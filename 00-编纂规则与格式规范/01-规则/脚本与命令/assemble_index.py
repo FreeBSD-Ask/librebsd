@@ -26,6 +26,10 @@
 - 2.1 @@〔第一卷第 8 章 8.5 分工注〕@@ 商业大厦…    → @@ 定界＝溯源注**前置**（紧跟节号）
 - 7.8 V7 前夜的 UNIX 生态与操作系统谱系@@〔时间：1978 年〕  → @@ 定界＝溯源注**后置**（行尾）
 - 2.1 ⟦en:POSIX⟧：从接口兼容到标准化        → 语言标记：⟦lang:文本⟧ → <span lang="lang">（WCAG 3.1.2；2026-10-12 立）
+  - 1.1.1 巴贝奇差分机的机械方案            → 小节（<li>，嵌套 <ul class="subsections">；ADR-0020，2026-11-06 立）：
+                                              两前导空格＋「- M.N.P 题名」，M.N 须等于父节号，P 节内自 1 连续唯一；
+                                              @@ 注文（前置／后置）与语言标记同节行适用；
+                                              唯一写者＝merge_subsections.py（卷批幂等合并），数据落盘前零小节行为合法零态
 ```
 
 **标准形（canonical）**：一元素一行、LF、UTF-8 无 BOM；卷题后空一行；`<h3>` 与 `<ul class="sections">`
@@ -85,6 +89,8 @@ _embed = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_embed)
 
 SEC_RE = re.compile(r"^(\d+\.\d+)\s(.*)$")
+SUB_RE = re.compile(r"^(\d+\.\d+\.\d+)\s(.*)$")
+SUB_LINE_RE = re.compile(r"^  - (.*)$")
 VOL_RE = re.compile(r"^# (.*)$")
 OVER_RE = re.compile(r"^> (.*)$")
 NOTE_RE = re.compile(r"^! (.*)$")
@@ -166,12 +172,28 @@ _VOLNUM_RE = re.compile(r'第\s*([\d一二三四五六七八九十]+)\s*卷')
 _CHNUM_RE = re.compile(r'第\s*(\d{1,3})\s*章')
 
 
+def _split_note(rest, ln, kind):
+    """节／小节行题文与 @@ 注文切分（前置／后置／无注；前置缺第二定界符即硬失败）。"""
+    if rest.startswith("@@"):
+        end = rest.find("@@", 2)
+        if end < 0:
+            sys.exit("outline.txt 第 %d 行：%s前置注文缺第二 @@ 定界符：%r" % (ln, kind, rest[:60]))
+        return rest[end + 2:].lstrip(), rest[2:end], True
+    if "@@" in rest:
+        i = rest.index("@@")
+        return rest[:i].rstrip(), rest[i + 2:], False
+    return rest, None, False
+
+
 def parse_outline(text):
     """outline.txt → [{num, title, overview, note, chapters:[{num, title, secs:[…]}]}]
     2026-10-07 S8：卷／章锚点 id 一律取卷题／章题的**真实号**（中文数字解析）——
     此前按 enumerate 顺序编号，卷号连续（含 S1–S6 挂尾恰在尾部）时二者一致；
     卷 12 撤销后顺序与真实号错位，导致 vol-N 锚点与全库引用体系错配（第五件
-    50 处误报「章越界」、第七件 R 组误报）。解析失败即 sys.exit，硬失败优于静默错位。"""
+    50 处误报「章越界」、第七件 R 组误报）。解析失败即 sys.exit，硬失败优于静默错位。
+    2026-11-06（ADR-0020）：节条目 dict 化并增第四级小节——小节行＝两前导空格＋
+    `- M.N.P 题名`，挂于当前节（subs 列表）；M.N 须等于父节号、P 节内自 1 连续唯一；
+    @@ 注文与语言标记同节行。零小节行为合法零态。"""
     vols, vol = [], None
     ch = None
     for ln, raw in enumerate(text.split("\n"), 1):
@@ -220,14 +242,27 @@ def parse_outline(text):
             if not ms:
                 sys.exit("outline.txt 第 %d 行：节行缺少「节号 空格」前缀：%r" % (ln, body[:40]))
             num, rest = ms.group(1), ms.group(2)
-            if rest.startswith("@@"):
-                end = rest.index("@@", 2)
-                ch["secs"].append((num, rest[end + 2:].lstrip(), rest[2:end], True))
-            elif "@@" in rest:
-                i = rest.index("@@")
-                ch["secs"].append((num, rest[:i].rstrip(), rest[i + 2:], False))
-            else:
-                ch["secs"].append((num, rest, None, False))
+            title, src, pre = _split_note(rest, ln, "节")
+            ch["secs"].append({"num": num, "title": title, "src": src, "pre": pre, "subs": []})
+            continue
+        m = SUB_LINE_RE.match(line)
+        if m:
+            if ch is None or not ch["secs"]:
+                sys.exit("outline.txt 第 %d 行：小节行之前无宿主节：%r" % (ln, line[:50]))
+            sec = ch["secs"][-1]
+            body = m.group(1)
+            ms = SUB_RE.match(body)
+            if not ms:
+                sys.exit("outline.txt 第 %d 行：小节行缺少「小节号 空格」前缀：%r" % (ln, body[:40]))
+            num, rest = ms.group(1), ms.group(2)
+            if not num.startswith(sec["num"] + "."):
+                sys.exit("outline.txt 第 %d 行：小节 %s 不归属当前节 %s" % (ln, num, sec["num"]))
+            p = int(num.rsplit(".", 1)[1])
+            expect = len(sec["subs"]) + 1
+            if p != expect:
+                sys.exit("outline.txt 第 %d 行：小节号 %s 不连续（期望 .%d）" % (ln, num, expect))
+            title, src, pre = _split_note(rest, ln, "小节")
+            sec["subs"].append({"num": num, "title": title, "src": src, "pre": pre})
             continue
         sys.exit("outline.txt 第 %d 行：无法识别的行：%r" % (ln, line[:50]))
     return vols
@@ -264,7 +299,9 @@ def plain(t):
 
 
 def render_outline(vols):
-    """标准形渲染：31 卷块（每块以 </section> + 空行 结尾）。"""
+    """标准形渲染：31 卷块（每块以 </section> + 空行 结尾）。
+    2026-11-06（ADR-0020）：节条目 dict 化；有小节时节 <li> 展开为多行，
+    下嵌 <ul class="subsections">（锚 vol-V-ch-C-sec-M-N-sub-P）；无小节保持单行原形（零态零漂移）。"""
     out = []
     for vol in vols:
         v = vol["num"]
@@ -281,7 +318,8 @@ def render_outline(vols):
             m = ch["num"]
             out.append('<h3 class="chapter" id="vol-%d-ch-%d">%s</h3>' % (v, m, esc(ch["title"])))
             out.append('<ul class="sections">')
-            for num, title, src, pre in ch["secs"]:
+            for sec in ch["secs"]:
+                num, title, src, pre = sec["num"], sec["title"], sec["src"], sec["pre"]
                 if src is None:
                     inner = esc(title)
                 elif pre:
@@ -289,7 +327,24 @@ def render_outline(vols):
                 else:
                     inner = '%s<span class="src">%s</span>' % (esc(title), esc(src))
                 sec_id = "vol-%d-ch-%d-sec-%s" % (v, m, num.replace(".", "-"))
-                out.append('<li id="%s"><span class="sec-num">%s</span> %s</li>' % (sec_id, num, inner))
+                if not sec["subs"]:
+                    out.append('<li id="%s"><span class="sec-num">%s</span> %s</li>' % (sec_id, num, inner))
+                    continue
+                out.append('<li id="%s"><span class="sec-num">%s</span> %s' % (sec_id, num, inner))
+                out.append('<ul class="subsections">')
+                for sub in sec["subs"]:
+                    snum, stitle, ssrc, spre = sub["num"], sub["title"], sub["src"], sub["pre"]
+                    if ssrc is None:
+                        sinner = esc(stitle)
+                    elif spre:
+                        sinner = '<span class="src">%s</span> %s' % (esc(ssrc), esc(stitle))
+                    else:
+                        sinner = '%s<span class="src">%s</span>' % (esc(stitle), esc(ssrc))
+                    sid = "vol-%d-ch-%d-sec-%s-sub-%d" % (v, m, num.replace(".", "-"),
+                                                          int(snum.rsplit(".", 1)[1]))
+                    out.append('<li id="%s"><span class="sec-num">%s</span> %s</li>' % (sid, snum, sinner))
+                out.append("</ul>")
+                out.append("</li>")
             out.append("</ul>")
         out.append("</section>")
         out.append("")
@@ -300,7 +355,9 @@ def render_toc_static(vols):
     """P3-2：无脚本静态目录（noscript 回退）——左栏卷+章、右栏全量节。
     标记与 assets/doc.js 动态版同 class，便于共用样式；不含需 JS 的折叠控件。
     2026-09-30：题面一律经 esc() 转义——此前直出原文，致 `AT&T` 等以裸 `&`
-    输出（与内容区 `&amp;` 不一致，严格校验不通过），见 98 号文 §八·丙-1。"""
+    输出（与内容区 `&amp;` 不一致，严格校验不通过），见 98 号文 §八·丙-1。
+    2026-11-06（ADR-0020）：右栏节条目下嵌 <ul class="toc-sub-list"> 小节
+    （锚与正文区一致）；无小节时保持单行原形（零态零漂移）。"""
     left = ['<ul class="toc-left-list">']
     right = []
     for v in vols:
@@ -314,10 +371,24 @@ def render_toc_static(vols):
                         % (i, m, i, m, esc(ch["title"])))
             right.append('<div class="toc-sec-title">%s</div>' % esc(ch["title"]))
             right.append('<ul class="toc-sec-list">')
-            for num, title, src, pre in ch["secs"]:
+            for sec in ch["secs"]:
+                num, title = sec["num"], sec["title"]
                 sid = "vol-%d-ch-%d-sec-%s" % (i, m, num.replace(".", "-"))
-                right.append('<li><a href="#%s" data-target="%s"><span class="sec-num">%s</span> %s</a></li>'
+                if not sec["subs"]:
+                    right.append('<li><a href="#%s" data-target="%s"><span class="sec-num">%s</span> %s</a></li>'
+                                 % (sid, sid, esc(num), esc(title)))
+                    continue
+                right.append('<li><a href="#%s" data-target="%s"><span class="sec-num">%s</span> %s</a>'
                              % (sid, sid, esc(num), esc(title)))
+                right.append('<ul class="toc-sub-list">')
+                for sub in sec["subs"]:
+                    snum, stitle = sub["num"], sub["title"]
+                    subid = "vol-%d-ch-%d-sec-%s-sub-%d" % (i, m, num.replace(".", "-"),
+                                                            int(snum.rsplit(".", 1)[1]))
+                    right.append('<li><a href="#%s" data-target="%s"><span class="sec-num">%s</span> %s</a></li>'
+                                 % (subid, subid, esc(snum), esc(stitle)))
+                right.append('</ul>')
+                right.append('</li>')
             right.append('</ul>')
         left.append('</ul>')
         left.append('</li>')
@@ -338,20 +409,24 @@ def derive_metrics(vols):
     n_vol = len(vols)
     n_ch = sum(len(v["chapters"]) for v in vols)
     n_sec = sum(len(c["secs"]) for v in vols for c in v["chapters"])
+    # 第四级小节总数（ADR-0020，2026-11-06）：计全部小节（含空骨架）；零态合法 0。
+    # 小节行 @@ 注文不计入 N_SRC／N_PENDING（该二键口径仍为节级溯源注，与第九件对拍实现一致）。
+    n_sub = sum(len(s["subs"]) for v in vols for c in v["chapters"] for s in c["secs"])
     n_bib = sum(1 for v in vols for c in v["chapters"] if "卷末书目述评" in c["title"])
-    n_src = sum(1 for v in vols for c in v["chapters"] for (num, title, src, pre) in c["secs"] if src)
+    n_src = sum(1 for v in vols for c in v["chapters"] for s in c["secs"] if s["src"])
     n_pending = sum(1 for v in vols for c in v["chapters"]
-                    for (num, title, src, pre) in c["secs"]
-                    if src and re.match(r"〔(?:待补|待重建)", src))
+                    for s in c["secs"]
+                    if s["src"] and re.match(r"〔(?:待补|待重建)", s["src"]))
     # 2026-10-11 收紧：仅认**结构性待补声明**（注文以〔待补／〔待重建起首），
     #   不再匹配注文中部的引述。缘由：7.3 注引述镜像旧标注“待补（B3 深化）”被旧判据
     #   误计为 1，致未决项瓦片自 0 复活且无告警（131 批）。第九件 E4 以独立实现交叉核验。
     return {
-        "N_VOL": n_vol, "N_CH": n_ch, "N_SEC": n_sec,
+        "N_VOL": n_vol, "N_CH": n_ch, "N_SEC": n_sec, "N_SUB": n_sub,
         "N_CH_MAIN": n_ch - n_bib, "N_CH_BIBLIO": n_bib,
         "N_SRC": n_src,
         "N_PENDING": n_pending,
         "TRIPLE": "%d 卷 %d 章 %d 节" % (n_vol, n_ch, n_sec),
+        "QUAD": "%d 卷 %d 章 %d 节 %d 小节" % (n_vol, n_ch, n_sec, n_sub),
     }
 
 
@@ -488,7 +563,7 @@ def main():
                   % ((_new_n / _old_n - 1) * 100, _old_n, _new_n))
     vols = parse_outline(read(OUTLINE))
     met = derive_metrics(vols)
-    print("口径（由内容源派生）：%s" % met["TRIPLE"])
+    print("口径（由内容源派生）：%s" % met["QUAD"])
     return 0
 
 

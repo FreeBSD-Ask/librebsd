@@ -283,14 +283,16 @@
       var ns = 0;
       cs.forEach(function (c) {
         var ul = c.nextElementSibling;
-        if (ul && ul.classList && ul.classList.contains('sections')) ns += ul.children.length;
+        /* 2026-11-06（ADR-0020）：:scope > li 只数节——嵌套小节 ul 不计入节数。 */
+        if (ul && ul.classList && ul.classList.contains('sections')) ns += ul.querySelectorAll(':scope > li').length;
       });
       if (h) { var b = document.createElement('span'); b.className = 'vol-badge'; b.textContent = cs.length + ' 章 · ' + ns + ' 节'; h.appendChild(b); }
     });
     chapters.forEach(function (c) {
       var ul = c.nextElementSibling;
       if (!ul || !ul.classList || !ul.classList.contains('sections')) return;
-      var b = document.createElement('span'); b.className = 'ch-badge'; b.textContent = ul.children.length + ' 节'; c.appendChild(b);
+      /* 2026-11-06（ADR-0020）：:scope > li 只数节（嵌套小节 ul 不计入）。 */
+      var b = document.createElement('span'); b.className = 'ch-badge'; b.textContent = ul.querySelectorAll(':scope > li').length + ' 节'; c.appendChild(b);
     });
 
       } catch (err) { console.error(U("diag.badge"), err); }
@@ -307,7 +309,10 @@
       var badge = srcEl ? '<button type="button" class="note-badge" aria-expanded="false">' + U("ui.note.badge") + '</button>' : '';
       var html = head + '<span class="t-short">' + esc(short) + '</span><button class="t-more" type="button">' + U("ui.more.expand") + '</button>' +
                  '<span class="t-full">' + esc(s.title) + '</span>' + badge + (srcEl ? srcEl.outerHTML : '');
+      /* 2026-11-06（ADR-0020）：先摘下嵌套 ul.subsections 再重写，写后放回末尾（顺序与装配一致）。 */
+      var subUlKeep = s.li.querySelector(':scope > ul.subsections');
       s.li.innerHTML = __LB.ttt(html);
+      if (subUlKeep) s.li.appendChild(subUlKeep);
       s.li.classList.add('long-title');
       s.li.querySelector('.t-more').addEventListener('click', function () {
         s.li.classList.toggle('open');
@@ -456,6 +461,8 @@
       allNodes.forEach(function (tn) {
         if (!tn.parentElement || !tn.parentElement.closest ||
             !tn.parentElement.closest('ul.sections > li')) return;
+        /* 2026-11-06（ADR-0020）：嵌套小节文本不参与节级注入（小节锚为静态 id）。 */
+        if (tn.parentElement.closest('ul.subsections')) return;
         var orig = tn.textContent;
         if (!orig || orig.trim().length < 2) return;
         targets.push({ node: tn, text: orig });
@@ -647,11 +654,13 @@
         if (parseInt((c.id.match(/-ch-(\d+)$/) || [0, 0])[1], 10) !== i + 1) checks.push(['章号连续', v.id]);
         var ul = c.nextElementSibling; if (!ul || !ul.classList || !ul.classList.contains('sections')) return;
         var chNo = (c.id.match(/-ch-(\d+)$/) || [0, 0])[1];
-        [].slice.call(ul.children).forEach(function (li, k) {
+        /* 2026-11-06（ADR-0020）：:scope > li 只数节——嵌套小节 ul 不再使索引偏移误报。 */
+        var secLis = [].slice.call(ul.querySelectorAll(':scope > li'));
+        secLis.forEach(function (li, k) {
           var n = li.querySelector(':scope > .sec-num'); if (!n) return;
           if (n.textContent.trim() !== chNo + '.' + (k + 1)) checks.push(['节号连续', c.id + ' ' + n.textContent.trim()]);
         });
-        var lisArr = [].slice.call(ul.children), bibIdx = -1;
+        var lisArr = secLis, bibIdx = -1;
         lisArr.forEach(function (li, k) {
           var n2 = li.querySelector(':scope > .sec-num'); if (!n2) return;
           var tt = __LB.pureTitle(li);

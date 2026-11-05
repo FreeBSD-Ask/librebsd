@@ -86,6 +86,14 @@ h3.chapter { letter-spacing: 0.01em; }
   min-width: 2.6em; display: inline-block;
 }
 
+/* 小节（第四级，ADR-0020）：轻量缩进、无边框，弱化于节 */
+.subsections li { border-bottom: none; padding: 2px 8px 2px 0; margin-left: 16px;
+  font-size: 0.95em; border-radius: 6px;
+  transition: background-color .15s ease; }
+.subsections li:hover { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+.subsections .sec-num { font-size: 0.82em; min-width: 3.4em; }
+.toc-right .toc-sub-list a { opacity: .92; }
+
 /* 目录双栏与抽屉：链接过渡、卷题悬浮、激活态 */
 .toc-left a, .toc-right a, #tocDrawer a {
   transition: background-color .15s ease, color .15s ease, border-radius .15s ease;

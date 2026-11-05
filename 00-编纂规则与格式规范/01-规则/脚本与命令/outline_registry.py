@@ -3,7 +3,7 @@
 
 用途
 ----
-解析目录真值源 ``05-卷册大纲/目录/data/outline.txt``，为卷／章／节三级节点
+解析目录真值源 ``05-卷册大纲/目录/data/outline.txt``，为卷／章／节／小节四级节点
 分配稳定 ID，生成目标注册表 ``05-卷册大纲/映射/targets.tsv``；并提供漂移
 检测（``--check``）与漂移同步（``--sync``）能力，以及合成夹具自检
 （``--selftest``）。
@@ -11,13 +11,13 @@
 节点 ID 规则
 ------------
 卷 ``V-001``（三位）、章 ``C-0001``（四位，全书连续）、节 ``S-000001``
-（六位，全书连续）。ID 一经分配即稳定；漂移时按“同父同题 → 同层同题 →
+（六位，全书连续）、小节 ``SS-0000001``（七位，全书连续；2026-11-06 ADR-0020）。ID 一经分配即稳定；漂移时按“同父同题 → 同层同题 →
 模糊改题（相似度 ≥ 0.86）→ 新增”顺序复用旧 ID，退役节点保留原 ID 并置
 ``status=retired``。
 
 targets.tsv 列
 --------------
-``node_id`` / ``level``（vol|ch|sec）/ ``parent_id`` / ``vol_no`` / ``ch_no`` /
+``node_id`` / ``level``（vol|ch|sec|subsec）/ ``parent_id`` / ``vol_no`` / ``ch_no`` /
 ``sec_no`` / ``title``（原文含 ``⟦lang:…⟧``）/ ``path_title``（剥离标记后的
 显示文本）/ ``status``（active|retired）/ ``first_seen`` / ``last_seen`` /
 ``renamed_from``。
@@ -65,7 +65,8 @@ TODAY = datetime.date.today().isoformat()
 LANG_RE = re.compile(r"⟦[a-zA-Z-]+:([^⟧]*)⟧")
 VOL_RE = re.compile(r"^# 第[一二三四五六七八九十百零〇0-9]+卷\s+(.*)$")
 CH_RE = re.compile(r"^## 第\s*\d+\s*章\s+(.*)$")
-SEC_RE = re.compile(r"^-\s+(\d+(?:\.\d+)+)\s+(.*)$")
+SEC_RE = re.compile(r"^-(\s+)(\d+(?:\.\d+)+)\s+(.*)$")
+SUB4_RE = re.compile(r"^  -\s+(\d{1,3})\.(\d{1,3})\.(\d{1,4})\s+(.*)$")
 
 
 def path_title(title):
@@ -79,9 +80,9 @@ def norm(s):
 
 
 def parse(text):
-    """解析 outline.txt → 节点列表（文档序），保留父子引用。"""
+    """解析 outline.txt → 节点列表（文档序），保留父子引用（四级，ADR-0020）。"""
     nodes = []
-    vol = ch = None
+    vol = ch = sec = None
     vol_no = 0
     gch = 0   # 全书章序（仅用于稳定 ID 计数，不进 ch_no）
     vch = 0   # 卷内章序（ch_no 的口径，2026-10-23 ykla 裁定：每卷永远以第一章开始）
@@ -107,16 +108,25 @@ def parse(text):
             m = SEC_RE.match(line)
             if not m:
                 continue
-            title = m.group(2).split("@@")[0].rstrip()
+            title = m.group(3).split("@@")[0].rstrip()
             sec = {"level": "sec", "vol_no": vol_no, "ch_no": vch,
-                   "sec_no": m.group(1), "title": title, "parent": ch}
+                   "sec_no": m.group(2), "title": title, "parent": ch}
             nodes.append(sec)
+        elif line.startswith("  - "):
+            # 第四级小节行（ADR-0020，2026-11-06）：两前导空格＋`- M.N.P 题名`
+            m = SUB4_RE.match(line)
+            if not m:
+                continue
+            title = m.group(4).split("@@")[0].rstrip()
+            nodes.append({"level": "subsec", "vol_no": vol_no, "ch_no": vch,
+                          "sec_no": "%s.%s.%s" % (m.group(1), m.group(2), m.group(3)),
+                          "title": title, "parent": sec})
     return nodes
 
 
 def assign_ids(nodes):
-    """按文档序分配稳定 ID：V-001 / C-0001 / S-000001。"""
-    v = c = s = 0
+    """按文档序分配稳定 ID：V-001 / C-0001 / S-000001 / SS-0000001（ADR-0020）。"""
+    v = c = s = ss = 0
     for n in nodes:
         if n["level"] == "vol":
             v += 1
@@ -126,6 +136,10 @@ def assign_ids(nodes):
             c += 1
             n["node_id"] = "C-%04d" % c
             n["parent_id"] = n["parent"]["node_id"]
+        elif n["level"] == "subsec":
+            ss += 1
+            n["node_id"] = "SS-%07d" % ss
+            n["parent_id"] = n["parent"]["node_id"] if n["parent"] else ""
         else:
             s += 1
             n["node_id"] = "S-%06d" % s
@@ -154,7 +168,7 @@ def load_registry(path):
 
 
 def _no_str(n):
-    if n["level"] == "sec":
+    if n["level"] in ("sec", "subsec"):
         return str(n["sec_no"])
     if n["level"] == "ch":
         return str(n["ch_no"])
@@ -187,14 +201,14 @@ def reconcile(new_nodes, old_nodes):
         by_parent.setdefault((o["level"], o["parent_id"], norm(o["title"])), []).append(o)
         by_level.setdefault((o["level"], norm(o["title"])), []).append(o)
 
-    counters = {"V": 0, "C": 0, "S": 0}
+    counters = {"V": 0, "C": 0, "S": 0, "SS": 0}
     for o in old_nodes:
         pfx, num = o["node_id"].split("-")
         counters[pfx] = max(counters[pfx], int(num))
 
     def next_id(level):
-        pfx = {"vol": "V", "ch": "C", "sec": "S"}[level]
-        width = {"vol": 3, "ch": 4, "sec": 6}[level]
+        pfx = {"vol": "V", "ch": "C", "sec": "S", "subsec": "SS"}[level]
+        width = {"vol": 3, "ch": 4, "sec": 6, "subsec": 7}[level]
         counters[pfx] += 1
         return "%s-%0*d" % (pfx, width, counters[pfx])
 
@@ -202,7 +216,7 @@ def reconcile(new_nodes, old_nodes):
     stats = {"exact-parent": 0, "exact-level": 0, "renumber": 0,
              "RENAME_SUSPECT": 0, "new": 0, "retired": 0}
 
-    for level in ("vol", "ch", "sec"):
+    for level in ("vol", "ch", "sec", "subsec"):
         for n in [x for x in new_nodes if x["level"] == level]:
             n["parent_id"] = "" if level == "vol" else n["parent"]["node_id"]
             hit = None
@@ -307,8 +321,9 @@ def cmd_write(outline, targets):
     nv = sum(1 for n in nodes if n["level"] == "vol")
     nc = sum(1 for n in nodes if n["level"] == "ch")
     ns = sum(1 for n in nodes if n["level"] == "sec")
-    print("已写 %s：%d 卷 / %d 章 / %d 节（共 %d 行）"
-          % (targets, nv, nc, ns, len(nodes)))
+    nss = sum(1 for n in nodes if n["level"] == "subsec")
+    print("已写 %s：%d 卷 / %d 章 / %d 节 / %d 小节（共 %d 行）"
+          % (targets, nv, nc, ns, nss, len(nodes)))
     return 0
 
 
@@ -353,6 +368,8 @@ def cmd_sync(outline, targets, drift_dir, do_write):
 FIXTURE = """# 第一卷  测试卷
 ## 第 1 章 测试章一
 - 1.1 机械计算与自动计算思想
+  - 1.1.1 巴贝奇的差分机方案
+  - 1.1.2 分析机与通用计算构想
 - 1.2 差分机与分析机
 - 1.3 可计算性与机电计算机
 ## 第 2 章 测试章二
@@ -399,10 +416,24 @@ def selftest():
                   {"new": 1, "retired": 0}))
 
     # 6 合并：两节并为一节（合并题与两原题相似度均 < 0.86）→ 新增 1、退役 2
+    # 6 合并：两节并为一节（含其下两小节行一并撤销；合并题与两原题相似度均 < 0.86）
+    # → sec 新增 1＋退役 2、subsec 退役 2（宿主节亡则小节退役）（2026-11-06 四级口径）
     cases.append(("合并 merge",
-                  FIXTURE.replace("- 1.1 机械计算与自动计算思想\n- 1.2 差分机与分析机",
+                  FIXTURE.replace("- 1.1 机械计算与自动计算思想\n"
+                                  "  - 1.1.1 巴贝奇的差分机方案\n"
+                                  "  - 1.1.2 分析机与通用计算构想\n"
+                                  "- 1.2 差分机与分析机",
                                   "- 1.1 机械计算与自动计算思想与差分机与分析机"),
-                  {"new": 1, "retired": 2}))
+                  {"new": 1, "retired": 4}))
+
+    # 7 小节（ADR-0020，2026-11-06）：新增一小节 → subsec new 1；删一小节 → subsec retired 1
+    cases.append(("小节新增 subsec-new",
+                  FIXTURE.replace("  - 1.1.2 分析机与通用计算构想",
+                                  "  - 1.1.2 分析机与通用计算构想\n  - 1.1.3 差分机的经济史"),
+                  {"new": 1, "retired": 0}))
+    cases.append(("小节退役 subsec-retired",
+                  FIXTURE.replace("  - 1.1.2 分析机与通用计算构想\n", ""),
+                  {"new": 0, "retired": 1}))
 
     passed = 0
     for name, text, expect in cases:

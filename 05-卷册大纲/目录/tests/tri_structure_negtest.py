@@ -303,6 +303,44 @@ h_r = re.sub(r'(<p class="vol-note">[^<]*?)〔主体声明〕', r'\1', h)
 assert h_r != h, "R 夹具未能删除〔主体声明〕"
 p_r.write_text(h_r, encoding="utf-8", newline="\n")
 
+# ── S 组（2026-11-06 追加，ADR-0020）：小节（第四级）四缺陷 ────────────────
+#   动态锚定卷 2 ch1 节 1.1（M.N 锚恒定）；在其 </li> 前注入嵌套 ul.subsections。
+#   四件分别命中：小节编号跳号／不归属父节／空小节题／F 组四级口径漂移。
+_m_s = re.search(r'<li id="vol-2-ch-1-sec-1-1">.*?</li>', h, re.S)
+assert _m_s, "S 组夹具无法定位 vol-2-ch-1-sec-1-1"
+_s_li = _m_s.group(0)
+_s_head = h[:_m_s.start()]
+_s_tail = h[_m_s.end():]
+
+# S-1 跳号：注入 1.1.1 与 1.1.3（缺 1.1.2）→ D 组 want 序列不匹配
+p_s1 = OUT / "_neg_s_sub_gap.html"
+p_s1.write_text(_s_head + _s_li.replace("</li>",
+    '<ul class="subsections">'
+    '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.1.1</span> 小节甲</li>'
+    '<li id="vol-2-ch-1-sec-1-1-sub-3"><span class="sec-num">1.1.3</span> 小节丙</li>'
+    "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
+
+# S-2 归属破坏：小节号 1.2.1 挂在节 1.1 下
+p_s2 = OUT / "_neg_s_sub_orphan.html"
+p_s2.write_text(_s_head + _s_li.replace("</li>",
+    '<ul class="subsections">'
+    '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.2.1</span> 小节甲</li>'
+    "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
+
+# S-3 空小节题：编号后有且只有空白
+p_s3 = OUT / "_neg_s_sub_empty.html"
+p_s3.write_text(_s_head + _s_li.replace("</li>",
+    '<ul class="subsections">'
+    '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.1.1</span> </li>'
+    "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
+
+# S-4 F 组口径漂移：footer 四级串的小节数改 5（与实测 0 不符）
+m_ft = re.search(r"现行大纲目录 · (\d+ 卷 \d+ 章 \d+ 节) 0 小节", h)
+assert m_ft, "S-4 夹具无法定位 footer 四级口径串"
+p_s4 = OUT / "_neg_s_quad_drift.html"
+p_s4.write_text(h[:m_ft.start()] + m_ft.group(0).replace(" 0 小节", " 5 小节", 1)
+                + h[m_ft.end():], encoding="utf-8", newline="\n")
+
 cases += [
     (p10, "N-e 年序回落", "N-e"),
 ] + ([(p12, "N-g 述评非末位", "N-g")] if NG_ACTIVE else []) + [
@@ -316,6 +354,10 @@ cases += [
     (p_qlang, "Q 语言标记泄漏", "Q"),
     (p_q2, "Q2 谱系残留", "Q2"),
     (p_r, "R 卷头主体声明缺失", "R"),
+    (p_s1, "S 小节跳号", "D"),
+    (p_s2, "S 小节归属", "D"),
+    (p_s3, "S 小节空题", "D"),
+    (p_s4, "S 口径漂移", "F"),
 ]
 
 results = [run(p, tag, grp) for p, tag, grp in cases]
@@ -382,6 +424,10 @@ targets = {"K 无章之卷": "无章之卷 1", "K 无节之章": "无节之章 1
            "Q 语言标记泄漏": "Q 可见标记泄漏",
            "Q2 谱系残留": "Q2 谱系残留",
            "R 卷头主体声明缺失": "R 卷头缺〔主体声明〕",
+           "S 小节跳号": "小节 ['1.1.1', '1.1.3']",
+           "S 小节归属": "小节 ['1.2.1'] != ['1.1.1']",
+           "S 小节空题": "空小节题 1.1.1",
+           "S 口径漂移": "F 口径六处: FAIL",
            }
 precise = all(targets[cases[k][1]] in results[k][1] for k in HARD_IDX if cases[k][1] in targets)
 

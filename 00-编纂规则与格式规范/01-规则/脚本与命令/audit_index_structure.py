@@ -280,6 +280,7 @@ def main():
         print("   ❌", t)
 
     ch_total = 0
+    sub_total = sub_src_total = 0   # 第四级小节计数（ADR-0020）
     ch_bad, sec_bad, bib_bad, dup_ch, bib_none = [], [], [], [], []
     appx_bad, os_bad = [], []   # L 不设附录；M OS 比较节位次
     os_n = 0                    # M 组命中数（复核真值：全库 29）
@@ -299,14 +300,19 @@ def main():
             h[st : vols[i + 1][2]],
             flags=re.S | re.I,
         )
+        # 2026-11-06（ADR-0020）：前瞻限定 </ul> 为 sections 本体收尾——
+        # 节 li 内嵌 <ul class="subsections"> 的 </ul> 不得提前终结匹配（S 组负向例暴露）。
         chs = re.findall(
-            r'<h3 class="chapter" id="([^"]+)">(.*?)</h3>\s*<ul class="sections">(.*?)</ul>',
+            r'<h3 class="chapter" id="([^"]+)">(.*?)</h3>\s*<ul class="sections">'
+            r'(.*?)</ul>\s*(?=<h3|</section>)',
             seg,
             re.S,
         )
         if not chs:
             tri_bad.append((vid, "无章之卷"))
-        _seg_li = len(re.findall(r"<li[^>]*>", seg))
+        # 2026-11-06（ADR-0020）：先剥嵌套 subsections 块再数 <li>——小节 li 非孤立节行。
+        _seg_li = len(re.findall(
+            r"<li[^>]*>", re.sub(r'<ul class="subsections">.*?</ul>', "", seg, flags=re.S)))
         _ch_li = 0
         nums = [int(re.search(r"ch-(\d+)$", c[0]).group(1)) for c in chs]
         if nums != list(range(1, len(chs) + 1)):
@@ -326,7 +332,18 @@ def main():
             # L 不设附录（O1）：章题去「第 N 章」前缀后以「附录」起首即 FAIL。
             if re.match(r"^附录", re.sub(r"^第\s*\d+\s*章\s*", "", t)):
                 appx_bad.append((cid, t))
-            lis = re.findall(r"<li[^>]*>(.*?)</li>", raw_ul, re.S)
+            # 2026-11-06（ADR-0020）四级适配：先摘节 li 内嵌 <ul class="subsections">
+            # （占位替换）再解析节 li——否则小节 li 会被 <li> 正则误当作节。
+            sub_blocks = []
+
+            def _stash(mm):
+                sub_blocks.append(mm.group(1))
+                return "\x00SUB%d\x00" % (len(sub_blocks) - 1)
+
+            raw_ul_flat = re.sub(
+                r'<ul class="subsections">(.*?)</ul>', _stash, raw_ul, flags=re.S
+            )
+            lis = re.findall(r"<li[^>]*>(.*?)</li>", raw_ul_flat, re.S)
             _ch_li += len(lis)
             if not lis:
                 tri_bad.append((cid, "无节之章"))
@@ -345,6 +362,30 @@ def main():
                     sec_bad.append((cid, "空节题 " + sm.group(1)))
                 if 'class="src"' in li:
                     src_total += 1
+                # ── 小节（第四级）四判据：连续／唯一／归属／非空（ADR-0020，2026-11-06）──
+                msub = re.search(r"\x00SUB(\d+)\x00", li)
+                if msub:
+                    sub_html = sub_blocks[int(msub.group(1))]
+                    slis = re.findall(r"<li[^>]*>(.*?)</li>", sub_html, re.S)
+                    subnums = []
+                    for sli in slis:
+                        sub_total += 1
+                        sm2 = re.search(r'<span class="sec-num">([\d.]+)</span>(.*)$', sli, re.S)
+                        if not sm2:
+                            sec_bad.append((cid, "小节缺编号 " + sli[:50]))
+                            continue
+                        subnums.append(sm2.group(1))
+                        srest = re.sub(r'<span class="src">.*?</span>', "", sm2.group(2), flags=re.S)
+                        if not re.sub(r"<[^>]+>", "", srest).strip():
+                            sec_bad.append((cid, "空小节题 " + sm2.group(1)))
+                        if 'class="src"' in sli:
+                            sub_src_total += 1
+                    want_s = ["%s.%d" % (sm.group(1), k) for k in range(1, len(slis) + 1)]
+                    if subnums != want_s:
+                        sec_bad.append((cid, "小节 %s != %s" % (subnums, want_s)))
+                    for sn in subnums:
+                        if not sn.startswith(sm.group(1) + "."):
+                            sec_bad.append((cid, "小节 %s 不归属节 %s" % (sn, sm.group(1))) )
             want = [f"{cn_}.{k}" for k in range(1, len(lis) + 1)]
             if snums != want:
                 sec_bad.append((cid, f"{snums} != {want}"))
@@ -375,9 +416,9 @@ def main():
         print("   ❌", x)
     for x in dup_ch[:5]:
         print("   ❌ 重题", x)
-    print(f"D 节: 共 {sec_total} 节（含 src 注 {src_total}）| 异常 {len(sec_bad)}")
+    print(f"D 节: 共 {sec_total} 节（含 src 注 {src_total}）| 小节 {sub_total} 条（含 src 注 {sub_src_total}）| 异常 {len(sec_bad)}")
     for x in sec_bad[:10]:
-        print("   ❌", x)
+        print("   ❌ D", x)   # 组前缀：负向自检 run() 的 ❌ 过滤按「D 」定向（ADR-0020，2026-11-06）
     print(f"E 述评恒末（若有述评须居末）: 异常 {len(bib_bad)}")
     for x in bib_bad[:10]:
         print("   ❌", x)
@@ -388,20 +429,22 @@ def main():
     dm = re.search(r'<span>总卷数</span><strong>(\d+)</strong>', h)
     dmc = re.search(r'<span>总章数</span><strong>(\d+)</strong>', h)
     dms = re.search(r'<span>总节数</span><strong>(\d+)</strong>', h)
-    og = re.search(r'og:description" content="(\d+) 卷 (\d+) 章 (\d+) 节', h)
-    md = re.search(r'name="description" content="[^"]*?(\d+) 卷 (\d+) 章 (\d+) 节', h)
-    ft = re.search(r'现行大纲目录 · (\d+) 卷 (\d+) 章 (\d+) 节', h)
+    dmsub = re.search(r'<span>总小节数</span><strong>(\d+)</strong>', h)   # ADR-0020 第四瓦片
+    og = re.search(r'og:description" content="(\d+) 卷 (\d+) 章 (\d+) 节 (\d+) 小节', h)
+    md = re.search(r'name="description" content="[^"]*?(\d+) 卷 (\d+) 章 (\d+) 节 (\d+) 小节', h)
+    ft = re.search(r'现行大纲目录 · (\d+) 卷 (\d+) 章 (\d+) 节 (\d+) 小节', h)
     jl = json.loads(
         re.search(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S).group(1)
     )
     jap = {x["name"]: x["value"] for x in jl["additionalProperty"]}
-    measured = (len(vno), ch_total, sec_total)
+    measured = (len(vno), ch_total, sec_total, sub_total)
     got = {
-        "doc-metrics": (int(dm.group(1)), int(dmc.group(1)), int(dms.group(1))),
+        "doc-metrics": (int(dm.group(1)), int(dmc.group(1)), int(dms.group(1)),
+                        int(dmsub.group(1)) if dmsub else -1),
         "og": tuple(map(int, og.groups())),
         "meta": tuple(map(int, md.groups())),
         "footer": tuple(map(int, ft.groups())),
-        "JSON-LD": (jap["卷数"], jap["章数"], jap["节数"]),
+        "JSON-LD": (jap["卷数"], jap["章数"], jap["节数"], jap["小节数"]),
         "实测": measured,
     }
     okF = all(v == measured for v in got.values())

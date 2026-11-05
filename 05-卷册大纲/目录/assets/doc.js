@@ -109,13 +109,14 @@ function F(k, o) {
   /* 标题净化：剥离**运行时注入**的装饰元素，返回目录“内容层”原文。
      对象含：卷/章计数徽标（.vol-badge/.ch-badge）、溯源注徽标与注文（.note-badge/.src）、
      长节名折叠控件（.t-short/.t-more）、节号（.sec-num）及浮层类（.path/.pv）。
-     长节名折叠态（li.long-title）另取 .t-full 完整标题——否则会拼出“短标题＋展开＋完整标题”。 */
+     长节名折叠态（li.long-title）另取 .t-full 完整标题——否则会拼出“短标题＋展开＋完整标题”。
+     2026-11-06（ADR-0020）：增 .subsections——节 li 含嵌套小节列表时，小节文本不得拼入节题。 */
   function pureTitle(el) {
     if (!el) return "";
     var clone = el.cloneNode(true);
     var full = clone.querySelector(".t-full");
     if (full) return full.textContent.trim();
-    clone.querySelectorAll(".vol-badge, .ch-badge, .note-badge, .t-more, .t-short, .src, .sec-num, .path, .pv").forEach(function (n) { n.remove(); });
+    clone.querySelectorAll(".vol-badge, .ch-badge, .note-badge, .t-more, .t-short, .src, .sec-num, .path, .pv, .subsections").forEach(function (n) { n.remove(); });
     return clone.textContent.trim();
   }
 
@@ -152,8 +153,10 @@ function F(k, o) {
     chapters.forEach((ch) => {
       const ul = ch.nextElementSibling;
       if (!ul || !ul.classList || !ul.classList.contains("sections")) return;
-      ul.querySelectorAll("li").forEach((li) => {
-        const secNum = li.querySelector(".sec-num");
+      /* 2026-11-06（ADR-0020）：:scope > li 只处理节——嵌套小节 li 的静态 id
+         （…-sub-P 形制）由装配器给出，不得在此被改写成无 sub- 段形态。 */
+      ul.querySelectorAll(":scope > li").forEach((li) => {
+        const secNum = li.querySelector(":scope > .sec-num");
         if (!secNum) return;
         const num = secNum.textContent.trim().replace(/\./g, "-");
         li.id = ch.id + "-sec-" + num;
@@ -237,10 +240,19 @@ function F(k, o) {
       const ul = ch.nextElementSibling;
       const secs = [];
       if (ul && ul.classList && ul.classList.contains("sections")) {
-        ul.querySelectorAll("li").forEach((li) => {
-          const secNum = li.querySelector(".sec-num");
+        /* 2026-11-06（ADR-0020）：:scope > li 只收节；小节入 subs（右栏嵌套渲染与静态 TOC 同构）。 */
+        ul.querySelectorAll(":scope > li").forEach((li) => {
+          const secNum = li.querySelector(":scope > .sec-num");
           const title = __LB.pureTitle(li);
-          secs.push({ id: li.id, num: secNum ? secNum.textContent.trim() : "", title: title });
+          const subs = [];
+          const subUl = li.querySelector(":scope > ul.subsections");
+          if (subUl) {
+            subUl.querySelectorAll(":scope > li").forEach((sli) => {
+              const sn = sli.querySelector(":scope > .sec-num");
+              subs.push({ id: sli.id, num: sn ? sn.textContent.trim() : "", title: __LB.pureTitle(sli) });
+            });
+          }
+          secs.push({ id: li.id, num: secNum ? secNum.textContent.trim() : "", title: title, subs: subs });
         });
       }
       chapterSecMap.set(ch.id, secs);
@@ -270,6 +282,27 @@ function F(k, o) {
             a.insertBefore(n, a.firstChild);
           }
           li.appendChild(a);
+          /* 2026-11-06（ADR-0020）：节下嵌套渲染小节（与静态 TOC 同构；无小节零差异）。 */
+          if (sec.subs && sec.subs.length) {
+            const su = document.createElement("ul");
+            su.className = "toc-sub-list";
+            sec.subs.forEach((sb) => {
+              const sli = document.createElement("li");
+              const sa = document.createElement("a");
+              sa.href = "#" + sb.id;
+              sa.dataset.target = sb.id;
+              sa.textContent = sb.title;
+              if (sb.num) {
+                const sn = document.createElement("span");
+                sn.className = "sec-num";
+                sn.textContent = sb.num;
+                sa.insertBefore(sn, sa.firstChild);
+              }
+              sli.appendChild(sa);
+              su.appendChild(sli);
+            });
+            li.appendChild(su);
+          }
           ul.appendChild(li);
         });
         cached = { title: title, ul: ul };
@@ -1086,10 +1119,20 @@ function F(k, o) {
       var chs = Array.prototype.slice.call(v.querySelectorAll("h3.chapter[id]")).map(function (c) {
         var ul = c.nextElementSibling, secs = [];
         if (ul && ul.classList && ul.classList.contains("sections")) {
-          Array.prototype.slice.call(ul.children).forEach(function (li) {
+          /* 2026-11-06（ADR-0020）：:scope > li 只收节；小节入 subs（导出四格式随之含小节层级）。 */
+          Array.prototype.slice.call(ul.querySelectorAll(":scope > li")).forEach(function (li) {
             var n = li.querySelector(":scope > .sec-num"); if (!n) return;
             var src = li.querySelector(":scope > .src");
-            secs.push({ id: li.id, num: n.textContent.trim(), title: __LB.pureTitle(li), note: src ? src.textContent.trim() : "" });
+            var subs = [];
+            var subUl = li.querySelector(":scope > ul.subsections");
+            if (subUl) {
+              Array.prototype.slice.call(subUl.querySelectorAll(":scope > li")).forEach(function (sli) {
+                var sn = sli.querySelector(":scope > .sec-num"); if (!sn) return;
+                var ssrc = sli.querySelector(":scope > .src");
+                subs.push({ id: sli.id, num: sn.textContent.trim(), title: __LB.pureTitle(sli), note: ssrc ? ssrc.textContent.trim() : "" });
+              });
+            }
+            secs.push({ id: li.id, num: n.textContent.trim(), title: __LB.pureTitle(li), note: src ? src.textContent.trim() : "", subs: subs });
           });
         }
         return { id: c.id, title: __LB.pureTitle(c), sections: secs };
@@ -1109,6 +1152,9 @@ function F(k, o) {
         L.push("  ## " + c.title);
         c.sections.forEach(function (s) {
           L.push("    - " + s.num + " " + s.title);
+          (s.subs || []).forEach(function (sb) {
+            L.push("      - " + sb.num + " " + sb.title);
+          });
         });
       });
     });
@@ -1309,7 +1355,16 @@ function F(k, o) {
         H.push('<ul>');
         c.sections.forEach(function (ss) {
           H.push('<li><span class="n">' + es(ss.num) + '</span>' + es(ss.title) +
-                 (ss.note ? ' <span class="note">' + es(ss.note) + '</span>' : '') + '</li>');
+                 (ss.note ? ' <span class="note">' + es(ss.note) + '</span>' : ''));
+          if (ss.subs && ss.subs.length) {
+            H.push('<ul>');
+            ss.subs.forEach(function (sb) {
+              H.push('<li><span class="n">' + es(sb.num) + '</span>' + es(sb.title) +
+                     (sb.note ? ' <span class="note">' + es(sb.note) + '</span>' : '') + '</li>');
+            });
+            H.push('</ul>');
+          }
+          H.push('</li>');
         });
         H.push('</ul>');
       });
@@ -1374,6 +1429,10 @@ function F(k, o) {
               return '"' + s.replace(/"/g, '""') + '"';
             };
             lines.push([f(v.title), f(c.title), f(s.num), f(s.title), f(s.note)].join(","));
+            /* 2026-11-06（ADR-0020）：小节行 chapter 列留空、num 为 M.N.P 三段形态。 */
+            (s.subs || []).forEach(function (sb) {
+              lines.push([f(v.title), f(""), f(sb.num), f(sb.title), f(sb.note)].join(","));
+            });
           });
         });
       });
@@ -1399,11 +1458,13 @@ function F(k, o) {
       chs.forEach(function (c) {
         var ul = c.nextElementSibling; if (!ul || !ul.classList || !ul.classList.contains("sections")) return;
         var chNo = (c.id.match(/-ch-(\d+)$/) || [0, 0])[1];
-        Array.prototype.slice.call(ul.children).forEach(function (li, i) {
+        /* 2026-11-06（ADR-0020）：:scope > li 只数节——嵌套小节 ul 不再使索引偏移误报。 */
+        var secLis = Array.prototype.slice.call(ul.querySelectorAll(":scope > li"));
+        secLis.forEach(function (li, i) {
           var n = li.querySelector(":scope > .sec-num"); if (!n) return;
           var exp = chNo + "." + (i + 1);
           if (n.textContent.trim() !== exp) bad.push(c.id + " 节号 " + n.textContent.trim() + "≠" + exp);
-          if (i === ul.children.length - 1 && /本章书目述评/.test(n.textContent) === false) { /* 述评可选 */ }
+          if (i === secLis.length - 1 && /本章书目述评/.test(n.textContent) === false) { /* 述评可选 */ }
         });
       });
     });
@@ -1880,14 +1941,16 @@ function F(k, o) {
       var ns = 0;
       cs.forEach(function (c) {
         var ul = c.nextElementSibling;
-        if (ul && ul.classList && ul.classList.contains('sections')) ns += ul.children.length;
+        /* 2026-11-06（ADR-0020）：:scope > li 只数节——嵌套小节 ul 不计入节数。 */
+        if (ul && ul.classList && ul.classList.contains('sections')) ns += ul.querySelectorAll(':scope > li').length;
       });
       if (h) { var b = document.createElement('span'); b.className = 'vol-badge'; b.textContent = cs.length + ' 章 · ' + ns + ' 节'; h.appendChild(b); }
     });
     chapters.forEach(function (c) {
       var ul = c.nextElementSibling;
       if (!ul || !ul.classList || !ul.classList.contains('sections')) return;
-      var b = document.createElement('span'); b.className = 'ch-badge'; b.textContent = ul.children.length + ' 节'; c.appendChild(b);
+      /* 2026-11-06（ADR-0020）：:scope > li 只数节（嵌套小节 ul 不计入）。 */
+      var b = document.createElement('span'); b.className = 'ch-badge'; b.textContent = ul.querySelectorAll(':scope > li').length + ' 节'; c.appendChild(b);
     });
 
       } catch (err) { console.error(U("diag.badge"), err); }
@@ -1904,7 +1967,10 @@ function F(k, o) {
       var badge = srcEl ? '<button type="button" class="note-badge" aria-expanded="false">' + U("ui.note.badge") + '</button>' : '';
       var html = head + '<span class="t-short">' + esc(short) + '</span><button class="t-more" type="button">' + U("ui.more.expand") + '</button>' +
                  '<span class="t-full">' + esc(s.title) + '</span>' + badge + (srcEl ? srcEl.outerHTML : '');
+      /* 2026-11-06（ADR-0020）：先摘下嵌套 ul.subsections 再重写，写后放回末尾（顺序与装配一致）。 */
+      var subUlKeep = s.li.querySelector(':scope > ul.subsections');
       s.li.innerHTML = __LB.ttt(html);
+      if (subUlKeep) s.li.appendChild(subUlKeep);
       s.li.classList.add('long-title');
       s.li.querySelector('.t-more').addEventListener('click', function () {
         s.li.classList.toggle('open');
@@ -2053,6 +2119,8 @@ function F(k, o) {
       allNodes.forEach(function (tn) {
         if (!tn.parentElement || !tn.parentElement.closest ||
             !tn.parentElement.closest('ul.sections > li')) return;
+        /* 2026-11-06（ADR-0020）：嵌套小节文本不参与节级注入（小节锚为静态 id）。 */
+        if (tn.parentElement.closest('ul.subsections')) return;
         var orig = tn.textContent;
         if (!orig || orig.trim().length < 2) return;
         targets.push({ node: tn, text: orig });
@@ -2244,11 +2312,13 @@ function F(k, o) {
         if (parseInt((c.id.match(/-ch-(\d+)$/) || [0, 0])[1], 10) !== i + 1) checks.push(['章号连续', v.id]);
         var ul = c.nextElementSibling; if (!ul || !ul.classList || !ul.classList.contains('sections')) return;
         var chNo = (c.id.match(/-ch-(\d+)$/) || [0, 0])[1];
-        [].slice.call(ul.children).forEach(function (li, k) {
+        /* 2026-11-06（ADR-0020）：:scope > li 只数节——嵌套小节 ul 不再使索引偏移误报。 */
+        var secLis = [].slice.call(ul.querySelectorAll(':scope > li'));
+        secLis.forEach(function (li, k) {
           var n = li.querySelector(':scope > .sec-num'); if (!n) return;
           if (n.textContent.trim() !== chNo + '.' + (k + 1)) checks.push(['节号连续', c.id + ' ' + n.textContent.trim()]);
         });
-        var lisArr = [].slice.call(ul.children), bibIdx = -1;
+        var lisArr = secLis, bibIdx = -1;
         lisArr.forEach(function (li, k) {
           var n2 = li.querySelector(':scope > .sec-num'); if (!n2) return;
           var tt = __LB.pureTitle(li);

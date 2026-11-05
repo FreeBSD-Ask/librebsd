@@ -109,13 +109,14 @@ function F(k, o) {
   /* 标题净化：剥离**运行时注入**的装饰元素，返回目录“内容层”原文。
      对象含：卷/章计数徽标（.vol-badge/.ch-badge）、溯源注徽标与注文（.note-badge/.src）、
      长节名折叠控件（.t-short/.t-more）、节号（.sec-num）及浮层类（.path/.pv）。
-     长节名折叠态（li.long-title）另取 .t-full 完整标题——否则会拼出“短标题＋展开＋完整标题”。 */
+     长节名折叠态（li.long-title）另取 .t-full 完整标题——否则会拼出“短标题＋展开＋完整标题”。
+     2026-11-06（ADR-0020）：增 .subsections——节 li 含嵌套小节列表时，小节文本不得拼入节题。 */
   function pureTitle(el) {
     if (!el) return "";
     var clone = el.cloneNode(true);
     var full = clone.querySelector(".t-full");
     if (full) return full.textContent.trim();
-    clone.querySelectorAll(".vol-badge, .ch-badge, .note-badge, .t-more, .t-short, .src, .sec-num, .path, .pv").forEach(function (n) { n.remove(); });
+    clone.querySelectorAll(".vol-badge, .ch-badge, .note-badge, .t-more, .t-short, .src, .sec-num, .path, .pv, .subsections").forEach(function (n) { n.remove(); });
     return clone.textContent.trim();
   }
 

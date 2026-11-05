@@ -1,65 +1,14 @@
 node_id	level	change	old_title	new_title	old_no	new_no	similarity
-C-0539	ch	new		Ports 提交与构建邮件档案		17	0.0000
-C-0540	ch	new		Ports 生态与治理邮件档案		18	0.0000
-C-0541	ch	new		Ports 应用与杂项邮件档案		19	0.0000
-C-0542	ch	new		FreeBSD 2.x 开发者邮件档案：内核与网络		14	0.0000
-C-0543	ch	new		FreeBSD 2.x 开发者邮件档案：构建与共同体		15	0.0000
-C-0544	ch	new		FreeBSD 4.0 邮件档案：系统与网络		16	0.0000
-C-0545	ch	new		FreeBSD 4.0 邮件档案：应用与管理		17	0.0000
-S-001163	sec	renumber	与同时期操作系统的比较：Linux 2.2、Windows 2000、Solaris 8	与同时期操作系统的比较：Linux 2.2、Windows 2000、Solaris 8	3.34	3.10	1.0000
-S-003910	sec	renumber	新 Port 提交与移植请求	新Port提交与移植请求	3.10	17.1	1.0000
-S-003911	sec	renumber	Port 版本升级提交与跟进	Port版本升级提交与跟进	3.11	17.2	1.0000
-S-003912	sec	renumber	Port 补丁与文件修正	Port补丁与文件修正	3.12	17.3	1.0000
-S-003913	sec	renumber	PR 回复、关闭与状态流转	PR 回复、关闭与状态流转	3.13	17.4	1.0000
-S-003914	sec	renumber	更新异常与缺陷反馈	更新异常与缺陷反馈	3.14	17.5	1.0000
-S-003915	sec	renumber	编译与链接故障	编译与链接故障	3.15	17.6	1.0000
-S-003917	sec	renumber	安装与运行故障	安装与运行故障	3.17	17.7	1.0000
-S-003918	sec	renumber	架构与工具链故障	架构与工具链故障	3.18	17.8	1.0000
-S-003919	sec	renumber	升级与环境故障	升级与环境故障	3.19	17.9	1.0000
-S-003916	sec	renumber	依赖与取档故障	依赖与取档故障	3.16	17.10	1.0000
-S-003920	sec	renumber	未判定杂项	未判定杂项	3.20	17.11	1.0000
-S-003922	sec	renumber	包构建与 Port 管理工具	包构建与Port管理工具	3.22	18.1	1.0000
-S-003923	sec	renumber	构建与运行配置选项	构建与运行配置选项	3.23	18.2	1.0000
-S-003924	sec	renumber	维护者变更与工单移交	维护者变更与工单移交	3.24	18.3	1.0000
-S-003925	sec	renumber	Ports 树同步与基础设施	Ports 树同步与基础设施	3.25	18.4	1.0000
-S-003926	sec	renumber	校验和与版本号一致性	校验和与版本号一致性	3.26	18.5	1.0000
-S-003927	sec	renumber	Port 去留与推行政策争论	Port去留与推行政策争论	3.27	18.6	1.0000
-S-003921	sec	renumber	共享库升级与依赖版本冲突	共享库升级与依赖版本冲突	3.21	18.7	1.0000
-S-003928	sec	renumber	桌面环境与 X11 应用问题	桌面环境与 X11 应用问题	3.28	19.1	1.0000
-S-003929	sec	renumber	文档、手册与网站事项	文档、手册与网站事项	3.29	19.2	1.0000
-S-003930	sec	renumber	Ports 树生态与归类	Ports 树生态与归类	3.30	19.3	1.0000
-S-003931	sec	renumber	应用软件与服务使用	应用软件与服务使用	3.31	19.4	1.0000
-S-003932	sec	RENAME_SUSPECT	基础系统与内核话题	基本系统与内核话题	3.32	19.5	0.8889
-S-003933	sec	renumber	杂项与无法判定	杂项与无法判定	3.33	19.6	1.0000
-S-001362	sec	renumber	对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后	对 FreeBSD 2.x 的批评：技术债务与 SMP 滞后	6.35	6.12	1.0000
-S-001363	sec	renumber	FreeBSD 2.x 时期被遗忘的驱动维护者	FreeBSD 2.x 时期被遗忘的驱动维护者	6.36	6.13	1.0000
-S-003945	sec	renumber	TCP／IP 协议栈与网络性能	TCP／IP 协议栈与网络性能	6.23	14.1	1.0000
-S-003946	sec	renumber	网卡与设备驱动	网卡与设备驱动	6.24	14.2	1.0000
-S-003947	sec	renumber	存储子系统：SCSI、ATA 与磁光设备	存储子系统：SCSI、ATA 与磁光设备	6.25	14.3	1.0000
-S-003948	sec	renumber	文件系统与虚拟内存	文件系统与虚拟内存	6.26	14.4	1.0000
-S-003949	sec	renumber	内核架构与启动机制	内核架构与启动机制	6.27	14.5	1.0000
-S-003950	sec	renumber	网络配置、防火墙与站点运维	网络配置、防火墙与站点运维	6.28	14.6	1.0000
-S-003954	sec	renumber	系统调用接口与 POSIX 语义	系统调用接口与 POSIX 语义	6.32	14.7	1.0000
-S-003951	sec	renumber	构建、编译与调试工具链	构建、编译与调试工具链	6.29	15.1	1.0000
-S-003952	sec	renumber	第三方软件、软件包与版权	第三方软件、软件包与版权	6.30	15.2	1.0000
-S-003953	sec	renumber	社区协作、倡导与文档	社区协作、倡导与文档	6.31	15.3	1.0000
-S-003955	sec	renumber	用户硬件环境与使用报告	用户硬件环境与使用报告	6.33	15.4	1.0000
-S-003956	sec	renumber	杂项	杂项	6.34	15.5	1.0000
-S-003936	sec	renumber	内核与系统构建升级	内核与系统构建升级	6.14	16.1	1.0000
-S-003937	sec	renumber	驱动与硬件外设	驱动与硬件外设	6.15	16.2	1.0000
-S-003938	sec	renumber	网络与防火墙	网络与防火墙	6.16	16.3	1.0000
-S-003939	sec	renumber	Jail 与虚拟化	Jail 与虚拟化	6.17	16.4	1.0000
-S-003943	sec	renumber	存储与文件系统	存储与文件系统	6.21	16.5	1.0000
-S-003940	sec	renumber	安装与发布介质	安装与发布介质	6.18	16.6	1.0000
-S-003934	sec	renumber	Ports 树与包管理	Ports 树与包管理	6.12	17.1	1.0000
-S-003935	sec	renumber	桌面应用与 X11	桌面应用与 X11	6.13	17.2	1.0000
-S-003941	sec	renumber	系统管理与命令行	系统管理与命令行	6.19	17.3	1.0000
-S-003942	sec	renumber	Web 与数据库服务	Web 与数据库服务	6.20	17.4	1.0000
-S-003944	sec	renumber	题面杂项	题面杂项	6.22	17.5	1.0000
-S-001165	sec	retired	Ports 数量的增长曲线与社区贡献模式		3.10		0.0000
-S-001360	sec	retired	FreeBSD 4.0 的发布与 Jails 引入（2000—2003）		6.12		0.0000
-S-001361	sec	retired	FreeBSD 2.x 的开发者群体与核心团队代际更替		6.13		0.0000
-S-000691	sec	retired	kernel-doc 与 mb2q 的 Python 版本选择		8.2		0.0000
-S-001991	sec	retired	OpenBSD 静态 PIE 的实现		15.2		0.0000
-C-0448	ch	retired	日本 BSD 社区：JUNET、WIDE 与 KAME		2		0.0000
-V-076	vol	retired	Rust 入核与 BSD–Linux 技术承袭（1991–2026）		76		0.0000
+S-003955	sec	new		从声学到计算的机构案例		3.2	0.0000
+S-003956	sec	new		旧世代机制与新体系的衔接		6.9	0.0000
+S-003957	sec	new		骨干角色的分期与非洲的证据限度		7.1	0.0000
+S-003958	sec	new		mentor 与申请者互动禁令的查证		2.6	0.0000
+S-003959	sec	new		英语写作偏差与制度回应		4.11	0.0000
+S-003413	sec	RENAME_SUSPECT	2020 年 ZFS 主题的存否之辨	2020 年 ZFS 主题的存否核验	9.5	9.5	0.8667
+S-003418	sec	RENAME_SUSPECT	Kamil Rytarowski 与内核模糊测试线（2018–2019）：导师身份之辨	Kamil Rytarowski 与内核模糊测试线（2018–2019）：导师身份的定性	10.5	10.5	0.9398
+S-003795	sec	RENAME_SUSPECT	史料与方法：DDJ 连载 18 期的期号索引	史料与方法：DDJ 连载的期号索引	3.9	3.9	0.9143
+S-000384	sec	retired	从……到……		3.2		0.0000
+S-001897	sec	retired	兼及旧世代……		6.9		0.0000
+S-003281	sec	retired	非洲 BSD 社区的规模与分布：证据与限度		7.1		0.0000
+S-003362	sec	retired	mentor 与申请者互动禁令之辨		2.6		0.0000
+S-003381	sec	retired	英语写作偏差		4.11		0.0000

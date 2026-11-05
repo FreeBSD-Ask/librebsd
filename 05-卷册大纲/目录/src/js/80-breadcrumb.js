@@ -375,10 +375,20 @@
       var chs = Array.prototype.slice.call(v.querySelectorAll("h3.chapter[id]")).map(function (c) {
         var ul = c.nextElementSibling, secs = [];
         if (ul && ul.classList && ul.classList.contains("sections")) {
-          Array.prototype.slice.call(ul.children).forEach(function (li) {
+          /* 2026-11-06（ADR-0020）：:scope > li 只收节；小节入 subs（导出四格式随之含小节层级）。 */
+          Array.prototype.slice.call(ul.querySelectorAll(":scope > li")).forEach(function (li) {
             var n = li.querySelector(":scope > .sec-num"); if (!n) return;
             var src = li.querySelector(":scope > .src");
-            secs.push({ id: li.id, num: n.textContent.trim(), title: __LB.pureTitle(li), note: src ? src.textContent.trim() : "" });
+            var subs = [];
+            var subUl = li.querySelector(":scope > ul.subsections");
+            if (subUl) {
+              Array.prototype.slice.call(subUl.querySelectorAll(":scope > li")).forEach(function (sli) {
+                var sn = sli.querySelector(":scope > .sec-num"); if (!sn) return;
+                var ssrc = sli.querySelector(":scope > .src");
+                subs.push({ id: sli.id, num: sn.textContent.trim(), title: __LB.pureTitle(sli), note: ssrc ? ssrc.textContent.trim() : "" });
+              });
+            }
+            secs.push({ id: li.id, num: n.textContent.trim(), title: __LB.pureTitle(li), note: src ? src.textContent.trim() : "", subs: subs });
           });
         }
         return { id: c.id, title: __LB.pureTitle(c), sections: secs };
@@ -398,6 +408,9 @@
         L.push("  ## " + c.title);
         c.sections.forEach(function (s) {
           L.push("    - " + s.num + " " + s.title);
+          (s.subs || []).forEach(function (sb) {
+            L.push("      - " + sb.num + " " + sb.title);
+          });
         });
       });
     });
@@ -598,7 +611,16 @@
         H.push('<ul>');
         c.sections.forEach(function (ss) {
           H.push('<li><span class="n">' + es(ss.num) + '</span>' + es(ss.title) +
-                 (ss.note ? ' <span class="note">' + es(ss.note) + '</span>' : '') + '</li>');
+                 (ss.note ? ' <span class="note">' + es(ss.note) + '</span>' : ''));
+          if (ss.subs && ss.subs.length) {
+            H.push('<ul>');
+            ss.subs.forEach(function (sb) {
+              H.push('<li><span class="n">' + es(sb.num) + '</span>' + es(sb.title) +
+                     (sb.note ? ' <span class="note">' + es(sb.note) + '</span>' : '') + '</li>');
+            });
+            H.push('</ul>');
+          }
+          H.push('</li>');
         });
         H.push('</ul>');
       });
@@ -663,6 +685,10 @@
               return '"' + s.replace(/"/g, '""') + '"';
             };
             lines.push([f(v.title), f(c.title), f(s.num), f(s.title), f(s.note)].join(","));
+            /* 2026-11-06（ADR-0020）：小节行 chapter 列留空、num 为 M.N.P 三段形态。 */
+            (s.subs || []).forEach(function (sb) {
+              lines.push([f(v.title), f(""), f(sb.num), f(sb.title), f(sb.note)].join(","));
+            });
           });
         });
       });
@@ -688,11 +714,13 @@
       chs.forEach(function (c) {
         var ul = c.nextElementSibling; if (!ul || !ul.classList || !ul.classList.contains("sections")) return;
         var chNo = (c.id.match(/-ch-(\d+)$/) || [0, 0])[1];
-        Array.prototype.slice.call(ul.children).forEach(function (li, i) {
+        /* 2026-11-06（ADR-0020）：:scope > li 只数节——嵌套小节 ul 不再使索引偏移误报。 */
+        var secLis = Array.prototype.slice.call(ul.querySelectorAll(":scope > li"));
+        secLis.forEach(function (li, i) {
           var n = li.querySelector(":scope > .sec-num"); if (!n) return;
           var exp = chNo + "." + (i + 1);
           if (n.textContent.trim() !== exp) bad.push(c.id + " 节号 " + n.textContent.trim() + "≠" + exp);
-          if (i === ul.children.length - 1 && /本章书目述评/.test(n.textContent) === false) { /* 述评可选 */ }
+          if (i === secLis.length - 1 && /本章书目述评/.test(n.textContent) === false) { /* 述评可选 */ }
         });
       });
     });

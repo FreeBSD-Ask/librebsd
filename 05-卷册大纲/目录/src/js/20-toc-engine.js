@@ -16,8 +16,10 @@
     chapters.forEach((ch) => {
       const ul = ch.nextElementSibling;
       if (!ul || !ul.classList || !ul.classList.contains("sections")) return;
-      ul.querySelectorAll("li").forEach((li) => {
-        const secNum = li.querySelector(".sec-num");
+      /* 2026-11-06（ADR-0020）：:scope > li 只处理节——嵌套小节 li 的静态 id
+         （…-sub-P 形制）由装配器给出，不得在此被改写成无 sub- 段形态。 */
+      ul.querySelectorAll(":scope > li").forEach((li) => {
+        const secNum = li.querySelector(":scope > .sec-num");
         if (!secNum) return;
         const num = secNum.textContent.trim().replace(/\./g, "-");
         li.id = ch.id + "-sec-" + num;
@@ -101,10 +103,19 @@
       const ul = ch.nextElementSibling;
       const secs = [];
       if (ul && ul.classList && ul.classList.contains("sections")) {
-        ul.querySelectorAll("li").forEach((li) => {
-          const secNum = li.querySelector(".sec-num");
+        /* 2026-11-06（ADR-0020）：:scope > li 只收节；小节入 subs（右栏嵌套渲染与静态 TOC 同构）。 */
+        ul.querySelectorAll(":scope > li").forEach((li) => {
+          const secNum = li.querySelector(":scope > .sec-num");
           const title = __LB.pureTitle(li);
-          secs.push({ id: li.id, num: secNum ? secNum.textContent.trim() : "", title: title });
+          const subs = [];
+          const subUl = li.querySelector(":scope > ul.subsections");
+          if (subUl) {
+            subUl.querySelectorAll(":scope > li").forEach((sli) => {
+              const sn = sli.querySelector(":scope > .sec-num");
+              subs.push({ id: sli.id, num: sn ? sn.textContent.trim() : "", title: __LB.pureTitle(sli) });
+            });
+          }
+          secs.push({ id: li.id, num: secNum ? secNum.textContent.trim() : "", title: title, subs: subs });
         });
       }
       chapterSecMap.set(ch.id, secs);
@@ -134,6 +145,27 @@
             a.insertBefore(n, a.firstChild);
           }
           li.appendChild(a);
+          /* 2026-11-06（ADR-0020）：节下嵌套渲染小节（与静态 TOC 同构；无小节零差异）。 */
+          if (sec.subs && sec.subs.length) {
+            const su = document.createElement("ul");
+            su.className = "toc-sub-list";
+            sec.subs.forEach((sb) => {
+              const sli = document.createElement("li");
+              const sa = document.createElement("a");
+              sa.href = "#" + sb.id;
+              sa.dataset.target = sb.id;
+              sa.textContent = sb.title;
+              if (sb.num) {
+                const sn = document.createElement("span");
+                sn.className = "sec-num";
+                sn.textContent = sb.num;
+                sa.insertBefore(sn, sa.firstChild);
+              }
+              sli.appendChild(sa);
+              su.appendChild(sli);
+            });
+            li.appendChild(su);
+          }
           ul.appendChild(li);
         });
         cached = { title: title, ul: ul };

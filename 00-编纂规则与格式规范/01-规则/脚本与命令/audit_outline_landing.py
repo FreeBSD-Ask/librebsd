@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""audit_outline_landing.py —— 大纲落地一致性门禁 L1–L18（第三十七件，固定脚本）。
+"""audit_outline_landing.py —— 大纲落地一致性门禁 L1–L19（第三十七件，固定脚本）。
 
 用途
 ----
-对 `05-卷册大纲/` 落地树做 L1–L18 全量一致性审计，回答“目录真值、映射台账、
+对 `05-卷册大纲/` 落地树做 L1–L19 全量一致性审计，回答“目录真值、映射台账、
 磁盘落点、派生件四者是否自洽”。判据正文见 `流程规则.md`“大纲落地一致性门禁
-（L1–L18）”；本器是唯一执行件。
+（L1–L19）”；本器是唯一执行件。
 
 判据（每条一行结果为 PASS／FAIL／SKIP）
 ----
@@ -56,6 +56,7 @@ import argparse
 import collections
 import csv
 import hashlib
+import io
 import json
 import os
 import re
@@ -197,12 +198,79 @@ def scan_tree(root):
 
 
 def count_vol_ch_sec(targets):
-    """由 targets.tsv 统计 active 三级节点数（status 已归一为大写）。"""
+    """由 targets.tsv 统计 active 四级节点数（status 已归一为大写；ADR-0020 四级）。"""
     active = [r for r in targets if (r.get("status") or "") == "ACTIVE"]
     nv = sum(1 for r in active if r.get("level") == "vol")
     nc = sum(1 for r in active if r.get("level") == "ch")
     ns = sum(1 for r in active if r.get("level") == "sec")
-    return nv, nc, ns, active
+    nss = sum(1 for r in active if r.get("level") == "subsec")
+    return nv, nc, ns, nss, active
+
+
+_CN2 = "一二三四五六七八九十"
+
+
+def _cn2int(s):
+    """中文数字 → int（1–99；阿拉伯直返；失败 None）。"""
+    if s.isdigit():
+        return int(s)
+    if s in _CN2:
+        return _CN2.index(s) + 1
+    if s == "十":
+        return 10
+    if s.startswith("十"):
+        return 10 + _CN2.index(s[1]) + 1
+    if "十" in s:
+        a, _, b = s.partition("十")
+        if a in _CN2 and b in _CN2:
+            return (_CN2.index(a) + 1) * 10 + (_CN2.index(b) + 1 if b else 0)
+    return None
+
+
+def outline_sub_keys(outline_path):
+    """outline.txt → 小节行键集合 {(卷号, M, N, P)}（ADR-0020 L19 第一向）。"""
+    keys = set()
+    v = None
+    with io.open(outline_path, encoding="utf-8") as fh:
+        for raw in fh:
+            line = raw.rstrip("\r\n").rstrip()
+            if not line.strip():
+                continue
+            if line.startswith("## "):
+                mc = re.match(r"^##\s*第\s*(\d{1,3})\s*章", line)
+                continue
+            if line.startswith("# "):
+                mv = re.match(r"^#\s*第\s*([一二三四五六七八九十]+)卷", line)
+                v = _cn2int(mv.group(1)) if mv else None
+                continue
+            ms = re.match(r"^  -\s+(\d{1,3})\.(\d{1,3})\.(\d{1,4})\s", line)
+            if ms:
+                if v is not None:
+                    keys.add((v, int(ms.group(1)), int(ms.group(2)), int(ms.group(3))))
+    return keys
+
+
+def summary_sub_keys(summary_path):
+    """SUMMARY.md → 小节条目键集合（缩进 12 行，磁盘名前缀 M.N.P；L19 第三向）。"""
+    keys = set()
+    v = None
+    with io.open(summary_path, encoding="utf-8") as fh:
+        for raw in fh:
+            line = raw.rstrip("\r\n")
+            if not line.strip():
+                continue
+            indent = len(line) - len(line.lstrip(" "))
+            s = line.strip()
+            if s.startswith("- "):
+                s = s[2:]
+            if indent == 0:
+                mv = re.match(r"^第(\d{1,3})卷", s)
+                v = int(mv.group(1)) if mv else None
+            elif indent >= 12:
+                ms = re.match(r"^(\d+)\.(\d+)\.(\d+)-", s)
+                if ms and v is not None:
+                    keys.add((v, int(ms.group(1)), int(ms.group(2)), int(ms.group(3))))
+    return keys
 
 
 def _norm(p):
@@ -210,7 +278,7 @@ def _norm(p):
 
 
 def run_gate(root, mapdir):
-    """执行 L1–L18，返回 [(判据, 结果, 说明)]。"""
+    """执行 L1–L19，返回 [(判据, 结果, 说明)]。"""
     if not os.path.isdir(root):
         print("FATAL 大纲根不存在或不是目录：%s" % root)
         raise SystemExit(2)
@@ -232,7 +300,7 @@ def run_gate(root, mapdir):
     has_map = mapping is not None and layout is not None
 
     vols, chs, secs, subs, anomalies = scan_tree(root)
-    nv, nc, ns, active = count_vol_ch_sec(targets)
+    nv, nc, ns, nss, active = count_vol_ch_sec(targets)
     res = []
 
     def add(no, ok, detail):
@@ -241,9 +309,10 @@ def run_gate(root, mapdir):
     def skip(no, reason):
         res.append((no, "SKIP", reason))
 
-    # L1 落点节数守恒
-    add("L1", (len(vols), len(chs), len(secs)) == (nv, nc, ns),
-        "tree=%d/%d/%d targets=%d/%d/%d" % (len(vols), len(chs), len(secs), nv, nc, ns))
+    # L1 落点层级守恒（2026-11-06 四级：卷/章/节/小节，ADR-0020）
+    add("L1", (len(vols), len(chs), len(secs), len(subs)) == (nv, nc, ns, nss),
+        "tree=%d/%d/%d/%d targets=%d/%d/%d/%d"
+        % (len(vols), len(chs), len(secs), len(subs), nv, nc, ns, nss))
 
     lay = {r.get("source_id"): r for r in (layout or [])}
     confirmed = [r for r in (mapping or []) if (r.get("status") or "") == "CONFIRMED"]
@@ -506,8 +575,33 @@ def run_gate(root, mapdir):
                                 "" if not overname else
                                 " 首例=%dB %s" % (overname[0][0], overname[0][1])))
 
-    # 按 L1..L18 顺序输出
-    order = {("L%d" % i): i for i in range(1, 19)}
+    # L19 小节三向双射（ADR-0020，2026-11-06）：outline.txt 小节行 ↔ 树内 .md ↔ SUMMARY 条目。
+    # 全部小节必须有 .md（含空骨架）；无"设计级豁免"。零态（三方皆空）合法 PASS。
+    outline_p = os.path.join(root, "目录", "data", "outline.txt")
+    summary_p = os.path.join(root, "SUMMARY.md")
+    if not os.path.exists(outline_p) or not os.path.exists(summary_p):
+        skip("L19", "outline.txt 或 SUMMARY.md 缺（四级三向不可判）")
+    else:
+        okeys = outline_sub_keys(outline_p)
+        tkeys = set()
+        for rel in subs:
+            parts = rel.split(os.sep)
+            mv, mc = VOL_RE.match(parts[0]), CH_RE.match(parts[1])
+            mm = SUB_RE.match(parts[3])
+            if mv and mc and mm:
+                tkeys.add((int(mv.group(1)), int(mm.group(1)), int(mm.group(2)), int(mm.group(3))))
+        skeys = summary_sub_keys(summary_p)
+        o_no_t = sorted(okeys - tkeys)      # outline 有行、树无 .md（设计级，禁）
+        t_no_o = sorted(tkeys - okeys)      # 树有 .md、outline 无行（游离）
+        s_diff = sorted(skeys ^ okeys)      # SUMMARY 与 outline 不一致
+        add("L19", okeys == tkeys == skeys,
+            "outline=%d tree=%d summary=%d ghost_row=%d orphan_md=%d summary_diff=%d%s"
+            % (len(okeys), len(tkeys), len(skeys), len(o_no_t), len(t_no_o), len(s_diff),
+               "" if not (o_no_t or t_no_o or s_diff) else
+               " 首例=%s" % ((o_no_t or t_no_o or s_diff)[0],)))
+
+    # 按 L1..L19 顺序输出
+    order = {("L%d" % i): i for i in range(1, 20)}
     res.sort(key=lambda t: order.get(t[0], 99))
     return res
 
@@ -547,6 +641,10 @@ def build_fixture(base):
         ("S-000002", "sec", "C-0002", 1, 2, "2.1"),
         ("S-000003", "sec", "C-0003", 2, 1, "1.1"),
         ("S-000004", "sec", "C-0003", 2, 1, "1.2"),
+        # 第四级 subsec（ADR-0020）：与树 3 个小节 .md 对齐（2026-11-06）
+        ("SS-0000001", "subsec", "S-000001", 1, 1, "1.1.1"),
+        ("SS-0000002", "subsec", "S-000002", 1, 2, "2.1.1"),
+        ("SS-0000003", "subsec", "S-000003", 2, 1, "1.1.1"),
     ]
     _write_tsv(os.path.join(mapdir, "targets.tsv"),
                ["node_id", "level", "parent_id", "vol_no", "ch_no", "sec_no",
@@ -569,13 +667,30 @@ def build_fixture(base):
              "- 第01卷-合成甲",
              "    - 第1章-甲一",
              "        - 1.1-甲一节",
+             "                            - 1.1.1-甲一一.md",
              "    - 第2章-甲二",
              "        - 2.1-甲二节",
+             "                            - 2.1.1-甲二一.md",
              "- 第02卷-合成乙",
              "    - 第1章-乙一",
              "        - 1.1-乙一节",
+             "                            - 1.1.1-乙一一.md",
              "        - 1.2-乙一二节"]
     _mk(os.path.join(root, "SUMMARY.md"), "\n".join(lines) + "\n")
+    # outline.txt（L19 第一向，ADR-0020）：与树 3 个小节 .md 三向对齐
+    _mk(os.path.join(root, "目录", "data", "outline.txt"),
+        "# 第一卷  合成甲\n"
+        "> 本卷所书皆为形式主义化的重构。\n"
+        "## 第 1 章 甲一\n"
+        "- 1.1 甲一节\n"
+        "  - 1.1.1 甲一一\n"
+        "## 第 2 章 甲二\n"
+        "- 2.1 甲二节\n"
+        "  - 2.1.1 甲二一\n"
+        "# 第二卷  合成乙\n"
+        "## 第 1 章 乙一\n"
+        "- 1.1 乙一节\n"
+        "  - 1.1.1 乙一一\n")
     # 主题索引
     kw = {"meta": {"schema": "theme-index/4", "volumes": 2, "chapters": 3, "sections": 4},
           "chapters": {}, "sections": {"V01-C001-1.1": {}, "V01-C002-2.1": {},
@@ -599,7 +714,7 @@ def selftest():
         r = run_gate(root, os.path.join(root, "映射"))
         fails = [x for x in r if x[1] == "FAIL"]
         check("正例全 PASS", not fails, "%d 项 FAIL" % len(fails))
-        check("L1–L18 齐 18 条", len([x for x in r if x[0].startswith("L")]) == 18)
+        check("L1–L19 齐 19 条", len([x for x in r if x[0].startswith("L")]) == 19)
 
         # 负向：L17 节内 .md 与 .gitkeep 并存
         gk = os.path.join(root, "第01卷-合成甲", "第1章-甲一", "1.1-甲一节", ".gitkeep")
@@ -615,6 +730,24 @@ def selftest():
         r18 = {x[0]: x for x in run_gate(root, os.path.join(root, "映射"))}
         check("负向 L18 超 255 字节", r18["L18"][1] == "FAIL")
         os.remove(p18)
+
+        # 负向：L19 outline 幽灵小节行（树无 .md——设计级，禁）
+        _mk(os.path.join(root, "目录", "data", "outline.txt"),
+            io.open(os.path.join(root, "目录", "data", "outline.txt"), encoding="utf-8").read()
+            + "  - 1.1.2 幽灵小节\n")
+        r19 = {x[0]: x for x in run_gate(root, os.path.join(root, "映射"))}
+        check("负向 L19 幽灵行", r19["L19"][1] == "FAIL", r19["L19"][2])
+        _mk(os.path.join(root, "目录", "data", "outline.txt"),
+            io.open(os.path.join(root, "目录", "data", "outline.txt"), encoding="utf-8").read()
+            .replace("  - 1.1.2 幽灵小节\n", ""))
+
+        # 负向：L19 树缺 .md（outline 有行而 .md 被删）
+        _miss = os.path.join(root, "第02卷-合成乙", "第1章-乙一", "1.1-乙一节", "1.1.1-乙一一.md")
+        _bak = _miss + ".tmp"
+        os.rename(_miss, _bak)
+        r19b = {x[0]: x for x in run_gate(root, os.path.join(root, "映射"))}
+        check("负向 L19 缺 .md", r19b["L19"][1] == "FAIL", r19b["L19"][2])
+        os.rename(_bak, _miss)
 
         # 负向：L4 H1 前缀不符
         p4 = os.path.join(root, "第01卷-合成甲", "第2章-甲二", "2.1-甲二节", "2.1.1-甲二一.md")
@@ -922,7 +1055,7 @@ def selftest():
 
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="大纲落地一致性门禁 L1–L18")
+    ap = argparse.ArgumentParser(description="大纲落地一致性门禁 L1–L19")
     ap.add_argument("--root", default=DEFAULT_ROOT, help="大纲树根（默认 05-卷册大纲）")
     ap.add_argument("--map", default=None, help="映射层目录（默认 <root>/映射）")
     ap.add_argument("--check", action="store_true", help="只读检查（默认行为，兼容门禁调用惯例）")
@@ -937,7 +1070,7 @@ def main(argv=None):
     fails = [x for x in res if x[1] == "FAIL"]
     skips = [x for x in res if x[1] == "SKIP"]
     print("=" * 72)
-    print("大纲落地一致性门禁 L1–L18")
+    print("大纲落地一致性门禁 L1–L19")
     print("=" * 72)
     for no, verdict, detail in res:
         print("  %-4s %-4s %s" % (no, verdict, detail))

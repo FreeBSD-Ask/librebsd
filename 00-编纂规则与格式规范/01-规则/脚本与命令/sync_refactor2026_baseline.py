@@ -58,7 +58,9 @@ def target_files():
 # 否则规则文件里「举例说明标记块语法」的行会误触发状态机，把其后全文当成块内内容。
 BEGIN_RE = re.compile(r"^\s*<!--\s*BEGIN 口径基准（脚本自动维护[^>]*?）\s*-->\s*$")
 END_RE = re.compile(r"^\s*<!--\s*END 口径基准（脚本自动维护）\s*-->\s*$")
-TRIPLE_RE = re.compile(r"(\d{1,3})\s*卷\s*(\d{1,4})\s*章(?:\s*([\d,]{2,7})\s*节)?")
+# 2026-11-06（ADR-0020）四级口径：组 4＝小节数（可选）——旧三级行兼容（组 4 缺省不判）。
+QUAD_RE = re.compile(r"(\d{1,3})\s*卷\s*(\d{1,4})\s*章(?:\s*([\d,]{2,7})\s*节)(?:\s*(\d{1,6})\s*小节)?")
+TRIPLE_RE = QUAD_RE   # 向后别名：本文件其余引用点均已升级为四组语义
 # 现在时态现行口径声明（标记块外仍出现即视为漂移，需人工）
 PRESENT_RE = re.compile(r"(适用范围|本书全部|全书全部|现行大纲目录|现行目录|当前大纲)")
 # 维度四（INFO 级，2026-09-20 第四十一批立）：PRESENT_RE 未覆盖、但语义上仍属「现在时态」的口径声明词。
@@ -97,14 +99,17 @@ def write_text(p: Path, s: str) -> None:
     p.write_bytes(s.replace("\r\n", "\n").encode("utf-8"))
 
 
-def parse_authoritative() -> tuple[int, int, int]:
+def parse_authoritative() -> tuple:
     html = read_text(INDEX_HTML)
     m = re.search(r"总卷数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
     n = re.search(r"总章数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
     s = re.search(r"总节数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
+    sub = re.search(r"总小节数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
     if not (m and n and s):
         sys.exit("错误：无法从 index.html 解析 doc-metrics 权威三元组")
-    return int(m.group(1)), int(n.group(1)), int(s.group(1))
+    # 第四级小节数（ADR-0020，2026-11-06）：瓦片缺省 None（旧产物兼容，四级不判）
+    return (int(m.group(1)), int(n.group(1)), int(s.group(1)),
+            int(sub.group(1)) if sub else None)
 
 
 def parse_jsonld_metrics():
@@ -123,13 +128,17 @@ def parse_jsonld_metrics():
         mm = re.search(r'"name"\s*:\s*"%s"\s*,\s*"value"\s*:\s*(\d+)' % name, blob)
         return int(mm.group(1)) if mm else None
     vol, ch, sec = grab("卷数"), grab("章数"), grab("节数")
+    sub = grab("小节数")   # ADR-0020 四级；旧产物缺省 None
     if vol is None or ch is None or sec is None:
         return None
-    return vol, ch, sec
+    return vol, ch, sec, sub
 
 
-def fmt(v: tuple[int, int, int]) -> str:
-    return f"{v[0]} 卷 {v[1]} 章 {v[2]} 节"
+def fmt(v: tuple) -> str:
+    s = f"{v[0]} 卷 {v[1]} 章 {v[2]} 节"
+    if len(v) > 3 and v[3] is not None:
+        s += f" {v[3]} 小节"
+    return s
 
 
 def classify_triple(ln: str, tm, v: tuple, in_block: bool) -> str:
@@ -138,9 +147,11 @@ def classify_triple(ln: str, tm, v: tuple, in_block: bool) -> str:
     返回 "ok" | "drift" | "stale" | "exempt" | "blind"。
     """
     declared = (int(tm.group(1)), int(tm.group(2)),
-                int(tm.group(3).replace(",", "")) if tm.group(3) else None)
+                int(tm.group(3).replace(",", "")) if tm.group(3) else None,
+                int(tm.group(4)) if (tm.lastindex or 0) >= 4 and tm.group(4) else None)
     same = declared[0] == v[0] and declared[1] == v[1] and (
-        declared[2] is None or declared[2] == v[2])
+        declared[2] is None or declared[2] == v[2]) and (
+        declared[3] is None or len(v) < 4 or v[3] is None or declared[3] == v[3])
     prefix = ln[max(0, tm.start() - 48):tm.start()]
     if in_block:
         return "ok" if same else "drift"
@@ -173,7 +184,7 @@ def classify_dm_standalone(ln: str, v: tuple) -> bool:
     return False
 
 
-def scan(v: tuple[int, int, int]):
+def scan(v: tuple):
     """返回 (marker_drift, present_stale, exempt, marker_ok, ref_stale, pending_stale,
     present_stale_blind, dm_stale)。末两项为 INFO 盲区与维度五独立数字形。"""
     drift, stale, exempt, ok, ref_stale, pending_stale, blind, dm_stale = [], [], [], [], [], [], [], []
@@ -199,7 +210,8 @@ def scan(v: tuple[int, int, int]):
                 had_triple = True
                 cat = classify_triple(ln, tm, v, in_block)
                 declared = (int(tm.group(1)), int(tm.group(2)),
-                            int(tm.group(3).replace(",", "")) if tm.group(3) else None)
+                            int(tm.group(3).replace(",", "")) if tm.group(3) else None,
+                            int(tm.group(4)) if (tm.lastindex or 0) >= 4 and tm.group(4) else None)
                 if cat == "ok":
                     ok.append((fp, i, ln.strip(), declared))
                 elif cat == "drift":
@@ -231,8 +243,14 @@ def cmd_selftest() -> int:
     “doc-metrics 26 卷”独立数字形在旧判据（TRIPLE_RE）下完全漏检，
     新判据必须判 dm_stale；外加 TRIPLE 三连形／豁免／盲区／一致各形。
     """
-    v = (74, 521, 3691)
+    v = (74, 521, 3691, 0)
     cases = [
+        (u"四级一致（块内）判 ok",
+         u"- 05-卷册大纲/目录口径：74 卷 521 章 3691 节 0 小节",
+         True, "ok", False),
+        (u"四级小节数漂移（块内）判 drift",
+         u"- 05-卷册大纲/目录口径：74 卷 521 章 3691 节 5 小节",
+         True, "drift", False),
         # (说明, 行, in_block, 期望 triple 类别（无 TRIPLE 则 None）, 期望 dm_stale)
         (u"旧三连形现在时态须判 stale",
          u"- 现行大纲目录 `x/index.html` 的 doc-metrics 67 卷 482 章 3468 节",
@@ -320,20 +338,21 @@ def cmd_check(v, verbose: bool):
     if jsonld is None:
         print("❌ jsonld-missing（index.html 未找到 application/ld+json 块或其卷/章/节字段）：需人工")
         jsonld_bad = 1
-    elif jsonld != v:
-        print(f"❌ jsonld-drift（JSON-LD {jsonld[0]} 卷 {jsonld[1]} 章 {jsonld[2]} 节 "
+    elif tuple(x for x in jsonld if x is not None) != tuple(x for x in v if x is not None):
+        print(f"❌ jsonld-drift（JSON-LD {fmt(tuple(x for x in jsonld if x is not None))} "
               f"≠ 权威基准 {fmt(v)}）：需同步")
         jsonld_bad = 1
     else:
-        print(f"JSON-LD 口径：一致（{jsonld[0]} 卷 {jsonld[1]} 章 {jsonld[2]} 节）")
+        print(f"JSON-LD 口径：一致（{fmt(tuple(x for x in jsonld if x is not None))}）")
         jsonld_bad = 0
     # D9：92 号文 frontmatter「现行口径（唯一权威）」行须与权威基准一致（2026-09-29 加，防施工后累积漂移）
     try:
         _f92 = (Path(__file__).resolve().parents[3] / "05-卷册大纲" / "目录" /
                 "92-目录内容调整建议书-综合释疑库与未实施建议.md")
         _head = "\n".join(_f92.read_text(encoding="utf-8").split("\n")[:10])
-        _m92 = re.search(r"(\d+) 卷 (\d+) 章 (\d+) 节", _head)
-        _d92 = (int(_m92.group(1)), int(_m92.group(2)), int(_m92.group(3))) if _m92 else None
+        _m92 = re.search(r"(\d+) 卷 (\d+) 章 (\d+) 节(?:\s*(\d{1,6})\s*小节)?", _head)
+        _d92 = ((int(_m92.group(1)), int(_m92.group(2)), int(_m92.group(3)),
+                 int(_m92.group(4)) if _m92.group(4) else None) if _m92 else None)
         d92_bad = 0 if (_d92 == v) else 1
         if d92_bad:
             print(f"❌ 92号文口径漂移：frontmatter 现 {_d92} ≠ 权威基准 {fmt(v)}（施工后未回写）")
@@ -368,10 +387,12 @@ def cmd_sync(v):
                 out.append(ln)
                 continue
             if in_block:
-                tm = TRIPLE_RE.search(ln)
+                tm = QUAD_RE.search(ln)
                 if tm:
                     repl = f"{v[0]} 卷 {v[1]} 章" + (f" {v[2]} 节" if tm.group(3) else "")
-                    new = TRIPLE_RE.sub(repl, ln, count=1)
+                    if (tm.lastindex or 0) >= 4 and tm.group(4):
+                        repl += f" {v[3]} 小节"
+                    new = QUAD_RE.sub(repl, ln, count=1)
                     if new != ln:
                         dirty = True
                         changed.append((fp.name, new.strip()[:120]))
