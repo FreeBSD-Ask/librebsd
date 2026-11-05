@@ -619,7 +619,7 @@
     }
     if (u.flag_machine) parts.push('<span class="badge warn">机判曾 FAIL</span>');
     if (u.flag_human) parts.push('<span class="badge warn">人判曾 FAIL</span>');
-    if (st === 'ok') parts.push('<span class="badge status-ok">' + esc(L.ok) + '</span>');
+    if (st === 'ok') parts.push('<span class="badge status-ok" aria-label="已通过">✓</span>');
     if (st === 'reroll') parts.push('<span class="badge status-reroll">' + esc(L.reroll) + '</span>');
     if (st === 'custom') parts.push('<span class="badge status-custom">' + esc(L.custom) + '</span>');
     if (st !== 'pending') {
@@ -631,8 +631,9 @@
     parts.push('<div class="pills">');
     ['ok', 'reroll', 'custom'].forEach(function (v) {
       parts.push('<button type="button" class="pill" data-act="verdict" data-v="' + v +
-        '" data-key="' + esc(u.key) + '" aria-pressed="' + (st === v ? 'true' : 'false') + '">' +
-        ICONS[v] + '<span>' + esc(L[v]) + '</span></button>');
+        '" data-key="' + esc(u.key) + '" aria-pressed="' + (st === v ? 'true' : 'false') + '"' +
+        (v === 'ok' ? ' aria-label="通过（维持原题）" title="通过"' : '') + '>' +
+        ICONS[v] + (v === 'ok' ? '' : '<span>' + esc(L[v]) + '</span>') + '</button>');
     });
     parts.push('</div>');
 

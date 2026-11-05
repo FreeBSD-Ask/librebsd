@@ -300,7 +300,11 @@ def scenario_load_and_group(server, page, errors):
     assert page.locator('#view-group .card[data-level="section"]').count() > 0
     assert page.locator('#view-group .card[data-level="subsection"]').count() > 0
     labels = page.locator("#view-group .card").first.locator(".pill span").all_inner_texts()
-    assert labels == ["对勾", "重拟", "自定义"], labels
+    assert labels == ["重拟", "自定义"], labels
+    first_card = page.locator("#view-group .card").first
+    ok_pill = first_card.locator('.pill[data-v="ok"]')
+    assert ok_pill.get_attribute("aria-label") == "通过（维持原题）"
+    assert "对勾" not in first_card.inner_text()
     assert page.locator(".sec-pass").count() > 0
     assert_no_js_errors(errors)
 

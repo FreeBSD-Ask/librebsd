@@ -65,7 +65,7 @@ DEFAULT_CONFIG = {
     "daily_goal": 500,
     "theme": "amoled",
     "font_size": "m",
-    "labels": {"ok": "对勾", "reroll": "重拟", "custom": "自定义"},
+    "labels": {"ok": "通过", "reroll": "重拟", "custom": "自定义"},
     "only_flagged": False,
 }
 

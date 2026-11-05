@@ -763,7 +763,7 @@ def test_export_json_tsv_rewrite(env):
     assert by_key[reroll_key][7] == ""
     assert by_key[custom_key][6] == "改题"
     assert by_key[custom_key][7] == "自定义题名"
-    assert all(row[10] == env.app.source_hash for row in rows)
+    assert all(row[12] == env.app.source_hash for row in rows)
 
     status, _h, _b = env.call("GET", "/api/export?fmt=xml")
     assert status == 400
