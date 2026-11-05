@@ -20,6 +20,8 @@ import socket
 import sys
 import tempfile
 import threading
+import time
+import uuid
 from collections import OrderedDict, defaultdict
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -38,6 +40,7 @@ SNAPSHOTS_DIR = ANSWERS_DIR / "snapshots"
 CONFIG_DIR = DATA_DIR / "config"
 CANDIDATES_DIR = DATA_DIR / "candidates"
 EXPORTS_DIR = DATA_DIR / "exports"
+SUGGEST_DIR = DATA_DIR / "suggest"
 
 OUTLINE_REL = Path("05-卷册大纲") / "目录" / "data" / "outline.txt"
 DESIGN_REL = Path("05-卷册大纲") / "映射" / "title-design"
@@ -1075,6 +1078,181 @@ class App:
                     merged[key] = items
         return merged
 
+    # ---------- 实时建议队列（本会话轮询生成） ----------
+
+    def _suggest_path(self) -> Path:
+        return SUGGEST_DIR / "requests.json"
+
+    def _load_suggest_locked(self):
+        path = self._suggest_path()
+        if not path.exists():
+            return {}
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8-sig"))
+        except (OSError, ValueError):
+            return {}
+        items = raw.get("requests") if isinstance(raw, dict) else None
+        return items if isinstance(items, dict) else {}
+
+    def _save_suggest_locked(self, items) -> None:
+        SUGGEST_DIR.mkdir(parents=True, exist_ok=True)
+        atomic_write_text(self._suggest_path(), dump_json_file({"requests": items}))
+
+    def suggest_enqueue(self, payload):
+        if not isinstance(payload, dict):
+            raise ApiError(400, "invalid_suggest", "请求体必须是对象")
+        key = payload.get("unit_key")
+        unit = self.key_index.get(key) if isinstance(key, str) else None
+        if unit is None:
+            raise ApiError(400, "invalid_unit", "unit_key 不存在")
+        tags_raw = payload.get("tags") or []
+        if not isinstance(tags_raw, list):
+            raise ApiError(400, "invalid_tags", "tags 必须是数组")
+        tags = [t for t in tags_raw if isinstance(t, str)]
+        bad = [t for t in tags if t not in REROLL_TAGS]
+        if bad:
+            raise ApiError(400, "invalid_tags", "标签不合法", {"invalid": bad})
+        merge_target = str(payload.get("merge_target") or "")
+        if merge_target and "merge" not in tags:
+            raise ApiError(400, "invalid_merge", "仅“合并”标签可带 merge_target")
+        if "merge" in tags and merge_target not in MERGE_TARGETS and merge_target not in self.key_index:
+            raise ApiError(400, "invalid_merge", "merge_target 须为 prev／next／parent 或存在的单元键")
+        with self.lock:
+            items = self._load_suggest_locked()
+            for rid, item in items.items():
+                if (
+                    item.get("unit_key") == key
+                    and item.get("status") == "pending"
+                    and item.get("tags") == tags
+                    and item.get("merge_target", "") == merge_target
+                ):
+                    return {"id": rid, "status": "pending", "dedup": True}
+            rid = f"s{int(time.time() * 1000)}{uuid.uuid4().hex[:4]}"
+            while rid in items:
+                rid = f"s{int(time.time() * 1000)}{uuid.uuid4().hex[:4]}"
+            items[rid] = {
+                "id": rid,
+                "unit_key": key,
+                "title": unit.get("title", ""),
+                "thesis": unit.get("thesis", ""),
+                "level": unit.get("level", ""),
+                "vol": unit.get("vol"),
+                "chapter_no": unit.get("chapter_no"),
+                "section_no": unit.get("section_no"),
+                "tags": tags,
+                "merge_target": merge_target,
+                "created_at": iso_now(),
+                "status": "pending",
+                "candidates": [],
+                "error": "",
+            }
+            self._save_suggest_locked(items)
+            return {"id": rid, "status": "pending"}
+
+    def suggest_status(self, rid: str):
+        with self.lock:
+            items = self._load_suggest_locked()
+            item = items.get(rid)
+            if not item:
+                raise ApiError(404, "not_found", "建议请求不存在")
+            return copy.deepcopy(item)
+
+    def suggest_pending(self):
+        with self.lock:
+            items = self._load_suggest_locked()
+        pending = [copy.deepcopy(v) for v in items.values() if v.get("status") == "pending"]
+        pending.sort(key=lambda item: item.get("created_at", ""))
+        return {"pending": pending, "count": len(pending)}
+
+    def suggest_result(self, payload):
+        if not isinstance(payload, dict):
+            raise ApiError(400, "invalid_result", "请求体必须是对象")
+        results = payload.get("results")
+        if results is None:
+            results = [payload]
+        if not isinstance(results, list) or not results:
+            raise ApiError(400, "invalid_result", "results 必须是非空数组")
+        applied = 0
+        errors = []
+        with self.lock:
+            items = self._load_suggest_locked()
+            for one in results:
+                if not isinstance(one, dict):
+                    errors.append("条目必须是对象")
+                    continue
+                rid = one.get("id")
+                item = items.get(str(rid)) if rid else None
+                if item is None:
+                    errors.append(f"{rid}: 请求不存在")
+                    continue
+                if item.get("status") != "pending":
+                    applied += 1  # 幂等：已处理的不再改
+                    continue
+                if one.get("error"):
+                    item["status"] = "error"
+                    item["error"] = str(one.get("error"))[:500]
+                    applied += 1
+                    continue
+                cands = one.get("candidates")
+                if not isinstance(cands, list) or not cands:
+                    errors.append(f"{rid}: 缺少 candidates")
+                    continue
+                clean = []
+                for index, cand in enumerate(cands[:5]):
+                    if not isinstance(cand, dict):
+                        continue
+                    text = str(cand.get("new_title") or "").strip()
+                    if not text or len(text) > 120:
+                        continue
+                    clean.append(
+                        {
+                            "candidate_id": str(cand.get("candidate_id") or f"c{index + 1}"),
+                            "new_title": text,
+                            "rationale": str(cand.get("rationale") or "")[:300],
+                            "source": "llm-session",
+                        }
+                    )
+                if not clean:
+                    errors.append(f"{rid}: 候选题名全为空或超长")
+                    continue
+                item["candidates"] = clean
+                item["status"] = "ready"
+                item["error"] = ""
+                applied += 1
+            self._save_suggest_locked(items)
+            self._sync_live_candidates_locked(items)
+        if errors and not applied:
+            raise ApiError(400, "invalid_result", "结果校验失败", {"errors": errors})
+        return {"ok": True, "applied": applied, "errors": errors}
+
+    def _sync_live_candidates_locked(self, items) -> None:
+        path = CANDIDATES_DIR / "llm-live.json"
+        merged = {}
+        if path.exists():
+            try:
+                raw = json.loads(path.read_text(encoding="utf-8-sig"))
+            except (OSError, ValueError):
+                raw = {}
+            if isinstance(raw, dict) and isinstance(raw.get("candidates"), dict):
+                merged = raw["candidates"]
+        changed = False
+        for item in items.values():
+            if item.get("status") == "ready" and item.get("candidates"):
+                key = item.get("unit_key")
+                if merged.get(key) != item["candidates"]:
+                    merged[key] = item["candidates"]
+                    changed = True
+        if not changed:
+            return
+        record = {
+            "batch_id": "llm-live",
+            "created_at": iso_now(),
+            "source_hash": self.source_hash,
+            "candidates": merged,
+        }
+        CANDIDATES_DIR.mkdir(parents=True, exist_ok=True)
+        atomic_write_text(path, dump_json_file(record))
+
     # ---------- 导出 ----------
 
     def _answered_rows(self):
@@ -1516,6 +1694,26 @@ class Handler(BaseHTTPRequestHandler):
                 return
             raise ApiError(405, "method_not_allowed", "仅支持 GET、POST")
 
+        if path == "/api/suggest":
+            if method == "POST":
+                self._send_json(app.suggest_enqueue(self._json_body()))
+                return
+            if method == "GET":
+                if param("pending") in ("1", "true"):
+                    self._send_json(app.suggest_pending())
+                    return
+                rid = param("id")
+                if not rid:
+                    raise ApiError(400, "invalid_id", "缺少 id 参数")
+                self._send_json(app.suggest_status(rid))
+                return
+            raise ApiError(405, "method_not_allowed", "仅支持 GET、POST")
+
+        if path == "/api/suggest/result":
+            self._require(method, "POST")
+            self._send_json(app.suggest_result(self._json_body()))
+            return
+
         if path == "/api/archive":
             self._require(method, "POST")
             self._send_json(app.archive())
@@ -1585,7 +1783,7 @@ def main(argv=None) -> int:
     parser.add_argument("--data-dir", default=None, help="数据目录，默认工具目录下 data/")
     args = parser.parse_args(argv)
 
-    global DATA_DIR, ANSWERS_DIR, SNAPSHOTS_DIR, CONFIG_DIR, CANDIDATES_DIR, EXPORTS_DIR
+    global DATA_DIR, ANSWERS_DIR, SNAPSHOTS_DIR, CONFIG_DIR, CANDIDATES_DIR, EXPORTS_DIR, SUGGEST_DIR
     if args.data_dir:
         DATA_DIR = Path(args.data_dir).resolve()
         ANSWERS_DIR = DATA_DIR / "answers"
@@ -1593,6 +1791,7 @@ def main(argv=None) -> int:
         CONFIG_DIR = DATA_DIR / "config"
         CANDIDATES_DIR = DATA_DIR / "candidates"
         EXPORTS_DIR = DATA_DIR / "exports"
+        SUGGEST_DIR = DATA_DIR / "suggest"
 
     if not (0 <= args.port <= 65535):
         print("端口须在 0–65535 之间", file=sys.stderr)

@@ -31,6 +31,21 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\serve_3b_
 - 筛选：待审／已改／已通过；可按卷·章·节定位；“继续上次”回到上次位置。
 - 列表默认按目录顺序（不做风险排序），仅触控交互。
 
+## 实时建议（重拟即取候选）
+
+点“重拟”后在标签条里选好标签，按**获取建议**即把请求入队：
+
+1. 页面每 1.5 秒轮询 `/api/suggest?id=…`，等待期间显示“已提交给 LLM 会话，等待返回建议… 已等 N 秒”，可随时取消（超过 5 分钟自动放弃）。
+2. 会话侧用 `llm_bridge.py` 取件并回填，页面收到后自动展开候选（各附理由，可选“采纳”“改写后采纳”）：
+   ```text
+   C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\llm_bridge.py" --list
+   C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\llm_bridge.py" --result results.json
+   ```
+3. 回填的候选同时写入 `data/candidates/llm-live.json`（`source` 标为 `llm-session`），刷新或重开也会重现；同一单元同一标签组合重复提交会自动去重。
+4. 刷新页面时自动接回未完成的请求（`/api/suggest?pending=1`），不必重新点。
+
+**用法**：在会话说一句“处理”，助手即执行 `--list`、按标签生成若干候选并 `--result` 回填，全程不需要页面重开。
+
 ## 配置上传
 
 页面“配置”面板提供两个入口，均可导出复用（`3B-config-*.json`）：
@@ -81,7 +96,7 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e
 C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_stage_resume.py"
 ```
 
-当前结果：pytest **52 passed**（`test_server.py` 26 例：75 卷逐卷对位、23,722 总数、V76 零单元、指纹、徽标、合并／清除、快照轮转、配置与清单、三种导出、归档、候选、重拟标签、TSV 转义与 JSON 保真、导入合并语义、导出排序；`test_mobile_layout.py` 26 例：媒体查询方向、底部固定工具栏、44px 触控、题名字号档位、末条遮挡、过滚抑制、对勾符号化、浅色主题、PWA manifest、平板不套用手机规则、三级绿色与字号递减、章／节折叠、全部卷筛选与卷级进度）；E2E **15 passed / 0 skip**、暂存／续点／导入导出专项 **30 passed / 0 fail**（两者均 headless 与 `E2E_HEADED=1` 有头各一轮）。有头随机 5% 抽测（1,186 条，seed 20261105）提交耗时 0.13 s，分布 720／300／166、TSV 1,187 行、回写清单 467 行、归档与界面进度均一致。
+当前结果：pytest **57 passed**（`test_server.py` 30 例：75 卷逐卷对位、23,722 总数、V76 零单元、指纹、徽标、合并／清除、快照轮转、配置与清单、三种导出、归档、候选、重拟标签、TSV 转义与 JSON 保真、导入合并语义、导出排序、建议队列校验与去重、建议回填与幂等、空题拒绝、错误与未知 id；`test_mobile_layout.py` 27 例：媒体查询方向、底部固定工具栏、44px 触控、题名字号档位、末条遮挡、过滚抑制、对勾符号化、浅色主题、PWA manifest、平板不套用手机规则、三级绿色与字号递减、章／节折叠、全部卷筛选与卷级进度、节头吸顶）；E2E **16 passed / 0 skip**（含“实时建议轮询”）、暂存／续点／导入导出专项 **30 passed / 0 fail**（E2E 与专项均 headless 与 `E2E_HEADED=1` 有头各一轮）。有头随机 5% 抽测（1,186 条，seed 20261105）提交耗时 0.13 s，分布 720／300／166、TSV 1,187 行、回写清单 467 行、归档与界面进度均一致。
 
 `e2e_stage_resume.py` 覆盖：Service Worker 接管、在线作答落库、localStorage 暂存与游标、停服后离线作答、离线刷新暂存不丢、起服自动重推、V07 续点与“继续上次”、JSON／TSV／回写清单三类导出的列序与内容保真（含逗号、弯引号、标签）、清库清缓存归零、导入回灌逐条全字段还原与重复导入幂等。
 
@@ -93,6 +108,7 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e
 
 ```text
 serve_3b_review.py        本地服务（只读源台账，写 data/）
+llm_bridge.py             会话侧取件／回填（--list／--status／--result）
 web/index.html            单页外壳
 web/app.css               主题、字号、卡片与安全区
 web/app.js                作答、配置、导出、二审、离线队列

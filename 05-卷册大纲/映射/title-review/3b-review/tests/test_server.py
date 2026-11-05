@@ -227,6 +227,7 @@ class Env:
         srv.CONFIG_DIR = data / "config"
         srv.CANDIDATES_DIR = data / "candidates"
         srv.EXPORTS_DIR = data / "exports"
+        srv.SUGGEST_DIR = data / "suggest"
 
     def start(self):
         self._patch_globals()
@@ -1158,3 +1159,98 @@ def test_rewrite_actions_and_empty_new_title(env):
     assert rows[keys[1]][6] == "重拟待办" and rows[keys[1]][7] == ""
     assert rows[keys[1]][8] == "content+length"
     assert rows[keys[2]][6] == "改题" and rows[keys[2]][7] == "改题"
+
+
+# ---------------------------------------------------------------------------
+# 实时建议队列（本会话轮询生成）
+# ---------------------------------------------------------------------------
+
+
+def test_suggest_enqueue_validation_and_dedup(env):
+    keys = expected_model()[2][1]
+    key = keys[0]
+    status, _h, _b = env.call("POST", "/api/suggest", {"unit_key": "no-such", "tags": ["content"]})
+    assert status == 400
+    status, _h, _b = env.call("POST", "/api/suggest", {"unit_key": key, "tags": ["bogus"]})
+    assert status == 400
+    status, _h, _b = env.call(
+        "POST", "/api/suggest", {"unit_key": key, "tags": ["content"], "merge_target": "prev"}
+    )
+    assert status == 400
+    status, _h, body = env.call(
+        "POST", "/api/suggest", {"unit_key": key, "tags": ["content", "term"], "merge_target": ""}
+    )
+    assert status == 200
+    first = json.loads(body)
+    assert first["status"] == "pending"
+    status, _h, body = env.call(
+        "POST", "/api/suggest", {"unit_key": key, "tags": ["content", "term"], "merge_target": ""}
+    )
+    assert json.loads(body)["id"] == first["id"]
+    pending = env.json("/api/suggest?pending=1")
+    assert pending["count"] == 1
+    item = pending["pending"][0]
+    assert item["unit_key"] == key and item["title"] and item["tags"] == ["content", "term"]
+
+
+def test_suggest_result_ready_and_candidates(env):
+    keys = expected_model()[2][1]
+    key = keys[1]
+    env.put_answers({key: _payload("reroll", tags=["content"], ts="2026-11-05T10:00:00Z")})
+    status, _h, body = env.call("POST", "/api/suggest", {"unit_key": key, "tags": ["content"]})
+    rid = json.loads(body)["id"]
+    status, _h, body = env.call(
+        "POST",
+        "/api/suggest/result",
+        {
+            "results": [
+                {
+                    "id": rid,
+                    "candidates": [
+                        {"candidate_id": "c1", "new_title": "建议甲", "rationale": "理由甲"},
+                        {"candidate_id": "c2", "new_title": "建议乙"},
+                    ],
+                }
+            ]
+        },
+    )
+    assert status == 200 and json.loads(body)["applied"] == 1
+    detail = env.json("/api/suggest?id=" + rid)
+    assert detail["status"] == "ready" and len(detail["candidates"]) == 2
+    assert detail["candidates"][0]["source"] == "llm-session"
+    live = env.json("/api/candidates")["candidates"]
+    assert live[key][0]["new_title"] == "建议甲"
+    status, _h, body = env.call(
+        "POST", "/api/suggest/result",
+        {"results": [{"id": rid, "candidates": [{"new_title": "再改"}]}]},
+    )
+    assert status == 200 and json.loads(body)["applied"] == 1
+    assert env.json("/api/suggest?id=" + rid)["candidates"][0]["new_title"] == "建议甲"
+
+
+def test_suggest_result_rejects_empty_titles(env):
+    keys = expected_model()[2][1]
+    key = keys[2]
+    env.put_answers({key: _payload("reroll", tags=["length"], ts="2026-11-05T10:00:00Z")})
+    status, _h, body = env.call("POST", "/api/suggest", {"unit_key": key, "tags": ["length"]})
+    rid = json.loads(body)["id"]
+    status, _h, _b = env.call(
+        "POST", "/api/suggest/result",
+        {"results": [{"id": rid, "candidates": [{"new_title": "   "}]}]},
+    )
+    assert status == 400
+    assert env.json("/api/suggest?id=" + rid)["status"] == "pending"
+
+
+def test_suggest_error_and_unknown_id(env):
+    keys = expected_model()[2][1]
+    status, _h, body = env.call("POST", "/api/suggest", {"unit_key": keys[3], "tags": ["format"]})
+    rid = json.loads(body)["id"]
+    status, _h, _b = env.call(
+        "POST", "/api/suggest/result", {"results": [{"id": rid, "error": "模型不可用"}]}
+    )
+    assert status == 200
+    detail = env.json("/api/suggest?id=" + rid)
+    assert detail["status"] == "error" and "模型不可用" in detail["error"]
+    status, _h, _b = env.call("GET", "/api/suggest?id=nope")
+    assert status == 404

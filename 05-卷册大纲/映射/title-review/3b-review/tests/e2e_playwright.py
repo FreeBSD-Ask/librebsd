@@ -656,6 +656,53 @@ def scenario_candidates_second_round(server, page, errors):
     assert_no_js_errors(errors)
 
 
+def scenario_live_suggest(server, page, errors):
+    key = "V01.1.1.2"
+    server.api(
+        "PUT",
+        "/api/answers",
+        {"answers": {key: {"verdict": "reroll", "custom_title": "", "note": "",
+                           "updated_at": "2020-03-01T00:00:00+00:00"}}},
+    )
+    open_app(page, server)
+    ensure_card(page, key)
+    card(page, key).locator('.pill[data-v="reroll"]').click()
+    page.wait_for_timeout(300)
+    card(page, key).locator('[data-act="suggest"]').click()
+    wait_box = card(page, key).locator(".suggest-wait")
+    expect(wait_box).to_be_visible(timeout=10000)
+    assert "等待" in wait_box.inner_text()
+
+    pending = server.api("GET", "/api/suggest?pending=1")
+    assert pending["count"] == 1, pending
+    rid = pending["pending"][0]["id"]
+    server.api(
+        "POST",
+        "/api/suggest/result",
+        {
+            "results": [
+                {
+                    "id": rid,
+                    "candidates": [
+                        {"candidate_id": "s1", "new_title": "建议一：实时生成"},
+                        {"candidate_id": "s2", "new_title": "建议二：实时生成"},
+                        {"candidate_id": "s3", "new_title": "建议三：实时生成"},
+                    ],
+                }
+            ]
+        },
+    )
+    box = card(page, key).locator(".cand-box")
+    expect(box).to_be_visible(timeout=20000)
+    assert box.locator(".cand-item").count() == 3
+    expect(wait_box).to_be_hidden()
+    box.locator('[data-act="cand-adopt"]').first.click()
+    expect(card(page, key)).to_have_attribute("data-status", "custom")
+    expect(card(page, key).locator(".card-title")).to_contain_text("建议一：实时生成")
+    server.wait_answer(key, check=lambda a: a.get("custom_title") == "建议一：实时生成")
+    assert_no_js_errors(errors)
+
+
 def scenario_theme_font_progress_stats(server, page, errors):
     open_app(page, server)
     expect(page.locator("html")).to_have_attribute("data-theme", "dark")
@@ -775,6 +822,7 @@ SCENARIOS = [
     ("三种导出下载", scenario_exports_download),
     ("导入恢复", scenario_import_restore),
     ("二审多候选", scenario_candidates_second_round),
+    ("实时建议轮询", scenario_live_suggest),
     ("主题字号与进度统计", scenario_theme_font_progress_stats),
     ("沉浸式按钮与降级", scenario_immersive_button),
     ("离线缓冲与重连同步", scenario_offline_buffer),

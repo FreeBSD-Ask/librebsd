@@ -35,7 +35,8 @@
     sessionCount: 0,
     lastTags: ['content'],
     quickTags: false,
-    fold: { vols: {}, chapters: {}, sections: {} }
+    fold: { vols: {}, chapters: {}, sections: {} },
+    suggest: {}
   };
 
   var ui = {
@@ -446,6 +447,7 @@
         renderProgress();
         renderActive();
         loadUnits();
+        resumeSuggest();
       })
       .catch(function (err) {
         $('#view-group').innerHTML =
@@ -540,6 +542,107 @@
     }
 
     step();
+  }
+
+  /* 单卷按需载入：断网期间首轮只载入当前卷，切到未载入的卷时补拉一次 */
+  var volQueue = {};
+
+  function ensureVolUnits(vol, then) {
+    if (!vol) {
+      if (then) then();
+      return;
+    }
+    if (state.units.some(function (u) { return u.vol === vol; })) {
+      if (then) then();
+      return;
+    }
+    if (volQueue[vol]) {
+      if (then) volQueue[vol].push(then);
+      return;
+    }
+    volQueue[vol] = then ? [then] : [];
+    apiGet('/api/units?vol=' + vol)
+      .then(function (d) {
+        if (d && d.units && d.units.length) {
+          state.units = state.units.concat(d.units);
+          state.units.sort(function (a, b) {
+            return (
+              (a.vol || 0) - (b.vol || 0) ||
+              (a.chapter_no || 0) - (b.chapter_no || 0) ||
+              (a.section_no || 0) - (b.section_no || 0) ||
+              (a.order || 0) - (b.order || 0)
+            );
+          });
+          state.unitsError = null;
+        }
+      })
+      .catch(function () {})
+      .then(function () {
+        var cbs = volQueue[vol] || [];
+        delete volQueue[vol];
+        cbs.forEach(function (fn) {
+          if (fn) fn();
+        });
+        renderActive();
+      });
+  }
+
+  /* “全部卷”按需补载：逐卷拉取，连续失败 3 次即停（离线时不全量空等） */
+  var allVolsRunning = false;
+
+  function ensureAllVols(then) {
+    if (allVolsRunning) {
+      if (then) then();
+      return;
+    }
+    var missing = state.vols.filter(function (v) {
+      return !state.units.some(function (u) {
+        return u.vol === v.vol;
+      });
+    });
+    if (!missing.length) {
+      if (then) then();
+      return;
+    }
+    allVolsRunning = true;
+    var i = 0;
+    var fails = 0;
+
+    function next() {
+      if (i >= missing.length || fails >= 3) {
+        allVolsRunning = false;
+        if (then) then();
+        return;
+      }
+      var v = missing[i];
+      i += 1;
+      apiGet('/api/units?vol=' + v.vol)
+        .then(function (d) {
+          if (d && d.units && d.units.length) {
+            state.units = state.units.concat(d.units);
+            fails = 0;
+          }
+        })
+        .catch(function () {
+          fails += 1;
+        })
+        .then(function () {
+          if (i >= missing.length || fails >= 3) {
+            state.units.sort(function (a, b) {
+              return (
+                (a.vol || 0) - (b.vol || 0) ||
+                (a.chapter_no || 0) - (b.chapter_no || 0) ||
+                (a.section_no || 0) - (b.section_no || 0) ||
+                (a.order || 0) - (b.order || 0)
+              );
+            });
+          }
+          if (i % 10 === 0) renderActive();
+          next();
+        });
+    }
+
+    next();
   }
 
   /* ---------------- 计数 ---------------- */
@@ -699,9 +802,17 @@
       }
       parts.push('<div class="tag-actions"><label><input type="checkbox" data-act="tag-quick"' +
         (state.quickTags ? ' checked' : '') + '> 连续沿用</label>');
+      parts.push('<button type="button" data-act="suggest" data-key="' + esc(u.key) +
+        '">获取建议</button>');
       parts.push('<button type="button" class="primary" data-act="tag-save" data-key="' + esc(u.key) +
         '">完成</button></div>');
       parts.push('</div>');
+    }
+    if (st === 'reroll' && state.suggest[u.key]) {
+      parts.push('<div class="suggest-wait" data-key="' + esc(u.key) + '">' +
+        '<span class="suggest-dot" aria-hidden="true"></span>' +
+        '<span>已提交给 LLM 会话，等待返回建议… 已等 <span class="suggest-elapsed">0 秒</span></span>' +
+        '<button type="button" data-act="suggest-cancel" data-key="' + esc(u.key) + '">取消</button></div>');
     }
 
     var prefill = st === 'custom' && a.custom_title ? a.custom_title : (u.title || '');
@@ -1579,7 +1690,10 @@
         $('#goto-sec', body).innerHTML = opt.join('');
       }
 
-      $('#goto-vol', body).addEventListener('change', fillChaps);
+      $('#goto-vol', body).addEventListener('change', function () {
+        ensureVolUnits(Number($('#goto-vol', body).value), fillChaps);
+        fillChaps();
+      });
       $('#goto-chap', body).addEventListener('change', fillSecs);
       $('#goto-go', body).addEventListener('click', function () {
         var vol = Number($('#goto-vol', body).value);
@@ -1589,33 +1703,41 @@
         ui.vol = vol;
         ui.all = false;
         if (ui.view !== 'group') setView('group');
-        else renderGroup();
-        var target = null;
-        if (sec) {
-          var pair = sec.split(':');
-          var heads = $$('.section-head', $('#view-group'));
-          for (var i = 0; i < heads.length; i += 1) {
-            var btn = heads[i].querySelector('.sec-pass');
-            if (btn && Number(btn.dataset.chapter) === Number(pair[0]) &&
-              Number(btn.dataset.section) === Number(pair[1])) {
-              target = heads[i];
-              break;
+
+        function jump() {
+          var target = null;
+          if (sec) {
+            var pair = sec.split(':');
+            var heads = $$('.section-head', $('#view-group'));
+            for (var i = 0; i < heads.length; i += 1) {
+              var btn = heads[i].querySelector('.sec-pass');
+              if (btn && Number(btn.dataset.chapter) === Number(pair[0]) &&
+                Number(btn.dataset.section) === Number(pair[1])) {
+                target = heads[i];
+                break;
+              }
+            }
+          } else if (chap) {
+            var chs = $$('.chapter-head', $('#view-group'));
+            for (var j = 0; j < chs.length; j += 1) {
+              var chTitle = chs[j].querySelector('.ch-title');
+              if (chTitle && chTitle.textContent.indexOf('第 ' + chap + ' 章') === 0) {
+                target = chs[j];
+                break;
+              }
             }
           }
-        } else if (chap) {
-          var chs = $$('.chapter-head', $('#view-group'));
-          for (var j = 0; j < chs.length; j += 1) {
-            var chTitle = chs[j].querySelector('.ch-title');
-            if (chTitle && chTitle.textContent.indexOf('第 ' + chap + ' 章') === 0) {
-              target = chs[j];
-              break;
-            }
-          }
+          if (target) target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+          else window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        if (target) target.scrollIntoView({ block: 'start', behavior: 'smooth' });
-        else window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        ensureVolUnits(vol, function () {
+          renderGroup();
+          jump();
+        });
       });
 
+      ensureVolUnits(current, fillChaps);
       fillChaps();
     });
   }
@@ -1683,6 +1805,90 @@
     renderActive();
   }
 
+  /* ---------------- 实时建议（本会话轮询） ---------------- */
+
+  var suggestPollers = {};
+
+  function stopSuggestPoll(key) {
+    if (suggestPollers[key]) {
+      clearInterval(suggestPollers[key]);
+      delete suggestPollers[key];
+    }
+  }
+
+  function pollSuggest(key, rid) {
+    stopSuggestPoll(key);
+    suggestPollers[key] = setInterval(function () {
+      if (document.hidden) return;
+      var st = state.suggest[key];
+      if (!st) {
+        stopSuggestPoll(key);
+        return;
+      }
+      var elapsed = Math.round((Date.now() - st.started) / 1000);
+      var box = $('.suggest-wait[data-key="' + key + '"]');
+      var label = box ? $('.suggest-elapsed', box) : null;
+      if (label) label.textContent = elapsed + ' 秒';
+      if (elapsed > 300) {
+        stopSuggestPoll(key);
+        delete state.suggest[key];
+        renderActive();
+        showToast('等待建议超时（5 分钟）：请在本会话说“处理”后重试');
+        return;
+      }
+      apiGet('/api/suggest?id=' + encodeURIComponent(rid)).then(function (d) {
+        if (!d || d.status === 'pending') return;
+        stopSuggestPoll(key);
+        delete state.suggest[key];
+        if (d.status === 'ready' && d.candidates && d.candidates.length) {
+          state.candidates[key] = d.candidates;
+          showToast('已收到 ' + d.candidates.length + ' 条建议', null, true);
+        } else {
+          showToast('建议生成失败：' + (d.error || '未知错误'));
+        }
+        renderActive();
+      }).catch(function () {});
+    }, 1500);
+  }
+
+  function requestSuggest(key) {
+    var u = unitByKey(key);
+    var a = state.answers[key];
+    if (!u || !a || a.verdict !== 'reroll') {
+      showToast('请先选择“重拟”');
+      return;
+    }
+    apiSend('POST', '/api/suggest', {
+      unit_key: key,
+      tags: (a.tags || []).slice(),
+      merge_target: a.merge_target || ''
+    }).then(function (res) {
+      if (!res || !res.id) throw new Error('入队失败');
+      state.suggest[key] = { id: res.id, started: Date.now() };
+      ui.tagging = null;
+      renderActive();
+      pollSuggest(key, res.id);
+      showToast('已提交，等待会话返回建议');
+    }).catch(function (err) {
+      showToast('提交失败：' + (err.message || err));
+    });
+  }
+
+  function resumeSuggest() {
+    apiGet('/api/suggest?pending=1').then(function (d) {
+      var list = (d && d.pending) || [];
+      if (!list.length) return;
+      list.slice(0, 10).forEach(function (item) {
+        state.suggest[item.unit_key] = {
+          id: item.id,
+          started: Date.parse(item.created_at) || Date.now()
+        };
+        pollSuggest(item.unit_key, item.id);
+      });
+      renderActive();
+    }).catch(function () {});
+  }
+
   /* ---------------- 事件委托 ---------------- */
 
   function onCardClick(ev) {
@@ -1724,6 +1930,16 @@
     }
     if (act === 'tag-save') {
       ui.tagging = null;
+      renderActive();
+      return;
+    }
+    if (act === 'suggest') {
+      requestSuggest(key);
+      return;
+    }
+    if (act === 'suggest-cancel') {
+      stopSuggestPoll(key);
+      delete state.suggest[key];
       renderActive();
       return;
     }
@@ -1918,11 +2134,13 @@
       if (e.target.id === 'vol-select') {
         if (e.target.value === 'all') {
           ui.all = true;
+          renderGroup();
+          ensureAllVols(renderGroup);
         } else {
           ui.all = false;
           ui.vol = Number(e.target.value);
+          ensureVolUnits(ui.vol, renderGroup);
         }
-        renderGroup();
       }
     });
 

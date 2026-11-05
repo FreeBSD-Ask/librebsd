@@ -1204,6 +1204,50 @@ button.clear-btn {
   height: 18px;
 }
 
+/* ---------- 实时建议等待态 ---------- */
+
+.suggest-wait {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 5px 8px;
+  border: 1px dashed var(--accent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.suggest-wait button {
+  min-height: 30px;
+  padding: 1px 8px;
+  font-size: 12px;
+  background: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.suggest-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: suggestPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes suggestPulse {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 /* ---------- 手机专项：2400×1080 / 6.67 英寸 OLED ---------- */
 /* 物理 2400×1080、20:9、约 395 dpi；浏览器 CSS 视口约 393×873（DPR≈2.75） */
 
