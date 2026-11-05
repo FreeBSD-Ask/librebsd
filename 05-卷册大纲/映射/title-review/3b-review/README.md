@@ -69,11 +69,15 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\serve_3b_
 ## 测试
 
 ```text
-C:\Python314\python.exe -m pytest "05-卷册大纲\映射\title-review\3b-review\tests\test_server.py" -q
+C:\Python314\python.exe -m pytest "05-卷册大纲\映射\title-review\3b-review\tests" -q
+C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_playwright.py"
+
+# 有头（visible browser）模式
+set E2E_HEADED=1
 C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_playwright.py"
 ```
 
-当前结果：pytest **15 passed**（含 75 卷逐卷全量对位、23,722 总数、V76 零单元、指纹、徽标、合并／清除、快照轮转、配置与清单、三种导出、归档、候选）；E2E **15 passed / 0 skip**（390×844 移动视口全路径）。
+当前结果：pytest **46 passed**（`test_server.py` 22 例：75 卷逐卷对位、23,722 总数、V76 零单元、指纹、徽标、合并／清除、快照轮转、配置与清单、三种导出、归档、候选、重拟标签；`test_mobile_layout.py` 24 例：媒体查询方向、底部固定工具栏、44/48px 触控、题名字号档位、末条遮挡、过滚抑制、对勾符号化、浅色主题、PWA manifest、平板不套用手机规则）；E2E **15 passed / 0 skip**（headless 与 `E2E_HEADED=1` 有头各一轮）。有头随机 5% 抽测（1,186 条，seed 20261105）提交耗时 0.13 s，分布 720／300／166、TSV 1,187 行、回写清单 467 行、归档与界面进度均一致。
 
 ## 版本管理说明
 

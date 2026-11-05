@@ -167,15 +167,17 @@ class Server:
 
 
 def launch_browser(playwright):
+    headed = os.environ.get("E2E_HEADED") == "1"
+    options = {"headless": False, "slow_mo": 30} if headed else {}
     try:
-        return playwright.chromium.launch()
+        return playwright.chromium.launch(**options)
     except PlaywrightError:
         root = Path(os.environ.get("LOCALAPPDATA", "")) / "ms-playwright"
         candidates = sorted(root.glob("chromium_headless_shell-*/chrome-headless-shell-win64/chrome-headless-shell.exe"))
         candidates += sorted(root.glob("chromium-*/chrome-win64/chrome.exe"))
         if not candidates:
             raise SkipScenario("未找到可用的 Chromium，且 playwright install 未完成")
-        return playwright.chromium.launch(executable_path=str(candidates[-1]))
+        return playwright.chromium.launch(executable_path=str(candidates[-1]), **options)
 
 
 # ---------------------------------------------------------------------------
