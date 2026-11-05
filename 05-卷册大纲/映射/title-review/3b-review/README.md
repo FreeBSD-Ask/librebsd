@@ -76,7 +76,7 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e
 
 ## 版本管理说明
 
-根 `.gitignore` 的 `*.py` 规则使 `serve_3b_review.py` 与 `tests/*.py` 不入库（与 `05-卷册大纲/目录/server/serve_refactor2026.py` 同例）；`web/` 资产、字体与本文档入库。若需将脚本纳入版本管理，须按项目红线 11 经 ykla 明示批准后 `git add -f`。
+根 `.gitignore` 的 `*.py` 规则本会使 `serve_3b_review.py` 与 `tests/*.py` 不入库；2026-11-05 ykla 明示批准后已强制纳入版本管理（提交 `9aa38e5a4`，提交说明含 `APPROVED-IGNORED` 放行标记）；`web/` 资产、字体与本文档亦在库。
 
 ## 文件
 
