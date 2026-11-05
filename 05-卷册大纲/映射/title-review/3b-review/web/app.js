@@ -734,7 +734,7 @@
     var L = labels();
     var customChanged = st === 'custom' && a.custom_title && a.custom_title !== u.title;
     var titleText = customChanged ? a.custom_title : u.title || '';
-    var no = unitNo(u);
+    var no = (u.level === 'section' && ui.view === 'group') ? '' : unitNo(u);
     var parts = [];
 
     parts.push('<article class="card" data-key="' + esc(u.key) + '" data-status="' + esc(st) +
@@ -1048,7 +1048,7 @@
             vol + '" data-chapter="' + cn + '" data-section="' + sn + '" aria-expanded="' +
             (secOpen ? 'true' : 'false') + '">' + foldCaret(secOpen) +
             '<span class="status-dot' + (done === seqAll.length ? ' is-ok' : done > 0 ? ' is-partial' : '') + '"></span>' +
-            '<span class="sec-title">' + (sn === 0 ? '（无节）' : '第 ' + sn + ' 节') + '</span>' +
+            '<span class="sec-title">' + (sn === 0 ? '（无节）' : cn + '.' + sn + ' 节') + '</span>' +
             '<span class="sec-stat">' + statText(done, seqAll.length) + '</span></button>');
           body.push('<button type="button" class="sec-pass" data-act="section" data-vol="' + vol +
             '" data-chapter="' + cn + '" data-section="' + sn + '"' + (pending ? '' : ' disabled') +

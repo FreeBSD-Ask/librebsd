@@ -1,7 +1,7 @@
 /* 3B 标题审定 · Service Worker（shell 预缓存；数据接口网络优先） */
 'use strict';
 
-const CACHE_NAME = '3b-review-v13-20261105';
+const CACHE_NAME = '3b-review-v14-20261105';
 let apiOfflineUntil = 0;
 const SHELL = [
   './',
