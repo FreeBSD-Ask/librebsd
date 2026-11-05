@@ -640,7 +640,8 @@ def scenario_candidates_second_round(server, page, errors):
 
     box.locator('[data-act="cand-adopt"]').first.click()
     expect(card(page, keys[0])).to_have_attribute("data-status", "custom")
-    expect(card(page, keys[0]).locator(".card-title")).to_have_text("候选甲")
+    expect(card(page, keys[0]).locator(".card-title .card-no")).to_have_text("1.1.1")
+    expect(card(page, keys[0]).locator(".card-title")).to_contain_text("候选甲")
     assert server.wait_answer(keys[0], check=lambda a: a.get("custom_title") == "候选甲")["custom_title"] == "候选甲"
 
     ensure_card(page, keys[1])

@@ -602,17 +602,34 @@
 
   /* ---------------- 卡片渲染 ---------------- */
 
+  function unitNo(u) {
+    if (u.level === 'section') {
+      return u.chapter_no + '.' + u.section_no;
+    }
+    if (u.level === 'subsection') {
+      var parts = String(u.subsection_id || u.key || '').split('.');
+      if (parts.length < 4) return '';
+      return parts.slice(-3).map(function (x) {
+        var n = Number(x);
+        return isNaN(n) ? x : String(n);
+      }).join('.');
+    }
+    return '';
+  }
+
   function cardHTML(u) {
     var a = state.answers[u.key];
     var st = a && a.verdict ? a.verdict : 'pending';
     var L = labels();
     var customChanged = st === 'custom' && a.custom_title && a.custom_title !== u.title;
     var titleText = customChanged ? a.custom_title : u.title || '';
+    var no = unitNo(u);
     var parts = [];
 
     parts.push('<article class="card" data-key="' + esc(u.key) + '" data-status="' + esc(st) +
       '" data-level="' + esc(u.level || 'subsection') + '">');
-    parts.push('<h3 class="card-title">' + esc(titleText) + '</h3>');
+    parts.push('<h3 class="card-title">' + (no ? '<span class="card-no">' + esc(no) + '</span>' : '') +
+      esc(titleText) + '</h3>');
     if (customChanged) {
       parts.push('<p class="card-old">原题：' + esc(u.title) + '</p>');
     }
@@ -814,6 +831,7 @@
       if (ui.filter !== 'all' && chapFiltered.length === 0) return;
       shown += chapFiltered.length;
 
+      html.push('<div class="chapter-block">');
       html.push('<div class="chapter-head">');
       html.push('<span class="status-dot' + (chapDone === chapUnits.length ? ' is-ok' : '') + '"></span>');
       html.push('<span class="ch-title">第 ' + cn + ' 章</span>');
@@ -833,6 +851,7 @@
           return statusOf(u.key) !== 'pending';
         }).length;
         var pending = seqAll.length - done;
+        html.push('<div class="section-block">');
         html.push('<div class="section-head">');
         html.push('<span class="status-dot' + (done === seqAll.length ? ' is-ok' : done > 0 ? ' is-partial' : '') + '"></span>');
         html.push('<span class="sec-title">' + (sn === 0 ? '（无节）' : '第 ' + sn + ' 节') + '</span>');
@@ -847,7 +866,9 @@
         list.forEach(function (u) {
           html.push(cardHTML(u));
         });
+        html.push('</div>');
       });
+      html.push('</div>');
     });
 
     if (shown === 0 && ui.filter !== 'all') {

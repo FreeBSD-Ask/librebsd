@@ -166,7 +166,9 @@ def test_touch_targets(browser, server, width, height, dpr):
 def test_title_font_size_tiers(browser, server, width, height, dpr):
     context, page = open_page(browser, server, width, height, dpr)
     try:
-        size = page.evaluate("getComputedStyle(document.querySelector('.card-title')).fontSize")
+        size = page.evaluate(
+            "getComputedStyle(document.querySelector('.card[data-level=\"subsection\"] .card-title')).fontSize"
+        )
         assert size == ("21px" if width >= 380 else "20px"), size
     finally:
         context.close()
@@ -230,7 +232,9 @@ def test_adaptation_scoped_to_phones(browser, server):
     context, page = open_page(browser, server, 600, 960, 2)
     try:
         assert page.evaluate("getComputedStyle(document.querySelector('.toolbar')).position") == "static"
-        size = page.evaluate("getComputedStyle(document.querySelector('.card-title')).fontSize")
+        size = page.evaluate(
+            "getComputedStyle(document.querySelector('.card[data-level=\"subsection\"] .card-title')).fontSize"
+        )
         assert size == "20px", size
     finally:
         context.close()

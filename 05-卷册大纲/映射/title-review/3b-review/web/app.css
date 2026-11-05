@@ -302,20 +302,27 @@ button.danger {
   flex: 0 0 auto;
 }
 
+/* 章块：整章内容（章卡＋各节）都在同一块里 */
+.chapter-block {
+  margin: 18px 0 6px;
+}
+
 .chapter-head {
   display: flex;
   align-items: baseline;
   gap: 8px;
-  padding: 14px 2px 4px;
-  border-top: 1px solid var(--line);
-  margin-top: 8px;
+  padding: 10px 10px 7px;
+  background: var(--surface-2);
+  border-top: 2px solid var(--accent);
+  border-radius: 10px 10px 0 0;
 }
 
 .chapter-head .ch-title {
   flex: 1;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--text);
+  letter-spacing: 0.02em;
 }
 
 .chapter-head .ch-stat,
@@ -325,17 +332,29 @@ button.danger {
   white-space: nowrap;
 }
 
+/* 节块：左侧竖线＋缩进，表明归属本章 */
+.section-block {
+  margin: 4px 0 12px;
+  padding-left: 12px;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 38%, var(--line));
+}
+
 .section-head {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 2px 2px;
+  padding: 7px 10px;
+  margin-bottom: 4px;
+  background: var(--surface-2);
+  border-radius: 8px;
 }
 
 .section-head .sec-title {
   flex: 1;
-  font-size: 14px;
-  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.8;
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -405,6 +424,45 @@ button.danger {
 
 .card[data-status="custom"]::before {
   background: var(--custom);
+}
+
+/* 层级：章卡接在章头之下，节卡透明，小节卡再缩进一级；配合 .section-block 竖线区分归属 */
+.card[data-level="chapter"] {
+  margin: 0 0 8px;
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.card[data-level="chapter"] .card-title {
+  font-size: calc(var(--title-size) + 1px);
+}
+
+.card[data-level="section"] {
+  background: transparent;
+  margin: 6px 0 8px;
+}
+
+.card[data-level="section"] .card-title {
+  font-size: calc(var(--title-size) - 1px);
+}
+
+.card[data-level="subsection"] {
+  margin: 6px 0 6px 10px;
+}
+
+.card-no {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 6px 1px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  vertical-align: 2px;
 }
 
 .card-title {
