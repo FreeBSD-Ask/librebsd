@@ -292,9 +292,7 @@ button.danger {
 .vol-head .vol-name {
   flex: 1 1 auto;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.3;
   color: var(--muted);
 }
 
@@ -309,7 +307,7 @@ button.danger {
 
 .vol-block-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
   width: 100%;
   min-height: 0;
@@ -328,9 +326,8 @@ button.danger {
 .vol-block-title {
   flex: 1;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .vol-stat {
@@ -394,7 +391,7 @@ button.danger {
 
 .section-fold {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
   flex: 1;
   min-width: 0;
@@ -414,14 +411,14 @@ button.danger {
   font-weight: 600;
   color: var(--accent);
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .fold-caret {
   width: 15px;
   height: 15px;
+  margin-top: 3px;
   flex: 0 0 auto;
   stroke: currentColor;
   fill: none;
@@ -540,11 +537,7 @@ button.danger {
   font-size: var(--title-size);
   line-height: 1.3;
   font-weight: 600;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 .card-thesis {
