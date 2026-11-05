@@ -555,7 +555,7 @@ def scenario_exports_download(server, page, errors):
         page.click("#exp-rw")
     rewrite = Path(info.value.path()).read_text(encoding="utf-8").splitlines()
     assert len(rewrite) == 3  # 表头 + custom + reroll
-    assert all(len(line.split("\t")) == 11 for line in rewrite)
+    assert all(len(line.split("\t")) == 13 for line in rewrite)
     rows = {line.split("\t")[0]: line.split("\t") for line in rewrite[1:]}
     assert rows[keys[1]][6] == "重拟待办" and rows[keys[1]][7] == ""
     assert rows[keys[2]][6] == "改题" and rows[keys[2]][7] == "导出题名"
