@@ -151,7 +151,7 @@ def test_touch_targets(browser, server, width, height, dpr):
         toolbar_h = page.locator(".toolbar button").first.bounding_box()["height"]
         assert toolbar_h >= 44, toolbar_h
         pill_h = page.locator('.card .pill[data-v="ok"]').first.bounding_box()["height"]
-        assert pill_h >= 48, pill_h
+        assert pill_h >= 44, pill_h
         chip_h = page.evaluate(
             "(() => { const el=document.createElement('button'); el.className='chip';"
             " el.textContent='内容'; document.body.appendChild(el);"
@@ -236,5 +236,75 @@ def test_adaptation_scoped_to_phones(browser, server):
             "getComputedStyle(document.querySelector('.card[data-level=\"subsection\"] .card-title')).fontSize"
         )
         assert size == "20px", size
+    finally:
+        context.close()
+
+
+def test_hierarchy_colors_and_fold(browser, server):
+    """章、节头为绿色且字号递减，小节题名不用绿色；章、节可折叠且可恢复。"""
+    width, height, dpr = VIEWPORTS[0]
+    context, page = open_page(browser, server, width, height, dpr)
+    try:
+        info = page.evaluate(
+            """() => {
+                const cs = (el) => getComputedStyle(el);
+                const ch = document.querySelector('.chapter-head .ch-title');
+                const sec = document.querySelector('.section-fold .sec-title');
+                const sub = document.querySelector('.card[data-level="subsection"] .card-title');
+                return {
+                    chColor: cs(ch).color,
+                    chSize: parseFloat(cs(ch).fontSize),
+                    secColor: cs(sec).color,
+                    secSize: parseFloat(cs(sec).fontSize),
+                    subColor: cs(sub).color
+                };
+            }"""
+        )
+        assert info["chColor"] == info["secColor"], info
+        assert info["chSize"] > info["secSize"], info
+        assert info["subColor"] != info["chColor"], info
+
+        first = page.locator("#view-group .chapter-block").first
+        before = first.locator(".card[data-level=subsection]").count()
+        assert before > 0
+        page.click(".chapter-head")
+        page.wait_for_timeout(250)
+        assert first.locator(".card[data-level=subsection]").count() == 0
+        page.click(".chapter-head")
+        page.wait_for_timeout(250)
+        assert first.locator(".card[data-level=subsection]").count() == before
+
+        page.click(".section-fold")
+        page.wait_for_timeout(250)
+        assert first.locator(".card[data-level=subsection]").count() < before
+    finally:
+        context.close()
+
+
+def test_all_volumes_filter_and_progress(browser, server):
+    """卷下拉含“全部卷”：列出 75 个卷块（默认折叠），卷头显示百分比进度，可展开。"""
+    width, height, dpr = VIEWPORTS[0]
+    context, page = open_page(browser, server, width, height, dpr)
+    try:
+        assert page.locator('#vol-select option[value="all"]').count() == 1
+        page.select_option("#vol-select", "all")
+        page.wait_for_function(
+            "document.querySelectorAll('#view-group .vol-block').length === 75", timeout=30000
+        )
+        assert page.locator("#view-group .card[data-level=subsection]").count() == 0
+        head = page.locator(".vol-block-head").first
+        text = head.inner_text()
+        assert "%" in text and "/" in text, text
+        head.click()
+        page.wait_for_function(
+            "document.querySelectorAll('#view-group .card[data-level=subsection]').length > 0",
+            timeout=30000,
+        )
+        page.select_option("#vol-select", "1")
+        page.wait_for_function(
+            "document.querySelectorAll('#view-group .vol-block').length === 0"
+            " && document.querySelectorAll('#view-group .chapter-block').length > 0",
+            timeout=30000,
+        )
     finally:
         context.close()

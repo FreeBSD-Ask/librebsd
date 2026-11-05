@@ -845,17 +845,20 @@
     var volDone = all.filter(function (u) {
       return statusOf(u.key) !== 'pending';
     }).length;
-    var open = !foldState('vols', 'v' + vol, ui.all);
+    var withHead = ui.all;
+    var open = !withHead || !foldState('vols', 'v' + vol, true);
     var parts = [];
-    parts.push('<section class="vol-block" data-vol="' + vol + '">');
-    parts.push('<button type="button" class="vol-block-head" data-act="fold-vol" data-vol="' + vol +
-      '" aria-expanded="' + (open ? 'true' : 'false') + '">' + foldCaret(open) +
-      '<span class="vol-block-title">第 ' + vol + ' 卷 · ' + esc(volTitle(vol)) + '</span>' +
-      '<span class="vol-stat">' + statText(volDone, all.length) + '</span></button>');
+    if (withHead) {
+      parts.push('<section class="vol-block" data-vol="' + vol + '">');
+      parts.push('<button type="button" class="vol-block-head" data-act="fold-vol" data-vol="' + vol +
+        '" aria-expanded="' + (open ? 'true' : 'false') + '">' + foldCaret(open) +
+        '<span class="vol-block-title">第 ' + vol + ' 卷 · ' + esc(volTitle(vol)) + '</span>' +
+        '<span class="vol-stat">' + statText(volDone, all.length) + '</span></button>');
+    }
     var shown = 0;
     if (!open) {
       shown = all.filter(passFilter).length;
-      parts.push('</section>');
+      if (withHead) parts.push('</section>');
       return { html: parts.join(''), shown: shown };
     }
 
@@ -954,9 +957,12 @@
       body.push('</div>');
     });
 
-    parts.push('<div class="vol-block-body">' + body.join('') + '</div>');
-    parts.push('</section>');
-    return { html: parts.join(''), shown: shown };
+    if (withHead) {
+      parts.push('<div class="vol-block-body">' + body.join('') + '</div>');
+      parts.push('</section>');
+      return { html: parts.join(''), shown: shown };
+    }
+    return { html: body.join(''), shown: shown };
   }
 
   function refreshCounters(root) {
