@@ -32,6 +32,9 @@
 | `08-intent-first.md` | 知难行易：意图确证先于手段（项目侧增补） | 是 |
 | `09-reflection-generalization.md` | 反思、理论化与全局回流：十条普适原则与 G6 门禁（项目侧增补） | 是 |
 | `templates/` | AGENTS、ADR、并发档案、哲学审查、PR、spec/tasks/checklist 模板 | 是 |
+| `templates/agents/` | 项目角色卡 4 张：`title-designer`／`block-triage`／`gate-reviewer`／`volume-merger`（职责／输入／输出／禁止／交接） | 按需 |
+| `templates/skills/` | 技能模板 4 件：`four-source-title`／`gate-runner`／`milestone-tag`／`volume-parallel`（触发／步骤／产物／判据／失效） | 按需 |
+| `templates/qoder-plugin/` | 插件模板包 `plugin.json`＋README（使用映射；只作模板，不自动安装） | 按需 |
 
 ## 3. 最小采用步骤
 
