@@ -549,7 +549,8 @@
     var titleText = customChanged ? a.custom_title : u.title || '';
     var parts = [];
 
-    parts.push('<article class="card" data-key="' + esc(u.key) + '" data-status="' + esc(st) + '">');
+    parts.push('<article class="card" data-key="' + esc(u.key) + '" data-status="' + esc(st) +
+      '" data-level="' + esc(u.level || 'subsection') + '">');
     parts.push('<h3 class="card-title">' + esc(titleText) + '</h3>');
     if (customChanged) {
       parts.push('<p class="card-old">原题：' + esc(u.title) + '</p>');
@@ -685,17 +686,25 @@
     });
     html.push('</select>');
     html.push('<span class="vol-name">' + esc(volTitle(vol)) + '</span>');
-    var volDone = 0;
-    subs.forEach(function (u) {
-      if (statusOf(u.key) !== 'pending') volDone += 1;
+    var volUnits = state.units.filter(function (u) {
+      return u.vol === vol;
     });
-    html.push('<span class="spacer"></span><span>' + volDone + ' / ' + subs.length + '</span>');
+    var volDone = volUnits.filter(function (u) {
+      return statusOf(u.key) !== 'pending';
+    }).length;
+    html.push('<span class="spacer"></span><span>' + volDone + ' / ' + volUnits.length + '</span>');
     html.push('</div>');
 
     var shown = 0;
+    var unitIndex = {};
+    state.units.forEach(function (u) {
+      if (u.vol !== vol || u.level === 'subsection') return;
+      unitIndex[u.level + ':' + u.chapter_no + ':' + (u.section_no || 0)] = u;
+    });
     chapOrder.forEach(function (cn) {
       var chap = chapMap[cn];
-      var chapUnits = [];
+      var chapterUnit = unitIndex['chapter:' + cn + ':0'];
+      var chapUnits = chapterUnit ? [chapterUnit] : [];
       chap.order.forEach(function (sn) {
         chapUnits = chapUnits.concat(chap.sections[sn]);
       });
@@ -709,28 +718,34 @@
 
       html.push('<div class="chapter-head">');
       html.push('<span class="status-dot' + (chapDone === chapUnits.length ? ' is-ok' : '') + '"></span>');
-      html.push('<span class="ch-title">第 ' + cn + ' 章 ' + esc(chapterTitles[cn] || '') + '</span>');
+      html.push('<span class="ch-title">第 ' + cn + ' 章</span>');
       html.push('<span class="ch-stat">' + chapDone + '/' + chapUnits.length + '</span>');
       html.push('</div>');
+      if (chapterUnit && (ui.filter === 'all' || passFilter(chapterUnit))) {
+        html.push(cardHTML(chapterUnit));
+      }
 
       chap.order.forEach(function (sn) {
         var units = chap.sections[sn];
+        var sectionUnit = sn === 0 ? null : unitIndex['section:' + cn + ':' + sn];
         var list = units.filter(passFilter);
-        if (ui.filter !== 'all' && list.length === 0) return;
-        var done = units.filter(function (u) {
+        if (ui.filter !== 'all' && list.length === 0 && !(sectionUnit && passFilter(sectionUnit))) return;
+        var seqAll = (sectionUnit ? [sectionUnit] : []).concat(units);
+        var done = seqAll.filter(function (u) {
           return statusOf(u.key) !== 'pending';
         }).length;
-        var pending = units.length - done;
-        var secTitle = sectionTitles[cn + ':' + sn];
+        var pending = seqAll.length - done;
         html.push('<div class="section-head">');
-        html.push('<span class="status-dot' + (done === units.length ? ' is-ok' : done > 0 ? ' is-partial' : '') + '"></span>');
-        html.push('<span class="sec-title">' + (sn === 0 ? '（无节）' : '第 ' + sn + ' 节') +
-          (secTitle ? ' ' + esc(secTitle) : '') + '</span>');
-        html.push('<span class="sec-stat">' + done + '/' + units.length + '</span>');
+        html.push('<span class="status-dot' + (done === seqAll.length ? ' is-ok' : done > 0 ? ' is-partial' : '') + '"></span>');
+        html.push('<span class="sec-title">' + (sn === 0 ? '（无节）' : '第 ' + sn + ' 节') + '</span>');
+        html.push('<span class="sec-stat">' + done + '/' + seqAll.length + '</span>');
         html.push('<button type="button" class="sec-pass" data-act="section" data-vol="' + vol +
           '" data-chapter="' + cn + '" data-section="' + sn + '"' + (pending ? '' : ' disabled') +
           '>整节通过</button>');
         html.push('</div>');
+        if (sectionUnit && (ui.filter === 'all' || passFilter(sectionUnit))) {
+          html.push(cardHTML(sectionUnit));
+        }
         list.forEach(function (u) {
           html.push(cardHTML(u));
         });
@@ -756,7 +771,7 @@
 
   function singleList() {
     return state.units.filter(function (u) {
-      return u.level === 'subsection' && passFilter(u);
+      return passFilter(u);
     });
   }
 
@@ -861,10 +876,15 @@
   }
 
   function onSectionPass(vol, chapter, section) {
+    var sectionUnit = state.units.filter(function (u) {
+      return u.level === 'section' && u.vol === vol && u.chapter_no === chapter &&
+        (u.section_no == null ? 0 : u.section_no) === section;
+    })[0];
     var units = state.units.filter(function (u) {
       return u.level === 'subsection' && u.vol === vol && u.chapter_no === chapter &&
         (u.section_no == null ? 0 : u.section_no) === section && statusOf(u.key) === 'pending';
     });
+    if (sectionUnit && statusOf(sectionUnit.key) === 'pending') units.unshift(sectionUnit);
     if (!units.length) {
       showToast('本节没有待审条目');
       return;
@@ -1068,7 +1088,7 @@
       html.push('<div class="sheet-actions">');
       html.push('<button type="button" class="primary" id="cfg-save">上传参数配置</button>');
       html.push('<button type="button" class="primary" id="scope-save">上传审阅清单</button>');
-      html.push('<button type="button" id="scope-reset">恢复全量</button>');
+      html.push('<button type="button" id="scope-reset">恢复全量（卷段与清单）</button>');
       html.push('<button type="button" id="cfg-export">导出配置</button>');
       html.push('</div>');
       body.innerHTML = html.join('');
@@ -1141,10 +1161,13 @@
           });
       });
       $('#scope-reset', body).addEventListener('click', function () {
-        apiSend('POST', '/api/scope', { unit_keys: [] })
+        apiSend('POST', '/api/config', { config: { vol_start: 1, vol_end: 75, only_flagged: false } })
+          .then(function () {
+            return apiSend('POST', '/api/scope', { unit_keys: [] });
+          })
           .then(function () {
             closeSheet();
-            showToast('已恢复全量作用域');
+            showToast('已恢复全量作用域（卷段 1–75、清空清单）');
             reloadAll();
           })
           .catch(function (e) {

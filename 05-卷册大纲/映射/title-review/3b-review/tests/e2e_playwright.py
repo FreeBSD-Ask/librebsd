@@ -295,7 +295,10 @@ def scenario_load_and_group(server, page, errors):
     assert page.input_value("#vol-select") == "1"
     first = page.locator("#view-group .card").first
     key = first.get_attribute("data-key")
-    assert re.fullmatch(r"V01\.\d+\.\d+\.\d+", key), key
+    assert re.fullmatch(r"V01\.C\d+", key), key
+    assert page.locator('#view-group .card[data-level="chapter"]').count() > 0
+    assert page.locator('#view-group .card[data-level="section"]').count() > 0
+    assert page.locator('#view-group .card[data-level="subsection"]').count() > 0
     labels = page.locator("#view-group .card").first.locator(".pill span").all_inner_texts()
     assert labels == ["对勾", "重拟", "自定义"], labels
     assert page.locator(".sec-pass").count() > 0
