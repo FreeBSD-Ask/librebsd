@@ -1582,7 +1582,17 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description="3B 逐卷人工审定本地审阅服务")
     parser.add_argument("--port", type=int, default=8899, help="监听端口，默认 8899；0 表示随机端口")
     parser.add_argument("--root", default=None, help="仓库根目录，默认自动定位")
+    parser.add_argument("--data-dir", default=None, help="数据目录，默认工具目录下 data/")
     args = parser.parse_args(argv)
+
+    global DATA_DIR, ANSWERS_DIR, SNAPSHOTS_DIR, CONFIG_DIR, CANDIDATES_DIR, EXPORTS_DIR
+    if args.data_dir:
+        DATA_DIR = Path(args.data_dir).resolve()
+        ANSWERS_DIR = DATA_DIR / "answers"
+        SNAPSHOTS_DIR = ANSWERS_DIR / "snapshots"
+        CONFIG_DIR = DATA_DIR / "config"
+        CANDIDATES_DIR = DATA_DIR / "candidates"
+        EXPORTS_DIR = DATA_DIR / "exports"
 
     if not (0 <= args.port <= 65535):
         print("端口须在 0–65535 之间", file=sys.stderr)

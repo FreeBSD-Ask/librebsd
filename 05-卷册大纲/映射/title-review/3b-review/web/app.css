@@ -382,11 +382,15 @@ button.danger {
 }
 
 .section-head {
+  position: sticky;
+  top: var(--top-h, 0px);
+  z-index: 5;
   display: flex;
   align-items: center;
   gap: 4px;
-  padding: 0;
-  margin-bottom: 3px;
+  margin: 0 0 3px -10px;
+  padding: 3px 0 3px 10px;
+  background: var(--bg);
 }
 
 .section-fold {

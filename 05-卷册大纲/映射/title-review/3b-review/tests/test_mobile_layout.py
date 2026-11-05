@@ -18,7 +18,6 @@ import pytest
 from playwright.sync_api import sync_playwright
 
 TOOL = Path(__file__).resolve().parents[1]
-DATA = TOOL / "data"
 CSS = TOOL / "web" / "app.css"
 MANIFEST = TOOL / "web" / "manifest.webmanifest"
 VIEWPORTS = [(393, 873, 2.75), (412, 915, 2.625), (360, 800, 3)]
@@ -33,11 +32,12 @@ def free_port():
 
 
 @pytest.fixture(scope="module")
-def server():
-    pre = {str(p) for p in DATA.rglob("*") if p.is_file()} if DATA.exists() else set()
+def server(tmp_path_factory):
+    data = tmp_path_factory.mktemp("3b-data")
     port = free_port()
     proc = subprocess.Popen(
-        [sys.executable, str(TOOL / "serve_3b_review.py"), "--port", str(port)],
+        [sys.executable, str(TOOL / "serve_3b_review.py"), "--port", str(port),
+         "--data-dir", str(data)],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
@@ -57,16 +57,8 @@ def server():
     proc.terminate()
     try:
         proc.wait(timeout=10)
-    except Exception:
+    except subprocess.TimeoutExpired:
         proc.kill()
-    for path in sorted(DATA.rglob("*"), reverse=True):
-        if path.is_file() and str(path) not in pre:
-            path.unlink()
-        elif path.is_dir() and path != DATA:
-            try:
-                path.rmdir()
-            except OSError:
-                pass
 
 
 @pytest.fixture(scope="module")
@@ -277,6 +269,28 @@ def test_hierarchy_colors_and_fold(browser, server):
         page.click(".section-fold")
         page.wait_for_timeout(250)
         assert first.locator(".card[data-level=subsection]").count() < before
+    finally:
+        context.close()
+
+
+def test_section_head_sticks_below_topbar(browser, server):
+    """滚动到节中部时，该节头吸在顶栏下方，“整节通过”始终可见。"""
+    width, height, dpr = VIEWPORTS[0]
+    context, page = open_page(browser, server, width, height, dpr)
+    try:
+        page.wait_for_timeout(300)
+        topbar_h = page.locator("#topbar").bounding_box()["height"]
+        block = page.locator(".section-block").nth(1)
+        block.locator(".card[data-level=subsection]").nth(2).scroll_into_view_if_needed()
+        page.wait_for_timeout(400)
+        head = block.locator(".section-head").bounding_box()
+        assert abs(head["y"] - topbar_h) <= 2, (head["y"], topbar_h)
+        assert block.locator(".sec-pass").is_visible()
+        nxt = page.locator(".section-block").nth(2)
+        nxt.locator(".card[data-level=subsection]").nth(2).scroll_into_view_if_needed()
+        page.wait_for_timeout(400)
+        y2 = nxt.locator(".section-head").bounding_box()["y"]
+        assert abs(y2 - topbar_h) <= 2, (y2, topbar_h)
     finally:
         context.close()
 

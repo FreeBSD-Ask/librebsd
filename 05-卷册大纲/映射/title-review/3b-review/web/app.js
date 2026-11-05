@@ -1872,6 +1872,13 @@
 
   /* ---------------- 启动 ---------------- */
 
+  function syncTopOffset() {
+    var tb = $('#topbar');
+    if (!tb) return;
+    var h = Math.round(tb.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--top-h', h + 'px');
+  }
+
   function bind() {
     $('#btn-theme').addEventListener('click', toggleTheme);
     $('#btn-font').addEventListener('click', cycleFont);
@@ -1942,6 +1949,12 @@
     if (state.config === null) state.config = {};
     applyChrome();
     bind();
+    syncTopOffset();
+    if (window.ResizeObserver) {
+      new ResizeObserver(syncTopOffset).observe($('#topbar'));
+    } else {
+      window.addEventListener('resize', syncTopOffset);
+    }
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(function () {});
       navigator.serviceWorker.ready.then(function () {

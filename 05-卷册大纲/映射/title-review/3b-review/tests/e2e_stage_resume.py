@@ -6,9 +6,11 @@
 import json
 import os
 import re
+import shutil
 import socket
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 from pathlib import Path
@@ -16,7 +18,8 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 TOOL = Path(__file__).resolve().parents[1]
-DATA = TOOL / "data"
+TMP = Path(tempfile.mkdtemp(prefix="3b-stage-"))
+DATA = TMP / "data"
 LS_KEY = "3b_review_v1"
 results = []
 HEADED = os.environ.get("E2E_HEADED") == "1"
@@ -43,7 +46,8 @@ def api(path, method="GET", body=None, timeout=20):
 
 
 def start():
-    proc = subprocess.Popen([sys.executable, str(TOOL / "serve_3b_review.py"), "--port", str(PORT)],
+    proc = subprocess.Popen([sys.executable, str(TOOL / "serve_3b_review.py"), "--port", str(PORT),
+                             "--data-dir", str(DATA)],
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     for _ in range(120):
         try:
@@ -111,7 +115,6 @@ def close_sheet(page):
         page.wait_for_timeout(200)
 
 
-pre = {str(p) for p in DATA.rglob("*") if p.is_file()} if DATA.exists() else set()
 srv = start()
 try:
     units = api("/api/units?vol=1")["units"]
@@ -300,14 +303,7 @@ try:
         browser.close()
 finally:
     stop(srv)
-    for path in sorted(DATA.rglob("*"), reverse=True):
-        if path.is_file() and str(path) not in pre:
-            path.unlink()
-        elif path.is_dir() and path != DATA:
-            try:
-                path.rmdir()
-            except OSError:
-                pass
+    shutil.rmtree(TMP, ignore_errors=True)
 
 bad = [r for r in results if not r[1]]
 print("\n===== 暂存／续点／导入导出：%d 项，FAIL %d =====" % (len(results), len(bad)))
