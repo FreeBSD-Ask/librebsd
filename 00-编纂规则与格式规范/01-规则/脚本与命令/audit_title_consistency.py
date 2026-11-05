@@ -672,12 +672,13 @@ def run(root, collect=None):
     f("I2", "I2 例外 kind／status 枚举", bad_i2,
       "非法 %d 条：%s" % (len(bad_i2), "、".join(bad_i2[:5]) or "无"))
 
-    # ---------------- J 节题层（P7-4；2026-11-05 ykla 定序扩判定面，同日扩全卷）
-    # 两层设计：J3／J3i／J4 为全局结构卫生（76 卷节题 vs 台账族双向对位＋禁 AI
-    # 词——全卷实测本即零失衡）；J1／J2 为 V68 注册范围的风格帽（长度 ≥8、同尾
-    # 簇 ≤4；V68 四章平行开篇「之辨」属有意结构故帽定 4——依据＝P7-4 执行记录）。
-    # 其余 75 卷的节题风格规则（短题豁免口径、区域调查章平行句式等）另行批次注册，
-    # 本件不径行套用。夹具环境：outline.txt 未收录的台账卷跳过对位（子集兼容）。
+    # ---------------- J 节题层（P7-4；2026-11-05 逐卷注册扩容）
+    # 三层判据：J3／J3i 禁 AI 词（全 76 卷）；J4 节题与台账族双向对位（全 76 卷）；
+    # J1／J2 按逐卷注册表执行——`05-卷册大纲/映射/title-design/节题帽注册.tsv`
+    # 声明每卷策略：cap＝无豁免硬帽（J1 长度 ≥8；J2 同尾簇 ≤4）；exempt＝
+    # 已注册短题白名单／已注册尾簇计数（新增题或尾簇超过注册基线即 FAIL）。
+    # 注册依据见该表 basis 列；2026-11-05 ykla“3A 余项逐卷注册”令下建档。
+    # 夹具环境：outline.txt 未收录的台账卷跳过对位（子集兼容）。
     outp = os.path.join(root, "05-卷册大纲", "目录", "data", "outline.txt")
     if not os.path.exists(outp):
         rec("J0", "J0 节题层判定面（P7-4）", True,
@@ -719,19 +720,90 @@ def run(root, collect=None):
                        if sn not in out_keys]
         f("J4", "J4 节题与台账族双向对位（全 76 卷；夹具未收录卷跳过）", bad_j4,
           "失衡 %d 处：%s" % (len(bad_j4), "、".join(bad_j4[:5]) or "无"))
-        j68 = j_all.get(68, [])
-        bad_j1 = ["%s（%s）" % (sn, t) for sn, t in j68
-                  if len("".join(t.split())) < 8]
-        f("J1", "J1 节题长度下限 ≥8（去空白；注册范围＝V68）", bad_j1,
-          "过短 %d 处：%s" % (len(bad_j1), "、".join(bad_j1[:5]) or "无"))
-        j_tails = {}
-        for sn, t in j68:
-            tt = "".join(t.split())
-            if len(tt) >= 2:
-                j_tails.setdefault(tt[-2:], []).append(sn)
-        bad_j2 = ["尾“%s”×%d（%s…）" % (tail, len(ids), "、".join(ids[:4]))
-                  for tail, ids in sorted(j_tails.items()) if len(ids) > 4]
-        f("J2", "J2 节题同尾簇 ≤4（注册范围＝V68；平行开篇帽定依据＝P7-4 执行记录）",
+        regp = os.path.join(root, "05-卷册大纲", "映射", "title-design",
+                            "节题帽注册.tsv")
+        reg, reg_err = {}, []
+        if not os.path.exists(regp):
+            reg_err.append("注册表缺失：%s" % regp)
+        else:
+            for ln, line in enumerate(_read(regp).split("\n"), 1):
+                if not line.strip():
+                    continue
+                parts = line.split("\t")
+                if ln == 1:
+                    if len(parts) != 8 or parts[0].strip() != "vol":
+                        reg_err.append("表头不合 schema（第 1 行）")
+                    continue
+                if len(parts) != 8:
+                    reg_err.append("第 %d 行列数 %d≠8" % (ln, len(parts)))
+                    continue
+                m = re.match(r"^V(\d{2})$", parts[0].strip())
+                if not m:
+                    reg_err.append("第 %d 行卷号非法：%s" % (ln, parts[0]))
+                    continue
+                vv = int(m.group(1))
+                if vv in reg:
+                    reg_err.append("第 %d 行卷号重复：V%02d" % (ln, vv))
+                    continue
+                if parts[1].strip() not in ("cap", "exempt") or \
+                        parts[3].strip() not in ("cap", "exempt"):
+                    reg_err.append("第 %d 行模式非法（须 cap／exempt）" % ln)
+                    continue
+                cap, okc = {}, True
+                for it in (x.strip() for x in parts[4].split("；")):
+                    if not it:
+                        continue
+                    mt = re.match(r"^(.+)×(\d+)$", it)
+                    if not mt:
+                        reg_err.append("第 %d 行尾簇格式非法：%s" % (ln, it))
+                        okc = False
+                        break
+                    cap[mt.group(1)] = int(mt.group(2))
+                if not okc:
+                    continue
+                reg[vv] = {"j1": parts[1].strip(),
+                           "wl": set(x.strip() for x in parts[2].split("；") if x.strip()),
+                           "j2": parts[3].strip(), "cap": cap}
+        bad_reg = list(reg_err)
+        for vv in sorted(j_all):
+            if vv not in reg:
+                bad_reg.append("V%d 未注册" % vv)
+
+        bad_j1 = []
+        for vv, items in sorted(j_all.items()):
+            r = reg.get(vv)
+            if not r:
+                continue
+            for sn, t in items:
+                if len("".join(t.split())) >= 8:
+                    continue
+                if r["j1"] == "exempt" and t in r["wl"]:
+                    continue
+                bad_j1.append("%s（%s%s）" % (sn, t, "" if r["j1"] == "cap" else " 未注册"))
+        f("J1", "J1 节题长度下限 ≥8（逐卷注册：cap／exempt 白名单）",
+          bad_j1 + bad_reg,
+          "过短 %d 处%s：%s" % (
+              len(bad_j1),
+              "；注册表问题 %d 处（%s）" % (len(bad_reg), "；".join(bad_reg[:3]))
+              if bad_reg else "",
+              "、".join(bad_j1[:5]) or "无"))
+
+        bad_j2 = []
+        for vv, items in sorted(j_all.items()):
+            r = reg.get(vv)
+            if not r:
+                continue
+            tails = {}
+            for sn, t in items:
+                tt = "".join(t.split())
+                if len(tt) >= 2:
+                    tails.setdefault(tt[-2:], []).append(sn)
+            for tail, ids in sorted(tails.items()):
+                limit = r["cap"].get(tail, 4) if r["j2"] == "exempt" else 4
+                if len(ids) > limit:
+                    bad_j2.append("V%d 尾“%s”×%d（帽 %d；%s…）" % (
+                        vv, tail, len(ids), limit, "、".join(ids[:4])))
+        f("J2", "J2 节题同尾簇（逐卷注册：默认 ≤4，exempt 按注册计数）",
           bad_j2, "超限 %d 处：%s" % (len(bad_j2), "；".join(bad_j2[:3]) or "无"))
 
     return rows_out
@@ -963,6 +1035,12 @@ def cmd_selftest():
                   ok_exc, "期望 I2 非法 0 且例外行数计入 1"))
 
     # ---- 2026-11-05 P7-4 自检：J 组节题层判定面（V68 范围，夹具自带 outline.txt）
+    def _write_jreg(troot, row):
+        rd = os.path.join(troot, "05-卷册大纲", "映射", "title-design")
+        os.makedirs(rd, exist_ok=True)
+        w(os.path.join(rd, "节题帽注册.tsv"),
+          "vol\tJ1_mode\tJ1_exceptions\tJ2_mode\tJ2_exceptions\tbasis\tdecided_by\tdecided_date\n"
+          + row + "\n")
     j_titles = ["编程之夏的创立动机与首届组织", "津贴制度与付费开源的起点记述",
                 "选拔机制的多口径对照", "批评诸线的对勘与辩护"]
     t_j = build("68", j_titles, sources=src3, secs=[1, 2, 3, 4])
@@ -982,6 +1060,7 @@ def cmd_selftest():
       "- 1.10 编程风格的形成过程\n"
       "- 1.11 网络栈的形成过程\n"
       "- 1.12 孤儿节的样式\n")
+    _write_jreg(t_j, "V68\tcap\t\tcap\t\t夹具：硬帽\t夹具\t2026-11-05")
     rj = run(t_j)
     def _jok(code, want_ok):
         return all(ok is want_ok for c, _, ok, _ in rj if c == code) and any(
@@ -1007,10 +1086,40 @@ def cmd_selftest():
       "- 1.2 津贴制度与付费开源的起点记述\n"
       "- 1.3 选拔机制的多口径对照\n"
       "- 1.4 批评诸线的对勘与辩护\n")
+    _write_jreg(t_j2, "V68\tcap\t\tcap\t\t夹具：硬帽\t夹具\t2026-11-05")
     rj2 = run(t_j2)
     bad_j = [c for c, _, ok, _ in rj2 if c.startswith("J") and ok is not True]
     cases.append(("J 组干净正形（对位四行零 FAIL）", not bad_j,
                   "J1–J4 全过" if not bad_j else "未过：%s" % "、".join(bad_j)))
+
+    # 注册豁免自检：已注册短题放行、未注册短题拦截；尾簇按注册计数封顶
+    t_j3 = build("68", j_titles, sources=src3, secs=[1, 2, 3, 4])
+    odir3 = os.path.join(t_j3, "05-卷册大纲", "目录", "data")
+    os.makedirs(odir3, exist_ok=True)
+    w(os.path.join(odir3, "outline.txt"),
+      "# 第六十八卷 编程之夏（2005–2026）\n"
+      "- 1.1 编程之夏的创立动机与首届组织\n"
+      "- 1.2 短题甲\n"
+      "- 1.3 短题乙\n"
+      "- 1.4 短题丙\n"
+      "- 1.5 管道机制的形成过程\n"
+      "- 1.6 文件系统的形成过程\n"
+      "- 1.7 命令解释的形成过程\n"
+      "- 1.8 编程风格的形成过程\n"
+      "- 1.9 网络栈的形成过程\n"
+      "- 1.10 内核接口的形成过程\n")
+    _write_jreg(t_j3, "V68\texempt\t短题甲；短题乙\texempt\t过程×5\t夹具：豁免注册\t夹具\t2026-11-05")
+    rj3 = run(t_j3)
+    j1det = [det for c, _, _, det in rj3 if c == "J1"]
+    j2det = [det for c, _, _, det in rj3 if c == "J2"]
+    cases.append(("J1 注册豁免：已注册短题放行、未注册短题拦截（仅 1.4）",
+                  any(ok is False for c, _, ok, _ in rj3 if c == "J1")
+                  and any("1.4" in d and "1.2" not in d for d in j1det),
+                  "期望 FAIL 且仅点名 1.4"))
+    cases.append(("J2 注册豁免：注册 ×5 封顶、超注册 ×6 拦截",
+                  any(ok is False for c, _, ok, _ in rj3 if c == "J2")
+                  and any("×6" in d for d in j2det),
+                  "期望 FAIL 且计 ×6"))
 
     bad = [c for c in cases if not c[1]]
     for label, ok, detail in cases:
