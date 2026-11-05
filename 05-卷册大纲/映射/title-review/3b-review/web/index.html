@@ -1,167 +1,81 @@
-<!doctype html>
-<html lang="zh-CN" data-theme="amoled" data-size="m">
+<!DOCTYPE html>
+<html lang="zh-Hans" data-theme="dark" data-fs="2">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#000000">
+<title>3B 标题审定</title>
+<meta name="description" content="小节标题审阅工具（内部使用）">
+<meta name="theme-color" content="#000000" id="meta-theme">
 <meta name="color-scheme" content="dark light">
-<title>3B 逐卷审定</title>
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/app.css">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link rel="stylesheet" href="./app.css">
 </head>
 <body>
-<a class="skip-link" href="#main">跳到正文</a>
 
-<header class="app-header">
-  <div class="brand">
-    <span class="brand-mark" aria-hidden="true">3B</span>
-    <div class="brand-text">
-      <h1>逐卷人工审定</h1>
-      <p id="scope-summary">正在载入…</p>
+<header id="topbar">
+  <div class="bar-row">
+    <div class="brand">3B <em>标题审定</em></div>
+    <div class="top-actions">
+      <button type="button" id="btn-exit-fs" hidden>退出沉浸</button>
+      <button type="button" id="btn-theme" aria-label="切换主题">日间</button>
+      <button type="button" id="btn-font" aria-label="切换字号">字号 中</button>
     </div>
   </div>
-  <div class="header-actions">
-    <button type="button" class="ghost-btn" id="open-scope">范围</button>
-    <button type="button" class="ghost-btn" id="open-settings">设置</button>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-text">
+      <span><strong id="p-answered">0</strong> / <span id="p-total">0</span></span>
+      <span id="p-pct">0%</span>
+      <span class="dirty" id="p-dirty" hidden>未同步 0 条</span>
+    </div>
   </div>
+
+  <nav class="toolbar" aria-label="工具栏">
+    <button type="button" id="btn-view" aria-pressed="false">单卡模式</button>
+    <button type="button" id="btn-filter">筛选：全部</button>
+    <button type="button" id="btn-goto">定位</button>
+    <button type="button" id="btn-resume">继续上次</button>
+    <button type="button" id="btn-stats">统计</button>
+    <button type="button" id="btn-config">配置</button>
+    <button type="button" id="btn-export">导出</button>
+  </nav>
 </header>
 
-<section class="meter" aria-label="审定进度">
-  <div class="meter-line">
-    <span id="answer-stats">已答 0</span>
-    <span id="verdict-stats"></span>
-    <span id="daily-stats">今日 0 / 500</span>
-  </div>
-  <div class="meter-bar" role="progressbar" aria-label="今日目标" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-    <i id="daily-bar"></i>
-  </div>
-</section>
-
-<nav class="filters" aria-label="筛选">
-  <label class="field field-vol">
-    <span>卷</span>
-    <select id="vol-select" aria-label="选择卷"></select>
-  </label>
-  <label class="field field-chapter">
-    <span>章</span>
-    <select id="chapter-select" aria-label="选择章">
-      <option value="">全部</option>
-    </select>
-  </label>
-  <label class="toggle">
-    <input type="checkbox" id="flag-toggle">
-    <span>仅看标记</span>
-  </label>
-  <label class="search">
-    <span class="visually-hidden">搜索</span>
-    <input type="search" id="search-input" placeholder="搜索题名或论题" autocomplete="off">
-  </label>
-</nav>
-
 <main id="main">
-  <div id="unit-list" class="unit-list" role="list"></div>
-  <div id="empty" class="empty" hidden>
-    <p id="empty-text">本卷没有符合当前筛选的单元。</p>
-  </div>
-  <button type="button" id="load-more" class="load-more" hidden>加载更多</button>
+  <section id="view-group" aria-label="分组列表"></section>
+  <section id="view-single" aria-label="单卡模式" hidden></section>
 </main>
 
-<footer class="dock" aria-label="导出">
-  <a class="dock-btn" href="/api/export?fmt=json" download>JSON</a>
-  <a class="dock-btn" href="/api/export?fmt=tsv" download>TSV</a>
-  <a class="dock-btn" href="/api/export?fmt=rewrite" download>改题</a>
-  <button type="button" class="dock-btn" id="dock-archive">归档</button>
-</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span id="toast-msg"></span>
+  <button type="button" id="toast-undo" hidden>撤销</button>
+</div>
 
-<dialog id="settings-dialog" class="sheet">
-  <div class="sheet-body">
-    <header class="sheet-head">
-      <h2>设置</h2>
-      <button type="button" class="ghost-btn" data-close>关闭</button>
-    </header>
-    <div class="form-grid two">
-      <label class="field"><span>起始卷</span><input type="number" id="cfg-vol-start" min="1" max="75" step="1"></label>
-      <label class="field"><span>结束卷</span><input type="number" id="cfg-vol-end" min="1" max="75" step="1"></label>
+<div class="sheet-backdrop" id="sheet-backdrop" hidden>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div class="sheet-head">
+      <h2 id="sheet-title">标题</h2>
+      <button type="button" class="close" id="sheet-close">关闭</button>
     </div>
-    <label class="field"><span>每日目标（单元）</span><input type="number" id="cfg-daily-goal" min="1" max="5000" step="1"></label>
-    <div class="form-grid two">
-      <label class="field"><span>主题</span>
-        <select id="cfg-theme">
-          <option value="amoled">纯黑</option>
-          <option value="day">纸白</option>
-        </select>
-      </label>
-      <label class="field"><span>字号</span>
-        <select id="cfg-font-size">
-          <option value="s">小</option>
-          <option value="m">中</option>
-          <option value="l">大</option>
-        </select>
-      </label>
-    </div>
-    <fieldset class="label-fieldset">
-      <legend>按钮文字</legend>
-      <div class="form-grid three">
-        <label class="field"><span>对勾</span><input type="text" id="cfg-label-ok" maxlength="8"></label>
-        <label class="field"><span>重拟</span><input type="text" id="cfg-label-reroll" maxlength="8"></label>
-        <label class="field"><span>自定义</span><input type="text" id="cfg-label-custom" maxlength="8"></label>
-      </div>
-    </fieldset>
-    <label class="check"><input type="checkbox" id="cfg-only-flagged"><span>仅显示带机判或人判标记的单元</span></label>
-    <div class="form-actions">
-      <button type="button" class="primary-btn" id="save-settings">保存设置</button>
-    </div>
-    <hr class="rule">
-    <section class="export-block" aria-label="导出与归档">
-      <h3>导出与归档</h3>
-      <div class="btn-row">
-        <a class="btn" href="/api/export?fmt=json" download>答案 JSON</a>
-        <a class="btn" href="/api/export?fmt=tsv" download>答案 TSV</a>
-        <a class="btn" href="/api/export?fmt=rewrite" download>改题清单</a>
-        <a class="btn" href="/api/config/export" download>配置</a>
-      </div>
-      <div class="btn-row">
-        <button type="button" class="btn" id="settings-archive">归档快照</button>
-        <label class="btn file-btn">导入答案<input type="file" id="import-file" accept=".json,application/json" hidden></label>
-      </div>
-    </section>
+    <div id="sheet-body"></div>
   </div>
-</dialog>
+</div>
 
-<dialog id="scope-dialog" class="sheet">
-  <div class="sheet-body">
-    <header class="sheet-head">
-      <h2>审定范围</h2>
-      <button type="button" class="ghost-btn" data-close>关闭</button>
-    </header>
-    <p id="scope-current" class="scope-current"></p>
-    <div class="btn-col">
-      <button type="button" class="btn" id="scope-all">全量：按卷段范围</button>
-      <button type="button" class="btn" id="scope-vol">锁定当前卷的可见单元</button>
-      <button type="button" class="btn" id="scope-chapter">锁定当前章的可见单元</button>
-    </div>
-    <p class="hint">锁定后，单元接口只返回清单内的键；全量会清除清单，回到设置的卷段范围。</p>
-  </div>
-</dialog>
+<div class="start-overlay" id="start-overlay">
+  <h1>3B 标题审定</h1>
+  <p>逐条审阅小节标题：对勾通过、重拟退回、自定义就地改题。状态只由胶囊按钮或整节通过触发，滑动与点击空白不会改变判定。</p>
+  <button type="button" class="primary" id="btn-start">开始沉浸审阅</button>
+  <button type="button" class="skip" id="btn-start-plain">直接进入</button>
+</div>
 
-<dialog id="custom-dialog" class="sheet">
-  <div class="sheet-body">
-    <header class="sheet-head">
-      <h2>自定义题名</h2>
-      <button type="button" class="ghost-btn" data-close>关闭</button>
-    </header>
-    <p id="custom-origin" class="custom-origin"></p>
-    <label class="field"><span>新题名</span><input type="text" id="custom-title" maxlength="160" autocomplete="off"></label>
-    <label class="field"><span>备注（可选）</span><textarea id="custom-note" rows="3"></textarea></label>
-    <div class="form-actions">
-      <button type="button" class="primary-btn" id="save-custom">保存自定义</button>
-    </div>
-  </div>
-</dialog>
+<noscript><p style="padding:16px">本工具需要启用 JavaScript。</p></noscript>
 
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-<script src="/app.js" defer></script>
+<script src="./app.js"></script>
 </body>
 </html>
