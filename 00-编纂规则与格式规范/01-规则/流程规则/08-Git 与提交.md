@@ -101,6 +101,8 @@ exec python "00-编纂规则与格式规范/01-规则/脚本与命令/git_commit
 git commit --no-gpg-sign -F <消息文件>
 ```
 
+> **🟢 2026-11-06 根治（ykla 裁定方案一）**：根因＝私钥在 gpg4win（`C:/Program Files/GnuPG/bin/gpg.exe`，keyboxd）而 Git Bash 侧 MSYS gpg 钥匙串为空，全局 `commit.gpgsign=true` 使无旗标提交必败。已全局 `gpg.program` 指向 gpg4win 并 unset `commit.gpgsign`（临时仓无旗标提交 rc=0 验证）——**提交默认免签，`--no-gpg-sign` 不再必需**（带之无害）；需签名时显式 `git commit -S`（交互输口令），无头会话签名挂死问题随自动签名关闭而消解。上方“一律显式免签”自即日起为历史口径。
+
 `git commit-tree` **不读** `commit.gpgsign`，会静默产出无签名提交却 RC=0——用 `commit-tree` 建提交时须显式 `--gpg-sign`，或明确接受免签并在说明里写清。
 
 **② 仓库存在自动暂存器与自动提交器，`git diff` 为空不代表无改动**。实测 `git diff` 空而 `git diff --cached` 有上万文件在索引；`.gitignore` 的 `/script` 一行会让 `git status` 对被忽略文件**完全沉默**（不算 untracked、不报错）。判“本批是否已在索引”的唯一办法：
