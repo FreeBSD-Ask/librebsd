@@ -628,7 +628,11 @@ class App:
         try:
             raw = json.loads(path.read_text(encoding="utf-8-sig"))
         except (OSError, ValueError) as exc:
-            print(f"提示：answers.json 读取失败（{exc}），以空答案启动。")
+            recovered = self._recover_answers_from_snapshot()
+            if recovered:
+                print(f"警告：answers.json 读取失败（{exc}），已从最新可用快照恢复 {len(self.answers)} 条答案。")
+            else:
+                print(f"警告：answers.json 读取失败（{exc}），且无可用快照，以空答案启动。")
             return
         entries = raw.get("answers") if isinstance(raw, dict) and "answers" in raw else raw
         if not isinstance(entries, dict):
@@ -649,6 +653,41 @@ class App:
             }
         if dropped:
             print(f"提示：answers.json 有 {dropped} 条无效或越界记录，已忽略。")
+
+    def _recover_answers_from_snapshot(self) -> bool:
+        """answers.json 损坏时按时间倒序尝试快照，恢复成功后回写主文件。"""
+        if not SNAPSHOTS_DIR.exists():
+            return False
+        files = sorted(
+            SNAPSHOTS_DIR.glob("answers-*.json"),
+            key=lambda item: (item.stat().st_mtime_ns, item.name),
+            reverse=True,
+        )
+        for path in files[:10]:
+            try:
+                raw = json.loads(path.read_text(encoding="utf-8-sig"))
+            except (OSError, ValueError):
+                continue
+            entries = raw.get("answers") if isinstance(raw, dict) and "answers" in raw else raw
+            if not isinstance(entries, dict):
+                continue
+            recovered = {}
+            for key, value in entries.items():
+                if key not in self.key_index or not isinstance(value, dict):
+                    continue
+                if value.get("verdict") not in VERDICTS:
+                    continue
+                recovered[key] = {
+                    "verdict": value["verdict"],
+                    "custom_title": str(value.get("custom_title") or ""),
+                    "note": str(value.get("note") or ""),
+                    "updated_at": str(value.get("updated_at") or ""),
+                }
+            if recovered:
+                self.answers = recovered
+                self._save_answers_locked()
+                return True
+        return False
 
     def _load_config(self) -> None:
         path = CONFIG_DIR / "config.json"
@@ -690,11 +729,20 @@ class App:
     # ---------- 单元与作用域 ----------
 
     def effective_units(self):
-        if self.scope_set is not None:
-            return [unit for unit in self.all_units if unit["key"] in self.scope_set]
         start = self.config["vol_start"]
         end = self.config["vol_end"]
-        return [unit for unit in self.all_units if start <= unit["vol"] <= end]
+        scope = self.scope_set
+        flagged = self.config["only_flagged"]
+        out = []
+        for unit in self.all_units:
+            if not (start <= unit["vol"] <= end):
+                continue
+            if scope is not None and unit["key"] not in scope:
+                continue
+            if flagged and not (unit.get("flag_machine") or unit.get("flag_human")):
+                continue
+            out.append(unit)
+        return out
 
     def effective_count(self) -> int:
         return len(self.effective_units())
@@ -709,8 +757,6 @@ class App:
             for unit in self.effective_units()
             if unit["vol"] == vol and (chapter is None or unit["chapter_no"] == chapter)
         ]
-        if self.config["only_flagged"]:
-            units = [unit for unit in units if unit.get("flag_machine") or unit.get("flag_human")]
         return {"vol": vol, "units": [self._public_unit(unit) for unit in units]}
 
     def manifest(self):
@@ -764,10 +810,12 @@ class App:
         now_iso = iso_now()
         normalized = {}
         invalid = []
+        ignored = 0
         invalid_detail = ""
         for key, value in incoming.items():
             if not isinstance(key, str) or key not in self.key_index:
-                # 越界或陈旧键（含第 76 卷）静默丢弃，避免旧本地缓存拖死整批同步。
+                # 越界或陈旧键（含第 76 卷）不入库，但计数回报，便于前端提示“已忽略 N 条”。
+                ignored += 1
                 continue
             try:
                 normalized[key] = self._validate_answer_value(value, now_iso)
@@ -799,7 +847,7 @@ class App:
             if applied:
                 self._save_answers_locked()
             count = len(self.answers)
-        return applied, len(normalized), count
+        return applied, len(normalized), count, ignored
 
     def delete_answer(self, key: str):
         with self.lock:
@@ -1343,12 +1391,13 @@ class Handler(BaseHTTPRequestHandler):
                 payload = self._json_body()
                 if "answers" not in payload:
                     raise ApiError(400, "invalid_answers", "缺少 answers 字段")
-                merged, accepted, count = app.merge_answers(payload["answers"])
+                merged, accepted, count, ignored = app.merge_answers(payload["answers"])
                 self._send_json(
                     {
                         "merged": merged,
                         "accepted": accepted,
                         "count": count,
+                        "ignored": ignored,
                         "source_hash": app.source_hash,
                     }
                 )
@@ -1420,8 +1469,8 @@ class Handler(BaseHTTPRequestHandler):
             payload = self._json_body()
             if "answers" not in payload:
                 raise ApiError(400, "invalid_answers", "缺少 answers 字段")
-            merged, _accepted, count = app.merge_answers(payload["answers"])
-            self._send_json({"merged": merged, "count": count})
+            merged, _accepted, count, ignored = app.merge_answers(payload["answers"])
+            self._send_json({"merged": merged, "count": count, "ignored": ignored})
             return
 
         if path == "/api/candidates":

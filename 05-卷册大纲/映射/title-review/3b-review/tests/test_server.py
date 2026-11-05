@@ -13,6 +13,7 @@ import csv
 import importlib.util
 import json
 import re
+import socket
 import threading
 import urllib.error
 import urllib.parse
@@ -816,11 +817,11 @@ def test_import_is_idempotent(env):
     payload = {"answers": {"V01.1.1.1": answer_payload("ok", updated_at="2031-05-01T00:00:00+00:00")}}
     status, _h, body = env.call("POST", "/api/import", payload)
     assert status == 200
-    assert error_of(body) == {"merged": 1, "count": 1}
+    assert error_of(body) == {"merged": 1, "count": 1, "ignored": 0}
 
     status, _h, body = env.call("POST", "/api/import", payload)
     assert status == 200
-    assert error_of(body) == {"merged": 0, "count": 1}
+    assert error_of(body) == {"merged": 0, "count": 1, "ignored": 0}
     assert env.json("/api/answers")["count"] == 1
     assert env.answer("V01.1.1.1")["verdict"] == "ok"
 
@@ -958,3 +959,71 @@ def test_static_assets_and_error_responses(env):
 
     status, _h, _b = env.call("PUT", "/api/config", {"config": {}})
     assert status == 405
+
+
+# ---------------------------------------------------------------------------
+# 回归：对抗性探针发现的问题（2026-11-05）
+# ---------------------------------------------------------------------------
+
+
+def test_unknown_keys_are_reported_not_stored(env):
+    status, _h, body = env.put_answers(
+        {"V76.1.1.1": answer_payload("ok"), "garbage": answer_payload("ok")}
+    )
+    assert status == 200
+    result = error_of(body)
+    assert result["ignored"] == 2 and result["count"] == 0
+    assert env.answers() == {}
+
+
+def test_only_flagged_denominator_matches_visible(env):
+    status, _h, _b = env.call("POST", "/api/config", {"config": {"only_flagged": True}})
+    assert status == 200
+    effective = env.json("/api/manifest")["scope"]["effective"]
+    visible = 0
+    for vol in range(1, 76):
+        visible += len(env.json("/api/units?vol=%d" % vol)["units"])
+    assert effective == visible and effective > 0
+
+
+def test_scope_intersects_vol_range(env):
+    first_key = env.json("/api/units?vol=1")["units"][0]["key"]
+    status, _h, _b = env.call("POST", "/api/config", {"config": {"vol_start": 2, "vol_end": 75}})
+    assert status == 200
+    status, _h, _b = env.call("POST", "/api/scope", {"unit_keys": [first_key]})
+    assert status == 200
+    assert env.json("/api/manifest")["scope"]["effective"] == 0
+    assert env.json("/api/units?vol=1")["units"] == []
+
+
+def test_corrupt_answers_recovers_from_snapshot(env):
+    key = "V01.1.1.1"
+    status, _h, _b = env.put_answers({key: answer_payload("ok")})
+    assert status == 200
+    answers_path = env.data_dir / "answers" / "answers.json"
+    assert answers_path.exists()
+    answers_path.write_bytes(b'{"answers": {"V01.1.1.1": {"verdict": "ok"')
+    env.restart()
+    assert env.json("/api/answers")["count"] == 1
+    assert env.answer(key)["verdict"] == "ok"
+
+
+def test_path_traversal_blocked(env):
+    parsed = urllib.parse.urlsplit(env.base)
+    for path in ("/../README.md", "/..%2f..%2fREADME.md", "/%2e%2e/%2e%2e/README.md"):
+        sock = socket.create_connection((parsed.hostname, parsed.port), 5)
+        try:
+            sock.sendall(
+                ("GET %s HTTP/1.1\r\nHost: 127.0.0.1\r\nConnection: close\r\n\r\n" % path).encode("latin-1")
+            )
+            raw = b""
+            while True:
+                chunk = sock.recv(65536)
+                if not chunk:
+                    break
+                raw += chunk
+        finally:
+            sock.close()
+        head = raw.split(b"\r\n", 1)[0]
+        assert b"200" not in head, (path, head)
+        assert "3B 逐卷人工审定工具".encode("utf-8") not in raw
