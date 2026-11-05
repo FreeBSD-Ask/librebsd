@@ -21,18 +21,24 @@ E6 复审日期存在；过期仅 WARN，不判 FAIL
 E7 `流程规则.md` 存根内的分册索引表与 `流程规则/` 全部 H2 标题逐条一致
    （2026-10-29 随 2026-10-27 拆分改造：原“单文件 H2 ↔ 列表行”判据在拆分后无对象，
    改为跨分册校验，并逐行核对链接指向的分册内确有该 H2）
+E7b `流程规则/00-索引.md` 总索引（2026-11-06 立，ykla“重复行合并去重＋建立机制”令）：
+   D1 分册表每分册恰一行（重复路径行＝历史缺陷，直接 FAIL）；
+   D2 行目标分册存在，单元格内小节（`<br>` 分隔）逐条属于该分册 H2 且行内无重复；
+   D3 各分册 H2 全部登记（表 ↔ H2 双向一致）；
+   D4 FLOW_INDEX 块 bullet 与全体 H2 多重集一致（缺项、重复、多出皆 FAIL）。
 E8 意图确证接线（理论件／全局节／G0／AGENTS／模板 I）
 
 用法
 ----
     python audit_engineering_practice.py            # 0 通过 / 1 不通过
-    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 十二类负向夹具）
+    python audit_engineering_practice.py --selftest # 判据非空自检（正样本 + 负向夹具逐类命中）
     python audit_engineering_practice.py --list     # 打印检查对象
 
 依赖：仅标准库。
 """
 
 import argparse
+import collections
 import datetime
 import pathlib
 import re
@@ -217,6 +223,71 @@ def _flow_index_check(text: str, flow_dir: pathlib.Path):
         len(h2map), sum(len(v) for v in h2map.values()), len(rows))
 
 
+def _flow_index00_check(flow_dir: pathlib.Path):
+    """总索引 00-索引.md 判据（E7b，2026-11-06 立，ykla“重复行合并去重＋建立机制”令）。
+
+    分册表历史上每小节一行，同分册路径随小节增长不断重复（实测 65 行仅 11 个分册），
+    且曾混入分册中不存在的幻影行、FLOW_INDEX 块漏登新 H2——存根有 E7 看护而总索引无人看护。
+    判据：D1 每分册恰一行（重复路径行 FAIL）；D2 行目标分册存在、单元格小节（`<br>` 分隔）
+    逐条属于该分册 H2 且行内无重复；D3 各分册 H2 全部登记（双向一致）；
+    D4 FLOW_INDEX 块 bullet 与全体 H2 多重集一致。
+    """
+    path = flow_dir / "00-索引.md"
+    if not path.exists():
+        return False, "缺 %s" % path.name
+    text = _read(path)
+    if INDEX_BEGIN not in text or INDEX_END not in text:
+        return False, "缺 FLOW_INDEX_BEGIN／FLOW_INDEX_END 标记"
+    head = text.split(INDEX_BEGIN, 1)[0]
+    rows = [(m.group(1).strip(), m.group(2).strip()) for m in FLOW_ROW_RE.finditer(head)]
+    h2map = _flow_h2_map(flow_dir)
+    if not h2map:
+        return False, "未找到分册：%s" % flow_dir
+    if not rows:
+        return False, "总索引无“分册链接 | 原小节”表格行"
+    bad, dup, covered = [], [], {}
+    for target, cell in rows:
+        name = target.rsplit("/", 1)[-1]
+        if name in covered:
+            dup.append(name)
+            continue
+        titles, cseen = [t.strip() for t in cell.split("<br>") if t.strip()], set()
+        for t in titles:
+            if t in cseen:
+                bad.append("%s 行内重复“%s”" % (name, t))
+            elif t not in h2map.get(name, set()):
+                bad.append("%s 无 H2“%s”" % (name, t))
+            cseen.add(t)
+        covered[name] = cseen
+    if dup:
+        bad.insert(0, "重复路径行：%s" % "、".join(sorted(set(dup))))
+    missing = ["%s：%s" % (n, h) for n, hs in h2map.items()
+               for h in hs if h not in covered.get(n, set())]
+    block = text.split(INDEX_BEGIN, 1)[1].split(INDEX_END, 1)[0]
+    bullets = []
+    for m in re.finditer(r"(?m)^-\s+(.+?)\s*$", block):
+        t = m.group(1).replace(INDEX_END, "").strip()
+        if t:
+            bullets.append(t)
+    hcount = collections.Counter(h for hs in h2map.values() for h in hs)
+    bcount = collections.Counter(bullets)
+    bextra = sorted((bcount - hcount).elements())
+    bmiss = sorted((hcount - bcount).elements())
+    if bad or missing or bextra or bmiss:
+        parts = []
+        if bad:
+            parts.append("错指/重复 %d 条（%s）" % (len(bad), "、".join(bad[:3])))
+        if missing:
+            parts.append("未登记 %d 条（%s）" % (len(missing), "、".join(missing[:3])))
+        if bextra:
+            parts.append("bullet 块多出/重复 %d 条（%s）" % (len(bextra), "、".join(bextra[:3])))
+        if bmiss:
+            parts.append("bullet 块缺 %d 条（%s）" % (len(bmiss), "、".join(bmiss[:3])))
+        return False, "；".join(parts)
+    return True, "分册 %d 件／H2 %d 条：总索引表 %d 行（每分册一行）与 bullet %d 条全部一致" % (
+        len(h2map), sum(hcount.values()), len(rows), len(bullets))
+
+
 def run_checks(root: pathlib.Path):
     p = _paths(root)
     rows = []
@@ -338,6 +409,10 @@ def run_checks(root: pathlib.Path):
     # E7 流程规则二级索引与 H2 标题一致
     e7_ok, e7_detail = _flow_index_check(_read(p["flow"]), p["flow_dir"])
     rows.append(("E7", "流程规则二级索引与 H2 标题一致", e7_ok, e7_detail))
+
+    # E7b 流程规则总索引（00-索引.md）：分册表去重与 H2 双向一致（2026-11-06 立）
+    e7b_ok, e7b_detail = _flow_index00_check(p["flow_dir"])
+    rows.append(("E7b", "流程规则总索引（00-索引.md）分册表去重与 H2 一致", e7b_ok, e7b_detail))
 
     # E8 意图确证接线（理论件／全局节／G0／AGENTS／模板 I）
     e8_bad = []
@@ -475,6 +550,18 @@ def _write_fixture(root: pathlib.Path):
         "<!-- FLOW_INDEX_END -->\n",
         encoding="utf-8",
     )
+    # E7b 正样本夹具（2026-11-06 立）：总索引每分册恰一行＋bullet 块与 H2 一致
+    (p["flow_dir"] / "00-索引.md").write_text(
+        "# 流程规则·总索引\n\n"
+        "| 分册 | 原小节 |\n"
+        "| ---- | ------ |\n"
+        "| [01-测试分册.md](01-测试分册.md) "
+        "| 工程实践生命周期与阶段门禁（G0–G5）<br>意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
+        "<!-- FLOW_INDEX_BEGIN -->\n\n"
+        "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+        "- 意图确证（知难行易；全任务适用；2026-10-29 立）<!-- FLOW_INDEX_END -->\n",
+        encoding="utf-8",
+    )
     p["cmd_readme"].write_text("audit_engineering_practice.py\n", encoding="utf-8")
     p["registry"].write_text("audit_engineering_practice.py\n", encoding="utf-8")
 
@@ -518,6 +605,47 @@ def cmd_selftest():
             ("E7", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/01-测试分册.md")
              .write_text("# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
                          "## 新增未登记小节\n", encoding="utf-8")),
+            # E7b 负向之一（2026-11-06 立）：同分册另起新行（重复路径行，ykla 去重令的主对象）
+            ("E7b", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/00-索引.md").write_text(
+                "# 流程规则·总索引\n\n| 分册 | 原小节 |\n| ---- | ------ |\n"
+                "| [01-测试分册.md](01-测试分册.md) | 工程实践生命周期与阶段门禁（G0–G5）<br>意图确证（知难行易；全任务适用；2026-10-29 立） |\n"
+                "| [01-测试分册.md](01-测试分册.md) | 意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
+                "<!-- FLOW_INDEX_BEGIN -->\n\n"
+                "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+                "- 意图确证（知难行易；全任务适用；2026-10-29 立）<!-- FLOW_INDEX_END -->\n",
+                encoding="utf-8")),
+            # E7b 负向之二：单元格小节非该分册 H2（错指）
+            ("E7b", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/00-索引.md").write_text(
+                "# 流程规则·总索引\n\n| 分册 | 原小节 |\n| ---- | ------ |\n"
+                "| [01-测试分册.md](01-测试分册.md) | 别的标题<br>意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
+                "<!-- FLOW_INDEX_BEGIN -->\n\n"
+                "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+                "- 意图确证（知难行易；全任务适用；2026-10-29 立）<!-- FLOW_INDEX_END -->\n",
+                encoding="utf-8")),
+            # E7b 负向之三：分册 H2 未在总索引登记
+            ("E7b", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/00-索引.md").write_text(
+                "# 流程规则·总索引\n\n| 分册 | 原小节 |\n| ---- | ------ |\n"
+                "| [01-测试分册.md](01-测试分册.md) | 意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
+                "<!-- FLOW_INDEX_BEGIN -->\n\n"
+                "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+                "- 意图确证（知难行易；全任务适用；2026-10-29 立）<!-- FLOW_INDEX_END -->\n",
+                encoding="utf-8")),
+            # E7b 负向之四：FLOW_INDEX 块 bullet 缺项（实测历史漂移形态）
+            ("E7b", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/00-索引.md").write_text(
+                "# 流程规则·总索引\n\n| 分册 | 原小节 |\n| ---- | ------ |\n"
+                "| [01-测试分册.md](01-测试分册.md) | 工程实践生命周期与阶段门禁（G0–G5）<br>意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
+                "<!-- FLOW_INDEX_BEGIN -->\n\n"
+                "- 工程实践生命周期与阶段门禁（G0–G5）<!-- FLOW_INDEX_END -->\n",
+                encoding="utf-8")),
+            # E7b 负向之五：FLOW_INDEX 块 bullet 重复
+            ("E7b", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/00-索引.md").write_text(
+                "# 流程规则·总索引\n\n| 分册 | 原小节 |\n| ---- | ------ |\n"
+                "| [01-测试分册.md](01-测试分册.md) | 工程实践生命周期与阶段门禁（G0–G5）<br>意图确证（知难行易；全任务适用；2026-10-29 立） |\n\n"
+                "<!-- FLOW_INDEX_BEGIN -->\n\n"
+                "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+                "- 工程实践生命周期与阶段门禁（G0–G5）\n"
+                "- 意图确证（知难行易；全任务适用；2026-10-29 立）<!-- FLOW_INDEX_END -->\n",
+                encoding="utf-8")),
             # E8 负向之一（2026-10-29 立）：缺理论件
             ("E8", lambda: (tmp / "13-软件工程/08-intent-first.md").unlink()),
             # E8 负向之二：全局节缺“档 B”
@@ -564,7 +692,7 @@ def cmd_selftest():
         for f in failures:
             print("     - %s" % f)
         return 1
-    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8 十二类负向夹具均命中")
+    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8/E7b %d 项负向夹具均命中" % len(cases))
     return 0
 
 
