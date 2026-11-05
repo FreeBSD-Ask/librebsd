@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="amoled" data-size="m">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark light">
+<title>3B 逐卷审定</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="app-header">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">3B</span>
+    <div class="brand-text">
+      <h1>逐卷人工审定</h1>
+      <p id="scope-summary">正在载入…</p>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button type="button" class="ghost-btn" id="open-scope">范围</button>
+    <button type="button" class="ghost-btn" id="open-settings">设置</button>
+  </div>
+</header>
+
+<section class="meter" aria-label="审定进度">
+  <div class="meter-line">
+    <span id="answer-stats">已答 0</span>
+    <span id="verdict-stats"></span>
+    <span id="daily-stats">今日 0 / 500</span>
+  </div>
+  <div class="meter-bar" role="progressbar" aria-label="今日目标" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+    <i id="daily-bar"></i>
+  </div>
+</section>
+
+<nav class="filters" aria-label="筛选">
+  <label class="field field-vol">
+    <span>卷</span>
+    <select id="vol-select" aria-label="选择卷"></select>
+  </label>
+  <label class="field field-chapter">
+    <span>章</span>
+    <select id="chapter-select" aria-label="选择章">
+      <option value="">全部</option>
+    </select>
+  </label>
+  <label class="toggle">
+    <input type="checkbox" id="flag-toggle">
+    <span>仅看标记</span>
+  </label>
+  <label class="search">
+    <span class="visually-hidden">搜索</span>
+    <input type="search" id="search-input" placeholder="搜索题名或论题" autocomplete="off">
+  </label>
+</nav>
+
+<main id="main">
+  <div id="unit-list" class="unit-list" role="list"></div>
+  <div id="empty" class="empty" hidden>
+    <p id="empty-text">本卷没有符合当前筛选的单元。</p>
+  </div>
+  <button type="button" id="load-more" class="load-more" hidden>加载更多</button>
+</main>
+
+<footer class="dock" aria-label="导出">
+  <a class="dock-btn" href="/api/export?fmt=json" download>JSON</a>
+  <a class="dock-btn" href="/api/export?fmt=tsv" download>TSV</a>
+  <a class="dock-btn" href="/api/export?fmt=rewrite" download>改题</a>
+  <button type="button" class="dock-btn" id="dock-archive">归档</button>
+</footer>
+
+<dialog id="settings-dialog" class="sheet">
+  <div class="sheet-body">
+    <header class="sheet-head">
+      <h2>设置</h2>
+      <button type="button" class="ghost-btn" data-close>关闭</button>
+    </header>
+    <div class="form-grid two">
+      <label class="field"><span>起始卷</span><input type="number" id="cfg-vol-start" min="1" max="75" step="1"></label>
+      <label class="field"><span>结束卷</span><input type="number" id="cfg-vol-end" min="1" max="75" step="1"></label>
+    </div>
+    <label class="field"><span>每日目标（单元）</span><input type="number" id="cfg-daily-goal" min="1" max="5000" step="1"></label>
+    <div class="form-grid two">
+      <label class="field"><span>主题</span>
+        <select id="cfg-theme">
+          <option value="amoled">纯黑</option>
+          <option value="day">纸白</option>
+        </select>
+      </label>
+      <label class="field"><span>字号</span>
+        <select id="cfg-font-size">
+          <option value="s">小</option>
+          <option value="m">中</option>
+          <option value="l">大</option>
+        </select>
+      </label>
+    </div>
+    <fieldset class="label-fieldset">
+      <legend>按钮文字</legend>
+      <div class="form-grid three">
+        <label class="field"><span>对勾</span><input type="text" id="cfg-label-ok" maxlength="8"></label>
+        <label class="field"><span>重拟</span><input type="text" id="cfg-label-reroll" maxlength="8"></label>
+        <label class="field"><span>自定义</span><input type="text" id="cfg-label-custom" maxlength="8"></label>
+      </div>
+    </fieldset>
+    <label class="check"><input type="checkbox" id="cfg-only-flagged"><span>仅显示带机判或人判标记的单元</span></label>
+    <div class="form-actions">
+      <button type="button" class="primary-btn" id="save-settings">保存设置</button>
+    </div>
+    <hr class="rule">
+    <section class="export-block" aria-label="导出与归档">
+      <h3>导出与归档</h3>
+      <div class="btn-row">
+        <a class="btn" href="/api/export?fmt=json" download>答案 JSON</a>
+        <a class="btn" href="/api/export?fmt=tsv" download>答案 TSV</a>
+        <a class="btn" href="/api/export?fmt=rewrite" download>改题清单</a>
+        <a class="btn" href="/api/config/export" download>配置</a>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn" id="settings-archive">归档快照</button>
+        <label class="btn file-btn">导入答案<input type="file" id="import-file" accept=".json,application/json" hidden></label>
+      </div>
+    </section>
+  </div>
+</dialog>
+
+<dialog id="scope-dialog" class="sheet">
+  <div class="sheet-body">
+    <header class="sheet-head">
+      <h2>审定范围</h2>
+      <button type="button" class="ghost-btn" data-close>关闭</button>
+    </header>
+    <p id="scope-current" class="scope-current"></p>
+    <div class="btn-col">
+      <button type="button" class="btn" id="scope-all">全量：按卷段范围</button>
+      <button type="button" class="btn" id="scope-vol">锁定当前卷的可见单元</button>
+      <button type="button" class="btn" id="scope-chapter">锁定当前章的可见单元</button>
+    </div>
+    <p class="hint">锁定后，单元接口只返回清单内的键；全量会清除清单，回到设置的卷段范围。</p>
+  </div>
+</dialog>
+
+<dialog id="custom-dialog" class="sheet">
+  <div class="sheet-body">
+    <header class="sheet-head">
+      <h2>自定义题名</h2>
+      <button type="button" class="ghost-btn" data-close>关闭</button>
+    </header>
+    <p id="custom-origin" class="custom-origin"></p>
+    <label class="field"><span>新题名</span><input type="text" id="custom-title" maxlength="160" autocomplete="off"></label>
+    <label class="field"><span>备注（可选）</span><textarea id="custom-note" rows="3"></textarea></label>
+    <div class="form-actions">
+      <button type="button" class="primary-btn" id="save-custom">保存自定义</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
