@@ -478,6 +478,11 @@
     var errors = [];
     var idx = 0;
     var vols = state.vols.slice();
+    if (!ui.vol) ui.vol = pickVol();
+    // 当前卷优先：断网时首卷即可渲染，其余失败三次即止
+    vols.sort(function (a, b) {
+      return (b.vol === ui.vol ? 1 : 0) - (a.vol === ui.vol ? 1 : 0) || a.vol - b.vol;
+    });
 
     if (!vols.length) {
       state.unitsLoaded = true;
@@ -518,6 +523,7 @@
         })
         .catch(function () {
           errors.push(v.vol);
+          if (errors.length >= 3) idx = vols.length - 1;  // 断网时停止逐卷空等
         })
         .then(function () {
           idx += 1;
@@ -1804,6 +1810,24 @@
     bind();
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(function () {});
+      navigator.serviceWorker.ready.then(function () {
+        var tries = 0;
+        (function warm() {
+          // 首访时首个请求发在 SW claim 之前，不落缓存；须等 controller 就绪
+          if ((!navigator.serviceWorker.controller || !ui.vol) && tries < 80) {
+            tries += 1;
+            setTimeout(warm, 250);
+            return;
+          }
+          if (!ui.vol) return;
+          // 预热当前卷与答案接口，保证断网刷新仍可渲染并合并
+          apiGet('/api/answers').catch(function () {});
+          apiGet('/api/units?vol=' + ui.vol).catch(function () {});
+        })();
+      }).catch(function () {});
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (ui.vol) apiGet('/api/units?vol=' + ui.vol).catch(function () {});
+      });
     }
     loadAll();
   }

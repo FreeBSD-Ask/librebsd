@@ -1076,3 +1076,85 @@ def test_path_traversal_blocked(env):
         head = raw.split(b"\r\n", 1)[0]
         assert b"200" not in head, (path, head)
         assert "3B 逐卷人工审定工具".encode("utf-8") not in raw
+
+
+# ---------------------------------------------------------------------------
+# 导入导出：格式与内容保真（转义、合并语义、行序、动作映射）
+# ---------------------------------------------------------------------------
+
+
+def _payload(verdict="ok", title="", note="", tags=None, target="", ts="2026-11-05T10:00:00Z"):
+    return {
+        "verdict": verdict,
+        "custom_title": title,
+        "note": note,
+        "tags": tags or [],
+        "merge_target": target,
+        "updated_at": ts,
+    }
+
+
+def test_export_tsv_escapes_and_json_preserves(env):
+    keys = expected_model()[2][1]
+    tricky = "题名 “引号” ‘单’ 🚀"
+    note = "第一行\t制表\n第二行,逗号"
+    status, _h, _b = env.put_answers({keys[0]: _payload("custom", tricky, note)})
+    assert status == 200
+    saved = env.json("/api/answers")["answers"][keys[0]]
+    assert saved["custom_title"] == tricky and saved["note"] == note
+    status, _h, body = env.call("GET", "/api/export?fmt=tsv")
+    lines = body.decode("utf-8").splitlines()
+    row = [ln for ln in lines[1:] if ln.startswith(keys[0])][0].split("\t")
+    assert len(row) == 10
+    assert row[7] == tricky
+    assert row[8] == "第一行 制表 第二行,逗号"
+    assert len(lines) == 2
+    status, _h, body = env.call("GET", "/api/export?fmt=rewrite")
+    rw = [ln for ln in body.decode("utf-8").splitlines()[1:] if ln.startswith(keys[0])][0].split("\t")
+    assert len(rw) == 13
+    assert rw[7] == tricky and rw[10] == "第一行 制表 第二行,逗号"
+
+
+def test_import_merge_semantics(env):
+    keys = expected_model()[2][1]
+    env.put_answers({
+        keys[0]: _payload("ok", ts="2026-11-05T10:00:00Z"),
+        keys[1]: _payload("ok", ts="2026-11-05T10:00:00Z"),
+    })
+    status, _h, _b = env.call("POST", "/api/import", {"answers": {
+        keys[0]: _payload("custom", "旧值", ts="2026-11-05T09:00:00Z")}})
+    assert status == 200 and env.answer(keys[0])["verdict"] == "ok"
+    status, _h, _b = env.call("POST", "/api/import", {"answers": {
+        keys[0]: _payload("custom", "新值", ts="2026-11-05T11:00:00Z")}})
+    assert status == 200 and env.answer(keys[0])["custom_title"] == "新值"
+    assert env.json("/api/answers")["count"] == 2
+    status, _h, body = env.call("POST", "/api/import", {"answers": {
+        "V76.1.1.1": _payload(), "no-such-key": _payload()}})
+    result = json.loads(body)
+    assert status == 200 and result["ignored"] == 2
+    assert env.json("/api/answers")["count"] == 2
+
+
+def test_export_rows_follow_outline_order(env):
+    units = env.json("/api/units?vol=1")["units"]
+    subs = [u["key"] for u in units if u["level"] == "subsection"]
+    first, second = subs[0], subs[3]
+    env.put_answers({second: _payload(), first: _payload()})
+    status, _h, body = env.call("GET", "/api/export?fmt=tsv")
+    rows = [ln.split("\t")[0] for ln in body.decode("utf-8").splitlines()[1:]]
+    assert rows == [first, second], rows
+
+
+def test_rewrite_actions_and_empty_new_title(env):
+    keys = expected_model()[2][1]
+    env.put_answers({
+        keys[0]: _payload("ok"),
+        keys[1]: _payload("reroll", tags=["content", "length"], ts="2026-11-05T10:00:01Z"),
+        keys[2]: _payload("custom", "改题", ts="2026-11-05T10:00:02Z"),
+    })
+    status, _h, body = env.call("GET", "/api/export?fmt=rewrite")
+    rows = {ln.split("\t")[0]: ln.split("\t") for ln in body.decode("utf-8").splitlines()[1:]}
+    assert keys[0] not in rows
+    assert rows[keys[1]][6] == "重拟待办" and rows[keys[1]][7] == ""
+    assert rows[keys[1]][8] == "content+length"
+    assert rows[keys[2]][6] == "改题" and rows[keys[2]][7] == "改题"

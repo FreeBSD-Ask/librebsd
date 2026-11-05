@@ -71,13 +71,17 @@ C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\serve_3b_
 ```text
 C:\Python314\python.exe -m pytest "05-卷册大纲\映射\title-review\3b-review\tests" -q
 C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_playwright.py"
+C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_stage_resume.py"
 
 # 有头（visible browser）模式
 set E2E_HEADED=1
 C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_playwright.py"
+C:\Python314\python.exe "05-卷册大纲\映射\title-review\3b-review\tests\e2e_stage_resume.py"
 ```
 
-当前结果：pytest **46 passed**（`test_server.py` 22 例：75 卷逐卷对位、23,722 总数、V76 零单元、指纹、徽标、合并／清除、快照轮转、配置与清单、三种导出、归档、候选、重拟标签；`test_mobile_layout.py` 24 例：媒体查询方向、底部固定工具栏、44/48px 触控、题名字号档位、末条遮挡、过滚抑制、对勾符号化、浅色主题、PWA manifest、平板不套用手机规则）；E2E **15 passed / 0 skip**（headless 与 `E2E_HEADED=1` 有头各一轮）。有头随机 5% 抽测（1,186 条，seed 20261105）提交耗时 0.13 s，分布 720／300／166、TSV 1,187 行、回写清单 467 行、归档与界面进度均一致。
+当前结果：pytest **50 passed**（`test_server.py` 26 例：75 卷逐卷对位、23,722 总数、V76 零单元、指纹、徽标、合并／清除、快照轮转、配置与清单、三种导出、归档、候选、重拟标签、TSV 转义与 JSON 保真、导入合并语义、导出排序；`test_mobile_layout.py` 24 例：媒体查询方向、底部固定工具栏、44/48px 触控、题名字号档位、末条遮挡、过滚抑制、对勾符号化、浅色主题、PWA manifest、平板不套用手机规则）；E2E **15 passed / 0 skip**、暂存／续点／导入导出专项 **30 passed / 0 fail**（两者均 headless 与 `E2E_HEADED=1` 有头各一轮）。有头随机 5% 抽测（1,186 条，seed 20261105）提交耗时 0.13 s，分布 720／300／166、TSV 1,187 行、回写清单 467 行、归档与界面进度均一致。
+
+`e2e_stage_resume.py` 覆盖：Service Worker 接管、在线作答落库、localStorage 暂存与游标、停服后离线作答、离线刷新暂存不丢、起服自动重推、V07 续点与“继续上次”、JSON／TSV／回写清单三类导出的列序与内容保真（含逗号、弯引号、标签）、清库清缓存归零、导入回灌逐条全字段还原与重复导入幂等。
 
 ## 版本管理说明
 
@@ -95,6 +99,8 @@ web/manifest.webmanifest  PWA 清单（全屏优先）
 web/fonts/                霞鹜文楷子集、OFL 许可与说明
 web/icons/                PWA 图标 192／512
 tests/test_server.py      API 全量测试
+tests/test_mobile_layout.py  手机适配静态单元测试
 tests/e2e_playwright.py   移动视口端到端测试
+tests/e2e_stage_resume.py 暂存／续点／导入导出专项测试
 data/                     答案、配置、候选、导出（运行时生成）
 ```
