@@ -333,7 +333,10 @@ def cmd_check(outline, targets, drift_dir):
     if not targets.exists():
         print("targets.tsv 不存在：%s（视为全量新增）" % targets)
         return 1
-    old_nodes = load_registry(targets)
+    old_all = load_registry(targets)
+    # 2026-11-06（披露清零批）：retired 留存行不是漂移对象——reconcile 只吃 active 旧节点，
+    # 否则历史退役行每次 --check 都被重报为 retired（恒 exit 1 的假红，92 批记先例曾记"工具既定语义"）。
+    old_nodes = [o for o in old_all if (o.get("status") or "active").lower() != "retired"]
     new_nodes, old_nodes, drift, stats = reconcile(new_nodes, old_nodes)
     path = write_drift_report(drift_dir, drift)
     print("漂移检测：%s" % targets)
@@ -350,14 +353,17 @@ def cmd_check(outline, targets, drift_dir):
 def cmd_sync(outline, targets, drift_dir, do_write):
     text = outline.read_text(encoding="utf-8")
     new_nodes = parse(text)
-    old_nodes = load_registry(targets) if targets.exists() else []
+    old_all = load_registry(targets) if targets.exists() else []
+    # 2026-11-06（披露清零批）：retired 留存行不进 reconcile，写盘时照常附带（不丢失）。
+    old_nodes = [o for o in old_all if (o.get("status") or "active").lower() != "retired"]
+    retired_kept = [o for o in old_all if (o.get("status") or "active").lower() == "retired"]
     new_nodes, old_nodes, drift, stats = reconcile(new_nodes, old_nodes)
     path = write_drift_report(drift_dir, drift)
     print("漂移同步（%s）：%s" % ("写盘" if do_write else "dry-run", targets))
     _print_stats(stats)
     print("  报告：%s（%d 行）" % (path, len(drift)))
     if do_write:
-        out = list(new_nodes) + [o for o in old_nodes if o["status"] == "retired"]
+        out = list(new_nodes) + [o for o in old_nodes if o["status"] == "retired"] + retired_kept
         write_targets(targets, out)
         print("已写 %s（%d 行）" % (targets, len(out)))
     else:
