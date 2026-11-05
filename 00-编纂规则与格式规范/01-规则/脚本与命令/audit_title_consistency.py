@@ -134,6 +134,16 @@ REVIEW_TERMS = ("叙事", "话语", "互构", "建构", "解构", "范式", "语
 # C8 去 AI 味（2026-10-30 ykla 令“标题风格应一致，去 AI 味的同时保持学术性”）：
 # 硬拦 AI 高频空转词、同卷结尾二字簇超限、单题「的」超密；临界词只披露防误杀。
 BANNED_AI = ("赋能", "抓手", "闭环", "颗粒度", "锚点", "景深", "温差", "样态")
+_CN_DIGIT = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5,
+             "六": 6, "七": 7, "八": 8, "九": 9}
+
+
+def _cn_vol(s):
+    """中文卷号转整数（一~九十九；J 组节题层用）。“六十八”→68、“十”→10。"""
+    if "十" in s:
+        a, _, b = s.partition("十")
+        return (_CN_DIGIT.get(a, 1) if a else 1) * 10 + (_CN_DIGIT.get(b, 0) if b else 0)
+    return _CN_DIGIT.get(s, 0)
 REVIEW_AI = ("图景", "维度", "对位", "坐标", "版图", "生态", "张力", "轨迹", "格局", "画像")
 PATTERN_TECH = re.compile(r"[A-Za-z]{2,}|POSIX|IEEE|ANSI|ISO|RFC|USENIX|ACM")
 STANDARD = re.compile(r"(IEEE\s*Std|POSIX|ISO/IEC|ANSI|RFC\s*\d+|USENIX)")
@@ -662,59 +672,67 @@ def run(root, collect=None):
     f("I2", "I2 例外 kind／status 枚举", bad_i2,
       "非法 %d 条：%s" % (len(bad_i2), "、".join(bad_i2[:5]) or "无"))
 
-    # ---------------- J 节题层（P7-4；2026-11-05 ykla 定序扩判定面）
-    # 范围注册＝长线登记表 §十九 V68 节题层：判定对象仅卷 68 的上位节题行
-    # （outline.txt 内「第六十八卷」标题块下的 - N.M 行）；其余卷的节题层另行批次。
-    # 判据：J1 长度下限 ≥8（去空白）；J2 同尾簇 ≤4（四章平行开篇「之辨」属有意
-    # 结构，帽定 4；依据＝执行记录 §二）；J3 BANNED_AI 照判（REVIEW_AI 走 J3i
-    # 披露）；J4 outline 节题与台账（chapter.section）族双向对位。
+    # ---------------- J 节题层（P7-4；2026-11-05 ykla 定序扩判定面，同日扩全卷）
+    # 两层设计：J3／J3i／J4 为全局结构卫生（76 卷节题 vs 台账族双向对位＋禁 AI
+    # 词——全卷实测本即零失衡）；J1／J2 为 V68 注册范围的风格帽（长度 ≥8、同尾
+    # 簇 ≤4；V68 四章平行开篇「之辨」属有意结构故帽定 4——依据＝P7-4 执行记录）。
+    # 其余 75 卷的节题风格规则（短题豁免口径、区域调查章平行句式等）另行批次注册，
+    # 本件不径行套用。夹具环境：outline.txt 未收录的台账卷跳过对位（子集兼容）。
     outp = os.path.join(root, "05-卷册大纲", "目录", "data", "outline.txt")
     if not os.path.exists(outp):
-        rec("J0", "J0 节题层判定面（P7-4：V68）", True,
+        rec("J0", "J0 节题层判定面（P7-4）", True,
             "跳过：outline.txt 不在位（夹具或子集环境）")
     else:
-        j_secs = []
-        in68 = False
+        j_all = {}
+        v_no = 0
         for s in _read(outp).split("\n"):
-            if s.startswith("# "):
-                in68 = "六十八卷" in s
+            mh = re.match(r"^# 第([一二三四五六七八九十]+)卷", s)
+            if mh:
+                v_no = _cn_vol(mh.group(1))
                 continue
             m_j = re.match(r"^- (\d+)\.(\d+) (.+?)(?:@@|$)", s)
-            if in68 and m_j:
-                j_secs.append(("%s.%s" % (m_j.group(1), m_j.group(2)),
-                               m_j.group(3).strip()))
-        led68 = {}
+            if m_j and 1 <= v_no <= 76:
+                j_all.setdefault(v_no, []).append(
+                    ("%s.%s" % (m_j.group(1), m_j.group(2)), m_j.group(3).strip()))
+        led_all = {}
         for _, _, r in all_rows:
-            if r["vol"] == "68":
-                led68["%s.%s" % (r["chapter"], r["section"])] = led68.get(
-                    "%s.%s" % (r["chapter"], r["section"]), 0) + 1
-        bad_j1 = ["%s（%s）" % (sn, t) for sn, t in j_secs
+            k = (int(r["vol"]), "%s.%s" % (r["chapter"], r["section"]))
+            led_all[k] = led_all.get(k, 0) + 1
+        bad_j3 = ["V%d %s（%s）" % (v, sn, "、".join(w for w in BANNED_AI if w in t))
+                  for v, items in sorted(j_all.items()) for sn, t in items
+                  if any(w in t for w in BANNED_AI)]
+        f("J3", "J3 节题禁 AI 高频空转词（全 76 卷）", bad_j3,
+          "命中 %d 处：%s" % (len(bad_j3), "、".join(bad_j3[:5]) or "无"))
+        info_j3 = ["V%d %s（%s）" % (v, sn, "、".join(w for w in REVIEW_AI if w in t))
+                   for v, items in sorted(j_all.items()) for sn, t in items
+                   if any(w in t for w in REVIEW_AI)]
+        rec("J3i", "J3i 节题 AI 腔词披露（人工复核项，不拦退出码）", True,
+            "命中 %d 处：%s" % (len(info_j3), "、".join(info_j3[:6]) or "无"),
+            items=info_j3)
+        bad_j4 = []
+        for v, items in sorted(j_all.items()):
+            out_keys = {sn for sn, _ in items}
+            led_keys = {k[1] for k in led_all if k[0] == v}
+            bad_j4 += ["V%d %s（台账无族）" % (v, sn) for sn in sorted(out_keys)
+                       if sn not in led_keys]
+            bad_j4 += ["V%d %s（outline 无节）" % (v, sn) for sn in sorted(led_keys)
+                       if sn not in out_keys]
+        f("J4", "J4 节题与台账族双向对位（全 76 卷；夹具未收录卷跳过）", bad_j4,
+          "失衡 %d 处：%s" % (len(bad_j4), "、".join(bad_j4[:5]) or "无"))
+        j68 = j_all.get(68, [])
+        bad_j1 = ["%s（%s）" % (sn, t) for sn, t in j68
                   if len("".join(t.split())) < 8]
-        f("J1", "J1 节题长度下限 ≥8（去空白；P7-4 范围＝V68）", bad_j1,
+        f("J1", "J1 节题长度下限 ≥8（去空白；注册范围＝V68）", bad_j1,
           "过短 %d 处：%s" % (len(bad_j1), "、".join(bad_j1[:5]) or "无"))
         j_tails = {}
-        for sn, t in j_secs:
+        for sn, t in j68:
             tt = "".join(t.split())
             if len(tt) >= 2:
                 j_tails.setdefault(tt[-2:], []).append(sn)
         bad_j2 = ["尾“%s”×%d（%s…）" % (tail, len(ids), "、".join(ids[:4]))
                   for tail, ids in sorted(j_tails.items()) if len(ids) > 4]
-        f("J2", "J2 节题同尾簇 ≤4（P7-4 范围＝V68）", bad_j2,
-          "超限 %d 处：%s" % (len(bad_j2), "；".join(bad_j2[:3]) or "无"))
-        bad_j3 = ["%s（%s）" % (sn, "、".join(w for w in BANNED_AI if w in t))
-                  for sn, t in j_secs if any(w in t for w in BANNED_AI)]
-        f("J3", "J3 节题禁 AI 高频空转词（P7-4 范围＝V68）", bad_j3,
-          "命中 %d 处：%s" % (len(bad_j3), "、".join(bad_j3[:5]) or "无"))
-        info_j3 = ["%s（%s）" % (sn, "、".join(w for w in REVIEW_AI if w in t))
-                   for sn, t in j_secs if any(w in t for w in REVIEW_AI)]
-        rec("J3i", "J3i 节题 AI 腔词披露（人工复核项，不拦退出码）", True,
-            "命中 %d 处：%s" % (len(info_j3), "、".join(info_j3[:6]) or "无"),
-            items=info_j3)
-        out_secs = {sn for sn, _ in j_secs}
-        bad_j4 = (["%s（台账无族）" % sn for sn, _ in j_secs if sn not in led68]
-                  + ["%s（outline 无节）" % sn for sn in led68 if sn not in out_secs])
-        f("J4", "J4 节题与台账族双向对位（P7-4 范围＝V68）", bad_j4,
-          "失衡 %d 处：%s" % (len(bad_j4), "、".join(bad_j4[:5]) or "无"))
+        f("J2", "J2 节题同尾簇 ≤4（注册范围＝V68；平行开篇帽定依据＝P7-4 执行记录）",
+          bad_j2, "超限 %d 处：%s" % (len(bad_j2), "；".join(bad_j2[:3]) or "无"))
 
     return rows_out
 
