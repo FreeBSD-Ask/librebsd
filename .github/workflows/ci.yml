@@ -84,6 +84,11 @@ jobs:
           python "$GATES/audit_page_version_bump.py"
           python "$GATES/audit_title_consistency.py"
           python "$GATES/audit_title_term_forms.py"
+          # 2026-11-06（ADR-0020）四级新增：装配漂移自证／小节设计台账一致性（第三十八件，
+          #   零态合法 PASS）／四级行合并器幂等自证（零态无 fragment exit 0）
+          python "$GATES/assemble_index.py" --check
+          python "$GATES/audit_subsection_design.py"
+          python "$GATES/merge_subsections.py" --check
 
       - name: 守卫、锚与交叉引用层门禁
         id: g3
