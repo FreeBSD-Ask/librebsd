@@ -1,0 +1,31 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.28992		—	移出	人工判读：题面不符，建议宿主 V14／V31
+login-zazhi.articles.CL-2-058		—	移出	人工判读：题面不符，建议宿主 V14／V31
+historical_claims.duckdb.claim	V13.1.2.2	可靠信号机制的试验接口	归入	4.2／4.3 引入可靠信号与 FFS 的史家判断
+usenet_mail.messages.4353		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.128896	V13.4.4.5	域名服务的集成部署	归入	Bostic 公告 4.3BSD res_send.c 缺陷与影响
+usenet_mail.messages.28888		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.4470		—	移出	人工判读：题面不符，建议宿主 V14／V31
+chapter_reviews		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.4376		—	移出	人工判读：题面不符，建议宿主 V14／V31
+11410011@eecs.nwu.edu		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.7093	V13.4.3.4	可靠性与安全的补强	归入	CERT 协调中心设立公告（DARPA／SEI）
+usenet_mail.messages.68931		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.128976		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.2082		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.3523	V13.4.3.4	可靠性与安全的补强	归入	Bostic 指 setuid／setgid 脚本的固有问题
+usenet_mail.messages.126877		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.3983	V13.3.4.2	磁盘性能的改进幅度	归入	BSD FFS 对 1K／2K 扇区的支持之问
+5238@mcvax.UUCP	V13.4.3.1	性能改进的主攻方向	归入	Leffler：4.2 不含虚存映射，相关修改延至 4.3
+usenet_mail.messages.3117		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.128907		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.56130		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.4195		—	移出	人工判读：题面不符，建议宿主 V14／V31
+17516@adm.BRL.MIL	V13.4.3.4	可靠性与安全的补强	归入	蠕虫报告的转发与定性（非病毒）
+usenet_mail.messages.56842		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.51665	V13.4.3.1	性能改进的主攻方向	归入	4.2BSD brk 不真释放页面乃 vm_drum 明言设计
+usenet_mail.messages.4174		—	移出	人工判读：题面不符，建议宿主 V14／V31
+usenet_mail.messages.66911	V13.2.5.5	套接字原语的语义约定	归入	Unix 域套接字传文件描述符两例（语义约定）
+usenet_mail.messages.128543	V13.3.3.5	整合完成的站点验证	归入	非法 level 的 setsockopt 触发 ip_ct 崩溃
+usenet_mail.messages.128834	V13.3.3.5	整合完成的站点验证	归入	4.3BSD 与 Ultrix 1.1 服务端 TCP bind 缺陷
+usenet_mail.messages.128158	V13.3.3.5	整合完成的站点验证	归入	4.3BSD-tahoe accept 行为之问
