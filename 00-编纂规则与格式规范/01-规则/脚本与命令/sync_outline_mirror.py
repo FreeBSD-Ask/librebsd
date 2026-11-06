@@ -12,11 +12,10 @@
   * `SUMMARY.md`：`# Summary` 后逐条列表；缩进四层（卷 0／章 2／节 4／小节 6）；
     目录用带尾斜杠的相对链接，小节用 `.md` 相对链接；标题与磁盘目录／文件名**逐字一致**，
     空目录与空文件照列，零树外条目。
-  * `chapter_keywords.json`：键＝三位章号字符串；值含 `volume`／`title`／`subs`
-    （该章节目录名数组，须非空）／`keywords`（数组）。旧库既有 `keywords` 按**旧章身份**
-    保留——旧键（自然数 1..390）经 `script/_b7_mapping.json` 的 `chapter_map` 由 old→new
-    映射到新键，旧键不残留；无旧身份的新增结构章按章题与节题中的拉丁词元派生（≤8，小写
-    去重）。若现有库已是新键形态（三位），只补不删。
+  * `chapter_keywords.json`／`theme_index.json`：自 2026-10-21 起委派同目录
+    `build_theme_index.py` 独立再生与校验（schema `theme-index/4`／`theme-reverse/2`）。
+    本脚本不再派生关键词，也不读任何章号映射表——历史上对
+    `script/_b7_mapping.json`（批 7 临时件）的依赖已随死代码一并移除。
 
 语义
 ----
@@ -61,7 +60,6 @@ except Exception:  # 主题索引生成器缺失时，SUMMARY 功能仍可独立
     bti = None
 DEFAULT_ROOT = os.path.join(REPO, "05-卷册大纲")
 DEFAULT_OUT = os.path.join(REPO, "05-卷册大纲")
-DEFAULT_MAPPING = os.path.join(REPO, "script", "_b7_mapping.json")
 SELFTEST_REL = os.path.join("script", "_mirror_selftest")
 
 VOL_RE = re.compile(r"^第(\d{1,3})卷(?:-(?P<slug>.+))?$")
@@ -77,16 +75,8 @@ CH_RE = re.compile(r"^第(\d{1,3})章(?:-(?P<slug>.+))?$")
 SEC_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})-(?P<slug>.+)$")
 SUB_RE = re.compile(r"^(\d{1,3})\.(\d{1,3})\.(\d{1,4})-(?P<slug>.+)\.md$")
 KEY3_RE = re.compile(r"^\d{3}$")
-KEYN_RE = re.compile(r"^\d{1,3}$")
 LINE_RE = re.compile(r"^(?P<indent> *)- (?P<title>.+)$")
 
-# 章节词元派生：拉丁词元、合法词形与停用词（沿 sync_chapter_keywords.py 惯例）
-LATIN = re.compile(r"[A-Za-z][A-Za-z0-9.+-]{1,}")
-TERM = re.compile(r"^[a-z0-9][a-z0-9._+-]{1,39}$")
-STOP = set("""bsd unix os history computer software system technology project community
-development open source free internet the and for with from into over under about
-its his her their this that these those new old early late modern""".split())
-MAX_KW = 8
 # 章号上限改为**目录页口径派生**（2026-10-23 搬迁批）：旧树写死 001..449，新树按
 # `目录/data/outline.txt` 的章数派生；派生不可用（如合成夹具树）时不判越界。
 CH_NUM_MIN = 1
@@ -409,157 +399,6 @@ def chapter_title(root, chap):
     return chap["name"]
 
 
-def derive_keywords(chap, title):
-    """新增章按章题与节题中的拉丁词元派生（≤8，小写去重，排序）。"""
-    pool = [title] + [s["name"] for s in chap["sections"]]
-    out, seen = [], set()
-    for text in pool:
-        for tok in LATIN.findall(text):
-            t = tok.lower().strip(".-+")
-            if len(t) < 2 or t in STOP or t in seen or not TERM.match(t):
-                continue
-            seen.add(t)
-            out.append(t)
-            if len(out) >= MAX_KW:
-                return sorted(out)
-    return sorted(out)
-
-
-def load_legacy_keywords(out_dir):
-    """读现有 chapter_keywords.json，返回 (doc, mode)；mode ∈ {absent, legacy, new}。"""
-    path = os.path.join(out_dir, "chapter_keywords.json")
-    if not os.path.isfile(path):
-        return {}, "absent"
-    try:
-        with open(path, encoding="utf-8") as fh:
-            doc = json.load(fh)
-    except Exception as exc:
-        raise Fatal("现有 chapter_keywords.json 无法解析（拒覆盖）：%s" % exc)
-    if not isinstance(doc, dict):
-        raise Fatal("现有 chapter_keywords.json 顶层不是对象（拒覆盖）")
-    if not doc:
-        return {}, "absent"
-    three = [k for k in doc if KEY3_RE.match(k)]
-    legacy = [k for k in doc if KEYN_RE.match(k) and not KEY3_RE.match(k)]
-    if len(three) == len(doc):
-        return doc, "new"
-    if len(legacy) == len(doc):
-        return doc, "legacy"
-    if three and legacy:
-        return doc, "mixed"
-    raise Fatal("现有 chapter_keywords.json 键形态无法判定（三位 %d 个／旧键 %d 个），拒判"
-                % (len(three), len(legacy)))
-
-
-def load_mapping(path):
-    """读批 7 映射表，返回 old_num → new_num（仅 old_num ≥ 1 的实质章）。"""
-    if not os.path.isfile(path):
-        raise Fatal("章号映射表不存在：%s" % path)
-    try:
-        with open(path, encoding="utf-8") as fh:
-            doc = json.load(fh)
-    except Exception as exc:
-        raise Fatal("章号映射表无法解析：%s" % exc)
-    rows = doc.get("chapter_map")
-    if not isinstance(rows, list):
-        raise Fatal("章号映射表缺 chapter_map 数组：%s" % path)
-    old2new = {}
-    for row in rows:
-        try:
-            old = int(row.get("old_num"))
-            new = int(row.get("new_num"))
-        except (TypeError, ValueError):
-            continue
-        if old < 1:
-            continue
-        old2new.setdefault(old, new)
-    return old2new
-
-
-def build_keywords(tree, legacy, mode, old2new, root):
-    """生成章关键词库文档与派生说明。"""
-    notes = {"mode": mode, "kept": 0, "derived": 0,
-             "unmapped": [], "retitled": [], "mapped_from_legacy": 0}
-    prev = {}
-    if mode == "new":
-        prev = dict(legacy)
-    elif mode in ("legacy", "mixed"):
-        title_map = {}
-
-        def _norm_title(s):
-            return (s or "").replace("-", "").replace("_", "").replace(" ", "")
-
-        for vol in tree["volumes"]:
-            for chap in vol["chapters"]:
-                t = chapter_title(root, chap)
-                key3 = "%03d" % chap["num"]
-                title_map[(vol["name"], t)] = key3
-                title_map[(vol["name"], _norm_title(t))] = key3
-        for key, value in legacy.items():
-            if mode == "mixed" and KEY3_RE.match(key):
-                nk = key
-            else:
-                nk = None
-                try:
-                    old = int(key)
-                except ValueError:
-                    old = None
-                if old is not None and old in old2new:
-                    nk = "%03d" % old2new[old]
-                # 旧号映射可能因中途局部改名而失真；以 (volume,title) 为准
-                tm = title_map.get((value.get("volume"), value.get("title")))
-                if not tm:
-                    vt = (value.get("title") or "").replace("-", "").replace("_", "").replace(" ", "")
-                    tm = title_map.get((value.get("volume"), vt))
-                if tm:
-                    nk = tm
-                if nk is None:
-                    notes["unmapped"].append(key)
-                    continue
-            if nk in prev:
-                # 混态下同章可能同时存在三位新键与旧键：词表取并集，只增不删
-                a = [str(x) for x in (prev[nk].get("keywords") or []) if isinstance(x, str)]
-                b = [str(x) for x in (value.get("keywords") or []) if isinstance(x, str)]
-                seen = set()
-                merged = []
-                for x in a + b:
-                    if x and x not in seen:
-                        seen.add(x)
-                        merged.append(x)
-                prev[nk] = dict(prev[nk])
-                prev[nk]["keywords"] = merged
-                continue
-            prev[nk] = value
-            notes["mapped_from_legacy"] += 1
-
-    doc = {}
-    for vol in tree["volumes"]:
-        for chap in vol["chapters"]:
-            key = "%03d" % chap["num"]
-            title = chapter_title(root, chap)
-            subs = [s["name"] for s in chap["sections"]]
-            old = prev.get(key) or {}
-            kws = [str(x) for x in (old.get("keywords") or [])
-                   if isinstance(x, str) and x]
-            if kws:
-                notes["kept"] += 1
-            else:
-                kws = derive_keywords(chap, title)
-                notes["derived"] += 1
-            if old and (old.get("volume") != vol["name"] or old.get("title") != title):
-                notes["retitled"].append(key)
-            doc[key] = {"volume": vol["name"], "title": title,
-                        "subs": subs, "keywords": kws}
-    ordered = {k: doc[k] for k in sorted(doc, key=int)}
-    return ordered, notes
-
-
-def render_keywords(doc):
-    if doc is None:          # 关键词库已委派 build_theme_index.py，本器不再派生
-        return ""
-    return json.dumps(doc, ensure_ascii=False, indent=2) + "\n"
-
-
 # ---------------------------------------------------------------- 校验器（独立函数）
 
 def parse_summary(text):
@@ -847,7 +686,7 @@ def atomic_write(path, text):
 
 # ---------------------------------------------------------------- 命令实现
 
-def _build_all(root, out_dir, mapping_path):
+def _build_all(root, out_dir):
     """扫描＋生成 SUMMARY，返回 (tree, summary_text, None, notes)。
 
     chapter_keywords.json／theme_index.json 自 2026-10-21 起由
@@ -892,8 +731,8 @@ def _print_problems(problems, limit=80):
         print("    …（另 %d 项，已按判据码汇总）" % (len(problems) - limit))
 
 
-def cmd_list(root, out_dir, mapping_path):
-    tree, summary_text, keywords_doc, notes = _build_all(root, out_dir, mapping_path)
+def cmd_list(root, out_dir):
+    tree, summary_text, keywords_doc, notes = _build_all(root, out_dir)
     print("=" * 72)
     print("大纲根级派生件计数统计")
     print("=" * 72)
@@ -904,8 +743,6 @@ def cmd_list(root, out_dir, mapping_path):
         nb = sum(len(s["subs"]) for c in vol["chapters"] for s in c["sections"])
         print("    %s：%d 章 / %d 节 / %d 小节"
               % (vol["name"], len(vol["chapters"]), ns, nb))
-    print("  旧库形态：%s；沿用旧词表 %d 章；新派生 %d 章；旧键映射 %d"
-          % (notes["mode"], notes["kept"], notes["derived"], notes["mapped_from_legacy"]))
     if empty_subs:
         print("  subs 空键：%s" % "、".join(sorted(empty_subs)[:20]))
     if tree["anomalies"]:
@@ -916,11 +753,11 @@ def cmd_list(root, out_dir, mapping_path):
     return 0
 
 
-def cmd_check(root, out_dir, mapping_path, verbose=False):
+def cmd_check(root, out_dir, verbose=False):
     print("=" * 72)
     print("大纲根级派生件双射校验")
     print("=" * 72)
-    tree, summary_text, keywords_doc, notes = _build_all(root, out_dir, mapping_path)
+    tree, summary_text, keywords_doc, notes = _build_all(root, out_dir)
     _print_targets(root, out_dir)
     entries, empty_subs = _print_counts(tree, summary_text, keywords_doc)
 
@@ -956,11 +793,11 @@ def cmd_check(root, out_dir, mapping_path, verbose=False):
     return 1
 
 
-def cmd_write(root, out_dir, mapping_path):
+def cmd_write(root, out_dir):
     print("=" * 72)
     print("大纲根级派生件再生写盘")
     print("=" * 72)
-    tree, summary_text, keywords_doc, notes = _build_all(root, out_dir, mapping_path)
+    tree, summary_text, keywords_doc, notes = _build_all(root, out_dir)
     _print_targets(root, out_dir)
     entries, empty_subs = _print_counts(tree, summary_text, keywords_doc)
 
@@ -970,7 +807,7 @@ def cmd_write(root, out_dir, mapping_path):
         _print_problems(problems)
         return 1
 
-    dirty, why = normalization_probe(summary_text + render_keywords(keywords_doc))
+    dirty, why = normalization_probe(summary_text)
     if dirty:
         print("  [W_NORM] %s" % why)
         return 1
@@ -989,8 +826,6 @@ def cmd_write(root, out_dir, mapping_path):
             print("    · " + x)
         return 1
     print("  [theme] %s；复核 PASS" % ("、".join(written) if written else "内容未变"))
-    if notes["mode"] == "legacy":
-        print("  旧键已按 old→new 映射迁移为三位新键，旧键未残留")
     return 0
 
 
@@ -1174,7 +1009,6 @@ def main():
     ap.add_argument("--selftest", action="store_true", help="合成夹具自检（script/_mirror_selftest）")
     ap.add_argument("--root", default=None, help="大纲树根（默认 %s）" % DEFAULT_ROOT)
     ap.add_argument("--out", default=None, help="输出目录（默认 %s）" % DEFAULT_OUT)
-    ap.add_argument("--mapping", default=None, help="章号映射表（默认 %s）" % DEFAULT_MAPPING)
     ap.add_argument("--verbose", action="store_true", help="附加明细")
     args = ap.parse_args()
 
@@ -1183,13 +1017,12 @@ def main():
 
     root = os.path.abspath(args.root or DEFAULT_ROOT)
     out_dir = os.path.abspath(args.out or DEFAULT_OUT)
-    mapping_path = os.path.abspath(args.mapping or DEFAULT_MAPPING)
     try:
         if args.write:
-            return cmd_write(root, out_dir, mapping_path)
+            return cmd_write(root, out_dir)
         if args.list:
-            return cmd_list(root, out_dir, mapping_path)
-        return cmd_check(root, out_dir, mapping_path, verbose=args.verbose)
+            return cmd_list(root, out_dir)
+        return cmd_check(root, out_dir, verbose=args.verbose)
     except Fatal as exc:
         print("FATAL：%s" % exc, file=sys.stderr)
         return 2
