@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 3875,
+  "subsections": 4115,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "7facd8977b6b92772d4549d4eed3eb4c0d1cc13490fb6b8d2ad55a9d9e0ee50e",
+  "content_sha256": "f6d7cf37b05c2e725638134ae905523d57c54d50cd10a9d7a41bbbe0a7fd5fd2",
   "extract": "title+body",
-  "generated_at": "2026-11-07T07:24:00+08:00"
+  "generated_at": "2026-11-07T07:43:44+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -1634,6 +1634,14 @@
    "tech": [
     "osd",
     "osi"
+   ]
+  },
+  "TH-LAW-027": {
+   "label": "自由软件定义",
+   "level": "narrow",
+   "broader": "TH-LAW-000",
+   "tech": [
+    "free software"
    ]
   },
   "TH-LAW-028": {
@@ -4077,7 +4085,14 @@
    "title": "GNU 计划与自由软件运动的形成",
    "domains": [],
    "themes": [
-    "TH-LAW-025"
+    "TH-GOV-014",
+    "TH-HIS-004",
+    "TH-REL-001",
+    "TH-BIZ-014",
+    "TH-HIS-002",
+    "TH-HIS-046",
+    "TH-HW-036",
+    "TH-LAW-002"
    ],
    "sections": 10
   },
@@ -4086,10 +4101,14 @@
    "title": "GNU 系统的构造与长期开发",
    "domains": [],
    "themes": [
+    "TH-GOV-005",
+    "TH-HW-036",
     "TH-LANG-007",
     "TH-LANG-010",
     "TH-LANG-024",
-    "TH-LANG-034"
+    "TH-LANG-034",
+    "TH-LAW-008",
+    "TH-OS-037"
    ],
    "sections": 11
   },
@@ -4098,7 +4117,10 @@
    "title": "自由软件话语的制度化",
    "domains": [],
    "themes": [
-    "TH-LAW-025"
+    "TH-LAW-025",
+    "TH-LAW-010",
+    "TH-LAW-027",
+    "TH-LAW-037"
    ],
    "sections": 4
   },
@@ -4351,10 +4373,10 @@
     "TH-NET-025",
     "TH-BIZ-008",
     "TH-GOV-014",
+    "TH-HIS-003",
     "TH-HW-010",
     "TH-HW-036",
     "TH-REL-001",
-    "TH-BIZ-006",
     "TH-GOV-005"
    ],
    "sections": 8
@@ -19241,8 +19263,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "9d9fd1f9bdee14dd614174b225cd9bbe9bce74b9"
   },
   "V16-C001-1.2": {
    "chapter": "V16-C001",
@@ -19258,8 +19280,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "6f9f905b68baebffa24c69b2fce90a9da493c270"
   },
   "V16-C001-1.3": {
    "chapter": "V16-C001",
@@ -19275,8 +19297,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "f5964320a58515638ba4e2e24dce2e53424da73a"
   },
   "V16-C001-1.4": {
    "chapter": "V16-C001",
@@ -19292,8 +19314,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "d3dda160150be658bb05e82ddd1a2d2c7612ce56"
   },
   "V16-C001-1.5": {
    "chapter": "V16-C001",
@@ -19309,8 +19331,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "fe340394da0b6682ab44dc277e1bc358a6a6761c"
   },
   "V16-C001-1.6": {
    "chapter": "V16-C001",
@@ -19326,8 +19348,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "ca1d404ac5d9c78ba6233c5ccbb148fec2b9dcd7"
   },
   "V16-C001-1.7": {
    "chapter": "V16-C001",
@@ -19343,46 +19365,48 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "4c5d2bcbe8a8ebcb2209279aa3dca4726cd96912"
   },
   "V16-C002-2.1": {
    "chapter": "V16-C002",
    "title": "1983 年 GNU 计划的提出",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
+    "TH-REL-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-REL-001",
+    "TH-HIS-002",
+    "TH-REL-004",
+    "TH-REL-009",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "682cc033f605fbd59af886e6283d9a885552918b"
   },
   "V16-C002-2.2": {
    "chapter": "V16-C002",
    "title": "GNU 与 Unix 兼容系统的目标",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-014",
+    "TH-HIS-004",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "49ce52a005030e3ec6f361db41713f0036ffdd26"
   },
   "V16-C002-2.3": {
    "chapter": "V16-C002",
@@ -19390,75 +19414,78 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-014",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b9174d322bcbf04a2103181b408399cce006c765"
   },
   "V16-C002-2.4": {
    "chapter": "V16-C002",
    "title": "GNU Emacs 与早期 GNU 软件",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-BIZ-000",
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-HIS-004",
+    "TH-BIZ-014",
+    "TH-LAW-002",
+    "TH-LAW-033",
+    "TH-HW-036",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c8f76a791fa09115dd514f64c8d792955fe78774"
   },
   "V16-C002-2.5": {
    "chapter": "V16-C002",
    "title": "自由软件基金会（1985）的成立",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-014",
+    "TH-HIS-004",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "00a1f3b5964b4a82a261f64f4c9557d90c93b4be"
   },
   "V16-C002-2.6": {
    "chapter": "V16-C002",
    "title": "从 GNU 宣言到四项自由",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000",
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "54d2ec1b45aa3675c31f25881f6fa4de47298313"
   },
   "V16-C002-2.7": {
    "chapter": "V16-C002",
@@ -19467,337 +19494,354 @@
    "domains": [
     "TH-LAW-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-SEC-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-LAW-010",
+    "TH-HIS-004",
+    "TH-SEC-011",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "82077d506a9a28cfab2cea06aa1ea6991566ee8f"
   },
   "V16-C002-2.8": {
    "chapter": "V16-C002",
    "title": "自由软件运动的组织化",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-014",
+    "TH-HIS-004",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "8792eae706aef976c4f91141cd009f47c3748278"
   },
   "V16-C002-2.9": {
    "chapter": "V16-C002",
    "title": "GNU 与同期 BSD 项目的关系",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-GOV-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-HIS-046",
+    "TH-GOV-014",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "7e14dd8e54bce3dc3f0bac03978eb335f68be4e6"
   },
   "V16-C002-2.10": {
    "chapter": "V16-C002",
    "title": "自由软件运动进入 Unix 软件世界",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-GOV-014",
+    "TH-HIS-004",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c350f16a7588fa3a0306249c9c4932923198391d"
   },
   "V16-C003-3.1": {
    "chapter": "V16-C003",
    "title": "GNU 编译器与 GCC",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-LANG-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-010",
     "TH-LANG-034",
-    "TH-LANG-007"
+    "TH-GOV-005"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "gcc"
+   ],
+   "subs": 6,
+   "subs_sha1": "7c21e76c3552ab3e75e6b74ab9d1edf677f76539"
   },
   "V16-C003-3.2": {
    "chapter": "V16-C003",
    "title": "GNU C Library",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-LAW-000",
+    "TH-GOV-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-LAW-008",
+    "TH-GOV-005",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "fda6f83aaaf8ef8451364425d917796b9d214f06"
   },
   "V16-C003-3.3": {
    "chapter": "V16-C003",
    "title": "binutils 与基础开发工具",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-LANG-000",
+    "TH-GOV-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-LANG-024",
-    "TH-LANG-007",
-    "TH-LANG-010"
+    "TH-GOV-005",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "32ec4f42091591ab867c015b7d6e0775f3f8e2e4"
   },
   "V16-C003-3.4": {
    "chapter": "V16-C003",
    "title": "Bash 与 GNU Shell 环境",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-LANG-000",
+    "TH-GOV-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-GOV-005",
+    "TH-HW-036"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "bash"
+   ],
+   "subs": 6,
+   "subs_sha1": "4852639ee7d934a591beb6ac7bbce212ae792f22"
   },
   "V16-C003-3.5": {
    "chapter": "V16-C003",
    "title": "Coreutils 与基本用户空间",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-REL-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-REL-015",
+    "TH-REL-001",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "e8e26f66e9d970ce0af27fb53a69200cd095ef1c"
   },
   "V16-C003-3.6": {
    "chapter": "V16-C003",
    "title": "Emacs、Texinfo 与软件开发环境",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
+    "TH-HW-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-GOV-005",
+    "TH-HW-036",
+    "TH-LANG-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "fe26e24f8bf93f94d4e85f9d49a3916c2e7887f8"
   },
   "V16-C003-3.7": {
    "chapter": "V16-C003",
    "title": "GNU 构建工具与 Autotools",
    "meta": false,
    "domains": [
+    "TH-HW-000",
+    "TH-GOV-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-HW-036",
+    "TH-GOV-005",
+    "TH-LANG-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "bf6a9e3b88fc774244308faae546e6d0f434f7d2"
   },
   "V16-C003-3.8": {
    "chapter": "V16-C003",
    "title": "GNU 系统工具与网络软件",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
+    "TH-HW-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-GOV-005",
+    "TH-HW-036",
+    "TH-LANG-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "9dd5938de1bb53e29f2e7b58b93c39b4bbd12f7b"
   },
   "V16-C003-3.9": {
    "chapter": "V16-C003",
    "title": "GNU Hurd 的设计目标",
    "meta": false,
    "domains": [
-    "TH-LANG-000"
+    "TH-OS-000",
+    "TH-GOV-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-OS-037",
+    "TH-GOV-005",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "f2d59210baf188c8d811b1b393e4db487fc8bfd4"
   },
   "V16-C003-3.10": {
    "chapter": "V16-C003",
    "title": "Hurd 的长期开发",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
+    "TH-HW-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-GOV-005",
+    "TH-HW-036",
+    "TH-LANG-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "be8c21e355790056b328a36d30533cb8ddcfc292"
   },
   "V16-C003-3.11": {
    "chapter": "V16-C003",
    "title": "Linux 出现以前 GNU 系统的完成程度",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
+    "TH-HW-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-007",
-    "TH-LANG-010",
-    "TH-LANG-024"
+    "TH-GOV-005",
+    "TH-HW-036",
+    "TH-LANG-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "db199dc0ace2b93e8ced01e3d6537fe4855387a0"
   },
   "V16-C004-4.1": {
    "chapter": "V16-C004",
    "title": "Free Software 概念的制度化",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-LAW-027",
+    "TH-LAW-037",
+    "TH-LAW-025"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "29e6fb4290e3bee58a8e5318b93468f9ba578291"
   },
   "V16-C004-4.2": {
    "chapter": "V16-C004",
    "title": "软件自由与用户权利",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-LAW-000"
    ],
    "themes": [
     "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-LAW-010",
+    "TH-LAW-027"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b5bb2f627a8e75d7792cf5dc7ff6ac218ae46693"
   },
   "V16-C004-4.3": {
    "chapter": "V16-C004",
    "title": "Copyleft 与自由软件共同体",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-LAW-000"
    ],
    "themes": [
+    "TH-LAW-010",
     "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-LAW-027"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b911a3febc3b565425e71f9a2fc64507331e2c4e"
   },
   "V16-C004-4.4": {
    "chapter": "V16-C004",
    "title": "FSF 的软件自由政治与 BSD 商业化的路线分歧",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-LAW-000"
    ],
    "themes": [
     "TH-LAW-025",
-    "TH-HIS-001",
-    "TH-LANG-007"
+    "TH-LAW-010",
+    "TH-LAW-027"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b98c3af20143ae678b242f269e3b766fbdc46965"
   },
   "V16-C005-5.1": {
    "chapter": "V16-C005",
@@ -19813,9 +19857,11 @@
     "TH-HIS-001"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "gpl"
+   ],
+   "subs": 6,
+   "subs_sha1": "2731d3936a2074da400d3cd1479a2bb831da9420"
   },
   "V16-C005-5.2": {
    "chapter": "V16-C005",
@@ -19832,8 +19878,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "ea329d0dcc0ea7d9b2b21c203701c5c0e549fd94"
   },
   "V16-C005-5.3": {
    "chapter": "V16-C005",
@@ -19849,9 +19895,11 @@
     "TH-HIS-001"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "gpl"
+   ],
+   "subs": 6,
+   "subs_sha1": "60a4e0b58522fd658a809ab2c9e233a5cd1d15bb"
   },
   "V16-C006-6.1": {
    "chapter": "V16-C006",
@@ -19867,8 +19915,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "f34663eac98877c3653e3a9f5954dab93c3d7006"
   },
   "V16-C006-6.2": {
    "chapter": "V16-C006",
@@ -19884,8 +19932,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "e46a4481dbcd40a98e020a26f227c6e952c567ca"
   },
   "V16-C006-6.3": {
    "chapter": "V16-C006",
@@ -19901,8 +19949,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "a6785c806a1ffcb30d6fe2f5bae45006dfc72988"
   },
   "V16-C006-6.4": {
    "chapter": "V16-C006",
@@ -19918,8 +19966,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "ee4b061a289bd230d68f9a130cf52bc61f4b7c5e"
   },
   "V16-C006-6.5": {
    "chapter": "V16-C006",
@@ -19935,8 +19983,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "dbc983a0cf8047554f066815a06852d72b3dd54e"
   },
   "V17-C001-1.1": {
    "chapter": "V17-C001",
@@ -22584,7 +22632,7 @@
     "TH-BIZ-008",
     "TH-GOV-005",
     "TH-LAW-004",
-    "TH-BIZ-006"
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -49803,8 +49851,8 @@
    "themes": [
     "TH-BIZ-019",
     "TH-LANG-038",
-    "TH-GOV-005",
-    "TH-GOV-006"
+    "TH-GOV-006",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -52492,8 +52540,8 @@
     "TH-REL-032",
     "TH-GOV-010",
     "TH-OS-040",
-    "TH-GOV-009",
-    "TH-LAW-016"
+    "TH-LAW-016",
+    "TH-GOV-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81587,15 +81635,71 @@
     "TH-SEC-023"
    ]
   },
+  "V16-C002-2.4.1": {
+   "add": [
+    "TH-HIS-024"
+   ]
+  },
+  "V16-C003-3.1.2": {
+   "add": [
+    "TH-LANG-024"
+   ]
+  },
+  "V16-C003-3.1.6": {
+   "add": [
+    "TH-REL-001",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V16-C003-3.3.4": {
+   "add": [
+    "TH-LANG-010"
+   ]
+  },
+  "V16-C004-4.4.1": {
+   "add": [
+    "TH-LAW-004",
+    "TH-LAW-003"
+   ]
+  },
+  "V16-C004-4.4.3": {
+   "add": [
+    "TH-HIS-046"
+   ]
+  },
+  "V16-C004-4.4.4": {
+   "add": [
+    "TH-LAW-003",
+    "TH-GOV-014",
+    "TH-HIS-001",
+    "TH-OS-020"
+   ]
+  },
+  "V16-C005-5.1.2": {
+   "add": [
+    "TH-REL-001"
+   ]
+  },
+  "V16-C005-5.1.3": {
+   "add": [
+    "TH-REL-001"
+   ]
+  },
+  "V16-C005-5.3.1": {
+   "add": [
+    "TH-REL-001"
+   ]
+  },
   "V21-C002-2.1.1": {
    "add": [
-    "TH-HIS-003",
     "TH-LAW-003",
     "TH-HW-008"
    ]
   },
   "V21-C002-2.1.3": {
    "add": [
+    "TH-BIZ-006",
     "TH-LAW-001",
     "TH-HW-012"
    ]
@@ -81609,7 +81713,7 @@
   "V21-C002-2.2.4": {
    "add": [
     "TH-HIS-003",
-    "TH-BIZ-015"
+    "TH-HW-010"
    ]
   },
   "V21-C002-2.2.5": {
@@ -82212,8 +82316,8 @@
    "add": [
     "TH-BIZ-008",
     "TH-LAW-001",
-    "TH-LAW-017",
     "TH-LAW-021",
+    "TH-LAW-017",
     "TH-LAW-013"
    ]
   },
@@ -83194,8 +83298,8 @@
     "TH-LANG-018",
     "TH-OS-001",
     "TH-LANG-030",
-    "TH-GOV-026",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-GOV-026"
    ]
   },
   "V51-C003-3.3.2": {
@@ -84093,8 +84197,8 @@
   },
   "V53-C006-6.7.1": {
    "add": [
-    "TH-LANG-010",
-    "TH-VM-001"
+    "TH-VM-001",
+    "TH-LANG-010"
    ]
   },
   "V53-C006-6.7.2": {
