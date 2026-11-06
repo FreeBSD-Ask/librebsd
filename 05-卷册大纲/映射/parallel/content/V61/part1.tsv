@@ -1,0 +1,374 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.138369		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138381	V61.2.4.1	条目式授权的基本结构	归入	POSIX 1003.6 ACL 标准草案状态与 API/CLI 分拆为 P1003.1e／P1003.2c
+usenet_mail.messages.138382	V61.2.4.1	条目式授权的基本结构	归入	POSIX 1003.6 ACL 标准草案状态与 API/CLI 分拆为 P1003.1e／P1003.2c
+usenet_mail.messages.47864		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.47870		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.47893		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.47913		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.47936		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.47991		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48003		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48018		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48019		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48033		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48045		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48101		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48112		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48135		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48146		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48147		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48150		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48172		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48272		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48323	V61.2.1.1	九位权限位的语义	归入	setuid root 程序在 NFS／RFS 下权限反转，九位权限语义的实现边界
+usenet_mail.messages.48368	V61.2.1.5	权限判定的内核集中	归入	access(2) 按真实 uid 判定，test -x／-r 误判暴露内核访问例程语义
+usenet_mail.messages.48389		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48404		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48408		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48422		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48432	V61.2.1.5	权限判定的内核集中	归入	access 不能测有效 uid 属设计缺陷，仅对 setuid 调用者有影响
+usenet_mail.messages.48436		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48444		—	删除	零内容：空块（bytes 199，sha 前 12 位 4e5eafe796c4）
+usenet_mail.messages.48469		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48512	V61.2.1.5	权限判定的内核集中	归入	引内核 access 代码（超级用户直接放行）反驳，权限判定内核集中
+usenet_mail.messages.48532		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48550	V61.2.1.1	九位权限位的语义	归入	su 只改真实与有效 uid，setuid 位才是 uid 分离来源
+usenet_mail.messages.48573		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48575	V61.2.1.5	权限判定的内核集中	归入	test(1) 该答可读而非应可读，依赖 access 的实现皆坏
+usenet_mail.messages.48608		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48619		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48640	V61.2.1.5	权限判定的内核集中	归入	O_EXEC 与 fexec 提案消除 access 竞态，能力式 exec 接口
+usenet_mail.messages.48641	V61.2.1.5	权限判定的内核集中	归入	SCO eaccess 按有效 uid 判定，suid root 二进制误报可写
+usenet_mail.messages.138392		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138393		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138395		—	挂账	待定位：POSIX 安全扩展标准必要性之批评，本卷无对应题
+usenet_mail.messages.138396		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138401		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138402		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138406		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138407		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138408		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138409		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138410		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138412		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138413		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138414		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138415		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138419		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138421		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138422		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138424		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138427		—	删除	零内容：空块（bytes 197，sha 前 12 位 964fc5e93481）
+usenet_mail.messages.138428		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138429		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138430		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138434		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138436		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138437		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138440		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138442		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138443		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138446		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138447		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138459		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138461		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138462		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138463		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138464		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138465		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138467		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138469		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138470		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138479		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138489		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138490		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138492		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138493		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138494		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138497		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138498		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138499		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138500		—	删除	零内容：空块（bytes 200，sha 前 12 位 63ccfec9e8bf）
+usenet_mail.messages.138502		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138503		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138504		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138505	V61.2.8.1	审计事件的选取标准	归入	1003.6 仅做审计 API 而非审计 MIB，另有分布式安全指南
+usenet_mail.messages.138506		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138509		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138510		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138511		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138512		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138514		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138515		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138516		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138518		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138519		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138520		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138521		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138522		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138525		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138526		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138527		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138536		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138537		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138538		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138540		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138542		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138546		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138572		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138588		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138591		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138592		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138596		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138598		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138600		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138601		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138602		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138603		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138605		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138607		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138608		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138609		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138611		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138612	V61.2.1.5	权限判定的内核集中	归入	O_EXEC 位与 O_ACCMODE 之争，能力式访问模式接口
+usenet_mail.messages.138613	V61.2.1.5	权限判定的内核集中	归入	O_EXEC 位与 O_ACCMODE 之争，能力式访问模式接口
+usenet_mail.messages.138614		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138616		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138617		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138628		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138629		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138630		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138631		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138632		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138633		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138634		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138640		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138641		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138642		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138643		—	删除	零内容：空块（bytes 197，sha 前 12 位 8b312d476a39）
+usenet_mail.messages.138645		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138646		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138647		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138651		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138655		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138656		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138657		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138658		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138660		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138661		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138662		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138664		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138665		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138667		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138668		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138669		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138672		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138673		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138679		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138682		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138684		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138701		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138702		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138706		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138711		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138712		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138718		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138719		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138721		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138731		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138732		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138733	V61.2.1.1	九位权限位的语义	归入	有效 uid 为零时 setgid 连保存组 ID 一并改动，权限语义缺陷
+usenet_mail.messages.138734		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138735		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138736		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138737		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138739		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138740		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138742		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138745		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138746		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138747	V61.2.8.1	审计事件的选取标准	归入	审阅 1003.6 第 13 稿：规定审计却无审计命令，遗漏与可用性
+usenet_mail.messages.138748		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138749		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138750	V61.3.6.3	可信基的最小化策略	归入	1003.6 接口过繁致可信计算基最小性难保证，审计命令归属之问
+usenet_mail.messages.138751		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138752		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138753		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138755		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138756		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138757	V61.2.4.5	移植中的兼容取舍	归入	评 POSIX ACL 规范可憎、特权机制为迁就旧管理程序
+usenet_mail.messages.138769		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138770		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138773		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138776		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138777		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138781		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138784		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138785		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138787		—	删除	零内容：空块（bytes 200，sha 前 12 位 6dbcf99df6aa）
+usenet_mail.messages.48749		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48759	V61.2.1.5	权限判定的内核集中	归入	test 误用 access 判可访问性；委员会建议实做而非猜权限位
+usenet_mail.messages.48763		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48780	V61.2.1.5	权限判定的内核集中	归入	AIX accessx 可按真实／有效／任意身份检查并处理扩展 ACL
+usenet_mail.messages.48804		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48857		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48908		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48931		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48940	V61.2.1.1	九位权限位的语义	归入	POSIX 沿用 SysIII／V 缺陷：root 调 setuid 改掉保存 UID
+usenet_mail.messages.48946		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48948		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48961		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48963		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48968		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48975		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.48997		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.49008		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.49027		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.49028		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.49040		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138788		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138789		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138791		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138792		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138793		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138794		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138802		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138805		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138806		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138807		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138810		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138812		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138813		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138815		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138816		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138817		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138818		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138820		—	挂账	待定位：1003.6 安全接口新子组通告，本卷无对应题
+usenet_mail.messages.138821		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138823		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138824		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138825		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138826		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138827		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138828		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138829		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138830		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138831		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138832		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138834		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138836		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138837		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138839		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138841		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138846		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138847		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138848		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138849		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138850		—	删除	零内容：空块（bytes 197，sha 前 12 位 66ad34af0e49）
+usenet_mail.messages.138851		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138852		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138853		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138854		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138855		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138857		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138858		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138860		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138861		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138862		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138864		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138866		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138867		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138868		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138869		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138870		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138871		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138872		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138873		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138874		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138875		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138876		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138877		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138878		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138879		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138882		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138883		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138886		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138888		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138890		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138891		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138892		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138894		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138897		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138903		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138905		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138906		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138908		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138912		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138918	V61.1.11.4	与认证体系的接入	归入	POSIX 分布式安全研究组与 POSIX.6 安全扩展组进程，安全与认证接轨
+usenet_mail.messages.138919	V61.1.11.4	与认证体系的接入	归入	POSIX 分布式安全研究组与 POSIX.6 安全扩展组进程，安全与认证接轨
+usenet_mail.messages.138921	V61.1.11.4	与认证体系的接入	归入	POSIX 分布式安全研究组与 POSIX.6 安全扩展组进程，安全与认证接轨
+usenet_mail.messages.138923		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138940		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138943		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138944		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138945		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138946		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138947		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138948		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138953		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138956		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138962		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138965		—	删除	零内容：空块（bytes 197，sha 前 12 位 cd507c10b911）
+usenet_mail.messages.138967		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138969		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138977		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138978		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138979		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138980		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138981		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138982		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138983		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138984		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138985		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138986		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138987		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138988		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138989		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138990		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138991		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138992		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138993		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138994		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138995		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138996		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138997		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.138998		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139000		—	删除	零内容：空块（bytes 197，sha 前 12 位 79899bffd4c2）
+usenet_mail.messages.139001		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139004		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139006		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139007		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139008		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139009		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139012		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139013		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139014		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139015		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139016		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139017		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139018		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139020		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139023		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139024		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139025	V61.2.1.1	九位权限位的语义	归入	Cray setuid 限制更不安全、chown 风险与普通用户 setuid 权限语义
+usenet_mail.messages.139026	V61.2.1.1	九位权限位的语义	归入	Cray setuid 限制更不安全、chown 风险与普通用户 setuid 权限语义
+usenet_mail.messages.139027	V61.2.1.1	九位权限位的语义	归入	Cray setuid 限制更不安全、chown 风险与普通用户 setuid 权限语义
+usenet_mail.messages.139028	V61.2.1.1	九位权限位的语义	归入	Cray setuid 限制更不安全、chown 风险与普通用户 setuid 权限语义
+usenet_mail.messages.139029		—	移出	配额占用与强制 chown 的组织管理议题，建议宿主 V62
+usenet_mail.messages.139030		—	移出	配额占用与强制 chown 的组织管理议题，建议宿主 V62
+usenet_mail.messages.139031		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139034		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139043		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139048		—	移出	POSIX 标准条款与流程细节，建议宿主 V62（BSD 合规、标准与供应链）
+usenet_mail.messages.139050		—	删除	零内容：空块（bytes 197，sha 前 12 位 c82e7788c9a2）
