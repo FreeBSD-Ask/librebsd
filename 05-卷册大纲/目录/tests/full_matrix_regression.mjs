@@ -163,7 +163,7 @@ async function combo(name, { w, h, dpr, theme, scheme, fs, touch, deep }) {
     if (!b) {
       const mx = Array.from(document.querySelectorAll('ul.sections > li')).reduce((m, el) => {
         const c = el.cloneNode(true);
-        c.querySelectorAll('.src, .sec-num, .note-badge, .t-more, .t-short, .t-full, button').forEach(n => n.remove());
+        c.querySelectorAll('.src, .sec-num, .note-badge, .t-more, .t-short, .t-full, button, .subsections').forEach(n => n.remove());
         return Math.max(m, c.textContent.trim().length);
       }, 0);
       return { has: false, dormant: mx < 150, max: mx };

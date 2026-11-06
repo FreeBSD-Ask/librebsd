@@ -376,8 +376,10 @@ def run_gate(root, mapdir):
         add("L3", not extra, "dest_md=%d mapped=%d extra=%d" % (len(dest_md), len(mapped), len(extra)))
 
     # L4 H1 与路径一致（数字边界防 1.1.10 冒充 1.1.1；支持 YAML frontmatter 前置）
+    # C 案（2026-11-06）：H1 校验须覆盖全部小节 .md（含设计台账登记的小节），
+    # 不得因 L3 的排除集而空转；排除集只服务 L3“多余落点”。
     h1bad, empty = [], []
-    for p in dest_md:
+    for p in [os.path.join(root, x) for x in subs]:
         m = SUB_RE.match(os.path.basename(p))
         if not m:
             continue
@@ -397,7 +399,7 @@ def run_gate(root, mapdir):
         if not pat.match(h1):
             h1bad.append(os.path.relpath(p, root))
     add("L4", not h1bad and not empty,
-        "subs=%d h1/path mismatch=%d empty=%d" % (len(dest_md), len(h1bad), len(empty)))
+        "subs=%d h1/path mismatch=%d empty=%d" % (len(subs), len(h1bad), len(empty)))
 
     # L5／L16 旧号未决
     unresolved = set()
