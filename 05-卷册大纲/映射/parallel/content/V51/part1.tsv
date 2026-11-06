@@ -1,0 +1,146 @@
+rowmine_id	subsection_id	title	action	reason
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history	—	—	移出	copyleft 概念演化通史块，属 V59-1 概念史；非本节 DragonFly 材料
+dragonfly_mail.messages.13805	V51.7.3.1	符号来历的画者投稿	归入	fork 次日外部画者投稿 Fred 吉祥物并附源文件，符号来历的当事人自述
+dragonfly_mail.messages.13818	—	—	删除	零内容：空块
+dragonfly_mail.messages.9	—	—	移出	5.x 用户态与 4.x 内核不兼容的合并邮件，属 V48／V49 技术史
+dragonfly_mail.messages.6	—	—	辑存	辑存组：Fred 吉祥物投稿（与 messages.13805 同源事件，去重）
+dragonfly_mail.messages.10518	—	—	移出	kmod 构建 Makefile 体系根因，属 V49 构建系统技术
+dragonfly_mail.messages.1654671	—	—	移出	COMPAT_LINUX／COMPAT_43 补丁评审，属 V49 系统调用技术
+dragonfly_mail.messages.1654672	—	—	移出	快照构建机与 sysinstall 路径修复，属 V48 发布工程事件
+dragonfly_mail.messages.1654682	—	—	移出	copyin/copyout 从 bind/connect/accept 分离，属 V49 系统调用技术
+dragonfly_mail.messages.1654683	—	—	移出	accept 动态分配裁定，属 V49 系统调用技术
+dragonfly_mail.messages.1654684	V51.2.1.3	提交信息的摘要体例	归入	当事人自承提交漏写 attribution，提交体例的一手反例
+dragonfly_mail.messages.1318309	V51.2.1.4	列表中的方案论证	归入	sysinstall 四阶段架构的公开提案，列表中的方案论证
+dragonfly_mail.messages.1318310	V51.2.1.4	列表中的方案论证	归入	Dillon 两阶段安装流程主张，列表中的方案论证
+dragonfly_mail.messages.1318321	V51.2.1.4	列表中的方案论证	归入	反向拆解构建与溯源程序构想，列表中的方案论证
+dragonfly_mail.messages.1318322	V51.2.1.1	邮件长文作为设计载体	归入	Dillon 本周工作长文（slab 与 VFS 缓存重做），邮件长文作为设计载体
+dragonfly_mail.messages.1318327	V51.2.4.1	机制简化与可懂性的兑换	归入	kmem_map 因线程化而可移除，机制简化的公开论证实例
+dragonfly_mail.messages.1318328	—	—	移出	二级系统调用函数原型落点，属 V49 系统调用技术
+dragonfly_mail.messages.1318330	—	—	移出	真实参数类型与前置声明裁定，属 V49 编码惯例技术面
+dragonfly_mail.messages.1318336	—	—	移出	vm_map_findspace 超级对齐补丁，属 V49 虚拟内存技术
+dragonfly_mail.messages.1654688	—	—	移出	doFS.sh 设备处理修正，属 V48 发布工程事件
+dragonfly_mail.messages.1318338	—	—	移出	NO_KMEM_MAP 选项引入，属 V49 内核技术
+dragonfly_mail.messages.1318346	—	—	移出	首个可引导 ISO 与 156MB 镜像，属 V48 发布史事件
+dragonfly_mail.messages.1318351	V51.2.4.1	机制简化与可懂性的兑换	归入	未写入文档的 malloc 隐含假设清单，可懂性与隐含契约问题
+dragonfly_mail.messages.1318355	—	—	移出	slab 分配器全量入库，属 V49 分配器技术
+dragonfly_mail.messages.1318357	V51.3.4.1	邮件列表与即时频道的并设	归入	docs@ 列表与新闻组建立，邮件列表与即时频道并设的起点
+dragonfly_mail.messages.1318361	—	—	移出	每日快照构建服务（CEST 9:30），属 V48 发布工程事件
+dragonfly_mail.messages.1318367	—	—	移出	VM 分化致第三方软件编译失败，属 V49 虚拟内存技术
+dragonfly_mail.messages.1654691	—	—	移出	vmstat 诊断字段修正，属 V49 用户态工具技术
+dragonfly_mail.messages.1659812	—	—	移出	syscall separation 5a：uio 取代 msghdr，属 V49 系统调用技术
+dragonfly_mail.messages.1659816	V51.7.3.5	标志的缩小使用实态	归入	外部成员用项目 logo 制作启动画面，标识使用实态
+dragonfly_mail.messages.1659817	—	—	移出	COMPAT_43 移除第三部分，属 V49 系统调用技术
+dragonfly_mail.messages.1360159	—	—	移出	variant symlink 补丁与 shell 环境处理，属 V49 技术
+dragonfly_mail.messages.1360166	—	—	移出	sendfile 拆分时机征询，属 V49 系统调用技术
+dragonfly_mail.messages.1360182	—	—	移出	osendfile 缺陷史梳理，属 V49 系统调用技术
+dragonfly_mail.messages.1360188	—	—	移出	iovec_copyin 辅助函数提案，属 V49 系统调用技术
+dragonfly_mail.messages.1659818	—	—	移出	syscall separation 第 6 部分，属 V49 系统调用技术
+dragonfly_mail.messages.1360192	—	—	移出	kern_open 接收 nameidata 的接口取舍，属 V49 系统调用技术
+dragonfly_mail.messages.1360197	—	—	移出	类 CEF 路由引擎提议，属 V49 网络技术
+dragonfly_mail.messages.1360216	—	—	移出	checkpoint/restart 代码更新，属 V49 内核技术
+dragonfly_mail.messages.1659830	—	—	移出	COMPAT_43 移除第四部分，属 V49 系统调用技术
+dragonfly_mail.messages.1360246	—	—	移出	fcntl／ioctl 拆分思路，属 V49 系统调用技术
+dragonfly_mail.messages.1360254	V51.2.4.3	取舍标准的公开说明	归入	软盘引导是否续维护的公开取舍表态，取舍标准的公开说明
+dragonfly_mail.messages.1360270	V51.2.4.1	机制简化与可懂性的兑换	归入	variant symlink 定位与拒绝 shell PATH 拼装，机制简化取向
+dragonfly_mail.messages.1360275	—	—	移出	checkpoint/restart 完整补丁，属 V49 内核技术
+dragonfly_mail.messages.1360276	—	—	移出	SIGCKPT／SIGCKPTEXIT 信号方案，属 V49 内核技术
+dragonfly_mail.messages.13825	—	—	删除	零内容：空块
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history	—	—	移出	copyleft 概念演化通史块，属 V59-1 概念史
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history	—	—	移出	copyleft 概念演化通史块，属 V59-1 概念史
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+dragonfly_mail.messages.17073	V51.3.2.2	同行审查的默认强度	归入	fork 后三个月 Dillon 认可补丁并抄送 Hsu，同行审查与专家咨询惯例
+dragonfly_mail.messages.1325842	—	—	移出	VFS 移植难点在 VM 与缓冲耦合，属 V49 文件系统技术
+dragonfly_mail.messages.1405292	—	—	移出	为 bitstring API 增设区间首末位函数，属 V49 库接口技术
+dragonfly_mail.messages.1405298	V51.2.4.1	机制简化与可懂性的兑换	归入	反对把实现细节搬进 API、主张内联函数清晰，可懂性优先的论证
+dragonfly_mail.messages.1405309	V51.7.5.6	风格分歧的惯例仲裁	归入	新位串函数命名与旧宏惯例的往返，风格分歧的惯例仲裁
+dragonfly_mail.messages.1405426	—	—	移出	评 FreeBSD 5 DoS 补丁为坏改动，属 V52 跨分支技术判断
+dragonfly_mail.messages.1405443	V51.3.3.3	新人任务的分级清单	归入	向初学者给出 UFS2 容量回移项目，新人任务分级实例
+dragonfly_mail.messages.58900	—	—	移出	ALWAYS_MSG 设计自认错误，属 V49 消息机制技术
+dragonfly_mail.messages.58928	—	—	移出	ifconfig wepkey 用 curthread 检查权限，属 V49 网络技术
+dragonfly_mail.messages.58948	—	—	移出	WEP 密钥 copyin 线程上下文问题，属 V49 网络技术
+dragonfly_mail.messages.19421	—	—	移出	NIS 隐式绑定语义对齐补丁，属 V49 网络技术
+dragonfly_mail.messages.19464	—	—	移出	socreate 崩溃根因（线程上下文未下推），属 V49 网络技术
+dragonfly_mail.messages.1379342	—	—	移出	notifymsglist 定位自查纠偏，属 V49 构建／技术细节
+dragonfly_mail.messages.1379343	—	—	移出	struct 条件编译可见性修复，属 V49 技术
+dragonfly_mail.messages.19479	—	—	移出	承认自家引入崩溃并回帖补丁，属 V49 缺陷修复
+dragonfly_mail.messages.19483	—	—	移出	SMP 连接问题排查（DISTRIBUTED_TCBINFO），属 V49 网络技术
+dragonfly_mail.messages.61881	—	—	移出	sendfile 再次损坏与修复，属 V49 系统调用技术
+dragonfly_mail.messages.61935	—	—	删除	零内容：仅元数据无摘要正文
+dragonfly_mail.messages.1692602	V51.7.5.6	风格分歧的惯例仲裁	归入	M_ 前缀标志命名混淆之争，风格与命名惯例的分歧
+dragonfly_mail.messages.53534	—	—	移出	IPv6 异常修复与测试致谢，属 V49 网络技术
+dragonfly_mail.messages.1416742	—	—	移出	ip_hl 长度检查前移，属 V49 网络技术
+dragonfly_mail.messages.1698790	—	—	移出	恢复 FAST_IPSEC 选项，属 V49 网络技术
+dragonfly_mail.messages.1698824	—	—	移出	racoon／IPsec 修复，属 V49 网络技术
+dragonfly_mail.messages.66069	—	—	移出	TCP 乱序段长度 bug，属 V49 网络技术
+dragonfly_mail.messages.32241	—	—	移出	IPv6 监听套接字通配符表修复，属 V49 网络技术
+dragonfly_mail.messages.1668828	—	—	移出	in6_pcb off-by-one 修正，属 V49 网络技术
+dragonfly_mail.messages.1668829	—	—	移出	ip6fw ESP 选项处置征询，属 V49 网络技术
+dragonfly_mail.messages.1668830	—	—	移出	ND6_IFF_ACCEPT_RTADV 开关评审，属 V49 网络技术
+dragonfly_mail.messages.1668831	—	—	移出	in6_rmx 双重释放修复评估，属 V49 网络技术
+dragonfly_mail.messages.1668834	—	—	移出	ip6fw ESP 补丁合入，属 V49 网络技术
+dragonfly_mail.messages.1668843	—	—	移出	多宿主 IPv6 按接口开关的理由，属 V49 网络技术
+dragonfly_mail.messages.1668844	—	—	移出	ndp 与手册页同步，属 V49 网络技术
+dragonfly_mail.messages.1713092	—	—	移出	IPv6 路由双重释放修复闭环，属 V49 网络技术
+dragonfly_mail.messages.1713119	—	—	移出	IPv6 分片头字节序修复，属 V49 网络技术
+dragonfly_mail.messages.1713120	—	—	移出	v6only 默认值设为 1，属 V49 网络技术
+dragonfly_mail.messages.97247	V51.3.10.3	支持请求的即时渠道	归入	维护者承认破坏用户态构建、靠用户反馈修正，支持渠道的即时性
+dragonfly_mail.messages.1487161	—	—	移出	核心转储在两分支的差异（锁粒度），属 V52 技术横向比较
+dragonfly_mail.messages.1487191	—	—	移出	连接启动回归修复，属 V49 网络技术
+dragonfly_mail.messages.97353	—	—	移出	IPFW2 二层过滤指针重取，属 V49 网络技术
+dragonfly_mail.messages.1713320	—	—	移出	BPF 扩展补丁命名与实现评审，属 V49 网络技术
+dragonfly_mail.messages.1713331	—	—	移出	BPF 接口形式的往返讨论，属 V49 网络技术
+dragonfly_mail.messages.1847539	—	—	移出	MSS 停滞与 PPPoE MTU，属 V49 网络运维
+dragonfly_mail.messages.97444	—	—	移出	IPv6 panic 分析的自我纠正，属 V49 网络技术
+dragonfly_mail.messages.1481730	—	—	移出	FreeBSD 移除 ipfw1 的沿革，属 V52／V05 跨分支技术史
+dragonfly_mail.messages.1708922	—	—	移出	ALTQ 宏与内联函数的实现取舍，属 V49 网络技术
+dragonfly_mail.messages.112403	—	—	移出	Limited Transmit 发送位置讨论，属 V49 网络技术
+dragonfly_mail.messages.112404	—	—	移出	TCP panic 的 snd_ssthresh 修补，属 V49 网络技术
+dragonfly_mail.messages.1703709	—	—	移出	inode 散列链 SLIST 改造评审，属 V49 文件系统技术
+dragonfly_mail.messages.1499215	—	—	移出	TCB errno 指针与 offsetof 用法，属 V49 技术
+dragonfly_mail.messages.1499240	—	—	移出	可切换调度器框架的价值说明，属 V49 调度器技术
+dragonfly_mail.messages.122390	—	—	移出	HTTP 下载 99% 停滞的抓包排查，属 V49 网络排障
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history	—	—	移出	copyleft 概念演化通史块，属 V59-1 概念史
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+cross_indexes.duckdb.concept_history		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）

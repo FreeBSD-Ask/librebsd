@@ -1,0 +1,189 @@
+rowmine_id	subsection_id	title	action	reason
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+dragonfly_mail.messages.17722	—	—	移出	top 无中断占比源于 Giant 大锁，属 V49 技术
+dragonfly_mail.messages.35806	—	—	移出	buildworld 后 fatal trap 与 UPDATING 缺 lwkt 说明，属 V49 技术
+dragonfly_mail.messages.44415	—	—	移出	1.1-CURRENT 新调度器音画表现，属 V49 调度器技术
+dragonfly_mail.messages.103185	—	—	移出	SMP 汇总测试补丁（LWKT 调度器与大锁），属 V49 技术
+dragonfly_mail.messages.108021	—	—	删除	零内容：空块
+dragonfly_mail.messages.17695	—	—	移出	lwkt_preempt 抢占计数 panic，属 V49 LWKT 技术
+dragonfly_mail.messages.17696	—	—	移出	DDB 与 INVARIANTS 调试建议，属 V49 技术
+dragonfly_mail.messages.1368440	—	—	移出	mkdir 与硬链接构造目录环反例，属 V49 文件系统技术
+dragonfly_mail.messages.1368442	—	—	移出	目录硬链接计数统计难题，属 V49 文件系统技术
+dragonfly_mail.messages.1368448	—	—	移出	父目录改名形成环的检测难题，属 V49 文件系统技术
+dragonfly_mail.messages.1368677	—	—	移出	NAMEI2.DIFF 对比测试建议，属 V49 技术
+dragonfly_mail.messages.1368678	—	—	移出	lwkt_preempt panic 根因定位进展，属 V49 LWKT 技术
+dragonfly_mail.messages.1655703	V51.7.5.2	注释写成完整句子的要求	归入	setrunqueue 注释与实际临界区不符的纠正，注释体例的现场
+dragonfly_mail.messages.1655704	—	—	移出	临界区与 splhigh/IPI 语义讨论，属 V49 技术
+dragonfly_mail.messages.1655705	—	—	移出	waitport 临界区冗余指出，属 V49 技术
+dragonfly_mail.messages.1655707	—	—	移出	crit_enter／crit_exit 配平 bug，属 V49 技术
+dragonfly_mail.messages.1655710	V51.2.4.6	简化路线的后继调整	归入	Dillon 自评早期 LWKT 过度设计、见好就收，简化路线的后继调整
+dragonfly_mail.messages.1655709	V51.3.2.2	同行审查的默认强度	归入	评审中以「老师」口吻纠正计数应为加 32，同行审查的现场
+dragonfly_mail.messages.1395505	—	—	移出	gcc3 完整构建周期验证，属 V49 构建技术
+dragonfly_mail.messages.1395506	—	—	移出	CCVER=gcc3 编译 GENERIC 可用，属 V49 构建技术
+dragonfly_mail.messages.1395507	—	—	移出	IP 校验和代码的汇编与别名问题，属 V49 网络技术
+dragonfly_mail.messages.1673169	—	—	移出	ng_bpf 在 gcc3 下的修复，属 V49 构建技术
+dragonfly_mail.messages.1673171	—	—	移出	__ARRAY_ZERO 宏统一两代编译器，属 V49 构建技术
+dragonfly_mail.messages.35813	—	—	移出	lwkt_send_ipiq 遗漏改动致 trap，属 V49 技术
+dragonfly_mail.messages.35831	—	—	移出	ext2fs 模块致崩溃复现，属 V49 文件系统技术
+dragonfly_mail.messages.1395513	—	—	移出	安装器方向讨论与理解澄清，属 V49 安装器技术
+dragonfly_mail.messages.1395530	V51.2.7.3	决策风格的书面痕迹	归入	Dillon 裁定安装器两层结构以终止争论，决策风格的书面痕迹
+dragonfly_mail.messages.1395533	—	—	移出	SMP CPU 同步补丁发布，属 V49 SMP 技术
+dragonfly_mail.messages.1395560	—	—	移出	SMP 同步补丁测试反馈与测试床取舍，属 V49 技术
+dragonfly_mail.messages.1395652	—	—	删除	零内容：空块
+dragonfly_mail.messages.1395654	V51.2.1.5	令牌信条的文档印证	归入	序列化令牌进展：初版可启单处理器、旧模型无法根治，令牌信条的文档印证
+dragonfly_mail.messages.1379255	V51.2.3.3	令牌信条与可维护性取向	归入	外部评述令牌规则漂亮、能降低编码出错概率，令牌信条与可维护性取向
+dragonfly_mail.messages.1379256	V51.2.3.4	两种可扩展性判断的口径	归入	令牌方案远比 FreeBSD 对象机制简洁，两种可扩展性判断的口径
+dragonfly_mail.messages.1379258	V51.2.3.3	令牌信条与可维护性取向	归入	Dillon 强调 token 抽象不是放手乱来的许可，令牌信条的自我界定
+dragonfly_mail.messages.1379260	V51.2.3.6	两条路线的公开表述	归入	Dillon 称 LWKT 编程模型比 FreeBSD 5 更合理，两条路线的公开表述
+dragonfly_mail.messages.1379261	—	—	删除	零内容：愚人节玩笑帖，无实质内容
+dragonfly_mail.messages.1673213	—	—	移出	ACPI 节流与锁改造补丁，属 V49 技术
+dragonfly_mail.messages.1673215	—	—	移出	令牌未初始化之疑与新版语义，属 V49 LWKT 技术
+dragonfly_mail.messages.1673217	—	—	移出	ACPI 补丁初始化 token，属 V49 技术
+dragonfly_mail.messages.1673236	—	—	移出	Coverity 静态分析缺陷修补，属 V49 技术
+dragonfly_mail.messages.1395539	V51.7.1.3	man 页的措辞纪律	归入	man page 批量替换 FreeBSD 为 DragonFly 的溯源保真讨论，措辞纪律
+dragonfly_mail.messages.1673176	V51.7.5.3	排版一致性的强制力	归入	恢复 .Fx 宏并新增 .Dx 宏，排版与工具链一致性的强制力
+dragonfly_mail.messages.1395650	V51.3.1.4	修复者与讨论者的重合取证	归入	成员自陈每天约五小时投入、多数工作留在本地仓库，修复者与讨论者的重合
+dragonfly_mail.messages.1395601	—	—	移出	设备反复复位的硬件故障判断，属 V49 硬件排障
+dragonfly_mail.messages.1395611	—	—	移出	PCCARD 设备匹配例程补齐，属 V49 驱动技术
+dragonfly_mail.messages.1663774	—	—	移出	POSIX 建议锁补丁移植并提醒未充分评审，属 V49 文件系统技术
+dragonfly_mail.messages.1663778	V51.3.2.2	同行审查的默认强度	归入	逐条评审：合并例程、加大括号、改写注释、拆分计数函数，同行审查强度
+dragonfly_mail.messages.1663782	V51.3.2.2	同行审查的默认强度	归入	把计数增减整合进 lockf 分配释放函数，审查中的重构建议
+dragonfly_mail.messages.1663785	V51.3.2.2	同行审查的默认强度	归入	无条件增减计数在 lf_alloc／lf_free 的实现往返，审查迭代
+dragonfly_mail.messages.1379396	V51.3.3.5	文档工作的低门槛入口	归入	Warren Toomey 以写内核文档为参与切入点，文档工作的低门槛入口
+dragonfly_mail.messages.1379397	V51.2.1.2	设计文档的动机来源	归入	Dillon 称 LWKT 已稳固、正是文档化时机，设计文档的动机来源
+dragonfly_mail.messages.1379400	V51.2.1.2	设计文档的动机来源	归入	man page 与白皮书两种载体的取舍裁定，设计文档的载体选择
+dragonfly_mail.messages.1379403	V51.2.1.2	设计文档的动机来源	归入	用 groff 输出网页化解手册格式顾虑，文档载体的技术铺路
+dragonfly_mail.messages.1395608	—	—	移出	PCCARD 匹配机制与规避说明，属 V49 驱动技术
+dragonfly_mail.messages.1395653	V51.2.1.2	设计文档的动机来源	归入	询问令牌说明是否加到网站目标页面，令牌文档化的起点
+dragonfly_mail.messages.122373	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.121608	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.121611	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.121620	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.121631	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.121004	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.121009	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90188	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90192	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90199	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90203	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90214	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90235	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90238	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.90244	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.132985	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.132994	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.133028	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.133033	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.133039	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.133042	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.133050	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.132083	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.132101	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.132109	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142019	—	—	移出	1.2–1.4 期间的构建、缺陷与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142024	—	—	删除	零内容：空块
+dragonfly_mail.messages.142027	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142030	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142038	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124671	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124678	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124693	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124707	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124722	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124738	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124749	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.124753	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142771	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142789	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142799	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142809	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.142815	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.138971	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.138982	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.138990	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.138995	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139005	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139017	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139019	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139036	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139037	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139045	—	—	移出	1.4–1.5 期间的缺陷修复与运维邮件，属 V49 技术史
+dragonfly_mail.messages.139052	—	—	删除	零内容：空块
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+dragonfly_mail.messages.230	—	—	移出	vkernel buildworld panic 的 pv_entry 尺寸根因，属 V49 技术
+dragonfly_mail.messages.513	—	—	移出	vkernel 手册操作触发凭据双重释放，属 V49 技术
+dragonfly_mail.messages.570	—	—	移出	Xen HVM 下 vm.idlezero_enable 腐坏，属 V49 技术
+dragonfly_mail.messages.1542217	—	—	移出	vkernel 启动至挂载根文件系统里程碑，属 V48 事件
+dragonfly_mail.messages.1542218	—	—	移出	vkernel 执行 /sbin/init 卡在 TLS，属 V48 事件
+dragonfly_mail.messages.1542222	V51.5.4.4	虚拟内核的方法论价值	归入	vkernel 与 UML 相似、短期目标为集群与缓存一致性开发，方法论价值
+dragonfly_mail.messages.1542224	—	—	移出	vkernel 内跑起 /bin/csh 里程碑，属 V48 事件
+dragonfly_mail.messages.1542226	—	—	移出	vkernel 启动到 login 提示符里程碑，属 V48 事件
+dragonfly_mail.messages.1542227	—	—	移出	vke 伪网络驱动的 tap 中断设计征询，属 V49 技术
+dragonfly_mail.messages.1542235	—	—	移出	Sephe 十分钟完成 vke 驱动并请入库，属 V49 技术
+dragonfly_mail.messages.1542248	—	—	移出	vkernel 内 ping 通真实机器，属 V49 技术
+dragonfly_mail.messages.1542250	—	—	移出	vkernel 浮点可用、buildworld 仍受阻，属 V48 事件
+dragonfly_mail.messages.1542252	—	—	删除	零内容：空块
+dragonfly_mail.messages.1542254	V51.5.4.4	虚拟内核的方法论价值	归入	虚拟内核嵌套虚拟内核的可行性边界，方法论价值
+dragonfly_mail.messages.1542260	—	—	移出	vkernel 内 buildworld 越过失败点，属 V48 事件
+dragonfly_mail.messages.1542262	—	—	移出	vke 多网络接口支持实测，属 V49 技术
+dragonfly_mail.messages.1542264	—	—	移出	vke 与 tap 同号及 -I auto 语法设想，属 V49 技术
+dragonfly_mail.messages.1542268	V51.2.4.1	机制简化与可懂性的兑换	归入	评 Linux 相关代码晦涩几无注释、难判断页表实现，可懂性作为对照
+dragonfly_mail.messages.1542284	—	—	移出	vkernel 稳定性通报与 gdb 寄存器帧待办，属 V48 事件
+dragonfly_mail.messages.1542292	—	—	移出	vkernel 偶发找不到根文件系统排查，属 V49 技术
+dragonfly_mail.messages.1542306	—	—	移出	vke 多接口语法补丁评述，属 V49 技术
+dragonfly_mail.messages.1542310	V51.5.4.4	虚拟内核的方法论价值	归入	虚拟内核用作单机网络测试床与更强隔离环境，用途设想
+dragonfly_mail.messages.1542319	V51.5.4.4	虚拟内核的方法论价值	归入	Dillon 论 jail 无法有效隔离与资源划分、性能是关键差异，方法论辨析
+dragonfly_mail.messages.1963361	—	—	移出	虚拟内核进程迁移构想的状态与资源辨析，属 V49 技术
+dragonfly_mail.messages.1963362	—	—	移出	迁移可行性从进程状态角度的分析，属 V49 技术
+dragonfly_mail.messages.1956099	V51.5.4.4	虚拟内核的方法论价值	归入	检查点机制作迁移范例、Dillon 指出 VPAGETABLE 等障碍，方法论边界
+dragonfly_mail.messages.1538776	V51.5.4.4	虚拟内核的方法论价值	归入	询问运行中虚拟内核可否检查点，能力诉求
+dragonfly_mail.messages.1538778	V51.5.4.4	虚拟内核的方法论价值	归入	Dillon 逐条说明检查点不可行的两个简单原因，方法论边界
+dragonfly_mail.messages.1538784	V51.5.4.4	虚拟内核的方法论价值	归入	挂起恢复需复制内存与磁盘镜像、TCP 大概率丢失，方法论代价
+dragonfly_mail.messages.1538792	V51.5.4.4	虚拟内核的方法论价值	归入	CARP 移植缺测试机、拟以虚拟内核作测试平台，用途扩展
+dragonfly_mail.messages.1956302	V51.5.4.4	虚拟内核的方法论价值	归入	询问虚拟内核可否做 pf 隔离并打听托管服务商，隔离与商用设想
+dragonfly_mail.messages.1956306	V51.5.4.4	虚拟内核的方法论价值	归入	确认虚拟内核可做不影响他实例的 pf 过滤，隔离能力确认
+dragonfly_mail.messages.1973791	—	—	移出	以 vn1 挂根文件系统致崩溃，属 V49 技术排障
+dragonfly_mail.messages.1945721	—	—	移出	虚拟内核时间异常实测，属 V49 技术
+dragonfly_mail.messages.1945727	—	—	移出	虚拟内核时钟来源与宿主偏差说明，属 V49 技术
+dragonfly_mail.messages.1531147	—	—	移出	宿主侧干净关机的 RFC，属 V49 技术
+dragonfly_mail.messages.1531148	—	—	移出	外部关机的邮箱信号机制建议，属 V49 技术
+dragonfly_mail.messages.1945789	—	—	移出	dd 与 truncate 建根镜像的取舍，属 V49 技术
+dragonfly_mail.messages.1945805	—	—	移出	预分配与延迟分配的镜像实践建议，属 V49 技术
+dragonfly_mail.messages.1737764	—	—	删除	零内容：空块
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+sacred_sources.duckdb.blocks		—	删除	零内容：通用史观模板块（全树重复注入，与本节主题无关）
+dragonfly_mail.messages.17711	—	—	移出	/usr/dports 覆盖层级建立与 cpdup 首例，属 V49 打包技术
+dragonfly_mail.messages.17063	V51.2.4.3	取舍标准的公开说明	归入	自承 ports 覆盖机制是越来越糟的巨大 hack，取舍的公开自述
+dragonfly_mail.messages.15402	—	—	移出	stdint 头文件重构与类型不透明方案，属 V49 用户态技术
+dragonfly_mail.messages.15436	—	—	移出	OSVERSION 取值在 DragonFly 上的适配，属 V49 打包技术
+dragonfly_mail.messages.108038	V51.2.4.1	机制简化与可懂性的兑换	归入	否决把 /bin/sh 链到 ash：名称已够多、再增链接平添混淆，简化取向
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+dragonfly_mail.messages.122313	—	—	移出	lwkt_reltoken 断言 panic 补丁，属 V49 LWKT 技术
+dragonfly_mail.messages.152221	—	—	移出	machine 与 machine_arch 命名沿革与设计反思，属 V49 接口史
+dragonfly_mail.messages.152295	—	—	移出	双核笔记本 SMP 中断投递失效，属 V49 SMP 技术
+dragonfly_mail.messages.155439	—	—	移出	mbuf 泄漏的错误码根因，属 V49 网络技术
+dragonfly_mail.messages.158406	—	—	移出	Core Duo 笔记本 SMP 内核 panic，属 V49 SMP 技术
+dragonfly_mail.messages.158477	—	—	移出	X 鼠标粘死与 MXCSR 保留位异常，属 V49 技术
+dragonfly_mail.messages.152231	—	—	移出	随机数生成器与 arc4 的取舍质疑，属 V49 技术
+dragonfly_mail.messages.152232	—	—	移出	cache_lock 阻塞于 maildir 目录的排障，属 V49 文件系统技术
+dragonfly_mail.messages.152256	—	—	移出	ALI 芯片组时钟走速加倍，属 V49 硬件技术
+dragonfly_mail.messages.152282	—	—	移出	man cvsup 无手册条目，属 V49 文档缺漏
+dragonfly_mail.messages.152300	—	—	删除	零内容：空块
+dragonfly_mail.messages.152305	—	—	移出	strtod 缺 strtof／strtold 的缺陷报告，属 V49 用户态技术
+dragonfly_mail.messages.152315	—	—	移出	mount_msdos 静态链接缺 citrus 库，属 V49 打包技术
+dragonfly_mail.messages.152332	—	—	移出	SYSINIT 改动致启动早期 panic，属 V49 技术
+dragonfly_mail.messages.152338	—	—	移出	make nativekernel 缺 DRAGON 配置，属 V49 构建技术
+dragonfly_mail.messages.155470	—	—	移出	lwp 改动致 libkvm 构建中断，属 V49 技术
+dragonfly_mail.messages.155488	—	—	移出	fdisk 在 USB 闪存盘几何异常，属 V49 技术
+dragonfly_mail.messages.155489	—	—	移出	mountroot 设备名误导性错误，属 V49 技术
+dragonfly_mail.messages.155496	—	—	移出	登录提示后必然 panic，属 V49 技术
+dragonfly_mail.messages.155530	—	—	移出	升级后冻结于并口探测，属 V49 技术
+dragonfly_mail.messages.158407	—	—	移出	vfs_helper.c 编译错误复现，属 V49 技术
+dragonfly_mail.messages.158412	—	—	移出	Xorg 鼠标粘在左上角缺陷，属 V49 技术
+dragonfly_mail.messages.158415	—	—	移出	Elf64_Sxword 缺失致 libelf 不可构建，属 V49 用户态技术
+dragonfly_mail.messages.158443	—	—	移出	ucontext 浮点保存空间扩展设想，属 V49 技术
+dragonfly_mail.messages.158452	—	—	移出	vm_page_cache 脏页 panic，属 V49 技术
+dragonfly_mail.messages.158469	—	—	移出	硬盘跨机后 Fatal Trap 12，属 V49 技术
