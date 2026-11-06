@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 3455,
+  "subsections": 3761,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "d989ce2fd0c1ce42d91c9f8c313f8d4a91fde5148d4395b5c7e4fa0db52a79da",
+  "content_sha256": "bd440cfc6e1f00f63ca2fb90a9a432a8eb97de677022a7a9add5722092ece04f",
   "extract": "title+body",
-  "generated_at": "2026-11-07T05:44:09+08:00"
+  "generated_at": "2026-11-07T06:38:01+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -3915,7 +3915,9 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-004",
+    "TH-HIS-046"
    ],
    "sections": 10
   },
@@ -3924,8 +3926,14 @@
    "title": "4.3BSD-Tahoe：机器无关化与 BSD 可移植性的转折（1988）",
    "domains": [],
    "themes": [
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-HW-036",
+    "TH-BIZ-008",
+    "TH-HIS-003",
+    "TH-HW-017",
+    "TH-LANG-036",
+    "TH-REL-009",
+    "TH-FS-010",
+    "TH-GOV-005"
    ],
    "sections": 10
   },
@@ -3933,14 +3941,32 @@
    "volume": "第14卷-CSRG 后期发行、可移植性与源码独立化（1983–1992）",
    "title": "Net／1：首次独立网络源码发行（1988–1989）",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015",
+    "TH-HIS-003",
+    "TH-HIS-004",
+    "TH-HW-036",
+    "TH-NET-001",
+    "TH-NET-025"
+   ],
    "sections": 9
   },
   "V14-C004": {
    "volume": "第14卷-CSRG 后期发行、可移植性与源码独立化（1983–1992）",
    "title": "4.3BSD-Reno：走向 4.4BSD 的中间发行（1990）",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-FS-023",
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-LANG-021",
+    "TH-GOV-005",
+    "TH-HW-036",
+    "TH-LANG-018",
+    "TH-LAW-026"
+   ],
    "sections": 9
   },
   "V14-C005": {
@@ -3948,6 +3974,9 @@
    "title": "AT&T 代码重写与 Net／2 的形成",
    "domains": [],
    "themes": [
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-REL-015",
     "TH-SEC-021"
    ],
    "sections": 8
@@ -3959,7 +3988,8 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-046"
    ],
    "sections": 5
   },
@@ -17916,8 +17946,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "ef2bd33647364903b75a1e8f77ca6f4bff9a09e2"
   },
   "V14-C001-1.2": {
    "chapter": "V14-C001",
@@ -17933,8 +17963,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "e383b654bbdb20bfb0b10eea7b819d3c75a660ae"
   },
   "V14-C001-1.3": {
    "chapter": "V14-C001",
@@ -17944,14 +17974,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
+    "TH-HIS-004",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "764e3bd5922bb09444ddcdde839fee36e1d42a34"
   },
   "V14-C001-1.4": {
    "chapter": "V14-C001",
@@ -17967,8 +17997,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "37aca5629aa1ddce275885258c09d0256bcd38e6"
   },
   "V14-C001-1.5": {
    "chapter": "V14-C001",
@@ -17984,8 +18014,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "97013b99c865ff8766d21c85740f1ea5a5d1c323"
   },
   "V14-C001-1.6": {
    "chapter": "V14-C001",
@@ -18001,8 +18031,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "31565fa6dad84b90c6692c88a13004ddb58b995b"
   },
   "V14-C001-1.7": {
    "chapter": "V14-C001",
@@ -18012,14 +18042,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-004",
+    "TH-HIS-046",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "2f7db512b61ccfbecab74e5d3343128bf81cbd7f"
   },
   "V14-C001-1.8": {
    "chapter": "V14-C001",
@@ -18035,8 +18065,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "d4680723dcd90d9abe9084ca8cbb1c7f8135862b"
   },
   "V14-C001-1.9": {
    "chapter": "V14-C001",
@@ -18052,8 +18082,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "fe1bbac3f340f473267c97dee3e98e6f439ea6e1"
   },
   "V14-C001-1.10": {
    "chapter": "V14-C001",
@@ -18069,122 +18099,124 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "9484311a563aa2b974dd186e4e753bb983f6a0b2"
   },
   "V14-C002-2.1": {
    "chapter": "V14-C002",
    "title": "从 4.3BSD 到 Tahoe：体系结构转换的背景",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-HW-036",
-    "TH-HIS-001"
+    "TH-HW-017",
+    "TH-REL-009",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "a1b45eaf7ffcdd61ab7d77ae218bf9f13f10a70e"
   },
   "V14-C002-2.2": {
    "chapter": "V14-C002",
    "title": "Tahoe：新硬件平台与版本形成",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-GOV-005",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "cf29b6914a7251425d7f3f4300e17af4935f0198"
   },
   "V14-C002-2.3": {
    "chapter": "V14-C002",
    "title": "分离的完成：4.3BSD-Tahoe 的体系结构抽象",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-VM-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-GOV-005",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-VM-033",
+    "TH-REL-015",
+    "TH-BIZ-008",
+    "TH-FS-010",
+    "TH-HW-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "2a98ce14e98821f57f36bd18dbcd358211cbd69b"
   },
   "V14-C002-2.4": {
    "chapter": "V14-C002",
    "title": "4.3BSD-Tahoe 的发行",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
+    "TH-HIS-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-GOV-005",
+    "TH-HIS-003",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "893586cb9071bc075d5c25774cce4ad83f66e3d7"
   },
   "V14-C002-2.5": {
    "chapter": "V14-C002",
    "title": "4.3BSD-Tahoe 的版本构成与前代继承",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-GOV-005",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c54fbf0c255c3af557cb6a3ab33cf1b8a015d92e"
   },
   "V14-C002-2.6": {
    "chapter": "V14-C002",
    "title": "Berkeley UNIX 向多体系结构系统的发展",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-GOV-005",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-LANG-036",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "6a354d469f3360782a1257fbaf4203bdf1ff3562"
   },
   "V14-C002-2.7": {
    "chapter": "V14-C002",
@@ -18193,473 +18225,481 @@
    "domains": [
     "TH-GOV-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-GOV-005",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "16285fb5063fe833b6008ea7c1821df452460c09"
   },
   "V14-C002-2.8": {
    "chapter": "V14-C002",
    "title": "4.3BSD-Tahoe 的技术选择与未延续路线",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
+    "TH-HIS-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-OS-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-HW-036",
-    "TH-HIS-001"
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-OS-001",
+    "TH-OS-013",
+    "TH-HW-017",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "f62bca9385ffde715b70cc4c33fa782c2c9b74f0"
   },
   "V14-C002-2.9": {
    "chapter": "V14-C002",
    "title": "4.3BSD-Tahoe 的历史地位",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-LANG-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-GOV-005",
     "TH-HW-036",
-    "TH-HIS-001"
+    "TH-LANG-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "88ce5044fa3f7ad2ce1c1d9feecac61cebc7bc6b"
   },
   "V14-C002-2.10": {
    "chapter": "V14-C002",
    "title": "与同时期操作系统的比较（1988）",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-HW-036",
-    "TH-HIS-001"
+    "TH-HW-019",
+    "TH-BIZ-008",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c83909e6a4d0e33bd6e7a32d3422b6c07e62a031"
   },
   "V14-C003-3.1": {
    "chapter": "V14-C003",
    "title": "AT&T UNIX 许可证与 Berkeley 源码发行的限制",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c2a20f7e5a6e019f38b7a535113559c5bd5d2b4a"
   },
   "V14-C003-3.2": {
    "chapter": "V14-C003",
    "title": "Net／1 的形成背景与 Keith Bostic 的发行计划",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-REL-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-REL-009",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "17b1b4f3cefcfb8963c166b5639230001b91be6e"
   },
   "V14-C003-3.3": {
    "chapter": "V14-C003",
    "title": "Net／1 公告日期与发行时间线：1988-12-07 公告与 1989 年正式发行",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-NET-000",
+    "TH-REL-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-NET-001",
+    "TH-REL-001",
+    "TH-GOV-015",
+    "TH-REL-030",
+    "TH-BIZ-008",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "cdb9146feda9e67dd5600f2482359050fb95c5c5"
   },
   "V14-C003-3.4": {
    "chapter": "V14-C003",
    "title": "Net／1 的版本构成与软件范围",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-NET-000",
+    "TH-HW-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-NET-025",
+    "TH-HW-036",
+    "TH-HIS-004",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "459d8348e5b9b3bcdd8b9451d2ce333132cbea9f"
   },
   "V14-C003-3.5": {
    "chapter": "V14-C003",
    "title": "Net／1 的发行方式与许可证",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "36c11d99f79e9da7a2ae413dedcfb293972fb81d"
   },
   "V14-C003-3.6": {
    "chapter": "V14-C003",
    "title": "Net／1 的传播：网络、大学与 UNIX 用户共同体",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c17e1e3922b08c1457f9cf22ca173ba78d194be5"
   },
   "V14-C003-3.7": {
    "chapter": "V14-C003",
    "title": "Net／1 与 4.3BSD-Tahoe 的关系",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "e2152010df04a3263e0907f263e5f997b12e4da4"
   },
   "V14-C003-3.8": {
    "chapter": "V14-C003",
    "title": "Net／1 与 Berkeley 源码独立化",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "4a0f878cad541daa6e0bb9aa70aa5879dbaa16ea"
   },
   "V14-C003-3.9": {
    "chapter": "V14-C003",
    "title": "Net／1 的历史定位：首个可自由再分发的 Berkeley 网络代码发行物（1989）",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c85148d3dd6fe2fd3cc61d8687ed5ab53b1a2aa7"
   },
   "V14-C004-4.1": {
    "chapter": "V14-C004",
    "title": "4.3BSD-Reno 的形成背景",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-LANG-000",
+    "TH-FS-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-LANG-021",
+    "TH-FS-023",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "aa2a5cc285bb12eacc52e96d308d58f8acc3ae69"
   },
   "V14-C004-4.2": {
    "chapter": "V14-C004",
    "title": "Reno 在 4.3BSD 序列中的位置",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-FS-023",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "af9d5d1430a783e7f660e86f1fd8b4563772211b"
   },
   "V14-C004-4.3": {
    "chapter": "V14-C004",
    "title": "Reno 的版本构成与新增内容",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-FS-000",
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-BIZ-008",
+    "TH-FS-023",
+    "TH-LAW-026",
+    "TH-OS-013",
+    "TH-OS-028",
+    "TH-GOV-014"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "nfs",
+    "osi"
+   ],
+   "subs": 6,
+   "subs_sha1": "3d90ae94c08891adf9e16116a7f0ba33618a67c8"
   },
   "V14-C004-4.4": {
    "chapter": "V14-C004",
    "title": "4.3BSD-Tahoe、Reno 与下一代 Berkeley 系统",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-FS-023",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "17e53f1b02c8e41e90e4107b516813411c26a397"
   },
   "V14-C004-4.5": {
    "chapter": "V14-C004",
    "title": "Berkeley 外部参与者与 Reno 的开发网络",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-FS-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-HW-036",
+    "TH-FS-023",
+    "TH-LANG-018"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "nfs"
+   ],
+   "subs": 6,
+   "subs_sha1": "6b25218c572cd0e24606b23f9f7d027b1e5fac3c"
   },
   "V14-C004-4.6": {
    "chapter": "V14-C004",
    "title": "Reno 的发行与传播",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-001",
+    "TH-GOV-014",
+    "TH-BIZ-008",
+    "TH-LANG-021",
     "TH-GOV-005",
-    "TH-HW-036"
+    "TH-REL-030",
+    "TH-FS-023"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c5ea1170120be75fb81c2c449b5d4f122f3e417e"
   },
   "V14-C004-4.7": {
    "chapter": "V14-C004",
    "title": "Reno 的技术选择与实验性质",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-FS-023",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "56ee252e0b51ce6a08634607dcd4a05450770e61"
   },
   "V14-C004-4.8": {
    "chapter": "V14-C004",
    "title": "Reno 的历史定位",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-FS-023",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "f6f67f8deeb7d6002b378a0d246a6db0e41915b5"
   },
   "V14-C004-4.9": {
    "chapter": "V14-C004",
    "title": "与同时期商业 UNIX 的比较：许可与支持体系的差异",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-HW-000"
+    "TH-FS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-GOV-005",
-    "TH-HW-036"
+    "TH-FS-023",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "d0b1f6d9e85e3ce7f357f45573fdfc1416f0e2b5"
   },
   "V14-C005-5.1": {
    "chapter": "V14-C005",
    "title": "Keith Bostic 与 AT&T 代码重写运动",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-015",
+    "TH-REL-009",
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "d3aebdfc4825b64a682d2252b39efb126e46430d"
   },
   "V14-C005-5.2": {
    "chapter": "V14-C005",
    "title": "从 Net／1 到完整 Berkeley 源码重写",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "fe83d4e60a118f04edb446c7fed12fe9403969e2"
   },
   "V14-C005-5.3": {
    "chapter": "V14-C005",
    "title": "社区招募：志愿者、匿名贡献与分布式重写",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "d19679210e8b255fff2e44e179268c8949a89e29"
   },
   "V14-C005-5.4": {
    "chapter": "V14-C005",
@@ -18667,94 +18707,90 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-009",
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b3f715ef83373801a05f45e6f3ca62bcbc13facd"
   },
   "V14-C005-5.5": {
    "chapter": "V14-C005",
    "title": "Net／2 的形成（1991-06）",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "4e5cc49945657b224ee9297b9076df62e3e88732"
   },
   "V14-C005-5.6": {
    "chapter": "V14-C005",
    "title": "Net／2 的版本构成与源码状态",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "1dd1080939cea876d72baa238cd37c74cfca3bd3"
   },
   "V14-C005-5.7": {
    "chapter": "V14-C005",
    "title": "Net／2 与 4.3BSD-Reno 的关系",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-LANG-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-LANG-021",
+    "TH-REL-009",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "01dd59e91d02a643205a8a5ff1db6bb396e7599d"
   },
   "V14-C005-5.8": {
    "chapter": "V14-C005",
    "title": "重写运动的组织方式：小团队协调与外部社区参与",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-SEC-021",
-    "TH-HIS-001",
-    "TH-GOV-005"
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "ff13833ebc9cd11d3318fb40b0827817799da140"
   },
   "V14-C006-6.1": {
    "chapter": "V14-C006",
@@ -18770,8 +18806,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "a591661b6cffc61bb48d58e8fce13d804c504497"
   },
   "V14-C006-6.2": {
    "chapter": "V14-C006",
@@ -18787,8 +18823,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "70baf77cf8429afbfa366e417cad12a9b49fdfb3"
   },
   "V14-C006-6.3": {
    "chapter": "V14-C006",
@@ -18804,8 +18840,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "9bbba7f0a6399656bd3082049f82ce074f9faed5"
   },
   "V14-C006-6.4": {
    "chapter": "V14-C006",
@@ -18815,14 +18851,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "75178d409a94d5a274e772ad4cc83ab2711e081b"
   },
   "V14-C006-6.5": {
    "chapter": "V14-C006",
@@ -18838,8 +18872,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "5723105066adf917aaf1c0282d7661582643a53d"
   },
   "V15-C001-1.1": {
    "chapter": "V15-C001",
@@ -22734,8 +22768,8 @@
     "TH-HW-010",
     "TH-GOV-014",
     "TH-REL-001",
-    "TH-HW-036",
-    "TH-GOV-006"
+    "TH-GOV-006",
+    "TH-REL-025"
    ],
    "projects": [],
    "technical_terms": [],
@@ -27692,13 +27726,13 @@
    "domains": [
     "TH-GOV-000",
     "TH-FS-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-GOV-014",
     "TH-FS-005",
-    "TH-HIS-004",
     "TH-HW-010",
+    "TH-HIS-004",
     "TH-FS-017",
     "TH-FS-018"
    ],
@@ -49738,8 +49772,8 @@
    "themes": [
     "TH-BIZ-019",
     "TH-LANG-038",
-    "TH-GOV-006",
-    "TH-GOV-005"
+    "TH-GOV-005",
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
@@ -52886,8 +52920,8 @@
     "TH-NET-026",
     "TH-HW-027",
     "TH-HIS-003",
-    "TH-NET-010",
-    "TH-HW-010"
+    "TH-HW-010",
+    "TH-NET-010"
    ],
    "projects": [
     "netbsd"
@@ -80896,8 +80930,8 @@
   "V01-C002-2.8.6": {
    "add": [
     "TH-SEC-029",
-    "TH-HW-026",
     "TH-HIS-004",
+    "TH-HW-026",
     "TH-LANG-021",
     "TH-FS-038"
    ]
@@ -81452,6 +81486,71 @@
     "TH-NET-009"
    ]
   },
+  "V14-C002-2.3.2": {
+   "add": [
+    "TH-VM-001"
+   ]
+  },
+  "V14-C002-2.7.3": {
+   "add": [
+    "TH-LANG-021"
+   ]
+  },
+  "V14-C002-2.8.2": {
+   "add": [
+    "TH-GOV-014"
+   ]
+  },
+  "V14-C004-4.3.1": {
+   "add": [
+    "TH-HIS-004"
+   ]
+  },
+  "V14-C004-4.3.4": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V14-C004-4.6.1": {
+   "add": [
+    "TH-LAW-026",
+    "TH-FS-038"
+   ]
+  },
+  "V14-C004-4.6.3": {
+   "add": [
+    "TH-LAW-010",
+    "TH-HIS-004"
+   ]
+  },
+  "V14-C004-4.6.4": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-REL-022"
+   ]
+  },
+  "V14-C004-4.6.5": {
+   "add": [
+    "TH-REL-001",
+    "TH-LAW-033",
+    "TH-LANG-030"
+   ]
+  },
+  "V14-C004-4.6.6": {
+   "add": [
+    "TH-REL-009"
+   ]
+  },
+  "V14-C005-5.4.3": {
+   "add": [
+    "TH-LAW-015",
+    "TH-REL-001",
+    "TH-BIZ-008",
+    "TH-LAW-013",
+    "TH-HIS-046"
+   ]
+  },
   "V21-C002-2.1.1": {
    "add": [
     "TH-HIS-003",
@@ -81688,12 +81787,13 @@
   },
   "V21-C003-3.3.4": {
    "add": [
-    "TH-REL-025"
+    "TH-HW-023"
    ]
   },
   "V21-C003-3.3.5": {
    "add": [
-    "TH-SEC-039"
+    "TH-SEC-039",
+    "TH-HW-036"
    ]
   },
   "V21-C003-3.4.2": {
@@ -81829,9 +81929,9 @@
    "add": [
     "TH-VM-014",
     "TH-HW-008",
-    "TH-NET-025",
     "TH-GOV-014",
     "TH-HIS-001",
+    "TH-NET-025",
     "TH-HW-010"
    ]
   },
@@ -82285,13 +82385,13 @@
     "TH-GOV-014",
     "TH-HIS-001",
     "TH-HW-010",
-    "TH-OS-013"
+    "TH-HW-008"
    ]
   },
   "V31-C003-3.3.4": {
    "add": [
-    "TH-HW-036",
     "TH-HW-010",
+    "TH-HW-036",
     "TH-HIS-003",
     "TH-GOV-014"
    ]
@@ -82482,8 +82582,8 @@
     "TH-HIS-001",
     "TH-BIZ-008",
     "TH-OS-031",
-    "TH-VM-009",
-    "TH-HW-010"
+    "TH-HW-010",
+    "TH-VM-009"
    ]
   },
   "V31-C005-5.3.5": {
@@ -82610,8 +82710,8 @@
    "add": [
     "TH-NET-007",
     "TH-OS-013",
-    "TH-OS-028",
     "TH-HW-010",
+    "TH-OS-028",
     "TH-HIS-001"
    ]
   },
@@ -83189,7 +83289,7 @@
   "V51-C004-4.3.2": {
    "add": [
     "TH-FS-002",
-    "TH-REL-015"
+    "TH-OS-017"
    ]
   },
   "V51-C004-4.3.4": {
@@ -83668,8 +83768,8 @@
    "add": [
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-NET-025",
     "TH-GOV-014",
+    "TH-NET-025",
     "TH-GOV-026"
    ]
   },
@@ -83883,8 +83983,8 @@
   "V53-C005-5.3.5": {
    "add": [
     "TH-HIS-003",
-    "TH-VM-009",
     "TH-HW-010",
+    "TH-VM-009",
     "TH-OS-030",
     "TH-OS-005",
     "TH-GOV-014"
