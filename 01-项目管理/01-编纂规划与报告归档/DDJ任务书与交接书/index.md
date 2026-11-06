@@ -17,7 +17,7 @@
 | `ads_rules.md` | 广告判定规则 |
 | `dispatch_templates.md` | 派单模板 |
 
-⚠️ 四库 DuckDB **活跃真值在 `C:\Users\ykla\Documents\libre\{ddj,cuj,sa,tpj}.duckdb`**（`C:\ddj_stage\` 为 10-09 建库原件、非续跑入口）；两者均**不在仓库**。最终推送目标 `\\DESKTOP-M5P610N\d\librebsd\dvd6\Website\ddj\`——**T038 已随 2026-11-07 收官终止，该目录不建，四库为仓外资产**。机器可读产出（`articles_inventory.json`／`figures_inventory_*.json`／`verify_all_report.json` 等）仍留 `script/_ddj_out/`；判读工作区 `C:\Users\ykla\Documents\libre\ddj_claim_work\`。
+⚠️ 四库 DuckDB **活跃真值在 `C:\Users\ykla\Documents\libre\{ddj,cuj,sa,tpj}.duckdb`**（`C:\ddj_stage\` 10-09 建库原件**已于 2026-11-07 按主理人令删除**）；四库**不在仓库**。最终推送目标 `\\DESKTOP-M5P610N\d\librebsd\dvd6\Website\ddj\`——**T038 已随 2026-11-07 收官终止，该目录不建，四库为仓外资产**。机器可读产出（`articles_inventory.json`／`figures_inventory_*.json`／`verify_all_report.json` 等）仍留 `script/_ddj_out/`；判读工作区 `C:\Users\ykla\Documents\libre\ddj_claim_work\`（判读件证据链，保留）。
 
 ## 2026-10-22 22:33 本机实测进度块（只读复核）
 
