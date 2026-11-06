@@ -1,0 +1,224 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.155852	V03.1.2.2	存储管理单元的机型差异	归入	PDP-11 变长页与无可重启指令致移植棘手，属 MMU 机型差异
+usenet_mail.messages.155832		—	移出	NetBSD/i386 选配 SCSI 卡与显卡，属 V04 硬件支持
+usenet_mail.messages.155864	V03.1.2.1	系统移植的硬件前提与起点	归入	移植 PRO-350 的前置：交叉编译器与 RX-50 引导盘
+usenet_mail.messages.155896	V03.2.4.4	微处理器对小型机的替代	归入	Pentium 90 以性价比抗衡低端 RISC，微处理器替代
+usenet_mail.messages.155921		—	移出	Novell 股权买断经济学，属 V14-305 商业史
+usenet_mail.messages.155947		—	移出	UnixWare SDK 定价与 Dynatext 文档，属 V14-305
+usenet_mail.messages.155967		—	删除	零内容：仅抬头无正文；bytes=219，sha=75eff1be60db
+usenet_mail.messages.155994		—	移出	Linux 奇偶版本命名讨论，属 V04 系统技术
+usenet_mail.messages.156019		—	移出	strcasecmp 的标准归属，属 V04 接口标准
+usenet_mail.messages.156067		—	移出	Solaris 与 UnixWare 比较方法论，属 V14-305
+usenet_mail.messages.156098		—	移出	家庭服务器配置与 OODB 选型，属 V04
+usenet_mail.messages.156129		—	移出	Linux 1.1.x beta 释义，属 V04
+usenet_mail.messages.156167		—	移出	NetBSD 1.0 串口锁定排查，属 V04
+usenet_mail.messages.156203		—	移出	NetBSD 1.0 FORTRAN 与虚拟控制台，属 V04
+usenet_mail.messages.81111	V03.3.5.5	维护工作的隐性投入	归入	MicroVAX qe 中断 panic 逐日排查，维护隐性投入
+usenet_mail.messages.81314	V03.3.5.5	维护工作的隐性投入	归入	swap 小于内存致 dump 冲掉分区，运维实测
+usenet_mail.messages.81452	V03.1.2.3	设备驱动与外围适配层	归入	LAT 终端服务器吞吐与丢帧，外围适配
+usenet_mail.messages.81453	V03.3.5.1	补丁的分发与采纳机制	归入	装补丁带后当日两次崩溃并报修，补丁采纳后果
+usenet_mail.messages.81454		—	移出	amd 在 Ultrix 下免 symlink 挂载，属 V14-305
+usenet_mail.messages.81459	V03.3.5.5	维护工作的隐性投入	归入	加二级交换区的完整步骤，运维操作记录
+usenet_mail.messages.81463	V03.3.5.5	维护工作的隐性投入	归入	login 定时读口令缺陷的定位，缺陷排查
+usenet_mail.messages.81474	V03.2.1.2	模块化机型与价格带划分	归入	crypt 不含于 3.1，须按货号单独订购，价格带划分
+usenet_mail.messages.81484		—	移出	YP 与 BIND/Hesiod 查询顺序，属 V14-305
+usenet_mail.messages.81490	V03.3.5.5	维护工作的隐性投入	归入	启动即开交换设备的推断，运维实测
+usenet_mail.messages.81502	V03.1.3.4	机型族的性能分层与配置差异	归入	DS5000 与 3100 的 SCSI 接口差异，机型配置分层
+usenet_mail.messages.81508	V03.1.2.3	设备驱动与外围适配层	归入	LAT 负载测试原始帧数，外围适配
+usenet_mail.messages.81520	V03.3.5.4	现场支持与远程维护	归入	DEC 工程师远程指导 ncp 节点库配置
+usenet_mail.messages.81522		—	移出	man 的未文档 -P 选项，属 V14-305
+usenet_mail.messages.81526	V03.3.5.5	维护工作的隐性投入	归入	交换分区重试行为实测，运维证据
+usenet_mail.messages.81539		—	移出	bootp 与 ipintr 目的地址校验，属 V10 网络
+usenet_mail.messages.81540		—	移出	UWS 4.0 随附 X11R3 的版本承诺，属 V14-305
+usenet_mail.messages.81544	V03.3.5.5	维护工作的隐性投入	归入	uucp 不支持 TCP，用户改装 BSD 源码替代
+usenet_mail.messages.81546		—	移出	头文件不合 ANSI C 与 fixincludes，属 V14-305
+usenet_mail.messages.81554	V03.2.1.4	软硬件捆绑与客户锁定	归入	用户数许可须 options QUOTA 才生效，许可绑定锁定
+usenet_mail.messages.81563		—	移出	fstat 移植所需 getu 源码，属 V14-305
+usenet_mail.messages.81580		—	删除	零内容：仅抬头无正文；bytes=188，sha=b7f7e245bab9
+usenet_mail.messages.81581	V03.3.3.2	复制与传输的时间成本	归入	dump 写 stdout 比写磁带慢一倍，复制时间成本
+usenet_mail.messages.81586	V03.3.5.1	补丁的分发与采纳机制	归入	SLIP 须向 DEC 索取新驱动，补丁分发
+usenet_mail.messages.81598		—	移出	SunRPC 与 NCS 两套 RPC 并存，属 V14-305
+usenet_mail.messages.81603	V03.3.5.5	维护工作的隐性投入	归入	LAT 断链后会话可被接管，DEC 长期未修
+usenet_mail.messages.81611	V03.3.5.5	维护工作的隐性投入	归入	8800 上频发崩溃，驱动连接块指针被破坏
+usenet_mail.messages.81619	V03.3.3.2	复制与传输的时间成本	归入	dump 直写 TK70 九分半，经 dd 仅三分半
+usenet_mail.messages.81621		—	移出	gcc 1.37.1 在 4.0 上的编译障碍，属 V14-305
+usenet_mail.messages.81637		—	移出	内核构建缺 _savucred，属 V14-305
+usenet_mail.messages.81645	V03.3.5.5	维护工作的隐性投入	归入	lcp 绕过 LAT 服务口令，安全缺口处置
+usenet_mail.messages.81646		—	移出	ULTRIX 只实现 LAT 从端，属 V14-305
+usenet_mail.messages.81651	V03.3.3.1	磁带介质的物理特性	归入	dump 块长随介质密度与 -b 覆盖，磁带特性
+usenet_mail.messages.81657	V03.1.3.3	指令集兼容的延续与断裂	归入	RISC 版仍用 VAX 二进制字体且缺常用软件，兼容断裂
+usenet_mail.messages.81661		—	移出	lockd 主机名缓冲加倍，属 V14-305
+usenet_mail.messages.81673		—	移出	cdevsw 多一项 strategy 例程，属 V06 内核结构
+usenet_mail.messages.81685		—	移出	mh inc 挂起与遗留锁文件，属 V14-305
+usenet_mail.messages.81696	V03.1.3.4	机型族的性能分层与配置差异	归入	VAX-3500 配 QDSS 鼠标死锁，机型配置差异
+usenet_mail.messages.81704		—	移出	libdbm 与 libndbm 的关系，属 V14-305
+usenet_mail.messages.81730	V03.1.3.3	指令集兼容的延续与断裂	归入	字宽表改格式致第三方工具不兼容，迁移断裂
+usenet_mail.messages.81733	V03.1.3.3	指令集兼容的延续与断裂	归入	3.1/4.0 二进制在 3100/2100/5800/5000 混用
+usenet_mail.messages.81743		—	移出	ANSI C／SVID／POSIX 符合度，属 V14-305
+usenet_mail.messages.81745		—	移出	NFS fcntl 锁慢两百倍，属 V14-305
+usenet_mail.messages.81755		—	移出	NFS 沿用守护进程 umask，属 V14-305
+usenet_mail.messages.81762		—	移出	UWS 子集 lk 文件补建，属 V14-305
+usenet_mail.messages.81775		—	移出	4.0 beta 仅 su 一处缺陷，属 V14-305
+usenet_mail.messages.81793		—	移出	top 移植缺 cp_time 符号，属 V14-305
+usenet_mail.messages.81796		—	移出	X11R4 与 DECwindows 共存，属 V14-305
+usenet_mail.messages.81801	V03.1.3.5	编译系统对体系结构的适配	归入	splx 内联仅 VAX 成立，RISC 改依赖编译器优化
+usenet_mail.messages.81802		—	移出	ndbm 并入 libc.a，属 V14-305
+usenet_mail.messages.81817		—	删除	零内容：仅抬头无正文；bytes=188，sha=ef6e93da8b3f
+usenet_mail.messages.81825		—	移出	emacs 段错误源于 MIPS 内核缺陷，属 V14-305
+usenet_mail.messages.81830		—	移出	perl 去掉 -O 后编译通过，属 V14-305
+usenet_mail.messages.81842		—	移出	MIPS 编译器错译 perly.c，附 BSD Now 附录
+5447@mcvax.UUCP	V03.3.5.2	勘误文档与版本记录	归入	4.2BSD 预发布到终版间外部邮件被静默丢弃
+2939@sri-arpa.UUCP	V03.1.3.4	机型族的性能分层与配置差异	归入	780 与两台 750 取舍：略快但运维负担重
+usenet_mail.messages.79126	V03.1.3.4	机型族的性能分层与配置差异	归入	8650 电池备份只够撑过短暂断电
+usenet_mail.messages.79140	V03.1.2.3	设备驱动与外围适配层	归入	780/750 转 Ultrix 问第三方盘与网卡支持
+usenet_mail.messages.79159	V03.1.3.4	机型族的性能分层与配置差异	归入	8650 电池备份疑问与其他机型对照
+usenet_mail.messages.79282		—	删除	零内容：仅抬头无正文；bytes=196，sha=f4e006c82a13
+usenet_mail.messages.79289		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79292		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79294		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79324		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79338		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79340		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79373		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79388		—	移出	780 上搭 3.0 并装 emacs/TeX 的清单，属 V14-305
+usenet_mail.messages.79393		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79407		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79436		—	辑存	辑存组：机型识别问答（uname/sizer/cpu.h），归 1.3.4
+usenet_mail.messages.79852	V03.3.3.2	复制与传输的时间成本	归入	dump 用大块长使 TK50 流式，三小时缩至半小时
+usenet_mail.messages.79854	V03.3.3.1	磁带介质的物理特性	归入	restore 不认 -b，靠 mt fsf 定位多卷带
+usenet_mail.messages.79858	V03.3.5.1	补丁的分发与采纳机制	归入	3.1 补丁带尚不存在，LAT 未决宜暂缓升级
+usenet_mail.messages.79860		—	移出	Andrew 动态装载器移植 pmax 的开关，属 V14-305
+usenet_mail.messages.79862		—	移出	typedef void 的编译实测，属 V14-305
+usenet_mail.messages.79863	V03.2.1.5	教育科研市场的开拓	归入	源码授权商业价一万五、教育授权另列，教育市场培育
+usenet_mail.messages.79868		—	移出	无文档 IEEE 与 DEC 浮点互转函数，属 V14-305
+usenet_mail.messages.79870		—	移出	NFS 命名管道在 785 与 Sun 间复现，属 V14-305
+usenet_mail.messages.79874		—	移出	X 工具包内存开销与共享库，属 V14-305
+usenet_mail.messages.79876		—	移出	uucp 源码陈旧缺 4.3BSD 特性，属 V14-305
+usenet_mail.messages.79890		—	移出	basename 第二参数当正则，属 V14-305
+usenet_mail.messages.79893	V03.3.5.1	补丁的分发与采纳机制	归入	缺陷已在 V3.1 修复，旧版可向 CSC 索取补丁
+usenet_mail.messages.79896		—	移出	RA90 的 disktab 块与旋转间隙，属 V06 存储
+usenet_mail.messages.79898		—	移出	newfs -i 受柱面组 inode 上限，属 V06
+usenet_mail.messages.79910		—	移出	xload 读 kmem 与 nosuid 限制，属 V14-305
+usenet_mail.messages.79915	V03.3.3.2	复制与传输的时间成本	归入	nbuf 多缓冲改进 dump/tar/dd 流式性能
+usenet_mail.messages.79925		—	删除	零内容：仅抬头无正文；bytes=185，sha=b0ca6b79222f
+usenet_mail.messages.79930		—	移出	无盘 VS2000 首登录者成 root，属 V14-305
+usenet_mail.messages.79932	V03.3.5.2	勘误文档与版本记录	归入	3.1/UWS2.1 漏装发行说明与安装指南的通告
+usenet_mail.messages.79941	V03.2.1.4	软硬件捆绑与客户锁定	归入	用户数授权绑定配额系统，许可执行与锁定
+usenet_mail.messages.79944		—	移出	basename 按 System V 正则语义，属 V14-305
+usenet_mail.messages.79949		—	移出	2.x 到 3.x 调用号与 rdump 协议变更，属 V14-305
+usenet_mail.messages.79961		—	移出	NFS 跨子网 bind 特权端口告警，属 V14-305
+usenet_mail.messages.79966	V03.1.2.3	设备驱动与外围适配层	归入	第三方 Maxtor 盘须改 scsi_devtab 标志
+usenet_mail.messages.79973		—	移出	copyin/copyoutl/splx 内联替换，属 V06
+usenet_mail.messages.79974	V03.1.3.4	机型族的性能分层与配置差异	归入	KDB50 挂 1 至 4 块 RA90 的顺序读带宽实测
+usenet_mail.messages.79977	V03.3.5.1	补丁的分发与采纳机制	归入	3.0 有两条分头出自不同支持组的补丁带
+usenet_mail.messages.79982		—	移出	4bsd renice 规则，属 V06 调度
+usenet_mail.messages.79991	V03.3.3.1	磁带介质的物理特性	归入	tar/dump 块长上限受 Massbus 字节计数寄存器限制
+usenet_mail.messages.79995		—	移出	NFS 命名管道误判字符设备，属 V14-305
+usenet_mail.messages.79998		—	移出	DECnet 与 IP 共用驱动，属 V14-305
+usenet_mail.messages.80003	V03.2.1.4	软硬件捆绑与客户锁定	归入	RISC 源码授权待下一大版本，授权政策构成锁定
+usenet_mail.messages.80006		—	移出	NFS 命名管道两处独立故障，属 V14-305
+usenet_mail.messages.80011		—	移出	SCSI 驱动无动态坏块重定向，属 V06 存储
+usenet_mail.messages.80016		—	移出	sendmail 百分号地址转 at，属 V14-305
+usenet_mail.messages.80019	V03.1.2.3	设备驱动与外围适配层	归入	DS3100 接 CDC Wren-V：改 install.1 与 disktab
+usenet_mail.messages.80021	V03.3.5.4	现场支持与远程维护	归入	DEC 支持答复 xcons/xterm 属不支持产品
+usenet_mail.messages.80029		—	移出	stty ioctl 只对一号单元，属 V14-305
+usenet_mail.messages.80032		—	移出	无 /etc/exportfs 需 touch 触发再导出，属 V14-305
+usenet_mail.messages.80041		—	移出	uucp 节点名截断七字符，属 V14-305
+usenet_mail.messages.80059		—	移出	clean 标志与 mount -o force，属 V06
+usenet_mail.messages.80060	V03.3.5.5	维护工作的隐性投入	归入	8810 升级后 popen/system 挂起并提交 SPR
+usenet_mail.messages.80093		—	移出	Ultrix 1.2 网络能力清单，属 V14-305
+usenet_mail.messages.80095		—	移出	preen 并行 fsck 原理与作者归属，属 V06
+usenet_mail.messages.80105	V03.1.3.4	机型族的性能分层与配置差异	归入	24MB 只认 16MB 系 SIMM 故障，内存配置
+usenet_mail.messages.80119	V03.3.5.2	勘误文档与版本记录	归入	3.1 属升级非替换，顺序与文档部件号
+usenet_mail.messages.80123		—	移出	sendmail.cf 的 mailer 标志 HEAD/MULT，属 V14-305
+usenet_mail.messages.80136	V03.3.5.2	勘误文档与版本记录	归入	SCSI TK50 固件 34 应不低于 45 的提示
+usenet_mail.messages.80146	V03.1.3.3	指令集兼容的延续与断裂	归入	750 上编译的二进制可在 750/780/8810/MicroVAX 运行
+usenet_mail.messages.80155		—	移出	X 客户端令远程 Xqdsg 崩溃，属 V04 工作站互操作
+usenet_mail.messages.80184	V03.1.2.3	设备驱动与外围适配层	归入	经 DECserver 传大文件失败，终端服务器数据通路
+usenet_mail.messages.80217	V03.1.2.3	设备驱动与外围适配层	归入	1.2 加 device qe0 支持以太网，DELQA 不支持
+usenet_mail.messages.80228		—	移出	8MB PMAX 升 UWS2.1 后挂起，属 V14-305
+usenet_mail.messages.80238	V03.3.5.2	勘误文档与版本记录	归入	xcons 与 xterm -L 将在 X11R4 被移除的通告
+usenet_mail.messages.80243		—	移出	Ultrix sendmail 被改坏改回 Berkeley 版，属 V14-305
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（文件系统演化），跨卷重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（Capsicum），跨卷重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+references_fulltext.key_facts.2496		—	移出	chroot 加入日期 1982-03-18，属 V04 系统史
+ucbvax.5145	V03.1.2.2	存储管理单元的机型差异	归入	非分离 I/D 机型上 csh 须 overlay，MMU 约束
+usenet_mail.messages.445	V03.1.1.1	十六位字长的选择与成本压力	归入	2.9 从未打算跑 11/23，低端机型承载极限
+usenet_mail.messages.414	V03.1.1.1	十六位字长的选择与成本压力	归入	2.9 加 TCP 内核逾 200K，11/34 跑不动
+usenet_mail.messages.217	V03.1.2.2	存储管理单元的机型差异	归入	内核 I 空间超 56K 加载限制，KISA7 指 I/O 页
+usenet_mail.messages.170	V03.3.5.3	维护人手的规模与来源	归入	2BSD 维护由 Mark 交 Carl Smith，报告渠道重组
+usenet_mail.messages.195	V03.3.5.1	补丁的分发与采纳机制	归入	缺陷清单按磁带制作日期滚动广播，报告—甄别—再广播
+usenet_mail.messages.206	V03.3.5.1	补丁的分发与采纳机制	归入	I/O 缓冲移回内核的修复与回退决定
+usenet_mail.messages.231	V03.3.5.5	维护工作的隐性投入	归入	NETLDISC 仅二十小时投入，疏漏而非技术难题
+usenet_mail.messages.295	V03.3.3.5	介质成本对数据组织的影响	归入	2.8BSD 为 V7 叠加发行，因一卷磁带装不下
+usenet_mail.messages.450	V03.3.5.1	补丁的分发与采纳机制	归入	动员缺陷持有者汇总修复名单
+usenet_mail.messages.452	V03.3.5.1	补丁的分发与采纳机制	归入	2.9BSD 网络代码改动的编译链接清单
+usenet_mail.messages.453		—	移出	2.8/2.9BSD 首个 TCP 工程与机构分工，属 V10 网络
+usenet_mail.messages.462	V03.3.5.1	补丁的分发与采纳机制	归入	鸟群会社区自救：整合修复并求代发磁带
+usenet_mail.messages.464	V03.3.5.1	补丁的分发与采纳机制	归入	鸟群会议程：修整合、代发磁带、网络代码移植
+usenet_mail.messages.89304	V03.3.5.3	维护人手的规模与来源	归入	2.9BSD 磁带供不应求，分发受制于人手
+usenet_mail.messages.89168		—	移出	PSU 以 V7M 重造 PSUnix 1.0，属 V04 版本谱系
+usenet_mail.messages.89606		—	删除	零内容：仅抬头无正文；bytes=191，sha=822e60330183
+usenet_mail.messages.90337		—	移出	VSH 视觉壳移植到 4.2BSD 的 NDIR，属 V04
+usenet_mail.messages.162621		—	移出	Unicode 缺陷与 KOI-8 现实编码，属 V04
+usenet_mail.messages.164483		—	移出	BSD/386 在 Cyrix 486SLC 的性能，属 V04
+usenet_mail.messages.165600		—	移出	lseek 语义与 VOP_SEEK 调用时机，属 V06
+usenet_mail.messages.167696		—	移出	Diamond 不公开时钟合成器，属 V04
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（文件系统演化），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GNU 与开源），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（Capsicum），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+usenet_mail.messages.162211		—	移出	execve 补丁与 suid/sgid 脚本，属 V06
+usenet_mail.messages.164350		—	移出	Ultrastor 24F 识别 ID7 无法 SCSI 引导，属 V04
+usenet_mail.messages.165530		—	移出	Micronics 486VL 键盘不响应，属 V04
+usenet_mail.messages.167326	V03.3.5.1	补丁的分发与采纳机制	归入	patch00007 用绝对路径致安装失败
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+sacred_sources.duckdb.blocks		—	辑存	辑存组：通用史观块（sacred 原句，跨件重复）
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（文件系统演化），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GNU 与开源），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（Capsicum），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+linux-man.messages.732192		—	移出	groff 公告 man(7) 缩进沿袭 V7/4.3BSD-Reno，属 V04
+usenet_mail.messages.163479		—	移出	200 进程入队表现与 SunOS 比较，属 V06 调度
+usenet_mail.messages.164939		—	移出	XBSD8514 服务器对 8514/a 的构建，属 V04
+usenet_mail.messages.165997		—	移出	hosts 优先与 DNS 解析顺序，属 V10 网络
+usenet_mail.messages.169587	V03.1.2.3	设备驱动与外围适配层	归入	wd.c 备用状态寄存器与双盘引导挂起修复
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+usenet_mail.messages.94845	V03.1.3.4	机型族的性能分层与配置差异	归入	780 上 FORTRAN 性能仅 750 跑 VMS 的 0.75
+usenet_mail.messages.165099		—	移出	isa.c 的 DELAY 宏括号缺失，属 V06
+usenet_mail.messages.166127		—	移出	pc_probe 键盘复位重写，属 V04
+usenet_mail.messages.169746		—	移出	kmem_map too small 恐慌修复，属 V06
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+ucbvax.4724	V03.1.2.5	可移植性实践的技术条件	归入	32V/3BSD/4BSD 函数命名取舍与可移植代价
+usenet_mail.messages.49047		—	移出	chdir/getcwd 相对路径转绝对，属 V06
+usenet_mail.messages.49077	V03.1.2.5	可移植性实践的技术条件	归入	栈帧布局假定无强制，接口的最小硬件假定
+usenet_mail.messages.49088	V03.1.2.5	可移植性实践的技术条件	归入	i860 寄存器与参数传递约定
+usenet_mail.messages.49104	V03.1.2.5	可移植性实践的技术条件	归入	88000 上 time_t 结构差异致 utime 写坏
+usenet_mail.messages.49109	V03.1.2.5	可移植性实践的技术条件	归入	全世界并非都是 VAX：寄存器传参的普遍性
+usenet_mail.messages.49176	V03.1.2.5	可移植性实践的技术条件	归入	VAX 上正常的 C 程序迁 RS/6000 即段违例
+usenet_mail.messages.49199	V03.1.2.5	可移植性实践的技术条件	归入	跨 UNIX 移植须并置 SVR3/4.2BSD/Xenix 三套手册
+usenet_mail.messages.49277	V03.1.2.5	可移植性实践的技术条件	归入	SysV 代码迁 SunOS 4.1 即段违例
+usenet_mail.messages.49356	V03.1.2.5	可移植性实践的技术条件	归入	同一程序在 386/NCR Tower/Sparc 三处均须改
+usenet_mail.messages.49388	V03.1.2.5	可移植性实践的技术条件	归入	大端小端致标签整数编码错乱
+cross_indexes.duckdb.concept_history		—	辑存	辑存组：通用概念史块（GEOM），跨件重复
+ucbvax.4736	V03.1.3.1	地址空间扩展的工程路线	归入	PDP-11 分页寄存器不足，32V scatter/gather 至 VMUNIX
+usenet_mail.messages.169647		—	移出	stdio a+ 语义与 rogue 计分，属 V06
+usenet_mail.messages.166043		—	移出	XFree86 兼容 SVGA 显卡型号清单，属 V04
+usenet_mail.messages.164956		—	移出	挂载 DOS 文件系统与 FFS 复杂度，属 V06
+usenet_mail.messages.277	V03.1.3.3	指令集兼容的延续与断裂	归入	PDP-11 与 VAX 长整数字序相反，共享盘须翻字序

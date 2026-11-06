@@ -1,0 +1,226 @@
+rowmine_id	subsection_id	title	action	reason
+osu-dbs.204	V03.2.2.3	兼容取向与客户迁移成本	归入	DG MV 被追问能否跑 UNIX 与 C，属兼容门槛
+usenet_mail.messages.81857	V06	—	移出	移出至 V06：Ultrix 根盘迁本地盘步骤
+usenet_mail.messages.81859	V06	—	移出	移出至 V06：UWS dxpsview 版本差异
+usenet_mail.messages.81880	V06	—	移出	移出至 V06：rdump o 开关跨版本失效
+usenet_mail.messages.81886	V03.1.3.3	指令集兼容的延续与断裂	归入	5400 二进制挂 3100 八成可用，属兼容断裂
+usenet_mail.messages.81894	V10	—	移出	移出至 V10：cisco 转换器 LAT 连接配置
+usenet_mail.messages.81919	V06	—	移出	移出至 V06：doconfig 与 mscp 单元号
+usenet_mail.messages.81930	V06	—	移出	移出至 V06：lockd 与 MAXHOSTNAMELEN
+usenet_mail.messages.81934		—	删除	零内容：仅抬头无正文；188B；sha256 22dff224c396
+usenet_mail.messages.81936	V06	—	移出	移出至 V06：newfs -m 预留一成空间
+usenet_mail.messages.81956	V06	—	移出	移出至 V06：FORTRAN BLOCK DATA 链接规则
+usenet_mail.messages.81957	V06	—	移出	移出至 V06：交换配置硬编码设备号
+usenet_mail.messages.81991	V03.2.1.4	软硬件捆绑与客户锁定	归入	Motif 按每台 UWS 向 OSF 计版税，属捆绑锁定
+usenet_mail.messages.82008	V06	—	移出	移出至 V06：USED+FREE 不等于 TOTAL 与柱面组开销
+usenet_mail.messages.82018	V06	—	移出	移出至 V06：kmem 组号与 /etc/group 覆盖
+usenet_mail.messages.82037	V06	—	移出	移出至 V06：disktab eagle 几何项错
+usenet_mail.messages.82044	V06	—	移出	移出至 V06：容量升级须开 QUOTAS
+usenet_mail.messages.82057	V06	—	移出	移出至 V06：RZ57 disktab 容量错
+usenet_mail.messages.82063	V06	—	移出	移出至 V06：doconfig uopt 段错误与磁带号
+usenet_mail.messages.82091	V06	—	移出	移出至 V06：g++ 与 a.out.h 宏参数不符
+usenet_mail.messages.82119	V10	—	移出	移出至 V10：以 BIND 4.8.1 覆盖修登录迟缓
+usenet_mail.messages.82130	V06	—	移出	移出至 V06：须 setgid kmem 的程序清单
+usenet_mail.messages.82136	V06	—	移出	移出至 V06：交叉交换区配置与 swapon
+usenet_mail.messages.82157	V06	—	移出	移出至 V06：RA90 双端口并发风险
+usenet_mail.messages.82182	V03.1.3.4	机型族的性能分层与配置差异	归入	DECsystem 5000 与 5820 编译耗时对照，属机型分层
+usenet_mail.messages.82189	V06	—	移出	移出至 V06：自动 nice 的内核改法
+usenet_mail.messages.82198	V10	—	移出	移出至 V10：登录卡顿源于名字服务器超时
+usenet_mail.messages.82199	V06	—	移出	移出至 V06：dmmax 改 maxtsiz 等上限
+usenet_mail.messages.82205	V06	—	移出	移出至 V06：libc.a 缺 cacheflush 模块
+usenet_mail.messages.82212	V03.3.5.2	勘误文档与版本记录	归入	3.1 各字母版本支持矩阵，属版本记录
+usenet_mail.messages.82214	V10	—	移出	移出至 V10：sendmail 处理 MX 回环转发
+usenet_mail.messages.82217	V06	—	移出	移出至 V06：stdio.h fileno 强制转换
+usenet_mail.messages.82230	V06	—	移出	移出至 V06：libcursesX 与 termio 异常
+usenet_mail.messages.80662	V06	—	移出	移出至 V06：磁盘电梯排序与缓存命中率
+usenet_mail.messages.80686	V06	—	移出	移出至 V06：swap 须不小于内存方可全量 dump
+usenet_mail.messages.80753	V06	—	移出	移出至 V06：dlogin 的 tty 检查实现
+usenet_mail.messages.80966	V35	—	移出	移出至 V35：VT1000 X 终端实测与安全隐患
+usenet_mail.messages.81014		—	删除	零内容：仅抬头无正文；188B；sha256 7cfaecbdd22e
+usenet_mail.messages.80352	V06	—	移出	移出至 V06：显示内存换算脚本与 dbx 读 mem
+usenet_mail.messages.80368	V06	—	移出	移出至 V06：tn3270 移植 DS3100 的改动
+59@datagen.UUCP	V03.2.2.3	兼容取向与客户迁移成本	归入	PRIME C 编译器指针尺寸不一，属迁移成本
+wivax.114	V03.2.2.1	差异化定位与市场细分	归入	王安生态须并行 Berkeley UNIX 与 VMS
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论分合循环，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论否定必然，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论历史循环，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论主体否定，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论范式更替，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论历史结构，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论命运预定，宜入总纲不入正文
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观泛论时间尺度，宜入总纲不入正文
+cross_indexes.duckdb.concept_history	V01	—	移出	移出至 V01：分时思想与 CTSS／Multics 年表
+cross_indexes.duckdb.concept_history	V06	—	移出	移出至 V06：文件系统概念演化年表
+cross_indexes.duckdb.concept_history	V59	—	移出	移出至 V59：自由软件与开源运动年表
+cross_indexes.duckdb.concept_history	V06	—	移出	移出至 V06：Capsicum 能力机制谱系
+cross_indexes.duckdb.concept_history	V06	—	移出	移出至 V06：chroot 与 jail 谱系
+ucbvax.5188	V01	—	移出	移出至 V01：TOPS-10 移植 Snyder 编译器
+usenet_mail.messages.81475	V06	—	移出	移出至 V06：DHU 驱动 CTS 流控
+usenet_mail.messages.81515	V06	—	移出	移出至 V06：进程同号无法发信号
+usenet_mail.messages.81588	V06	—	移出	移出至 V06：at.deny 实际路径与手册不符
+usenet_mail.messages.81596	V03.3.5.4	现场支持与远程维护	归入	DEC 支持默认独占 /usr，属支持方式
+usenet_mail.messages.81630	V06	—	移出	移出至 V06：dms 无盘环境容量与客户盘
+usenet_mail.messages.81648	V03.3.5.1	补丁的分发与采纳机制	归入	4.0 因 SMP 缺陷延后，最终版须打强制补丁
+usenet_mail.messages.81672	V35	—	移出	移出至 V35：DS5000 显卡 CX／PX／PXG 分级
+usenet_mail.messages.81691	V03.1.3.3	指令集兼容的延续与断裂	归入	3100 与 5400 二进制不全互通
+usenet_mail.messages.81706		—	删除	零内容：仅抬头无正文；188B；sha256 0d1fb46c1f98
+usenet_mail.messages.81732	V06	—	移出	移出至 V06：dms 整机装载与 root 盘 dd
+usenet_mail.messages.81776	V06	—	移出	移出至 V06：f77 开 -O2 结果错误
+usenet_mail.messages.81806	V03.3.3.2	复制与传输的时间成本	归入	TMSCP-SCSI 带机实测 220KB/s，属传输时间成本
+usenet_mail.messages.81843	V20	—	移出	移出至 V20：POSIX 只要求 uid_t 为算术类型
+usenet_mail.messages.81061	V06	—	移出	移出至 V06：/dev/trace 的 ioctl 用法
+usenet_mail.messages.81079	V06	—	移出	移出至 V06：LAT 输出丢包与 select 失准
+usenet_mail.messages.81099	V06	—	移出	移出至 V06：Maxtor 8760 几何实为 RA82
+usenet_mail.messages.81123	V06	—	移出	移出至 V06：绕过 setld 前置检查
+usenet_mail.messages.81164	V06	—	移出	移出至 V06：分区表入超级块使 dd 备份失效
+usenet_mail.messages.81222	V10	—	移出	移出至 V10：UWS 2.2 ip/udp 野包
+usenet_mail.messages.81231	V06	—	移出	移出至 V06：mail11v3 长 To 字段段错误
+usenet_mail.messages.81263	V06	—	移出	移出至 V06：mkfs 忽略 nbpi 与 MAXIPG
+usenet_mail.messages.81331	V06	—	移出	移出至 V06：登录 shell 与 /dev/tty 建立
+usenet_mail.messages.80651	V03.3.3.1	磁带介质的物理特性	归入	多文件系统 dump 入单带，属顺序介质数据组织
+usenet_mail.messages.80669	V35	—	移出	移出至 V35：GPX 与 PMAX 图形性能实测
+usenet_mail.messages.80676	V06	—	移出	移出至 V06：emacs 空转成因
+usenet_mail.messages.80703	V06	—	移出	移出至 V06：FFS 旋转布局论证
+usenet_mail.messages.80715	V06	—	移出	移出至 V06：out of core 实为 swap 不足
+usenet_mail.messages.80716	V06	—	移出	移出至 V06：CDC Wren V 缓存位提速
+usenet_mail.messages.80730	V06	—	移出	移出至 V06：旧 scsi_data.c 致 Exabyte 误判
+usenet_mail.messages.80748	V03.3.5.1	补丁的分发与采纳机制	归入	向支持中心索取带机驱动补丁
+usenet_mail.messages.80760	V06	—	移出	移出至 V06：dlogin 误写描述符 0
+usenet_mail.messages.80777	V03.1.3.4	机型族的性能分层与配置差异	归入	5810 双板与 XMI 背板，基准为 785 九倍
+usenet_mail.messages.80781	V06	—	移出	移出至 V06：getty 空转循环
+usenet_mail.messages.80783	V06	—	移出	移出至 V06：内核须用同版本 scsi_data.c
+usenet_mail.messages.80835	V03.3.5.2	勘误文档与版本记录	归入	3.1C 新增 5800 与 5400 支持，属版本记录
+usenet_mail.messages.80856	V06	—	移出	移出至 V06：gettytab 被启动脚本覆写
+usenet_mail.messages.80880	V06	—	移出	移出至 V06：3.1C 的 lcp／pstat／getnode 缺陷
+usenet_mail.messages.80885	V06	—	移出	移出至 V06：dump 入 Exabyte 触发 mscp resync
+usenet_mail.messages.80891	V06	—	移出	移出至 V06：dlogin 不打开 /dev/tty 之澄清
+usenet_mail.messages.80900	V06	—	移出	移出至 V06：760MB 盘实际容量核算
+usenet_mail.messages.80905	V03.3.5.1	补丁的分发与采纳机制	归入	补丁带静默覆盖 lps20 专用打印守护
+usenet_mail.messages.80906	V06	—	移出	移出至 V06：X11 挂载点致 UWS 2.2 安装失败
+usenet_mail.messages.80907	V06	—	移出	移出至 V06：DSA 动态坏块替换
+usenet_mail.messages.80929	V06	—	移出	移出至 V06：DS3100 串口无 DTR
+usenet_mail.messages.80951	V06	—	移出	移出至 V06：gnode 上限与 maxusers
+usenet_mail.messages.80952	V03.3.5.1	补丁的分发与采纳机制	归入	补丁带覆写 /bin/csh 丢命令补全
+usenet_mail.messages.81003	V06	—	移出	移出至 V06：uVAX3600 dump 报错与 BBR
+usenet_mail.messages.81007	V06	—	移出	移出至 V06：UWS 2.2 须删旧子集
+usenet_mail.messages.81031	V10	—	移出	移出至 V10：TCP TTL 的 adb 补丁
+usenet_mail.messages.81038	V06	—	移出	移出至 V06：未编译 QUOTA 致登录上限失效
+usenet_mail.messages.80249	V06	—	移出	移出至 V06：VS2000 升级时远端带机名损坏
+usenet_mail.messages.80250	V10	—	移出	移出至 V10：rc.local 中 ncp 竞态
+usenet_mail.messages.80252	V03.1.3.3	指令集兼容的延续与断裂	归入	2100 与 3100 内核相同、盘可互换
+usenet_mail.messages.80253	V03.3.5.2	勘误文档与版本记录	归入	UWS 与 ULTRIX 版本对照表
+usenet_mail.messages.80259	V06	—	移出	移出至 V06：/dev/xcons 抓控制台输出
+usenet_mail.messages.80271	V06	—	移出	移出至 V06：第三方盘十六步自做法
+usenet_mail.messages.80287	V10	—	移出	移出至 V10：NFS 锁定自 3.1 引入
+usenet_mail.messages.80311	V10	—	移出	移出至 V10：ULTRIX 被入侵 login 被替换
+usenet_mail.messages.80317	V06	—	移出	移出至 V06：DSA 强制错误位机制
+usenet_mail.messages.80337	V10	—	移出	移出至 V10：sl.h NSL 决定 SLIP 线数
+usenet_mail.messages.80357	V10	—	移出	移出至 V10：pseudo-device sl 2 重建内核
+usenet_mail.messages.80385	V06	—	移出	移出至 V06：4.3BSD 格式化工具用于 SI 9900
+usenet_mail.messages.80388	V10	—	移出	移出至 V10：NFS 变慢与分区占用逾九成
+usenet_mail.messages.80442	V06	—	移出	移出至 V06：csh 八位透明引号缺陷
+usenet_mail.messages.80504	V06	—	移出	移出至 V06：每日 panic：m_free bad m_cltype
+usenet_mail.messages.80516		—	删除	零内容：仅抬头无正文；188B；sha256 d580b4abaf7d
+usenet_mail.messages.80523	V35	—	移出	移出至 V35：X 协议版本与 X11R 发布编号之别
+usenet_mail.messages.80558	V06	—	移出	移出至 V06：按 gid 限制进程数的源码改法
+usenet_mail.messages.80581	V06	—	移出	移出至 V06：mail 在 telnet 断开后陷入 getc
+usenet_mail.messages.35491	V01	—	移出	移出至 V01：Cray-3 增强／耗尽型器件推测
+usenet_mail.messages.35502	V01	—	移出	移出至 V01：Brooks 论 GaAs 迁移率与互补
+usenet_mail.messages.35504	V01	—	移出	移出至 V01：交流耦合逻辑专利适用性
+usenet_mail.messages.35508	V01	—	移出	移出至 V01：增强／耗尽型无法真正互补
+usenet_mail.messages.35545	V35	—	移出	移出至 V35：Mac 作 Cray 实时音频输出
+usenet_mail.messages.35700	V03.2.4.2	精简指令集的技术论证	归入	GaAs 深流水线与虚拟内存不合，属 RISC 论证
+usenet_mail.messages.35735	V01	—	移出	移出至 V01：Y/MP 164 命名歧义
+usenet_mail.messages.35751	V01	—	移出	移出至 V01：Cray 机型命名规则
+usenet_mail.messages.35777	V35	—	移出	移出至 V35：XMS 与 Y-MP-EL 价格区间
+usenet_mail.messages.35778	V35	—	移出	移出至 V35：小 X-Cray 规格与惠普工作站性价比
+usenet_mail.messages.35497	V01	—	移出	移出至 V01：Cray-3 缓冲 FET 逻辑推测
+usenet_mail.messages.35531	V01	—	移出	移出至 V01：Y-MP 场地规划手册编号
+usenet_mail.messages.35566	V35	—	移出	移出至 V35：CRI 裁员四百与周期危机预言
+usenet_mail.messages.35626	V35	—	移出	移出至 V35：Steve Chen 的 SSI 与 IBM 签约
+usenet_mail.messages.35740	V35	—	移出	移出至 V35：Steve Chen 离职与 SSI 项目超支
+usenet_mail.messages.35749	V01	—	移出	移出至 V01：Fernbach 讣告与 DOE 机器分级
+usenet_mail.messages.35779		—	删除	零内容：仅抬头无正文；203B；sha256 a398df50f77e
+usenet_mail.messages.35780	V35	—	移出	移出至 V35：XMS 实为 Supertek S-1 换壳
+usenet_mail.messages.35782	V01	—	移出	移出至 V01：XMS 与 YMP-EL 完整规格
+usenet_mail.messages.19723	V35	—	移出	移出至 V35：SPARCstation 交付延期
+usenet_mail.messages.19730	V03.2.4.3	工作站市场与小型机的重叠	归入	MIPS 以 VAX 11/780 为基准，小型机作性能标尺
+usenet_mail.messages.19754	V03.2.4.3	工作站市场与小型机的重叠	归入	DEC 指 MIPS 基准失真改用 VUPS
+usenet_mail.messages.19760	V35	—	移出	移出至 V35：XView／OLWM／Lucida 源码公开
+usenet_mail.messages.19780	V03.2.4.1	指令集哲学的两种取向	归入	Sun 弃 68k 转 SPARC，与 Motorola 88K 生隙
+usenet_mail.messages.19801	V35	—	移出	移出至 V35：386i 与 Sun3 线存废传闻
+usenet_mail.messages.19859	V35	—	移出	移出至 V35：3/80 配置与报价
+usenet_mail.messages.19911	V35	—	移出	移出至 V35：Sun C++ 定价与上市
+usenet_mail.messages.19990	V03.2.4.1	指令集哲学的两种取向	归入	68020 机因过时退场、SPARC 主推
+usenet_mail.messages.19287	V03.2.4.3	工作站市场与小型机的重叠	归入	DEC 2100 加项价高于 SS1 入门价
+usenet_mail.messages.19387	V35	—	移出	移出至 V35：3/60 与 3/80 加内存报价
+usenet_mail.messages.19427	V35	—	移出	移出至 V35：内存颗粒测速分档
+usenet_mail.messages.19514	V35	—	移出	移出至 V35：SCSI 为不公开不支持的接口
+usenet_mail.messages.19531	V35	—	移出	移出至 V35：FPU2 浮点协处理器
+usenet_mail.messages.18841	V35	—	移出	移出至 V35：X11/NeWS 随附与另行分发
+usenet_mail.messages.18873	V35	—	移出	移出至 V35：SunMathematica 按单 CPU 授权
+usenet_mail.messages.18879	V35	—	移出	移出至 V35：Mac 与 SPARCstation 性能折算价差
+usenet_mail.messages.18882	V35	—	移出	移出至 V35：Solbourne 与 Sun 的 Dhrystone 对照
+usenet_mail.messages.18961	V35	—	移出	移出至 V35：SS330 提前到货与 Dhrystone
+usenet_mail.messages.18981	V35	—	移出	移出至 V35：浮动许可服务器三种实现
+usenet_mail.messages.18434	V35	—	移出	移出至 V35：焊接内存卡与保修之争
+usenet_mail.messages.18461	V03.2.4.3	工作站市场与小型机的重叠	归入	Sun 浮点基准落后 DECstation 3100 一倍
+usenet_mail.messages.18462	V35	—	移出	移出至 V35：四家 3/50 内存扩展评述
+usenet_mail.messages.18559	V35	—	移出	移出至 V35：SS1 批量出货延至十月
+usenet_mail.messages.18562	V35	—	移出	移出至 V35：移除 SunView 3.X 兼容选项
+usenet_mail.messages.18569	V35	—	移出	移出至 V35：XView 与 SunView 兼容度实测
+usenet_mail.messages.18646	V35	—	移出	移出至 V35：SS1 延期因 SPARC 整数单元问题
+usenet_mail.messages.18680	V35	—	移出	移出至 V35：Campus 定价与教育折扣
+usenet_mail.messages.18682	V35	—	移出	移出至 V35：Solbourne 4/500 作文件服务器
+usenet_mail.messages.18717	V35	—	移出	移出至 V35：细以太收发器型号报价
+usenet_mail.messages.18793	V35	—	移出	移出至 V35：4/330 内存每兆成本
+usenet_mail.messages.18002	V35	—	移出	移出至 V35：SunOS 4.0 内存与无盘配置建议
+usenet_mail.messages.18090	V03.3.5.4	现场支持与远程维护	归入	Sun 以布局机密拒供芯片映射，维护受阻
+usenet_mail.messages.18105	V10	—	移出	移出至 V10：粗细缆取舍与双绞线组网
+usenet_mail.messages.18161	V35	—	移出	移出至 V35：撤回 HM 显示器停产
+usenet_mail.messages.18170	V03.2.4.3	工作站市场与小型机的重叠	归入	DEC 3100 与 SS1 同配置价差
+usenet_mail.messages.18220	V35	—	移出	移出至 V35：Xylogics 7053 传输率未认证
+usenet_mail.messages.18248	V35	—	移出	移出至 V35：非捆绑软件可用性矩阵
+usenet_mail.messages.18255	V35	—	移出	移出至 V35：SBus 以太网控制器报价
+usenet_mail.messages.18297	V35	—	移出	移出至 V35：开发者半价彩色 SS1
+usenet_mail.messages.18334	V35	—	移出	移出至 V35：3/60 与第三方内存价权衡
+usenet_mail.messages.18359	V35	—	移出	移出至 V35：3/80 定价与加内存价
+usenet_mail.messages.17660	V03.3.5.4	现场支持与远程维护	归入	Sun 软件支持周转慢、响应合同仅硬件
+usenet_mail.messages.17734	V35	—	移出	移出至 V35：3/260 作文件服务器性价比
+usenet_mail.messages.17735	V35	—	移出	移出至 V35：六台 CDC 盘挂控制器与报价
+usenet_mail.messages.17738	V35	—	移出	移出至 V35：HM 单色显示器停产
+usenet_mail.messages.17754	V35	—	移出	移出至 V35：3/50 内存升级报价汇总
+usenet_mail.messages.17873	V35	—	移出	移出至 V35：4/300 单宽卡与 cg3 帧缓冲
+usenet_mail.messages.17880	V35	—	移出	移出至 V35：三维绘图软件八种报价
+usenet_mail.messages.17890	V35	—	移出	移出至 V35：SS1 规格 12.5 MIPS 与 SBus
+usenet_mail.messages.17940	V35	—	移出	移出至 V35：HM 停产销量理由
+usenet_mail.messages.17626	V03.3.5.1	补丁的分发与采纳机制	归入	Sun 寄 bugfix 磁带，主张厂商主动分发
+usenet_mail.messages.17279	V35	—	移出	移出至 V35：发布会要点与磁盘噪声
+usenet_mail.messages.17299	V35	—	移出	移出至 V35：FPU2 不可升级原因
+usenet_mail.messages.17325	V35	—	移出	移出至 V35：SS1 与 4/300 规格价格
+usenet_mail.messages.17588	V35	—	移出	移出至 V35：Sun 平台 DBMS 可用性总表
+usenet_mail.messages.16801	V35	—	移出	移出至 V35：SunWrite／Paint／Draw 试用
+usenet_mail.messages.16802	V35	—	移出	移出至 V35：OpenWindows 与 XView 捐 MIT
+usenet_mail.messages.16817	V35	—	移出	移出至 V35：Frame 支持费改经分销商
+usenet_mail.messages.16854	V35	—	移出	移出至 V35：Sun 否认弃 Open Look
+usenet_mail.messages.17006	V35	—	移出	移出至 V35：Frame 支持费与续加许可
+usenet_mail.messages.17048	V03.2.4.1	指令集哲学的两种取向	归入	RISC 与 CISC 的 MIPS 不可直接相比
+usenet_mail.messages.17066	V35	—	移出	移出至 V35：386i 跑 DOS 与 Unix
+usenet_mail.messages.17076	V03.3.3.1	磁带介质的物理特性	归入	高容带产品误码率与价位比较
+usenet_mail.messages.17089	V02	—	移出	移出至 V02：非披露协议的法律效力
+usenet_mail.messages.17105	V35	—	移出	移出至 V35：Thalatta 转换软件价格
+usenet_mail.messages.17114	V35	—	移出	移出至 V35：发布会逐项机型规格
+usenet_mail.messages.17153	V35	—	移出	移出至 V35：SunWrite 捆绑与浮动许可之议
+usenet_mail.messages.17171	V03.3.3.5	介质成本对数据组织的影响	归入	Exabyte 四千美元备 2.3Gb，属介质成本
+usenet_mail.messages.17176	V02	—	移出	移出至 V02：NDA 与竞争情报价值
+usenet_mail.messages.16810	V35	—	移出	移出至 V35：displaytool 光栅图编辑器
+usenet_mail.messages.16902	V03.3.5.4	现场支持与远程维护	归入	老机型求助第三方硬件支持
+usenet_mail.messages.16962	V35	—	移出	移出至 V35：FrameMaker X 版
+usenet_mail.messages.16405	V03.3.3.1	磁带介质的物理特性	归入	高容带误码率与五千至七千价位
+usenet_mail.messages.16412	V35	—	移出	移出至 V35：Open Look 首批程序定价
+usenet_mail.messages.16497	V35	—	移出	移出至 V35：Jaguar 控制器四个月未交付
+usenet_mail.messages.16587	V35	—	移出	移出至 V35：Helios 2/50 内存升级板
+usenet_mail.messages.16671	V03.2.3.1	大型机厂商群的市场位置	归入	HP 售 IBM SNA／RJE 产品，大型机接口锁定
+usenet_mail.messages.16679	V35	—	移出	移出至 V35：FrameMaker X 版升级价
+usenet_mail.messages.16739	V03.2.5.4	开发工具的普及与门槛下降	归入	MKS Toolkit 把 Unix 工具带入 DOS
+usenet_mail.messages.16743		—	删除	零内容：仅抬头无正文；211B；sha256 5fe0b32be1e4

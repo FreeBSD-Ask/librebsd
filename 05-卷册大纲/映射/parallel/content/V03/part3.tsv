@@ -1,0 +1,290 @@
+rowmine_id	subsection_id	title	action	reason
+164@dual.UUCP	V03.2.4.1	指令集哲学的两种取向	归入	RISC 定义：精简原语加寄存器窗口，路线分歧起点
+usenet_mail.messages.79492	V03.1.3.4	机型族的性能分层与配置差异	归入	VAX 6000 系列 SMP 与处理器扩充，机型配置分层
+usenet_mail.messages.79504	V03.1.3.4	机型族的性能分层与配置差异	归入	二手 6210／6220 加处理器，机型配置与升级路径
+usenet_mail.messages.79640	V03.2.4.4	微处理器对小型机的替代	归入	R3000 缓存与 XMI 带宽，通用芯片装入 DECsystem
+usenet_mail.messages.79647	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 13 块）
+usenet_mail.messages.79660	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 14 块）
+usenet_mail.messages.79663	V03.2.4.4	微处理器对小型机的替代	归入	DECsystem 5800 系列 MIPS 与内存，通用芯片整机
+usenet_mail.messages.79706	V03.2.4.4	微处理器对小型机的替代	归入	5400 与 5810 标称 MIPS 差异，整机性能分层
+usenet_mail.messages.18145	V03.2.4.3	工作站市场与小型机的重叠	归入	实验室二十台 DEC 工作站浮点快于 SPARCstation 1
+usenet_mail.messages.18166	V03.2.4.3	工作站市场与小型机的重叠	归入	客户因浮点仅竞品一半拒购，工作站市场替代
+usenet_mail.messages.18181	V03.2.4.3	工作站市场与小型机的重叠	归入	DECstation 实测快三成至一倍，工作站竞争
+usenet_mail.messages.79083	V03-2.4	—	挂账	V03.2.4.3 容量已满（第 13 块）
+usenet_mail.messages.79357	V03-2.4	—	挂账	V03.2.4.2 容量已满（第 13 块）
+usenet_mail.messages.17640		—	移出	移出｜V01-指令集技术史：SPARC asi 与 MMU 取舍
+usenet_mail.messages.17936	V03.2.4.3	工作站市场与小型机的重叠	归入	SPARCstation 1 发布：12 MIPS、九千美元
+usenet_mail.messages.47063	V03.2.4.1	指令集哲学的两种取向	归入	RISC 沦为营销词，4BSD 与 SunOS 内核体积对比
+usenet_mail.messages.47103	V03.2.4.2	精简指令集的技术论证	归入	RISC 编译产物约大三成，代码密度之争
+usenet_mail.messages.47203	V03-2.4	—	挂账	V03.2.4.2 容量已满（第 14 块）
+usenet_mail.messages.47216	V03.2.4.2	精简指令集的技术论证	归入	Hennessy 与 Patterson 教材被视为 RISC 必读
+usenet_mail.messages.176101	V03.2.5.6	产业转型对传统厂商的冲击	归入	廉价够用者驱逐更好更贵，Unix 桌面机一万美元
+usenet_mail.messages.16914	V03.2.4.2	精简指令集的技术论证	归入	R3000 浮点周期与寄存器窗口非 RISC 通例
+usenet_mail.messages.17191		—	删除	删除｜零内容：仅表头无正文（211B，sha 71d5a56c43b8）
+usenet_mail.messages.17178	V03.2.4.3	工作站市场与小型机的重叠	归入	DEC 路演同台旧 VAX 与 MIPS 工作站
+usenet_mail.messages.16426	V03.2.4.3	工作站市场与小型机的重叠	归入	EE Times 称六周内出万元以下 12 MIPS 机
+usenet_mail.messages.16082	V03.2.4.2	精简指令集的技术论证	归入	C 编译器几乎不用 CISC 花哨指令（Klein 统计）
+usenet_mail.messages.51602	V03.2.4.4	微处理器对小型机的替代	归入	3B1 停产后被迫转 386，微机替换小型机角色
+usenet_mail.messages.15972	V03.2.2.3	兼容取向与客户迁移成本	归入	Solbourne 便宜两成半且二进制兼容 SunOS
+usenet_mail.messages.15331	V03.2.2.3	兼容取向与客户迁移成本	归入	客户权衡 Solbourne 与 Sun 4/260 的迁移代价
+usenet_mail.messages.124290	V03.2.1.4	软硬件捆绑与客户锁定	归入	新购 VAX 8600 选系统并追问 BSD 支持来源
+usenet_mail.messages.45639	V03.1.1.6	小型机范式与大型机的分工	归入	VAX 11/780 本非大型机，大小机分工边界
+usenet_mail.messages.45709	V03.2.4.3	工作站市场与小型机的重叠	归入	百兆次桌面机是否买早，工作站吞并超算
+usenet_mail.messages.45738	V03.2.4.4	微处理器对小型机的替代	归入	十台工作站合 100 MIPS 三万美元替代大型机
+usenet_mail.messages.45725	V03.2.4.3	工作站市场与小型机的重叠	归入	十台 VAXstation 供三千余用户，工作站担主机
+usenet_mail.messages.45726	V03-2.4	—	挂账	V03.2.4.3 容量已满（第 14 块）
+usenet_mail.messages.45728	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 15 块）
+usenet_mail.messages.45745	V03-2.4	—	挂账	V03.2.4.3 容量已满（第 15 块）
+usenet_mail.messages.45753	V03.2.6.4	高端事务处理的延续	归入	巨型库需强一致与通道带宽，大型机更优
+usenet_mail.messages.45756	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 16 块）
+usenet_mail.messages.45751	V03.2.6.4	高端事务处理的延续	归入	FDDI 与 IBM 通道自带算力，主机优势
+usenet_mail.messages.45765		—	移出	移出｜V06-分布式系统：Amoeba 论争与异构未来
+usenet_mail.messages.45768	V03.2.4.4	微处理器对小型机的替代	归入	十台三万美元工作站胜三台两千二百万大型机
+usenet_mail.messages.45772	V03.3.4.3	批处理与交互式的竞争	归入	招标分列交互服务器与批处理农场，两类负载并存
+usenet_mail.messages.45775	V03.2.6.1	遗留系统的维护与迁移	归入	拼大型机物理不难而软件须重写，迁移成本
+usenet_mail.messages.14942	V03.2.4.2	精简指令集的技术论证	归入	Sun 公布 MIPS 应打两三折，性能口径
+usenet_mail.messages.15060	V03.2.4.4	微处理器对小型机的替代	归入	386i 以私有 AT 总线兼容 PC 选件卡
+usenet_mail.messages.46097	V03.2.4.1	指令集哲学的两种取向	归入	IBM 官方 RISC 定义即指令少于 S/360
+usenet_mail.messages.44107	V03.2.4.4	微处理器对小型机的替代	归入	ISA 总线 DMA 近无用与单线程控制器诸弊
+usenet_mail.messages.14492	V03.2.4.2	精简指令集的技术论证	归入	Fujitsu SPARC 非 64 位超集，仅通道 64 位
+usenet_mail.messages.14495	V03.2.4.3	工作站市场与小型机的重叠	归入	以 Sun 4 取代 VAX 作通用分时主机
+usenet_mail.messages.14698	V03.2.4.2	精简指令集的技术论证	归入	SPARC 对松散 C 写法更不宽容
+usenet_mail.messages.14059	V03.2.4.2	精简指令集的技术论证	归入	Sun-3／Sun-4 的 FFT 与 Lisp 基准对照
+usenet_mail.messages.14062	V03.2.4.2	精简指令集的技术论证	归入	Gabriel 基准 Sun-4 快两三倍
+usenet_mail.messages.43735	V03.2.4.4	微处理器对小型机的替代	归入	386 由 CPU 直接控总线致 I/O 响应受损
+usenet_mail.messages.43744	V03.2.4.4	微处理器对小型机的替代	归入	实测磁盘与 FFS 速率，反 386 瓶颈论
+usenet_mail.messages.43753	V03.2.4.4	微处理器对小型机的替代	归入	11/70 支六十用户而 386 十用户即死
+usenet_mail.messages.43836	V03.2.6.4	高端事务处理的延续	归入	KL-10 前端机与八端口真 DMA，主机 I/O 结构
+usenet_mail.messages.43865	V03.2.4.4	微处理器对小型机的替代	归入	ISA 每扇区中断拖死 CPU，总线主控对比
+usenet_mail.messages.43879		—	移出	移出｜V06-内核实现：伪 DMA 与调度器细节
+usenet_mail.messages.43989		—	移出	移出｜V06-内核实现：驱动四步流程教学
+usenet_mail.messages.44040		—	移出	移出｜V06-内核实现：缓冲冲刷与扩张交换
+usenet_mail.messages.44066	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 17 块）
+usenet_mail.messages.44083	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 18 块）
+8904130943.AA12772@malibu.ai.sri.com	V03.2.4.3	工作站市场与小型机的重叠	归入	Sun 弃 Sun-4 名改 SPARCstation，产品转折
+18553@mimsy.UUCP	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 19 块）
+usenet_mail.messages.43450	V03.2.6.1	遗留系统的维护与迁移	归入	分布式透明是旧梦且须重写应用，迁移成本
+usenet_mail.messages.43512	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 20 块）
+usenet_mail.messages.43560	V03-2.4	—	挂账	V03.2.4.3 容量已满（第 16 块）
+usenet_mail.messages.15182	V03-2.4	—	挂账	V03.2.4.2 容量已满（第 15 块）
+usenet_mail.messages.15014	V03-2.4	—	挂账	V03.2.4.2 容量已满（第 16 块）
+3337@sri-arpa.UUCP	V03-2.4	—	挂账	V03.2.4.3 容量已满（第 17 块）
+usenet_mail.messages.137		—	移出	移出｜V06-系统调用：vadvise 分页行为与手册
+usenet_mail.messages.79070	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79084	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79091	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79106	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79166	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79174	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79180	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79194	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79195	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79196	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79203	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79204	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79220	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79242	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79243	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79256	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79257	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79258	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79264	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79267	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79280	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.2 件）
+usenet_mail.messages.79291		—	删除	删除｜零内容：仅表头无正文（199B，sha c0437093b521）
+usenet_mail.messages.79297	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79307	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79310	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79336	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79364	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79390	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79395	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79413	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79416	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79418	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79420	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79427	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79429	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79431	V03.3.5.5	维护工作的隐性投入	归入	数周排查 X 崩溃真因，维护隐性投入
+usenet_mail.messages.79432	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.79445	V03-3.5	—	辑存	辑存组：DECwindows／X11 使用问答（019.4.3 件）
+usenet_mail.messages.47051	V03.2.6.1	遗留系统的维护与迁移	归入	BSC／RJE 适配器供 RISC/os，主机互联延续
+usenet_mail.messages.47127	V03.2.6.5	老机型的仿真与保存	归入	修复 1983 年 Callan 100，老机存续
+usenet_mail.messages.47176	V03.2.6.5	老机型的仿真与保存	归入	Callan 300 跑 TinyMUD，老机再利用
+usenet_mail.messages.47278	V03.2.6.5	老机型的仿真与保存	归入	无手册 Convergent 6300，老机建档
+usenet_mail.messages.47332		—	移出	移出｜V06-驱动适配：HP 9000 HPIB 控仪与 BSD
+usenet_mail.messages.47377	V03.2.6.5	老机型的仿真与保存	归入	闲置 Megaframe 供备件，老机零件流通
+usenet_mail.messages.47396	V03.2.6.5	老机型的仿真与保存	归入	Megaframe 与 Miniframe／Safari 同源，机型谱系
+usenet_mail.messages.47397	V03.2.5.1	个人计算机的硬件普及条件	归入	IDE 启动盘与 ISC 2.2 容量，微机整机配置
+usenet_mail.messages.47399	V03.2.6.5	老机型的仿真与保存	归入	二手 Megaframe 移植 Cnews 与 rn
+usenet_mail.messages.47403	V03.2.6.5	老机型的仿真与保存	归入	廉价 URIX 背板带 DG 标签，老机辨识
+usenet_mail.messages.46661	V03.2.6.5	老机型的仿真与保存	归入	9380 连转一年与格式化容量 318MB
+usenet_mail.messages.46706	V03.2.6.5	老机型的仿真与保存	归入	Plexus P/35 控制器电缆松脱，老机排障
+usenet_mail.messages.46716		—	删除	删除｜零内容：仅表头无正文（199B，sha 5056e06d0011）
+usenet_mail.messages.46736	V03.2.5.1	个人计算机的硬件普及条件	归入	IDE 200MB 八百美元，微机存储成本
+usenet_mail.messages.46808	V03.2.4.3	工作站市场与小型机的重叠	归入	Sony NWS-3250 便携工作站与 SVR4 移植
+usenet_mail.messages.46843	V03.2.5.1	个人计算机的硬件普及条件	归入	486 EISA 装 SCO 无兼容问题，微机整机
+usenet_mail.messages.46929	V03.2.6.5	老机型的仿真与保存	归入	Callan 启动盘与显示器烧毁视频控制器
+usenet_mail.messages.46987	V03.3.2.1	采购预算与设备配置	归入	校内 IBM／VAX 各机型内存磁盘与并发用户表
+usenet_mail.messages.46252		—	移出	移出｜V06-内核实现：VME 内存作缓冲与内存盘
+usenet_mail.messages.46299	V03.2.4.1	指令集哲学的两种取向	归入	RISC 是设计哲学非指令数，与 CISC 并列
+usenet_mail.messages.46301	V03.2.4.2	精简指令集的技术论证	归入	按负载选硬件，反对唯 MIPS 与唯带宽
+usenet_mail.messages.46302	V03.2.4.2	精简指令集的技术论证	归入	磁盘速度容量才是决定因素
+usenet_mail.messages.46349	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 21 块）
+usenet_mail.messages.46363	V03.2.6.4	高端事务处理的延续	归入	联航磁盘阵列与 shared nothing 分区
+usenet_mail.messages.46374	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 22 块）
+usenet_mail.messages.46387		—	移出	移出｜V06-串口终端服务器：8E1 协商绕行
+usenet_mail.messages.46407	V03.2.6.4	高端事务处理的延续	归入	IBM 论文称数据库宜少量快处理器
+usenet_mail.messages.46424	V03.2.6.1	遗留系统的维护与迁移	归入	工作站拼主机物理可行而软件须重写
+usenet_mail.messages.46459	V03.2.6.4	高端事务处理的延续	归入	巨型库需强一致与磁盘带宽，以太网瓶颈
+usenet_mail.messages.46483	V03.2.6.4	高端事务处理的延续	归入	370 盘 5MB/s 与通道算力，主机优势
+usenet_mail.messages.46487	V03-2.4	—	挂账	V03.2.4.4 容量已满（第 23 块）
+usenet_mail.messages.46560	V03-2.6	—	挂账	V03.2.6.5 容量已满（第 13 块）
+usenet_mail.messages.46567	V03-3.3	—	挂账	V03.3.3.5 容量已满（第 13 块）
+usenet_mail.messages.46614	V03.2.5.1	个人计算机的硬件普及条件	归入	386 机加内存作 X 终端服务器
+usenet_mail.messages.46618	V03.2.5.1	个人计算机的硬件普及条件	归入	多串口卡每端口五十美元，微机外设
+usenet_mail.messages.46626	V03.2.5.1	个人计算机的硬件普及条件	归入	跑 Unix 需 16MB 以上，微机内存门槛
+usenet_mail.messages.46629	V03.2.6.5	老机型的仿真与保存	归入	9380 家用一年无故障，老盘可靠性
+usenet_mail.messages.46631	V03.2.6.5	老机型的仿真与保存	归入	电脑展购得 Plexus P/35，老机流通
+4254@brl-smoke.ARPA	V03-2.4	—	挂账	V03.2.4.3 容量已满（第 18 块）
+1247@brl-tgr.ARPA	V03.2.4.2	精简指令集的技术论证	归入	HP9000-500 Dhrystone 讨论，性能比较入场
+usenet_mail.messages.84		—	移出	移出｜V06-版本谱系：SunOS 的 BSD 与 SVR 混合
+usenet_mail.messages.103	V03.3.5.4	现场支持与远程维护	归入	支持部以 rfe 归类拒查，响应渠道受阻
+16218@sri-arpa.UUCP	V03.3.1.2	操作员的职责与作业流程	归入	穿孔卡上反复跑汇编器，卡组作业装配
+usenet_mail.messages.45587	V03.3.3.5	介质成本对数据组织的影响	归入	光盘 NFS 服务器厂商名录，近线存储
+usenet_mail.messages.45614	V03.3.4.4	机时核算与经费约束	归入	账号记账与 TMS 磁带管理，机时核算
+usenet_mail.messages.45618	V03.3.4.2	优先级与配额的规则	归入	NQS 批处理队列系统的联系人
+usenet_mail.messages.124306	V03.3.3.3	介质的保存与循环复用	归入	误覆他人磁带与 tapealloc 借用，介质复用
+usenet_mail.messages.124318	V03-3.5	—	辑存	辑存组：Heiby 邮件汇编期号摘要（022.2.2 件）
+usenet_mail.messages.124351	V03-3.5	—	辑存	辑存组：Heiby 邮件汇编期号摘要（022.2.2 件）
+usenet_mail.messages.124349	V03-3.5	—	辑存	辑存组：Heiby 邮件汇编期号摘要（022.2.2 件）
+usenet_mail.messages.45584	V03-3.3	—	挂账	V03.3.3.5 容量已满（第 14 块）
+usenet_mail.messages.45582	V03.3.3.5	介质成本对数据组织的影响	归入	FMWORM 单库 350GB 且增量写入，数据组织
+usenet_mail.messages.45591	V03.3.2.1	采购预算与设备配置	归入	光驱等三月而媒体次日到，交付时机成约束
+usenet_mail.messages.45593	V03.3.3.1	磁带介质的物理特性	归入	8mm 带 10.24GB 与 60MB/min，物理特性
+usenet_mail.messages.45596	V03.3.3.1	磁带介质的物理特性	归入	EBCDIC 标签带难处理，介质格式互通
+usenet_mail.messages.45598	V03.3.3.5	介质成本对数据组织的影响	归入	在线 15GB 拟增至 100GB，容量规划
+usenet_mail.messages.45599	V03-3.3	—	挂账	V03.3.3.5 容量已满（第 15 块）
+usenet_mail.messages.45600	V03.3.3.2	复制与传输的时间成本	归入	8mm 与 4mm 速率慢，九轨需频繁换带
+usenet_mail.messages.45601	V03.3.3.1	磁带介质的物理特性	归入	ansitape 写 EBCDIC 带而读法未明
+usenet_mail.messages.45603	V03.3.3.4	备份策略与代际更替	归入	建议 UniTree 面向大型 Unix 环境的备份
+usenet_mail.messages.45617	V03.3.3.1	磁带介质的物理特性	归入	EXB-8500 速率 30MB/min 与 5GB
+usenet_mail.messages.45622	V03.3.3.6	计量口径的历史局限	归入	10GB 之说或双驱或五成压缩，容量口径
+usenet_mail.messages.45633	V03.3.3.3	介质的保存与循环复用	归入	迁移后失去磁带排队与独占，挂载秩序
+usenet_mail.messages.45634	V03.3.3.1	磁带介质的物理特性	归入	AT&T ToolChest 解读 EBCDIC 带的工具
+usenet_mail.messages.45638	V03.3.3.6	计量口径的历史局限	归入	10G 实为四倍压缩上限，宣称口径
+usenet_mail.messages.45648	V03.3.3.5	介质成本对数据组织的影响	归入	柯达 WORM 光库 150 盘各 6.3GB
+usenet_mail.messages.45649	V03.3.3.4	备份策略与代际更替	归入	在线 20GB 归档 100GB，主机一次仅挂 10GB
+usenet_mail.messages.45656	V03.3.3.5	介质成本对数据组织的影响	归入	HP C1700A 光库 20GB 三万九千九百五十美元
+usenet_mail.messages.45666	V03-3.3	—	挂账	V03.3.3.5 容量已满（第 16 块）
+usenet_mail.messages.45669	V03.3.3.3	介质的保存与循环复用	归入	符号链接仿暂存之难，归档回迁
+usenet_mail.messages.45670	V03.3.3.4	备份策略与代际更替	归入	Plan 9 夜间全量入光盘，Multics 稳定存储
+usenet_mail.messages.45676	V03.3.3.4	备份策略与代际更替	归入	Plan 9 以 WORM 为库、硬盘为缓存
+usenet_mail.messages.45682	V03.3.3.3	介质的保存与循环复用	归入	在线光资源终会耗尽须整合，旧带上架
+usenet_mail.messages.45696	V03.3.3.1	磁带介质的物理特性	归入	600MB 可擦盘已标准化，换盘六秒
+usenet_mail.messages.45697	V03.3.3.4	备份策略与代际更替	归入	Plan 9 按日期目录存每日变更
+usenet_mail.messages.45703	V03.3.3.1	磁带介质的物理特性	归入	磁光读写原理：激光降阈与磁头写入
+usenet_mail.messages.45707	V03.3.1.2	操作员的职责与作业流程	归入	光库须操作员亲赴控制台选盘，作业流程人工环节
+usenet_mail.messages.45708	V03.3.3.5	介质成本对数据组织的影响	归入	十五万美元文件服务器不如符号链接分层
+usenet_mail.messages.45711	V03.3.3.4	备份策略与代际更替	归入	SunOS 半透明文件系统堆叠日期层
+usenet_mail.messages.45717	V03.3.3.5	介质成本对数据组织的影响	归入	光库每兆三美元、巨型库低于一美元
+usenet_mail.messages.45779	V03.3.3.3	介质的保存与循环复用	归入	磁带管理须 ANSI 标签与位置目录
+usenet_mail.messages.45781	V03.3.3.3	介质的保存与循环复用	归入	磁带管理软件报价三百至一万五千美元
+usenet_mail.messages.45790	V03.3.3.3	介质的保存与循环复用	归入	tmount 以锁文件与属主切换独占磁带
+usenet_mail.messages.45810	V03.3.3.5	介质成本对数据组织的影响	归入	文件服务器招标要 AFP 与 NFS，实战经验
+usenet_mail.messages.45814	V03-3.3	—	挂账	V03.3.3.5 容量已满（第 17 块）
+usenet_mail.messages.45829	V03.3.3.4	备份策略与代际更替	归入	home 备份与 scr 不备份两层，二十四小时清除
+usenet_mail.messages.45830	V03.3.3.5	介质成本对数据组织的影响	归入	数十吉字节数据文件须归档磁带并追踪借还
+usenet_mail.messages.45610	V03.3.3.4	备份策略与代际更替	归入	Plan 9 以 120GB WORM 为底、拟购 20GB 光库
+usenet_mail.messages.45802	V03.3.3.5	介质成本对数据组织的影响	归入	百吉字节库与千台工作站，冷热分层
+usenet_mail.messages.45818	V03.3.3.5	介质成本对数据组织的影响	归入	单库 0.1 至 20GB 合计百吉，冷热分层
+usenet_mail.messages.45578	V03.3.4.1	计算中心的组织形态	归入	超算站点同支两百用户，计算中心规模参照
+usenet_mail.messages.45630	V03.3.3.2	复制与传输的时间成本	归入	TB 级每日备份需五百盘、五驱十小时
+usenet_mail.messages.45661	V03.3.3.3	介质的保存与循环复用	归入	贝尔实验室磁带资源管理器限学术站点
+usenet_mail.messages.45663	V03.3.3.4	备份策略与代际更替	归入	8mm 备份与 Epoch 自动暂存，巧妙而贵
+usenet_mail.messages.45841	V03.3.3.4	备份策略与代际更替	归入	集中备份七项需求：格式、加密、卷管理
+usenet_mail.messages.92517	V03.3.1.2	操作员的职责与作业流程	归入	前面板两百灯百开关让位控制台屏幕
+1362@sdcrdcf.UUCP	V03.3.3.1	磁带介质的物理特性	归入	超 64K 块须自写通道程序，主机带约束
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观随笔（古琴与互联网），无 V03 论题对应
+sacred_sources.duckdb.blocks		—	挂账	待定位：史观随笔（文明转型与选择），无 V03 论题对应
+sacred_sources.duckdb.blocks	V03.2.2.6	厂商兴衰的共性机制	归入	技术一流企业照样倒闭，裁撤关键部门
+sacred_sources.duckdb.blocks		—	移出	移出｜V06-社区治理：去中心化与隐形中心
+cross_indexes.duckdb.concept_history		—	移出	移出｜V02-反垄断：概念史与执法分期
+usenet_mail.messages.28420	V03.3.3.3	介质的保存与循环复用	归入	TOPS-20 至 Unix 逐级失去磁带排队
+usenet_mail.messages.28609	V03.3.5.5	维护工作的隐性投入	归入	根分区损坏后寻引导代码，修复劳动
+usenet_mail.messages.78703	V03.3.5.2	勘误文档与版本记录	归入	邮件池须 1777 粘滞位，未载于文档
+usenet_mail.messages.78704	V03.3.5.2	勘误文档与版本记录	归入	发行说明不足致 init 移位与挂载工具失效
+usenet_mail.messages.78724	V03.3.5.5	维护工作的隐性投入	归入	命令移至 /usr/bin 致备份脚本崩，自行排障
+usenet_mail.messages.78731	V03.3.5.2	勘误文档与版本记录	归入	1.2 升 2.2 十一项陷阱清单，勘误记录
+usenet_mail.messages.78717	V03.3.5.5	维护工作的隐性投入	归入	autologout 与 Mail.rc 默认变更，自行发现
+usenet_mail.messages.78718	V03.3.5.1	补丁的分发与采纳机制	归入	补丁带修 NFS 句柄过期与 fsck 恐慌
+usenet_mail.messages.78756	V03.3.5.1	补丁的分发与采纳机制	归入	第二块补丁带修优先级不衰减
+usenet_mail.messages.78790	V03.3.5.1	补丁的分发与采纳机制	归入	补丁带 sccs 信息错误与更正，分发秩序
+usenet_mail.messages.78798	V03.3.5.2	勘误文档与版本记录	归入	释注与补丁 README 互不覆盖，版本记录
+usenet_mail.messages.78842	V03.3.5.4	现场支持与远程维护	归入	2.3 安装脚本致系统损坏须重装，支持升级
+usenet_mail.messages.78846	V03.3.5.2	勘误文档与版本记录	归入	fsck 与内核版本不可混用，版本记录
+usenet_mail.messages.78847	V03.3.5.4	现场支持与远程维护	归入	CSC 建议暂勿装 2.3，支持渠道
+usenet_mail.messages.78851	V03.3.5.5	维护工作的隐性投入	归入	回退 2.0 带再升 2.3，隐性排障
+usenet_mail.messages.78857	V03.3.5.4	现场支持与远程维护	归入	DEC 官方口径：有 DECnet 者勿装 2.3
+usenet_mail.messages.78869		—	移出	移出｜V06-版本特性：Ultrix 3.0 功能清单
+usenet_mail.messages.78833	V03.3.3.5	介质成本对数据组织的影响	归入	NFS 集群 16 设备与 38GB，容量组织
+usenet_mail.messages.78892	V03.3.5.6	维护史料的留存状况	归入	撤回含重大差错的 SPD 草稿，记录可信度
+usenet_mail.messages.78981	V03.2.4.5	既有技能与维护人手的贬值	归入	3.0 不再支持 RM80 系统盘，旧技能贬值
+usenet_mail.messages.78985	V03.3.5.5	维护工作的隐性投入	归入	换头文件重跑 ris 以网络引导新机型
+usenet_mail.messages.78701	V03.2.1.4	软硬件捆绑与客户锁定	归入	自维保月费翻倍且坏带十二日才换
+usenet_mail.messages.78715	V03.2.1.4	软硬件捆绑与客户锁定	归入	自维保月费 105 涨至 200 美元
+usenet_mail.messages.78766	V03.2.1.6	商业模式对技术选择的约束	归入	一个公司一个架构两个操作系统，两系统平权
+usenet_mail.messages.78774	V03.3.5.4	现场支持与远程维护	归入	Ultrix 被视为私生子，SPR 反馈遭冷待
+usenet_mail.messages.78777	V03.2.1.6	商业模式对技术选择的约束	归入	蛇油指标准化炒作，DEC 在 POSIX 失利
+usenet_mail.messages.78792	V03.3.2.1	采购预算与设备配置	归入	用户数上限取决于所购升级包，许可即配置
+usenet_mail.messages.78802	V03.3.2.1	采购预算与设备配置	归入	登录上限改存 /upgrade，按登录数售许可
+usenet_mail.messages.78805	V03-3.2	—	辑存	辑存组：登录上限许可技术细节（305.2.5 件）
+usenet_mail.messages.78810	V03-3.2	—	辑存	辑存组：登录上限许可技术细节（305.2.5 件）
+usenet_mail.messages.78811		—	移出	移出｜V02-许可条款：AT&T 对附属磁带的限制
+usenet_mail.messages.78854		—	移出	移出｜V59-许可执行：他厂违约与 DEC 顾虑
+usenet_mail.messages.78858		—	移出	移出｜V59-许可执行：DEC 员工回应违约论
+usenet_mail.messages.78865	V03.2.1.4	软硬件捆绑与客户锁定	归入	专利总线排斥第三方且价高，客户锁定
+usenet_mail.messages.78836	V03.3.5.2	勘误文档与版本记录	归入	手册拆十八册只随套件售，文档版本错配
+usenet_mail.messages.78830	V03.3.5.1	补丁的分发与采纳机制	归入	DEC 员工三机装 2.3 无碍，补丁采纳
+usenet_mail.messages.78959	V03.3.5.1	补丁的分发与采纳机制	归入	DEC 及时封堵 sendmail 漏洞，补丁分发
+usenet_mail.messages.78961	V03.3.5.2	勘误文档与版本记录	归入	站点称约五十处缺陷并求修复清单
+usenet_mail.messages.78924	V03.3.5.1	补丁的分发与采纳机制	归入	Ultrix sendmail 调试默认关闭免蠕虫
+usenet_mail.messages.78963	V03.3.5.1	补丁的分发与采纳机制	归入	关闭调试令配置无从下手，补丁代价
+usenet_mail.messages.78964	V03.3.5.2	勘误文档与版本记录	归入	1.1 调试实为开启，与官方说法相左
+usenet_mail.messages.78890		—	移出	移出｜V06-X11：DEC 对公共领域的源码捐赠
+usenet_mail.messages.78903	V03.2.1.4	软硬件捆绑与客户锁定	归入	DECwindows 鼓励不可移植专有软件，锁定
+usenet_mail.messages.78917		—	移出	移出｜V06-X11：xmh 工具包界面诉求
+usenet_mail.messages.78886	V03.3.5.5	维护工作的隐性投入	归入	crontab 清五日以上临时文件，隐性维护
+usenet_mail.messages.78746	V03.3.5.6	维护史料的留存状况	归入	MH 非受支持产品故无手册，文档缺口
+usenet_mail.messages.78698	V03.3.5.6	维护史料的留存状况	归入	月付千澳元仍无 MH 文档，文档缺口
+usenet_mail.messages.174462		—	删除	删除｜零内容：仅表头无正文（210B，sha 0b87a1b74667）
+usenet_mail.messages.176374	V03.2.1.6	商业模式对技术选择的约束	归入	Compaq 官方：Alpha 主推 Tru64 与 VMS
+usenet_mail.messages.176387	V03.2.4.6	市场收缩中的路径依赖	归入	Compaq 停供 Alpha 版 NT，平台收缩
+usenet_mail.messages.79051	V03.2.4.3	工作站市场与小型机的重叠	归入	DECstation 3100 于 USENIX 首次演示
+usenet_mail.messages.79056	V03.3.5.3	维护人手的规模与来源	归入	DECAID 月费千元而八小时响应、换盘十二日
+usenet_mail.messages.79075	V03.2.1.3	直销体系与区域代理	归入	销售代表称 VWS 磁带可用于 Ultrix，渠道误导
+usenet_mail.messages.79099	V03.2.1.4	软硬件捆绑与客户锁定	归入	DECnet 与 LAT 另收费，故转 CMU TCP/IP
+usenet_mail.messages.79149	V03.3.5.1	补丁的分发与采纳机制	归入	升级带按档案订单办理，拟向他处复制
+usenet_mail.messages.79154	V03.3.5.1	补丁的分发与采纳机制	归入	系统内征求 Ultrix 3.0 磁带并主张合法复制
+usenet_mail.messages.79172	V03.3.5.1	补丁的分发与采纳机制	归入	建议以 QAR 系统收集缺陷报告
+usenet_mail.messages.79186	V03.3.5.1	补丁的分发与采纳机制	归入	缺陷经 SPR 提交，回执卡与销售亦为渠道
+usenet_mail.messages.79218	V03.3.5.4	现场支持与远程维护	归入	电邮提交 SPR 未见回复
+usenet_mail.messages.79221	V03.3.5.4	现场支持与远程维护	归入	难使 DEC 支持人员以电邮回复
+usenet_mail.messages.79223	V03.3.5.4	现场支持与远程维护	归入	促 DEC 公开 Internet 联系渠道
+usenet_mail.messages.79228	V03.3.5.4	现场支持与远程维护	归入	DEC 内部推动电子缺陷报告机制
+usenet_mail.messages.79232	V03-2.1	—	辑存	辑存组：Digital NEWS 营销函件争议（305.2.6 件）
+usenet_mail.messages.79238	V03.3.5.4	现场支持与远程维护	归入	征集电子缺陷通信机制意见，安全性约束
+usenet_mail.messages.79239	V03.3.2.1	采购预算与设备配置	归入	持八用户许可而软件迟三十日，学期仅三周
+usenet_mail.messages.79240	V03.2.1.3	直销体系与区域代理	归入	销售代表可电邮联系且数分钟回
+usenet_mail.messages.79247	V03-2.1	—	辑存	辑存组：Digital NEWS 营销函件争议（305.2.6 件）
+usenet_mail.messages.79255	V03.2.1.3	直销体系与区域代理	归入	销售代表失误与包装重复手册，渠道失序
+usenet_mail.messages.79271	V03.3.5.1	补丁的分发与采纳机制	归入	愿建 biz.comp.dec 以加快修复送达
+usenet_mail.messages.79273	V03.3.5.4	现场支持与远程维护	归入	支持可电邮，DEC 内部取软件仍靠寄带
+usenet_mail.messages.79281	V03.3.5.6	维护史料的留存状况	归入	SPR 响应时间图表，多数逾九月未答
+usenet_mail.messages.79288	V03.2.1.3	直销体系与区域代理	归入	先问索取者身份与用途再给信息
+usenet_mail.messages.79331	V03.3.5.4	现场支持与远程维护	归入	询问 2.2 支持终止，官方只支持近两版
+usenet_mail.messages.79352	V03.2.1.3	直销体系与区域代理	归入	ISV 计划地址与电话，第三方渠道
+usenet_mail.messages.79391		—	删除	删除｜零内容：仅表头无正文（196B，sha 542070e0e1cc）
+199703271143.AA223523030@fakir.india.hp.com		—	移出	移出｜V06-ARM 移植：NetBSD 于 SA-110
+20010101174554.A29489@dragon.nuxi.com		—	移出	移出｜V06-ARM 优化：Theora 汇编改写（播客）
+linux-mail-core-figures.core_figure_stats.Andrew Waterman		—	移出	移出｜V01-RISC-V：发明人在 LKML 的边缘在场
