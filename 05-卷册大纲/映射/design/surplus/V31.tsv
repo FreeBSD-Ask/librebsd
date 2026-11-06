@@ -1,0 +1,19 @@
+rowmine_id	subsection_id	source_file	block_seq	orig_reason
+usenet_mail.messages.103040		旧大纲-20261023/第02卷-伯克利的岁月/第034章-3bsd与vax/034.3-vax硬件与bsd的协同演化decvms与bsd的资源竞争/034.3.57-质疑重编译即可解决的说法称其窗口系统在Ultrix12重编译后仍不能用pty二次.md	17	待定位：为写书征集 SysV 虚存材料
+usenet_mail.messages.169647		旧大纲-20261023/第02卷-伯克利的岁月/第034章-3bsd与vax/034.10-3bsd时期的技术淘汰pdp11vax平台迁移32v简单换页3bsd/034.10.3-32v内核改造为3bsd内核与bsd独立内核谱系的起点1979.md	3	待定位：stdio a+ 模式语义讨论
+usenet_mail.messages.93953		旧大纲-20261023/第02卷-伯克利的岁月/第036章-4.2bsd革命与三件套/036.1-19811983年42bsd革命tcpipffssocket三件套/036.1.18-二手转述证据等级L3来源historical_claimsduckdbclai.md	18	待定位：lseek 返回类型口径
+usenet_mail.messages.66298	V31.6.6.3	旧大纲-20261023/第02卷-伯克利的岁月/第037章-4.2bsd时期的技术淘汰/037.1-42bsd时期的技术淘汰uucp让位于tcpip与csh的兴起/037.1.9-年7月6日HenrySpencer回应链接uucp队列文件的设想指出无需智能se.md	2	容量已满（第 15 块）
+usenet_mail.messages.52268		旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.4-43bsd的性能改进两年调优与网络代码精炼平息42bsd/039.4.2-要点43BSD性能改进的长期影响超出平息抱怨的即时效应其网络子系统经两年精炼后被.md	8	待定位：pty 登录后 utmp 残留
+usenet_mail.messages.128914		旧大纲-20261023/第02卷-伯克利的岁月/第039章-4.3bsd/039.4-43bsd的性能改进两年调优与网络代码精炼平息42bsd/039.4.3-年6月16日GuyHarris斥以rename差异证VFS缺陷指所论为某些UFS.md	13	待定位：4.3BSD tty 输出缺陷公告
+freebsd-hackers.messages.2555297		旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.390-年10月9日StuPhillips在210950928SNAP上跑xntpd时i.md	18	待定位：多人共同作者归属说明
+usenet_mail.messages.139990		旧大纲-20261023/第16卷-开源运动与合规治理/第334章-合规认证与标准遵守-liberty词源/334.3-C-语言标准遵守史/334.3.7-DougGwyn给出符合标准的raise函数完整实现范例引用时按L4纪律以上为邮.md	8	待定位：getarg 替代 getopt
+usenet_mail.messages.78164	V31.6.6.3	旧大纲-20261023/第02卷-伯克利的岁月/第035章-4.1bsd/035.6-curses库与屏幕终端处理kenarnold的贡献/035.6.13-当事人自述证据等级L4来源historical_claimsduckdbcla.md	7	容量已满（第 13 块）
+usenet_mail.messages.78453	V31.6.6.3	旧大纲-20261023/第02卷-伯克利的岁月/第035章-4.1bsd/035.6-curses库与屏幕终端处理kenarnold的贡献/035.6.13-当事人自述证据等级L4来源historical_claimsduckdbcla.md	16	容量已满（第 14 块）
+usenet_mail.messages.77477	V31.6.6.6	旧大纲-20261023/第02卷-伯克利的岁月/第032章-对vi与cshell的批评/032.1-对vi与cshell的批评模态争议与csh缺陷对vi模态争议与csh/032.1.5-二手转述证据等级L3来源historical_claimsduckdbclai.md	15	容量已满（第 13 块）
+usenet_mail.messages.76823	V31.6.6.6	旧大纲-20261023/第02卷-伯克利的岁月/第032章-对vi与cshell的批评/032.1-对vi与cshell的批评模态争议与csh缺陷对vi模态争议与csh/032.1.5-二手转述证据等级L3来源historical_claimsduckdbclai.md	23	容量已满（第 14 块）
+usenet_mail.messages.124630	V31.6.2.5	旧大纲-20261023/第02卷-伯克利的岁月/第032章-对vi与cshell的批评/032.1-对vi与cshell的批评模态争议与csh缺陷对vi模态争议与csh/032.1.6-Grandi报告vi与ex37的recover不置changed标志恢复后立即Z.md	30	容量已满（第 13 块）
+usenet_mail.messages.124642	V31.6.2.5	旧大纲-20261023/第02卷-伯克利的岁月/第032章-对vi与cshell的批评/032.1-对vi与cshell的批评模态争议与csh缺陷对vi模态争议与csh/032.1.7-ScottSimpers认为编辑器读取文件内命令是坏主意但从当前目录与主目录读取.md	3	容量已满（第 14 块）
+usenet_mail.messages.48306		旧大纲-20261023/第02卷-伯克利的岁月/第035章-4.1bsd/035.12-41bsd安全机制继承chroot2系统调用的早期定型与原始动机辨析1981/035.12.1-要点41BSD1981年6月继承4BSD1980年10月引入的setuid检.md	10	待定位：panic 与信号边界讨论
+usenet_mail.messages.321		旧大纲-20261023/第02卷-伯克利的岁月/第035章-4.1bsd/035.12-41bsd安全机制继承chroot2系统调用的早期定型与原始动机辨析1981/035.12.4-二手转述证据等级L3来源historical_claimsduckdbclai.md	4	待定位：pwhash 与口令文件规模
+usenet_mail.messages.88355		旧大纲-20261023/第02卷-伯克利的岁月/第035章-4.1bsd/035.12-41bsd安全机制继承chroot2系统调用的早期定型与原始动机辨析1981/035.12.6-当事人自述证据等级L4来源historical_claimsduckdbcla.md	23	待定位：Bourne shell 例证之争
+usenet_mail.messages.137155	V31.8.1.4	旧大纲-20261023/第03卷-伯克利学术文化外溢影响/第063章-bsd作为tcpip参考实现/063.3-bsd网络应用的黄金时代web服务器与邮件系统/063.3.7-v18i023收录DanHeller的mushMailUsersShell64版.md	2	容量已满（第 13 块）

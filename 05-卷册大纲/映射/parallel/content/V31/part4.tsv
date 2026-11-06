@@ -1,0 +1,295 @@
+rowmine_id	subsection_id	title	action	reason
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+ucbvax.5440	V31.7.2.3	4.1a 起的集成序列	归入	MIT 为 4.1BSD 上 BBN TCP/IP 写驱动
+usenet_mail.messages.162964		—	移出	短符号链接 inode hack，属 V09
+usenet_mail.messages.165863		—	移出	bus mouse 驱动补丁，属 V05
+usenet_mail.messages.168896		—	移出	X386 SVGA 显卡清单，属 V21
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+281@sun.UUCP	V31.7.2.5	协议文本与实现的界分	归入	互通须重新插入旧式 kludge
+usenet_mail.messages.168918		—	移出	ps aux 浮点异常，属 V05
+usenet_mail.messages.164660		—	移出	physio buf 泄漏补丁，属 V05
+usenet_mail.messages.163399		—	移出	XFree86 显卡模式征集，属 V21
+ucbvax.4494	V31.7.2.3	4.1a 起的集成序列	归入	TCP-IP Digest 创刊议题含 BBN VMUNIX
+usenet_mail.messages.524	V31.7.2.6	名义归属的档案口径	归入	Bostic 澄清 2.9 网络代码来源区间
+usenet_mail.messages.393	V31.7.2.3	4.1a 起的集成序列	归入	2.9bsd 网络代码修复集移植 4.2 rwho
+usenet_mail.messages.417	V31.7.2.3	4.1a 起的集成序列	归入	2.9bsd 上可跑 4.2 网络代码
+freebsd-net.messages.1495409		—	移出	2021 年 TFO/LRO 缺陷，属 V05
+freebsd-net.messages.1495430		—	移出	禁用 LRO 排查，属 V05
+freebsd-net.messages.1496537	V31.5.1.6	后续演进的分驻去向	归入	ipfw 增设 TEE 选项之议
+freebsd-net.messages.1496794		—	移出	交换机芯片价格，属 V05
+freebsd-net.messages.1496881	V31.8.2.6	ISC 接管的后续分驻	归入	BIND 8 配置文档缺失
+freebsd-net.messages.1497081		—	移出	NT 与 Apache 机房取舍，属 V05
+freebsd-net.messages.1497108		—	移出	IIS 与 Apache 内容对比，属 V05
+freebsd-net.messages.1500401	V31.1.2.4	内核态不可抢占的约定	归入	BSD 信号异步且内核不可抢占
+freebsd-net.messages.1488562		—	移出	ngctl 配置，属 V05
+freebsd-net.messages.1501178		—	移出	ICMP6 redirect 成因，属 V05
+freebsd-net.messages.1501325		—	移出	TCP 比较文章推荐，属 V07
+freebsd-net.messages.1488704		—	移出	RIPE76 测试版本，属 V07
+freebsd-net.messages.1502065		—	移出	KAME ipsec VPN，属 V07
+freebsd-net.messages.1503061	V31.7.1.3	系统调用面的构成	归入	accept 返回零长 sockaddr 的语义
+freebsd-net.messages.1503441		—	移出	MII 异步事件，属 V05
+freebsd-net.messages.1503991		—	移出	sysctl 比较优化，属 V05
+freebsd-net.messages.1504316		—	移出	IP_SENDSRCADDR，属 V05
+freebsd-net.messages.1506488		—	移出	ip_fastforward 调用点，属 V05
+freebsd-net.messages.1506616	V31.5.1.6	后续演进的分驻去向	归入	以太防火墙补丁包发布
+freebsd-net.messages.1506841	V31.7.1.1	套接字接口的抽象设计	归入	SCTP 套接字的 UDP 与 TCP 模型
+freebsd-net.messages.1507090		—	移出	NATD 下 FTP 传输，属 V05
+freebsd-net.messages.1507288		—	移出	kqueue 重写 natd，属 V05
+freebsd-net.messages.1507468		—	移出	ppp -nat ADSL 故障，属 V05
+freebsd-net.messages.1508052		—	移出	PPTP 单 TCP 控制连接，属 V05
+freebsd-net.messages.1508108		—	移出	vr 驱动与网卡，属 V05
+freebsd-net.messages.1508428		—	移出	m_clalloc 恐慌，属 V05
+freebsd-net.messages.1508768	V31.7.5.6	后续演化的分驻交代	归入	ssthresh 与 cwnd 实测口径
+freebsd-net.messages.1508791		—	移出	ERX 隧道重组开关，属 V05
+freebsd-net.messages.1510038	V31.7.5.6	后续演化的分驻交代	归入	自动调 sockbuf 与公平份额论文
+freebsd-net.messages.1510287	V31.3.3.3	共享映射与文件一致性	归入	与用户进程共享 mbuf 的设想
+freebsd-net.messages.1510292		—	移出	bge 驱动版本，属 V05
+freebsd-net.messages.1510344		—	移出	802.3ad 链路聚合，属 V05
+usenet_mail.messages.33270		—	移出	EtherPort II 启动脚本，属 V12
+freebsd-net.messages.1491500		—	移出	FLOWTABLE 选项，属 V05
+usenet_mail.messages.34292		—	移出	A/UX 与 TOPS 3.0 共存，属 V12
+freebsd-net.messages.1492132	V31.7.5.6	后续演化的分驻交代	归入	按 socket 分别设拥塞控制
+freebsd-net.messages.1492514		—	移出	D24061 性能测试，属 V05
+freebsd-net.messages.1492703	V31.7.5.6	后续演化的分驻交代	归入	newreno 字节计数缺陷修复
+freebsd-net.messages.1494087		—	移出	F-Stack 与 kevent，属 V05
+freebsd-net.messages.1494725		—	移出	ifconfig 二进制重放，属 V05
+usenet_mail.messages.34668		—	移出	A/UX 加速卡与 PMMU，属 V12
+usenet_mail.messages.34714		—	移出	A/UX 交换空间，属 V12
+usenet_mail.messages.34095	V31.3.2.5	共享正文与零填页	归入	文本段共享按原路径换入
+usenet_mail.messages.34397		—	移出	TBMEMORY 设置，属 V12
+usenet_mail.messages.34008		—	移出	A/UX 视频驱动，属 V12
+usenet_mail.messages.32313		—	移出	A/UX 2.0 虚存，属 V12
+usenet_mail.messages.32320	V31.3.4.1	虚存对象的抽象成型	归入	借 Mach 共享虚拟内存保共享区
+usenet_mail.messages.32387		—	移出	A/UX 与 X11R4，属 V12
+usenet_mail.messages.31506		—	移出	A/UX 驱动测试版，属 V12
+usenet_mail.messages.31554		—	移出	A/UX 启动内存占用，属 V12
+usenet_mail.messages.31560		—	移出	A/UX uw_tty.c 移植差异，属 V12
+usenet_mail.messages.31696		—	移出	A/UX 磁盘吞吐实测，属 V12
+usenet_mail.messages.31719		—	移出	A/UX 购买与整合，属 V12
+usenet_mail.messages.31152		—	移出	A/UX kconfig NPROC，属 V12
+usenet_mail.messages.31236		—	移出	A/UX 邮件权限，属 V12
+usenet_mail.messages.31436		—	移出	A/UX 未含 dump 与 restore，属 V12
+usenet_mail.messages.30816		—	移出	A/UX HFS 与 NFS，属 V12
+usenet_mail.messages.30847		—	移出	A/UX 备份软件，属 V12
+usenet_mail.messages.30865		—	移出	Mac II 坏块挂起 SCSI，属 V12
+usenet_mail.messages.31055	V31.6.5.1	作业控制的引入时点	归入	A/UX 作业控制遭团队抵触
+7439@brl-smoke.ARPA		—	移出	SVR3.0 与 4.nBSD 评价，属 V20
+usenet_mail.messages.34863		—	移出	A/UX 2.0.1 升级包，属 V12
+usenet_mail.messages.35194		—	移出	A/UX 与开放系统批评，属 V12
+usenet_mail.messages.35237		—	移出	A/UX 性能与磁盘选型，属 V12
+9007060750.AA04879@okeeffe.Berkeley.EDU	V31.7.5.2	Reno 版本的过渡身份	归入	Bostic 发布 4.3BSD-Reno 公告
+usenet_mail.messages.48287	V31.6.5.1	作业控制的引入时点	归入	setsid 为 Reno 新增系统调用
+usenet_mail.messages.44249		—	移出	386BSD 获取途径，属 V23
+usenet_mail.messages.44281		—	移出	Windows 386 与 OS/2，属 V20
+usenet_mail.messages.44304		—	移出	加密出口管制之辩，属 V02
+usenet_mail.messages.43737		—	删除	零内容：空块
+usenet_mail.messages.43765	V31.2.4.1	fsck 的全量扫描程序	归入	零长文件名目录条目与 clri 重链
+usenet_mail.messages.43810		—	移出	SCO 稀疏文件 st_size，属 V20
+usenet_mail.messages.43830	V31.2.4.5	可靠性的工程权衡	归入	服务器预分配先写零再应答
+usenet_mail.messages.43913	V31.2.4.1	fsck 的全量扫描程序	归入	4.3 下零长文件名目录与 NFS
+usenet_mail.messages.43919	V31.2.4.1	fsck 的全量扫描程序	归入	洞文件备份把零写出占满洞位
+usenet_mail.messages.43972		—	移出	远程 fork 原语，属 V05
+usenet_mail.messages.43987	V31.2.4.3	磁盘缺陷的应对惯例	归入	WORM 提案以位改分配新块
+usenet_mail.messages.42672	V31.3.2.3	交换的降位与保留	归入	Reno 引入 VMFS 内存文件系统
+usenet_mail.messages.42620	V31.3.2.3	交换的降位与保留	归入	Sun 把内存盘放交换区的取舍
+lkml.messages.1724762		—	删除	零内容：仅有 claim 索引行
+usenet_mail.messages.7803		—	删除	零内容：空块
+usenet_mail.messages.43208		—	移出	Pyramid RAM 盘特性，属 V20
+usenet_mail.messages.43220		—	移出	Reno 重写 find 用 fts，属 V05
+usenet_mail.messages.182961		—	移出	Reno 与 Net2 光盘求购，属 V05
+11410002@eecs.nwu.edu	V31.7.5.6	后续演化的分驻交代	归入	4.4BSD 计划含 OSI 实现的报道
+usenet_mail.messages.4297		—	移出	4.3-reno users 缺陷，属 V05
+usenet_mail.messages.4423		—	移出	make 中断删目标，属 V05
+usenet_mail.messages.4447		—	移出	uda.c 驱动问题，属 V05
+usenet_mail.messages.4469	V31.7.4.4	子网划分的工程背景	归入	in_sockmaskof 掩码类型缺陷
+usenet_mail.messages.4246	V31.7.5.2	Reno 版本的过渡身份	归入	Reno 贡献者名单与 4.4 分组
+usenet_mail.messages.4291	V31.2.4.1	fsck 的全量扫描程序	归入	Reno fsck pass2 未初始化变量
+usenet_mail.messages.157432		—	移出	调制解调器监控工具，属 V21
+usenet_mail.messages.157498		—	移出	邮件分发地域限制，属 V21
+usenet_mail.messages.157552		—	移出	NetBSD 第二块网卡，属 V09
+usenet_mail.messages.157589		—	移出	Amiga NetBSD，属 V09
+usenet_mail.messages.157721		—	移出	CPU 总线与 ISA 之争，属 V05
+usenet_mail.messages.157740		—	移出	SunOS shutdown 广播，属 V20
+usenet_mail.messages.157807		—	移出	Linux 光盘引导，属 V18
+usenet_mail.messages.32406	V31.7.5.3	拥塞控制的算法内涵	归入	VJ 首部压缩的 SLIP 驱动
+usenet_mail.messages.32532	V31.8.2.5	RFC 1034／1035 的标准地基	归入	NCSA Telnet 自解析域名服务器
+usenet_mail.messages.32558		—	移出	Mac 与 X.25 方案，属 V21
+usenet_mail.messages.31746		—	移出	无盘工作站与集中文件服务器，属 V21
+usenet_mail.messages.31285		—	移出	NFS ku_fastsend 挂死，属 V05
+usenet_mail.messages.30719		—	移出	A/UX BNET 与 NFS 安装，属 V12
+usenet_mail.messages.30725		—	移出	A/UX telnet 提示硬编码，属 V12
+usenet_mail.messages.31044	V31.8.2.5	RFC 1034／1035 的标准地基	归入	无 YP 时 NFS 经广播查名字服务器
+2320@csu-cs.UUCP		—	移出	HP-UX 发货，属 V20
+68141@felix.UUCP		—	移出	Ultrix 网络栈比较残句，属 V20
+usenet_mail.messages.35075		—	移出	网络锁管理器登记，属 V21
+usenet_mail.messages.35108		—	移出	route add 与 in.routed，属 V05
+usenet_mail.messages.35215		—	移出	A/UX 作 MSmail 服务器，属 V12
+usenet_mail.messages.34534		—	移出	pathalias 编译，属 V21
+usenet_mail.messages.34642		—	移出	A/UX 的 NNTP 需求，属 V12
+usenet_mail.messages.34785		—	移出	A/UX NNTP 安装，属 V12
+usenet_mail.messages.79287	V31.3.3.4	映射语义的移植差异	归入	共享内存在 Ultrix 版本间失效
+usenet_mail.messages.79314	V31.3.3.4	映射语义的移植差异	归入	子进程继承共享内存映射
+usenet_mail.messages.79406	V31.3.3.5	与异构共享内存的对照	归入	SysV 共享内存宏与 512 字节页
+usenet_mail.messages.79424	V31.3.3.5	与异构共享内存的对照	归入	重编内核支持 40MB 共享段
+usenet_mail.messages.158022		—	移出	TCP/IP Illustrated 二卷披露，属 V21
+usenet_mail.messages.49322	V31.7.1.3	系统调用面的构成	归入	紧急数据与 socket 带外的错配
+usenet_mail.messages.30362		—	移出	AFS 七项缺陷，属 V21
+usenet_mail.messages.30403		—	移出	telnet 账户作登录外壳，属 V21
+usenet_mail.messages.137491	V31.3.3.5	与异构共享内存的对照	归入	用户态共享内存仿真经 TCP/IP
+usenet_mail.messages.137628	V31.7.1.6	跨系统扩散的前夜	归入	Sun RPC 3.9 源码发布含 XDR
+usenet_mail.messages.150603	V31.2.2.2	文件系统形态的分期盘点	归入	跨平台搬运须读写裸设备与字节序
+usenet_mail.messages.87674		—	删除	零内容：空块
+usenet_mail.messages.88057		—	移出	自动拨号调制解调器，属 V21
+usenet_mail.messages.88100		—	删除	零内容：空块
+usenet_mail.messages.88109		—	移出	VMS 上 uucico，属 V21
+usenet_mail.messages.87063		—	删除	零内容：空块
+usenet_mail.messages.87153	V31.8.1.2	SMTP 适配的重写	归入	RFC733 邮件格式将架于新协议
+293@sun.UUCP	V31.7.2.5	协议文本与实现的界分	归入	Sun 论证 trailers 封装不违 IP
+538@ulysses.UUCP	V31.7.2.5	协议文本与实现的界分	归入	链路层封装不触及 IP 规范
+8804050317.AA00514@okeeffe.Berkeley.EDU	V31.7.5.4	慢启动的设计思想	归入	新 TCP 发送策略减轻拥塞
+8806152300.AA28766@okeeffe.Berkeley.EDU	V31.7.5.1	Tahoe 版本的发布时点	归入	Bostic 宣布 Tahoe 发布
+usenet_mail.messages.174924	V31.7.6.3	互联网底座的形成	归入	美政府资助的协议参考实现
+usenet_mail.messages.174969	V31.7.6.3	互联网底座的形成	归入	同上追述（参考实现由联邦出资）
+usenet_mail.messages.46451		—	移出	终端服务器分配，属 V21
+usenet_mail.messages.46464		—	移出	服务器池招标，属 V21
+usenet_mail.messages.29089		—	移出	终端服务器对比，属 V21
+usenet_mail.messages.29099		—	移出	文件服务器目录布局，属 V21
+usenet_mail.messages.29339		—	移出	PLP 发布站，属 V21
+usenet_mail.messages.46833		—	移出	RNALIB 发布，属 V21
+usenet_mail.messages.47244		—	移出	ftpmail 服务，属 V21
+usenet_mail.messages.48767	V31.7.1.3	系统调用面的构成	归入	select 零指针歧义与描述符上限
+usenet_mail.messages.48905		—	移出	Stevens 书评，属 V21
+usenet_mail.messages.48954		—	移出	驱动永久挂起，属 V05
+usenet_mail.messages.49026	V31.7.1.3	系统调用面的构成	归入	maxfdp1 写法与非全部设备支持
+usenet_mail.messages.135562	V31.8.1.4	重写规则与配置语言	归入	mail-expand 按重写规则解析
+usenet_mail.messages.144432		—	移出	ISP POP 扩容争用，属 V21
+usenet_mail.messages.30247		—	移出	邮件归属与知情，属 V21
+usenet_mail.messages.135890		—	移出	uulocks 工具，属 V21
+usenet_mail.messages.136093	V31.8.3.5	内建服务的轻量化	归入	munetd 为 inetd 的增强实现
+usenet_mail.messages.49146		—	移出	伯克利节点命名，属 V21
+usenet_mail.messages.30366		—	移出	隐私与工厂例，属 V21
+usenet_mail.messages.32418	V31.8.1.6	邮件路由的史学评价	归入	Xenix 以 smail 换 rmail 并移植 sendmail
+usenet_mail.messages.137024		—	移出	rkive 归档器，属 V21
+usenet_mail.messages.137155	V31.8.1.4	重写规则与配置语言	归入	ease 专用于写 sendmail 配置
+usenet_mail.messages.137178	V31.8.1.3	队列机制的增设过程	归入	mq 显示邮件队列
+usenet_mail.messages.137235	V31.8.1.5	sendmail 8 重写的动因	归入	IDA Sendmail 增强套件首发
+usenet_mail.messages.137243	V31.8.1.6	邮件路由的史学评价	归入	deliver 以 shell 脚本作配置
+usenet_mail.messages.137948	V31.8.1.5	sendmail 8 重写的动因	归入	IDA 增强为 sendmail 加 dbm 直访
+usenet_mail.messages.136677		—	移出	NN 新闻阅读器，属 V21
+usenet_mail.messages.148967		—	移出	wu-ftpd 版本，属 V21
+usenet_mail.messages.149178		—	移出	BSDI 新闻阅读器，属 V21
+usenet_mail.messages.149540		—	移出	ftpd 核心转储，属 V21
+usenet_mail.messages.151703		—	移出	服务器标识探测，属 V21
+usenet_mail.messages.151708		—	移出	BSDI 服务器标识，属 V21
+12487@brl-adm.ARPA	V31.7.4.4	子网划分的工程背景	归入	B 类网按 256 子网划分
+usenet_mail.messages.140405		—	移出	comp.std.unix 归档缺失，属 V21
+usenet_mail.messages.140406		—	移出	PAX 源码公告，属 V21
+usenet_mail.messages.140520		—	移出	UUCP g 协议论文，属 V21
+usenet_mail.messages.140544		—	移出	USENIX 会期更改，属 V21
+usenet_mail.messages.140577		—	移出	手册装帧，属 V21
+usenet_mail.messages.140692		—	移出	标准 BOF 出席，属 V21
+usenet_mail.messages.140011		—	移出	标准观察委员会，属 V21
+usenet_mail.messages.140133		—	移出	夏季标准 BOF，属 V21
+usenet_mail.messages.140156		—	移出	ANSI C 标准价格，属 V21
+usenet_mail.messages.140204		—	移出	IEEE 赞助方致歉，属 V21
+usenet_mail.messages.140232		—	移出	IEEE 版权与机读版，属 V21
+usenet_mail.messages.140258		—	移出	IEEE 邮件列表订阅，属 V21
+usenet_mail.messages.79252		—	移出	征求 FESTOON 程序，属 V21
+usenet_mail.messages.79299		—	移出	研究生项目征评，属 V21
+usenet_mail.messages.139749		—	移出	标准动态投票，属 V21
+usenet_mail.messages.138136		—	删除	零内容：空块
+Mar.17.13.30.43.1988.2656@topaz.rutgers.edu	V31.7.6.3	互联网底座的形成	归入	NSFNET 区域接入路径
+645@fig.bbn.com		—	移出	NNTP 1.5 发布，属 V21
+2581@inews.intel.com		—	移出	ARPANET 与 Internet 之问，属 V21
+16441@ucbvax.BERKELEY.EDU		—	移出	CSRG 公告残句，属 V05
+usenet_mail.messages.28295		—	移出	UIUC 名字服务器客户端，属 V21
+usenet_mail.messages.30297		—	移出	YP 与 NIS 名称和解，属 V20
+usenet_mail.messages.28369		—	移出	amd 取回地址，属 V21
+usenet_mail.messages.28396		—	移出	rc.site 样例，属 V21
+usenet_mail.messages.30346		—	移出	etc/hosts 更新之问，属 V21
+usenet_mail.messages.30530	V31.8.2.5	RFC 1034／1035 的标准地基	归入	hosts 应由管理员维护，动态用 DNS
+usenet_mail.messages.30674	V31.8.2.5	RFC 1034／1035 的标准地基	归入	vis 的 hosts/dns/files/nis 解析序
+usenet_mail.messages.30145		—	移出	SunOS 共享 libc 解析器，属 V21
+usenet_mail.messages.30204		—	移出	libresolv 编译步骤，属 V21
+usenet_mail.messages.30261		—	移出	Sun 二进制只调 yp，属 V20
+usenet_mail.messages.29597	V31.8.2.5	RFC 1034／1035 的标准地基	归入	反查正查不符即断连
+usenet_mail.messages.29604	V31.8.2.5	RFC 1034／1035 的标准地基	归入	bind 4.8.2 解析器先查 hosts
+usenet_mail.messages.49383		—	移出	Sun 白页黄页，属 V21
+usenet_mail.messages.151842		—	移出	BSDI sysquery 告警，属 V21
+6273@bloom-beacon.MIT.EDU		—	移出	Hesiod 命名服务，属 V21
+681@ulysses.UUCP	V31.8.1.4	重写规则与配置语言	归入	4.1c sendmail 别名未剥离主机名
+22m861$gjg@agate.berkeley.edu	V31.8.1.5	sendmail 8 重写的动因	归入	sendmail 8.x 的 FTP 发布路径
+13303@sri-arpa.UUCP	V31.8.1.5	sendmail 8 重写的动因	归入	Allman 亲处 4.2BSD sendmail 缺陷
+54083@felix.UUCP	V31.8.1.4	重写规则与配置语言	归入	~/.mailcf 改写邮件头被滥用
+515@edcaad.UUCP	V31.8.1.6	邮件路由的史学评价	归入	4.1BSD rmail 要求恰好两参
+usenet_mail.messages.151899		—	移出	bsdi-users 列表停摆，属 V21
+usenet_mail.messages.149575		—	移出	BSD/OS 自带 uucp，属 V21
+usenet_mail.messages.149582		—	移出	Taylor UUCP 安装，属 V21
+usenet_mail.messages.149883		—	移出	BSD/OS 版本号查询，属 V21
+usenet_mail.messages.149349		—	移出	Taylor UUCP 行为兼容，属 V21
+usenet_mail.messages.149363		—	移出	Taylor UUCP 运行版本，属 V21
+usenet_mail.messages.148876		—	移出	GroupWise SMTP 网关，属 V21
+usenet_mail.messages.148546		—	移出	Majordomo 列表服务，属 V21
+usenet_mail.messages.35333	V31.8.1.5	sendmail 8 重写的动因	归入	sendmail 5.64 移植加 DNS 回退
+usenet_mail.messages.35396	V31.8.1.4	重写规则与配置语言	归入	无域名服务器时 sendmail 受限
+usenet_mail.messages.35473		—	移出	A/UX sendmail 无 DNS 配置，属 V12
+usenet_mail.messages.34918		—	移出	SysV 信号语义与 ELM，属 V20
+usenet_mail.messages.35063	V31.8.1.4	重写规则与配置语言	归入	EASE 把 sendmail.cf 译回高级语言
+usenet_mail.messages.34667	V31.8.1.4	重写规则与配置语言	归入	升级后冻结配置文件报错
+usenet_mail.messages.34764	V31.8.1.4	重写规则与配置语言	归入	sendmail -bz 重建冻结配置
+usenet_mail.messages.34781		—	移出	A/UX 编译器 -ZB 开关，属 V12
+usenet_mail.messages.34818		—	移出	A/UX 信号语义致 ELM 退出，属 V12
+usenet_mail.messages.34846	V31.6.5.3	挂起与恢复的信号语义	归入	后台任务 alarm 唤醒排队到恢复
+usenet_mail.messages.34861	V31.6.5.3	挂起与恢复的信号语义	归入	作业控制正常而超时信号出错
+usenet_mail.messages.33977		—	移出	mh 配置差异，属 V21
+usenet_mail.messages.79071		—	移出	mail11v3 与 DECnet，属 V21
+usenet_mail.messages.79148	V31.8.1.4	重写规则与配置语言	归入	Ultrix sendmail.cf 三份示例
+usenet_mail.messages.29732	V31.8.1.6	邮件路由的史学评价	归入	FSF 邮件程序与 smail 版本关系
+usenet_mail.messages.29742	V31.8.1.4	重写规则与配置语言	归入	配置难点在地址重写理解
+usenet_mail.messages.29761	V31.8.1.4	重写规则与配置语言	归入	凭 smm 文档自学 sendmail
+121@cdcvax.UUCP	V31.8.5.1	Ingres 的关系数据库奠基	归入	Ingres demo 库查询
+257@ucbcad.UUCP	V31.8.5.1	Ingres 的关系数据库奠基	归入	Ingres bug 修复已入 4.2 磁带
+117@utastro.UUCP	V31.8.5.1	Ingres 的关系数据库奠基	归入	4.2BSD 下 Ingres 独立磁盘
+4822@ucbvax.ARPA	V31.8.5.1	Ingres 的关系数据库奠基	归入	~ingres 目录与 4.2BSD
+4790@pasteur.Berkeley.EDU	V31.8.5.2	POSTGRES 的八年计划	归入	postgres 主机地址参与讨论
+1990Oct8.002908.14549@rice.edu	V31.8.5.2	POSTGRES 的八年计划	归入	public domain 数据库安装求助
+1992Nov25.083754.2691@izf.tno.nl	V31.8.5.2	POSTGRES 的八年计划	归入	Postgres 移植 386BSD
+15363@sri-arpa.UUCP	V31.8.5.4	Berkeley DB 的无束缚重写	归入	4.1BSD dbm 包逐层分析
+usenet_mail.messages.72232	V31.8.5.4	Berkeley DB 的无束缚重写	归入	ndbm 建库遇空字节截断
+usenet_mail.messages.61058	V31.8.5.4	Berkeley DB 的无束缚重写	归入	dbm_fetch 返回 datum 非指针
+usenet_mail.messages.60208	V31.8.5.4	Berkeley DB 的无束缚重写	归入	dbm 源自 V7 属 AT&T 授权
+usenet_mail.messages.58973	V31.8.5.4	Berkeley DB 的无束缚重写	归入	dbm.c 与 ndbm.c 被误编译
+usenet_mail.messages.56605		—	移出	fortunes.dat 分发与许可，属 V21
+usenet_mail.messages.49156	V31.8.5.4	Berkeley DB 的无束缚重写	归入	伯克利数据库 bsd_db.tar.Z 公告
+usenet_mail.messages.49294		—	删除	零内容：空块
+usenet_mail.messages.29229		—	移出	Oracle 接管 passwd，属 V21
+usenet_mail.messages.29263		—	移出	改动后重建数据库，属 V21
+usenet_mail.messages.29340		—	移出	SMIT 与 ODM 之辨，属 V21
+usenet_mail.messages.29375		—	移出	DBMS 作主之辩，属 V21
+usenet_mail.messages.47886	V31.8.5.4	Berkeley DB 的无束缚重写	归入	dbm 系只适合单键且无序场景
+1053@utah-gr.UUCP	V31.8.5.4	Berkeley DB 的无束缚重写	归入	Gosling 由 dbm 改造出 ndbm
+2724@yale-com.UUCP	V31.8.5.4	Berkeley DB 的无束缚重写	归入	dbm 算法出自 IBM 学者论文
+3749@umcp-cs.UUCP	V31.8.5.4	Berkeley DB 的无束缚重写	归入	nextkey 议论
+1992Jul27.194056.26921@bnr.ca	V31.8.5.4	Berkeley DB 的无束缚重写	归入	ndbm 在 SunOS 上 firstkey 乱码
+1992Jul30.144545.15534@alias.com		—	移出	db.tar.Z 匿名 FTP 获取，属 V21
+21aaup$bs5@gw.home.vix.com	V31.8.5.4	Berkeley DB 的无束缚重写	归入	Sleepycat 兼容桩与多实例
+43154@beno.seismo.CSS.GOV		—	移出	伯克利自认需 AT&T 许可，属 V15
+426@auspex.UUCP	V31.5.3.2	提权与逃逸的讨论线	归入	4.3 磁带 sendmail DEBUG 置 1
+usenet_mail.messages.3195		—	移出	SunOS readlink 缺陷，属 V05
+usenet_mail.messages.3327		—	移出	MicroVAX 指令仿真 bug，属 V05
+usenet_mail.messages.2843	V31.5.3.2	提权与逃逸的讨论线	归入	passwd 错行成空用户名免口令
+usenet_mail.messages.2930		—	移出	telnetd select 非阻塞，属 V05
+usenet_mail.messages.2322	V31.7.4.5	网关行为的语义定义	归入	跨网广播与网关行为
+usenet_mail.messages.2531	V31.5.3.1	文件系统暴露的残余局限	归入	find 不追随符号链接的两条理由
+usenet_mail.messages.2642		—	移出	file 魔数识别代码，属 V21
+usenet_mail.messages.2681	V31.8.1.4	重写规则与配置语言	归入	Sun sendmail 冻结配置不可用
+usenet_mail.messages.2102	V31.3.3.4	映射语义的移植差异	归入	符号链接改动路径到文件映射语义
+usenet_mail.messages.2168	V31.7.4.1	radix 树的引入	归入	rtrequest 路由表指针负偏移
+usenet_mail.messages.2259	V31.3.1.5	负载控制的策略选择	归入	UCSD 负载控制压制负载均值
+usenet_mail.messages.28888	V31.8.2.5	RFC 1034／1035 的标准地基	归入	仅 NXDOMAIN 退信，查询失败重试
+usenet_mail.messages.28992	V31.8.2.5	RFC 1034／1035 的标准地基	归入	主域名服务器与 UUCP 邮件循环
+8811040318.AA26579@okeeffe.Berkeley.EDU	V31.5.3.2	提权与逃逸的讨论线	归入	蠕虫公告三：fingerd 入口与修补
+usenet_mail.messages.128966	V31.8.1.6	邮件路由的史学评价	归入	sendmail 新版修好已知安全问题
+34qfhg$kpf@spruce.cic.net	V31.8.4.2	大学站点的服务器实践	归入	BSDi 上架 NCSA HTTP 服务器
+jrb.21.2D1F41BD@csi.compuserve.com	V31.8.4.1	早期网站服务的登场语境	归入	BSD/386 缺 Mosaic 的求助
+2ldqjk$sc2@bigfoot.wustl.edu	V31.8.4.3	超文本服务的雏形	归入	NCSA Mosaic 与 WWW 介绍

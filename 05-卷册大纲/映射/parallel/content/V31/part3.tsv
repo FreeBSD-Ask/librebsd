@@ -1,0 +1,184 @@
+rowmine_id	subsection_id	title	action	reason
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+ucbvax.3188	V31.6.6.5	原型与贡献者的分工	归入	贝尔支持组拒用 csh 的立场
+usenet_mail.messages.78588	V31.6.6.2	历史机制的替换规则	归入	history 输出指认 csh 解析错处
+usenet_mail.messages.78141	V31.6.6.3	别名与补全的交互机制	归入	csh 目录跳转别名与参数转存
+usenet_mail.messages.78208	V31.6.6.6	脚本面弱点的登记	归入	删除环境变量之法因系统而异
+usenet_mail.messages.78258	V31.6.6.6	脚本面弱点的登记	归入	Bourne 可彻底移除而 csh 只能置空
+usenet_mail.messages.78312	V31.6.6.6	脚本面弱点的登记	归入	借 sh 设环境变量再返回
+usenet_mail.messages.78314	V31.6.6.2	历史机制的替换规则	归入	单引号内历史替换仍发生
+usenet_mail.messages.78354	V31.6.6.6	脚本面弱点的登记	归入	unsetenv 用法与手册细读
+usenet_mail.messages.77857	V31.6.5.2	前后台切换的规程	归入	csh 暂停后能否送输入
+usenet_mail.messages.77879	V31.6.6.5	原型与贡献者的分工	归入	which 内建非原版所加
+usenet_mail.messages.77891	V31.6.6.2	历史机制的替换规则	归入	单引号回显与转义之困
+usenet_mail.messages.78007	V31.6.6.1	C 风格语法的选择	归入	命令替换多词须双引号防拆词
+usenet_mail.messages.77429	V31.6.6.2	历史机制的替换规则	归入	手册命令行解析次序
+usenet_mail.messages.77600	V31.6.6.5	原型与贡献者的分工	归入	tcsh 缺陷向维护者反映
+usenet_mail.messages.77626	V31.6.6.5	原型与贡献者的分工	归入	脚本交原版 csh 执行更稳
+usenet_mail.messages.76538	V31.6.6.6	脚本面弱点的登记	归入	终端命令误置 cshrc 而非 login
+usenet_mail.messages.76553	V31.6.6.3	别名与补全的交互机制	归入	提示串设为当前目录的别名
+usenet_mail.messages.76732	V31.6.6.3	别名与补全的交互机制	归入	尾段修饰符取目录末段
+usenet_mail.messages.76770	V31.6.6.3	别名与补全的交互机制	归入	别名传两参以上的伪历史机制
+usenet_mail.messages.76795	V31.6.6.1	C 风格语法的选择	归入	多行别名之限与函数之盼
+usenet_mail.messages.76876	V31.6.6.3	别名与补全的交互机制	归入	伪历史传参笨拙的自述
+usenet_mail.messages.76935	V31.6.6.6	脚本面弱点的登记	归入	csh 缺求值且不设当前目录
+usenet_mail.messages.77003	V31.6.6.3	别名与补全的交互机制	归入	.login 写提示符并别名刷新
+usenet_mail.messages.31949		—	删除	零内容：空块
+usenet_mail.messages.31970	V31.6.6.3	别名与补全的交互机制	归入	ksh 补齐全部匹配盼响铃
+usenet_mail.messages.31977	V31.6.6.5	原型与贡献者的分工	归入	tcsh 作业控制 bug 与换版本
+usenet_mail.messages.31979	V31.6.6.3	别名与补全的交互机制	归入	tcsh 提供 csh 文件名补全
+usenet_mail.messages.31989	V31.6.6.5	原型与贡献者的分工	归入	A/UX 改进愿望清单
+usenet_mail.messages.32009	V31.6.6.5	原型与贡献者的分工	归入	tcsh 移植修订版获取
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+usenet_mail.messages.46320	V31.6.1.4	作者与维护者的更替	归入	STEVIE 作为 vi 克隆的推荐
+usenet_mail.messages.46368		—	移出	GNU emacs 折行与 EZ，属 V16
+usenet_mail.messages.46405	V31.6.1.5	编辑器家族的文档体系	归入	编辑器比较汇总帖
+usenet_mail.messages.46504	V31.6.6.2	历史机制的替换规则	归入	第 8 位引号惯例的版本废止
+usenet_mail.messages.46516	V31.6.1.5	编辑器家族的文档体系	归入	EXINIT 与 exrc 读取次序
+usenet_mail.messages.46536	V31.6.6.2	历史机制的替换规则	归入	S5R3 移除引号处理
+usenet_mail.messages.46577	V31.6.2.2	运动算子的组合语法	归入	替换写法与行首行尾误改
+usenet_mail.messages.46591	V31.6.2.2	运动算子的组合语法	归入	替换命令范围与标志用法
+usenet_mail.messages.46604		—	移出	EDITOR 设 emacs，属 V16
+usenet_mail.messages.46791		—	删除	零内容：空块
+usenet_mail.messages.46877	V31.6.2.5	命令助记的键位考量	归入	整篇交 nroff 的映射写法
+usenet_mail.messages.46917	V31.6.2.5	命令助记的键位考量	归入	鼠标定位与区域选择建议
+usenet_mail.messages.46935	V31.6.2.5	命令助记的键位考量	归入	连接行移出 J 键防误按
+usenet_mail.messages.46959		—	移出	fill-paragraph 两端对齐，属 V16
+usenet_mail.messages.46963	V31.6.2.5	命令助记的键位考量	归入	排版宏映射 N 键
+usenet_mail.messages.46964	V31.6.2.5	命令助记的键位考量	归入	F1 联机帮助建议
+usenet_mail.messages.46971	V31.6.2.5	命令助记的键位考量	归入	快速排版映射与其局限
+usenet_mail.messages.46979	V31.6.2.6	交互模型的史学意义	归入	多级撤销能力的建议
+usenet_mail.messages.46983	V31.6.2.6	交互模型的史学意义	归入	可定制选项与弹出菜单建议
+usenet_mail.messages.46991	V31.6.2.5	命令助记的键位考量	归入	visible marks 与 ~ 键之议
+usenet_mail.messages.47049	V31.6.2.5	命令助记的键位考量	归入	@ 键不可改以免破坏 exrc
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+ihuxg.117	V31.6.6.1	C 风格语法的选择	归入	csh 真假取 1/0 与 Bourne 之别
+usenet_mail.messages.167700		—	移出	BSD/386 SLIP 溢出，属 V23
+usenet_mail.messages.174298		—	删除	零内容：空块
+ucbvax.3255	V31.6.6.5	原型与贡献者的分工	归入	history 与 alias 为 csh 最有用特性
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+318@wyszecki.munsell.UUCP	V31.6.1.4	作者与维护者的更替	归入	劝停编辑器战争的第三方声音
+usenet_mail.messages.124631	V31.6.2.5	命令助记的键位考量	归入	modeline 代码位置分析
+usenet_mail.messages.287	V31.6.6.6	脚本面弱点的登记	归入	V7 空串文件名约定与 csh 依赖
+usenet_mail.messages.78577	V31.6.6.6	脚本面弱点的登记	归入	变量名缺陷在各版 csh 普遍存在
+usenet_mail.messages.78586	V31.6.6.6	脚本面弱点的登记	归入	自动纠正对赋值参数解析不当
+usenet_mail.messages.78218	V31.6.6.6	脚本面弱点的登记	归入	core 限制与内核派生退出错误
+usenet_mail.messages.78271	V31.6.6.5	原型与贡献者的分工	归入	tcsh 缺陷报告联系方式
+usenet_mail.messages.78359	V31.6.6.1	C 风格语法的选择	归入	启动文件终端命令改用 Bourne
+usenet_mail.messages.78431	V31.6.6.6	脚本面弱点的登记	归入	目录拼写纠正无法关闭
+usenet_mail.messages.77999	V31.6.5.1	作业控制的引入时点	归入	SysV 所附 csh 无作业控制之由
+usenet_mail.messages.77477	V31.6.6.6	脚本面弱点的登记	归入	反引号输出被当命令名
+usenet_mail.messages.76823	V31.6.6.6	脚本面弱点的登记	归入	while read 脚本挂起缺陷
+usenet_mail.messages.124829		—	删除	零内容：空块
+usenet_mail.messages.125035	V31.6.1.3	同码双模的切换规矩	归入	wq 与 ZZ 语义之别
+usenet_mail.messages.125036	V31.6.1.3	同码双模的切换规矩	归入	编辑作业告警的边界之问
+usenet_mail.messages.125038	V31.6.1.3	同码双模的切换规矩	归入	ZZ 为写并退出简写
+usenet_mail.messages.125042	V31.6.1.3	同码双模的切换规矩	归入	ZZ 等价 :x 而非 :wq
+usenet_mail.messages.125060	V31.6.1.3	同码双模的切换规矩	归入	Torek 释 ZZ 伪键入 :x
+usenet_mail.messages.125063	V31.6.1.3	同码双模的切换规矩	归入	recover 后 ZZ 丢文件已在 4.3 修复
+usenet_mail.messages.124530	V31.6.1.3	同码双模的切换规矩	归入	vi 插空行破坏作业控制文件
+usenet_mail.messages.124551	V31.6.2.5	命令助记的键位考量	归入	借强制置已改标志绕过缺陷
+usenet_mail.messages.124613	V31.6.2.5	命令助记的键位考量	归入	模式行属坏主意且自动执行
+usenet_mail.messages.124618	V31.6.1.4	作者与维护者的更替	归入	缺陷在 2.8BSD 版本 2.13 未复现
+usenet_mail.messages.124629	V31.6.1.5	编辑器家族的文档体系	归入	4.2 版本说明记模式行与改动
+usenet_mail.messages.124630	V31.6.2.5	命令助记的键位考量	归入	模式行应默认关闭
+usenet_mail.messages.124638	V31.6.1.5	编辑器家族的文档体系	归入	按扩展名而非目录决定配置
+usenet_mail.messages.124642	V31.6.2.5	命令助记的键位考量	归入	模式行检查默认关闭之请
+usenet_mail.messages.124644	V31.6.2.6	交互模型的史学意义	归入	加特性修不良特性的伯克利作风
+usenet_mail.messages.185191	V31.6.1.4	作者与维护者的更替	归入	vi 加密命令归属 Joy
+usenet_mail.messages.347	V31.6.5.1	作业控制的引入时点	归入	带作业控制预发布版崩溃
+usenet_mail.messages.33611		—	移出	SE/30 tty 设备缺失，属 V12
+usenet_mail.messages.33653		—	移出	cu 与 uucp 锁文件恢复，属 V21
+usenet_mail.messages.34980		—	移出	A/UX 串口卡选型，属 V12
+usenet_mail.messages.35027		—	删除	零内容：空块
+usenet_mail.messages.94743	V31.6.3.1	能力描述文件的章程	归入	Concept 终端 termcap 需求
+usenet_mail.messages.92879	V31.6.3.4	描述语言的表达力	归入	DC3/DC1 流控与 ESC 序列史
+usenet_mail.messages.93499		—	移出	Pyramid OS/X 的 tcsh，属 V20
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+usenet_mail.messages.124596	V31.6.3.3	异构终端的适配层	归入	7 位偶校验与 8 位传输之争
+usenet_mail.messages.46417		—	移出	AIX 登录预输入，属 V20
+usenet_mail.messages.29241	V31.6.3.2	终端类型的登记规则	归入	tset 询问终端类型
+usenet_mail.messages.29253	V31.6.3.2	终端类型的登记规则	归入	tset 使用推荐
+usenet_mail.messages.29308	V31.6.3.2	终端类型的登记规则	归入	DEC 终端 ANSI 型号应答
+usenet_mail.messages.48317	V31.6.3.2	终端类型的登记规则	归入	自写终端类型判定与 .terms 表
+usenet_mail.messages.48319	V31.6.3.2	终端类型的登记规则	归入	仅凭 TERM 判型之疑
+usenet_mail.messages.48325	V31.6.3.2	终端类型的登记规则	归入	tset -m dialup 映射
+usenet_mail.messages.48501	V31.6.3.4	描述语言的表达力	归入	VT100 图形字符 as/ae 设置
+usenet_mail.messages.48634	V31.6.3.4	描述语言的表达力	归入	magic cookie 省内存之由
+usenet_mail.messages.124995		—	删除	零内容：空块
+usenet_mail.messages.48939	V31.6.3.4	描述语言的表达力	归入	SysV 区分 ESC 序列与 termio 限
+usenet_mail.messages.48990	V31.6.3.5	与终端库的分工界面	归入	tgoto 两参与 tparm 多参取舍
+usenet_mail.messages.32058		—	移出	A/UX 高波特率劣化，属 V20
+usenet_mail.messages.49178		—	移出	自研 comm 串口工具，属 V21
+usenet_mail.messages.49247		—	删除	零内容：空块
+usenet_mail.messages.49438	V31.6.5.1	作业控制的引入时点	归入	伪终端启动 login 后无 tty
+usenet_mail.messages.32460		—	移出	A/UX 回拨 getty，属 V12
+usenet_mail.messages.32874		—	移出	A/UX 键盘模式，属 V12
+usenet_mail.messages.32996		—	移出	A/UX 扩展键盘，属 V12
+usenet_mail.messages.33004		—	移出	A/UX 系统文件夹，属 V12
+2850@sri-arpa.UUCP	V31.5.3.1	文件系统暴露的残余局限	归入	V7 每进程根目录可经 .. 越出
+807@rlgvax.UUCP	V31.5.2.2	chroot(2) 的引入时点	归入	4.1BSD 手册未记 chroot 而 V7 记
+usenet_mail.messages.48286		—	移出	getwd 与 zsh 版本，属 V21
+usenet_mail.messages.48306		—	挂账	待定位：panic 与信号边界讨论
+usenet_mail.messages.48318	V31.3.3.3	共享映射与文件一致性	归入	setuid 守护进程把信息倒入共享内存
+usenet_mail.messages.48351		—	移出	dump 与 NFS 设备 inode，属 V21
+usenet_mail.messages.48410	V31.1.3.2	信号机制的语义约定	归入	失败系统调用给进程发信号之议
+usenet_mail.messages.48531	V31.2.2.2	文件系统形态的分期盘点	归入	自拟 4 字节目录项结构读目录
+usenet_mail.messages.48566	V31.3.2.4	核心表与帧的账本	归入	锁进程表取内核统计的代价
+usenet_mail.messages.48639	V31.5.2.3	超级用户约束的用意	归入	SVR4 /proc PIOCNICE 限超级用户
+usenet_mail.messages.48645	V31.5.2.3	超级用户约束的用意	归入	减少可获超版权限人数
+usenet_mail.messages.48664	V31.5.2.3	超级用户约束的用意	归入	小站点拆权限徒增不便
+usenet_mail.messages.48692		—	移出	C2 安全等级要求，属 V20
+usenet_mail.messages.48725		—	移出	Tandem SVVS 豁免，属 V20
+usenet_mail.messages.48835	V31.5.2.3	超级用户约束的用意	归入	dump 与 restore 使 sysadmin 即超级用户
+usenet_mail.messages.236	V31.5.3.2	提权与逃逸的讨论线	归入	berknet net -y 冒充任意用户
+usenet_mail.messages.321		—	挂账	待定位：pwhash 与口令文件规模
+usenet_mail.messages.360	V31.5.3.2	提权与逃逸的讨论线	归入	4.2BSD 与 SysV 共有的安全问题与披露
+usenet_mail.messages.88086	V31.8.1.3	队列机制的增设过程	归入	delivermail 投文件与管道致隐患
+usenet_mail.messages.88267		—	删除	零内容：无技术内容的玩笑
+usenet_mail.messages.88355		—	挂账	待定位：Bourne shell 例证之争
+usenet_mail.messages.88361	V31.5.3.3	与多用户惯例的张力	归入	USG PATH 冒号开头致先搜当前目录
+usenet_mail.messages.88371		—	删除	零内容：空块
+usenet_mail.messages.88394	V31.5.3.3	与多用户惯例的张力	归入	口令选词与 salt 机制
+3131@sri-arpa.UUCP	V31.5.2.3	超级用户约束的用意	归入	chroot 设特权以防 setuid 程序
+usenet_mail.messages.165212		—	移出	lseek 错误码之辩，属 V05
+usenet_mail.messages.163651		—	移出	CDROM 价格与再版，属 V21
+843@ittvax.UUCP	V31.5.3.3	与多用户惯例的张力	归入	chroot 独立文件系统非独立虚拟机
+freebsd-ipfw.messages.1363572	V31.5.1.1	ipfw 的首配规则	归入	ipfw 首条匹配规则生效
+freebsd-ipfw.messages.1363931	V31.5.1.6	后续演进的分驻去向	归入	ipfw 表机制扩 IPv6
+freebsd-ipfw.messages.1364853	V31.5.1.6	后续演进的分驻去向	归入	vnet jail 独立网络栈
+freebsd-ipfw.messages.1367247	V31.5.1.6	后续演进的分驻去向	归入	NAT 哈希桶全量扫描问题
+freebsd-net.messages.1450423	V31.5.1.6	后续演进的分驻去向	归入	ipfw 集成 DUMMYNET 的卖点
+freebsd-security.messages.2491226	V31.5.1.5	防火墙部署的两类形态	归入	冗余防火墙部署方案
+freebsd-security.messages.2494042	V31.5.1.6	后续演进的分驻去向	归入	IPFW2 需重编内核与用户态
+freebsd-security.messages.2496425	V31.5.2.6	后续强化的分驻去向	归入	chroot 后续去留之议
+freebsd-ipfw.messages.13905	V31.5.1.6	后续演进的分驻去向	归入	check-state 与 keep-state 异常
+freebsd-ipfw.messages.1360015	V31.5.1.3	首配与末配的规则哲学	归入	skipto 不能向后跳的规则设计
+freebsd-security.messages.2497983		—	移出	Apache 配置与闭源定性，属 V05
+freebsd-security.messages.2497989		—	移出	build.conf 混淆，属 V05
+freebsd-security.messages.2501793	V31.5.1.3	首配与末配的规则哲学	归入	过滤语言与内核规则两层设计
+freebsd-security.messages.2501824	V31.5.1.5	防火墙部署的两类形态	归入	PC 作代理防火墙的可行性
+freebsd-security.messages.2503713	V31.5.1.4	过滤与地址翻译的并轨	归入	ipfw 是否支持 NAT
+freebsd-security.messages.2507972	V31.5.1.5	防火墙部署的两类形态	归入	squid 与 FWTK 部署取舍
+freebsd-security.messages.2509680	V31.5.1.5	防火墙部署的两类形态	归入	回环地址是否纳入拦截
+freebsd-security.messages.2510577	V31.8.2.6	ISC 接管的后续分驻	归入	主域名服务器只读模式的保护
+freebsd-security.messages.2513845	V31.5.1.4	过滤与地址翻译的并轨	归入	IPFIREWALL 与 IPDIVERT 选项配置
+freebsd-security.messages.2515130	V31.5.1.2	IPFilter 的跨平台起点	归入	IPFilter 跨平台与日志通道之别
+freebsd-ipfw.messages.1360168	V31.5.1.6	后续演进的分驻去向	归入	ipfw2 IPv6 与 dummynet 实现
+freebsd-security.messages.2516991	V31.5.1.5	防火墙部署的两类形态	归入	拨号网关 NAT 是否仍需防火墙
+freebsd-security.messages.2520577	V31.5.1.4	过滤与地址翻译的并轨	归入	FTP 与防火墙端口放行
+freebsd-security.messages.2521688	V31.7.4.4	子网划分的工程背景	归入	掩码与网络地址按位与之教
+freebsd.duckdb		—	移出	FreeBSD 提交计数注，属 V05
+sacred_sources.duckdb.blocks		—	移出	百分之一生活的方法论声明，属 V75
+sacred_sources.duckdb.blocks		—	移出	本体论与不均等声明，属 V75
+sacred_sources.duckdb.blocks		—	移出	FreeBSD 存在性之问，属 V75
+sacred_sources.duckdb.blocks		—	移出	替代品与偶然性之议，属 V75
+cross_indexes.duckdb.concept_history		—	移出	bhyve 虚拟化，属 V05
+freebsd-ports.messages.1657767		—	移出	pkg_install 兼容包，属 V07
+freebsd-ports.messages.1714784		—	移出	pine 邮件权限，属 V07
+freebsd-ports.messages.1718269		—	移出	pdnsd 端口，属 V07
+freebsd-ports.messages.1719160		—	移出	xephem 端口，属 V07
+freebsd-ports.messages.1719943		—	移出	jad 端口，属 V07
+freebsd-ports.messages.1722316		—	移出	cfengine 端口，属 V07
+freebsd-ports.messages.1723867		—	移出	p5-Template 端口，属 V07
+freebsd-ports.messages.1729518		—	移出	doxygen 端口，属 V07

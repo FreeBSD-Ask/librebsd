@@ -1,0 +1,121 @@
+rowmine_id	subsection_id	title	action	reason
+sacred_sources.duckdb.blocks		—	移出	分合规律方法论声明，属 V75
+sacred_sources.duckdb.blocks		—	移出	技术范式循环论，属 V75
+sacred_sources.duckdb.blocks		—	移出	程序结构与历史结构同构，属 V75
+cross_indexes.duckdb.concept_history		—	移出	GNU 项目启动，属 V16
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+usenet_mail.messages.162261	V31.6.6.6	脚本面弱点的登记	归入	#!/ 脚本带参数丢 argv 的补丁
+usenet_mail.messages.165545		—	移出	FreeBSD VFS lseek 内部，属 V05
+usenet_mail.messages.167366		—	移出	Motif 静态链接分发许可，属 V16
+sacred_sources.duckdb.blocks		—	移出	分合规律方法论声明，属 V75
+sacred_sources.duckdb.blocks		—	移出	技术范式循环论，属 V75
+sacred_sources.duckdb.blocks		—	移出	程序结构与历史结构同构，属 V75
+cross_indexes.duckdb.concept_history		—	移出	GNU 思想土壤，属 V16
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+usenet_mail.messages.164350		—	移出	SCSI 控制器引导，属 V05
+usenet_mail.messages.165530		—	移出	486 键盘与引导技巧，属 V23
+usenet_mail.messages.167326		—	移出	补丁绝对路径问题，属 V05
+ucbvax.4061	V31.4.1.1	Pascal 系统的移植工程	归入	复用 PCC 代码生成器的 Pascal 之问
+ucbvax.3005	V31.4.1.1	Pascal 系统的移植工程	归入	Berkeley Pascal mark/release 非标准
+cornell.2651	V31.4.2.4	编译器移植与平台源流	归入	ETH Modula 交叉编译器移植
+cross_indexes.duckdb.concept_history		—	移出	自由软件概念演化，属 V16
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+ucbvax.1540	V31.4.2.4	编译器移植与平台源流	归入	Algol 68C 编译器与 V7 分发
+cross_indexes.duckdb.concept_history		—	移出	Capsicum 概念演化，属 V75
+usenet_mail.messages.125320	V31.6.2.3	终端无关的渲染策略	归入	vi 连按 ^B 致内存错
+usenet_mail.messages.125557	V31.6.2.3	终端无关的渲染策略	归入	vi 在 HP 终端偶发 core dump
+usenet_mail.messages.125583	V31.6.1.4	作者与维护者的更替	归入	286 上 vi 空指针解引用崩溃
+usenet_mail.messages.125608	V31.6.2.1	模态切换的核心约定	归入	vi 3.10 测试版 ^^ 与 autowrite
+usenet_mail.messages.125611	V31.6.2.1	模态切换的核心约定	归入	vi 错误打印的两条复现路径
+usenet_mail.messages.125622	V31.6.2.1	模态切换的核心约定	归入	ex_vmain.c CTRL 分支临时绕法
+usenet_mail.messages.125662	V31.6.1.4	作者与维护者的更替	归入	vi 3.7 的发行归属与机型差异
+usenet_mail.messages.125787	V31.6.2.5	命令助记的键位考量	归入	modeline 特性在 ex_io.c
+usenet_mail.messages.125497	V31.6.1.4	作者与维护者的更替	归入	Horton 称 3.10 随 SysV R3 修复
+freebsd-ports.messages.1681006		—	移出	rxvt 端口维护，属 V07
+freebsd-ports.messages.1574652		—	移出	ports 维护权接管，属 V07
+freebsd-ports.messages.1690306	V31.4.2.3	工具链组合的重构	归入	汇编器版本致误编译的工具链之辩
+freebsd-ports.messages.1579761		—	移出	geos 端口升级，属 V07
+freebsd-ports.messages.1703835		—	移出	libcdaudio 端口，属 V07
+freebsd-ports.messages.1704097		—	移出	lang/ici 端口，属 V07
+freebsd-ports.messages.1584802		—	移出	openldap 端口，属 V07
+freebsd-ports.messages.1707793		—	移出	kmp3 编译失败，属 V07
+freebsd-ports.messages.1710002		—	移出	healthd 端口，属 V07
+freebsd-ports.messages.1710391		—	移出	t1lib 端口，属 V07
+freebsd-ports.messages.1711313		—	移出	fetchmail 端口，属 V07
+freebsd-ports.messages.1711316		—	移出	postgres7 端口，属 V07
+freebsd-ports.messages.1738396		—	移出	tcptraceroute 端口，属 V07
+freebsd-ports.messages.1740524		—	移出	gnomeiconedit 端口，属 V07
+freebsd-ports.messages.1741373		—	移出	提案催办，属 V07
+freebsd-ports.messages.1742216		—	移出	p5 端口更新，属 V07
+freebsd-ports.messages.1743160		—	移出	p5-Net-SNMP 端口，属 V07
+freebsd-ports.messages.1743183		—	移出	PR 关闭记录，属 V07
+freebsd-ports.messages.1743327		—	移出	FreshPorts 通知，属 V07
+freebsd-ports.messages.1744705		—	移出	p5-MIME-Base64 端口，属 V07
+freebsd-ports.messages.1609595		—	移出	ClamAV 端口 BROKEN，属 V07
+freebsd-ports.messages.1630363		—	移出	libaio 猜测，属 V07
+freebsd-ports.messages.1655924		—	移出	synth 与 poudriere，属 V07
+freebsd-ports.messages.1667897		—	移出	poudriere 清理，属 V07
+freebsd-hackers.messages.2581716	V31.5.1.4	过滤与地址翻译的并轨	归入	ppp 内置 NAT 与 IPFilter 两条路
+freebsd-hackers.messages.2614608	V31.2.2.4	后续演进的时段外登记	归入	块与碎片口径的时段外问答
+freebsd-hackers.messages.2619928		—	移出	Apache 与 Oracle 配置，属 V05
+freebsd-stable.messages.2592798		—	移出	发布日程猜测，属 V05
+freebsd-hackers.messages.2519117		—	移出	ccd 不能作启动设备，属 V05
+freebsd-hackers.messages.2522382		—	移出	de 驱动统计接口，属 V05
+freebsd-hackers.messages.2545498	V31.3.3.6	接口成熟度的窗口判断	归入	mmap 与 i/o 映射吞吐实测
+freebsd-hackers.messages.2555297		—	挂账	待定位：多人共同作者归属说明
+freebsd-hackers.messages.2564512		—	移出	devfs 与 PC-CARD 取舍，属 V05
+freebsd-hackers.messages.2578325		—	移出	PPP NAT 定为 2.2 实现，属 V05
+freebsd-hackers.messages.2585962		—	移出	yp 映射行数差异，属 V05
+freebsd-hackers.messages.2587825		—	移出	并行集群业务落差，属 V05
+freebsd-hackers.messages.2589224	V31.7.5.6	后续演化的分驻交代	归入	延迟确认与拥塞窗口递增之辩
+freebsd-hackers.messages.2592149	V31.4.2.3	工具链组合的重构	归入	链接双格式与单一选项之请
+freebsd-hackers.messages.2592563	V31.7.4.4	子网划分的工程背景	归入	子网划分与地址分配咨询
+freebsd-hackers.messages.2593474		—	移出	SCSI 与 ATAPI 共用驱动，属 V09
+tech-kern.messages.112201		—	移出	Windows 注册表配置管理，属他系统
+tech-kern.messages.112210		—	移出	注册表与 WIN.INI 比较，属他系统
+tech-kern.messages.118837		—	移出	ioctl 命名之争，属 V05
+tech-kern.messages.155875		—	移出	uvm_map 改名之争，属 V09
+tech-kern.messages.158961		—	移出	原子指令与平台讨论，属 V09
+tech-kern.messages.211800	V31.4.3.6	风格审读的工程功能	归入	三目赋值加括号的风格审读
+tech-kern.messages.221972		—	移出	POSIX shell 要求的立场，属 V09
+tech-kern.messages.110612		—	移出	跨平台设备标识，属 V09
+usenet_mail.messages.92607		—	移出	C 标准化进展之问，属 V01
+usenet_mail.messages.138062		—	移出	共享库性能，属 V07
+usenet_mail.messages.48440	V31.6.5.3	挂起与恢复的信号语义	归入	用 JOBCONTROL 宏集中信号定义
+usenet_mail.messages.138448		—	移出	静态 FILE 数组与线程专有数据，属 V04
+usenet_mail.messages.138699		—	移出	printf %c 语义之辩，属 V01
+usenet_mail.messages.139990		—	挂账	待定位：getarg 替代 getopt
+usenet_mail.messages.140331	V31.4.2.4	编译器移植与平台源流	归入	POSIX 头文件幂等与移植负担
+usenet_mail.messages.177140	V31.4.2.3	工具链组合的重构	归入	size_t 与 long 的兼容取舍
+ucbvax.5558	V31.6.4.2	屏幕更新的抽象层	归入	4.1BSD curses 子窗口与刷新缺陷
+usenet_mail.messages.88235		—	删除	零内容：空块
+usenet_mail.messages.33428		—	移出	Xt 头判服务器版本，属 V21
+usenet_mail.messages.78547	V31.6.6.3	别名与补全的交互机制	归入	vi 模式下转义加星号补全
+usenet_mail.messages.78594	V31.6.6.3	别名与补全的交互机制	归入	ksh 无文件名补全之说
+usenet_mail.messages.78596	V31.6.6.3	别名与补全的交互机制	归入	补全与列举改绑按键之问
+usenet_mail.messages.79116	V31.6.3.1	能力描述文件的章程	归入	4.3 termcap 的玻璃 tty 条目
+usenet_mail.messages.78157	V31.6.6.3	别名与补全的交互机制	归入	ksh 寻 filec 不得
+usenet_mail.messages.78164	V31.6.6.3	别名与补全的交互机制	归入	ESC 跟星号的补全示范
+usenet_mail.messages.78453	V31.6.6.3	别名与补全的交互机制	归入	编辑模式补全按键列举
+usenet_mail.messages.77883	V31.6.3.4	描述语言的表达力	归入	早期能力命令不自动代入参数
+usenet_mail.messages.76819	V31.6.3.4	描述语言的表达力	归入	查 sl 与 el 而非 ts 与 fs
+usenet_mail.messages.49385	V31.6.4.1	光标优化的库设计	归入	光标移动优化压缩字符数
+usenet_mail.messages.48775	V31.6.4.5	移植面的扩散与沉淀	归入	公有领域代码跨 BSD 与 SysV curses
+usenet_mail.messages.48394	V31.5.2.4	服务进程的环境收缩	归入	关键程序不宜在 pty 下运行
+usenet_mail.messages.48574	V31.6.4.2	屏幕更新的抽象层	归入	newterm 与 set_term 双终端输出
+usenet_mail.messages.48000	V31.6.3.1	能力描述文件的章程	归入	putenv TERMCAP 再调库
+usenet_mail.messages.124582	V31.6.3.3	异构终端的适配层	归入	USG 与伯克利终端驱动对比
+usenet_mail.messages.124633	V31.6.3.3	异构终端的适配层	归入	为伯克利 tty 驱动辩护
+usenet_mail.messages.124645	V31.6.3.3	异构终端的适配层	归入	字符删除所见即所得之别
+usenet_mail.messages.79470		—	移出	xmodmap 改键码，属 V21
+usenet_mail.messages.48173	V31.6.3.4	描述语言的表达力	归入	关闭光标取决于终端能力
+usenet_mail.messages.48219	V31.6.3.3	异构终端的适配层	归入	ReGIS 图形能力探测受阻
+usenet_mail.messages.135572	V31.6.4.3	应用界面的库化历程	归入	rain 程序依赖光标移动
+usenet_mail.messages.135626	V31.6.4.3	应用界面的库化历程	归入	xtree 终端应用发布
+usenet_mail.messages.125616	V31.6.4.5	移植面的扩散与沉淀	归入	SysV 5.2 terminfo 修复清单
+qumix.1045	V31.6.4.3	应用界面的库化历程	归入	索取 Rogue 暴露发行缺口
+usenet_mail.messages.79743		—	移出	lpf 打印过滤器，属 V21
+usenet_mail.messages.79788		—	移出	UWS tip 端口占用，属 V20
+usenet_mail.messages.34836		—	移出	Mac X 与 tcsh 冲突，属 V12
+usenet_mail.messages.33866		—	移出	A/UX 地址空间说明，属 V20
+usenet_mail.messages.137636	V31.6.3.2	终端类型的登记规则	归入	qterm 改查表驱动兼容原版
