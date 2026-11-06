@@ -113,14 +113,16 @@ record('V1 渲染·题名逐条一致', mismatch === 0, 'mismatch=' + mismatch);
 const [M, N, P] = want[0].num.split('.').map(Number);
 const anchor = `vol-${VOL_NO}-ch-${M}-sec-${M}-${N}-sub-${P}`;
 
-/* V2 TOC：TOC 为懒渲染（DOM 仅含已展开章），故只断言该卷首个小节在 TOC 中可定位 */
+/* 右 TOC 为懒渲染（运行时只渲染当前可见章），故先深链导航到该卷首个小节，
+   再断言其在小节级 TOC 中可定位（2026-11-06 修订：V02 起他卷首个小节
+   在未导航时不在 DOM，原顺序对 V≥2 恒假阴） */
+await page.goto(PAGE_URL + '#' + anchor, { waitUntil: 'load' });
+await page.waitForTimeout(900);
 const toc = await page.evaluate((a) => ({
   hit: !!document.querySelector('a[data-target="' + a + '"]'),
   total: document.querySelectorAll('a[data-target]').length
 }), anchor);
 record('V2 TOC·该卷小节可定位', toc.hit, `命中=${toc.hit} 全表链接=${toc.total}`);
-await page.goto(PAGE_URL + '#' + anchor, { waitUntil: 'load' });
-await page.waitForTimeout(900);
 const deep = await page.evaluate((id) => {
   const el = document.getElementById(id);
   if (!el) return { ok: false, why: '锚缺失' };
