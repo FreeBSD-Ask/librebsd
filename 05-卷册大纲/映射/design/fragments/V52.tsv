@@ -1,0 +1,263 @@
+vol	chapter	sec_no	sub_no	title	status	evidence
+52	1	1.1	1.1.1	池化存储与卷管理角色的合并	filled	
+52	1	1.1	1.1.2	原子事务提交与一致性前提	filled	
+52	1	1.1	1.1.3	校验和随数据写入的取向	skeleton	
+52	1	1.1	1.1.4	两人小组的 2001 年起步	skeleton	
+52	1	1.1	1.1.5	三项设计目标的并列陈述	skeleton	
+52	1	1.1	1.1.6	ZFS 的 Solaris 原生出身	skeleton	
+52	1	1.2	1.2.1	FreeBSD 7.0 引入 ZFS 的时点	skeleton	
+52	1	1.2	1.2.2	OpenZFS 成立后上游回流的方向	skeleton	
+52	1	1.2	1.2.3	ZFS 源码的 CDDL 发布条件	skeleton	
+52	1	1.2	1.2.4	OpenZFS 跨平台代码合流的口径	skeleton	
+52	1	1.2	1.2.5	新功能与 OpenZFS 版本号的绑定	skeleton	
+52	1	1.2	1.2.6	illumos 承接 ZFS 的开放开发	skeleton	
+52	1	1.3	1.3.1	单盘假设与池化布局的分界	skeleton	
+52	1	1.3	1.3.2	GEOM 软 RAID 之上的 UFS 视角	skeleton	
+52	1	1.3	1.3.3	两层合并对单盘困境的化解	skeleton	
+52	1	1.3	1.3.4	文件系统感知磁盘结构的程度	filled	
+52	1	1.3	1.3.5	数据集划分对单一大文件系统的替代	skeleton	
+52	1	1.3	1.3.6	池取代单盘文件系统的范围	skeleton	
+52	1	1.4	1.4.1	HAMMER 设计九个月的实施节奏	skeleton	
+52	1	1.4	1.4.2	免 fsck 挂载的设计承诺	skeleton	
+52	1	1.4	1.4.3	全历史保留与实时文件系统的结合	skeleton	
+52	1	1.4	1.4.4	UNDO 记录只覆盖元数据的界限	skeleton	
+52	1	1.4	1.4.5	单一全局 B-Tree 的索引编排	skeleton	
+52	1	1.4	1.4.6	1 EB 容量目标的技术前提	skeleton	
+52	1	1.5	1.5.1	HAMMER2 对 HAMMER1 的设计改造	skeleton	
+52	1	1.5	1.5.2	超级根下的多根挂载安排	skeleton	
+52	1	1.5	1.5.3	子树可写快照的放宽尺度	skeleton	
+52	1	1.5	1.5.4	blockref 的修改与镜像双标识	skeleton	
+52	1	1.5	1.5.5	按子树配置压缩的存储分层	skeleton	
+52	1	1.5	1.5.6	HAMMER1 边界案例的清理负担	skeleton	
+52	1	1.6	1.6.1	软更新对同步写次序的替代	filled	
+52	1	1.6	1.6.2	崩溃后免全盘检查的恢复次序	skeleton	
+52	1	1.6	1.6.3	快照挂起窗口与文件系统体量	skeleton	
+52	1	1.6	1.6.4	WAPBL 日志重放的秒级恢复	skeleton	
+52	1	1.6	1.6.5	日志与软更新的互斥关系	skeleton	
+52	1	1.6	1.6.6	元数据标签的三写安排	skeleton	
+52	1	1.7	1.7.1	merkle 树在校验链中的位置	skeleton	
+52	1	1.7	1.7.2	HAMMER 放弃传播到根指针的取舍	skeleton	
+52	1	1.7	1.7.3	校验码的层次差异	filled	
+52	1	1.7	1.7.4	单盘池自愈能力的缺位	skeleton	
+52	1	1.7	1.7.5	ZIL 自校验块的导入读取条件	skeleton	
+52	1	1.7	1.7.6	数据集级快照的对象界定	skeleton	
+52	1	1.8	1.8.1	设计目标陈述作为维度来源	filled	
+52	1	1.8	1.8.2	实现时序作为工程判准的依据	filled	
+52	1	1.8	1.8.3	四方并列对象的可比基础	filled	
+52	1	1.8	1.8.4	摘要节引用本体卷的边界	skeleton	
+52	1	1.8	1.8.5	横向比较与分支编年的划界	skeleton	
+52	1	1.8	1.8.6	单支材料的引用限度	skeleton	
+52	2	2.1	2.1.1	单锁内核在对称多处理下的限度	skeleton	
+52	2	2.1	2.1.2	OpenBSD 多处理器支持的 2000 年起点	skeleton	
+52	2	2.1	2.1.3	NetBSD 5.0 的线程模型改写	filled	
+52	2	2.1	2.1.4	处理器亲和性与运行队列的分置	skeleton	
+52	2	2.1	2.1.5	中断线程化对执行上下文的改造	skeleton	
+52	2	2.1	2.1.6	从 4.4BSD 调度器到多核调度的过渡	skeleton	
+52	2	2.2	2.2.1	SMPng 起点的 BSDi 经验输入	skeleton	
+52	2	2.2	2.2.2	Giant 与 sched_lock 的初始分工	skeleton	
+52	2	2.2	2.2.3	锁拆分的测量依据	skeleton	
+52	2	2.2	2.2.4	六年拆锁周期的收尾判定	skeleton	
+52	2	2.2	2.2.5	遗留 giant 锁子系统的清单	filled	
+52	2	2.2	2.2.6	从拆锁转向测量的重心迁移	skeleton	
+52	2	2.3	2.3.1	LWKT 对执行上下文与地址空间的解耦	skeleton	
+52	2	2.3	2.3.2	每处理器自含调度器的绑定规则	skeleton	
+52	2	2.3	2.3.3	仅允许中断线程抢占的次序	skeleton	
+52	2	2.3	2.3.4	跨处理器调度的异步 IPI 通路	skeleton	
+52	2	2.3	2.3.5	内核调度器与用户调度器的两层分工	skeleton	
+52	2	2.4	2.4.1	以消息传递替代共享锁的设计取向	skeleton	
+52	2	2.4	2.4.2	资源归属处理器与消息路由的编排	skeleton	
+52	2	2.4	2.4.3	从 FreeBSD 4 分支切出的代码基线	skeleton	
+52	2	2.4	2.4.4	网络协议线程的按协议分派	skeleton	
+52	2	2.4	2.4.5	用户态消息传递的落地进度	skeleton	
+52	2	2.4	2.4.6	消息式驱动框架的改造幅度	skeleton	
+52	2	2.5	2.5.1	细粒度锁与无锁分区的成本对照	filled	
+52	2	2.5	2.5.2	SMPng 与 LWKT 对 NUMA 的预设差异	skeleton	
+52	2	2.5	2.5.3	OpenBSD 大锁模型的保守收益	skeleton	
+52	2	2.5	2.5.4	NetBSD 调度器模块化的可选余地	skeleton	
+52	2	2.5	2.5.5	OpenBSD rthread 的一对一实现	skeleton	
+52	2	2.5	2.5.6	SMPng 收尾目标的公开表述	skeleton	
+52	3	3.1	3.1.1	vkernel 作为用户态 DragonFly 系统的定位	skeleton	
+52	3	3.1	3.1.2	用户态内核的 gdb 直接调试手段	skeleton	
+52	3	3.1	3.1.3	内核内存由临时文件承载的回收机制	skeleton	
+52	3	3.1	3.1.4	vke 设备与 mbuf 簇的分配规则	skeleton	
+52	3	3.1	3.1.5	VKERNEL64 配置与内核构建入口	skeleton	
+52	3	3.1	3.1.6	虚拟内核平台的 world 构建限制	skeleton	
+52	3	3.2	3.2.1	bhyve 在 FreeBSD 10.0 的入树时点	filled	
+52	3	3.2	3.2.2	bhyve 的 BSD 许可与基本系统身份	skeleton	
+52	3	3.2	3.2.3	EPT 与 RVI 的硬件前提	skeleton	
+52	3	3.2	3.2.4	virtio 为主、AHCI 等仿真为辅	skeleton	
+52	3	3.2	3.2.5	串行控制台与图形控制台的缺省	skeleton	
+52	3	3.2	3.2.6	vmm 设备节点对虚拟机生命周期的绑定	skeleton	
+52	3	3.3	3.3.1	EC2 区域的 AMI 检索路径	skeleton	
+52	3	3.3	3.3.2	Azure 与 GCE 的上架状态差异	skeleton	
+52	3	3.3	3.3.3	UFS 与 ZFS 双镜像的发行安排	skeleton	
+52	3	3.3	3.3.4	预装镜像格式的兼容取舍	skeleton	
+52	3	3.3	3.3.5	Hyper-V 客体的半虚拟化驱动	skeleton	
+52	3	3.3	3.3.6	云平台清单的四家并列	skeleton	
+52	3	3.4	3.4.1	监控器与虚拟机的对象关系	skeleton	
+52	3	3.4	3.4.2	OpenBSD vmm 的内核内监控器定位	skeleton	
+52	3	3.4	3.4.3	privsep 与 pledge 对 VM 进程的约束	skeleton	
+52	3	3.4	3.4.4	客体运行对硬件支持的要求	skeleton	
+52	3	3.4	3.4.5	云平台可用性作为路线的材料限度	skeleton	
+52	4	4.1	4.1.1	386BSD 补丁包的三位协调者	skeleton	
+52	4	4.1	4.1.2	FreeBSD 1.0 的 Net/2 底本	skeleton	
+52	4	4.1	4.1.3	NetBSD 建项目时的补丁质量困境	skeleton	
+52	4	4.1	4.1.4	NetBSD 四位创始人的组成	skeleton	
+52	4	4.1	4.1.5	架构无关取向与 i386 取向的分岔	skeleton	
+52	4	4.1	4.1.6	4.4BSD-Lite 重建对代码基线的重置	skeleton	
+52	4	4.2	4.2.1	port 作为受支持架构的命名惯例	skeleton	
+52	4	4.2	4.2.2	三层分级对平台维护义务的划分	skeleton	
+52	4	4.2	4.2.3	MI 变更须惠及重点平台的规则	skeleton	
+52	4	4.2	4.2.4	机器相关支持的开发者责任	skeleton	
+52	4	4.2	4.2.5	同一 MACHINE_ARCH 的用户态共享	skeleton	
+52	4	4.2	4.2.6	长期失修移植平台的限期清退	skeleton	
+52	4	4.3	4.3.1	OpenBSD 的 4.4BSD 派生身份	skeleton	
+52	4	4.3	4.3.2	项目宗旨中的主动安全条款	skeleton	
+52	4	4.3	4.3.3	DragonFly 从 RELENG_4 切出的时点	skeleton	
+52	4	4.3	4.3.4	以消息传递区分于 FreeBSD 5 的立场	skeleton	
+52	4	4.3	4.3.5	分叉时的提交者规模	skeleton	
+52	4	4.3	4.3.6	CSRG 发行版的承继起点	skeleton	
+52	4	4.4	4.4.1	Ports 树与预编译包的双轨供给	filled	
+52	4	4.4	4.4.2	Ports 树规模的量级与体积	skeleton	
+52	4	4.4	4.4.3	pkgsrc 对其他系统的引导安装	filled	
+52	4	4.4	4.4.4	pkgsrc 分支制与季度发布	filled	
+52	4	4.4	4.4.5	包管理工具在基本系统中的位置	skeleton	
+52	4	4.4	4.4.6	pkgsrc 支持的系统与架构基数	skeleton	
+52	4	4.5	4.5.1	OpenSSH 对受限许可的清理动机	skeleton	
+52	4	4.5	4.5.2	从 ssh 1.2.12 到 OSSH 的来源链	skeleton	
+52	4	4.5	4.5.3	首次导入的 1999 年节点	skeleton	
+52	4	4.5	4.5.4	核心开发与移植分支的分离	filled	
+52	4	4.5	4.5.5	OpenZFS 跨平台上游的合并方式	skeleton	
+52	4	4.5	4.5.6	WireGuard 从 Linux 内核向外扩散	skeleton	
+52	4	4.6	4.6.1	DTrace 在 Sun 的原始用途	skeleton	
+52	4	4.6	4.6.2	以内核模块实现的移植形态	skeleton	
+52	4	4.6	4.6.3	CTF 类型数据对探针的支持	skeleton	
+52	4	4.6	4.6.4	CDDL 与二进制分发条件	skeleton	
+52	4	4.6	4.6.5	root 独占使用权的安全落差	skeleton	
+52	4	4.6	4.6.6	探针参数不兼容对脚本移植的阻碍	skeleton	
+52	4	4.7	4.7.1	eBPF 作为内核内虚拟机的角色	filled	
+52	4	4.7	4.7.2	eBPF 在 Linux 的 2014 年发端	skeleton	
+52	4	4.7	4.7.3	动态追踪与过滤共用同一虚拟机	skeleton	
+52	4	4.7	4.7.4	移植前对 Linux 组件的拆解	skeleton	
+52	4	4.7	4.7.5	解释器与 JIT 的双实现	skeleton	
+52	4	4.7	4.7.6	钩子缺失对追踪能力的限制	skeleton	
+52	4	4.8	4.8.1	Junos 的 FreeBSD 出身	skeleton	
+52	4	4.8	4.8.2	开源软件在设备环境中的加固改写	skeleton	
+52	4	4.8	4.8.3	进程隔离对设备弹性的支撑	skeleton	
+52	4	4.8	4.8.4	OpenSSH 进入其他系统的路径	skeleton	
+52	4	4.8	4.8.5	OpenZFS 在 Linux 与 BSD 间的双向流动	skeleton	
+52	4	4.8	4.8.6	BSD 代码进入商业产品的许可空间	skeleton	
+52	5	5.1	5.1.1	基本系统 2008 年 6 月迁出 CVS	skeleton	
+52	5	5.1	5.1.2	文档树 2012 年的迁移	skeleton	
+52	5	5.1	5.1.3	基本系统迁入 Git 的年份	skeleton	
+52	5	5.1	5.1.4	Ports 树 2021 年的迁移	skeleton	
+52	5	5.1	5.1.5	git2svn 导出对旧分支的维持	skeleton	
+52	5	5.1	5.1.6	CVS 作为长期中央仓库的时期	skeleton	
+52	5	5.2	5.2.1	提交前评审的惯例强度	skeleton	
+52	5	5.2	5.2.2	提交说明的首行与正文分界	skeleton	
+52	5	5.2	5.2.3	patchkit 机制的能力边界	skeleton	
+52	5	5.2	5.2.4	提交权限的分区授予	skeleton	
+52	5	5.2	5.2.5	代码冻结期审批口令的格式	skeleton	
+52	5	5.2	5.2.6	主线与稳定线的合并等待	skeleton	
+52	5	5.3	5.3.1	测试套件的首次出现	skeleton	
+52	5	5.3	5.3.2	ATF 在 NetBSD 的引入	skeleton	
+52	5	5.3	5.3.3	Kyua 作为测试驱动的角色	skeleton	
+52	5	5.3	5.3.4	测试套件默认安装的版本界标	skeleton	
+52	5	5.3	5.3.5	四系共用测试工具的收敛程度	filled	
+52	5	5.3	5.3.6	测试框架对多语言的容纳	skeleton	
+52	5	5.4	5.4.1	点发布与零点发布的区分	skeleton	
+52	5	5.4	5.4.2	发布周期里程碑的排定	skeleton	
+52	5	5.4	5.4.3	代码冻结对提交权的收束	skeleton	
+52	5	5.4	5.4.4	ALPHA 构建对稳定分支的预告	skeleton	
+52	5	5.4	5.4.5	公告体例中的镜像与校验清单	skeleton	
+52	5	5.4	5.4.6	支持窗口与终止期限	skeleton	
+52	5	5.5	5.5.1	MI 与 MD 的代码分层	skeleton	
+52	5	5.5	5.5.2	多架构功能的测试义务	skeleton	
+52	5	5.5	5.5.3	构建故障的责任提案	skeleton	
+52	5	5.5	5.5.4	测试回归的回退时限	skeleton	
+52	5	5.5	5.5.5	移植平台分级作为引入门槛	skeleton	
+52	5	5.5	5.5.6	首页对平台覆盖的自述	skeleton	
+52	5	5.6	5.6.1	mdoc 语义标记对手册的限定	skeleton	
+52	5	5.6	5.6.2	mandoc 自 4.8 起构建全部系统手册	skeleton	
+52	5	5.6	5.6.3	同一源文件多格式输出的配置	skeleton	
+52	5	5.6	5.6.4	手册校验模式对体例的强制	skeleton	
+52	5	5.6	5.6.5	文档树的独立冻结节点	skeleton	
+52	5	5.6	5.6.6	手册页与内核接口的对应	skeleton	
+52	5	5.7	5.7.1	KNF 作为四系共同底本	skeleton	
+52	5	5.7	5.7.2	制表符缩进与八字符宽度	skeleton	
+52	5	5.7	5.7.3	函数返回类型独立成行	skeleton	
+52	5	5.7	5.7.4	GNU 规范的自洽性原则	skeleton	
+52	5	5.7	5.7.5	纯风格改动对合并的干扰	skeleton	
+52	5	5.7	5.7.6	纯风格提交的谨慎要求	skeleton	
+52	5	5.8	5.8.1	MFC 对稳定分支的补丁回流	filled	
+52	5	5.8	5.8.2	三日等待下限的例外情形	skeleton	
+52	5	5.8	5.8.3	vendor 分支与原树的界线	skeleton	
+52	5	5.8	5.8.4	上游改动进入下游的渠道	skeleton	
+52	5	5.8	5.8.5	工具跨系引入的实例	skeleton	
+52	5	5.8	5.8.6	代码共享与分支分化的平衡	skeleton	
+52	6	6.1	6.1.1	重点级移植平台的八席分布	skeleton	
+52	6	6.1	6.1.2	重点平台覆盖的架构类别	skeleton	
+52	6	6.1	6.1.3	FreeBSD 支持架构的清单范围	skeleton	
+52	6	6.1	6.1.4	RISC-V 与 ARM 同列一份清单	skeleton	
+52	6	6.1	6.1.5	老平台的生命维持与退出	skeleton	
+52	6	6.1	6.1.6	跨分支移植沿革的可比口径	filled	
+52	6	6.2	6.2.1	KAME 六家日本企业的联合出资	skeleton	
+52	6	6.2	6.2.2	项目八年跨度与多次延期	skeleton	
+52	6	6.2	6.2.3	共享参考实现替代各自维护	filled	
+52	6	6.2	6.2.4	合流进 FreeBSD 与 NetBSD 的收尾	skeleton	
+52	6	6.2	6.2.5	BSD/OS 与商业系统的同步采用	skeleton	
+52	6	6.2	6.2.6	IPv6 参考实现与 BSD 许可的绑定	skeleton	
+52	6	6.3	6.3.1	netgraph 图状结构对协议组合的支撑	filled	
+52	6	6.3	6.3.2	节点类型按需自动装载的机制	skeleton	
+52	6	6.3	6.3.3	桥接对 MAC 学习表的依赖	skeleton	
+52	6	6.3	6.3.4	生成树协议对环路的抑制	skeleton	
+52	6	6.3	6.3.5	链路聚合六种协议的并存	skeleton	
+52	6	6.3	6.3.6	VNET 把全局变量改为每实例	skeleton	
+52	6	6.4	6.4.1	netmap 对三项包处理成本的处理	filled	
+52	6	6.4	6.4.2	单核 14.88 Mpps 的实测上限	skeleton	
+52	6	6.4	6.4.3	零拷贝与内核内存保护的兼顾	skeleton	
+52	6	6.4	6.4.4	iflib 对驱动样板代码的收拢	skeleton	
+52	6	6.4	6.4.5	驱动框架的三层职能划分	skeleton	
+52	6	6.4	6.4.6	SCTP 协议的多宿主支持	skeleton	
+52	6	6.5	6.5.1	WireGuard 以极简接口为设计目标	skeleton	
+52	6	6.5	6.5.2	公钥交换替代连接状态管理	skeleton	
+52	6	6.5	6.5.3	可审计性对代码规模的要求	skeleton	
+52	6	6.5	6.5.4	从 Linux 内核到 BSD 的移植起点	skeleton	
+52	6	6.5	6.5.5	内核内实现的吞吐主张	skeleton	
+52	6	6.5	6.5.6	跨平台说明对移植者的指引	skeleton	
+52	7	7.1	7.1.1	拆锁路线的渐进收益与尾声	skeleton	
+52	7	7.1	7.1.2	无锁分区对 NUMA 的预适应	skeleton	
+52	7	7.1	7.1.3	大锁模型的保守代价	skeleton	
+52	7	7.1	7.1.4	三条路径的共同源头	skeleton	
+52	7	7.1	7.1.5	线程模型选择对改造次序的制约	skeleton	
+52	7	7.1	7.1.6	改造收尾时的残留项	skeleton	
+52	7	7.2	7.2.1	引入路线的原生平台约束	skeleton	
+52	7	7.2	7.2.2	自研文件系统的作者意图	skeleton	
+52	7	7.2	7.2.3	借用路线与上游同步的负担	skeleton	
+52	7	7.2	7.2.4	快照存储单位的分歧	skeleton	
+52	7	7.2	7.2.5	校验强度与冗余前提的关联	skeleton	
+52	7	7.2	7.2.6	引入时点与版本号的对应	skeleton	
+52	7	7.3	7.3.1	共享参考实现与各自改造的张力	skeleton	
+52	7	7.3	7.3.2	承诺模型对系统调用面的裁剪	filled	
+52	7	7.3	7.3.3	能力模型对文件描述符的倚重	skeleton	
+52	7	7.3	7.3.4	内核内加速与通用栈的分层	skeleton	
+52	7	7.3	7.3.5	虚拟网络栈对隔离能力的加成	skeleton	
+52	7	7.3	7.3.6	Capsicum 进入基本系统的版本	skeleton	
+52	7	7.4	7.4.1	Ports 树与 pkgsrc 的两种定位	filled	
+52	7	7.4	7.4.2	季度分支与滚动树的时间尺度	skeleton	
+52	7	7.4	7.4.3	预编译包对源码构建的替代	skeleton	
+52	7	7.4	7.4.4	移植框架对异系统的吸附力	filled	
+52	7	7.4	7.4.5	基本系统与第三方件的边界	filled	
+52	7	7.4	7.4.6	两种框架的体量对照	skeleton	
+52	7	7.5	7.5.1	代码基线时点对路线的锁定	filled	
+52	7	7.5	7.5.2	自由可得在项目自述中的位置	skeleton	
+52	7	7.5	7.5.3	人力规模对改造深度的限制	skeleton	
+52	7	7.5	7.5.4	创始取向的长期投影	skeleton	
+52	7	7.5	7.5.5	相互借鉴与刻意分流的并存	filled	
+52	7	7.5	7.5.6	分化叙事的自我建构成分	skeleton	
+52	7	7.6	7.6.1	五系共享的 UNIX 接口集合	filled	
+52	7	7.6	7.6.2	GNU 编码规范的成文形态	skeleton	
+52	7	7.6	7.6.3	许可差异对商业采用的影响	skeleton	
+52	7	7.6	7.6.4	发行节奏的可比尺度	skeleton	
+52	7	7.6	7.6.5	发行公告中的云平台条目	skeleton	
+52	7	7.6	7.6.6	netmap 跨系统实现的既有范围	skeleton	

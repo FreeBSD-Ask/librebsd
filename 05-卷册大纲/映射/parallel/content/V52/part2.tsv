@@ -1,0 +1,146 @@
+rowmine_id	subsection_id	title	action	reason
+freebsd-isdn.messages.1370061	—	—	移出	i4b ISDN 驱动连接排障，属 V49 驱动技术
+freebsd-isdn.messages.1370063	V52.6.1.6	跨分支移植沿革的可比口径	归入	无人维护即移除 2.x 支持，老平台生命维持与退出的判定
+freebsd-isdn.messages.1370066	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370078	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370084	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370085	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370087	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370089	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370099	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370100	—	—	移出	i4b 驱动兼容与配置排障，属 V49 驱动技术
+freebsd-isdn.messages.1370106	V52.6.1.6	跨分支移植沿革的可比口径	归入	旧卡底层驱动无人维护、要么有人修要么移除，生命维持与退出
+freebsd-isdn.messages.1370109	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370111	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370114	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370118	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370121	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370129	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370131	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370133	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370135	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370138	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370139	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370149	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370154	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370156	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370157	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-isdn.messages.1370158	—	—	移出	i4b 驱动单元分配与 PPP 缺陷，属 V49 驱动技术
+freebsd-smp.messages.2506667	—	—	移出	1997 年 SMP 中断优先级重排试验，属 V49 SMP 技术
+freebsd-smp.messages.2506668	—	—	移出	1997 年 SMP 中断优先级重排试验，属 V49 SMP 技术
+freebsd-smp.messages.2506669	—	—	移出	1997 年 SMP 中断优先级重排试验，属 V49 SMP 技术
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+freebsd-ia64.messages.1355198	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355207	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355312	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355320	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355462	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-mips.messages.13122	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355705	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355724	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355898	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1355900	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1356025	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1356100	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1356132	—	—	移出	ia64 与兼容层的 SMPng 补丁邮件，属 V49 SMP 技术
+freebsd-ia64.messages.1356182	—	—	删除	零内容：空块
+freebsd-smp.messages.2504093	—	—	移出	SMP 负载与中断风暴排障，属 V49 SMP 技术
+freebsd-smp.messages.2504094	—	—	移出	SMP 负载与中断风暴排障，属 V49 SMP 技术
+freebsd-smp.messages.2504097	—	—	移出	SMP 负载与中断风暴排障，属 V49 SMP 技术
+freebsd-smp.messages.2504101	—	—	移出	SMP 负载与中断风暴排障，属 V49 SMP 技术
+freebsd-smp.messages.2504104	V52.2.5.1	细粒度锁与无锁分区的成本对照	归入	自适应自旋退避以减少大型 SMP 缓存流量，细粒度锁的成本对照
+freebsd-smp.messages.2504105	—	—	移出	SMP 崩溃与 VMware 硬件差异排障，属 V49 SMP 技术
+freebsd-smp.messages.2504106	—	—	移出	SMP 崩溃与 VMware 硬件差异排障，属 V49 SMP 技术
+freebsd-smp.messages.2504108	—	—	移出	SMP 崩溃与 VMware 硬件差异排障，属 V49 SMP 技术
+freebsd-smp.messages.2504110	—	—	移出	SMP 崩溃与 VMware 硬件差异排障，属 V49 SMP 技术
+freebsd-smp.messages.2504113	V52.2.2.5	遗留 giant 锁子系统的清单	归入	timeout／untimeout 在 Giant 与多 CPU 下的竞争缺陷，遗留 giant 子系统清单
+freebsd-smp.messages.2504117	V52.2.2.5	遗留 giant 锁子系统的清单	归入	callout 修复：softclock 调用前即置不可访，遗留 giant 子系统的具体缺陷
+freebsd-smp.messages.2504125	—	—	移出	超线程与 irq9 中断负载，属 V49 SMP 技术
+freebsd-smp.messages.2504127	—	—	移出	超线程与 irq9 中断负载，属 V49 SMP 技术
+freebsd-smp.messages.2504128	—	—	移出	超线程与 irq9 中断负载，属 V49 SMP 技术
+freebsd-smp.messages.2504131	—	—	移出	超线程与 irq9 中断负载，属 V49 SMP 技术
+tech-net.messages.265538	V52.2.5.1	细粒度锁与无锁分区的成本对照	归入	altq 与多核共用的锁与调度异常，细粒度改造的成本对照
+tech-net.messages.265550	V52.2.5.1	细粒度锁与无锁分区的成本对照	归入	收发路径加锁与 IPsec 配合之问，细粒度锁与无锁分区的成本对照
+tech-net.messages.265555	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265564	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265579	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265608	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265620	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265630	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265667	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265684	—	—	移出	NetBSD tech-net 缺陷与接口提案，属 V49 网络技术
+tech-net.messages.265715	V52.5.3.5	四系共用测试工具的收敛程度	归入	packetdrill 支持四系网络栈测试，测试工具跨系收敛
+tech-net.messages.265719	V52.5.3.5	四系共用测试工具的收敛程度	归入	packetdrill 单 master 分支与 clone 方式，跨系测试工具的协作形态
+tech-net.messages.265733	—	—	移出	SCTP 多宿主行为提问，属 V49 网络技术
+tech-net.messages.265754	V52.4.7.1	eBPF 作为内核内虚拟机的角色	归入	BPF 协处理器扩展指令提议，eBPF 类内核虚拟机的角色之争
+tech-net.messages.265758	—	—	移出	无 in-tree 使用者即提扩展的公平性质疑，属 V49 网络技术
+tech-net.messages.265778	V52.4.7.1	eBPF 作为内核内虚拟机的角色	归入	以 assurance 反对图灵完备扩展，内核内虚拟机能力边界之争
+tech-net.messages.265799	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265817	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265821	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265828	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265835	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265839	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265845	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-net.messages.265851	—	—	移出	ARP、AAAA 与 BPF 实现细节邮件，属 V49 网络技术
+tech-kern.messages.153231	—	—	移出	退役 USBVERBOSE 与内核固件压缩，属 V49 内核配置技术
+tech-kern.messages.153232	—	—	移出	退役 USBVERBOSE 与内核固件压缩，属 V49 内核配置技术
+tech-kern.messages.153234	—	—	移出	退役 USBVERBOSE 与内核固件压缩，属 V49 内核配置技术
+tech-kern.messages.153235	—	—	移出	退役 USBVERBOSE 与内核固件压缩，属 V49 内核配置技术
+tech-kern.messages.153236	—	—	移出	退役 USBVERBOSE 与内核固件压缩，属 V49 内核配置技术
+tech-kern.messages.153238	—	—	移出	退役 USBVERBOSE 与内核固件压缩，属 V49 内核配置技术
+netbsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+tech-kern.messages.209109	—	—	移出	NetBSD 1.6 SMP 竞态与稳定性，属 V49 SMP 技术
+tech-kern.messages.209308	—	—	移出	NetBSD 1.6 SMP 竞态与稳定性，属 V49 SMP 技术
+tech-kern.messages.209313	—	—	移出	NetBSD 1.6 SMP 竞态与稳定性，属 V49 SMP 技术
+tech-kern.messages.213852	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	SA 线程库 SMP 化补丁首发，NetBSD 线程模型改写
+tech-kern.messages.213871	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	SA 补丁首轮正面实测，线程模型改写的验证
+tech-kern.messages.213877	—	—	移出	SA 补丁致 mozilla 总线错误，属 V49 线程技术
+tech-kern.messages.213878	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	两版补丁实测差异（不再 panic 但 phoenix 不稳），线程改造的收敛过程
+tech-kern.messages.213881	—	—	移出	挂起问题非 SMP 独有与信号缺陷修复，属 V49 线程技术
+tech-kern.messages.213891	—	—	移出	挂起问题非 SMP 独有与信号缺陷修复，属 V49 线程技术
+tech-kern.messages.213926	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	SA 补丁第二次修订消除信号与中断键异常，线程模型改写的迭代
+tech-kern.messages.213927	—	—	移出	current 稳定性与 ktrace LWP 标识，属 V49 调试技术
+tech-kern.messages.213969	—	—	移出	current 稳定性与 ktrace LWP 标识，属 V49 调试技术
+tech-kern.messages.213975	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	p_dupfd 应改为每 LWP 独立，LWP 化落到内核字段的决策
+tech-kern.messages.214388	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	修复破坏 upcall 的路径，SA 补丁与 upcall 的耦合
+tech-kern.messages.214411	—	—	移出	UP 机器 cpuspin 残留问题，属 V49 线程技术
+tech-kern.messages.214429	V52.2.1.3	NetBSD 5.0 的线程模型改写	归入	双 CPU 运行 current 且 pthread 问题消失，线程模型改造的用户端回执
+tech-kern.messages.214516	—	—	删除	零内容：空块
+tech-kern.messages.213319	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213320	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213669	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213670	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213671	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213672	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213673	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213674	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213675	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213676	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213677	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.213678	—	—	移出	vnode 默认值与 microtime 优化，属 V49 内核技术
+tech-kern.messages.361445	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361446	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361447	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361448	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361449	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361450	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361451	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361452	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361453	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361455	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361456	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361458	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361462	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361463	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361464	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361465	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361466	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361467	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361468	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361469	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361470	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361471	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361472	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361473	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史
+tech-kern.messages.361474	—	—	移出	NetBSD 4.0 期间驱动、sysctl 与电源管理邮件，属 V49 技术史

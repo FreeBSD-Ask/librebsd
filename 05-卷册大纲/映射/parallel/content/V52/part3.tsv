@@ -1,0 +1,186 @@
+rowmine_id	subsection_id	title	action	reason
+freebsd-emulation.messages.1176708	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	linux ipcs 扩展 SEM_STAT，兼容层复刻系统调用面的裁剪
+freebsd-emulation.messages.1176714	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	getcwd 语义差异致程序落到根目录，调用面语义的对齐
+freebsd-emulation.messages.1176721	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	升级 linux_base 所需新系统调用成批补入，承诺面的裁剪
+freebsd-emulation.messages.1176722	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	兼容层同步到 Linux 2.4.2 并出对应 base，承诺面的版本锚定
+freebsd-emulation.messages.1176755	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176762	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176807	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176818	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176848	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176850	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176856	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176871	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176883	—	—	移出	Linuxulator 与 vmware 具体缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1176909	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	semctl 不传播权限、与 Linux 语义不符，调用面语义的裁剪
+freebsd-emulation.messages.1176915	—	—	移出	vmnet 设备与信号栈差异排障，属 V49 兼容层技术
+freebsd-emulation.messages.1176926	—	—	移出	vmnet 设备与信号栈差异排障，属 V49 兼容层技术
+freebsd-emulation.messages.1176975	—	—	移出	vmnet 设备与信号栈差异排障，属 V49 兼容层技术
+freebsd-emulation.messages.1176990	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	linux_mmap2 未实现致 winex 不通，承诺面对未实现调用的暴露
+freebsd-emulation.messages.1176998	—	—	移出	兼容层补丁合入与 vmnet 释放缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1177024	—	—	移出	兼容层补丁合入与 vmnet 释放缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1177031	—	—	移出	兼容层补丁合入与 vmnet 释放缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1177032	—	—	移出	兼容层补丁合入与 vmnet 释放缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1177043	—	—	移出	兼容层补丁合入与 vmnet 释放缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1177076	—	—	移出	兼容层补丁合入与 vmnet 释放缺陷，属 V49 兼容层技术
+freebsd-emulation.messages.1177101	V52.7.3.2	承诺模型对系统调用面的裁剪	归入	mkdir 返回 EACCES 而非 EEXIST，errno 语义的分支差异
+freebsd-security.messages.2497058	V52.4.5.4	核心开发与移植分支的分离	归入	ssh-keyscan 变更经 vendor 分支再合并 HEAD，核心与移植分支分离
+freebsd-security.messages.2497059	V52.4.5.4	核心开发与移植分支的分离	归入	同一变更以 r237567／r237568 两步走，vendor 与 HEAD 的分层
+freebsd-security.messages.2497063	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497064	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497065	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497066	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497067	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497068	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497069	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497075	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497076	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497077	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497554	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497555	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497557	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497558	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497560	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497646	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497647	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497649	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497745	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497747	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497749	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497751	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd-security.messages.2497753	—	—	移出	SSH 中间人争论与 PAM 凭据排障，属 V49 安全技术
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+cross_indexes.duckdb.concept_history	V52.3.2.1	bhyve 在 FreeBSD 10.0 的入树时点	归入	bhyve 概念演化：2010 MeetBSD 呼声到立项，入树前的来路
+cross_indexes.duckdb.concept_history	V52.6.4.1	netmap 对三项包处理成本的处理	归入	netmap 概念演化：Rizzo 设计、FP7 资助与 2011 原型，接口设计目标
+cross_indexes.duckdb.concept_history	—	—	移出	pf／ipfw 概念演化通史，属 V49 网络技术
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+usenet_mail.messages.174570	—	—	移出	网卡驱动探测与收发错误，属 V49 驱动技术
+usenet_mail.messages.174578	—	—	移出	网卡驱动探测与收发错误，属 V49 驱动技术
+usenet_mail.messages.185250	V52.6.2.3	共享参考实现替代各自维护	归入	BSD 小组解散后谁写 IPv6 参考实现，共享参考实现的接棒
+usenet_mail.messages.185251	V52.6.2.3	共享参考实现替代各自维护	归入	指向 INRIA 取用参考实现，共享参考实现的来源
+freebsd-questions.messages.2178494	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2184193	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2193025	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2205284	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2217564	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2220304	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2223064	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2228279	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2245360	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2246383	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2248496	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2257592	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2259066	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2263993	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2265699	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2266195	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2267640	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2284143	—	—	移出	IPv6 与隧道配置的用户问答，属 V49 网络运维
+freebsd-questions.messages.2289668	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2289691	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2291776	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2291907	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2291916	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2292310	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2292386	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2292445	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2293324	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2294401	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2294472	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2297649	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2297790	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2298545	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2298727	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2298849	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2299223	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2299362	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2299475	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2300098	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2300577	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2300788	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2300793	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2301867	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-questions.messages.2301869	—	—	移出	SSH 使用与配置问答，属 V49 运维
+freebsd-ipfw.messages.1360310	—	—	移出	ipfw 动态规则生命期参数，属 V49 防火墙技术
+freebsd-ipfw.messages.1360312	—	—	移出	dummynet 延迟模型与带宽保障，属 V49 流量整形技术
+freebsd-ipfw.messages.1360321	—	—	移出	dummynet 延迟模型与带宽保障，属 V49 流量整形技术
+freebsd-ipfw.messages.1360325	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360328	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360331	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360333	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360336	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360341	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360348	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360349	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360354	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360362	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360364	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360365	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360370	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360372	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360376	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360380	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360385	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360386	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360390	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360391	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360393	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-ipfw.messages.1360397	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-security.messages.2525499	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-security.messages.2525582	—	—	移出	ipfw2 动态规则与桥接缺陷，属 V49 防火墙技术
+freebsd-security.messages.2525601	—	—	移出	ipfw 与 Linux 防火墙无关的澄清，属 V49 防火墙技术
+freebsd-security.messages.2525611	—	—	移出	ipf 与 ipfw 为不同实现，属 V49 防火墙技术
+freebsd-security.messages.2525621	—	—	移出	simple 模式拦截过严排障，属 V49 防火墙技术
+tech-pkg.messages.272285	V52.7.4.5	基本系统与第三方件的边界	归入	pkg_install 版本要求与基本系统解耦，基本系统与第三方件边界
+tech-pkg.messages.272296	V52.4.4.4	pkgsrc 分支制与季度发布	归入	冻结新功能并为 2010Q2 拉分支，pkgsrc 分支制与季度发布
+tech-pkg.messages.272300	—	—	移出	dlopen 链接与 libarchive 测试，属 V49 打包技术
+tech-pkg.messages.272306	—	—	移出	dlopen 链接与 libarchive 测试，属 V49 打包技术
+tech-pkg.messages.272308	—	—	移出	dlopen 链接与 libarchive 测试，属 V49 打包技术
+tech-pkg.messages.272310	—	—	移出	dlopen 链接与 libarchive 测试，属 V49 打包技术
+tech-pkg.messages.272320	—	—	移出	dlopen 链接与 libarchive 测试，属 V49 打包技术
+tech-pkg.messages.272321	V52.7.4.4	移植框架对异系统的吸附力	归入	pkgsrc 应含尽可能少补丁、能送上游就送，移植框架的吸附力
+tech-pkg.messages.272322	—	—	移出	编译器缺 64 位类型与 as-needed 处理，属 V49 打包技术
+tech-pkg.messages.272329	—	—	移出	编译器缺 64 位类型与 as-needed 处理，属 V49 打包技术
+tech-pkg.messages.272343	V52.7.4.1	Ports 树与 pkgsrc 的两种定位	归入	pkgsrc 目标偏向 NetBSD 桌面与服务器，两种定位的自述
+tech-pkg.messages.272350	—	—	移出	MySQL 依赖与 Solaris 构建，属 V49 打包技术
+tech-pkg.messages.272362	—	—	移出	MySQL 依赖与 Solaris 构建，属 V49 打包技术
+tech-pkg.messages.272366	—	—	移出	make replace 前提与三类不一致，属 V49 包管理技术
+tech-pkg.messages.272368	—	—	移出	第 14 次 Hackathon 目标，属 V48 社区活动
+tech-pkg.messages.272372	—	—	移出	setgid games 变量整理，属 V49 打包技术
+tech-pkg.messages.272377	V52.7.4.4	移植框架对异系统的吸附力	归入	OpenBSD 以 @lib 覆盖 libtool 主版本号，异系统打包做法对照
+tech-pkg.messages.272379	—	—	移出	ELF 命名空间与 replace 不变量争论，属 V49 包管理技术
+tech-pkg.messages.272390	—	—	移出	ELF 命名空间与 replace 不变量争论，属 V49 包管理技术
+tech-pkg.messages.272395	—	—	移出	ELF 命名空间与 replace 不变量争论，属 V49 包管理技术
+tech-pkg.messages.272407	—	—	移出	DESTDIR 回退与依赖不变量改写，属 V49 包管理技术
+tech-pkg.messages.272414	—	—	移出	DESTDIR 回退与依赖不变量改写，属 V49 包管理技术
+tech-pkg.messages.272415	V52.7.4.1	Ports 树与 pkgsrc 的两种定位	归入	效仿 FreeBSD ports 引入 UPDATING，两种框架的相互借鉴
+tech-pkg.messages.272423	—	—	移出	LICENSE 元数据位置取舍，属 V59 许可
+tech-pkg.messages.272426	—	—	删除	零内容：空块
+tech-pkg.messages.273270	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273272	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273283	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273286	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273293	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273294	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273300	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273305	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273306	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273324	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273334	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273335	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273343	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273345	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273351	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273359	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273361	—	—	移出	pkgsrc 3.0 期间 uid 与构建工具邮件，属 V49 打包技术
+tech-pkg.messages.273365	V52.4.4.4	pkgsrc 分支制与季度发布	归入	2011Q1 冻结自次日起十天，季度分支的时间尺度
+tech-pkg.messages.273367	—	—	移出	冻结公告的时间与时区意见，属 V48 公告体例
+tech-pkg.messages.273373	V52.4.4.3	pkgsrc 对其他系统的引导安装	归入	百台 Linux 客户端自单一二进制仓库批量更新，pkgsrc 跨系统引导
+tech-pkg.messages.273383	—	—	移出	包重叠、pkg_delete 与 GSoC 提案，属 V49 打包技术
+tech-pkg.messages.273385	—	—	移出	包重叠、pkg_delete 与 GSoC 提案，属 V49 打包技术
+tech-pkg.messages.273387	—	—	移出	包重叠、pkg_delete 与 GSoC 提案，属 V49 打包技术
+tech-pkg.messages.273390	—	—	移出	包重叠、pkg_delete 与 GSoC 提案，属 V49 打包技术
+tech-pkg.messages.273401	—	—	移出	包重叠、pkg_delete 与 GSoC 提案，属 V49 打包技术

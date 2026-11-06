@@ -1,0 +1,214 @@
+rowmine_id	subsection_id	title	action	reason
+netbsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+dragonfly_mail.messages.10264	—	—	移出	DragonFly 2009–2010 内核与驱动提交记录，属 V49 技术
+dragonfly_mail.messages.10144	—	—	移出	DragonFly 2009–2010 内核与驱动提交记录，属 V49 技术
+dragonfly_mail.messages.1612048	—	—	移出	DragonFly 2009–2010 内核与驱动提交记录，属 V49 技术
+dragonfly_mail.messages.1612050	—	—	移出	pkgsrc 漏洞检查与 AHCI 引导块排障，属 V49 技术
+dragonfly_mail.messages.303	—	—	移出	pkgsrc 漏洞检查与 AHCI 引导块排障，属 V49 技术
+dragonfly_mail.messages.1612054	—	—	移出	pkgsrc 漏洞检查与 AHCI 引导块排障，属 V49 技术
+dragonfly_mail.messages.1612056	—	—	移出	64 位 vkernel 与 cryptodev 评审，属 V49 技术
+dragonfly_mail.messages.10148	—	—	移出	64 位 vkernel 与 cryptodev 评审，属 V49 技术
+dragonfly_mail.messages.307	V52.7.4.5	基本系统与第三方件的边界	归入	建议 sendmail 移出 base、以 dma 为默认 MTA，基本系统边界
+dragonfly_mail.messages.2069730	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.1612057	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.2069732	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.1612058	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.2069738	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.261	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.313	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.2069744	—	—	移出	包依赖、vkernel 与存储卡排障，属 V49 技术
+dragonfly_mail.messages.2069748	V52.7.5.5	相互借鉴与刻意分流的并存	归入	tmpfs 第三版补丁参考 HAMMER 实现，相互借鉴与刻意分流
+dragonfly_mail.messages.2069750	—	—	移出	设备识别表与 tmpfs 策略接口评审，属 V49 技术
+dragonfly_mail.messages.2069751	—	—	移出	设备识别表与 tmpfs 策略接口评审，属 V49 技术
+dragonfly_mail.messages.2066916	V52.7.5.5	相互借鉴与刻意分流的并存	归入	tmpfs 自 NetBSD 移植并在主分支可用，跨分支移植的借鉴
+dragonfly_mail.messages.10157	—	—	移出	引导路径适配与空块，属 V49 技术
+dragonfly_mail.messages.1610874	—	—	移出	引导路径适配与空块，属 V49 技术
+dragonfly_mail.messages.10161	V52.7.5.5	相互借鉴与刻意分流的并存	归入	定时器接口参照 OpenBSD 引入秒级与毫秒级重置，相互借鉴
+dragonfly_mail.messages.1760213	—	—	移出	硬盘链路电源管理补丁，属 V49 技术
+dragonfly_mail.messages.1613786	V52.7.5.5	相互借鉴与刻意分流的并存	归入	从 FreeBSD 移植千兆网卡驱动并致歉构建中断，跨分支移植
+dragonfly_mail.messages.1613788	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.1613807	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.1610844	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.1610845	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.1610856	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.1610858	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.346	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.2066870	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.2066905	—	—	移出	内核资源清理、包维护者招募与存储布局，属 V49 技术
+dragonfly_mail.messages.2066906	—	—	移出	HAMMER 镜像、BPF 与事件跟踪、口令散列，属 V49 技术
+dragonfly_mail.messages.365	—	—	移出	HAMMER 镜像、BPF 与事件跟踪、口令散列，属 V49 技术
+dragonfly_mail.messages.1610864	—	—	移出	HAMMER 镜像、BPF 与事件跟踪、口令散列，属 V49 技术
+dragonfly_mail.messages.1607588	—	—	移出	HAMMER 镜像、BPF 与事件跟踪、口令散列，属 V49 技术
+dragonfly_mail.messages.1607589	—	—	移出	GSoC 卷管理方向设想，属实习专题
+dragonfly_mail.messages.2056910	—	—	移出	DragonFly 2.6 发布通告，属 V48 事件
+dragonfly_mail.messages.1317019	—	—	移出	HAMMER 名解析、gcc 切换与 PostgreSQL 基准，属 V49 技术
+dragonfly_mail.messages.2056909	—	—	移出	HAMMER 名解析、gcc 切换与 PostgreSQL 基准，属 V49 技术
+dragonfly_mail.messages.268143	—	—	移出	HAMMER 名解析、gcc 切换与 PostgreSQL 基准，属 V49 技术
+dragonfly_mail.messages.2056920	—	—	移出	HAMMER 名解析、gcc 切换与 PostgreSQL 基准，属 V49 技术
+dragonfly_mail.messages.2056921	—	—	移出	HAMMER 名解析、gcc 切换与 PostgreSQL 基准，属 V49 技术
+dragonfly_mail.messages.2056922	—	—	移出	HAMMER 名解析、gcc 切换与 PostgreSQL 基准，属 V49 技术
+dragonfly_mail.messages.10186	V52.7.4.5	基本系统与第三方件的边界	归入	把 BIND 移出基本系统并迁到包版，基本系统与第三方件边界
+dragonfly_mail.messages.1607609	—	—	移出	新 IO 调度框架试用反馈，属 V49 技术
+tech-kern.messages.116878	—	—	移出	new-bus 元信息嵌入方式的争论，属 V49 驱动技术
+tech-kern.messages.116879	—	—	移出	new-bus 元信息嵌入方式的争论，属 V49 驱动技术
+tech-kern.messages.116881	—	—	移出	new-bus 元信息嵌入方式的争论，属 V49 驱动技术
+tech-kern.messages.116884	—	—	移出	NetBSD 无 PCA-200 驱动的差异，属 V49 驱动技术
+tech-kern.messages.116900	—	—	移出	序列号机制与 splsoftclock 语义，属 V49 内核技术
+tech-kern.messages.116921	—	—	移出	序列号机制与 splsoftclock 语义，属 V49 内核技术
+tech-kern.messages.116923	V52.7.6.1	五系共享的 UNIX 接口集合	归入	追问 asleep 与 FreeBSD 同名实现是否等同，接口语义的一致性
+tech-kern.messages.116924	V52.7.6.1	五系共享的 UNIX 接口集合	归入	asleep 提案介于 sleep 与 timeout、FreeBSD 用法难安全使用
+tech-kern.messages.116925	V52.7.6.1	五系共享的 UNIX 接口集合	归入	FreeBSD 的 asleep 语义完全不同，故改名 esleep 以免混淆
+tech-kern.messages.116927	V52.7.6.1	五系共享的 UNIX 接口集合	归入	希望三系就同名接口语义达成一致，共享接口集合的诉求
+tech-kern.messages.116933	V52.7.6.1	五系共享的 UNIX 接口集合	归入	改用 async_sleep、致力消除 BSD 间不必要的 API 分歧
+tech-kern.messages.116934	—	—	移出	newconfig 垫片与琐碎差异，属 V49 驱动技术
+tech-kern.messages.116935	V52.7.6.1	五系共享的 UNIX 接口集合	归入	发起跨 BSD 内核 API 分歧梳理并拟设共同邮件列表，接口收敛
+tech-kern.messages.116937	V52.7.6.1	五系共享的 UNIX 接口集合	归入	SMP／AIO／newbus 无法用旧 API 实现，分歧难免的判断
+tech-kern.messages.116940	V52.7.6.1	五系共享的 UNIX 接口集合	归入	纠正 splnet 与 splimp 在 FreeBSD／NetBSD 的命名错位
+tech-kern.messages.116944	V52.7.6.1	五系共享的 UNIX 接口集合	归入	用 PDP 梳理各函数出自哪个 BSD 与版本，接口谱系的考据
+tech-kern.messages.116946	V52-7.6	—	挂账	容量已满（第 15／16 块）
+tech-kern.messages.116948	V52-7.6	—	挂账	容量已满（第 15／16 块）
+tech-kern.messages.116963	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.116967	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.116979	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.117014	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.117016	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.117018	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.117020	—	—	移出	Linux 与 BSD 的文件接口、fattach 与 procfs 讨论，属 V49 技术
+tech-kern.messages.117021	V52.7.6.1	五系共享的 UNIX 接口集合	归入	Linus 以 /proc/sys 取代 sysctl、BSD 转向名字，载体选择分歧
+tech-kern.messages.117022	V52-7.6	—	挂账	容量已满（第 13 块）
+tech-kern.messages.117023	—	—	移出	procfs 与 kernfs 历史、openpromfs 维护，属 V49 技术
+tech-kern.messages.117024	—	—	移出	procfs 与 kernfs 历史、openpromfs 维护，属 V49 技术
+tech-kern.messages.117025	—	—	移出	procfs 与 kernfs 历史、openpromfs 维护，属 V49 技术
+openbsd_mail.messages.208799	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.208844	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209005	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209047	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209175	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209216	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209657	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209661	—	—	移出	OpenBSD 2.x 安装与手册问答，属 V49 运维
+openbsd_mail.messages.209717	V52.4.4.1	Ports 树与预编译包的双轨供给	归入	FreeBSD 不用 tgz 包格式、OpenBSD 的 pkg_* 工具集，双轨供给
+openbsd_mail.messages.209796	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.209863	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.209950	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.210077	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.210139	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.210165	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.210181	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.210247	—	—	移出	目录服务、C2 认证与厂商支持讨论，属 V56 商业与技术
+openbsd_mail.messages.210256	V52.6.3.1	netgraph 图状结构对协议组合的支撑	归入	FreeBSD 以 Netgraph 支持帧封装，图状结构的协议组合
+openbsd_mail.messages.210330	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210426	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210469	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210545	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210640	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210656	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210696	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210964	—	—	移出	分区、NIS 与线程支持问答，属 V49 运维
+openbsd_mail.messages.210979	—	—	移出	setproctitle 在 Solaris 缺失的差异，属 V49 用户态技术
+openbsd_mail.messages.211261	—	—	删除	零内容：空块
+openbsd_mail.messages.211293	—	—	移出	VMware 与 wcons 控制台问答，属 V49 技术
+openbsd_mail.messages.211392	—	—	移出	VMware 与 wcons 控制台问答，属 V49 技术
+netbsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+openbsd.duckdb.commits	—	—	移出	OpenBSD 核心贡献者提交量统计，属 V48 编年
+usenet_mail.messages.181265	—	—	移出	安装耗时与系统上限问答，属 V49 运维
+usenet_mail.messages.181302	—	—	移出	安装耗时与系统上限问答，属 V49 运维
+usenet_mail.messages.181377	V52.7.5.5	相互借鉴与刻意分流的并存	归入	OpenBSD 用户态与内核态两版 PPP 并存且各有理由，分流取向
+usenet_mail.messages.181743	V52.1.3.4	文件系统感知磁盘结构的程度	归入	OpenBSD 磁盘标签惯例与容量分配，磁盘结构感知的对照
+usenet_mail.messages.181798	—	—	移出	X11 平台与安装体验问答，属 V49 运维
+usenet_mail.messages.181801	—	—	移出	X11 平台与安装体验问答，属 V49 运维
+usenet_mail.messages.181894	—	—	移出	X11 平台与安装体验问答，属 V49 运维
+usenet_mail.messages.181986	V52.7.5.5	相互借鉴与刻意分流的并存	归入	以重可靠甚于功能者为选 OpenBSD 之由，分流取向的自述
+usenet_mail.messages.183440	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.184891	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.214150	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.216149	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.234975	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.217827	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.231090	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.232425	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.229060	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.219114	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.220761	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.227274	—	—	移出	OpenBSD 各版本安装与运行问答，属 V49 运维
+usenet_mail.messages.221564	—	—	移出	默认服务与 mozilla 调试信息讨论，属 V49 技术
+usenet_mail.messages.223051	—	—	移出	默认服务与 mozilla 调试信息讨论，属 V49 技术
+usenet_mail.messages.224670	—	—	移出	默认服务与 mozilla 调试信息讨论，属 V49 技术
+openbsd_mail.messages.216705	—	—	移出	MySQL 静态编译与 ldconfig 讨论，属 V49 技术
+openbsd_mail.messages.216706	—	—	移出	MySQL 静态编译与 ldconfig 讨论，属 V49 技术
+openbsd_mail.messages.216707	—	—	移出	MySQL 静态编译与 ldconfig 讨论，属 V49 技术
+openbsd_mail.messages.216710	—	—	移出	MySQL 静态编译与 ldconfig 讨论，属 V49 技术
+openbsd_mail.messages.216711	—	—	移出	MySQL 静态编译与 ldconfig 讨论，属 V49 技术
+usenet_mail.messages.150743	—	—	移出	BSDI 与 NT 建站取向讨论，属 V56 商业
+usenet_mail.messages.150837	—	—	移出	BSDI 与 NT 建站取向讨论，属 V56 商业
+usenet_mail.messages.150848	—	—	移出	BSDI 与 NT 建站取向讨论，属 V56 商业
+usenet_mail.messages.147009	V52.7.5.5	相互借鉴与刻意分流的并存	归入	比较 NetBSD 与 FreeBSD 的 VM 性能与兼容层差异
+usenet_mail.messages.151948	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.151957	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152217	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152218	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152261	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152301	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152326	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152329	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152357	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152548	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.152552	—	—	移出	BSDI 价格与支持讨论，属 V56 商业
+usenet_mail.messages.146888	—	—	移出	FreeBSD 与 Linux 的 NFS 吞吐实测，属 V49 性能
+usenet_mail.messages.175202	—	—	移出	Linux 漏洞数为 BSD 三到四倍的主张，属 V56 舆论
+usenet_mail.messages.178940	—	—	移出	各系统适用场景与安装体验，属 V49 运维
+usenet_mail.messages.179529	—	—	移出	各系统适用场景与安装体验，属 V49 运维
+usenet_mail.messages.179683	—	—	移出	各系统适用场景与安装体验，属 V49 运维
+usenet_mail.messages.179789	—	—	移出	各系统适用场景与安装体验，属 V49 运维
+usenet_mail.messages.180330	—	—	移出	各系统适用场景与安装体验，属 V49 运维
+usenet_mail.messages.180346	V52.7.5.1	代码基线时点对路线的锁定	归入	Digital UNIX 的 rc.conf 集中配置为 FreeBSD 所采，基线锁定
+usenet_mail.messages.180362	V52.7.5.1	代码基线时点对路线的锁定	归入	以 FreeBSD 1.1 源码比对诊断 Digital UNIX 3.2G，基线同源
+usenet_mail.messages.180429	V52.7.5.5	相互借鉴与刻意分流的并存	归入	RedHat 以 SysV 启停脚本为貌、视 BSD 式启动为怪异，分流叙事
+usenet_mail.messages.180487	—	—	移出	Whistle 选 FreeBSD 因 TCP 栈更先进，属 V56 商业
+usenet_mail.messages.180491	V52.1.8.3	四方并列对象的可比基础	归入	Linux 先支持怪设备而 BSD 更早 USB、设备支持难以量化，可比基础
+usenet_mail.messages.180562	—	—	移出	PC 硬件支持落差与空块，属 V49 技术
+usenet_mail.messages.180593	—	—	移出	PC 硬件支持落差与空块，属 V49 技术
+usenet_mail.messages.181091	—	—	移出	PC 硬件支持落差与空块，属 V49 技术
+freebsd-advocacy.messages.825995	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.825997	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826017	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826020	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826113	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826121	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826122	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826127	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826132	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826164	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826172	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826175	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826184	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826185	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826186	—	—	移出	advocacy 宣传与宣传素材讨论，属 V56 舆论
+freebsd-advocacy.messages.826192	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826195	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826205	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826214	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826215	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826288	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826367	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826432	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826482	—	—	移出	Netcraft 统计与厂商案例，属 V56 商业
+freebsd-advocacy.messages.826506	V52.5.8.1	MFC 对稳定分支的补丁回流	归入	apt 与 ports 升级工具相当，但 Linux 缺 MFC 等价机制
+freebsd-advocacy.messages.826682	—	—	移出	桌面与大型机 Linux 讨论，属 V56 舆论
+freebsd-advocacy.messages.826719	—	—	移出	桌面与大型机 Linux 讨论，属 V56 舆论
+freebsd-advocacy.messages.826728	—	—	移出	桌面与大型机 Linux 讨论，属 V56 舆论
+freebsd-advocacy.messages.826742	—	—	移出	桌面与大型机 Linux 讨论，属 V56 舆论
+freebsd-advocacy.messages.826746	—	—	移出	桌面与大型机 Linux 讨论，属 V56 舆论
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+cross_indexes.duckdb.concept_history	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+sacred_sources.duckdb.blocks	—	—	删除	零内容：通用史观模板块（变体，全树重复注入）
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+dragonfly.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+dragonfly.duckdb.commits	—	—	删除	零内容：仓库贡献者统计行（变体，全树重复注入）
+netbsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+dragonfly.duckdb.commits	—	—	删除	零内容：仓库贡献者统计行（变体，全树重复注入）
+netbsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）

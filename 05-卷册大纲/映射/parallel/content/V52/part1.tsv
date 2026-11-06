@@ -1,0 +1,111 @@
+rowmine_id	subsection_id	title	action	reason
+freebsd-fs.messages.1199894	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199896	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199898	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199899	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199900	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199902	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199910	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199911	V52.1.1.2	原子事务提交与一致性前提	归入	克隆盘 GPID 不同致 zpool import 识别失败，池标签与一致性前提
+freebsd-fs.messages.1199914	V52.1.1.2	原子事务提交与一致性前提	归入	导入时 FAULTED 与设备缺失提示，池成员一致性的判定
+freebsd-fs.messages.1199916	V52.1.1.2	原子事务提交与一致性前提	归入	先不跑 -o ro -fF 以免破坏成员标签，恢复语义的谨慎次序
+freebsd-fs.messages.1199919	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199921	V52.1.1.2	原子事务提交与一致性前提	归入	同名池替换成员未被拒、加盘才被拒，池成员身份的校验缺口
+freebsd-fs.messages.1199924	V52.1.1.2	原子事务提交与一致性前提	归入	标签完整而内部结构不可访问的取证判断，池元数据的可恢复边界
+freebsd-fs.messages.1199927	V52.1.1.2	原子事务提交与一致性前提	归入	按 GUID 导入仍报 cannot import，池标识与元数据的绑定
+freebsd-fs.messages.1199932	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199937	V52.1.7.3	校验码的层次差异	归入	L2ARC 在压缩下校验和错误与容量异常，校验码覆盖层次的实例
+freebsd-fs.messages.1199948	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199957	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199965	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199966	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199967	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199970	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1199973	V52.1.7.3	校验码的层次差异	归入	第二版补丁仍致压缩比异常与校验错误，校验层次的复测
+freebsd-fs.messages.1200010	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1200011	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1200012	V52.1.1.1	池化存储与卷管理角色的合并	归入	autoexpand 仅在两情形触发，池扩容与卷管理的角色合并
+freebsd-fs.messages.1200016	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1200035	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1200042	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1200045	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1208454	—	—	移出	ZFS 缺陷与运维邮件（锁序、导入恢复、L2ARC），属 V49 存储技术
+freebsd-fs.messages.1208802	V52.1.8.3	四方并列对象的可比基础	归入	逐条对比 NetBSD 10.0 发布说明（路径缓存红黑树、tmpfs），四方并列的可比口径
+freebsd-fs.messages.1209043	V52.1.8.1	设计目标陈述作为维度来源	归入	以 Linux 行为有缺陷为由拒绝兼容，设计目标差异作为比较维度
+freebsd-fs.messages.1210258	V52.7.6.1	五系共享的 UNIX 接口集合	归入	SEEK_DATA／SEEK_HOLE 在 XNU 晚十年加入，共享接口集合的分支落差
+freebsd-fs.messages.1210259	V52.7.6.1	五系共享的 UNIX 接口集合	归入	修正 XNU 加入时点到 10.15 且长期有缺陷，接口时序的对照
+freebsd-fs.messages.1210264	V52-7.6	—	挂账	容量已满（第 13 块）
+freebsd-fs.messages.1210461	V52.1.8.3	四方并列对象的可比基础	归入	Ubuntu 上 zpool import 需 modprobe 的对照观察，实现细节的可比性限度
+freebsd-fs.messages.1211237	V52-7.6	—	挂账	容量已满（第 14 块）
+freebsd-fs.messages.1211505	V52.1.3.4	文件系统感知磁盘结构的程度	归入	非 FreeBSD 生成的 UFS 因 disklabel 偏移不同而无法挂载，磁盘结构感知的差异
+freebsd-fs.messages.1211506	V52.1.3.4	文件系统感知磁盘结构的程度	归入	非 FreeBSD 生成的 UFS 因 disklabel 偏移不同而无法挂载，磁盘结构感知的差异
+freebsd-fs.messages.1211626	—	—	移出	NFS 代理两端规则一致性争论，属 V49 网络文件系统技术
+freebsd-fs.messages.1211628	—	—	移出	XFS 移植进度与 NDA 取源码，属 V49 移植技术
+freebsd-fs.messages.1211629	—	—	移出	XFS 移植进度与 NDA 取源码，属 V49 移植技术
+freebsd-fs.messages.1211777	V52.1.3.4	文件系统感知磁盘结构的程度	归入	FFS 与 UFS 关系表述含糊、需修订，磁盘结构感知的体例问题
+freebsd-fs.messages.1211779	V52.1.3.4	文件系统感知磁盘结构的程度	归入	WAFL 把元数据放进文件、由末快照引用，磁盘结构感知的对照
+freebsd-fs.messages.1211847	—	—	移出	journaling fs 采用 GPL 的新闻转发，属 V59 许可
+freebsd-fs.messages.1211992	V52.1.6.1	软更新对同步写次序的替代	归入	JFS 开源引发下载查看的对照兴趣，日志式文件系统的他山参照
+freebsd-fs.messages.1211994	—	—	移出	Veritas 所告 JFS 版本（OS/2 而非 AIX），属 V49 版本考据
+freebsd-fs.messages.1212228	—	—	移出	dd 经 rsh 复制磁盘的操作建议，属 V49 运维
+freebsd-fs.messages.1212299	—	—	移出	Rubberhose 可否认加密工具推荐，属 V49 存储加密
+freebsd-fs.messages.1212413	V52.1.8.2	实现时序作为工程判准的依据	归入	SGI 许可证不变则 XFS 编不进内核，许可条款约束技术可达性
+freebsd-fs.messages.1212414	V52.1.8.2	实现时序作为工程判准的依据	归入	SGI 借 Linux 之势、XFS 在 beta 前属专有，实现时序作为判准
+freebsd-fs.messages.1212417	V52.1.8.2	实现时序作为工程判准的依据	归入	XFS 代码公开时点与 USL 素材清理，实现时序与许可的判准
+freebsd-fs.messages.1212418	V52.1.8.2	实现时序作为工程判准的依据	归入	XFS 代码公开时点与 USL 素材清理，实现时序与许可的判准
+freebsd-fs.messages.1212425	V52.1.3.4	文件系统感知磁盘结构的程度	归入	WAFL 元数据归档与卷上末快照引用，磁盘结构感知的对照
+freebsd-fs.messages.1212443	—	—	移出	NetApp 专利号检索，属 V59 专利考据
+freebsd-fs.messages.1212660	V52.1.8.2	实现时序作为工程判准的依据	归入	GPL clause 6 使 XFS 永不能成为默认 boot FS，许可与基本系统边界
+freebsd-fs.messages.1212665	V52.1.8.2	实现时序作为工程判准的依据	归入	GPL clause 6 使 XFS 永不能成为默认 boot FS，许可与基本系统边界
+freebsd-fs.messages.1212671	—	—	移出	NetApp filer 与 EMC 方案比较，属 V56 商业存储
+freebsd-fs.messages.1212673	—	—	移出	XFS pinned buffers 与 daemon 扫描释放，属 V49 文件系统技术
+freebsd-openoffice.messages.1512173	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512180	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512182	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512187	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512200	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512211	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512213	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512235	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512236	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512237	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512238	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-openoffice.messages.1512244	—	—	移出	OpenOffice 源码构建障碍与硬件怀疑，属 V49 打包技术
+freebsd-elastic.messages.1149126	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149156	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149160	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149164	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149165	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149166	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149187	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149189	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149199	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149200	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149202	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-elastic.messages.1149222	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd-ports.messages.1619460	—	—	移出	ports 缺陷与 rc 脚本修复，属 V49 打包技术
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+freebsd-emulation.messages.4028	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4036	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4039	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4040	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4043	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4045	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4050	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4051	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4058	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4060	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4062	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4066	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4073	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.4074	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.8788	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.8789	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.8807	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.8809	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.8812	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.10563	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.10567	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.10593	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.16529	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
+freebsd-emulation.messages.16548	—	—	移出	Linux／DOS 仿真层与 vmware 兼容邮件，属 V49 兼容层技术
