@@ -27,6 +27,7 @@ E7b `流程规则/00-索引.md` 总索引（2026-11-06 立，ykla“重复行合
    D3 各分册 H2 全部登记（表 ↔ H2 双向一致）；
    D4 FLOW_INDEX 块 bullet 与全体 H2 多重集一致（缺项、重复、多出皆 FAIL）。
 E8 意图确证接线（理论件／全局节／G0／AGENTS／模板 I）
+E11 角色卡与技能模板接线（agents 4／skills 4／plugin.json／README 登记）
 
 用法
 ----
@@ -460,6 +461,58 @@ def run_checks(root: pathlib.Path):
     rows.append(("E8", "意图确证接线", not e8_bad,
                  "；".join(e8_bad) if e8_bad else
                  "理论件／全局节／G0／AGENTS／模板 I 接线一致"))
+
+    # E11 角色卡与技能模板接线（Task 12.5，2026-11-06 立）
+    e11_bad = []
+    tdir = p["doctrine"].parent / "templates"
+    AGENT_FIELDS = ["职责", "输入", "输出", "禁止", "交接"]
+    SKILL_FIELDS = ["触发", "步骤", "产物", "判据", "失效"]
+    agents = {"title-designer": AGENT_FIELDS, "block-triage": AGENT_FIELDS,
+              "gate-reviewer": AGENT_FIELDS, "volume-merger": AGENT_FIELDS}
+    skills = {"four-source-title": SKILL_FIELDS, "gate-runner": SKILL_FIELDS,
+              "milestone-tag": SKILL_FIELDS, "volume-parallel": SKILL_FIELDS}
+    adir, sdir = tdir / "agents", tdir / "skills"
+    for name, fields in agents.items():
+        f = adir / ("%s.md" % name)
+        if not f.exists():
+            e11_bad.append("角色卡缺失：%s" % f.name)
+            continue
+        txt = _read(f)
+        miss = [x for x in fields if ("## %s" % x) not in txt]
+        if miss:
+            e11_bad.append("角色卡 %s 缺字段 %s" % (name, "、".join(miss)))
+    for name, fields in skills.items():
+        f = sdir / ("%s.md" % name)
+        if not f.exists():
+            e11_bad.append("技能缺失：%s" % f.name)
+            continue
+        txt = _read(f)
+        miss = [x for x in fields if ("## %s" % x) not in txt]
+        if miss:
+            e11_bad.append("技能 %s 缺字段 %s" % (name, "、".join(miss)))
+    pj = tdir / "qoder-plugin" / "plugin.json"
+    if not pj.exists():
+        e11_bad.append("plugin.json 缺失")
+    else:
+        try:
+            import json as _json
+            data = _json.loads(_read(pj))
+            for kind, expect_dir, n in (("agents", "agents", 4), ("skills", "skills", 4)):
+                lst = data.get(kind) or []
+                if len(lst) != n:
+                    e11_bad.append("plugin.json %s 应 %d 条，实 %d" % (kind, n, len(lst)))
+                for it in lst:
+                    ref = tdir / "qoder-plugin" / (it.get("file") or "")
+                    if not ref.exists():
+                        e11_bad.append("plugin.json %s 引用不可达：%s" % (kind, it.get("file")))
+        except Exception as _e:
+            e11_bad.append("plugin.json 解析失败：%s" % _e)
+    readme13 = _read(p["doctrine"].parent / "README.md")
+    if "templates/agents" not in readme13 or "templates/skills" not in readme13:
+        e11_bad.append("13-软件工程/README.md 未登记 templates/agents 与 templates/skills")
+    rows.append(("E11", "角色卡与技能模板接线", not e11_bad,
+                 "；".join(e11_bad) if e11_bad else
+                 "角色卡 4／技能 4／plugin.json 引用可达／README 登记一致"))
     return rows, rule_date
 
 
@@ -524,7 +577,8 @@ def _write_fixture(root: pathlib.Path):
     )
     p["doctrine_readme"].write_text(
         "# 13-软件工程\n\n| 文件 | 内文 | 必读 |\n| ---- | ---- | ---- |\n"
-        "| `08-intent-first.md` | x | 是 |\n",
+        "| `08-intent-first.md` | x | 是 |\n\n"
+        "templates/agents 与 templates/skills：角色卡与技能模板见 templates/qoder-plugin/README.md。\n",
         encoding="utf-8",
     )
     p["agents"].write_text(
@@ -564,6 +618,24 @@ def _write_fixture(root: pathlib.Path):
     )
     p["cmd_readme"].write_text("audit_engineering_practice.py\n", encoding="utf-8")
     p["registry"].write_text("audit_engineering_practice.py\n", encoding="utf-8")
+    # E11 正样本夹具（2026-11-06 立）：4 角色卡／4 技能／plugin.json／README 登记
+    _t13 = p["doctrine"].parent / "templates"
+    for _d in ("agents", "skills", "qoder-plugin"):
+        (_t13 / _d).mkdir(parents=True, exist_ok=True)
+    for _n in ("title-designer", "block-triage", "gate-reviewer", "volume-merger"):
+        (_t13 / "agents" / ("%s.md" % _n)).write_text(
+            "# %s\n\n## 职责\nx\n## 输入\nx\n## 输出\nx\n## 禁止\nx\n## 交接\nx\n" % _n,
+            encoding="utf-8")
+    for _n in ("four-source-title", "gate-runner", "milestone-tag", "volume-parallel"):
+        (_t13 / "skills" / ("%s.md" % _n)).write_text(
+            "# %s\n\n## 触发\nx\n## 步骤\nx\n## 产物\nx\n## 判据\nx\n## 失效\nx\n" % _n,
+            encoding="utf-8")
+    (_t13 / "qoder-plugin" / "plugin.json").write_text(
+        '{"agents":[{"file":"../agents/title-designer.md"},{"file":"../agents/block-triage.md"},'
+        '{"file":"../agents/gate-reviewer.md"},{"file":"../agents/volume-merger.md"}],'
+        '"skills":[{"file":"../skills/four-source-title.md"},{"file":"../skills/gate-runner.md"},'
+        '{"file":"../skills/milestone-tag.md"},{"file":"../skills/volume-parallel.md"}]}',
+        encoding="utf-8")
 
 
 def _failed_codes(root: pathlib.Path):
@@ -648,6 +720,8 @@ def cmd_selftest():
                 encoding="utf-8")),
             # E8 负向之一（2026-10-29 立）：缺理论件
             ("E8", lambda: (tmp / "13-软件工程/08-intent-first.md").unlink()),
+            # E11 负向（2026-11-06 立）：删一张角色卡
+            ("E11", lambda: (tmp / "13-软件工程/templates/agents/block-triage.md").unlink()),
             # E8 负向之二：全局节缺“档 B”
             ("E8", lambda: (tmp / "00-编纂规则与格式规范/01-规则/流程规则/01-测试分册.md")
              .write_text("# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
@@ -692,7 +766,7 @@ def cmd_selftest():
         for f in failures:
             print("     - %s" % f)
         return 1
-    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8/E7b %d 项负向夹具均命中" % len(cases))
+    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8/E7b/E11 %d 项负向夹具均命中" % len(cases))
     return 0
 
 
