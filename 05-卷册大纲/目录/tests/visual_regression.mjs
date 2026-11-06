@@ -54,11 +54,20 @@ const LANG_RE = /\u27E6[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*:([^\u27E6\u27E7]+)\u27E7
 const stripLang = s => s.replace(LANG_RE, '$1');
 function readOutlineTitles() {
   var volSec = {}, chSec = {};
-  const vols = [], chapters = [], sections = [];
+  const vols = [], chapters = [], sections = [], subsections = [];
   for (const line of fs.readFileSync(OUTLINE_PATH, 'utf8').split(/\r?\n/)) {
     if (!line.trim()) continue;
     if (line.startsWith('# ')) { vols.push(stripLang(line.slice(2).trim())); continue; }
     if (line.startsWith('## ')) { chapters.push(stripLang(line.slice(3).trim())); continue; }
+    /* ADR-0020 第四级（2026-11-06）：小节行＝两个前导空格＋- M.N.P 题名 */
+    if (line.startsWith('  - ')) {
+      const sm = line.slice(4).trim().match(/^(\S+)\s+([\s\S]*)$/);
+      let snum = sm ? sm[1] : '', sbody = sm ? sm[2] : '';
+      if (sbody.startsWith('@@')) { const se = sbody.indexOf('@@', 2); sbody = sbody.slice(se + 2); }
+      else if (sbody.includes('@@')) { sbody = sbody.slice(0, sbody.indexOf('@@')); }
+      subsections.push(snum + ' ' + stripLang(sbody).trim());
+      continue;
+    }
     if (line.startsWith('- ')) {
       const m = line.slice(2).trim().match(/^(\S+)\s+([\s\S]*)$/);
       let num = m ? m[1] : '', body = m ? m[2] : '';
@@ -71,7 +80,7 @@ function readOutlineTitles() {
     }
   }
   /* 附加：按卷/章的节数归组（供 T17 校验 CSV 的卷/章归属） */
-  return { vols, chapters, sections, volSec, chSec };
+  return { vols, chapters, sections, subsections, volSec, chSec };
 }
 const OUTLINE = readOutlineTitles();
 
@@ -89,14 +98,15 @@ function diffCount(got, want) {
 }
 /* 导出内容 vs 内容源逐条比对；返回 {pass, detail} */
 function checkExportFidelity(exp) {
-  const sv = [], sc = [], ss = [];
+  const sv = [], sc = [], ss = [], ssub = [];
   for (const line of exp.summary.split('\n')) {
     let m;
     if ((m = line.match(/^### (.*)$/))) sv.push(m[1].trim());
     else if ((m = line.match(/^- \[(.*?)\]\(.*?\)$/))) sc.push(m[1].trim());
     else if ((m = line.match(/^ {2}- \[(.*?)\]\(.*?\)$/))) ss.push(m[1].trim());
+    else if ((m = line.match(/^ {4}- \[(.*?)\]\(.*?\)$/))) ssub.push(m[1].trim());
   }
-  const jv = [], jc = [], js = [];
+  const jv = [], jc = [], js = [], jsub = [];
   let jparse = '';
   try {
     const j = JSON.parse(exp.json);
@@ -104,20 +114,27 @@ function checkExportFidelity(exp) {
       jv.push(v.title);
       for (const c of v.chapters || []) {
         jc.push(c.title);
-        for (const s of c.sections || []) js.push(s.num + ' ' + s.title);
+        for (const s of c.sections || []) {
+          js.push(s.num + ' ' + s.title);
+          for (const sb of s.subs || []) jsub.push(sb.num + ' ' + sb.title);
+        }
       }
     }
   } catch (e) { jparse = String(e).slice(0, 60); }
-  const tv = [], tc = [], ts = [];
+  const tv = [], tc = [], ts = [], tsub = [];
   for (const line of exp.txt.split('\n')) {
     if (line.startsWith('# ') && !line.includes('完整目录')) tv.push(line.slice(2).trim());
     else if (line.startsWith('  ## ')) tc.push(line.slice(5).trim());
+    else if (line.startsWith('      - ')) tsub.push(line.slice(8).trim());
     else if (line.startsWith('    - ')) ts.push(line.slice(6).trim());
   }
   const parts = {
     'SUMMARY 卷': [sv, OUTLINE.vols], 'SUMMARY 章': [sc, OUTLINE.chapters], 'SUMMARY 节': [ss, OUTLINE.sections],
+    'SUMMARY 小节': [ssub, OUTLINE.subsections],
     'JSON 卷': [jv, OUTLINE.vols], 'JSON 章': [jc, OUTLINE.chapters], 'JSON 节': [js, OUTLINE.sections],
-    'TXT 卷': [tv, OUTLINE.vols], 'TXT 章': [tc, OUTLINE.chapters], 'TXT 节': [ts, OUTLINE.sections]
+    'JSON 小节': [jsub, OUTLINE.subsections],
+    'TXT 卷': [tv, OUTLINE.vols], 'TXT 章': [tc, OUTLINE.chapters], 'TXT 节': [ts, OUTLINE.sections],
+    'TXT 小节': [tsub, OUTLINE.subsections]
   };
   const bad = [], detail = {};
   for (const k of Object.keys(parts)) {
@@ -559,11 +576,16 @@ function linkVisible(link) {
   });
   const secKey = r => r[2] + " " + r[3];
   const join = a => a.slice().sort().join(SEP);
-  const csvSecSet = join(csvRows.map(secKey));
+  /* ADR-0020：CSV 一节一行，小节另起一行且 chapter 列留空（80-breadcrumb.js §8） */
+  const csvSecRows = csvRows.filter(function (r) { return r[1] !== ""; });
+  const csvSubRows = csvRows.filter(function (r) { return r[1] === ""; });
+  const csvSecSet = join(csvSecRows.map(secKey));
   const truthSecSet = join(OUTLINE.sections);
-  /* 卷/章列按「每卷/每章节数」归组比对（CSV 一节一行，卷/章自然重复） */
+  const csvSubSet = join(csvSubRows.map(secKey));
+  const truthSubSet = join(OUTLINE.subsections);
+  /* 卷/章列按「每卷/每章节数」归组比对（CSV 一节一行，卷/章自然重复；小节行不计） */
   const csvVolCnt = {}, csvChCnt = {};
-  csvRows.forEach(function (r) {
+  csvSecRows.forEach(function (r) {
     csvVolCnt[r[0]] = (csvVolCnt[r[0]] || 0) + 1;
     const k = r[0] + SEP + r[1];
     csvChCnt[k] = (csvChCnt[k] || 0) + 1;
@@ -578,11 +600,13 @@ function linkVisible(link) {
   const pv = cnt(ex.pdf, /<h2>/g), pc = cnt(ex.pdf, /<h3>/g), ps = cnt(ex.pdf, /<li>/g);
   const subOk = ex.pdf.includes(OUTLINE.vols.length + " 卷 · " + OUTLINE.chapters.length + " 章 · " + OUTLINE.sections.length + " 节");
   const bomOk = ex.csv.charCodeAt(0) === 65279;
-  const ok = bomOk && csvRows.length === OUTLINE.sections.length && csvSecSet === truthSecSet
-    && csvVolOk && csvChOk
-    && pv === OUTLINE.vols.length && pc === OUTLINE.chapters.length && ps === OUTLINE.sections.length && subOk && errs.length === 0;
+  const expRows = OUTLINE.sections.length + OUTLINE.subsections.length;
+  const ok = bomOk && csvRows.length === expRows && csvSecSet === truthSecSet
+    && csvSubSet === truthSubSet && csvVolOk && csvChOk
+    && pv === OUTLINE.vols.length && pc === OUTLINE.chapters.length && ps === expRows && subOk && errs.length === 0;
   record('T17 CSV 与 PDF 导出内容', ok, JSON.stringify({
-    csvRows: csvRows.length, csvSec: csvSecSet === truthSecSet, csvVolGroups: Object.keys(csvVolCnt).length, csvVolOk: csvVolOk, csvChOk: csvChOk, bom: bomOk,
+    csvRows: csvRows.length, csvSec: csvSecSet === truthSecSet, csvSub: csvSubSet === truthSubSet,
+    csvVolGroups: Object.keys(csvVolCnt).length, csvVolOk: csvVolOk, csvChOk: csvChOk, bom: bomOk,
     pdf: { h2: pv, h3: pc, li: ps }, pdfSub: subOk, errs: errs.length, csvLen: ex.csv.length, pdfLen: ex.pdf.length
   }));
   await page.close();
@@ -684,7 +708,7 @@ function linkVisible(link) {
       /* 与页面 __LB.pureTitle 同构的净化器（10-boot.js）：仅剥离运行时注入件与注／节号，
          返回内容层题面。file 导出＝运行时 DOM 序列化（含装饰），须同口径净化后
          才能与内容源逐条比对（同 T13「导出读运行时 DOM 须净化」的既有处理）。 */
-      const PURE_SEL = '.vol-badge, .ch-badge, .note-badge, .t-more, .t-short, .src, .sec-num, .path, .pv';
+      const PURE_SEL = '.vol-badge, .ch-badge, .note-badge, .t-more, .t-short, .src, .sec-num, .path, .pv, .subsections';
       const pure = (el) => {
         if (!el) return '';
         const c = el.cloneNode(true);
@@ -693,7 +717,7 @@ function linkVisible(link) {
         c.querySelectorAll(PURE_SEL).forEach((n) => n.remove());
         return c.textContent.trim();
       };
-      const sv = [], sc = [], ss = [];
+      const sv = [], sc = [], ss = [], sss = [];
       d.querySelectorAll("section[id^='vol-']").forEach((v) => {
         sv.push(pure(v.querySelector('h2')));
         v.querySelectorAll('h3.chapter[id]').forEach((ch) => {
@@ -704,17 +728,27 @@ function linkVisible(link) {
               const n = li.querySelector(':scope > .sec-num');
               if (!n) return;
               ss.push(n.textContent.trim() + ' ' + pure(li));
+              /* ADR-0020：小节行同口径比对（.subsections 已由 PURE_SEL 剥离，不影响节题） */
+              const subUl = li.querySelector(':scope > ul.subsections');
+              if (subUl) {
+                Array.prototype.slice.call(subUl.children).forEach((sli) => {
+                  const sn = sli.querySelector(':scope > .sec-num');
+                  if (sn) sss.push(sn.textContent.trim() + ' ' + pure(sli));
+                });
+              }
             });
           }
         });
       });
-      return { sv: sv, sc: sc, ss: ss, hasVer: !!d.querySelector('.page-version') };
+      return { sv: sv, sc: sc, ss: ss, sss: sss, hasVer: !!d.querySelector('.page-version') };
     }, s);
     const dv = diffCount(deep.sv, OUTLINE.vols);
     const dc = diffCount(deep.sc, OUTLINE.chapters);
     const ds = diffCount(deep.ss, OUTLINE.sections);
-    det20.fileFid = { v: dv, c: dc, s: ds, cnt: [deep.sv.length, deep.sc.length, deep.ss.length] };
-    const fileOk = deep.hasVer && dv === 0 && dc === 0 && ds === 0;
+    const dss = diffCount(deep.sss, OUTLINE.subsections);
+    det20.fileFid = { v: dv, c: dc, s: ds, ss: dss,
+      cnt: [deep.sv.length, deep.sc.length, deep.ss.length, deep.sss.length] };
+    const fileOk = deep.hasVer && dv === 0 && dc === 0 && ds === 0 && dss === 0;
     ok20 = det20.httpNameOk && det20.httpByteOk && det20.httpErrs === 0
       && det20.fileNameOk && fileOk && errs.length === 0;
   } catch (e) {

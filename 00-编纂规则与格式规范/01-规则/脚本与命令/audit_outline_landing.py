@@ -329,7 +329,42 @@ def run_gate(root, mapdir):
                 miss.append(r.get("source_id"))
         add("L2", not miss, "confirmed=%d missing=%d" % (len(confirmed), len(miss)))
 
-    dest_md = [os.path.join(root, p) for p in subs]
+    # C 案（spec U8，2026-11-06 定）：小节落盘面由第三十八件管，L3 只审旧子节落点。
+    # 排除依据取「设计台账 design/V{NN}.tsv 登记的小节键」，不取文件名形制——
+    # 旧子节落点与小节 .md 同为 M.N.P-slug.md，按名形无法区分，按名排除会误伤合成夹具。
+    _dsign = set()
+    _ddir = os.path.join(mapdir, "design")
+    if os.path.isdir(_ddir):
+        for _fn in sorted(os.listdir(_ddir)):
+            _mv = re.match(r"^V(\d{1,3})\.tsv$", _fn)
+            if not _mv:
+                continue
+            _vn = int(_mv.group(1))
+            try:
+                with io.open(os.path.join(_ddir, _fn), encoding="utf-8") as _fh:
+                    _hdr = _fh.readline().rstrip("\r\n").split("\t")
+                    _ix = _hdr.index("subsection_id")
+                    for _ln in _fh:
+                        _cells = _ln.rstrip("\r\n").split("\t")
+                        if _ix >= len(_cells):
+                            continue
+                        _mm = re.match(r"^V\d+\.(\d{1,3})\.(\d{1,3})\.(\d{1,4})$",
+                                       _cells[_ix].strip())
+                        if _mm:
+                            _dsign.add((_vn, int(_mm.group(1)),
+                                        int(_mm.group(2)), int(_mm.group(3))))
+            except (OSError, ValueError):
+                continue
+
+    def _is_design_sub(rel):
+        mv = re.match(r"^第(\d{1,3})卷", rel)
+        ms = re.search(r"[/\\](\d{1,3})\.(\d{1,3})\.(\d{1,4})-", rel)
+        if not (mv and ms):
+            return False
+        return (int(mv.group(1)), int(ms.group(1)), int(ms.group(2)),
+                int(ms.group(3))) in _dsign
+
+    dest_md = [os.path.join(root, p) for p in subs if not _is_design_sub(p)]
     # L3 落点无多余 .md
     if not has_map:
         skip("L3", "映射基础设施未建")

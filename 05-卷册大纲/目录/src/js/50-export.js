@@ -32,7 +32,7 @@
         lines.push("- [" + chTitle + "](./" + chDir + "/概述.md)");
         var ul = ch.nextElementSibling;
         if (!ul || !ul.classList || !ul.classList.contains("sections")) return;
-        ul.querySelectorAll("li").forEach(function (li) {
+        ul.querySelectorAll(":scope > li").forEach(function (li) {
           secCount++;
           var numEl = li.querySelector(".sec-num");
           var num = numEl ? numEl.textContent.trim() : "";
@@ -40,6 +40,16 @@
              否则题文本身以节号字面量开头时（如 “4.2BSD 的版本组成与前代继承”）会被误删开头。 */
           var title = __LB.pureTitle(li);
           lines.push("  - [" + num + " " + title + "](./" + chDir + "/" + num + ".md)");
+          /* ADR-0020 第四级（2026-11-06）：小节行四空格缩进，号取 M.N.P，紧随其父节。 */
+          var subUl = li.querySelector("ul.subsections");
+          if (subUl) {
+            subUl.querySelectorAll(":scope > li").forEach(function (sli) {
+              var snEl = sli.querySelector(".sec-num");
+              var sn = snEl ? snEl.textContent.trim() : "";
+              var st = __LB.pureTitle(sli);
+              lines.push("    - [" + sn + " " + st + "](./" + chDir + "/" + sn + ".md)");
+            });
+          }
         });
       });
       lines.push("");

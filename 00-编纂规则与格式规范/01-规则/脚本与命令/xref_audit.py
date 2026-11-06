@@ -93,6 +93,8 @@ for m in re.finditer(r'<section class="doc-block" id="vol-(\d+)"', d):
         vol_sec[(vid, cno)] = set(
             int(re.match(r'\d+\.(\d+)$', y).group(1))
             for y in re.findall(r'<span class="sec-num">([\d.]+)</span>', cm.group(3))
+            # C 案（spec U8，2026-11-06）：小节行沿用 sec-num class，三段号不计入节集合
+            if y.count(".") == 1
         )
 maxch = {v: (max(c) if c else 0) for v, c in vol_ch.items()}
 

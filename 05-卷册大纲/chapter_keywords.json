@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 0,
+  "subsections": 3,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "content_sha256": "cc8f7ddab9363c1eedb13cbe5484b61cce3e734a29380de423f591747a947b57",
   "extract": "title+body",
-  "generated_at": "2026-11-06T04:05:52+08:00"
+  "generated_at": "2026-11-06T13:11:42+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -795,6 +795,16 @@
    "tech": [
     "risc",
     "cisc"
+   ]
+  },
+  "TH-HW-010": {
+   "label": "缓存层次",
+   "level": "narrow",
+   "broader": "TH-HW-000",
+   "tech": [
+    "l1",
+    "l2",
+    "l3"
    ]
   },
   "TH-HW-013": {
@@ -2489,10 +2499,13 @@
    "domains": [],
    "themes": [
     "TH-BIZ-008",
+    "TH-LANG-030",
     "TH-FS-038",
     "TH-GOV-010",
+    "TH-GOV-014",
+    "TH-HIS-001",
     "TH-HW-008",
-    "TH-LANG-030"
+    "TH-HW-010"
    ],
    "sections": 9
   },
@@ -8542,13 +8555,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-FS-000",
-    "TH-GOV-000"
+    "TH-LANG-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-FS-038",
-    "TH-GOV-010"
+    "TH-LANG-030",
+    "TH-FS-038"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8561,13 +8574,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-FS-000",
-    "TH-GOV-000"
+    "TH-LANG-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-FS-038",
-    "TH-GOV-010"
+    "TH-LANG-030",
+    "TH-FS-038"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8579,19 +8592,22 @@
    "title": "ACM 与 IEEE 计算机学会：两个学科组织的建制",
    "meta": false,
    "domains": [
+    "TH-LANG-000",
     "TH-BIZ-000",
-    "TH-FS-000",
     "TH-GOV-000"
    ],
    "themes": [
+    "TH-LANG-030",
     "TH-BIZ-008",
-    "TH-FS-038",
-    "TH-GOV-010"
+    "TH-GOV-014",
+    "TH-HIS-001",
+    "TH-HW-010",
+    "TH-OS-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 3,
+   "subs_sha1": "a0f278901dd3b9e07950bdc81567d2bce10de9a2"
   },
   "V01-C002-2.4": {
    "chapter": "V01-C002",
@@ -8599,13 +8615,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-FS-000",
-    "TH-GOV-000"
+    "TH-LANG-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-FS-038",
-    "TH-GOV-010"
+    "TH-LANG-030",
+    "TH-FS-038"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8618,13 +8634,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-FS-000",
-    "TH-GOV-000"
+    "TH-LANG-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-FS-038",
-    "TH-GOV-010"
+    "TH-LANG-030",
+    "TH-FS-038"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8657,12 +8673,12 @@
    "domains": [
     "TH-BIZ-000",
     "TH-FS-000",
-    "TH-GOV-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-BIZ-008",
     "TH-FS-038",
-    "TH-GOV-010"
+    "TH-LANG-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8675,13 +8691,13 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-FS-000",
-    "TH-GOV-000"
+    "TH-LANG-000",
+    "TH-FS-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-FS-038",
-    "TH-GOV-010"
+    "TH-LANG-030",
+    "TH-FS-038"
    ],
    "projects": [],
    "technical_terms": [],
@@ -8695,12 +8711,12 @@
    "domains": [
     "TH-HW-000",
     "TH-BIZ-000",
-    "TH-FS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-008",
     "TH-BIZ-008",
-    "TH-FS-038"
+    "TH-LANG-030"
    ],
    "projects": [],
    "technical_terms": [],
