@@ -1,0 +1,31 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.13012	V20.2.1.3	两大流派的长期拉锯	归入	Sun 销售称非 SPARC 不算真 UNIX 兼容，引发 ABI 标准之争，见两大流派的长期拉锯
+usenet_mail.messages.139187		—	移出	人工判读：POSIX SIG_IGN 条款释读，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.138262	V20.2.1.3	两大流派的长期拉锯	归入	POSIX 非唯一标准体系、是否存在唯一 UNIX 标准之问，见两大流派的长期拉锯
+usenet_mail.messages.75694		—	移出	人工判读：可移植程序与编译器测试，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.140447		—	移出	人工判读：字符界面标准化动向之询，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.138581	V20.2.4.3	规范与品牌的绑定	归入	Fagan 反驳：X/Open 条件属过渡安排，BSD 系统符 XPG／SVID 亦可获品牌，见规范与品牌的绑定
+usenet_mail.messages.138303	V20.2.1.5	接口标准对厂商的约束	归入	Kingdon 指 ANSI C 与 POSIX.1 皆由重要厂商同意、讽 1170 把过时接口标准化，见接口标准对厂商的约束
+usenet_mail.messages.89389	V20.2.1.2	用户团体文件的底本	归入	/usr/group 标准委员会系统接口标准到终稿、含 DEC／HP／Microsoft 代表，见用户团体文件的底本
+usenet_mail.messages.47986	V20.2.1.5	接口标准对厂商的约束	归入	DEC 路线图：VMS 1991 年交付 POSIX 兼容并支持 XPG3，见接口标准对厂商的约束
+usenet_mail.messages.139206	V20.2.1.3	两大流派的长期拉锯	归入	区分 IEEE／ISO 共识型标准与 SVID 等厂商联合体标准，见两大流派的长期拉锯
+usenet_mail.messages.138945		—	移出	人工判读：语言独立规范与绑定之既有实践，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.138820		—	移出	人工判读：POSIX 1003.6 安全子组通告，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.138864		—	移出	人工判读：P1238 标准通告，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139706	V20.2.1.5	接口标准对厂商的约束	归入	AFCAC 案维护采购中使用 SVID 的合法性，见接口标准对厂商的约束
+usenet_mail.messages.139140	V20.2.1.5	接口标准对厂商的约束	归入	厂商无把修复反馈标准组织的机制（三家答复），见接口标准对厂商的约束
+usenet_mail.messages.139231	V20.2.2.4	指南路线的实用取向	归入	仅用 POSIX 接口开发商用应用是否可行之问，见指南路线的实用取向
+usenet_mail.messages.130030		—	移出	人工判读：FreeBSD UFS gid 继承与其 POSIX 偏离，无本卷落点；建议宿主 V05
+usenet_mail.messages.138828		—	移出	人工判读：题面不符，建议宿主 V19／V32
+usenet_mail.messages.138903		—	移出	人工判读：题面不符，建议宿主 V19／V32
+usenet_mail.messages.139384	V20.2.1.3	两大流派的长期拉锯	归入	Gwyn 反驳 pcc 构成事实标准之说，见两大流派的长期拉锯
+usenet_mail.messages.139227		—	移出	人工判读：IEEE TCOS／SEC 表决程序，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139292		—	移出	人工判读：df 输出单位偏离标准之辨，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.71976		—	移出	人工判读：磁盘配额无 POSIX 标准之答，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139542		—	移出	人工判读：术语定义严谨程度之答，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139219	V20.2.2.3	与 POSIX 的叠合关系	归入	SCCT 讨论各类加性一致性测试要求，见与 POSIX 的叠合关系
+usenet_mail.messages.139536	V20.2.2.4	指南路线的实用取向	归入	对“为产品加盖官印式标准”之风的批评与抵制，见指南路线的实用取向
+usenet_mail.messages.139437		—	移出	人工判读：文件系统标准鲜有人遵之答，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139493		—	移出	人工判读：RTFS 语义读法之辨，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139362		—	移出	人工判读：ANSI X3B11.1 WORM 文件系统报告，无本卷落点；建议宿主 V20 他节外
+usenet_mail.messages.139376	V20.2.1.3	两大流派的长期拉锯	归入	1991 年《未实现、发明、过早、失败之标准一览表》的分类，见两大流派的长期拉锯
