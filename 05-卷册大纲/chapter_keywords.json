@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 4115,
+  "subsections": 4175,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "f6d7cf37b05c2e725638134ae905523d57c54d50cd10a9d7a41bbbe0a7fd5fd2",
+  "content_sha256": "31d01811889f5d5938b2912e1a44325448faca7f4bcc2da36c4a1e79eafb6bc5",
   "extract": "title+body",
-  "generated_at": "2026-11-07T07:43:44+08:00"
+  "generated_at": "2026-11-07T07:59:33+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -362,6 +362,14 @@
    "tech": [
     "buffer cache",
     "bcache"
+   ]
+  },
+  "TH-FS-016": {
+   "label": "页缓存",
+   "level": "narrow",
+   "broader": "TH-FS-000",
+   "tech": [
+    "page cache"
    ]
   },
   "TH-FS-017": {
@@ -2527,6 +2535,14 @@
     "distro"
    ]
   },
+  "TH-REL-031": {
+   "label": "衍生发行版",
+   "level": "narrow",
+   "broader": "TH-REL-000",
+   "tech": [
+    "derivative"
+   ]
+  },
   "TH-REL-032": {
    "label": "打包者",
    "level": "narrow",
@@ -4160,7 +4176,10 @@
    "volume": "第17卷-Minix 的世界：一间教室、一位作者与一所大学（1987–1991）",
    "title": "Andrew Tanenbaum：作者、教学设计与教材影响",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-OS-037",
+    "TH-VM-014"
+   ],
    "sections": 3
   },
   "V17-C003": {
@@ -4168,7 +4187,13 @@
    "title": "Minix 的技术形态与后续发展",
    "domains": [],
    "themes": [
-    "TH-OS-037"
+    "TH-FS-005",
+    "TH-FS-016",
+    "TH-GOV-014",
+    "TH-LANG-009",
+    "TH-NET-012",
+    "TH-OS-037",
+    "TH-REL-031"
    ],
    "sections": 2
   },
@@ -20000,8 +20025,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "9ac92afd87ac2fe903b3d0bc1f861ee7314bea8f"
   },
   "V17-C001-1.2": {
    "chapter": "V17-C001",
@@ -20017,8 +20042,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "c75d14d0e83c2867d554e1db9036a60c76e82c1b"
   },
   "V17-C001-1.3": {
    "chapter": "V17-C001",
@@ -20034,80 +20059,87 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "a54f20a7292e92b6707b86c33f8be308d431a08c"
   },
   "V17-C002-2.1": {
    "chapter": "V17-C002",
    "title": "Andrew Tanenbaum 与 Minix",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-OS-000"
+    "TH-OS-000",
+    "TH-VM-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
     "TH-OS-037",
-    "TH-HIS-037"
+    "TH-VM-014",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "fa9d1ef3c0f8322c0647f9bae781c9eba29b76a0"
   },
   "V17-C002-2.2": {
    "chapter": "V17-C002",
    "title": "Minix 的教学设计与操作系统课程",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-OS-000"
+    "TH-VM-000",
+    "TH-OS-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
+    "TH-VM-014",
     "TH-OS-037",
-    "TH-HIS-037"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "57e7152f202009b4aae7433eba345477978e4ff9"
   },
   "V17-C002-2.3": {
    "chapter": "V17-C002",
    "title": "教材影响与后续采用",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-OS-000"
+    "TH-OS-000",
+    "TH-VM-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
     "TH-OS-037",
-    "TH-HIS-037"
+    "TH-VM-014",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "7efa60927579bcbeb5c84f1c0eb9a312656f13ce"
   },
   "V17-C003-3.1": {
    "chapter": "V17-C003",
    "title": "Minix 作为开发环境与技术参照",
    "meta": false,
    "domains": [
-    "TH-OS-000",
-    "TH-HIS-000"
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-OS-037",
-    "TH-HIS-001",
-    "TH-OS-001"
+    "TH-GOV-014",
+    "TH-REL-031",
+    "TH-LANG-009",
+    "TH-FS-005",
+    "TH-FS-016",
+    "TH-NET-012"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "8cf162a1f1d784231c909eb98682ec15760a5073"
   },
   "V17-C003-3.2": {
    "chapter": "V17-C003",
@@ -20115,17 +20147,17 @@
    "meta": false,
    "domains": [
     "TH-OS-000",
-    "TH-HIS-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-OS-037",
-    "TH-HIS-001",
-    "TH-OS-001"
+    "TH-FS-005",
+    "TH-FS-016"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "da8b714005a7d0a876580a30ac5356828491e087"
   },
   "V17-C004-4.1": {
    "chapter": "V17-C004",
@@ -20139,8 +20171,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b31fa068ba3c85cac610500a82d8e6d7333de741"
   },
   "V17-C004-4.2": {
    "chapter": "V17-C004",
@@ -20156,8 +20188,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "10941f177a7773d68068eb7e3c0d481a0405deee"
   },
   "V18-C001-1.1": {
    "chapter": "V18-C001",
@@ -81691,6 +81723,29 @@
     "TH-REL-001"
    ]
   },
+  "V17-C003-3.1.2": {
+   "add": [
+    "TH-OS-009",
+    "TH-LANG-021",
+    "TH-HW-036"
+   ]
+  },
+  "V17-C003-3.1.5": {
+   "add": [
+    "TH-HW-006",
+    "TH-HW-007"
+   ]
+  },
+  "V17-C003-3.2.2": {
+   "add": [
+    "TH-HW-013"
+   ]
+  },
+  "V17-C003-3.2.5": {
+   "add": [
+    "TH-GOV-014"
+   ]
+  },
   "V21-C002-2.1.1": {
    "add": [
     "TH-LAW-003",
@@ -82610,8 +82665,8 @@
   },
   "V31-C005-5.1.1": {
    "add": [
-    "TH-NET-012",
-    "TH-NET-031"
+    "TH-NET-031",
+    "TH-NET-012"
    ]
   },
   "V31-C005-5.1.2": {
@@ -83101,8 +83156,8 @@
   "V50-C004-4.1.3": {
    "add": [
     "TH-FS-026",
-    "TH-HW-013",
     "TH-GOV-014",
+    "TH-HW-013",
     "TH-LANG-006",
     "TH-OS-025",
     "TH-HIS-004"

@@ -1,0 +1,19 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.142025		—	移出	人工判读：1996 年 A/UX 于 MacIIx 的使用体验，与 MINIX 无涉；建议宿主 V16（A/UX 线）
+linux-fsdevel.messages.533031	V17.3.1.5	参照地位的持续期	归入	Al Viro 的 fs/minix 拉取请求与 rename／delete_entry 修补，见 MINIX 代码在 Linux 内核中的长期维护，作“参照地位持续期”的间接证据（跨域：Linux 内核 fs/minix）
+linux-fsdevel.messages.534371	V17.3.1.5	参照地位的持续期	归入	Eric Sandeen 修 minixfs printk 限流应对损坏目录（CVE-2006-6058），见 minix 代码三十年后仍在维护，作持续期的间接证据
+linux-arch.messages.9791453	V17.3.1.2	源码研读的参照地位	归入	Arnd Bergmann 论 microblaze 移植的 minixfs 位图字节序，属对 minix 磁盘结构的源码级研读，作参照地位的间接证据
+linux-fsdevel.messages.706231	V17.3.1.5	参照地位的持续期	归入	minix 转 iomap 补丁的空指针复现与修补，见 minix 文件系统代码长期在维护序列内
+linux-fsdevel.messages.710745	V17.3.1.2	源码研读的参照地位	归入	iomap 转换中 inode 锁语义讨论（Jeremy Bingham），属对 minix 代码的源码级研读
+linux-fsdevel.messages.689719	V17.3.2.5	后续发展的规模限度	归入	MINIX3 开发者 Erik van der Kouwe 直接回应 fs/minix 间接块指针修补，见新版项目维持小规模、开发者亲预细节（当事人一手）
+linux-fsdevel.messages.534314	V17.3.1.5	参照地位的持续期	归入	Eric Sandeen 关于 minix_readdir／minix_find_entry 空转的说明，同 CVE-2006-6058 线程，作持续期的间接证据
+linux-fsdevel.messages.270083	V17.3.1.5	参照地位的持续期	归入	Al Viro 转引 Linus 称 minixfs 是 V7 文件系统后代、fs/minix 与 fs/sysv 长期同步，直接支持持续期与血统判定
+linux-mm.messages.758151	V17.3.1.5	参照地位的持续期	归入	Eric Biggers 修 fs/minix 的 s_maxbytes，见 minix 代码仍在主线维护（跨域间接证据）
+linux-fsdevel.messages.270267	V17.3.1.5	参照地位的持续期	归入	同线程提出把 fs/minix 并入 fs/sysv，并称 minixfs 是 V7 后代，作持续期与合并动议的间接证据
+linux-arch.messages.9713364	V17.3.1.2	源码研读的参照地位	归入	讨论把 minix 位操作从 asm/bitops.h 迁入独立代码并区分大端／原生位图，属对 minix 结构的源码级研读
+linux-arch.messages.9724469	V17.3.1.2	源码研读的参照地位	归入	Geert 质疑 m68k 用小端 minix 文件系统、推测沿用 ext2 访问器，属对 minix 磁盘结构的源码级辨析
+linux-arch.messages.9748842	V17.3.1.2	源码研读的参照地位	归入	补丁集把 ext2／minix 位操作统一改小端，理由为各架构 inode 与块位图字节序不同，触及 minix 结构血统
+linux-arch.messages.9753842	V17.3.1.2	源码研读的参照地位	归入	Mike Frysinger 主张 minix 位操作定死小端并设默认、少加 Kconfig 选项，属位操作语义的源码级讨论
+linux-arch.messages.9754449	V17.3.1.5	参照地位的持续期	归入	Arnd Bergmann 给出架构清单主张定死小端，附“仅很老 sparc 与 mips 需大端挂载 minix”的社会史判断
+linux-arch.messages.9757393	V17.3.1.2	源码研读的参照地位	归入	Akinobu Mita 区分 m68knommu 大端与带 MMU m68k 小端 minixfs，属对 minix 位图实现的源码级辨析
+linux-arch.messages.9789899	V17.3.1.5	参照地位的持续期	归入	Arnd 转引 Akinobu Mita 称 minix 位运算仅 minix 文件系统使用，作 minix 代码长期独立存续的间接证据
