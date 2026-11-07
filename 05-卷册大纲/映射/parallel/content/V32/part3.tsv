@@ -1,0 +1,281 @@
+rowmine_id	subsection_id	title	action	reason
+linux-man.messages.748100	V32.4.6.3	小工具的许可取舍	归入	man-pages 页取 BSD-3-Clause 之由
+linux-man.messages.725721	V32.4.4.1	源码再分发的声明义务	归入	全项目统一版权署名与 AUTHORS
+linux-man.messages.729914	V32.4.4.1	源码再分发的声明义务	归入	统一版权署名之合法性征询
+linux-man.messages.730085	V32.4.9.1	定稿文本的版本标号	归入	以 SPDX 与 REUSE 标记替代全文
+linux-man.messages.731462	V32.4.6.3	小工具的许可取舍	归入	man-pages 版权头统一之法律质疑
+linux-man.messages.733926	V32.4.6.3	小工具的许可取舍	归入	VERBATIM 无 SPDX 亦未获 OSI 认证
+linux-man.messages.733967	V32.4.6.3	小工具的许可取舍	归入	反对 VERBATIM 要求改用标准许可
+linux-man.messages.736908	V32.3.3.3	许可文本的早期印记	归入	VERBATIM 许可最早见于 1.24 版
+linux-man.messages.737057	V32.3.3.3	许可文本的早期印记	归入	同上谱系重建（重复引述）
+linux-man.messages.738778	V32.4.9.1	定稿文本的版本标号	归入	VERBATIM 四种变体与迁移暂缓
+linux-man.messages.742461	V32.4.9.1	定稿文本的版本标号	归入	示例程序补 SPDX 与 REUSE 规范
+linux-man.messages.742472	V32.3.3.3	许可文本的早期印记	归入	VERBATIM 文本或由 Rik Faith 撰写
+linux-man.messages.742571	V32.3.3.3	许可文本的早期印记	归入	同上溯源（重复引述）
+linux-man.messages.742988	V32.4.9.1	定稿文本的版本标号	归入	VERBATIM_TWO_PARA 谱系梳理
+linux-man.messages.751032	V32.4.9.1	定稿文本的版本标号	归入	VERBATIM_TWO_PARA 首用于 3.07
+rust-for-linux.messages.9267987		—	移出	Rust alloc crate 许可标注，属 V18
+rust-for-linux.messages.9304786		—	移出	gendwarfksyms 的 SPDX 确认，属 V18
+linux-api.messages.49558	V32.4.4.1	源码再分发的声明义务	归入	LRNG 改 SPDX 双许可标识
+linux-api.messages.53761	V32.4.4.1	源码再分发的声明义务	归入	LRNG 冗余免责声明之议
+linux-arch.messages.9797110	V32.4.9.1	定稿文本的版本标号	归入	反对逐行照抄 GPL 声明改用 SPDX
+linux-arch.messages.9793006		—	移出	freelist 头 SPDX 标注，属 V18
+linux-scsi.messages.1490994	V32.4.6.1	法律风险的评估框架	归入	SCSI 驱动违规取证的先行主张
+linux-scsi.messages.1498770		—	移出	RPMB 接口与头许可，属 V18
+linux-scsi.messages.1524305	V32.4.9.1	定稿文本的版本标号	归入	libsas 补 SPDX 的三处证据
+linux-scsi.messages.1525979	V32.4.9.1	定稿文本的版本标号	归入	内核默认 GPLv2 而非 v2+
+linux-scsi.messages.1459901		—	移出	R-Car UFS 绑定 SPDX，属 V18
+linux-arch.messages.9838121		—	移出	Hyper-V VMBus 绑定双许可，属 V18
+linux-arch.messages.9845883	V32.4.4.4	Copyleft 的兼容边界	归入	接受 GPLv2 或 BSD-2 的自述
+linux-fsdevel.messages.290632		—	移出	2.10BSD 的 link 手册转引，属 V21
+linux-fsdevel.messages.324097	V32.4.4.1	源码再分发的声明义务	归入	virtio pmem 以 SPDX 替换 BSD 文本
+linux-fsdevel.messages.446540	V32.4.4.4	Copyleft 的兼容边界	归入	访问 GPL 接口不必然同许可之驳
+linux-fsdevel.messages.457515	V32.4.4.1	源码再分发的声明义务	归入	用户态 BSD-3 与内核头 WITH 例外
+linux-fsdevel.messages.474936	V32.4.4.4	Copyleft 的兼容边界	归入	BSD 与 GPL 兼容性作类比
+linux-fsdevel.messages.541893		—	移出	selftests SPDX 争议，属 V18
+linux-fsdevel.messages.583083		—	移出	2.10BSD link 传统之引，属 V21
+linux-fsdevel.messages.684740	V32.4.4.1	源码再分发的声明义务	归入	ZUF 用户态 BSD-3 与共享头
+netdev.messages.8252955	V32.4.4.4	Copyleft 的兼容边界	归入	ath5k 恢复 BSD 声明之请
+netdev.messages.8243791	V32.4.4.4	Copyleft 的兼容边界	归入	altq HFSC 移植的许可处理
+linux-mm.messages.928772		—	移出	SGX 驱动 GPL 与 BSD 混用，属 V18
+netdev.messages.8399322	V32.4.4.4	Copyleft 的兼容边界	归入	无广告条款 BSD 与 GPL 混用
+netdev.messages.8387793	V32.4.4.1	源码再分发的声明义务	归入	if_ppp.h 广告条款的许可修复
+linux-mm.messages.855649	V32.4.9.1	定稿文本的版本标号	归入	绑定文档按 GPL-2.0 或 BSD-2 双许可
+netdev.messages.8417949		—	移出	huawei_cdc_ncm 头注释审阅，属 V18
+netdev.messages.8441837	V32.4.4.4	Copyleft 的兼容边界	归入	BSD 无广告条款与 GPL 混合之澄清
+netdev.messages.8412844	V32.4.4.4	Copyleft 的兼容边界	归入	四条款 BSD 与纯 BSD 之分
+netdev.messages.8416259		—	移出	RDMA 与 GPL 限制的 rbtree，属 V18
+netdev.messages.8457403	V32.4.4.4	Copyleft 的兼容边界	归入	公有领域声明成三条款与 GPL 双许可
+netdev.messages.8673244		—	移出	libbpf 与 Apache-2 劝退，属 V18
+netdev.messages.8673313	V32.4.9.1	定稿文本的版本标号	归入	SPDX 双许可与 GPL 全文并存冲突
+netdev.messages.8675252	V32.4.4.4	Copyleft 的兼容边界	归入	BSD-2 可与 Apache-2 配合之主张
+netdev.messages.8688962		—	移出	ENETC 驱动双许可标识，属 V18
+netdev.messages.8538406	V32.4.4.4	Copyleft 的兼容边界	归入	MIT 与 BSD-3 均与 GPL2 兼容
+netdev.messages.8544827		—	移出	ks8851 绑定改 BSD-2，属 V18
+netdev.messages.8743664	V32.4.4.4	Copyleft 的兼容边界	归入	MIT 非 GPL-2.0 子集之反驳
+netdev.messages.8355772	V32.4.4.1	源码再分发的声明义务	归入	修复 if_ppp.h 广告条款许可
+netdev.messages.8203889	V32.4.4.4	Copyleft 的兼容边界	归入	三条款 BSD 与 GPL 兼容
+netdev.messages.8551433	V32.4.4.4	Copyleft 的兼容边界	归入	MIT 与 BSD3 均兼容 GPL2 之辨
+netdev.messages.8563521		—	移出	iwlwifi 子模块重许可，属 V18
+netdev.messages.8570039	V32.4.9.1	定稿文本的版本标号	归入	只留 SPDX 行且须与实许可相符
+netdev.messages.8600120		—	移出	QED 驱动许可清理，属 V18
+netdev.messages.8604642	V32.4.2.2	整体许可的覆盖规则	归入	libbpf 整体 LGPL 与 BSD 双许可
+netdev.messages.8650705	V32.4.4.4	Copyleft 的兼容边界	归入	劝退用户态 GPL 头的 BSD 双许可
+netdev.messages.8652435		—	移出	DSA 寄存器定义删 BSD 换 GPL，属 V18
+netdev.messages.8704264	V32.4.9.1	定稿文本的版本标号	归入	cassini 许可冲突清理
+netdev.messages.9038095	V32.4.4.1	源码再分发的声明义务	归入	libbpf types.h 的 LGPL 与 BSD 双许可
+netdev.messages.9041571		—	移出	dp8386x 绑定许可之争，属 V18
+netdev.messages.9177216	V32.4.4.1	源码再分发的声明义务	归入	ntb_netdev 标 GPL-2.0 与 BSD-3
+netdev.messages.9181384		—	移出	TIPC 补 SPDX，属 V18
+netdev.messages.9184539		—	移出	lynx PCS 复合表达式，属 V18
+netdev.messages.8918946		—	移出	bpftool 双许可提问，属 V18
+netdev.messages.8926764		—	移出	iproute2 SPDX 清理，属 V18
+netdev.messages.9008690		—	移出	bpf 树合并与重许可，属 V18
+netdev.messages.9013317		—	移出	qca_spi 补丁回执，属 V18
+netdev.messages.9132163		—	移出	BBR 的 MODULE_LICENSE 改 SPDX，属 V18
+netdev.messages.9132958		—	移出	packing_types 头 SPDX，属 V18
+netdev.messages.9236933		—	移出	wireguard 生成码许可，属 V18
+netdev.messages.8946026		—	移出	TI PHY 双许可定案，属 V18
+netdev.messages.8958318		—	移出	qca_7k 许可样板替换，属 V18
+netdev.messages.8958330		—	移出	ethertsn 绑定 SPDX，属 V18
+netdev.messages.8958474		—	移出	dp8386x 双许可续帖，属 V18
+netdev.messages.8995136		—	移出	绑定文件惯用许可之要求，属 V18
+netdev.messages.8995533		—	移出	iproute2 全库 SPDX 清理，属 V18
+netdev.messages.8999041		—	移出	i825xx 样板换 GPL-1.0+，属 V18
+netdev.messages.8999090		—	移出	netlink 生成码许可不一致，属 V18
+linux-mm.messages.1172480		—	移出	UDF SPDX 转换，属 V18
+linux-mm.messages.1190154		—	移出	UDF 转换第二版，属 V18
+linux-mm.messages.1183100		—	移出	hexagon 头清理，属 V18
+netdev.messages.9201594	V32.4.4.1	源码再分发的声明义务	归入	ntb_netdev 双许可写成机器可读
+netdev.messages.9209675		—	移出	lynx 许可沿革质疑，属 V18
+netdev.messages.9067256		—	移出	TI PHY 加 MIT 之争，属 V18
+netdev.messages.8583302		—	移出	QLogic 许可清理，属 V18
+linux-mm.messages.1151393		—	移出	UDF COPYRIGHT 增删，属 V18
+linux-mm.messages.1219958		—	移出	UDF 跳过非标准 BSD 变体，属 V18
+linux-mm.messages.1227080		—	移出	同上（BSD 变体无法 SPDX 表达）
+linux-mm.messages.1297540		—	移出	OpenBSD 许可与 ISC 之辨，属 V18
+ksummit.messages.6621		—	移出	IB 栈许可重设，属 V18
+linux-fsdevel.messages.328109	V32.4.4.1	源码再分发的声明义务	归入	virtio pmem 移除 BSD 文本换 SPDX
+usenet_mail.messages.46005	V32.3.3.2	许可证传统的形成	归入	BSD 许可近乎公有领域的评述
+usenet_mail.messages.47834	V32.3.7.1	GNU 工程的协作惯例	归入	flex 著作权与许可证归属
+usenet_mail.messages.51618	V32.3.3.3	许可文本的早期印记	归入	UNIX 商标排印惯例手册
+netdev.messages.8553592		—	移出	bpftool 许可修正系列，属 V18
+netdev.messages.8597038	V32.4.4.1	源码再分发的声明义务	归入	bpftool 改 GPLv2-only 与 BSD-2
+linux-mm.messages.1035091	V32.4.6.1	法律风险的评估框架	归入	GPL 中 derived 用法的辩论
+netdev.messages.8469144	V32.4.4.1	源码再分发的声明义务	归入	ntb_hw.h 的 BSD 与 GPLv2 双许可
+netdev.messages.8725200	V32.4.3.5	升级路径的采纳迟滞	归入	许可证由专有改为 GPLv2+ 之例
+netdev.messages.8994440		—	移出	TI PHY 改 GPL 与 MIT，属 V18
+ksummit.messages.283	V32.4.6.1	法律风险的评估框架	归入	违规企业公然挑衅之转述
+ksummit.messages.321	V32.4.6.1	法律风险的评估框架	归入	德国 GPL 诉讼与程序疏失
+ksummit.messages.718	V32.4.6.1	法律风险的评估框架	归入	SFC 行事透明的辩护
+ksummit.messages.996	V32.4.6.1	法律风险的评估框架	归入	以正式政策与行动评判公共人物
+ksummit.messages.4817	V32.3.5.4	三种形态的决策链	归入	反对意见者多为 FreeBSD 工作者
+ksummit.messages.5427	V32.3.5.4	三种形态的决策链	归入	勿把 SFC 成员类比为愤怒将军
+ksummit.messages.5559	V32.3.6.2	价值之辨的措辞分歧	归入	诉讼把人驱离 GPL 之论
+ksummit.messages.6605	V32.4.6.1	法律风险的评估框架	归入	Kuhn 自述执法经历
+ksummit.messages.6759	V32.3.5.1	基金会的治理结构	归入	Conservancy 一方之表态
+ksummit.messages.6961	V32.4.5.3	固件与二进制的例外	归入	以禁反言论内嵌固件之争
+linux-fsdevel.messages.306319	V32.4.6.1	法律风险的评估框架	归入	POSIX ACL 符号导出裁决
+linux-man.messages.732285	V32.4.2.4	许可继承的适用情形	归入	GFDL 与 LGPLv2 壁垒致文档割裂
+linux-man.messages.743371	V32.4.6.3	小工具的许可取舍	归入	手册页作者与编辑的许可口径
+linux-man.messages.754314	V32.4.3.5	升级路径的采纳迟滞	归入	GPL-1.0-or-later 非本意之论
+rust-for-linux.messages.9278159		—	移出	gendwarfksyms 许可标记质疑，属 V18
+rust-for-linux.messages.9301763	V32.4.4.1	源码再分发的声明义务	归入	版权人可自改许可不必双许可
+rust-for-linux.messages.9309410	V32.4.4.1	源码再分发的声明义务	归入	新 Rust 文件未附版权声明之议
+rust-for-linux.messages.9309804	V32.4.2.4	许可继承的适用情形	归入	非 GPL 工具与专有内核版本之辩
+sparclinux.messages.9353670	V32.4.3.1	版本升级的条款增补	归入	链接器表与段范围 RFC 的许可安排
+sparclinux.messages.9357369		—	移出	GPL 第二节改动记录之争，属 V18
+linux-arch.messages.9708270		—	移出	用户态头文件许可解耦，属 V18
+linux-api.messages.35379		—	移出	microblaze 删 GPL 声明，属 V18
+linux-api.messages.35820		—	移出	HSI 驱动许可小纠正，属 V18
+linux-api.messages.56345		—	移出	sysfs 十六进制值之争，属 V18
+linux-api.messages.50694		—	移出	STM32 USART 许可纠正，属 V18
+linux-arch.messages.9757393		—	移出	microblaze 许可扫描，属 V18
+linux-scsi.messages.1451162	V32.4.5.3	固件与二进制的例外	归入	二进制固件是否 GPL 首选修改形式
+linux-scsi.messages.1451641	V32.4.6.1	法律风险的评估框架	归入	内核 GPLv2 与模块无例外
+linux-scsi.messages.1455862	V32.4.6.1	法律风险的评估框架	归入	仅二进制第三方驱动的导出之争
+linux-scsi.messages.1538034	V32.4.5.3	固件与二进制的例外	归入	qla2xxx 固件源文件是否受 GPL
+linux-scsi.messages.1384826	V32.4.6.1	法律风险的评估框架	归入	LIO 使用内核 API 的衍生之争
+linux-scsi.messages.1389419	V32.4.6.1	法律风险的评估框架	归入	维护者无权代改他人版权声明
+linux-scsi.messages.1475753		—	移出	tcm_qla2xxx 清理与版权立场，属 V18
+linux-scsi.messages.1495230		—	移出	aic94xx 头文件 GPLv2，属 V18
+linux-scsi.messages.1524347	V32.4.4.1	源码再分发的声明义务	归入	GPL and additional rights 标注
+linux-scsi.messages.1528590	V32.4.6.1	法律风险的评估框架	归入	GPL 边界与模块派生的系统阐述
+linux-scsi.messages.1343930		—	移出	sg3_utils 公告，属 V21
+linux-scsi.messages.1352534		—	移出	Chelsio 公共库补丁，属 V18
+linux-scsi.messages.1423508	V32.4.5.3	固件与二进制的例外	归入	手写汇编即最合理源码之论
+linux-scsi.messages.1424503	V32.4.6.1	法律风险的评估框架	归入	作者只能移除他人代码方可放宽
+linux-scsi.messages.1416202	V32.4.6.1	法律风险的评估框架	归入	RTL 对 scsi target 违规的辩护
+linux-scsi.messages.1440745	V32.4.5.3	固件与二进制的例外	归入	二进制固件受 GPL 约束之论
+linux-scsi.messages.1445715	V32.4.5.3	固件与二进制的例外	归入	固件位模式非优先源码之辩
+linux-scsi.messages.1377358		—	移出	isci 删双许可声明，属 V18
+linux-fsdevel.messages.255851	V32.4.4.1	源码再分发的声明义务	归入	ZUFS 内核 GPLv2 与用户态 BSD-3
+linux-fsdevel.messages.302670	V32.4.6.1	法律风险的评估框架	归入	POSIX ACL 于非 GPL 模块之裁决
+linux-fsdevel.messages.511552		—	移出	Samba 异步 IO 许可，属 V18
+linux-fsdevel.messages.535629		—	移出	保留所有权利一句之辨，属 V18
+linux-fsdevel.messages.585106		—	移出	v9fs 头文件 GPL 样板，属 V18
+linux-fsdevel.messages.679185		—	移出	IMA/NFS 许可障碍，属 V18
+linux-fsdevel.messages.679725		—	移出	IMA 元数据许可障碍，属 V18
+netdev.messages.8063366	V32.4.4.1	源码再分发的声明义务	归入	nes 驱动双许可选择头
+linux-mm.messages.827634		—	移出	Samba 客户端库许可，属 V18
+linux-mm.messages.830505		—	移出	page-types.c 补 GPL，属 V18
+netdev.messages.8081466	V32.4.4.1	源码再分发的声明义务	归入	反对核心库许可变更
+netdev.messages.8082888	V32.4.4.4	Copyleft 的兼容边界	归入	OpenHAL 作者通报 ath5k 许可
+netdev.messages.8102383	V32.4.4.1	源码再分发的声明义务	归入	NetEffect 双许可头
+netdev.messages.8029121	V32.4.4.1	源码再分发的声明义务	归入	RDMA 连接管理双授权
+netdev.messages.8029341	V32.4.4.1	源码再分发的声明义务	归入	PCIe 非透明桥双 BSD/GPLv2
+netdev.messages.8167247		—	移出	be2net 许可标记修改，属 V18
+netdev.messages.8189507	V32.4.4.1	源码再分发的声明义务	归入	nes_cm.c 内嵌 OpenIB BSD 全文
+netdev.messages.8190477	V32.4.6.3	小工具的许可取舍	归入	用户态测试套件下沉的许可障碍
+netdev.messages.8169188	V32.4.4.4	Copyleft 的兼容边界	归入	Sam Leffler 授权与双重许可之争
+netdev.messages.8212205		—	移出	Al Viro 论窃码争论，属 V18
+netdev.messages.8153465	V32.4.4.1	源码再分发的声明义务	归入	nes_hw.c 双许可声明
+linux-mm.messages.896540		—	移出	vhost_net virtio 总线，属 V18
+netdev.messages.8281533		—	移出	MadWifi 移植 d80211，属 V18
+netdev.messages.8397702	V32.4.4.1	源码再分发的声明义务	归入	cma.c 三选一许可
+netdev.messages.8290599	V32.4.4.1	源码再分发的声明义务	归入	OpenFabrics verbs 双许可
+netdev.messages.8307522		—	移出	wimax 头文件许可，属 V18
+netdev.messages.8334380	V32.4.4.1	源码再分发的声明义务	归入	ntb_hw.c BSD 与 GPLv2 任选
+linux-mm.messages.1047782		—	移出	SGX 线程许可回复，属 V18
+netdev.messages.8679828		—	移出	netdevsim 测试驱动许可，属 V18
+linux-mm.messages.1016382	V32.4.6.1	法律风险的评估框架	归入	反对非 GPL 方式导出函数
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+historical_claims.duckdb.claim	V32.3.6.3	硬件锁定的条款争议	归入	固件改由 OS 加载的许可问题
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+original_sources.blocks.29	V32.4.9.1	定稿文本的版本标号	归入	GPL-1.0 发布于 1989 年 2 月的口径
+original_sources.blocks.16	V32.4.9.1	定稿文本的版本标号	归入	BUSL-1.1 的 SPDX 官方标识
+usenet_mail.messages.179438	V32.4.6.3	小工具的许可取舍	归入	BEER-WARE 许可逐字引述
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+usenet_mail.messages.177970	V32.4.6.1	法律风险的评估框架	归入	版权只及源码与头文件视为源行之论
+usenet_mail.messages.178599	V32.4.6.1	法律风险的评估框架	归入	版权为国家授予的有限垄断
+linux-man.messages.735003	V32.4.9.1	定稿文本的版本标号	归入	VERBATIM 四派生版本清单
+linux-man.messages.740276	V32.4.4.1	源码再分发的声明义务	归入	改 GNU 手册须版权转让之争
+linux-man.messages.741308	V32.4.4.1	源码再分发的声明义务	归入	Red Hat 著作权授权是否及 man-pages
+linux-man.messages.746894	V32.4.9.1	定稿文本的版本标号	归入	统一版权头与不得删署名的提醒
+linux-man.messages.747091	V32.4.4.1	源码再分发的声明义务	归入	版权头统一通知与致谢
+linux-man.messages.748615	V32.4.4.1	源码再分发的声明义务	归入	被删版权头作者的无异议回复
+linux-man.messages.748645	V32.4.4.1	源码再分发的声明义务	归入	统一版权头的合法性说明
+linux-man.messages.753418	V32.4.4.1	源码再分发的声明义务	归入	三分之一明示同意即继续推进
+linux-scsi.messages.1510520		—	移出	aic7xxx 版权年份同步，属 V18
+linux-scsi.messages.1497448		—	移出	Domex 驱动改 PCI 探测，属 V18
+linux-scsi.messages.1527592		—	移出	aic7xxx 版权行更新，属 V18
+linux-fsdevel.messages.705078		—	移出	AI 归属标签之反对，属 V18
+linux-fsdevel.messages.710992		—	移出	强制标签价值之质疑，属 V18
+linux-fsdevel.messages.715000		—	移出	LLM 署名不可核查，属 V18
+netdev.messages.8015511	V32.4.6.4	共同体惯例的惯性	归入	多许可须同时依全部条款分发
+netdev.messages.8066393	V32.4.4.1	源码再分发的声明义务	归入	OpenBSD ath.c 三条款许可全文
+linux-mm.messages.838298	V32.4.6.1	法律风险的评估框架	归入	GPFS 胶水层不可能是独立作品
+linux-mm.messages.887167		—	移出	invalidate_mmap_range 放宽，属 V18
+netdev.messages.8244441		—	移出	ath.c 版本记录与版权头，属 V18
+netdev.messages.8282123	V32.4.4.1	源码再分发的声明义务	归入	移除 BSD 声明之补丁争议
+netdev.messages.8284737	V32.3.3.3	许可文本的早期印记	归入	SFLC 协助评估逆向代码许可
+netdev.messages.8384051		—	移出	德国著作权法署名要求，属 V18
+netdev.messages.8420936	V32.4.4.4	Copyleft 的兼容边界	归入	ath 代码许可与 OpenBSD/NetBSD 版
+netdev.messages.8444125		—	移出	mv643xx 版权更新，属 V18
+netdev.messages.8478596		—	移出	crc32 补署名，属 V18
+netdev.messages.9137201		—	移出	DEPT 版权年份之争，属 V18
+netdev.messages.9140669		—	移出	MCTP 头版权年份，属 V18
+ksummit.messages.6266		—	移出	AI 辅助代码标注讨论，属 V18
+sacred_sources.duckdb.blocks		—	移出	历史书写非存在论，属 V75
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+linux_kernel.duckdb		—	删除	零内容：代码库引用头
+2474	V32.3.1.1	GNU 公告的发布日	归入	GNU 宣言与 GPL v1 前言著录
+doubts_resolved		—	删除	零内容：存疑库引用头
+chapter_reviews		—	删除	零内容：文献库引用头
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+linux-kernel.duckdb.commits		—	删除	零内容：代码库统计行
+usenet_mail.messages.46066	V32.4.2.1	再发布义务的触发链条	归入	GPL 拟只须供 FSF 软件源码之传闻
+linux-kernel.duckdb.commits		—	删除	零内容：代码库统计行
+usenet_mail.messages.46134	V32.4.2.2	整体许可的覆盖规则	归入	库许可证非对 GPL 的修改
+usenet_mail.messages.46246	V32.4.3.1	版本升级的条款增补	归入	GPL 版本适用由作者指定
+usenet_mail.messages.139703		—	移出	FIPS 流程与 POSIX 重复，属 V12
+usenet_mail.messages.139753		—	移出	USENIX 标准调查方法，属 V12
+usenet_mail.messages.139762		—	移出	1003.5 投票期过短，属 V12
+usenet_mail.messages.139766		—	移出	1003.2 草案篇幅与投票期，属 V12
+usenet_mail.messages.139771		—	移出	patch 拒绝标准化，属 V12
+usenet_mail.messages.139900		—	移出	1003.6 安全扩展评论，属 V12
+usenet_mail.messages.139904		—	移出	1003.6 安全标准评论，属 V12
+usenet_mail.messages.139914		—	移出	1003.6 与 POSIX 评论，属 V12
+usenet_mail.messages.139925		—	移出	1003.6 安全标准评论，属 V12
+usenet_mail.messages.140003		—	移出	snitch 报告 1003.6，属 V12
+usenet_mail.messages.140015		—	移出	MAC 商业用途之辩，属 V12
+usenet_mail.messages.140020		—	移出	质疑 1003.6 强制安全机制，属 V12
+usenet_mail.messages.140046		—	移出	反驳 da Silva 的安全软件论，属 V12
+usenet_mail.messages.140055		—	移出	标准潮流失控之忧，属 V12
+usenet_mail.messages.140057		—	移出	Xlib 标准化过早，属 V12
+usenet_mail.messages.140064		—	移出	1003.1 是否糟糕工程，属 V12
+usenet_mail.messages.140088		—	移出	用户代表缺失之辩，属 V12
+usenet_mail.messages.140118		—	移出	厂商受罚与 POSIX 销售，属 V12
+usenet_mail.messages.140125		—	移出	标准应固化既有实践，属 V12
+usenet_mail.messages.140197		—	移出	符号链接实现与标准固化，属 V12
+usenet_mail.messages.140208		—	移出	联邦采购规则与过早标准，属 V12
+usenet_mail.messages.140216		—	移出	标准鼓励创新之论，属 V12
+usenet_mail.messages.140230		—	移出	无标准则变体混乱，属 V12
+usenet_mail.messages.140255		—	移出	IEEE 不回应草案索取，属 V12
+usenet_mail.messages.140260		—	移出	1201 层次过低，属 V12
+usenet_mail.messages.140361		—	移出	Ada 社区与 POSIX，属 V12
+usenet_mail.messages.140402		—	移出	标准更新社论化，属 V12
+usenet_mail.messages.140403		—	移出	会议纪要压缩之辨，属 V12
+usenet_mail.messages.140449		—	移出	与会者不熟 UNIX 语义，属 V12
+usenet_mail.messages.140493		—	移出	NIST FIPS 评论比例，属 V12
+youtube.episodes.CL-15-2326	V32.4.6.3	小工具的许可取舍	归入	宽松许可的 SMART 工具框架
+youtube.episodes.CL-15-2878	V32.4.6.3	小工具的许可取舍	归入	同上（diskctl 许可自述）
+youtube.episodes.CL-15-2879	V32.4.6.3	小工具的许可取舍	归入	同上（diskctl 许可自述）
+youtube.episodes.CL-15-2880	V32.4.6.3	小工具的许可取舍	归入	同上（diskctl 许可自述）
+youtube.episodes.CL-15-2881	V32.4.6.3	小工具的许可取舍	归入	同上（diskctl 许可自述）
+cross_indexes_person		—	删除	零内容：交叉索引引用头
+doubts_resolved		—	删除	零内容：存疑库引用头
+chapter_reviews		—	删除	零内容：文献库引用头
+sacred_sources.duckdb.blocks		—	移出	历史书写非存在论，属 V75
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+usenet_mail.messages.174087	V32.4.6.3	小工具的许可取舍	归入	BSD 许可的摄像头管理程序发布

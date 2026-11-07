@@ -1,0 +1,90 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.158	V32.3.3.3	许可文本的早期印记	归入	公有领域代码头的声明惯例
+usenet_mail.messages.88797	V32.3.3.2	许可证传统的形成	归入	需 Unix 许可的公共领域 68K 移植提议
+usenet_mail.messages.89002		—	移出	移植成果实为旧 SUN 板，属 V21
+usenet_mail.messages.89043		—	移出	make 读 VPATH 的 USG 特性，属 V20
+usenet_mail.messages.89102		—	删除	零内容：空块
+linux-man.messages.725431		—	移出	Linux namespace 专属特性，属 V18
+linux-man.messages.746656	V32.3.7.1	GNU 工程的协作惯例	归入	GNU 手册页并入 Linux man-pages
+linux-man.messages.750837	V32.3.6.2	价值之辨的措辞分歧	归入	Linus 讥 GNU 编码标准的措辞
+linux-man.messages.753412	V32.3.6.2	价值之辨的措辞分歧	归入	草案忽视 BSD 目录标准之批评
+rust-for-linux.messages.9286518	V32.4.6.4	共同体惯例的惯性	归入	Rust for Linux 许可是否集体决定
+sparclinux.messages.9331537		—	移出	sparc O_NDELAY 取值考古，属 V18
+sparclinux.messages.9332516		—	移出	Sun Blade 启动 GNU 失败，属 V12
+sparclinux.messages.9336495		—	移出	sparc clone3 支持，属 V18
+sparclinux.messages.9346986	V32.4.6.4	共同体惯例的惯性	归入	BSD 未列入 GPL 兼容白名单
+sparclinux.messages.9348154		—	移出	sparc Kconfig 重排，属 V18
+sparclinux.messages.9349901	V32.4.4.1	源码再分发的声明义务	归入	sparc64 ADI 驱动双重许可
+sparclinux.messages.9354972		—	移出	openat2 补丁系列，属 V18
+sparclinux.messages.9356101		—	移出	glibc O_NDELAY 与 BSD，属 V18
+linux-api.messages.42627		—	移出	CLONE_FD 与 pdfork，属 V18
+linux-arch.messages.9698183		—	移出	BSD 的 SIGINFO 与 GNU make，属 V21
+linux-api.messages.13225		—	移出	ext4 保留字段与 BSD 冲突，属 V18
+linux-api.messages.57782		—	移出	MADV_FREE 与 FreeBSD 分配器，属 V18
+linux-arch.messages.9754796		—	移出	tools 非对齐访问补丁，属 V18
+linux-api.messages.61058		—	移出	arc4random 与 OpenBSD 实现，属 V18
+linux-api.messages.61934		—	移出	seccomp 与 SELinux 策略，属 V18
+linux-api.messages.66346		—	移出	seccomp 与 GNU/Linux 开发模式，属 V18
+linux-scsi.messages.1509022		—	移出	Gibbs 的 GNU 补丁包地址，属 V21
+linux-scsi.messages.1514166	V32.4.4.1	源码再分发的声明义务	归入	Adaptec 驱动 BSD 风格与 GPL 双轨
+linux-scsi.messages.1457322	V32.4.4.1	源码再分发的声明义务	归入	FlashPoint 驱动双许可声明
+linux-scsi.messages.1564705		—	移出	MT_ST_SYSV ioctl 语义，属 V18
+linux-scsi.messages.1566835	V32.4.4.1	源码再分发的声明义务	归入	Adaptec 双授权文本条款
+linux-fsdevel.messages.281552		—	移出	SIGINFO 与 GNU make 证据，属 V21
+linux-fsdevel.messages.284524		—	移出	alternate CREDs 与 FreeBSD，属 V18
+linux-fsdevel.messages.444650		—	移出	GNU 与 BSD cpio 兼容评估，属 V21
+linux-fsdevel.messages.548651		—	移出	tmpfs fallocate 语义，属 V18
+linux-fsdevel.messages.637272		—	移出	union mount whiteout 与 BSD，属 V18
+linux-fsdevel.messages.638655		—	移出	util-linux 的 BSD 构建目标，属 V21
+linux-fsdevel.messages.639051		—	移出	syscall_cred 与 FreeBSD，属 V18
+netdev.messages.8070231		—	移出	net/if.h 与 BSD 特性冲突，属 V18
+netdev.messages.8133764	V32.4.4.1	源码再分发的声明义务	归入	nes 双许可条款入树
+netdev.messages.8252183		—	移出	iproute2 与 netinet 头冲突，属 V18
+linux-mm.messages.886096		—	移出	GNU time 的 MaxRSS 误算，属 V21
+netdev.messages.8392687	V32.3.6.5	对立叙事的史料限度	归入	是否存在对 BSD 项目集中攻击
+netdev.messages.8393522		—	移出	linux/if.h 与 BSD 头冲突，属 V18
+linux-mm.messages.962879		—	移出	getrusage ru_maxrss 补丁，属 V18
+linux-mm.messages.1008880		—	移出	MADV_WIPEONFORK 与 minherit，属 V18
+netdev.messages.8472932	V32.4.4.1	源码再分发的声明义务	归入	虚拟 CAN 驱动双许可
+netdev.messages.8458849		—	移出	GTSM 与 BSD 内核同实现，属 V18
+netdev.messages.8491855	V32.4.4.1	源码再分发的声明义务	归入	Mellanox mthca 双许可
+netdev.messages.8493272	V32.4.4.1	源码再分发的声明义务	归入	nes_nic 双许可
+linux-mm.messages.1022901		—	移出	posix_madvise 与 Linux 语义，属 V18
+netdev.messages.8226162	V32.4.4.1	源码再分发的声明义务	归入	Neterion 驱动双许可
+netdev.messages.8613245	V32.4.6.4	共同体惯例的惯性	归入	Bionic 与 BSD 许可 C 库分界
+linux-mm.messages.1069935		—	移出	ru_maxrss 语义来源提交，属 V18
+netdev.messages.8114600	V32.4.4.1	源码再分发的声明义务	归入	QLogic 删除双许可头
+netdev.messages.8339447	V32.4.4.1	源码再分发的声明义务	归入	nes verbs 头双许可
+netdev.messages.8344781	V32.4.4.1	源码再分发的声明义务	归入	同头文件另一版双许可
+netdev.messages.9199793	V32.4.4.1	源码再分发的声明义务	归入	以 SPDX 行替代旧许可样板
+netdev.messages.8351007	V32.4.4.1	源码再分发的声明义务	归入	mthca 二选一许可入树
+linux-fsdevel.messages.398465		—	移出	fcntl OFD 锁补丁，属 V18
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+usenet_mail.messages.141502	V32.4.4.5	商业采纳的制度优势	归入	1996 商用开发平台许可之问
+usenet_mail.messages.141524	V32.4.4.5	商业采纳的制度优势	归入	整部 OS 商用须附 GNU 组件源码
+usenet_mail.messages.179698	V32.4.4.5	商业采纳的制度优势	归入	NetMax/Interjet/Snap 商用产品
+freebsd.duckdb		—	删除	零内容：代码库引用头
+cross_indexes.duckdb.concept_history		—	挂账	待定位：1997 新西兰自装防火墙
+freebsd.duckdb		—	删除	零内容：代码库引用头
+linux-kernel.duckdb.commits		—	删除	零内容：代码库统计行
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+usenet_mail.messages.185135	V32.3.3.3	许可文本的早期印记	归入	BSDi 与 4.4BSD-Lite 商标版权立场
+cross_indexes.duckdb.concept_history		—	移出	itojun 个人经历，属 V09
+linux-man.messages.731510	V32.4.6.3	小工具的许可取舍	归入	man-pages 许可取 VERBATIM 或 GPLv2
+linux-man.messages.732229	V32.4.6.1	法律风险的评估框架	归入	AI 贡献禁止政策与版权顾虑
+sparclinux.messages.9337749	V32.4.2.4	许可继承的适用情形	归入	与内核结合后必为 GPLv2
+linux-arch.messages.9704650	V32.4.4.4	Copyleft 的兼容边界	归入	内核刻意不提供 BSD 标签防滥用
+linux-api.messages.24309	V32.3.3.3	许可文本的早期印记	归入	4BSD 定下的 sun_path 契约沿用
+linux-arch.messages.9788315	V32.4.2.4	许可继承的适用情形	归入	模块标签指模块自身许可
+linux-scsi.messages.1492192	V32.4.6.1	法律风险的评估框架	归入	aic94xx 的 GPL fork 版权遗留
+linux-scsi.messages.1523683	V32.4.6.1	法律风险的评估框架	归入	ESX 内核属明显违规之判断
+linux-scsi.messages.1464572	V32.4.4.5	商业采纳的制度优势	归入	open core 模型与 RTS 衍生义务
+linux-arch.messages.9807497	V32.4.6.4	共同体惯例的惯性	归入	BSD 未入 GPL 兼容白名单（复述）
+linux-fsdevel.messages.255700	V32.4.4.4	Copyleft 的兼容边界	归入	copyleft-next 作 OR 分支之争
+linux-fsdevel.messages.275285	V32.4.4.4	Copyleft 的兼容边界	归入	提交者自择双授权不应强制
+linux-fsdevel.messages.408699		—	移出	Darwin fsync 不刷盘，属 V12
+linux-fsdevel.messages.335017	V32.4.4.4	Copyleft 的兼容边界	归入	双许可正当理由的两类情形
+linux-fsdevel.messages.392114	V32.4.6.1	法律风险的评估框架	归入	每增一许可即增法律分析成本
+linux-fsdevel.messages.717275		—	移出	pidfd 与 FreeBSD pdfork，属 V18
+netdev.messages.8581777	V32.4.9.1	定稿文本的版本标号	归入	要求删 GPL 样板只留 SPDX
+ksummit.messages.10005	V32.4.6.1	法律风险的评估框架	归入	Linus 2016 年 GPL 防御表态
