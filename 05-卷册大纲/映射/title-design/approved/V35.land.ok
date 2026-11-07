@@ -1,0 +1,25 @@
+kind=landing
+vol=V35
+title_count=156
+ledger_sha256=da9a3fc8d4934e8087efc81ab6a71c57b5d5a3907c872c17a6df704626b27fdf
+scope=全 156 题（11 filled＋145 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V35-C1.tsv
+ledger_main_sha256=86f4bdc8437068ceca6a8b3897d26a89816e8a25867c1aae1b7ff74afdaa35e2
+ledger_supp=design/V35-C2.tsv
+ledger_supp_sha256=16ea2a8428412fe9418920b3bf322c7da1d06e777d299f7ff7148a03d4cf6e74
+design_index=design/V35.tsv
+design_index_sha256=8f8d658b612ad1f65f82b240a7e61f46fda18d151b95357e49d49d09fdda583a
+fragments=design/fragments/V35.tsv
+fragments_sha256=d36de9894c9e0f96a00f55559fc9a7f80efab49709dc4402fcb50b1136fcb6b7
+blocks_total=437
+blocks_landed=81
+blocks_surplus=29
+blocks_moved=269
+blocks_compiled=0
+blocks_deleted=58
+gate=L1–L19 PASS 19/19（outline=tree=SUMMARY=8,627，本卷 156＝156＝156；判读期间 W_NORM 阻断一度致 summary=8,187，由他线上游改名后重生成解）；第三十八件 D1／D2 PASS、L 缺 V063 land.ok（他线在途）；第三十九件 45 项 FAIL 0；第二十四／二十八件 PASS；卷级回归 V35 6/6
+note=主会话单写者判读（不派子代理）；料域＝旧树第 305 章商业 UNIX 谱系（Sun／DEC／Microsoft／USL／NeXT 及二线厂商）＋303.9 BSDL 缺陷＋307 反批评＋第 10 卷 225／226 OpenSSH 归属链；本卷语料结构偏斜（商业章以厂商运维邮件为主，“缄默／吸纳”话语证据稀薄），145 题按 corpus_gap 空骨架如实落盘；容量挂账 29 块在 surplus/V35.tsv
+approved_by=ykla
+approved_at=2026-11-08
