@@ -1,255 +1,180 @@
 rowmine_id	subsection_id	title	action	reason
+tech-kern.messages.121953	V41.1.1.2	386BSD 的个人维护脉络	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122567	V41.1.1.5	早期分支共享驱动的存量	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122591	V41.1.1.3	三条代码承继线的分岔	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122276	V41.1.3.3	间接配置与直接配置的区分	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122282	V41.1.3.1	机器描述文件的语法构造	归入	节级匹配＋题内轮转分配
+netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
+tech-kern.messages.217135	V41.1.4.4	非一致缓存架构下的接口惯例	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217194	V41.1.4.2	内存屏障的语义约束	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.183601	V41.1.5.2	硬件抽象层的三层布局	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217141	V41.1.5.5	抽象层下的驱动复用	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218528	V41.1.5.3	驱动代码在 MI 与 MD 间的配额	归入	节级匹配＋题内轮转分配
+tech-security.messages.284985	V41.1.6.3	多平台构建的机时开销	归入	节级匹配＋题内轮转分配
+tech-security.messages.285188	V41.1.6.1	移植成本在维护端的沉淀	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9376	V41.1.7.1	平台矩阵在 1.3 的成型	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9418	V41.1.7.4	移植者协作的邮件惯例	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9468	V41.1.7.2	新平台引入的验收尺度	归入	节级匹配＋题内轮转分配
+netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=113，sha=b400ee7877c5）
+tech-kern.messages.217461	V41.10.1.5	虚拟化平台的适配账单	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217633	V41.10.1.3	PV 与 HVM 的实现分歧	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9418	V41.10.3.3	云环境的启动约束	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9468	V41.10.3.1	云镜像的制作流水	归入	节级匹配＋题内轮转分配
+tech-security.messages.284962	V41.10.5.1	微型虚拟机的启动时延	归入	节级匹配＋题内轮转分配
+tech-kern.messages.152669	V41.10.5.4	与既有虚拟化的接驳	归入	节级匹配＋题内轮转分配
+tech-security.messages.285175	V41.11.1.2	移植能力的技术外溢	归入	节级匹配＋题内轮转分配
+tech-security.messages.285868	V41.11.1.5	工程收益的射程边界	归入	节级匹配＋题内轮转分配
+tech-security.messages.286019	V41.11.1.3	可移植性与系统演化的牵连	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9437	V41.11.2.3	成果与项目定位的咬合	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9478	V41.11.2.1	技术成果的清单式盘点	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9418	V41.11.3.1	技术贡献的三个门类	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9468	V41.11.3.4	影响的时限与幅员	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9495	V41.11.3.2	被外部采纳的实现样本	归入	节级匹配＋题内轮转分配
+tech-kern.messages.121956	V41.11.4.2	维护侧的成本形态	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122569	V41.11.4.5	限制与路线调整的勾连	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122593	V41.11.4.3	限制对路线选择的反向塑造	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218584	V41.11.5.3	路线选择的后续涟漪	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218589	V41.11.5.1	代际影响的技术线索	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9437	V41.11.6.1	发行刻度的技术分期	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9478	V41.11.6.4	发行节奏的松紧变化	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9497	V41.11.6.2	版本节点的选取准据	归入	节级匹配＋题内轮转分配
+tech-security.messages.285188	V41.12.2.2	新平台引入的提交流程	归入	节级匹配＋题内轮转分配
+tech-security.messages.286077	V41.12.2.1	CVS 仓库的连续性	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217968	V41.12.2.4	版本控制与移植的榫卯	归入	节级匹配＋题内轮转分配
+tech-security.messages.285868	V41.12.3.3	规范执行的评审闸口	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217968	V41.12.3.2	MI 与 MD 代码的置放纪律	归入	节级匹配＋题内轮转分配
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=154，sha=337631518370）
-historical_claims.duckdb.claim		—	删除	零内容：仅抬头无正文（bytes=253，sha=40e2fea7a1a4）
-usenet_mail.messages.154193	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.154194	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.154197	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.172573	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.172803	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.172805	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.154904	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.154992	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.129311	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.130403	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.130425	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.130644	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.130660	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.130686	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-usenet_mail.messages.130727	V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	归入	章级匹配（C1）＋节名重合 1 项
-netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=155，sha=cd5090c0923c）
-usenet_mail.messages.182371	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-usenet_mail.messages.182376	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-usenet_mail.messages.182991	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-usenet_mail.messages.145618	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-usenet_mail.messages.145635	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-usenet_mail.messages.145715	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.114795	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.114798	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.114805	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.114809	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115248	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115254	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115400	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115410	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115412	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115415	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115419	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115420	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115421	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115422	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115424	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115425	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115428	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-tech-kern.messages.115430		—	删除	零内容：仅抬头无正文（bytes=206，sha=c968b4f6b830）
-netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=155，sha=3a7f6b7c8ba3）
-usenet_mail.messages.174160	V41.1.1.5	早期分支共享驱动的存量	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.119722	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.119724	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.123485	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
+usenet_mail.messages.154194	V41.12.5.4	发布流程的交接单	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.172803	V41.12.5.3	发行说明的编写准绳	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.174160	V41.12.6.2	平台矩阵的组织图谱	归入	节级匹配＋题内轮转分配
+tech-kern.messages.123485	V41.12.6.1	批量构建的调度编排	归入	节级匹配＋题内轮转分配
+tech-kern.messages.127985	V41.12.6.4	工程过程的资源配给	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.273354	V41.12.8.3	流动中的许可闸门	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.273609	V41.12.8.2	上游回馈的路径选择	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9462	V41.12.9.1	极简取向的代码表征	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9489	V41.12.9.4	美学主张与工程折冲	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9511	V41.12.9.3	接口取舍的判断准绳	归入	节级匹配＋题内轮转分配
+tech-kern.messages.119724	V41.13.1.2	多版本并存的依赖解法	归入	节级匹配＋题内轮转分配
+tech-kern.messages.127985	V41.13.1.5	语言生态扩展的篱墙	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128326	V41.13.1.3	语言生态的维护分派	归入	节级匹配＋题内轮转分配
+tech-security.messages.286077	V41.13.2.3	编译器升级的连锁震荡	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217970	V41.13.2.2	工具链在多平台的分发网	归入	节级匹配＋题内轮转分配
+tech-kern.messages.123485	V41.13.3.1	脚本语言的系统集成	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128292	V41.13.3.4	脚本语言的取舍标尺	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128338	V41.13.3.3	脚本生态的演进节拍	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9478	V41.2.1.2	68k 工作站的驱动继承	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9497	V41.2.1.5	四平台并行的维护分派	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9543	V41.2.1.3	VAX 内存管理的适配难点	归入	节级匹配＋题内轮转分配
+port-alpha.messages.6538	V41.2.2.3	嵌入式平台的裁剪尺度	归入	节级匹配＋题内轮转分配
+port-alpha.messages.6689	V41.2.2.1	PowerPC 移植的代码出处	归入	节级匹配＋题内轮转分配
+netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
+tech-kern.messages.152913	V41.2.3.4	Alpha 在发行矩阵中的位次	归入	节级匹配＋题内轮转分配
+tech-kern.messages.152919	V41.2.3.2	TURBOchannel 设备的驱动覆盖	归入	节级匹配＋题内轮转分配
+tech-kern.messages.215410	V41.2.4.2	evbarm 的变体组织	归入	节级匹配＋题内轮转分配
+tech-kern.messages.215417	V41.2.4.5	ARM 移植的维护责任	归入	节级匹配＋题内轮转分配
+tech-kern.messages.215424	V41.2.4.3	ARM 平台的引导装载链	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217386	V41.2.6.3	RISC-V 板级支持的名单	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217465	V41.2.6.1	RISC-V 移植的起步契机	归入	节级匹配＋题内轮转分配
+tech-kern.messages.121956	V41.2.7.1	架构维护者的职分层级	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122569	V41.2.7.4	架构退役的判定流程	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122593	V41.2.7.2	跨架构构建的同步节律	归入	节级匹配＋题内轮转分配
+tech-kern.messages.152911	V41.3.1.2	内核代码与运行环境的拆解	归入	节级匹配＋题内轮转分配
+tech-kern.messages.152916	V41.3.1.5	内核边界的重划依据	归入	节级匹配＋题内轮转分配
+tech-kern.messages.152921	V41.3.1.3	单内核到多形态内核的演进	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.154194	V41.3.3.3	网络协议栈的独立进程	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.172803	V41.3.3.1	文件系统驱动的用户态挂载	归入	节级匹配＋题内轮转分配
+netbsd.duckdb	V41.3.5.1	rump 服务的部署样式	归入	节级匹配＋题内轮转分配
+tech-kern.messages.2320697	V41.3.5.4	采用案例的边界情形	归入	节级匹配＋题内轮转分配
+tech-kern.messages.2320700	V41.3.5.2	外部采用的技术动因	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9489	V41.4.1.2	内核锁的粗粒度安排	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9511	V41.4.1.5	单处理器模型的惯性负担	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9544	V41.4.1.3	中断屏蔽形成的临界区	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218611	V41.4.2.3	初始锁划分的粒度	归入	节级匹配＋题内轮转分配
+tech-kern.messages.231689	V41.4.2.1	初期 SMP 的启动步骤	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9489	V41.4.3.1	2.0 的 SMP 覆盖范围	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9511	V41.4.3.4	2.0 架构的锁序安排	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9544	V41.4.3.2	原生线程与 SMP 的双轨	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9497	V41.4.4.2	细粒度锁的替换路线	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9543	V41.4.4.5	并发重构的遗留项	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9558	V41.4.4.3	抢占能力与调度的联动	归入	节级匹配＋题内轮转分配
+tech-net.messages.267350	V41.4.5.3	NET_MPSAFE 的开关语义	归入	节级匹配＋题内轮转分配
+tech-net.messages.267393	V41.4.5.1	VFS 层的并行化改造	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9497	V41.4.6.1	多核维护的职责划界	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9543	V41.4.6.4	多核平台的测试组合	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9558	V41.4.6.2	性能回归的监测装置	归入	节级匹配＋题内轮转分配
+tech-net.messages.267350	V41.4.7.2	并发性能的双指标度量	归入	节级匹配＋题内轮转分配
+tech-net.messages.267393	V41.4.7.5	性能优化的可测尽头	归入	节级匹配＋题内轮转分配
+tech-net.messages.267648	V41.4.7.3	锁竞争的定位手法	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122280	V41.5.1.3	构建产物的落盘布局	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122283	V41.5.1.1	build.sh 的脚本化封装	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9511	V41.5.2.1	源码树的目录分派	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9544	V41.5.2.4	树的版本控制形态	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9570	V41.5.2.2	共享代码与体系结构目录的隔断	归入	节级匹配＋题内轮转分配
+port-vax.messages.459147	V41.5.3.2	用户空间构建的依赖次第	归入	节级匹配＋题内轮转分配
+port-vax.messages.459729	V41.5.3.5	构建体系的演化遗迹	归入	节级匹配＋题内轮转分配
+port-vax.messages.460133	V41.5.3.3	两段构建的接续节点	归入	节级匹配＋题内轮转分配
+tech-kern.messages.161077	V41.5.5.3	安装镜像的生成工艺	归入	节级匹配＋题内轮转分配
+tech-kern.messages.162488	V41.5.5.1	快照构建的周期编排	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122276	V41.5.6.1	构建体系中的测试环	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122282	V41.5.6.4	测试与发布的挂钩	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122285	V41.5.6.2	自动化测试的覆盖面	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122567	V41.6.1.2	文件系统语义的 BSD 底色	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122591	V41.6.1.5	传统布局的沿用与翻修	归入	节级匹配＋题内轮转分配
+tech-kern.messages.129227	V41.6.1.3	FFS 在大容量介质上的伸展	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122590	V41.6.2.3	一致性维护的性能折损	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122597	V41.6.2.1	Soft Updates 的写入排序	归入	节级匹配＋题内轮转分配
+tech-kern.messages.116878	V41.6.3.1	WAPBL 的日志区段	归入	节级匹配＋题内轮转分配
+tech-kern.messages.116884	V41.6.3.4	日志模式的得失权衡	归入	节级匹配＋题内轮转分配
+tech-kern.messages.116923	V41.6.3.2	日志回放的恢复次序	归入	节级匹配＋题内轮转分配
+tech-kern.messages.116881	V41.6.6.2	临时文件系统的资源围栏	归入	节级匹配＋题内轮转分配
+tech-kern.messages.116921	V41.6.6.5	现代扩展的兼容账单	归入	节级匹配＋题内轮转分配
+tech-kern.messages.116925	V41.6.6.3	扩展文件系统的挂接接口	归入	节级匹配＋题内轮转分配
+port-vax.messages.459471	V41.6.7.3	ZFS 与 FFS 的并存账	归入	节级匹配＋题内轮转分配
+port-vax.messages.459874	V41.6.7.1	ZFS 的引入路径	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122569	V41.7.1.1	4.3BSD 网络栈的继承线	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122593	V41.7.1.4	传统栈的边界收束	归入	节级匹配＋题内轮转分配
+tech-kern.messages.129229	V41.7.1.2	协议实现的层次编组	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.273354	V41.7.2.2	IPv6 集成的版本落点	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.273609	V41.7.2.5	KAME 遗产的承接幅度	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.274217	V41.7.2.3	IPsec 栈的更替轨迹	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122282	V41.7.3.3	多队列与中断的分担	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122285	V41.7.3.1	网络接口在协议栈中的挂点	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122281	V41.7.4.1	net80211 的框架骨架	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122284	V41.7.4.4	无线支持的硬件幅员	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122302	V41.7.4.2	无线驱动的接入形式	归入	节级匹配＋题内轮转分配
+tech-kern.messages.166864	V41.7.5.2	多核环境下的查表结构	归入	节级匹配＋题内轮转分配
+tech-kern.messages.166886	V41.7.5.5	NPF 设计的技术筹码	归入	节级匹配＋题内轮转分配
+tech-kern.messages.166892	V41.7.5.3	BPF 即时编译的执行链	归入	节级匹配＋题内轮转分配
+port-vax.messages.459410	V41.7.6.3	安全特性与性能的配平	归入	节级匹配＋题内轮转分配
+port-vax.messages.459803	V41.7.6.1	包过滤方案的代际轮替	归入	节级匹配＋题内轮转分配
 tech-kern.messages.123662		—	删除	零内容：仅抬头无正文（bytes=206，sha=82a95af05433）
-tech-kern.messages.127405	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.127985	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128174	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128292	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128326	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128335	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128338	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128366	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.128376	V41.1.6.1	移植成本在维护端的沉淀	归入	章级匹配（C1）＋节名重合 1 项
-netbsd.duckdb	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254594	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254599	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254601	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254753	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254743	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254770	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254854	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254871	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254897	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254975	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.254996	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.255022	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.255025	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.255033	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.255075	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-port-arm.messages.255078	V41.5.1.1	build.sh 的脚本化封装	归入	章级匹配（C5）＋节名重合 0 项
-netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=155，sha=3536ebe74e7c）
-tech-kern.messages.158778	V41.1.7.4	移植者协作的邮件惯例	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.2322839	V41.1.7.4	移植者协作的邮件惯例	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.2322840	V41.1.7.4	移植者协作的邮件惯例	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.2322841	V41.1.7.4	移植者协作的邮件惯例	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.2322842	V41.1.7.4	移植者协作的邮件惯例	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.2322844	V41.1.7.4	移植者协作的邮件惯例	归入	章级匹配（C1）＋节名重合 1 项
-freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=158，sha=050d8b131325）
-tech-kern.messages.152524	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153243	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153244	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153246	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153249	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153250	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153254	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153264	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153266	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153267	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153271	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153273	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153274	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153275	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153278	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153279	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153281	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153285	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153289	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153321	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153423	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153427	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153429	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153430	V41.1.5.5	抽象层下的驱动复用	归入	章级匹配（C1）＋节名重合 1 项
-tech-kern.messages.153431		—	删除	零内容：仅抬头无正文（bytes=206，sha=f87c4f93ac8a）
-freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=6900630e291a）
-tech-kern.messages.161074	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.161077	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.162475	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.162477	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.162488	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.162819	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.162823	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.163705	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.163707	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.163709	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167251	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167252	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167253	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167255	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167256	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167262	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167267	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167273	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167274	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167278	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167282	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167287	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-kern.messages.167288	V41.4.1.2	内核锁的粗粒度安排	归入	章级匹配（C4）＋节名重合 3 项
-tech-security.messages.285857	V41.10.2.5	监控框架的安全外沿	归入	章级匹配（C10）＋节名重合 1 项
-netbsd.duckdb	V41.10.2.5	监控框架的安全外沿	归入	章级匹配（C10）＋节名重合 1 项
-tech-kern.messages.2336406	V41.10.2.5	监控框架的安全外沿	归入	章级匹配（C10）＋节名重合 1 项
-tech-kern.messages.2336415	V41.10.2.5	监控框架的安全外沿	归入	章级匹配（C10）＋节名重合 1 项
-tech-kern.messages.2336418	V41.10.2.5	监控框架的安全外沿	归入	章级匹配（C10）＋节名重合 1 项
-tech-kern.messages.2336425	V41.10.2.5	监控框架的安全外沿	归入	章级匹配（C10）＋节名重合 1 项
-tech-security.messages.285961	V41.5.1.5	构建体系的可重复保障	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.285380	V41.5.2.3	源码树对移植的牵制	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.284985	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.284989	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.285175	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.285188	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.285371	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.285868	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-tech-security.messages.286077	V41.5.4.1	发布工程的职能边界	归入	章级匹配（C5）＋节名重合 1 项
-freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=161，sha=c05530e2947f）
-netbsd.duckdb.commits		—	删除	零内容：仅抬头无正文（bytes=241，sha=21a5c61dfa5b）
-tech-kern.messages.218584	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218585	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218586	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218589	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218590	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218605	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218607	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.218647	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.229526	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.229529	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.229531	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.232079	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.235913	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.235961	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-tech-kern.messages.235965	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-netbsd.duckdb	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275067	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275106	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275108	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275109	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275117	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275124	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275203	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275477	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275496	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275575	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-pkg.messages.275910	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-login-zazhi.articles.CL-1-128	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-login-zazhi.articles.CL-2-058	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-485	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-1502	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-1503	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-1504	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-1505	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-2042	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-2043	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-2044	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-2045	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-2786	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-2787	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-3258	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-3259	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-3260	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-youtube.episodes.CL-15-3261	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=160，sha=4940f85c81db）
-tech-kern.messages.128527	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128528	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128529	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128532	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128533	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128534	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128536	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128547	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128548	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.128551	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.151465	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.151468	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.151477	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.151540	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.154090	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.154091	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.154092	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.154093	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.154322	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.158509	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.159334	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.159335	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-tech-kern.messages.161697		—	删除	零内容：仅抬头无正文（bytes=206，sha=fc33a9d0aac7）
-netbsd.duckdb	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-netbsd.duckdb	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=252，sha=33ca30600862）
-netbsd.duckdb	V41.8.1.1	Packages 集合的源头	归入	章级匹配（C8）＋节名重合 0 项
-doubts_resolved	V41.8.1.4	从集合到框架的蜕变	归入	章级匹配（C8）＋节名重合 1 项
-chapter_reviews	V41.8.1.4	从集合到框架的蜕变	归入	章级匹配（C8）＋节名重合 1 项
-doubts_resolved	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-chapter_reviews	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-netbsd.duckdb.commits	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1512	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1513	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1514	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1515	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1696	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1697	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1698	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1699	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1885	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1886	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1887	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1888	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1925	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1926	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1927	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-1928	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-2683	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-2684	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-2685	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-2686	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-3001	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-3002	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-3003	V41.2.1.1	i386 平台的适配起点	归入	章级匹配（C2）＋节名重合 0 项
-youtube.episodes.CL-15-3004		—	删除	零内容：仅抬头无正文（bytes=196，sha=389777ebf545）
-freebsd.duckdb	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-netbsd.duckdb	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-netbsd.duckdb	V41.1.1.1	Net/2 分装的代码界线	归入	章级匹配（C1）＋节名重合 0 项
-doubts_resolved	V41.1.3.2	设备探测与附着次序	归入	章级匹配（C1）＋节名重合 1 项
-chapter_reviews	V41.1.3.2	设备探测与附着次序	归入	章级匹配（C1）＋节名重合 1 项
+tech-kern.messages.128335	V41.8.1.4	从集合到框架的蜕变	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128376	V41.8.1.2	早期包管理的脚本雏形	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128338	V41.8.2.3	构建框架的分段设计	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128335	V41.8.3.1	系统整合的路径契约	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128376	V41.8.3.4	整合对升级的牵动	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128376	V41.8.4.3	非 NetBSD 平台的支撑名录	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122284	V41.8.5.3	二进制与源码构建的分流	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122302	V41.8.5.1	二进制包的仓库编目	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122590	V41.8.6.1	季度分支的发行韵律	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122597	V41.8.6.4	长期维护的资源紧箍	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.130416	V41.8.6.2	包维护者的职责划分	归入	节级匹配＋题内轮转分配
+tech-kern.messages.122593	V41.8.7.2	安全更新的发布通道	归入	节级匹配＋题内轮转分配
+tech-kern.messages.129229	V41.8.7.5	安全维护的响应限度	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.131322	V41.8.7.3	包审计的核查条目	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9544	V41.9.1.3	机制编排的非年序章法	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9570	V41.9.1.2	NetBSD 安全设计的取舍	归入	节级匹配＋题内轮转分配
+tech-security.messages.285868	V41.9.10.1	安全机制的架构歧异	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217970	V41.9.10.4	一致性目标的收束半径	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217973	V41.9.10.3	可移植安全实现的代价账	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9544	V41.9.11.2	默认安全与可用性的配平	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9570	V41.9.11.1	机制取舍的技术凭据	归入	节级匹配＋题内轮转分配
+port-alpha.messages.9642	V41.9.11.4	取舍结果的历史定评	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.182376	V41.9.2.3	监听器机制的扩展判定	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.145635	V41.9.2.2	凭证与权限的判定阶梯	归入	节级匹配＋题内轮转分配
+tech-security.messages.286077	V41.9.5.1	ASLR 的随机化区域	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217972	V41.9.5.4	默认启用的安全账单	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217975	V41.9.5.3	随机化与可移植性的龃龉	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217135	V41.9.8.2	内核数据访问的铁律	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217194	V41.9.8.1	硬件防护位的启用条款	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218530	V41.9.8.4	硬件防护的失效情形	归入	节级匹配＋题内轮转分配
