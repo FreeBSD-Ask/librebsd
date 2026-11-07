@@ -1,0 +1,25 @@
+kind=landing
+vol=V30
+title_count=208
+ledger_sha256=dcfa4c0504c8acb9dd5930e976917ed8f8464e63e6dd0be94090e36a959563e8
+scope=全 208 题（27 filled＋181 空骨架）；ykla 全量批准模式落盘
+design_card=—
+design_card_sha256=—
+ledger_p1=design/V30-C1.tsv
+ledger_p1_sha256=bdadb58fa5f47232b015b18b1af0ad4aa4b25e4027a5df3fd34a3a7e845ce04a
+ledger_p2=design/V30-C2.tsv
+ledger_p2_sha256=4bc8d7b43846880a8c3ccc4520de753dc27ec6b6028a696ec38f628c6e4b074e
+design_index=design/V30.tsv
+design_index_sha256=0f9c815f3a7a47790e8a008d420895d6b4a629929fb9b0e186545b885bdfb501
+fragments=design/fragments/V30.tsv
+fragments_sha256=ba46b009c62adb58bf255329924c9d5e3b20704ab5d483c36f8213359d7777e5
+blocks_total=73
+blocks_landed=27
+blocks_surplus=0
+blocks_moved=20
+blocks_compiled=26
+blocks_deleted=0
+gate=L1–L18 PASS；L19 因他线旧词红（outline=tree=9465 而 SUMMARY=9195：V33／V35／V53 题面含旧词“基础系统”，镜像写盘器按 TERM_MAP 拒绝归一化写盘，须由该线在 title-design 改名）；第三十九件 45 项 0 失败；第二十四／二十八件 PASS；卷级回归 V30 6/6
+note=全量批准模式由主会话签发；V21–V30 十卷委派，主会话单写者、未起子代理。料域：387–392（BSD 史编纂学：认识论自反、叙事结构批判、人物书写伦理、去中心化悖论、双向检验、书写方向）＋047.1／095.1（卷末书目述评两件），共 19 件 73 块，全部逐块判读；处置归入 27／移出 20／辑存 26（史观原文 20、数据库要点 4、文献导引 2）。208 题中 27 题有料（termcap 认领、bikeshed 与 daemon 词源诸说、Berkeley Flame、IEEE Computer 漏引之争、Open Group 年表检核、BSDCan 口述），181 题记 corpus_gap；本卷为学术史卷，论文／报告／期刊三章的真料为卷期与报告编号考订，须逐条对刊核验，本轮不入块级台账
+approved_by=ykla
+approved_at=2026-11-08
