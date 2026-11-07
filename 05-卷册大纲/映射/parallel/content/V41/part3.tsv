@@ -1,179 +1,179 @@
 rowmine_id	subsection_id	title	action	reason
-tech-kern.messages.121956	V41.1.1.3	三条代码承继线的分岔	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122569	V41.1.1.1	Net/2 分装的代码界线	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122274	V41.1.3.1	机器描述文件的语法构造	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122280	V41.1.3.4	内核配置表的裁剪能力	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122283	V41.1.3.2	设备探测与附着次序	归入	节级匹配＋题内轮转分配
-usenet_mail.messages.183582	V41.1.4.2	内存屏障的语义约束	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217139	V41.1.4.5	总线抽象支撑的复用范围	归入	节级匹配＋题内轮转分配
-tech-kern.messages.218450	V41.1.4.3	DMA 映射的地址翻译	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217135	V41.1.5.3	驱动代码在 MI 与 MD 间的配额	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217194	V41.1.5.1	驱动与总线的挂接环节	归入	节级匹配＋题内轮转分配
-tech-security.messages.285961	V41.1.6.1	移植成本在维护端的沉淀	归入	节级匹配＋题内轮转分配
-tech-security.messages.284989	V41.1.6.4	代码规模的度量标准	归入	节级匹配＋题内轮转分配
-tech-security.messages.285371	V41.1.6.2	可移植性与性能的兑换比率	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9383	V41.1.7.2	新平台引入的验收尺度	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9437	V41.1.7.5	两次发行间的驱动归并	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9478	V41.1.7.3	发行组合与平台名录	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217385	V41.10.1.3	PV 与 HVM 的实现分歧	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217462	V41.10.1.1	Xen 域的运行位阶	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9383	V41.10.3.1	云镜像的制作流水	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9437	V41.10.3.4	云部署的运维接口层	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9478	V41.10.3.2	云平台的驱动装具	归入	节级匹配＋题内轮转分配
-tech-security.messages.285046	V41.10.5.2	轻量隔离的实现地基	归入	节级匹配＋题内轮转分配
-tech-kern.messages.152675	V41.10.5.5	轻量隔离的适用半径	归入	节级匹配＋题内轮转分配
-tech-security.messages.285188	V41.11.1.3	可移植性与系统演化的牵连	归入	节级匹配＋题内轮转分配
-tech-security.messages.286077	V41.11.1.1	可移植性作为架构纲领	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9417	V41.11.2.1	技术成果的清单式盘点	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9462	V41.11.2.4	内部影响的传导导线	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9489	V41.11.2.2	成果在项目内部的扩散	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9437	V41.11.3.2	被外部采纳的实现样本	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9478	V41.11.3.5	技术贡献评价的标尺	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9497	V41.11.3.3	技术贡献的传播路数	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122564	V41.11.4.3	限制对路线选择的反向塑造	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122590	V41.11.4.1	限制的类别与出处	归入	节级匹配＋题内轮转分配
+tech-kern.messages.121956		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122569		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122274		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122280		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122283		—	挂账	待定位：与 418 题重合不足 6 项
+usenet_mail.messages.183582		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217139		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.218450		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217135	V41.4.6.2	性能回归的监测装置	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.217194		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.285961		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.284989		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.285371		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9383		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.217385		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217462		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9383		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
+tech-security.messages.285046	V41.4.3.2	原生线程与 SMP 的双轨	归入	文本与题名thesis 重合 6 项
+tech-kern.messages.152675		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.285188		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9417		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9462		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9489		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9497	V41.1.4.1	总线标签的封装方式	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.122564		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122590		—	挂账	待定位：与 418 题重合不足 6 项
 freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=161，sha=c05530e2947f）
-tech-kern.messages.218585	V41.11.5.4	代际更替中的连续性	归入	节级匹配＋题内轮转分配
-tech-kern.messages.218590	V41.11.5.2	跨代平台的技术承继	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9462	V41.11.6.2	版本节点的选取准据	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9489	V41.11.6.5	时间线的技术读序	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9511	V41.11.6.3	年表与叙事的分职	归入	节级匹配＋题内轮转分配
-tech-security.messages.285371	V41.12.2.3	autoconf 变更的评审关卡	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218585		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.218590		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9462		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9489		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.285371		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
-tech-security.messages.285188	V41.12.3.1	代码书写规范的戒条	归入	节级匹配＋题内轮转分配
-tech-security.messages.286077	V41.12.3.4	规范与移植效率的勾兑	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217969	V41.12.3.3	规范执行的评审闸口	归入	节级匹配＋题内轮转分配
+tech-security.messages.285188		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.217969		—	挂账	待定位：与 418 题重合不足 6 项
 historical_claims.duckdb.claim		—	删除	零内容：仅抬头无正文（bytes=253，sha=40e2fea7a1a4）
-usenet_mail.messages.154197	V41.12.5.1	发布文书的构成组件	归入	节级匹配＋题内轮转分配
-usenet_mail.messages.172805	V41.12.5.4	发布流程的交接单	归入	节级匹配＋题内轮转分配
-tech-kern.messages.119722	V41.12.6.3	构建中断的分流路径	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.154197		—	挂账	待定位：与 418 题重合不足 6 项
+usenet_mail.messages.172805		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.119722		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.123662		—	删除	零内容：仅抬头无正文（bytes=206，sha=82a95af05433）
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
-tech-pkg.messages.273601	V41.12.8.4	跨项目协作的礼节	归入	节级匹配＋题内轮转分配
-tech-pkg.messages.274212	V41.12.8.3	流动中的许可闸门	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9468	V41.12.9.2	命名惯例的技术负载	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9495	V41.12.9.1	极简取向的代码表征	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9525	V41.12.9.4	美学主张与工程折冲	归入	节级匹配＋题内轮转分配
-tech-kern.messages.123485	V41.13.1.3	语言生态的维护分派	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128174	V41.13.1.1	语言运行时的打包成规	归入	节级匹配＋题内轮转分配
-tech-security.messages.285371	V41.13.2.1	编译器移植的发端	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217968	V41.13.2.4	移植中的后端适配	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217971	V41.13.2.3	编译器升级的连锁震荡	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.273601		—	挂账	待定位：与 418 题重合不足 6 项
+tech-pkg.messages.274212		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9468		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9495		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.123485		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128174		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.285371		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217968	V41.3.1.2	内核代码与运行环境的拆解	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.217971		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.123662		—	删除	零内容：仅抬头无正文（bytes=206，sha=82a95af05433）
-tech-kern.messages.128326	V41.13.3.1	脚本语言的系统集成	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128366	V41.13.3.4	脚本语言的取舍标尺	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9489	V41.2.1.3	VAX 内存管理的适配难点	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9511	V41.2.1.1	i386 平台的适配起点	归入	节级匹配＋题内轮转分配
-netbsd.duckdb	V41.2.2.1	PowerPC 移植的代码出处	归入	节级匹配＋题内轮转分配
-port-alpha.messages.6646	V41.2.2.4	多平台共用的总线抽象	归入	节级匹配＋题内轮转分配
-port-alpha.messages.6691	V41.2.2.2	MIPS 评估板的重心迁移	归入	节级匹配＋题内轮转分配
-tech-kern.messages.152909	V41.2.3.2	TURBOchannel 设备的驱动覆盖	归入	节级匹配＋题内轮转分配
-tech-kern.messages.152914	V41.2.3.5	工作站移植的遗产台账	归入	节级匹配＋题内轮转分配
-tech-kern.messages.152920	V41.2.3.3	工作站架构的维护降级	归入	节级匹配＋题内轮转分配
-tech-kern.messages.215414	V41.2.4.3	ARM 平台的引导装载链	归入	节级匹配＋题内轮转分配
-tech-kern.messages.215420	V41.2.4.1	ARM 移植的板级切分	归入	节级匹配＋题内轮转分配
+tech-kern.messages.128326		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128366		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9489		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
+netbsd.duckdb	V41.2.1.2	68k 工作站的驱动继承	归入	文本与题名thesis 重合 6 项
+port-alpha.messages.6646		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.6691		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.152909		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.152914		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.152920		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.215414		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.215420		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=113，sha=b400ee7877c5）
-tech-kern.messages.217461	V41.2.6.4	新兴架构的准入条件	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217633	V41.2.6.2	指令集扩展的兼容处置	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122564	V41.2.7.2	跨架构构建的同步节律	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122590	V41.2.7.5	三层维护模型的组织耗费	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122597	V41.2.7.3	移植分支的合并要件	归入	节级匹配＋题内轮转分配
-tech-kern.messages.152913	V41.3.1.3	单内核到多形态内核的演进	归入	节级匹配＋题内轮转分配
-tech-kern.messages.152919	V41.3.1.1	Anykernel 的构成原理	归入	节级匹配＋题内轮转分配
+tech-kern.messages.217461		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217633		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122564		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122590		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122597		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.152913		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.152919		—	挂账	待定位：与 418 题重合不足 6 项
 historical_claims.duckdb.claim		—	删除	零内容：仅抬头无正文（bytes=253，sha=40e2fea7a1a4）
-usenet_mail.messages.154197	V41.3.3.4	用户态化的接口界限	归入	节级匹配＋题内轮转分配
-usenet_mail.messages.172805	V41.3.3.2	设备驱动的用户态测试	归入	节级匹配＋题内轮转分配
-tech-kern.messages.2320695	V41.3.5.2	外部采用的技术动因	归入	节级匹配＋题内轮转分配
-tech-kern.messages.2320698	V41.3.5.5	外部采用的反哺回路	归入	节级匹配＋题内轮转分配
-tech-kern.messages.2320702	V41.3.5.3	rump 在工具链中的位置	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9495	V41.4.1.3	中断屏蔽形成的临界区	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9525	V41.4.1.1	单处理器内核的默认假设	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.154197		—	挂账	待定位：与 418 题重合不足 6 项
+usenet_mail.messages.172805		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.2320695		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.2320698		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.2320702	V41.4.1.1	单处理器内核的默认假设	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9495		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
-tech-kern.messages.218614	V41.4.2.4	初期 SMP 的平台名单	归入	节级匹配＋题内轮转分配
-tech-kern.messages.231698	V41.4.2.2	处理器间中断的职责	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9495	V41.4.3.2	原生线程与 SMP 的双轨	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9525	V41.4.3.5	SMP 架构的验收标准	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9553	V41.4.3.3	ACPI 框架承担的枚举	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9511	V41.4.4.3	抢占能力与调度的联动	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9544	V41.4.4.1	5.x 并发重构的波及面	归入	节级匹配＋题内轮转分配
-tech-net.messages.267005	V41.4.5.1	VFS 层的并行化改造	归入	节级匹配＋题内轮转分配
-tech-net.messages.267354	V41.4.5.4	MP-safe 化的验收尺度	归入	节级匹配＋题内轮转分配
-tech-net.messages.267412	V41.4.5.2	驱动改造的批次节奏	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9511	V41.4.6.2	性能回归的监测装置	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9544	V41.4.6.5	维护成本的长期走势	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9570	V41.4.6.3	内核选项的增删步调	归入	节级匹配＋题内轮转分配
-tech-net.messages.267354	V41.4.7.3	锁竞争的定位手法	归入	节级匹配＋题内轮转分配
-tech-net.messages.267412	V41.4.7.1	调度器在多核下的权衡	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122275	V41.5.1.1	build.sh 的脚本化封装	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122281	V41.5.1.4	主机与目标平台的划分	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122284	V41.5.1.2	交叉工具链的生成途径	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9525	V41.5.2.2	共享代码与体系结构目录的隔断	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9553	V41.5.2.5	树结构的历次增删	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9606	V41.5.2.3	源码树对移植的牵制	归入	节级匹配＋题内轮转分配
-port-vax.messages.459409	V41.5.3.3	两段构建的接续节点	归入	节级匹配＋题内轮转分配
-port-vax.messages.459730	V41.5.3.1	内核构建的配置入口	归入	节级匹配＋题内轮转分配
+tech-kern.messages.218614		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.231698		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9495		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9544	V41.7.3.2	网卡驱动的共享范围	归入	文本与题名thesis 重合 5 项
+tech-net.messages.267005		—	挂账	待定位：与 418 题重合不足 6 项
+tech-net.messages.267354		—	挂账	待定位：与 418 题重合不足 6 项
+tech-net.messages.267412		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9544	V41.7.3.2	网卡驱动的共享范围	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9570		—	挂账	待定位：与 418 题重合不足 6 项
+tech-net.messages.267354		—	挂账	待定位：与 418 题重合不足 6 项
+tech-net.messages.267412		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122275		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122281		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122284		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
+port-vax.messages.459409	V41.13.1.1	语言运行时的打包成规	归入	文本与题名thesis 重合 5 项
+port-vax.messages.459730	V41.1.6.1	移植成本在维护端的沉淀	归入	文本与题名thesis 重合 4 项
 freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=6900630e291a）
-tech-kern.messages.162475	V41.5.5.4	快照与正式发布的落差	归入	节级匹配＋题内轮转分配
-tech-kern.messages.162819	V41.5.5.2	多架构发行组合的排布	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122280	V41.5.6.2	自动化测试的覆盖面	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122283	V41.5.6.5	测试体系的养护代价	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122295	V41.5.6.3	测试结果的归档格式	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122569	V41.6.1.3	FFS 在大容量介质上的伸展	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122593	V41.6.1.1	FFS 的磁盘布局继承	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122567	V41.6.2.1	Soft Updates 的写入排序	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122591	V41.6.2.4	Soft Updates 的适用圈定	归入	节级匹配＋题内轮转分配
-tech-kern.messages.129227	V41.6.2.2	崩溃一致性的守护链条	归入	节级匹配＋题内轮转分配
-tech-kern.messages.116879	V41.6.3.2	日志回放的恢复次序	归入	节级匹配＋题内轮转分配
-tech-kern.messages.116900	V41.6.3.5	日志文件系统的性能签名	归入	节级匹配＋题内轮转分配
-tech-kern.messages.116924	V41.6.3.3	WAPBL 与 FFS 的咬合	归入	节级匹配＋题内轮转分配
-tech-kern.messages.116884	V41.6.6.3	扩展文件系统的挂接接口	归入	节级匹配＋题内轮转分配
-tech-kern.messages.116923	V41.6.6.1	tmpfs 的内存定位	归入	节级匹配＋题内轮转分配
-port-vax.messages.459212	V41.6.7.1	ZFS 的引入路径	归入	节级匹配＋题内轮转分配
-port-vax.messages.459697	V41.6.7.4	生态接入的维护负荷	归入	节级匹配＋题内轮转分配
-port-vax.messages.459907	V41.6.7.2	外部文件系统的集成层级	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122590	V41.7.1.2	协议实现的层次编组	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122597	V41.7.1.5	传统栈的重构路径	归入	节级匹配＋题内轮转分配
+tech-kern.messages.162475	V41.3.6.2	组件化路线与单体内核的分野	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.162819	V41.10.4.2	进程隔离与系统隔离的界线	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.122280		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122283		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122295		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122569		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122593		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122567	V41.13.2.1	编译器移植的发端	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.122591		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.129227		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.116879		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.116900	V41.2.4.5	ARM 移植的维护责任	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.116924		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.116884		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.116923		—	挂账	待定位：与 418 题重合不足 6 项
+port-vax.messages.459212		—	挂账	待定位：与 418 题重合不足 6 项
+port-vax.messages.459697		—	挂账	待定位：与 418 题重合不足 6 项
+port-vax.messages.459907		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122590		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122597		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
-tech-pkg.messages.273601	V41.7.2.3	IPsec 栈的更替轨迹	归入	节级匹配＋题内轮转分配
-tech-pkg.messages.274212	V41.7.2.1	KAME 代码的导入节拍	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122280	V41.7.3.1	网络接口在协议栈中的挂点	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122283	V41.7.3.4	驱动与协议栈的交接带	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122295	V41.7.3.2	网卡驱动的共享范围	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122282	V41.7.4.2	无线驱动的接入形式	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122285	V41.7.4.5	无线体系的维护依赖	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122342	V41.7.4.3	无线协议栈的分层切片	归入	节级匹配＋题内轮转分配
-tech-kern.messages.166881	V41.7.5.3	BPF 即时编译的执行链	归入	节级匹配＋题内轮转分配
-tech-kern.messages.166889	V41.7.5.1	NPF 的设计取向	归入	节级匹配＋题内轮转分配
-port-vax.messages.459147	V41.7.6.1	包过滤方案的代际轮替	归入	节级匹配＋题内轮转分配
-port-vax.messages.459729	V41.7.6.4	过滤规则的表述语汇	归入	节级匹配＋题内轮转分配
-port-vax.messages.460133	V41.7.6.2	IPsec 的特性落位	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128292	V41.8.1.2	早期包管理的脚本雏形	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128338	V41.8.1.5	早期生态的规模天花板	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128326	V41.8.2.1	pkgsrc 框架的成型标识	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128366	V41.8.2.4	pkgsrc 与 Ports 树的取向之别	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128338	V41.8.3.2	基础系统与软件包的边界线	归入	节级匹配＋题内轮转分配
-tech-kern.messages.128338	V41.8.4.1	bootstrap 的引导阶梯	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122282	V41.8.5.1	二进制包的仓库编目	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122285	V41.8.5.4	仓库同步的更新时点	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122342	V41.8.5.2	pkgin 的依赖求解	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122591	V41.8.6.2	包维护者的职责划分	归入	节级匹配＋题内轮转分配
-tech-kern.messages.129227	V41.8.6.5	维护模式的组织开销	归入	节级匹配＋题内轮转分配
-usenet_mail.messages.130542	V41.8.6.3	版本升级的批量作业	归入	节级匹配＋题内轮转分配
-tech-kern.messages.122597	V41.8.7.3	包审计的核查条目	归入	节级匹配＋题内轮转分配
-usenet_mail.messages.130542	V41.8.7.1	漏洞通告的处置链条	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9525	V41.9.1.1	BSD 安全传统的技术脉络	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9553	V41.9.1.4	安全机制与可移植性的捆绑	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9606	V41.9.1.3	机制编排的非年序章法	归入	节级匹配＋题内轮转分配
-tech-security.messages.286077	V41.9.10.2	一致性验证的检查内容	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217971	V41.9.10.1	安全机制的架构歧异	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217974	V41.9.10.4	一致性目标的收束半径	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9553	V41.9.11.3	安全工程的维护担子	归入	节级匹配＋题内轮转分配
-port-alpha.messages.9606	V41.9.11.2	默认安全与可用性的配平	归入	节级匹配＋题内轮转分配
+tech-pkg.messages.273601		—	挂账	待定位：与 418 题重合不足 6 项
+tech-pkg.messages.274212		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122280		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122283		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122295		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122282		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122285		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122342		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.166881		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.166889		—	挂账	待定位：与 418 题重合不足 6 项
+port-vax.messages.459147	V41.1.6.1	移植成本在维护端的沉淀	归入	文本与题名thesis 重合 5 项
+port-vax.messages.459729		—	挂账	待定位：与 418 题重合不足 6 项
+port-vax.messages.460133		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128292		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128338		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128326		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128366		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128338		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.128338		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122282		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122285		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122342		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122591		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.129227		—	挂账	待定位：与 418 题重合不足 6 项
+usenet_mail.messages.130542		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.122597		—	挂账	待定位：与 418 题重合不足 6 项
+usenet_mail.messages.130542		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.217971		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217974		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=155，sha=cd5090c0923c）
-usenet_mail.messages.182991	V41.9.2.4	kauth 与其他子系统的接榫	归入	节级匹配＋题内轮转分配
-usenet_mail.messages.145715	V41.9.2.3	监听器机制的扩展判定	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217970	V41.9.5.2	KASLR 的实现条件	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217973	V41.9.5.1	ASLR 的随机化区域	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217976	V41.9.5.4	默认启用的安全账单	归入	节级匹配＋题内轮转分配
-tech-kern.messages.217139	V41.9.8.3	多架构支持的偏斜	归入	节级匹配＋题内轮转分配
-tech-kern.messages.218450	V41.9.8.2	内核数据访问的铁律	归入	节级匹配＋题内轮转分配
+usenet_mail.messages.182991	V41.5.4.3	发行公告的技术措辞	归入	文本与题名thesis 重合 5 项
+usenet_mail.messages.145715		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217970	V41.6.2.5	一致性机制的替代方案	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.217973		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217976	V41.1.1.1	Net/2 分装的代码界线	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.217139		—	挂账	待定位：与 418 题重合不足 6 项
+tech-kern.messages.218450		—	挂账	待定位：与 418 题重合不足 6 项
