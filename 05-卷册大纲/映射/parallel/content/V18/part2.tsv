@@ -1,0 +1,36 @@
+rowmine_id	subsection_id	title	action	reason
+ksummit-discuss.messages.348201	V18.5.1.4	归档链接的可追溯诉求	归入	文档迁 docs/* 与旧链接占位的可追溯之议，属归档链接的可追溯诉求
+ksummit-discuss.messages.349330		—	移出	人工判读：缺陷报告礼节的团队文化材料，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.348889	V18.4.8.4	稳定树治理的提问条目	归入	Greg KH 稳定树体量与补丁速率之争，属稳定树治理的提问条目
+ksummit-discuss.messages.348954		—	移出	人工判读：bisect／get_maintainer 自动化工具史，无本卷落点；建议宿主 V59
+ksummit.messages.5112	V18.4.3.2	维护者层级的建制	归入	Chehab 述争议特性先进 staging 并认同维护者层级判断
+ksummit-discuss.messages.349127		—	移出	人工判读：NDA 与 L1TF 披露之争属安全披露治理；建议宿主 V59
+linux-smp.messages.1572721		—	移出	人工判读：2002–2009 调度与中断延迟实测，属硬件专题；建议宿主 V20
+ksummit.messages.6052	V18.7.8.1	会前筹备的议题列表	归入	Gushchin 提五项 AI 评审议题，属会前筹备的议题列表
+ksummit.messages.4552	V18.7.2.1	内容政策的议程走向	归入	Stoakes 批评指南草案回避要害，属内容政策的议程走向
+ksummit.messages.6234	V18.7.3.4	定稿历经的修订版次	归入	反对指南用俚语 slop，属定稿历经的修订版次
+ksummit.messages.7716		—	移出	人工判读：DRM/KMS 与 GEMM 路径之议，无本卷落点；建议宿主 V59
+ksummit.messages.2433	V18.4.3.2	维护者层级的建制	归入	主张默认信任子系统维护者把关（ISP 厂商换子系统个案）
+ksummit.messages.9269	V18.5.3.2	反对意见的核心理由	归入	Bottomley 反对 git notes 共享，属版本说明之争的反对意见
+ksummit-discuss.messages.348898		—	移出	人工判读：厂商硬件问题同构之论，无本卷落点；建议宿主 V59
+ksummit.messages.10468	V18.5.1.4	归档链接的可追溯诉求	归入	Bottomley 提 lore.kernel.org/dig 链接方案，属归档链接的可追溯诉求
+linux-smp.messages.1572685		—	移出	人工判读：内核警告报料十二例，属硬件专题；建议宿主 V59
+linux-smp.messages.1572335		—	移出	人工判读：2002 年 TLS 与 APIC timer 实录，属硬件专题；建议宿主 V20
+ksummit-discuss.messages.349348	V18.7.8.1	会前筹备的议题列表	归入	2018 峰会筹备重提 2014 三线旧议题，属会前筹备的议题列表
+ksummit-discuss.messages.348905	V18.4.8.4	稳定树治理的提问条目	归入	Gleixner 与 Kosina 就 LTS 支持年限对撞，属稳定树治理的提问条目
+linux-smp.messages.1572336		—	移出	人工判读：5.12 回归 bisect 个案，属回归治理专题；建议宿主 V59
+linux-smp.messages.1572537		—	移出	人工判读：smp_affinity 写不回实测，属硬件专题；建议宿主 V20
+ksummit-discuss.messages.349119	V18.7.8.1	会前筹备的议题列表	归入	2018 讨论重提 2014 三线档案，属会前筹备的议题列表
+ksummit-discuss.messages.349001	V18.5.2.2	元数据方案的平行路线	归入	给原提交加元数据指向后续修复，属元数据方案的平行路线
+ksummit-discuss.messages.348801		—	移出	人工判读：ACPI 与 DT 统一抽象层之争，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.348253		—	移出	人工判读：SFI／HW Reduced ACPI 固件抽象路径，无本卷落点；建议宿主 V59
+linux-smp.messages.1572479		—	移出	人工判读：oops 报料方法论与 IO-APIC 查证，属硬件专题；建议宿主 V59
+linux-smp.messages.1572885		—	移出	人工判读：闭源模块责任归属，属硬件／许可专题；建议宿主 V20
+ksummit.messages.3307	V18.7.6.2	崩溃解码的实操案例	归入	Levin 用 LLM 解码 oops 与 Pinchart 之驳，属崩溃解码的实操案例
+ksummit-discuss.messages.348927	V18.4.8.4	稳定树治理的提问条目	归入	stable opt-in／opt-out 与包办之争，属稳定树治理的提问条目
+ksummit-discuss.messages.348955		—	移出	人工判读：secure boot 与 lockdown 补丁拆分，属安全治理；建议宿主 V59
+ksummit-discuss.messages.348796	V18.4.8.4	稳定树治理的提问条目	归入	-rc 周期收紧与 stable 回移质量之争，属稳定树治理的提问条目
+linux-smp.messages.1572733		—	移出	人工判读：报料要素与 dmesg／syslog 之别，属硬件专题；建议宿主 V59
+ksummit.messages.7617	V18.5.6.1	邮件搬运工具链的构想	归入	Kicinski 提按路径订阅的虚拟列表构想，属邮件搬运工具链的构想
+ksummit.messages.9302		—	移出	人工判读：跨子系统系列无人肯审的两难自述，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.349004	V18.4.3.5	治理形态的演进阶段	归入	投票选领袖／小组维护制／arm-soc 轮值之议，属治理形态的演进阶段

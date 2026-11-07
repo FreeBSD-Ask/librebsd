@@ -1,0 +1,36 @@
+rowmine_id	subsection_id	title	action	reason
+ksummit.messages.10084	V18.7.5.2	纯生成代码的权属推断	归入	Bottomley 论 AI 生成代码无版权与 DCO 覆盖，属纯生成代码的权属推断
+tech-board-discuss.messages.9363404	V18.4.15.4	维护者支持小组的设想	归入	支持设维护者支持小组并覆盖提交者
+ksummit-discuss.messages.347941	V18.6.1.1	会前议程的编排流程	归入	峰会重启与核心名单／邀请名单之议，属会前议程的编排流程
+ksummit.messages.8630	V18.4.17.2	维护者倦怠的表达帖文	归入	初审 bot 与 staging 列表等减负设计，属维护者倦怠的表达帖文
+ksummit.messages.8593	V18.4.10.3	合入权与事实标准的纠葛	归入	Gunthorpe 论合入权沦为事实标准与 uAPI 不可删
+ksummit.messages.9704	V18.5.8.1	维护者峰会会前议程	归入	2024 维也纳维护者峰会完整日程与预读问题
+ksummit-discuss.messages.348604	V18.5.5.4	静态检查工具的停摆插曲	归入	JFFS2 端序包装与 sparse bitwise 落 GCC 之议，属静态检查工具
+ksummit-discuss.messages.348545	V18.5.6.1	邮件搬运工具链的构想	归入	kernel.org 提供 git 钩子自动通知合入，属邮件搬运工具链的构想
+ksummit-discuss.messages.347847	V18.6.3.1	议题征集的流程样本	归入	子系统维护者推荐名单与 Android 不上游缺口，属议题征集的流程样本
+tech-board-discuss.messages.9362999	V18.4.3.2	维护者层级的建制	归入	Greg 表态接纳与否由子系统维护者定（LTTng 模块化）
+ksummit-discuss.messages.349090		—	移出	人工判读：arm-soc 与 media 子系统分合之论，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.348601	V18.7.8.1	会前筹备的议题列表	归入	2017 峰会筹备重提 2014 五线档案，属会前筹备的议题列表
+ksummit.messages.10115	V18.7.16.3	标签政策的官方定音	归入	Linus 定调 AI 补丁不作特殊化、须附工具与 prompt
+ksummit.messages.9572	V18.4.17.2	维护者倦怠的表达帖文	归入	Bacik 提以审换审／自动化增信等措施，属维护者倦怠的缓解提案
+tech-board-discuss.messages.9363252	V18.6.16.1	自荐声明的系列样本	归入	Rostedt 自荐连任并提 AI 影响与倦怠议题，属自荐声明的系列样本
+ksummit-discuss.messages.349095	V18.5.14.1	回移拣选的冲突处理	归入	CoreOS 五例之一一补修复与归因，属回移拣选的冲突处理
+ksummit-discuss.messages.348645	V18.4.6.3	利害相关者语义的收束	归入	Needs-Acked-by／RFACK 等标签两案并置，属利害相关者语义的收束
+ksummit-discuss.messages.348746	V18.5.12.1	预发布树流程的交代	归入	子系统 -fixes 分支并入 linux-next 的流程交代
+ksummit-discuss.messages.348368		—	移出	人工判读：子集系统调用与设备 DMA 隔离之议，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.347616	V18.4.8.5	峰会议题的筛选机制	归入	Greg“bell the cat”判语，峰会议题筛选哲学的直接表达
+ksummit-discuss.messages.350706	V18.5.8.2	工作流分享的争点	归入	Ted 征集工作流分享（KS 录像与 MS 不录之别）
+ksummit-discuss.messages.349103	V18.5.15.2	自动挑选的定义商榷	归入	stable-next 自动测试与结果判据之议，属自动挑选的定义商榷
+ksummit-discuss.messages.348651	V18.6.1.1	会前议程的编排流程	归入	报名 wiki、规模约 40 与场地反馈，属会前议程的编排流程
+ksummit-discuss.messages.348557		—	移出	人工判读：Documentation 转 ReST 与 checkpatch→Sphinx，属文档工程；建议宿主 V59
+ksummit-discuss.messages.347852		—	移出	人工判读：文档责任与 bugzilla 依赖，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.347867		—	移出	人工判读：CI 覆盖面与 cmock／kernelci，属测试基建；建议宿主 V59
+ksummit.messages.8656	V18.3.5.4	发行与内核的版本错位	归入	发行版测上游 RC／控制技术债之四项议题，见发行与内核的版本错位
+ksummit.messages.9649	V18.6.12.1	栈回溯导出的许可争论	归入	EXPORT_USERSPACE_GPL 之许可边界，属导出符号的许可攻防
+ksummit.messages.8638	V18.5.3.2	反对意见的核心理由	归入	Levin 反对扁平合并树、主张共维护者组，属反对意见的核心理由
+ksummit-discuss.messages.348403	V18.6.1.1	会前议程的编排流程	归入	Devicetree 工作坊与峰会办会实况，属会前议程的编排流程
+ksummit-discuss.messages.348631	V18.5.9.1	评审链文件的定稿	归入	Williams 起草维护者职责文档初稿，属评审链文件的定稿
+ksummit-discuss.messages.347830	V18.6.1.1	会前议程的编排流程	归入	Linus 亲定名单与配比设想，属会前议程的编排流程
+ksummit-discuss.messages.347782		—	移出	人工判读：2017 峰会五方技术提案杂糅，无本卷落点；建议宿主 V59
+ksummit.messages.2949	V18.4.3.4	合并窗口的惯例成型	归入	以 6.7.2 改动量与 4 天窗口质疑回移植，见合并窗口的惯例成型
+ksummit.messages.10103	V18.7.2.1	内容政策的议程走向	归入	AI 与人相当论及 Stoakes 反驳，属内容政策的议程走向

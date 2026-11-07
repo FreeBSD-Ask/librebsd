@@ -1,0 +1,36 @@
+rowmine_id	subsection_id	title	action	reason
+ksummit.messages.872	V18.7.8.3	断言被实测驳倒的案例	归入	hfsprogs 实测反驳“无 mkfs 不可测试”，属断言被实测驳倒的案例
+ksummit.messages.8510	V18.7.1.3	维护者处置权的保留	归入	措辞之争落在“维护者可整包拒绝”，属维护者处置权的保留
+ksummit.messages.8222	V18.5.11.3	加速器用户态的议题穿插	归入	加速器用户态接口三方并置，属加速器用户态的议题穿插
+ksummit.messages.8287	V18.7.18.2	可信名单的资格纠纷	归入	信任网改版与 kernel.org／OpenSSF 方案之争，属可信名单的资格纠纷
+ksummit.messages.6416	V18.7.5.2	纯生成代码的权属推断	归入	Bottomley 引版权局报告与 Mauro 实测 AI 测试失败，属纯生成代码权属
+ksummit.messages.10359	V18.7.9.3	评审自动化的迭代加深	归入	public-inbox 作消息总线与 X-For-Commit-ID，属评审自动化的迭代加深
+ksummit.messages.8178	V18.5.18.2	工具链改进的路线分歧	归入	提交队列轮询替代方案之议，属工具链改进的路线分歧
+ksummit.messages.8154		—	移出	人工判读：粘滞位目录与 richACL 替代方案，属文件系统 API 设计；建议宿主 V59
+ksummit-discuss.messages.349912	V18.4.3.2	维护者层级的建制	归入	Greg KH 拒将额外工作压给子系统维护者（for-stable 分支提案）
+ksummit.messages.3677	V18.8.2.1	新语言的接纳结果	归入	Brown 论 Rust 共享抽象与子系统可见机制，属新语言的接纳结果
+ksummit.messages.6503	V18.8.2.1	新语言的接纳结果	归入	Van Assche 质询 C／Rust 双版本头文件维护，属新语言的接纳结果
+ksummit.messages.140	V18.7.5.4	接口弃用的定调表态	归入	Mauro 提由子系统维护者宣布移除并以多 SOB 补丁为载体，属接口弃用的定调表态
+ksummit.messages.8675	V18.8.1.5	保守与演进的拉扯	归入	Ojeda 澄清 Rust 为 C 之消费者而非替换，属保守与演进的拉扯
+ksummit.messages.8437	V18.7.4.2	缺陷归档的自动化实践	归入	预存缺陷库与 syzkaller 式看板等 AI 审查工程方案，属缺陷归档的自动化实践
+ksummit.messages.9467	V18.5.11.3	加速器用户态的议题穿插	归入	Mauro 反对强制驱动配开源用户态、主张完整文档化 uAPI
+ksummit.messages.7058	V18.7.9.3	评审自动化的迭代加深	归入	patch-id 匹配不可靠、以 Message-Id 尾注替代，属评审自动化的迭代加深
+ksummit-discuss.messages.349250	V18.4.9.5	稳定议题的收束载体	归入	后期 -rc 补丁易引入 bug 之辨与 linux-next 自动化改进，属稳定议题的收束载体
+ksummit.messages.7320	V18.6.3.1	议题征集的流程样本	归入	Stoakes 批评议题征集含混，属议题征集的流程样本
+ksummit.messages.5584	V18.7.2.1	内容政策的议程走向	归入	标签暂无法刻画 LLM 参与度、先立“展示你的工作”文档
+ksummit.messages.9454	V18.4.17.2	维护者倦怠的表达帖文	归入	以 640 项变更与 4 天窗口反对强制回移，属维护者负担的表达
+ksummit.messages.8019	V18.6.18.1	历年选举结果的序列	归入	1012 名合格投票者、237 人投票的公告与结果，属历年选举结果序列
+ksummit-discuss.messages.349190	V18.7.8.1	会前筹备的议题列表	归入	2018 讨论重提 2014 四线档案，属会前筹备的议题列表
+ksummit.messages.8351	V18.5.6.1	邮件搬运工具链的构想	归入	public-inbox-clone／fetch 与 grokmirror 工具链，属工具链构想
+ksummit-discuss.messages.349977		—	移出	人工判读：对长期不受理的收尾长怨，无本卷落点；建议宿主 V59
+ksummit.messages.9518	V18.7.1.1	生成内容指南的全文转抄	归入	generated-content.rst v5 全文条款，属生成内容指南的全文转抄
+ksummit-discuss.messages.348486		—	移出	人工判读：整树脚本补丁与维护者树之争，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.349253		—	移出	人工判读：staging 之弊与 2014 档案并置，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.348290		—	移出	人工判读：SFI 与 DT 固件解耦之议，无本卷落点；建议宿主 V59
+ksummit.messages.10622	V18.8.1.5	保守与演进的拉扯	归入	以 godbolt 实测驳 C++ 隐藏指针论、union 语义之辨，属保守与演进的拉扯
+ksummit-discuss.messages.349186		—	移出	人工判读：embargo 协调组与 NDA 之争，属安全披露治理；建议宿主 V59
+ksummit-discuss.messages.348149	V18.5.12.1	预发布树流程的交代	归入	API 入 R-1／转换经受影响树入 R 与 linux-oven 构想，属预发布树流程
+ksummit.messages.7949	V18.5.7.1	归档链接格式的收束	归入	lore 存档收不全补丁、迁出 vger 可行性，属归档链接格式的收束
+ksummit.messages.107	V18.4.3.2	维护者层级的建制	归入	Konstantin 反对 karma 系统、主张限子维护者层级并要密码学证明
+ksummit-discuss.messages.349965	V18.4.3.5	治理形态的演进阶段	归入	Neil 两原则述团队内部协议与 right-of-review，属治理形态的演进阶段
+ksummit-discuss.messages.349192	V18.7.16.1	拉取拒绝的真实标准	归入	Linus“仍要邮件拉取请求”与 Bottomley 的 bugzilla 流程之议，属拉取拒绝的真实标准

@@ -1,0 +1,36 @@
+rowmine_id	subsection_id	title	action	reason
+rust-for-linux.messages.9278159	V18.3.2.1	GCC 在内核开发中的地位	归入	非 GPL 工具与 GPL 兼容内核的许可论证，属 GCC／工具链在内核开发中地位之争
+ksummit.messages.926	V18.7.8.3	断言被实测驳倒的案例	归入	hfsprogs 实测反驳“无 mkfs 不可测试”，属断言被实测驳倒的案例
+ksummit-discuss.messages.347292	V18.3.1.1	内核进入自由软件环境的许可前提	归入	Linus 以“自利≠反 GPL”反驳 copyleft 极大主义者，见内核进入自由软件环境的许可前提
+ksummit-discuss.messages.347246		—	移出	人工判读：Welte 的 GPL 执法数据属许可执法史，无本卷落点；建议宿主 V16
+ksummit.messages.704	V18.4.3.2	维护者层级的建制	归入	karma 在维护者层级内纵横皆有意义，属维护者层级的建制
+ksummit.messages.10075	V18.7.5.2	纯生成代码的权属推断	归入	Bottomley 称版权局认定 AI 生成代码无版权、DCO 可覆盖，属纯生成代码权属推断
+ksummit.messages.9436	V18.7.1.2	工具披露的条款清单	归入	generated-content.rst v5 的工具与提示词披露条款清单
+netdev.messages.8049584	V18.3.1.1	内核进入自由软件环境的许可前提	归入	GPL v2 与 OpenIB BSD 双许可并列入内核树，属许可前提的落地样本
+ksummit-discuss.messages.346691	V18.4.9.1	测试标准化的议程设置	归入	Shuah Khan 主张测试标准化列为峰会核心议题，属测试标准化的议程设置
+ksummit.messages.9008	V18.4.15.4	维护者支持小组的设想	归入	Brown 赞同“维护者支持小组”并主张覆盖提交者
+ksummit-discuss.messages.346277	V18.4.8.5	峰会议题的筛选机制	归入	Howells 提议峰会设 tech slot（内存模型），属峰会议题的筛选机制
+ksummit-discuss.messages.351455	V18.4.6.3	利害相关者语义的收束	归入	Rostedt 界定 Acked-by／Approved-by 语义，属利害相关者语义的收束
+ksummit-discuss.messages.347301		—	移出	人工判读：Kuhn 对 copyleft 标签的长篇回应属 V16 许可论争；建议宿主 V16
+netdev.messages.8279014	V18.3.4.5	用户空间的边界划分	归入	以 FreeBSD 拆分 /dev/random 为对照，见用户空间的边界划分
+ksummit-discuss.messages.346115	V18.4.9.1	测试标准化的议程设置	归入	Jan Kara 述“不回归用户空间”边界与 xfstests 经验，属测试标准化的议程设置
+sparclinux.messages.9332727	V18.3.3.2	系统调用与库接口的对接	归入	SPARC clone3 接口统一之议，属系统调用与库接口的对接
+ksummit-discuss.messages.347354	V18.4.8.4	稳定树治理的提问条目	归入	以 LTS 提交量分布论主线不适合生产，属稳定树治理的提问条目
+ksummit-discuss.messages.346419		—	移出	人工判读：ARM sub-arch 多配置构建现状，无本卷落点；建议宿主 V59
+ksummit-discuss.messages.347069	V18.4.8.5	峰会议题的筛选机制	归入	Triplett 述内核峰会存在理由与议题筛选机理
+ksummit.messages.4352	V18.6.3.1	议题征集的流程样本	归入	回应 2021 峰会议题清单并自荐分享，属议题征集的流程样本
+ksummit.messages.2931	V18.6.8.2	许可签署条款的冲突论	归入	LLM 代码与 DCO 1.1(a) 条款冲突之问，属许可签署条款的冲突论
+ksummit-discuss.messages.346578	V18.5.5.4	静态检查工具的停摆插曲	归入	Mark Brown 在 KS2014 报告 sparse 实践，属静态检查工具的停摆插曲
+ksummit.messages.6799	V18.7.2.1	内容政策的议程走向	归入	Levin 视 AI 补丁与 checkpatch／syzbot 同源，属内容政策的议程走向
+ksummit.messages.6533	V18.6.3.1	议题征集的流程样本	归入	Ts'o 公布 2021 峰会议程与邀请名单，属议题征集的流程样本
+linux-fsdevel.messages.334729	V18.3.1.1	内核进入自由软件环境的许可前提	归入	Greg KH 援引 BSD 双许可历史先例论 copyleft-next，属许可前提
+ksummit-discuss.messages.346688	V18.4.9.1	测试标准化的议程设置	归入	Pinchart 论测试框架标准化与树外测试共用接口
+fb-6314		—	移出	人工判读：2003 年 OpenBSD 与发行版构建方式对比，属 V19／V20；建议宿主 V19
+linux-mm.messages.761189	V18.3.3.2	系统调用与库接口的对接	归入	MADV_WIPEONFORK 对标 OpenBSD minherit，属系统调用与库接口的对接
+ksummit.messages.3753	V18.5.11.3	加速器用户态的议题穿插	归入	ENQCMD 用户态提交描述符之争，属加速器用户态的议题穿插
+ksummit-discuss.messages.346516	V18.3.4.5	用户空间的边界划分	归入	Cameron 论设备树／IIO 用户态接口的折中，属用户空间的边界划分
+linux-fsdevel.messages.266858	V18.1.2.3	文件系统布局的借用	归入	Morton 将 minix 与 ext2 并列为早期 Unix 文件系统，见文件系统布局的借用
+ksummit.messages.7660	V18.4.10.2	客户厂商合一的动机分析	归入	OEM／大客户／OS 厂商合一令旧激励瓦解，属客户厂商合一的动机分析
+rust-for-linux.messages.9271645	V18.8.1.4	新语言的准入门槛	归入	Lunn 追问 Rust 在内核外系统（u-boot／Zephyr）的可行性，属新语言的准入门槛
+ksummit-discuss.messages.347159	V18.4.12.3	宣言与治理主张的对应	归入	Ts'o 将 SFC 讲台之争定性为治理问题，属宣言与治理主张的对应
+linux-fsdevel.messages.691636	V18.3.4.5	用户空间的边界划分	归入	Al Viro 论 dup2 竞态超出 POSIX 而内核须保证不出错，属用户空间的边界划分
