@@ -1,0 +1,27 @@
+kind=landing
+vol=V26
+title_count=90
+ledger_sha256=6dbf4e4ea2a2ad0a9bafbebc85895b2cf40454d74e2a237553ff0c554b7acc0f
+scope=全 90 题（27 filled＋63 空骨架）；ykla 全量批准模式落盘
+design_card=—
+design_card_sha256=—
+ledger_p1=design/V26-C1.tsv
+ledger_p1_sha256=9f19107232b82f5a99545d3aadf0bc7d2e176b23fb997ce6c341d0d62483df28
+ledger_p2=design/V26-C2.tsv
+ledger_p2_sha256=ebc4f5cae41c11038d56d02ec4bb7064bc61493a8a68199e38be2fccb78f8e9b
+ledger_p3=design/V26-C3.tsv
+ledger_p3_sha256=fa051b8bae399cda4d5c65ba6f3eb8f643e82deb683788892d3ed4d6c44e0f20
+design_index=design/V26.tsv
+design_index_sha256=5efcb0554ca9178d0431a398c45573e5241c08a08bf1c85ad65d582016d23f43
+fragments=design/fragments/V26.tsv
+fragments_sha256=239616671c1946f4f22df28a6d159d3d1d0b5fcf49a83c5e576311b8e234fc59
+blocks_total=187
+blocks_landed=49
+blocks_surplus=0
+blocks_moved=135
+blocks_compiled=3
+blocks_deleted=0
+gate=L1–L19 19/19；第三十八件 D1/D2 vols=32 零差异（L 缺 V005 为他线在途）；第三十九件 45 项 0 失败；第三十三／三十四件本卷零孤儿锚；第二十四／二十八／七／九／十／十八／二十二／二十三／十三／十六／三十六／四十二／十七／二十件 PASS；卷级回归 V26 6/6
+note=全量批准模式由主会话签发；V21–V30 十卷委派，主会话单写者、未起子代理。抽样口径（须披露）：料域收窄至专题节 012.5／012.7／041.1／038.2／019.9／034.3／038.4／035.11／035.0，原始 8,084 块；按 V26 关键词（SunOS／Ultrix／DYNIX／Concentrix／MachTen／OSF／Coherent／RISC iX／XENIX／HP-UX／AIX／SVR4／Net/2／授权／license／4.2BSD／4.3BSD／变种／移植／分支）优先再等距补齐，抽样 187 块逐块判读；未读块按“非本卷题域”处理，不入本卷台账。90 题中 63 题记 corpus_gap；第 2 章 2.1（Apollo）／2.4（DYNIX）与 4.2／4.3 两节料域极薄，待补
+approved_by=ykla
+approved_at=2026-11-07
