@@ -1,0 +1,130 @@
+rowmine_id	subsection_id	title	action	reason
+fb-1036823	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	webcamd 与 video4bsd 之移植
+fb-1048038	V34.2.1.1	版权声明的格式与要件	归入	NFSv4.1 Layout 许可之问的答复
+fb-1089058	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	PaX RAP 需 GPLv3 工具链
+fb-1097962	V34.1.2.5	接口兼容与二进制兼容的落差	归入	基本系统转向 copyfree 之迁移
+fb-2617209	V34.2.7.6	工具链演进对判定方法的重塑	归入	ACPICA 许可比较之记录
+fb-2622085	V34.1.5.4	宏内核与微内核的路线差异	归入	ACPICA 许可证属四条款 BSD
+fb-2622094	V34.2.7.6	工具链演进对判定方法的重塑	归入	Intel 代码许可与友好性断言
+fb-2631208	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	ltmodem 驱动之内核整合
+fb-2633004	V34.1.5.4	宏内核与微内核的路线差异	归入	valgrind 含 Linux 内核与 libc 码
+fb-2637035	V34.1.1.4	标准符合性作为类 UNIX 判据	归入	GPL 码可吞并 BSDL 码之非对称
+fb-5358	V34.1.3.4	汇编语法与编译工具的来源	归入	GNU grep 与 BSD grep 基准
+fb-5392	V34.1.6.2	编译工具链的来源与影响	归入	择 BSD 许可编译器之立场
+fb-5402	V34.2.7.6	工具链演进对判定方法的重塑	归入	linuxkpi 方向之批评
+ob-172104	V34.2.7.6	工具链演进对判定方法的重塑	归入	IBM 专利许可与 BSD 不相容
+ob-173765	V34.1.2.5	接口兼容与二进制兼容的落差	归入	Linux 把 BSD 码改 GPL 之争
+ob-233983	V34.1.5.2	Minix 环境下开发的具体含义	归入	同步 videoio.h 跳过 GPL2 头
+ob-59588	V34.1.7.4	Linux 对 POSIX 的选择性实现	归入	fq_codel 实现本为 BSD 许可
+fb-1041097	V34.2.8.2	内容寻址标识的技术原理	归入	HardenedBSD 季报之记录
+fb-12483	V34.1.5.1	Linux 0.01 源码的目录构成	归入	2021 季报中的移植工作
+fb-6314	V34.1.1.6	命名歧义与系统归属之争	归入	OpenBSD 与各家之命名归属
+ob-150099	V34.1.1.4	标准符合性作为类 UNIX 判据	归入	atheros 驱动许可与来源之引述
+ob-216367	V34.1.3.1	AT&T 版权声明在源码中的分布	归入	iwm 驱动去 Linux 代码
+ob-3673	V34.1.3.1	AT&T 版权声明在源码中的分布	归入	Linux NFS 服务致 OpenBSD 挂起
+fb-1092623	V34.1.5.4	宏内核与微内核的路线差异	归入	zpool upgrade 与 boot 分区
+fb-6325	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	OpenBSD 支持设想与商业产品
+freebsd-hackers.messages.16621	V34.1.5.1	Linux 0.01 源码的目录构成	归入	声卡驱动跨系统移植之问
+freebsd-hackers.messages.1274172	V34.1.5.1	Linux 0.01 源码的目录构成	归入	Nvidia 驱动非 GPL 之追问
+freebsd-hackers.messages.1274540	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	版权与 FreeBSD 去向之论
+freebsd-hackers.messages.1279222	V34.1.5.2	Minix 环境下开发的具体含义	归入	star 由 GPL 改动之追问
+freebsd-hackers.messages.1292377	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	FreeBSD 对 APSL 之立场
+freebsd-hackers.messages.1298420	V34.1.2.6	移植层对接口传统的延续	归入	DVB wrapper 移植之形
+freebsd-hackers.messages.1306916	V34.1.3.4	汇编语法与编译工具的来源	归入	cdialog 替代 dialog 之由
+freebsd-hackers.messages.1315779	V34.1.6.2	编译工具链的来源与影响	归入	libobjc 来源与 GSoC 任务
+freebsd-hackers.messages.2515805	V34.1.4.4	文件系统布局的相似性辨析	归入	soft-update 整合之类比
+freebsd-hackers.messages.2536253	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	FreeBSD 手机移植之质疑
+freebsd-hackers.messages.2536711	V34.1.2.2	命令解释器与工具链的接口约定	归入	wifi 库移植之求助
+freebsd-hackers.messages.2545410	V34.1.5.6	从 Minix 引导的依赖链条	归入	GPL 码是否入 FreeBSD 之争
+freebsd-hackers.messages.2550137	V34.1.3.1	AT&T 版权声明在源码中的分布	归入	同上之争的回应
+freebsd-hackers.messages.2582943	V34.1.5.2	Minix 环境下开发的具体含义	归入	Kerberos 与商用登记之因
+freebsd-hackers.messages.2585200	V34.2.1.4	声明缺失时的推定规则	归入	FreeBSD 许可立场之定调
+freebsd-hackers.messages.2600915	V34.2.8.3	大规模采集与去重的管线	归入	重许可尝试之辨析
+freebsd-hackers.messages.2614907	V34.1.1.4	标准符合性作为类 UNIX 判据	归入	GNU GLOBAL 转向之反对
+freebsd-hackers.messages.2623784	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	OpenMotif 许可之评点
+freebsd-hackers.messages.2630935	V34.1.7.2	标准文本与实现之间的空隙	归入	是否换用之标准追问
+freebsd-hackers.messages.2640164	V34.2.7.6	工具链演进对判定方法的重塑	归入	辨微软是否用 BSD TCP/IP 码
+freebsd-hackers.messages.2647618	V34.1.5.6	从 Minix 引导的依赖链条	归入	JFS 入 src 之主张
+freebsd-hackers.messages.2648438	V34.1.5.2	Minix 环境下开发的具体含义	归入	反对吸纳 Hurd 代码
+freebsd-hackers.messages.2655897	V34.1.5.4	宏内核与微内核的路线差异	归入	GPL 组件不得静态链接内核
+freebsd-hackers.messages.2597241	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	Apple 与 MacOS X 之回顾
+freebsd-hackers.messages.2639800	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	厂商驱动可否非 GPL 入树
+usenet_mail.messages.136827	V34.2.8.4	源流查询接口的使用方式	归入	X3J11 宏展开程序之档案收录
+usenet_mail.messages.136857	V34.2.8.4	源流查询接口的使用方式	归入	memlintok 之档案收录
+usenet_mail.messages.136902	V34.2.8.3	大规模采集与去重的管线	归入	补回传输截断之缺失文件
+usenet_mail.messages.136981	V34.2.8.4	源流查询接口的使用方式	归入	Flex 七部分发行之首
+usenet_mail.messages.38018	V34.2.8.1	档案的对象模型与层级	归入	背景性材料与对象层级
+usenet_mail.messages.39776	V34.2.8.4	源流查询接口的使用方式	归入	X11R4 server 经档案渠道分发
+usenet_mail.messages.28288	V34.2.8.4	源流查询接口的使用方式	归入	groff 替代 ditroff 之建议
+usenet_mail.messages.28353	V34.2.8.4	源流查询接口的使用方式	归入	irm 小程序之公开与来源
+usenet_mail.messages.28379	V34.2.8.4	源流查询接口的使用方式	归入	UCSF troff 出售与许可前提
+usenet_mail.messages.28476	V34.2.8.4	源流查询接口的使用方式	归入	XROFF 商用排版工具之介绍
+usenet_mail.messages.28375	V34.2.8.5	自动化比对的证据链	归入	NQS 原版有偿获取之渠道
+usenet_mail.messages.28655	V34.2.8.4	源流查询接口的使用方式	归入	PNX 源自第七版 UNIX 之追溯
+usenet_mail.messages.28756	V34.2.8.4	源流查询接口的使用方式	归入	expect 之获取渠道指路
+usenet_mail.messages.28936	V34.2.7.2	RCS 的反向增量设计	归入	RCS 日志缺陷与版本 5 修复
+usenet_mail.messages.29106	V34.2.8.1	档案的对象模型与层级	归入	背景性材料与对象层级
+usenet_mail.messages.29125	V34.2.8.4	源流查询接口的使用方式	归入	自由工具清单与回应者名录
+usenet_mail.messages.29426	V34.2.8.4	源流查询接口的使用方式	归入	许可证管理程序之调查
+usenet_mail.messages.29498	V34.2.8.5	自动化比对的证据链	归入	learn 含 AT&T 专有代码之判
+usenet_mail.messages.29620	V34.2.8.4	源流查询接口的使用方式	归入	NFSWATCH 源码获取渠道
+usenet_mail.messages.136537	V34.2.8.4	源流查询接口的使用方式	归入	cron V2 提交伯克利未及 4.4BSD
+usenet_mail.messages.137042	V34.2.8.4	源流查询接口的使用方式	归入	undel 之档案收录
+usenet_mail.messages.137126	V34.2.8.4	源流查询接口的使用方式	归入	ofiles 内嵌头文件以便编译
+usenet_mail.messages.135489	V34.2.8.4	源流查询接口的使用方式	归入	idled 之档案收录
+usenet_mail.messages.136846	V34.2.8.4	源流查询接口的使用方式	归入	Pcomm 1.2 之收录
+usenet_mail.messages.136855	V34.2.8.3	大规模采集与去重的管线	归入	Pcomm 补丁之收录
+youtube.episodes.CL-15-698		—	移出	包管理移植演讲，属 V21
+youtube.episodes.CL-15-478		—	移出	图形界面早期史演讲，属 V21
+youtube.episodes.CL-15-1313		—	移出	port system 重写自述，属 V21
+youtube.episodes.CL-15-1348		—	移出	vim 教程讲题，属 V21
+youtube.episodes.CL-15-1349		—	移出	教学课件取材，属 V21
+youtube.episodes.CL-15-1628		—	移出	qr 测试框架介绍，属 V21
+youtube.episodes.CL-15-1630	V34.1.7.3	符合性测试的裁决功能	归入	TTCN-3 符合性测试之平台依赖
+youtube.episodes.CL-15-1760		—	移出	smoke-label 补全缺陷，属 V21
+youtube.episodes.CL-15-1820		—	移出	Ansible 实验室自动化，属 V21
+youtube.episodes.CL-15-1821		—	移出	同上自动化的部署段，属 V21
+youtube.episodes.CL-15-1822		—	移出	同上自动化的任务段，属 V21
+youtube.episodes.CL-15-1823		—	移出	同上自动化的收尾段，属 V21
+youtube.episodes.CL-15-1847	V34.1.4.6	共同技术传统与代码借用的分野	归入	Epitome 借 Venti 概念之源流
+youtube.episodes.CL-15-1848	V34.1.4.6	共同技术传统与代码借用的分野	归入	Epitome 借用 Sun 码之自述
+youtube.episodes.CL-15-2589		—	移出	Syspack 的 ports 源，属 V21
+youtube.episodes.CL-15-2590		—	删除	零内容：空块
+youtube.episodes.CL-15-2591		—	移出	Syspack 的 setter/getter，属 V21
+youtube.episodes.CL-15-2592		—	移出	Syspack 的部署层，属 V21
+youtube.episodes.CL-15-2741		—	移出	spell(1) 替换之动机，属 V21
+youtube.episodes.CL-15-2742		—	移出	词缀法不准之评，属 V21
+youtube.episodes.CL-15-2743		—	移出	规则仅适英语之限，属 V21
+youtube.episodes.CL-15-2753		—	移出	apropos 用 SQLite 重写，属 V21
+youtube.episodes.CL-15-2754		—	移出	man-k.org 与提交权限，属 V21
+youtube.episodes.CL-15-3243		—	移出	SysAdm 三组件，属 V21
+youtube.episodes.CL-15-3244		—	移出	SysAdm 服务端能力，属 V21
+usenet_mail.messages.16687	V34.2.8.1	档案的对象模型与层级	归入	档案按卷分目录之重排
+usenet_mail.messages.93977	V34.2.8.1	档案的对象模型与层级	归入	Xref 字段之解读
+usenet_mail.messages.184965	V34.2.8.4	源流查询接口的使用方式	归入	Net2 源码存 ftp.uu.net
+sacred_sources.duckdb.blocks		—	移出	总纲拆分与章目说明，属 V75
+sacred_sources.duckdb.blocks		—	移出	二十五条总纲之著录，属 V75
+sacred_sources.duckdb.blocks		—	移出	历史诠释与话语权之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	现代性批判之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	进步即权力再分配之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	螺旋上升批评之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	科学范式和倒退之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	道德进步之质疑，属 V75
+sacred_sources.duckdb.blocks		—	移出	人类进化倒挂之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	理论体系兼容性之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	理论字数与质朴之论，属 V75
+sacred_sources.duckdb.blocks		—	移出	苏格拉底牛虻之喻，属 V75
+sacred_sources.duckdb.blocks		—	移出	历史哲学终极问题，属 V75
+sacred_sources.duckdb.blocks		—	移出	记录即权力之论，属 V75
+3494@utzoo.UUCP	V34.2.5.4	口述回忆的采信尺度	归入	2.9BSD 源流声明之采信尺度
+199601170918.BAA26568@ref.tfs.com	V34.1.1.6	命名歧义与系统归属之争	归入	纠正对 BSD 有利之假声明
+freebsd-chat-1998-07-29-1905-thread	V34.2.4.4	三类关系的判别次序	归入	谱系编制者自标可能之误
+3494@utzoo.UUCP	V34.2.5.4	口述回忆的采信尺度	归入	转述源流诸说之声明
+marc:93989604502332	V34.2.5.2	推测的合理性与表述限度	归入	转引微软 Linux 迷思之辨
+19980606113856.S768@freebie.lemis.com	V34.2.5.1	可证事实的材料门槛	归入	检验官方年表并给替代信源
+199601151609.RAA09152@labinfo.iet.unipi.it	V34.2.5.2	推测的合理性与表述限度	归入	对争论双方同时持疑
+chapter_reviews		—	删除	零内容：文献库引用头
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签
+cross_indexes.duckdb.concept_history		—	删除	零内容：技术聚类标签

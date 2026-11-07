@@ -1,0 +1,25 @@
+kind=landing
+vol=V34
+title_count=90
+ledger_sha256=cf39c96a9349aae0e48bf6991450eb61c4da55bbb3e66d7d544388906b586a51
+scope=全 90 题（53 filled＋37 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V34-C1.tsv
+ledger_main_sha256=c8c871388f10d00f3d03d2d44e3f053cede4b62ea6db0cb9db2ec9ac20d44192
+ledger_supp=design/V34-C2.tsv
+ledger_supp_sha256=187c964b5f2cb6aee399584b81c597ad43a216f17be207c2bf644178d820eb4d
+design_index=design/V34.tsv
+design_index_sha256=b1e2505f89a2b14c979b1dfa316b9b4e257faa06d1d311b7f46bb0f1b64f1b8e
+fragments=design/fragments/V34.tsv
+fragments_sha256=e10d436a4cbf19d217108378f915a6ee719622a161f5712dd886cc1ce381653b
+blocks_total=304
+blocks_landed=215
+blocks_surplus=43
+blocks_moved=40
+blocks_compiled=0
+blocks_deleted=6
+gate=L1–L18 PASS；L19 FAIL 系他线在途卷（V28）135 件孤儿 .md 已落树未入纲，本卷段 90＝90＝90 且 summary_diff=0；第三十八件 D2／L PASS、D1 FAIL orphan=1 同为他线件；第三十九件 45 项 FAIL 0；第二十四／二十八件 PASS；卷级回归 V34 6/6
+note=主会话单写者判读（不派子代理）；料域＝旧树第 395 章 LKML 中的 BSD 系列（技术承袭／张力）＋409 档案谱系＋413 工具链＋387／391 编纂学＋311.13／313.9／312.3／313.6 判例；容量挂账 43 块在 surplus/V34.tsv；第 1.5／1.7 节（Linux 0.01 与 POSIX 中介）料薄，37 题 corpus_gap 如实落盘
+approved_by=ykla
+approved_at=2026-11-07

@@ -1,0 +1,176 @@
+rowmine_id	subsection_id	title	action	reason
+lkml.messages.1871378	V34.1.2.6	移植层对接口传统的延续	归入	跨平台构建中 __linux__ 宏之差异
+lkml.messages.1983190	V34.2.4.3	共同传统的独立生成机制	归入	内存回收算法之独立实现比较
+lkml.messages.1693799	V34.1.2.3	独立实现中的接口复刻路径	归入	参照 FreeBSD 源码写 i8042 时序
+lkml.messages.1782605	V34.1.4.4	文件系统布局的相似性辨析	归入	soft updates 与日志式文件系统对照
+lkml.messages.1952032	V34.1.4.2	终端驱动与 termios 的沿用范围	归入	PTY read() 返回值语义分歧
+lkml.messages.5479906	V34.1.4.6	共同技术传统与代码借用的分野	归入	ath5k printk 宏与 FreeBSD HAL 之别
+lkml.messages.5130606	V34.1.2.6	移植层对接口传统的延续	归入	留 ps3 辅助函数以利双树同步
+lkml.messages.5590345	V34.2.4.2	间接影响的中介环节	归入	ath10k 接口差异作为移植中介
+lkml.messages.6420111	V34.1.2.1	系统调用接口的稳定边界	归入	采纳 FreeBSD mmap 命名与语义
+lkml.messages.2321591	V34.2.3.5	多文件一致性的加权规则	归入	AM335x UART 长度多文件一致修
+lkml.messages.7254720	V34.1.2.6	移植层对接口传统的延续	归入	ACPICA 双树共用代码之维护
+lkml.messages.2522356		—	移出	双许可与移除之争，属 V32-4.4.4
+lkml.messages.2188147	V34.1.2.6	移植层对接口传统的延续	归入	rockchip clk 补丁跨树同步
+lkml.messages.7312963		—	移出	drm/client 双许可，属 V32-4.4.1
+lkml.messages.7312964		—	移出	drm/format_helper 双许可，属 V32-4.4.1
+lkml.messages.1901629	V34.1.3.2	系统调用接口的命名对照	归入	NetBSD 新架构即继承全部系统调用
+lkml.messages.5376129	V34.1.3.2	系统调用接口的命名对照	归入	qsort 实现来源与算法对照
+lkml.messages.5822881	V34.1.4.6	共同技术传统与代码借用的分野	归入	FreeBSD 自适应锁与 Solaris 对照
+lkml.messages.1822653	V34.1.3.4	汇编语法与编译工具的来源	归入	DRM 代码库来源与分支之辨
+lkml.messages.5661782	V34.1.2.1	系统调用接口的稳定边界	归入	kevent 与 kqueue 接口对照
+lkml.messages.1970930	V34.1.3.4	汇编语法与编译工具的来源	归入	epoll 讨论中的实践对照
+lkml.messages.2108576	V34.1.3.2	系统调用接口的命名对照	归入	execveat 补丁来源之说明
+lkml.messages.5641755	V34.1.4.1	套接字接口在两侧的实现差异	归入	TCP_NOPUSH 在 FreeBSD 之合入
+lkml.messages.1865213	V34.1.4.1	套接字接口在两侧的实现差异	归入	truncate(2) 权限语义引 FreeBSD
+lkml.messages.7217466	V34.1.3.2	系统调用接口的命名对照	归入	strlcpy 转换与回退之争
+lkml.messages.2050123	V34.1.3.2	系统调用接口的命名对照	归入	natsemi 芯片命名与来源考
+lkml.messages.2029274	V34.1.3.3	头文件与结构体定义的异同	归入	aic7xxx 头文件与死锁对照
+lkml.messages.2008275	V34.1.3.2	系统调用接口的命名对照	归入	kernfs 非 Linux 专有之澄清
+lkml.messages.6412275	V34.1.2.1	系统调用接口的稳定边界	归入	preadv 参数顺序沿用 NetBSD
+lkml.messages.1886011	V34.2.2.5	重构与改写造成的噪声	归入	重构造成的 diff 噪声之辩
+lkml.messages.3766149	V34.1.2.3	独立实现中的接口复刻路径	归入	EtherIP 驱动独立实现之辩
+lkml.messages.7444752	V34.1.2.1	系统调用接口的稳定边界	归入	O_BENEATH 语义由 FreeBSD 提出
+lkml.messages.6945141	V34.1.2.1	系统调用接口的稳定边界	归入	getrandom 语义援引 FreeBSD
+lkml.messages.7187157	V34.1.2.1	系统调用接口的稳定边界	归入	setitimer ABI 与 BSD 语义
+lkml.messages.5429709	V34.1.2.1	系统调用接口的稳定边界	归入	LOOKUP_BENEATH 来源之自陈
+lkml.messages.5825116	V34.1.2.1	系统调用接口的稳定边界	归入	getrandom 阻塞语义之设计
+lkml.messages.7247308	V34.1.2.1	系统调用接口的稳定边界	归入	random 设备语义与 BSD 对照
+lkml.messages.5610110	V34.1.3.2	系统调用接口的命名对照	归入	strlcpy 补 null 之实现来源
+lkml.messages.2067746	V34.1.4.1	套接字接口在两侧的实现差异	归入	disklabel 与 swap 分区差异
+lkml.messages.1786216	V34.1.3.2	系统调用接口的命名对照	归入	kenv() 与 /proc/cmdline 对照
+lkml.messages.5784334	V34.1.2.1	系统调用接口的稳定边界	归入	BSD __MAP_NOFAULT 语义查证
+lkml.messages.2104011	V34.2.4.3	共同传统的独立生成机制	归入	内核实现路径独立之论
+lkml.messages.1988789	V34.1.4.6	共同技术传统与代码借用的分野	归入	aic79xx 驱动双树同源
+lkml.messages.6136583	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	自 FreeBSD ata 驱动裁改代码
+lkml.messages.6522826	V34.1.4.4	文件系统布局的相似性辨析	归入	softupdates 与 journaling 对照
+lkml.messages.1659286	V34.2.7.6	工具链演进对判定方法的重塑	归入	设备号历史与版本记录
+lkml.messages.6295754	V34.1.2.6	移植层对接口传统的延续	归入	MIPS 平台支持与移植参照
+lkml.messages.1945574	V34.2.7.6	工具链演进对判定方法的重塑	归入	ARM dts 补丁跨树来源记录
+lkml.messages.1730888	V34.1.2.1	系统调用接口的稳定边界	归入	jail() 接口与 fd 传递设计
+lkml.messages.2097378	V34.1.3.2	系统调用接口的命名对照	归入	chroot 再 chroot 语义之辨
+lkml.messages.3646316	V34.1.6.4	代码来源的物证要求	归入	Forensic FS 补丁动机之自述
+lkml.messages.2563178	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	DRM/fbdev 合并之许可壁垒
+lkml.messages.1770731		—	移出	HyperBK 许可介绍，属 V32-4.4.1
+lkml.messages.4164828	V34.1.6.2	编译工具链的来源与影响	归入	OpenBSD 方论 atheros 许可之争
+lkml.messages.2408836	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	aic7xxx 去 DB 依赖之争
+lkml.messages.1794682	V34.1.6.2	编译工具链的来源与影响	归入	同上许可之争的回应
+lkml.messages.6635965	V34.2.7.6	工具链演进对判定方法的重塑	归入	dt-bindings 提交之源流记录
+lkml.messages.2871971		—	移出	改 BSD 许可出售之议，属 V32-4.4.5
+lkml.messages.3827779	V34.1.2.3	独立实现中的接口复刻路径	归入	mseal() 系 OpenBSD mimmutable 之仿
+lkml.messages.3584118	V34.1.3.1	AT&T 版权声明在源码中的分布	归入	NetBSD 开发者述两树技术差异
+lkml.messages.7084295	V34.1.4.4	文件系统布局的相似性辨析	归入	SoftUpdates 论战与文件系统对照
+lkml.messages.2335730	V34.2.7.6	工具链演进对判定方法的重塑	归入	提交署名与记录形态之辨
+lkml.messages.4887608	V34.2.1.2	许可证文本的权属表达	归入	uapi 增 BSD-2-Clause 标识
+lkml.messages.1652706	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	namespaces 引用 BSD 之证
+lkml.messages.5612946	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	ktap 运行时与 DTrace 对照
+lkml.messages.5898684	V34.1.3.1	AT&T 版权声明在源码中的分布	归入	DTrace 追踪实现之参照
+lkml.messages.1638913	V34.2.7.6	工具链演进对判定方法的重塑	归入	dprobe 提议的提交与对照记录
+lkml.messages.2213916	V34.2.7.6	工具链演进对判定方法的重塑	归入	kallsyms 补丁的接口记录
+lkml.messages.2693116	V34.1.7.1	POSIX 标准的接口抽象层	归入	链接脚本与符号表接口
+lkml.messages.5704369	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	O_BENEATH_ONLY 补丁之赓续
+lkml.messages.5817879	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	capsicum 系统调用之讨论
+lkml.messages.1603581	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	ipsec-tools 与 KAME 栈来源
+lkml.messages.1998312	V34.2.7.6	工具链演进对判定方法的重塑	归入	strlcpy 越界之补丁记录
+lkml.messages.6803041	V34.1.6.3	设计参照的文献形态	归入	NFSv4 透传与设计参照
+lkml.messages.6734892	V34.1.5.3	文件系统兼容的取舍与代价	归入	__kernel_fpu 导出与 x86 语义
+youtube.episodes.CL-15-1245	V34.2.4.1	直接继承的代码凭证	归入	ZFS on Linux 版本之口述
+lkml.messages.1682177	V34.1.6.4	代码来源的物证要求	归入	Squashfs 来源自述之物证
+lkml.messages.1625369	V34.1.4.6	共同技术传统与代码借用的分野	归入	Acorn 加密文件系统之渊源
+lkml.messages.1763181	V34.2.7.6	工具链演进对判定方法的重塑	归入	PAM 与 /dev 安全之记录
+lkml.messages.1724762	V34.1.4.6	共同技术传统与代码借用的分野	归入	copyfile 补丁的来源说明
+lkml.messages.2033405	V34.2.4.4	三类关系的判别次序	归入	内核与 glibc 接口归属之判别
+lkml.messages.2234563	V34.1.5.1	Linux 0.01 源码的目录构成	归入	ufs write_inode errno 之修
+lkml.messages.1605274	V34.2.7.6	工具链演进对判定方法的重塑	归入	SCO 诉讼与 GPL 买断之记录
+lkml.messages.2077327	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	unifdef 上游版本之来源
+lkml.messages.2375105	V34.1.5.2	Minix 环境下开发的具体含义	归入	/proc 信息泄露之对照
+lkml.messages.2634315	V34.2.7.6	工具链演进对判定方法的重塑	归入	dt-bindings pci 绑定记录
+lkml.messages.2714948	V34.2.7.6	工具链演进对判定方法的重塑	归入	中断控制器绑定记录
+lkml.messages.2764628	V34.1.6.3	设计参照的文献形态	归入	mseal 与 mimmutable 之参照
+lkml.messages.3479951	V34.1.2.1	系统调用接口的稳定边界	归入	mseal 系统调用语义之辩
+lkml.messages.3662146	V34.1.1.4	标准符合性作为类 UNIX 判据	归入	.note 段与标准符合性
+lkml.messages.3762579	V34.1.2.1	系统调用接口的稳定边界	归入	mseal 语义之争续
+lkml.messages.3762893	V34.2.3.5	多文件一致性的加权规则	归入	MA 权限多文件一致性
+lkml.messages.3790824	V34.2.7.6	工具链演进对判定方法的重塑	归入	mseal 补丁版本记录
+lkml.messages.3797643	V34.1.2.1	系统调用接口的稳定边界	归入	mseal 与 mmap 标志之辨
+lkml.messages.3813346	V34.1.3.1	AT&T 版权声明在源码中的分布	归入	Unix 接口传统之归属
+lkml.messages.3816028	V34.1.1.4	标准符合性作为类 UNIX 判据	归入	文档与标准判据
+lkml.messages.3821853	V34.2.3.5	多文件一致性的加权规则	归入	反讽提议与多文件判定
+lkml.messages.3843029	V34.2.7.6	工具链演进对判定方法的重塑	归入	BSD 全系版本对照之记录
+lkml.messages.3891707	V34.1.2.1	系统调用接口的稳定边界	归入	阐明 Unix 接口归属
+lkml.messages.3916725	V34.1.2.6	移植层对接口传统的延续	归入	mseal 文档与移植层
+lkml.messages.3919387	V34.2.7.6	工具链演进对判定方法的重塑	归入	批评 Linux 补丁流程之记录
+lkml.messages.5117708	V34.1.5.1	Linux 0.01 源码的目录构成	归入	ath5k 引入 _ath 前缀
+lkml.messages.5136171	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	硬件 bring-up 与驱动来源
+lkml.messages.5183453	V34.1.4.1	套接字接口在两侧的实现差异	归入	版本号政策与接口稳定
+lkml.messages.5756685	V34.1.2.6	移植层对接口传统的延续	归入	getrandom 与 arc4random 对照
+lkml.messages.6954488	V34.1.3.2	系统调用接口的命名对照	归入	close_range 与 FreeBSD 实现
+lkml.messages.7659740	V34.1.6.3	设计参照的文献形态	归入	open／close_range 设计参照
+lkml.messages.7704537	V34.2.7.6	工具链演进对判定方法的重塑	归入	pinctrl 绑定记录
+lkml.messages.7319459	V34.2.7.6	工具链演进对判定方法的重塑	归入	双许可补丁之记录
+ksummit.messages.296	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	内核峰会中的 BSD 技术
+ksummit.messages.2131	V34.1.2.5	接口兼容与二进制兼容的落差	归入	接口兼容与二进制兼容之落差
+ksummit.messages.4422	V34.2.5.1	可证事实的材料门槛	归入	设备树工作坊之材料门槛
+ksummit.messages.5185	V34.2.8.1	档案的对象模型与层级	归入	2038 议题中的 OpenBSD 经验
+ksummit.messages.5281	V34.1.7.6	标准中介的限度与副作用	归入	2038 时间接口之标准中介
+ksummit.messages.6941	V34.2.8.1	档案的对象模型与层级	归入	2038 讨论之档案留存
+ksummit.messages.943	V34.2.8.2	内容寻址标识的技术原理	归入	EXPORT_SYMBOL 与模块边界记录
+ksummit.messages.3986	V34.2.7.6	工具链演进对判定方法的重塑	归入	GPL 执法议题之记录
+linux-fsdevel.messages.295995	V34.1.5.6	从 Minix 引导的依赖链条	归入	Landlock 以 Capsicum 为参照
+linux-fsdevel.messages.313470	V34.1.1.5	类 UNIX 系统的共同技术基础	归入	close_range 之共同基础
+linux-fsdevel.messages.341331	V34.1.5.6	从 Minix 引导的依赖链条	归入	Landlock 谱系之自述
+linux-fsdevel.messages.419383	V34.1.6.2	编译工具链的来源与影响	归入	Landlock 简化与参照自述
+linux-fsdevel.messages.513930	V34.1.2.1	系统调用接口的稳定边界	归入	Linux vfs 无 dup 语义之论
+linux-fsdevel.messages.537670	V34.1.2.2	命令解释器与工具链的接口约定	归入	pdfork 与 CLONE_FD 通知机制
+linux-fsdevel.messages.612212	V34.1.2.6	移植层对接口传统的延续	归入	apfs 驱动引入之移植层
+linux-fsdevel.messages.613775	V34.1.2.6	移植层对接口传统的延续	归入	mount 标志迁移与移植层
+linux-fsdevel.messages.697152	V34.2.7.6	工具链演进对判定方法的重塑	归入	openat2 REGULAR 补丁记录
+linux-fsdevel.messages.697975	V34.1.2.6	移植层对接口传统的延续	归入	ufs 尊重 immutable 属性
+linux-fsdevel.messages.710849	V34.2.4.1	直接继承的代码凭证	归入	ufs 文件标志继承之渊源
+linux-fsdevel.messages.277074	V34.1.6.2	编译工具链的来源与影响	归入	ufs 目录与页缓存之来源
+linux-fsdevel.messages.303503	V34.1.4.1	套接字接口在两侧的实现差异	归入	UFS s_maxbytes 按 BSD 深度算
+linux-fsdevel.messages.538754	V34.1.1.4	标准符合性作为类 UNIX 判据	归入	HFS+ 与 UFS 互操作之标准
+linux-fsdevel.messages.676676	V34.1.5.1	Linux 0.01 源码的目录构成	归入	UFS 驱动跨平台定位自述
+linux-fsdevel.messages.702748	V34.1.4.3	网络协议栈的独立编写证据	归入	ufs 泄漏补丁未合并之故
+linux-fsdevel.messages.530442	V34.2.7.6	工具链演进对判定方法的重塑	归入	ext2／reiserfs 违规举报记录
+linux-fsdevel.messages.556563	V34.1.6.2	编译工具链的来源与影响	归入	ZUF 双许可之选择
+linux-fsdevel.messages.446540	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	copyleft-next 与 BSD 并入
+linux-fsdevel.messages.603727	V34.1.6.2	编译工具链的来源与影响	归入	apfs 上游化之许可顾虑
+freebsd-hackers.messages.2620105	V34.1.2.6	移植层对接口传统的延续	归入	O_BENEATH 移植到 Linux openat
+linux-fsdevel.messages.303021	V34.1.7.1	POSIX 标准的接口抽象层	归入	landlock truncate 与标准接口
+linux-fsdevel.messages.675313	V34.2.1.5	多重版权声明的叠压现象	归入	curtain 多重参照之声明
+freebsd-hackers.messages.1320440	V34.1.5.4	宏内核与微内核的路线差异	归入	orangefs strncpy 改 strlcpy
+linux-fsdevel.messages.590217	V34.2.7.6	工具链演进对判定方法的重塑	归入	strscpy 已合入之记录
+linux-fsdevel.messages.626206	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	kdbus 与 capabilities 之提议
+freebsd-hackers.messages.1322707	V34.1.2.1	系统调用接口的稳定边界	归入	NFS 客户端接口之变
+linux-fsdevel.messages.472924	V34.1.5.4	宏内核与微内核的路线差异	归入	vfs 批量换 strscpy
+netdev.messages.8341775	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	netmap 移植入 ixgbe 驱动
+netdev.messages.8208102	V34.2.8.2	内容寻址标识的技术原理	归入	netmap 基础设施入 staging
+netdev.messages.8167541	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	Linux 取用 BSD 码之争
+netdev.messages.8191922	V34.2.1.2	许可证文本的权属表达	归入	dwc-xlgmac 双许可声明
+netdev.messages.8015345	V34.2.1.2	许可证文本的权属表达	归入	libbpf 改 LGPL-2.1 OR BSD-2
+netdev.messages.8579990	V34.2.1.2	许可证文本的权属表达	归入	OpenIB BSD 压为 SPDX 标签
+netdev.messages.8649013	V34.1.6.2	编译工具链的来源与影响	归入	bpftool 全面双许可
+netdev.messages.8717333	V34.2.1.2	许可证文本的权属表达	归入	bpftool 样板与 BSD 标签清理
+netdev.messages.8827397	V34.1.4.1	套接字接口在两侧的实现差异	归入	派生码不得贴 BSD-3 标签
+netdev.messages.8909812	V34.2.1.2	许可证文本的权属表达	归入	ynl 统一 GPL-2.0 OR BSD-3
+netdev.messages.8952279	V34.1.6.2	编译工具链的来源与影响	归入	ynl 工具校验许可
+netdev.messages.9193855	V34.1.3.5	许可证条款划定的代码边界	归入	TIPC SPDX 与原许可之辨
+netdev.messages.8146127	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	EXPORT_SYMBOL_GPL 与套接字 API
+netdev.messages.8240632	V34.1.7.2	标准文本与实现之间的空隙	归入	ath5k 导入后 BSD 声明被剥离
+netdev.messages.8374213	V34.2.1.3	文件头注释的证据价值	归入	Landlock 定位与文件头注释
+linux-api.messages.22125	V34.2.7.6	工具链演进对判定方法的重塑	归入	Capsicum 移植 RFC 版本记录
+linux-api.messages.27373	V34.1.7.1	POSIX 标准的接口抽象层	归入	需等效能力框架之主张
+linux-api.messages.42724	V34.1.4.5	BSD 许可证代码流入 Linux 的实例	归入	为绕过 /proc 而补 execveat
+linux-api.messages.46844	V34.1.7.4	Linux 对 POSIX 的选择性实现	归入	移植手册页并保留 FreeBSD 版权头
+linux-api.messages.54878	V34.1.2.6	移植层对接口传统的延续	归入	能力权利限制两系统调用
+linux-api.messages.72681	V34.2.4.2	间接影响的中介环节	归入	O_BENEATH 出自 FreeBSD 之说明
+linux-api.messages.53965	V34.2.4.2	间接影响的中介环节	归入	FreeBSD 拆出 O_BENEATH 之谱系
+linux-api.messages.47563	V34.1.2.6	移植层对接口传统的延续	归入	pdfork 映射到 clone4 之实测
+linux-api.messages.50600	V34.2.4.2	间接影响的中介环节	归入	CLONE_FD 对齐 pdfork 语义
+linux-api.messages.47470	V34.2.4.2	间接影响的中介环节	归入	Landlock 设计灵感来源
+linux-api.messages.60121	V34.2.4.2	间接影响的中介环节	归入	Capsicum 与 pledge 为灵感
+linux-api.messages.12945	V34.2.4.2	间接影响的中介环节	归入	O_BENEATH 为 Capsicum 衍生
+linux-api.messages.15152	V34.2.4.2	间接影响的中介环节	归入	RESOLVE_IN_ROOT 源自 Capsicum
+linux-api.messages.44615	V34.2.4.2	间接影响的中介环节	归入	close_range 反向跟进之谱系
+linux-api.messages.24708	V34.2.4.2	间接影响的中介环节	归入	手册页与 FreeBSD 跟进
