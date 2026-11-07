@@ -117,7 +117,13 @@ const anchor = `vol-${VOL_NO}-ch-${M}-sec-${M}-${N}-sub-${P}`;
    再断言其在小节级 TOC 中可定位（2026-11-06 修订：V02 起他卷首个小节
    在未导航时不在 DOM，原顺序对 V≥2 恒假阴） */
 await page.goto(PAGE_URL + '#' + anchor, { waitUntil: 'load' });
-await page.waitForTimeout(900);
+/* 2026-11-07：页面增至 5,000+ 小节（文档高约 38 万 px）后，固定 900ms 等待不足，
+   V2／V3 对全部非首卷在并行负载下恒假阴（实测 5s 后同一锚点 tOC 条目在册、
+   滚入视口正常）。改为等待该锚的 TOC 条目出现（上限 8s），判据本身不变。 */
+await page.waitForFunction(
+  (a) => !!document.querySelector('a[data-target="' + a + '"]'), anchor,
+  { timeout: 8000 }).catch(() => {});
+await page.waitForTimeout(200);
 const toc = await page.evaluate((a) => ({
   hit: !!document.querySelector('a[data-target="' + a + '"]'),
   total: document.querySelectorAll('a[data-target]').length
