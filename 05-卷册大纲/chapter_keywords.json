@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 5582,
+  "subsections": 5639,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "504374b8b1ab308438c0e1973f592371e4333a832df03bf6a7ed7521273a54e7",
+  "content_sha256": "9535bd3abdd8a995c390dd184af9fcbbff244e5b33b4db3d6a7636a54e06c853",
   "extract": "title+body",
-  "generated_at": "2026-11-07T10:46:15+08:00"
+  "generated_at": "2026-11-07T13:20:12+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -1961,14 +1961,6 @@
     "dns",
     "bind",
     "unbound"
-   ]
-  },
-  "TH-NET-023": {
-   "label": "动态主机配置",
-   "level": "narrow",
-   "broader": "TH-NET-000",
-   "tech": [
-    "dhcp"
    ]
   },
   "TH-NET-024": {
@@ -4772,7 +4764,8 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-046"
    ],
    "sections": 3
   },
@@ -4780,14 +4773,26 @@
    "volume": "第25卷-4.4BSD-Lite2 与伯克利谢幕（1994–2005）",
    "title": "CSRG 的组织终局与档案保存（1995）",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-OS-017",
+    "TH-REL-009"
+   ],
    "sections": 1
   },
   "V25-C003": {
    "volume": "第25卷-4.4BSD-Lite2 与伯克利谢幕（1994–2005）",
    "title": "4.4BSD 系列的再发行源流（1994–1996）",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-REL-004",
+    "TH-BIZ-008",
+    "TH-LANG-036",
+    "TH-NET-022",
+    "TH-GOV-002",
+    "TH-GOV-003",
+    "TH-GOV-014",
+    "TH-HIS-046"
+   ],
    "sections": 4
   },
   "V25-C004": {
@@ -4795,9 +4800,6 @@
    "title": "4.4BSD 知识的定型与伯克利谢幕（1996–2005）",
    "domains": [],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037",
-    "TH-HIS-040",
     "TH-HIS-046"
    ],
    "sections": 2
@@ -6791,10 +6793,10 @@
     "TH-HIS-003",
     "TH-HW-010",
     "TH-GOV-006",
+    "TH-GOV-014",
     "TH-LANG-017",
     "TH-LANG-019",
-    "TH-NET-010",
-    "TH-NET-013"
+    "TH-NET-010"
    ],
    "sections": 6
   },
@@ -24298,14 +24300,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1ee685a0092190640672ac197fb60b53e6c6f467"
   },
   "V25-C001-1.2": {
    "chapter": "V25-C001",
@@ -24321,8 +24321,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d9aa47073564feb7b1529fe8c829048108ec5236"
   },
   "V25-C001-1.3": {
    "chapter": "V25-C001",
@@ -24338,103 +24338,114 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9afa19db7c55d9742b49881a2110a948fbe32cd4"
   },
   "V25-C002-2.1": {
    "chapter": "V25-C002",
    "title": "CSRG 的组织终局与档案保存（1994–1995）",
    "meta": false,
    "domains": [
+    "TH-OS-000",
+    "TH-REL-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-OS-017",
+    "TH-REL-009",
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "的组织终局与"
-   ]
+   "subs": 12,
+   "subs_sha1": "46c9b93c0daabd7d3bc04fb5106fa7b3ef83cb1b"
   },
   "V25-C003-3.1": {
    "chapter": "V25-C003",
    "title": "再发行脉络：4.4BSD-Lite 与 Lite2 成为三大分支的共同基线",
    "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-LAW-000",
+    "TH-NET-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-BIZ-008",
+    "TH-LAW-016",
+    "TH-NET-033",
+    "TH-GOV-002",
+    "TH-NET-022",
+    "TH-LANG-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "再发行脉络"
-   ]
+   "subs": 5,
+   "subs_sha1": "b7c50a1642399cad9220ab8ea0a208b80a7a2fdd"
   },
   "V25-C003-3.2": {
    "chapter": "V25-C003",
    "title": "4.4BSD-Lite2 在 FreeBSD、NetBSD、OpenBSD 源流中的位置",
    "meta": false,
    "domains": [
+    "TH-LANG-000",
+    "TH-REL-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-LANG-036",
+    "TH-REL-004",
+    "TH-HIS-046",
+    "TH-HW-036"
    ],
-   "projects": [],
+   "projects": [
+    "freebsd",
+    "netbsd",
+    "openbsd"
+   ],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "源流中的位置"
-   ]
+   "subs": 5,
+   "subs_sha1": "63bb91865351e27b0107359da349bfaa5ed3f363"
   },
   "V25-C003-3.3": {
    "chapter": "V25-C003",
    "title": "Lite 与 Lite2 两套基础在分支中的断裂与连续",
    "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-GOV-000",
+    "TH-BIZ-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-GOV-003",
+    "TH-BIZ-008",
+    "TH-LANG-036",
+    "TH-NET-022",
+    "TH-REL-004",
+    "TH-LAW-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "两套基础在分"
-   ]
+   "subs": 5,
+   "subs_sha1": "7033fee8c4434c3489e98c34f9d36b93597fd801"
   },
   "V25-C003-3.4": {
    "chapter": "V25-C003",
    "title": "Lite／Lite2 基线切换年表对照",
    "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-REL-000",
+    "TH-GOV-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-REL-004",
+    "TH-GOV-014",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-   "auto": [
-    "基线切换年表"
-   ]
+   "subs": 5,
+   "subs_sha1": "fce7c3c706ac81113397d9398c4c16c045ad62f6"
   },
   "V25-C004-4.1": {
    "chapter": "V25-C004",
@@ -24444,14 +24455,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0e7462afaedf876819228fd6e361528b154befbd"
   },
   "V25-C004-4.2": {
    "chapter": "V25-C004",
@@ -24465,8 +24474,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2dfc89b3d91b37dcf79b183a7c3cfba19118b6d1"
   },
   "V26-C001-1.1": {
    "chapter": "V26-C001",
@@ -46650,7 +46659,7 @@
     "TH-LANG-017",
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-NET-023"
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -82306,8 +82315,7 @@
   },
   "V18-C004-4.9.3": {
    "add": [
-    "TH-HW-029",
-    "TH-REL-009"
+    "TH-HW-029"
    ]
   },
   "V18-C004-4.9.4": {
@@ -83287,8 +83295,8 @@
   },
   "V24-C002-2.1.6": {
    "add": [
-    "TH-LAW-016",
     "TH-VM-001",
+    "TH-LAW-016",
     "TH-OS-009",
     "TH-HIS-004"
    ]
@@ -83345,6 +83353,11 @@
   "V24-C002-2.4.3": {
    "add": [
     "TH-HIS-003"
+   ]
+  },
+  "V25-C003-3.3.1": {
+   "add": [
+    "TH-HW-036"
    ]
   },
   "V31-C001-1.1.5": {
@@ -83773,7 +83786,7 @@
   "V31-C006-6.3.1": {
    "add": [
     "TH-OS-024",
-    "TH-REL-004"
+    "TH-HW-015"
    ]
   },
   "V31-C006-6.3.2": {
@@ -83839,7 +83852,7 @@
     "TH-REL-001",
     "TH-NET-003",
     "TH-HIS-004",
-    "TH-FS-007"
+    "TH-GOV-014"
    ]
   },
   "V31-C007-7.1.2": {
@@ -84381,7 +84394,7 @@
     "TH-BIZ-022",
     "TH-HW-010",
     "TH-HIS-004",
-    "TH-REL-021"
+    "TH-GOV-014"
    ]
   },
   "V50-C003-3.4.2": {
@@ -85035,8 +85048,8 @@
     "TH-HW-036",
     "TH-BIZ-002",
     "TH-HW-010",
-    "TH-LANG-036",
     "TH-HIS-004",
+    "TH-LANG-036",
     "TH-GOV-014"
    ]
   },
