@@ -1,0 +1,58 @@
+rowmine_id	subsection_id	title	action	reason
+topic_analysis_freebsd_current:freebsd		—	移出	FreeBSD VOP_xxx 内存拷贝讨论，属 FreeBSD 内核技术史（V37）
+doubts_resolved		—	删除	零内容：数据库统计要点行（全树重复注入）
+chapter_reviews		—	删除	零内容：数据库统计要点行（全树重复注入）
+netdev.messages.8295673	V58.7.5.2	缺失部件的逐项清单	归入	Apple 为 Broadcom PHY 私加电源管理代码并对开源 Darwin 隐藏（Linux 驱动旧注）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb.commits	V58.3.5.1	源码披露的分项清单	归入	darwin 镜像库 2,016 提交／43 行贡献者的口径注记（不能代表 XNU 上游全量）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+chapter_reviews		—	删除	零内容：数据库统计要点行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+chapter_reviews		—	删除	零内容：数据库统计要点行（全树重复注入）
+darwin.duckdb.commits		—	挂账	与 3.5.1 已归入的 darwin 贡献者口径块同质，留待内容批复用
+usenet_mail.messages.173977	V58.7.1.4	文件系统差异的登记底稿	归入	2002 年 ditto 复制致应用属性丢失、UFS 分区备份还原后应用不可用
+usenet_mail.messages.174737	V58.3.6.1	技术共同体的交集	归入	2001 年 Mac OS X 发布当日预告 Mach／BSD 后端将带来 BSD 各组人流
+usenet_mail.messages.139682		—	移出	comp.std.unix 的 pty 主侧 TIOCGPGRP 禁用询问，属 UNIX 标准化史（V20）
+usenet_mail.messages.139684		—	移出	pty 主侧 TIOCGPGRP 的规范与实现取舍，属 UNIX 标准化史（V20）
+usenet_mail.messages.139689		—	移出	pty 主侧 TIOCGPGRP 行为与作业控制，属 UNIX 标准化史（V20）
+usenet_mail.messages.139698		—	移出	pty 主侧 TIOCGPGRP 实现建议，属 UNIX 标准化史（V20）
+usenet_mail.messages.139730		—	移出	POSIX 1003.4 实时扩展的优先级与调度论辩，属 UNIX 标准化史（V20）
+usenet_mail.messages.139821		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139824		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139826		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139834		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139836		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139838		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139845		—	移出	POSIX 1003.4 实时扩展评论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139846		—	移出	POSIX 1003.4 实时语义讨论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139847		—	删除	零内容：仅邮件元数据抬头与纪律句，无正文
+usenet_mail.messages.139935		—	移出	_POSIX_VDISABLE 与 cc_t 类型讨论，属 UNIX 标准化史（V20）
+usenet_mail.messages.139947		—	移出	1003.1a 以 seteuid／setegid 重载 setuid 语义，属 UNIX 标准化史（V20）
+usenet_mail.messages.139994		—	移出	lseek 对非法偏移返回 EINVAL 的判定，属 UNIX 标准化史（V20）
+usenet_mail.messages.140045		—	删除	零内容：仅邮件元数据抬头与纪律句，无正文
+usenet_mail.messages.140242		—	移出	sysconf 的 CLK_TCK 与 ANSI C 草案名称差异，属 UNIX 标准化史（V20）
+usenet_mail.messages.140697		—	移出	AIX（RTPC 的 System V 移植）弃 vread 选 filemap 的自述，属商业 UNIX（V20）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb.commits		—	挂账	darwin 贡献者口径块（同 3.5.1 已归入），留待内容批复用
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+doubts_resolved		—	删除	零内容：数据库统计要点行（全树重复注入）
+chapter_reviews		—	删除	零内容：数据库统计要点行（全树重复注入）
+linux-fsdevel.messages.447562	V58.4.2.4	系统调用面的扩张	归入	Tiger 将提供 Darwin 级统一元数据／资源叉 API（reiser4 之辩中的官方预告）
+darwin.duckdb.commits		—	挂账	darwin 贡献者口径块（同 3.5.1 已归入），留待内容批复用
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+doubts_resolved		—	删除	零内容：数据库统计要点行（全树重复注入）
+chapter_reviews		—	删除	零内容：数据库统计要点行（全树重复注入）
+freebsd.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
+darwin.duckdb.commits		—	挂账	darwin 镜像导入机制说明（与 3.5.1 已归入块同质），留待内容批复用
+darwin.duckdb		—	删除	零内容：数据库引用统计行（全树重复注入）
