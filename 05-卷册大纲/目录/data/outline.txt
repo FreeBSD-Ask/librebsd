@@ -1175,71 +1175,341 @@
 ! 逻辑—定位（2026-10-09 补批 17）：本卷为学术史卷（UNIX v1–v7 研究），素材自原各卷书目述评迁出重组；素材三分按研究对象的主体时段与源流归属，跨期文献按主体归卷并互设指注；素材源存档：12-重构大纲书目述评/学术史卷素材存档-UNIX卷源-20261009.md；〔主体声明〕本卷叙述对象为 UNIX v1–v7 研究文献与学术建制（史学元层），不承担 UNIX 编年本体（见第一、七、九卷）
 ## 第 1 章 论文
 - 1.1 Ritchie 与 Thompson：《The UNIX Time-Sharing System》@@〔溯源：一手：Communications of the ACM 17(7): 365–375（1974-07），DOI 10.1145/361011.361061；初版宣读于第四届 ACM SOSP（1973-10）；修订重印于 BSTJ 57(6) Part 2: 1905–1929（1978-07/08）；本地库：CL-1-118（1974-07 发表）；书目著录 [868]／[869] 同载卷期页与 DOI〕〔说明：SOSP 1973／CACM 1974 修订版〕
+  - 1.1.1 原始论文的文本结构
+  - 1.1.2 分时论述的要点编排
+  - 1.1.3 署名、致谢与发表经过
+  - 1.1.4 发表渠道与前身报告的考订
+  - 1.1.5 引用网络与经典地位的形成
 - 1.2 《The Bell System Technical Journal》UNIX 专号论文群（1978）@@〔溯源：一手：The Bell System Technical Journal 57(6) Part 2（1978-07/08）UNIX 专号，论文群多冠以“UNIX Time-Sharing System:”前缀（如 RBCS/RCMAS 篇，pp. 2275–2287），专号自 p. 1905 起约 380 页；含 Ritchie 与 Thompson 修订重印（1905–1929）／Thompson《UNIX Implementation》（1931–1946）等；本地库：CL-1-00436（1978-08 UNIX News 许可证限定与专号同期）；书目 TUHS 扫描件 [1276]／[1278]／[1279]／[1280]／[1282]〕
+  - 1.2.1 专号的组稿背景与篇目
+  - 1.2.2 与 CACM 论文的分工差异
+  - 1.2.3 各篇主题的覆盖排布
+  - 1.2.4 专号的发行与流传
+  - 1.2.5 专号在文献史上的位置
 - 1.3 Thompson：《UNIX Implementation》（1978）@@〔溯源：一手：Bell System Technical Journal 57(6) Part 2: 1931–1946（1978-07/08），DOI 10.1002/j.1538-7305.1978.tb02137.x；本地库：CL-RM-061567（1978 年 7–8 月 BSTJ 57 卷 8 期第二部分）；书目著录 [203]／[873]〕
+  - 1.3.1 实现论述的章节结构
+  - 1.3.2 内核设计的自述要点
+  - 1.3.3 与原始论文的互补关系
+  - 1.3.4 数据结构与算法的披露程度
+  - 1.3.5 该文在实现文献中的地位
 - 1.4 Thompson：《Reflections on Trusting Trust》（1984）@@〔溯源：一手：Communications of the ACM 27(8): 761–763（1984-08），1983 年度 ACM 图灵奖演讲；本地库：CL-1-117／CL-4-009；书目著录 [22]／[1158]；2026-10-09 订正：原题面作“Ritchie”，本文作者实为 Ken Thompson，据 CACM 原刊与图灵奖档案订正〕
+  - 1.4.1 图灵奖演讲的成文经过
+  - 1.4.2 编译器后门的论证结构
+  - 1.4.3 信任链概念的提出
+  - 1.4.4 演示的传播与反应
+  - 1.4.5 安全文献中的引用地位
 ## 第 2 章 著作与书目
 - 2.1 Ritchie 与 Thompson 等：《UNIX Programmer's Manual》历代版（1971–1979）@@〔溯源：一手：首版《UNIX Programmer's Manual, First Edition》1971-11-03（署名 Thompson 与 Ritchie；Nokia Bell Labs 微站影印，TUHS 收录）；版次序列：1st 1971-11／2nd 1972-06／3rd 1973／4th 1973-11／5th 1974-06／6th 1975-05／7th 1979-01（另 32V 版 1979-02）；V7 为两卷制（Vol.1＋Vol.2A）；本地库：CL-8-002（MERT 版手册影印，1977）；首版无“编者”字样，作署名作者〕
+  - 2.1.1 手册体例的确立与沿袭
+  - 2.1.2 历代版本的增补脉络
+  - 2.1.3 条目组织与章节划分
+  - 2.1.4 印刷与发行的形制
+  - 2.1.5 手册作为文献对象的考订要点
 - 2.2 Bourne：《The UNIX System》（1983）@@〔溯源：一手：Addison-Wesley，ISBN 0-201-13791-7；出版年两说——CHM 馆藏与 LOC 编目作 1982（1982-12 刊行），出版社页作 1983，并陈；本地库：CL-RM-012676／CL-RM-012709（Bourne shell 版本差异与 BRL 增强分支，当事人陈述）〕
+  - 2.2.1 综述框架的章节布局
+  - 2.2.2 对系统全貌的叙述策略
+  - 2.2.3 国际读者的面向设定
+  - 2.2.4 与手册文献的互补
+  - 2.2.5 该书在评述文献中的接受
 - 2.3 Salus：《A Quarter Century of UNIX》（1994）@@〔溯源：一手：Addison-Wesley，1994-06-01，ISBN 0-201-54777-5；1995-01“with corrections”重印；本地库：CL-1-100（V6 内核注释考）／CL-4-116（前言：1992 前所见二十余种 UNIX 史叙述无一完全准确）；增补（127 批 3，2026-10-10）：中文译名《Unix 四分之一世纪》（book.bsdcn.org 参考书目附录著录，Addison-Wesley 原版 ISBN 978-0-201-54777-1）〕
+  - 2.3.1 编年叙事的断限与分期
+  - 2.3.2 口述与档案的取材比重
+  - 2.3.3 人物线索的编织方式
+  - 2.3.4 编年体裁的得失评估
+  - 2.3.5 该书作为通史的引用状况
 - 2.4 Libes 与 Ressler：《Life with UNIX》（1989）@@〔溯源：一手：Prentice Hall，ISBN 0-13-536657-7，pp.346（NIST 载 Libes 本人书目）；年份两说——部分参考书目作 1988（Englewood Cliffs），另有 Special Edition 版次，并陈；本地库：CL-RM-012463（Salus 指引本著与 Mach 会议录）〕
+  - 2.4.1 科普面向的写法定位
+  - 2.4.2 章节题材的覆盖与取舍
+  - 2.4.3 花絮体例与知识普及
+  - 2.4.4 对批评意见的收录
+  - 2.4.5 该书的读者群与流传
 - 2.5 Lions：Lions' Commentary on UNIX 6th Edition, with Source Code 与 V6 注释本（1976–1996）@@〔溯源：一手：John Lions,Lions' Commentary on UNIX 6th Edition with Source Code——1976–77 年 UNSW 课程讲义自印本流传，1996 年 Peer-to-Peer Communications 正式出版（ISBN 1-57398-054-2）；中文通行译名《莱昂氏UNIX源代码分析》；本节载该书的成书与地下流传史（UNIX 史上流传最广的盗版稿之一）、1996 年正式出版经过及其在 UNIX 教学与学术史中的地位；一手待取：1976–77 自印本影印与 1996 版书影；依 127 号文 T-1（2026-10-10）新增〕〔分工·迁移：莱昂氏注释三面分工（C-26，2026-10-11）：成书与流传史＝本节；评审传播面＝第五卷第1章 1.18；教学面＝第六卷第3章 3.2〕
+  - 2.5.1 逐行评注的体例设计
+  - 2.5.2 第六版源码的覆盖范围
+  - 2.5.3 油印流传与版权历程
+  - 2.5.4 正式再版的开端意义
+  - 2.5.5 注释本的文献序列位置
 - 2.6 批评视角：The UNIX-Haters Handbook（1994）与 UNIX 批评文献@@〔溯源：一手：Simson Garfinkel、Daniel Weise 与 Steven Strassmann《Unix 痛恨者手册》（原题 The Unix Hater's Handbook，IDG Books, 1994，ISBN 978-1-56884-203-5；中文译名通行）；本节载 UNIX 批评文献的源流与学术史价值——从系统设计缺陷的内部批评到文化反思；与第十六卷第2章 GNU 话语、第三十二卷第 3、4 章自由软件／开源对照面互指；取证源＝book.bsdcn.org 参考书目附录；依 127 号文批 3（2026-10-10）新增；取证源＝book.bsdcn.org（T-6）〕〔说明：《UNIX 痛恨者手册》〕
+  - 2.6.1 论战文集的成书背景
+  - 2.6.2 章目题材与批评焦点
+  - 2.6.3 序言立场的自反性
+  - 2.6.4 发行方式与流传范围
+  - 2.6.5 批评文献的史学价值
 ## 第 3 章 文章
 - 3.1 Bell Labs 计算科学研究中心技术报告群@@〔溯源：一手：Computing Science Technical Report（CSTR）连续编号（CSTR #17，Kernighan 与 Cherry，1974-05；CSTR #102，Johnson 与 Ritchie，1981）；早期文稿多以“Technical Memorandum”形式流传（C 手册 1974-01 TM）；TUHS 收有 CSTR 全编号目录（bib 格式，tuhs.org 镜像 UA_Documentation/TechReports/Bell_Labs/CSTRs/bib；该页自述本中心亦称 Center 1127），编号体系为主证；本地库在册：CSTR 单件（#33／#52 全文，参考文献库 id 3944／3945；#8／#9 引，SRC-mat:273／276／288）＋Center 1127 内部备忘录与技术报告档案登记（参考文献库 id 2667）〕
+  - 3.1.1 技术报告系列的建制
+  - 3.1.2 编号与著录的体例
+  - 3.1.3 报告题材的分布与侧重
+  - 3.1.4 校外流通的渠道与规模
+  - 3.1.5 报告群的档案现状
 - 3.2 Usenix 会议中的早期 UNIX 研究文章@@〔溯源：一手：USENIX 首次会议 1975-06-18（CUNY，Mel Ferentz 主持；前此 1974-05-15 Lou Katz 曾于 Columbia 办小型会议）；1978-05-24～27 Columbia 会议更名 USENIX（名由 Margaret Law 建议）；更名年份两说——出版物 1977-07 改名《;login:》与组织 1978-05 更名两事并陈；会议录总档见 USENIX legacy proceedings；本地库：CL-1-006／CL-RM-010024／CL-RM-010060／CL-RM-010087（1970s–80s USENIX 鸟群会实录）〕
+  - 3.2.1 会议文集的早期形制
+  - 3.2.2 论文题材的分布与迁移
+  - 3.2.3 报告人的机构构成
+  - 3.2.4 文集的发行面与受众
+  - 3.2.5 与期刊文献的时效关系
 - 3.3 早期 UNIX 媒体记述与评论文章@@〔溯源：一手：《UNIX NEWS》Vol.1 No.1 影印（出版人 Mel Ferentz，Brooklyn College, CUNY；首期日期两说 1975-07-30／1975-06-30）与 No.4（1976-03-19，含机构邮寄名单）；本地库：CL-1-00417（1976-04 广告：手册复印件每卷 12 美元）／CL-1-00436（1978-08 许可证流通限定）；专业媒体专文未获一手〕
+  - 3.3.1 行业刊物的报道脉络
+  - 3.3.2 报道框架与史实的偏差
+  - 3.3.3 记者叙事的取材路径
+  - 3.3.4 媒体接受的时间差
+  - 3.3.5 剪报档案的史料价值
 - 3.4 UNIX 文档计划的文章面研究@@〔溯源：一手：《Documents for Use with the UNIX Time-Sharing System》为 V6（1975-05）手册第五卷（Ritchie 微站影印）；V7（1979-01）扩为《Supplementary Documents》Volume 2A（bitsavers 存 SRI 1980 重印本）；“UNIX Documentation project”之专名经三轮检索未证实（否定性结论，非“未查”）：1977 年 Center 127 名录仅载职名“UNIX Documentation Specialist”（一手），《Documents for Use with the UNIX Time-Sharing System》卷首语系随软件协议分发的文档集合泛称——以卷名与手册序列为据〕
+  - 3.4.1 文档计划的文献形态
+  - 3.4.2 文章与手册的分工
+  - 3.4.3 写作规范的文献证据
+  - 3.4.4 文档计划的存档程度
+  - 3.4.5 文献面的收档边界
 ## 第 4 章 期刊
 - 4.1 Communications of the ACM 的 UNIX 研究线@@〔溯源：一手：Ritchie 与 Thompson《The UNIX Time-Sharing System》CACM 17(7): 365–375（1974-07），DOI 10.1145/361011.361061；1983 年度图灵奖演讲两篇同刊 CACM 27(8)（1984-08）——Ritchie《Reflections on Software Research》pp. 758–760（DOI 10.1145/358198.358207）、Thompson《Reflections on Trusting Trust》pp. 761–763（DOI 10.1145/358198.358210）；1970s CACM 直接 UNIX 论文以 1974 一篇为主（其余为 1984 讲演）〕
+  - 4.1.1 期刊的学术定位与读者
+  - 4.1.2 UNIX 论文的刊发脉络
+  - 4.1.3 论文入选的栏目通道
+  - 4.1.4 引文网络的枢纽节点
+  - 4.1.5 与会议文献的互补
 - 4.2 The Bell System Technical Journal 的系统论文@@〔溯源：一手：BSTJ 57(6) Part 2（1978-07/08）UNIX 专号，题冠“UNIX Time-Sharing System:”——Ritchie 与 Thompson《The UNIX Time-Sharing System》pp. 1905–1929（止页一说 1930）／Thompson《UNIX Implementation》pp. 1931–1946（DOI 10.1002/j.1538-7305.1978.tb02137.x）／Ritchie《A Retrospective》pp. 1947–1969／Bourne《The UNIX Shell》pp. 1971–1990／Ritchie、Johnson、Lesk 与 Kernighan《The C Programming Language》pp. 1991–2019 等〕
+  - 4.2.1 期刊的机构属性与沿革
+  - 4.2.2 专号以外的论文题材
+  - 4.2.3 期刊的发行与馆藏现状
+  - 4.2.4 专号之外的题材覆盖
+  - 4.2.5 期刊文献的自述性
 - 4.3 Operating Systems Review 与系统研究述评@@〔溯源：一手：第四届 ACM 操作系统原理研讨会（SOSP '73）会议录 DOI 10.1145/800009（Ritchie 与 Thompson 论文首次宣读；会期 1973-10-15～17 于 IBM T. J. Watson 研究中心，与 ACM DL 编年 1973-01 并陈）；OSR 1970s–80s 系统述评多为转载（如 Lauer 与 Needham，OSR 13(2)，1979-04，pp. 3–19）；OSR 内 UNIX 专文（本地库续证）：OSR 7(4)（1973-10）＝SOSP-4 会议录（含先宣读文；SRC-mat:332 登记）；OSR 15(5)（1981）Babaoglu 与 Joy《Converting a Swap-Based System to do Paging in an Architecture Lacking Page-Reference Bits》（DOI 10.1145/1067627.806595，参考文献库 id 2341）；另《UNIX: a portable operating system?》（OSR，DeepDyve 存录）〕
+  - 4.3.1 刊物的学会建制背景
+  - 4.3.2 述评体裁的栏目特征
+  - 4.3.3 系统研究的评述接力
+  - 4.3.4 与会议述评的分工
+  - 4.3.5 刊物的档案可得性
 - 4.4 USENIX 早期会讯研究：从《UNIX NEWS》（1975）到《;login：》@@〔溯源：一手：《UNIX NEWS》至 1977-05/06 期为末刊，自 1977-07 起更名《;login:》（副题“The UNIX Newsletter”；改因 AT&T 律师电话，UNIX 商标属 Western Electric）——据 Salus《HISTORY: Workshops and Publications》；本地库：CL-1-00417／CL-1-00436（UNIX NEWS 存续期实录）；“1983 年创刊”之说与一手不符；创刊前零散通讯：toad.com/early-usenix-newsletters 汇总页＋TUHS 镜像（19760210-unix-news-n3.pdf 等）＋USENIX 官方页《Introducing UNIX News》〕
+  - 4.4.1 从会讯到会刊的沿革
+  - 4.4.2 刊名与体例的变化
+  - 4.4.3 内容题材的转移过程
+  - 4.4.4 早期会讯的档案状况
+  - 4.4.5 会讯研究的文本基础
 ## 第 5 章 研究人员
 - 5.1 Thompson 与 Ritchie 的研究传记文献@@〔溯源：一手：ACM 图灵奖官网两人页（1983 年度共获）；CACM 讣闻《Dennis Ritchie, 1941–2011》（2011-12-01）；Ritchie《The Evolution of the Unix Time-sharing System》（原 LNCS #79, 1980；重印 AT&T BLTJ 63(6) Part 2, 1984，pp. 1577–1593——卷期一处二手引作 63(8)，并陈）；本地库：CL-4-008（该文概述早期发展史）／CL-1-117（Thompson 图灵奖演讲要旨）〕
+  - 5.1.1 图灵奖颂词的官方定性
+  - 5.1.2 生平访谈的分期提问
+  - 5.1.3 纪念文章的叙事框架
+  - 5.1.4 传记材料的可得程度
+  - 5.1.5 人物研究的考订需求
 - 5.2 McIlroy、Kernighan 与工具研究传统@@〔溯源：一手：McIlroy、Pinson 与 Tague《UNIX Time-Sharing System: Foreword》（BSTJ 57(6)，1978，pp. 1899–1904——另引 1902–03，并陈；UNIX 哲学三原则出处）；Kernighan《Software Tools》（Addison-Wesley, 1976，ISBN 0-201-03669-X）、《UNIX 编程环境》（原题 The UNIX Programming Environment）（与 Pike 合著，Prentice-Hall, 1984，ISBN 0-13-937681-X）；管道起源两说——McIlroy 1964 备忘录构想与 Thompson 1972 实作，并陈〕
+  - 5.2.1 工具传统的自述文献
+  - 5.2.2 麦基尔罗伊论管道的著述
+  - 5.2.3 克尼汉教科书的线索
+  - 5.2.4 人物与工具的互证路径
+  - 5.2.5 口述补正的必要性
 - 5.3 早期贡献者的口述史与纪念文献@@〔溯源：一手：Computer History Museum 口述史（Thompson 馆藏号 102808980／Kernighan 102740169；Ritchie papers 同馆）；Unix Oral History（Mahoney 主持，TUHS 存抄本含 McIlroy 篇）；Charles Babbage Institute 口述史集（编号 SC0618）；本地库：CL-RM-012888（Libes 优先权声明，当事人陈述）〕
+  - 5.3.1 口述访谈的馆藏清单
+  - 5.3.2 访谈提纲的引导次序
+  - 5.3.3 纪念文集的体裁特征
+  - 5.3.4 记忆偏差的校准办法
+  - 5.3.5 口述与书证的对勘
 - 5.4 Research UNIX 人物源流的考订研究@@〔溯源：一手：V7 手册前言（1979，署 Kernighan 与 McIlroy；致谢 Aho、Bourne、Cherry、Feldman 等 16 位贡献者）；Spinellis《A repository of Unix history and evolution》（Empirical Software Engineering 22(3): 1372–1404，2017，DOI 10.1007/s10664-016-9445-5；各版本贡献者标注研究）；V7 日期两说（1978／1979-01）并陈；本地库：CL-1-050（V7 前言致谢名单）／CL-1-052（贡献分配表考订）〕
+  - 5.4.1 人物谱料的著录来源
+  - 5.4.2 师承与合作的证据链
+  - 5.4.3 署名歧异的考订案例
+  - 5.4.4 生卒与职任的核对基准
+  - 5.4.5 考订结论的分级标记
 ## 第 6 章 研究机构
 - 6.1 贝尔实验室计算科学研究中心研究@@〔溯源：一手：IEEE《Electronics》1982-10 成就奖记事（明载 Computing Science Research Center of Bell Laboratories, Murray Hill）；Ritchie《The Evolution…》（述 1968–69 Multics 撤退与 Murray Hill 环境）；“1127”系 Bell Labs 计算科学研究中心 Center 编号（TUHS CSTR 页自述 also known as Center 1127），非室号；Unix Room 2C-518 为室号——二说各指其物，非矛盾〕〔说明：1127 部门〕
+  - 6.1.1 机构史文献的分布
+  - 6.1.2 编制与人物的著录
+  - 6.1.3 空间与设备的记述内容
+  - 6.1.4 与自述材料的对读
+  - 6.1.5 机构考订的边界与分寸
 - 6.2 1970 年代大学中的 UNIX 研究课程@@〔溯源：一手：TUHS 邮件列表（首家被许可者 Columbia University（Lou Katz）第 4 版；教育许可约 200 美元、商业约 2 万美元）；Salus 1994 多校名单；TUHS“Licenses”子页已失效，须以邮件列表与 Internet Archive 回溯；首批院校两说（Columbia／Harvard）并陈〕〔分工·迁移：课程建制划界（C-22，2026-10-11）：学术史考察面＝本节；课程建制本体＝第六卷第3章〕
+  - 6.2.1 课程档案的文献形态
+  - 6.2.2 教学大纲的取材范围
+  - 6.2.3 课程名录的学年序列
+  - 6.2.4 授课记录的可得性
+  - 6.2.5 课程文献的著录规范
 - 6.3 TUHS 与在线档案共同体的研究建制@@〔溯源：一手：TUHS 1995 年成立（初名 PDP-11 Unix Preservation Society——命名两说并陈）；Toomey《The Restoration of Early UNIX Artifacts》（USENIX 2009）；官网与镜像（www.tuhs.org／minnie.tuhs.org）〕
+  - 6.3.1 档案共同体的成立经过
+  - 6.3.2 邮件列表的史料价值
+  - 6.3.3 源码档案的收集跨度
+  - 6.3.4 复原工程的协作机制
+  - 6.3.5 档案建制的史学定位
 - 6.4 UNIX 研究的跨国机构网络@@〔溯源：一手：USENIX 时间线（1976 年 UNIX 传入日本，JUS 由 Jun Murai 等创立；1981-04 EUUG 首次会议，后改 EurOpen）；EUUG Newsletter（1982–）见于 USENIX 书目；欧洲各机构具体引入年未获一手〕
+  - 6.4.1 各国用户组的文献存量
+  - 6.4.2 会议纪录的跨国散布
+  - 6.4.3 机构互访的记述材料
+  - 6.4.4 语言与译介的层面
+  - 6.4.5 跨国网络的取证限度
 ## 第 7 章 赞助机构
 - 7.1 Bell System 内部经费与许可收入研究@@〔溯源：一手：Yale 经济系工作论文《How Antitrust Enforcement Can Spur Innovation: Bell Labs and the 1956 Consent Decree》（1956-01-24 同意令）；1974 年许可副本（约 1982 前学术许可近乎免版税，仅收 150–800 美元工本费）；System V 具体许可费一手账目未见〕
+  - 7.1.1 经费记述的档案层级
+  - 7.1.2 内部核算文献的体裁
+  - 7.1.3 许可收入的账面痕迹
+  - 7.1.4 转账与拨款的可见性
+  - 7.1.5 经费面的可见限度
 - 7.2 联邦资助在 V1–V7 语境中的缺席与存在@@〔溯源：一手：McKusick《Twenty Years of Berkeley Unix》（《Open Sources》，O'Reilly, 1999，ISBN 1-56592-582-3；3BSD 1979-12；DARPA 1979 起筹备、1980-04 起 18 个月合同）；v1–v7 期联邦资助一手账目缺失——DARPA 资助属后期 BSD 语境（本地库同向无 v1–v7 资助记录）〕
+  - 7.2.1 缺席论的文献根源
+  - 7.2.2 存在论的修正凭证
+  - 7.2.3 资助线索的档案散布
+  - 7.2.4 两种叙述的逐条对勘
+  - 7.2.5 资助面的考订结论
 - 7.3 大学授权收入的制度记述@@〔溯源：一手：TUHS 邮件列表（Western Electric 许可；Columbia 首获第 4 版；商业约 2 万、教育约 200 美元）；ETHW《Lions' Commentary on the UNIX Operating System》（1979 年 Western Electric 限缩课堂源码分发，即所谓“John Lions 条款”）；首批院校两说并陈〕
+  - 7.3.1 授权协议的文献形态
+  - 7.3.2 收入记账的凭据与簿册
+  - 7.3.3 校际扩散的商业环节
+  - 7.3.4 授权条款的沿革节点
+  - 7.3.5 收入面的核验限度
 - 7.4 赞助结构的史学盲区@@〔溯源：本地库：v1–v7 期经费与赞助记录检索以“记录不存在”为结论（承本项目 CSRG 报酬案先例处理法）；Salus 1994 口述史体未覆盖项目预算与赞助账目；出资叙事一手（分层）：Ritchie《The Evolution of the Unix Time-sharing System》自述 Multics 撤退后管理方不愿资助操作系统研究、购机提案被否、其后以文本处理服务与专利部门章程为由取得机器（当事人回忆，非账册）；一手中之账目未见——本节以记录缺席为史实边界〕
+  - 7.4.1 史料盲区的成因辨析
+  - 7.4.2 档案缺环的两端定位
+  - 7.4.3 补证的两条可能渠道
+  - 7.4.4 存疑标记的写法约定
+  - 7.4.5 盲区对叙事的约束
 ## 第 8 章 制度
 - 8.1 1956 同意令约束下的软件发布制度@@〔溯源：一手：1956-01-24 AT&T 同意令（两项救济含专利免版税授权；Yale 工作论文）；47 U.S.C. §153“AT&T Consent Decree”（govinfo）；1982-08-24 United States v. Western Electric, Civ. No. 82-0192（MFJ）——1956 原令与 1982 修改判决两令须区分，勿混〕
+  - 8.1.1 判决文本的原始出处
+  - 8.1.2 软件附赠条款的记述
+  - 8.1.3 对发布制度的约束条件
+  - 8.1.4 学界引述的歧异所在
+  - 8.1.5 判决文献的档案现状
 - 8.2 1970 年代 UNIX 源码许可制度@@〔溯源：一手：1974 年“Software License Agreement”副本（Ritchie 微站所存，原址已失效，须 Internet Archive 回溯）；TUHS 列表（SCO Ancient UNIX 许可编号可回溯，1998／2000 帖）；本地库：CL-1-00436（1978-08 许可证持有者流通限定）〕
+  - 8.2.1 许可文本的标准形制
+  - 8.2.2 教学许可的条款组成
+  - 8.2.3 价目与对象的著录
+  - 8.2.4 再许可的限制条件
+  - 8.2.5 许可文献的存档去处
 - 8.3 USENIX 的学术建制研究@@〔溯源：一手：USENIX 官网史页（1975-06-18 CUNY 首次会议，Mel Ferentz 主持）；《;login:》期刊序列；Salus《Twenty Years Ago…and More》（委员会主席与命名沿革）；成立年两说——1974（Lou Katz 于 Columbia 小型会）与 1975（首次会议）并陈〕
+  - 8.3.1 学会建制的文献依据
+  - 8.3.2 章程与选举的记录
+  - 8.3.3 会议制度的样本意义
+  - 8.3.4 出版物的编年清单
+  - 8.3.5 建制研究的档案基础
 - 8.4 版本命名与发行制度@@〔溯源：一手：Ritchie 与 Thompson（CACM 1974／BSTJ 1978）；V7 手册前言（1979-01；Research UNIX 以手册“Edition”编号标识；V7 为贝尔实验室最后整编版，磁带＋纸质手册发行）；命名两制（手册 Edition 与版本 Vn）并陈〕
+  - 8.4.1 版本命名的文献证据
+  - 8.4.2 Edition 与 Version 的用法
+  - 8.4.3 发行说明的体例与格式
+  - 8.4.4 命名歧异的考订案例
+  - 8.4.5 版本命名史的分期依据
 ## 第 9 章 概念与边界
 - 9.1 “UNIX 学术史”的对象界定与分期@@〔溯源：一手：Salus《A Quarter Century of UNIX》（Addison-Wesley, 1994，ISBN 0-201-54777-5；社会／社群史分期，收束于约 1994）；Ritchie《The Evolution of the Unix Time-sharing System》（BSTJ 63(6) Part 2, 1984，pp. 1577–1593；以技术演进节点自述）；Mahoney《Unix: An Oral History》（Princeton, 1989，TUHS 存抄本）；分期无统一标准两说并陈——Salus 社会史分期与 McKusick 机构分期（BTL→CSRG→商业化）〕
+  - 9.1.1 学术史对象的界定论述
+  - 9.1.2 分期标准的各家诸说
+  - 9.1.3 与工程史书写的分界
+  - 9.1.4 卷帙归属的裁断准绳
+  - 9.1.5 界定面的存疑登记
 - 9.2 “Everything is a file”等概念的研究史@@〔溯源：一手：McIlroy、Pinson 与 Tague《UNIX Time-Sharing System: Foreword》（BSTJ 57(6)，1978，pp. 1899–1904；统一 I/O 表述源头）；TUHS 口述史（Canaday 参与文件系统设计，1969 春）；该英文短语未见于 1970s 备忘录原文（系后世概括），原始备忘录未获一手，出处存争议，两说并陈〕
+  - 9.2.1 概念命名的文献源头
+  - 9.2.2 释义分歧的层次划分
+  - 9.2.3 教科书中的转述链
+  - 9.2.4 概念的批评与再诠释
+  - 9.2.5 概念史的考订要点
 - 9.3 UNIX 哲学概念文献的源流考订@@〔溯源：一手：McIlroy 等《Foreword》（BSTJ 57(6)，1978）；Kernighan 与 Pike《UNIX 编程环境》（原题 The UNIX Programming Environment）（Prentice-Hall, 1984，ISBN 0-13-937681-X）；Raymond《UNIX 编程艺术》（原题 The Art of Unix Programming）（Addison-Wesley, 2003，ISBN 0-13-142901-9）；三者哲学表述不一——Raymond 归纳属回溯性建构，与 BSTJ 同代表述并陈〕
+  - 9.3.1 源流考订的方法文献
+  - 9.3.2 引文链的追踪程序
+  - 9.3.3 转讹案例的辨析归因
+  - 9.3.4 概念与史实的分层
+  - 9.3.5 考订结论的分级标注
 - 9.4 学术史与工程史书写边界@@〔溯源：一手：Haigh 与 Ceruzzi《A New History of Modern Computing》（MIT Press, 2021，ISBN 9780262542906；以史学问题统领技术叙事）；Mahoney《The Histories of Computing(s)》（Interdisciplinary Science Reviews 30(2)，2005，pp. 119–135，DOI 10.1179/030801805X25927；Monoskop 存 PDF）〕
+  - 9.4.1 书写边界的论说文献
+  - 9.4.2 两类史学的证据偏好
+  - 9.4.3 边界争议的实例分析
+  - 9.4.4 本书的边界处置方案
+  - 9.4.5 边界面的自反声明
 ## 第 10 章 争议与反思
 - 10.1 起源叙事之争与考订文献@@〔溯源：一手：Multicians.org《Myths about Multics》（澄清“Unix 早于 Multics 运行”等误说）；TUHS 存档 Usenet 帖《Origin of UNIX》（comp.unix.wizards，1981-10）；本地库：CL-1-006（“阉割版 Multics”系戏称而非命名起源——Ritchie 1981 USENIX 否认——场合经本地库一手定位：1981 年 1 月 USENIX 会议（引文“At the January USENIX meeting, Dennis Ritchie emphatically denied that ‘Unix’ was derived from ‘castrated MULTICS’”，usenet:unix-wizards:86573，1981-10-28，本地库 EV-M-000006／CL-1-006；与 1981 USENET 记述并陈）〕
+  - 10.1.1 争论文献的散布情形
+  - 10.1.2 机型与命名公案的实证
+  - 10.1.3 当事人叙述的分歧点
+  - 10.1.4 转述链的讹变样例
+  - 10.1.5 公案的裁断与存疑
 - 10.2 “UNIX 神话”的史学反思@@〔溯源：一手：Salus 1994 前言（口述史方法自限：1992 前所见二十余种叙述无一完全准确）；《Historical Reflections: When Hackers Were Heroes》（ACM，DOI 10.1145/3451227）；“参与者立传”与“祛神话”两种立场并陈；本地库：CL-4-116〕
+  - 10.2.1 神话概念的用语考察
+  - 10.2.2 神话与传说的判准
+  - 10.2.3 流行读物的叙事定式
+  - 10.2.4 反思所用的史学工具
+  - 10.2.5 反思面的写作约束
 - 10.3 优先权争议的记述@@〔溯源：一手：Multicians.org《Chronology》（1961.11 CTSS 四用户演示／1963 稳定运行；1967.12 Multics phase1／1969.10 公开服务）；Saltzer 等《CTSS 50th Anniversary Commemorative Overview》（MIT, 2011）；个别资料称 Multics 1965 即运行，Multicians 判误——两说并陈〕〔说明：MULTICS／CTSS〕
+  - 10.3.1 优先权主张的出处排查
+  - 10.3.2 各方证据的层级排布
+  - 10.3.3 时间线的对勘程序
+  - 10.3.4 优先权争议的裁断案例
+  - 10.3.5 争议的裁断与登记
 - 10.4 学术史书写的自反性问题@@〔溯源：以既有史学理论文献为据：Haigh 与 Ceruzzi 2021（ISBN 9780262542906）；IEEE Annals of the History of Computing（ISSN 1058-6180）；UNIX 史专门自反性一手文献：Mahoney 主持《The UNIX Oral History Project: Release 0, The Beginning》（TUHS 存，tuhs.org/Archive/Documentation/OralHistory/expotape.htm）——史家以“创造者之言与声”校正参与者自述传统之方法论自觉；本节与 Haigh 与 Ceruzzi 2021 并据〕
+  - 10.4.1 自反性主张的方法凭据
+  - 10.4.2 书写者位置的申明
+  - 10.4.3 史观映射的章目落点
+  - 10.4.4 自反与实证的平衡
+  - 10.4.5 自反面的核查程序
 ## 第 11 章 转型
 - 11.1 从实验室系统到 System III／V 的转型研究@@〔溯源：一手：unix.org《UNIX Past》年表（1982 System III 首个贝尔外公开版／1983 System V 首个受支持版）；TUHS《The Unix Tree》（System III 源档记 1980-06）；发布年两说并陈（官方年表 1982／TUHS 归档 1980-06）〕
+  - 11.1.1 转型研究的文献分布
+  - 11.1.2 商业化转向的记述
+  - 11.1.3 版本序列的编年证据
+  - 11.1.4 学术界的反应材料
+  - 11.1.5 转型面的考订边界
 - 11.2 向 4BSD 过渡的研究记述@@〔溯源：一手：McKusick《Twenty Years of Berkeley Unix》（《Open Sources》，1999，ISBN 1-56592-582-3）；Karels 与 McKusick《4.2BSD and 4.3BSD as Examples of the UNIX System》（ACM Computing Surveys 17(4): 379–418，1985，DOI 10.1145/6041.6043）；TUHS Unix Tree（3BSD 1980-03／4BSD 1980-10／4.2BSD 1983-09）；“接棒”系渐进过程而非单点事件〕
+  - 11.2.1 过渡期的文体杂陈
+  - 11.2.2 伯克利侧的记述与留存
+  - 11.2.3 原研方一侧的反应佐证
+  - 11.2.4 版本交接的证据链
+  - 11.2.5 过渡面的编年序列
 - 11.3 商业转型中的学术记述断层@@〔溯源：一手：AT&T 1982 同意令与 1984 分拆（MFJ）；“1978 为贝尔末研究版”与“以 V7（1979）为界”两说并陈；本地库：CL-4-116（Salus 述 1992 前叙述之不足）〕
+  - 11.3.1 断层现象的文献表现
+  - 11.3.2 学术文献的停顿位置
+  - 11.3.3 商业文献的体裁差异
+  - 11.3.4 文献断层的成因假说
+  - 11.3.5 断层面的补证渠道
 - 11.4 转型叙事的史料边界@@〔溯源：一手：McKusick 1999（CSRG 记录）；Salus 1994；TUHS Unix Tree 仅存少量 System III／V 源档——1980s 商业版因许可不可公开，档案缺环属史料边界（非“无记载”）〕
+  - 11.4.1 叙事边界的划定依据
+  - 11.4.2 转型叙述的分级处置
+  - 11.4.3 与制度卷的分工关系
+  - 11.4.4 边界处的存疑标记
+  - 11.4.5 边界面的逐节复核
 ## 第 12 章 前沿
 - 12.1 TUHS 复原与源码考古前沿@@〔溯源：一手：Toomey《First Edition Unix: Its Creation and Restoration》（IEEE Annals of the History of Computing 32(3): 74–82，2010，DOI 10.1109/MAHC.2009.55）；Toomey《The Restoration of Early UNIX Artifacts》（USENIX ATC 2009）；TUHS Unix Tree（1970-01 PDP-7 Unix）；“v7 源码”释出实为 2002-01 Caldera International 以 BSD 式许可释出 ancient UNIX（V1–7 与 32V；TUHS 2002-01 邮件与 SPDX《Caldera License》），原注“2017 古登堡计划”表述不确、经订正；另 2016 年 TUHS 作 PDP-7 Unix 复原（非 v7），二事分列〕
+  - 12.1.1 复原工程的记述来源
+  - 12.1.2 源码重建的方法记述
+  - 12.1.3 复原成果的著录体例
+  - 12.1.4 与原始档案的校验
+  - 12.1.5 复原面的未决问题
 - 12.2 数字人文方法在 UNIX 史中的应用@@〔溯源：一手：Spinellis《A repository of Unix history and evolution》（Empirical Software Engineering 22(3): 1372–1404，2017，DOI 10.1007/s10664-016-9445-5）；Spinellis《A repository with 44 years of Unix evolution》（MSR'15，pp. 462–465，DOI 10.1109/MSR.2015.6）；数据集以 1972 起（V2/V3）为界、不含 1969–1971 PDP-7，存覆盖边界〕
+  - 12.2.1 方法引入的文献线索
+  - 12.2.2 文本挖掘的适用边界
+  - 12.2.3 计量结论的解读分寸
+  - 12.2.4 工具链的版本著录
+  - 12.2.5 方法文献的引用格式
 - 12.3 计算史研究的近年转向：软件史、基础设施史与平台史（2010 年代以来）@@〔溯源：一手：IEEE Annals 32(3)（2010 Toomey 文）；CHM 藏 Thompson 口述史 102808981／Kernighan 102740169；Brock《The Earliest Unix Code: An Anniversary Source Code Release》（CHM，2019-10-17；PDP-7“Unix Book II”印件定为 1970）〕
+  - 12.3.1 软件史转向的纲领文本
+  - 12.3.2 基础设施史的进路
+  - 12.3.3 平台史的比较视野
+  - 12.3.4 转向对本书的效应
+  - 12.3.5 转向面的书目辑录
 - 12.4 档案数字化的新进展@@〔溯源：一手：TUHS Unix Archive／Unix Tree（tuhs.org）；CHM“Unix Book II”PDP-7 印件（1970）；Internet Archive 对 UNIX 一手托管有限，主要经 TUHS／CHM——Internet Archive 非首要一手源〕
+  - 12.4.1 数字化项目的分布
+  - 12.4.2 影像与全文的层级
+  - 12.4.3 存档格式与校验和
+  - 12.4.4 访问渠道的历史变化
+  - 12.4.5 数字化面的著录规范
 ## 第 13 章 比较研究
 - 13.1 UNIX 与 Multics／CTSS 比较研究@@〔溯源：一手：Ritchie《The Evolution of the Unix Time-sharing System》（BSTJ 63(6) Part 2, 1984）；Multicians.org《Myths》与《Chronology》；Saltzer 等《CTSS 50th》（MIT, 2011）；“Unix 早于 Multics 运行”被 Multicians 判误——运行时点并陈（Multics 1969.10 公开服务；UNIX 1969.04 起于 PDP-7）〕
+  - 13.1.1 比较研究的文献基础
+  - 13.1.2 设计目标的对照表
+  - 13.1.3 系统结局的叙述差异
+  - 13.1.4 当事人回忆的互证
+  - 13.1.5 比较面的裁断准则
 - 13.2 与同期分时系统比较@@〔溯源：一手：Multicians.org《Chronology》（TSS/360：1965.08 宣布／1967.10 Release 1／1968.04 撤／1969.04 复／1971.05 终撤）；CHM《The Evolution of the DECsystem 10》（1978；TOPS-10 源自 PDP-6 monitor；PDP-10 1967 发布）；TSS/360“1967 试用、从未正式支持”与 Multicians 年表两说并陈；TOPS-10 首发年 1967／1970 两说〕〔说明：IBM TSS、TOPS-10〕
+  - 13.2.1 同期系统的文献清单
+  - 13.2.2 功能对照的取证步骤
+  - 13.2.3 商业结果的评说分歧
+  - 13.2.4 比较框架的适用疆界
+  - 13.2.5 比较面的证据分级
 - 13.3 学术史比较方法的方法论文献@@〔溯源：一手：Marc Bloch《The Historian's Craft》（Apologie pour l'histoire，1949；英译 Vintage, 1964，ISBN 9780394705125）；计算机史比较研究无统一方法论一手文，本节标“以史学理论文献为据”〕
+  - 13.3.1 方法论引入的文献线索
+  - 13.3.2 可比性的判准设定
+  - 13.3.3 单位与口径的选定
+  - 13.3.4 反例的分级处置办法
+  - 13.3.5 方法面的自反声明
 - 13.4 跨系统比较的史料边界@@〔溯源：一手：Multicians.org（Multics 侧）、TUHS（Unix 侧）、CHM DECsystem-10（DEC 侧）档案；无专门论著，以档案可得性差异为据（Multics／Unix 丰、TSS／TOPS 稀）〕
+  - 13.4.1 边界判定的文献凭据
+  - 13.4.2 异系材料的取舍原则
+  - 13.4.3 引用他系材料的规范
+  - 13.4.4 争议条目的登记方式
+  - 13.4.5 边界面的逐节核查
 
 # 第八卷  UNIX 技术专题史（1969–1989）
 > 本卷为 UNIX 阶段的横向技术主题卷：以系统调用、文件系统、可移植性与网络诸线的问题史呈现，不重复卷 1 的编年叙述。
@@ -5663,69 +5933,277 @@
 ! 逻辑—定位（2026-10-09 补批 17）：本卷为学术史卷（BSD 至 4.4BSD-Lite2 研究），素材自原各卷书目述评迁出重组；素材三分按研究对象的主体时段与源流归属，跨期文献按主体归卷并互设指注；素材源存档：12-重构大纲书目述评/学术史卷素材存档-BSD卷源-20261009.md；〔主体声明〕本卷叙述对象为 CSRG/BSD 源流（至 4.4BSD-Lite2）之研究文献与学术建制（史学元层）
 ## 第 1 章 论文：会议录与技术报告
 - 1.1 Jacobson 与 Karels：《Congestion Avoidance and Control》（1988）@@〔溯源：一手：ACM SIGCOMM '88 会议录（Stanford），CCR 18(4): 314–329（1988），DOI 10.1145/52325.52356；本地库：拥塞控制相关 claim 万级（BSD 网络栈研究线）；DOI 异写 10.1145/52324.52356 一并登记〕
+  - 1.1.1 论文的会议与卷期
+  - 1.1.2 拥塞控制的方法贡献
+  - 1.1.3 合著者的实际分工
+  - 1.1.4 引用与影响的后续走向
 - 1.2 CSRG 技术报告论文群@@〔溯源：一手：UCB/CSD 编号体系（CSD-83-146 4.2BSD Networking Notes／CSD-84-217 Ethernet under 4.2BSD／CSD-85-245 4.3BSD 性能）；可回溯档案：Berkeley EECS Technical Reports 库与 digicoll 数字馆藏；报告多为 DARPA 合同交付物（非独立刊物），Bancroft 另藏 CU-551〕〔说明：Technical Reports〕
+  - 1.2.1 报告编号体系的层级
+  - 1.2.2 合同交付物的属性
+  - 1.2.3 报告与论文的转化路径
+  - 1.2.4 馆藏与回溯的现实条件
 - 1.3 USENIX 会议中的 4.xBSD 研究论文@@〔溯源：一手：McKusick、Karels 与 Leffler《Performance Improvements and Functional Enhancements in 4.3BSD》（USENIX Summer 1985, Portland, pp. 519–531）；Joy《4.2BSD Interprocess Communications Primer》（USENIX Summer 1982, Boston, pp. 30–31）；可回溯档案：USENIX legacy proceedings byDate 索引（1982–1993 期域连续）〕
+  - 1.3.1 会议论文的篇目清单
+  - 1.3.2 性能报告的写作体例
+  - 1.3.3 会议录的回溯索引
+  - 1.3.4 论文与版本的对应表
 - 1.4 Fast File System 系列研究论文@@〔溯源：一手：McKusick、Joy、Leffler 与 Fabry《A Fast File System for UNIX》，ACM Transactions on Computer Systems 2(3): 181–197（1984-08），DOI 10.1145/989.990（另见 USENIX Summer 1984）；本地库：FFS 相关 claim 数百（文件系统研究线）；卷期订正：“TOCS 6(2)”系误记，实为 2(3)（6(2) 属 1988 卷）〕
+  - 1.4.1 论文的期刊与卷期
+  - 1.4.2 设计论证的基本路数
+  - 1.4.3 后续论文的延伸方向
+  - 1.4.4 卷期订正的考据经过
 ## 第 2 章 著作与书目
 - 2.1 Leffler、McKusick、Karels 与 Quarterman：《4.3BSD UNIX 操作系统设计与实现》@@〔溯源：一手：Leffler、McKusick、Karels 与 Quarterman《4.3BSD UNIX 操作系统设计与实现》（原题 The Design and Implementation of the 4.3BSD UNIX Operating System），Addison-Wesley，1989，ISBN 0-201-06196-1（FreeBSD 手册书目互证）；本地库：CL-RM-000709（许可费多源交叉）等在册；“Berkeley UNIX”表述见本著正文；增补（127 批 3，2026-10-10）：中文译本《4.4BSD 操作系统设计与实现》（李善平、刘文峰、马天驰等译，机械工业出版社，ISBN 978-7-111-36647-8）——中文世界的 4.4BSD 知识传递主渠道〕
+  - 2.1.1 著作成书背景的考订
+  - 2.1.2 章节体例的整体安排
+  - 2.1.3 中文译本线索的检核
+  - 2.1.4 书目互证的实际情况
 - 2.2 McKusick 等：《4.4BSD UNIX 操作系统设计与实现》（1996）@@〔溯源：一手：McKusick、Bostic、Karels 与 Quarterman《4.4BSD UNIX 操作系统设计与实现》（原题 The Design and Implementation of the 4.4BSD Operating System），Addison-Wesley，1996，ISBN 0-201-54979-4（InformIT 与 NetBSD／FreeBSD 书目互证）〕〔分工·迁移：本书两点分工（C-42，2026-10-11）：文献著录面＝本节；谢幕事件面＝第二十五卷第4章 4.1〕
+  - 2.2.1 著作修订的实际幅度
+  - 2.2.2 作者组合的调整过程
+  - 2.2.3 与首版的内容差异
+  - 2.2.4 教科书形态的最终完成
 - 2.3 CSRG：《4.4BSD Documents》文档集@@〔溯源：一手：文档集分 PSD／SMM／USD／URM 四类；可回溯档案：FreeBSD docs-archive 44doc 全镜像；SMM 另出 O'Reilly 单行本（ISBN 1-56592-080-5，1994-05）；体例注：FreeBSD 文档树分卷重排后卷号与原集略有出入〕
+  - 2.3.1 文档集的四类分卷
+  - 2.3.2 单行本的出版情况
+  - 2.3.3 文档树的镜像现状
+  - 2.3.4 体例与原集的出入
 - 2.4 4.2BSD 手册体系与文档研究@@〔溯源：一手：4th Berkeley Distribution 手册（1983-01-18 与 1983-07-18 两版，修订件）；《4.2BSD System Manual》vol 2C（1983）；可回溯档案：bitsavers Stanford 藏本；两版日期悬殊属修订关系，并陈〕
+  - 2.4.1 手册两版修订的实况
+  - 2.4.2 系统手册的分卷惯例
+  - 2.4.3 藏本与影像的藏地
+  - 2.4.4 版本日期的并陈体例
 ## 第 3 章 文章：综述、评介与报道
 - 3.1 CSRG 年度报告（1985–1994）研究@@〔溯源：未获一手——未见以“Annual Report”为题的 CSRG 连续一手件；替代可回溯件：CSRG Archive CD-ROM 清单（McKusick BSDcan 2020 讲义）、EECS TechRpts、Bancroft CU-551；本地库在册：CSRG Technical Report 4（1981，含 OCR 文本，参考文献库 id 1735／1736）与 CSRG 档案登记（Net/2 计划文档 SRC-mat:372、解散文档 SRC-mat:868、Bancroft 词条 SRC-mat:957）；本卷以“年度报告形态待考”登记，不代为断言〕
+  - 3.1.1 年度报告存在的核查
+  - 3.1.2 替代性档案的目录
+  - 3.1.3 报告体例的合理推定
+  - 3.1.4 缺口登记的记录格式
 - 3.2 USL 诉讼档案的研究性文章@@〔溯源：一手：USL v. BSDi（D.N.J. Civil Action No. 92-1667 (DRD)，主审 Debevoise）诉讼文书群（dmr 档案镜像 plan9.io 存 1993-01-08 辩护方备忘录）；Salus《Dueling UNIXes and the UNIX Wars》（;login: 2015-04）；裁定日期两说（1992-12 听审后约六周意见与 1993-03-03 裁定书）并陈；和解月份两说（1994-01／1994-02）；卷宗文书群：dmr 档案 bsdisuit.html（bell-labs.co/who/dmr/bsdi/bsdisuit.html）＋NetBSD 镜像 USL-lawsuit（含 1994-02-07 联合新闻稿全文）；完整卷宗数字化未获一手〕〔分工·迁移：本节载 USL 诉讼档案的研究性文章面；学术研究制度面见本卷第 8 章 8.2（C-48 互指，2026-10-11）〕
+  - 3.2.1 诉讼文书的篇目构成
+  - 3.2.2 文章记述的裁定时日
+  - 3.2.3 和解月份的记载差异
+  - 3.2.4 文章对数字化进度的记述
 - 3.3 《ACM Computing Surveys》及其他学刊的 BSD 评介文章@@〔溯源：一手：Karels 与 McKusick《4.2BSD and 4.3BSD as Examples of the UNIX System》，ACM Computing Surveys 17(4): 379–418（1985-12），DOI 10.1145/6041.6043〕
+  - 3.3.1 评介文章的期刊与卷期
+  - 3.3.2 比较框架的设定缘由
+  - 3.3.3 引用与后续影响范围
+  - 3.3.4 与会议论文的分工
 - 3.4 4.4BSD-Lite 发布的报道文本：史料类型与可用性@@〔溯源：一手：4.4BSD-Lite 1994-06（与 Encumbered 版并行发行）；4.4BSD-Lite Release 2 1995-06（CSRG 末次发行）；可回溯：FreeBSD bsd-family-tree（src/share/misc/）与手册书目互证；发布日期主流作 1994-06，个别版本树标注略异，并陈〕
+  - 3.4.1 报道文本的基本类型
+  - 3.4.2 发布日期的记载分歧
+  - 3.4.3 文本可用性的评估标准
+  - 3.4.4 报道与档案的互补作用
 ## 第 4 章 期刊：刊物史与论文域
 - 4.1 ;login： 的 BSD 研究报道线@@〔溯源：一手：《;login:》沿革（1975 创刊《UNIX NEWS》／1977-07 改名）与篇目（如 McKusick《A Brief History of the BSD Fast File System》，2007-06）；1983–2000 期于 Internet Archive 部分可回溯〕
+  - 4.1.1 刊物的沿革与改名
+  - 4.1.2 篇目时间的集中程度
+  - 4.1.3 回溯的可得性限制
+  - 4.1.4 报道线与技术史的关联
 - 4.2 USENIX Proceedings 的 BSD 论文域@@〔溯源：一手：USENIX legacy proceedings 库与 byDate 索引；样本篇目：McCanne 与 Jacobson《The BSD Packet Filter》（Winter USENIX 1993）；1993 前需经索引与订购回溯〕
+  - 4.2.1 会议录期域的连续性
+  - 4.2.2 样本篇目的选取原则
+  - 4.2.3 索引与订购的回溯渠道
+  - 4.2.4 论文域的边界划定
 - 4.3 IEEE／ACM 期刊中的 BSD 实现研究@@〔溯源：一手：ACM Transactions on Computer Systems 为主载体——TOCS 2(3): 181–197（1984，FFS，DOI 10.1145/989.990）；“TOCS 6(2) 1984”系卷年混记之误，6(2) 属 1988 卷，注中订正〕
+  - 4.3.1 期刊载体的分布格局
+  - 4.3.2 卷期与年份的订正记录
+  - 4.3.3 论文主题的集中程度
+  - 4.3.4 引用的跨刊分布格局
 - 4.4 技术期刊对 4.2BSD 的评介@@〔溯源：已穷尽检索（本地库＋联网）仍未获一手——Electronics 1982-10-20 篇目已获（Rosenblatt《1982 Award for Achievement》，Thompson 与 Ritchie，pp. 108–110，扫描件），惟该篇为 Unix/C 成就评介、非 4.2BSD 专文；可回溯的一手期刊评介：Quarterman 与 Silberschatz《4.2BSD and 4.3BSD as Examples of the UNIX System》（ACM Computing Surveys 17(4), 1985）；旁证：UNIX Review 1986-03《The Monthly Report》、AUUGN V05.1；不以二手断言〕
+  - 4.4.1 检索穷尽的结论陈述
+  - 4.4.2 已获篇目的实际性质
+  - 4.4.3 未获篇目的登记格式
+  - 4.4.4 二手引述的警戒规则
 ## 第 5 章 研究人员
 - 5.1 McKusick 的研究传记与口述文献@@〔溯源：一手：Computer History Museum 馆藏《History of the Berkeley software distributions》（目录号 102740467，1999–2016；捐赠号 X7878.2017）；IEEE Reynold B. Johnson 奖（2009）；USENIX 1993 集体终身成就奖（含其）；口述文献：bsdtalk 第 018 期访谈（2006，互联网档案馆存 archive.org/details/bsdtalk018；本地大纲镜像第 36 章采访录考据在册）与 FreeBSD Foundation《An Interview With Kirk McKusick》（BSDCan 2018）；另注：“2014 图灵奖”经 ACM 官方名单反证无此事（2013＝Lamport、2014＝Stonebraker），不采〕〔说明：研究文献面〕
+  - 5.1.1 馆藏与奖项的记录
+  - 5.1.2 口述文献的类型划分
+  - 5.1.3 奖项传说的反证程序
+  - 5.1.4 传记与自述的差异处
 - 5.2 Joy、Bostic 与 Karels 的研究记述@@〔溯源：一手：Joy——ACM Grace Murray Hopper 奖（1986）与 USENIX Lifetime Achievement（1993）；Bostic——USENIX 1993 集体奖（约 180 人名单含之）；Karels 记述见 CSUR 17(4) 合著；一手口述与记述补：Joy CHM 口述史（2011-03-30，编号 102743073）；Bostic 分工记述见 McKusick 主持《A Conversation with Margo Seltzer and Mike Olson》（ACM Queue 19(5)，2021）；本地大纲镜像另存 Bostic／BSD Now 采访录考据（期数待核）；Karels 无专篇口述（并陈）；另注：“Joy 图灵奖 1990”经 ACM 官方名单反证无此事，不采〕
+  - 5.2.1 奖项记录的核对结果
+  - 5.2.2 口述史的采集分布
+  - 5.2.3 合著中的位置与角色
+  - 5.2.4 记述稀薄的具体环节
 - 5.3 Leffler 与 Pendry 等的学术痕迹@@〔溯源：一手：Leffler《An Advanced 4.3BSD Interprocess Communication Tutorial》（4.4BSD PSD，1986-04）；Stevens 与 Pendry《Portals in 4.4BSD》（USENIX 1995, pp. 1–10）；二人无独立传记，痕迹凭合著与会议论文〕
+  - 5.3.1 教程文献的著录情况
+  - 5.3.2 会议论文痕迹的核查
+  - 5.3.3 无专篇传记的实况
+  - 5.3.4 痕迹考据的三条取径
 - 5.4 CSRG 人物源流考订@@〔溯源：一手：4.4BSD 致谢名单（bsd42.sourceforge.net 转录）；Bancroft CU-551；CHM X7878.2017 讲义致谢；USENIX 1993 集体奖 180 人名单（另一线）；体例注：无单一权威花名册，须多源拼合，本卷不立全名录〕
+  - 5.4.1 致谢名单的拼合规则
+  - 5.4.2 无权威花名册的实况
+  - 5.4.3 多源拼合的操作规程
+  - 5.4.4 不立全名录的理由
 ## 第 6 章 研究机构
 - 6.1 CSRG 的学术建制研究@@〔溯源：一手：McKusick《Twenty Years of Berkeley Unix》（《Open Sources》，O'Reilly, 1999-01）；DARPA 合同 1980-04 起（18 个月＋继两年）；建制缘起与人事（Fabry、Tong、Joy）见该文；机构全称与致谢另见 CSRG 报告〕
+  - 6.1.1 建制缘起与人事更迭
+  - 6.1.2 合同阶段的具体划分
+  - 6.1.3 致谢页的机构表述
+  - 6.1.4 建制研究的史料基础
 - 6.2 Bancroft Library‘Berkeley Software Distribution records’专藏研究@@〔溯源：一手：The Bancroft Library《Berkeley Software Distribution records, 1974–2005》，编号 CU-551，UC Berkeley；OAC 检索页 ark:/13030/hb2b69n7b5；馆藏含技术手册、草稿、磁带与 CD-ROM〕〔说明：CU-551〕
+  - 6.2.1 专藏的编号与层级
+  - 6.2.2 馆藏内容的实际组成
+  - 6.2.3 检索工具的著录格式
+  - 6.2.4 利用条件的实际限制
 - 6.3 TUHS 的 BSD 档案线@@〔溯源：一手：TUHS 档案（tuhs.org/Archive/Distributions 含 4BSD 各发行）；创立者 Warren Toomey（1995；2022 获 USENIX Flame 奖）；体例注：TUHS 系再收集镜像而非原始馆藏，与 Bancroft CU-551 性质区分〕
+  - 6.3.1 档案线的创立经过
+  - 6.3.2 镜像与原始馆藏的区分
+  - 6.3.3 发行物的覆盖幅度
+  - 6.3.4 再收集性质的方法含义
 - 6.4 伯克利校史档案中的 CSRG 条目：与 CU-551 的层级关系@@〔溯源：一手：UC Berkeley University Archives（Bancroft Library）——与 CU-551 同源检索路径；本节与第 2 节同源，避免重复计数，体例上作“校史档案面”表述〕
+  - 6.4.1 条目层级归属的核定
+  - 6.4.2 与专藏的同源性质
+  - 6.4.3 避免重复计数的做法
+  - 6.4.4 校史档案的表述分寸
 ## 第 7 章 赞助机构
 - 7.1 DARPA 资助与 CSRG 研究建制@@〔溯源：一手：McKusick 1999 记述——1980-04 起 18 个月合同，次年继两年合同、资金约五倍（半数归 Unix 项目），与 BBN 协同；资助促生 TCP/IP 与 FFS；具体合同号：DARPA Order No. 4031 与 Contract No. N00039-82-C-0235（UCB/CSD-83-147 致谢页一手；NSF MCS80-05144 并列）〕
+  - 7.1.1 合同的起始与续期
+  - 7.1.2 资助额度的增减变化
+  - 7.1.3 与承包商的协同安排
+  - 7.1.4 合同号的著录规范
 - 7.2 NSF 与大学网络的资助面@@〔溯源：一手：CSNET 史料——Comm. ACM《CSNET: A History and Status Report》（DOI 10.1145/358413.358423）与《History and Overview of CSNET》（DOI 10.1145/1035237.1035267）；NSF 主资 CSNET／NSFNET（1981 起 500 万美元／5 年）；体例注：NSF 未直补 CSRG，属网络计划资助面，不并入 7.1 口径〕
+  - 7.2.1 网络计划的资助线
+  - 7.2.2 与项目资助的区分
+  - 7.2.3 网络计划的史料构成
+  - 7.2.4 资助面的边界划定
 - 7.3 Lite2 前后的资助空白：基金会形态出现之前（1994–2000）@@〔溯源：一手：FreeBSD 基金会 Timeline（freebsdfoundation.org/freebsd/timeline/；2000-12 创立，501(c)(3)，Justin Gibbs；2001-08 公告载 Colorado 注册）——2000 年前无基金会形态，Lite2（1995-06）前后的资助线确无基金会一手，本卷以“2000 年前无形态”登记〕
+  - 7.3.1 基金会成立的时间
+  - 7.3.2 空白期的资助形态
+  - 7.3.3 商业收入的过渡作用
+  - 7.3.4 空白期的史料状况
 - 7.4 商业许可收入的资助转化@@〔溯源：一手：McKusick 1999 记述——4.2BSD 十八个月内逾 1,000 站点许可；Net/1 与 Net/2 每份 1,000 美元、数百机构购买；许可文本由校知识产权办公室拟（Olson 2018）；Bancroft Library《Berkeley Software Distribution records, CU-551》finding aid（2007，ark:/13030/hb2b69n7b5；2005-10-27 由 McKusick 移交）为一手档案检索工具，确认档案存在与系列划分，惟未见授权收入账目；Sun／DEC 等 4.3BSD 授权收入转入研究经费的具体账目未见一手〕
+  - 7.4.1 许可站点的规模估算
+  - 7.4.2 许可费的定价机制
+  - 7.4.3 收入的流向与用途
+  - 7.4.4 账目缺口的登记方式
 ## 第 8 章 制度
 - 8.1 BSD 授权制度研究（1979–1995）@@〔溯源：一手：UC Berkeley IPIRA《Amendment of 4-Clause BSD Software License》（2012-01-31，署 Michael Katz；第 3 条广告条款“hereby deleted in its entirety”）；FreeBSD《The 4.4BSD Copyright》（官方许可页）；1999-07-22 由 UC 技术许可办公室主任 William Hoskins 首次删除广告条款、2012-01-31 IPIRA 再发正式修订函，两时点并陈；1979 年 4BSD 原始许可文本（SPDX BSD-4-Clause-UC／AboutCode bsd-original-uc，即 UC 四条款原文）；订正与补证（2026-10-11）：1BSD 并无独立许可文本，分发依附 AT&T UNIX 源代码许可框架（TUHS DETAILS 一手归档＋1bsd.tar.gz READ_ME 核对，本地大纲镜像 27.1 辨析在册；2BSD 磁带标签载 Western Electric 与加州大学双重协议结构）；1979-04-01《UNIX/32V Software Agreement》存在性经 Regents 法庭之友意见书（USL v. BSDI, 92-1667，1993）一手确证（名义许可费约 1,500 美元），原件影像未获〕
+  - 8.1.1 原始许可的条款结构
+  - 8.1.2 条款删改的后续两时点
+  - 8.1.3 修订函文本的逐字引用
+  - 8.1.4 许可文本的传承关系
 - 8.2 USL 诉讼的学术研究制度面@@〔溯源：一手：USL v. BSDi（D.N.J. Civil Action No. 92-1667 (DRD)，主审 Dickinson R. Debevoise）——dmr 档案镜像存 1993-01-08 辩护方备忘录（plan9.io）；USL 先诉 BSDi、后追加加州大学为被告；裁定时点两说（1992-12 听审后约六周四十页意见驳回禁令／1993-03-03 裁定书）；1994-02 和解：NetBSD 镜像 USL-lawsuit 存 1994-02-07 联合新闻稿全文（Novell 与 Berkeley 声明）；和解协议原文：UNIX System Laboratories, Inc. v. The Regents of the University of California《Settlement Agreement》1994-02-04（Groklaw 经加州公共记录法获取，tech-insider.org 存档 PDF）〕〔分工·迁移：本节载诉讼研究的制度面；研究性文章面见本卷第 3 章 3.2（C-48 互指，2026-10-11）〕
+  - 8.2.1 案号与受理法院的核定
+  - 8.2.2 裁定时点的两说处理
+  - 8.2.3 和解协议的获取路径
+  - 8.2.4 制度层面的研究缺口
 - 8.3 source license 时代的合作制度@@〔溯源：一手：TUHS 邮件档案（tuhs.org/Archive/Documentation/TUHS/Mail_list/，2019 年帖涉 Al Arms（AT&T 法务）与 Western Electric 许可）——机构须持 AT&T 源码许可方可购得发行；AT&T 源码许可合同原件影像未获；已获 1979-04-01 Western Electric 与 Regents《UNIX/32V Software Agreement》条款（经 USL v. BSDI 1992-07-24 修正起诉状逐条援引）与 AUUGN 转载 3BSD 许可，注中标此边界〕
+  - 8.3.1 许可框架的结构层次
+  - 8.3.2 机构购得的实际条件
+  - 8.3.3 合同原件的存续状况
+  - 8.3.4 制度史的研究余地
 - 8.4 4.4BSD-Lite 两轨发行制度@@〔溯源：一手：McKusick《Twenty Years of Berkeley Unix》（1999）与 Spinellis 2017（Empir. Softw. Eng. 22(3): 1372–1404，DOI 10.1007/s10664-016-9445-5）——Lite 为 unencumbered 版（1994-06，与 Encumbered 版并行）；Lite2 为 1995-06（CSRG 末次发行）〕
+  - 8.4.1 两轨许可的根本分野
+  - 8.4.2 发行对象的划分标准
+  - 8.4.3 制度的后续影响范围
+  - 8.4.4 两轨制的史料范围
 ## 第 9 章 概念与边界
 - 9.1 “BSD 学术史”分期判准（1974–1995）@@〔溯源：一手：McKusick《Twenty Years of Berkeley Unix》（《Open Sources》，O'Reilly, 1999）；Salus《A Quarter Century of UNIX》（Addison-Wesley, 1994，ISBN 0-201-54777-5）——以 DARPA 资助起至 CSRG 解散（1995）为 CSRG 时代；分期无统一标准，两著口径并陈〕
+  - 9.1.1 分期的两种口径辨
+  - 9.1.2 起止点的选择依据
+  - 9.1.3 判准的适用限度析
+  - 9.1.4 分期与编年的关系
 - 9.2 “Berkeley UNIX”概念的研究史@@〔溯源：一手：Leffler、McKusick、Karels 与 Quarterman《4.3BSD UNIX 操作系统设计与实现》（原题 The Design and Implementation of the 4.3BSD UNIX Operating System）（Addison-Wesley, 1989，ISBN 0-201-06196-1；书中作“the Berkeley version of the UNIX operating system”）；UC Berkeley EECS 系史页；术语最早用例（本地库 Usenet 存档）1981-06（Berknet 讨论）与 1981-08（“Unix”与“Berkeley Unix”对比讨论）已见通行，首出文献仍待考〕
+  - 9.2.1 术语早期用例的考订
+  - 9.2.2 概念使用的三层边界
+  - 9.2.3 学术史的分段惯例
+  - 9.2.4 概念的边界与争议
 - 9.3 学术史与派生史书写边界@@〔溯源：以既有史学理论文献为据：Butterfield《The Whig Interpretation of History》（1931，反目的论）；Mahoney《The History of Computing in the History of Technology》（IEEE Annals 10(2): 113–125，DOI 10.1109/MAHC.1988.10011）；本主题专门一手文献：Haigh《The History of Unix in the History of Software》（Cahiers d'histoire du Cnam 7-8(2): 77–90，2017，HAL hal-03027081）〕
+  - 9.3.1 反目的论警示的由来
+  - 9.3.2 技术史与软件史的分野
+  - 9.3.3 专门文献的历史位置
+  - 9.3.4 边界划定的操作要领
 - 9.4 计算机史学中的 BSD 定位@@〔溯源：一手：Computer History Museum 口述史与馆藏（Bill Joy 口述，2011）；体例注：经 Crossref 期刊库（ISSN 1058-6180）三轮检索，IEEE Annals 无 BSD／CSRG 专论（Toomey《First Edition Unix》2010 为 UNIX 早期史权威篇，DOI 10.1109/MAHC.2009.55；BSD 专论属缺口），本节以 CHM 馆藏线与 Annals 背景线并陈〕
+  - 9.4.1 馆藏与口述的覆盖
+  - 9.4.2 学刊专论的空白地带
+  - 9.4.3 定位的两种叙述辨
+  - 9.4.4 缺口补证的议题名录
 ## 第 10 章 争议与反思
 - 10.1 386BSD roots 之争的记述考订@@〔溯源：两说并陈、不作裁断——FreeBSD 侧：FreeBSD Handbook《A Brief History of FreeBSD》（记 Jolitz 撤回认可、名称由 David Greenman 拟）与 bsd-family-tree；Jolitz 侧：发行说明与自述（治理与分歧）；本地库：CL-RM-016977／CL-RM-016997／CL-RM-016998／CL-RM-017003（386BSD 1.0 与 CD-ROM 佐证）；Internet Archive 存 386BSD 1.0 CD-ROM 影像（archive.org/details/386BSD1.0）〕〔分工·迁移：roots 之争三层分工（C-43，2026-10-11）：史学考订＝本节；对象叙事＝第二十一卷第2章；分叉机制解释＝第二十七卷第5章 5.12–5.16〕
+  - 10.1.1 两说各自的文本依据
+  - 10.1.2 名称由来的异说并列
+  - 10.1.3 佐证材料的档案面
+  - 10.1.4 不作裁断的处理原则
 - 10.2 Lite 发布月日两说的学术处理@@〔溯源：两说并陈——McKusick 1999 与 Spinellis 2017 作 1994-06；FreeBSD Handbook 记 1994-07 底为 Net/2 停售期限（发行与停售两事）；本节以两说并列、不裁单一日期〕
+  - 10.2.1 两说来源的梳理对照
+  - 10.2.2 停售期限与发行的区分
+  - 10.2.3 并列呈现的书写体例
+  - 10.2.4 日期处理的通用规范
 - 10.3 “BSD 之死”叙事的史学反思@@〔溯源：网络叙事实录：本地库 Usenet 存档 1996 年已见“Is BSD dead?”讨论，早于 Slashdot 2001 起“*BSD is dying”系列帖；与 McKusick 1999 结语并陈；学术专文反思未获一手——本节以媒体与当事人记述为据，标学术反思文献缺口〕
+  - 10.3.1 叙事早期形态的辨析
+  - 10.3.2 媒体与当事人的表述
+  - 10.3.3 学术反思的薄弱环节
+  - 10.3.4 叙事研究的可能路径
 - 10.4 当事人叙事分歧的证据处理@@〔溯源：两说并陈——FreeBSD Handbook 记 Jolitz 退出之侧与 Jolitz 自述互异；可回溯件：bsd-family-tree 与各项目官方史；本节立“证据处理”方法面（分歧并列、不作裁断）〕
+  - 10.4.1 分歧的三种基本类型
+  - 10.4.2 证据处理的既定规则
+  - 10.4.3 并列呈现的操作要领
+  - 10.4.4 规则的适用场合与例外
 ## 第 11 章 转型
 - 11.1 从 CSRG 到三分支的研究记述@@〔溯源：一手：FreeBSD Handbook《A Brief History of FreeBSD》；NetBSD 官方 About 页（netbsd.org/about/）；OpenBSD 官方论文（openbsd.org，1995-10 自 NetBSD 分叉）——NetBSD 与 FreeBSD 立 1993、OpenBSD 立 1995〕
+  - 11.1.1 三分支成立年份的核定
+  - 11.1.2 官方史的表述差异
+  - 11.1.3 记述相互参照的方法
+  - 11.1.4 转型叙述的分期口径
 - 11.2 386BSD 与分水岭研究@@〔溯源：一手：386BSD 1.0（1994，Dr. Dobb's CD）见 bsd-family-tree；McKusick 1999；一手专论：Jolitz W F 与 Jolitz L G《Porting UNIX to the 386》（Dr. Dobb's Journal 16 卷系列连载，1991-01 至 1992-07）；体例注：“分水岭”系史学叙述用语，本节与第五十五卷相关节互见〕
+  - 11.2.1 专论的篇目与作者
+  - 11.2.2 分水岭用语的属性
+  - 11.2.3 文献面与本体面的分界
+  - 11.2.4 文献缺口的具体所在
 - 11.3 Net／2 授权转型的研究面@@〔溯源：一手：McKusick 1999；TUHS 帖《Status of Net/2》（tuhs.org/pipermail/tuhs/2020-May/021103.html）——Net/2 即 Networking Release 2（1991-06），未完全清除 AT&T 码，触发 USL 诉讼（承 8.2）〕
+  - 11.3.1 网络发行的法律性质
+  - 11.3.2 未清除代码的比例
+  - 11.3.3 与诉讼的触发关系
+  - 11.3.4 转型研究的史料构成
 - 11.4 学术研究向社区开发的过渡@@〔溯源：一手：Spinellis 2017（ESE 22(3)，DOI 10.1007/s10664-016-9445-5）；FreeBSD 与 NetBSD 官方史——Lite2（1995-06）为 CSRG 末次发行，此后转为社区开发模式〕
+  - 11.4.1 末版之后的转向轨迹
+  - 11.4.2 共同体开发形态的辨析
+  - 11.4.3 学术建制的退出过程
+  - 11.4.4 过渡期的史料分布
 ## 第 12 章 前沿
 - 12.1 BSD 源码考古前沿@@〔溯源：一手：TUHS CSRG_CDs 档案（tuhs.org/Archive/Documentation/CSRG_CDs/；csrg_ls.gz 与 csrg_md5sums.gz）——Berkeley SCCS 存档以 CSRG CD 清单为可回溯依据；本地库：CL-RM-016977 等（386BSD 源码线）〕〔说明：SCCS/CVS 档案〕
+  - 12.1.1 SCCS 存档的利用
+  - 12.1.2 档案清单的实际作用
+  - 12.1.3 版本树复原的进展
+  - 12.1.4 考古方法的固有局限
 - 12.2 诉讼档案数字化的进展@@〔溯源：一手：dmr 档案镜像 BSDi 文书群（plan9.io/cm/cs/who/dmr/bsdi/）；TUHS Archive；已数字化一手文书：判决书 832 F. Supp. 790（D.N.J. 1993-09-08，Justia 全文）与 1992-07-24 修正起诉状全文；体例注：完整法院卷宗（全部动议／笔录／证物）尚未免费数字化，本节以已数字化文书群为界〕
+  - 12.2.1 已数字化文书的清单
+  - 12.2.2 未数字化的卷宗部分
+  - 12.2.3 数字化的机构主体
+  - 12.2.4 利用的技术条件清单
 - 12.3 口述史采集的未竟议程@@〔溯源：一手：TUHS 镜像 Mahoney《An Oral History of Unix》（tuhs.org/Archive/Documentation/OralHistory/）；CHM 口述史集；体例注：CSRG 成员（McKusick／Bostic／Jolitz）系统口述尚缺（未竟议程）〕
+  - 12.3.1 已采口述的人物分布
+  - 12.3.2 缺失人物的清单表
+  - 12.3.3 采集方法的设计思路
+  - 12.3.4 议程推进的现实障碍
 - 12.4 版本树复原的方法前沿@@〔溯源：一手：TUHS《The Unix Tree》（tuhs.org/cgi-bin/utree.pl）；Spinellis 2017（ESE 22(3)，DOI 10.1007/s10664-016-9445-5）——依 SCCS 记录复原版本树并移植为 Git／Mercurial〕
+  - 12.4.1 复原的技术路线图
+  - 12.4.2 记录系统的转换处理
+  - 12.4.3 复原成果的验证程序
+  - 12.4.4 方法适用边界的界定
 ## 第 13 章 比较研究
 - 13.1 BSD 与 SVR4 的比较研究文献@@〔溯源：一手：McKusick 等《4.4BSD UNIX 操作系统设计与实现》（原题 The Design and Implementation of the 4.4BSD Operating System）（Addison-Wesley, 1996，ISBN 0-201-54979-4）；SVR4 手册（Prentice-Hall, 1992）；体例注：“4.4BSD vs SVR4”专篇技术评述未获一手，本节以两系统权威著作为比较基线〕
+  - 13.1.1 比较基线的选择理由
+  - 13.1.2 权威著作的对照步骤
+  - 13.1.3 专篇评述的长期缺位
+  - 13.1.4 比较维度的设定原则
 - 13.2 BSD 与早期 Linux 的比较研究@@〔溯源：一手：Torvalds 1991-08-25 comp.os.minix 公告（Usenet 可回溯）；FreeBSD Handbook 时序对照；体例注：1991–1993 直接比较文献稀薄（多属 Usenet 记述），本节标此边界〕〔分工·迁移：本节载比较研究文献面；关系史本体见第三十四卷与第六十三卷（C-47，2026-10-11）〕
+  - 13.2.1 直接文献的稀薄状况
+  - 13.2.2 时序对照的操作步骤
+  - 13.2.3 论坛记述的使用限度
+  - 13.2.4 比较结论的克制写法
 - 13.3 四分支学术史比较的方法文献@@〔溯源：一手：arXiv:2206.05616《Is Kernel Code Different From Non-Kernel Code? A Case Study of BSD Family Operating Systems》；Spinellis 2017（方法线）；体例注：四分支专门比较方法文献稀薄，以实证软件工程文献为据〕
+  - 13.3.1 实证文献的取径来源
+  - 13.3.2 代码度量的具体指标
+  - 13.3.3 方法文献的稀薄现状
+  - 13.3.4 比较框架的适用性
 - 13.4 与商业 UNIX 的比较史料边界@@〔溯源：一手：《OSF/1 User's Guide》（Prentice Hall, 1992，bitsavers 藏）；DEC《OSF/1 Internals》（1992）；SunOS→Solaris 见 Oracle 官方文档；体例注：商业 UNIX 厂商文档授权受限——SunOS／Solaris 与 OSF/1 可得性高于其他专有系统，本节以可得性差异为史料边界〕〔分工·迁移：本节载比较研究文献面；关系史本体见第三十四卷与第六十三卷（C-47，2026-10-11）〕
+  - 13.4.1 厂商文档的可得性
+  - 13.4.2 授权限制的实际影响
+  - 13.4.3 可得性差异的处理
+  - 13.4.4 边界声明的落点与效力
 
 # 第三十一卷  BSD UNIX 技术专题史（1974–1995）
 > 本卷为 BSD 阶段的横向技术主题卷（收窄至 1995 年前）：以内核、文件系统、网络栈、存储与软件工程诸线呈现 BSD 技术在本期的形成。1993 年以后各分支的技术发展见第五十二卷（技术发展史的横向比较）与第三十四、三十八、四十二、四十六卷（各分支技术专题史）。
@@ -8193,239 +8671,1033 @@
 ! 〔主体声明〕本卷叙述单位为操作系统（制品），变迁单位＝版本序列；项目、法人与职位事件另见本分支文化卷与《BSD 分支的治理制度》《BSD 治理制度比较》两卷
 ## 第 1 章 OpenBSD 起源（1995–1996）
 - 1.1 1995 年从 NetBSD 分叉的动因与经过@@〔分工·迁移：本章载版本发布与人物编年细节；分叉确立机制面的收窄叙述见第二十七卷第3章（A-35 甲案互注，2026-10-11）〕
+  - 1.1.1 分叉动因的自述与旁证
+  - 1.1.2 出走时点的版本坐标
+  - 1.1.3 共用源树的断裂程度
+  - 1.1.4 首份发布物的署名线索
+  - 1.1.5 分叉叙述的精度上限
 - 1.2 Theo de Raadt 与 NetBSD 核心团队冲突考据（前史：1994–1995）@@〔分工·迁移：本节载冲突考据的 OpenBSD 侧；NetBSD 侧早期争议见第四十卷第1章 1.7（C-98，2026-10-11）〕〔溯源：证据类型——CVS 提交记录、核心团队邮件、de Raadt 声明；两说并陈〕
+  - 1.2.1 除名争议的程序要件
+  - 1.2.2 核心席位的构成与更替
+  - 1.2.3 当事声明的文本层级
+  - 1.2.4 口传证据的使用限度
+  - 1.2.5 存疑条目的标注规程
 - 1.3 OpenBSD 早期 CVS 建立与 1.1–1.2 发布（1995–1996）
+  - 1.3.1 匿名 CVS 的开放口径
+  - 1.3.2 早期发布物的缺档
+  - 1.3.3 半年一发的节奏惯例
+  - 1.3.4 源码包的封装体例
+  - 1.3.5 光盘与镜像的分发次序
 - 1.4 NetBSD 社区回应与分叉争论
+  - 1.4.1 争论场域的会议与列表
+  - 1.4.2 回应文本的措辞分寸
+  - 1.4.3 人员与代码的双向流向
+  - 1.4.4 第三方转述的可信分层
+  - 1.4.5 争论降温的制度出口
 - 1.5 创建期贡献者构成（1995–1996）
+  - 1.5.1 开发者地理分布的粗描
+  - 1.5.2 安全审计组的编制
+  - 1.5.3 核心与边缘的分层
+  - 1.5.4 具名贡献的稀缺程度
+  - 1.5.5 名单复原的可靠性
 - 1.6 创建期治理结构与开发模式形成
+  - 1.6.1 许可准入的硬性门槛
+  - 1.6.2 源码用途的无限制承诺
+  - 1.6.3 开发者集会的固定场合
+  - 1.6.4 问题处置的纪律约束
+  - 1.6.5 提交权限的集中形态
 - 1.7 4.4BSD-Lite 迁移与代码基础重建
+  - 1.7.1 4.4BSD-Lite 的源流
+  - 1.7.2 机器独立源码树的目标
+  - 1.7.3 标准跟随的清单范围
+  - 1.7.4 多平台移植的早期广度
+  - 1.7.5 加密代码的合入条件
 - 1.8 创建期技术路线争论与批评
+  - 1.8.1 审计方法的成本争议
+  - 1.8.2 默认关闭的可用性代价
+  - 1.8.3 批评来源的分层结构
+  - 1.8.4 主动防御的自述依据
+  - 1.8.5 安全目标的自我定位
 - 1.9 与同时期操作系统的比较：NetBSD、FreeBSD、Linux 与商业 UNIX@@〔分工·迁移：对照时段：创建期（1995–1996）〕
+  - 1.9.1 商业扫描器的检验结果
+  - 1.9.2 同业安全公司的关系
+  - 1.9.3 开源阵营的审计差异
+  - 1.9.4 商业 UNIX 的加密差距
+  - 1.9.5 生态采用的反向证据
 ## 第 2 章 OpenBSD 2.x：OpenSSH 诞生与审计文化形成（1996–2001）
 - 2.1 OpenBSD 2.x 发布史
+  - 2.1.1 2.x 序列的起讫
+  - 2.1.2 半年节奏的实测偏差
+  - 2.1.3 随版本分发的组件清单
+  - 2.1.4 光盘载体的加密巧计
+  - 2.1.5 专利到期后的默认变更
 - 2.2 代码审计文化建立（1996–2000）
+  - 2.2.1 审计工作的起点年份
+  - 2.2.2 审计规模的峰值时段
+  - 2.2.3 审计对象的判读取向
+  - 2.2.4 可利用性未证时的处置
+  - 2.2.5 审计与发版的耦合
 - 2.3 OpenSSH 起源：SSH 1.2.12、OSSH 与 OpenBSD fork
+  - 2.3.1 1.2.12 版本的许可遗产
+  - 2.3.2 许可收紧的历史路径
+  - 2.3.3 OSSH 分支的复起
+  - 2.3.4 分叉决策的两月窗口
+  - 2.3.5 首版随发行物落地
 - 2.4 OpenSSH 创建者与主要贡献者
+  - 2.4.1 创建班底的国别构成
+  - 2.4.2 加密组件的清理者
+  - 2.4.3 协议移植的承担者
+  - 2.4.4 构建层的专利规避
+  - 2.4.5 手册页承担的归属
 - 2.5 安全审计方法进入工程流程
+  - 2.5.1 修补进入变更日志的标记
+  - 2.5.2 缺陷公告的独立载体
+  - 2.5.3 全量披露的立场宣示
+  - 2.5.4 审计与编译器的衔接
+  - 2.5.5 变更日志的汇总地位
 - 2.6 ktrace 等 BSD 工具的继承与扩展（1996–2001）@@〔溯源：mandoc 为跨时段追述，其源头晚于本章时段，确切起始年份待核〕
+  - 2.6.1 继承工具的入树时点
+  - 2.6.2 内核事件接口的引入
+  - 2.6.3 兼容层的取舍标准
+  - 2.6.4 控制台驱动的统一
+  - 2.6.5 文件系统缓冲的收益
 - 2.7 外部批评：安全审计文化的成本与争议
+  - 2.7.1 成本争论的长期存在
+  - 2.7.2 性能抱怨的技术根据
+  - 2.7.3 平台支持的断续记录
+  - 2.7.4 硬件覆盖的比较口径
+  - 2.7.5 批评与回应的公开性
 - 2.8 社区贡献者与边缘开发者
+  - 2.8.1 边缘开发者的署名方式
+  - 2.8.2 漏洞报告者的致谢惯例
+  - 2.8.3 移植线的独立编队
+  - 2.8.4 商业产品的嵌入式采用
+  - 2.8.5 规模自述与人力实况
 - 2.9 FreeBSD 2010—2026 年的贡献者多样性与企业参与
+  - 2.9.1 企业赞助的稀薄程度
+  - 2.9.2 基金会资金的归集
+  - 2.9.3 商业衍生的合法性
+  - 2.9.4 厂商采用的鼓励口径
+  - 2.9.5 实现的完整度自述
 - 2.10 与同时期操作系统的比较（OpenBSD 2.x 时期）@@〔分工·迁移：对照时段：OpenBSD 2.x 时代与代码审计文化时期（1996–2001）；OpenSSH 首现 OpenBSD 2.6（1999.12）〕
+  - 2.10.1 同期许可的分野界线
+  - 2.10.2 组件供应的外部依赖
+  - 2.10.3 软件包数量的对照
+  - 2.10.4 平台覆盖的比较尺度
+  - 2.10.5 硬件加密的同期位置
 ## 第 3 章 OpenBSD 3.x：pf 与主动安全工程（2001–2005）
 - 3.1 OpenBSD 3.x 发布史
+  - 3.1.1 3.x 序列的首发平台
+  - 3.1.2 版本间隔的半年惯性
+  - 3.1.3 每版附曲的发行体例
+  - 3.1.4 软件包规模的增长曲线
+  - 3.1.5 发行介质的张数变化
 - 3.2 IPFilter 许可证争议与移除事件（2001）
+  - 3.2.1 替代品的语法承接
+  - 3.2.2 内核集成的默认地位
+  - 3.2.3 作者归属的转移过程
+  - 3.2.4 许可清理的连续性
+  - 3.2.5 等价物替换的既有惯例
 - 3.3 pf 的设计、实现与作者群体
+  - 3.3.1 规则语言的分层结构
+  - 3.3.2 运行期的控制工具
+  - 3.3.3 整形与带宽的并置
+  - 3.3.4 规则写法的简化幅度
+  - 3.3.5 实现者的最初归属
 - 3.4 Darren Reed 与 IPFilter 许可证立场考据@@〔分工·迁移：日期口径：openbsd-cvs 移除提交日志为 2001-05-29（LWN 存档原文“did this today”），CNET 等媒体报道为 2001-05-30；目录采提交日志口径〕
+  - 3.4.1 旧组件的在树痕迹
+  - 3.4.2 版本序列中的组件更替
+  - 3.4.3 许可争议的公开文本
+  - 3.4.4 当事立场的文本缺环
+  - 3.4.5 考据结论的存疑标注
 - 3.5 DARPA POSSE 项目与安全研究资金@@〔溯源：POSSE 全称、资助起止与金额须以 DARPA／OpenBSD 当年公告核定〕〔说明：可移植开源安全要素〕
+  - 3.5.1 资助关系的建立起点
+  - 3.5.2 资金与自主的条件
+  - 3.5.3 撤资的时点与方式
+  - 3.5.4 官方说明的措辞分寸
+  - 3.5.5 撤资后的替代来源
 - 3.6 W^X 安全设计理念形成
+  - 3.6.1 执行位分离的首批平台
+  - 3.6.2 i386 的跟进时点
+  - 3.6.3 默认强制的收紧节点
+  - 3.6.4 GOT 与 PLT 的只读化
+  - 3.6.5 代码与数据的分区
 - 3.7 SSP 与编译级安全增强
+  - 3.7.1 栈保护的来源项目
+  - 3.7.2 栈布局的重排原理
+  - 3.7.3 内核层的同款保护
+  - 3.7.4 静态边界检查器的加入
+  - 3.7.5 检查器的实际产出
 - 3.8 外部批评：性能、可移植性与维护成本
+  - 3.8.1 硬件覆盖的滞后现象
+  - 3.8.2 平台支持的断续成本
+  - 3.8.3 审计式替换的工程量
+  - 3.8.4 支持不齐的公开记载
+  - 3.8.5 兼容取舍的制度化
 - 3.9 贡献者构成与 committer 社群@@〔分工·迁移：1996–2000 创建期记录移注〕
+  - 3.9.1 历年参与者总数估算
+  - 3.9.2 提交频度的日均值
+  - 3.9.3 首次导入的精确时刻
+  - 3.9.4 版权署名的年限跨度
+  - 3.9.5 提交总量的规模基数
 - 3.10 ipfw、pf 与 ipfilter 的防火墙框架演进
+  - 3.10.1 从 ipf 到 pf 的换轨
+  - 3.10.2 规则集的原子提交
+  - 3.10.3 冗余协议的专利障碍
+  - 3.10.4 CARP 的替代设计
+  - 3.10.5 规则分组的嵌套层级
 - 3.11 与同时期操作系统的比较：NetBSD 1.5–2.x、FreeBSD 4.x–5.x、Linux 2.4–2.6、Solaris 8–9@@〔比较维度：2001–2005；NetBSD 1.5-2.x（可移植性至上）、FreeBSD 4.x-5.x（x86 性能与稳定性）、Linux 2.4-2.6（内核成熟与商业爆发）、Solaris 8-9（企业 Unix）；Solaris 8 释出 2000、Solaris 9 释出 2002〕
+  - 3.11.1 标准组织的专利政策
+  - 3.11.2 商业实现的许可门槛
+  - 3.11.3 同期开源阵营的审计强度
+  - 3.11.4 硬件平台的覆盖对照
+  - 3.11.5 跨平台移植的投入差异
 ## 第 4 章 OpenBSD 4.x：安全机制体系化（2006–2011）
 - 4.1 OpenBSD 4.x 发布史
+  - 4.1.1 外部工具的替换清单
+  - 4.1.2 版本间隔的月份固定
+  - 4.1.3 变更日志的链接定式
+  - 4.1.4 发布说明的自述结构
+  - 4.1.5 运维视图的扩充路径
 - 4.2 malloc 随机化与内存安全工程
+  - 4.2.1 分配器的整体重写
+  - 4.2.2 记账结构的运行时保护
+  - 4.2.3 调试开关的引入版本
+  - 4.2.4 整数溢出调用的替换
+  - 4.2.5 内核分配的零初始化
 - 4.3 gcc GPLv3 许可争议与工具链路线抉择
+  - 4.3.1 重写替代的许可取向
+  - 4.3.2 兼容面的并行维护
+  - 4.3.3 编译器版本的分平台
+  - 4.3.4 构建工具的稳定性
+  - 4.3.5 兼容选项的增补方式
 - 4.4 pcc 探索与 clang 引入准备（2006–2010）
+  - 4.4.1 编译器换代的准备期
+  - 4.4.2 编译器优化的对抗
+  - 4.4.3 随机池的搅拌改进
+  - 4.4.4 预链接与随机化并存
+  - 4.4.5 浮点代码的机器无关化
 - 4.5 pf、CARP、网络工具生态发展
+  - 4.5.1 状态跟踪的默认化
+  - 4.5.2 日志接口的可克隆
+  - 4.5.3 同步接口的流量控制
+  - 4.5.4 负载均衡工具的更名
+  - 4.5.5 反垃圾邮件的域级陷阱
 - 4.6 贡献者与维护者群体变化
+  - 4.6.1 终端复用器的接替
+  - 4.6.2 多路由表的调度入口
+  - 4.6.3 规则优化器的启用
+  - 4.6.4 系统监视的新视图
+  - 4.6.5 技术说明的外部化
 - 4.7 外部批评与回应
+  - 4.7.1 规则语法的破坏性变更
+  - 4.7.2 重整规则的删减范围
+  - 4.7.3 宽松状态跟踪的取舍
+  - 4.7.4 入站过滤的简化手段
+  - 4.7.5 重载事务化的动机
 - 4.8 安全文化的社会影响
+  - 4.8.1 加密指令的硬件接入
+  - 4.8.2 无线驱动的协议内建
+  - 4.8.3 随机数接口的扩充
+  - 4.8.4 硬件随机源的驱动
+  - 4.8.5 域名解析的标识随机化
 - 4.9 OpenBSD 4.x 的工程改进：分配器替换与 pf 语法扩展
+  - 4.9.1 状态表的存取接口
+  - 4.9.2 跨路由域的转换能力
+  - 4.9.3 状态删除的匹配规则
+  - 4.9.4 计数读写的原子化
+  - 4.9.5 中继会话的状态借用
 - 4.10 OpenBSD 4.x 时期的技术淘汰与新旧交替（2005—2010）
+  - 4.10.1 报头承载的元数据
+  - 4.10.2 日志子系统的重写
+  - 4.10.3 多核扩展的上限抬升
+  - 4.10.4 旧驱动器的退役清单
+  - 4.10.5 地址空间上限的调整
 - 4.11 OpenBSD 与密码学的深度结合（2005—2012）
+  - 4.11.1 密钥保护的算法更替
+  - 4.11.2 网络层的加密加速
+  - 4.11.3 随机地址的网络接口
+  - 4.11.4 加密硬件的协议适配
+  - 4.11.5 配置文件的可分拆
 - 4.12 pf 防火墙的持续演进：状态跟踪、队列调度与冗余（2005—2012）
+  - 4.12.1 带宽队列的配置次序
+  - 4.12.2 状态表的上限设定
+  - 4.12.3 冗余簇的标识设定
+  - 4.12.4 超时值的自适应缩放
+  - 4.12.5 中继守护进程的依赖
 - 4.13 与同时期操作系统的比较：Linux、FreeBSD、NetBSD 与其他 UNIX 系统@@〔比较维度：OpenBSD 4.x 时代与 pf 演进时期（2006–2011）〕
+  - 4.13.1 包路径的查找规则
+  - 4.13.2 路由会话的加密兼容
+  - 4.13.3 路由协议的版本跟进
+  - 4.13.4 虚拟磁盘协议的互操作
+  - 4.13.5 文件系统的默认取舍
 ## 第 5 章 OpenBSD 5.x：LibreSSL 与工具链自主化（2011–2016）
 - 5.1 OpenBSD 5.x 发布史
+  - 5.1.1 多平台随机化的默认
+  - 5.1.2 i386 的默认切换
+  - 5.1.3 powerpc 的默认收敛
+  - 5.1.4 静态二进制的随机化
+  - 5.1.5 发行公钥的公布格式
 - 5.2 Heartbleed 事件与 LibreSSL fork@@〔时间：Heartbleed 2014-04 披露，LibreSSL 随后分叉〕
+  - 5.2.1 分叉的年份与目标
+  - 5.2.2 分叉随版本同批发布
+  - 5.2.3 加密代码的单一来源
+  - 5.2.4 外部漏洞的适用甄别
+  - 5.2.5 新栈的早期缺陷周期
 - 5.3 LibreSSL 的工程目标与争议
+  - 5.3.1 面向易用性的新库
+  - 5.3.2 资金与项目的绑定
+  - 5.3.3 标准选项的勉力支持
+  - 5.3.4 密钥强度的下限收紧
+  - 5.3.5 移植环境的检查项
 - 5.4 gcc 至 clang 转换过程@@〔互见：前史见 4.3、4.4〕
+  - 5.4.1 格式化字符串的统一
+  - 5.4.2 目录读取接口的替换
+  - 5.4.3 静态链接的析构修正
+  - 5.4.4 旧磁盘接口的退役
+  - 5.4.5 静态随机化的平台扩展
 - 5.5 OpenBSD 基础工具自主化路线
+  - 5.5.1 发行物的签名实践
+  - 5.5.2 包管理的信任默认
+  - 5.5.3 工具自上游的分叉
+  - 5.5.4 工具接入新加密库
+  - 5.5.5 发行公钥的轮替记录
 - 5.6 OpenSSH、OpenNTPD、OpenSMTPD 生态扩展
+  - 5.6.1 默认邮件的换代过程
+  - 5.6.2 内部代码的库化改造
+  - 5.6.3 默认弱算法的清除
+  - 5.6.4 漫游功能的外部发现
+  - 5.6.5 邮件守护进程的收权
 - 5.7 贡献者与维护者构成
+  - 5.7.1 改造覆盖面的计量
+  - 5.7.2 审计标注的工作量
+  - 5.7.3 权限分离的推广进程
+  - 5.7.4 接口调整的连带修改
+  - 5.7.5 具名报告者的致谢
 - 5.8 外部批评：硬件支持与生态规模问题
+  - 5.8.1 硬件覆盖的公开说明
+  - 5.8.2 旧硬件的清退节奏
+  - 5.8.3 同类修补的反复出现
+  - 5.8.4 接口替换的性能账
+  - 5.8.5 人为可读语法的增补
 - 5.9 ISC／Berkeley 许可证与 OpenBSD 的代码自由使用政策@@〔说明：许可政策的实际后果〕〔互见：许可争议个案见 3.2、3.4〕
+  - 5.9.1 等价物替换的覆盖范围
+  - 5.9.2 许可自述的口语表达
+  - 5.9.3 文档许可的原文表述
+  - 5.9.4 上游取代的许可动因
+  - 5.9.5 加密栈的许可独立
 - 5.10 与同时期操作系统的比较：NetBSD 6.x、FreeBSD 9.x–10.x、Linux 3.x、Solaris 11@@〔比较维度：2011–2016；NetBSD 6.x（可移植性与嵌入式）、FreeBSD 9.x–10.x（ZFS/bhyve/ULE 成熟）、Linux 3.x（cgroups 与 namespace，容器前夜）、Solaris 11（ZFS/DTrace/Zones 延续）〕
+  - 5.10.1 协议扩展的接入批次
+  - 5.10.2 加密协议的退役时点
+  - 5.10.3 解析默认的调整幅度
+  - 5.10.4 回归测试的扩容规模
+  - 5.10.5 外部漏洞的协调披露
 ## 第 6 章 OpenBSD 6.x：pledge／unveil 与现代安全模型（2016–2021）
 - 6.1 OpenBSD 6.x 发布史
+  - 6.1.1 二进制补丁工具的出现
+  - 6.1.2 安装后的自动检查
+  - 6.1.3 补丁渠道分发新工具
+  - 6.1.4 默认镜像地址的设定
+  - 6.1.5 升级工具的目录细节
 - 6.2 pledge 从实验机制到系统接口
+  - 6.2.1 越权调用的进程终止
+  - 6.2.2 承诺集合的单向收缩
+  - 6.2.3 承诺项的增补办法
+  - 6.2.4 承诺项的细化步骤
+  - 6.2.5 运行时可见性的建立
 - 6.3 unveil 与文件访问限制模型
+  - 6.3.1 文件访问的接口引入
+  - 6.3.2 三重机制的配合条件
+  - 6.3.3 相对路径的匹配逻辑
+  - 6.3.4 路径解析的性能账
+  - 6.3.5 受限程序的临时口
 - 6.4 安全机制进入用户空间程序
+  - 6.4.1 用户态覆盖面的计量
+  - 6.4.2 覆盖面的后续扩张
+  - 6.4.3 守护进程的成批纳入
+  - 6.4.4 电源管理进程的纳入
+  - 6.4.5 目录服务的接入限制
 - 6.5 sndio 与简约主义设计@@〔溯源：sndio 起于 4.x 时代（2004 年前后）；本节只述其设计取向，音频栈沿革不另立节〕
+  - 6.5.1 寄存器化的性能取向
+  - 6.5.2 以新机制替代旧机制
+  - 6.5.3 为安全关掉的优化
+  - 6.5.4 每次引导的唯一内核
+  - 6.5.5 多重约束的样板实例
 - 6.6 贡献者与维护者构成（2016–2021）
+  - 6.6.1 平台移植的承担人员
+  - 6.6.2 违规个案的修补记录
+  - 6.6.3 细项路径的补注工作
+  - 6.6.4 小众场景的维护缺口
+  - 6.6.5 机制相容的程序改写
 - 6.7 外部批评：兼容性与运维负担
+  - 6.7.1 隐式放行的取消规则
+  - 6.7.2 机制之间的互扰成本
+  - 6.7.3 语义收紧的连带代价
+  - 6.7.4 网络守护进程的纳入
+  - 6.7.5 监视工具的收权幅度
 - 6.8 开发文化与决策惯例变化（2016–2021）
+  - 6.8.1 新守护进程的模板
+  - 6.8.2 内核接口的收敛过程
+  - 6.8.3 语言运行时的适配
+  - 6.8.4 首次调用的行为改写
+  - 6.8.5 派生执行成为常态
 - 6.9 旧世代机制与新体系的衔接@@〔分工·迁移：对照时段：OpenBSD 6.x 时代与 pledge/unveil 安全机制时期（2017–2021）；pledge 引入 5.9（2016.3）、unveil 引入 6.4（2018.10）；原题对照项系沿用 5.10 维度串写，与章时段冲突，改同期系统并标旧世代背景对照（v35c 裁决，2026-10-14）〕
+  - 6.9.1 旧机制的锁定期望
+  - 6.9.2 调用后的不可逆性
+  - 6.9.3 旧承诺项的退场路径
+  - 6.9.4 新一代缓解机制的引入
+  - 6.9.5 文件消失的风险提示
 ## 第 7 章 OpenBSD 7.x：现代硬件时代与代码政策（2021–2026）
 - 7.1 OpenBSD 7.x 发布史
+  - 7.1.1 Apple 平台的多处理器修复
+  - 7.1.2 安装器的固件取用
+  - 7.1.3 版本次数的里程碑
+  - 7.1.4 内核地址空间扩容
+  - 7.1.5 旧平台的退役决定
 - 7.2 pledge／unveil 的扩展与维护（2021–2026）@@〔互见：机制建立见 6.2、6.3〕
+  - 7.2.1 外围工具的机制接入
+  - 7.2.2 设备接口的承诺扩展
+  - 7.2.3 虚拟化承诺的扩充
+  - 7.2.4 异常报告的路径改换
+  - 7.2.5 数据结构竞争的修复
 - 7.3 riscv64、ARM64 与现代硬件支持
+  - 7.3.1 新架构的安装步骤
+  - 7.3.2 新架构的外设支持
+  - 7.3.3 新架构的固件调用
+  - 7.3.4 时钟中断的机器无关化
+  - 7.3.5 新架构的缓存启用
 - 7.4 异构 CPU 调度与大小核支持@@〔溯源：版本 7.9；据官方发行说明与变更记录逐项核对，版本号不入题〕
+  - 7.4.1 片上附加核的通信
+  - 7.4.2 大小核的深睡状态
+  - 7.4.3 多核锁竞争的收益
+  - 7.4.4 网络输入的多核并行
+  - 7.4.5 调度代码的运行判定
 - 7.5 Wi-Fi 驱动开放化路线（2021–2026）@@〔限缩：2004 年以来诉求为前史，2021 年后进展为主述；起始年份待核〕
+  - 7.5.1 厂商重许可的固件
+  - 7.5.2 新无线驱动的接入
+  - 7.5.3 可分发固件的普适化
+  - 7.5.4 安装期的固件获取
+  - 7.5.5 固件安全公告的跟随
 - 7.6 生成式 AI 代码政策与 AI 生成代码争议（2022–2026）
+  - 7.6.1 自动生成报告的涌入
+  - 7.6.2 人工分诊的保留要求
+  - 7.6.3 独立复现的校验价值
+  - 7.6.4 代码政策的成文缺位
+  - 7.6.5 以曲词表达的立场
 - 7.7 贡献者结构变化@@〔分工·迁移：2013–2020 前史移注〕
+  - 7.7.1 维护面的横向扩张
+  - 7.7.2 细节维护的长期负担
+  - 7.7.3 内核锁结构的重写
+  - 7.7.4 并发缺陷的排查工作
+  - 7.7.5 维护者构成的推断
 - 7.8 外部批评与项目回应（2021–2026）
+  - 7.8.1 硬件缺陷的缓解跟进
+  - 7.8.2 旧固件时钟的修正
+  - 7.8.3 桌面栈的相互干扰
+  - 7.8.4 无线漫游的稳定性
+  - 7.8.5 固件缺失的启动故障
 - 7.9 OpenBSD 对 BSD 生态的代码贡献与软件扩散（2021–2026）@@〔分工·迁移：覆盖 1995–2026 各时期；并合原 3.10／5.10 两节；卷级贡献综述，依 Q-V39-03 移置卷末作总结性节，前七章按时代叙述，读者可按需回看对应时段〕〔说明：更新节；起自 1995 年〕
+  - 7.9.1 连接工具的外溢效应
+  - 7.9.2 关联项目的公开名录
+  - 7.9.3 隧道与配置能力的扩散
+  - 7.9.4 多分支的并行维护
+  - 7.9.5 上游应用的兼容让步
 - 7.10 与同时期操作系统的比较：Linux 6.x、FreeBSD 14.x–15.x 与 NetBSD 10–11（2021–2026）@@〔比较维度：2021–2026；对照项——Linux 6.x（内核节奏与安全模型）、FreeBSD 14.x–15.x（同源分支安全工程对照）、NetBSD 10–11（跨平台与安全默认）；置章末（M 判据：无述评则居章末）——2026-10-09 依 86 §五·5.6（★51）补〕
+  - 7.10.1 队列性能的对标基准
+  - 7.10.2 加密指令的性能账
+  - 7.10.3 无线标准的跟进速度
+  - 7.10.4 工具链版本的对齐
+  - 7.10.5 路由守护进程的新增
 
 # 第四十五卷  OpenBSD 技术专题史（1995–2026）
 > 本卷为 OpenBSD 技术横向卷：以缓解机制、密码学基础设施、最小权限模型与工具链自主诸线呈现。
 ! 〔主体声明〕本卷叙述单位为操作系统之技术物；项目决策与治理制度另见《BSD 分支的治理制度》《BSD 治理制度比较》两卷
 ## 第 1 章 安全工程体系：从代码审计到主动防御（1995–2026）
 - 1.1 OpenBSD 分叉背景与安全目标的形成@@〔溯源：OpenBSD 1995-10 从 NetBSD fork；据 de Raadt 1995 comp.os.386bsd 公告与 CL-RM-000904（fork 日期三源交叉）〕
+  - 1.1.1 分叉后的安全目标宣示
+  - 1.1.2 开放模式下的不妥协立场
+  - 1.1.3 健壮性与自由再分发并置
+  - 1.1.4 技术判断的去政治化
 - 1.2 1996–1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理@@〔溯源：OpenBSD 2.0（1996-10）集成 integrate.sh 大规模代码审计；据 de Raadt 技术邮件与 OpenBSD 2.0 release notes〕
+  - 1.2.1 审计起点的季节记载
+  - 1.2.2 审计强度的时间分布
+  - 1.2.3 缺陷规模的数量记载
+  - 1.2.4 系统清理后的缺陷递减
 - 1.3 Secure by Default：默认安全理念@@〔溯源：Secure by Default 由 Theo de Raadt 提出——非仅默认配置安全，而是主动减少攻击面；据 de Raadt 演讲与 OpenBSD 官方 philosophy 页〕
+  - 1.3.1 默认安全的初始配置
+  - 1.3.2 非必要服务的默认停用
+  - 1.3.3 新手启用的学习路径
+  - 1.3.4 商业默认值的对照组
 - 1.4 Correctness、安全性与工程质量
+  - 1.4.1 缺陷优先于漏洞的取向
+  - 1.4.2 可证实性不足时的修复
+  - 1.4.3 缺陷类别的再发现循环
+  - 1.4.4 重复审计的多人复核
 - 1.5 漏洞修复流程与安全响应实践
+  - 1.5.1 披露与修复的时间窗
+  - 1.5.2 完全披露的先例地位
+  - 1.5.3 公告清单的逐年归档
+  - 1.5.4 严重问题的补丁时限
 - 1.6 安全审计与功能开发之间的工程关系
+  - 1.6.1 审计与发明的同批产出
+  - 1.6.2 既有做法的推广程度
+  - 1.6.3 递减收益的工程现实
+  - 1.6.4 近期缺陷的隐蔽程度
 - 1.7 攻击面削减的具体手段：默认关闭、协议精简、权限剥离
+  - 1.7.1 网络输入路径的收缩
+  - 1.7.2 权限剥离的资源前置
+  - 1.7.3 子进程的 chroot 隔离
+  - 1.7.4 setuid 清单的持续削减
 - 1.8 安全工程方法在 2000 年代后的制度化
+  - 1.8.1 审计承诺的持续声明
+  - 1.8.2 军备竞赛式的投入逻辑
+  - 1.8.3 全树替换的工程规模
+  - 1.8.4 宏误用的检测设施
 - 1.9 FreeBSD 安全官制度与安全公告流程
+  - 1.9.1 安全官的公告发布职责
+  - 1.9.2 公告的签名与归档
+  - 1.9.3 公告邮寄的渠道清单
+  - 1.9.4 受支持分支的时限
 - 1.10 安全社区的无名守护者：FreeBSD 安全团队成员
+  - 1.10.1 团队应答漏洞的分项
+  - 1.10.2 确认之后的修复步骤
+  - 1.10.3 公告所附的验证含义
+  - 1.10.4 缺陷库的共同维护
 - 1.11 与同时期操作系统的比较：Linux 安全生态与 SELinux、KSPP、LKM
+  - 1.11.1 内核缺陷的长周期前提
+  - 1.11.2 检查工具的动静两路
+  - 1.11.3 运行时防护的主动性
+  - 1.11.4 内核支撑的用户态防护
 ## 第 2 章 内核安全机制：内存保护、执行控制与随机化
 - 2.1 4.4BSD 基础与 OpenBSD 内核安全重构
+  - 2.1.1 逐文件分析的覆盖面
+  - 2.1.2 缺陷分布的普遍性
+  - 2.1.3 内核与用户态的合并审计
 - 2.2 W^X：执行权限分离机制@@〔溯源：W^X（Write XOR Execute）由 OpenBSD 3.3（2003-05）默认启用；据 de Raadt commit 记录与 OpenBSD 3.3 release notes〕
+  - 2.2.1 W^X 的默认强制
+  - 2.2.2 Ports 树违例与放行挂载
+  - 2.2.3 W^X 的平台起始
 - 2.3 GOT、PLT 与动态链接保护
+  - 2.3.1 GOT 与 PLT 的只读区
+  - 2.3.2 保护范围向构造段延伸
+  - 2.3.3 动态链接器的特权位置
 - 2.4 Stack Protector 与 propolice：栈保护机制的引入@@〔时间：2001 起；OpenBSD 3.3 起系统级默认（2026-10-21 题例批）〕
+  - 2.4.1 栈金丝雀的布置手法
+  - 2.4.2 栈保护的系统级默认启用
+  - 2.4.3 共享对象的独立金丝雀
 - 2.5 malloc 随机化与 Guard Page
+  - 2.5.1 malloc 随机化的实现者
+  - 2.5.2 guard page 与延迟释放
+  - 2.5.3 4.4 版的分配器再造
 - 2.6 mmap 随机化与地址空间布局随机化
+  - 2.6.1 ASLR 的默认提供
+  - 2.6.2 库加载顺序的随机化
+  - 2.6.3 i386 的地址随机映射
 - 2.7 地址空间随机化：mmap 与栈、堆@@〔溯源：OpenBSD 的地址空间随机化默认始于 3.4（2003，Matthew Dempsky 的 malloc 随机化）；PIE 于 2008-11 由 Kurt Miller 实现，随 OpenBSD 5.3（2013-05-01 发布）默认；据 OpenBSD +PLUS 文件（2026-10-03 复核）〕
+  - 2.7.1 栈顶随机空隙的加入
+  - 2.7.2 每进程地址空间的独立
+  - 2.7.3 启动时的库重链接
 - 2.8 控制流攻击缓解机制
+  - 2.8.1 trapsleds 的指令改写
+  - 2.8.2 MAP_STACK 的栈指针核对
+  - 2.8.3 SROP 缓解的启用年份
+  - 2.8.4 寄存器分配顺序的调整
 - 2.9 RETGUARD 与返回地址保护@@〔溯源：RETGUARD 由 Todd Mortimer 2018 年引入（amd64/arm64 返回地址保护）；据 OpenBSD commit 记录与 tech 邮件列表〕
+  - 2.9.1 RETGUARD 的随机金丝雀
+  - 2.9.2 两架构的首次投放
+  - 2.9.3 mips64 与 powerpc 的后续
 - 2.10 内核内存保护机制
+  - 2.10.1 内核启动时的重链接
+  - 2.10.2 内核文本与数据的内部随机化
+  - 2.10.3 地址空间区域的不可变化
+  - 2.10.4 内核随机熵的注入
 - 2.11 用户空间与内核安全边界
+  - 2.11.1 系统调用入口的精确定址
+  - 2.11.2 可写内存发起的调用禁令
+  - 2.11.3 pinsyscalls 的替代方案
 - 2.12 内核侧防护的分层与互补
+  - 2.12.1 机制冗余的清理顺序
+  - 2.12.2 RELRO 与 ASLR 的合成
+  - 2.12.3 静态区的默认不可变化
 - 2.13 多架构内核安全机制一致性
+  - 2.13.1 非读代码的架构序列
+  - 2.13.2 缺硬件执行位时的软件替代
+  - 2.13.3 七平台 PIE 的同步
 - 2.14 平台相关内存保护
+  - 2.14.1 架构陷阱差异的利用
+  - 2.14.2 loongson 平台转入只执行二进制
+  - 2.14.3 i386 的 brk 区收缩
 - 2.15 MMU、页表与执行权限
+  - 2.15.1 VM 的不先读后执行约束
+  - 2.15.2 核心转储的页面隐藏
+  - 2.15.3 mmap 标志的架构铺开
 - 2.16 随机化机制的架构适配
+  - 2.16.1 共享对象级的独立 cookie
+  - 2.16.2 硬件随机指令的接入
+  - 2.16.3 EFI 随机源的启动接入
+  - 2.16.4 随机数据段的语义底座
 ## 第 3 章 进程隔离与最小权限模型
 - 3.1 chroot 遗产与 OpenBSD 隔离机制的起点
+  - 3.1.1 chroot 目录的固定位置
+  - 3.1.2 特权子进程的残余职责
+  - 3.1.3 图形服务的隔离转向
 - 3.2 权限分离模型的形成：从 Provos 设计到通用范式@@〔溯源：Privilege Separation 由 Niels Provos 与 Markus Friedl 于 2002-03 实现，随 OpenSSH 3.2.2（2002-05-16）发布；据 Provos 2003 USENIX 论文（2026-10-03 复核）〕
+  - 3.2.1 分离模型的首个落地
+  - 3.2.2 默认启用的版本节点
+  - 3.2.3 守护进程的第二例
 - 3.3 Privilege Revocation
+  - 3.3.1 早期弃权的操作安排
+  - 3.3.2 特权与无权的通信收敛
+  - 3.3.3 chroot 内的日志桥梁
 - 3.4 tame 的提出与 pledge 的形成@@〔溯源：tame() 系统调用由 Bob Beck 2015-05 提出，后改名 pledge(2)；据 OpenBSD 5.9 release notes 与 tech 邮件列表〕
+  - 3.4.1 收窄接口的登记条目
+  - 3.4.2 旧机制的退场理由
+  - 3.4.3 首次出现的版本标注
 - 3.5 pledge 系统调用设计
+  - 3.5.1 承诺字符串的声明形式
+  - 3.5.2 关键词表的排列形式
+  - 3.5.3 空值参数的中性含义
 - 3.6 pledge 权限集合与系统调用限制
+  - 3.6.1 只减不增的收缩纪律
+  - 3.6.2 执行权限的承诺门控
+  - 3.6.3 ioctl 的承诺通行集
+  - 3.6.4 POSIX 行为的首处改易
 - 3.7 unveil 文件系统视图限制@@〔溯源：unveil(2) 由 Bob Beck 2018-06 引入（OpenBSD 6.4）；据 unveil(2) 手册页与 OpenBSD 6.4 release notes〕
+  - 3.7.1 目录授权的递归范围
+  - 3.7.2 配置完成后的立即锁定
+  - 3.7.3 未授权路径的错误码
+  - 3.7.4 违规进程的记账标记
 - 3.8 pledge 与 unveil 的联合使用
+  - 3.8.1 两机制并用的异常模式
+  - 3.8.2 执行后视图的继承
+  - 3.8.3 隐藏符号的直开途径
 - 3.9 权限收缩 API 演进：setresuid 至 pledge 与 unveil
+  - 3.9.1 fork 与 exec 的承诺衔接
+  - 3.9.2 setuid 位与承诺冲突
+  - 3.9.3 高位承诺的静默忽略
 - 3.10 基本系统中的沙箱化实践
+  - 3.10.1 进程状态的记账可见性
+  - 3.10.2 文件命令的沙箱再造
+  - 3.10.3 非 root 的离线读包
 - 3.11 进程权限收缩与传统 UNIX 权限模型
+  - 3.11.1 pty 分配的权限改造
+  - 3.11.2 信息共享的最小化
+  - 3.11.3 传统权限模型的限度
 - 3.12 从权限分离到应用程序最小权限
+  - 3.12.1 基础程序的分离扩散
+  - 3.12.2 通用范式的适用实例
+  - 3.12.3 承诺串格式的报错返回
 ## 第 4 章 pf 与网络边界安全
 - 4.1 IPFilter 移除与 pf 的形成@@〔溯源：IPFilter 许可证争议导致 2001-05 从 OpenBSD 移除，pf 由 Daniel Hartmeier 开发替代（OpenBSD 3.0/2001-11）；据 Hartmeier pf 设计论文与 OpenBSD commit 记录〕
+  - 4.1.1 替代品的作者与动机
+  - 4.1.2 非自由许可的替换动因
+  - 4.1.3 首发版本的年份标注
 - 4.2 pf 的状态检测与规则处理架构@@〔时间：pf 3.0 起采用内核态状态机（2026-10-21 题例批）〕
+  - 4.2.1 默认有状态的过滤
+  - 4.2.2 末条匹配的判定流程
+  - 4.2.3 规则集的原子切换
+  - 4.2.4 并发操作的票据机制
 - 4.3 pf 地址转换与状态表
+  - 4.3.1 状态表的按址查询
+  - 4.3.2 表项清除的批量操作
+  - 4.3.3 表项结构的枚举长度
 - 4.4 pf 与网络边界安全
+  - 4.4.1 流量规范化的两项
+  - 4.4.2 规则集的树状嵌套
+  - 4.4.3 过滤动作的三分类
 - 4.5 CARP 与高可用网络@@〔溯源：CARP（Common Address Redundancy Protocol）2003 年由 Ryan McBride 开发替代 VRRP（Cisco 专利限制）；据 McBride 2004 USENIX 论文〕
+  - 4.5.1 虚拟地址的共享目标
+  - 4.5.2 最小配置的两要素
+  - 4.5.3 负载分担的散列过滤
+  - 4.5.4 广告频率与抢占开关
 - 4.6 pfsync 与状态同步
+  - 4.6.1 状态同步的伪设备
+  - 4.6.2 主机标识与状态归属
+  - 4.6.3 同步接口的写入规程
 ## 第 5 章 OpenBSD 网络协议守护进程与路由源验证
 - 5.1 spamd 与网络服务防护
+  - 5.1.1 假邮件守护的功能性质
+  - 5.1.2 三类发送主机的判分
+  - 5.1.3 灰名单的默认拖延
+  - 5.1.4 黑名单的错误码选项
 - 5.2 OpenNTPD 与时间同步安全
+  - 5.2.1 时钟同步的多源设定
+  - 5.2.2 协议版本的实现取舍
+  - 5.2.3 内置时间服务的发布
 - 5.3 OpenBGPD 与路由协议工程
+  - 5.3.1 路由选优的评估过程
+  - 5.3.2 会话保护的参考依据
+  - 5.3.3 路由软件的作者与代际
 - 5.4 OpenIKED 与 IKE／IPsec 实现
+  - 5.4.1 IKEv2 守护的双向任务
+  - 5.4.2 协议标准的合并关系
+  - 5.4.3 旧协议的移交分工
 - 5.5 rpki-client 与路由源验证
+  - 5.5.1 仓库抓取的组件链
+  - 5.5.2 源验证状态的通告
+  - 5.5.3 验证工具的启用时机
 - 5.6 网络协议实现中的最小权限设计
+  - 5.6.1 分离程序的派生执行
+  - 5.6.2 证书链的内存加载
+  - 5.6.3 守护进程的降级协同
 - 5.7 邮件反垃圾战争：RBL、ORBS 与内容过滤（1996–2026）@@〔溯源：92 号文 L608 F-13 取证记录（CL-RM-010184＝DMARC 冲击邮件列表、CL-RM-010621＝DCC 入 pkgsrc 2008-12）；原承载章系 2026-09-19→09-20 重构中静默丢失（88 号文三时点比对），本节为回写落点〕
+  - 5.7.1 仅拦模式的外部地址集
+  - 5.7.2 邮件落盘的双格式
+  - 5.7.3 灰名单时间的参数调校
+  - 5.7.4 邮件列表的月度延迟
 ## 第 6 章 密码学基础设施：OpenSSH、LibreSSL 与 TLS
 - 6.1 OpenSSH 的产生与 SSH 协议实现@@〔分工·迁移：OpenSSH 作品史维度与第六十卷第9章分工；本章载机制本体〕
+  - 6.1.1 许可清理的初始动因
+  - 6.1.2 受控许可的连锁收紧
+  - 6.1.3 协议版本的分步兼容
+  - 6.1.4 首发与 2.6 的衔接
 - 6.2 OpenSSH 3.2（2002）中的 Privilege Separation
+  - 6.2.1 权限分离的署名归属
+  - 6.2.2 分离与再执行的不可关闭
+  - 6.2.3 跨进程状态的编码核对
+  - 6.2.4 监视进程的标题标识
 - 6.3 sshd 权限边界与沙箱化
+  - 6.3.1 预认证沙箱的默认开启
+  - 6.3.2 预认证进程的双重约束
+  - 6.3.3 解析代码的分离边界
+  - 6.3.4 监视进程的独立复查
 - 6.4 Portable OpenSSH 与跨平台维护
+  - 6.4.1 移植分流的组织决定
+  - 6.4.2 首批移植者的来历
+  - 6.4.3 核心与移植的规模对照
+  - 6.4.4 外部平台沙箱的取舍
 - 6.5 OpenBSD 密码库的发展
+  - 6.5.1 随机数接口的早期引入
+  - 6.5.2 口令散列的早期引入
+  - 6.5.3 定时安全比较的补入
+  - 6.5.4 显式清零的接口形式
 - 6.6 Heartbleed 与 LibreSSL 的产生@@〔溯源：CVE-2014-0160 Heartbleed 漏洞 2014-04 暴露 OpenSSL 缺陷 → LibreSSL fork（2014-04-22）；据 OpenSSL 公告与 LibreSSL 官方页〕
+  - 6.6.1 分叉的年份与对象
+  - 6.6.2 分叉事件的纪年条目
+  - 6.6.3 分叉版本的发行归属
 - 6.7 LibreSSL 的代码重构
+  - 6.7.1 树内主开发的既有地位
+  - 6.7.2 便携版的重打包节奏
+  - 6.7.3 发行件的三层划分
 - 6.8 libtls 与高层 TLS 接口
+  - 6.8.1 高层接口的设计目标
+  - 6.8.2 随库工具集的重写
+  - 6.8.3 chroot 内的证书访问
 - 6.9 TLS 协议实现与证书验证
+  - 6.9.1 证书检查工具的入树年份
+  - 6.9.2 重协商入口的关闭
+  - 6.9.3 无界内存增长的修复
 - 6.10 随机数、密钥处理与系统安全
+  - 6.10.1 熵获取的专用系统调用
+  - 6.10.2 重分配的安全保证
+  - 6.10.3 释放路径的清零处理
+  - 6.10.4 密钥缓冲的蒙面分配
 - 6.11 OpenSSH 与 LibreSSL 的维护模式
+  - 6.11.1 早期开发者的集中署名
+  - 6.11.2 财政支撑的归属主体
+  - 6.11.3 跨协议的兼容义务
 - 6.12 密码基础设施与基本系统安全边界
+  - 6.12.1 加密合法性的属地依据
+  - 6.12.2 加密软件的许可门槛
+  - 6.12.3 专利规避的选型纪律
+  - 6.12.4 随附加密的公开立场
 ## 第 7 章 编译器、链接器与安全构建环境
 - 7.1 OpenBSD 基本系统与自举构建@@〔说明：GCC-local 时代与 LLVM 接管〕
+  - 7.1.1 源码取用与版本管理
+  - 7.1.2 本地取树的工具约定
+  - 7.1.3 树内更新的日常动作
 - 7.2 系统工具链：GCC 时代与 Clang／lld 接棒@@〔时间：GCC 初版至 6.1；gcc-local 自 3.4；Clang/lld 自 6.2 接棒（2026-10-21 题例批）〕
+  - 7.2.1 两平台的编译器换装
+  - 7.2.2 默认链接器的换代
+  - 7.2.3 新平台的编译器选型
+  - 7.2.4 嵌入式架构的补入
 - 7.3 pcc 探索与自主工具链实践
+  - 7.3.1 编译器设计的会议纪要
+  - 7.3.2 向新架构的移植讲座
 - 7.4 Clang 进入 OpenBSD
+  - 7.4.1 移植包的大量修补
+  - 7.4.2 与安全目标冲突的优化
+  - 7.4.3 工具链维护的加速
 - 7.5 编译器硬化与安全代码生成
+  - 7.5.1 可复用指令的替换管线
+  - 7.5.2 推测执行缓解的开关
+  - 7.5.3 多态返回件数量的下降
 - 7.6 ld.so 与动态链接器安全
+  - 7.6.1 动态链接器的特权角色
+  - 7.6.2 库定位的提示文件
+  - 7.6.3 多线程惰性绑定的新调用
 - 7.7 PIE、Static PIE 与位置无关代码
+  - 7.7.1 位置无关可执行件的实现者
+  - 7.7.2 静态链接件的位置随机化
+  - 7.7.3 静态版的落地版本
 - 7.8 ld、as 与基础工具链维护
+  - 7.8.1 链接器向旧架构推进
+  - 7.8.2 归档工具的同步换用
+  - 7.8.3 符号处理工具的换用
 - 7.9 make 与系统构建体系
+  - 7.9.1 构建描述的关系表
+  - 7.9.2 并行构建的冲突回避
+  - 7.9.3 简单命令的免壳执行
 - 7.10 基本系统构建边界
+  - 7.10.1 源码目录的写权限组
+  - 7.10.2 目标目录的构建归置
+  - 7.10.3 编译器缺位架构的软件包线
 - 7.11 构建工具链与安全机制协同
+  - 7.11.1 随机数据段的编译语义
+  - 7.11.2 只执行选项的默认启用
+  - 7.11.3 编译器与链接器的协同
 ## 第 8 章 UNIX 用户空间与基本系统工具
 - 8.1 OpenBSD 用户空间组织方式@@〔分工·迁移：本节载 OpenBSD 用户空间组织与安全审计视角；mandoc、nc、tmux 之作品史维度见第六十卷（D11，2026-10-08 去重）〕
+  - 8.1.1 支持窗口的双版本口径
+  - 8.1.2 基础程序的成套改造
+  - 8.1.3 手册以源码形态安装
 - 8.2 ksh与命令解释环境@@〔说明：公有领域 Korn shell〕
+  - 8.2.1 命令解释器的双重用途
+  - 8.2.2 语言集合的向上兼容
+  - 8.2.3 内存分配的调试可见性
 - 8.3 ftp 与基础网络工具
+  - 8.3.1 文件传输的标准接口
+  - 8.3.2 双向传输的日常用途
+  - 8.3.3 多协议套接字的通用前端
 - 8.4 基础工具的安全审计与权限收缩
+  - 8.4.1 基础二进制的改造成效
+  - 8.4.2 用户态审计的标注产出
+  - 8.4.3 替代身份的执行渠道
+  - 8.4.4 登录类的资源约束
 - 8.5 rc.d 脚本体例与启动顺序
+  - 8.5.1 启动框架的成文规章
+  - 8.5.2 服务开关的集中控制
+  - 8.5.3 服务参数的集中改写
 - 8.6 signify 与软件验证@@〔分工·迁移：signify 的工具与验证面（本节）；发布物信任链的工程过程面见本卷第 14 章 14.6（C-56，2026-10-11）〕
+  - 8.6.1 签名与校验的基本职能
+  - 8.6.2 完整性的最小承诺
+  - 8.6.3 发行物与包的签名覆盖
 - 8.7 基本系统更新机制
+  - 8.7.1 补丁工具的四项动作
+  - 8.7.2 安装前的回滚包机制
+  - 8.7.3 二进制更新工具的入树
 - 8.8 基本系统与 ports 的技术边界
+  - 8.8.1 Ports 树的基础设施职能
+  - 8.8.2 每个 Port 的修补义务
+  - 8.8.3 系统集与软件包的分野
 - 8.9 OpenBSD 用户空间统一性
+  - 8.9.1 基础系统的外移决定
+  - 8.9.2 同类工具入口的统一
+  - 8.9.3 基础工具的成批重写
 ## 第 9 章 网络服务与系统守护进程安全
 - 9.1 OpenSMTPD 架构
+  - 9.1.1 邮件守护的主系统定位
+  - 9.1.2 配置文件的单一入口
+  - 9.1.3 来信信封的生成与入队
+  - 9.1.4 邮件套件的入树时点
 - 9.2 OpenSMTPD 权限分离与服务安全
+  - 9.2.1 生产可用性的官方结论
+  - 9.2.2 受限声明的整批加注
+  - 9.2.3 派生执行模式的重构
+  - 9.2.4 加密进程的分离举例
 - 9.3 relayd 与代理、负载均衡
+  - 9.3.1 中转与动态改向职能
+  - 9.3.2 三种用途的固定定位
+  - 9.3.3 可用性探测的分组
+  - 9.3.4 地址转换中继的实现
 - 9.4 httpd 与基础 Web 服务
+  - 9.4.1 服务器的最小功能集
+  - 9.4.2 信号驱动的重读与重开
+  - 9.4.3 单一地址的多站点
+  - 9.4.4 传输版本的向下收敛
 - 9.5 slowcgi 与 FastCGI 服务架构
+  - 9.5.1 协议转换的中间层
+  - 9.5.2 常驻进程替代逐请求派生
+  - 9.5.3 并发连接的处理能力
 - 9.6 nsd 与权威 DNS 服务
+  - 9.6.1 权威服务的完整覆盖
+  - 9.6.2 启动后的常驻与网络端口
+  - 9.6.3 旧域名实现的分批退役
 - 9.7 unbound 与递归 DNS 服务
+  - 9.7.1 缓存解析器的角色划分
+  - 9.7.2 解析链的逐级推进
+  - 9.7.3 客户端侧的验证路线
 - 9.8 acme-client 与证书自动化
+  - 9.8.1 证书自动化的客户端
+  - 9.8.2 证书工具的入树与来源
 - 9.9 服务程序的权限收缩实践：五类守护进程案例
+  - 9.9.1 邮件队列逻辑的重订
+  - 9.9.2 默认前向保密的启用
+  - 9.9.3 回归测试套件的移植
 - 9.10 守护进程生命周期管理与权限交接
+  - 9.10.1 守护化的终端剥离
+  - 9.10.2 特权父进程的重排
+  - 9.10.3 启动框架覆盖基础守护
 - 9.11 基础网络服务最小权限化
+  - 9.11.1 地址配置的接替方案
+  - 9.11.2 解析设置的集中写入
+  - 9.11.3 启动期的降级计数
 - 9.12 OpenBSD 服务程序统一安全模型
+  - 9.12.1 分离模式的共同底座
+  - 9.12.2 视图规则的追加能力
+  - 9.12.3 服务层的兼容与约束并行
 ## 第 10 章 Ports、软件生态与安全维护
 - 10.1 OpenBSD Ports 体系形成
+  - 10.1.1 安装工具的作者与年份
+  - 10.1.2 元数据排序的专用结构
+  - 10.1.3 构建工具的分工蔓延
 - 10.2 Ports 与基本系统的边界：重叠、依赖与责任划分
+  - 10.2.1 名称省略的识别惯例
+  - 10.2.2 搜索路径的先后次序
+  - 10.2.3 口味消歧的双横线
 - 10.3 pkg_＊ 工具与二进制软件包
+  - 10.3.1 安装工具的职责界限
+  - 10.3.2 依赖解析的步骤次序
+  - 10.3.3 灾难之后的修复手段
 - 10.4 软件包签名与验证机制
+  - 10.4.1 默认拒绝未签名包
+  - 10.4.2 打包清单的校验项
+  - 10.4.3 签名校验的跳过关键字
 - 10.5 依赖关系与软件更新
+  - 10.5.1 全量更新的风险提示
+  - 10.5.2 反向依赖的对称性
+  - 10.5.3 同名包的分支选择机制
 - 10.6 第三方软件安全维护@@〔说明：第三方软件安全维护的投入〕〔说明：本节载第三方软件安全维护三要素（维护者人力、更新滞后、补丁回溯）之一；分工见 10.7（2026-10-21 依目录执行建议书，批准落地）〕
+  - 10.6.1 包内脚本的固有风险
+  - 10.6.2 维护人力的外部依托
+  - 10.6.3 维护活跃度的取舍
 - 10.7 ports 补丁回溯与安全更新流程
+  - 10.7.1 构建时的囚禁工具
+  - 10.7.2 直接依赖的记录一致
+  - 10.7.3 文件系统的前提假设
 - 10.8 软件生态与基本系统关系
+  - 10.8.1 正常使用以软件包为准
+  - 10.8.2 缺省路径的回落规则
+  - 10.8.3 项目自产工具的软件包化
 ## 第 11 章 架构移植史：从 i386 到多架构
 - 11.1 从 i386 到 amd64
+  - 11.1.1 官方支持的三项条件
+  - 11.1.2 受支持平台的清单编制
+  - 11.1.3 amd64 的清单席位
 - 11.2 m68k、vax、SPARC 等历史架构的退役与保留（1996–2014）
+  - 11.2.1 旧架构在清单中的位置
+  - 11.2.2 自举能力的保留条件
+  - 11.2.3 晚期架构的编译器补入
 - 11.3 arm64 平台支持
+  - 11.3.1 64 位 ARM 的移植对象
+  - 11.3.2 目标机型群的覆盖广度
+  - 11.3.3 固件随安装介质分发
 - 11.4 armv7 与嵌入式平台
+  - 11.4.1 设备清单的代表机型
+  - 11.4.2 启动载荷的版本更新
+  - 11.4.3 SoC 平台的控制器支持
 - 11.5 riscv64 与新架构支持
+  - 11.5.1 开放指令集的移植线
+  - 11.5.2 目标板卡的单一性
+  - 11.5.3 支持硬件的短清单
 ## 第 12 章 硬件支持边界
 - 12.1 无线网络硬件与驱动支持
+  - 12.1.1 无线驱动的设备覆盖
+  - 12.1.2 取得固件方可使用
+  - 12.1.3 无线控制器的串行通道
 - 12.2 固件 blob 依赖与不可维护部件
+  - 12.2.1 不可自由分发者的处置
+  - 12.2.2 制造商的发布限制
+  - 12.2.3 下载件的签名校验
 - 12.3 硬件文档开放度与驱动可维护性
+  - 12.3.1 自由再分发的长期争取
+  - 12.3.2 固件自由的公开表彰
+  - 12.3.3 启动固件的平台差异
 ## 第 13 章 OpenBSD 安全工程路线的整合与演进
 - 13.1 从代码审计到整体安全架构
+  - 13.1.1 审计队伍的规模与构成
+  - 13.1.2 主动性作为方法特征
+  - 13.1.3 扫描器的外部检验
 - 13.2 内核机制与用户空间安全设计的结合
+  - 13.2.1 系统调用来源的收窄
+  - 13.2.2 内核与链接器的入口固定
 - 13.3 内存防护、编译器与链接器协同
+  - 13.3.1 返回值的栈上清除
+  - 13.3.2 只执行链接选项的默认
+  - 13.3.3 系统调用桩的返回保护
 - 13.4 Privilege Separation、pledge 与 unveil 的技术连续性
+  - 13.4.1 文件视图接口的规模化使用
+  - 13.4.2 承诺撤销的可见痕迹
+  - 13.4.3 越界指针的报错路径
 - 13.5 pf 与网络服务安全体系整合
+  - 13.5.1 标记动作的重复求值
+  - 13.5.2 并发改写的忙等返回
+  - 13.5.3 规则改动的原子提交
 - 13.6 OpenSSH、LibreSSL 与基本系统共同演进
+  - 13.6.1 随系统分发的加密实现
+  - 13.6.2 加密栈的早期内建
+  - 13.6.3 专利层的剥离结果
 - 13.7 基本系统统一开发模式
+  - 13.7.1 单一源码树的公开承诺
+  - 13.7.2 版本库的多作者协同
+  - 13.7.3 网页端可见的变更
 - 13.8 OpenBSD 安全工程路线的长期稳定部分
+  - 13.8.1 完全披露的判断依据
+  - 13.8.2 硬件支持面的长期目标
+  - 13.8.3 开发者导向的组织方式
 - 13.9 OpenBSD 安全工程路线的持续变化部分
+  - 13.9.1 近年新增的接口清单
+  - 13.9.2 机制退役的更优判据
 - 13.10 技术路线的能力范围与工程边界
+  - 13.10.1 最小影响的有条件担保
+  - 13.10.2 源码自建的完整性代价
+  - 13.10.3 变更披露的时间限制
 - 13.11 OpenBSD 安全技术演进（1995–2026）@@〔体例：1995-10-18 建 CVS；1.2 于 1996-07-01 发布；2.0 于 1996-10-01 发布；“非正式发布”为社区与维基说法，非官方定性〕
+  - 13.11.1 创新清单的时间排序
+  - 13.11.2 论文与机制的对应
+  - 13.11.3 首个加密栈的提供者
 - 13.12 版本发行时间线：OpenBSD 1.2–7.9（1996–2026）@@〔体例：完整版本发行年表以 bsd-family-tree.txt（[OBD]＝OpenBSD 官方发布记录）为一手参照，point release 不逐一入正文（115 号文 ★2 定性）；主体叙事见本卷各章与第四十四卷（OpenBSD 编年）。本节正文阶段二 0 信任新撰〕
+  - 13.12.1 发行物的常规供给
+  - 13.12.2 当前树的安全优势假设
+  - 13.12.3 勘误页的版本留痕
 
 ## 第 14 章 软件工程：提交纪律、构建验证与发布流程
 - 14.1 CVS 流程与提交纪律：commit log 体例与审查@@〔分工·迁移：mat 1181/1182；卷四十一 7.7 分工；2026-10-05 简写补正：两轮顺延（112/113 拆卷、114 插卷）漏“卷X”简写形制，按语义回核订正〕〔分工·迁移：本节载 OpenBSD 分支工程过程本体；四分支横向比较见第五十二卷第5章（D10 划界，2026-10-07）〕〔回核标记（C-99，2026-10-11）：注内“卷四十一 7.7”疑旧号，待正文核对〕
+  - 14.1.1 版本库的日志记录
+  - 14.1.2 目录集合的作业单位
+  - 14.1.3 本地镜像的自建可能
 - 14.2 KNF 的严格执行：OpenBSD style(9) 与风格—正确性之辨@@〔溯源：OpenBSD style.9 原文（$OpenBSD: style.9,v 1.1 1999/08/19；版权行 Copyright (c) 1995 FreeBSD Inc.；正文自称 Style guide for the OpenBSD KNF）；KNF 成文化与 style(9) 沿革见第三十一卷第4章 4.3（C-99 订正：原“4.4”系旧节号，2026-10-11）；磁盘层 第六卷／第 73、74、75 章（de Raadt 与 KNF 记述）；“I don’t care about style, I care about correctness”系转述来源，未获一手确证；美学主张面见第四十七卷第7章 6.2〕
+  - 14.2.1 风格文件的适用对象
+  - 14.2.2 新代码的遵循义务
+  - 14.2.3 半量即新的新旧划定
 - 14.3 六个月发布节奏：snapshot、release 与 errata 流程@@〔溯源：卷三十八各版本章发布史；ref 10005（Adams & McIntosh 2016 发布阶段对照）；2026-10-05 简写补正：两轮顺延（112/113 拆卷、114 插卷）漏“卷X”简写形制，按语义回核订正（OpenBSD 发布史唯一承载卷）〕
+  - 14.3.1 发布节奏的官方约定
+  - 14.3.2 快照的常态供给节律
+  - 14.3.3 严重问题不得悬置
 - 14.4 构建集群：ports 与 release 的批量构建@@〔分工·迁移：第四十五卷第10章分工〕
+  - 14.4.1 构建工具的作者与改写
+  - 14.4.2 包规模的年代清点
+  - 14.4.3 构建辅助件的入树留痕
 - 14.5 回归测试：regress 树与测试进入提交流程@@〔分工·迁移：第六十一卷第6章 6.12 分工（2026-10-15 顺延：原 6.11；2026-10-07 订正：原第 7 章 7.3 系旧号，与本节测试语境不合，按语义最契合者订正）；卷四十一 12.4（atf 测试框架与回归测试；C-39 回核订正，2026-10-11：原“卷三十 1.4”指向失据，按测试语境归 NetBSD 技术专题卷；2026-10-22 订正：该卷经 149 批重映射及其后顺延现编卷三十八，卷号按语义再定位）〕
+  - 14.5.1 构建目标的清单含回归
+  - 14.5.2 依赖数据库的测试框架
+  - 14.5.3 回归引入的修复记录
 - 14.6 signify 与发布物验证：工程过程里的信任链@@〔分工·迁移：第四十五卷第8章 8.6 分工（signify）〕
+  - 14.6.1 校验和清单的签名验证
+  - 14.6.2 签名文件的随件下载
+  - 14.6.3 补丁集的缺失跳过
 - 14.7 hackathon：集中协作的组织方式与产出@@〔分工·迁移：卷四十三 3.2 分工；2026-10-05 简写补正：两轮顺延（112/113 拆卷、114 插卷）漏“卷X”简写形制，按语义回核订正（原号旧体系不可考，按现行语义重定位至 Hackathon 仪式节）〕
+  - 14.7.1 首届的时间与场合
+  - 14.7.2 活动名称的造词来源
+  - 14.7.3 活动日程的自由形态
 - 14.8 文档工程：man 页极简体例与随代码更新@@〔溯源：mat 1183（OpenBSD committer 文档）〕
+  - 14.8.1 手册完备度的署名
+  - 14.8.2 手册排版工具的输出
+  - 14.8.3 输入编码的自动识别
 
 ## 第 15 章 OpenBSD 的语言与安全工具链
 - 15.1 安全编译器与语言工具链加固
+  - 15.1.1 边界检查的编译标注
+  - 15.1.2 上游补丁的回收态度
+  - 15.1.3 安全转换函数的标准位
 - 15.2 Ports 与用户态脚本语言
+  - 15.2.1 解释器多版本的包内并存
+  - 15.2.2 宏处理器的长期扩展
+  - 15.2.3 计算工具的补入经过
 - 15.3 语言政策的保守主义
+  - 15.3.1 机器无关的源码取向
+  - 15.3.2 外来代码的许可门槛
+  - 15.3.3 标准跟进的范围分寸
 
 # 第四十六卷  OpenBSD 人物志：安全路线的维护者（1995–2026）
 > 本卷以 OpenBSD 项目的成员与记录为经纬：领导的正面与反面记录、安全审计参与者、项目与工具作者、基金会与 hackathon 组织者、批评记录与史料状况；涉争议处记录纪律从紧。
@@ -8596,134 +9868,537 @@
 ! OpenBSD 文化哲学线；项目编年见卷 41，技术专题见卷 42，安全工程横向比较见卷 58。；〔主体声明〕本卷叙述单位为项目（共同体），变迁单位＝共同体与协作制度；制品的版本编年见本分支编年卷
 ## 第 1 章 分化轴总论：主动安全与许可证纯化——从 CSRG／USENIX 到 OpenBSD 的分化
 - 1.1 OpenBSD 分化轴的形成：从 BSD 工程传统到主动安全原则@@〔分工·迁移：本卷分化轴（文化面）；三方分化轴横向对照见第五十三卷第1章 1.7（第五批合并，2026-09-27）；与第四十三卷、第五十一卷同构章互见、各载自身（★50 甲案互设分工注，2026-10-09）〕
+  - 1.1.1 分化轴两端的成文证据
+  - 1.1.2 分化前提的许可与代码基础
+  - 1.1.3 分化轴与同期分支的错位
 - 1.2 分化的物质基础：代码审计、默认安全配置与架构重构@@〔分工·迁移：与第四十五卷第 1、2、3 章分工：彼处载加固实现，本节取其物质条件〕
+  - 1.2.1 审计对象的文件级切分
+  - 1.2.2 默认配置的最小服务集
+  - 1.2.3 内存防护的世代叠加
 - 1.3 “安全优先”的观念形成：从工程选择到项目身份
+  - 1.3.1 安全优先表述的成文位置
+  - 1.3.2 首页自述中的身份表述
+  - 1.3.3 身份表述的自我限定
 - 1.4 边界：性能与兼容性的代价
+  - 1.4.1 强制的代价：例外清单与开关
+  - 1.4.2 安全改造的用户态清理负担
+  - 1.4.3 代价的承担者与边界说明
 - 1.5 OpenBSD 项目史要：本项目本体事件与制品事件的层次@@〔分工·迁移：本节为本分支文化卷的项目史显性落点（主体＝项目）；制品的版本编年见第四十四卷；与《BSD 分支的治理制度》《BSD 治理制度比较》两卷分工〕
+  - 1.5.1 项目本体事件的选取标准
+  - 1.5.2 制品事件的层级归属
+  - 1.5.3 项目史与编年卷的交界
 ## 第 2 章 工程哲学的物质基础：审计文化与重构传统
 - 2.1 设计信条的文本化：邮件列表、代码提交与技术讨论
+  - 2.1.1 信条的三类文本载体
+  - 2.1.2 技术裁量的讨论语汇
+  - 2.1.3 信条与代码的对照方法
 - 2.2 代码证据：审计、重写与删除旧代码的工程文化
+  - 2.2.1 审计记录的年度连续性
+  - 2.2.2 重写与替换的触发条件
+  - 2.2.3 删除旧组件的判断依据
 - 2.3 “正确性优先”的技术价值观@@〔分工·迁移：与第四十卷、第四十四卷、第五十三卷第2章分工〕
+  - 2.3.1 正确性在目标序列中的位置
+  - 2.3.2 正确性判断的工程尺度
+  - 2.3.3 价值排序的争议余地
 - 2.4 工具链政治：GCC、clang、pcc 与自主控制@@〔分工·迁移：与第四十五卷第7章分工：彼处载编年事实，本节取 fork 的政治面（C-39 回核订正，2026-10-11：卷 40 编译器章经 A-10 拆章顺移为第 7 章）；第 26 批：原引“第 4、5 章”因卷 29 全卷替换重编章号而收窄至第 5 章〕
+  - 2.4.1 GCC 遗留组件的许可处境
+  - 2.4.2 基础系统编译器的切换
+  - 2.4.3 工具链自主的政策边界
 - 2.5 OpenSSL 至 LibreSSL：fork 作为工程哲学事件
+  - 2.5.1 分叉动因的公开表述
+  - 2.5.2 分叉的工程团队构成
+  - 2.5.3 分叉作为工程哲学事件
 - 2.6 性能观：安全机制带来的成本与取舍@@〔分工·迁移：与第四十五卷第14章分工〕
+  - 2.6.1 防护机制的运行成本记录
+  - 2.6.2 成本与收益的比较口径
+  - 2.6.3 性能让位的判断标准
 - 2.7 de Raadt 的技术决断风格：争议个案@@〔分工·迁移：与第六十四卷第6章 6.7 分工〕
+  - 2.7.1 决断的个人署名密度
+  - 2.7.2 争议个案的裁量依据
+  - 2.7.3 决断修订的公开留痕
 ## 第 3 章 共同体与治理文化：核心维护者、开发圈与开放边界
 - 3.1 Theo de Raadt 与 OpenBSD 的创立（1995 年 10 月）@@〔分工·迁移：与第六十四卷第5章分工：彼处载治理结构，本节载文化面〕〔说明：自 NetBSD 分叉〕
+  - 3.1.1 分叉时点的两种记载
+  - 3.1.2 自 NetBSD 分叉的组织条件
+  - 3.1.3 创立者的双重角色
 - 3.2 源码树的两级访问制：开发者读写与公众只读@@〔分工·迁移：与第六十四卷第5章 5.3 分工；开发者持中央 CVS 仓库读写权（提交权按贡献授予、由协调人授予）〕
+  - 3.2.1 读写与只读的两级分层
+  - 3.2.2 中央仓库的公开镜像通道
+  - 3.2.3 访问分层的成文范围
 - 3.3 OpenBSD 社区的进入门槛体现为成文的参与纪律@@〔分工·迁移：与第六十四卷第5章 5.6 分工〕
+  - 3.3.1 参与纪律的成文形态
+  - 3.3.2 提交前的自查清单
+  - 3.3.3 纪律的执行与例外
 - 3.4 OpenBSD 邮件列表按分工运作@@〔分工·迁移：与第六十四卷第5章 5.7 分工〕
+  - 3.4.1 列表按主题分流的格局
+  - 3.4.2 列表与公告的衔接
+  - 3.4.3 列表之外的正式渠道
 - 3.5 名称形成：OpenBSD 的“开放”语义@@〔分工·迁移：与第十九卷第3章分工〕〔说明：源代码可得；兼指硬件平台覆盖面〕
+  - 3.5.1 开放语的源代码含义
+  - 3.5.2 开放语的多重指向
+  - 3.5.3 名称与许可承诺的距离
 - 3.6 hackathon：“只写代码”的非会议型开发聚会@@〔溯源：无演讲、无固定议程，同室协作以求新改动尽快进入源码树；含原第 3 章 3.2 面向仪式的记述（2026-10-07 S11 同章归并）〕〔互见：hackathon 组织者与参与者见第四十六卷第4章〕
+  - 3.6.1 首届聚会的时间与地点
+  - 3.6.2 无议程的协作形态
+  - 3.6.3 聚会物件的纪念功能
 - 3.7 项目语汇与内部文化：“hack”“diff”“commit”等词汇体系@@〔分工·迁移：与第十一卷第3章 3.8 分工〕
+  - 3.7.1 核心语汇的工序定义
+  - 3.7.2 版本语汇的简写传统
+  - 3.7.3 语汇排他与外部读者
 - 3.8 OpenBSD 的外部贡献路径不走平台化机制@@〔分工·迁移：与第六十五卷第 5、6 章分工；贡献路径的门槛〕
+  - 3.8.1 补丁提交的唯一入口
+  - 3.8.2 贡献者署名的归属记载
+  - 3.8.3 贡献路径的开发者自组织
 ## 第 4 章 价值、许可证与自由观：ISC 许可、安全共享与产业关系
 - 4.1 ISC 许可证：极简法律文本背后的工程观@@〔分工·迁移：与第五十九卷第1章分工〕
+  - 4.1.1 两条款文本的删减理由
+  - 4.1.2 许可修改的三种后果
+  - 4.1.3 广告条款废止的时间锚
 - 4.2 OpenBSD 的共享观成文于项目目标页@@〔分工·迁移：与第五十九卷第1章 1.3 分工〕
+  - 4.2.1 共享承诺的措辞强度
+  - 4.2.2 目标页的优先序排列
+  - 4.2.3 承诺与实现的落差
 - 4.3 OpenBSD 成果的对外扩散：路径与证据@@〔分工·迁移：与第四十五卷第3章分工；第 26 批：原引“第 3 章 3.5”因卷 34 全卷替换删去该节而收窄至章〕
+  - 4.3.1 成果扩散的三条路径
+  - 4.3.2 上游项目的来源标注
+  - 4.3.3 扩散计量的证据缺口
 - 4.4 LibreSSL：许可证、代码控制与安全治理@@〔分工·迁移：与第六十三卷第3章 3.3 分工〕
+  - 4.4.1 分叉后许可条款的延续
+  - 4.4.2 移植面的主动收窄
+  - 4.4.3 安全治理的内部化
 - 4.5 OpenBSD 商业采用的两级形态：组件级与整机级第三方集成@@〔分工·迁移：与第五十九卷第7章分工〕
+  - 4.5.1 商业支持的外部承接
+  - 4.5.2 组件级嵌入的采用方式
+  - 4.5.3 采用与资助的错位
 - 4.6 安全工具的公共品属性：判据与边界@@〔分工·迁移：与第五十九卷第5章分工〕
+  - 4.6.1 公共品判据的成文来源
+  - 4.6.2 安全工具的公共品边界
+  - 4.6.3 公共品的非对称成本
 - 4.7 公共品的来源：无偿维护与商业采用
+  - 4.7.1 无偿维护的时间投入
+  - 4.7.2 捐赠与基金的双轨
+  - 4.7.3 公共品再生产的脆弱处
 ## 第 5 章 争议、批评与自我批评：安全声誉的形成与边界
 - 5.1 “默认安装仅 N 个远程漏洞”口号的文本流变（1997–2026）@@〔分工·迁移：原 9.1–9.2 载传播链与功能，原 9.4–9.5 载逐条考据（考据依据 OpenBSD errata 与 de Raadt 回应），随章保真〕
+  - 5.1.1 口号的原始文本与位置
+  - 5.1.2 口号与公告序列的对照
+  - 5.1.3 口号流变的截取点
 - 5.2 安全声誉的社会建构：口号、事故与外部批评（1995–2026）
+  - 5.2.1 声誉证据的两类来源
+  - 5.2.2 口号与事故的并置
+  - 5.2.3 声誉建构的讲述场合
 - 5.3 默认安装远程漏洞编年：IPv6 与 OpenSMTPD 两次事故@@〔新增：依目录执行建议书〕
+  - 5.3.1 两次远程漏洞的公告原文
+  - 5.3.2 IPv6 事故的技术定性
+  - 5.3.3 编年与口号的时距
 - 5.4 对 OpenBSD 外部批评的集中议题@@〔分工·迁移：原“与第三十六卷第9章分工”注因两章同迁入本卷而消解，神话建构故事学归本卷第 5 章 5.1–6.2〕
+  - 5.4.1 外部批评的集中议题
+  - 5.4.2 批评受理的格式门槛
+  - 5.4.3 自我批评的收敛落点
 - 5.5 安全投入与开发资源的张力：记录与限度@@〔分工·迁移：第 26 批：原注所载“收纳第三十二卷各版本章的史观审视节，不搬移”因卷 34 按 ykla 清单删去该体例节而消解〕〔分工·迁移：OpenBSD 项目资源与治理决策见第六十四卷第5章 5.10；本节载投入与资源张力的记录与限度（2026-10-21 分诊批）〕
+  - 5.5.1 安全投入的记录口径
+  - 5.5.2 资源张力的公开表述
+  - 5.5.3 张力对开发节奏的影响
 - 5.6 OpenBSD 参与安全认证的公开记录：检索范围与结果@@〔分工·迁移：OpenBSD 治理制度与认证参与的组织背景见第六十四卷第5章 5.11；本节载认证公开记录的检索范围与结果（2026-10-21 分诊批）〕
+  - 5.6.1 审计团队规模的区间
+  - 5.6.2 公告之外的变更留痕
+  - 5.6.3 检索结论的表述限度
 - 5.7 OpenBSD 技术遗产：项目产出与安全形象的再审视@@〔分工·迁移：与第六十四卷第5章分工〕
+  - 5.7.1 技术遗产的清单形态
+  - 5.7.2 遗产外溢的采用实例
+  - 5.7.3 形象与产出清单的对读
 ## 第 6 章 OpenBSD 传言、都市传说与习俗
 - 6.1 OpenBSD 传言考据@@〔溯源：旧大纲-20261023/第10卷-openbsd的历史/第232章-openbsd的相关传言与都市传说考据/232.1-OpenBSD安全远程漏洞宣传语考据/（旧树文件 213.1-OpenBSD安全远程漏洞宣传语考据.md）〕
+  - 6.1.1 传言与宣传语的同源关系
+  - 6.1.2 外部认知的取样偏差
+  - 6.1.3 传说考据的证据层级
 - 6.2 OpenBSD 习俗考据@@〔溯源：旧大纲-20261023/第10卷-openbsd的历史/第232章-openbsd的相关传言与都市传说考据/232.2-FBI后门传言与De-Raadt治理方式考据/（旧树文件 213.2-FBI后门传言与De-Raadt治理方式考据.md）〕〔说明：213.2 兼载 OpenBSD 习俗内容；底本与节题错配待正文阶段改指（2026-10-21 分诊批）〕
+  - 6.2.1 聚会习俗的成文记载
+  - 6.2.2 发行仪式的年度节律
+  - 6.2.3 习俗的排他性与传承
 ## 第 7 章 美学：OpenBSD 的极简与仪式
 - 7.1 美学的证据与载体：commit log、邮件语体、man 页、发行歌曲与 CD artwork@@〔溯源：mat 1181/1182（OpenBSD CVS author 列表与 committer 权限邮件）〕
+  - 7.1.1 美学证据的四类载体
+  - 7.1.2 手册页的语体约束
+  - 7.1.3 发行物的物质清单
 - 7.2 代码美学：删减与形式的偏好@@〔溯源：OpenBSD 审计史料直指；与第四十五卷第14章 14.2 分工：本节载审美主张面，彼节载 KNF 严格执行的技术与流程面〕
+  - 7.2.1 代码风格的成文规范
+  - 7.2.2 删减偏好的代码实例
+  - 7.2.3 形式的边界与可读性
 - 7.3 语体：de Raadt 邮件与 man 页的极简@@〔溯源：mat 1181；man 页极简自述〕
+  - 7.3.1 邮件语体的短句结构
+  - 7.3.2 手册页的极简句法
+  - 7.3.3 语体与权威的关系
 - 7.4 视觉与符号：Puffy、CD artwork 与版本身份@@〔分工·迁移：Puffy/CD artwork 官方史料直指〕
+  - 7.4.1 吉祥物的绘制者与授权
+  - 7.4.2 美术与项目史的对位
+  - 7.4.3 符号的版本身份功能
 - 7.5 仪式：发行歌曲与仪式性场合@@〔分工·迁移：ref 1247（OLS 2006）〕
+  - 7.5.1 发行歌曲的题旨来源
+  - 7.5.2 制作周期与发行节点
+  - 7.5.3 仪式性场合的在场者
 - 7.6 极简与默认安全：美学上的取舍@@〔说明：默认安全取舍自述〕
+  - 7.6.1 默认安全的成文承诺
+  - 7.6.2 极简配置的美学理由
+  - 7.6.3 安全取舍的宣传化表达
 - 7.7 美学批评：形式的边界与兼容性代价
+  - 7.7.1 兼容性代价的实例清单
+  - 7.7.2 旧有机制弃置的判定
+  - 7.7.3 美学批评的外部视角
 - 7.8 参照：美学史与软件美学研究@@〔溯源：ref 10001（Kozbelt 等 2011 代码美学定量研究）；ref 10002（Graham 2002）；ref 10003（Gelernter 1998）；与第二十九卷第9章 7.8、第三十九卷第12章 11.8、第四十三卷第8章 7.7、第五十一卷第7章 6.7、第五十三卷第9章 9.8 分工：各卷引用同一美学框架但例证限于本卷时段与项目〕
+  - 7.8.1 形式规范的参照系
+  - 7.8.2 语体参照的外部资源
+  - 7.8.3 美学研究的史料门槛
 
 # 第四十八卷  分叉之后的多核实验：DragonFly BSD 操作系统的历史（2003–2026）
 > 本卷为 DragonFly BSD 编年卷：以分叉缘起、LWKT 消息传递内核与 HAMMER 存储实验为纲（1.x 至 6.x），其“分叉、架构实验与持续演进”的定位由各章承载。
 ! 〔主体声明〕本卷叙述单位为操作系统（制品），变迁单位＝版本序列；项目、法人与职位事件另见本分支文化卷与《BSD 分支的治理制度》《BSD 治理制度比较》两卷
 ## 第 1 章 FreeBSD 路线分歧与 DragonFly BSD 的创建（2000–2004）
 - 1.1 分叉前的技术背景：Dillon 在 FreeBSD 的工作@@〔分工·迁移：本章载版本发布与人物编年细节；分叉确立机制面的收窄叙述见第二十七卷第4章（A-35 甲案互注，2026-10-11）〕〔说明：摘要，人物主述见第五十卷第1章〕〔说明：1.1–1.3 为前史〕
+  - 1.1.1 FreeBSD 4.x 内核的分工格局
+  - 1.1.2 子系统改造经验的积累
+  - 1.1.3 单系统映像构想的萌芽
+  - 1.1.4 分叉前技术判断的由来
 - 1.2 FreeBSD 4.x 时代的 SMP 改进与内核发展背景
+  - 1.2.1 大锁内核的并发状况
+  - 1.2.2 网络栈线程化的先行
+  - 1.2.3 namecache 重写的技术动因
+  - 1.2.4 内核改造的先后次序
 - 1.3 FreeBSD 5.x SMPng 路线与技术分歧
+  - 1.3.1 分叉目标的自我修正
+  - 1.3.2 5.x 路线的时间基准
+  - 1.3.3 并发路线的两种取向
+  - 1.3.4 技术分歧的公开记载
 - 1.4 DragonFly BSD 的开发起始与公开宣布（2003 年 6 月—7 月）@@〔时间：6 月自 FreeBSD 4.8 分叉（官方口径）与 7 月 16 日公开宣布（邮件实物）两说并陈；TortoiseBSD 插话已划去改作 TurtleBSD，不可核（2026-10-21 补遗批）〕
+  - 1.4.1 分叉时点的两说并存
+  - 1.4.2 周年公告的文本构成
+  - 1.4.3 周年自述的项目定位
+  - 1.4.4 创建初期的工程条目
 - 1.5 DragonFly 创建期版本演进（2003–2004）
+  - 1.5.1 1.2 系列的后续补丁
+  - 1.5.2 首个发行版的功能限度
+  - 1.5.3 1.0 与 1.0A 的次序
+  - 1.5.4 镜像补丁的交付手段
 - 1.6 创建期贡献者构成与 committer 变化（2003–2004）@@〔说明：分叉期〕
+  - 1.6.1 创建期贡献者名单的构成
+  - 1.6.2 核心贡献者的长期留存
+  - 1.6.3 提交者名录的署名惯例
+  - 1.6.4 分叉期人事的延续性
 - 1.7 分叉必要性的技术争论与外部批评、回应（2003–2004）@@〔分工·迁移：自本卷原第 2 章 2.1 归并本节（C17，2026-10-09）〕
+  - 1.7.1 分叉成果的技术论点
+  - 1.7.2 首版稳定性的外部压力
+  - 1.7.3 待完成事项的公开列表
+  - 1.7.4 自评与外部评价的落差
 - 1.8 技术继承与自主重构：FreeBSD 基础代码、BSD 用户空间、自主内核改造
+  - 1.8.1 FreeBSD 基础代码的沿用
+  - 1.8.2 BSD 用户空间的取材
+  - 1.8.3 内核自主改造的覆盖面
+  - 1.8.4 工具链来源的更替
 - 1.9 创建期安全维护机制与漏洞通报渠道（2003–2004）
+  - 1.9.1 安全修复的分支策略
+  - 1.9.2 通报渠道的邮件载体
+  - 1.9.3 安全补丁的随版发布
+  - 1.9.4 漏洞信息的公开节奏
 - 1.10 创建期的代码继承与工具来源（2003–2004）
+  - 1.10.1 编译器默认值的更替
+  - 1.10.2 外部工具的引入渠道
+  - 1.10.3 基础工具的版本更新
+  - 1.10.4 源码树的版本管理
 - 1.11 创建期与 FreeBSD 的关系（2003–2004）
+  - 1.11.1 上游依赖的具体面向
+  - 1.11.2 同步式引入的子系统
+  - 1.11.3 差异化的内核路线
+  - 1.11.4 分叉关系的长期读法
 - 1.12 与同时期操作系统的比较：FreeBSD 5.x 与 Linux 2.4–2.6@@〔比较维度：2003；分叉动因与内核并发模型〕〔说明：原 1.8 随 C17 合章调至述评前一位（OS 比较节位次体例）〕
+  - 1.12.1 比较窗口的时间基准
+  - 1.12.2 并发模型的两条分野
+  - 1.12.3 SACK 与千兆网性能调优
+  - 1.12.4 Linux 2.6 的参照位置
 ## 第 2 章 DragonFly 1.x：LWKT 与消息传递内核实验（2004–2007）
 - 2.1 DragonFly 1.x 发布历史与版本概况（2004–2007）@@〔分工·迁移：本节为 1.x 世代发布编年；首版发布的时刻与产物见 2.2（2026-10-21 批复）〕
+  - 2.1.1 1.x 世代的发行节律
+  - 2.1.2 发行分支的维护惯例
+  - 2.1.3 补丁版的版本标注
+  - 2.1.4 版本编号的序列读法
 - 2.2 DragonFly 1.0 发布（2004）@@〔分工·迁移：世代编年见 2.1（2026-10-21 批复）〕
+  - 2.2.1 首个发行版的时点
+  - 2.2.2 首版的用户级待办
+  - 2.2.3 首版镜像的增量补丁
+  - 2.2.4 1.0A 修正版的后继发行
 - 2.3 DragonFly 1.x 时期贡献者构成与 committer 变化（2004–2007）
+  - 2.3.1 1.x 期贡献者规模
+  - 2.3.2 署名统计的口径问题
+  - 2.3.3 核心与外围的分层
+  - 2.3.4 1.x 期人事的稳定度
 - 2.4 消息传递模型与传统 Unix 内核线程模型比较@@〔比较维度：DragonFly 1.x 时代与 LWKT 子系统时期（2004–2007）〕
+  - 2.4.1 调度器的两层拆分
+  - 2.4.2 LWKT 的实体调度职责
+  - 2.4.3 用户线程的选取机制
+  - 2.4.4 与传统线程模型的差别
 - 2.5 同期批评与回应（2004–2007）@@〔体例：各章批评节只收同期材料；后见评价见第 7 章相关节〕
+  - 2.5.1 同期技术批评的议题
+  - 2.5.2 稳定性争议的回应态度
+  - 2.5.3 已知缺陷的披露体例
+  - 2.5.4 批评与修补的对应线索
 - 2.6 DragonFly 1.x 技术路线调整与代码重构（2004–2007）
+  - 2.6.1 LWKT 令牌代码的清理
+  - 2.6.2 缓冲缓存子系统的改造
+  - 2.6.3 自旋锁的替换比例
+  - 2.6.4 调度器的 CPU 绑定
 - 2.7 漏洞响应体系与安全维护
+  - 2.7.1 安全修复的随版密度
+  - 2.7.2 第三方库的安全暴露
+  - 2.7.3 缺陷上报渠道的入口
+  - 2.7.4 修补流程的公开性
 - 2.8 FreeBSD 代码继承与 nullfs 等 BSD 遗产@@〔说明：DragonFly 侧〕
+  - 2.8.1 nullfs 挂载点的改造
+  - 2.8.2 内存文件系统的来源
+  - 2.8.3 文件系统接口的继承
+  - 2.8.4 BSD 遗产的取舍标准
 - 2.9 与同时期操作系统的比较：FreeBSD 5.x–6.x 与 Linux 2.6@@〔比较维度：2004–2007；消息传递内核的实验位置〕
+  - 2.9.1 并发进程数的量级
+  - 2.9.2 内存分配的扩展性
+  - 2.9.3 网络栈的并发上限
+  - 2.9.4 同期发行的版本参照
 ## 第 3 章 DragonFly 2.x：HAMMER 文件系统从实验到生产（2008–2011）
 - 3.1 DragonFly 2.x 发布历史与版本概况（2008–2011）
+  - 3.1.1 2.x 世代的发行节点
+  - 3.1.2 2.0 发行的核心交付
+  - 3.1.3 补丁版的稳定化安排
+  - 3.1.4 CD 与 DVD 镜像的分化
 - 3.2 HAMMER 文件系统设计目标
+  - 3.2.1 历史保留的设计目标
+  - 3.2.2 挂载即恢复的目标设定
+  - 3.2.3 容量与卷数的上限
+  - 3.2.4 镜像与复制的目标
 - 3.3 HAMMER 架构与实现
+  - 3.3.1 快照在 B 树中的索引
+  - 3.3.2 多卷与伪文件系统结构
+  - 3.3.3 空间回收的调度规则
+  - 3.3.4 B 树重新平衡的实现
 - 3.4 快照、历史记录与数据一致性模型
+  - 3.4.1 细粒度历史的在线取用
+  - 3.4.2 粗粒度快照的调度
+  - 3.4.3 数据与元数据的一致性校验
+  - 3.4.4 单文件历史的操作接口
 - 3.5 HAMMER 与 ZFS、Btrfs 的同期比较@@〔比较维度：2003–2010；NetBSD 1.6-5.x（可移植性）、FreeBSD 5.x-8.x（SMPng/ULE/ZFS）、OpenBSD 3.4-4.8（安全审计/pf）、Linux 2.6.x（CFS/cgroups）；既有注保留〕〔体例：比较窗口跨章区间，系跨代对照所需（断代一致性复核 §七＋凡例三条，2026-10-21）〕
+  - 3.5.1 容量路线的同期对照
+  - 3.5.2 快照模型的语义差异
+  - 3.5.3 复制取向的分野所在
+  - 3.5.4 创新节奏的量化统计
 - 3.6 贡献者构成与开发结构@@〔分工·迁移：2003–2007 创建期记录移注〕
+  - 3.6.1 开发重心的分线格局
+  - 3.6.2 个人承担的分量估计
+  - 3.6.3 提交入口的开放原则
+  - 3.6.4 构建基础设施的支撑
 - 3.7 同期批评与回应（2008–2011）
+  - 3.7.1 损坏缺陷的公开记录
+  - 3.7.2 磁盘占用的实际约束
+  - 3.7.3 低内存配置的边界
+  - 3.7.4 批评议题的收束结论
 - 3.8 DragonFly 2.x 维护收缩与技术路线调整（2008–2011）
+  - 3.8.1 维护模式的技术侧写
+  - 3.8.2 二进制包基线的跟进
+  - 3.8.3 性能改进的幅度测量
+  - 3.8.4 资源投入的重新分配
 - 3.9 漏洞响应与安全实践
+  - 3.9.1 安全修补的记录格式
+  - 3.9.2 第三方组件的安全跟进
+  - 3.9.3 随机数熵源的更换
+  - 3.9.4 修补与版本的绑定规则
 ## 第 4 章 DragonFly 3.x–4.x：HAMMER2 与现代内核架构探索（2011–2017）
 - 4.1 DragonFly 3.x–4.x 发布历史
+  - 4.1.1 3.x 世代的断代标记
+  - 4.1.2 4.0 的转折地位
+  - 4.1.3 补丁版的发行频次
+  - 4.1.4 发行节奏的年度化
 - 4.2 HAMMER2 设计目标与开发背景@@〔分工·迁移：设计比较主述在本章；第五十二卷第1章作摘要比较（2026-10-21 批复）〕
+  - 4.2.1 二代设计的目标设定
+  - 4.2.2 块引用与校验的设计
+  - 4.2.3 压缩与去重的取舍
+  - 4.2.4 复制机制的字段预留
 - 4.3 HAMMER2 架构：blockref、版本化存储、分布式存储愿景@@〔比较维度：DragonFly 3.x 时代与 HAMMER-2 文件系统时期（2012–2014）〕
+  - 4.3.1 基数树的树形编排
+  - 4.3.2 inode 内联的尺度
+  - 4.3.3 目录项的哈希查找
+  - 4.3.4 卷头与快照的生成
 - 4.4 HAMMER2 开发进度与工程争议（2011–2017）@@〔分工·迁移：设计面见 4.2、4.3；功能完备与持续优化分别见 6.2、7.3（2026-10-21 批复）〕
+  - 4.4.1 早期状态的自我限定
+  - 4.4.2 HAMMER2 可用性的限制
+  - 4.4.3 开发延续的跨代记录
+  - 4.4.4 工程争议的时间跨度
 - 4.5 SMP 可扩展性重构
+  - 4.5.1 全内核细粒度锁的完成
+  - 4.5.2 进程子系统的扩展
+  - 4.5.3 派生路径的扩展完成
+  - 4.5.4 网络栈的持续修补
 - 4.6 vkernel 与内核实验环境@@〔时间：vkernel 2006-09 公布、随 DragonFly 1.8 首发；置于本卷 4.x–4.x 专题章系按专题归组，非年代归属〕
+  - 4.6.1 虚拟内核的进程化执行
+  - 4.6.2 与 Usermode Linux 的类比
+  - 4.6.3 调试意图的设计取向
+  - 4.6.4 虚拟网络交换的配套
 - 4.7 3.x–4.0 期 DRM／KMS 引入
+  - 4.7.1 图形栈移植的开端
+  - 4.7.2 i915 的来源转换
+  - 4.7.3 内核内 Linux 接口的补齐
+  - 4.7.4 旧图形驱动的退场
 - 4.8 贡献者构成与 committer 变化
+  - 4.8.1 重构期的人力投向
+  - 4.8.2 提交者结构的变化
+  - 4.8.3 协作规模的间接读数
+  - 4.8.4 图形工作的交接线索
 - 4.9 同期批评与回应（2011–2017）
+  - 4.9.1 性能承诺的核验限度
+  - 4.9.2 单机基准的适用声明
+  - 4.9.3 图形稳定性的未竟
+  - 4.9.4 构建选项的争议公开
 - 4.10 vkernel 的中止、恢复与架构实验影响@@〔分工·迁移：自第四十四卷第4章 4.6 归并本节（D14，2026-10-08）〕〔互见：版本控制迁移的工程过程见第四十九卷第9章 9.1〕
+  - 4.10.1 虚拟内核的进程修补
+  - 4.10.2 协程接口的引入时点
+  - 4.10.3 调试支持的补齐程度
+  - 4.10.4 虚拟设备的可配置化
 - 4.11 与同时期操作系统的比较：FreeBSD 9.x–11.x 与 Linux 3.x–4.x@@〔比较维度：2011–2017；存储栈与内核架构探索〕
+  - 4.11.1 基准对照的方法设定
+  - 4.11.2 可扩展性的同期位次
+  - 4.11.3 内存延迟的残余差异
+  - 4.11.4 同期内核版本的时间轴
 ## 第 5 章 DragonFly 4.x：现代硬件支持与系统现代化（2015–2017）
 - 5.1 DragonFly 4.x 发布历史
+  - 5.1.1 4.x 世代的发行序列
+  - 5.1.2 4.2 与 4.4 的版本间隔
+  - 5.1.3 末期版本的收束位置
+  - 5.1.4 版本号与年份的对应
 - 5.2 4.x 期 UEFI 与 NVMe 适配（2015–2017）@@〔比较维度：2011–2018；NetBSD 5.x-7.x（可移植性）、FreeBSD 9.x-11.x（Clang/LLVM/bhyve/ZFS）、OpenBSD 5.x-6.x（pledge/unveil）、Linux 3.x-4.x（cgroups/Docker）〕〔体例：比较窗口跨章区间，系跨代对照所需（断代一致性复核 §七＋凡例三条，2026-10-21）〕
+  - 5.2.1 NVMe 驱动的首次出现
+  - 5.2.2 加载方式的过渡安排
+  - 5.2.3 固件引导的依赖条件
+  - 5.2.4 缓冲缓存的连带改造
 - 5.3 4.x 期 DRM 转换完成与遗留问题
+  - 5.3.1 radeon 的 Linux 基线
+  - 5.3.2 图形栈的对齐程度
+  - 5.3.3 EFI 帧缓冲的衔接
+  - 5.3.4 线程优先级的遗留
 - 5.4 社区结构与贡献模式变化
+  - 5.4.1 参与门槛的制度规定
+  - 5.4.2 共同体气质的自述
+  - 5.4.3 贡献模式的延续性
+  - 5.4.4 协作规范的实际运作
 - 5.5 漏洞响应与维护模型
+  - 5.5.1 安全修补的引入渠道
+  - 5.5.2 补丁说明的安全条目
+  - 5.5.3 维护责任的承担主体
+  - 5.5.4 工具链维护的负担
 - 5.6 同期批评与回应（2015–2017）
+  - 5.6.1 工具链争议的焦点
+  - 5.6.2 官方支持的范围划定
+  - 5.6.3 回应偏向补齐的做法
+  - 5.6.4 未竟事项的公开披露
 - 5.7 DragonFly 技术遗产与路线评估（2015–2017）
+  - 5.7.1 技术遗产的构成部分
+  - 5.7.2 桌面可用性的评估
+  - 5.7.3 路线评估的参照对象
+  - 5.7.4 后续影响的解读线索
 - 5.8 与同时期操作系统的比较：FreeBSD 10.x–11.x 与 Linux 4.x@@〔比较维度：2015–2017；现代硬件支持与系统现代化〕
+  - 5.8.1 基准选择与比较窗口
+  - 5.8.2 扩展曲线的线性预期
+  - 5.8.3 版本映射的对照结果
+  - 5.8.4 内存管理的对照要点
 ## 第 6 章 DragonFly 5.x：HAMMER2 转为官方推荐的默认根文件系统（2017–2020）
 - 6.1 DragonFly 5.x 发布历史
+  - 6.1.1 5.x 的前史与接续
+  - 6.1.2 5.0 的转折意义
+  - 6.1.3 系列补丁的发行节奏
+  - 6.1.4 发行密度的年度化
 - 6.2 HAMMER2 的功能完备（2015–2020）@@〔并入：5.2 HAMMER2 持续开发〕〔分工·迁移：设计目标见第 4 章 4.2、架构见 4.3；持续优化期见 7.3（2026-10-21 批复）〕
+  - 6.2.1 功能完备的判定标准
+  - 6.2.2 快照与崩溃保护的补齐
+  - 6.2.3 引导支持的落地过程
+  - 6.2.4 去重与压缩的并进
 - 6.3 网络、存储与系统性能改进
+  - 6.3.1 同步代码的重写幅度
+  - 6.3.2 缓冲机制的改造要点
+  - 6.3.3 写入冲刷的跟进机制
+  - 6.3.4 网络接口处理的改进
 - 6.4 DPorts 生态的成熟（2017–2020）
+  - 6.4.1 DPorts 树的基础定位
+  - 6.4.2 构建工具的引入过程
+  - 6.4.3 与 Ports 树的差异控制
+  - 6.4.4 包管理器的角色定位
 - 6.5 贡献者结构变化@@〔分工·迁移：与第四十四卷第7章 7.7 分工：彼处载 OpenBSD committer 演变与贡献者结构，本节载 DragonFly 贡献者结构与 git 署名统计〕
+  - 6.5.1 结构变化的间接证据
+  - 6.5.2 署名统计的分布特征
+  - 6.5.3 人力分布的侧重面向
+  - 6.5.4 工具链维护的人力投向
 - 6.6 同期批评与回应（2017–2020）
+  - 6.6.1 成熟度争议的回应方式
+  - 6.6.2 争议内容的具体事项
+  - 6.6.3 修补落地的节奏控制
 - 6.7 漏洞与安全响应
+  - 6.7.1 组件的安全更新途径
+  - 6.7.2 加密引导的配套工具
+  - 6.7.3 安全改进的零散条目
+  - 6.7.4 维护窗口的时间安排
 - 6.8 与同时期操作系统的比较：FreeBSD 11.x–12.x 与 Linux 4.x–5.x@@〔比较维度：2017–2020；HAMMER2 成熟度与并发扩展〕
+  - 6.8.1 存储栈成熟度的对照
+  - 6.8.2 文件系统对照的窗口
+  - 6.8.3 并发扩展的对照基点
+  - 6.8.4 同期发行的版本节点
 ## 第 7 章 DragonFly 6.x：持续维护与未来路线（2021–2026）
 - 7.1 DragonFly 6.x 发布历史
+  - 7.1.1 6.x 的发行起点
+  - 7.1.2 6.2 与 6.4 的间隔
+  - 7.1.3 系列补丁的排布次序
+  - 7.1.4 最新版本的信息入口
 - 7.2 6.0–6.4 系列现代化
+  - 7.2.1 现代化的范围界定
+  - 7.2.2 硬件适配的具体内容
+  - 7.2.3 图形栈的对齐现状
+  - 7.2.4 系统组件的更新批次
 - 7.3 HAMMER2 的持续优化（2021–2026）@@〔并入：6.3 HAMMER2 与存储架构愿景〕〔分工·迁移：功能完备期见 6.2（2026-10-21 批复）〕
+  - 7.3.1 优化工作的延续证据
+  - 7.3.2 故障修复的逐条记录
+  - 7.3.3 卷扩展能力的引入
+  - 7.3.4 远程挂载的实验状态
 - 7.4 NVMM 虚拟化支持
+  - 7.4.1 NVMM 引入的技术依托
+  - 7.4.2 虚拟化的定位调整
+  - 7.4.3 单独文档的配套发布
+  - 7.4.4 硬件条件的公开披露
 - 7.5 amdgpu 与现代图形支持@@〔溯源：以官方 release notes（release62）为一手锚；dragonfly_mail 无 amdgpu 一手 claim，phoronix_news 为二手（v38d 裁决，2026-10-14）〕
+  - 7.5.1 amdgpu 的来源
+  - 7.5.2 覆盖范围的型号界限
+  - 7.5.3 配套组件的同步更新
+  - 7.5.4 图形遗留缺陷的处理
 - 7.6 6.x 期服务器硬件与固件支持（2021–2026）@@〔比较维度：2019–2026；NetBSD 9.x-10.x（可移植性）、FreeBSD 13.x-15.x（Clang/OpenZFS/bhyve）、OpenBSD 6.x-7.x（pledge/unveil/LibreSSL）、Linux 5.x-6.x（cgroups/Docker/Kubernetes）〕〔体例：比较窗口跨章区间，系跨代对照所需（断代一致性复核 §七＋凡例三条，2026-10-21）〕
+  - 7.6.1 固件与 UEFI 的现状
+  - 7.6.2 存储设备的支持范围
+  - 7.6.3 多卷支持的范围限定
+  - 7.6.4 单架构支持的表述强度
 - 7.7 riscv64 与未来平台讨论@@〔说明：riscv／arm64 库内命中 30 条全为异指（FreeBSD／NetBSD／Linux），DB 与联网均无 DragonFly 专条，正文不得表述为已实现端口（v38d 裁决，2026-10-14）〕
+  - 7.7.1 平台范围的当前状况
+  - 7.7.2 平台讨论的载体分布
+  - 7.7.3 议题归档的组织方式
+  - 7.7.4 未来取向的公开表述
 - 7.8 生成式 AI 工具在提交与评审中的使用争议（2022–2026）
+  - 7.8.1 政策文件的长期缺位
+  - 7.8.2 对照项目的显式禁令
+  - 7.8.3 审批前置的条件差别
+  - 7.8.4 评审惯例的横向差异
 - 7.9 贡献者与 committer 结构变迁（2022–2026）@@〔分工·迁移：2019–2020 前史移注；committer 结构变化的另一面〕〔说明：更新节；起自 2003 年〕
+  - 7.9.1 名录规模的长期变化
+  - 7.9.2 核心贡献的集中度
+  - 7.9.3 新进贡献的可见痕迹
+  - 7.9.4 署名口径的分层统计
 - 7.10 漏洞响应综览与长期维护@@〔说明：官方 security 页（dragonflybsd.org/security/）404，佐证无正式安全公告页；6.x 期 CVE 专条与 regreSSHion 修复线索留正文期回 dragonfly-src commit log 核（v38d 裁决，2026-10-14）〕
+  - 7.10.1 响应综览的条目结构
+  - 7.10.2 长期维护的存续判据
+  - 7.10.3 公告形式的实际缺位
+  - 7.10.4 缺陷条目的披露痕迹
 - 7.11 与同时期操作系统的比较：FreeBSD、NetBSD、OpenBSD 与 Linux@@〔比较维度：2021–2026（DragonFly 6.x 语境）；四分支并陈，NetBSD／OpenBSD 面以 05 旧镜像 232.4 为骨架；持续维护模式与路线延续（v38d 裁决，2026-10-14）〕
+  - 7.11.1 四分支并陈的框架
+  - 7.11.2 维护模式的两种对照
+  - 7.11.3 路线延续的实际程度
+  - 7.11.4 性能序列的同代位次
 
 # 第四十九卷  DragonFly BSD 技术专题史（2003–2026）
 > 本卷为 DragonFly 技术横向卷：以消息传递内核、SMP 路线、HAMMER 与虚拟化实验诸线呈现。
@@ -10853,43 +12528,193 @@
 ! 逻辑—时间定位（2026-10-05 新建，116b 丙案）：本卷为后分裂时代的 BSD 衍生与分叉总览卷，时间范围 1995–2026；承第二十六卷（分裂前诸变种，1982–1995），与各源流本体史卷（第二十七至二十九卷 FreeBSD 系、第三十至三十二卷 NetBSD 系、第三十三至三十五卷 OpenBSD 系、第三十六至三十八卷 DragonFly 系）并行；本卷不属 BSD 共同体编年，本卷不入编年主干。；〔主体声明〕本卷叙述单位在 BSD 之外（主干诸系之分岔与扩散）；与 BSD 各主体之交接见相关分工注
 ## 第 1 章 源流总览：后分裂时代的分岔、派生与移植
 - 1.1 判准的延续：fork、变种与移植@@〔分工·迁移：与第二十六卷第1章 1.3 分工：彼卷立三形态判准于商业授权期语境，本节沿用同一判准于后分裂语境〕〔说明：承第二十六卷 1.3〕
+  - 1.1.1 fork 与变种、移植的三重判准
+  - 1.1.2 判准自商业授权期向后分裂期的沿用
+  - 1.1.3 同一判准在两期语境下的适用边界
+  - 1.1.4 分叉与派生的判定次序
+  - 1.1.5 移植项在分叉判准中的位置
 - 1.2 后分裂衍生的全景：四主干源流与跨 BSD 派生@@〔体例：本卷分类轴——形态面在前（第 2–9 章），源流面在后；章序即轴序〕
+  - 1.2.1 四主干源流的派生总目
+  - 1.2.2 跨 BSD 派生的来源分类
+  - 1.2.3 同源多枝的拓扑记载
+  - 1.2.4 fork 提交比例的分层对照
+  - 1.2.5 家族树文献的记录体例
 - 1.3 衍生命名、许可与归名的基本问题@@〔分工·迁移：本节载命名与归名的一般问题；宽松许可下的衍生自由度与署名惯例见 1.6（2026-10-21 复核修正批）〕〔分工·迁移：衍生自由度与署名惯例见 1.6〕
+  - 1.3.1 项目更名的三类情形
+  - 1.3.2 同名域名的占用与辨误
+  - 1.3.3 宽松许可下的署名要求
+  - 1.3.4 归名争议的判定次序
+  - 1.3.5 商业使用与致谢的条件
 - 1.4 本卷的史料层级与可证范围
+  - 1.4.1 一手公告的取证层级
+  - 1.4.2 项目官方页的引用条件
+  - 1.4.3 编目文献的旁证效力
+  - 1.4.4 共同体所有权的归属表述
+  - 1.4.5 公告日期的可核性
 - 1.5 技术分岔点：内核、用户空间与工具链@@〔说明：本节由原第 6 章 6.1 归并（2026-10-08 批 5b D19）〕
+  - 1.5.1 内核分叉的技术动因
+  - 1.5.2 用户空间的分层与复用
+  - 1.5.3 打包体系的两条路线
+  - 1.5.4 内核接口的稳定承诺
+  - 1.5.5 上游同步的节奏差异
 - 1.6 宽松许可下的衍生自由度与署名惯例
+  - 1.6.1 广告条款撤销的时点
+  - 1.6.2 二条款与三条款的文本差别
+  - 1.6.3 版权声明保留的分发前提
+  - 1.6.4 衍生作品权利的分界
+  - 1.6.5 标识与署名惯例的成文限度
 - 1.7 社区治理与项目生命周期
+  - 1.7.1 提交权的授予与撤回
+  - 1.7.2 核心团队的决策链
+  - 1.7.3 项目终止的判定要件
+  - 1.7.4 维护主体的接续方式
+  - 1.7.5 发行周期的惯例长度
 - 1.8 同期操作系统生态对照
+  - 1.8.1 与 Linux 发行生态的对照
+  - 1.8.2 商用 UNIX 的同期处境
+  - 1.8.3 专用设备系统的位置
+  - 1.8.4 嵌入式市场的分野
+  - 1.8.5 生态位比较的取材限度
 ## 第 2 章 桌面系统衍生
 - 2.1 PC-BSD 与桌面产品化@@〔溯源：PC-BSD 统计〕
+  - 2.1.1 PC-BSD 的图形安装器路线
+  - 2.1.2 桌面产品化的打包选择
+  - 2.1.3 预装应用集的范围
+  - 2.1.4 版本沿革的编号惯例
+  - 2.1.5 商业支持与社区版的双轨
 - 2.2 TrueOS 与 FreeBSD 用户空间实验@@〔溯源：PC-BSD 获 iXsystems 支持／接管开发，团队 2016-09-01 宣布更名 TrueOS；2018 年移除图形安装器并转向 iXsystems 其他产品线（FreeNAS 等）；其后开发停止（OSNews 报道；官方终止公告待一手核；原“收购”表述无一手公告支持，降格为支持／接管开发——v45a 裁决，2026-10-14）〕
+  - 2.2.1 从 PC-BSD 到 TrueOS 的更名
+  - 2.2.2 服务端转向的公告缺口
+  - 2.2.3 回馈上游的提交权前提
+  - 2.2.4 用户空间实验的清单缺口
+  - 2.2.5 开发停止后的资产处置
 - 2.3 小型桌面衍生的类型与生命周期：以 GhostBSD、MidnightBSD 等为例@@〔溯源：各项目官方站／仓库直取〕〔分工·迁移：自本卷原第 2 章 2.10／2.14 归并本节（C21，2026-10-08）〕
+  - 2.3.1 GhostBSD 的桌面栈选择
+  - 2.3.2 MidnightBSD 的分叉起点
+  - 2.3.3 小型项目的维护者结构
+  - 2.3.4 版本编号的惯例对照
+  - 2.3.5 桌面衍生的终止实例
 - 2.4 FreeBSD 桌面化实践与桌面栈维护（2009—2026）
+  - 2.4.1 桌面栈的集成方式
+  - 2.4.2 桌面栈的上游依赖
+  - 2.4.3 桌面环境的打包分工
+  - 2.4.4 桌面支持的渠道分布
+  - 2.4.5 可用性评估的取材口径
 ## 第 3 章 网络存储衍生
 - 3.1 网络存储衍生：FreeNAS 至 TrueNAS 与 XigmaNAS@@〔分工·迁移：本体史见第七十一卷第2章 2.4–2.8；本节载源流定位〕〔说明：FreeNAS 名称存两代异指（v45a 裁决，2026-10-14），登记须逐项目核曾用名／现名／上游防同名配对错误，两代界定以 v45a 稿为准〕
+  - 3.1.1 FreeNAS 的两代同名异指
+  - 3.1.2 TrueNAS 产品线的分层
+  - 3.1.3 XigmaNAS 的分支来历
+  - 3.1.4 ZFS 版本的随行实态
+  - 3.1.5 存储衍生的许可取向
 ## 第 4 章 防火墙、路由与安全强化系统
 - 4.1 m0n0wall 与嵌入式防火墙系统@@〔溯源：一手：m0n0.ch 官方终止公告——Manuel Kasper 于 2015-02-15 宣布 m0n0wall 项目正式结束（2003 年始，12 年），不再开发与发布；后续由社区延续为 SmallWall 等〕
+  - 4.1.1 m0n0wall 的终止与迁移提示
+  - 4.1.2 嵌入式镜像的体积约束
+  - 4.1.3 分叉后保留的共同成分
+  - 4.1.4 共同体延续项目的接续
+  - 4.1.5 防火墙系统的许可选择
 - 4.2 pfSense 与 FreeBSD 网络平台@@〔溯源：一手：Netgate 官方文档载“pfSense forked from the m0n0wall project in 2004”（面向 PC／服务器级硬件扩展能力）；后续维护主体为 Netgate／ESF〕
+  - 4.2.1 分叉起点的 OPNsense 侧陈述
+  - 4.2.2 可扩展性目标的技术取向
+  - 4.2.3 商业版与社区版的界线
+  - 4.2.4 插件与包的来源分置
+  - 4.2.5 版本命名与发布周期
 - 4.3 OPNsense：pfSense 系的分叉（2014–2015）@@〔溯源：一手：OPNsense 官方站载“began as a fork of pfSense and m0n0wall in 2014, with its first official release in January 2015”；版本命名自 15.1 起为年.月制〕
+  - 4.3.1 分叉时点的两条官方记载
+  - 4.3.2 年.月制命名的启用时点
+  - 4.3.3 路线决定权的厂商归属
+  - 4.3.4 固定发布的周期承诺
+  - 4.3.5 品牌与商标的分家
 - 4.4 HardenedBSD 与安全强化路线@@〔溯源：一手：FreeBSD 官方文档（advocacy/myths）载 HardenedBSD“Founded in 2014 by Oliver Pinter and Shawn Webb… security-enhanced fork of FreeBSD”，在 FreeBSD 上实现多项 exploit mitigation 与安全技术〕
+  - 4.4.1 加固补丁的技术清单
+  - 4.4.2 分叉与重基的同步机制
+  - 4.4.3 独立发布的构建验证
+  - 4.4.4 与上游安全团队的协作位置
+  - 4.4.5 分层防御的整体取向
 ## 第 5 章 商用设备中的 FreeBSD 系衍生
 - 5.1 厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案@@〔分工·迁移：本体史见第七十一卷第 1–3 章；本节载源流定位〕
+  - 5.1.1 Junos 的 FreeBSD 基线
+  - 5.1.2 控制平面与转发平面的分层
+  - 5.1.3 OneFS 的取证难点
+  - 5.1.4 Data ONTAP 的 BSD 成分
+  - 5.1.5 厂商改动的披露程度
 - 5.2 FreeBSD 系进入专用设备：源流与证据（1999–2026）@@〔溯源：本节正文待撰（0 信任核证）；材料底数——①华纳兄弟《黑客帝国》特效制作于 FreeBSD 集群（FreeBSD Project 新闻稿 1999-04-22，freebsd.org/press/press-rel-1；《FreeBSD 技术内幕》p.2 互证）；②Beckhoff TwinCAT/BSD＝TwinCAT 实时核与 FreeBSD 结合的工业 PC 平台（beckhoff.com）；③QNX 8.0 起新网络栈 io-sock 复用 FreeBSD 代码（旧 io-pkt 复用 NetBSD 代码）——汽车安全 OS 线（qnx.com 文档；与第七十一卷第1章 BSD 作为网络设备操作系统互指）；④OpenHarmony LiteOS 内核引入 FreeBSD 驱动代码（gitee openharmony/kernel_liteos_a）；⑤FreeBSD 基金会 end-user-stories 汇总页（freebsdfoundation.org）为案例总目；取证源＝book.bsdcn.org §2.1 谁在使用 FreeBSD；依 127 号文批 3（2026-10-10）新增；取证源＝book.bsdcn.org（T-9）〕
+  - 5.2.1 特效制作集群的系统选型
+  - 5.2.2 可扩展目标的工程取舍
+  - 5.2.3 派生项目的软件栈借用
+  - 5.2.4 案例总目的来源与用途
+  - 5.2.5 专用设备衍生的判定要件
 ## 第 6 章 停更与 Live 系统
 - 6.1 项目终止的类型、归因与社区迁移@@〔分工·迁移：自本卷原第 2 章 2.9／2.11 归并本节（C21，2026-10-08）〕
+  - 6.1.1 终止公告的三种体裁
+  - 6.1.2 归因叙述的分歧点
+  - 6.1.3 用户迁移的去向统计
+  - 6.1.4 代码与域名的托管转移
+  - 6.1.5 终止后的维护承接
 - 6.2 Live 系统与微型衍生：FreeSBIE、Frenzy、ClonOS、Zrouter@@〔溯源：各项目官方站／仓库直取；ClosedBSD 等停更项目并入〕〔分工·迁移：自本卷原第 2 章 2.10／2.14 归并本节（C21，2026-10-08）〕
+  - 6.2.1 Live 镜像的构建流程
+  - 6.2.2 微型衍生的体积约束
+  - 6.2.3 镜像再分发的许可条件
+  - 6.2.4 固件代码的许可取舍
+  - 6.2.5 停更项目的资料留存
 - 6.3 衍生的形成、继承与项目身份@@〔分工·迁移：自本卷原第 2 章 2.7／2.8 归并本节（C21，2026-10-08）〕
+  - 6.3.1 项目身份的识别要件
+  - 6.3.2 继承关系的两类记载
+  - 6.3.3 分叉与重写的区分
+  - 6.3.4 名称与代码的归属分离
+  - 6.3.5 身份延续的证据链
 ## 第 7 章 NetBSD 系衍生
 - 7.1 Debian GNU／NetBSD：跨内核发行形态@@〔溯源：Debian 官方 Wiki 页族（kFreeBSD 页 2008-05-01 Internet Archive 快照一手，载官方定义 uses the kernel of FreeBSD instead of the Linux kernel；NetBSD 移植页待核）——净室实现（Debian 用户空间＋NetBSD 内核）〕〔分工·迁移：内核—用户空间组合系统的本体史见第六十三卷第2章；本节载源流定位〕
+  - 7.1.1 净室实现的层次构成
+  - 7.1.2 内核与用户空间的配对
+  - 7.1.3 跨内核移植的发布前例
+  - 7.1.4 官方定义的措辞差别
+  - 7.1.5 发行形态的归位分歧
 - 7.2 桌面与嵌入式衍生：OS108、PolyBSD、smolBSD@@〔溯源：OS108 官网与 GitHub 组织仓库一手（CL-RM-388968）——项目 2018 起（组织仓库 2018-07-09／主仓库 2018-12-07），OS108-9.1 amd64 发布 2020-11-09（基 NetBSD 9.1，默认桌面由 MATE 改 Xfce）；smolBSD＝NetBSDfr 组织 GitHub 仓库一手（CL-RM-388969）——2024-12-29 建仓、2026-10 仍活跃，NetBSD 微 VM 创建工具；PolyBSD／pocketSAN 为 NetBSD 嵌入式系统构建框架（待一手核）〕
+  - 7.2.1 桌面环境的更换先例
+  - 7.2.2 微虚拟机的构建工具
+  - 7.2.3 嵌入式构建框架的定位
+  - 7.2.4 微虚拟机的启动开销
+  - 7.2.5 最小系统的构建约束
 - 7.3 工具与 Live 衍生：irBSD、Jibbed 与 Gentoo／NetBSD@@〔溯源：irBSD（NetBSD 基数字取证套件，已停）、Jibbed（NetBSD Live CD）、Gentoo/NetBSD（Portage 移植子项目）——三项待回官网直取〕
+  - 7.3.1 取证套件的内容构成
+  - 7.3.2 Live 光盘的启动流程
+  - 7.3.3 打包框架的跨项目复用
+  - 7.3.4 子项目页面的状态记录
+  - 7.3.5 停更工具的下架痕迹
 ## 第 8 章 OpenBSD 系衍生
 - 8.1 MirOS BSD：欧洲衍生与许可选择@@〔溯源：MirOS 官方站（2005-04-03 IA 快照为反软件专利封锁页，德／英／法三语重定向 swpat.ffii.org——CL-RM-388971，项目软件专利立场一手）；MirBSD 系自 OpenBSD 派生（部分 NetBSD 代码），i386／SPARC 为主；末版 2016-01（社区时间线，待一手核）〕
+  - 8.1.1 欧洲衍生的许可立场
+  - 8.1.2 可接受许可的清单
+  - 8.1.3 新增代码的权利归属
+  - 8.1.4 发行节奏的经验值
+  - 8.1.5 多语站点的主张表达
 - 8.2 Gentoo／OpenBSD 与 Live 系统：OliveBSD、Anonym.OS@@〔溯源：OliveBSD 系 OpenBSD 系 Live 系统，源流本体归位本节；Anonym.OS 系 2005 年 Anonym.OS Live CD〕
+  - 8.2.1 4.4BSD 基底的分发形态
+  - 8.2.2 隐私工具的选择范围
+  - 8.2.3 打包系统的跨项目移植
+  - 8.2.4 早期 Live 光盘的发行痕迹
+  - 8.2.5 编目中的项目条目
 - 8.3 停更与小型衍生：ekkoBSD、MicroBSD@@〔溯源：ekkoBSD 系 OpenBSD 3.3 基之小型服务器系统（已停更）；MicroBSD 系 OpenBSD 3.0 分叉（2002-07 起），2003 年项目组转入 ISOS Labs——microbsd.org 2003-06-18 Internet Archive 快照一手（CL-RM-388970）〕
+  - 8.3.1 基线版本的选择动因
+  - 8.3.2 小型服务器系统的定位
+  - 8.3.3 代码权利的可转让性
+  - 8.3.4 家族树条目的时间刻度
+  - 8.3.5 停更时点的判定依据
 ## 第 9 章 DragonFly 系与跨 BSD 衍生
 - 9.1 DragonFly 系衍生的生态位分析@@〔说明：DragonFly 分叉后衍生极少，本节考其生态位原因〕
+  - 9.1.1 衍生稀少的结构原因
+  - 9.1.2 分叉后的技术路线差异
+  - 9.1.3 自我定位的失效与改写
+  - 9.1.4 共同体规模的观察指标
+  - 9.1.5 生态位判断的资料前提
 - 9.2 跨 BSD 衍生：Gentoo／kFreeBSD 与 Debian GNU／kFreeBSD@@〔分工·迁移：本体史见第六十三卷第2章 2.2–2.7（kFreeBSD 官方移植至终止、Gentoo/FreeBSD 与 Portage）与第六十一卷第4章 4.12、第三十七卷第5章 5.3（TrustedBSD 与 Capsicum 的 FreeBSD 集成）；本节载三者源流定位与跨 BSD 归类；一手＝Debian Wiki 页（2008-05-01 Internet Archive 快照）；Gentoo/BSD 子项目状态一手＝Gentoo Wiki Project:BSD 页正文已清空（末编辑 2019-12-21）；TrustedBSD 学术文献＝ref 502／1628〕
+  - 9.2.1 跨内核项目的两支
+  - 9.2.2 官方移植的终止时序
+  - 9.2.3 补丁进入主线的提案程序
+  - 9.2.4 Capsicum 的上游归属
+  - 9.2.5 跨 BSD 归类的判据
 
 # 第五十八卷  macOS 历史：作为经过认证的 UNIX 发行版（1976–2026）
 > 本卷以 macOS 的 BSD 遗产为经、认证 UNIX 的商业战略为纬：从 NeXTSTEP 到 OS X 的内核与用户空间取舍，既是技术史也是商业史。开源边界——哪些成分开放、哪些封闭——在本卷作为结构问题处理。

@@ -1,0 +1,25 @@
+kind=landing
+vol=V57
+title_count=150
+ledger_sha256=3b4c65679046712e1a62bcf8a10deab6ff206b0e34c9c994a5cc442bcedaafc1
+scope=全 150 题（19 filled＋131 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V57-C1.tsv
+ledger_main_sha256=ea54e4219d3f961c35793ab8d3327fbb80f6e059a76c66065d00ef28a805345b
+ledger_supp=design/V57-C2.tsv
+ledger_supp_sha256=455ee22f82f3d7c7167594697ac44151fe4015efa91fd14ec66e2304425d3388
+design_index=design/V57.tsv
+design_index_sha256=daa033c0478e4a857f80fb318ca9696119f132400da8f8a1210deb3e4914f760
+fragments=design/fragments/V57.tsv
+fragments_sha256=4c183f604b91111d447dfbf7d675899a4b6bc310fc199483bbdeca868308485a
+blocks_total=890
+blocks_landed=42
+blocks_surplus=0
+blocks_moved=667
+blocks_compiled=0
+blocks_deleted=181
+gate=L1–L18 PASS／L19 FAIL（outline=tree=10049 一致、orphan_md=0、ghost_row=0；summary_diff=854 因 SUMMARY.md 再生被 W_NORM 阻断——V45 8.9.1 与 V63 1.4.3／1.5.3／2.3.2 四处题名「基础系统」属他线在途，披露不代改）；第三十八件 D1／D2 PASS（L 项 V007 他线在途）；第三十九件 45 项 FAIL 0；第三十五件 PASS；第二十四件 PASS（本卷 RULES.md 2 处直角引号已改弯）；第二十八件 PASS；第七件 O 组本卷清零（语料 1.1.5／7.1.5 已去计数概括，余 1 处卷 62 他线）；P2-11 本卷 T1／T2 清零（2.4.1／2.4.4 thesis 术语归一；余 19 处属 V41／V44／V45／V63 他线）；第三十三／三十四件 FAIL 属他线（V27／V34 W172-YT-ROUTE 孤儿 END、V64 未闭合注释）；装配 76/544/3954/10049 全六处口径一致；卷级回归 V57 5/6（V3 深链 FAIL 属页面规模共性——V31／V55／V56 同项同红，非本卷）
+note=全量批准模式下由主会话签发；本批含改题 2 条与 thesis 术语归一 2 条，同批重签 title.ok
+approved_by=ykla
+approved_at=2026-11-06
