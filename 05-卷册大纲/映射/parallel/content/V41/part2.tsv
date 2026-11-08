@@ -1,5 +1,5 @@
 rowmine_id	subsection_id	title	action	reason
-tech-kern.messages.121953	V41.1.4.5	总线抽象支撑的复用范围	归入	文本与题名thesis 重合 6 项
+tech-kern.messages.121953		—	挂账	复核错配：原拟 V41.1.4.5，cdevsw/bdevsw 机器无关化，非 bus.h 复用范围
 tech-kern.messages.122567	V41.13.2.1	编译器移植的发端	归入	文本与题名thesis 重合 4 项
 tech-kern.messages.122591		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122276		—	挂账	待定位：与 418 题重合不足 6 项
@@ -20,10 +20,10 @@ tech-kern.messages.217461		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217633		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9418		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9468		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.284962	V41.7.7.2	rump 网络服务的运行样式	归入	文本与题名thesis 重合 6 项
+tech-security.messages.284962		—	挂账	复核错配：原拟 V41.7.7.2，RLIMIT_NPROC 绕过，非 rump 网络服务
 tech-kern.messages.152669		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.285175	V41.3.1.2	内核代码与运行环境的拆解	归入	文本与题名thesis 重合 5 项
-tech-security.messages.285868	V41.1.3.4	内核配置表的裁剪能力	归入	文本与题名thesis 重合 6 项
+tech-security.messages.285175		—	挂账	复核错配：原拟 V41.3.1.2，secmodel 注销校验，非内核代码与运行环境拆解
+tech-security.messages.285868		—	挂账	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
 tech-security.messages.286019		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
 port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
@@ -37,12 +37,12 @@ tech-kern.messages.218584		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218589		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
 port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
-port-alpha.messages.9497	V41.1.4.1	总线标签的封装方式	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9497		—	挂账	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 tech-security.messages.285188		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
-tech-kern.messages.217968	V41.3.1.2	内核代码与运行环境的拆解	归入	文本与题名thesis 重合 4 项
-tech-security.messages.285868	V41.1.3.4	内核配置表的裁剪能力	归入	文本与题名thesis 重合 6 项
-tech-kern.messages.217968	V41.3.1.2	内核代码与运行环境的拆解	归入	文本与题名thesis 重合 4 项
+tech-security.messages.286077		—	挂账	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
+tech-kern.messages.217968		—	挂账	复核错配：原拟 V41.3.1.2，fpu 内核线程与旧 AES 保留，非内核／用户态拆解
+tech-security.messages.285868		—	挂账	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
+tech-kern.messages.217968		—	挂账	复核错配：原拟 V41.3.1.2，fpu 内核线程与旧 AES 保留，非内核／用户态拆解
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=154，sha=337631518370）
 usenet_mail.messages.154194		—	挂账	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.172803		—	挂账	待定位：与 418 题重合不足 6 项
@@ -57,13 +57,13 @@ port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.119724		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.127985		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128326		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
-tech-kern.messages.217970	V41.6.2.5	一致性机制的替代方案	归入	文本与题名thesis 重合 5 项
+tech-security.messages.286077		—	挂账	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
+tech-kern.messages.217970		—	挂账	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 tech-kern.messages.123485		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128292		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128338		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
-port-alpha.messages.9497	V41.1.4.1	总线标签的封装方式	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9497		—	挂账	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6538		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6689		—	挂账	待定位：与 418 题重合不足 6 项
@@ -94,14 +94,14 @@ tech-kern.messages.231689		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9544	V41.7.3.2	网卡驱动的共享范围	归入	文本与题名thesis 重合 5 项
-port-alpha.messages.9497	V41.1.4.1	总线标签的封装方式	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9497		—	挂账	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.9558	V41.10.2.3	虚拟处理器的执行轨辙	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9558		—	挂账	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
 tech-net.messages.267350		—	挂账	待定位：与 418 题重合不足 6 项
 tech-net.messages.267393		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.9497	V41.1.4.1	总线标签的封装方式	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9497		—	挂账	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.9558	V41.10.2.3	虚拟处理器的执行轨辙	归入	文本与题名thesis 重合 4 项
+port-alpha.messages.9558		—	挂账	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
 tech-net.messages.267350		—	挂账	待定位：与 418 题重合不足 6 项
 tech-net.messages.267393		—	挂账	待定位：与 418 题重合不足 6 项
 tech-net.messages.267648		—	挂账	待定位：与 418 题重合不足 6 项
@@ -114,7 +114,7 @@ port-vax.messages.459147	V41.1.6.1	移植成本在维护端的沉淀	归入	文�
 port-vax.messages.459729		—	挂账	待定位：与 418 题重合不足 6 项
 port-vax.messages.460133		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.161077		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.162488	V41.6.1.4	文件系统接口的稳定核	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.162488		—	挂账	复核错配：原拟 V41.6.1.4，模块目录与多内核共存，非文件系统接口稳定核
 tech-kern.messages.122276		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122282		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122285		—	挂账	待定位：与 418 题重合不足 6 项
@@ -129,11 +129,11 @@ tech-kern.messages.116923		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116881		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116921		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116925		—	挂账	待定位：与 418 题重合不足 6 项
-port-vax.messages.459471	V41.1.5.4	设备生命周期与解挂时机	归入	文本与题名thesis 重合 5 项
+port-vax.messages.459471		—	挂账	复核错配：原拟 V41.1.5.4，VAX 1.5 稳定版自述，非设备生命周期
 port-vax.messages.459874	V41.1.6.1	移植成本在维护端的沉淀	归入	文本与题名thesis 重合 5 项
 tech-kern.messages.122569		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122593		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.129229	V41.8.4.5	跨平台构建的验证射程	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.129229		—	挂账	复核错配：原拟 V41.8.4.5，pkgsrc 批量构建的资源抱怨，非验证射程
 tech-pkg.messages.273354		—	挂账	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.273609		—	挂账	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.274217		—	挂账	待定位：与 418 题重合不足 6 项
@@ -158,21 +158,21 @@ tech-kern.messages.122284		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122302		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122590		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122597		—	挂账	待定位：与 418 题重合不足 6 项
-usenet_mail.messages.130416	V41.1.5.4	设备生命周期与解挂时机	归入	文本与题名thesis 重合 5 项
+usenet_mail.messages.130416		—	挂账	复核错配：原拟 V41.1.5.4，GNATS 缺陷跟踪切换，非设备生命周期
 tech-kern.messages.122593		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.129229	V41.8.4.5	跨平台构建的验证射程	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.129229		—	挂账	复核错配：原拟 V41.8.4.5，pkgsrc 批量构建的资源抱怨，非验证射程
 usenet_mail.messages.131322	V41.5.4.3	发行公告的技术措辞	归入	文本与题名thesis 重合 5 项
 port-alpha.messages.9544	V41.7.3.2	网卡驱动的共享范围	归入	文本与题名thesis 重合 5 项
 port-alpha.messages.9570		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.285868	V41.1.3.4	内核配置表的裁剪能力	归入	文本与题名thesis 重合 6 项
-tech-kern.messages.217970	V41.6.2.5	一致性机制的替代方案	归入	文本与题名thesis 重合 5 项
+tech-security.messages.285868		—	挂账	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
+tech-kern.messages.217970		—	挂账	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 tech-kern.messages.217973		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9544	V41.7.3.2	网卡驱动的共享范围	归入	文本与题名thesis 重合 5 项
 port-alpha.messages.9570		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9642		—	挂账	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.182376		—	挂账	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.145635		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+tech-security.messages.286077		—	挂账	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 tech-kern.messages.217972		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217975		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217135	V41.4.6.2	性能回归的监测装置	归入	文本与题名thesis 重合 5 项

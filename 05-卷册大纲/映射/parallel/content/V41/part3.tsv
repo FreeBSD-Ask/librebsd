@@ -20,16 +20,16 @@ tech-kern.messages.217462		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9383		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
 port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
-tech-security.messages.285046	V41.4.3.2	原生线程与 SMP 的双轨	归入	文本与题名thesis 重合 6 项
+tech-security.messages.285046		—	挂账	复核错配：原拟 V41.4.3.2，tty 缓冲信息泄露，非原生线程与 SMP 双轨
 tech-kern.messages.152675		—	挂账	待定位：与 418 题重合不足 6 项
 tech-security.messages.285188		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+tech-security.messages.286077		—	挂账	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 port-alpha.messages.9417		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9462		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9437	V41.2.5.2	服务器平台的设备覆盖面	归入	文本与题名thesis 重合 4 项
 port-alpha.messages.9478	V41.1.3.5	自动配置与移植门槛的形成	归入	文本与题名thesis 重合 4 项
-port-alpha.messages.9497	V41.1.4.1	总线标签的封装方式	归入	文本与题名thesis 重合 5 项
+port-alpha.messages.9497		—	挂账	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 tech-kern.messages.122564		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122590		—	挂账	待定位：与 418 题重合不足 6 项
 freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=161，sha=c05530e2947f）
@@ -41,7 +41,7 @@ port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
 tech-security.messages.285371		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
 tech-security.messages.285188		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+tech-security.messages.286077		—	挂账	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 tech-kern.messages.217969		—	挂账	待定位：与 418 题重合不足 6 项
 historical_claims.duckdb.claim		—	删除	零内容：仅抬头无正文（bytes=253，sha=40e2fea7a1a4）
 usenet_mail.messages.154197		—	挂账	待定位：与 418 题重合不足 6 项
@@ -57,14 +57,14 @@ port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.123485		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128174		—	挂账	待定位：与 418 题重合不足 6 项
 tech-security.messages.285371		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.217968	V41.3.1.2	内核代码与运行环境的拆解	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.217968		—	挂账	复核错配：原拟 V41.3.1.2，fpu 内核线程与旧 AES 保留，非内核／用户态拆解
 tech-kern.messages.217971		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.123662		—	删除	零内容：仅抬头无正文（bytes=206，sha=82a95af05433）
 tech-kern.messages.128326		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128366		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9511		—	挂账	待定位：与 418 题重合不足 6 项
-netbsd.duckdb	V41.2.1.2	68k 工作站的驱动继承	归入	文本与题名thesis 重合 6 项
+netbsd.duckdb		—	挂账	复核错配：原拟 V41.2.1.2，日本用户 BSD 缘起自述，非 68k 驱动继承
 port-alpha.messages.6646		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6691		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.152909		—	挂账	待定位：与 418 题重合不足 6 项
@@ -85,7 +85,7 @@ usenet_mail.messages.154197		—	挂账	待定位：与 418 题重合不足 6 �
 usenet_mail.messages.172805		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.2320695		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.2320698		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.2320702	V41.4.1.1	单处理器内核的默认假设	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.2320702		—	挂账	复核错配：原拟 V41.4.1.1，缓存结构查询能力，非单处理器默认假设
 port-alpha.messages.9495		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=363741171ecf）
@@ -110,11 +110,11 @@ tech-kern.messages.122284		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
-port-vax.messages.459409	V41.13.1.1	语言运行时的打包成规	归入	文本与题名thesis 重合 5 项
+port-vax.messages.459409		—	挂账	复核错配：原拟 V41.13.1.1，awk SIGILL 的 ISO C 辨析，非语言运行时打包成规
 port-vax.messages.459730	V41.1.6.1	移植成本在维护端的沉淀	归入	文本与题名thesis 重合 4 项
 freebsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=157，sha=6900630e291a）
 tech-kern.messages.162475	V41.3.6.2	组件化路线与单体内核的分野	归入	文本与题名thesis 重合 5 项
-tech-kern.messages.162819	V41.10.4.2	进程隔离与系统隔离的界线	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.162819		—	挂账	复核错配：原拟 V41.10.4.2，Postgres SYSV 共享内存配置，非隔离界线
 tech-kern.messages.122280		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122283		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122295		—	挂账	待定位：与 418 题重合不足 6 项
@@ -124,7 +124,7 @@ tech-kern.messages.122567	V41.13.2.1	编译器移植的发端	归入	文本与�
 tech-kern.messages.122591		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.129227		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116879		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.116900	V41.2.4.5	ARM 移植的维护责任	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.116900		—	挂账	复核错配：原拟 V41.2.4.5，序列号注册机构提议，非 ARM 维护责任
 tech-kern.messages.116924		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116884		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116923		—	挂账	待定位：与 418 题重合不足 6 项
@@ -164,7 +164,7 @@ usenet_mail.messages.130542		—	挂账	待定位：与 418 题重合不足 6 �
 port-alpha.messages.9525		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
-tech-security.messages.286077	V41.1.4.2	内存屏障的语义约束	归入	文本与题名thesis 重合 5 项
+tech-security.messages.286077		—	挂账	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 tech-kern.messages.217971		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217974		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9553		—	挂账	待定位：与 418 题重合不足 6 项
@@ -172,8 +172,8 @@ port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=155，sha=cd5090c0923c）
 usenet_mail.messages.182991	V41.5.4.3	发行公告的技术措辞	归入	文本与题名thesis 重合 5 项
 usenet_mail.messages.145715		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.217970	V41.6.2.5	一致性机制的替代方案	归入	文本与题名thesis 重合 5 项
+tech-kern.messages.217970		—	挂账	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 tech-kern.messages.217973		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.217976	V41.1.1.1	Net/2 分装的代码界线	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.217976		—	挂账	复核错配：原拟 V41.1.1.1，2020 AES-NI i386 帖，与“Net/2 分装代码界线”无涉
 tech-kern.messages.217139		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218450		—	挂账	待定位：与 418 题重合不足 6 项

@@ -10,6 +10,9 @@ tech-kern.messages.217141		旧大纲-20261023/第09卷-netbsd的历史/第200章
 usenet_mail.messages.183582		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217139		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	4	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218450		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	7	待定位：与 418 题重合不足 6 项
+tech-security.messages.285380		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.2-kernelaslr默认启用与可移植性代价-90的安全范式转向.md	1	复核错配：原拟 V41.1.4.1，PIC/ASLR 议题，非总线标签
+tech-security.messages.285175		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	3	复核错配：原拟 V41.3.1.2，secmodel 注销校验，非内核代码与运行环境拆解
+tech-security.messages.285868		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	6	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
 port-alpha.messages.9417		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9462		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
 port-vax.messages.459016 已按核查报告移除：qv(4) VAX 显示驱动材料与本节 NetBSD 9.0 技术淘汰主题零关联，属 ROW_MINE 主题门禁失效错挂（原块 CL-RM-013218，2015-07-11 Charles Dickman qv(4) 手册页），移出本节，留待 port-vax 相关章节挂接。		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.2-netbsd90时期的技术淘汰旧usb栈新usb栈旧无gpu支持gpu/199.2.4-旧文件系统ext2fs改进2020f2fs已剔除-未找到代码级证据.md	1	待定位：与 418 题重合不足 6 项
@@ -25,20 +28,28 @@ port-alpha.messages.9468		旧大纲-20261023/第09卷-netbsd的历史/第190章-
 port-alpha.messages.9495		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9462		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
+tech-kern.messages.121953		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	1	复核错配：原拟 V41.1.4.5，cdevsw/bdevsw 机器无关化，非 bus.h 复用范围
 tech-kern.messages.122591		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218586		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.3-与freebsdsmp路线的比较/200.3.1-与freebsdsmp路线的比较.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218605		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.3-与freebsdsmp路线的比较/200.3.1-与freebsdsmp路线的比较.md	8	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9468		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9495		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
+tech-security.messages.285175		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	1	复核错配：原拟 V41.3.1.2，secmodel 注销校验，非内核代码与运行环境拆解
+tech-security.messages.285868		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	4	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
+tech-kern.messages.217967		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	2	复核错配：原拟 V41.4.1.1，AES 常量时间替换，非单处理器假设
 tech-security.messages.285371		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	2	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217967		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	1	复核错配：原拟 V41.4.1.1，AES 常量时间替换，非单处理器假设
+tech-kern.messages.217970		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	4	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 usenet_mail.messages.154193		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.119724		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.6-本期可取证的一手材料包括OpenBSDc2k15卡尔加里黑客松与会者亲笔汇报含J.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.127405		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	1	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.272755		旧大纲-20261023/第09卷-netbsd的历史/第204章-netbsd与同时期操作系统的比较/204.6-bsd许可证哲学对各项目走向的塑造/204.6.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md	2	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.273607		旧大纲-20261023/第09卷-netbsd的历史/第204章-netbsd与同时期操作系统的比较/204.6-bsd许可证哲学对各项目走向的塑造/204.6.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md	5	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.274214		旧大纲-20261023/第09卷-netbsd的历史/第204章-netbsd与同时期操作系统的比较/204.6-bsd许可证哲学对各项目走向的塑造/204.6.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md	8	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 usenet_mail.messages.174160		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.4-要点pkgsrc早期commit记录考据pkgsrcCVScommit日志是研究.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128292		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	3	待定位：与 418 题重合不足 6 项
+tech-security.messages.285868		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	2	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
 tech-kern.messages.217969		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217972		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128174		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	1	待定位：与 418 题重合不足 6 项
@@ -46,6 +57,7 @@ tech-kern.messages.128335		旧大纲-20261023/第09卷-netbsd的历史/第193章
 port-alpha.messages.9468		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9495		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9525		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	待定位：与 418 题重合不足 6 项
+port-alpha.messages.6359		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	2	复核错配：原拟 V41.1.4.2，Parsys 节点机移植，非内存屏障语义
 port-alpha.messages.6683		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	5	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6701		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.152911		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.9-netbsd5x周期漏洞与安全响应综览架构重构下的ocspssh漏洞与/196.9.4-要点NetBSD5x周期内核与基本系统零散漏洞包括CVE20110014越界访问.md	3	待定位：与 418 题重合不足 6 项
@@ -63,9 +75,11 @@ usenet_mail.messages.154193		旧大纲-20261023/第09卷-netbsd的历史/第189�
 usenet_mail.messages.154904		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.2320696		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.5-外部批评与反对者netbsd节奏放缓与资源稀释批评linux社区对netbsd3/196.5.4-批评原始发言与邮件列表考据.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.2320699		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.5-外部批评与反对者netbsd节奏放缓与资源稀释批评linux社区对netbsd3/196.5.4-批评原始发言与邮件列表考据.md	6	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218616		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.4-与linuxsolaris同期smp实现的对比/200.4.1-与linuxsolaris同期smp实现的对比.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.231707		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.4-与linuxsolaris同期smp实现的对比/200.4.1-与linuxsolaris同期smp实现的对比.md	8	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9495		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9525		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
@@ -82,6 +96,8 @@ tech-kern.messages.122276		旧大纲-20261023/第09卷-netbsd的历史/第192章
 tech-kern.messages.122282		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122285		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	8	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9558		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
+port-vax.messages.457471		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	1	复核错配：原拟 V41.10.2.3，VAX emodd 崩溃现场，非虚拟化
 port-vax.messages.459410		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	4	待定位：与 418 题重合不足 6 项
 port-vax.messages.459803		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.161074		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.3-与同时期操作系统的比较netbsd60发布与多核改进时期2012与freebsd/197.3.5-要点2012年操作系统围绕多核扩展性竞争FreeBSD910与Linux3x在x.md	2	待定位：与 418 题重合不足 6 项
@@ -94,10 +110,14 @@ tech-kern.messages.122590		旧大纲-20261023/第09卷-netbsd的历史/第191章
 tech-kern.messages.122597		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122569		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122593		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	5	待定位：与 418 题重合不足 6 项
+tech-kern.messages.129229		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	8	复核错配：原拟 V41.8.4.5，pkgsrc 批量构建的资源抱怨，非验证射程
 tech-kern.messages.116881		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116921		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	6	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116879		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	1	待定位：与 418 题重合不足 6 项
+tech-kern.messages.116900		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	4	复核错配：原拟 V41.2.4.5，序列号注册机构提议，非 ARM 维护责任
 tech-kern.messages.116924		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	7	待定位：与 418 题重合不足 6 项
+port-vax.messages.459457		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.6-外部批评与反对者netbsd现代化滞后与生态萎缩批评linux社区对netbsd/206.6.4-要点外部批评的原始发言散见于LWNPhoronixSlashdotOSNews邮.md	2	复核错配：原拟 V41.2.2.1，VAX 存续之争，非 PowerPC 代码出处
+port-vax.messages.459754		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.6-外部批评与反对者netbsd现代化滞后与生态萎缩批评linux社区对netbsd/206.6.4-要点外部批评的原始发言散见于LWNPhoronixSlashdotOSNews邮.md	5	复核错配：原拟 V41.12.6.3，GCC vax 上游化，非构建中断分流
 port-vax.messages.460105		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.6-外部批评与反对者netbsd现代化滞后与生态萎缩批评linux社区对netbsd/206.6.4-要点外部批评的原始发言散见于LWNPhoronixSlashdotOSNews邮.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122591		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.129227		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	6	待定位：与 418 题重合不足 6 项
@@ -112,6 +132,8 @@ tech-kern.messages.122295		旧大纲-20261023/第09卷-netbsd的历史/第192章
 tech-kern.messages.166861		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.2-netbsd60时期的技术淘汰旧线程调度器新线程调度器ipfpfnpf防火墙旧/197.2.10-年2月9日MarcBalmer在移除compatFreeBSD线程中认为大体合理.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.166885		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.2-netbsd60时期的技术淘汰旧线程调度器新线程调度器ipfpfnpf防火墙旧/197.2.10-年2月9日MarcBalmer在移除compatFreeBSD线程中认为大体合理.md	4	待定位：与 418 题重合不足 6 项
 tech-kern.messages.166890		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.2-netbsd60时期的技术淘汰旧线程调度器新线程调度器ipfpfnpf防火墙旧/197.2.10-年2月9日MarcBalmer在移除compatFreeBSD线程中认为大体合理.md	7	待定位：与 418 题重合不足 6 项
+port-vax.messages.459409		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	2	复核错配：原拟 V41.13.1.1，awk SIGILL 的 ISO C 辨析，非语言运行时打包成规
+port-vax.messages.460568		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	8	复核错配：原拟 V41.5.2.2，VAX/IEEE 浮点互转例程，非共享代码与架构目录隔断
 tech-kern.messages.128326		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128366		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128335		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	2	待定位：与 418 题重合不足 6 项
@@ -122,14 +144,17 @@ tech-kern.messages.122283		旧大纲-20261023/第09卷-netbsd的历史/第192章
 tech-kern.messages.122295		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122346		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122593		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	3	待定位：与 418 题重合不足 6 项
+tech-kern.messages.129229		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	6	复核错配：原拟 V41.8.4.5，pkgsrc 批量构建的资源抱怨，非验证射程
 tech-kern.messages.122591		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.129227		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	4	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.130852		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.4-要点TheodeRaadt西奥德若特作为NetBSD创始成员之一19941223.md	2	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	2	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9558		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	5	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
 port-alpha.messages.9624		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217969		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217972		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	4	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9558		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
 port-alpha.messages.9624		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.182371		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.3-committer权限记录19942004本时期netbsdcoreteam/190.3.5-要点20260806将NetBSDdevelopershtmlcommitter.md	2	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.145618		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.3-committer权限记录19942004本时期netbsdcoreteam/190.3.5-要点20260806将NetBSDdevelopershtmlcommitter.md	5	待定位：与 418 题重合不足 6 项
@@ -139,6 +164,7 @@ tech-kern.messages.217974		旧大纲-20261023/第09卷-netbsd的历史/第199章
 usenet_mail.messages.183601		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217141		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	4	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218528		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	7	待定位：与 418 题重合不足 6 项
+tech-kern.messages.121953		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	2	复核错配：原拟 V41.1.4.5，cdevsw/bdevsw 机器无关化，非 bus.h 复用范围
 tech-kern.messages.122591		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122276		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122282		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	6	待定位：与 418 题重合不足 6 项
@@ -155,7 +181,10 @@ tech-kern.messages.217461		旧大纲-20261023/第09卷-netbsd的历史/第199章
 tech-kern.messages.217633		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.2-netbsd90时期的技术淘汰旧usb栈新usb栈旧无gpu支持gpu/199.2.4-旧文件系统ext2fs改进2020f2fs已剔除-未找到代码级证据.md	8	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9418		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9468		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
+tech-security.messages.284962		旧大纲-20261023/第09卷-netbsd的历史/第195章-netbsd-4.0的发布与嵌入式生态/195.7-netbsd3x4x周期漏洞与安全响应综览dns缓存中毒危机与/195.7.1-netbsd3x-4x周期安全治理的规模化压力2006-2011.md	1	复核错配：原拟 V41.7.7.2，RLIMIT_NPROC 绕过，非 rump 网络服务
 tech-kern.messages.152669		旧大纲-20261023/第09卷-netbsd的历史/第195章-netbsd-4.0的发布与嵌入式生态/195.7-netbsd3x4x周期漏洞与安全响应综览dns缓存中毒危机与/195.7.4-tcpdumpfile1等基本系统工具漏洞2007-2008.md	2	待定位：与 418 题重合不足 6 项
+tech-security.messages.285175		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	2	复核错配：原拟 V41.3.1.2，secmodel 注销校验，非内核代码与运行环境拆解
+tech-security.messages.285868		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	5	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
 tech-security.messages.286019		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.6-procfspppoeusb等本地代码漏洞-9x周期netbsd自有代码审计.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9418		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9468		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
@@ -165,7 +194,12 @@ tech-kern.messages.122569		旧大纲-20261023/第09卷-netbsd的历史/第191章
 tech-kern.messages.122593		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218584		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.3-与freebsdsmp路线的比较/200.3.1-与freebsdsmp路线的比较.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218589		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.3-与freebsdsmp路线的比较/200.3.1-与freebsdsmp路线的比较.md	6	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 tech-security.messages.285188		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	2	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	5	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
+tech-kern.messages.217968		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	3	复核错配：原拟 V41.3.1.2，fpu 内核线程与旧 AES 保留，非内核／用户态拆解
+tech-security.messages.285868		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	3	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
+tech-kern.messages.217968		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	2	复核错配：原拟 V41.3.1.2，fpu 内核线程与旧 AES 保留，非内核／用户态拆解
 usenet_mail.messages.154194		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	4	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.172803		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	7	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.174160		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.4-要点pkgsrc早期commit记录考据pkgsrcCVScommit日志是研究.md	2	待定位：与 418 题重合不足 6 项
@@ -179,9 +213,12 @@ port-alpha.messages.9511		旧大纲-20261023/第09卷-netbsd的历史/第190章-
 tech-kern.messages.119724		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.6-本期可取证的一手材料包括OpenBSDc2k15卡尔加里黑客松与会者亲笔汇报含J.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.127985		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128326		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	4	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	3	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
+tech-kern.messages.217970		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	3	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 tech-kern.messages.123485		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.6-本期可取证的一手材料包括OpenBSDc2k15卡尔加里黑客松与会者亲笔汇报含J.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128292		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128338		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	5	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	5	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6538		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6689		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	6	待定位：与 418 题重合不足 6 项
@@ -209,10 +246,14 @@ tech-kern.messages.218611		旧大纲-20261023/第09卷-netbsd的历史/第200章
 tech-kern.messages.231689		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.4-与linuxsolaris同期smp实现的对比/200.4.1-与linuxsolaris同期smp实现的对比.md	6	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9511		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	2	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	5	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9558		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
 tech-net.messages.267350		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.7-netbsd50时期的技术淘汰旧smp调度器新smp调度器传统vfs层改进vfs/196.7.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	3	待定位：与 418 题重合不足 6 项
 tech-net.messages.267393		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.7-netbsd50时期的技术淘汰旧smp调度器新smp调度器传统vfs层改进vfs/196.7.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	6	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 port-alpha.messages.9543		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9558		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	复核错配：原拟 V41.10.2.3，Alpha 第二处理器打印，非虚拟处理器执行轨辙
 tech-net.messages.267350		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.7-netbsd50时期的技术淘汰旧smp调度器新smp调度器传统vfs层改进vfs/196.7.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	2	待定位：与 418 题重合不足 6 项
 tech-net.messages.267393		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.7-netbsd50时期的技术淘汰旧smp调度器新smp调度器传统vfs层改进vfs/196.7.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	5	待定位：与 418 题重合不足 6 项
 tech-net.messages.267648		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.7-netbsd50时期的技术淘汰旧smp调度器新smp调度器传统vfs层改进vfs/196.7.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	8	待定位：与 418 题重合不足 6 项
@@ -223,6 +264,7 @@ port-alpha.messages.9570		旧大纲-20261023/第09卷-netbsd的历史/第190章-
 port-vax.messages.459729		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	5	待定位：与 418 题重合不足 6 项
 port-vax.messages.460133		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.161077		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.3-与同时期操作系统的比较netbsd60发布与多核改进时期2012与freebsd/197.3.5-要点2012年操作系统围绕多核扩展性竞争FreeBSD910与Linux3x在x.md	3	待定位：与 418 题重合不足 6 项
+tech-kern.messages.162488		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.3-与同时期操作系统的比较netbsd60发布与多核改进时期2012与freebsd/197.3.5-要点2012年操作系统围绕多核扩展性竞争FreeBSD910与Linux3x在x.md	6	复核错配：原拟 V41.6.1.4，模块目录与多内核共存，非文件系统接口稳定核
 tech-kern.messages.122276		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122282		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	4	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122285		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	7	待定位：与 418 题重合不足 6 项
@@ -236,8 +278,10 @@ tech-kern.messages.116923		旧大纲-20261023/第09卷-netbsd的历史/第192章
 tech-kern.messages.116881		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116921		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116925		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	8	待定位：与 418 题重合不足 6 项
+port-vax.messages.459471		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.6-外部批评与反对者netbsd现代化滞后与生态萎缩批评linux社区对netbsd/206.6.4-要点外部批评的原始发言散见于LWNPhoronixSlashdotOSNews邮.md	3	复核错配：原拟 V41.1.5.4，VAX 1.5 稳定版自述，非设备生命周期
 tech-kern.messages.122569		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122593		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	4	待定位：与 418 题重合不足 6 项
+tech-kern.messages.129229		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	7	复核错配：原拟 V41.8.4.5，pkgsrc 批量构建的资源抱怨，非验证射程
 tech-pkg.messages.273354		旧大纲-20261023/第09卷-netbsd的历史/第204章-netbsd与同时期操作系统的比较/204.6-bsd许可证哲学对各项目走向的塑造/204.6.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md	2	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.273609		旧大纲-20261023/第09卷-netbsd的历史/第204章-netbsd与同时期操作系统的比较/204.6-bsd许可证哲学对各项目走向的塑造/204.6.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md	5	待定位：与 418 题重合不足 6 项
 tech-pkg.messages.274217		旧大纲-20261023/第09卷-netbsd的历史/第204章-netbsd与同时期操作系统的比较/204.6-bsd许可证哲学对各项目走向的塑造/204.6.1-BSDvsGPL许可证哲学对各项目商业关系与生态扩张的塑造对照表.md	8	待定位：与 418 题重合不足 6 项
@@ -261,13 +305,18 @@ tech-kern.messages.122284		旧大纲-20261023/第09卷-netbsd的历史/第192章
 tech-kern.messages.122302		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	6	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122590		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	1	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122597		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	4	待定位：与 418 题重合不足 6 项
+usenet_mail.messages.130416		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.4-要点TheodeRaadt西奥德若特作为NetBSD创始成员之一19941223.md	1	复核错配：原拟 V41.1.5.4，GNATS 缺陷跟踪切换，非设备生命周期
 tech-kern.messages.122593		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	2	待定位：与 418 题重合不足 6 项
+tech-kern.messages.129229		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	5	复核错配：原拟 V41.8.4.5，pkgsrc 批量构建的资源抱怨，非验证射程
 port-alpha.messages.9570		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
+tech-security.messages.285868		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	1	复核错配：原拟 V41.1.3.4，veriexec 撤销 SHA1/MD5 支持，非“配置表裁剪”
+tech-kern.messages.217970		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	2	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 tech-kern.messages.217973		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	5	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9570		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	5	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9642		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.182376		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.3-committer权限记录19942004本时期netbsdcoreteam/190.3.5-要点20260806将NetBSDdevelopershtmlcommitter.md	3	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.145635		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.3-committer权限记录19942004本时期netbsdcoreteam/190.3.5-要点20260806将NetBSDdevelopershtmlcommitter.md	6	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	1	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 tech-kern.messages.217972		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217975		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	6	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217194		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	5	待定位：与 418 题重合不足 6 项
@@ -288,11 +337,14 @@ port-alpha.messages.9383		旧大纲-20261023/第09卷-netbsd的历史/第190章-
 tech-kern.messages.217385		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.2-netbsd90时期的技术淘汰旧usb栈新usb栈旧无gpu支持gpu/199.2.4-旧文件系统ext2fs改进2020f2fs已剔除-未找到代码级证据.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217462		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.2-netbsd90时期的技术淘汰旧usb栈新usb栈旧无gpu支持gpu/199.2.4-旧文件系统ext2fs改进2020f2fs已剔除-未找到代码级证据.md	6	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9383		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
+tech-security.messages.285046		旧大纲-20261023/第09卷-netbsd的历史/第195章-netbsd-4.0的发布与嵌入式生态/195.7-netbsd3x4x周期漏洞与安全响应综览dns缓存中毒危机与/195.7.1-netbsd3x-4x周期安全治理的规模化压力2006-2011.md	2	复核错配：原拟 V41.4.3.2，tty 缓冲信息泄露，非原生线程与 SMP 双轨
 tech-kern.messages.152675		旧大纲-20261023/第09卷-netbsd的历史/第195章-netbsd-4.0的发布与嵌入式生态/195.7-netbsd3x4x周期漏洞与安全响应综览dns缓存中毒危机与/195.7.4-tcpdumpfile1等基本系统工具漏洞2007-2008.md	3	待定位：与 418 题重合不足 6 项
 tech-security.messages.285188		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	3	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	6	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 port-alpha.messages.9417		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9462		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	待定位：与 418 题重合不足 6 项
+port-alpha.messages.9497		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	复核错配：原拟 V41.1.4.1，Pyxis 总线访问方式变更，非 bus_space 标签封装
 tech-kern.messages.122564		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122590		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	6	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218585		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.3-与freebsdsmp路线的比较/200.3.1-与freebsdsmp路线的比较.md	4	待定位：与 418 题重合不足 6 项
@@ -302,6 +354,7 @@ port-alpha.messages.9489		旧大纲-20261023/第09卷-netbsd的历史/第190章-
 port-alpha.messages.9511		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	待定位：与 418 题重合不足 6 项
 tech-security.messages.285371		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	3	待定位：与 418 题重合不足 6 项
 tech-security.messages.285188		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	1	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	4	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 tech-kern.messages.217969		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	3	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.154197		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	5	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.172805		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	8	待定位：与 418 题重合不足 6 项
@@ -314,11 +367,13 @@ port-alpha.messages.9525		旧大纲-20261023/第09卷-netbsd的历史/第190章-
 tech-kern.messages.123485		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.6-本期可取证的一手材料包括OpenBSDc2k15卡尔加里黑客松与会者亲笔汇报含J.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128174		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	2	待定位：与 418 题重合不足 6 项
 tech-security.messages.285371		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	1	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217968		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	1	复核错配：原拟 V41.3.1.2，fpu 内核线程与旧 AES 保留，非内核／用户态拆解
 tech-kern.messages.217971		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	4	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128326		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.128366		旧大纲-20261023/第09卷-netbsd的历史/第193章-netbsd-pkgsrc的早期演进/193.1-netbsd与pkgsrc的早期演进19972004pkgsrc1997年8月由/193.1.7-年1月28日TomaszLuchowski报告在15Qi386上构建avifil.md	6	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9489		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9511		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
+netbsd.duckdb		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	1	复核错配：原拟 V41.2.1.2，日本用户 BSD 缘起自述，非 68k 驱动继承
 port-alpha.messages.6646		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	4	待定位：与 418 题重合不足 6 项
 port-alpha.messages.6691		旧大纲-20261023/第09卷-netbsd的历史/第194章-netbsd嵌入式市场与外部批评/194.1-netbsd与嵌入式市场19982004dreamcastsharpzaurus/194.1.4-要点嵌入式部署记录与硬件文档考据NetBSD嵌入式部署记录ports目录与硬件文.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.152909		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.9-netbsd5x周期漏洞与安全响应综览架构重构下的ocspssh漏洞与/196.9.4-要点NetBSD5x周期内核与基本系统零散漏洞包括CVE20110014越界访问.md	2	待定位：与 418 题重合不足 6 项
@@ -337,6 +392,7 @@ usenet_mail.messages.154197		旧大纲-20261023/第09卷-netbsd的历史/第189�
 usenet_mail.messages.172805		旧大纲-20261023/第09卷-netbsd的历史/第189章-netbsd的诞生与早期版本/189.1-netbsd0809的胎动与10发布19941995/189.1.5-要点20260806将NetBSD官方发展史与CoreTeam治理文档下载归档至.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.2320695		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.5-外部批评与反对者netbsd节奏放缓与资源稀释批评linux社区对netbsd3/196.5.4-批评原始发言与邮件列表考据.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.2320698		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.5-外部批评与反对者netbsd节奏放缓与资源稀释批评linux社区对netbsd3/196.5.4-批评原始发言与邮件列表考据.md	5	待定位：与 418 题重合不足 6 项
+tech-kern.messages.2320702		旧大纲-20261023/第09卷-netbsd的历史/第196章-netbsd-5.0架构重构与社区演进/196.5-外部批评与反对者netbsd节奏放缓与资源稀释批评linux社区对netbsd3/196.5.4-批评原始发言与邮件列表考据.md	8	复核错配：原拟 V41.4.1.1，缓存结构查询能力，非单处理器默认假设
 port-alpha.messages.9495		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9525		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218614		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.4-与linuxsolaris同期smp实现的对比/200.4.1-与linuxsolaris同期smp实现的对比.md	4	待定位：与 418 题重合不足 6 项
@@ -358,6 +414,8 @@ tech-kern.messages.122284		旧大纲-20261023/第09卷-netbsd的历史/第192章
 port-alpha.messages.9525		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	2	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9553		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	5	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9606		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	8	待定位：与 418 题重合不足 6 项
+port-vax.messages.459409		旧大纲-20261023/第09卷-netbsd的历史/第206章-netbsd-10-0的现代硬件支持/206.8-netbsd100时期的技术淘汰旧内核安全特性新内核安全特性旧硬件支持新硬件支持/206.8.4-要点NetBSD1002024328引入大量新设备驱动覆盖NVMe新ARMSoC.md	3	复核错配：原拟 V41.13.1.1，awk SIGILL 的 ISO C 辨析，非语言运行时打包成规
+tech-kern.messages.162819		旧大纲-20261023/第09卷-netbsd的历史/第197章-netbsd-6.0的发布与多核改进/197.3-与同时期操作系统的比较netbsd60发布与多核改进时期2012与freebsd/197.3.5-要点2012年操作系统围绕多核扩展性竞争FreeBSD910与Linux3x在x.md	7	复核错配：原拟 V41.10.4.2，Postgres SYSV 共享内存配置，非隔离界线
 tech-kern.messages.122280		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	2	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122283		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	5	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122295		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.2-netbsd1x周期漏洞与安全响应综览sa公告体系奠基与/192.2.10-年11月5日WarnerLosh认同应尽早放弃root但指出不少程序与API并未.md	8	待定位：与 418 题重合不足 6 项
@@ -366,6 +424,7 @@ tech-kern.messages.122593		旧大纲-20261023/第09卷-netbsd的历史/第191章
 tech-kern.messages.122591		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	4	待定位：与 418 题重合不足 6 项
 tech-kern.messages.129227		旧大纲-20261023/第09卷-netbsd的历史/第191章-netbsd-1x的争议与路线分化/191.2-netbsd1x时期的技术淘汰386bsd单人维护coreteam集体治理43/191.2.10-当事人自述证据等级L3来源historical_claimsduckdbcla.md	7	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116879		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	2	待定位：与 418 题重合不足 6 项
+tech-kern.messages.116900		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	5	复核错配：原拟 V41.2.4.5，序列号注册机构提议，非 ARM 维护责任
 tech-kern.messages.116924		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	8	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116884		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.116923		旧大纲-20261023/第09卷-netbsd的历史/第192章-netbsd-1x与同时期操作系统的比较/192.1-与同时期操作系统的比较netbsd1x成长时期19932004与freebsd2/192.1.10-当事人自述证据等级L4来源historical_claimsduckdbcla.md	6	待定位：与 418 题重合不足 6 项
@@ -403,11 +462,14 @@ usenet_mail.messages.130542		旧大纲-20261023/第09卷-netbsd的历史/第191�
 port-alpha.messages.9525		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	1	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9553		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	4	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9606		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	7	待定位：与 418 题重合不足 6 项
+tech-security.messages.286077		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.3-veriexec与kauth框架的边界-netbsd特有授权与完整性机制.md	2	复核错配：原拟 V41.1.4.2，veriexec 同步问题，非内存屏障
 tech-kern.messages.217971		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.217974		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	6	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9553		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	3	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9606		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.4-重要贡献者与边缘者netbsd早期核心团队chrisdemetriouadamg/190.4.10-年1月1日JasonThorpe宣布为alpha端口实现了isa_intr_di.md	6	待定位：与 418 题重合不足 6 项
 usenet_mail.messages.145715		旧大纲-20261023/第09卷-netbsd的历史/第190章-netbsd-1x的成熟期与pkgsrc引入/190.3-committer权限记录19942004本时期netbsdcoreteam/190.3.5-要点20260806将NetBSDdevelopershtmlcommitter.md	7	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217970		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	1	复核错配：原拟 V41.6.2.5，AES 旧代码去留，非一致性机制替代方案
 tech-kern.messages.217973		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	4	待定位：与 418 题重合不足 6 项
+tech-kern.messages.217976		旧大纲-20261023/第09卷-netbsd的历史/第199章-netbsd-9.0的发布与zfs集成/199.4-netbsd9x周期漏洞与安全响应综览aslr默认启用与可移植性的安全代价/199.4.7-要点9x周期NetBSDSecurityOfficerTeam的18个SA在数量.md	7	复核错配：原拟 V41.1.1.1，2020 AES-NI i386 帖，与“Net/2 分装代码界线”无涉
 tech-kern.messages.217139		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	3	待定位：与 418 题重合不足 6 项
 tech-kern.messages.218450		旧大纲-20261023/第09卷-netbsd的历史/第200章-netbsd-2-0的smp与多平台扩展/200.2-smp性能基准与硬件支持广度/200.2.1-要点NetBSD2x3x时期SMP性能基准在28核机器上较FreeBSD5x6x.md	6	待定位：与 418 题重合不足 6 项
