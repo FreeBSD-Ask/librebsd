@@ -1,0 +1,25 @@
+kind=landing
+vol=V38
+title_count=198
+ledger_sha256=a1e00a23f47864eb3d61dbc9f8117f66668f7d0ec9e6742331ae39c4b259d84d
+scope=全 198 题（45 filled＋153 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V38-C1.tsv
+ledger_main_sha256=00d8d4aa95c2ee003e846fb00961d83ca7224a1b4477a76183601195d1c53540
+ledger_supp=design/V38-C2.tsv
+ledger_supp_sha256=3e874a61b2978fc459b5cf1d9969122c1ec4db2a78b0d183517729e1d2d00e24
+design_index=design/V38.tsv
+design_index_sha256=c0c773a21372e92ec65308cdf2550d3de4e84711e2e261ae95b20d768d2a7b89
+fragments=design/fragments/V38.tsv
+fragments_sha256=639a0d0a6da1da120953ce00c838e0ab311e8105cf648d18ff6364dc3808946c
+blocks_total=357
+blocks_landed=50
+blocks_surplus=134
+blocks_moved=127
+blocks_compiled=0
+blocks_deleted=46
+gate=L1–L18 PASS（outline=tree=13,183=13,183，本卷 198＝198）；L19 FAIL summary_diff=3,988——全局 W_NORM（V45 8.9.1／V47 2.4.2／V63 1.4.3·1.5.3·2.3.2 五题旧词“基础系统”）使 sync_outline_mirror 拒写，SUMMARY 停 01:40；并含他会话新落卷未镜像行，只披露不代改；第三十八件 D1／D2 PASS（L 缺 V008／V069，他线在途；V038 已签）；第三十九件 45 项 FAIL 0；第三十三／三十四／二十四件本卷零项；第二十八件 PASS；卷级回归 V38 6/6（198/198）
+note=主会话单写者判读（不派子代理）；料域＝旧树创始期诸节（072/069/071）＋版本章“开发者群体／重要贡献者与边缘者”节（097.5／097.7／100.6／100.11／102.2／107.6／110.10／114.4／115.7／115.9／134.1／135.4／135.8／142.3／162.1／179.1／175.4）＋基金会（106）＋Ports 维护者（098／099）＋社区（337／338／339／340／349），357 块（P1 206／P2 94／P3 32／P4 25）；P1／P2 机助定址后逐条复核归入（12 块成案，误配 39 块改移出 V37）；P3／P4 为**人名直指补片**：按 13 位人物名（Greenman／Hubbard／Grimes／Jolitz／McKusick／Bostic／Goodkin／Dillon／Kamp／Losh／Watson／Evans）扫料域大节，每人至多 5 件、节内分散落位，弱项（Bruce Evans 与 Jason Evans 混指、Michael Dillon、创始期外硬件问答）逐条降级；`--exclude-landed` 排除他卷已归入 23 块防跨卷双落。语料结构事实：旧树社区治理章（337–340／349／358）机器块近乎为零（散文为主），人物材料集中在版本章“贡献者”节，故 filled 45／198（22.7%），如实记 corpus_gap
+approved_by=ykla
+approved_at=2026-11-08
