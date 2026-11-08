@@ -1,0 +1,25 @@
+kind=landing
+vol=V36
+title_count=531
+ledger_sha256=94767b974539c42870fefe6c30418544f947a03381bb89a646a01fd2be223597
+scope=全 531 题（25 filled＋506 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V36-C1.tsv
+ledger_main_sha256=861b89067e57f2e8a0c8de6777819ffde33d987d8462db2abc6b445d0b4a3e25
+ledger_supp=design/V36-C2.tsv
+ledger_supp_sha256=0c70258e1d2c2d1637e52d9048eeb05316b51d746c5b6ff541d772b8e104857f
+design_index=design/V36.tsv
+design_index_sha256=37b243cae02d14af3d43a7c6277422218c22e03c1dc9f9fc2876d8f7872d7c75
+fragments=design/fragments/V36.tsv
+fragments_sha256=3d7a58fcbcfec21531ec49ae7d8c8cdbd7cf81f1a5328429c7c09595c3b313f6
+blocks_total=797
+blocks_landed=43
+blocks_surplus=321
+blocks_moved=404
+blocks_compiled=0
+blocks_deleted=29
+gate=L1–L18 PASS（outline=tree=11,883=11,883，本卷 531＝531）；L19 FAIL summary_diff=2,688——全局 W_NORM 阻断：V45 8.9.1／V47 2.4.2／V63 1.4.3·1.5.3·2.3.2 五题含旧词“基础系统”，sync_outline_mirror 拒绝写盘致 SUMMARY 停 01:40（他线题名，只披露不代改）；第三十八件 D1／D2 PASS；第三十九件 45 项 FAIL 0；第三十三／三十四／二十四件本卷零项（余项属他线）；第二十八件 PASS；卷级回归 V36 6/6（531/531 渲染）
+note=主会话单写者判读（不派子代理）；料域按 16 个版本章＋3 个 Ports 档案章重建（072/069/071/073→1.x；097→2.x；100/106→3.x；101/102/103→4.x；107/109→5.x；110→6.x；113/114→7.x；115/116/123→8.x；134/135/137→9.x；138–140→10.x；141–143→11.x；144–146→12.x；161–163→13.x；164–168→14.x；177–180→15.x；181–183→16.x；098/099/321→17–19），797 块入批；机助定址（章内 tf-idf＋事实线索）后逐条复核全部归入项，误配 26 块改移出 V37；史观样板 59 块（含禁称“一刻哲学”）移出 V75 不落树；386BSD 产品支持/技术问答 83 块移出 V21；技术问答移出 V37；DB 统计行 29 块删除；321 块低相似挂账于 surplus/V36.tsv。语料结构事实：旧树版本章文件以“要点”散文＋嵌入邮件块为主，嵌入块多为邮件问答，故 filled 仅 25／531（4.7%），如实记 corpus_gap
+approved_by=ykla
+approved_at=2026-11-08
