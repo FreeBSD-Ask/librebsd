@@ -1,0 +1,25 @@
+kind=landing
+vol=V09
+title_count=120
+ledger_sha256=26509c2bca85f2c1579edc143b30fc273af5374568d6f25ff505daff7684093f
+scope=全 120 题（19 filled＋101 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V09-C1.tsv
+ledger_main_sha256=890d5ff217e8540c797f736119da235939fb390dd4d378acbe73a79c14ca5e60
+ledger_supp=design/V09-C2.tsv
+ledger_supp_sha256=3791527ee28e56f959b1ae0aa0eafaa493d85059b800ae539a55863499e6186f
+design_index=design/V09.tsv
+design_index_sha256=52b46d836f2da9970bd9cae94d0558ca792550c93ed298404f29d8598023bbc3
+fragments=design/fragments/V09.tsv
+fragments_sha256=1829999782231f7113acad87ad42a5c777174aed816d52411e703237425fa7c3
+blocks_total=174
+blocks_landed=23
+blocks_surplus=0
+blocks_moved=146
+blocks_compiled=0
+blocks_deleted=5
+gate=本卷：outline=tree=120；L1–L19 19/19 PASS（2026-11-09 晨复跑：outline=tree=summary=15,577、orphan_md=0、summary_diff=0）；第三十八件 D1／D2 PASS（D 系差异仅 V75 在途卷）；第三十九件 45 项 FAIL 0；第二十四／二十八／三十五件 PASS；第三十四件本卷零处（V58 修 2 处 REVIEW-ANNOT 未配对后归零）；卷级回归 V09 6/6 PASS
+note=主会话单写者判读（ykla 令不使用子代理）；corpus_gap 例外 101 行如实登记
+approved_by=ykla
+approved_at=2026-11-09
