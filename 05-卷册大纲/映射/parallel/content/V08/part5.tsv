@@ -1,0 +1,816 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.77894	V08.8.2.2	重定向与管道的语法融合	归入	循环置于子壳之因
+usenet_mail.messages.77898	V08.8.2.2	重定向与管道的语法融合	归入	csh here 文档包裹写法
+usenet_mail.messages.77905	V08.8.2.3	命令替换的嵌套能力	归入	查找定位目录再切换
+usenet_mail.messages.77939	V08.8.2.4	引用规则的歧义来源	归入	单引号内变量不展开
+usenet_mail.messages.77948	V08.8.2.2	重定向与管道的语法融合	归入	循环后重定向逐行读
+usenet_mail.messages.77952	V08.8.2.1	展开规则的次序约定	归入	位置参数仅单数字
+usenet_mail.messages.77958	V08.8.2.3	命令替换的嵌套能力	归入	模式即目录名可通配
+usenet_mail.messages.77965	V08.8.5.3	脚本执行的解释流程	归入	子壳目录不外传
+usenet_mail.messages.77970	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77974	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77978	V08.8.5.4	启动文件的加载次序	归入	shells 文件白名单
+usenet_mail.messages.77989	V08.8.5.3	脚本执行的解释流程	归入	点命令使当前 shell 执行
+usenet_mail.messages.77990	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.78004	V08.8.2.3	命令替换的嵌套能力	归入	CDPATH 搜索路径变量
+usenet_mail.messages.78006	V08.8.5.5	环境面的可移植隐患	归入	列表选项不通用的变通
+usenet_mail.messages.78009	V08.8.1.1	第一代解释器的语法遗产	归入	受限 shell 选项机制
+usenet_mail.messages.78022	V08.8.2.2	重定向与管道的语法融合	归入	分流标准输出与错误
+usenet_mail.messages.78028	V08.8.2.2	重定向与管道的语法融合	归入	分流同时写屏留档
+usenet_mail.messages.78044	V08.8.2.3	命令替换的嵌套能力	归入	命令替换空白分词
+usenet_mail.messages.78045	V08.8.2.3	命令替换的嵌套能力	归入	eval 展开命令输出
+usenet_mail.messages.78054	V08.8.2.2	重定向与管道的语法融合	归入	while 递减计数循环
+usenet_mail.messages.78070	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.78079	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.78082	V08.8.2.2	重定向与管道的语法融合	归入	ksh 分流菜单示例
+usenet_mail.messages.78091	V08.8.2.4	引用规则的歧义来源	归入	单双引号行为差异
+usenet_mail.messages.78093	V08.8.2.1	展开规则的次序约定	归入	位置参数单数字之诙谐
+usenet_mail.messages.78102	V08.8.2.2	重定向与管道的语法融合	归入	留档兼终端提示之问
+usenet_mail.messages.78103	V08.8.2.2	重定向与管道的语法融合	归入	追加错误并分流输出
+usenet_mail.messages.78108	V08.8.5.4	启动文件的加载次序	归入	sh -c 不读 profile
+usenet_mail.messages.78109	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.78114	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.78120	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.78125	V08.8.2.2	重定向与管道的语法融合	归入	分流两文件之问
+usenet_mail.messages.78126	V08.8.2.2	重定向与管道的语法融合	归入	全会话记录之问
+usenet_mail.messages.78128	V08.8.2.1	展开规则的次序约定	归入	十位以上无从直取
+usenet_mail.messages.78131	V08.8.5.3	脚本执行的解释流程	归入	父环境不可被子改
+usenet_mail.messages.77336	V08.8.2.4	引用规则的歧义来源	归入	漏反引号容错差异
+usenet_mail.messages.77337	V08.8.2.2	重定向与管道的语法融合	归入	空命令重定向截断
+usenet_mail.messages.77338	V08.8.5.2	退出状态码的解读	归入	管线退出状态语义沿革
+usenet_mail.messages.77339	V08.8.5.2	退出状态码的解读	归入	管线末个一词含义混
+usenet_mail.messages.77341	V08.8.2.2	重定向与管道的语法融合	归入	三层 for case 跳出
+usenet_mail.messages.77345	V08.8.5.2	退出状态码的解读	归入	管线退出状态语义沿革
+usenet_mail.messages.77352	V08.8.2.2	重定向与管道的语法融合	归入	冒号加重定向等义
+usenet_mail.messages.77354	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77359	V08.8.2.2	重定向与管道的语法融合	归入	空重定向保留属主权限
+usenet_mail.messages.77361	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77364	V08.8.2.2	重定向与管道的语法融合	归入	一行 for 取末参语法
+usenet_mail.messages.77365	V08.8.5.5	环境面的可移植隐患	归入	路径空分量防木马
+usenet_mail.messages.77367	V08.8.1.1	第一代解释器的语法遗产	归入	sh 注释史与冒号注释
+usenet_mail.messages.77370	V08.8.2.4	引用规则的歧义来源	归入	引号状态机四态转移
+usenet_mail.messages.77382	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77384	V08.8.7.2	多解释器生态的形成	归入	ksh EOF 定义缺陷
+usenet_mail.messages.77387	V08.8.7.5	家族分化的问题清单	归入	BSD 与 AT&T sh 差异小
+usenet_mail.messages.77392	V08.8.2.4	引用规则的歧义来源	归入	词分割器引号扫描机制
+usenet_mail.messages.77397	V08.8.2.2	重定向与管道的语法融合	归入	多重输出重定向次序
+usenet_mail.messages.77400	V08.8.2.4	引用规则的歧义来源	归入	EOF 补定界符差异
+usenet_mail.messages.77402	V08.8.5.5	环境面的可移植隐患	归入	临时目录编译风险
+usenet_mail.messages.77408	V08.8.2.2	重定向与管道的语法融合	归入	省略 in 子句取末参
+usenet_mail.messages.77409	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77417	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77425	V08.8.2.2	重定向与管道的语法融合	归入	取末参数移位写法
+usenet_mail.messages.77444	V08.8.2.4	引用规则的歧义来源	归入	紧凑写法方言差异
+usenet_mail.messages.77450	V08.8.2.2	重定向与管道的语法融合	归入	重定向可任意位置
+usenet_mail.messages.77452	V08.8.2.2	重定向与管道的语法融合	归入	重定向跨行非缺陷
+usenet_mail.messages.77453	V08.8.5.5	环境面的可移植隐患	归入	编译器输出选项绕行
+usenet_mail.messages.77455	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77462	V08.8.2.1	展开规则的次序约定	归入	换行解释依上下文
+usenet_mail.messages.77466	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77470	V08.8.2.2	重定向与管道的语法融合	归入	命令替换分词多词之因
+usenet_mail.messages.77475	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77480	V08.8.2.4	引用规则的歧义来源	归入	井号注释交互之辩
+usenet_mail.messages.77484	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77491	V08.8.2.1	展开规则的次序约定	归入	空分量等同当前目录
+usenet_mail.messages.77502	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77517	V08.8.2.2	重定向与管道的语法融合	归入	脚本错误逐条纠正
+usenet_mail.messages.77529	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77539	V08.8.2.1	展开规则的次序约定	归入	空分量等同当前目录
+usenet_mail.messages.77549	V08.8.2.2	重定向与管道的语法融合	归入	短路语义子壳包裹
+usenet_mail.messages.77579	V08.8.2.2	重定向与管道的语法融合	归入	重定向次序长期缺陷
+usenet_mail.messages.77596	V08.8.2.2	重定向与管道的语法融合	归入	前置重定向写法惯例
+usenet_mail.messages.77612	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77643	V08.8.2.2	重定向与管道的语法融合	归入	多重重定向一般规则
+usenet_mail.messages.77687	V08.8.2.4	引用规则的歧义来源	归入	厂商 sh 三处缺陷
+usenet_mail.messages.77694	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77732	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.76554	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.76581	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.76600	V08.8.2.2	重定向与管道的语法融合	归入	内建绕开额外 shell
+usenet_mail.messages.76610	V08.8.2.2	重定向与管道的语法融合	归入	错误流限缩输出核心问题
+usenet_mail.messages.76617	V08.8.2.2	重定向与管道的语法融合	归入	描述符复制一行解
+usenet_mail.messages.76641	V08.8.5.4	启动文件的加载次序	归入	远程 sh 环境不继承
+usenet_mail.messages.76656	V08.8.2.2	重定向与管道的语法融合	归入	csh 无二号重定向之困
+usenet_mail.messages.76674	V08.8.2.2	重定向与管道的语法融合	归入	重定向到命令与文件之辨
+usenet_mail.messages.76754	V08.8.2.2	重定向与管道的语法融合	归入	早 sh 额外进程忆
+usenet_mail.messages.76780	V08.8.2.2	重定向与管道的语法融合	归入	fd3 中转交换两流
+usenet_mail.messages.76790	V08.8.5.4	启动文件的加载次序	归入	init 调用描述符建议
+usenet_mail.messages.76804	V08.8.2.2	重定向与管道的语法融合	归入	重定向序免子壳
+usenet_mail.messages.76816	V08.8.2.2	重定向与管道的语法融合	归入	左到右求值换流
+usenet_mail.messages.76859	V08.8.2.2	重定向与管道的语法融合	归入	重定向到命令不奏效
+usenet_mail.messages.76919	V08.8.2.2	重定向与管道的语法融合	归入	临时文件 tail 折衷
+usenet_mail.messages.76921	V08.8.2.2	重定向与管道的语法融合	归入	条件重定向脚本演示
+usenet_mail.messages.76936	V08.8.2.2	重定向与管道的语法融合	归入	set 与 for 逐词回显
+usenet_mail.messages.76952	V08.8.5.5	环境面的可移植隐患	归入	read 吞多余输入
+usenet_mail.messages.76969	V08.8.2.2	重定向与管道的语法融合	归入	system 下 set 不改参
+usenet_mail.messages.76981	V08.8.2.2	重定向与管道的语法融合	归入	子壳 exec 条件重定向
+usenet_mail.messages.77018	V08.8.2.1	展开规则的次序约定	归入	IFS 换行按行切分
+usenet_mail.messages.77025	V08.8.5.3	脚本执行的解释流程	归入	子进程环境不外传
+usenet_mail.messages.77041	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77136	V08.8.2.1	展开规则的次序约定	归入	方括号否定模式实测
+usenet_mail.messages.77138	V08.8.2.1	展开规则的次序约定	归入	方括号否定跨 shell
+usenet_mail.messages.77150	V08.8.2.1	展开规则的次序约定	归入	POSIX 采纳否定写法
+usenet_mail.messages.77168	V08.8.2.2	重定向与管道的语法融合	归入	Bourne shell 语义一手讨论
+usenet_mail.messages.77190	V08.8.2.2	重定向与管道的语法融合	归入	空重定向截断语义
+usenet_mail.messages.77233	V08.8.2.1	展开规则的次序约定	归入	IFS 指定保护空白
+usenet_mail.messages.77286	V08.8.2.4	引用规则的歧义来源	归入	未闭合引号跨行读
+usenet_mail.messages.77287	V08.8.2.4	引用规则的歧义来源	归入	跨行读属既定特性
+ucbvax.3188	V08.8.7.1	C shell 的交互革新	归入	csh 历史特性入 Bourne 之议
+usenet_mail.messages.46364			辑存	SPICE 获取答
+usenet_mail.messages.46371			辑存	fuser root 限制
+usenet_mail.messages.46383			辑存	零长文件清理案
+usenet_mail.messages.46398			辑存	MakeWrite 评论
+usenet_mail.messages.46401			辑存	xargs 限长建议
+usenet_mail.messages.46404			辑存	ls grep while rm 写法
+usenet_mail.messages.46418			辑存	fuser 读 kmem 问
+usenet_mail.messages.46435	V08.8.4.1	正则引擎的三种实现	归入	egrep 字符区间代替列举
+usenet_mail.messages.46438			辑存	fstat 查目录进入
+usenet_mail.messages.46439			辑存	RTF 与 TeX 宏包设想
+usenet_mail.messages.46440			辑存	zoo 归档选项问
+usenet_mail.messages.46449			辑存	Unix 文字处理器之缺
+usenet_mail.messages.46452			辑存	ps 输出列宽解析
+usenet_mail.messages.46454			辑存	cpio 魔数损坏判
+usenet_mail.messages.46458			辑存	bc .bcrc 配置
+usenet_mail.messages.46467			辑存	fuser 权限调整法
+usenet_mail.messages.46469			辑存	SVR4 fuser 实测
+usenet_mail.messages.46475			辑存	ofiles 工具介绍
+usenet_mail.messages.46476			辑存	least-loaded 脚本
+usenet_mail.messages.46477			辑存	GNU Calc 推介边缘
+usenet_mail.messages.46485			辑存	less 源码获取
+usenet_mail.messages.46489			辑存	bc 基数换算
+usenet_mail.messages.46491			辑存	磁带归档魔数问
+usenet_mail.messages.46492			辑存	bc 点号复用结果
+usenet_mail.messages.46497			辑存	fuser 目录占用答
+usenet_mail.messages.46537	V08.8.4.2	流编辑的两遍扫描	归入	整行替换需词边界
+usenet_mail.messages.46541	V08.8.4.2	流编辑的两遍扫描	归入	vi 词边界替换表达式
+usenet_mail.messages.46543			辑存	SUNTRAC 使用忆
+usenet_mail.messages.46549	V08.8.4.2	流编辑的两遍扫描	归入	词边界标记写法
+usenet_mail.messages.46556			辑存	TIOCSTI 改写目录
+usenet_mail.messages.46557			辑存	查目录进入权限
+usenet_mail.messages.46566	V08.8.4.2	流编辑的两遍扫描	归入	vi 带词边界替换命令
+usenet_mail.messages.46579			辑存	tcsh shar 补丁站
+usenet_mail.messages.46585			辑存	ar t 与 nm 之别
+usenet_mail.messages.46589	V08.8.4.2	流编辑的两遍扫描	归入	ed 分节替换写法
+usenet_mail.messages.46603	V08.8.4.2	流编辑的两遍扫描	归入	sed ex perl 三写法
+usenet_mail.messages.46613	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.46619			辑存	find newer 同步脚本
+usenet_mail.messages.46627			辑存	indent 程序推介
+usenet_mail.messages.46634			辑存	反复 stat 判写完
+usenet_mail.messages.46635			辑存	归档工具总表
+usenet_mail.messages.46637			辑存	rdist 用途答
+usenet_mail.messages.46641			辑存	dump 设备指定问
+usenet_mail.messages.46642			辑存	dump 只能整文件系统
+usenet_mail.messages.46646			辑存	培训新用户经验
+usenet_mail.messages.46647			辑存	fsck 坏超级块处理
+usenet_mail.messages.175465			移出	cscope 开源通告→V06
+usenet_mail.messages.135368			移出	strftime 重发通告→V06
+usenet_mail.messages.135460			移出	grolier 发布通告→V06
+usenet_mail.messages.135617			移出	strftime 6.1 通告→V06
+usenet_mail.messages.135647			移出	diffstat 发布通告→V06
+usenet_mail.messages.135662			移出	filter 2.1 通告→V06
+usenet_mail.messages.125822	V08.8.3.5	终端模型的遗产清点	归入	col 尾部垃圾缺陷
+usenet_mail.messages.125823	V08.8.3.5	终端模型的遗产清点	归入	learn 三处缺陷
+usenet_mail.messages.125824	V08.8.3.5	终端模型的遗产清点	归入	learn 描述符耗尽
+usenet_mail.messages.125826	V08.8.3.5	终端模型的遗产清点	归入	col 缓冲刷新缺陷
+usenet_mail.messages.125829	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.125855	V08.8.4.4	三工具的性能取舍	归入	spell -x 传递缺陷
+usenet_mail.messages.125876	V08.8.4.4	三工具的性能取舍	归入	ptx 格式化语句集
+usenet_mail.messages.125882	V08.8.4.4	三工具的性能取舍	归入	plot 空间说明之误
+usenet_mail.messages.125886	V08.8.4.4	三工具的性能取舍	归入	wc 输出取数不便
+usenet_mail.messages.125893	V08.8.4.4	三工具的性能取舍	归入	plot 图元支持不全
+usenet_mail.messages.125894	V08.8.4.4	三工具的性能取舍	归入	plot 临时文件冲突
+usenet_mail.messages.125900	V08.8.4.4	三工具的性能取舍	归入	手册页宏 at 符缺陷
+usenet_mail.messages.125914	V08.8.4.2	流编辑的两遍扫描	归入	expr 冒号整串匹配
+usenet_mail.messages.125940	V08.8.4.4	三工具的性能取舍	归入	tbl 跨列宽度缺陷
+usenet_mail.messages.125957	V08.8.4.3	模式扫描的字段处理	归入	awk 输出 512 字节限
+usenet_mail.messages.125958	V08.8.4.4	三工具的性能取舍	归入	tbl 选项失效缺陷
+usenet_mail.messages.125959	V08.8.4.4	三工具的性能取舍	归入	basename 后缀空串
+usenet_mail.messages.125960	V08.8.4.3	模式扫描的字段处理	归入	awk 行长受限确认
+usenet_mail.messages.125961	V08.8.4.4	三工具的性能取舍	归入	basename 修复更正
+usenet_mail.messages.125965	V08.8.4.4	三工具的性能取舍	归入	tbl 居中跨列缺陷
+usenet_mail.messages.125966	V08.8.4.1	正则引擎的三种实现	归入	grep -v 手册措辞误导
+usenet_mail.messages.125967	V08.8.4.2	流编辑的两遍扫描	归入	sed y 命令缺界符
+usenet_mail.messages.125969	V08.8.4.4	三工具的性能取舍	归入	calendar 前导零缺陷
+usenet_mail.messages.125972	V08.8.4.4	三工具的性能取舍	归入	split 行数上限缺陷
+usenet_mail.messages.125974	V08.8.4.4	三工具的性能取舍	归入	nroff 临时文件尺寸
+usenet_mail.messages.125976	V08.8.4.3	模式扫描的字段处理	归入	awk 文档 printf 语法
+usenet_mail.messages.125984	V08.8.4.4	三工具的性能取舍	归入	tbl expand 模式缺陷
+usenet_mail.messages.125995	V08.8.4.4	三工具的性能取舍	归入	look 三处缺陷
+usenet_mail.messages.126001	V08.8.4.1	正则引擎的三种实现	归入	grep -v 状态反转主张
+usenet_mail.messages.126002	V08.8.4.1	正则引擎的三种实现	归入	grep -v 实为手册写错
+usenet_mail.messages.126003	V08.8.4.3	模式扫描的字段处理	归入	awk substr 首行缺陷
+usenet_mail.messages.126012	V08.8.4.1	正则引擎的三种实现	归入	fgrep fail 链缺陷
+usenet_mail.messages.126016	V08.8.4.2	流编辑的两遍扫描	归入	expr 缓冲尺寸缺陷
+usenet_mail.messages.126032	V08.8.4.3	模式扫描的字段处理	归入	awk 等号转义实测
+usenet_mail.messages.126036	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.126038	V08.8.4.3	模式扫描的字段处理	归入	awk 等号转义复测
+usenet_mail.messages.126039	V08.8.4.3	模式扫描的字段处理	归入	awk /= 词法歧义
+usenet_mail.messages.126040	V08.8.4.3	模式扫描的字段处理	归入	词法歧义变通之辨
+usenet_mail.messages.126077	V08.8.4.2	流编辑的两遍扫描	归入	S5 sed 混入注释代码
+usenet_mail.messages.126079	V08.8.4.2	流编辑的两遍扫描	归入	sed 注释处理未文档
+usenet_mail.messages.126088	V08.8.4.2	流编辑的两遍扫描	归入	expr 负数处理缺陷
+usenet_mail.messages.126090	V08.8.4.2	流编辑的两遍扫描	归入	expr UMINUS 彻底解
+usenet_mail.messages.126092	V08.8.4.2	流编辑的两遍扫描	归入	expr 负参数 SysV 已修
+usenet_mail.messages.126093	V08.8.4.2	流编辑的两遍扫描	归入	match 前缀同义漏改
+usenet_mail.messages.126096	V08.8.4.2	流编辑的两遍扫描	归入	expr 重写保留旧算符
+usenet_mail.messages.94566			辑存	排版预处理器征文边缘
+usenet_mail.messages.94598			辑存	troff 多字体答疑边缘
+cross_indexes.duckdb.concept_history	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+utzoo.2694	V08.8.4.1	正则引擎的三种实现	归入	grep -v 手册措辞误导
+usenet_mail.messages.137234			移出	hgrep 发布通告→V06
+usenet_mail.messages.137250			移出	colm 发布通告→V06
+usenet_mail.messages.137315			移出	uniqbib 发布通告→V06
+usenet_mail.messages.137393			移出	mcat2 发布通告→V06
+usenet_mail.messages.137528			移出	inc-elim 通告→V06
+usenet_mail.messages.136817			移出	strsed 收录通告→V06
+usenet_mail.messages.137090			移出	GNU grep 补丁→V06
+usenet_mail.messages.137166			移出	GNU grep 1.2 通告→V06
+usenet_mail.messages.78541	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78544	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78549	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78566	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78579	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78584	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78587	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78589	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78601	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78604	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78606	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78614	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78621	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78627	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78634	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78637	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78138	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78144	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78148	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78174	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78177	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78185	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78189	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78192	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78196	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78201	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78210	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78212	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78222	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78224	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78235	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78240	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78241	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78243	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78247	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78248	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78253	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78254	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78262	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78263	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78264	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78267	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78272	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78275	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78280	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78282	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78289	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78291	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78293	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78296	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.78297	V08.8.4.2	流编辑的两遍扫描	归入	V7 文本工具缺陷一手通报
+usenet_mail.messages.46980			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.46982			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48248			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48256			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48259			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48269			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48276			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48284			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48308			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48366			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48385			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48390			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48545			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48549			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48562			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48584			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48625			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124815			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124922			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124931			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124943			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124945			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124948			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124950			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124951			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124953			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124954			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124955			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124956			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124958			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124959			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124961			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124963			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124964			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124965			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124967			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124969			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124971			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124974			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124975			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124977			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124978			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124979			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124981			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124982			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124983			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124986			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124987			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124991			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124992			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124993			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124994			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124997			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.124998			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125000			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125001			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125002			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125006			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125026			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125104			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47073			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47089			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47105			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47107			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47125			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47131			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47137			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.47202			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.125193			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.29798			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.29846			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48723			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48729			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48733			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48769			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48883			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.48984			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49033			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.29927			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.29973			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.29991			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30004			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30005			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30006			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30016			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30018			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30032			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30042			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30049			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30077			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30085			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30099			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30106			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30118			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30130			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30138			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30139			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30169			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30186			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30190			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30200			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30206			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30207			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30234			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30244			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30264			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30285			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.135711			移出	calc 2.9 分卷→V06
+usenet_mail.messages.135855			移出	conv123 通告→V06
+usenet_mail.messages.135863			移出	encode 通告→V06
+usenet_mail.messages.135911			移出	rmgetopts 通告→V06
+usenet_mail.messages.136031			移出	ssh 1.7 shell 通告→V06
+usenet_mail.messages.136064			移出	philspell 通告→V06
+usenet_mail.messages.136079			移出	arc 5.21 通告→V06
+usenet_mail.messages.136087			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.136095			移出	agrep 2.01 通告→V06
+usenet_mail.messages.136101			移出	CALC 通告→V06
+usenet_mail.messages.53507			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.53526			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.53562			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.53709			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49072			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49252			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49291			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49332			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49377			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49384			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49393			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49451			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49490			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49522			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49534			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.49582			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.76978	V08.8.7.2	多解释器生态的形成	归入	各 shell 使用统计
+usenet_mail.messages.76987	V08.4.2.1	a.out 的格式要素	归入	可执行文件可删性
+usenet_mail.messages.76991	V08.8.5.5	环境面的可移植隐患	归入	脚本命名与 at 参数
+usenet_mail.messages.76999	V08.8.5.4	启动文件的加载次序	归入	etc/shells 白名单
+usenet_mail.messages.77022	V08.8.7.5	家族分化的问题清单	归入	ksh 无 csh 修饰符
+usenet_mail.messages.77033	V08.9.5.2	网络文件系统的语义边界	归入	符号链接可移植性
+usenet_mail.messages.77078			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.77106			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.77134	V08.8.2.1	展开规则的次序约定	归入	点文件列法压进程
+usenet_mail.messages.77137	V08.8.7.2	多解释器生态的形成	归入	ksh tcsh bash 优劣
+usenet_mail.messages.77140	V08.8.7.5	家族分化的问题清单	归入	ksh CDPATH 缺陷
+usenet_mail.messages.77175	V08.8.2.1	展开规则的次序约定	归入	点文件匹配写法差异
+usenet_mail.messages.77176	V08.8.7.2	多解释器生态的形成	归入	ksh 最佳与源码许可
+usenet_mail.messages.77200			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.77206	V08.8.2.1	展开规则的次序约定	归入	csh 缺否定模式
+usenet_mail.messages.77225	V08.8.5.4	启动文件的加载次序	归入	bash 登出文件机制
+usenet_mail.messages.77239	V08.8.2.1	展开规则的次序约定	归入	点文件排序假设隐患
+usenet_mail.messages.77246	V08.8.2.1	展开规则的次序约定	归入	ls -ad 列点文件法
+usenet_mail.messages.77255			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.77256	V08.8.2.1	展开规则的次序约定	归入	find 通配规则匹配
+usenet_mail.messages.77258			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.77275	V08.8.5.4	启动文件的加载次序	归入	bash 登出文件机制
+usenet_mail.messages.77297	V08.8.7.2	多解释器生态的形成	归入	vsh 可视化 shell 缺陷
+usenet_mail.messages.77299			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.77301	V08.8.7.2	多解释器生态的形成	归入	bash 作登录外壳经验
+usenet_mail.messages.77312	V08.8.2.4	引用规则的歧义来源	归入	csh 命令替换单词语境
+usenet_mail.messages.77316	V08.8.7.5	家族分化的问题清单	归入	sh 语法文档出处
+usenet_mail.messages.77317	V08.8.7.1	C shell 的交互革新	归入	Norton 工具移植评价
+usenet_mail.messages.77319	V08.8.7.5	家族分化的问题清单	归入	ksh vi 模式历史搜索
+usenet_mail.messages.77329	V08.8.7.2	多解释器生态的形成	归入	ksh 历史文件异常
+usenet_mail.messages.77331	V08.8.7.5	家族分化的问题清单	归入	rc 与 csh 语法差异
+usenet_mail.messages.30323			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30324			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30327			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30364			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30365			辑存	shell 实操问答，无本卷题面落点
+usenet_mail.messages.30368			辑存	shell 实操问答，无本卷题面落点
+freebsd-perl.messages.1516991			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1516992			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517015			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517018			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517020			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517028			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517031			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517034			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517035			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517047			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517060			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517078			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517079			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517084			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517086			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517090			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517091			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517093			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517094			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517103			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517104			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517106			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517117			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517131			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517137			移出	FreeBSD ports 维护面→V37
+freebsd-perl.messages.1517141			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2170784			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166132			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166156			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166196			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166199			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166205			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166228			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166231			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166240			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166269			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166314			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166335			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166354			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166384			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166385			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166407			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166440			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166470			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166491			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166501			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166510			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166527			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166578			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166579			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166596			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166625			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166660			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166661			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166662			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166664			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166666			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166667			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166670			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166683			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166691			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166692			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166693			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166695			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166699			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166708			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166711			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166729			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166732			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166734			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166742			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166748			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166750			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166752			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166754			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166756			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166759			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166763			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166767			移出	FreeBSD ports 维护面→V37
+freebsd-python.messages.2166781			移出	FreeBSD ports 维护面→V37
+freebsd-java.messages.1379116			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379125			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379134			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379147			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379156			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379164			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379185			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379194			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379203			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379208			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379215			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379242			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379254			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379268			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379278			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379291			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379300			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379311			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379320			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379326			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379336			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379345			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379362			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379381			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379389			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1379395			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389691			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389695			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389696			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389697			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389699			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389700			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389702			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389703			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389708			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389713			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389714			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389717			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389722			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389724			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389725			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389726			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389730			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389732			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389733			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389738			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389739			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389743			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389745			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389747			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389753			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389754			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389757			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389758			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389759			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389765			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389767			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389768			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389774			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389775			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389776			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389778			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389786			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389787			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389791			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389796			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389798			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389799			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389800			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389801			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389802			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389804			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389805			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389807			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389808			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389818			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389819			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389820			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389825			移出	FreeBSD Java 移植面→V37
+freebsd-java.messages.1389827			移出	FreeBSD Java 移植面→V37
+2449	V08.8.8.1	版本碎片的具体表现	归入	碎片化起点争议史观块
+usenet_mail.messages.123427			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123429			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123433			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123435			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123436			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123437			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123442			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123446			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123456			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123471			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123478			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123479			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123486			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123491			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123494			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123498			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123500			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123504			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123505			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123510			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123523	V08.5.2.4	内存映射接口的雏形	归入	68030 页表与 BSD 虚存移植
+usenet_mail.messages.123524	V08.3.4.4	驱动接口的统一程度	归入	SVR4 流与套接字双轨
+usenet_mail.messages.123526	V08.5.1.4	分页策略的取舍比较	归入	AIX 可分页内核对价
+usenet_mail.messages.123539			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123540			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123549			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123560			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123562			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123565			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123571			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.123578			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110620	V08.8.4.4	三工具的性能取舍	归入	vi 缓冲区行数不足解
+usenet_mail.messages.110624			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110627			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110630			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110633			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110634			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110637			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110639			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110654			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110659			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110660	V08.4.5.5	段式布局的移植影响	归入	分离空间误区纠正
+usenet_mail.messages.110671	V08.8.3.4	终端属性的系统调用入口	归入	termio 手册与实现不符
+usenet_mail.messages.110677	V08.3.1.1	索引节点的设计要点	归入	十六位 inode 上限
+usenet_mail.messages.110678	V08.8.9.2	版本断代的证据层次	归入	XENIX 为 System III 移植
+usenet_mail.messages.110684	V08.1.6.3	锁机制与同步原语的引入	归入	SysV 消息队列可移植
+usenet_mail.messages.110686	V08.8.4.4	三工具的性能取舍	归入	vi 行数不足真因
+usenet_mail.messages.110703	V08.2.4.3	缓冲与直接读写的分野	归入	stdio 粘滞 EOF 改动
+usenet_mail.messages.110709	V08.3.1.2	目录项与路径解析	归入	inode 消失与 fsck
+usenet_mail.messages.110710	V08.8.8.1	版本碎片的具体表现	归入	只读字符串内核 EFAULT
+usenet_mail.messages.110719	V08.7.1.2	组身份的从属关系	归入	NGROUPS 上限对比
+usenet_mail.messages.110725	V08.9.5.2	网络文件系统的语义边界	归入	NFS 新闻组创建
+usenet_mail.messages.110734	V08.4.6.2	位置无关代码的引入	归入	位置无关代码开销
+usenet_mail.messages.110741			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110745	V08.4.6.3	运行时绑定的实现	归入	共享库引用满足
+usenet_mail.messages.110755	V08.2.4.3	缓冲与直接读写的分野	归入	stdio 开销剖析
+usenet_mail.messages.110760	V08.9.5.1	远端调用的透明化	归入	MDQS 与 NQS 源流
+usenet_mail.messages.110762	V08.8.3.4	终端属性的系统调用入口	归入	termios 控制字符禁用
+usenet_mail.messages.110771	V08.4.5.5	段式布局的移植影响	归入	PDP-11 分离空间方式
+usenet_mail.messages.110776	V08.3.1.2	目录项与路径解析	归入	目录读取统一接口
+usenet_mail.messages.110777			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110794	V08.1.5.4	命名通道的后续扩展	归入	fsck FIFO 大小告警
+usenet_mail.messages.110831	V08.8.5.5	环境面的可移植隐患	归入	crontab PATH 空文件
+usenet_mail.messages.110834	V08.8.7.5	家族分化的问题清单	归入	无作业控制 sh 挂起
+usenet_mail.messages.110845	V08.4.5.5	段式布局的移植影响	归入	分离空间现代常态
+usenet_mail.messages.110053	V08.7.5.2	设备文件的权限管控	归入	kmem 探查与换出
+usenet_mail.messages.110056	V08.9.2.3	BSD 实现的催化作用	归入	UDP 截获内核路径
+usenet_mail.messages.110057	V08.8.2.4	引用规则的歧义来源	归入	csh 引号位标记缺陷
+usenet_mail.messages.110058	V08.8.3.4	终端属性的系统调用入口	归入	FIONREAD 与 rdchk
+usenet_mail.messages.110061	V08.2.3.3	描述符与内核对象的映射	归入	读 kmem 列进程之困
+usenet_mail.messages.110062	V08.4.6.3	运行时绑定的实现	归入	共享库 popen 引用
+usenet_mail.messages.110065	V08.1.6.3	锁机制与同步原语的引入	归入	睡眠队列非 FIFO
+usenet_mail.messages.110066	V08.2.2.3	返回值与错误码的约定	归入	负一作错误码传统
+usenet_mail.messages.110071	V08.7.6.4	局限的批评与辩护	归入	SVVS 空指针缺陷
+usenet_mail.messages.110072	V08.1.6.3	锁机制与同步原语的引入	归入	进程检查点汇总
+usenet_mail.messages.110073	V08.3.1.3	元数据的组织布局	归入	rename 改 ctime 考
+usenet_mail.messages.110076	V08.8.3.3	回显与行编辑的取舍	归入	自动折行缺陷
+usenet_mail.messages.110079	V08.2.6.5	继承语义的工程后果	归入	非阻塞对父壳影响
+usenet_mail.messages.110080	V08.8.3.3	回显与行编辑的取舍	归入	行编辑实现位置
+usenet_mail.messages.110083	V08.3.2.1	mount 调用与文件树嫁接	归入	tar 绝对路径还原难
+usenet_mail.messages.110084	V08.9.1.1	uucp 的拷贝与转发流程	归入	tip cm 串原样发送
+usenet_mail.messages.110097	V08.3.2.1	mount 调用与文件树嫁接	归入	tar 增量备份困难
+usenet_mail.messages.110100	V08.8.7.1	C shell 的交互革新	归入	csh 与 ksh 参数引用
+usenet_mail.messages.110106			辑存	ConMan 图形管道介绍
+usenet_mail.messages.110118	V08.8.3.2	线路规程的分层职责	归入	激光成像仪串口参数
+usenet_mail.messages.110119	V08.2.2.1	陷入入口的寄存器约定	归入	简单调用缓存优化
+usenet_mail.messages.110120	V08.4.5.4	虚实地址的换算路径	归入	空指针核心转储实现
+usenet_mail.messages.110125	V08.2.4.5	简约模型的代价评估	归入	patch 套用差异
+usenet_mail.messages.110128	V08.1.3.1	signal 的异常事件机制	归入	孤儿进程 SIGTTIN 处理
+usenet_mail.messages.110130	V08.2.2.1	陷入入口的寄存器约定	归入	快速接口方案
+usenet_mail.messages.110135	V08.2.4.2	打开与关闭的对称设计	归入	EOF 后流关闭差异
+usenet_mail.messages.110142			辑存	泛问答边缘，无本卷题面落点
+usenet_mail.messages.110147	V08.8.3.3	回显与行编辑的取舍	归入	提前键入缓冲清除
+usenet_mail.messages.110150	V08.8.9.4	命名歧异的比对方法	归入	UNICS 缩写名称考
+usenet_mail.messages.110151	V08.9.3.3	诊断工具的成套出现	归入	trace 与 truss 与 ptrace
+usenet_mail.messages.110154	V08.3.1.5	文件模型的抽象层次	归入	VMS 访问方法与字节流
+usenet_mail.messages.110159	V08.6.4.2	编译器与系统接口的咬合	归入	xstr 超长行缺陷
+usenet_mail.messages.110160	V08.3.1.5	文件模型的抽象层次	归入	VMS 写断开与 UNIX
+usenet_mail.messages.110165	V08.3.1.5	文件模型的抽象层次	归入	OS 放入用户空间之议
+usenet_mail.messages.110172	V08.2.4.3	缓冲与直接读写的分野	归入	dd 手册 bs 语义
+usenet_mail.messages.110174	V08.3.1.1	索引节点的设计要点	归入	长 inode 与换文件系统
+usenet_mail.messages.110176	V08.8.2.1	展开规则的次序约定	归入	空正则与括号元符号
+usenet_mail.messages.110177	V08.3.1.3	元数据的组织布局	归入	rename ctime 影响备份
+usenet_mail.messages.110184	V08.7.6.4	局限的批评与辩护	归入	SVVS 缺陷源流
+usenet_mail.messages.110189	V08.4.6.3	运行时绑定的实现	归入	共享库映射致调用多
+usenet_mail.messages.110195	V08.8.2.1	展开规则的次序约定	归入	空串匹配语义比较
+usenet_mail.messages.110200	V08.8.3.5	终端模型的遗产清点	归入	vi 分流重定向行为
+usenet_mail.messages.110207	V08.8.4.4	三工具的性能取舍	归入	vi 行数不足与特殊串
+usenet_mail.messages.110208	V08.2.4.2	打开与关闭的对称设计	归入	NFS 异步错误于 close
+usenet_mail.messages.110211	V08.3.2.3	名称空间的统一视图	归入	make SHELL 变量问题
+usenet_mail.messages.110212	V08.2.2.1	陷入入口的寄存器约定	归入	调用频度统计法
+usenet_mail.messages.110213	V08.3.1.5	文件模型的抽象层次	归入	RMS 与 UNIX 之争
+usenet_mail.messages.110214	V08.8.2.1	展开规则的次序约定	归入	find 逐段查路径
+usenet_mail.messages.110219	V08.8.4.1	正则引擎的三种实现	归入	egrep 空正则语法
+usenet_mail.messages.110226	V08.8.2.1	展开规则的次序约定	归入	括号加星号元构造
+usenet_mail.messages.110227	V08.1.3.1	signal 的异常事件机制	归入	进程组与作业迁移
+usenet_mail.messages.110246	V08.8.4.4	三工具的性能取舍	归入	vi 行数不足已知怪异
+usenet_mail.messages.110254	V08.8.2.1	展开规则的次序约定	归入	find grep 排除子目录
+usenet_mail.messages.110255	V08.8.3.4	终端属性的系统调用入口	归入	ABI 双窗口系统要求
+usenet_mail.messages.110256	V08.8.3.1	TTY 的控制终端角色	归入	控制终端与进程组
+usenet_mail.messages.110258	V08.2.4.3	缓冲与直接读写的分野	归入	交互流缓冲刷新
+usenet_mail.messages.110260	V08.8.5.3	脚本执行的解释流程	归入	make SHELL 设计缺陷
+usenet_mail.messages.110263	V08.8.7.2	多解释器生态的形成	归入	csh 与 ksh 行编辑差异
+usenet_mail.messages.59619	V08.8.9.2	版本断代的证据层次	归入	ls -c 创建时间手册考
+usenet_mail.messages.59624	V08.8.9.4	命名歧异的比对方法	归入	grep 词源诸说辨
+usenet_mail.messages.59637	V08.8.9.1	源码考古的方法基础	归入	SCCS 与 RCS 效率实测
+usenet_mail.messages.59676			辑存	make 哈希表溢出
+usenet_mail.messages.59677	V08.8.9.4	命名歧异的比对方法	归入	grep 之名 g/re/p 考
+usenet_mail.messages.59729			辑存	hosts.lpd 版本源流
+usenet_mail.messages.59744	V08.8.9.2	版本断代的证据层次	归入	ls -c 系统无此值
+usenet_mail.messages.59808			辑存	sccs 移植符号缺失
+usenet_mail.messages.59200	V08.8.4.4	三工具的性能取舍	归入	sort 字段定界之限
+usenet_mail.messages.59216	V08.8.5.5	环境面的可移植隐患	归入	ls -d 列子目录法
+usenet_mail.messages.59248			辑存	hosts.lpd 机制问
+usenet_mail.messages.59256	V08.8.4.4	三工具的性能取舍	归入	spell 词典算法问
+usenet_mail.messages.59257	V08.8.4.4	三工具的性能取舍	归入	ncheck 反查文件名
+usenet_mail.messages.59266	V08.8.8.1	版本碎片的具体表现	归入	ls -F 符号链接差异
+usenet_mail.messages.59281			辑存	描述符上限实测
+usenet_mail.messages.59289	V08.8.4.4	三工具的性能取舍	归入	sort 定界符换行法
+usenet_mail.messages.59300			辑存	工具问答边缘，无本卷题面落点
+usenet_mail.messages.59306	V08.8.9.1	源码考古的方法基础	归入	SCCS 需前端之评
+usenet_mail.messages.59309			辑存	工具问答边缘，无本卷题面落点
+usenet_mail.messages.59334			辑存	VMS 转 Ultrix 体会
+usenet_mail.messages.59335	V08.4.6.3	运行时绑定的实现	归入	S5R3 共享库链接法
+usenet_mail.messages.59342	V08.8.9.1	源码考古的方法基础	归入	SCCS s 与 p 文件位置
+usenet_mail.messages.59353	V08.8.4.4	三工具的性能取舍	归入	spell 算法出处
+usenet_mail.messages.59359	V08.8.4.4	三工具的性能取舍	归入	sort 混二进制之难
+usenet_mail.messages.59360			辑存	格式化对齐脚本求
+usenet_mail.messages.59368			辑存	unexec 共享库变通
+usenet_mail.messages.59369			辑存	工具问答边缘，无本卷题面落点
+usenet_mail.messages.59381			辑存	colrm 与 cut 之别
+usenet_mail.messages.59424	V08.8.4.1	正则引擎的三种实现	归入	bin 与 ucb 两 grep
+usenet_mail.messages.58648	V08.8.4.4	三工具的性能取舍	归入	bc 弧度争议
+usenet_mail.messages.58650			辑存	VMS 时区套件问
+usenet_mail.messages.58689			辑存	yacc lex 源码许可
+usenet_mail.messages.58701			辑存	dump 性能问
+usenet_mail.messages.58706	V08.8.4.2	流编辑的两遍扫描	归入	sed 分隔符规避斜杠
+usenet_mail.messages.58756	V08.8.4.3	模式扫描的字段处理	归入	GNU AWK 推荐
+usenet_mail.messages.58758			辑存	make FRC 技巧
+usenet_mail.messages.58790	V08.6.6.4	关键字与语义的增补	归入	下划线宏命名边界
+usenet_mail.messages.58816	V08.8.4.2	流编辑的两遍扫描	归入	sed 处理 CRLF 写法
+usenet_mail.messages.58817	V08.8.4.4	三工具的性能取舍	归入	fmt 缓冲上限
+usenet_mail.messages.58847	V08.8.4.4	三工具的性能取舍	归入	tail 32K 缓冲源
+usenet_mail.messages.58855	V08.8.9.1	源码考古的方法基础	归入	SCCS 前端易用比较
+usenet_mail.messages.58861			辑存	dd 读 mem 实现差
+usenet_mail.messages.58865			辑存	修改时间工具 modtime
+usenet_mail.messages.58870	V08.8.9.1	源码考古的方法基础	归入	RCS 分支管理用法
+usenet_mail.messages.58878	V08.3.1.2	目录项与路径解析	归入	inode 反查路径法
+usenet_mail.messages.58885			辑存	超前缓冲回显问
+usenet_mail.messages.59023	V08.8.4.1	正则引擎的三种实现	归入	fgrep 跳表创新
+usenet_mail.messages.59027			辑存	sccs ndir 移植问
+usenet_mail.messages.57863	V08.3.1.3	元数据的组织布局	归入	ctime 覆盖范围
+usenet_mail.messages.57995			辑存	630 ditroff 预览
+usenet_mail.messages.58037	V08.8.2.1	展开规则的次序约定	归入	V8 正则重复次数
+usenet_mail.messages.58067	V08.3.1.3	元数据的组织布局	归入	mtime 与 ctime 之别
+usenet_mail.messages.57546			辑存	DWB grap 发布
+usenet_mail.messages.57563	V08.4.3.5	符号冲突的处置惯例	归入	crt0 对象格式错误
+usenet_mail.messages.57632	V08.9.2.3	BSD 实现的催化作用	归入	socket 地址占用
+usenet_mail.messages.57758	V08.3.1.3	元数据的组织布局	归入	ctime 即 inode 变更
+usenet_mail.messages.57789	V08.2.3.3	描述符与内核对象的映射	归入	fstat 判文件类型
+usenet_mail.messages.57803			移出	BSD 手册订阅商业面→V02
+usenet_mail.messages.57067			辑存	第十版手册筹备
+usenet_mail.messages.57134	V08.9.1.1	uucp 的拷贝与转发流程	归入	remsh 别名与 8 位透明
+usenet_mail.messages.57163			辑存	GRAND 编辑器由来
+usenet_mail.messages.57287			辑存	sendmail FSCALE 缺陷
+usenet_mail.messages.57307			辑存	PC/VI 商业产品
+usenet_mail.messages.57317	V08.8.4.3	模式扫描的字段处理	归入	SunOS awk 基于 S5R2
+usenet_mail.messages.57396	V08.8.4.2	流编辑的两遍扫描	归入	sed 上下文检索改良
+usenet_mail.messages.56640	V08.8.4.4	三工具的性能取舍	归入	spell 哈希字典之别
+usenet_mail.messages.56692	V08.8.4.3	模式扫描的字段处理	归入	awkcc 转 C 提速
+usenet_mail.messages.56697	V08.8.9.1	源码考古的方法基础	归入	SCCS 基线七法
+usenet_mail.messages.56739			辑存	elm 错投案
+usenet_mail.messages.56757			移出	印刷出版独家→V02
+usenet_mail.messages.56797			辑存	fortune 数据提取
+usenet_mail.messages.56813	V08.8.4.4	三工具的性能取舍	归入	rev 工具与合成法
+usenet_mail.messages.56821			辑存	HP-UX vi tab 死循环
+usenet_mail.messages.56885			移出	印刷出版规则→V02
+usenet_mail.messages.57025	V08.8.4.4	三工具的性能取舍	归入	spell 词表演进考
+usenet_mail.messages.56833			辑存	第九版手册内容
+usenet_mail.messages.56836			删除	Joy of Lex 辨名边缘
+usenet_mail.messages.56906			辑存	Ultrix 错投共同特征
+usenet_mail.messages.56236	V08.8.4.1	正则引擎的三种实现	归入	grep 演进与算法
+usenet_mail.messages.56245			辑存	grap 周编号换算
+usenet_mail.messages.56249			辑存	Xenix 卷标备份
+usenet_mail.messages.56302			辑存	rsh -n 后台进程
+usenet_mail.messages.56339	V08.8.4.1	正则引擎的三种实现	归入	fgrep 多串搜索优势
+usenet_mail.messages.56395			辑存	工具问答边缘，无本卷题面落点

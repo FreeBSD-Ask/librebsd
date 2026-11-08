@@ -1,0 +1,156 @@
+rowmine_id	subsection_id	title	action	reason
+sri-unix.807	V08.11.1.1	科学计算语言的诞生	归入	UNIX 上 ALGOL 缺位之问
+cbosg.114	V08.11.1.5	对系统语言的间接影响	归入	2BSD f77 overlay 实现
+ucbvax.2507	V08.11.2.1	Lisp 的发明与实验室文化	归入	ULISP 移植发布
+ucbvax.2509	V08.11.2.1	Lisp 的发明与实验室文化	归入	分离空间 LISP 实现
+3438@sri-arpa.UUCP	V08.11.4.1	C++ 的演进脉络	归入	Stroustrup 带类 C 文章
+usenet_mail.messages.48757	V08.11.4.2	共同体的接纳与抵制	归入	SVR3 C++ 目标格式之困
+3536@sri-arpa.UUCP	V08.11.4.1	C++ 的演进脉络	归入	Stroustrup 与 Cox 工作之辨
+1861@floyd.UUCP	V08.11.4.2	共同体的接纳与抵制	归入	类 C 未出售与发布政治
+ucbvax.2489	V08.11.2.1	Lisp 的发明与实验室文化	归入	PDP-11 LISP 教学需求
+usenet_mail.messages.177128	V08.11.6.3	保守主义的工程理由	归入	可移植 C 非万能系统语言
+usenet_mail.messages.176660			辑存	个人 OS 履历边缘
+usenet_mail.messages.176844			辑存	Knuth 递归表示法忆
+usenet_mail.messages.176858	V08.11.1.3	贝尔实验室的参与范围	归入	RSX 下 Ratfor 宏处理器
+usenet_mail.messages.176118	V08.11.1.3	贝尔实验室的参与范围	归入	Ratfor 采用决策回忆
+usenet_mail.messages.176120	V08.11.1.3	贝尔实验室的参与范围	归入	Ratfor 非 Fortran 方言
+usenet_mail.messages.176122	V08.11.1.3	贝尔实验室的参与范围	归入	Plauger 回应可移植校验
+usenet_mail.messages.176123	V08.11.1.3	贝尔实验室的参与范围	归入	RATFOR 输出因编译器而异
+usenet_mail.messages.176150	V08.11.1.3	贝尔实验室的参与范围	归入	Software Tools 用户组活跃
+ucbvax.2084	V08.11.1.5	对系统语言的间接影响	归入	PDP-11 UNIX 上 COBOL 开发
+ucbvax.5109	V08.11.1.5	对系统语言的间接影响	归入	4.1BSD VAX Fortran 编译器
+9840.822394759@time.cdrom.com			移出	FreeBSD Objective-C 现状→V37
+27e1a828-5cd9-0755-50ca-d7143e7df117@multiplay.co.uk			移出	FreeBSD Go fork 缺陷→V37
+CAG6CVpWJ=AOVt7zXZKCXqJnbtJ8U_EyYTpTHOVzpoRk5JDWjyA@mail.gmail.com			移出	FreeBSD Rust 讨论→V37
+ucbvax.3255	V08.8.7.1	C shell 的交互革新	归入	csh 历史别名入 Bourne 之议
+usenet_mail.messages.136360	V08.8.7.2	多解释器生态的形成	归入	tcsh 6.01 发布
+usenet_mail.messages.136441			辑存	ABC 语言实现通告
+usenet_mail.messages.136536			辑存	awf 格式化器通告
+usenet_mail.messages.136546			移出	flex 发布通告→V06
+usenet_mail.messages.136775	V08.8.11.1	脚本语言的生态位	归入	Perl 3.0 分卷投递
+usenet_mail.messages.136864	V08.8.11.1	脚本语言的生态位	归入	Perl 3.0 首卷与 GPL
+usenet_mail.messages.78548			辑存	历史列命令更正
+usenet_mail.messages.78565			辑存	历史编号重排
+usenet_mail.messages.78572			删除	空块
+usenet_mail.messages.78583			辑存	类型声明补空格
+usenet_mail.messages.78605			辑存	历史编号重排问
+usenet_mail.messages.78145			辑存	提示串路径写法
+usenet_mail.messages.78169			辑存	提示串函数写法
+usenet_mail.messages.78181			辑存	ksh 计数循环写法
+usenet_mail.messages.78187			辑存	内建测试语义
+usenet_mail.messages.78195			辑存	全局变量之问
+usenet_mail.messages.78206			辑存	环境文件下标技巧
+usenet_mail.messages.78216			辑存	环境文件机制问
+usenet_mail.messages.78219			辑存	eval 动态取值
+usenet_mail.messages.78229			辑存	eval 逐层展开
+usenet_mail.messages.78265			辑存	提示串末段写法
+usenet_mail.messages.78274			辑存	参数展开缩短提示
+usenet_mail.messages.78283			辑存	历史文件变量之问
+usenet_mail.messages.78285			辑存	环境文件反向剖析
+usenet_mail.messages.78292			辑存	csh 彩色别名改 bash
+usenet_mail.messages.78294			辑存	历史文件环境变量
+usenet_mail.messages.78304			辑存	问号传参引用难
+usenet_mail.messages.78361			辑存	提示串通配参数
+usenet_mail.messages.78384			辑存	动态变量创建之需
+usenet_mail.messages.78388			辑存	目录末段提示写法
+usenet_mail.messages.78434			辑存	清除历史列表之问
+usenet_mail.messages.78443			辑存	历史替换记号形式
+usenet_mail.messages.78484			辑存	提示串仅参数替换
+usenet_mail.messages.78498			辑存	特殊参数定宽之限
+usenet_mail.messages.77739			辑存	字符串比较分层答
+usenet_mail.messages.77741			辑存	提示串变量替换
+usenet_mail.messages.77743			辑存	交互判断之辩
+usenet_mail.messages.77747			辑存	kshrc 别名存放
+usenet_mail.messages.77756			辑存	测试命令内建
+usenet_mail.messages.77757			辑存	csh 单引号转义
+usenet_mail.messages.77759			删除	空块
+usenet_mail.messages.77760			辑存	别名持久化之问
+usenet_mail.messages.77762			辑存	提示串变量写法
+usenet_mail.messages.77765			辑存	别名对子壳可见
+usenet_mail.messages.77772			辑存	函数定义之问
+usenet_mail.messages.77784			辑存	交互判断之辩
+usenet_mail.messages.77788			辑存	历史替换回显
+usenet_mail.messages.77793			辑存	退出陷阱存别名
+usenet_mail.messages.77799			辑存	函数包裹 cd 做法
+usenet_mail.messages.77808			辑存	历史符号入数组
+usenet_mail.messages.77816			辑存	ksh 无注销脚本
+usenet_mail.messages.77818			辑存	内建加引号之辨
+usenet_mail.messages.77823			辑存	简化提示串主张
+usenet_mail.messages.77830			辑存	内建命令加引号
+usenet_mail.messages.77853			辑存	直接写目录变量
+usenet_mail.messages.77856			辑存	长路径占满提示串
+usenet_mail.messages.77872			辑存	case 与 test 性能
+usenet_mail.messages.77878			辑存	eval 动态取值简写
+usenet_mail.messages.77892			辑存	路径修饰截层
+usenet_mail.messages.77893			辑存	参数列表保留写法
+usenet_mail.messages.77896			辑存	read 取首行替代
+usenet_mail.messages.77904			辑存	ksh 提示串之问
+usenet_mail.messages.77909			辑存	输出直接展开之问
+usenet_mail.messages.77910			辑存	全路径偏好
+usenet_mail.messages.77914			辑存	while 计数两写法
+usenet_mail.messages.77916			辑存	计数器循环写法
+usenet_mail.messages.77925			辑存	函数别名提示串
+usenet_mail.messages.77934			辑存	for 遍历列表
+usenet_mail.messages.77940			辑存	integer 别名
+usenet_mail.messages.77944			辑存	提示命令变量
+usenet_mail.messages.77975			辑存	提示串触发函数
+usenet_mail.messages.78019			辑存	提示串触发函数
+usenet_mail.messages.78034			删除	空块
+ucbvax.2509	V08.11.2.1	Lisp 的发明与实验室文化	归入	分离空间 LISP 实现
+ucbvax.2766	V08.11.6.1	新语言准入的争论焦点	归入	BLISS 与 VMS LISP 之问
+linux_kernel.duckdb			删除	数据库引用元块
+usenet_mail.messages.80650			移出	tn3270 移植面→V20
+usenet_mail.messages.80652			移出	exports 行上限→V20
+usenet_mail.messages.80660			移出	VT1000 产品面→V20
+usenet_mail.messages.80668			移出	RMS-32 特性面→V20
+usenet_mail.messages.80674			移出	Ultrix IP 分片缺陷→V20
+usenet_mail.messages.80678			移出	Ultrix 配额宕机→V20
+usenet_mail.messages.80681	V08.5.2.1	从整存整取到按需分页	归入	Ultrix 采用 4.2BSD FFS
+usenet_mail.messages.80690			移出	RISC 机型清单→V03
+usenet_mail.messages.80706			移出	SPR 渠道面→V20
+usenet_mail.messages.80709			移出	Ultrix cron 缺位→V20
+usenet_mail.messages.80710	V08.6.4.2	编译器与系统接口的咬合	归入	MIPS 编译器自增缺陷
+usenet_mail.messages.80720			移出	LAT 缺陷面→V20
+usenet_mail.messages.80722	V08.6.4.4	方言分歧的治理尝试	归入	Ultrix cc 预定义符号
+usenet_mail.messages.80725			移出	sendmail 引号分词→V28 第6章
+usenet_mail.messages.80728			移出	DSA 坏块处理→V20
+usenet_mail.messages.80731			移出	config 条目释义→V20
+usenet_mail.messages.80732			移出	5810 安装报告→V20
+usenet_mail.messages.80787			移出	DECnet 安装面→V20
+usenet_mail.messages.80792			移出	gettytab 被覆盖→V20
+usenet_mail.messages.80879			移出	f77 ENTRY 缺陷→V20
+usenet_mail.messages.80883			移出	setld 发行带格式→V20
+usenet_mail.messages.80893			移出	MAKEDEV 显示段错误→V20
+usenet_mail.messages.80899			移出	第三方 SCSI 盘→V20
+usenet_mail.messages.80971			移出	DECnet 对象名→V20
+usenet_mail.messages.80984	V08.5.1.2	各家实现的路线差异	归入	Ultrix 调优与换页
+usenet_mail.messages.80992			删除	空块
+usenet_mail.messages.81005			移出	LAT 补丁渠道→V20
+usenet_mail.messages.81006			移出	DECnet 地址改写→V20
+usenet_mail.messages.81041			移出	Ultrix NFS 写缺陷→V20
+usenet_mail.messages.80262	V08.5.1.2	各家实现的路线差异	归入	Ultrix 虚存与非对称 CPU
+usenet_mail.messages.80277			移出	MAIL-11 行长→V20
+usenet_mail.messages.80282			移出	Ultrix 共享内存缺陷→V20
+usenet_mail.messages.80295	V08.3.6.1	分区方案的演进线索	归入	默认分区惯例考
+usenet_mail.messages.80303			移出	8 位字符 I/O 缺陷→V20
+usenet_mail.messages.80318			移出	共享内存补丁带→V20
+usenet_mail.messages.80334			移出	CI 共用经验→V20
+usenet_mail.messages.80349	V08.7.6.2	威胁环境的时代变迁	归入	CERT 校验和通告
+usenet_mail.messages.80359	V08.8.7.3	语法兼容的取舍争论	归入	csh echo 反引号缺陷
+usenet_mail.messages.80361			移出	5400 装 3.1 失败→V20
+usenet_mail.messages.80365			移出	内存基准比较→V20
+usenet_mail.messages.80384			移出	接口类型上限→V20
+usenet_mail.messages.80392	V08.8.8.1	版本碎片的具体表现	归入	Ultrix 4.2 兼容边界
+usenet_mail.messages.80402			移出	DECterm 转义符→V20
+usenet_mail.messages.80403			移出	DH11 仿真板→V20
+usenet_mail.messages.80408			移出	DECnet 地址合成→V20
+usenet_mail.messages.80420			移出	Ultrix 磁带退步→V20
+usenet_mail.messages.80431	V08.9.5.2	网络文件系统的语义边界	归入	NFS 上 lockf 假成功
+usenet_mail.messages.80437			移出	未入发行版命令→V20
+usenet_mail.messages.80453			移出	DECwindows imake→V20
+usenet_mail.messages.80468	V08.6.4.2	编译器与系统接口的咬合	归入	MIPS 编译器 i++ 缺陷
+usenet_mail.messages.80479			移出	MicroVAX I 支持末版→V20
+usenet_mail.messages.80495	V08.4.7.1	COFF 与 ELF 的格式换代	归入	ECOFF 与 BSD 装载格式
+usenet_mail.messages.80500	V08.7.4.3	认证流程的调用链	归入	ruserok 返回值语义变更
+usenet_mail.messages.80507			移出	用户数上限机制→V20
+usenet_mail.messages.80510			删除	空块

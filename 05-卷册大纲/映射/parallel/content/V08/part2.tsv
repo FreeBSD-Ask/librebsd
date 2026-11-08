@@ -1,0 +1,261 @@
+rowmine_id	subsection_id	title	action	reason
+856@utah-gr.UUCP	V08.4.6.1	共享库的动机与代价	归入	大型机共享库先例回推讨论
+187@kobold.UUCP	V08.11.6.1	新语言准入的争论焦点	归入	BLISS 与 C 系统语言之争
+2124@fortune.UUCP	V08.1.1.1	汇编内核的初代形态	归入	genie 汇编系统传闻求证
+1273@sri-arpa.UUCP	V08.6.1.1	BCPL 的无类型设计	归入	BCPL 可变参数机制讨论
+1347@sri-arpa.UUCP	V08.6.1.1	BCPL 的无类型设计	归入	BCPL valof 构造怀念
+5820@brl-tgr.ARPA	V08.6.1.4	解释实现与性能瓶颈	归入	BCPL 移植 4.2BSD 实践
+7870@alice.UUCP	V08.6.6.5	标准落地的时间跨度	归入	Ritchie 自述版本时序
+usenet_mail.messages.124264			移出	商用市场与标准化面→V20
+usenet_mail.messages.123944			辑存	stdio 内部结构答疑边缘
+usenet_mail.messages.123975	V08.8.5.3	脚本执行的解释流程	归入	shell 编译器 AWKCC 下落
+usenet_mail.messages.123000			移出	商用市场与标准化面→V20
+usenet_mail.messages.123078	V08.1.2.3	父进程的等待同步	归入	僵尸信号语义之别
+usenet_mail.messages.123138	V08.7.1.4	身份切换的受控通道	归入	POSIX 注销权限缺陷
+usenet_mail.messages.123243	V08.1.2.3	父进程的等待同步	归入	僵尸信号语义之别
+usenet_mail.messages.122466	V08.4.6.1	共享库的动机与代价	归入	TSOS 共享库更早先例
+usenet_mail.messages.105487	V08.2.4.3	缓冲与直接读写的分野	归入	printf 写次数与缓冲
+usenet_mail.messages.105563	V08.2.4.3	缓冲与直接读写的分野	归入	printf 拆多次写猜测
+usenet_mail.messages.105634			移出	商用市场与标准化面→V20
+usenet_mail.messages.104849	V08.6.4.3	交叉移植的实践积累	归入	long 扩 64 位移植障碍
+usenet_mail.messages.104930	V08.8.3.4	终端属性的系统调用入口	归入	ttychars 符号性缺陷
+usenet_mail.messages.104953	V08.6.5.1	K&R 教科书的规范地位	归入	K&R 整数尺寸引读
+usenet_mail.messages.104489	V08.4.1.3	符号表的早期结构	归入	nlist 符号位域异常
+usenet_mail.messages.104520	V08.4.1.3	符号表的早期结构	归入	a.out 符号表排序工具
+usenet_mail.messages.104523	V08.4.4.1	exec 的装载次序	归入	mboot lboot 装载设计
+usenet_mail.messages.104658	V08.3.4.3	缓冲策略的层级分工	归入	minphys 十六位遗留
+usenet_mail.messages.104670	V08.2.5.1	ioctl 的设备控制旁路	归入	ioctl 编码约定质疑
+usenet_mail.messages.104699	V08.6.4.2	编译器与系统接口的咬合	归入	调用者地址编译器相关
+usenet_mail.messages.104114	V08.2.3.2	进程表与打开文件表	归入	select 与 NOFILE 兼容
+usenet_mail.messages.104129			移出	curses 体积对比→V31 终端抽象
+usenet_mail.messages.104381	V08.2.5.1	ioctl 的设备控制旁路	归入	ioctl 文档指针整数之辨
+usenet_mail.messages.103695			辑存	DIBOL 移植求问边缘
+usenet_mail.messages.103971	V08.6.2.2	编译器在小型机的落地	归入	2.9bsd 寄存器溢出复现
+usenet_mail.messages.103975			移出	编辑器宏与管道之争→V31
+usenet_mail.messages.103289	V08.6.4.2	编译器与系统接口的咬合	归入	Fortran 调用 C 信号故障
+usenet_mail.messages.102850	V08.4.3.3	库搜索的规则沉淀	归入	ld 库时间戳与 ranlib 考
+usenet_mail.messages.102863	V08.1.4.4	日历时间与本地时制	归入	时区编译器夏令时改法
+usenet_mail.messages.102899	V08.4.3.3	库搜索的规则沉淀	归入	SysV 以 ar 代 ranlib
+usenet_mail.messages.103029	V08.6.4.2	编译器与系统接口的咬合	归入	F77 下划线约定纠正
+usenet_mail.messages.103205	V08.6.4.3	交叉移植的实践积累	归入	68k 交叉编译器清单
+usenet_mail.messages.102506	V08.2.4.1	描述符读写的基本语义	归入	lseek 偏移以字节计考
+usenet_mail.messages.102536	V08.6.6.3	原型声明的规范引入	归入	varargs 需编译器相助
+usenet_mail.messages.102568	V08.1.2.3	父进程的等待同步	归入	varargs 兼容 V7 wait
+usenet_mail.messages.102593	V08.9.6.1	dbm 的例程与哈希存取	归入	dbm 可扩展散列移植
+usenet_mail.messages.102610	V08.2.2.2	参数布局与传址方式	归入	寄存器传参剥胶水方案
+usenet_mail.messages.102657	V08.8.9.2	版本断代的证据层次	归入	System III 断代反驳
+usenet_mail.messages.102685	V08.6.4.2	编译器与系统接口的咬合	归入	C 与 Fortran 下划线互调
+usenet_mail.messages.102733	V08.4.3.3	库搜索的规则沉淀	归入	SysV ar 内置 ranlib
+usenet_mail.messages.102762	V08.4.3.3	库搜索的规则沉淀	归入	两系符号表目录重建之别
+usenet_mail.messages.102772	V08.4.3.3	库搜索的规则沉淀	归入	归档符号表成员命名细节
+usenet_mail.messages.102776	V08.4.3.3	库搜索的规则沉淀	归入	ranlib 源自 V7 考订
+usenet_mail.messages.102124	V08.2.2.4	调用约定的兼容负担	归入	寄存器传参兼容负担辨
+usenet_mail.messages.102210	V08.6.6.3	原型声明的规范引入	归入	varargs 作者自述边界
+usenet_mail.messages.102246	V08.2.6.4	共享偏移的并发效应	归入	O_APPEND 原子 seek 考
+usenet_mail.messages.102349	V08.6.1.5	由 B 到新语言的动因	归入	B 编译器寄存器传参旧忆
+usenet_mail.messages.102399	V08.2.2.2	参数布局与传址方式	归入	RT/PC 参数寄存器做法
+usenet_mail.messages.102415	V08.2.4.3	缓冲与直接读写的分野	归入	stdio 信号捕捉器内之辨
+usenet_mail.messages.101655			移出	sendmail 改进清单→V28 第6章
+usenet_mail.messages.101699	V08.6.4.3	交叉移植的实践积累	归入	ditroff 无符号比较移植
+usenet_mail.messages.101727	V08.2.2.2	参数布局与传址方式	归入	压参次序非右向一律
+usenet_mail.messages.101745	V08.6.4.4	方言分歧的治理尝试	归入	预定义符号方言之问
+usenet_mail.messages.101792	V08.11.1.5	对系统语言的间接影响	归入	EFL 扩展 Fortran 记
+usenet_mail.messages.101899	V08.2.4.2	打开与关闭的对称设计	归入	O_APPEND 后起与可移植
+usenet_mail.messages.102032			辑存	LINPACK 基准比较边缘
+usenet_mail.messages.101373			移出	sendmail 改进清单→V28 第6章
+usenet_mail.messages.100962	V08.2.2.5	实现细节的版本出入	归入	lseek 高位地址缺陷
+usenet_mail.messages.101155	V08.6.5.3	非官方标准的权威性	归入	K&R 唯一权威主张
+usenet_mail.messages.101178			辑存	DEC 营销传闻边缘
+usenet_mail.messages.101247	V08.6.6.4	关键字与语义的增补	归入	顺序点未定义之辨
+usenet_mail.messages.100455	V08.6.5.2	语言、库与生态的成型	归入	_doprnt 未文档化考
+usenet_mail.messages.100523	V08.2.4.3	缓冲与直接读写的分野	归入	printf 缓冲版本差异
+usenet_mail.messages.100555	V08.2.2.2	参数布局与传址方式	归入	trap 指令栈上传参考
+usenet_mail.messages.100148	V08.6.5.1	K&R 教科书的规范地位	归入	K&R 预处理描述不足
+usenet_mail.messages.100232	V08.6.4.1	可移植编译器的写就	归入	图灵奖演讲编译器后门转引
+usenet_mail.messages.100235	V08.6.5.1	K&R 教科书的规范地位	归入	K&R 字符串替换勘误
+usenet_mail.messages.100274	V08.4.1.5	与编译器的衔接口径	归入	下划线前缀汇编器缘由
+usenet_mail.messages.100298	V08.6.5.1	K&R 教科书的规范地位	归入	K&R 记号替换引读
+usenet_mail.messages.99726	V08.6.4.4	方言分歧的治理尝试	归入	void 兼容 kludge 之辨
+usenet_mail.messages.99886	V08.1.5.2	匿名通道的半双工限制	归入	PIPSIZ 块大小约束
+usenet_mail.messages.100000	V08.4.7.4	跨平台格式的统一努力	归入	MUFOM 链接标准之辨
+usenet_mail.messages.100023	V08.6.4.4	方言分歧的治理尝试	归入	Berkeley 编译器解析缺陷
+usenet_mail.messages.99374			移出	GNU 进展通报→V16
+usenet_mail.messages.99561			辑存	ditroff 字距细节边缘
+usenet_mail.messages.99574	V08.6.4.4	方言分歧的治理尝试	归入	宏参数字符串替换歧异
+usenet_mail.messages.99626	V08.6.4.4	方言分歧的治理尝试	归入	pcc 字符串边界处理异
+usenet_mail.messages.98997	V08.6.4.3	交叉移植的实践积累	归入	Sun 位域修复表态
+usenet_mail.messages.99155	V08.4.1.5	与编译器的衔接口径	归入	下划线惯例由来追问
+usenet_mail.messages.98466	V08.3.1.5	文件模型的抽象层次	归入	文件模型扩展之辨
+usenet_mail.messages.98475	V08.3.3.3	字符与块的两路分野	归入	swapon 块设备语义
+usenet_mail.messages.98633	V08.2.4.5	简约模型的代价评估	归入	写返回值截断自 V6 存
+usenet_mail.messages.98195	V08.3.1.5	文件模型的抽象层次	归入	文件模型扩展之辨
+usenet_mail.messages.98221	V08.3.1.5	文件模型的抽象层次	归入	文件头描述替代方案
+usenet_mail.messages.98317	V08.6.4.3	交叉移植的实践积累	归入	Sun 位域数组代码缺陷
+usenet_mail.messages.98381	V08.3.1.5	文件模型的抽象层次	归入	文件属性缺陷头案
+usenet_mail.messages.97660	V08.6.6.4	关键字与语义的增补	归入	NULL 入语言提议
+usenet_mail.messages.109231	V08.9.3.1	名称解析的分布架构	归入	Hesiod 基于 BIND 发布
+usenet_mail.messages.109259			移出	商用市场与标准化面→V20
+usenet_mail.messages.109271			移出	许可与同意令语境→V02 法律
+usenet_mail.messages.109300	V08.8.9.4	命名歧异的比对方法	归入	UNIX 拼写命名清单汇编
+usenet_mail.messages.109311	V08.8.1.1	第一代解释器的语法遗产	归入	grep 选项跨版本分歧
+usenet_mail.messages.109366			辑存	智能终端答问边缘
+usenet_mail.messages.109370	V08.8.9.4	命名歧异的比对方法	归入	uname 输出征集
+usenet_mail.messages.109382	V08.8.9.4	命名歧异的比对方法	归入	AT&T 商标称呼考
+usenet_mail.messages.109394	V08.8.3.1	TTY 的控制终端角色	归入	BPTAP 终端访问包记
+usenet_mail.messages.109453			移出	作业控制需求→V31 BSD 面
+usenet_mail.messages.109508			移出	商用市场与标准化面→V20
+usenet_mail.messages.109512			移出	硬件条目→V03 物质条件
+usenet_mail.messages.109549	V08.8.9.4	命名歧异的比对方法	归入	TNIX 命名与 V7 派生
+usenet_mail.messages.109560			移出	源码分发方式→V06 传播
+usenet_mail.messages.109589			辑存	NCR 缺陷报告边缘
+usenet_mail.messages.109650			移出	商用市场与标准化面→V20
+usenet_mail.messages.109658			移出	商用市场与标准化面→V20
+usenet_mail.messages.109660	V08.8.9.1	源码考古的方法基础	归入	SCCS 与 RCS 取舍记
+usenet_mail.messages.109678	V08.6.4.3	交叉移植的实践积累	归入	空指针可移植性争论
+usenet_mail.messages.109745	V08.7.3.2	setuid 位的机制与风险	归入	setuid 专利与同意令
+usenet_mail.messages.109842	V08.6.4.3	交叉移植的实践积累	归入	AT&T 可移植性批评
+usenet_mail.messages.109871	V08.9.3.4	服务配置的文件惯例	归入	services 端口汇总发布
+usenet_mail.messages.109897			移出	商用市场与标准化面→V20
+usenet_mail.messages.109951	V08.8.9.2	版本断代的证据层次	归入	BSD 谱系先后纠正
+usenet_mail.messages.109963			移出	商用市场与标准化面→V20
+usenet_mail.messages.109979			移出	Plan 9 设计目标→V05 再思考
+usenet_mail.messages.109990			删除	空块
+usenet_mail.messages.51441			移出	许可与同意令语境→V02 法律
+usenet_mail.messages.51459			移出	营业秘密辨析→V59 许可
+usenet_mail.messages.51498	V08.8.9.4	命名歧异的比对方法	归入	ditroff 命名缘由
+usenet_mail.messages.51504			移出	BSD 许可适用→V59 许可
+usenet_mail.messages.51511			移出	yacc 输出口径→V59 许可
+usenet_mail.messages.51552	V08.8.9.4	命名歧异的比对方法	归入	UNIX 商标脚注形式
+usenet_mail.messages.51756			移出	源码拍卖诉讼→V02 法律
+usenet_mail.messages.51783	V08.8.9.4	命名歧异的比对方法	归入	Ritchie 亲释大小写
+usenet_mail.messages.35485			辑存	Cray 编辑之争边缘
+usenet_mail.messages.35516	V08.8.9.2	版本断代的证据层次	归入	UNICOS 移植源推断代
+usenet_mail.messages.35555	V08.4.3.3	库搜索的规则沉淀	归入	bld 与 ranlib 之别
+usenet_mail.messages.35557	V08.4.3.3	库搜索的规则沉淀	归入	UNICOS 兼容怀旧记
+usenet_mail.messages.35562	V08.4.3.3	库搜索的规则沉淀	归入	ranlib 缺陷四点反驳
+usenet_mail.messages.35569			辑存	LANL 接口开发预告
+usenet_mail.messages.35571			辑存	CFS 风格评论边缘
+usenet_mail.messages.35574	V08.4.3.3	库搜索的规则沉淀	归入	ranlib 兼容脚本自述
+usenet_mail.messages.35575	V08.4.3.3	库搜索的规则沉淀	归入	ranlib 两行替代脚本
+usenet_mail.messages.35594			辑存	Cray 传输丢失运维案
+usenet_mail.messages.35597			辑存	Cray ftp 断管运维案
+usenet_mail.messages.35599			辑存	UNICOS 乱屏运维案
+usenet_mail.messages.35608			辑存	resize 解法运维案
+usenet_mail.messages.35614			辑存	cdbx 调试器缺陷案
+usenet_mail.messages.35618			辑存	rlogin 建议运维案
+usenet_mail.messages.35646			辑存	sigpause 手册抄录案
+usenet_mail.messages.35658			辑存	stty 破坏责任之问
+usenet_mail.messages.35661			删除	空块
+usenet_mail.messages.109999	V08.7.3.2	setuid 位的机制与风险	归入	同意令与空指针批评
+usenet_mail.messages.110019	V08.8.8.1	版本碎片的具体表现	归入	Olsen 论各厂改良碎片
+usenet_mail.messages.110050	V08.8.9.1	源码考古的方法基础	归入	SCCS 与 RCS 能力比较
+usenet_mail.messages.110113			辑存	tar 重命名需求边缘
+usenet_mail.messages.110171			移出	源码许可价格→V02 法律
+usenet_mail.messages.110175			移出	Minix 编写动机→V17
+usenet_mail.messages.110221	V08.3.3.4	设备文件的访问入口	归入	mknod 超级用户检查考
+usenet_mail.messages.110234	V08.8.1.2	Bourne 解释器的语法革新	归入	BRL 改造 Bourne shell
+usenet_mail.messages.110244	V08.9.3.3	诊断工具的成套出现	归入	truss 与 trace 之别
+usenet_mail.messages.110245	V08.3.4.4	驱动接口的统一程度	归入	SVR3 STREAMS 进度
+usenet_mail.messages.110313	V08.9.3.3	诊断工具的成套出现	归入	truss 追踪器评价
+usenet_mail.messages.110322			移出	许可与同意令语境→V02 法律
+usenet_mail.messages.110325	V08.8.9.4	命名歧异的比对方法	归入	UNIX 名由来异说
+usenet_mail.messages.110422	V08.8.7.1	C shell 的交互革新	归入	shell 历史替换用法
+usenet_mail.messages.110452			移出	许可与同意令语境→V02 法律
+usenet_mail.messages.110489			移出	许可与同意令语境→V02 法律
+usenet_mail.messages.110516			辑存	vi 缓冲区缺陷边缘
+usenet_mail.messages.110557			移出	SVVS 符合性套件→V20
+usenet_mail.messages.110588			移出	GNU 工具行为辨→V16
+usenet_mail.messages.110593	V08.4.7.1	COFF 与 ELF 的格式换代	归入	SVR4 以 ELF 代 COFF
+usenet_mail.messages.110712			移出	许可与同意令语境→V02 法律
+usenet_mail.messages.110747	V08.11.4.1	C++ 的演进脉络	归入	Cfront 移植死循环案
+usenet_mail.messages.110767	V08.7.1.4	身份切换的受控通道	归入	su 改双 uid 一致行为
+usenet_mail.messages.110857			移出	商用市场与标准化面→V20
+usenet_mail.messages.110908	V08.8.9.4	命名歧异的比对方法	归入	Multics 缩减版异说
+usenet_mail.messages.111014	V08.1.5.4	命名通道的后续扩展	归入	fsck 命名管道处理缺陷
+usenet_mail.messages.111057	V08.8.7.2	多解释器生态的形成	归入	ksh 无公有领域纠正
+usenet_mail.messages.111094			删除	空块
+2442			辑存	CPM 书目块无题面落点
+2444			辑存	CPM 书目块无题面落点
+2443			辑存	CPM 书目块无题面落点
+2441			辑存	CPM 书目块无题面落点
+ucbvax.2893			辑存	VMS 类 UNIX 问边缘
+usenet_mail.messages.161798			移出	商用市场与标准化面→V20
+usenet_mail.messages.161830			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.161865	V08.7.3.2	setuid 位的机制与风险	归入	setuid 专利页码考
+usenet_mail.messages.161898	V08.3.4.4	驱动接口的统一程度	归入	streams 大小写之别
+usenet_mail.messages.161941			辑存	slattach 运维问答
+usenet_mail.messages.161976			辑存	载波行为答问
+usenet_mail.messages.161454			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.161569			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.161599			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.161625	V08.8.5.5	环境面的可移植隐患	归入	script 缺陷 SHELL 查找
+usenet_mail.messages.161684	V08.7.3.2	setuid 位的机制与风险	归入	专利 4135240 题献考
+usenet_mail.messages.161723			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.161740			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163006			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163146			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163168			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163182			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163204			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163247			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.163372			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.159523			删除	空块
+usenet_mail.messages.159532			移出	哲学异同之问→V05 哲学
+usenet_mail.messages.159705	V08.8.5.4	启动文件的加载次序	归入	BSD init 重分发发布
+usenet_mail.messages.158861	V08.8.3.1	TTY 的控制终端角色	归入	revoke 控制终端机制
+usenet_mail.messages.158956			移出	386BSD 时代缺陷与补丁→V21
+usenet_mail.messages.158980			移出	邮件监控立法→V02 法律
+usenet_mail.messages.81050	V08.1.4.5	时间服务的精度限度	归入	Ultrix clock 哨兵缺陷
+usenet_mail.messages.81051			辑存	空字节传输运维案
+usenet_mail.messages.81052			辑存	UWS 到货记边缘
+usenet_mail.messages.81054			辑存	装盘变通运维案
+usenet_mail.messages.81055	V08.8.5.5	环境面的可移植隐患	归入	sh 描述符 dup 陷阱
+usenet_mail.messages.81056			辑存	mt 格式变化边缘
+usenet_mail.messages.81064			辑存	配额登录联动批评
+usenet_mail.messages.81065			移出	串口电气规格→V03
+usenet_mail.messages.81066			辑存	UWS 套件说明边缘
+usenet_mail.messages.81068	V08.3.1.1	索引节点的设计要点	归入	gnodes 通用 inode 解
+usenet_mail.messages.81071	V08.3.1.2	目录项与路径解析	归入	ncheck 目录遍历缺陷考
+usenet_mail.messages.81085			辑存	dms 截断运维案
+usenet_mail.messages.81086	V08.8.3.2	线路规程的分层职责	归入	LAT 流控 IXON 机制
+usenet_mail.messages.81091			辑存	配额登录上限案
+usenet_mail.messages.81101			辑存	DPS 初始化边缘
+usenet_mail.messages.81106			辑存	mail11 错误分类案
+usenet_mail.messages.81107	V08.4.7.3	调试信息的格式沉淀	归入	MIPS 调试信息格式求
+usenet_mail.messages.81122	V08.3.4.5	驱动移植成本的构成	归入	Ultrix 驱动改动归纳
+usenet_mail.messages.81146			辑存	X 内存归还边缘
+usenet_mail.messages.81150	V08.3.2.1	mount 调用与文件树嫁接	归入	Ultrix NFS 选项一份
+usenet_mail.messages.81152	V08.3.6.4	容量与几何的记录载体	归入	坏块替换几何记
+usenet_mail.messages.81158			辑存	UWS 出售结构边缘
+usenet_mail.messages.81165			删除	空块
+usenet_mail.messages.81170	V08.4.5.3	堆分配的库函数层	归入	brk 归还 malloc 之辨
+usenet_mail.messages.81179			辑存	if_qe 链式包旧史
+usenet_mail.messages.81194			辑存	DECnet 产品之别
+usenet_mail.messages.81220	V08.4.5.5	段式布局的移植影响	归入	MIPS 段布局重定位
+usenet_mail.messages.81224	V08.3.6.4	容量与几何的记录载体	归入	pstat 硬编码分区尺寸
+usenet_mail.messages.81228	V08.3.5.2	缓存一致性的维护	归入	dump 裸设备一致性考
+usenet_mail.messages.81241			移出	mail11 与 sendmail→V28 第6章
+usenet_mail.messages.81250	V08.9.1.2	拨号网络的低速率约束	归入	uucico 速率表补丁法
+usenet_mail.messages.81253	V08.3.5.4	预读与延迟写的取舍	归入	dump 活动文件系统用例
+usenet_mail.messages.81257			辑存	curses select 缺陷案
+usenet_mail.messages.81296	V08.4.5.3	堆分配的库函数层	归入	堆压缩不可行论证
+usenet_mail.messages.81307	V08.3.6.2	磁盘标签的数据布局	归入	分区表存超级块后考
+usenet_mail.messages.81308			辑存	find 损坏边缘案
+usenet_mail.messages.81310			辑存	KM_ALLOC 多 CPU 案
+usenet_mail.messages.81311	V08.3.3.4	设备文件的访问入口	归入	转储覆盖交换区缺陷考
+usenet_mail.messages.81312			辑存	ULTRIX4.0 安全预告
+usenet_mail.messages.81313	V08.9.1.1	uucp 的拷贝与转发流程	归入	UUCP over TCP 移植史
+usenet_mail.messages.81316			移出	OSF/1 路线声明→V20
+usenet_mail.messages.81336	V08.8.7.3	语法兼容的取舍争论	归入	csh 引用机制改动
+usenet_mail.messages.81342			辑存	发货时序边缘案
+usenet_mail.messages.81347			辑存	mail11 空正文案
+usenet_mail.messages.81351			辑存	LMF CONDIST 边缘
+usenet_mail.messages.81353			辑存	LMF 新品说明边缘
+usenet_mail.messages.81366			辑存	DECnet 电路配置案
+usenet_mail.messages.81376	V08.4.5.3	堆分配的库函数层	归入	Ultrix brk 未回收案
+usenet_mail.messages.81378	V08.4.5.1	代码与数据段的划分	归入	共享正文覆写保护案
+usenet_mail.messages.81380			删除	空块
+usenet_mail.messages.81403			移出	用户档位收费遗物→V02 法律
+usenet_mail.messages.81407	V08.3.5.2	缓存一致性的维护	归入	缓存刷洗证明之争
+usenet_mail.messages.81427	V08.3.5.4	预读与延迟写的取舍	归入	update 全表扫复杂度
+usenet_mail.messages.46202			移出	DOS 模拟产品谱→V20

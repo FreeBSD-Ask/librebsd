@@ -1,0 +1,272 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.30492	V08.7.3.2	setuid 位的机制与风险	归入	setuid 脚本禁令反驳
+usenet_mail.messages.30506	V08.7.3.2	setuid 位的机制与风险	归入	禁 setuid 程序之驳
+usenet_mail.messages.30542	V08.7.3.2	setuid 位的机制与风险	归入	saved uid 木马取权
+usenet_mail.messages.30621	V08.7.3.2	setuid 位的机制与风险	归入	exec 保存 uid 语义
+usenet_mail.messages.76948	V08.7.3.2	setuid 位的机制与风险	归入	Bishop 论文与脚本竞态
+usenet_mail.messages.76990	V08.7.3.3	特权程序的审查惯例	归入	find-exec 防恶意文件名
+usenet_mail.messages.77032	V08.7.4.3	认证流程的调用链	归入	.rhosts 跨机鉴权
+usenet_mail.messages.77075	V08.7.3.3	特权程序的审查惯例	归入	口令明文 ps 暴露
+usenet_mail.messages.77077	V08.7.3.2	setuid 位的机制与风险	归入	Ultrix 脚本 setuid 之疑
+usenet_mail.messages.77086	V08.7.3.2	setuid 位的机制与风险	归入	dev/fd 堵脚本漏洞
+usenet_mail.messages.77122	V08.7.3.2	setuid 位的机制与风险	归入	路径参数堵链接劫持
+usenet_mail.messages.77127	V08.8.1.1	第一代解释器的语法遗产	归入	井号感叹号机制源流
+usenet_mail.messages.77128	V08.7.4.4	弱口令的早期批评	归入	命令行明文口令风险
+usenet_mail.messages.77177	V08.7.4.3	认证流程的调用链	归入	组账户 rlogin 布局
+usenet_mail.messages.77186	V08.8.5.4	启动文件的加载次序	归入	启动文件非独立进程
+usenet_mail.messages.77196	V08.7.3.3	特权程序的审查惯例	归入	find 补组权限法
+usenet_mail.messages.77270	V08.7.2.1	九位权限位的语义	归入	chmod 等号组权限法
+usenet_mail.messages.77288			辑存	configure 冒号澄清
+usenet_mail.messages.77290	V08.7.3.3	特权程序的审查惯例	归入	转义与蠕虫例
+usenet_mail.messages.77310	V08.7.3.2	setuid 位的机制与风险	归入	井号感叹号 BSD 内核
+usenet_mail.messages.29900	V08.7.3.3	特权程序的审查惯例	归入	硬链接共享布局
+usenet_mail.messages.29904	V08.7.3.4	提权漏洞的早期案例	归入	XENIX 游戏 setuid 漏
+usenet_mail.messages.29916	V08.7.3.3	特权程序的审查惯例	归入	包装程序 chfn 法
+usenet_mail.messages.29918	V08.7.3.3	特权程序的审查惯例	归入	游戏专用用户方案
+usenet_mail.messages.29940	V08.7.3.3	特权程序的审查惯例	归入	伪用户替代 root
+usenet_mail.messages.29944	V08.7.3.3	特权程序的审查惯例	归入	游戏 setuid 缘由
+usenet_mail.messages.30086	V08.7.3.2	setuid 位的机制与风险	归入	nosuid 挂载拒执行
+usenet_mail.messages.30113	V08.7.3.2	setuid 位的机制与风险	归入	nosuid 教训记
+usenet_mail.messages.30193	V08.7.3.2	setuid 位的机制与风险	归入	NFS 挂载 setuid 拒
+usenet_mail.messages.30246			删除	空块
+usenet_mail.messages.30280	V08.7.3.2	setuid 位的机制与风险	归入	nosuid 推测答
+usenet_mail.messages.29495	V08.7.2.3	目录权限的执行位含义	归入	父目录执行位实测
+usenet_mail.messages.29497	V08.7.5.2	设备文件的权限管控	归入	kmem mem procfs 三器
+usenet_mail.messages.29510	V08.7.5.2	设备文件的权限管控	归入	ConvexOS kmem 组
+usenet_mail.messages.29512	V08.7.2.3	目录权限的执行位含义	归入	根目录可写推测
+usenet_mail.messages.29517	V08.7.5.2	设备文件的权限管控	归入	内核不用 kmem
+usenet_mail.messages.29529	V08.7.3.1	超级用户的特权集中	归入	wheel 组 su 受限
+usenet_mail.messages.29551	V08.7.5.2	设备文件的权限管控	归入	3B2 写 kmem 无事
+usenet_mail.messages.29554	V08.7.5.2	设备文件的权限管控	归入	kmem 可读致 root
+usenet_mail.messages.29555	V08.7.2.3	目录权限的执行位含义	归入	粘滞位攻击设想
+usenet_mail.messages.29556	V08.7.2.3	目录权限的执行位含义	归入	目录写权限实测
+usenet_mail.messages.29561	V08.7.5.2	设备文件的权限管控	归入	kmem sgid 公开方案
+usenet_mail.messages.29570	V08.7.3.4	提权漏洞的早期案例	归入	Emacs 缺陷进入案
+usenet_mail.messages.29576	V08.7.3.4	提权漏洞的早期案例	归入	kmem 监听窃口令
+usenet_mail.messages.29579	V08.7.5.2	设备文件的权限管控	归入	只写寄存器读 kmem
+usenet_mail.messages.29606	V08.7.3.3	特权程序的审查惯例	归入	find 排查 setuid
+usenet_mail.messages.29638	V08.7.2.3	目录权限的执行位含义	归入	粘滞位根目录风险小
+usenet_mail.messages.29643	V08.7.3.3	特权程序的审查惯例	归入	find 权限位排查法
+usenet_mail.messages.29657	V08.7.3.2	setuid 位的机制与风险	归入	脚本两大风险与 Bishop
+usenet_mail.messages.29676	V08.7.3.1	超级用户的特权集中	归入	su 环境保留之辨
+usenet_mail.messages.29690	V08.7.2.3	目录权限的执行位含义	归入	粘滞位语义与 rc 风险
+usenet_mail.messages.29696	V08.7.6.3	审计能力的缺席状况	归入	COPS SPY 审计工具
+usenet_mail.messages.29706	V08.7.3.4	提权漏洞的早期案例	归入	bin 改名伪 login
+usenet_mail.messages.29730	V08.7.3.3	特权程序的审查惯例	归入	XENIX hack 更正
+usenet_mail.messages.29734	V08.7.5.2	设备文件的权限管控	归入	fuser setgid kmem
+usenet_mail.messages.29735	V08.7.5.1	根目录切换的隔离设想	归入	chroot 外壳限目录
+usenet_mail.messages.29736	V08.7.2.3	目录权限的执行位含义	归入	SunOS 根 777 追忆
+usenet_mail.messages.29755	V08.7.3.3	特权程序的审查惯例	归入	hack setuid 猜测
+usenet_mail.messages.29759	V08.7.5.2	设备文件的权限管控	归入	盘设备可读绕挂载
+usenet_mail.messages.29764	V08.7.4.3	认证流程的调用链	归入	hosts.equiv 加号条
+usenet_mail.messages.29771	V08.7.3.3	特权程序的审查惯例	归入	games 用户方案
+usenet_mail.messages.29805	V08.7.3.4	提权漏洞的早期案例	归入	kmem more 搜口令
+usenet_mail.messages.29837	V08.7.3.3	特权程序的审查惯例	归入	计分文件权限案
+usenet_mail.messages.29862	V08.7.5.2	设备文件的权限管控	归入	strings mem 挂起
+usenet_mail.messages.29866	V08.7.6.4	局限的批评与辩护	归入	不信赖者不给权
+usenet_mail.messages.29867	V08.7.6.4	局限的批评与辩护	归入	特权拆分与影子口令
+usenet_mail.messages.29876	V08.7.3.3	特权程序的审查惯例	归入	XENIX hack 排查
+usenet_mail.messages.29879	V08.7.3.4	提权漏洞的早期案例	归入	motd 666 厂商漏洞
+usenet_mail.messages.29881	V08.7.3.4	提权漏洞的早期案例	归入	grep kmem 明文暴露
+usenet_mail.messages.29884	V08.7.5.3	系统管理的职责划分	归入	职责分离与 NCSC
+usenet_mail.messages.29087	V08.7.4.3	认证流程的调用链	归入	.rhosts 权限实测
+usenet_mail.messages.29115	V08.7.4.3	认证流程的调用链	归入	三档鉴权文件详解
+usenet_mail.messages.29163	V08.7.4.3	认证流程的调用链	归入	equiv 与 rhosts 之别
+usenet_mail.messages.29222	V08.7.3.1	超级用户的特权集中	归入	console secure 缺口
+usenet_mail.messages.29239	V08.7.4.3	认证流程的调用链	归入	netgroup 通配陷阱
+usenet_mail.messages.29249	V08.7.4.3	认证流程的调用链	归入	无盘 NIS root 缺口
+usenet_mail.messages.29270	V08.7.3.1	超级用户的特权集中	归入	PROM security-mode
+usenet_mail.messages.29395	V08.7.3.1	超级用户的特权集中	归入	wheel 组 su 手册引
+usenet_mail.messages.29407	V08.7.2.3	目录权限的执行位含义	归入	根可写点文件危险
+usenet_mail.messages.29408	V08.7.2.3	目录权限的执行位含义	归入	sticky bit 实测
+usenet_mail.messages.29417	V08.7.2.3	目录权限的执行位含义	归入	Ultrix 根权限异常
+usenet_mail.messages.29418	V08.7.3.1	超级用户的特权集中	归入	4.2BSD wheel 机制
+usenet_mail.messages.29430	V08.7.3.4	提权漏洞的早期案例	归入	根目录陷阱自述
+usenet_mail.messages.29434	V08.7.3.2	setuid 位的机制与风险	归入	疏漏论驳与橙皮书
+usenet_mail.messages.29435	V08.7.2.3	目录权限的执行位含义	归入	4.3 出厂 777 之问
+usenet_mail.messages.29453	V08.7.2.3	目录权限的执行位含义	归入	chmod 通配推测
+usenet_mail.messages.29474	V08.7.2.3	目录权限的执行位含义	归入	根可写所能为清单
+usenet_mail.messages.29482	V08.7.2.3	目录权限的执行位含义	归入	sticky 实现驳论
+usenet_mail.messages.28835			辑存	邮件槽链接配额案
+usenet_mail.messages.28849			辑存	newmail 链接方案
+usenet_mail.messages.28880	V08.7.3.4	提权漏洞的早期案例	归入	投递代理链接改写
+usenet_mail.messages.28900	V08.7.3.4	提权漏洞的早期案例	归入	decode 别名漏洞
+usenet_mail.messages.28935	V08.7.2.1	九位权限位的语义	归入	chmod-R g=u 法
+usenet_mail.messages.28976	V08.7.2.1	九位权限位的语义	归入	umask 逐位解释
+usenet_mail.messages.29080	V08.7.2.3	目录权限的执行位含义	归入	来宾目录根因
+usenet_mail.messages.29084	V08.7.2.3	目录权限的执行位含义	归入	删文件承目录权限
+usenet_mail.messages.125470	V08.7.3.2	setuid 位的机制与风险	归入	Xenix root setuid 失效
+usenet_mail.messages.125498	V08.7.3.2	setuid 位的机制与风险	归入	保存组标识缺位
+usenet_mail.messages.125629	V08.7.3.2	setuid 位的机制与风险	归入	脚本本不该生效
+usenet_mail.messages.125632	V08.7.3.2	setuid 位的机制与风险	归入	脚本不生效自编 C
+usenet_mail.messages.125640	V08.7.3.2	setuid 位的机制与风险	归入	脚本生效混合内核
+usenet_mail.messages.125642	V08.7.3.2	setuid 位的机制与风险	归入	两型机不生效
+usenet_mail.messages.125643	V08.7.3.2	setuid 位的机制与风险	归入	脚本与脚本本身之辨
+usenet_mail.messages.125644	V08.7.3.2	setuid 位的机制与风险	归入	ATT SysV 脚本不生效
+usenet_mail.messages.125651	V08.7.3.2	setuid 位的机制与风险	归入	Masscomp 受限 shell
+usenet_mail.messages.125652	V08.7.3.2	setuid 位的机制与风险	归入	argv0 设计缺陷
+usenet_mail.messages.125781	V08.7.3.2	setuid 位的机制与风险	归入	setgid 替代取权
+usenet_mail.messages.125790	V08.7.3.2	setuid 位的机制与风险	归入	S5R2 手册三处不符
+usenet_mail.messages.125802	V08.7.3.2	setuid 位的机制与风险	归入	SVr2v2 setuid 测试
+ucbarpa.120	V08.7.3.2	setuid 位的机制与风险	归入	4.1BSD 脚本机制记
+cross_indexes.duckdb.concept_history			移出	概念史条目→V08 概念面
+ucbvax.2811	V08.7.3.2	setuid 位的机制与风险	归入	Set-User-ID 正确性论文
+usenet_mail.messages.125265	V08.7.2.1	九位权限位的语义	归入	V7 不允许赠文件
+usenet_mail.messages.125277	V08.7.3.4	提权漏洞的早期案例	归入	互疑子系统可破
+usenet_mail.messages.125501	V08.7.3.2	setuid 位的机制与风险	归入	未文档化 uid 特性
+usenet_mail.messages.125639	V08.7.3.3	特权程序的审查惯例	归入	脚本上下文依赖
+usenet_mail.messages.125645	V08.7.3.2	setuid 位的机制与风险	归入	脚本机制 Ritchie 首创
+usenet_mail.messages.125794	V08.7.3.2	setuid 位的机制与风险	归入	两种 setuid 语义
+usenet_mail.messages.125945	V08.7.2.3	目录权限的执行位含义	归入	chmod 400 致 ENOEXEC
+usenet_mail.messages.45642	V08.7.1.5	身份模型的扩张空间	归入	字符串 UID 设计案
+usenet_mail.messages.140048	V08.7.6.1	安全模型的内在假设	归入	MAC 标签支配规则
+usenet_mail.messages.140228	V08.7.1.2	组身份的从属关系	归入	setgroups 行为调查
+usenet_mail.messages.140268			移出	POSIX 1003.6 ACL→V20
+usenet_mail.messages.140271			移出	POSIX 1003.6 ACL→V20
+usenet_mail.messages.140288			移出	POSIX 1003.6 ACL→V20
+usenet_mail.messages.140315			移出	POSIX 1003.6 ACL→V20
+usenet_mail.messages.140319			移出	POSIX 1003.6 ACL→V20
+usenet_mail.messages.78537			辑存	空写清除边缘
+usenet_mail.messages.78555			辑存	重定向清除边缘
+usenet_mail.messages.78557			辑存	自解压脚本比较
+usenet_mail.messages.78582	V08.8.10.1	运维安全的实践清单	归入	运维菜单 setuid 记
+usenet_mail.messages.78619			辑存	磁盘块清除追问
+usenet_mail.messages.78632	V08.8.10.1	运维安全的实践清单	归入	运维菜单清单记
+usenet_mail.messages.78143			辑存	网络加锁函数建议
+usenet_mail.messages.120999	V08.8.10.2	账号管理的制度安排	归入	空口令条目库缺陷
+usenet_mail.messages.121008	V08.3.2.2	硬链接与别名机制	归入	目录硬链接为引用计数
+usenet_mail.messages.121039	V08.8.10.1	运维安全的实践清单	归入	cleanup 删文件事故
+usenet_mail.messages.121085	V08.7.5.2	设备文件的权限管控	归入	kmem mem 收紧报错
+usenet_mail.messages.121095	V08.3.2.2	硬链接与别名机制	归入	目录硬链接与符号链接
+usenet_mail.messages.121135	V08.7.3.2	setuid 位的机制与风险	归入	脚本跨系统差异
+usenet_mail.messages.121149	V08.7.5.2	设备文件的权限管控	归入	kmem sgid 640 建议
+usenet_mail.messages.121201	V08.3.2.5	树形结构的组织原则	归入	目录树形 RT 论文引
+usenet_mail.messages.121208	V08.3.2.2	硬链接与别名机制	归入	目录硬链接之问
+usenet_mail.messages.121211	V08.7.5.1	根目录切换的隔离设想	归入	匿名 ftp chroot syslog
+usenet_mail.messages.120464	V08.7.3.2	setuid 位的机制与风险	归入	SVR4 脚本 setuid 试
+usenet_mail.messages.120471	V08.7.3.2	setuid 位的机制与风险	归入	csh -b 脚本做法
+usenet_mail.messages.120493	V08.8.10.2	账号管理的制度安排	归入	时段限登录与冲突
+usenet_mail.messages.120508			辑存	kill 探测误判
+usenet_mail.messages.120562			辑存	kill errno uid 限
+usenet_mail.messages.120565	V08.8.5.4	启动文件的加载次序	归入	登录外壳短横线之辨
+usenet_mail.messages.120569			辑存	shell 脱离异常
+usenet_mail.messages.120578	V08.8.5.4	启动文件的加载次序	归入	登录外壳定义
+usenet_mail.messages.120636	V08.7.4.2	影子文件的演进背景	归入	SunOS 口令老化沿革
+usenet_mail.messages.120647	V08.8.10.2	账号管理的制度安排	归入	at 组标识之问
+usenet_mail.messages.120778	V08.8.5.4	启动文件的加载次序	归入	登录外壳坚持
+usenet_mail.messages.120811			辑存	主目录缺失落根
+usenet_mail.messages.120835	V08.8.5.5	环境面的可移植隐患	归入	trap 组合无限循环
+usenet_mail.messages.120053	V08.7.4.3	认证流程的调用链	归入	kerberos 替 netrc
+usenet_mail.messages.120054			辑存	rlogind 挂起案
+usenet_mail.messages.120056			辑存	swapgeneric 补丁
+usenet_mail.messages.120067	V08.7.3.3	特权程序的审查惯例	归入	find 审计可写目录
+usenet_mail.messages.120069			辑存	符号链接字面量
+usenet_mail.messages.120121			辑存	vi 转义漏洞寻源
+usenet_mail.messages.120139	V08.8.10.2	账号管理的制度安排	归入	替换登录 shell 副作用
+usenet_mail.messages.120167	V08.8.10.2	账号管理的制度安排	归入	quota 替换挂程序
+usenet_mail.messages.120181	V08.8.10.2	账号管理的制度安排	归入	login 执行指定程序
+usenet_mail.messages.120185			辑存	Ridge 000 文件案
+usenet_mail.messages.120223	V08.7.3.3	特权程序的审查惯例	归入	shar 解包漏洞
+usenet_mail.messages.120323	V08.8.10.2	账号管理的制度安排	归入	主目录 000 阻登录
+usenet_mail.messages.120398	V08.7.3.2	setuid 位的机制与风险	归入	S5R4 脚本 dev/fd
+usenet_mail.messages.119666	V08.7.2.4	权限检查的判定顺序	归入	useracc 等价之问
+usenet_mail.messages.119672	V08.7.2.5	权限模型的表达边界	归入	setuid 目录冲突
+usenet_mail.messages.119696	V08.7.2.5	权限模型的表达边界	归入	大写 S 位传闻
+usenet_mail.messages.119698	V08.7.2.5	权限模型的表达边界	归入	3B20 目录 setuid
+usenet_mail.messages.119798			辑存	恐慌同步之辩
+usenet_mail.messages.119814			辑存	telnet 对端地址
+usenet_mail.messages.119879	V08.7.2.5	权限模型的表达边界	归入	第四版目录 setgid
+usenet_mail.messages.119946			辑存	su 免键入口令
+usenet_mail.messages.119341			辑存	mmap 地址安全
+usenet_mail.messages.119388	V08.8.10.2	账号管理的制度安排	归入	su 缺 shell 权限
+usenet_mail.messages.119413	V08.7.4.2	影子文件的演进背景	归入	影子口令 dbm 扩展
+usenet_mail.messages.119460			辑存	文件空洞安全
+usenet_mail.messages.119500	V08.7.2.5	权限模型的表达边界	归入	目录不可能 setuid
+usenet_mail.messages.119537	V08.8.5.5	环境面的可移植隐患	归入	profile SIGTTOU
+usenet_mail.messages.119542	V08.7.2.3	目录权限的执行位含义	归入	tmp 权限被改监视
+usenet_mail.messages.118857	V08.7.5.1	根目录切换的隔离设想	归入	来宾 chroot 转义
+usenet_mail.messages.118867	V08.7.5.1	根目录切换的隔离设想	归入	访客菜单限制
+usenet_mail.messages.118868			辑存	bin 目录合并主张
+usenet_mail.messages.118885	V08.7.6.3	审计能力的缺席状况	归入	击键记录风险收益
+usenet_mail.messages.118888	V08.8.10.2	账号管理的制度安排	归入	登录控制设计问
+usenet_mail.messages.118896	V08.7.5.1	根目录切换的隔离设想	归入	chroot 邮件新闻 NNTP
+usenet_mail.messages.118898			辑存	pwd setuid 纠正
+usenet_mail.messages.118911			删除	空块
+usenet_mail.messages.118915	V08.7.5.1	根目录切换的隔离设想	归入	匿名 ftp 式 chroot
+usenet_mail.messages.118919	V08.4.5.3	堆分配的库函数层	归入	valloc 与 free
+usenet_mail.messages.118920	V08.7.3.2	setuid 位的机制与风险	归入	ksh 特权脚本代置
+usenet_mail.messages.118942	V08.4.5.3	堆分配的库函数层	归入	valloc 权宜凑合
+usenet_mail.messages.118943	V08.7.5.1	根目录切换的隔离设想	归入	chroot 陷阱清单
+usenet_mail.messages.118978	V08.7.4.2	影子文件的演进背景	归入	口令期编码进 salt
+usenet_mail.messages.118981	V08.4.5.3	堆分配的库函数层	归入	valloc 手册缺陷引
+usenet_mail.messages.119022	V08.7.4.2	影子文件的演进背景	归入	口令历史加密法
+usenet_mail.messages.119030	V08.7.4.3	认证流程的调用链	归入	Athena Kerberos 特权
+usenet_mail.messages.119032	V08.7.4.4	弱口令的早期批评	归入	Wall 口令策略
+usenet_mail.messages.119062	V08.7.4.3	认证流程的调用链	归入	ftp 仿 rlogin 之问
+usenet_mail.messages.119065			辑存	登录识别终端型号
+usenet_mail.messages.119116	V08.8.10.2	账号管理的制度安排	归入	at batch ulimit 拒
+usenet_mail.messages.119129	V08.8.10.2	账号管理的制度安排	归入	at batch ulimit 案
+usenet_mail.messages.119173	V08.8.5.4	启动文件的加载次序	归入	登录文件 ANSI 转义
+usenet_mail.messages.119201	V08.7.3.4	提权漏洞的早期案例	归入	sendmail 蠕虫修补
+usenet_mail.messages.119210	V08.7.4.3	认证流程的调用链	归入	RFC 931 对端身份
+usenet_mail.messages.119220	V08.8.10.2	账号管理的制度安排	归入	ulimit 内核配置
+usenet_mail.messages.119225			辑存	TELNET 窗口尺寸
+usenet_mail.messages.118492	V08.9.5.2	网络文件系统的语义边界	归入	NFS 伪造与 UID 映射
+usenet_mail.messages.118558	V08.7.3.3	特权程序的审查惯例	归入	路径拼接越界
+usenet_mail.messages.118569	V08.7.2.4	权限检查的判定顺序	归入	access 竞争条件
+usenet_mail.messages.118668	V08.7.5.1	根目录切换的隔离设想	归入	chroot SMTP NNTP
+usenet_mail.messages.118691	V08.7.5.2	设备文件的权限管控	归入	ioctl 权限执行位
+usenet_mail.messages.118717	V08.7.5.1	根目录切换的隔离设想	归入	chroot spool 不可达
+usenet_mail.messages.118718	V08.7.3.2	setuid 位的机制与风险	归入	ksh 无读权限执行
+usenet_mail.messages.118719	V08.9.5.2	网络文件系统的语义边界	归入	NFS 删文件与 Kerberos
+usenet_mail.messages.118722			辑存	pwd setuid 厂商差
+usenet_mail.messages.118746	V08.7.6.3	审计能力的缺席状况	归入	击键记录之辩
+usenet_mail.messages.118767			删除	空块
+freebsd.duckdb			删除	空块
+usenet_mail.messages.79057	V08.7.3.4	提权漏洞的早期案例	归入	严重漏洞转贴确认
+usenet_mail.messages.79062	V08.7.3.4	提权漏洞的早期案例	归入	修补信息求取
+usenet_mail.messages.79120	V08.7.3.3	特权程序的审查惯例	归入	chfn chsh 700 建议
+usenet_mail.messages.79151	V08.7.3.4	提权漏洞的早期案例	归入	漏洞确认与排查
+usenet_mail.messages.79176	V08.7.6.4	局限的批评与辩护	归入	缺陷应公开主张
+usenet_mail.messages.79181	V08.7.6.3	审计能力的缺席状况	归入	su 日志不记人
+usenet_mail.messages.79251	V08.7.3.4	提权漏洞的早期案例	归入	dxsession 口令残留
+usenet_mail.messages.79358	V08.7.3.4	提权漏洞的早期案例	归入	yppasswd 前缀误改
+usenet_mail.messages.79408	V08.7.1.1	用户身份的数值化	归入	社安号登录之斥
+usenet_mail.messages.79444	V08.7.1.1	用户身份的数值化	归入	登录名构成建议
+usenet_mail.messages.79463	V08.7.3.4	提权漏洞的早期案例	归入	缺陷编号追问
+usenet_mail.messages.79476	V08.7.3.4	提权漏洞的早期案例	归入	V3.1 修复预告
+usenet_mail.messages.79486	V08.7.3.4	提权漏洞的早期案例	归入	单命令行 root 漏洞
+usenet_mail.messages.79491	V08.7.3.4	提权漏洞的早期案例	归入	编号推托
+usenet_mail.messages.79546	V08.7.6.3	审计能力的缺席状况	归入	su 失败记录之问
+usenet_mail.messages.79629	V08.7.6.3	审计能力的缺席状况	归入	sulog 位置答
+usenet_mail.messages.79632			辑存	Compose 键问题
+usenet_mail.messages.79702	V08.7.6.3	审计能力的缺席状况	归入	SU BADSU 落点
+usenet_mail.messages.79712			辑存	Compose meta 限
+usenet_mail.messages.79745			辑存	安全键盘机制
+usenet_mail.messages.79748	V08.7.6.2	威胁环境的时代变迁	归入	CERT telnet 替换咨询
+usenet_mail.messages.79755			辑存	syslog 停止案
+usenet_mail.messages.79774	V08.7.6.2	威胁环境的时代变迁	归入	crypt 出境讨论
+usenet_mail.messages.79777	V08.7.6.2	威胁环境的时代变迁	归入	出口限制厂商面
+usenet_mail.messages.79781	V08.7.3.3	特权程序的审查惯例	归入	chfn 强制办法
+usenet_mail.messages.79794	V08.7.6.2	威胁环境的时代变迁	归入	crypt 外泄反讽
+usenet_mail.messages.79819			辑存	Secure Keyboard 问
+usenet_mail.messages.79823			辑存	电子 SPR 无音
+usenet_mail.messages.79832			辑存	SPR 确认说明
+usenet_mail.messages.79837			辑存	SPR 渠道讨论
+usenet_mail.messages.88581	V08.7.5.4	隔离手段的局限所在	归入	chroot 与 chdir 同码
+usenet_mail.messages.88593	V08.7.5.4	隔离手段的局限所在	归入	V7 chroot 逃逸实证
+usenet_mail.messages.88599	V08.7.5.4	隔离手段的局限所在	归入	chroot 手册不载考
+usenet_mail.messages.87761	V08.7.5.1	根目录切换的隔离设想	归入	PARC 沙箱 V6 shell
+usenet_mail.messages.90006	V08.7.3.2	setuid 位的机制与风险	归入	suid 机制与专利时评
+usenet_mail.messages.88851	V08.2.6.1	fork 后的描述符继承	归入	exec 三描述符提案
+usenet_mail.messages.88970	V08.7.3.1	超级用户的特权集中	归入	halfway root 构想
+usenet_mail.messages.91129	V08.7.3.2	setuid 位的机制与风险	归入	井号机制早期质疑
+usenet_mail.messages.87745	V08.7.4.4	弱口令的早期批评	归入	弱口令撞库个案
+usenet_mail.messages.89910	V08.7.3.4	提权漏洞的早期案例	归入	kmem 窃口令程序
+usenet_mail.messages.89898	V08.7.3.4	提权漏洞的早期案例	归入	rogue 存档加密破
+usenet_mail.messages.89994	V08.7.3.3	特权程序的审查惯例	归入	cron 路径各级安全
+usenet_mail.messages.89279	V08.7.3.4	提权漏洞的早期案例	归入	cpp 木马属实作证
+usenet_mail.messages.89296	V08.7.3.4	提权漏洞的早期案例	归入	Thompson 编译后门原帖
+usenet_mail.messages.88653	V08.7.3.3	特权程序的审查惯例	归入	PATH 冒号木马风险
+usenet_mail.messages.90184	V08.7.1.2	组身份的从属关系	归入	组权限八组上限
+usenet_mail.messages.89520	V08.7.6.2	威胁环境的时代变迁	归入	计算机犯罪报道转述

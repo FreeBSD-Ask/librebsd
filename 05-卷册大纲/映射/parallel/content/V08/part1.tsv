@@ -1,0 +1,147 @@
+rowmine_id	subsection_id	title	action	reason
+cross_indexes.duckdb.concept_history			移出	概念史条目→V08 概念面
+ucbvax.1633	V08.1.1.5	早期内核的史源层级	归入	Lions 评注本流传一手证据
+cross_indexes.duckdb.concept_history			移出	概念史条目→V08 概念面
+ucbvax.1522	V08.4.2.1	a.out 的格式要素	归入	V7 405 覆盖魔数一手证据
+usenet_mail.messages.125939	V08.1.2.2	exec 族与程序替换	归入	execargs 特性一手考据
+usenet_mail.messages.125949	V08.3.4.2	中断到上层的传导路径	归入	V7 DH/DM 驱动缺陷一手通报
+usenet_mail.messages.126031	V08.1.3.3	调度策略的时间片分配	归入	setrun 调度饥饿一手通报
+usenet_mail.messages.126044	V08.7.3.4	提权漏洞的早期案例	归入	setuid 加 alarm 提权漏洞
+usenet_mail.messages.45569	V08.3.4.2	中断到上层的传导路径	归入	串口驱动适配一手问答
+usenet_mail.messages.125816	V08.4.4.1	exec 的装载次序	归入	exec 交换缓冲缺陷一手通报
+usenet_mail.messages.125821			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.125828			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.125833	V08.6.4.3	交叉移植的实践积累	归入	ldiv 运行库移植缺陷
+usenet_mail.messages.125837	V08.6.4.3	交叉移植的实践积累	归入	ldiv 运行库移植缺陷
+usenet_mail.messages.125838	V08.8.3.3	回显与行编辑的取舍	归入	raw 模式回显一手通报
+usenet_mail.messages.125840	V08.1.3.4	中断优先级的安排	归入	sig.c 中断窗口一手通报
+usenet_mail.messages.125844	V08.1.1.3	基本结构的部件清单	归入	fpp 现场保护缺陷一手通报
+usenet_mail.messages.125847	V08.8.3.4	终端属性的系统调用入口	归入	tty ioctl 校验缺陷通报
+usenet_mail.messages.125854	V08.6.4.3	交叉移植的实践积累	归入	ldiv 运行库移植缺陷
+usenet_mail.messages.125864	V08.6.4.3	交叉移植的实践积累	归入	ldiv 运行库移植缺陷
+usenet_mail.messages.125872	V08.3.1.3	元数据的组织布局	归入	inode 时间元数据缺陷通报
+usenet_mail.messages.125897	V08.3.1.3	元数据的组织布局	归入	inode 计数字段容量讨论
+usenet_mail.messages.125899	V08.3.4.2	中断到上层的传导路径	归入	DZ 驱动中断死循环通报
+usenet_mail.messages.125941	V08.3.3.4	设备文件的访问入口	归入	swapdev 设备打开缺陷
+usenet_mail.messages.125948	V08.3.4.2	中断到上层的传导路径	归入	DH 缺陷归属考订
+usenet_mail.messages.125952	V08.3.4.2	中断到上层的传导路径	归入	DH 驱动硬件归因讨论
+usenet_mail.messages.125954	V08.3.2.2	硬链接与别名机制	归入	namei 链接计数缺陷通报
+usenet_mail.messages.125962	V08.2.3.4	复制与共享的语义	归入	dup 与 close-on-exec 语义
+usenet_mail.messages.125963	V08.4.4.3	参数与环境块的传递	归入	exec 参数表容量缺陷
+usenet_mail.messages.125970	V08.8.3.2	线路规程的分层职责	归入	CBREAK 手册语义讨论
+usenet_mail.messages.125973			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.125977	V08.8.3.2	线路规程的分层职责	归入	flushtty TTSTOP 缺陷
+usenet_mail.messages.125979	V08.8.3.2	线路规程的分层职责	归入	flushtty TTSTOP 缺陷
+usenet_mail.messages.125980	V08.8.3.4	终端属性的系统调用入口	归入	TIOCSETN 切换缺陷通报
+usenet_mail.messages.125992	V08.4.4.2	进程映像的重建次序	归入	exec 栈分配缺陷通报
+usenet_mail.messages.125993	V08.4.5.2	栈段的自动扩张规则	归入	2.8BSD 栈扩展缺陷通报
+usenet_mail.messages.125997			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.126005			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.126021	V08.6.4.3	交叉移植的实践积累	归入	setjmp 栈残留移植缺陷
+usenet_mail.messages.126033			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.126034			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.126037	V08.4.4.1	exec 的装载次序	归入	exec 缓冲写回风险讨论
+usenet_mail.messages.126041	V08.1.4.3	定时器与睡眠等待	归入	alarm 跨 exec 语义讨论
+usenet_mail.messages.126042	V08.1.4.3	定时器与睡眠等待	归入	alarm 跨 exec 语义讨论
+usenet_mail.messages.126043	V08.1.4.3	定时器与睡眠等待	归入	alarm 跨 exec 语义讨论
+usenet_mail.messages.126047			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.126048			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.126069	V08.6.4.3	交叉移植的实践积累	归入	gtty 结构移植讨论
+usenet_mail.messages.126072	V08.6.4.3	交叉移植的实践积累	归入	gtty 结构移植讨论
+usenet_mail.messages.126074	V08.6.4.3	交叉移植的实践积累	归入	Pyramid 移植三教训
+usenet_mail.messages.126084			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.94239	V08.3.5.1	缓冲池的结构与容量	归入	V7 缓冲池替换策略讨论
+usenet_mail.messages.92433			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.92778	V08.4.2.1	a.out 的格式要素	归入	a.out 首页存废一手证据
+usenet_mail.messages.92805	V08.4.2.1	a.out 的格式要素	归入	a.out 首页存废一手证据
+usenet_mail.messages.92868	V08.2.3.2	进程表与打开文件表	归入	打开文件表上限讨论
+cbosgd.1989	V08.5.1.1	商用系统的虚存竞赛	归入	UNIX 分页支持分化一手记
+cross_indexes.duckdb.concept_history			移出	概念史条目→V08 概念面
+ucbvax.1732	V08.5.1.5	分化格局的史料基础	归入	UNIX 与 VMS 比较史料记
+cross_indexes.duckdb.concept_history			移出	概念史条目→V08 概念面
+utzoo.1549	V08.8.5.2	退出状态码的解读	归入	ld 退出状态码一手讨论
+utzoo.2277	V08.1.2.3	父进程的等待同步	归入	wait 状态被忽略缺陷通报
+usenet_mail.messages.125438	V08.1.2.3	父进程的等待同步	归入	wait 状态被忽略缺陷通报
+usenet_mail.messages.125439	V08.1.2.3	父进程的等待同步	归入	wait 自 V5 即缺检讨论
+usenet_mail.messages.125441	V08.1.2.3	父进程的等待同步	归入	tar 全量等待缺陷通报
+usenet_mail.messages.125445	V08.1.2.3	父进程的等待同步	归入	wait 不核对进程缺陷
+usenet_mail.messages.125453	V08.1.2.3	父进程的等待同步	归入	SysV.2 tar 等待缺陷
+usenet_mail.messages.125827	V08.1.2.2	exec 族与程序替换	归入	execl 失败穿透缺陷通报
+usenet_mail.messages.125880			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.125915	V08.8.5.2	退出状态码的解读	归入	ld 退出状态码一手讨论
+usenet_mail.messages.125916	V08.1.2.3	父进程的等待同步	归入	mail 忽略 uux 状态缺陷
+usenet_mail.messages.125931	V08.1.2.3	父进程的等待同步	归入	uux 退出码修复讨论
+usenet_mail.messages.125934	V08.7.3.2	setuid 位的机制与风险	归入	setuid 程序环境受限案例
+usenet_mail.messages.125946	V08.1.2.3	父进程的等待同步	归入	mail 忽略 uux 状态缺陷
+usenet_mail.messages.125971	V08.1.2.3	父进程的等待同步	归入	popen fork 失败缺陷通报
+usenet_mail.messages.125985	V08.1.2.3	父进程的等待同步	归入	wait 副作用误报缺陷
+usenet_mail.messages.126052	V08.8.5.2	退出状态码的解读	归入	make 终止码语义讨论
+usenet_mail.messages.135311			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135411			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135415			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135463			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135528			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135529			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135561			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135602			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135606			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135616			删除	comp.sources 通告无实义
+usenet_mail.messages.135620			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135633			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135648			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135657			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.135699			移出	comp.sources 发布通告，超卷期→V06 传播
+usenet_mail.messages.48089	V08.2.4.5	简约模型的代价评估	归入	错误检查简约代价讨论
+usenet_mail.messages.48107	V08.2.4.5	简约模型的代价评估	归入	过滤器不查输出错误讨论
+usenet_mail.messages.48149	V08.2.4.5	简约模型的代价评估	归入	cat.c 严格错误检查实践
+usenet_mail.messages.48192	V08.2.4.5	简约模型的代价评估	归入	管道过滤器错误检查局限
+usenet_mail.messages.48197	V08.2.4.5	简约模型的代价评估	归入	cat.c 严格错误检查实践
+usenet_mail.messages.48400	V08.2.4.5	简约模型的代价评估	归入	错误消息三段式主张
+usenet_mail.messages.48414			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.48537	V08.2.4.5	简约模型的代价评估	归入	防御式编程边界讨论
+usenet_mail.messages.48544	V08.2.4.5	简约模型的代价评估	归入	错误分级与断言主张
+usenet_mail.messages.48554	V08.2.4.5	简约模型的代价评估	归入	错误分级与断言主张
+usenet_mail.messages.48571	V08.2.4.5	简约模型的代价评估	归入	Berkeley 错误消息改良
+usenet_mail.messages.48582	V08.2.4.5	简约模型的代价评估	归入	perror 使用演变讨论
+usenet_mail.messages.48595	V08.2.4.5	简约模型的代价评估	归入	源码质量批评一手讨论
+usenet_mail.messages.48597			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.48658	V08.1.2.3	父进程的等待同步	归入	spawn 前置检查实践
+usenet_mail.messages.48673	V08.2.6.2	重定向的实现基础	归入	fork exec 重定向实测
+usenet_mail.messages.48678	V08.1.2.3	父进程的等待同步	归入	spawn 等待实践讨论
+usenet_mail.messages.48690	V08.2.6.3	管道与进程组合的协同	归入	pipe 程序实现讨论
+usenet_mail.messages.48720	V08.1.2.3	父进程的等待同步	归入	spawn 管道回传 errno
+usenet_mail.messages.48734	V08.2.3.4	复制与共享的语义	归入	dup2 语义纠正讨论
+usenet_mail.messages.48750	V08.1.2.3	父进程的等待同步	归入	spawn 失败原因回传
+usenet_mail.messages.48755	V08.8.5.3	脚本执行的解释流程	归入	system 与 fork exec 比较
+usenet_mail.messages.48758	V08.1.2.3	父进程的等待同步	归入	计时未等待子进程勘误
+usenet_mail.messages.48770			删除	空块
+usenet_mail.messages.48772	V08.1.2.3	父进程的等待同步	归入	access 预检局限自述
+usenet_mail.messages.48793	V08.1.3.1	signal 的异常事件机制	归入	SIGCLD 处理 spawn 方案
+usenet_mail.messages.48795	V08.1.2.1	fork 原语与进程复制	归入	二次 fork 防僵尸实践
+usenet_mail.messages.48818	V08.1.2.3	父进程的等待同步	归入	spawn 退出码传递实践
+usenet_mail.messages.48823	V08.2.6.2	重定向的实现基础	归入	fork exec 管道重定向
+usenet_mail.messages.48826	V08.1.2.3	父进程的等待同步	归入	计时未等待子进程勘误
+usenet_mail.messages.48847	V08.1.2.3	父进程的等待同步	归入	通用 spawn 示例讨论
+usenet_mail.messages.48983	V08.1.5.3	描述符传递的衔接方式	归入	socketpair 管道 EOF 讨论
+usenet_mail.messages.49000	V08.2.3.4	复制与共享的语义	归入	System V dup2 模拟实现
+usenet_mail.messages.49171	V08.2.2.3	返回值与错误码的约定	归入	errno 表述边界讨论
+usenet_mail.messages.49250	V08.2.2.3	返回值与错误码的约定	归入	errno 置位规则讨论
+usenet_mail.messages.49278	V08.2.2.3	返回值与错误码的约定	归入	errno 处理分流实践
+usenet_mail.messages.49284	V08.2.2.3	返回值与错误码的约定	归入	errno 残留值误判案例
+usenet_mail.messages.49285	V08.2.2.3	返回值与错误码的约定	归入	sscanf errno 异常案例
+usenet_mail.messages.49363	V08.2.2.3	返回值与错误码的约定	归入	stdio 临时描述符考据
+usenet_mail.messages.49399	V08.2.2.3	返回值与错误码的约定	归入	非阻塞读 errno 讨论
+usenet_mail.messages.49455	V08.1.5.2	匿名通道的半双工限制	归入	4.3BSD 管道实现考据
+usenet_mail.messages.49469	V08.1.3.1	signal 的异常事件机制	归入	SIGPIPE 处理讨论
+usenet_mail.messages.49482	V08.1.2.3	父进程的等待同步	归入	popen 分页器退出捕获
+usenet_mail.messages.49493			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.49519	V08.2.2.5	实现细节的版本出入	归入	fstat 实现版本出入
+usenet_mail.messages.49539	V08.2.4.1	描述符读写的基本语义	归入	writev 部分写处理讨论
+usenet_mail.messages.49551	V08.2.4.1	描述符读写的基本语义	归入	readv 提前返回讨论
+usenet_mail.messages.49591	V08.1.5.4	命名通道的后续扩展	归入	FIFO 非阻塞打开实践
+usenet_mail.messages.49611	V08.2.2.3	返回值与错误码的约定	归入	4.3BSD errno 写入考据
+usenet_mail.messages.77052	V08.8.5.2	退出状态码的解读	归入	分页器状态码建议讨论
+usenet_mail.messages.77095	V08.8.5.2	退出状态码的解读	归入	more 退出状态不一致
+usenet_mail.messages.77110			辑存	边缘缺陷通报，无本卷题面落点
+usenet_mail.messages.77121	V08.8.5.2	退出状态码的解读	归入	rsh 状态码回传实践
+usenet_mail.messages.77332			删除	空块
