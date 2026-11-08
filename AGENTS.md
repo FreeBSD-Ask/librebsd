@@ -17,7 +17,7 @@
 - **范围**：**禁止编纂正文**；工作范围限于大纲、考据、数据库与目录页。
 
 <!-- BEGIN 口径基准（脚本自动维护，勿手改数字，最后同步 2026-11-08） -->
-- **现行大纲目录口径：76 卷 544 章 3954 节 13183 小节**（四级；小节数随 Task 8 卷批逐卷回写，2026-11-06 起 V01／V02／V03／V04／V11／V21／V31／V51／V61 等卷已落，逐卷清单见 92 号文 §十一；src 标注见 index.html doc-metrics；本行由 `00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --sync` 自动维护）。
+- **现行大纲目录口径：76 卷 544 章 3954 节 13624 小节**（四级；小节数随 Task 8 卷批逐卷回写，2026-11-06 起 V01／V02／V03／V04／V11／V21／V31／V51／V61 等卷已落，逐卷清单见 92 号文 §十一；src 标注见 index.html doc-metrics；本行由 `00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --sync` 自动维护）。
 <!-- END 口径基准（脚本自动维护） -->
 
 卷章数只在标记块与 `05-卷册大纲/目录/index.html` 的 `doc-metrics` 维护，别处不得手写。
@@ -92,7 +92,7 @@
 | `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 不入库（2026-10-17 ykla 裁决，目录保留作工作区） |
 | `.zcode/` | ZCode 工作区路径 | 忽略 |
 | `bsd-family-tree.txt`、`bsd-family-tree-zh.txt` | 第三方维护的 BSD 家族树纯文本参照件（逐年更新）；被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 与 115 号文引用 | 入库（2026-10-29 补登记，同步列入 B2 根级白名单） |
-| `.autocorrectrc`、`.gitattributes`、`.gitignore`、`.zcodeignore`、`LICENSE` | 根配置 | 入库 |
+| `.autocorrectrc`、`.gitattributes`、`.gitignore`、`.zcodeignore`、`LICENSE`、`SECURITY.md` | 根配置（`SECURITY.md` 为安全策略与漏洞报告渠道） | 入库 |
 
 `.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则/00-索引.md`）；**2026-10-17 ykla 裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
 
