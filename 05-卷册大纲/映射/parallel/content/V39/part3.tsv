@@ -1,0 +1,238 @@
+rowmine_id	subsection_id	title	action	reason
+freebsd-ports.messages.1681846	V39.2.2.3	第三方软件的接入位置	归入	基本系统 sendmail 足以维持小列表
+freebsd-ports.messages.1682895	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1683653	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1579453	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1582674		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1702366	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1704536	V39.2.2.3	第三方软件的接入位置	归入	mergemaster 并入基本系统的疑问
+freebsd-ports.messages.1704710	V39.2.2.3	第三方软件的接入位置	归入	Ports 仅第三方入口，合规不担保
+freebsd-ports.messages.1705270	V39.2.2.3	第三方软件的接入位置	归入	第三方向限制的判定惯例
+freebsd-ports.messages.1705370	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1586949		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1711313	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1593306		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1741373		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1743327		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1630988	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1637163	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1646961	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1625961	V39.2.2.3	第三方软件的接入位置	归入	pkgng 与 base 引导工具之争
+freebsd-ports.messages.1626820		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-chromium.messages.1018610	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-chromium.messages.1018964	V39.6.3.3	构建中断的互助网络	归入	节内转最空题（6.3.4 已满 12）
+freebsd-chromium.messages.1019039	V39.6.3.3	构建中断的互助网络	归入	节内转最空题（6.3.4 已满 12）
+freebsd-ports.messages.1682571		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1695684	V39.2.2.3	第三方软件的接入位置	归入	反对拆散 java 目录的非标准布局
+freebsd-office.messages.1503469	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1718435		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1719670		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1721111		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1724474		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1731684		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1588420		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-ports.messages.1590712	V39.6.3.4	Ports 树的日常实践	归入	Ports 树的日常实践
+freebsd-ports.messages.1612388	V39.6.3.3	构建中断的互助网络	归入	节内转最空题（6.3.4 已满 12）
+freebsd-ports.messages.1612393	V39.6.3.3	构建中断的互助网络	归入	节内转最空题（6.3.4 已满 12）
+freebsd-openoffice.messages.1511483		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-apache.messages.859365	V39.6.8.2	文档补正的志愿投入	归入	UPDATING 条目过简引致升级混乱
+freebsd-apache.messages.860431		—	删除	空壳块（仅块头无正文）
+freebsd-chromium.messages.1020209		—	删除	空壳块（仅块头无正文）
+freebsd-chromium.messages.1021942		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-chromium.messages.1023475		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-chromium.messages.1024459		—	删除	空壳块（仅块头无正文）
+freebsd-chromium.messages.1024619	V39.2.2.3	第三方软件的接入位置	归入	反对默认启用 PULSEAUDIO 的依赖膨胀
+freebsd-elastic.messages.1152689	V39.2.2.3	第三方软件的接入位置	归入	建议端口直接依赖 OpenJDK21
+freebsd-x11.messages.22314		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-elastic.messages.1149272		—	删除	空壳块（仅块头无正文）
+freebsd-elastic.messages.1149297		—	挂账	同题容量溢出（6.3.4 已满 12）
+freebsd-apache.messages.857814		—	删除	空壳块（仅块头无正文）
+freebsd-ports.messages.1557566		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1577282		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1631843	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1631867		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1632580		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1632675		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1638426	V39.2.2.3	第三方软件的接入位置	归入	第三方配置应置于 PREFIX/etc
+freebsd-ports.messages.1642957	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1652199	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1656687	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1660811	V39.2.2.3	第三方软件的接入位置	归入	第三方软件无保证的边界声明
+freebsd-ports.messages.1663085		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1672786	V39.6.3.1	Ports 树的规模增长	归入	新增 games-text 分类的提议
+freebsd-ports.messages.1681923		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1691839	V39.6.3.2	维护者的志愿分工	归入	portball 附 PR 的规范执行迟缓
+freebsd-ports.messages.1726251	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1564300	V39.5.4.3	无人维护件的处置	归入	维护者停更一年半应归还 ports@
+freebsd-ports.messages.1631451	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1632473	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1662430		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1663948	V39.5.4.3	无人维护件的处置	归入	无人响应补丁愿出任维护者
+freebsd-ports.messages.1669629	V39.6.3.2	维护者的志愿分工	归入	无显式维护者即 ports@ 别名
+freebsd-ports.messages.1702403	V39.5.4.3	无人维护件的处置	归入	distfile 退信的处理政策
+freebsd-ports.messages.1705515	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1705771	V39.5.2.2	权限授予的审核环节	归入	质问提交权限的授予流程
+freebsd-ports.messages.1705990	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1706096		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1625097		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1630441		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1630658	V39.5.4.3	无人维护件的处置	归入	无维护者端口列入删除时间表
+freebsd-ports.messages.1630976	V39.6.8.2	文档补正的志愿投入	归入	文档补丁稀缺的自嘲
+freebsd-ports.messages.1632336	V39.12.7.2	Ports 树的框架秩序	归入	基础设施替换落回旧工作流
+freebsd-ports.messages.1632597		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1633906	V39.6.3.1	Ports 树的规模增长	归入	Perl 多版本弃用节奏
+freebsd-ports.messages.1710227		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1716912	V39.6.3.2	维护者的志愿分工	归入	Ports 维护者的志愿分工
+freebsd-ports.messages.1716952		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1722825		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1723019		—	挂账	同题容量溢出（6.3.2 已满 12）
+freebsd-ports.messages.1727402	V39.6.3.3	构建中断的互助网络	归入	节内转最空题（6.3.2 已满 12）
+freebsd-ports.messages.1742408	V39.2.2.3	第三方软件的接入位置	归入	expat 纳入基本系统之议
+freebsd-ports.messages.1743180	V39.6.3.3	构建中断的互助网络	归入	节内转最空题（6.3.2 已满 12）
+freebsd-pkgbase.messages.1552121	V39.2.2.1	基本系统的范围界定	归入	基本系统的范围界定
+freebsd-pkgbase.messages.1552120	V39.2.2.3	第三方软件的接入位置	归入	pkg 导入基本系统之议
+freebsd-pkgbase.messages.1552093	V39.2.2.1	基本系统的范围界定	归入	基本系统的范围界定
+freebsd-pkgbase.messages.1552186	V39.2.2.1	基本系统的范围界定	归入	基本系统的范围界定
+freebsd-pkgbase.messages.1552262	V39.2.2.1	基本系统的范围界定	归入	基本系统的范围界定
+freebsd-pkgbase.messages.1552308	V39.2.2.1	基本系统的范围界定	归入	基本系统的范围界定
+freebsd-pkgbase.messages.1552362		—	删除	空壳块（仅块头无正文）
+freebsd-pkgbase.messages.1552405	V39.2.2.1	基本系统的范围界定	归入	基本系统的范围界定
+freebsd-www.messages.19558	V39.6.5.3	群体交往的主要场合	归入	FreeBSD 用户名录的收录标准
+freebsd-www.messages.19642	V39.2.3.1	手册页的写作规范	归入	DocBook 引用手册页写法
+freebsd-www.messages.19692		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.19760	V39.6.8.1	问题报告的撰写规范	归入	URN 自动重定向的数据支撑
+freebsd-www.messages.19772		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.19712		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.19983		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.20199		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.20406	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.20413		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.20665		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.20695	V39.6.8.1	问题报告的撰写规范	归入	镜像站同步方案求助
+freebsd-www.messages.21328		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.21753		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.22289	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.22444		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.22641	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.23078	V39.6.8.1	问题报告的撰写规范	归入	PR 查询脚本失效报告
+freebsd-www.messages.19055	V39.2.3.2	手册的版本维护体制	归入	2.2 分支手册口径的权威确认
+freebsd-www.messages.19159	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.18944		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.19530		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.21830	V39.6.8.1	问题报告的撰写规范	归入	符号链接与重定向之争
+freebsd-www.messages.21860		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.22078	V39.6.8.1	问题报告的撰写规范	归入	邮件列表全文搜索恢复
+freebsd-www.messages.22111	V39.6.8.1	问题报告的撰写规范	归入	提交者指南链接失效
+freebsd-www.messages.22295		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.22306	V39.6.8.1	问题报告的撰写规范	归入	问题报告文章链接失效
+freebsd-www.messages.23079		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.23344	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.23417	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.23629		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.19402		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.19904		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.20714		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.20895	V39.6.2.4	知识传播的读者分层	归入	文件系统条目投稿
+freebsd-www.messages.22313		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.22505	V39.9.6.2	欧洲会议的网络节点	归入	波兰 BSD 新闻站请求官网链接
+freebsd-www.messages.23015	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.23212		—	删除	空壳块（仅块头无正文）
+freebsd-www.messages.23371	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.23506		—	挂账	同题容量溢出（6.8.2 已满 12）
+freebsd-www.messages.23523	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+freebsd-www.messages.23632	V39.6.8.2	文档补正的志愿投入	归入	文档补正的志愿投入
+youtube.episodes.-2E7vIunJ28 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-Lpx9QuCEsw 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-PNOug51HRg 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-Qope9JmJmw 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-R4mabCLz2I 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-RRMw7W1i2o 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-SL7RJAH_CU 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.-vDiFeatxdk 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.05iwE8I93ks 批w170		—	删除	ASR 回填桩块（无正文）
+youtube.episodes.05k2RcaOfjo 批w170		—	删除	ASR 回填桩块（无正文）
+usenet_mail.messages.46058	V39.6.2.4	知识传播的读者分层	归入	知识传播的读者分层
+usenet_mail.messages.46200		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.47381	V39.6.2.4	知识传播的读者分层	归入	知识传播的读者分层
+usenet_mail.messages.47383	V39.6.2.4	知识传播的读者分层	归入	知识传播的读者分层
+usenet_mail.messages.47423	V39.6.2.4	知识传播的读者分层	归入	知识传播的读者分层
+usenet_mail.messages.181620	V39.6.2.4	知识传播的读者分层	归入	知识传播的读者分层
+usenet_mail.messages.28744		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.29986		—	移出	建议宿主 V08：4.3BSD 网络服务杂谈，属第八卷
+usenet_mail.messages.30123		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.31960		—	移出	A/UX 邮件与新闻机，属第五十八卷
+usenet_mail.messages.30359		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.30607		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.30635		—	移出	邮件转发版权杂谈，属第八卷
+usenet_mail.messages.137094		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.151106		—	移出	建议宿主 V08：4.3BSD 网络服务杂谈，属第八卷
+usenet_mail.messages.147491		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.178512		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.178543	V39.7.9.1	消极自由的当事人表述	归入	版权自然权利论与激励论之辩
+usenet_mail.messages.178695		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.179017		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.179581	V39.7.7.3	派生作品的处理差别	归入	GPL 系统调用与内核模块歧义
+usenet_mail.messages.180581		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.180736	V39.7.1.5	背景叙述的常见误记	归入	BSD 为原始 UNIX 代码的误记辨析
+usenet_mail.messages.182977		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.179636		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.180465		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.146429	V39.7.7.3	派生作品的处理差别	归入	GPL 派生作品与混合许可
+linux-arch.messages.9728288		—	删除	空壳块（仅块头无正文）
+linux-scsi.messages.1518876		—	移出	建议宿主 V76：Linux 双许可补丁史料，属第七十六卷
+linux-scsi.messages.1526091		—	删除	空壳块（仅块头无正文）
+netdev.messages.8054103		—	移出	建议宿主 V76：Linux 双许可补丁史料，属第七十六卷
+netdev.messages.8331996		—	移出	建议宿主 V76：Linux 双许可补丁史料，属第七十六卷
+netdev.messages.8681028		—	移出	建议宿主 V76：Linux 双许可补丁史料，属第七十六卷
+netdev.messages.8465796		—	移出	建议宿主 V76：Linux 双许可补丁史料，属第七十六卷
+usenet_mail.messages.177864		—	删除	空壳块（仅块头无正文）
+usenet_mail.messages.178182	V39.7.9.3	两种自由的概念并置	归入	FSF 用词建议与修辞之争
+linux-kernel.duckdb.commits		—	删除	数据库分析元块
+usenet_mail.messages.153851		—	删除	空壳块（仅块头无正文）
+cross_indexes.duckdb.concept_history		—	删除	史家判断聚类元块
+ksummit-discuss.messages.347084		—	删除	空壳块（仅块头无正文）
+ksummit-discuss.messages.347141		—	删除	空壳块（仅块头无正文）
+ksummit-discuss.messages.347165		—	删除	空壳块（仅块头无正文）
+ID	V39.7.7.4	辩论中的相互指责	归入	GPL 法律与伦理论战
+usenet_mail.messages.46126	V39.7.7.4	辩论中的相互指责	归入	GPL 单边许可合同之辩
+usenet_mail.messages.46195	V39.7.7.4	辩论中的相互指责	归入	GPL 法律与伦理论战
+usenet_mail.messages.47571	V39.7.9.2	积极自由的制度主张	归入	只发二进制违背网络精神
+cross_indexes.duckdb.concept_history		—	删除	史家判断聚类元块
+usenet_mail.messages.148259		—	移出	建议宿主 V36：BSDI 技术问答，属第三十六卷
+usenet_mail.messages.148291		—	移出	建议宿主 V36：BSDI 技术问答，属第三十六卷
+usenet_mail.messages.148296		—	移出	建议宿主 V36：BSDI 技术问答，属第三十六卷
+usenet_mail.messages.148309		—	移出	建议宿主 V36：BSDI 技术问答，属第三十六卷
+usenet_mail.messages.151952		—	删除	空壳块（仅块头无正文）
+tech-pkg.messages.273354		—	移出	pkgsrc 许可白名单政策，属第四十卷
+tech-pkg.messages.273609		—	移出	pkgsrc 许可白名单政策，属第四十卷
+tech-pkg.messages.274212		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+tech-pkg.messages.274214		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+tech-pkg.messages.274217		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+tech-pkg.messages.275031		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+tech-pkg.messages.275044		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+tech-pkg.messages.277408		—	删除	空壳块（仅块头无正文）
+tech-pkg.messages.277691		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+tech-pkg.messages.283821		—	移出	建议宿主 V40：pkgsrc 许可证政策，属第四十卷
+sacred_sources.duckdb.blocks		—	删除	sacred 史观元块重复注入
+sacred_sources.duckdb.blocks		—	删除	sacred 史观元块重复注入
+sacred_sources.duckdb.blocks		—	删除	sacred 史观元块重复注入
+cross_indexes.duckdb.concept_history		—	删除	sacred 史观元块重复注入
+sacred_sources.duckdb.blocks		—	删除	sacred 史观元块重复注入
+sacred_sources.duckdb.blocks		—	删除	sacred 史观元块重复注入
+sacred_sources.duckdb.blocks		—	删除	sacred 史观元块重复注入
+cross_indexes.duckdb.concept_history		—	删除	sacred 史观元块重复注入
+freebsd.duckdb		—	删除	数据库引用元块（无正文）
+freebsd.duckdb		—	删除	数据库引用元块（无正文）
+freebsd.duckdb		—	删除	数据库引用元块（无正文）
+freebsd.duckdb.commits		—	删除	数据库引用元块（无正文）
+freebsd.duckdb		—	删除	数据库引用元块（无正文）
+freebsd.duckdb		—	删除	数据库引用元块（无正文）
+freebsd.duckdb		—	删除	数据库引用元块（无正文）
+netdev.messages.8298645	V39.7.2.2	学界与业界的推动力量	归入	KAME 作者述伯克利删广告条款
+linux-mm.messages.887343	V39.7.7.4	辩论中的相互指责	归入	BSD 代码按 BSD 许可使用的辩护
+linux-man.messages.749677	V39.7.1.2	条款删改的关键时点	归入	if_ppp.h 旧广告条款清理
+linux-man.messages.750313	V39.9.5.1	辅助工具的引入现状	归入	copyleft 与 AI 贡献政策之辩
+ksummit-discuss.messages.347183		—	删除	空壳块（仅块头无正文）
+ksummit-discuss.messages.347263		—	移出	建议宿主 V76：Linux 侧许可争论引语，属第七十六卷
+ksummit-discuss.messages.347270		—	移出	建议宿主 V76：Linux 侧许可争论引语，属第七十六卷
+linux-man.messages.725566	V39.7.9.3	两种自由的概念并置	归入	BSD 与 GPL 的非对称概括
