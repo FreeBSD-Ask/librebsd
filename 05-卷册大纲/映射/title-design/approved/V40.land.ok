@@ -1,0 +1,25 @@
+kind=landing
+vol=V40
+title_count=468
+ledger_sha256=ca139a517972709af5be2f05b6a641f5bba8fc2e5504070e0b51d0f4db5e3549
+scope=全 468 题（45 filled＋423 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V40-C1.tsv
+ledger_main_sha256=ab1f3f31bcf14f7d1a06ae53b101c9dfd966e992fdf38a363ed55c35e5161cfb
+ledger_supp=design/V40-C2.tsv
+ledger_supp_sha256=5bd29bb4626afcadb2041b258c2acf314d03df10cf9c41760389adc3a4e49f08
+design_index=design/V40.tsv
+design_index_sha256=fb7d7ec9e209cc6dfc35985b7a7b0948064c706e6834411c07841845d418631d
+fragments=design/fragments/V40.tsv
+fragments_sha256=25903c26921a9f745aeb24e498218b3c90c86147751cb67011a0fb24ac86c785
+blocks_total=1001
+blocks_landed=87
+blocks_surplus=206
+blocks_moved=708
+blocks_compiled=0
+blocks_deleted=0
+gate=L1–L19 PASS（outline=tree=summary=15,577，本卷 468＝468）；第三十八件 D1／D2 PASS（L 缺 V009／V058／V067——V009 为零填充卷探漏格式误报、V058／V067 他线在途，只披露不代改；V040 本批签）；第三十九件 45 项 FAIL 0；第三十三件全局 5 项失衡（COL_SCAN＋3 落 V09、PODCAST_REVIEW＋10 落 V11/V12/V15/V27/V54/V56、DOUBT_PENDING−3 落 V66、GAP-A-YT／W172 落他线在途件）本卷零项，只披露不代改；第三十四件本卷零项；第三十五件 INFO 2 组落 V32/V51 他线已提交卷；第二十四件 FAIL 全在 V58 他会话件，本卷零项；第二十八件 PASS；卷级回归 V40 5/6（V3 深链为页面规模共性，V31/V55/V56/V57 同项同红先例）；共享派生层本批随卷再生（targets.tsv/SUMMARY/theme 15,577 口径、index.html 7,339,128 B）
+note=主会话单写者判读（不派子代理）；2026-11-08 会话完成判读与树件落盘（fragments 00:23），2026-11-09 本会话续收口（outline 行随他会话 00:50 合并写入，dry-run 1,5577 行核对全同后由本会话再生派生层全链）。料域＝旧树 NetBSD 章与创始期诸节（074/075/189/190/191/192/195/196/197/198/199/200/201/202/205/206/207），4 片 1,001 块（P1 280／P2 220／P3 218／P4 283）；归入 87 块落 45 题、挂账 206（surplus 207 行）、移出 708（旧树 NetBSD 章机器块以 tech-kern／port-alpha 运维问答为主，与版本史／理念史题面同域不同类，按 V41 技术本体移出）；exceptions 423 条 corpus_gap（每空骨架题一条，按 3A.6 建空骨架，内容批前联网补证）；filled 45/468（9.6%）如实记 corpus_gap，不为凑 filled 降格判读
+approved_by=ykla
+approved_at=2026-11-09

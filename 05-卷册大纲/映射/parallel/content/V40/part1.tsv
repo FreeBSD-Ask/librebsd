@@ -1,0 +1,281 @@
+rowmine_id	subsection_id	title	action	reason
+usenet_mail.messages.154193	V40.2.7.1	OpenBSD 分流的直接起因	归入	1994-12-20 core 要求 de Raadt 辞职
+usenet_mail.messages.172803			挂账	发行期通信，题面无对应
+tech-kern.messages.108429	V40.1.5.1	1.0 的发行准备与冻结	归入	1.0 冻结期 fsck 改动取舍
+tech-kern.messages.108958	V40.2.1.1	1.1 至 1.6 的版本序列	归入	1.1 后再议的发行节奏
+tech-kern.messages.109889	V40.2.1.1	1.1 至 1.6 的版本序列	归入	1.2 手册页滞后发行
+tech-kern.messages.109895	V40.2.1.3	发行周期的收紧与拉长	归入	拖延项搁置与双周补丁主张
+tech-kern.messages.109901	V40.2.1.1	1.1 至 1.6 的版本序列	归入	手册随发行纳入之争
+tech-kern.messages.109908	V40.2.1.1	1.1 至 1.6 的版本序列	归入	文档随发行发布主张
+tech-kern.messages.110201	V40.2.1.1	1.1 至 1.6 的版本序列	归入	1.2 后 sup 源码分发断档
+tech-kern.messages.110202	V40.2.1.1	1.1 至 1.6 的版本序列	归入	sup 恢复时点的简复
+tech-kern.messages.110209	V40.2.1.1	1.1 至 1.6 的版本序列	归入	SUP collection 与修订选择
+tech-kern.messages.110693	V40.2.1.2	补丁分支的维护惯例	归入	patchkit 纳入 3c900 驱动
+tech-kern.messages.112983	V40.2.1.6	版本年表的史料核对	归入	CHANGES 用户程序改动缺载
+tech-kern.messages.112987	V40.2.1.6	版本年表的史料核对	归入	系统调用修订记载核对
+tech-kern.messages.112996	V40.2.1.2	补丁分支的维护惯例	归入	CHANGES 精简主张
+tech-kern.messages.108912	V40.2.2.1	MI 与 MD 的代码分界	归入	DMA 类型选型的 MI 困惑
+tech-kern.messages.108994			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109056	V40.1.5.4	1.0 与 386BSD 的承继关系	归入	386BSD 分区命名遗产
+tech-kern.messages.109065			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109082			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109302			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109404	V40.1.6.5	纲领在代码层的落点	归入	ISA userconfig 机器无关配置
+tech-kern.messages.109422			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109530			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109693	V40.1.6.4	与性能优先路线的取向之别	归入	汇编 in_cksum 提速两成
+tech-kern.messages.109777			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.109976			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.110183	V40.1.1.2	Jolitz 的 PC 移植路径	归入	Jolitz 书参考价值之辩
+tech-kern.messages.110326			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.110421			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.6819			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.110973			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.6964			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111251			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111282			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111284			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111320			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111399			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111407			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111408			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111472			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111484			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111764	V40.2.2.2	分层原则的实现代价	归入	bus tag 编译期区分 IO 与内存
+tech-kern.messages.111834			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.111928			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112023			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112038			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112278			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.7401			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112440			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112453			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112589			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112657			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112781			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112812			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112890			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112975			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.112982	V40.2.1.2	补丁分支的维护惯例	归入	vfork 回移 1.2 与分支切换
+tech-kern.messages.112992			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.113095			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.113200			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.113201			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.113537			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.113538			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.113784			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.114290			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.114674			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.7765			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.7799			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.7805			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.7958			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.8262			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.8275			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.8296			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.8301			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.8478			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.8663			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.9406			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.9661			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.9796			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.10062			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.10101			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.10112			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.10158			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.10994			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11078			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11186			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11359			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11369			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11392			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11453			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11594			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11660			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11783			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11784			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.11854			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.12075			挂账	移植运维问答，非纲领叙事
+usenet_mail.messages.156937			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.12388			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.12685			挂账	移植运维问答，非纲领叙事
+port-alpha.messages.12954			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.108409			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.108656			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.108717			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.108727			挂账	移植运维问答，非纲领叙事
+tech-kern.messages.108955	V40.1.6.5	纲领在代码层的落点	归入	属性宏替代架构 ifdef
+tech-kern.messages.108957	V40.1.6.5	纲领在代码层的落点	归入	按功能而非架构条件编译
+tech-kern.messages.108959	V40.1.6.5	纲领在代码层的落点	归入	DOS 定义置入 param.h
+tech-kern.messages.111178	V40.1.6.2	架构独立性的技术纲领	归入	Sun 禁显存直访的移植约束
+tech-kern.messages.111179	V40.1.6.2	架构独立性的技术纲领	归入	DGA 源出 Solaris 之辩
+tech-kern.messages.112043			挂账	可移植性讨论，未及题面
+tech-kern.messages.113846	V40.1.6.6	口号与实作之间的距离	归入	OF 驱动慢属实现非架构
+tech-kern.messages.113848	V40.1.6.6	口号与实作之间的距离	归入	Shark 上 OF 驱动实测
+tech-kern.messages.113850			挂账	可移植性讨论，未及题面
+tech-kern.messages.114457	V40.1.6.2	架构独立性的技术纲领	归入	无 MMU 移植可行性之辩
+tech-kern.messages.114472			挂账	可移植性讨论，未及题面
+usenet_mail.messages.157797	V40.1.6.1	可移植性主张的文本源头	归入	FreeBSD 仅 i386 而布局便于移植
+usenet_mail.messages.156004			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156038			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156114			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156491			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156615			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156633			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156768			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156808			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156871			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.156959			移出	建议 V21：386BSD 用户社区问答
+usenet_mail.messages.130602			移出	建议 V41：0.9 发行后缺陷报告
+usenet_mail.messages.130724			移出	建议 V41：0.9 发行后缺陷报告
+usenet_mail.messages.130865			移出	建议 V41：0.9 发行后缺陷报告
+tech-kern.messages.118570			挂账	运维问答，与版本史无对应
+tech-kern.messages.119288			挂账	运维问答，与版本史无对应
+tech-kern.messages.119425			挂账	运维问答，与版本史无对应
+tech-kern.messages.119426			挂账	运维问答，与版本史无对应
+tech-kern.messages.119498			挂账	运维问答，与版本史无对应
+tech-kern.messages.119732			挂账	运维问答，与版本史无对应
+port-alpha.messages.12394	V40.2.1.1	1.1 至 1.6 的版本序列	归入	1.4P 三平台快照分发
+tech-kern.messages.120055			挂账	运维问答，与版本史无对应
+tech-kern.messages.120700			挂账	运维问答，与版本史无对应
+tech-kern.messages.120825			挂账	运维问答，与版本史无对应
+tech-kern.messages.113278			挂账	运维问答，与版本史无对应
+tech-kern.messages.120920			挂账	运维问答，与版本史无对应
+tech-kern.messages.121010			挂账	运维问答，与版本史无对应
+tech-kern.messages.121108			挂账	运维问答，与版本史无对应
+tech-kern.messages.121128			挂账	运维问答，与版本史无对应
+tech-kern.messages.121523	V40.3.3.3	内核线程的创建开销	归入	内核线程创建 curproc 之问
+tech-kern.messages.121621			挂账	运维问答，与版本史无对应
+tech-kern.messages.113601			挂账	运维问答，与版本史无对应
+tech-kern.messages.122750			挂账	运维问答，与版本史无对应
+tech-kern.messages.122978			挂账	运维问答，与版本史无对应
+tech-kern.messages.123247			挂账	运维问答，与版本史无对应
+tech-kern.messages.123321			挂账	运维问答，与版本史无对应
+tech-kern.messages.123695			挂账	运维问答，与版本史无对应
+tech-kern.messages.123735			挂账	运维问答，与版本史无对应
+tech-kern.messages.124796			挂账	运维问答，与版本史无对应
+tech-kern.messages.124885			挂账	运维问答，与版本史无对应
+tech-kern.messages.125123			挂账	运维问答，与版本史无对应
+tech-kern.messages.113973			挂账	运维问答，与版本史无对应
+tech-kern.messages.125370			挂账	运维问答，与版本史无对应
+tech-kern.messages.125615			挂账	运维问答，与版本史无对应
+tech-kern.messages.125756			挂账	运维问答，与版本史无对应
+tech-kern.messages.125906			挂账	运维问答，与版本史无对应
+tech-kern.messages.126219			挂账	运维问答，与版本史无对应
+tech-kern.messages.126353			挂账	运维问答，与版本史无对应
+tech-kern.messages.126423			挂账	运维问答，与版本史无对应
+tech-kern.messages.126456			挂账	运维问答，与版本史无对应
+tech-kern.messages.114239	V40.2.1.5	1.x 末期的技术债务	归入	UBC 首快照与设计说明
+tech-kern.messages.126938			挂账	运维问答，与版本史无对应
+tech-kern.messages.126952			挂账	运维问答，与版本史无对应
+tech-kern.messages.127247			挂账	运维问答，与版本史无对应
+tech-kern.messages.127251			挂账	运维问答，与版本史无对应
+tech-kern.messages.127268			挂账	运维问答，与版本史无对应
+tech-kern.messages.127277			挂账	运维问答，与版本史无对应
+tech-kern.messages.127427			挂账	运维问答，与版本史无对应
+tech-kern.messages.114364			挂账	运维问答，与版本史无对应
+tech-kern.messages.128346			挂账	运维问答，与版本史无对应
+tech-kern.messages.128408			挂账	运维问答，与版本史无对应
+tech-kern.messages.128445	V40.2.2.4	内核接口的稳定化	归入	BUS_SPACE_SYNC 机器相关定界
+tech-kern.messages.128496	V40.2.2.4	内核接口的稳定化	归入	i2c framework 设计与 man 页
+tech-kern.messages.128754	V40.2.1.1	1.1 至 1.6 的版本序列	归入	发行树 24 份示例配置
+tech-kern.messages.128792			挂账	运维问答，与版本史无对应
+tech-kern.messages.129101			挂账	运维问答，与版本史无对应
+tech-kern.messages.129102			挂账	运维问答，与版本史无对应
+tech-kern.messages.129107			挂账	运维问答，与版本史无对应
+tech-kern.messages.151221			挂账	运维问答，与版本史无对应
+tech-kern.messages.151232			挂账	运维问答，与版本史无对应
+tech-kern.messages.151233			挂账	运维问答，与版本史无对应
+tech-kern.messages.151239			挂账	运维问答，与版本史无对应
+tech-kern.messages.151255			挂账	运维问答，与版本史无对应
+tech-kern.messages.151481			挂账	运维问答，与版本史无对应
+tech-kern.messages.152213			挂账	运维问答，与版本史无对应
+tech-kern.messages.152355			挂账	运维问答，与版本史无对应
+tech-kern.messages.190466			挂账	运维问答，与版本史无对应
+tech-kern.messages.190470			挂账	运维问答，与版本史无对应
+tech-kern.messages.190473			挂账	运维问答，与版本史无对应
+tech-kern.messages.190704			挂账	运维问答，与版本史无对应
+tech-kern.messages.190710			挂账	运维问答，与版本史无对应
+tech-kern.messages.208983			挂账	运维问答，与版本史无对应
+tech-kern.messages.208998			挂账	运维问答，与版本史无对应
+tech-kern.messages.209190			挂账	运维问答，与版本史无对应
+tech-kern.messages.114947			挂账	运维问答，与版本史无对应
+tech-kern.messages.209247			挂账	运维问答，与版本史无对应
+tech-kern.messages.210096	V40.2.1.1	1.1 至 1.6 的版本序列	归入	1.6_STABLE 测试意愿
+tech-kern.messages.211706			挂账	运维问答，与版本史无对应
+tech-kern.messages.225944			挂账	运维问答，与版本史无对应
+tech-kern.messages.335841			挂账	运维问答，与版本史无对应
+tech-kern.messages.335864			挂账	运维问答，与版本史无对应
+tech-kern.messages.335965			挂账	运维问答，与版本史无对应
+tech-kern.messages.336415			挂账	运维问答，与版本史无对应
+tech-kern.messages.336497			挂账	运维问答，与版本史无对应
+tech-kern.messages.115433			挂账	提交权限杂事，未及题面
+tech-kern.messages.122619			挂账	提交权限杂事，未及题面
+tech-kern.messages.123284	V40.2.1.2	补丁分支的维护惯例	归入	SCSI 重构分支之问
+tech-kern.messages.123287	V40.2.1.2	补丁分支的维护惯例	归入	bouyer_scsipi 分支并存
+tech-kern.messages.123295	V40.2.1.2	补丁分支的维护惯例	归入	ATAPI 分支用途澄清
+tech-kern.messages.123802			挂账	提交权限杂事，未及题面
+port-alpha.messages.11269			挂账	路线争论杂帖，未及题面
+port-alpha.messages.11428			挂账	路线争论杂帖，未及题面
+port-alpha.messages.12427			挂账	路线争论杂帖，未及题面
+port-alpha.messages.12461			挂账	路线争论杂帖，未及题面
+port-alpha.messages.13279			挂账	路线争论杂帖，未及题面
+tech-kern.messages.108924	V40.2.6.1	性能批评的具体论据	归入	STREAMS 缓慢的 BPF 论据
+tech-kern.messages.113021			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113023			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113319			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113363			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113406	V40.2.6.1	性能批评的具体论据	归入	三倍之说并不成立
+tech-kern.messages.113411			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113426			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113463			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113465			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113474			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113475			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113477			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113483			挂账	路线争论杂帖，未及题面
+tech-kern.messages.113525			挂账	路线争论杂帖，未及题面
+tech-kern.messages.114242			挂账	路线争论杂帖，未及题面
+tech-kern.messages.115445			挂账	路线争论杂帖，未及题面
+tech-kern.messages.118016			挂账	路线争论杂帖，未及题面
+tech-kern.messages.118056			挂账	路线争论杂帖，未及题面
+tech-kern.messages.119076			移出	建议 V43：缩进宽度之争
+tech-kern.messages.119084			移出	建议 V43：CACM 质量与退会杂谈
+tech-kern.messages.119099			移出	建议 V43：列宽偏好杂谈
+tech-kern.messages.119107			移出	建议 V43：个人风格自述
+tech-kern.messages.119146			移出	建议 V43：命名折中杂谈
+tech-kern.messages.119293			移出	建议 V43：缩进幂次玩笑
+tech-kern.messages.121931	V40.2.9.1	内核架构的三方对照	归入	Linux cli/sti 取代 spl 之评
+tech-kern.messages.129120	V40.1.6.2	架构独立性的技术纲领	归入	各移植并非不同系统之辩
+tech-kern.messages.151691			挂账	路线争论杂帖，未及题面
+tech-kern.messages.151994			挂账	路线争论杂帖，未及题面
+tech-kern.messages.152017			挂账	路线争论杂帖，未及题面
+port-alpha.messages.7421			挂账	路线争论杂帖，未及题面
+port-alpha.messages.8010			挂账	路线争论杂帖，未及题面
+port-alpha.messages.9866			挂账	路线争论杂帖，未及题面
+port-alpha.messages.10219	V40.2.9.2	SMP 支持的起步差距	归入	Compaq 关注无 BSD 着手 Alpha SMP
+port-alpha.messages.11052			挂账	路线争论杂帖，未及题面
+tech-kern.messages.116884			挂账	技术比较杂帖，未及题面
+tech-kern.messages.119919			挂账	技术比较杂帖，未及题面
+tech-kern.messages.120032			挂账	技术比较杂帖，未及题面
+tech-kern.messages.120038			挂账	技术比较杂帖，未及题面
+tech-kern.messages.120998			挂账	技术比较杂帖，未及题面
+tech-kern.messages.123180			挂账	技术比较杂帖，未及题面
+tech-kern.messages.126093			挂账	技术比较杂帖，未及题面
+tech-kern.messages.127235			挂账	技术比较杂帖，未及题面
+tech-kern.messages.128859			挂账	技术比较杂帖，未及题面
+tech-kern.messages.113316	V40.2.2.1	MI 与 MD 的代码分界	归入	机器无关 PCI 函数对照
+tech-kern.messages.113986			挂账	技术比较杂帖，未及题面
+tech-kern.messages.116850			挂账	技术比较杂帖，未及题面
+tech-kern.messages.115856			移出	建议 V43：代码风格与文化杂帖
+tech-kern.messages.116186			移出	建议 V43：代码风格与文化杂帖
+tech-kern.messages.116357			移出	建议 V43：代码风格与文化杂帖
+tech-kern.messages.121356			移出	建议 V43：代码风格与文化杂帖
+tech-kern.messages.124696			移出	建议 V43：代码风格与文化杂帖
+tech-kern.messages.158441			挂账	静态分析工具议论
+tech-kern.messages.163496			挂账	编译器求值标准之问
+tech-kern.messages.163730			移出	建议 V43：手册分节商榷
+tech-kern.messages.220277			移出	建议 V43：驱动命名商榷
+tech-kern.messages.221961			挂账	pragma once 考证
+tech-kern.messages.231009			移出	建议 V43：代码风格与文化杂帖
+tech-kern.messages.231295			移出	建议 V43：代码风格与文化杂帖
