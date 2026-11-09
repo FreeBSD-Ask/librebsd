@@ -1,0 +1,25 @@
+kind=landing
+vol=V10
+title_count=280
+ledger_sha256=05b9f472efc581e6d711a856da3423db8ebd8812faa30d6b9abefe6b8c7e364a
+scope=全 280 题（7 filled＋273 空骨架）；2026-11-06 ykla 豁免逐卷批准，全量批准落盘
+design_card=—
+design_card_sha256=—
+ledger_main=design/V10-C1.tsv
+ledger_main_sha256=f8729bc873edff3c69f95171346f604e734b7df44bfe534e4c2d27d35c175d02
+ledger_supp=design/V10-C2.tsv
+ledger_supp_sha256=4954180551eb4346e30c6f3a95201029a5b81b75ea7039e9b630559df070c37b
+design_index=design/V10.tsv
+design_index_sha256=94973fa264c44b645245485ed0f988f91928dffc9e4eb722f5e37f18b41c2f72
+fragments=design/fragments/V10.tsv
+fragments_sha256=5b2c4cd48d04015530ceb1f34a6ec786113cee6511d16d14e1038c93cbaca35b
+blocks_total=824
+blocks_landed=9
+blocks_surplus=46
+blocks_moved=728
+blocks_compiled=0
+blocks_deleted=41
+gate=本卷：outline=tree=280；L1–L19 19/19 PASS（2026-11-09 复跑：outline=tree=summary=15,857、orphan_md=0、summary_diff=0）；第三十八件 D1／D2 本卷零项（余项属 V075 他线在途）；第三十九件 45 项 FAIL 0；第二十四／二十八／三十五件 PASS；第三十四件本卷零处（他线 V27／V30／V34／V65 只披露）；卷级回归 V10 6/6 PASS
+note=主会话单写者判读（ykla 2026-11-09 令“接 task8，仅负责卷 37、51-60、5-10，不使用子代理”）；料域五片 62 件 824 块（P1 学科与资助制度 024.0／024.1／024.2／024.4；P2 DARPA 的选择 033.0–033.12；P3 机构与传播面 035.7／039.9／059.0／059.1／060.0／060.1／078.3；P4 ARPANET→NSFNET 062.0–062.4；P5 后期资助线 129.0／145.3／302.3／050.4）。判读口径＝**关键词门（ARPA／DARPA／NSF／IPTO／ARPANET／资助／合同／预算／招标／承包／军方等）＋题面 ID 加权余弦定址（≥0.04 且命中 token ≥3）**，未达门者挂账（46）或移出（728，按片给建议宿主 V11／V37／V36／V69），库指针与统计存根、≤260B 空块删除（41，含题内重复锚 12）；归入 9 块落 7 题，其余 273 题按 corpus_gap 如实记空骨架，不为凑 filled 降格判读。语料事实：旧树对 ARPA／DARPA 制度史覆盖极薄（主题余弦最高仅 0.069），故有料率 2.5% 属语料结构事实。
+approved_by=ykla
+approved_at=2026-11-09

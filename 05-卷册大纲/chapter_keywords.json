@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 15577,
+  "subsections": 15857,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "a92f18a2a3882da3b908c5c98530cf28ba2c4c1d04f4582b23f8e9124b3235d1",
+  "content_sha256": "cf176acd8153d47e3acffab721c8c3f122c0947f524c9e0b47bba32623e219ed",
   "extract": "title+body",
-  "generated_at": "2026-11-09T01:01:07+08:00"
+  "generated_at": "2026-11-09T11:31:17+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -4396,8 +4396,14 @@
    "title": "IPTO 与项目制科研：分时研究环境（1962–1969）",
    "domains": [],
    "themes": [
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003",
+    "TH-HIS-004",
+    "TH-HW-010",
+    "TH-LANG-018",
     "TH-LAW-002",
-    "TH-SEC-001"
+    "TH-OS-037"
    ],
    "sections": 10
   },
@@ -4406,8 +4412,10 @@
    "title": "DARPA 与网络研究时代：ARPANET 到 Internetting 的资助与管理（1969–1983）",
    "domains": [],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030"
+    "TH-NET-030",
+    "TH-OS-017"
    ],
    "sections": 11
   },
@@ -4417,7 +4425,10 @@
    "domains": [],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001"
+    "TH-HIS-014",
+    "TH-HIS-046",
+    "TH-NET-001",
+    "TH-REL-009"
    ],
    "sections": 11
   },
@@ -4426,9 +4437,14 @@
    "title": "DARPA 与现代研究操作系统：FreeBSD 与能力计算（1993–2026）",
    "domains": [],
    "themes": [
+    "TH-GOV-014",
     "TH-SEC-019",
+    "TH-BIZ-014",
+    "TH-HIS-003",
+    "TH-HIS-004",
     "TH-HW-004",
-    "TH-SEC-018"
+    "TH-HW-010",
+    "TH-HW-036"
    ],
    "sections": 8
   },
@@ -4439,7 +4455,9 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-011",
+    "TH-HIS-014"
    ],
    "sections": 8
   },
@@ -6892,8 +6910,8 @@
     "TH-HIS-046",
     "TH-LAW-001",
     "TH-LAW-012",
-    "TH-BIZ-019",
-    "TH-GOV-003"
+    "TH-GOV-003",
+    "TH-HIS-004"
    ],
    "sections": 9
   },
@@ -7117,10 +7135,9 @@
    "domains": [],
    "themes": [
     "TH-HIS-001",
-    "TH-HIS-004",
     "TH-HIS-037",
     "TH-HIS-040",
-    "TH-HIS-007"
+    "TH-HIS-004"
    ],
    "sections": 7
   },
@@ -7147,12 +7164,12 @@
    "themes": [
     "TH-LANG-021",
     "TH-VM-033",
-    "TH-HW-010",
     "TH-REL-009",
-    "TH-GOV-014",
-    "TH-HIS-004",
+    "TH-HW-010",
     "TH-HW-013",
-    "TH-LANG-024"
+    "TH-LANG-024",
+    "TH-OS-014",
+    "TH-OS-038"
    ],
    "sections": 6
   },
@@ -7165,7 +7182,7 @@
     "TH-OS-005",
     "TH-FS-001",
     "TH-HIS-004",
-    "TH-HW-006",
+    "TH-HW-019",
     "TH-LANG-021",
     "TH-OS-003",
     "TH-OS-006"
@@ -7180,11 +7197,11 @@
     "TH-REL-001",
     "TH-FS-005",
     "TH-FS-007",
-    "TH-HIS-004",
-    "TH-HW-017",
     "TH-HW-036",
     "TH-LANG-017",
-    "TH-LANG-021"
+    "TH-LANG-021",
+    "TH-OS-017",
+    "TH-REL-009"
    ],
    "sections": 6
   },
@@ -7200,7 +7217,7 @@
     "TH-FS-012",
     "TH-FS-018",
     "TH-FS-026",
-    "TH-HW-010"
+    "TH-HW-024"
    ],
    "sections": 7
   },
@@ -7211,12 +7228,12 @@
    "themes": [
     "TH-NET-013",
     "TH-FS-007",
-    "TH-HIS-007",
     "TH-HW-012",
     "TH-LANG-021",
     "TH-NET-001",
     "TH-NET-003",
-    "TH-NET-010"
+    "TH-NET-010",
+    "TH-NET-014"
    ],
    "sections": 7
   },
@@ -7296,9 +7313,9 @@
    "domains": [],
    "themes": [
     "TH-HIS-001",
-    "TH-HIS-004",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-004"
    ],
    "sections": 3
   },
@@ -9662,8 +9679,8 @@
     "TH-HIS-003",
     "TH-LANG-025",
     "TH-REL-001",
-    "TH-LANG-024",
-    "TH-OS-017"
+    "TH-LANG-010",
+    "TH-LANG-024"
    ],
    "sections": 13
   },
@@ -13247,8 +13264,8 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-003",
     "TH-HIS-001",
+    "TH-HIS-003",
     "TH-HIS-004"
    ],
    "projects": [],
@@ -16816,8 +16833,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "6131c2fc5c79a493e79a1fb5103ee6fe7dea09ff"
   },
   "V10-C001-1.2": {
    "chapter": "V10-C001",
@@ -16833,8 +16850,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "213ef383a54dcb1ed101e68ece18b566745fde7c"
   },
   "V10-C001-1.3": {
    "chapter": "V10-C001",
@@ -16850,8 +16867,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "12b4b2a044291708c11a2a9919db76108060581b"
   },
   "V10-C001-1.4": {
    "chapter": "V10-C001",
@@ -16867,8 +16884,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ec0763a3a84e0710fc13d197c1cf00292fbe4b1a"
   },
   "V10-C001-1.5": {
    "chapter": "V10-C001",
@@ -16884,8 +16901,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "636cc89006e84bb6ac7d20f349828ad85a745117"
   },
   "V10-C001-1.6": {
    "chapter": "V10-C001",
@@ -16901,8 +16918,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0ed1c9d5b6f14b1fb8de475f71e091b1e0195481"
   },
   "V10-C001-1.7": {
    "chapter": "V10-C001",
@@ -16918,8 +16935,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9e796a4cac447cb7aae9c90c45353c2941c90bcb"
   },
   "V10-C001-1.8": {
    "chapter": "V10-C001",
@@ -16935,65 +16952,65 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ef4441e85afb965961cdc1950fe0ce8d1836d178"
   },
   "V10-C002-2.1": {
    "chapter": "V10-C002",
    "title": "IPTO 的成立与 Licklider 的研究方向",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4cde1369baaa819c18d3ced14b8a5d4b90183050"
   },
   "V10-C002-2.2": {
    "chapter": "V10-C002",
    "title": "IPTO 项目制资助的合同结构（1962–1969）",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "51555030a601cb7f0b18344171d27c6e0bc81e7b"
   },
   "V10-C002-2.3": {
    "chapter": "V10-C002",
    "title": "分时计算与计算机资源共享",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5a92d79a96262de630d0deae83b4821e7b73465d"
   },
   "V10-C002-2.4": {
    "chapter": "V10-C002",
@@ -17002,239 +17019,242 @@
    "domains": [
     "TH-LAW-000",
     "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LAW-002",
     "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a7fb870b49ff2ff2d04c9d43d1791f839e99e1f0"
   },
   "V10-C002-2.5": {
    "chapter": "V10-C002",
    "title": "ARPA 与其他大学计算机研究机构",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-OS-000",
+    "TH-LANG-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-OS-037",
+    "TH-LANG-018",
+    "TH-REL-001",
+    "TH-HIS-004",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4b6a2728560fa41ea4e484c7a121ee24bd6f73e5"
   },
   "V10-C002-2.6": {
    "chapter": "V10-C002",
    "title": "研究人员、机构与知识联系",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7d1d3fbaa2dc28eb328141b02d7df204e73e7f0b"
   },
   "V10-C002-2.7": {
    "chapter": "V10-C002",
    "title": "ARPA 计算机研究共同体的形成",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f6625f24d891378139fbd0f5f1239771071d853c"
   },
   "V10-C002-2.8": {
    "chapter": "V10-C002",
    "title": "从单机计算到联网计算的研究问题",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-GOV-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-BIZ-015",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b7c375cf910da18c65a8cfdf0582cba811163243"
   },
   "V10-C002-2.9": {
    "chapter": "V10-C002",
    "title": "UNIX 出现时的 ARPA 研究环境",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
+    "TH-BIZ-000",
+    "TH-GOV-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-BIZ-015",
+    "TH-GOV-014",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "3ada7dde1665c654add2bef20ae5185f40c5b201"
   },
   "V10-C002-2.10": {
    "chapter": "V10-C002",
    "title": "1969 年 ARPANET 启动与研究环境转换",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-HW-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-LAW-002",
-    "TH-SEC-001",
-    "TH-HIS-001"
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0b78fbf155cf320d664a4348f8458a771fc0ca89"
   },
   "V10-C003-3.1": {
    "chapter": "V10-C003",
    "title": "ARPA 网络研究计划的形成与管理（1966–1972）",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "6ecbfb0c7def54d26a11c6c62a12046fe720efdb"
   },
   "V10-C003-3.2": {
    "chapter": "V10-C003",
    "title": "分组交换进入 ARPA 研究体系：资助决策",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-OS-000",
+    "TH-NET-000"
    ],
    "themes": [
-    "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-OS-017",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "01e268a94ce6710fb0a23e1063c13739d4e6dda4"
   },
   "V10-C003-3.3": {
    "chapter": "V10-C003",
    "title": "Lawrence Roberts 与 IPTO 的网络计划管理",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "29cd5e2f665260ff8566d47432615a301695a98e"
   },
   "V10-C003-3.4": {
    "chapter": "V10-C003",
    "title": "BBN 的 Interface Message Processor 合同",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "84cdd1c8c278a74660c95b22d8e2cc50718d1090"
   },
   "V10-C003-3.5": {
    "chapter": "V10-C003",
    "title": "四节点网络的建设与项目管理",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "102917b9674f0d9afbf010041283f70d8f910054"
   },
   "V10-C003-3.6": {
    "chapter": "V10-C003",
    "title": "ARPANET 的早期扩展与资源分配",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f1846834e7f7d0635b86ffa2b2270639d5069c59"
   },
   "V10-C003-3.7": {
    "chapter": "V10-C003",
@@ -17242,71 +17262,71 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-NET-030",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2dc33741f008833bab9e09c368cde4d1933e8c6f"
   },
   "V10-C003-3.8": {
    "chapter": "V10-C003",
    "title": "1972 年公共展示与网络研究共同体的制度化",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "519e1a8942a1ada0ee64c65978b170fc9a339746"
   },
   "V10-C003-3.9": {
    "chapter": "V10-C003",
    "title": "异构网络问题与 Internetting 研究计划",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "e37967ec6c9536b560ac8392021a19d24396d4f7"
   },
   "V10-C003-3.10": {
    "chapter": "V10-C003",
    "title": "Packet Radio 与 SATNET 的项目管理",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-BIZ-008",
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2dc46d8e2c81d1d85deb8e5c0bfa45195c49f96a"
   },
   "V10-C003-3.11": {
    "chapter": "V10-C003",
@@ -17314,36 +17334,36 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-NET-001",
-    "TH-NET-030",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2368452c5c94beda9bb03120366da3213180f0fd"
   },
   "V10-C004-4.1": {
    "chapter": "V10-C004",
    "title": "ARPANET、DARPA 与 BSD 前期网络研究环境",
    "meta": false,
    "domains": [
+    "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-HIS-046",
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f59645062c59504eb1e11a217d0a5abcec960ca6"
   },
   "V10-C004-4.2": {
    "chapter": "V10-C004",
@@ -17351,18 +17371,18 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "3758d57f67cf2dbfe8fdca6830f4e09af7c5930e"
   },
   "V10-C004-4.3": {
    "chapter": "V10-C004",
@@ -17370,18 +17390,18 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "afe3a597c4eb5ac65a978e379420b08b84304959"
   },
   "V10-C004-4.4": {
    "chapter": "V10-C004",
@@ -17389,18 +17409,17 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
     "TH-HIS-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bc3053c01d0c374b5aa4b222242a72af5b8af24f"
   },
   "V10-C004-4.5": {
    "chapter": "V10-C004",
@@ -17408,18 +17427,18 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5e38f45a9e452a6ecc59498001918006b47c5405"
   },
   "V10-C004-4.6": {
    "chapter": "V10-C004",
@@ -17427,18 +17446,18 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bb9ac52c0daa10bd516caa35cc4838603d46ad8f"
   },
   "V10-C004-4.7": {
    "chapter": "V10-C004",
@@ -17452,50 +17471,50 @@
    "themes": [
     "TH-NET-001",
     "TH-BIZ-008",
-    "TH-HIS-001"
+    "TH-HIS-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "86a711aa5627932448ba6a68ffcfdc1ee2f9303b"
   },
   "V10-C004-4.8": {
    "chapter": "V10-C004",
    "title": "Berkeley、BBN 与 DARPA 的技术联系",
    "meta": false,
    "domains": [
+    "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-NET-000"
    ],
    "themes": [
+    "TH-HIS-014",
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "06b11b597b2c0b581ef01e82cb08a786d31aea13"
   },
   "V10-C004-4.9": {
    "chapter": "V10-C004",
    "title": "研究合同对 CSRG 资源与研究能力的影响",
    "meta": false,
    "domains": [
+    "TH-REL-000",
     "TH-BIZ-000",
-    "TH-NET-000",
     "TH-HIS-000"
    ],
    "themes": [
+    "TH-REL-009",
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "aa6598822f06e4ac9425552d4238f868a93a92d0"
   },
   "V10-C004-4.10": {
    "chapter": "V10-C004",
@@ -17503,18 +17522,18 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5188e9b844a19c29e9bbd4c24198a254e4321d46"
   },
   "V10-C004-4.11": {
    "chapter": "V10-C004",
@@ -17522,72 +17541,75 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-BIZ-008",
-    "TH-NET-001",
-    "TH-HIS-001"
+    "TH-HIS-014",
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2f0289a753a9b0de400490fdb4c1564adaae622b"
   },
   "V10-C005-5.1": {
    "chapter": "V10-C005",
    "title": "FreeBSD 与 DARPA 的历史关系",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HW-000"
+    "TH-OS-000",
+    "TH-HIS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-SEC-019",
-    "TH-HW-004",
-    "TH-SEC-018"
+    "TH-OS-037",
+    "TH-HIS-004",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "fe140d910581fa8891f65c9fa69c8822aca797db"
   },
   "V10-C005-5.2": {
    "chapter": "V10-C005",
    "title": "FreeBSD 与政府科研项目",
    "meta": false,
    "domains": [
+    "TH-BIZ-000",
     "TH-SEC-000",
-    "TH-HW-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-SEC-019",
-    "TH-HW-004",
-    "TH-SEC-018"
+    "TH-BIZ-014",
+    "TH-SEC-032",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "895b88ac691fe1af9fe25b4b2ec3c98f910a01fe"
   },
   "V10-C005-5.3": {
    "chapter": "V10-C005",
    "title": "FreeBSD 作为安全研究平台",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HW-000"
+    "TH-HIS-000",
+    "TH-HW-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-SEC-019",
-    "TH-HW-004",
-    "TH-SEC-018"
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2b8cf2fc81ba54747e8268db46531012e60ec074"
   },
   "V10-C005-5.4": {
    "chapter": "V10-C005",
@@ -17595,17 +17617,18 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HW-000"
+    "TH-GOV-000",
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-SEC-019",
-    "TH-HW-004",
-    "TH-SEC-018"
+    "TH-GOV-014",
+    "TH-BIZ-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5f53bd0fb0c72ab068b004dfe3181d1c4b3bf038"
   },
   "V10-C005-5.5": {
    "chapter": "V10-C005",
@@ -17613,17 +17636,18 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HW-000"
+    "TH-GOV-000",
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-SEC-019",
-    "TH-HW-004",
-    "TH-SEC-018"
+    "TH-GOV-014",
+    "TH-BIZ-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "69fd0107cec4598ad73243f9f8c7b89e44f919c8"
   },
   "V10-C005-5.6": {
    "chapter": "V10-C005",
@@ -17631,35 +17655,37 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
+    "TH-GOV-000",
     "TH-SEC-000"
    ],
    "themes": [
     "TH-HW-004",
-    "TH-SEC-019",
-    "TH-SEC-018"
+    "TH-GOV-014",
+    "TH-SEC-019"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "36bafeabccd5c3ba968d5c6153341e7fcfa99ca5"
   },
   "V10-C005-5.7": {
    "chapter": "V10-C005",
    "title": "Morello 项目中的 CheriBSD：英国 DSbD 资助下的能力计算转移",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-GOV-000",
+    "TH-SEC-000"
    ],
    "themes": [
-    "TH-SEC-019",
-    "TH-HW-004",
-    "TH-SEC-018"
+    "TH-HW-036",
+    "TH-GOV-014",
+    "TH-SEC-019"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a1d75adb42ad4a6f115ea925921fb56118514e54"
   },
   "V10-C005-5.8": {
    "chapter": "V10-C005",
@@ -17667,17 +17693,17 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HW-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-SEC-018",
-    "TH-SEC-019",
-    "TH-HW-004"
+    "TH-GOV-014",
+    "TH-SEC-019"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4faca8f6bf8f4e98c3e906cc5cd214d753c856fe"
   },
   "V10-C006-6.1": {
    "chapter": "V10-C006",
@@ -17687,14 +17713,13 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-014",
+    "TH-HIS-011"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b1591e743ca092dce39fae1afc0fc96128d3c290"
   },
   "V10-C006-6.2": {
    "chapter": "V10-C006",
@@ -17710,8 +17735,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "e40763e320396deedaf9b254d1c83c286cbea741"
   },
   "V10-C006-6.3": {
    "chapter": "V10-C006",
@@ -17727,8 +17752,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "3150b772d4e8457b13629a27d1b2251aba3cdc0f"
   },
   "V10-C006-6.4": {
    "chapter": "V10-C006",
@@ -17744,8 +17769,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "6cf955579ced27119d9f67e8ca9699c72cb4656b"
   },
   "V10-C006-6.5": {
    "chapter": "V10-C006",
@@ -17761,8 +17786,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ff86e3e83e53c2f9ace3bf0efcdae4206ff98a1a"
   },
   "V10-C006-6.6": {
    "chapter": "V10-C006",
@@ -17778,8 +17803,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "85fb5c07e977cb740b245b7ee18281ab646ea020"
   },
   "V10-C006-6.7": {
    "chapter": "V10-C006",
@@ -17795,8 +17820,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "955653c259f0386670f53b57da2498e45f7346f1"
   },
   "V10-C006-6.8": {
    "chapter": "V10-C006",
@@ -17812,8 +17837,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1d15c10fbfa4e4a974ee099d4fe4a596a55e7aa9"
   },
   "V11-C001-1.1": {
    "chapter": "V11-C001",
@@ -38562,13 +38587,13 @@
    "domains": [
     "TH-BIZ-000",
     "TH-HW-000",
-    "TH-FS-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-BIZ-008",
     "TH-HW-010",
-    "TH-FS-005",
     "TH-HIS-004",
+    "TH-FS-005",
     "TH-LANG-033",
     "TH-OS-002"
    ],
@@ -39901,7 +39926,7 @@
     "TH-OS-024",
     "TH-HW-010",
     "TH-LANG-009",
-    "TH-BIZ-019"
+    "TH-LANG-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42198,8 +42223,9 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-004",
-    "TH-HIS-001"
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
    ],
    "projects": [
     "netbsd"
@@ -42249,9 +42275,9 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-004",
+    "TH-HIS-037",
     "TH-HIS-001",
-    "TH-HIS-007"
+    "TH-HIS-040"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42266,8 +42292,9 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-004",
-    "TH-HIS-001"
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42453,17 +42480,14 @@
    "title": "Anykernel 架构思想",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-OS-000",
-    "TH-LANG-000"
+    "TH-REL-000",
+    "TH-LANG-000",
+    "TH-VM-000"
    ],
    "themes": [
-    "TH-HW-010",
-    "TH-OS-002",
-    "TH-LANG-026",
-    "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-REL-009"
+    "TH-REL-009",
+    "TH-LANG-021",
+    "TH-VM-033"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42515,12 +42539,12 @@
    "domains": [
     "TH-LANG-000",
     "TH-VM-000",
-    "TH-HW-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-021",
     "TH-VM-033",
-    "TH-HW-010"
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42572,15 +42596,14 @@
    "domains": [
     "TH-LANG-000",
     "TH-OS-000",
-    "TH-SEC-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-LANG-033",
     "TH-OS-006",
     "TH-OS-005",
     "TH-OS-017",
-    "TH-SEC-009",
-    "TH-HW-006"
+    "TH-HW-019"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42732,15 +42755,14 @@
    "title": "NetBSD 源代码树组织",
    "meta": false,
    "domains": [
-    "TH-HW-000",
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HW-017",
     "TH-LANG-017",
     "TH-HW-036",
-    "TH-HIS-004"
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42845,16 +42867,11 @@
    "title": "Soft Updates 与一致性维护",
    "meta": false,
    "domains": [
-    "TH-FS-000",
-    "TH-SEC-000",
-    "TH-HW-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-FS-018",
-    "TH-SEC-009",
     "TH-FS-006",
-    "TH-HW-010",
-    "TH-SEC-006",
     "TH-FS-005"
    ],
    "projects": [],
@@ -43062,12 +43079,12 @@
    "domains": [
     "TH-NET-000",
     "TH-FS-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-013",
     "TH-FS-007",
-    "TH-HIS-007"
+    "TH-HW-012"
    ],
    "projects": [],
    "technical_terms": [
@@ -43082,16 +43099,13 @@
    "meta": false,
    "domains": [
     "TH-VM-000",
-    "TH-HIS-000",
-    "TH-NET-000"
+    "TH-LANG-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-VM-033",
-    "TH-HIS-007",
-    "TH-NET-026",
-    "TH-SEC-006",
-    "TH-OS-029",
-    "TH-LANG-021"
+    "TH-LANG-021",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -43821,8 +43835,9 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-004",
-    "TH-HIS-001"
+    "TH-HIS-037",
+    "TH-HIS-001",
+    "TH-HIS-040"
    ],
    "projects": [],
    "technical_terms": [],
@@ -47462,8 +47477,8 @@
    ],
    "themes": [
     "TH-NET-009",
-    "TH-OS-009",
-    "TH-NET-033"
+    "TH-NET-033",
+    "TH-OS-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -50655,14 +50670,14 @@
    "domains": [
     "TH-FS-000",
     "TH-HIS-000",
-    "TH-REL-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-FS-026",
     "TH-FS-001",
     "TH-HIS-004",
-    "TH-REL-022",
     "TH-GOV-014",
+    "TH-REL-022",
     "TH-OS-009"
    ],
    "projects": [],
@@ -55345,13 +55360,13 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-NET-000",
-    "TH-SEC-000"
+    "TH-SEC-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-LANG-017",
-    "TH-NET-010",
     "TH-SEC-015",
+    "TH-NET-010",
     "TH-GOV-026"
    ],
    "projects": [],
@@ -66569,17 +66584,17 @@
    "title": "Gentoo／FreeBSD 与 Portage",
    "meta": false,
    "domains": [
+    "TH-LANG-000",
     "TH-REL-000",
-    "TH-HW-000",
-    "TH-LANG-000"
+    "TH-HW-000"
    ],
    "themes": [
+    "TH-LANG-010",
     "TH-REL-009",
     "TH-REL-008",
     "TH-HW-036",
     "TH-HW-037",
-    "TH-LANG-024",
-    "TH-HW-010"
+    "TH-LANG-024"
    ],
    "projects": [],
    "technical_terms": [],
@@ -67241,8 +67256,8 @@
    ],
    "themes": [
     "TH-GOV-005",
-    "TH-REL-031",
     "TH-REL-032",
+    "TH-REL-031",
     "TH-HIS-011",
     "TH-OS-003",
     "TH-REL-010"
@@ -68816,8 +68831,8 @@
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-HW-010",
-    "TH-LANG-018",
     "TH-LANG-017",
+    "TH-LANG-018",
     "TH-HW-002"
    ],
    "projects": [],
@@ -76717,7 +76732,7 @@
     "TH-LANG-012",
     "TH-REL-017",
     "TH-HW-010",
-    "TH-NET-036"
+    "TH-GOV-017"
    ],
    "projects": [],
    "technical_terms": [],
@@ -85888,11 +85903,6 @@
     "TH-FS-031"
    ]
   },
-  "V08-C007-7.3.2": {
-   "add": [
-    "TH-FS-023"
-   ]
-  },
   "V08-C007-7.3.3": {
    "add": [
     "TH-OS-001",
@@ -85947,7 +85957,7 @@
   "V08-C007-7.6.2": {
    "add": [
     "TH-NET-026",
-    "TH-LANG-007"
+    "TH-HW-017"
    ]
   },
   "V08-C007-7.6.4": {
@@ -86015,8 +86025,7 @@
    "add": [
     "TH-HIS-001",
     "TH-HW-010",
-    "TH-GOV-027",
-    "TH-LANG-013"
+    "TH-GOV-027"
    ]
   },
   "V08-C008-8.4.4": {
@@ -86301,6 +86310,34 @@
    "add": [
     "TH-HIS-003",
     "TH-HIS-001"
+   ]
+  },
+  "V10-C002-2.4.2": {
+   "add": [
+    "TH-BIZ-014"
+   ]
+  },
+  "V10-C005-5.5.1": {
+   "add": [
+    "TH-SEC-004",
+    "TH-SEC-003",
+    "TH-BIZ-008",
+    "TH-HW-036"
+   ]
+  },
+  "V10-C005-5.6.1": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V10-C005-5.6.3": {
+   "add": [
+    "TH-HW-008"
+   ]
+  },
+  "V10-C005-5.8.2": {
+   "add": [
+    "TH-LANG-021"
    ]
   },
   "V11-C003-3.5.2": {
@@ -87055,8 +87092,8 @@
    "add": [
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-REL-022",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-REL-022"
    ]
   },
   "V21-C002-2.3.4": {
@@ -88746,7 +88783,8 @@
     "TH-LAW-002",
     "TH-BIZ-008",
     "TH-BIZ-014",
-    "TH-HIS-003"
+    "TH-HIS-003",
+    "TH-HW-010"
    ]
   },
   "V31-C007-7.2.5": {
@@ -89795,8 +89833,8 @@
   "V37-C002-2.7.1": {
    "add": [
     "TH-HIS-004",
-    "TH-NET-007",
     "TH-GOV-014",
+    "TH-NET-007",
     "TH-HW-010",
     "TH-REL-001"
    ]
@@ -90263,8 +90301,8 @@
    "add": [
     "TH-NET-012",
     "TH-FS-023",
-    "TH-NET-010",
     "TH-HIS-004",
+    "TH-NET-010",
     "TH-GOV-014"
    ]
   },
@@ -90965,7 +91003,8 @@
     "TH-SEC-008",
     "TH-HW-010",
     "TH-SEC-006",
-    "TH-LANG-016"
+    "TH-LANG-016",
+    "TH-HIS-004"
    ]
   },
   "V37-C007-7.10.4": {
@@ -92068,8 +92107,7 @@
   "V38-C003-3.1.4": {
    "add": [
     "TH-OS-017",
-    "TH-OS-006",
-    "TH-NET-010"
+    "TH-OS-006"
    ]
   },
   "V38-C003-3.1.5": {
@@ -93255,11 +93293,7 @@
   "V41-C002-2.1.2": {
    "add": [
     "TH-HW-019",
-    "TH-HW-010",
-    "TH-NET-010",
-    "TH-FS-003",
-    "TH-HW-036",
-    "TH-VM-015"
+    "TH-HW-036"
    ]
   },
   "V41-C002-2.1.3": {
@@ -93279,9 +93313,7 @@
   },
   "V41-C002-2.2.1": {
    "add": [
-    "TH-HW-036",
-    "TH-LANG-024",
-    "TH-HW-017"
+    "TH-HW-036"
    ]
   },
   "V41-C002-2.2.3": {
@@ -93328,7 +93360,6 @@
   "V41-C002-2.4.5": {
    "add": [
     "TH-HW-036",
-    "TH-HW-010",
     "TH-GOV-004"
    ]
   },
@@ -93379,19 +93410,6 @@
     "TH-LANG-022"
    ]
   },
-  "V41-C004-4.1.1": {
-   "add": [
-    "TH-REL-025",
-    "TH-HW-010",
-    "TH-SEC-013",
-    "TH-HW-003"
-   ]
-  },
-  "V41-C004-4.1.4": {
-   "add": [
-    "TH-HW-019"
-   ]
-  },
   "V41-C004-4.2.2": {
    "add": [
     "TH-OS-017"
@@ -93400,14 +93418,6 @@
   "V41-C004-4.2.5": {
    "add": [
     "TH-OS-036"
-   ]
-  },
-  "V41-C004-4.3.2": {
-   "add": [
-    "TH-OS-025",
-    "TH-HW-020",
-    "TH-HIS-007",
-    "TH-REL-010"
    ]
   },
   "V41-C004-4.3.3": {
@@ -93506,18 +93516,6 @@
     "TH-HW-024"
    ]
   },
-  "V41-C006-6.1.4": {
-   "add": [
-    "TH-HW-010",
-    "TH-HIS-004",
-    "TH-GOV-014"
-   ]
-  },
-  "V41-C006-6.2.5": {
-   "add": [
-    "TH-HIS-004"
-   ]
-  },
   "V41-C006-6.3.5": {
    "add": [
     "TH-REL-017"
@@ -93587,16 +93585,6 @@
     "TH-HW-010"
    ]
   },
-  "V41-C007-7.7.1": {
-   "add": [
-    "TH-REL-009"
-   ]
-  },
-  "V41-C007-7.7.2": {
-   "add": [
-    "TH-GOV-014"
-   ]
-  },
   "V41-C008-8.2.3": {
    "add": [
     "TH-LANG-023",
@@ -93620,14 +93608,6 @@
    "add": [
     "TH-OS-017",
     "TH-FS-005"
-   ]
-  },
-  "V41-C008-8.4.5": {
-   "add": [
-    "TH-HW-007",
-    "TH-BIZ-029",
-    "TH-HIS-004",
-    "TH-GOV-014"
    ]
   },
   "V41-C008-8.5.1": {
@@ -93717,11 +93697,6 @@
   },
   "V41-C010-10.2.3": {
    "add": [
-    "TH-LANG-008",
-    "TH-HW-017",
-    "TH-HW-020",
-    "TH-HIS-004",
-    "TH-HW-028",
     "TH-OS-015"
    ]
   },
@@ -93782,11 +93757,8 @@
   "V41-C012-12.6.3": {
    "add": [
     "TH-OS-017",
-    "TH-HW-017",
-    "TH-GOV-006",
-    "TH-REL-001",
-    "TH-LANG-034",
-    "TH-HIS-004"
+    "TH-FS-005",
+    "TH-GOV-006"
    ]
   },
   "V42-C001-1.5.3": {
@@ -94244,7 +94216,7 @@
     "TH-HIS-001",
     "TH-BIZ-029",
     "TH-LANG-026",
-    "TH-REL-022"
+    "TH-GOV-014"
    ]
   },
   "V43-C006-6.1.5": {
@@ -95077,7 +95049,7 @@
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-HW-010",
-    "TH-OS-011"
+    "TH-OS-002"
    ]
   },
   "V45-C007-7.8.2": {
@@ -95441,7 +95413,7 @@
     "TH-HW-010",
     "TH-FS-017",
     "TH-NET-009",
-    "TH-NET-030"
+    "TH-FS-010"
    ]
   },
   "V46-C003-3.4.2": {
@@ -97585,6 +97557,11 @@
     "TH-SEC-039"
    ]
   },
+  "V53-C006-6.7.4": {
+   "add": [
+    "TH-GOV-014"
+   ]
+  },
   "V53-C006-6.7.6": {
    "add": [
     "TH-GOV-014",
@@ -99432,15 +99409,14 @@
   "V63-C002-2.7.2": {
    "add": [
     "TH-REL-030",
-    "TH-LANG-010",
     "TH-HIS-004",
     "TH-GOV-014"
    ]
   },
   "V63-C002-2.7.4": {
    "add": [
-    "TH-HW-020",
-    "TH-REL-015"
+    "TH-HW-010",
+    "TH-HW-020"
    ]
   },
   "V63-C002-2.9.1": {
