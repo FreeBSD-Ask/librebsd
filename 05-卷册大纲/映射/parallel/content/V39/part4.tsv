@@ -123,7 +123,7 @@ usenet_mail.messages.179589	V39.3.8.3	与开源系统的分工格局	归入	开�
 usenet_mail.messages.180718	V39.3.8.3	与开源系统的分工格局	归入	真 Unix 之争双方各有其理的比较话语
 usenet_mail.messages.49108		—	删除	空壳块（仅块头无正文）
 ksummit-discuss.messages.347897		—	删除	空壳块（仅块头无正文）
-ksummit-discuss.messages.347914		—	挂账	题面无高分匹配，待复核
+ksummit-discuss.messages.347914	V39.12.2.3	可读性的评审尺度	归入	补遗：Lee Jones 主张人人皆可评审、不设信任门槛，评审尺度的当事人表述
 cross_indexes.duckdb.concept_history		—	删除	自媒体拼贴块（无史料价值）
 freebsd-smp.messages.2510521		—	移出	建议宿主 V36：SMPng 技术编年，属第三十六卷
 freebsd-smp.messages.2511518		—	移出	建议宿主 V36：SMPng 技术编年，属第三十六卷
@@ -216,31 +216,31 @@ freebsd-doc.messages.1130719	V39.2.2.3	第三方软件的接入位置	归入	UPD
 freebsd-doc.messages.1131674	V39.2.3.1	手册页的写作规范	归入	syscall 桩条目的手册处理
 freebsd-doc.messages.1132023	V39.2.3.2	手册的版本维护体制	归入	doceng 10.3R doc 冻结公告
 freebsd-doc.messages.1134224	V39.2.3.2	手册的版本维护体制	归入	itstool UTF-8 输出与语言目录统一
-freebsd-hackers.messages.1315253		—	挂账	题面无高分匹配，待复核
+freebsd-hackers.messages.1315253	V39.3.5.1	用户态环境的 BSD 血统	归入	补遗：8.3 内核配 8.2 用户态的错配之问，用户态与内核血统分界
 freebsd-hackers.messages.1316141		—	挂账	题面无高分匹配，待复核
-freebsd-hackers.messages.1318833		—	挂账	题面无高分匹配，待复核
+freebsd-hackers.messages.1318833	V39.3.5.1	用户态环境的 BSD 血统	归入	补遗：GSoC 2014 用户态工具机器可读输出项目，用户态工具改造实录
 freebsd-chat.messages.1017787	V39.8.8.1	商业化批评的论点	归入	请愿官网说明 Google Analytics 收益
 freebsd-chat.messages.1018296	V39.9.6.4	地区文化的对照观察	归入	中文社区请求官方镜像与文档翻译
 freebsd-chat.messages.1018360	V39.6.7.1	反馈渠道的制度框架	归入	论坛 vBulletin 迁移 phpBB 公告
 freebsd-chat.messages.1032399	V39.6.5.3	群体交往的主要场合	归入	微软退款日的社群动员
-freebsd-stable.messages.2581543		—	挂账	题面无高分匹配，待复核
+freebsd-stable.messages.2581543	V39.8.2.3	性能回退的舆论压力	归入	补遗：Glen Barber 排查构建性能回退并疑及 ZFS，回退压力的现场
 freebsd-stable.messages.2584497	V39.2.2.3	第三方软件的接入位置	归入	只升第三方软件的 pkg 仓库参数
 freebsd-stable.messages.2584508	V39.2.2.3	第三方软件的接入位置	归入	pkgbase 与 pkg 分命令的长期提议
 freebsd-hackers.messages.2533839		—	挂账	题面无高分匹配，待复核
 freebsd-hackers.messages.2533953		—	挂账	题面无高分匹配，待复核
-freebsd-hackers.messages.1282331		—	挂账	题面无高分匹配，待复核
+freebsd-hackers.messages.1282331	V39.9.3.1	消费设备的用户态遗产	归入	补遗：Niagara 卡以字符设备供用户态工具使用并移植至 5.x，用户态遗产
 freebsd-ppc.messages.2135657		—	挂账	题面无高分匹配，待复核
 freebsd-ppc.messages.2147652	V39.3.8.3	与开源系统的分工格局	归入	FreeBSD powerpc 与 OS X 分工问答
 freebsd-doc.messages.8752		—	挂账	题面无高分匹配，待复核
 freebsd-doc.messages.1107472	V39.6.8.1	问题报告的撰写规范	归入	PR 确认时限的核实建议
 freebsd-advocacy.messages.4901	V39.9.6.4	地区文化的对照观察	归入	阿根廷 BSDday 征稿预告
 freebsd-doc.messages.1110946		—	挂账	题面无高分匹配，待复核
-freebsd-doc.messages.1112024		—	挂账	题面无高分匹配，待复核
+freebsd-doc.messages.1112024	V39.5.7.1	报告与补丁的提交入口	归入	补遗：非提交者经邮件提交文档补丁，提交入口的日常形态
 freebsd-doc.messages.1114318	V39.5.4.1	维护范围的划界规则	归入	Contributors 条目清理与划界
 freebsd-newbies.messages.1497485	V39.6.2.4	知识传播的读者分层	归入	Core 关注新手答疑与 FAQ 编写
 freebsd-current.messages.1030991		—	删除	空壳块（仅块头无正文）
 freebsd-current.messages.1031240		—	删除	空壳块（仅块头无正文）
-freebsd-current.messages.1031351		—	挂账	题面无高分匹配，待复核
+freebsd-current.messages.1031351	V39.8.4.5	回应话语的论据层级	归入	补遗：Schouten 以受影响窗口与人群反驳，论据以事实为限
 freebsd-current.messages.1032625		—	移出	linux_base 换 Fedora 10，属第三十六卷
 freebsd-current.messages.1033662		—	删除	空壳块（仅块头无正文）
 freebsd-doc.messages.1125051		—	删除	空壳块（仅块头无正文）
