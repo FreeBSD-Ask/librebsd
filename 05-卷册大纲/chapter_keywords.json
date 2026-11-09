@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 17870,
+  "subsections": 18595,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "6a991f7a05fd3b64dcafb150ac727693aabfc8ae7979fb7abe2b9fdc6484e304",
+  "content_sha256": "229f618e8293191ee2e7c1c94646dc6696d05fdf5aad14bc537f6037de9db419",
   "extract": "title+body",
-  "generated_at": "2026-11-09T16:48:27+08:00"
+  "generated_at": "2026-11-09T18:05:23+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -862,6 +862,14 @@
    "broader": "TH-GOV-000",
    "tech": [
     "accountability"
+   ]
+  },
+  "TH-GOV-035": {
+   "label": "去中心化",
+   "level": "narrow",
+   "broader": "TH-GOV-000",
+   "tech": [
+    "decentralization"
    ]
   },
   "TH-GOV-037": {
@@ -3392,6 +3400,14 @@
     "threat model"
    ]
   },
+  "TH-SEC-037": {
+   "label": "零信任",
+   "level": "narrow",
+   "broader": "TH-SEC-000",
+   "tech": [
+    "zero trust"
+   ]
+  },
   "TH-SEC-039": {
    "label": "安全更新",
    "level": "narrow",
@@ -4220,13 +4236,13 @@
    "domains": [],
    "themes": [
     "TH-GOV-014",
-    "TH-HW-010",
     "TH-HIS-003",
+    "TH-HW-010",
     "TH-LANG-011",
+    "TH-LANG-012",
     "TH-BIZ-008",
     "TH-HIS-004",
-    "TH-HW-006",
-    "TH-HW-020"
+    "TH-HW-006"
    ],
    "sections": 7
   },
@@ -6553,11 +6569,11 @@
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-REL-001",
-    "TH-HW-010",
     "TH-REL-009",
     "TH-BIZ-002",
     "TH-BIZ-004",
-    "TH-FS-007"
+    "TH-FS-007",
+    "TH-GOV-006"
    ],
    "sections": 13
   },
@@ -6924,8 +6940,8 @@
     "TH-HIS-046",
     "TH-LAW-001",
     "TH-LAW-012",
-    "TH-BIZ-019",
-    "TH-GOV-003"
+    "TH-GOV-003",
+    "TH-HIS-004"
    ],
    "sections": 9
   },
@@ -9384,7 +9400,8 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-046"
    ],
    "sections": 6
   },
@@ -9393,6 +9410,12 @@
    "title": "vi：Unix 编辑器传统的形成",
    "domains": [],
    "themes": [
+    "TH-BIZ-008",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-BIZ-019",
+    "TH-GOV-014",
+    "TH-LANG-007",
     "TH-LANG-009",
     "TH-REL-009"
    ],
@@ -9403,7 +9426,14 @@
    "title": "csh 与 Unix Shell 软件传统",
    "domains": [],
    "themes": [
-    "TH-LANG-007"
+    "TH-LANG-007",
+    "TH-BIZ-008",
+    "TH-GOV-005",
+    "TH-GOV-014",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-HW-036",
+    "TH-LANG-001"
    ],
    "sections": 7
   },
@@ -9411,7 +9441,16 @@
    "volume": "第60卷-BSD 软件作品史（1977–2026）",
    "title": "curses、termcap 与终端软件生态",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-HW-036",
+    "TH-GOV-014",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-006",
+    "TH-HW-017",
+    "TH-LANG-021",
+    "TH-LANG-025"
+   ],
    "sections": 8
   },
   "V60-C005": {
@@ -9419,11 +9458,14 @@
    "title": "BSD 网络软件作品：socket、TCP／IP 与 Internet 工具",
    "domains": [],
    "themes": [
+    "TH-NET-001",
     "TH-NET-030",
     "TH-NET-008",
-    "TH-NET-001",
+    "TH-NET-026",
+    "TH-BIZ-008",
+    "TH-NET-016",
     "TH-NET-025",
-    "TH-NET-026"
+    "TH-NET-027"
    ],
    "sections": 9
   },
@@ -9432,7 +9474,14 @@
    "title": "sendmail：互联网邮件基础设施",
    "domains": [],
    "themes": [
-    "TH-NET-024"
+    "TH-NET-024",
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-NET-009",
+    "TH-REL-001",
+    "TH-BIZ-006"
    ],
    "sections": 9
   },
@@ -9450,7 +9499,16 @@
    "volume": "第60卷-BSD 软件作品史（1977–2026）",
    "title": "Unix 系统管理工具及其 BSD 形态",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-FS-003",
+    "TH-FS-005",
+    "TH-HW-010",
+    "TH-LANG-007",
+    "TH-NET-002",
+    "TH-NET-003",
+    "TH-NET-008",
+    "TH-NET-025"
+   ],
    "sections": 8
   },
   "V60-C009": {
@@ -9459,7 +9517,11 @@
    "domains": [],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009"
+    "TH-HW-036",
+    "TH-REL-009",
+    "TH-SEC-006",
+    "TH-SEC-009",
+    "TH-VM-033"
    ],
    "sections": 8
   },
@@ -9468,6 +9530,7 @@
    "title": "OpenBSD 网络服务作品（1990 年代至 2020 年代）",
    "domains": [],
    "themes": [
+    "TH-NET-009",
     "TH-NET-010",
     "TH-NET-024",
     "TH-NET-029"
@@ -9479,6 +9542,10 @@
    "title": "OpenBSD 密码、验证与文档作品（1990 年代至 2020 年代）",
    "domains": [],
    "themes": [
+    "TH-REL-001",
+    "TH-REL-009",
+    "TH-REL-017",
+    "TH-SEC-011",
     "TH-SEC-013"
    ],
    "sections": 3
@@ -9489,8 +9556,13 @@
    "domains": [],
    "themes": [
     "TH-LANG-016",
+    "TH-LANG-024",
+    "TH-FS-023",
+    "TH-HW-010",
     "TH-LANG-015",
-    "TH-REL-007"
+    "TH-OS-019",
+    "TH-OS-020",
+    "TH-OS-034"
    ],
    "sections": 7
   },
@@ -9499,8 +9571,14 @@
    "title": "Berkeley 软件传统的独立扩散",
    "domains": [],
    "themes": [
+    "TH-HW-010",
+    "TH-HW-022",
     "TH-HW-036",
-    "TH-LANG-016"
+    "TH-REL-001",
+    "TH-REL-009",
+    "TH-BIZ-008",
+    "TH-BIZ-024",
+    "TH-FS-023"
    ],
    "sections": 10
   },
@@ -9511,7 +9589,8 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-046"
    ],
    "sections": 13
   },
@@ -10148,9 +10227,8 @@
     "TH-HIS-001",
     "TH-HIS-037",
     "TH-HIS-040",
-    "TH-HIS-011",
     "TH-HIS-038",
-    "TH-HIS-007",
+    "TH-HIS-011",
     "TH-HIS-010"
    ],
    "sections": 10
@@ -10729,11 +10807,11 @@
    "domains": [],
    "themes": [
     "TH-HW-036",
-    "TH-GOV-014",
     "TH-GOV-026",
     "TH-NET-026",
     "TH-FS-004",
     "TH-FS-021",
+    "TH-GOV-014",
     "TH-HIS-004",
     "TH-HW-022"
    ],
@@ -10881,9 +10959,13 @@
    "domains": [],
    "themes": [
     "TH-HIS-001",
+    "TH-HIS-004",
+    "TH-HIS-017",
+    "TH-HIS-018",
+    "TH-HIS-023",
+    "TH-HIS-030",
     "TH-HIS-037",
-    "TH-HIS-040",
-    "TH-HIS-017"
+    "TH-HIS-038"
    ],
    "sections": 6
   },
@@ -10892,9 +10974,14 @@
    "title": "BSD 历史书写的演变（1970 年代–2026）",
    "domains": [],
    "themes": [
-    "TH-BIZ-022",
+    "TH-BIZ-008",
     "TH-GOV-014",
-    "TH-HIS-017"
+    "TH-GOV-019",
+    "TH-HIS-017",
+    "TH-REL-001",
+    "TH-BIZ-014",
+    "TH-BIZ-022",
+    "TH-BIZ-030"
    ],
    "sections": 6
   },
@@ -10904,8 +10991,13 @@
    "domains": [],
    "themes": [
     "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-BIZ-030",
+    "TH-GOV-014",
+    "TH-LANG-003",
+    "TH-LAW-003",
+    "TH-LAW-011",
+    "TH-BIZ-008",
+    "TH-BIZ-016"
    ],
    "sections": 11
   },
@@ -10914,8 +11006,14 @@
    "title": "UNIX 继承之争：BSD、GNU 与 Linux",
    "domains": [],
    "themes": [
+    "TH-GOV-014",
+    "TH-HIS-046",
+    "TH-LAW-015",
+    "TH-REL-030",
+    "TH-BIZ-019",
+    "TH-FS-007",
     "TH-GOV-005",
-    "TH-REL-030"
+    "TH-HIS-003"
    ],
    "sections": 7
   },
@@ -10926,7 +11024,12 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-040",
+    "TH-HIS-003",
+    "TH-HIS-014",
+    "TH-HIS-046",
+    "TH-HIS-004",
+    "TH-HIS-007"
    ],
    "sections": 9
   },
@@ -15609,12 +15712,12 @@
    "domains": [
     "TH-LANG-000",
     "TH-GOV-000",
-    "TH-HW-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-LANG-012",
     "TH-GOV-014",
-    "TH-HW-010"
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -15628,12 +15731,12 @@
    "domains": [
     "TH-OS-000",
     "TH-GOV-000",
-    "TH-HW-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-OS-001",
     "TH-GOV-014",
-    "TH-HW-010"
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [
@@ -15649,12 +15752,12 @@
    "domains": [
     "TH-OS-000",
     "TH-GOV-000",
-    "TH-HW-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-OS-009",
     "TH-GOV-014",
-    "TH-HW-010"
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -15698,7 +15801,7 @@
     "TH-HW-006",
     "TH-LANG-011",
     "TH-LAW-014",
-    "TH-HW-010"
+    "TH-LANG-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -15898,8 +16001,8 @@
     "TH-HW-010",
     "TH-HIS-003",
     "TH-LANG-007",
-    "TH-REL-026",
-    "TH-HW-013"
+    "TH-HW-013",
+    "TH-REL-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -18909,8 +19012,8 @@
     "TH-NET-022",
     "TH-OS-009",
     "TH-FS-002",
-    "TH-NET-026",
-    "TH-FS-023"
+    "TH-FS-023",
+    "TH-NET-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -19745,8 +19848,8 @@
     "TH-REL-004",
     "TH-HIS-003",
     "TH-OS-021",
-    "TH-HW-010",
     "TH-LANG-012",
+    "TH-HW-010",
     "TH-HW-017"
    ],
    "projects": [],
@@ -23162,7 +23265,7 @@
     "TH-BIZ-008",
     "TH-OS-028",
     "TH-HW-022",
-    "TH-LAW-021"
+    "TH-OS-009"
    ],
    "projects": [],
    "technical_terms": [],
@@ -26630,8 +26733,8 @@
    ],
    "themes": [
     "TH-HIS-001",
-    "TH-HIS-003",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -29624,14 +29727,14 @@
    "domains": [
     "TH-BIZ-000",
     "TH-REL-000",
-    "TH-GOV-000"
+    "TH-OS-000"
    ],
    "themes": [
     "TH-BIZ-008",
     "TH-BIZ-020",
     "TH-REL-008",
-    "TH-GOV-037",
-    "TH-OS-040"
+    "TH-OS-040",
+    "TH-GOV-037"
    ],
    "projects": [],
    "technical_terms": [],
@@ -36611,7 +36714,7 @@
     "TH-OS-015",
     "TH-BIZ-004",
     "TH-REL-024",
-    "TH-HW-010"
+    "TH-LANG-012"
    ],
    "projects": [],
    "technical_terms": [],
@@ -38369,8 +38472,8 @@
     "TH-HIS-004",
     "TH-HW-012",
     "TH-GOV-014",
-    "TH-BIZ-019",
-    "TH-HW-015"
+    "TH-HW-015",
+    "TH-BIZ-019"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40097,7 +40200,7 @@
     "TH-OS-024",
     "TH-HW-010",
     "TH-LANG-009",
-    "TH-BIZ-019"
+    "TH-LANG-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40380,8 +40483,8 @@
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-GOV-003",
-    "TH-REL-003",
-    "TH-GOV-009"
+    "TH-GOV-009",
+    "TH-REL-003"
    ],
    "projects": [],
    "technical_terms": [],
@@ -42208,8 +42311,8 @@
     "TH-HW-003",
     "TH-FS-003",
     "TH-HW-022",
-    "TH-LAW-021",
-    "TH-FS-007"
+    "TH-FS-007",
+    "TH-LAW-021"
    ],
    "projects": [],
    "technical_terms": [
@@ -45198,8 +45301,8 @@
     "TH-GOV-014",
     "TH-HIS-004",
     "TH-LANG-009",
-    "TH-HW-010",
     "TH-HW-006",
+    "TH-HW-010",
     "TH-LAW-003"
    ],
    "projects": [],
@@ -50859,8 +50962,8 @@
    "themes": [
     "TH-LANG-033",
     "TH-VM-005",
-    "TH-LANG-007",
     "TH-LANG-030",
+    "TH-LANG-007",
     "TH-NET-001",
     "TH-GOV-014"
    ],
@@ -54612,13 +54715,13 @@
    "title": "FreeBSD、OpenBSD 与 DragonFly 的技术分化",
    "meta": false,
    "domains": [
-    "TH-REL-000",
     "TH-GOV-000",
+    "TH-REL-000",
     "TH-LANG-000"
    ],
    "themes": [
-    "TH-REL-030",
     "TH-GOV-004",
+    "TH-REL-030",
     "TH-GOV-026",
     "TH-LANG-033",
     "TH-LANG-030",
@@ -55387,13 +55490,13 @@
    "meta": false,
    "domains": [
     "TH-FS-000",
-    "TH-LAW-000",
-    "TH-NET-000"
+    "TH-NET-000",
+    "TH-LAW-000"
    ],
    "themes": [
     "TH-FS-004",
-    "TH-LAW-013",
     "TH-NET-033",
+    "TH-LAW-013",
     "TH-HW-005",
     "TH-HW-003",
     "TH-REL-030"
@@ -57766,12 +57869,12 @@
    "title": "FreeBSD 5.x 重建争议的学术记述",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-OS-000"
+    "TH-OS-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-026",
     "TH-OS-003",
+    "TH-LANG-026",
     "TH-OS-036",
     "TH-OS-005"
    ],
@@ -58419,12 +58522,12 @@
    "title": "4.4BSD-Lite 与商业 BSD 的重新分化",
    "meta": false,
    "domains": [
-    "TH-LAW-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-LAW-016",
     "TH-REL-004",
+    "TH-LAW-016",
     "TH-REL-001"
    ],
    "projects": [],
@@ -58941,13 +59044,13 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-BIZ-000",
-    "TH-REL-000"
+    "TH-REL-000",
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-HW-020",
-    "TH-BIZ-030",
     "TH-REL-014",
+    "TH-BIZ-030",
     "TH-GOV-003"
    ],
    "projects": [],
@@ -62103,14 +62206,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "a90dd1e73d22ef70c2dd809f57d2dd5ee687b78f"
   },
   "V60-C001-1.2": {
    "chapter": "V60-C001",
@@ -62120,14 +62221,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "66ba0f4bdbad5f49044abfb1e8ef41ed5d9cd98d"
   },
   "V60-C001-1.3": {
    "chapter": "V60-C001",
@@ -62143,8 +62242,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9ed453e2598e149dbb5572c99a6c61795e92beb5"
   },
   "V60-C001-1.4": {
    "chapter": "V60-C001",
@@ -62160,8 +62259,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "25cea85f4ca8b41f5db5206e9572ba3ba2811ec1"
   },
   "V60-C001-1.5": {
    "chapter": "V60-C001",
@@ -62177,8 +62276,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4c79e9f73e3de89ba712cc24fe7467ae615ccfef"
   },
   "V60-C001-1.6": {
    "chapter": "V60-C001",
@@ -62188,52 +62287,49 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "014d46590dfed5eb128cdf8f3b27d13bc74f3afa"
   },
   "V60-C002-2.1": {
    "chapter": "V60-C002",
    "title": "ed、ex 与编辑器历史",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-REL-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-LANG-009",
-    "TH-REL-009",
-    "TH-HIS-001"
+    "TH-BIZ-019",
+    "TH-BIZ-008",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a622ea2617c551ad44cf7cc6453c554662490684"
   },
   "V60-C002-2.2": {
    "chapter": "V60-C002",
    "title": "vi 的产生背景",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-LANG-009",
-    "TH-REL-009",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-003",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "74ae556921c542c68402d3386360f988e4721ff7"
   },
   "V60-C002-2.3": {
    "chapter": "V60-C002",
@@ -62241,18 +62337,18 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
     "TH-LANG-009",
-    "TH-REL-009",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a60e6bd558426a4b62403b8c9953a1c910479da1"
   },
   "V60-C002-2.4": {
    "chapter": "V60-C002",
@@ -62260,75 +62356,79 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
-    "TH-LANG-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
     "TH-REL-009",
-    "TH-LANG-009",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7f76026cb60c317dd2a67abaffc82e02b1d88c8f"
   },
   "V60-C002-2.5": {
    "chapter": "V60-C002",
    "title": "nvi 与 BSD 继承",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-LANG-009",
-    "TH-REL-009",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-003",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "074463456d5b5c54db7a0127aa641cb31035f779"
   },
   "V60-C002-2.6": {
    "chapter": "V60-C002",
    "title": "Vim 与现代 Unix 编辑器生态",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-HIS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-LANG-009",
-    "TH-REL-009",
-    "TH-HIS-001"
+    "TH-HW-010",
+    "TH-HIS-003",
+    "TH-GOV-014",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "22c418a8972624f75b4c6d7d962a19c103ec69ce"
   },
   "V60-C002-2.7": {
    "chapter": "V60-C002",
    "title": "vi 在 Unix 与 Linux 系统中的扩散（1980 年代至 2000 年代）",
    "meta": false,
    "domains": [
+    "TH-VM-000",
     "TH-LANG-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-LANG-009",
-    "TH-REL-009",
-    "TH-HIS-001"
+    "TH-VM-034",
+    "TH-LANG-007",
+    "TH-VM-001",
+    "TH-BIZ-008",
+    "TH-HIS-003",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d74a735b253797e5d1f90c40c29d033671048e54"
   },
   "V60-C003-3.1": {
    "chapter": "V60-C003",
@@ -62336,17 +62436,20 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "sh"
+   ],
+   "subs": 5,
+   "subs_sha1": "5379fa709d2242e14e385169a0da3c6fbc0723f8"
   },
   "V60-C003-3.2": {
    "chapter": "V60-C003",
@@ -62354,17 +62457,21 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-014",
+    "TH-LANG-001",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "17ed3dd8969985508355f03b5f7e1d0c73c9313a"
   },
   "V60-C003-3.3": {
    "chapter": "V60-C003",
@@ -62372,17 +62479,18 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "3da47a58f62f56b07321d4d4959142eec378b397"
   },
   "V60-C003-3.4": {
    "chapter": "V60-C003",
@@ -62390,17 +62498,18 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-OS-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-OS-026",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "df6c39616747950e588f8705f84eeeee982be355"
   },
   "V60-C003-3.5": {
    "chapter": "V60-C003",
@@ -62408,17 +62517,18 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1d8e90affba3a16e99854913d916aa3fd2844e9b"
   },
   "V60-C003-3.6": {
    "chapter": "V60-C003",
@@ -62426,17 +62536,23 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-HW-000"
    ],
    "themes": [
+    "TH-LANG-030",
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-LANG-036",
+    "TH-BIZ-008",
+    "TH-HW-036"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "posix",
+    "sh"
+   ],
+   "subs": 5,
+   "subs_sha1": "77c2c15df82112cde08ba6e06fe17a972f9aa56f"
   },
   "V60-C003-3.7": {
    "chapter": "V60-C003",
@@ -62444,169 +62560,178 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LANG-007",
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "csh",
+    "ftp"
+   ],
+   "subs": 5,
+   "subs_sha1": "e70f49e14cd94a4b00b9b61ae5e3c69455b4e363"
   },
   "V60-C004-4.1": {
    "chapter": "V60-C004",
    "title": "终端控制问题",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
+    "TH-HW-000",
     "TH-LANG-000",
-    "TH-NET-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-HW-036",
+    "TH-LANG-036",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0b18be235172089e640e785302aca55569d73ccc"
   },
   "V60-C004-4.2": {
    "chapter": "V60-C004",
    "title": "termcap",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-HW-000",
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-HW-036",
+    "TH-GOV-014",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2d7e26ff3145d2b2f01438f3f3526261321a2ef2"
   },
   "V60-C004-4.3": {
    "chapter": "V60-C004",
    "title": "curses",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-GOV-014",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-LANG-025",
+    "TH-VM-024",
+    "TH-LANG-021"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "e4701b7ec0ed51c5627f78132acfa4ca69e3dcb2"
   },
   "V60-C004-4.4": {
    "chapter": "V60-C004",
    "title": "terminfo",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-LANG-000",
-    "TH-NET-000"
+    "TH-HW-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-LANG-030",
+    "TH-HW-036",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "fb27f0faa7760be36b8ef328d5c4fbe7c946a009"
   },
   "V60-C004-4.5": {
    "chapter": "V60-C004",
    "title": "BSD curses",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-GOV-014",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-HW-036",
+    "TH-OS-034",
+    "TH-HW-017"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "fd388fd27228bd5c8507f6f11b69ea045aead5c8"
   },
   "V60-C004-4.6": {
    "chapter": "V60-C004",
    "title": "ncurses 与 Linux 时代的传播",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-GOV-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-GOV-006",
+    "TH-HW-036",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "455a27b3f4c62afc928d3592e3f0ae3354a58038"
   },
   "V60-C004-4.7": {
    "chapter": "V60-C004",
    "title": "终端抽象的软件工程意义",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-HW-000",
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-HW-036",
+    "TH-GOV-014",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7760ff697e51c0db0a2242d817127e34ec3b2e48"
   },
   "V60-C004-4.8": {
    "chapter": "V60-C004",
    "title": "tmux 与终端复用器的 BSD 生态位置（2007– ）",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-HW-000",
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-HW-036",
+    "TH-GOV-014",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5e1223e7d95e9e81818082a99818138f38089970"
   },
   "V60-C005-5.1": {
    "chapter": "V60-C005",
@@ -62617,13 +62742,13 @@
    ],
    "themes": [
     "TH-NET-008",
-    "TH-NET-030",
-    "TH-NET-001"
+    "TH-NET-001",
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2b0768ed70381c1fb82aa0c5d0924fd20c2559fa"
   },
   "V60-C005-5.2": {
    "chapter": "V60-C005",
@@ -62634,13 +62759,13 @@
    ],
    "themes": [
     "TH-NET-008",
-    "TH-NET-030",
-    "TH-NET-001"
+    "TH-NET-001",
+    "TH-NET-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0def814a4993567a49f061595e2182c8ea225444"
   },
   "V60-C005-5.3": {
    "chapter": "V60-C005",
@@ -62656,8 +62781,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "c86744c0f4868cf130914244db6d9352be97c67b"
   },
   "V60-C005-5.4": {
    "chapter": "V60-C005",
@@ -62668,13 +62793,13 @@
    ],
    "themes": [
     "TH-NET-030",
-    "TH-NET-008",
-    "TH-NET-001"
+    "TH-NET-001",
+    "TH-NET-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7dc223f8230ddc6db0bf211da9c21aca8addd518"
   },
   "V60-C005-5.5": {
    "chapter": "V60-C005",
@@ -62685,13 +62810,13 @@
    ],
    "themes": [
     "TH-NET-030",
-    "TH-NET-008",
-    "TH-NET-001"
+    "TH-NET-001",
+    "TH-NET-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "507c8ab43e7da965ea644fdb091fc0d9f056a344"
   },
   "V60-C005-5.6": {
    "chapter": "V60-C005",
@@ -62703,12 +62828,12 @@
    "themes": [
     "TH-NET-025",
     "TH-NET-026",
-    "TH-NET-030"
+    "TH-NET-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5151008991e1d5040d0f065866e7da60e1b925aa"
   },
   "V60-C005-5.7": {
    "chapter": "V60-C005",
@@ -62719,30 +62844,36 @@
    ],
    "themes": [
     "TH-NET-030",
-    "TH-NET-008",
-    "TH-NET-001"
+    "TH-NET-001",
+    "TH-NET-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "aedf8111c69c0bb5c364aa7c358b4bd3e70e2311"
   },
   "V60-C005-5.8": {
    "chapter": "V60-C005",
    "title": "BSD 网络软件作品的现代继承",
    "meta": false,
    "domains": [
+    "TH-BIZ-000",
     "TH-NET-000"
    ],
    "themes": [
-    "TH-NET-030",
-    "TH-NET-008",
-    "TH-NET-001"
+    "TH-BIZ-008",
+    "TH-NET-001",
+    "TH-NET-026",
+    "TH-NET-038",
+    "TH-NET-016",
+    "TH-NET-027"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "telnet"
+   ],
+   "subs": 5,
+   "subs_sha1": "4b14623e2299d9b92f747e11272ba3aad54ba560"
   },
   "V60-C005-5.9": {
    "chapter": "V60-C005",
@@ -62752,14 +62883,14 @@
     "TH-NET-000"
    ],
    "themes": [
+    "TH-NET-001",
     "TH-NET-030",
-    "TH-NET-008",
-    "TH-NET-001"
+    "TH-NET-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "944ad9a3f60363e3d80b993adefdca7d5429ad29"
   },
   "V60-C006-6.1": {
    "chapter": "V60-C006",
@@ -62767,18 +62898,17 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-NET-009",
+    "TH-REL-009",
+    "TH-NET-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "8d48e7f3497567e461c9b2bc1ff82d29260440c1"
   },
   "V60-C006-6.2": {
    "chapter": "V60-C006",
@@ -62787,17 +62917,22 @@
    "domains": [
     "TH-NET-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-NET-025"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "sendmail"
+   ],
+   "subs": 5,
+   "subs_sha1": "1c836ee4c87aa71917f763f1f4e22231bbf0865d"
   },
   "V60-C006-6.3": {
    "chapter": "V60-C006",
@@ -62805,37 +62940,40 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "73ef5c3217c33d7c7d8c5f9a5944a1c140a2eb45"
   },
   "V60-C006-6.4": {
    "chapter": "V60-C006",
    "title": "M4 配置系统",
    "meta": false,
    "domains": [
+    "TH-REL-000",
     "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-GOV-000"
    ],
    "themes": [
+    "TH-REL-001",
     "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-GOV-015",
+    "TH-BIZ-008",
+    "TH-BIZ-006",
+    "TH-REL-037"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d421b8f0f91920b1e57042dbc1e3777db2bbf902"
   },
   "V60-C006-6.5": {
    "chapter": "V60-C006",
@@ -62844,17 +62982,20 @@
    "domains": [
     "TH-NET-000",
     "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-HW-000"
    ],
    "themes": [
+    "TH-NET-036",
+    "TH-HIS-003",
+    "TH-HW-010",
     "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-NET-009",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "78db5f819de462fefa0e99ee72ca7c12d3875398"
   },
   "V60-C006-6.6": {
    "chapter": "V60-C006",
@@ -62862,18 +63003,18 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "fa539e8830518c9de700bc4167f38d98000d1c10"
   },
   "V60-C006-6.7": {
    "chapter": "V60-C006",
@@ -62881,56 +63022,54 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0c36b1a5384144ec248b817370fbe519b19eae21"
   },
   "V60-C006-6.8": {
    "chapter": "V60-C006",
    "title": "Unix 邮件软件的历史归属问题",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-LAW-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-LAW-033",
+    "TH-LAW-013",
+    "TH-GOV-006"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ad3f09ea2eebfb0208e1bbf87f3de5a525b02fac"
   },
   "V60-C006-6.9": {
    "chapter": "V60-C006",
    "title": "SPF、DKIM 与 DMARC：邮件认证标准的形成（2003–2015）",
    "meta": false,
    "domains": [
-    "TH-NET-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000",
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-NET-024",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-REL-017",
+    "TH-LAW-011",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9eb1f4713a487b1b2c9caac0284fab0df08b9209"
   },
   "V60-C007-7.1": {
    "chapter": "V60-C007",
@@ -62939,17 +63078,17 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "8d0fc067cdcd8d212bf4ab0d815299007f618c4d"
   },
   "V60-C007-7.2": {
    "chapter": "V60-C007",
@@ -62958,17 +63097,17 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "961934c0bffcbdb1b1f8556ab7a5bdfa322194e1"
   },
   "V60-C007-7.3": {
    "chapter": "V60-C007",
@@ -62977,17 +63116,17 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2151edf1213bdb75286d13c8bfc79eef345479e6"
   },
   "V60-C007-7.4": {
    "chapter": "V60-C007",
@@ -62996,17 +63135,19 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "bind"
+   ],
+   "subs": 5,
+   "subs_sha1": "b22d16a66f00a63603f6a7e993ce8a4279d95ade"
   },
   "V60-C007-7.5": {
    "chapter": "V60-C007",
@@ -63015,17 +63156,17 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "89d4b6fed61c76177f7ca3afaee54eb16df4419f"
   },
   "V60-C007-7.6": {
    "chapter": "V60-C007",
@@ -63034,17 +63175,17 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bf2e2c6fa8fbd75e800bf1d4049670e699fa1494"
   },
   "V60-C007-7.7": {
    "chapter": "V60-C007",
@@ -63053,169 +63194,165 @@
    "domains": [
     "TH-NET-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-NET-022",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "28b89b40d4ca114cc90c23417b7760eaf129721b"
   },
   "V60-C008-8.1": {
    "chapter": "V60-C008",
    "title": "cron",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-FS-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-FS-003",
+    "TH-FS-005",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7718505dcbc5fb544927fa39b3f7a3c583ab4529"
   },
   "V60-C008-8.2": {
    "chapter": "V60-C008",
    "title": "at",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-SEC-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-SEC-001",
+    "TH-FS-003",
+    "TH-FS-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1a16559ada8d4eaff09404a05db37d8ae223bcbc"
   },
   "V60-C008-8.3": {
    "chapter": "V60-C008",
    "title": "inetd",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-NET-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-NET-008",
+    "TH-FS-003",
+    "TH-FS-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "35d7f354e45e2715623aa6927fa1e6b7ceb794a5"
   },
   "V60-C008-8.4": {
    "chapter": "V60-C008",
    "title": "syslog",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
+    "TH-FS-000",
     "TH-NET-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-FS-005",
+    "TH-NET-002",
+    "TH-NET-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bf50eadd9edef702b9541cea4d45804f3642d3b5"
   },
   "V60-C008-8.5": {
    "chapter": "V60-C008",
    "title": "su",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-REL-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-REL-009",
+    "TH-FS-003",
+    "TH-FS-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "cc6787cca5a95239ed8b14ff3889e378adce5be6"
   },
   "V60-C008-8.6": {
    "chapter": "V60-C008",
    "title": "sudo",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-REL-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-REL-030",
+    "TH-FS-003",
+    "TH-FS-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9cf4bfdef3d22459518ea54c47ef36110e450d2a"
   },
   "V60-C008-8.7": {
    "chapter": "V60-C008",
    "title": "login 与身份管理工具",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-SEC-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-SEC-032",
+    "TH-FS-003",
+    "TH-FS-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "80efefd15377c06c439100fffebe618fa7c77cc8"
   },
   "V60-C008-8.8": {
    "chapter": "V60-C008",
    "title": "系统管理工具的 BSD 传统",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-LANG-000",
-    "TH-NET-000"
+    "TH-REL-000",
+    "TH-NET-000",
+    "TH-FS-000"
    ],
    "themes": [
-    "TH-HIS-001",
-    "TH-LANG-016",
-    "TH-NET-024"
+    "TH-REL-014",
+    "TH-NET-025",
+    "TH-FS-003",
+    "TH-HW-010",
+    "TH-REL-025",
+    "TH-LANG-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "db32578951c2cc719737315e55b0813a681f08d3"
   },
   "V60-C009-9.1": {
    "chapter": "V60-C009",
@@ -63223,18 +63360,18 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "6244e0ccdb085b9610fb5855e4f4a9dd11db931d"
   },
   "V60-C009-9.2": {
    "chapter": "V60-C009",
@@ -63242,18 +63379,20 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "cvs"
+   ],
+   "subs": 5,
+   "subs_sha1": "6647ba55c27ecd9d2646d0c2ab6155a8a9579d57"
   },
   "V60-C009-9.3": {
    "chapter": "V60-C009",
@@ -63261,37 +63400,38 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "da92b62423d74ed781cca4376b34a5f7b50dc2e8"
   },
   "V60-C009-9.4": {
    "chapter": "V60-C009",
    "title": "privilege separation",
    "meta": false,
    "domains": [
-    "TH-NET-000",
+    "TH-VM-000",
     "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-VM-033",
+    "TH-SEC-006",
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d880147ca5a071a350676ab70e659fa17fd4dcdc"
   },
   "V60-C009-9.5": {
    "chapter": "V60-C009",
@@ -63299,18 +63439,18 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "da8a951fbc208e042c55e6344b1177a91c5ade47"
   },
   "V60-C009-9.6": {
    "chapter": "V60-C009",
@@ -63319,17 +63459,17 @@
    "domains": [
     "TH-SEC-000",
     "TH-NET-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
     "TH-SEC-009",
     "TH-NET-026",
-    "TH-HIS-001"
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b09d890a77ac40a678438cd6f78e54c23f0a3b1a"
   },
   "V60-C009-9.7": {
    "chapter": "V60-C009",
@@ -63337,18 +63477,18 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b2da72c2eb14055222a3c83605d86f2af959e817"
   },
   "V60-C009-9.8": {
    "chapter": "V60-C009",
@@ -63356,18 +63496,18 @@
    "meta": false,
    "domains": [
     "TH-NET-000",
-    "TH-SEC-000",
-    "TH-HIS-000"
+    "TH-HW-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-NET-026",
-    "TH-SEC-009",
-    "TH-HIS-001"
+    "TH-HW-036",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "34ae76e18c278d425747d22ee0d2ee31f1ec8788"
   },
   "V60-C010-10.1": {
    "chapter": "V60-C010",
@@ -63378,13 +63518,13 @@
    ],
    "themes": [
     "TH-NET-010",
-    "TH-NET-024",
-    "TH-NET-029"
+    "TH-NET-009",
+    "TH-NET-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d84d5694767dd6c9fd40a9b83e178f59ac1c576f"
   },
   "V60-C010-10.2": {
    "chapter": "V60-C010",
@@ -63394,14 +63534,14 @@
     "TH-NET-000"
    ],
    "themes": [
+    "TH-NET-009",
     "TH-NET-010",
-    "TH-NET-024",
-    "TH-NET-029"
+    "TH-NET-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b5c3e7f958504612b304a38dd302d5ee74a885c4"
   },
   "V60-C010-10.3": {
    "chapter": "V60-C010",
@@ -63412,13 +63552,13 @@
    ],
    "themes": [
     "TH-NET-029",
-    "TH-NET-010",
-    "TH-NET-024"
+    "TH-NET-009",
+    "TH-NET-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "263d0634f49490ac6b04459f718cd85a0ea9049b"
   },
   "V60-C010-10.4": {
    "chapter": "V60-C010",
@@ -63429,51 +63569,48 @@
    ],
    "themes": [
     "TH-NET-024",
-    "TH-NET-010",
-    "TH-NET-029"
+    "TH-NET-009",
+    "TH-NET-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bfbb3da89837d0e4b43ca0777ed90ddf883003be"
   },
   "V60-C011-11.1": {
    "chapter": "V60-C011",
    "title": "mandoc（2000 年代–）",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-SEC-013",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-REL-009",
+    "TH-REL-001",
+    "TH-REL-017"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0cdd533bf6add601483338358a3af7298f6304fc"
   },
   "V60-C011-11.2": {
    "chapter": "V60-C011",
    "title": "signify（2014–）",
    "meta": false,
    "domains": [
-    "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000",
+    "TH-SEC-000"
    ],
    "themes": [
-    "TH-SEC-013",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-REL-017",
+    "TH-SEC-011",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "62126b21eca201b5be3c877b0d96a79aa7d3ee46"
   },
   "V60-C011-11.3": {
    "chapter": "V60-C011",
@@ -63481,18 +63618,17 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HIS-000",
-    "TH-LANG-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-SEC-013",
-    "TH-HIS-001",
-    "TH-LANG-016"
+    "TH-REL-001",
+    "TH-REL-009"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ea00970f8fab63f14fbb2f65ac61534a122d6eaf"
   },
   "V60-C012-12.1": {
    "chapter": "V60-C012",
@@ -63505,12 +63641,12 @@
    "themes": [
     "TH-REL-007",
     "TH-LANG-016",
-    "TH-LANG-015"
+    "TH-LANG-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "36df0d0bf2347d59618a6c27a2a15450c3b30653"
   },
   "V60-C012-12.2": {
    "chapter": "V60-C012",
@@ -63518,17 +63654,17 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LANG-016",
-    "TH-LANG-015",
-    "TH-REL-007"
+    "TH-LANG-024",
+    "TH-FS-023"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "34ef06c4344dfefafe9d5ce2377c3b0d7c5342eb"
   },
   "V60-C012-12.3": {
    "chapter": "V60-C012",
@@ -63536,35 +63672,34 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LANG-016",
-    "TH-LANG-015",
-    "TH-REL-007"
+    "TH-LANG-024",
+    "TH-FS-023"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "3fe51f55e2930ea9fc20bcd6371c8a91c6ec84ea"
   },
   "V60-C012-12.4": {
    "chapter": "V60-C012",
    "title": "make",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-REL-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-LANG-015",
     "TH-LANG-016",
-    "TH-REL-007"
+    "TH-LANG-024"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "3234cad6a0530cfa466264017e09688f1cb6130b"
   },
   "V60-C012-12.5": {
    "chapter": "V60-C012",
@@ -63572,35 +63707,42 @@
    "meta": false,
    "domains": [
     "TH-LANG-000",
-    "TH-REL-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-LANG-016",
-    "TH-LANG-015",
-    "TH-REL-007"
+    "TH-LANG-024",
+    "TH-FS-023"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "8d7dab5d3f274dbc33f794c35be95d2cfb69c8ce"
   },
   "V60-C012-12.6": {
    "chapter": "V60-C012",
    "title": "调试与诊断工具",
    "meta": false,
    "domains": [
-    "TH-LANG-000",
-    "TH-REL-000"
+    "TH-OS-000",
+    "TH-FS-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-LANG-016",
-    "TH-LANG-015",
-    "TH-REL-007"
+    "TH-OS-020",
+    "TH-OS-034",
+    "TH-FS-023",
+    "TH-LANG-024",
+    "TH-OS-019",
+    "TH-HW-010"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "gdb",
+    "kgdb"
+   ],
+   "subs": 5,
+   "subs_sha1": "d19929548032746ff21bc6eef9235219e2e56a53"
   },
   "V60-C012-12.7": {
    "chapter": "V60-C012",
@@ -63611,14 +63753,14 @@
     "TH-REL-000"
    ],
    "themes": [
-    "TH-LANG-016",
-    "TH-LANG-015",
-    "TH-REL-007"
+    "TH-LANG-024",
+    "TH-REL-009",
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2d6b8ca70f603c2345f4a0b751429d94fad10e79"
   },
   "V60-C013-13.1": {
    "chapter": "V60-C013",
@@ -63626,94 +63768,96 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-GOV-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-010",
+    "TH-GOV-014",
+    "TH-LANG-010",
+    "TH-BIZ-024",
+    "TH-HIS-003",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "59d81eedca6d7c50802057d7376fad740a40ef39"
   },
   "V60-C013-13.2": {
    "chapter": "V60-C013",
    "title": "Berkeley POSTGRES 的研究起源",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-010",
+    "TH-HW-022",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "62ede3d621ab1a71db1d732e17998f6687392ac5"
   },
   "V60-C013-13.3": {
    "chapter": "V60-C013",
    "title": "Postgres95 与 PostgreSQL",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-REL-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-REL-004",
+    "TH-REL-006",
+    "TH-LANG-021",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ca8d62e176ccffa71651f7d050a5effba4753eea"
   },
   "V60-C013-13.4": {
    "chapter": "V60-C013",
    "title": "Berkeley DB 的独立产品化",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
+    "TH-HW-022",
     "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "e655e4b3e640cc3745b082d54f13a8dfed146740"
   },
   "V60-C013-13.5": {
    "chapter": "V60-C013",
    "title": "Netscape、Sleepycat 与商业数据库软件",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-NET-000",
+    "TH-FS-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-NET-026",
+    "TH-FS-023",
+    "TH-NET-025",
+    "TH-HW-010",
+    "TH-REL-009",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "38515260eda9de3f4f6f7aa85adc52a7cb7eb671"
   },
   "V60-C013-13.6": {
    "chapter": "V60-C013",
@@ -63721,18 +63865,17 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-022",
+    "TH-REL-009",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f2bc652fc125c81eda093cbe0ece9cfe4599dd92"
   },
   "V60-C013-13.7": {
    "chapter": "V60-C013",
@@ -63740,75 +63883,70 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a45bcc79fba83fe1440bc131b0444a15b4f65769"
   },
   "V60-C013-13.8": {
    "chapter": "V60-C013",
    "title": "Redis、NoSQL 与商业数据库边界之争（2009–2026）",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-GOV-026",
+    "TH-REL-001",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "cb9ec1a0d9b4d9c38460ca67dc40ff0416564392"
   },
   "V60-C013-13.9": {
    "chapter": "V60-C013",
    "title": "BSD 软件源流与 Berkeley 科研传统的区别",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-010",
+    "TH-HW-022",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f6eaf30b68e9ecb2ab736a2f465293cab7f6b6a7"
   },
   "V60-C013-13.10": {
    "chapter": "V60-C013",
    "title": "独立化的案例：BDB、PostgreSQL 与 MySQL",
    "meta": false,
    "domains": [
-    "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-HW-036",
-    "TH-LANG-016",
-    "TH-HIS-001"
+    "TH-HW-010",
+    "TH-HW-022",
+    "TH-HW-036"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "e7ffde70ed0eca46e9cd823251ec0400c048a553"
   },
   "V60-C014-14.1": {
    "chapter": "V60-C014",
@@ -63824,8 +63962,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "367c14e5703000845f125747ca75395d9480be08"
   },
   "V60-C014-14.2": {
    "chapter": "V60-C014",
@@ -63835,14 +63973,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bea2c3e84faa1dc5c9c19f70e62aa20500174e8f"
   },
   "V60-C014-14.3": {
    "chapter": "V60-C014",
@@ -63858,8 +63994,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a12232ff454f3af251a61d2b6dd0b1f6f39f9f48"
   },
   "V60-C014-14.4": {
    "chapter": "V60-C014",
@@ -63875,8 +64011,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7fc479bfdcfdd2d296ecef95d2dedd9129999276"
   },
   "V60-C014-14.5": {
    "chapter": "V60-C014",
@@ -63892,8 +64028,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "eead1cb7a43fa62fd2d370839222816542fd9c6b"
   },
   "V60-C014-14.6": {
    "chapter": "V60-C014",
@@ -63909,8 +64045,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ffd8b39922ceb2993c7cea895b5f91452dab46b0"
   },
   "V60-C014-14.7": {
    "chapter": "V60-C014",
@@ -63926,8 +64062,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7c9b8654f56ec66de99cad70c06b704a63015703"
   },
   "V60-C014-14.8": {
    "chapter": "V60-C014",
@@ -63943,8 +64079,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5a86c4ade1eb74e5da5c02a5dc52526d8735dc55"
   },
   "V60-C014-14.9": {
    "chapter": "V60-C014",
@@ -63960,8 +64096,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5c490e047df9d95d2b07ba08b16551a6854e74da"
   },
   "V60-C014-14.10": {
    "chapter": "V60-C014",
@@ -63977,8 +64113,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4ae027232fb620600ed9cf7c31e7b52f48b20acc"
   },
   "V60-C014-14.11": {
    "chapter": "V60-C014",
@@ -63994,8 +64130,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "e9ea1e17422dcca086d7ec30d947cd6ca3a22748"
   },
   "V60-C014-14.12": {
    "chapter": "V60-C014",
@@ -64011,8 +64147,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "708f7a9eae3635ca20eeb6ca9523dc6a8c57fa89"
   },
   "V60-C014-14.13": {
    "chapter": "V60-C014",
@@ -64028,8 +64164,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "fae652a57d2881d887a9cb96ca1c4fccafffb929"
   },
   "V61-C001-1.1": {
    "chapter": "V61-C001",
@@ -69238,13 +69374,13 @@
    "title": "个人领导的权力边界",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-GOV-000",
+    "TH-HIS-000",
     "TH-LAW-000"
    ],
    "themes": [
-    "TH-HIS-046",
     "TH-GOV-026",
+    "TH-HIS-046",
     "TH-LAW-010"
    ],
    "projects": [],
@@ -71586,8 +71722,8 @@
    "themes": [
     "TH-HW-010",
     "TH-LANG-016",
-    "TH-REL-022",
     "TH-HW-015",
+    "TH-REL-022",
     "TH-LANG-005",
     "TH-BIZ-008"
    ],
@@ -72439,9 +72575,9 @@
     "TH-HIS-000"
    ],
    "themes": [
+    "TH-HIS-038",
     "TH-HIS-011",
-    "TH-HIS-001",
-    "TH-HIS-007"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -74691,8 +74827,8 @@
     "TH-HIS-007",
     "TH-NET-010",
     "TH-FS-003",
-    "TH-NET-012",
-    "TH-GOV-016"
+    "TH-GOV-016",
+    "TH-NET-012"
    ],
    "projects": [],
    "technical_terms": [
@@ -74995,8 +75131,8 @@
    ],
    "themes": [
     "TH-GOV-025",
-    "TH-LANG-015",
-    "TH-GOV-009"
+    "TH-GOV-009",
+    "TH-LANG-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -77050,7 +77186,7 @@
     "TH-LANG-012",
     "TH-REL-017",
     "TH-HW-010",
-    "TH-NET-036"
+    "TH-GOV-017"
    ],
    "projects": [],
    "technical_terms": [],
@@ -77903,8 +78039,8 @@
     "TH-GOV-014",
     "TH-VM-005",
     "TH-LANG-016",
-    "TH-GOV-026",
     "TH-FS-004",
+    "TH-GOV-026",
     "TH-NET-033"
    ],
    "projects": [
@@ -77930,8 +78066,8 @@
     "TH-REL-001",
     "TH-LANG-009",
     "TH-FS-003",
-    "TH-OS-019",
-    "TH-LAW-001"
+    "TH-LAW-001",
+    "TH-OS-019"
    ],
    "projects": [
     "macos",
@@ -77991,7 +78127,7 @@
    "themes": [
     "TH-HW-036",
     "TH-LANG-036",
-    "TH-GOV-014"
+    "TH-GOV-026"
    ],
    "projects": [],
    "technical_terms": [
@@ -78029,17 +78165,17 @@
    "title": "DragonFly BSD：内核实验路线的独立化",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-FS-000",
-    "TH-OS-000"
+    "TH-OS-000",
+    "TH-NET-000"
    ],
    "themes": [
-    "TH-GOV-014",
     "TH-FS-004",
     "TH-OS-005",
     "TH-NET-033",
     "TH-OS-012",
-    "TH-FS-021"
+    "TH-FS-021",
+    "TH-OS-030"
    ],
    "projects": [
     "freebsd"
@@ -78082,12 +78218,13 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-NET-000"
    ],
    "themes": [
     "TH-GOV-026",
     "TH-HW-036",
-    "TH-GOV-014"
+    "TH-NET-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -80025,8 +80162,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "097ec5658af64057b48d73e78f26e2b749ea1349"
   },
   "V73-C001-1.2": {
    "chapter": "V73-C001",
@@ -80036,14 +80173,13 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "01c496dde1e6d85b0c890ece65c7ac480a616bce"
   },
   "V73-C001-1.3": {
    "chapter": "V73-C001",
@@ -80053,14 +80189,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-038",
+    "TH-HIS-023",
+    "TH-HIS-044"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2c12e54069271c8c8faf959c02cf140ad7b53389"
   },
   "V73-C001-1.4": {
    "chapter": "V73-C001",
@@ -80074,8 +80210,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "19bb0e1d0ecb8533b0cb88814e556685b59d6a1c"
   },
   "V73-C001-1.5": {
    "chapter": "V73-C001",
@@ -80085,14 +80221,13 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046",
+    "TH-HIS-018"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "68725afaa9f367424efad2bdf21d74f6830dbb6b"
   },
   "V73-C001-1.6": {
    "chapter": "V73-C001",
@@ -80102,14 +80237,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d236aff53e574e92fd35a94f0aa73d83ab821571"
   },
   "V73-C002-2.1": {
    "chapter": "V73-C002",
@@ -80117,56 +80250,60 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-BIZ-022",
-    "TH-GOV-014",
-    "TH-HIS-017"
+    "TH-BIZ-008",
+    "TH-HIS-018",
+    "TH-BIZ-014",
+    "TH-GOV-019",
+    "TH-GOV-015",
+    "TH-HW-020"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1c14f61fa43db38d04382642eab465022a87a857"
   },
   "V73-C002-2.2": {
    "chapter": "V73-C002",
    "title": "1990 年代 BSD 项目自我叙述的形成",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-REL-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-BIZ-022",
-    "TH-GOV-014",
-    "TH-HIS-017"
+    "TH-REL-001",
+    "TH-GOV-026",
+    "TH-REL-022"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "d8c15287c8638d4b620ba7c8ddf4b9f806ae48be"
   },
   "V73-C002-2.3": {
    "chapter": "V73-C002",
    "title": "Open Sources 时代：开源运动中的 BSD 叙事",
    "meta": false,
    "domains": [
+    "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-BIZ-022",
-    "TH-GOV-014",
-    "TH-HIS-017"
+    "TH-HIS-003",
+    "TH-BIZ-030",
+    "TH-HW-010",
+    "TH-NET-033",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "cb34396eedae5e9c612b22b5e2319ed5b524c1a3"
   },
   "V73-C002-2.4": {
    "chapter": "V73-C002",
@@ -80174,37 +80311,38 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-BIZ-022",
     "TH-GOV-014",
-    "TH-HIS-017"
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "94040d4de4f15e6761d4639c43726d76200e0253"
   },
   "V73-C002-2.5": {
    "chapter": "V73-C002",
    "title": "社交媒体时代：视频、播客与碎片化历史",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
     "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-BIZ-022",
-    "TH-GOV-014",
-    "TH-HIS-017"
+    "TH-GOV-019",
+    "TH-HIS-017",
+    "TH-BIZ-008",
+    "TH-HW-009",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "08fa06003980f63bc9e229e56a6573f29e589934"
   },
   "V73-C002-2.6": {
    "chapter": "V73-C002",
@@ -80217,13 +80355,13 @@
    ],
    "themes": [
     "TH-HIS-017",
-    "TH-BIZ-022",
+    "TH-BIZ-008",
     "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "254d55e273765980b21628eab8c7dd2663cd44b9"
   },
   "V73-C003-3.1": {
    "chapter": "V73-C003",
@@ -80231,18 +80369,21 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-LAW-000",
+    "TH-LANG-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-GOV-014",
+    "TH-LAW-003",
+    "TH-LANG-003",
+    "TH-BIZ-008",
+    "TH-LAW-011",
+    "TH-LANG-012"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f67624a9f41262607ba3258cc1d40bbfb935dba4"
   },
   "V73-C003-3.2": {
    "chapter": "V73-C003",
@@ -80250,18 +80391,17 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-BIZ-030",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2312599dff8ca97d87112a46b7d154f1a1585260"
   },
   "V73-C003-3.3": {
    "chapter": "V73-C003",
@@ -80275,50 +80415,50 @@
    "themes": [
     "TH-LAW-011",
     "TH-GOV-005",
-    "TH-BIZ-031"
+    "TH-BIZ-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a277009193c46f51c83270d6ee08c660eb2cd605"
   },
   "V73-C003-3.4": {
    "chapter": "V73-C003",
    "title": "商业传播、媒体叙事与技术记忆",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
-    "TH-BIZ-000",
+    "TH-HIS-000",
     "TH-LAW-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-HIS-030",
+    "TH-LAW-013",
+    "TH-LAW-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "246fcb3fd7699a31dc7e81cf10b63c450d32d9c5"
   },
   "V73-C003-3.5": {
    "chapter": "V73-C003",
    "title": "BSD 贡献被重新归类的问题",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-REL-000",
+    "TH-LAW-000",
+    "TH-GOV-000"
    ],
    "themes": [
+    "TH-REL-030",
+    "TH-LAW-016",
     "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-LAW-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0a0e64b509fc68fbfc4c92553c7c8398a8f72b0f"
   },
   "V73-C003-3.6": {
    "chapter": "V73-C003",
@@ -80326,94 +80466,94 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-BIZ-030",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "77e45fe6005ca6d80d6c65f4500ed315f524d390"
   },
   "V73-C003-3.7": {
    "chapter": "V73-C003",
    "title": "里奇、乔布斯与技术遗产传播模式比较",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-GOV-000"
    ],
    "themes": [
+    "TH-BIZ-030",
     "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "89bba60fcac24973599d9575a1059792150d9f88"
   },
   "V73-C003-3.8": {
    "chapter": "V73-C003",
    "title": "技术创造者与技术传播者的历史位置",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-NET-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-NET-026",
+    "TH-NET-013",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ee528acf910b2c1751a17b01fb0a0bbdcf2a2fe7"
   },
   "V73-C003-3.9": {
    "chapter": "V73-C003",
    "title": "机构归属与任职关系对可见性的影响",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
+    "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-LAW-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-HIS-046",
+    "TH-BIZ-030",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7c9f53a265276b5a1d56467e44d0f01ffd5be39f"
   },
   "V73-C003-3.10": {
    "chapter": "V73-C003",
    "title": "学术引用与文献计量：BSD 的科研位置",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-BIZ-000",
+    "TH-LANG-000",
     "TH-LAW-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-BIZ-031",
-    "TH-LAW-011"
+    "TH-BIZ-016",
+    "TH-LANG-003",
+    "TH-LAW-003",
+    "TH-GOV-014",
+    "TH-LAW-021",
+    "TH-LANG-016"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5d5d5ffaf2e659eef2585015425dc2e4c8af2811"
   },
   "V73-C003-3.11": {
    "chapter": "V73-C003",
@@ -80421,75 +80561,76 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-LAW-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-BIZ-031",
     "TH-GOV-005",
-    "TH-LAW-011"
+    "TH-BIZ-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "2d49f9bc319b9fa52899f8c883273e4a8a6d70e3"
   },
   "V73-C004-4.1": {
    "chapter": "V73-C004",
    "title": "UNIX 传统叙述的编纂基线：形成与待证伪",
    "meta": false,
    "domains": [
+    "TH-LAW-000",
     "TH-GOV-000",
-    "TH-REL-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-REL-030",
-    "TH-HIS-001"
+    "TH-LAW-015",
+    "TH-GOV-014",
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "15a0228d3a661cb0152788b6aabf04f5b329176f"
   },
   "V73-C004-4.2": {
    "chapter": "V73-C004",
    "title": "GNU 项目与自由软件传统",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-LAW-000",
+    "TH-HIS-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-REL-030",
-    "TH-HIS-001"
+    "TH-LAW-003",
+    "TH-HIS-004",
+    "TH-GOV-014"
    ],
    "projects": [],
-   "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "technical_terms": [
+    "gpl"
+   ],
+   "subs": 5,
+   "subs_sha1": "88ee5752518d35eb7dc1a98dd9f18b0105414962"
   },
   "V73-C004-4.3": {
    "chapter": "V73-C004",
    "title": "BSD 在 UNIX 源流中的位置",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
+    "TH-HIS-000",
     "TH-REL-000",
-    "TH-HIS-000"
+    "TH-LAW-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HIS-046",
+    "TH-REL-001",
+    "TH-LAW-016"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "8e5315a66bd8f5abcd04990f99ad415fd2935430"
   },
   "V73-C004-4.4": {
    "chapter": "V73-C004",
@@ -80502,32 +80643,34 @@
    ],
    "themes": [
     "TH-REL-030",
-    "TH-GOV-005",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9b68bc9cc5f7dbbd3b46912af134429123114c06"
   },
   "V73-C004-4.5": {
    "chapter": "V73-C004",
    "title": "从 BSD、UNIX 到 Linux 的技术继承、文化继承与叙事继承",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-LAW-000",
+    "TH-SEC-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-GOV-005",
+    "TH-LAW-014",
+    "TH-SEC-039",
+    "TH-LAW-015",
     "TH-REL-030",
-    "TH-HIS-001"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "823b8da45906e470bf5d5dae11d39c1e48470cdd"
   },
   "V73-C004-4.6": {
    "chapter": "V73-C004",
@@ -80535,18 +80678,21 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-REL-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
-    "TH-GOV-005",
-    "TH-REL-030",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-BIZ-019",
+    "TH-FS-007",
+    "TH-REL-010"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "f2f2d2e7c49661080f192ef1278f14117952a0af"
   },
   "V73-C004-4.7": {
    "chapter": "V73-C004",
@@ -80554,18 +80700,17 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-REL-000",
     "TH-HIS-000"
    ],
    "themes": [
     "TH-GOV-005",
-    "TH-REL-030",
-    "TH-HIS-001"
+    "TH-GOV-014",
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b9cedc3f5a7f619ee483b723ea2ab3f70d3d2683"
   },
   "V73-C005-5.1": {
    "chapter": "V73-C005",
@@ -80575,14 +80720,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-003",
+    "TH-HIS-007"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ac681c747a3ad249f463f1f4bf78f08f0507ae91"
   },
   "V73-C005-5.2": {
    "chapter": "V73-C005",
@@ -80592,14 +80737,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "5d105bb347ef1089654e7be1ebd63095da518677"
   },
   "V73-C005-5.3": {
    "chapter": "V73-C005",
@@ -80609,14 +80752,13 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-003",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "9823fb9e833b35eb9b03adc135f13f9f06bcd830"
   },
   "V73-C005-5.4": {
    "chapter": "V73-C005",
@@ -80632,8 +80774,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "62d583df919f1896792e4c2c9e6268016859a959"
   },
   "V73-C005-5.5": {
    "chapter": "V73-C005",
@@ -80643,14 +80785,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "cb74ae554df6da6da9e6bf254af9414addcfe3a8"
   },
   "V73-C005-5.6": {
    "chapter": "V73-C005",
@@ -80660,14 +80800,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
+    "TH-HIS-004",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0cbb6f259cc08fcbc0c5be75008fc0e72fb065b3"
   },
   "V73-C005-5.7": {
    "chapter": "V73-C005",
@@ -80683,8 +80823,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "a3c1cf2a8e2c3e23563b5fa2204dca4d53344394"
   },
   "V73-C005-5.8": {
    "chapter": "V73-C005",
@@ -80700,8 +80840,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "60e985b0c2be24321a13f9ec30827ba35630433c"
   },
   "V73-C005-5.9": {
    "chapter": "V73-C005",
@@ -80711,14 +80851,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "dd74d99ed22635b56f469144e021794c65436b0f"
   },
   "V74-C001-1.1": {
    "chapter": "V74-C001",
@@ -84887,8 +85025,8 @@
   },
   "V01-C002-2.5.6": {
    "add": [
-    "TH-LANG-007",
-    "TH-GOV-015"
+    "TH-GOV-015",
+    "TH-LANG-007"
    ]
   },
   "V01-C002-2.6.1": {
@@ -85572,8 +85710,8 @@
    "add": [
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-LANG-007",
-    "TH-LANG-030"
+    "TH-LANG-030",
+    "TH-LANG-007"
    ]
   },
   "V06-C002-2.5.2": {
@@ -85959,13 +86097,14 @@
   "V08-C004-4.3.3": {
    "add": [
     "TH-HIS-004",
+    "TH-HW-010",
     "TH-LANG-007",
     "TH-LANG-010"
    ]
   },
   "V08-C004-4.3.5": {
    "add": [
-    "TH-HIS-003",
+    "TH-HW-010",
     "TH-LANG-010"
    ]
   },
@@ -85983,7 +86122,7 @@
   },
   "V08-C004-4.4.3": {
    "add": [
-    "TH-HIS-003",
+    "TH-HW-010",
     "TH-LANG-007",
     "TH-REL-009"
    ]
@@ -86009,7 +86148,7 @@
   },
   "V08-C004-4.5.2": {
    "add": [
-    "TH-HIS-003",
+    "TH-HW-010",
     "TH-FS-036"
    ]
   },
@@ -86017,6 +86156,7 @@
    "add": [
     "TH-OS-011",
     "TH-HIS-001",
+    "TH-HW-010",
     "TH-NET-032"
    ]
   },
@@ -86065,13 +86205,9 @@
   "V08-C004-4.7.3": {
    "add": [
     "TH-HIS-003",
+    "TH-HW-010",
     "TH-LANG-034",
     "TH-OS-001"
-   ]
-  },
-  "V08-C004-4.7.4": {
-   "add": [
-    "TH-LANG-012"
    ]
   },
   "V08-C005-5.1.1": {
@@ -86354,8 +86490,8 @@
   "V08-C008-8.3.1": {
    "add": [
     "TH-OS-026",
-    "TH-LANG-007",
-    "TH-LANG-030"
+    "TH-LANG-030",
+    "TH-LANG-007"
    ]
   },
   "V08-C008-8.3.2": {
@@ -86429,7 +86565,7 @@
   },
   "V08-C008-8.5.5": {
    "add": [
-    "TH-OS-026"
+    "TH-OS-028"
    ]
   },
   "V08-C008-8.7.1": {
@@ -86521,11 +86657,11 @@
   "V08-C009-9.2.3": {
    "add": [
     "TH-NET-038",
-    "TH-NET-026",
     "TH-NET-008",
+    "TH-NET-026",
     "TH-BIZ-008",
-    "TH-NET-024",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-NET-024"
    ]
   },
   "V08-C009-9.3.1": {
@@ -87270,15 +87406,15 @@
   },
   "V18-C007-7.8.3": {
    "add": [
-    "TH-HIS-007",
-    "TH-LANG-021"
+    "TH-LANG-021",
+    "TH-HIS-007"
    ]
   },
   "V18-C007-7.9.3": {
    "add": [
     "TH-HIS-022",
-    "TH-REL-003",
-    "TH-HW-012"
+    "TH-HW-012",
+    "TH-REL-003"
    ]
   },
   "V18-C007-7.17.1": {
@@ -87448,7 +87584,8 @@
     "TH-HIS-004",
     "TH-GOV-014",
     "TH-LANG-033",
-    "TH-GOV-005"
+    "TH-GOV-005",
+    "TH-LANG-021"
    ]
   },
   "V21-C002-2.3.1": {
@@ -88258,8 +88395,8 @@
   },
   "V27-C002-2.2.3": {
    "add": [
-    "TH-HIS-046",
-    "TH-GOV-026"
+    "TH-GOV-026",
+    "TH-HIS-046"
    ]
   },
   "V27-C002-2.3.1": {
@@ -88421,7 +88558,8 @@
     "TH-HW-010",
     "TH-OS-002",
     "TH-FS-004",
-    "TH-HW-008"
+    "TH-HW-008",
+    "TH-LANG-009"
    ]
   },
   "V27-C004-4.4.2": {
@@ -89016,7 +89154,7 @@
   "V31-C006-6.1.4": {
    "add": [
     "TH-GOV-006",
-    "TH-NET-026"
+    "TH-FS-023"
    ]
   },
   "V31-C006-6.2.1": {
@@ -89670,8 +89808,8 @@
   "V36-C008-8.5.3": {
    "add": [
     "TH-NET-018",
-    "TH-HIS-040",
     "TH-SEC-013",
+    "TH-HIS-040",
     "TH-REL-017",
     "TH-FS-034"
    ]
@@ -90168,8 +90306,8 @@
    "add": [
     "TH-BIZ-008",
     "TH-FS-028",
-    "TH-OS-026",
     "TH-OS-028",
+    "TH-OS-026",
     "TH-HIS-004"
    ]
   },
@@ -90592,8 +90730,8 @@
   "V37-C004-4.5.5": {
    "add": [
     "TH-SEC-013",
-    "TH-LANG-025",
     "TH-HIS-004",
+    "TH-LANG-025",
     "TH-HW-037",
     "TH-GOV-014",
     "TH-HW-038"
@@ -90713,8 +90851,8 @@
   "V37-C004-4.8.5": {
    "add": [
     "TH-OS-035",
-    "TH-NET-024",
     "TH-HIS-004",
+    "TH-NET-024",
     "TH-GOV-014"
    ]
   },
@@ -90916,7 +91054,7 @@
   },
   "V37-C006-6.4.2": {
    "add": [
-    "TH-LANG-012",
+    "TH-HW-010",
     "TH-LANG-026"
    ]
   },
@@ -91116,8 +91254,8 @@
   },
   "V37-C007-7.2.4": {
    "add": [
-    "TH-REL-021",
     "TH-VM-015",
+    "TH-REL-021",
     "TH-HIS-004",
     "TH-NET-027",
     "TH-LANG-021"
@@ -91633,8 +91771,8 @@
    "add": [
     "TH-HW-010",
     "TH-OS-020",
-    "TH-LANG-025",
     "TH-HIS-004",
+    "TH-LANG-025",
     "TH-GOV-014"
    ]
   },
@@ -91773,8 +91911,7 @@
    "add": [
     "TH-HIS-004",
     "TH-GOV-014",
-    "TH-BIZ-002",
-    "TH-HW-010"
+    "TH-BIZ-002"
    ]
   },
   "V37-C010-10.8.2": {
@@ -92821,8 +92958,8 @@
   },
   "V39-C005-5.7.1": {
    "add": [
-    "TH-HW-010",
     "TH-HW-006",
+    "TH-HW-010",
     "TH-BIZ-029",
     "TH-HIS-004",
     "TH-GOV-014"
@@ -93077,11 +93214,6 @@
     "TH-HW-022"
    ]
   },
-  "V39-C010-10.5.4": {
-   "add": [
-    "TH-REL-001"
-   ]
-  },
   "V39-C011-11.2.2": {
    "add": [
     "TH-GOV-014"
@@ -93222,8 +93354,8 @@
    "add": [
     "TH-HW-010",
     "TH-OS-019",
-    "TH-NET-024",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-NET-024"
    ]
   },
   "V40-C002-2.9.1": {
@@ -93478,8 +93610,7 @@
   "V40-C006-6.3.1": {
    "add": [
     "TH-HW-037",
-    "TH-HIS-004",
-    "TH-GOV-014"
+    "TH-HIS-004"
    ]
   },
   "V40-C006-6.3.2": {
@@ -94580,8 +94711,8 @@
    "add": [
     "TH-HW-010",
     "TH-HIS-001",
-    "TH-BIZ-029",
     "TH-LANG-026",
+    "TH-BIZ-029",
     "TH-GOV-014"
    ]
   },
@@ -94784,8 +94915,8 @@
   "V44-C003-3.8.2": {
    "add": [
     "TH-HW-005",
-    "TH-HW-010",
     "TH-HW-006",
+    "TH-HW-010",
     "TH-HW-007",
     "TH-HIS-003",
     "TH-HW-028"
@@ -94930,8 +95061,8 @@
    "add": [
     "TH-SEC-013",
     "TH-OS-026",
-    "TH-FS-005",
-    "TH-HW-002"
+    "TH-HW-002",
+    "TH-FS-005"
    ]
   },
   "V44-C004-4.6.2": {
@@ -95148,8 +95279,8 @@
   "V45-C002-2.2.2": {
    "add": [
     "TH-LANG-016",
-    "TH-HW-010",
     "TH-REL-014",
+    "TH-HW-010",
     "TH-REL-007"
    ]
   },
@@ -95755,7 +95886,8 @@
     "TH-HIS-003",
     "TH-HW-010",
     "TH-LANG-016",
-    "TH-NET-013"
+    "TH-NET-013",
+    "TH-NET-008"
    ]
   },
   "V46-C003-3.1.5": {
@@ -96286,8 +96418,8 @@
    "add": [
     "TH-FS-021",
     "TH-FS-034",
-    "TH-HW-010",
-    "TH-REL-014"
+    "TH-REL-014",
+    "TH-HW-010"
    ]
   },
   "V48-C006-6.4.1": {
@@ -96329,8 +96461,8 @@
     "TH-OS-004",
     "TH-HIS-004",
     "TH-REL-027",
-    "TH-NET-008",
-    "TH-LANG-033"
+    "TH-LANG-033",
+    "TH-NET-008"
    ]
   },
   "V49-C002-2.1.5": {
@@ -96398,8 +96530,7 @@
   "V49-C003-3.1.5": {
    "add": [
     "TH-HW-036",
-    "TH-HIS-004",
-    "TH-GOV-014"
+    "TH-HIS-004"
    ]
   },
   "V49-C003-3.2.2": {
@@ -96426,8 +96557,7 @@
   "V49-C003-3.4.4": {
    "add": [
     "TH-FS-007",
-    "TH-HIS-004",
-    "TH-GOV-014"
+    "TH-HIS-004"
    ]
   },
   "V49-C003-3.5.1": {
@@ -96507,8 +96637,8 @@
   "V49-C005-5.3.3": {
    "add": [
     "TH-GOV-014",
-    "TH-NET-024",
     "TH-HIS-004",
+    "TH-NET-024",
     "TH-LANG-024"
    ]
   },
@@ -98775,7 +98905,7 @@
    "add": [
     "TH-REL-027",
     "TH-REL-024",
-    "TH-FS-010"
+    "TH-OS-023"
    ]
   },
   "V57-C004-4.1.2": {
@@ -99207,8 +99337,8 @@
     "TH-LAW-003",
     "TH-OS-040",
     "TH-LAW-001",
-    "TH-GOV-014",
     "TH-LANG-009",
+    "TH-GOV-014",
     "TH-REL-004"
    ]
   },
@@ -99375,6 +99505,805 @@
    "add": [
     "TH-LAW-012",
     "TH-LAW-008"
+   ]
+  },
+  "V60-C002-2.3.3": {
+   "add": [
+    "TH-LAW-023"
+   ]
+  },
+  "V60-C002-2.4.2": {
+   "add": [
+    "TH-OS-024"
+   ]
+  },
+  "V60-C002-2.7.1": {
+   "add": [
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C003-3.1.1": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-BIZ-014"
+   ]
+  },
+  "V60-C003-3.1.2": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-LANG-036",
+    "TH-GOV-014",
+    "TH-HW-036"
+   ]
+  },
+  "V60-C003-3.1.3": {
+   "add": [
+    "TH-BIZ-014"
+   ]
+  },
+  "V60-C003-3.1.4": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010"
+   ]
+  },
+  "V60-C003-3.1.5": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C003-3.2.1": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V60-C003-3.2.4": {
+   "add": [
+    "TH-REL-009"
+   ]
+  },
+  "V60-C003-3.7.1": {
+   "add": [
+    "TH-HW-010",
+    "TH-HIS-003",
+    "TH-GOV-014",
+    "TH-REL-009"
+   ]
+  },
+  "V60-C003-3.7.2": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-HW-036",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C003-3.7.5": {
+   "add": [
+    "TH-NET-025"
+   ]
+  },
+  "V60-C004-4.3.1": {
+   "add": [
+    "TH-BIZ-008"
+   ]
+  },
+  "V60-C004-4.3.4": {
+   "add": [
+    "TH-HW-036",
+    "TH-HIS-004",
+    "TH-HW-020"
+   ]
+  },
+  "V60-C004-4.5.1": {
+   "add": [
+    "TH-REL-001",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C004-4.5.2": {
+   "add": [
+    "TH-REL-009"
+   ]
+  },
+  "V60-C004-4.5.3": {
+   "add": [
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C004-4.5.5": {
+   "add": [
+    "TH-GOV-006"
+   ]
+  },
+  "V60-C005-5.1.1": {
+   "add": [
+    "TH-OS-028",
+    "TH-NET-007",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C005-5.1.2": {
+   "add": [
+    "TH-OS-030",
+    "TH-NET-016",
+    "TH-VM-001"
+   ]
+  },
+  "V60-C005-5.1.4": {
+   "add": [
+    "TH-OS-014",
+    "TH-HW-013"
+   ]
+  },
+  "V60-C005-5.3.1": {
+   "add": [
+    "TH-HIS-046",
+    "TH-HW-036"
+   ]
+  },
+  "V60-C005-5.3.3": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C005-5.3.4": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C005-5.3.5": {
+   "add": [
+    "TH-BIZ-008"
+   ]
+  },
+  "V60-C005-5.4.5": {
+   "add": [
+    "TH-REL-009"
+   ]
+  },
+  "V60-C005-5.5.4": {
+   "add": [
+    "TH-NET-009"
+   ]
+  },
+  "V60-C005-5.6.1": {
+   "add": [
+    "TH-NET-038",
+    "TH-BIZ-008"
+   ]
+  },
+  "V60-C005-5.7.4": {
+   "add": [
+    "TH-REL-015"
+   ]
+  },
+  "V60-C005-5.8.2": {
+   "add": [
+    "TH-LANG-022"
+   ]
+  },
+  "V60-C005-5.8.3": {
+   "add": [
+    "TH-LAW-008",
+    "TH-GOV-015",
+    "TH-HIS-046"
+   ]
+  },
+  "V60-C005-5.8.4": {
+   "add": [
+    "TH-REL-009",
+    "TH-REL-001"
+   ]
+  },
+  "V60-C006-6.2.4": {
+   "add": [
+    "TH-LAW-023"
+   ]
+  },
+  "V60-C006-6.4.2": {
+   "add": [
+    "TH-HIS-046"
+   ]
+  },
+  "V60-C006-6.6.3": {
+   "add": [
+    "TH-LANG-026",
+    "TH-VM-033",
+    "TH-HW-036",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C006-6.6.4": {
+   "add": [
+    "TH-SEC-006"
+   ]
+  },
+  "V60-C006-6.7.5": {
+   "add": [
+    "TH-REL-001"
+   ]
+  },
+  "V60-C007-7.1.1": {
+   "add": [
+    "TH-FS-031",
+    "TH-LAW-002",
+    "TH-LANG-025",
+    "TH-GOV-014",
+    "TH-HIS-001"
+   ]
+  },
+  "V60-C007-7.2.1": {
+   "add": [
+    "TH-NET-025",
+    "TH-GOV-015",
+    "TH-BIZ-008",
+    "TH-REL-007",
+    "TH-HIS-046"
+   ]
+  },
+  "V60-C007-7.2.2": {
+   "add": [
+    "TH-REL-015"
+   ]
+  },
+  "V60-C007-7.2.5": {
+   "add": [
+    "TH-GOV-006",
+    "TH-REL-037",
+    "TH-REL-001"
+   ]
+  },
+  "V60-C007-7.3.1": {
+   "add": [
+    "TH-FS-031",
+    "TH-HIS-003",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C007-7.3.2": {
+   "add": [
+    "TH-LANG-025",
+    "TH-HIS-003",
+    "TH-GOV-014",
+    "TH-FS-031"
+   ]
+  },
+  "V60-C007-7.3.3": {
+   "add": [
+    "TH-HIS-003",
+    "TH-NET-025",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C007-7.3.4": {
+   "add": [
+    "TH-LANG-025",
+    "TH-HIS-003",
+    "TH-FS-031",
+    "TH-OS-025"
+   ]
+  },
+  "V60-C007-7.3.5": {
+   "add": [
+    "TH-VM-014",
+    "TH-HIS-003",
+    "TH-FS-031",
+    "TH-LANG-025",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C007-7.5.4": {
+   "add": [
+    "TH-SEC-011"
+   ]
+  },
+  "V60-C007-7.6.1": {
+   "add": [
+    "TH-GOV-006"
+   ]
+  },
+  "V60-C007-7.6.2": {
+   "add": [
+    "TH-REL-001"
+   ]
+  },
+  "V60-C007-7.6.3": {
+   "add": [
+    "TH-SEC-006"
+   ]
+  },
+  "V60-C008-8.8.1": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V60-C008-8.8.2": {
+   "add": [
+    "TH-FS-036"
+   ]
+  },
+  "V60-C008-8.8.3": {
+   "add": [
+    "TH-BIZ-019"
+   ]
+  },
+  "V60-C009-9.1.1": {
+   "add": [
+    "TH-NET-035"
+   ]
+  },
+  "V60-C009-9.1.3": {
+   "add": [
+    "TH-SEC-011"
+   ]
+  },
+  "V60-C009-9.1.5": {
+   "add": [
+    "TH-NET-035"
+   ]
+  },
+  "V60-C009-9.2.1": {
+   "add": [
+    "TH-LANG-017",
+    "TH-LAW-034",
+    "TH-HW-010",
+    "TH-LAW-001"
+   ]
+  },
+  "V60-C009-9.2.2": {
+   "add": [
+    "TH-VM-033",
+    "TH-LAW-013",
+    "TH-HW-010"
+   ]
+  },
+  "V60-C009-9.2.3": {
+   "add": [
+    "TH-HW-010",
+    "TH-LAW-013",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.2.4": {
+   "add": [
+    "TH-HW-010",
+    "TH-REL-015",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.3.2": {
+   "add": [
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.3.4": {
+   "add": [
+    "TH-REL-001",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.5.1": {
+   "add": [
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.5.2": {
+   "add": [
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.5.3": {
+   "add": [
+    "TH-REL-003",
+    "TH-REL-001",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.5.4": {
+   "add": [
+    "TH-REL-032",
+    "TH-REL-001",
+    "TH-REL-030",
+    "TH-GOV-006"
+   ]
+  },
+  "V60-C009-9.5.5": {
+   "add": [
+    "TH-HW-010",
+    "TH-LANG-025",
+    "TH-LANG-015",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C009-9.6.1": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.6.2": {
+   "add": [
+    "TH-SEC-011"
+   ]
+  },
+  "V60-C009-9.6.3": {
+   "add": [
+    "TH-SEC-008",
+    "TH-HW-026",
+    "TH-HIS-004",
+    "TH-SEC-006",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.6.4": {
+   "add": [
+    "TH-SEC-008",
+    "TH-SEC-006",
+    "TH-FS-007",
+    "TH-REL-001",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C009-9.6.5": {
+   "add": [
+    "TH-REL-037",
+    "TH-REL-001"
+   ]
+  },
+  "V60-C009-9.7.1": {
+   "add": [
+    "TH-HW-010",
+    "TH-SEC-013",
+    "TH-REL-030",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.7.2": {
+   "add": [
+    "TH-REL-030",
+    "TH-HW-010",
+    "TH-VM-015",
+    "TH-NET-025",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C009-9.7.3": {
+   "add": [
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.7.4": {
+   "add": [
+    "TH-SEC-027",
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.7.5": {
+   "add": [
+    "TH-HW-010",
+    "TH-SEC-001",
+    "TH-VM-015",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.8.1": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-SEC-001",
+    "TH-LAW-003",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C009-9.8.2": {
+   "add": [
+    "TH-SEC-005"
+   ]
+  },
+  "V60-C010-10.1.1": {
+   "add": [
+    "TH-NET-012",
+    "TH-HIS-004",
+    "TH-REL-001",
+    "TH-GOV-014",
+    "TH-HW-010"
+   ]
+  },
+  "V60-C010-10.1.2": {
+   "add": [
+    "TH-VM-009",
+    "TH-OS-030",
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C010-10.1.3": {
+   "add": [
+    "TH-NET-032",
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-NET-012"
+   ]
+  },
+  "V60-C010-10.1.4": {
+   "add": [
+    "TH-NET-012",
+    "TH-HW-036",
+    "TH-HW-010",
+    "TH-GOV-014",
+    "TH-HIS-001"
+   ]
+  },
+  "V60-C010-10.1.5": {
+   "add": [
+    "TH-HW-010",
+    "TH-GOV-014",
+    "TH-HIS-001",
+    "TH-NET-001",
+    "TH-GOV-028"
+   ]
+  },
+  "V60-C010-10.3.1": {
+   "add": [
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C010-10.3.2": {
+   "add": [
+    "TH-REL-001"
+   ]
+  },
+  "V60-C010-10.3.4": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V60-C011-11.3.1": {
+   "add": [
+    "TH-GOV-026",
+    "TH-NET-013",
+    "TH-SEC-006",
+    "TH-HIS-004"
+   ]
+  },
+  "V60-C011-11.3.2": {
+   "add": [
+    "TH-GOV-026"
+   ]
+  },
+  "V60-C011-11.3.3": {
+   "add": [
+    "TH-HW-010"
+   ]
+  },
+  "V60-C011-11.3.4": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V60-C011-11.3.5": {
+   "add": [
+    "TH-GOV-026"
+   ]
+  },
+  "V60-C012-12.1.1": {
+   "add": [
+    "TH-HIS-001",
+    "TH-GOV-014",
+    "TH-REL-015",
+    "TH-HW-010",
+    "TH-HW-036"
+   ]
+  },
+  "V60-C012-12.1.2": {
+   "add": [
+    "TH-REL-010",
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-REL-003",
+    "TH-GOV-014",
+    "TH-HIS-001"
+   ]
+  },
+  "V60-C012-12.1.3": {
+   "add": [
+    "TH-REL-009",
+    "TH-HW-010",
+    "TH-NET-027",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C012-12.1.4": {
+   "add": [
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C012-12.1.5": {
+   "add": [
+    "TH-HW-010",
+    "TH-VM-009",
+    "TH-HIS-004",
+    "TH-OS-030",
+    "TH-GOV-014",
+    "TH-GOV-006"
+   ]
+  },
+  "V60-C012-12.2.1": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C012-12.2.2": {
+   "add": [
+    "TH-HW-010",
+    "TH-GOV-014",
+    "TH-HIS-001",
+    "TH-BIZ-014",
+    "TH-HW-028"
+   ]
+  },
+  "V60-C012-12.2.3": {
+   "add": [
+    "TH-REL-007",
+    "TH-HW-010",
+    "TH-REL-015"
+   ]
+  },
+  "V60-C012-12.2.5": {
+   "add": [
+    "TH-REL-030"
+   ]
+  },
+  "V60-C012-12.3.1": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-GOV-004",
+    "TH-HW-010",
+    "TH-SEC-013"
+   ]
+  },
+  "V60-C012-12.3.2": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-HW-010",
+    "TH-REL-021",
+    "TH-BIZ-029"
+   ]
+  },
+  "V60-C012-12.3.3": {
+   "add": [
+    "TH-FS-022",
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-HW-026",
+    "TH-HW-010"
+   ]
+  },
+  "V60-C012-12.3.4": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-VM-015",
+    "TH-HW-010",
+    "TH-LANG-017"
+   ]
+  },
+  "V60-C012-12.3.5": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-HW-010",
+    "TH-REL-027",
+    "TH-NET-025"
+   ]
+  },
+  "V60-C012-12.4.1": {
+   "add": [
+    "TH-REL-009",
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-HW-010"
+   ]
+  },
+  "V60-C012-12.4.2": {
+   "add": [
+    "TH-NET-032",
+    "TH-HW-010",
+    "TH-HIS-004",
+    "TH-GOV-014"
+   ]
+  },
+  "V60-C012-12.4.3": {
+   "add": [
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-REL-009"
+   ]
+  },
+  "V60-C012-12.4.4": {
+   "add": [
+    "TH-HW-036",
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-LANG-010",
+    "TH-REL-015"
+   ]
+  },
+  "V60-C012-12.4.5": {
+   "add": [
+    "TH-LANG-006",
+    "TH-HIS-004",
+    "TH-GOV-014",
+    "TH-SEC-013"
+   ]
+  },
+  "V60-C012-12.6.1": {
+   "add": [
+    "TH-REL-026",
+    "TH-NET-008"
+   ]
+  },
+  "V60-C012-12.6.2": {
+   "add": [
+    "TH-LANG-014"
+   ]
+  },
+  "V60-C012-12.6.4": {
+   "add": [
+    "TH-REL-009"
+   ]
+  },
+  "V60-C013-13.1.1": {
+   "add": [
+    "TH-HIS-046"
+   ]
+  },
+  "V60-C013-13.1.4": {
+   "add": [
+    "TH-HIS-001",
+    "TH-HW-017"
+   ]
+  },
+  "V60-C013-13.5.5": {
+   "add": [
+    "TH-LAW-015",
+    "TH-REL-001",
+    "TH-BIZ-008",
+    "TH-REL-037"
    ]
   },
   "V61-C002-2.1.5": {
@@ -100772,7 +101701,7 @@
   "V64-C006-6.1.5": {
    "add": [
     "TH-NET-011",
-    "TH-BIZ-019"
+    "TH-HW-015"
    ]
   },
   "V64-C006-6.2.1": {
@@ -101008,8 +101937,8 @@
   "V66-C002-2.8.1": {
    "add": [
     "TH-HW-010",
-    "TH-NET-002",
     "TH-HIS-004",
+    "TH-NET-002",
     "TH-GOV-014",
     "TH-NET-030"
    ]
@@ -101053,7 +101982,7 @@
     "TH-LANG-016",
     "TH-GOV-014",
     "TH-NET-030",
-    "TH-NET-022"
+    "TH-NET-027"
    ]
   },
   "V66-C002-2.13.1": {
@@ -101075,11 +102004,6 @@
    "add": [
     "TH-HIS-003",
     "TH-GOV-014"
-   ]
-  },
-  "V66-C007-7.3.3": {
-   "add": [
-    "TH-HIS-038"
    ]
   },
   "V67-C001-1.3.3": {
@@ -101306,8 +102230,8 @@
   },
   "V68-C005-5.3.4": {
    "add": [
-    "TH-NET-026",
-    "TH-HW-036"
+    "TH-HW-036",
+    "TH-NET-026"
    ]
   },
   "V68-C005-5.3.5": {
@@ -101512,8 +102436,8 @@
   "V68-C009-9.2.1": {
    "add": [
     "TH-VM-020",
-    "TH-OS-023",
     "TH-BIZ-027",
+    "TH-OS-023",
     "TH-SEC-003",
     "TH-BIZ-033"
    ]
@@ -102447,11 +103371,6 @@
     "TH-HIS-004"
    ]
   },
-  "V70-C004-4.4.2": {
-   "add": [
-    "TH-OS-030"
-   ]
-  },
   "V70-C004-4.4.3": {
    "add": [
     "TH-HW-024"
@@ -102459,6 +103378,7 @@
   },
   "V70-C004-4.4.4": {
    "add": [
+    "TH-GOV-014",
     "TH-OS-017",
     "TH-HIS-004"
    ]
@@ -102466,6 +103386,131 @@
   "V70-C005-5.6.3": {
    "projects": [
     "openbsd"
+   ]
+  },
+  "V73-C001-1.3.3": {
+   "add": [
+    "TH-HIS-018"
+   ]
+  },
+  "V73-C002-2.1.2": {
+   "add": [
+    "TH-HIS-017",
+    "TH-BIZ-015",
+    "TH-HIS-046"
+   ]
+  },
+  "V73-C002-2.1.3": {
+   "add": [
+    "TH-HIS-024",
+    "TH-OS-009"
+   ]
+  },
+  "V73-C002-2.1.4": {
+   "add": [
+    "TH-SEC-032",
+    "TH-NET-027"
+   ]
+  },
+  "V73-C002-2.4.2": {
+   "add": [
+    "TH-GOV-005"
+   ]
+  },
+  "V73-C002-2.4.3": {
+   "add": [
+    "TH-NET-033",
+    "TH-HIS-003",
+    "TH-HW-010",
+    "TH-GOV-026"
+   ]
+  },
+  "V73-C002-2.4.4": {
+   "add": [
+    "TH-GOV-019",
+    "TH-GOV-035",
+    "TH-HIS-007",
+    "TH-GOV-006"
+   ]
+  },
+  "V73-C003-3.1.2": {
+   "add": [
+    "TH-GOV-009",
+    "TH-HIS-004"
+   ]
+  },
+  "V73-C003-3.1.4": {
+   "add": [
+    "TH-LAW-021"
+   ]
+  },
+  "V73-C003-3.2.3": {
+   "add": [
+    "TH-GOV-004"
+   ]
+  },
+  "V73-C003-3.3.1": {
+   "add": [
+    "TH-LAW-010",
+    "TH-GOV-014",
+    "TH-GOV-026",
+    "TH-OS-001",
+    "TH-LAW-021",
+    "TH-LAW-003"
+   ]
+  },
+  "V73-C003-3.10.5": {
+   "add": [
+    "TH-HW-036"
+   ]
+  },
+  "V73-C003-3.11.3": {
+   "add": [
+    "TH-SEC-037",
+    "TH-LANG-022"
+   ]
+  },
+  "V73-C004-4.4.2": {
+   "add": [
+    "TH-REL-003",
+    "TH-LANG-021",
+    "TH-REL-001"
+   ]
+  },
+  "V73-C004-4.4.3": {
+   "add": [
+    "TH-HW-010"
+   ]
+  },
+  "V73-C004-4.4.4": {
+   "add": [
+    "TH-HW-002"
+   ]
+  },
+  "V73-C004-4.5.1": {
+   "add": [
+    "TH-LAW-010"
+   ]
+  },
+  "V73-C004-4.6.1": {
+   "add": [
+    "TH-HIS-004"
+   ]
+  },
+  "V73-C004-4.7.1": {
+   "add": [
+    "TH-LAW-015"
+   ]
+  },
+  "V73-C004-4.7.4": {
+   "add": [
+    "TH-REL-037",
+    "TH-REL-001"
+   ]
+  },
+  "V73-C005-5.1.5": {
+   "add": [
+    "TH-HIS-004"
    ]
   },
   "V75-C002-2.1.1": {
