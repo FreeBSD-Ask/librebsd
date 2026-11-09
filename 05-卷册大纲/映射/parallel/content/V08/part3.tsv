@@ -92,7 +92,7 @@ usenet_mail.messages.9881	V08.6.6.4	关键字与语义的增补	归入	位域提
 usenet_mail.messages.9984	V08.6.6.4	关键字与语义的增补	归入	字符型初始化矩阵速查
 usenet_mail.messages.10131	V08.6.6.4	关键字与语义的增补	归入	无符号算术模性判例
 usenet_mail.messages.10163	V08.6.6.4	关键字与语义的增补	归入	#if 常量求值规则
-usenet_mail.messages.9554	V08.6.6.4	关键字与语义的增补	归入	三字符组发明者坦承
+usenet_mail.messages.9554	V08.6.6.1	标准化进程的启动	归入	补遗：Gwyn 坦承三字符组系 X3J11 自创，委员会造词的直接证词
 usenet_mail.messages.9587	V08.6.6.4	关键字与语义的增补	归入	十六进制转义多字节之问
 usenet_mail.messages.9024	V08.6.6.4	关键字与语义的增补	归入	CDA 带量纲 C 设计稿
 usenet_mail.messages.9075	V08.6.6.4	关键字与语义的增补	归入	float 静默改写废除之辨
@@ -131,7 +131,7 @@ usenet_mail.messages.11024	V08.6.6.4	关键字与语义的增补	归入	行长�
 usenet_mail.messages.11025	V08.6.6.4	关键字与语义的增补	归入	for 空条件跳转之辨
 usenet_mail.messages.11123			辑存	Mindcraft 验证器广告
 usenet_mail.messages.10789	V08.6.6.4	关键字与语义的增补	归入	strtod 铁路图简化之辨
-usenet_mail.messages.10857	V08.6.6.4	关键字与语义的增补	归入	ANSI C 保留名总表
+usenet_mail.messages.10857	V08.6.6.1	标准化进程的启动	归入	补遗：Spencer 开列保留名总表，标准命名空间的划定本身
 usenet_mail.messages.10459	V08.6.6.2	委员会运作的周期	归入	top type 评审原件三句
 usenet_mail.messages.10519	V08.6.6.2	委员会运作的周期	归入	CLOCKS_PER_SEC 命名事故
 usenet_mail.messages.10537	V08.6.6.2	委员会运作的周期	归入	原型参数名与头文件分界
@@ -146,15 +146,15 @@ usenet_mail.messages.9548	V08.6.6.2	委员会运作的周期	归入	ANSI 与 ISO
 usenet_mail.messages.9590	V08.6.6.2	委员会运作的周期	归入	丹麦第二轮申辩
 usenet_mail.messages.9614	V08.6.6.2	委员会运作的周期	归入	西雅图 ISO 会议投票
 usenet_mail.messages.9043	V08.6.6.4	关键字与语义的增补	归入	预定义宏命名规则
-usenet_mail.messages.9124	V08.6.6.4	关键字与语义的增补	归入	STDC 可靠性之辨
+usenet_mail.messages.9124	V08.6.6.1	标准化进程的启动	归入	补遗：Gwyn 论 __STDC__ 为布尔属性、测试须百分百可靠，符合性判准
 usenet_mail.messages.9212	V08.6.6.2	委员会运作的周期	归入	POSIX 符号长度条款
-usenet_mail.messages.9257	V08.6.6.2	委员会运作的周期	归入	公众评审意见 P04 原文
+usenet_mail.messages.9257	V08.6.6.1	标准化进程的启动	归入	补遗：Butterworth 公布二轮评审意见 P04 与委员会敷衍答复，公众评审环节实录
 usenet_mail.messages.9277			删除	空块
-usenet_mail.messages.8587	V08.6.6.2	委员会运作的周期	归入	snprintf 三分之二多数
+usenet_mail.messages.8587	V08.6.6.1	标准化进程的启动	归入	补遗：snprintf 提案未达三分之二多数遭否决，X3J11 表决机制的当事人记述
 usenet_mail.messages.8592			移出	新闻组版务记→V06
 usenet_mail.messages.8640	V08.6.6.2	委员会运作的周期	归入	__STDP__ 提案分类否决
-usenet_mail.messages.8644	V08.6.6.2	委员会运作的周期	归入	冻结纪律两月评审
-usenet_mail.messages.8702	V08.6.6.2	委员会运作的周期	归入	定稿纪律与截断初始化
+usenet_mail.messages.8644	V08.6.6.1	标准化进程的启动	归入	补遗：依 ANSI 规则实质变更须再经两月公开评审，冻结纪律的制度根源
+usenet_mail.messages.8702	V08.6.6.1	标准化进程的启动	归入	补遗：Gwyn 申明定稿纪律，非编辑性变更须证明抵偿延期
 usenet_mail.messages.8742	V08.6.6.2	委员会运作的周期	归入	pp-number 意见原始答复
 usenet_mail.messages.12984	V08.6.6.4	关键字与语义的增补	归入	枚举尾逗号与令名空间
 usenet_mail.messages.12985	V08.6.6.2	委员会运作的周期	归入	should 软性措辞之辨
@@ -176,7 +176,7 @@ cross_indexes.duckdb.concept_history			移出	概念史条目→V08 概念面
 usenet_mail.messages.12710	V08.6.4.4	方言分歧的治理尝试	归入	scanf 0x 前缀跨系统分歧
 usenet_mail.messages.12725	V08.6.4.3	交叉移植的实践积累	归入	CDC 环位指针移植障碍
 usenet_mail.messages.12758			辑存	Zortech 移植汇编码边缘
-usenet_mail.messages.12763	V08.6.6.4	关键字与语义的增补	归入	HP 原型不完整结构告警
+usenet_mail.messages.12763	V08.6.6.3	原型声明的规范引入	归入	补遗：HP 编译器对原型内不完整结构体告警，容许诊断的边界
 usenet_mail.messages.12804	V08.6.6.4	关键字与语义的增补	归入	零字节 malloc 实现定义
 usenet_mail.messages.12846	V08.6.6.4	关键字与语义的增补	归入	EBCDIC 三联符实践
 usenet_mail.messages.12920	V08.11.6.3	保守主义的工程理由	归入	左值转换禁令之斥
@@ -194,14 +194,14 @@ usenet_mail.messages.11177	V08.6.6.4	关键字与语义的增补	归入	结构�
 usenet_mail.messages.11215			删除	Fortran 8x 零值闲谈
 usenet_mail.messages.11237	V08.6.6.4	关键字与语义的增补	归入	IEEE 754 比较语义纠正
 usenet_mail.messages.11281	V08.6.6.4	关键字与语义的增补	归入	只读字符串段 sscanf 崩溃
-usenet_mail.messages.10751	V08.6.6.2	委员会运作的周期	归入	STDC 之争各半对
+usenet_mail.messages.10751	V08.6.6.1	标准化进程的启动	归入	补遗：Spencer 判 __STDC__ 之争系程序拖延而非理性，标准内容早已铸铁
 usenet_mail.messages.10767	V08.6.6.4	关键字与语义的增补	归入	MSC 零值动因假说
 usenet_mail.messages.10184	V08.6.6.4	关键字与语义的增补	归入	别名与 volatile 之辨
 usenet_mail.messages.10234	V08.6.6.4	关键字与语义的增补	归入	volatile 与别名两病灶
 usenet_mail.messages.10243	V08.6.6.4	关键字与语义的增补	归入	AT&T bsearch 越界实败
 usenet_mail.messages.10285	V08.6.6.4	关键字与语义的增补	归入	S-1 标记数据机器证
 usenet_mail.messages.10375	V08.6.6.4	关键字与语义的增补	归入	Multics 截页栈悬垂指针
-usenet_mail.messages.10416	V08.6.6.4	关键字与语义的增补	归入	execv 原型 const 困局
+usenet_mail.messages.10416	V08.6.6.3	原型声明的规范引入	归入	补遗：Gwyn 解 execv 原型 const 困局，限定符第一层豁免细则
 usenet_mail.messages.10445	V08.6.4.2	编译器与系统接口的咬合	归入	结构返回先复制之疑
 usenet_mail.messages.9805	V08.6.6.4	关键字与语义的增补	归入	realloc 旧指针分段架构
 usenet_mail.messages.9880	V08.1.3.1	signal 的异常事件机制	归入	信号处理器 longjmp 困境
@@ -209,17 +209,17 @@ usenet_mail.messages.9888	V08.6.6.4	关键字与语义的增补	归入	calloc �
 usenet_mail.messages.9947	V08.6.6.4	关键字与语义的增补	归入	calloc 驳论
 usenet_mail.messages.9962	V08.1.3.1	signal 的异常事件机制	归入	sig_atomic_t 惯用法首授
 usenet_mail.messages.10020	V08.6.6.4	关键字与语义的增补	归入	位域序 VAX Tahoe 实测
-usenet_mail.messages.9416	V08.6.6.4	关键字与语义的增补	归入	realloc 空指针收编缘由
+usenet_mail.messages.9416	V08.6.6.1	标准化进程的启动	归入	补遗：realloc 空指针语义入标系前瞻性收编，当事人自述其立法意图
 usenet_mail.messages.9445	V08.6.6.4	关键字与语义的增补	归入	realloc 草案条文
 usenet_mail.messages.9461	V08.6.6.4	关键字与语义的增补	归入	realloc 零尺寸对偶面
 usenet_mail.messages.9490	V08.6.6.4	关键字与语义的增补	归入	realloc 空指针源流考
 usenet_mail.messages.8987			删除	空块
 usenet_mail.messages.9025	V08.6.6.4	关键字与语义的增补	归入	time_t 2038 与精度
-usenet_mail.messages.9100	V08.6.6.2	委员会运作的周期	归入	Apollo STDC 半兼容
-usenet_mail.messages.9231	V08.6.6.2	委员会运作的周期	归入	SVR4 STDC 置零
+usenet_mail.messages.9100	V08.6.6.1	标准化进程的启动	归入	补遗：Apollo 定义 __STDC__ 却只支持原型，符合性声明的失真个案
+usenet_mail.messages.9231	V08.6.6.1	标准化进程的启动	归入	补遗：AT&T SysV R4.0 拟将 __STDC__ 置零，标准符号被厂商挪用的现场
 usenet_mail.messages.8603	V08.6.6.4	关键字与语义的增补	归入	volatile 必要性示范
 usenet_mail.messages.8827	V08.6.6.4	关键字与语义的增补	归入	Ritchie 字符串 const 评断
-usenet_mail.messages.8882	V08.6.6.4	关键字与语义的增补	归入	块作用域声明禁令抗议
+usenet_mail.messages.8882	V08.6.6.3	原型声明的规范引入	归入	补遗：Wells 抗议块作用域函数声明禁令，Rationale 措辞之辨
 usenet_mail.messages.125261	V08.6.4.2	编译器与系统接口的咬合	归入	PDP-11 profiling 32K 失效
 usenet_mail.messages.125263	V08.6.4.2	编译器与系统接口的咬合	归入	profiling 责任之辨
 usenet_mail.messages.125294	V08.6.6.4	关键字与语义的增补	归入	int 与 unsigned 混合除
@@ -273,7 +273,7 @@ usenet_mail.messages.48712	V08.4.6.1	共享库的动机与代价	归入	mkshlib 
 usenet_mail.messages.48726	V08.2.2.2	参数布局与传址方式	归入	栈帧非必需之辨
 usenet_mail.messages.48739	V08.6.5.2	语言、库与生态的成型	归入	fgets BUFSIZ 行为
 usenet_mail.messages.48743	V08.4.4.4	解释器机制的先声	归入	ENOEXEC 脚本执行机制
-usenet_mail.messages.48745	V08.6.6.4	关键字与语义的增补	归入	函数指针转换写法
+usenet_mail.messages.48745	V08.6.6.3	原型声明的规范引入	归入	补遗：函数指针转换的正确写法与 ANSI 原型下几乎不必强转
 usenet_mail.messages.48764	V08.6.5.2	语言、库与生态的成型	归入	localtime 静态数据提醒
 usenet_mail.messages.48771	V08.6.4.3	交叉移植的实践积累	归入	Sun 68K PCC 对齐沿革
 usenet_mail.messages.48773			辑存	多模块拆分建议
@@ -413,7 +413,7 @@ usenet_mail.messages.32778	V08.6.6.4	关键字与语义的增补	归入	可写�
 usenet_mail.messages.32783			辑存	AKCL 编译失败
 usenet_mail.messages.32933			辑存	汇编器报错不一致
 usenet_mail.messages.32971			辑存	prof 索引截断推测
-usenet_mail.messages.33057	V08.6.6.4	关键字与语义的增补	归入	signal 声明解读
+usenet_mail.messages.33057	V08.6.6.3	原型声明的规范引入	归入	补遗：signal 声明按字面为返回函数指针的函数，原型形状之辨
 usenet_mail.messages.79068	V08.11.4.2	共同体的接纳与抵制	归入	Ultrix AT&T C++ 征询
 usenet_mail.messages.79072	V08.6.6.4	关键字与语义的增补	归入	函数指针调用写法
 usenet_mail.messages.79077	V08.6.4.4	方言分歧的治理尝试	归入	Ultrix vcc 拒函数指针

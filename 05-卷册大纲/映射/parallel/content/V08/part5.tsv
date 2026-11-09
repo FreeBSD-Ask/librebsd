@@ -738,7 +738,7 @@ usenet_mail.messages.59677	V08.8.9.4	命名歧异的比对方法	归入	grep 之
 usenet_mail.messages.59729			辑存	hosts.lpd 版本源流
 usenet_mail.messages.59744	V08.8.9.2	版本断代的证据层次	归入	ls -c 系统无此值
 usenet_mail.messages.59808			辑存	sccs 移植符号缺失
-usenet_mail.messages.59200	V08.8.4.4	三工具的性能取舍	归入	sort 字段定界之限
+usenet_mail.messages.59200	V08.8.4.3	模式扫描的字段处理	归入	补遗：Unix sort 须字段定界而 IBM/MPE 可整列排序，字段处理的工具差异
 usenet_mail.messages.59216	V08.8.5.5	环境面的可移植隐患	归入	ls -d 列子目录法
 usenet_mail.messages.59248			辑存	hosts.lpd 机制问
 usenet_mail.messages.59256	V08.8.4.4	三工具的性能取舍	归入	spell 词典算法问
@@ -766,7 +766,7 @@ usenet_mail.messages.58701			辑存	dump 性能问
 usenet_mail.messages.58706	V08.8.4.2	流编辑的两遍扫描	归入	sed 分隔符规避斜杠
 usenet_mail.messages.58756	V08.8.4.3	模式扫描的字段处理	归入	GNU AWK 推荐
 usenet_mail.messages.58758			辑存	make FRC 技巧
-usenet_mail.messages.58790	V08.6.6.4	关键字与语义的增补	归入	下划线宏命名边界
+usenet_mail.messages.58790	V08.6.6.1	标准化进程的启动	归入	补遗：标准 C 只许标准宏与下划线实现宏，应用名空间的保护条款
 usenet_mail.messages.58816	V08.8.4.2	流编辑的两遍扫描	归入	sed 处理 CRLF 写法
 usenet_mail.messages.58817	V08.8.4.4	三工具的性能取舍	归入	fmt 缓冲上限
 usenet_mail.messages.58847	V08.8.4.4	三工具的性能取舍	归入	tail 32K 缓冲源

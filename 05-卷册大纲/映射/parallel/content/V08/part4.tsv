@@ -97,11 +97,11 @@ usenet_mail.messages.29080	V08.7.2.3	目录权限的执行位含义	归入	来�
 usenet_mail.messages.29084	V08.7.2.3	目录权限的执行位含义	归入	删文件承目录权限
 usenet_mail.messages.125470	V08.7.3.2	setuid 位的机制与风险	归入	Xenix root setuid 失效
 usenet_mail.messages.125498	V08.7.3.2	setuid 位的机制与风险	归入	保存组标识缺位
-usenet_mail.messages.125629	V08.7.3.2	setuid 位的机制与风险	归入	脚本本不该生效
-usenet_mail.messages.125632	V08.7.3.2	setuid 位的机制与风险	归入	脚本不生效自编 C
+usenet_mail.messages.125629	V08.7.3.5	特权边界的争论记录	归入	补遗：Gwyn 称给脚本设用户标识位本就不该生效，否则即安全漏洞
+usenet_mail.messages.125632	V08.7.3.5	特权边界的争论记录	归入	补遗：Bamford 称该设置在所历各机皆不生效，实践面的否证
 usenet_mail.messages.125640	V08.7.3.2	setuid 位的机制与风险	归入	脚本生效混合内核
 usenet_mail.messages.125642	V08.7.3.2	setuid 位的机制与风险	归入	两型机不生效
-usenet_mail.messages.125643	V08.7.3.2	setuid 位的机制与风险	归入	脚本与脚本本身之辨
+usenet_mail.messages.125643	V08.7.3.5	特权边界的争论记录	归入	补遗：Yao 称该位历来无效因被执行者是程序脚本，机制层解释
 usenet_mail.messages.125644	V08.7.3.2	setuid 位的机制与风险	归入	ATT SysV 脚本不生效
 usenet_mail.messages.125651	V08.7.3.2	setuid 位的机制与风险	归入	Masscomp 受限 shell
 usenet_mail.messages.125652	V08.7.3.2	setuid 位的机制与风险	归入	argv0 设计缺陷
@@ -194,7 +194,7 @@ usenet_mail.messages.118898			辑存	pwd setuid 纠正
 usenet_mail.messages.118911			删除	空块
 usenet_mail.messages.118915	V08.7.5.1	根目录切换的隔离设想	归入	匿名 ftp 式 chroot
 usenet_mail.messages.118919	V08.4.5.3	堆分配的库函数层	归入	valloc 与 free
-usenet_mail.messages.118920	V08.7.3.2	setuid 位的机制与风险	归入	ksh 特权脚本代置
+usenet_mail.messages.118920	V08.7.3.5	特权边界的争论记录	归入	补遗：KornShell 一书所称特权脚本实指带 setuid 位的脚本，概念澄清
 usenet_mail.messages.118942	V08.4.5.3	堆分配的库函数层	归入	valloc 权宜凑合
 usenet_mail.messages.118943	V08.7.5.1	根目录切换的隔离设想	归入	chroot 陷阱清单
 usenet_mail.messages.118978	V08.7.4.2	影子文件的演进背景	归入	口令期编码进 salt
@@ -217,7 +217,7 @@ usenet_mail.messages.118569	V08.7.2.4	权限检查的判定顺序	归入	access 
 usenet_mail.messages.118668	V08.7.5.1	根目录切换的隔离设想	归入	chroot SMTP NNTP
 usenet_mail.messages.118691	V08.7.5.2	设备文件的权限管控	归入	ioctl 权限执行位
 usenet_mail.messages.118717	V08.7.5.1	根目录切换的隔离设想	归入	chroot spool 不可达
-usenet_mail.messages.118718	V08.7.3.2	setuid 位的机制与风险	归入	ksh 无读权限执行
+usenet_mail.messages.118718	V08.7.3.5	特权边界的争论记录	归入	补遗：ksh 允许在用户无读权限时执行脚本及其安全含义，边界争议
 usenet_mail.messages.118719	V08.9.5.2	网络文件系统的语义边界	归入	NFS 删文件与 Kerberos
 usenet_mail.messages.118722			辑存	pwd setuid 厂商差
 usenet_mail.messages.118746	V08.7.6.3	审计能力的缺席状况	归入	击键记录之辩
