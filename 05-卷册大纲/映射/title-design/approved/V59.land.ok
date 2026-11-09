@@ -20,8 +20,8 @@ blocks_moved=1092
 blocks_compiled=0
 blocks_deleted=110
 gate=PASS：L1–L19 19/19（outline＝tree＝summary＝17,421 三向双射）；第三十九件 45 项 FAIL 0；第四十一件 exit 0（披露属 V45／V55 他线）；第三十八件 D1／D2 PASS＋V059 land.ok 由本件补齐
-gate2=第二十八件 0 违规；第二十四件直角引号 0；装配 --check 无漂移；基线 --check 零漂移（76 卷 544 章 3,954 节 17,421 小节）
-gate3=卷级回归 V59 5/6：V1 渲染 425/425、题名 mismatch 0、V2 TOC 命中、V4 a11y 齐备、JS 错误 0；V3 深链红系页内 hash 再导航的平滑滚动落点漂移（同批 V37／V62／V68／V75 同红；fresh 深链 top=24、scroll-behavior:auto 对照六卷 top≈24 全合格），非本卷内容缺陷
+gate2=第二十八件 0 违规；第二十四件直角引号 0；装配 --check 无漂移；基线 --check 零漂移（76 卷 544 章 3,954 节 17,421 小节；本批收口时点，其后并行各线续落 V60／V65／V70 至 18,399，以 doc-metrics 为准）
+gate3=卷级回归 V59 5/6：V1 渲染 425/425、题名 mismatch 0、V2 TOC 命中、V4 a11y 齐备、JS 错误 0；V3 深链红系页内 hash 再导航的平滑滚动落点漂移（同批 V37／V62／V75 同红、V68 因检查时点落在动画中途偶过而其最终落点同样漂移；fresh 深链 top=24、scroll-behavior:auto 对照六卷 top≈23–25 全合格），非本卷内容缺陷
 note=料域＝1,868 块（C1／C2 两册）：归入 93／挂账 573／移出 1,092／删除 110；425 题落树（filled 40／skeleton 385，有料率 9.4%）
 approved_by=ykla
 approved_at=2026-11-09
