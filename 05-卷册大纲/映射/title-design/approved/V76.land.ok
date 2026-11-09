@@ -1,0 +1,27 @@
+kind=landing
+vol=V76
+title_count=196
+ledger_sha256=fd031a0666a72ab02b5043b5b25808f589b52bf7dacc8c24adc456ba578cad23
+scope=全 196 题（91 filled＋105 空骨架）；ykla 2026-11-06 全量批准模式
+design_card=—
+design_card_sha256=—
+ledger_main=design/V76-C1.tsv
+ledger_main_sha256=07104a0ce250618a96a394a65107ea00d44d85602352bc056685e0d6d359a9c5
+ledger_supp=design/V76-C2.tsv（1 册）
+ledger_supp_sha256=e50498c212d491210ea7d215c95ba9b23c2d8d41ae3bdbe94b1dad725f4e248f
+design_index=design/V76.tsv
+design_index_sha256=97605004fba4e87e592ebf7af8c86f2adc15341a394b80d6ea890a48e8ee66eb
+fragments=design/fragments/V76.tsv
+fragments_sha256=4d470236dc12faf6a03306184428562c2752c0c50bbe5835f2d396f5ffe0aea7
+blocks_total=2933
+blocks_landed=375
+blocks_surplus=149
+blocks_moved=35
+blocks_compiled=286
+blocks_deleted=2088
+gate=PASS：L1–L19 19/19（outline＝tree＝summary＝18,974 三向双射，ghost 0／orphan 0）；第三十九件 45 项 FAIL 0；第四十一件 PASS；第三十八件 D1／D2 PASS＋V076 land.ok 由本件补齐
+gate2=第二十八件 0 违规；第二十四件直角引号 0；装配无漂移；基线零漂移（76 卷 544 章 3,954 节 18,974 小节）；第三十四件本卷 5 处 REVIEW-ANNOT 单边开锚已整段剔除
+gate3=卷级回归 V76 6/6 PASS（V1 渲染 196/196、题名 mismatch 0、V2 TOC、V3 深链 top=24、V4 a11y、JS 错误 0）
+note=料域＝旧树第 20 卷 395–405 章（与新卷五章同构），五片 2,933 块（exclude_landed 块级防双落）。语料事实：2,088 块（71%）为单行空壳（中位 53 字节，仅含 ROW_MINE 注释、无正文）按删除处置；286 块为 `**史观**` 泛论块按辑存合组；叙述层元块（页面级逐封索引说明）35 块移出。强主题闸 22 组（假补丁／内存安全／峰会／破损实录／stable／CoC／regzbot／AI／版面／IO-APIC／DRM／tracepoint／缺陷跟踪／支持小组／printk／TAB／测试／git／malloc／系统调用／ZFS／BSD 承袭）定节，未命中时按旧章同域分 ≥0.5 定址；处置归入 375／挂账 149／移出 35／辑存 286／删除 2,088（守恒 2,933）。91 题有料（46.4%）／105 corpus_gap
+approved_by=ykla
+approved_at=2026-11-09

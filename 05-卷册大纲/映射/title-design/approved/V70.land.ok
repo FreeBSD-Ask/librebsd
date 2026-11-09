@@ -21,7 +21,7 @@ blocks_compiled=76
 blocks_deleted=86
 gate=PASS：L1–L19 19/19（outline＝tree＝summary＝17,870 三向双射，ghost 0／orphan 0）；第三十九件 45 项 FAIL 0；第四十一件 PASS（披露 3 处属 V45／V55 他线）；第三十八件 D1／D2 PASS，L 项由本件补齐 V070（余缺 V065 他线在途）
 gate2=第二十八件 0 违规；第二十四件直角引号 0（RULES 两处已改弯引号）；装配 --check 无漂移；基线 --check 零漂移（76 卷 544 章 3,954 节 17,870 小节）
-gate3=卷级回归 V70 5/6：V1 渲染 171/171、题名 mismatch 0、V2 TOC 命中、V4 a11y 齐备、JS 错误 0；V3 深链红系页面规模（7.97 MB／17,870 小节）共性红，与 V31／V39／V55／V67／V68 同项同源，非本卷内容缺陷（只披露不代改门禁）
+gate3=卷级回归 V70 复跑 6/6 PASS（V1 渲染小节数、题名 mismatch 0、V2 TOC、V3 深链 top=24、V4 a11y、JS 错误）；签发时点曾 5/6（V3 页面规模瞬态红，与 V31／V39／V55／V67／V68 同源），2026-11-09 复跑全绿
 note=合成卷料域：五片 2,712 块（旧节 77 个，取 exclude_landed 块级防双落）。判读＝强主题闸（16 组：USL 诉讼／Net/2-Lite／386BSD-patchkit／DragonFly-HAMMER／Darwin-APSL／ZFS／LLVM-Clang／RISC-V／Netflix／pkgsrc／CSRG-Bostic 等）定章节＋节内 bigram 定小节，命中强主题但无制度／版本史实锚词者降挂账；未命中者按分挂账／移出。处置：归入 255／挂账 536／移出 1,759／辑存 76／删除 86（守恒 2,712）。有块题 51／171，corpus_gap 120 行如实记——旧树史实面多已被 V12–V35 取尽，本卷属综合总结卷，高骨架率为语料事实而非判读失败
 approved_by=ykla
 approved_at=2026-11-09
