@@ -5,11 +5,11 @@
   "volumes": 76,
   "chapters": 544,
   "sections": 3954,
-  "subsections": 18595,
+  "subsections": 18778,
   "vocab_sha256": "bb7f2eabe0e2f5019439e111453d4ec74e5d46b72e6c56f917f8922061fbce0f",
-  "content_sha256": "229f618e8293191ee2e7c1c94646dc6696d05fdf5aad14bc537f6037de9db419",
+  "content_sha256": "91eabc835c73d84c3632cd77feef9c9d4ab2d0174c899ee196790ba05f966467",
   "extract": "title+body",
-  "generated_at": "2026-11-09T18:05:23+08:00"
+  "generated_at": "2026-11-09T18:34:27+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -966,6 +966,12 @@
    "tech": [
     "doubt"
    ]
+  },
+  "TH-HIS-012": {
+   "label": "零信任原则",
+   "level": "narrow",
+   "broader": "TH-HIS-000",
+   "tech": []
   },
   "TH-HIS-013": {
    "label": "三次复查",
@@ -6105,7 +6111,7 @@
     "TH-FS-023",
     "TH-GOV-020",
     "TH-GOV-028",
-    "TH-LAW-003",
+    "TH-HW-020",
     "TH-LAW-013"
    ],
    "sections": 3
@@ -11039,8 +11045,12 @@
    "domains": [],
    "themes": [
     "TH-HIS-001",
-    "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-003",
+    "TH-HIS-004",
+    "TH-HIS-046",
+    "TH-HIS-012",
+    "TH-HIS-021",
+    "TH-HIS-030"
    ],
    "sections": 7
   },
@@ -11050,7 +11060,8 @@
    "domains": [],
    "themes": [
     "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-GOV-034"
    ],
    "sections": 4
   },
@@ -11059,7 +11070,14 @@
    "title": "记忆研究与 BSD 历史书写方法论",
    "domains": [],
    "themes": [
-    "TH-HIS-030"
+    "TH-BIZ-008",
+    "TH-GOV-005",
+    "TH-HIS-030",
+    "TH-REL-009",
+    "TH-BIZ-020",
+    "TH-GOV-006",
+    "TH-GOV-014",
+    "TH-GOV-019"
    ],
    "sections": 9
   },
@@ -11068,7 +11086,14 @@
    "title": "BSD 历史书写中的自反性问题",
    "domains": [],
    "themes": [
-    "TH-HIS-030"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015",
+    "TH-HIS-003",
+    "TH-HIS-018",
+    "TH-HIS-030",
+    "TH-HIS-044",
+    "TH-HW-020"
    ],
    "sections": 7
   },
@@ -11076,7 +11101,16 @@
    "volume": "第74卷-BSD 史学理论：认识、解释与反思（1980–2026）",
    "title": "人力的计量：史料类型、代理指标与可证范围",
    "domains": [],
-   "themes": [],
+   "themes": [
+    "TH-GOV-014",
+    "TH-GOV-012",
+    "TH-HIS-004",
+    "TH-HIS-007",
+    "TH-LANG-018",
+    "TH-LAW-003",
+    "TH-LAW-015",
+    "TH-LAW-021"
+   ],
    "sections": 6
   },
   "V74-C006": {
@@ -11469,13 +11503,13 @@
    "domains": [
     "TH-LANG-000",
     "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-LANG-030",
     "TH-BIZ-008",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-OS-005",
     "TH-HW-010"
    ],
@@ -13877,8 +13911,8 @@
     "TH-HW-010",
     "TH-NET-009",
     "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -24935,14 +24969,14 @@
    "domains": [
     "TH-HW-000",
     "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-HW-036",
     "TH-HW-010",
     "TH-BIZ-008",
-    "TH-GOV-005",
     "TH-HIS-003",
+    "TH-GOV-005",
     "TH-LAW-004"
    ],
    "projects": [],
@@ -25540,13 +25574,13 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-LAW-010",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-OS-001",
     "TH-GOV-026"
@@ -27294,14 +27328,14 @@
    "title": "DragonFly 的独立身份形成",
    "meta": false,
    "domains": [
+    "TH-HIS-000",
     "TH-GOV-000",
-    "TH-VM-000",
-    "TH-HIS-000"
+    "TH-VM-000"
    ],
    "themes": [
+    "TH-HIS-004",
     "TH-GOV-014",
     "TH-VM-015",
-    "TH-HIS-004",
     "TH-GOV-026",
     "TH-REL-011",
     "TH-FS-038"
@@ -31048,13 +31082,13 @@
    "title": "话语对立与当代分歧：方法论之辨、Tivoization 与定义盲区",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HIS-000",
+    "TH-GOV-000",
     "TH-LAW-000"
    ],
    "themes": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-LAW-003",
     "TH-LAW-015",
     "TH-HW-010",
@@ -31421,7 +31455,7 @@
     "TH-FS-023",
     "TH-GOV-020",
     "TH-LAW-026",
-    "TH-LAW-003"
+    "TH-HW-020"
    ],
    "projects": [],
    "technical_terms": [],
@@ -39552,8 +39586,8 @@
    "themes": [
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40431,13 +40465,13 @@
    "title": "技术争论如何塑造项目文化",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-HIS-000",
+    "TH-GOV-000",
     "TH-HW-000"
    ],
    "themes": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-GOV-016",
     "TH-HW-010",
     "TH-LAW-015",
@@ -40604,8 +40638,8 @@
     "TH-HW-010",
     "TH-GOV-014",
     "TH-HIS-004",
-    "TH-GOV-019",
     "TH-VM-015",
+    "TH-GOV-019",
     "TH-GOV-026"
    ],
    "projects": [],
@@ -50131,13 +50165,13 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-HW-010",
-    "TH-GOV-014",
     "TH-HIS-004",
+    "TH-GOV-014",
     "TH-GOV-005",
     "TH-NET-023",
     "TH-LANG-021"
@@ -53157,13 +53191,13 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-GOV-000",
-    "TH-NET-000"
+    "TH-NET-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-HIS-004",
-    "TH-GOV-014",
     "TH-NET-006",
+    "TH-GOV-014",
     "TH-GOV-026",
     "TH-OS-001",
     "TH-NET-001"
@@ -57472,13 +57506,13 @@
    "domains": [
     "TH-BIZ-000",
     "TH-HW-000",
-    "TH-GOV-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-BIZ-026",
     "TH-HW-010",
-    "TH-GOV-017",
     "TH-FS-002",
+    "TH-GOV-017",
     "TH-HIS-046"
    ],
    "projects": [],
@@ -59088,14 +59122,14 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-010",
+    "TH-HIS-004",
     "TH-HW-026",
     "TH-LANG-016",
-    "TH-HIS-004",
     "TH-GOV-014",
     "TH-REL-009"
    ],
@@ -67151,8 +67185,8 @@
     "TH-HIS-003",
     "TH-HW-010",
     "TH-GOV-014",
-    "TH-BIZ-008",
-    "TH-LAW-015"
+    "TH-LAW-015",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
@@ -73226,8 +73260,8 @@
    "themes": [
     "TH-REL-009",
     "TH-GOV-037",
-    "TH-GOV-017",
     "TH-BIZ-033",
+    "TH-GOV-017",
     "TH-REL-001"
    ],
    "projects": [],
@@ -78039,8 +78073,8 @@
     "TH-GOV-014",
     "TH-VM-005",
     "TH-LANG-016",
-    "TH-FS-004",
     "TH-GOV-026",
+    "TH-FS-004",
     "TH-NET-033"
    ],
    "projects": [
@@ -80866,14 +80900,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "b0c0fc6df05a7f6bcc693a393c05ff1261175811"
   },
   "V74-C001-1.2": {
    "chapter": "V74-C001",
@@ -80883,14 +80915,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-021"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "064efac0d472e039a42851b446926f0288de473b"
   },
   "V74-C001-1.3": {
    "chapter": "V74-C001",
@@ -80900,14 +80930,12 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-030"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "38b533fba1d0fc73e67e9ae8321e42d4d301756d"
   },
   "V74-C001-1.4": {
    "chapter": "V74-C001",
@@ -80917,14 +80945,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
+    "TH-HIS-004",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-046"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "0a2de86034ffa508bbdcfd558d90b9b3229212cf"
   },
   "V74-C001-1.5": {
    "chapter": "V74-C001",
@@ -80934,14 +80962,13 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1e79631eb8cd21d58ef52e1bcb37b49d1100fa07"
   },
   "V74-C001-1.6": {
    "chapter": "V74-C001",
@@ -80951,14 +80978,13 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-003",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ee0066eadb386dc337dcfe30cfb8d4dc1004524b"
   },
   "V74-C001-1.7": {
    "chapter": "V74-C001",
@@ -80968,14 +80994,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-012",
+    "TH-HIS-004",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "665d858495a4f00eb5940caaf715a7527862c804"
   },
   "V74-C002-2.1": {
    "chapter": "V74-C002",
@@ -80983,18 +81009,17 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-GOV-014",
     "TH-BIZ-026",
-    "TH-HIS-030"
+    "TH-GOV-034"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4052097143a5f2f31c7fa2d2ff2629c9408373b0"
   },
   "V74-C002-2.2": {
    "chapter": "V74-C002",
@@ -81002,18 +81027,17 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-BIZ-026",
     "TH-GOV-014",
-    "TH-HIS-030"
+    "TH-GOV-034"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "15582c01cd8ad925f262ceeaac20c27f164e681a"
   },
   "V74-C002-2.3": {
    "chapter": "V74-C002",
@@ -81021,37 +81045,35 @@
    "meta": false,
    "domains": [
     "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-BIZ-026",
     "TH-GOV-014",
-    "TH-HIS-030"
+    "TH-GOV-034"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "4a5406d65cbb76511fe0d18e6bec340d8430f71c"
   },
   "V74-C002-2.4": {
    "chapter": "V74-C002",
    "title": "本书对不可证态度的处理规则",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
     "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
+    "TH-GOV-034",
     "TH-BIZ-026",
-    "TH-GOV-014",
-    "TH-HIS-030"
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "74cfc72e9907139d63c0632e6faf5ca8a3615cbe"
   },
   "V74-C003-3.1": {
    "chapter": "V74-C003",
@@ -81060,55 +81082,59 @@
    "domains": [
     "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-OS-000"
    ],
    "themes": [
     "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-BIZ-008",
+    "TH-OS-040",
+    "TH-GOV-037",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "067f1964a0b8eb00edb3aef4e15d57c10e8f73d5"
   },
   "V74-C003-3.2": {
    "chapter": "V74-C003",
    "title": "记忆地点：项目网站、文档、会议与档案",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-HIS-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
+    "TH-BIZ-020",
+    "TH-BIZ-008",
+    "TH-HIS-003",
+    "TH-REL-008",
+    "TH-HW-010",
     "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "573a566a392b4e717b6b3b39210cca023a8dd24c"
   },
   "V74-C003-3.3": {
    "chapter": "V74-C003",
    "title": "历史遗忘的形成机制",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-006",
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "b9bc6a13d70541fd997dd144d0e026bec428206d"
   },
   "V74-C003-3.4": {
    "chapter": "V74-C003",
@@ -81120,126 +81146,130 @@
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-HIS-014",
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "7eb267b6d07d6e2745215ceb1a6884a0d927e627"
   },
   "V74-C003-3.5": {
    "chapter": "V74-C003",
    "title": "与 Halbwachs、Nora 等记忆理论的对话",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
+    "TH-REL-000",
     "TH-BIZ-000",
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-REL-009",
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "ae5e34ad0beda45656a061ad2592cf0ca0317092"
   },
   "V74-C003-3.6": {
    "chapter": "V74-C003",
    "title": "技术史中的叙事竞争",
    "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
     "TH-HIS-030",
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "cbdf90977a4190557710d087dd418734ea886c55"
   },
   "V74-C003-3.7": {
    "chapter": "V74-C003",
    "title": "BSD 历史书写的伦理问题",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
+    "TH-SEC-000",
     "TH-BIZ-000",
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-SEC-033",
+    "TH-BIZ-008",
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "8982408b3efa9bb3775d5f77e590084b72ee257c"
   },
   "V74-C003-3.8": {
    "chapter": "V74-C003",
    "title": "谁的名字留下了：遗忘的选择性",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-005",
+    "TH-REL-009",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "576eacfc63d77f01381e597da5e1e74b78c62077"
   },
   "V74-C003-3.9": {
    "chapter": "V74-C003",
    "title": "版本库迁移与技术记忆变形",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
     "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-019",
+    "TH-HIS-007",
+    "TH-BIZ-008",
+    "TH-GOV-035",
+    "TH-REL-010",
+    "TH-LANG-017"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "61295a468fac3b2db51433474d7b26163ceb78dd"
   },
   "V74-C004-4.1": {
    "chapter": "V74-C004",
    "title": "历史作者也是历史的一部分",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-BIZ-000",
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "eb204654c6cf8f631c0ca0c941f0a5c8530b8b82"
   },
   "V74-C004-4.2": {
    "chapter": "V74-C004",
@@ -81252,218 +81282,229 @@
    ],
    "themes": [
     "TH-HIS-030",
-    "TH-BIZ-026",
+    "TH-BIZ-008",
     "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 3,
+   "subs_sha1": "d2958a6dc555953bece37edf2b56f7ff4c7ccb4e"
   },
   "V74-C004-4.3": {
    "chapter": "V74-C004",
    "title": "编年史、人物史、问题史与比较史的方法选择",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
+    "TH-REL-000",
     "TH-BIZ-000",
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
+    "TH-REL-009",
+    "TH-BIZ-008",
     "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ab25966a3d74a13d4c11257d1e4281063d467aed"
   },
   "V74-C004-4.4": {
    "chapter": "V74-C004",
    "title": "技术评价中的价值判断与事实判断",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-LAW-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-LAW-010",
+    "TH-LAW-021",
+    "TH-REL-032",
+    "TH-REL-003",
+    "TH-HIS-003"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "bddddfc70b59580914ae63b13d4f94f0b7e33c8e"
   },
   "V74-C004-4.5": {
    "chapter": "V74-C004",
    "title": "“成功”“失败”“衰落”等历史概念的使用边界",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-BIZ-000",
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-BIZ-008",
+    "TH-GOV-014",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 3,
+   "subs_sha1": "79db7419a05089cbd3d1046f6dd895ed3a427c67"
   },
   "V74-C004-4.6": {
    "chapter": "V74-C004",
    "title": "BSD 历史中的多重解释框架",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
     "TH-BIZ-000",
+    "TH-HIS-000",
     "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-BIZ-008",
+    "TH-HIS-018",
+    "TH-GOV-015",
+    "TH-HW-020",
+    "TH-OS-040",
+    "TH-NET-027"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "7b332667acff344153125c6cdbd91add9a2a4c97"
   },
   "V74-C004-4.7": {
    "chapter": "V74-C004",
    "title": "本书自身的史学位置",
    "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-HIS-000",
+    "TH-BIZ-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-HIS-044",
+    "TH-BIZ-008",
+    "TH-GOV-014"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "9ed6460f283e73b15c529501bf6e31a48d19e47a"
   },
   "V74-C005-5.1": {
    "chapter": "V74-C005",
    "title": "史料的类别：提交、邮件、文档与年报",
    "meta": false,
    "domains": [
-    "TH-HIS-000"
+    "TH-GOV-000",
+    "TH-LANG-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-HIS-001",
-    "TH-HIS-037"
+    "TH-GOV-014",
+    "TH-LANG-018",
+    "TH-GOV-012",
+    "TH-REL-032",
+    "TH-HIS-007",
+    "TH-VM-033"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 6,
+   "subs_sha1": "f8da16496ea3fcac4f7eed6d49c44a4e7cfcb6b4"
   },
   "V74-C005-5.2": {
    "chapter": "V74-C005",
    "title": "工时与报酬记录的缺失：代理指标的合法上限",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-LAW-000",
+    "TH-GOV-000",
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-LAW-028",
+    "TH-LAW-003",
+    "TH-GOV-014",
+    "TH-REL-009",
+    "TH-LAW-021",
+    "TH-LAW-015"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "dfd5925411580a291f3d64d63ce4fed860a6a246"
   },
   "V74-C005-5.3": {
    "chapter": "V74-C005",
    "title": "跨源对齐：可合并字段与同一性判定",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-GOV-012",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "4b879c4891cfd432394b57f97f3680a550e67ae1"
   },
   "V74-C005-5.4": {
    "chapter": "V74-C005",
    "title": "基金会财务档案与商业披露的边界",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-GOV-012",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "2e221ce6df4955ac3e79d75e53f15819b8ccce1e"
   },
   "V74-C005-5.5": {
    "chapter": "V74-C005",
    "title": "早期机构档案的检索路径",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-GOV-012",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "aa719dc7a99811dad564c689a9d1baec1f783212"
   },
   "V74-C005-5.6": {
    "chapter": "V74-C005",
    "title": "可证范围与研究倡议",
    "meta": false,
    "domains": [
-    "TH-HIS-000",
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-030",
-    "TH-BIZ-026",
-    "TH-GOV-014"
+    "TH-GOV-014",
+    "TH-HIS-004",
+    "TH-GOV-012"
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "0c7fc60650ea6d849c7533c57a925315f469f1d1"
   },
   "V74-C006-6.1": {
    "chapter": "V74-C006",
@@ -81479,8 +81520,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "ac06e569774aff40f6df87c287b398bc32002e9f"
   },
   "V74-C006-6.2": {
    "chapter": "V74-C006",
@@ -81496,8 +81537,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "aee74046c47b6e9edde2db044d8c8506c1f536d8"
   },
   "V74-C006-6.3": {
    "chapter": "V74-C006",
@@ -81511,8 +81552,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "bce1eb3c6780f92b57904af24935942a32764ed5"
   },
   "V74-C006-6.4": {
    "chapter": "V74-C006",
@@ -81528,8 +81569,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 4,
+   "subs_sha1": "ff1f68501aa574fcdedae14b22c4e7c19cfef1d9"
   },
   "V74-C006-6.5": {
    "chapter": "V74-C006",
@@ -81545,8 +81586,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "6166df62fef36cbe3e348f0c16a10cb6e40e8635"
   },
   "V74-C006-6.6": {
    "chapter": "V74-C006",
@@ -81562,8 +81603,8 @@
    ],
    "projects": [],
    "technical_terms": [],
-   "subs": 0,
-   "subs_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+   "subs": 5,
+   "subs_sha1": "1c7004699e0535eb1e4b63577401a777d8c013f4"
   },
   "V75-C001-1.1": {
    "chapter": "V75-C001",
@@ -85062,8 +85103,8 @@
   },
   "V01-C002-2.6.5": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-LANG-021"
    ]
@@ -85437,8 +85478,8 @@
     "TH-HW-006",
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V03-C002-2.4.2": {
@@ -85454,8 +85495,8 @@
    "add": [
     "TH-HW-006",
     "TH-HW-007",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010"
    ]
   },
@@ -85463,8 +85504,8 @@
    "add": [
     "TH-HW-012",
     "TH-HW-001",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V03-C002-2.4.5": {
@@ -85485,8 +85526,8 @@
   },
   "V03-C002-2.5.1": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-HW-008",
     "TH-HW-015"
@@ -85511,8 +85552,8 @@
    "add": [
     "TH-HW-019",
     "TH-HW-006",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010"
    ]
   },
@@ -85826,8 +85867,8 @@
   },
   "V08-C002-2.2.1": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010"
    ]
   },
@@ -85843,8 +85884,8 @@
   },
   "V08-C002-2.2.3": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-OS-025"
    ]
@@ -85866,8 +85907,8 @@
   "V08-C002-2.3.2": {
    "add": [
     "TH-HW-010",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-037",
     "TH-REL-009"
    ]
@@ -86304,8 +86345,8 @@
   },
   "V08-C006-6.4.2": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-HW-017",
     "TH-HW-020"
@@ -87099,8 +87140,8 @@
   "V16-C004-4.4.4": {
    "add": [
     "TH-LAW-003",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-OS-020"
    ]
   },
@@ -87823,14 +87864,14 @@
     "TH-BIZ-014",
     "TH-BIZ-008",
     "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V21-C003-3.5.3": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-GOV-003",
     "TH-GOV-006"
    ]
@@ -87853,8 +87894,8 @@
   },
   "V21-C003-3.5.6": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HIS-004",
     "TH-LANG-022"
    ]
@@ -87889,8 +87930,8 @@
   },
   "V21-C004-4.1.4": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-GOV-005",
     "TH-LAW-010"
@@ -87930,8 +87971,8 @@
    "add": [
     "TH-VM-014",
     "TH-HW-008",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-NET-025",
     "TH-HW-010"
    ]
@@ -88575,8 +88616,7 @@
   "V27-C004-4.7.2": {
    "add": [
     "TH-GOV-028",
-    "TH-REL-001",
-    "TH-NET-027"
+    "TH-REL-001"
    ]
   },
   "V27-C004-4.7.3": {
@@ -88778,8 +88818,8 @@
   "V31-C002-2.2.2": {
    "add": [
     "TH-FS-023",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-FS-037"
    ]
@@ -88826,8 +88866,8 @@
     "TH-FS-023",
     "TH-HW-020",
     "TH-FS-037",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V31-C002-2.4.3": {
@@ -88854,8 +88894,8 @@
   "V31-C003-3.1.1": {
    "add": [
     "TH-VM-001",
-    "TH-BIZ-008",
-    "TH-FS-006"
+    "TH-FS-006",
+    "TH-BIZ-008"
    ]
   },
   "V31-C003-3.1.2": {
@@ -88888,8 +88928,8 @@
   "V31-C003-3.2.3": {
    "add": [
     "TH-FS-026",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010"
    ]
   },
@@ -88929,8 +88969,8 @@
   "V31-C003-3.3.3": {
    "add": [
     "TH-NET-007",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-HW-008"
    ]
@@ -88963,8 +89003,8 @@
    "add": [
     "TH-OS-037",
     "TH-HW-020",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-FS-006"
    ]
   },
@@ -88979,8 +89019,8 @@
    "add": [
     "TH-LANG-011",
     "TH-LANG-012",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V31-C004-4.2.4": {
@@ -89038,8 +89078,8 @@
   "V31-C005-5.1.3": {
    "add": [
     "TH-HIS-004",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-NET-001"
    ]
   },
@@ -89127,8 +89167,8 @@
   },
   "V31-C005-5.3.3": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-BIZ-008",
     "TH-OS-031",
     "TH-HW-010",
@@ -89342,8 +89382,8 @@
   "V31-C007-7.4.4": {
    "add": [
     "TH-HW-010",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-BIZ-008"
    ]
   },
@@ -89584,7 +89624,7 @@
   },
   "V33-C002-2.1.4": {
    "add": [
-    "TH-HW-020"
+    "TH-LAW-003"
    ]
   },
   "V33-C002-2.1.5": {
@@ -90817,7 +90857,7 @@
     "TH-FS-023",
     "TH-HIS-004",
     "TH-NET-010",
-    "TH-GOV-014"
+    "TH-HW-001"
    ]
   },
   "V37-C004-4.8.2": {
@@ -90964,8 +91004,8 @@
     "TH-OS-019",
     "TH-LANG-021",
     "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V37-C005-5.6.1": {
@@ -91224,7 +91264,8 @@
    "add": [
     "TH-HW-012",
     "TH-LANG-022",
-    "TH-HW-008"
+    "TH-HW-008",
+    "TH-HW-001"
    ]
   },
   "V37-C006-6.13.2": {
@@ -91367,8 +91408,8 @@
    "add": [
     "TH-REL-009",
     "TH-FS-031",
-    "TH-NET-027",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-NET-027"
    ]
   },
   "V37-C007-7.6.4": {
@@ -92058,8 +92099,8 @@
     "TH-REL-026",
     "TH-GOV-006",
     "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V37-C011-11.3.1": {
@@ -92490,8 +92531,8 @@
     "TH-NET-003",
     "TH-NET-009",
     "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V37-C016-16.3.3": {
@@ -92732,8 +92773,8 @@
    "add": [
     "TH-LANG-016",
     "TH-LANG-017",
-    "TH-NET-027",
     "TH-HIS-004",
+    "TH-NET-027",
     "TH-GOV-014"
    ]
   },
@@ -93117,8 +93158,8 @@
   },
   "V39-C007-7.7.3": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-FS-011",
     "TH-OS-015"
    ]
@@ -93178,8 +93219,8 @@
   },
   "V39-C009-9.2.1": {
    "add": [
-    "TH-HW-020",
     "TH-LANG-024",
+    "TH-HW-020",
     "TH-HIS-004"
    ]
   },
@@ -94483,8 +94524,8 @@
    "add": [
     "TH-HW-010",
     "TH-FS-023",
-    "TH-NET-027",
     "TH-HIS-004",
+    "TH-NET-027",
     "TH-FS-002"
    ]
   },
@@ -94548,8 +94589,8 @@
   "V43-C004-4.5.1": {
    "add": [
     "TH-HW-010",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-REL-012",
     "TH-FS-025",
     "TH-GOV-008"
@@ -96151,8 +96192,8 @@
   "V48-C003-3.4.3": {
    "add": [
     "TH-HIS-004",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V48-C003-3.5.2": {
@@ -98744,8 +98785,8 @@
   },
   "V56-C003-3.2.1": {
    "add": [
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-VM-019",
     "TH-BIZ-023",
@@ -99570,8 +99611,7 @@
    "add": [
     "TH-HW-010",
     "TH-HIS-003",
-    "TH-GOV-014",
-    "TH-REL-009"
+    "TH-GOV-014"
    ]
   },
   "V60-C003-3.7.2": {
@@ -99736,8 +99776,8 @@
     "TH-FS-031",
     "TH-LAW-002",
     "TH-LANG-025",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V60-C007-7.2.1": {
@@ -100056,15 +100096,15 @@
     "TH-NET-012",
     "TH-HW-036",
     "TH-HW-010",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V60-C010-10.1.5": {
    "add": [
     "TH-HW-010",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-NET-001",
     "TH-GOV-028"
    ]
@@ -100129,16 +100169,16 @@
     "TH-HW-010",
     "TH-HIS-004",
     "TH-REL-003",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V60-C012-12.1.3": {
    "add": [
     "TH-REL-009",
     "TH-HW-010",
-    "TH-NET-027",
     "TH-HIS-004",
+    "TH-NET-027",
     "TH-GOV-014"
    ]
   },
@@ -100793,8 +100833,8 @@
    "add": [
     "TH-OS-026",
     "TH-BIZ-008",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V61-C006-6.10.3": {
@@ -100904,8 +100944,8 @@
   "V62-C002-2.1.4": {
    "add": [
     "TH-SEC-029",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-FS-037",
     "TH-HW-020"
@@ -100948,8 +100988,8 @@
   "V62-C002-2.8.1": {
    "add": [
     "TH-FS-038",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010",
     "TH-REL-001"
    ]
@@ -101572,8 +101612,8 @@
   },
   "V64-C002-2.14.1": {
    "add": [
-    "TH-GOV-017",
     "TH-BIZ-033",
+    "TH-GOV-017",
     "TH-FS-013",
     "TH-FS-012"
    ]
@@ -101827,18 +101867,18 @@
    "add": [
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-BIZ-008",
     "TH-LAW-015",
-    "TH-GOV-014",
-    "TH-HIS-001"
+    "TH-BIZ-008",
+    "TH-HIS-001",
+    "TH-GOV-014"
    ]
   },
   "V65-C004-4.9.3": {
    "add": [
     "TH-BIZ-030",
     "TH-LAW-013",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-HW-010"
    ]
   },
@@ -101982,7 +102022,7 @@
     "TH-LANG-016",
     "TH-GOV-014",
     "TH-NET-030",
-    "TH-NET-027"
+    "TH-NET-022"
    ]
   },
   "V66-C002-2.13.1": {
@@ -102090,7 +102130,7 @@
   "V67-C008-8.1.1": {
    "add": [
     "TH-HW-037",
-    "TH-BIZ-020"
+    "TH-LANG-026"
    ]
   },
   "V67-C008-8.1.4": {
@@ -102247,8 +102287,8 @@
   "V68-C005-5.4.2": {
    "add": [
     "TH-NET-030",
-    "TH-GOV-019",
     "TH-HIS-001",
+    "TH-GOV-019",
     "TH-HW-010"
    ]
   },
@@ -102794,8 +102834,8 @@
   "V69-C004-4.1.1": {
    "add": [
     "TH-FS-022",
-    "TH-GOV-014",
     "TH-HIS-001",
+    "TH-GOV-014",
     "TH-GOV-037",
     "TH-VM-015"
    ]
@@ -102995,8 +103035,8 @@
   "V69-C006-6.2.1": {
    "add": [
     "TH-HW-010",
-    "TH-NET-027",
     "TH-HIS-004",
+    "TH-NET-027",
     "TH-GOV-014"
    ]
   },
@@ -103511,6 +103551,84 @@
   "V73-C005-5.1.5": {
    "add": [
     "TH-HIS-004"
+   ]
+  },
+  "V74-C002-2.3.2": {
+   "add": [
+    "TH-HW-010",
+    "TH-GOV-017"
+   ]
+  },
+  "V74-C002-2.3.3": {
+   "add": [
+    "TH-HW-010",
+    "TH-GOV-017",
+    "TH-HIS-001",
+    "TH-LAW-029",
+    "TH-NET-027"
+   ]
+  },
+  "V74-C002-2.3.5": {
+   "add": [
+    "TH-BIZ-008",
+    "TH-REL-026",
+    "TH-BIZ-020",
+    "TH-OS-024",
+    "TH-LANG-015"
+   ]
+  },
+  "V74-C003-3.6.1": {
+   "add": [
+    "TH-BIZ-014",
+    "TH-HIS-017",
+    "TH-BIZ-015"
+   ]
+  },
+  "V74-C003-3.6.2": {
+   "add": [
+    "TH-HIS-018"
+   ]
+  },
+  "V74-C003-3.6.4": {
+   "add": [
+    "TH-NET-033",
+    "TH-BIZ-014",
+    "TH-HIS-018",
+    "TH-BIZ-015"
+   ]
+  },
+  "V74-C003-3.6.5": {
+   "add": [
+    "TH-GOV-019",
+    "TH-HIS-016",
+    "TH-HW-009",
+    "TH-NET-027",
+    "TH-LAW-013"
+   ]
+  },
+  "V74-C004-4.4.1": {
+   "add": [
+    "TH-HW-010"
+   ]
+  },
+  "V74-C004-4.4.4": {
+   "add": [
+    "TH-VM-020"
+   ]
+  },
+  "V74-C004-4.4.5": {
+   "add": [
+    "TH-LANG-017"
+   ]
+  },
+  "V74-C004-4.6.3": {
+   "add": [
+    "TH-OS-009"
+   ]
+  },
+  "V74-C005-5.2.5": {
+   "add": [
+    "TH-FS-005"
    ]
   },
   "V75-C002-2.1.1": {
