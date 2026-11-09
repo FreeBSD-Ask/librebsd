@@ -722,6 +722,11 @@ def main():
     sec_titles = _dd(list)
     for vi in sorted(vidx):
         seg = _seg(vi)
+        # 卷题判据按卷只核一次（2026-11-10 修：原在章循环内，同一卷题按章数重复上报）
+        _vt = _plain(vi)
+        _ot = o_flag(_vt)
+        if _ot:
+            o_bad.append("O 卷题计数概括式／集合名词：卷%d「%s」（命中「%s」）" % (vi, _vt[:40], _ot))
         for cm in re.finditer(r'<h3 class="chapter"[^>]*>(.*?)</h3>\s*<ul class="sections">(.*?)</ul>', seg, re.S):
             ct = re.sub("<[^>]+>", "", cm.group(1)).strip()
             cmno = re.match(r"^第 (\d+) 章", ct)
@@ -741,17 +746,18 @@ def main():
                     sec_titles[title].append("卷%d.第%d章" % (vi, cno))
             # ── O 组：标题计数概括式与集合名词（2026-09-27 立）──
             #   软硬：卷题／章题命中 → FAIL（集合的定义层）；节题、注文 → WARN（不阻断）。
-            #   已知缺陷（2026-10-08 记，不改）：本行 `o_flag(t)` 的 t 系 N-d 段遗留循环变量
-            #   （上一章末节题）而非本卷卷题——判据实际核的是残留节题。X3/122 拆卷先按此**既有行为**
-            #   令新撰节题不以数词概括集合（点名「FreeBSD、NetBSD、OpenBSD」），不改门禁以免波及其他线。
-            _ot = o_flag(t)
-            if _ot:
-                o_bad.append("O 卷题计数概括式／集合名词：卷%d「%s」（命中「%s」）" % (vi, t[:40], _ot))
+            #   2026-11-10 修（原「已知缺陷（2026-10-08 记，不改）」）：旧行 `o_flag(t)` 的 t
+            #   系 N-d 段遗留循环变量（上一章末节题），判据实际核残留节题而非本卷卷题。四层小節
+            #   落盘后节列表混入三段号小节，残留节题常为小节题（如「与 BSD 两条款的同构性」），
+            #   致 4 处假 FAIL（卷59／62／72／74）。今卷题判据移至卷循环头核真卷题；节题软示只取
+            #   两段号节题（三段号小节题不在 O 组判据面）。
             _ct_body = re.sub(r"^第 \\d+ 章\\s*", "", ct)
             _ot = o_flag(_ct_body)
             if _ot:
                 o_bad.append("O 章题计数概括式／集合名词：卷%d 第%d章「%s」（命中「%s」）" % (vi, cno, _ct_body[:40], _ot))
             for _num, _title in secs:
+                if _num.count(".") != 1:
+                    continue      # 三段号＝小节题，不入 O 组节题判据面
                 _ot = o_flag(_title)
                 if _ot:
                     o_warn.append("O WARN（软·节题）卷%d 第%d章 %s「%s」（命中「%s」）" % (vi, cno, _num, _title[:36], _ot))

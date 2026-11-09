@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# 交叉引用悬空审计 v6（2026-10-03 第六批：增设「冻结基准语境豁免」判据＋负向夹具）
+# 交叉引用悬空审计 v7（2026-11-10 第七批：章→节集合改按章标题切段，修嵌套小节列表截断）
 #
 # v4 只覆盖单一形制「第X卷第M章」，第五批复核实证其余三类形制共 229 处错位／越界
 # 无法被任何门禁发现（如「卷十二第 11 章」卷十二仅 10 章、「卷三 1.5」自指错位）。
@@ -79,20 +79,27 @@ def cn2int(s):
 
 
 # ── 现行体系地图：卷→章、卷→章→节 ────────────────────────────────────
+# v7（2026-11-10）：章→节集合改为「按章标题切段」取 sec-num。
+# 旧写法用 `<ul class="sections">(.*?)</ul>` 非贪婪截取，四层小节落盘后章节列表内嵌
+# `<ul class="subsections">`，截取在第一个小节列表的 `</ul>` 处提前终止，导致每章
+# 只读到第 1 节，凡引用 5.4／7.7／12.4 等真实存在的节一律误报「节号缺失（该章仅 1 节）」
+# （2026-11-10 实测 7 处悬空报错中 6 处为假红，V38 5.4–5.5／V41 7.7×2／V41 12.4／
+# V30 1.4／V43 3.2 在 outline.txt 均实存）。改按章标题位置切片，段内过滤两段号。
 vol_ch = {}
 vol_sec = {}
-for m in re.finditer(r'<section class="doc-block" id="vol-(\d+)"', d):
-    vid = int(m.group(1)); s = m.end()
-    nxt = re.search(r'<section class="doc-block" id="vol-\d+"', d[s:])
-    e = s + nxt.start() if nxt else len(d)
+vol_heads = list(re.finditer(r'<section class="doc-block" id="vol-(\d+)"', d))
+for i, vm in enumerate(vol_heads):
+    vid = int(vm.group(1)); s = vm.end()
+    e = vol_heads[i + 1].start() if i + 1 < len(vol_heads) else len(d)
     seg = d[s:e]
     vol_ch[vid] = set(int(x) for x in re.findall(r'id="vol-\d+-ch-(\d+)"', seg))
-    for cm in re.finditer(r'<h3 class="chapter" id="vol-\d+-ch-(\d+)">(.*?)</h3>\s*'
-                          r'<ul class="sections">(.*?)</ul>', seg, re.S):
+    chap_heads = list(re.finditer(r'<h3 class="chapter" id="vol-%d-ch-(\d+)">' % vid, seg))
+    for j, cm in enumerate(chap_heads):
         cno = int(cm.group(1))
+        ce = chap_heads[j + 1].start() if j + 1 < len(chap_heads) else len(seg)
         vol_sec[(vid, cno)] = set(
             int(re.match(r'\d+\.(\d+)$', y).group(1))
-            for y in re.findall(r'<span class="sec-num">([\d.]+)</span>', cm.group(3))
+            for y in re.findall(r'<span class="sec-num">([\d.]+)</span>', seg[cm.end():ce])
             # C 案（spec U8，2026-11-06）：小节行沿用 sec-num class，三段号不计入节集合
             if y.count(".") == 1
         )
