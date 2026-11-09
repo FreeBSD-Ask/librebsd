@@ -13,11 +13,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	1	1.3	1.3.4	发行版对许可条款的取舍	filled	
 63	1	1.4	1.4.1	编译器套件的引入时序	filled	
 63	1	1.4	1.4.2	binutils 的移植面与用途	skeleton	
-63	1	1.4	1.4.3	基础系统与第三方件的分界	skeleton	
+63	1	1.4	1.4.3	基本系统与第三方件的分界	skeleton	
 63	1	1.4	1.4.4	替换工具的逐项清单	skeleton	
 63	1	1.5	1.5.1	早期工具链的三件组成	skeleton	
 63	1	1.5	1.5.2	常见表述的史实校核	skeleton	
-63	1	1.5	1.5.3	调试器在基础系统中的位置	skeleton	
+63	1	1.5	1.5.3	调试器在基本系统中的位置	skeleton	
 63	1	1.5	1.5.4	工具链沿用的起点争议	skeleton	
 63	1	1.6	1.6.1	构建流程中的编译器角色	skeleton	
 63	1	1.6	1.6.2	链接器与汇编器的配合	skeleton	
@@ -56,7 +56,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	2	2.2	2.2.3	GNU 用户空间与 FreeBSD 内核的拼接	filled	
 63	2	2.2	2.2.4	技术预览版的发布位置	skeleton	
 63	2	2.3	2.3.1	内核与用户空间的异源拼接	filled	
-63	2	2.3	2.3.2	基础系统组件的替换范围	skeleton	
+63	2	2.3	2.3.2	基本系统组件的替换范围	skeleton	
 63	2	2.3	2.3.3	组合系统的启动链条	skeleton	
 63	2	2.3	2.3.4	组合形态的稳定性代价	filled	
 63	2	2.4	2.4.1	官方移植的准入门槛	filled	
