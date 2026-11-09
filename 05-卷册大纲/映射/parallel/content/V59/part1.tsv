@@ -2,7 +2,7 @@ rowmine_id	subsection_id	title	action	reason
 usenet_mail.messages.178243		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178245		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178251		—	挂账	关键词命中但题面余弦仅 0.010，待复核
-usenet_mail.messages.178257		—	挂账	关键词命中但题面余弦仅 0.013，待复核
+usenet_mail.messages.178257	V59.9.5.5	免责与合规体系的衔接	归入	补遗：Allbery 论 BSDL 免责过重并建议改 MPL，免责负担
 usenet_mail.messages.178275		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 usenet_mail.messages.178277		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178287		—	挂账	关键词命中但题面余弦仅 0.012，待复核
@@ -10,29 +10,29 @@ usenet_mail.messages.178291		—	移出	非本卷题域，建议宿主 V60（软
 usenet_mail.messages.178292		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 usenet_mail.messages.178311		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178329		—	挂账	关键词命中但题面余弦仅 0.019，待复核
-usenet_mail.messages.178346		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+usenet_mail.messages.178346	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：库与调用程序的限制之别，GPL 分界
 usenet_mail.messages.178363		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178365		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 usenet_mail.messages.178367		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
-usenet_mail.messages.178385		—	挂账	关键词命中但题面余弦仅 0.014，待复核
+usenet_mail.messages.178385	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：分发相关性判准，须问是否含版权人置入的 GPL 码
 usenet_mail.messages.178386		—	挂账	关键词命中但题面余弦仅 0.019，待复核
 usenet_mail.messages.178387		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 usenet_mail.messages.178391		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 usenet_mail.messages.178401		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 usenet_mail.messages.178403	V59.1.4.4	公有领域与开放源码的距离	归入	关键词命中＋题面余弦 0.022
 usenet_mail.messages.178409		—	挂账	关键词命中但题面余弦仅 0.017，待复核
-usenet_mail.messages.178410		—	挂账	关键词命中但题面余弦仅 0.010，待复核
+usenet_mail.messages.178410	V59.5.4.2	链接行为的法律定性	归入	补遗：readline 替代实现安全链接，链接义务的技术规避
 usenet_mail.messages.178452		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 usenet_mail.messages.178466		—	挂账	关键词命中但题面余弦仅 0.009，待复核
 usenet_mail.messages.178468		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
-usenet_mail.messages.178482		—	挂账	关键词命中但题面余弦仅 0.010，待复核
+usenet_mail.messages.178482	V59.4.3.1	定义十项的判准序列	归入	补遗：衍生构成由法院个案判定，判准序列的司法弹性
 usenet_mail.messages.178495		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 usenet_mail.messages.178504		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178512		—	删除	零内容块（<260B）
 usenet_mail.messages.178522	V59.1.7.1	两条款的信用要件	归入	关键词命中＋题面余弦 0.021
-usenet_mail.messages.178533		—	挂账	关键词命中但题面余弦仅 0.014，待复核
+usenet_mail.messages.178533	V59.1.1.1	软件作为版权客体的归类	归入	补遗：网页框入判例显示法院就外观作评价，调用不当然豁免
 usenet_mail.messages.178543	V59.2.8.1	IPIRA 函件的法律性质	归入	关键词命中＋题面余弦 0.023
-usenet_mail.messages.178546		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+usenet_mail.messages.178546	V59.5.1.3	声明保留的唯一义务	归入	补遗：bc 包装不打印版权声明之辨，声明复现的边界
 usenet_mail.messages.178549		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178550		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 usenet_mail.messages.178554		—	挂账	关键词命中但题面余弦仅 0.020，待复核
@@ -41,7 +41,7 @@ usenet_mail.messages.178562	V59.1.4.2	许可不是版权转让	归入	关键词�
 usenet_mail.messages.178582		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 usenet_mail.messages.178586		—	挂账	关键词命中但题面余弦仅 0.009，待复核
 usenet_mail.messages.178591		—	挂账	关键词命中但题面余弦仅 0.010，待复核
-usenet_mail.messages.178594		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+usenet_mail.messages.178594	V59.5.4.2	链接行为的法律定性	归入	补遗：链接 gdbm 主程序归入 GPL，BSD 无此观念
 usenet_mail.messages.178595		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 usenet_mail.messages.178597		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 usenet_mail.messages.178600		—	挂账	关键词命中但题面余弦仅 0.012，待复核
@@ -49,16 +49,16 @@ usenet_mail.messages.178613	V59.2.9.3	版本并存下的解释规则	归入	关�
 usenet_mail.messages.178618		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 usenet_mail.messages.178621	V59.2.3.1	背书禁止条的文本来源	归入	关键词命中＋题面余弦 0.022
 usenet_mail.messages.178636		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-usenet_mail.messages.178643		—	挂账	关键词命中但题面余弦仅 0.011，待复核
-usenet_mail.messages.178655		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-usenet_mail.messages.178656		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-usenet_mail.messages.178661		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+usenet_mail.messages.178643	V59.4.3.3	衍生作品条款的弹性	归入	补遗：以能否脱离 GPL 码独立运行界定衍生，条款弹性
+usenet_mail.messages.178655	V59.1.1.1	软件作为版权客体的归类	归入	补遗：GPL 感染效力源于许可约定而非版权法本身
+usenet_mail.messages.178656	V59.2.5.4	旧条款对新项目的约束力	归入	补遗：第三方库偶被同址载入即指衍生，旧条款约束力
+usenet_mail.messages.178661	V59.2.5.4	旧条款对新项目的约束力	归入	补遗：第三方库自身条款约束新项目的分野分析
 usenet_mail.messages.178664		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 usenet_mail.messages.178682		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178690		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 usenet_mail.messages.178695		—	删除	零内容块（<260B）
-usenet_mail.messages.178701		—	挂账	关键词命中但题面余弦仅 0.011，待复核
-usenet_mail.messages.178702		—	挂账	关键词命中但题面余弦仅 0.012，待复核
+usenet_mail.messages.178701	V59.7.2.1	修改与衍生的界线	归入	补遗：GPL 未定义衍生，界线出自版权法与判例
+usenet_mail.messages.178702	V59.9.1.2	免费与自由的语义分层	归入	补遗：自由指不可锁闭囤积而非免费，语义分层
 usenet_mail.messages.178705		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 usenet_mail.messages.178718		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 usenet_mail.messages.178729		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
@@ -66,25 +66,25 @@ usenet_mail.messages.178730		—	移出	非本卷题域，建议宿主 V60（软
 usenet_mail.messages.178733		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178742		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 usenet_mail.messages.178743		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-usenet_mail.messages.178750		—	挂账	关键词命中但题面余弦仅 0.010，待复核
-usenet_mail.messages.178751		—	挂账	关键词命中但题面余弦仅 0.010，待复核
+usenet_mail.messages.178750	V59.5.4.2	链接行为的法律定性	归入	补遗：静态与动态链接衍生差异之辨
+usenet_mail.messages.178751	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：引 GPL 第二节，可分离部分不受本许可约束
 usenet_mail.messages.178753		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178761		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 usenet_mail.messages.178767		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-usenet_mail.messages.178772		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+usenet_mail.messages.178772	V59.5.4.2	链接行为的法律定性	归入	补遗：RMS 视链接 GPL 库即为 GPL，链接定性
 usenet_mail.messages.178775		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178791		—	挂账	关键词命中但题面余弦仅 0.011，待复核
-usenet_mail.messages.178797		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+usenet_mail.messages.178797	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：二十五万行掺五十行 GPL 之例，限制被迫扩张
 usenet_mail.messages.178830		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178835		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 usenet_mail.messages.178863	V59.1.4.4	公有领域与开放源码的距离	归入	关键词命中＋题面余弦 0.022
-usenet_mail.messages.178869		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+usenet_mail.messages.178869	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：X 许可与 GPL 合并须整体转 GPL 的冲突
 usenet_mail.messages.178894	V59.1.4.4	公有领域与开放源码的距离	归入	关键词命中＋题面余弦 0.026
 usenet_mail.messages.178906		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178908		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.178922	V59.1.4.4	公有领域与开放源码的距离	归入	关键词命中＋题面余弦 0.024
 usenet_mail.messages.178949		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
-usenet_mail.messages.178964		—	挂账	关键词命中但题面余弦仅 0.009，待复核
+usenet_mail.messages.178964	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：RMS 阻分发阉割版，接口版权执行之辨
 usenet_mail.messages.178966		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 usenet_mail.messages.179005		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 usenet_mail.messages.179011		—	挂账	关键词命中但题面余弦仅 0.012，待复核
@@ -93,14 +93,14 @@ usenet_mail.messages.179017		—	删除	零内容块（<260B）
 usenet_mail.messages.179020		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 usenet_mail.messages.179024		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 usenet_mail.messages.179031		—	挂账	关键词命中但题面余弦仅 0.017，待复核
-usenet_mail.messages.179043		—	挂账	关键词命中但题面余弦仅 0.010，待复核
+usenet_mail.messages.179043	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：他许可设限非 GPL 之过，第九项禁令的边界辨析
 usenet_mail.messages.179049		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.179056		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.179067		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 usenet_mail.messages.179091		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.179101		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.179103		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
-usenet_mail.messages.179104		—	挂账	关键词命中但题面余弦仅 0.012，待复核
+usenet_mail.messages.179104	V59.4.3.4	不得限制其他软件的禁令	归入	补遗：明文设限者实为 GPL，BSD 署名条款对照
 usenet_mail.messages.179110		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.179122		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 usenet_mail.messages.179126		—	挂账	关键词命中但题面余弦仅 0.013，待复核
@@ -155,20 +155,20 @@ linux-api.messages.49558		—	挂账	关键词命中但题面余弦仅 0.016，�
 linux-api.messages.53761		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 linux-arch.messages.9787909		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 linux-arch.messages.9797110		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-linux-arch.messages.9793006		—	挂账	关键词命中但题面余弦仅 0.018，待复核
+linux-arch.messages.9793006	V59.3.6.1	新文件的许可默认值	归入	补遗：新文件 SPDX 双许可附来源标注，新文件默认实例
 linux-scsi.messages.1490994		—	挂账	关键词命中但题面余弦仅 0.019，待复核
 linux-scsi.messages.1544940		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 linux-scsi.messages.1479955		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-linux-scsi.messages.1498770		—	挂账	关键词命中但题面余弦仅 0.014，待复核
-linux-scsi.messages.1517762		—	挂账	关键词命中但题面余弦仅 0.018，待复核
+linux-scsi.messages.1498770	V59.4.4.1	三条款在 OSI 名录的位置	归入	补遗：新文件 BSD-3-Clause OR GPL-2.0 标识，三条款标识实例
+linux-scsi.messages.1517762	V59.2.2.4	文件头注释的样本待取	归入	补遗：ufs 驱动头注释 GPL 换 SPDX，文件头注释形态样本
 linux-scsi.messages.1524305		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 linux-scsi.messages.1525979		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-linux-scsi.messages.1459901		—	挂账	关键词命中但题面余弦仅 0.014，待复核
-linux-arch.messages.9838121		—	挂账	关键词命中但题面余弦仅 0.013，待复核
+linux-scsi.messages.1459901	V59.3.6.1	新文件的许可默认值	归入	补遗：新文件 SPDX GPL-2.0 OR BSD-2，新文件默认实例
+linux-arch.messages.9838121	V59.5.5.5	文件级策略与 BSD 的并用	归入	补遗：vmbus.yaml 逐文件双许可 SPDX，文件级并用
 linux-arch.messages.9805298		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 linux-arch.messages.9845883		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 linux-scsi.messages.1417416		—	删除	零内容块（<260B）
-linux-fsdevel.messages.273597		—	挂账	关键词命中但题面余弦仅 0.018，待复核
+linux-fsdevel.messages.273597	V59.2.4.4	逐件改写台账的缺失	归入	补遗：virtio_fs.h SPDX 改写补 WITH 限定，逐件改写实録
 linux-fsdevel.messages.290632		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 linux-fsdevel.messages.295087		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 linux-fsdevel.messages.300824		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
@@ -178,7 +178,7 @@ linux-fsdevel.messages.446540		—	挂账	关键词命中但题面余弦仅 0.01
 linux-fsdevel.messages.457515		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 linux-fsdevel.messages.486799		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 linux-fsdevel.messages.474936		—	挂账	关键词命中但题面余弦仅 0.017，待复核
-linux-fsdevel.messages.541893		—	挂账	关键词命中但题面余弦仅 0.013，待复核
+linux-fsdevel.messages.541893	V59.5.6.4	与 GPL 的不兼容争议	归入	补遗：MIT/BSD 代码访问 GPL-only API 之辨，不兼容争议
 linux-fsdevel.messages.583083		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 linux-fsdevel.messages.679183		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 linux-fsdevel.messages.684740		—	挂账	关键词命中但题面余弦仅 0.013，待复核
@@ -187,10 +187,10 @@ netdev.messages.8027601		—	挂账	关键词命中但题面余弦仅 0.012，�
 netdev.messages.8142799		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 linux-mm.messages.875773		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 netdev.messages.8252955		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-netdev.messages.8256375		—	挂账	关键词命中但题面余弦仅 0.016，待复核
+netdev.messages.8256375	V59.1.7.1	两条款的信用要件	归入	补遗：BSD 声明即完整许可并论署名位置，两条款信用要件
 linux-mm.messages.886494		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8243791	V59.2.1.1	广告条的加入时点未获	归入	关键词命中＋题面余弦 0.024
-linux-mm.messages.928772		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+linux-mm.messages.928772	V59.3.2.3	转换过程的三条动因	归入	补遗：SGX 双许可须法务确认，法务在转换中的把关
 netdev.messages.8399322	V59.2.1.1	广告条的加入时点未获	归入	关键词命中＋题面余弦 0.021
 netdev.messages.8387793	V59.2.1.1	广告条的加入时点未获	归入	关键词命中＋题面余弦 0.022
 linux-mm.messages.855649		—	挂账	关键词命中但题面余弦仅 0.013，待复核
@@ -198,13 +198,13 @@ netdev.messages.8417949		—	挂账	关键词命中但题面余弦仅 0.017，�
 netdev.messages.8373806		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 netdev.messages.8380828		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8441837	V59.2.1.1	广告条的加入时点未获	归入	关键词命中＋题面余弦 0.027
-netdev.messages.8260867		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.8260867	V59.3.8.3	补丁推定的政策文本待取	归入	补遗：ppp_mppe 文件头 BSD-2 授权文本，补丁许可标注
 netdev.messages.8412844	V59.2.6.4	三条款与四条款的兼容	归入	关键词命中＋题面余弦 0.027
-netdev.messages.8416259		—	挂账	关键词命中但题面余弦仅 0.019，待复核
+netdev.messages.8416259	V59.3.1.4	受限许可的编译限制	归入	补遗：勿期望用 GPL rbtree，许可限制约束代码复用
 linux-mm.messages.902629		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 netdev.messages.8457403		—	挂账	关键词命中但题面余弦仅 0.019，待复核
 netdev.messages.8667338		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.8673244		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.8673244	V59.9.3.5	自由观与许可取向	归入	补遗：内核树劝退 Apache-2 而纳 BSD-2，选择反映政策
 netdev.messages.8673313		—	挂账	关键词命中但题面余弦仅 0.019，待复核
 netdev.messages.8675252		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 netdev.messages.8622420		—	挂账	关键词命中但题面余弦仅 0.016，待复核
@@ -212,7 +212,7 @@ netdev.messages.8624261		—	删除	零内容块（<260B）
 netdev.messages.8638314		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 netdev.messages.8688167		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8688962		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-netdev.messages.8692138		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.8692138	V59.8.3.1	三条款转向双轨授权	归入	补遗：Cloudflare L4 LB 以 GPL-2.0 OR BSD-3 发布，双轨授权
 netdev.messages.8535017		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8535770		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 netdev.messages.8538406		—	挂账	关键词命中但题面余弦仅 0.012，待复核
@@ -230,10 +230,10 @@ netdev.messages.8558328		—	挂账	关键词命中但题面余弦仅 0.013，�
 netdev.messages.8563521		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 netdev.messages.8570039		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 netdev.messages.8596321		—	挂账	关键词命中但题面余弦仅 0.014，待复核
-netdev.messages.8596631		—	挂账	关键词命中但题面余弦仅 0.014，待复核
+netdev.messages.8596631	V59.4.4.1	三条款在 OSI 名录的位置	归入	补遗：绑定 SPDX 移除 BSD-2 分支，标识清理记录
 netdev.messages.8600120		—	挂账	关键词命中但题面余弦仅 0.019，待复核
 netdev.messages.8604642		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.8612347		—	挂账	关键词命中但题面余弦仅 0.017，待复核
+netdev.messages.8612347	V59.3.8.3	补丁推定的政策文本待取	归入	补遗：netdevsim 双重授权质疑，补丁许可标注的争议
 netdev.messages.8613133		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8650705		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8652435		—	挂账	关键词命中但题面余弦仅 0.016，待复核
@@ -243,7 +243,7 @@ netdev.messages.8704264		—	挂账	关键词命中但题面余弦仅 0.013，�
 netdev.messages.8707249		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8710953		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8715417		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.8716868		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.8716868	V59.3.7.1	导入件的许可登记	归入	补遗：bpf 导入漏删 GPL 样板，导入登记手续的失效例
 netdev.messages.8734474		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8734520		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8818668		—	挂账	关键词命中但题面余弦仅 0.012，待复核
@@ -256,40 +256,40 @@ netdev.messages.9177216		—	挂账	关键词命中但题面余弦仅 0.014，�
 netdev.messages.9181384		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.9184539		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 netdev.messages.8916923		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-netdev.messages.8918946		—	挂账	关键词命中但题面余弦仅 0.012，待复核
+netdev.messages.8918946	V59.4.4.1	三条款在 OSI 名录的位置	归入	补遗：bpftool 双许可以 SPDX 确认，标识定位置
 netdev.messages.8920359		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 netdev.messages.8920439		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8924109		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-netdev.messages.8926764		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.8926764	V59.5.9.2	组合发行的许可清单	归入	补遗：iproute2 全树 SPDX 清点，组合发行许可清单
 netdev.messages.9004663		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.9008690		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.9013229		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 netdev.messages.9013317		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.9013730		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.9074879		—	挂账	关键词命中但题面余弦仅 0.013，待复核
+netdev.messages.9013730	V59.2.4.4	逐件改写台账的缺失	归入	补遗：iproute2 SPDX 清理系列，逐件改写台账的可核形态
+netdev.messages.9074879	V59.3.8.3	补丁推定的政策文本待取	归入	补遗：ynl 生成文件顶部 SPDX BSD-3，生成物许可标注
 netdev.messages.9080565		—	移出	非本卷题域，建议宿主 V60（软件作品史）／V11
 netdev.messages.9121803		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-netdev.messages.9132163		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.9132958		—	挂账	关键词命中但题面余弦仅 0.020，待复核
-netdev.messages.9148418		—	挂账	关键词命中但题面余弦仅 0.019，待复核
-netdev.messages.9236933		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-netdev.messages.9241065		—	挂账	关键词命中但题面余弦仅 0.012，待复核
+netdev.messages.9132163	V59.3.8.3	补丁推定的政策文本待取	归入	补遗：BBR 模块 Dual BSD/GPL 改标准 SPDX，标注规范化
+netdev.messages.9132958	V59.1.7.2	版权归属的单方主张	归入	补遗：SPDX 标 BSD-3 而版权行须改实际雇主，单方主张
+netdev.messages.9148418	V59.1.7.2	版权归属的单方主张	归入	补遗：同上 packing_types.h 归属更正，主张者须为权利人
+netdev.messages.9236933	V59.3.1.4	受限许可的编译限制	归入	补遗：wireguard 双许可与构建期生成，构建层处理
+netdev.messages.9241065	V59.1.3.2	二进制分发的随附手续	归入	补遗：绑定文档 SPDX 双许可，随附文档沿用许可
 netdev.messages.8343127	V59.2.1.1	广告条的加入时点未获	归入	关键词命中＋题面余弦 0.022
-netdev.messages.8946026		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.8946026	V59.3.2.3	转换过程的三条动因	归入	补遗：TI 法务结论弃 BSD 条款，法务部门动因实例
 netdev.messages.8958318		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 netdev.messages.8958330		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 netdev.messages.8958474		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8995055		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8995136		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-netdev.messages.8995533		—	挂账	关键词命中但题面余弦仅 0.017，待复核
+netdev.messages.8995533	V59.5.9.2	组合发行的许可清单	归入	补遗：SPDX 清理系列十补丁，以 SPDX 为索引键的清单
 netdev.messages.8996799		—	挂账	关键词命中但题面余弦仅 0.012，待复核
-netdev.messages.8999041		—	挂账	关键词命中但题面余弦仅 0.014，待复核
+netdev.messages.8999041	V59.6.9.1	声明与标识的双轨制	归入	补遗：i825xx 样板换 SPDX 而实为 SRC 许可，声明与标识双轨
 netdev.messages.8999090		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-linux-mm.messages.1172480		—	挂账	关键词命中但题面余弦仅 0.018，待复核
-linux-mm.messages.1190154		—	挂账	关键词命中但题面余弦仅 0.013，待复核
+linux-mm.messages.1172480	V59.4.4.1	三条款在 OSI 名录的位置	归入	补遗：二三条文混排无法 SPDX 表达，条款级识别
+linux-mm.messages.1190154	V59.4.4.1	三条款在 OSI 名录的位置	归入	补遗：同上 UDF 排除件，自定义许可识别的边界
 linux-mm.messages.1183100	V59.1.2.3	4.4BSD 段的权属标识	归入	关键词命中＋题面余弦 0.021
 netdev.messages.9201594	V59.2.9.3	版本并存下的解释规则	归入	关键词命中＋题面余弦 0.023
-netdev.messages.9206619		—	挂账	关键词命中但题面余弦仅 0.010，待复核
+netdev.messages.9206619	V59.5.5.5	文件级策略与 BSD 的并用	归入	补遗：AC200 头文件 GPL-2.0 OR BSD-2，逐文件标注并用
 netdev.messages.9208216		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.9209675		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 netdev.messages.9219557		—	挂账	关键词命中但题面余弦仅 0.013，待复核
@@ -300,7 +300,7 @@ netdev.messages.9074006		—	挂账	关键词命中但题面余弦仅 0.016，�
 netdev.messages.8583302	V59.1.2.1	源文件版权声明的栏位构成	归入	关键词命中＋题面余弦 0.022
 netdev.messages.8585107		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 netdev.messages.8588361		—	挂账	关键词命中但题面余弦仅 0.016，待复核
-linux-mm.messages.1151393		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+linux-mm.messages.1151393	V59.2.4.4	逐件改写台账的缺失	归入	补遗：UDF SPDX 清理带审核往返，逐件改写台账形态
 linux-mm.messages.1219958		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 linux-mm.messages.1227080		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 linux-mm.messages.1297540		—	挂账	关键词命中但题面余弦仅 0.015，待复核
@@ -344,7 +344,7 @@ netdev.messages.8502710		—	删除	零内容块（<260B）
 netdev.messages.9137201		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.9140669		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 ksummit.messages.6266		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-2018-04-22 [patch 6/9] LICENSES: Add CDDL-5.0		—	挂账	关键词命中但题面余弦仅 0.019，待复核
+2018-04-22 [patch 6/9] LICENSES: Add CDDL-5.0	V59.3.1.4	受限许可的编译限制	归入	补遗：CDDL 文本入树而 ZFS 代码被拒，许可限制落在构建层
 2610		—	删除	零内容块（<260B）
 2611		—	删除	零内容块（<260B）
 2612		—	删除	零内容块（<260B）

@@ -6,7 +6,7 @@ netdev.messages.8597038		—	挂账	关键词命中但题面余弦仅 0.016，�
 linux-mm.messages.1035091		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 netdev.messages.8469144	V59.3.8.1	贡献者保留版权的默认	归入	关键词命中＋题面余弦 0.024
 netdev.messages.8725200		—	挂账	关键词命中但题面余弦仅 0.018，待复核
-netdev.messages.9080689		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+netdev.messages.9080689	V59.6.9.3	全文与标识的优先次序	归入	补遗：全文样板与 SPDX 之争，标识优先次序的现场
 netdev.messages.8994440		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 netdev.messages.8350855		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 ksummit.messages.283		—	挂账	关键词命中但题面余弦仅 0.011，待复核
@@ -15,16 +15,16 @@ ksummit.messages.718		—	挂账	关键词命中但题面余弦仅 0.012，待�
 ksummit.messages.996		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 ksummit.messages.4817		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 ksummit.messages.5427		—	挂账	关键词命中但题面余弦仅 0.008，待复核
-ksummit.messages.5475		—	挂账	关键词命中但题面余弦仅 0.017，待复核
+ksummit.messages.5475	V59.6.6.3	版权归作者而非项目	归入	补遗：Red Hat 版权与代码交织，再许可须全体权利人同意
 ksummit.messages.5559		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-ksummit.messages.6288		—	挂账	关键词命中但题面余弦仅 0.011，待复核
-ksummit.messages.6470		—	挂账	关键词命中但题面余弦仅 0.016，待复核
+ksummit.messages.6288	V59.1.7.2	版权归属的单方主张	归入	补遗：大陆法精神权利不可让渡，归属主张的实体限制
+ksummit.messages.6470	V59.3.8.2	版权转让的自愿性质	归入	补遗：普通法与大陆法转让之别，转让与独家许可两径
 ksummit.messages.6605		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 ksummit.messages.6743		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 ksummit.messages.6759		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 ksummit.messages.6835		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 ksummit.messages.6916		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-ksummit.messages.6934		—	挂账	关键词命中但题面余弦仅 0.012，待复核
+ksummit.messages.6934	V59.6.3.1	贡献许可的授予流程	归入	补遗：SFC 执法授权出自开发者书面委托，签署路径
 ksummit.messages.6961		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 ksummit.messages.6999		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 ksummit.messages.7093		—	挂账	关键词命中但题面余弦仅 0.014，待复核
@@ -34,7 +34,7 @@ linux-fsdevel.messages.306319		—	挂账	关键词命中但题面余弦仅 0.01
 cross_indexes.duckdb.concept_history		—	删除	零内容块（<260B）
 linux-man.messages.728857		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 linux-man.messages.732285		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-linux-man.messages.743284		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+linux-man.messages.743284	V59.8.2.1	权利人的同意凭证	归入	补遗：GPL-1.0-or-later 是否贡献者本意，同意的解释
 linux-man.messages.743371		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 linux-man.messages.754314		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 rust-for-linux.messages.9278159		—	挂账	关键词命中但题面余弦仅 0.013，待复核
@@ -42,17 +42,17 @@ rust-for-linux.messages.9298170	V59.3.1.4	受限许可的编译限制	归入	关
 rust-for-linux.messages.9301763		—	挂账	关键词命中但题面余弦仅 0.012，待复核
 rust-for-linux.messages.9309410		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 rust-for-linux.messages.9309804		—	挂账	关键词命中但题面余弦仅 0.014，待复核
-rust-for-linux.messages.9309946		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+rust-for-linux.messages.9309946	V59.6.10.5	长期维护的许可前提	归入	补遗：混许可长期维护是沉重负担，许可只减不增前提
 sparclinux.messages.9339973		—	删除	零内容块（<260B）
 sparclinux.messages.9353670		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 sparclinux.messages.9357369		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 sparclinux.messages.9359970	V59.3.1.4	受限许可的编译限制	归入	关键词命中＋题面余弦 0.023
 linux-api.messages.17777		—	挂账	关键词命中但题面余弦仅 0.015，待复核
-linux-arch.messages.9708270		—	挂账	关键词命中但题面余弦仅 0.018，待复核
-linux-arch.messages.9732370		—	挂账	关键词命中但题面余弦仅 0.013，待复核
+linux-arch.messages.9708270	V59.5.4.4	弱 Copyleft 的采纳场景	归入	补遗：内核构建解耦 GPL 头文件，构建规则限定许可边界
+linux-arch.messages.9732370	V59.5.4.1	弱 Copyleft 的强弱分界	归入	补遗：MODULE_LICENSE 标自身而组合恒 GPLv2，强弱分界
 linux-api.messages.35379	V59.2.5.1	旧文本在源树中的残留	归入	关键词命中＋题面余弦 0.021
 linux-api.messages.35820	V59.3.5.4	项目声明的许可表述	归入	关键词命中＋题面余弦 0.021
-linux-api.messages.56345		—	挂账	关键词命中但题面余弦仅 0.020，待复核
+linux-api.messages.56345	V59.5.4.4	弱 Copyleft 的采纳场景	归入	补遗：libpci 纯 GPL 与用户态例外难题，采纳场景受限
 linux-api.messages.50694		—	挂账	关键词命中但题面余弦仅 0.011，待复核
 linux-arch.messages.9743884		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 linux-arch.messages.9757393		—	挂账	关键词命中但题面余弦仅 0.012，待复核
@@ -64,15 +64,15 @@ linux-scsi.messages.1544990		—	挂账	关键词命中但题面余弦仅 0.016�
 linux-scsi.messages.1384826		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 linux-scsi.messages.1389419	V59.3.4.4	版权与许可的区分说明	归入	关键词命中＋题面余弦 0.020
 linux-scsi.messages.1475753		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-linux-scsi.messages.1477155		—	挂账	关键词命中但题面余弦仅 0.011，待复核
+linux-scsi.messages.1477155	V59.8.7.2	治理层的回应步骤	归入	补遗：Kuhn 以公开讨论为常规沟通，治理层回应方式
 linux-scsi.messages.1495230		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 linux-scsi.messages.1524347		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 linux-scsi.messages.1528590		—	挂账	关键词命中但题面余弦仅 0.016，待复核
-linux-scsi.messages.1343930		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+linux-scsi.messages.1343930	V59.8.1.4	改动的公布与生效时序	归入	补遗：sg3_utils 公告逐项列许可变更，公告版本时序
 linux-scsi.messages.1352534		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 linux-scsi.messages.1422591		—	挂账	关键词命中但题面余弦仅 0.014，待复核
 linux-scsi.messages.1423508		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-linux-scsi.messages.1423531		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+linux-scsi.messages.1423531	V59.1.3.2	二进制分发的随附手续	归入	补遗：NinjaSCSI 文档版权小节声明 Copyleft，文档载体声明
 linux-scsi.messages.1424503		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 linux-arch.messages.9834373		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 linux-scsi.messages.1416202		—	挂账	关键词命中但题面余弦仅 0.017，待复核
@@ -86,7 +86,7 @@ linux-fsdevel.messages.302670		—	挂账	关键词命中但题面余弦仅 0.01
 linux-fsdevel.messages.304073		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 linux-fsdevel.messages.416091		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37
 linux-fsdevel.messages.419287	V59.3.7.5	许可不兼容的处置	归入	关键词命中＋题面余弦 0.020
-linux-fsdevel.messages.483615		—	挂账	关键词命中但题面余弦仅 0.014，待复核
+linux-fsdevel.messages.483615	V59.5.5.3	源码形式的强制分发	归入	补遗：目标码再分发不供源码属违规，源码形式强制
 linux-fsdevel.messages.487315		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 linux-fsdevel.messages.511552		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 linux-fsdevel.messages.535629	V59.3.5.4	项目声明的许可表述	归入	关键词命中＋题面余弦 0.027
@@ -115,7 +115,7 @@ netdev.messages.8212205		—	挂账	关键词命中但题面余弦仅 0.013，�
 netdev.messages.8153465	V59.3.8.1	贡献者保留版权的默认	归入	关键词命中＋题面余弦 0.023
 linux-mm.messages.869046		—	挂账	关键词命中但题面余弦仅 0.010，待复核
 linux-mm.messages.896540		—	挂账	关键词命中但题面余弦仅 0.013，待复核
-netdev.messages.8281533		—	挂账	关键词命中但题面余弦仅 0.014，待复核
+netdev.messages.8281533	V59.9.3.2	Copyleft 的互惠要求	归入	补遗：GPL 与非 GPL 混合成衍生之辨，互惠要求
 netdev.messages.8397702	V59.3.8.1	贡献者保留版权的默认	归入	关键词命中＋题面余弦 0.023
 netdev.messages.8290599		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 netdev.messages.8307522		—	挂账	关键词命中但题面余弦仅 0.011，待复核
@@ -363,7 +363,7 @@ linux-man.messages.733447		—	挂账	关键词命中但题面余弦仅 0.015，
 linux-scsi.messages.1348685		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 linux-fsdevel.messages.263733		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37
 linux-fsdevel.messages.266516		—	删除	零内容块（<260B）
-linux-fsdevel.messages.289828		—	挂账	关键词命中但题面余弦仅 0.012，待复核
+linux-fsdevel.messages.289828	V59.8.6.5	兼容破坏的长期代价	归入	补遗：为兼容做净室再实现代价高昂，不兼容长期代价
 linux-fsdevel.messages.303503		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37
 linux-fsdevel.messages.369227		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37
 linux-fsdevel.messages.339680		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37
@@ -418,7 +418,7 @@ netdev.messages.8297331		—	移出	非本卷题域，建议宿主 V64（治理�
 netdev.messages.8505983		—	挂账	关键词命中但题面余弦仅 0.016，待复核
 netdev.messages.8593008		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37
 ksummit.messages.440		—	挂账	关键词命中但题面余弦仅 0.011，待复核
-ksummit.messages.8007		—	挂账	关键词命中但题面余弦仅 0.010，待复核
+ksummit.messages.8007	V59.9.3.5	自由观与许可取向	归入	补遗：GPLv3 与高压执法把新项目推向 BSD/Apache
 freebsd.duckdb		—	删除	库指针／统计存根，无独立证据面
 openbsd.duckdb		—	删除	库指针／统计存根，无独立证据面
 usenet_mail.messages.194874		—	移出	非本卷题域，建议宿主 V64（治理制度）／V37

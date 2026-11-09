@@ -160,7 +160,7 @@ freebsd-hackers.messages.1296665		—	挂账	关键词命中但题面余弦仅 0
 freebsd-hackers.messages.1297677		—	挂账	关键词命中但题面余弦仅 0.019，待复核
 freebsd-hackers.messages.1298420		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 freebsd-hackers.messages.1306916		—	挂账	关键词命中但题面余弦仅 0.016，待复核
-freebsd-hackers.messages.1306935		—	挂账	关键词命中但题面余弦仅 0.015，待复核
+freebsd-hackers.messages.1306935	V59.8.9.5	路径依赖的反例考察	归入	补遗：clang 切换 GPL-free FreeBSD 10，锁定可破的工具链反例
 freebsd-hackers.messages.1315779		—	挂账	关键词命中但题面余弦仅 0.013，待复核
 freebsd-hackers.messages.1320661		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 freebsd-hackers.messages.1321512	V59.5.6.4	与 GPL 的不兼容争议	归入	关键词命中＋题面余弦 0.026
@@ -388,7 +388,7 @@ netdev.messages.8298645		—	挂账	关键词命中但题面余弦仅 0.011，�
 netdev.messages.8142799	V59.5.7.1	APSL 的版本与生效日	归入	关键词命中＋题面余弦 0.024
 linux-mm.messages.887343		—	移出	非本卷题域，建议宿主 V32／V33（开源运动）
 netdev.messages.8417548	V59.4.1.2	四自由的表述方式	归入	关键词命中＋题面余弦 0.034
-netdev.messages.8111714		—	挂账	关键词命中但题面余弦仅 0.016，待复核
+netdev.messages.8111714	V59.3.10.1	三项目路径的分叉	归入	补遗：man-pages 保留 4.4BSD-Lite 出处，2008 节点第三方样本
 linux-man.messages.749677		—	挂账	关键词命中但题面余弦仅 0.018，待复核
 netdev.messages.8387793		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 ksummit.messages.1756		—	删除	零内容块（<260B）
@@ -404,8 +404,8 @@ ksummit-discuss.messages.347159		—	挂账	关键词命中但题面余弦仅 0.
 ksummit-discuss.messages.347183		—	删除	零内容块（<260B）
 ksummit-discuss.messages.347209		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 ksummit-discuss.messages.347215		—	挂账	关键词命中但题面余弦仅 0.018，待复核
-ksummit-discuss.messages.347247		—	挂账	关键词命中但题面余弦仅 0.017，待复核
-ksummit-discuss.messages.347263		—	挂账	关键词命中但题面余弦仅 0.017，待复核
+ksummit-discuss.messages.347247	V59.9.4.4	越界使用的救济手段	归入	补遗：Welte 三百案救济均止于停止侵害，越界救济实证
+ksummit-discuss.messages.347263	V59.7.9.3	定性差异的商业代价	归入	补遗：XFS/JFS/RCU 以 GPL 换代码，许可选择的商业代价
 ksummit-discuss.messages.347270		—	挂账	关键词命中但题面余弦仅 0.015，待复核
 ksummit-discuss.messages.347311		—	挂账	关键词命中但题面余弦仅 0.017，待复核
 linux-man.messages.725591		—	移出	非本卷题域，建议宿主 V32／V33（开源运动）

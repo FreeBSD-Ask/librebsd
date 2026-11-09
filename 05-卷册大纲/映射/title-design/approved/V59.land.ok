@@ -2,26 +2,26 @@ kind=landing
 vol=V59
 title_count=425
 ledger_sha256=30e966507340f5dedacb6591648aa0ebf7f0d0a09cb05fdfbcfc15ae75c1080a
-scope=全 425 题（40 filled＋385 空骨架）；V59 卷批，2026-11-09 收口
+scope=全 425 题（80 filled＋345 空骨架）；V59 卷批 2026-11-09 收口＋2026-11-10 补遗批（P1 兄弟题再分配）
 design_card=—
 design_card_sha256=—
 ledger_main=design/V59-C1.tsv
-ledger_main_sha256=04c15f147ad91d99a7f2dd3dd452845b2363e199bbd181150fee7090b2a2a702
+ledger_main_sha256=46f3526f8643b9134fb379d0150ad33efdf4d39c356ac298479d40cff269731d
 ledger_supp=design/V59-C2.tsv（1 册）
-ledger_supp_sha256=ecd2f90f356e193014d68e05118a019093814b18f3b116a6956cbbbfe940524e
+ledger_supp_sha256=c26d4843c0bc1b3d33b523ca392900d1ea9908477f0309a92de896ea931ecd1b
 design_index=design/V59.tsv
 design_index_sha256=347213b0975be97b3010a899377328619b51c512f6be7530e849b210fbe7d0fe
 fragments=design/fragments/V59.tsv
-fragments_sha256=5297a16b3d7a5a98418cf5fa3bab9762ae2183b8365cd6c02b8161958abd0496
+fragments_sha256=25413b5ed8e4667b7740b8c430101d3e08da2cabd8dbc670f0b5a61584b8ed73
 blocks_total=1868
-blocks_landed=93
-blocks_surplus=573
+blocks_landed=173
+blocks_surplus=493
 blocks_moved=1092
 blocks_compiled=0
 blocks_deleted=110
-gate=PASS：L1–L19 19/19（outline＝tree＝summary＝17,421 三向双射）；第三十九件 45 项 FAIL 0；第四十一件 exit 0（披露属 V45／V55 他线）；第三十八件 D1／D2 PASS＋V059 land.ok 由本件补齐
-gate2=第二十八件 0 违规；第二十四件直角引号 0；装配 --check 无漂移；基线 --check 零漂移（76 卷 544 章 3,954 节 17,421 小节；本批收口时点，其后并行各线续落 V60／V65／V70 至 18,399，以 doc-metrics 为准）
-gate3=卷级回归 V59 5/6：V1 渲染 425/425、题名 mismatch 0、V2 TOC 命中、V4 a11y 齐备、JS 错误 0；V3 深链红系页内 hash 再导航的平滑滚动落点漂移（同批 V37／V62／V75 同红、V68 因检查时点落在动画中途偶过而其最终落点同样漂移；fresh 深链 top=24、scroll-behavior:auto 对照六卷 top≈23–25 全合格），非本卷内容缺陷
-note=料域＝1,868 块（C1／C2 两册）：归入 93／挂账 573／移出 1,092／删除 110；425 题落树（filled 40／skeleton 385，有料率 9.4%）
+gate=PASS：L1–L19 19/19（outline＝tree＝summary＝19,461 三向双射，summary_diff=0）；第三十九件 45 项 FAIL 0；第四十一件 exit 0（披露属 V45／V55 他线）；第三十八件 D1／D2 PASS；第三十四件章内配对零残余（本批在 _vol_build_md 补 REVIEW-ANNOT 配平，:END／:结束 双闭合形）
+gate2=第二十八件 0 违规；第二十四件直角引号 0；装配 --check 无漂移；基线 --check 零漂移（76 卷 544 章 3,954 节 19,461 小节）；常备五件 PASS（元门禁／旁路备份／语料去重／长线／口径）
+gate3=卷级回归 V59 6/6：V1 渲染 425/425、题名 mismatch 0、V2 TOC 命中、V3 深链 top=24、V4 a11y 齐备、JS 错误 0
+note=补遗批（P1 同节／全卷兄弟题再分配）：一轮 288 候选＋二轮 86 候选逐块主会话判读，收 80 块（骨架 40 题点亮接 56 块；已填 8 题增密接 24 块）、拒 213 块（缺证题 7.10.3／7.6.3／4.4.2 三簇论题为缺证记录，不塞料）；容量截 3 块（V59.4.3.4 12 上限）；挂账 573→493；有料率 9.4%→18.8%。全程无子代理
 approved_by=ykla
-approved_at=2026-11-09
+approved_at=2026-11-10

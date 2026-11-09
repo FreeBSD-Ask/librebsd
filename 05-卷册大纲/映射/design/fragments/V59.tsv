@@ -10,7 +10,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	1	1.2	1.2.4	版权标识与权利取得的分离	skeleton	
 59	1	1.2	1.2.5	标识文本的沿袭与更替	skeleton	
 59	1	1.3	1.3.1	源码再分发的保留条件	filled	
-59	1	1.3	1.3.2	二进制分发的随附手续	skeleton	
+59	1	1.3	1.3.2	二进制分发的随附手续	filled	
 59	1	1.3	1.3.3	条件式许可的生效机制	skeleton	
 59	1	1.3	1.3.4	分发链条上的许可传递	skeleton	
 59	1	1.3	1.3.5	许可文本与合同文本的分野	skeleton	
@@ -29,7 +29,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	1	1.6	1.6.3	间接损失的列举清单	skeleton	
 59	1	1.6	1.6.4	免责段与许可段的次序	skeleton	
 59	1	1.7	1.7.1	两条款的信用要件	filled	
-59	1	1.7	1.7.2	版权归属的单方主张	skeleton	
+59	1	1.7	1.7.2	版权归属的单方主张	filled	
 59	1	1.7	1.7.3	逐行署名的样本空缺	skeleton	
 59	1	1.7	1.7.4	归属声明与许可授权的衔接	skeleton	
 59	1	1.7	1.7.5	署名义务的文本未定	skeleton	
@@ -46,7 +46,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	2	2.2	2.2.1	致谢句的固定措辞	skeleton	
 59	2	2.2	2.2.2	广告材料的范围判定	skeleton	
 59	2	2.2	2.2.3	致谢义务的触发条件	skeleton	
-59	2	2.2	2.2.4	文件头注释的样本待取	skeleton	
+59	2	2.2	2.2.4	文件头注释的样本待取	filled	
 59	2	2.2	2.2.5	违反致谢的救济路径	skeleton	
 59	2	2.3	2.3.1	背书禁止条的文本来源	filled	
 59	2	2.3	2.3.2	名义使用的事前许可	filled	
@@ -56,12 +56,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	2	2.4	2.4.1	广告条删除的公告文本	skeleton	
 59	2	2.4	2.4.2	删除公告的溯及效力	skeleton	
 59	2	2.4	2.4.3	许可人单方弃权的限度	skeleton	
-59	2	2.4	2.4.4	逐件改写台账的缺失	skeleton	
+59	2	2.4	2.4.4	逐件改写台账的缺失	filled	
 59	2	2.4	2.4.5	通知对象与分发渠道	skeleton	
 59	2	2.5	2.5.1	旧文本在源树中的残留	filled	
 59	2	2.5	2.5.2	逐文件许可的识别成本	skeleton	
 59	2	2.5	2.5.3	清理政策的文本线索	skeleton	
-59	2	2.5	2.5.4	旧条款对新项目的约束力	skeleton	
+59	2	2.5	2.5.4	旧条款对新项目的约束力	filled	
 59	2	2.5	2.5.5	SPDX 审计的操作缺据	skeleton	
 59	2	2.6	2.6.1	广告条删除后的条款重排	skeleton	
 59	2	2.6	2.6.2	三条款的通行称谓	skeleton	
@@ -90,7 +90,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	3	3.1	3.1.5	政策文本的适用对象	skeleton	
 59	3	3.2	3.2.1	会员表决与许可改定	skeleton	
 59	3	3.2	3.2.2	四条款到两条款的置换	skeleton	
-59	3	3.2	3.2.3	转换过程的三条动因	skeleton	
+59	3	3.2	3.2.3	转换过程的三条动因	filled	
 59	3	3.2	3.2.4	代码整体的逐件改写	skeleton	
 59	3	3.2	3.2.5	转换后的推荐口径	skeleton	
 59	3	3.3	3.3.1	基金会持有的版权集合	skeleton	
@@ -108,18 +108,18 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	3	3.5	3.5.3	继承文本的完整性	filled	
 59	3	3.5	3.5.4	项目声明的许可表述	filled	
 59	3	3.5	3.5.5	继承与再分发的连贯	filled	
-59	3	3.6	3.6.1	新文件的许可默认值	skeleton	
+59	3	3.6	3.6.1	新文件的许可默认值	filled	
 59	3	3.6	3.6.2	核心团队的审批权	skeleton	
 59	3	3.6	3.6.3	既有许可的维持原则	skeleton	
 59	3	3.6	3.6.4	决策依据的公开文本	skeleton	
 59	3	3.6	3.6.5	许可文件的集中存放规程	skeleton	
-59	3	3.7	3.7.1	导入件的许可登记	skeleton	
+59	3	3.7	3.7.1	导入件的许可登记	filled	
 59	3	3.7	3.7.2	静态内核的许可门槛	filled	
 59	3	3.7	3.7.3	许可文本目录与 SPDX 命名规程	skeleton	
 59	3	3.7	3.7.4	导入审批的权责主体	skeleton	
 59	3	3.7	3.7.5	许可不兼容的处置	filled	
 59	3	3.8	3.8.1	贡献者保留版权的默认	filled	
-59	3	3.8	3.8.2	版权转让的自愿性质	skeleton	
+59	3	3.8	3.8.2	版权转让的自愿性质	filled	
 59	3	3.8	3.8.3	补丁推定的政策文本待取	filled	
 59	3	3.8	3.8.4	集体作者与单一作者	skeleton	
 59	3	3.8	3.8.5	归属链的书面留痕	skeleton	
@@ -128,7 +128,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	3	3.9	3.9.3	商标持有的条目表	filled	
 59	3	3.9	3.9.4	主体分立下的合同承接	skeleton	
 59	3	3.9	3.9.5	三个项目的实体差异	skeleton	
-59	3	3.10	3.10.1	三项目路径的分叉	skeleton	
+59	3	3.10	3.10.1	三项目路径的分叉	filled	
 59	3	3.10	3.10.2	治理文本的公开程度	skeleton	
 59	3	3.10	3.10.3	决策权的集中与分散	skeleton	
 59	3	3.10	3.10.4	分化节点的可比性	skeleton	
@@ -141,12 +141,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	4	4.2	4.2.2	十条判据的排列逻辑	skeleton	
 59	4	4.2	4.2.3	Debian 与 BSD 许可的渊源	filled	
 59	4	4.2	4.2.4	指导方针对开源定义的供给	skeleton	
-59	4	4.3	4.3.1	定义十项的判准序列	skeleton	
+59	4	4.3	4.3.1	定义十项的判准序列	filled	
 59	4	4.3	4.3.2	再分发自由的底线	skeleton	
-59	4	4.3	4.3.3	衍生作品条款的弹性	skeleton	
+59	4	4.3	4.3.3	衍生作品条款的弹性	filled	
 59	4	4.3	4.3.4	不得限制其他软件的禁令	filled	
 59	4	4.3	4.3.5	定义与 DFSG 的承继关系	skeleton	
-59	4	4.4	4.4.1	三条款在 OSI 名录的位置	skeleton	
+59	4	4.4	4.4.1	三条款在 OSI 名录的位置	filled	
 59	4	4.4	4.4.2	批准时点的条目缺环	skeleton	
 59	4	4.4	4.4.3	双机构认定的对照底稿	skeleton	
 59	4	4.4	4.4.4	名录收录的规范意义	skeleton	
@@ -161,7 +161,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	4	4.7	4.7.1	开源作为分类的法律性质	skeleton	
 59	4	4.7	4.7.2	分类与权利类型的错位	skeleton	
 59	4	4.7	4.7.3	名录认定的效力边界	skeleton	
-59	4	4.7	4.7.4	分类对司法的弱约束	skeleton	
+59	4	4.7	4.7.4	分类对司法的弱约束	filled	
 59	4	4.8	4.8.1	Jacobsen 案的争点构成	skeleton	
 59	4	4.8	4.8.2	条件与契约的二分	skeleton	
 59	4	4.8	4.8.3	署名条件的许可范围归属	skeleton	
@@ -174,7 +174,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	4	4.9	4.9.5	重新定位的历史后果	filled	
 59	5	5.1	5.1.1	三种称谓的混用状况	skeleton	
 59	5	5.1	5.1.2	Expat 文本的授权条款	skeleton	
-59	5	5.1	5.1.3	声明保留的唯一义务	skeleton	
+59	5	5.1	5.1.3	声明保留的唯一义务	filled	
 59	5	5.1	5.1.4	X11 文本的附加段落	skeleton	
 59	5	5.1	5.1.5	与 BSD 两条款的同构性	skeleton	
 59	5	5.2	5.2.1	提交档案的反爬拦截	skeleton	
@@ -186,15 +186,15 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	5	5.3	5.3.3	与 GPLv2 的不兼容点	skeleton	
 59	5	5.3	5.3.4	版本沿革与机构背景	skeleton	
 59	5	5.3	5.3.5	基金会项目的审批门槛	skeleton	
-59	5	5.4	5.4.1	弱 Copyleft 的强弱分界	skeleton	
+59	5	5.4	5.4.1	弱 Copyleft 的强弱分界	filled	
 59	5	5.4	5.4.2	链接行为的法律定性	filled	
 59	5	5.4	5.4.3	库与程序的许可层级	skeleton	
-59	5	5.4	5.4.4	弱 Copyleft 的采纳场景	skeleton	
+59	5	5.4	5.4.4	弱 Copyleft 的采纳场景	filled	
 59	5	5.5	5.5.1	文件级单位的界定	skeleton	
 59	5	5.5	5.5.2	较大作品的分隔规则	skeleton	
-59	5	5.5	5.5.3	源码形式的强制分发	skeleton	
+59	5	5.5	5.5.3	源码形式的强制分发	filled	
 59	5	5.5	5.5.4	次级许可的兼容条款	skeleton	
-59	5	5.5	5.5.5	文件级策略与 BSD 的并用	skeleton	
+59	5	5.5	5.5.5	文件级策略与 BSD 的并用	filled	
 59	5	5.6	5.6.1	CDDL 提交页的机构留痕	skeleton	
 59	5	5.6	5.6.2	文件级定义的比对口径	skeleton	
 59	5	5.6	5.6.3	较大作品的界定依据	skeleton	
@@ -207,10 +207,10 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	5	5.8	5.8.1	条件叠加的兼容判准	skeleton	
 59	5	5.8	5.8.2	版权与专利的交叉约束	skeleton	
 59	5	5.8	5.8.3	兼容性判断的文本依据	filled	
-59	5	5.8	5.8.4	不兼容的法律处置	skeleton	
+59	5	5.8	5.8.4	不兼容的法律处置	filled	
 59	5	5.8	5.8.5	二元性质对兼容判断的效应	skeleton	
 59	5	5.9	5.9.1	双许可文本的选择权	skeleton	
-59	5	5.9	5.9.2	组合发行的许可清单	skeleton	
+59	5	5.9	5.9.2	组合发行的许可清单	filled	
 59	5	5.9	5.9.3	单一发行物内的多许可	skeleton	
 59	5	5.9	5.9.4	许可选择的告知义务	skeleton	
 59	5	5.9	5.9.5	组合发行的合规成本	skeleton	
@@ -229,7 +229,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	6	6.2	6.2.3	贡献比例与权利比例	skeleton	
 59	6	6.2	6.2.4	分散权属的许可难题	skeleton	
 59	6	6.2	6.2.5	归属碎片与维护成本	skeleton	
-59	6	6.3	6.3.1	贡献许可的授予流程	skeleton	
+59	6	6.3	6.3.1	贡献许可的授予流程	filled	
 59	6	6.3	6.3.2	版权转让的书面要件	skeleton	
 59	6	6.3	6.3.3	CLA 文本适用的缺项	skeleton	
 59	6	6.3	6.3.4	无协议贡献的处理	skeleton	
@@ -245,7 +245,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	6	6.5	6.5.4	版权让与的接收程序	skeleton	
 59	6	6.6	6.6.1	政策页的版权条款	skeleton	
 59	6	6.6	6.6.2	文件头的统一模板	skeleton	
-59	6	6.6	6.6.3	版权归作者而非项目	skeleton	
+59	6	6.6	6.6.3	版权归作者而非项目	filled	
 59	6	6.6	6.6.4	更严许可的排除规则	skeleton	
 59	6	6.6	6.6.5	项目名义的许可限制	skeleton	
 59	6	6.7	6.7.1	无门槛的贡献入口	skeleton	
@@ -257,22 +257,22 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	6	6.8	6.8.3	资产与责任的分隔	skeleton	
 59	6	6.8	6.8.4	分管格局的商标说明	skeleton	
 59	6	6.8	6.8.5	分离结构的治理代价	skeleton	
-59	6	6.9	6.9.1	声明与标识的双轨制	skeleton	
+59	6	6.9	6.9.1	声明与标识的双轨制	filled	
 59	6	6.9	6.9.2	SPDX 标识的机器可读性	skeleton	
-59	6	6.9	6.9.3	全文与标识的优先次序	skeleton	
+59	6	6.9	6.9.3	全文与标识的优先次序	filled	
 59	6	6.9	6.9.4	标识缺失的推定判据	skeleton	
 59	6	6.9	6.9.5	标识体系的维护权责	skeleton	
 59	6	6.10	6.10.1	版权稳定与维护能力	skeleton	
 59	6	6.10	6.10.2	替换受限的长期效应	skeleton	
 59	6	6.10	6.10.3	版权清单的维护负担	skeleton	
 59	6	6.10	6.10.4	治理结构与维护连续性	skeleton	
-59	6	6.10	6.10.5	长期维护的许可前提	skeleton	
+59	6	6.10	6.10.5	长期维护的许可前提	filled	
 59	7	7.1	7.1.1	商业利用的许可前提	skeleton	
 59	7	7.1	7.1.2	二进制销售的许可手续	skeleton	
 59	7	7.1	7.1.3	商业友好的制度成因	skeleton	
 59	7	7.1	7.1.4	再利用与再许可之别	skeleton	
 59	7	7.1	7.1.5	随附文本的样本缺位	skeleton	
-59	7	7.2	7.2.1	修改与衍生的界线	skeleton	
+59	7	7.2	7.2.1	修改与衍生的界线	filled	
 59	7	7.2	7.2.2	独立产品的判定要件	skeleton	
 59	7	7.2	7.2.3	修改后的声明保留	skeleton	
 59	7	7.2	7.2.4	产品分界与许可交接	skeleton	
@@ -309,7 +309,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	7	7.8	7.8.5	对 BSD 许可的对照意义	skeleton	
 59	7	7.9	7.9.1	云端的复制与分发	skeleton	
 59	7	7.9	7.9.2	服务商的分发定性	skeleton	
-59	7	7.9	7.9.3	定性差异的商业代价	skeleton	
+59	7	7.9	7.9.3	定性差异的商业代价	filled	
 59	7	7.9	7.9.4	云厂商的许可证选择	skeleton	
 59	7	7.9	7.9.5	定性问题的未决部分	skeleton	
 59	7	7.10	7.10.1	回馈义务的文本缺位	skeleton	
@@ -325,14 +325,14 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	8	8.1	8.1.1	改许可的常见动因	skeleton	
 59	8	8.1	8.1.2	商业模式的许可适配	skeleton	
 59	8	8.1	8.1.3	法律前提的先行确认	skeleton	
-59	8	8.1	8.1.4	改动的公布与生效时序	skeleton	
+59	8	8.1	8.1.4	改动的公布与生效时序	filled	
 59	8	8.1	8.1.5	改许可的历史先例	skeleton	
-59	8	8.2	8.2.1	权利人的同意凭证	skeleton	
+59	8	8.2	8.2.1	权利人的同意凭证	filled	
 59	8	8.2	8.2.2	既有许可的不可撤销	skeleton	
 59	8	8.2	8.2.3	贡献者授权的覆盖	skeleton	
 59	8	8.2	8.2.4	版本升级条款的效力	skeleton	
 59	8	8.2	8.2.5	许可变更的溯及界限	skeleton	
-59	8	8.3	8.3.1	三条款转向双轨授权	skeleton	
+59	8	8.3	8.3.1	三条款转向双轨授权	filled	
 59	8	8.3	8.3.2	转换时点与版本号	skeleton	
 59	8	8.3	8.3.3	源码可得的表述策略	skeleton	
 59	8	8.3	8.3.4	转换公告的官方理由	skeleton	
@@ -350,9 +350,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	8	8.6	8.6.2	生态影响的传导路径	skeleton	
 59	8	8.6	8.6.3	替代实现的填补速度	skeleton	
 59	8	8.6	8.6.4	破坏后的信任修复	skeleton	
-59	8	8.6	8.6.5	兼容破坏的长期代价	skeleton	
+59	8	8.6	8.6.5	兼容破坏的长期代价	filled	
 59	8	8.7	8.7.1	争议的许可文本依据	skeleton	
-59	8	8.7	8.7.2	治理层的回应步骤	skeleton	
+59	8	8.7	8.7.2	治理层的回应步骤	filled	
 59	8	8.7	8.7.3	争议对项目声誉的影响	skeleton	
 59	8	8.7	8.7.4	裁决权的归属问题	skeleton	
 59	8	8.7	8.7.5	争议解决的制度出口	skeleton	
@@ -365,32 +365,32 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 59	8	8.9	8.9.2	转换成本与锁定倾向	skeleton	
 59	8	8.9	8.9.3	生态位的许可分布	skeleton	
 59	8	8.9	8.9.4	长期路径的同类比较	skeleton	
-59	8	8.9	8.9.5	路径依赖的反例考察	skeleton	
+59	8	8.9	8.9.5	路径依赖的反例考察	filled	
 59	9	9.1	9.1.1	“自由”一词的歧义来源	skeleton	
-59	9	9.1	9.1.2	免费与自由的语义分层	skeleton	
+59	9	9.1	9.1.2	免费与自由的语义分层	filled	
 59	9	9.1	9.1.3	法律含义与道德含义的分置	skeleton	
 59	9	9.1	9.1.4	许可文本中的自由表述	skeleton	
 59	9	9.1	9.1.5	词义之争的制度回响	skeleton	
 59	9	9.2	9.2.1	运行自由的许可余地	skeleton	
 59	9	9.2	9.2.2	自由研究与源码可得	skeleton	
-59	9	9.2	9.2.3	修改自由的授权基础	skeleton	
+59	9	9.2	9.2.3	修改自由的授权基础	filled	
 59	9	9.2	9.2.4	再发布自由的限度	skeleton	
 59	9	9.2	9.2.5	四自由的顺序编排	skeleton	
 59	9	9.3	9.3.1	宽松许可的自由观	skeleton	
-59	9	9.3	9.3.2	Copyleft 的互惠要求	skeleton	
+59	9	9.3	9.3.2	Copyleft 的互惠要求	filled	
 59	9	9.3	9.3.3	两种自由观的对照	skeleton	
 59	9	9.3	9.3.4	自由概念的法律落点	skeleton	
-59	9	9.3	9.3.5	自由观与许可取向	skeleton	
+59	9	9.3	9.3.5	自由观与许可取向	filled	
 59	9	9.4	9.4.1	许可条件的效力根据	skeleton	
 59	9	9.4	9.4.2	权利边界的划定方法	skeleton	
 59	9	9.4	9.4.3	条件的自动执行效力	skeleton	
-59	9	9.4	9.4.4	越界使用的救济手段	skeleton	
+59	9	9.4	9.4.4	越界使用的救济手段	filled	
 59	9	9.4	9.4.5	条件与义务的区分	skeleton	
 59	9	9.5	9.5.1	免责条款的法理定位	skeleton	
 59	9	9.5	9.5.2	担保与责任的分离	skeleton	
 59	9	9.5	9.5.3	责任限制的合理性问题	skeleton	
 59	9	9.5	9.5.4	极简许可的免责安排	skeleton	
-59	9	9.5	9.5.5	免责与合规体系的衔接	skeleton	
+59	9	9.5	9.5.5	免责与合规体系的衔接	filled	
 59	9	9.6	9.6.1	署名作为归属仪式	skeleton	
 59	9	9.6	9.6.2	历史记忆的文本载体	skeleton	
 59	9	9.6	9.6.3	归属声明的累积记忆	skeleton	
