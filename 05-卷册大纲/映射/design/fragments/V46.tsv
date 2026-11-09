@@ -35,13 +35,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 46	1	1.7	1.7.4	关键改动的署名分工	skeleton	
 46	1	1.7	1.7.5	聚会邀请制的核心圈	skeleton	
 46	2	2.1	2.1.1	协议分叉期的代码清理	filled	
-46	2	2.1	2.1.2	特权分离的方案提出	skeleton	
+46	2	2.1	2.1.2	特权分离的方案提出	filled	
 46	2	2.1	2.1.3	主机探测工具的作者	skeleton	
-46	2	2.1	2.1.4	漏洞通报的内部路径	skeleton	
-46	2	2.1	2.1.5	缓解方案的应急地位	skeleton	
+46	2	2.1	2.1.4	漏洞通报的内部路径	filled	
+46	2	2.1	2.1.5	缓解方案的应急地位	filled	
 46	2	2.2	2.2.1	协议 1.5 实现的替换	filled	
-46	2	2.2	2.2.2	协议 2.0 的单体整合	skeleton	
-46	2	2.2	2.2.3	SFTP 服务端的实现	skeleton	
+46	2	2.2	2.2.2	协议 2.0 的单体整合	filled	
+46	2	2.2	2.2.3	SFTP 服务端的实现	filled	
 46	2	2.2	2.2.4	协议改动的复核分工	skeleton	
 46	2	2.2	2.2.5	维护者署名的版本延续	skeleton	
 46	2	2.3	2.3.1	可移植分支的发端	filled	
@@ -62,7 +62,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 46	2	2.6	2.6.1	披露渠道的公开化	skeleton	
 46	2	2.6	2.6.2	外部报告的修复时长	skeleton	
 46	2	2.6	2.6.3	未证可利用缺陷的处置	filled	
-46	2	2.6	2.6.4	公告节奏的对外承诺	skeleton	
+46	2	2.6	2.6.4	公告节奏的对外承诺	filled	
 46	2	2.6	2.6.5	外部研究的引用边界	skeleton	
 46	3	3.1	3.1.1	维护名单的共管形态	skeleton	
 46	3	3.1	3.1.2	世代分段的协议锚定	skeleton	
@@ -81,7 +81,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 46	3	3.3	3.3.5	作者群的轮换与留任	skeleton	
 46	3	3.4	3.4.1	时间服务的自建动机	filled	
 46	3	3.4	3.4.2	路由守护进程的首次发布	skeleton	
-46	3	3.4	3.4.3	时间服务的跨分支采用	skeleton	
+46	3	3.4	3.4.3	时间服务的跨分支采用	filled	
 46	3	3.4	3.4.4	权限分离的守护进程复用	skeleton	
 46	3	3.4	3.4.5	路由能力的逐年补齐	skeleton	
 46	3	3.5	3.5.1	聚会产出的署名惯例	skeleton	
@@ -95,8 +95,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 46	4	4.1	4.1.4	聚会资助的拨款口径	skeleton	
 46	4	4.1	4.1.5	捐赠渠道的机构化	skeleton	
 46	4	4.2	4.2.1	早期自筹的经费来源	filled	
-46	4	4.2	4.2.2	捐赠名单的时间分层	skeleton	
-46	4	4.2	4.2.3	实物捐赠的记账方式	skeleton	
+46	4	4.2	4.2.2	捐赠名单的时间分层	filled	
+46	4	4.2	4.2.3	实物捐赠的记账方式	filled	
 46	4	4.2	4.2.4	聚会经费的分担结构	skeleton	
 46	4	4.2	4.2.5	资金组织人的可见度	skeleton	
 46	4	4.3	4.3.1	聚会命名的年份编码	skeleton	
