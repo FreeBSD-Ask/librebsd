@@ -1,13 +1,13 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
-71	1	1.1	1.1.1	路由设备控制平面的 BSD 内核移植	skeleton	
+71	1	1.1	1.1.1	路由设备控制平面的 BSD 内核移植	filled	
 71	1	1.1	1.1.2	FreeBSD 内核与 Junos 代码的分层	filled	
-71	1	1.1	1.1.3	网络协议栈的商品化嵌入	skeleton	
-71	1	1.1	1.1.4	厂商内核与上游代码的界线	skeleton	
+71	1	1.1	1.1.3	网络协议栈的商品化嵌入	filled	
+71	1	1.1	1.1.4	厂商内核与上游代码的界线	filled	
 71	1	1.1	1.1.5	Wind River 的 BSD 栈移植路径	filled	
-71	1	1.2	1.2.1	Junos 控制平面的 FreeBSD 基线	skeleton	
+71	1	1.2	1.2.1	Junos 控制平面的 FreeBSD 基线	filled	
 71	1	1.2	1.2.2	路由引擎中的内核版本演进	filled	
 71	1	1.2	1.2.3	Junos 用户空间与内核的分工	filled	
-71	1	1.2	1.2.4	内核升级与平台兼容的次序	skeleton	
+71	1	1.2	1.2.4	内核升级与平台兼容的次序	filled	
 71	1	1.2	1.2.5	FreeBSD 10 内核在 Junos 的采用	skeleton	
 71	1	1.3	1.3.1	Junos OS Evolved 的 Linux 底座	skeleton	
 71	1	1.3	1.3.2	两代 Junos 的架构分岔	skeleton	
@@ -51,12 +51,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 71	2	2.2	2.2.5	存储设备的开源基础披露	skeleton	
 71	2	2.3	2.3.1	ONTAP 的 FreeBSD 组件范围	filled	
 71	2	2.3	2.3.2	WAFL 与 BSD 内核的并置	skeleton	
-71	2	2.3	2.3.3	NetApp 上游回馈的规模	skeleton	
+71	2	2.3	2.3.3	NetApp 上游回馈的规模	filled	
 71	2	2.3	2.3.4	bhyve 进入基本系统的经过	filled	
 71	2	2.3	2.3.5	厂商 fork 与主线的关系	skeleton	
 71	2	2.4	2.4.1	FreeNAS 项目的起源与定位	filled	
-71	2	2.4	2.4.2	网络存储的软件化过程	skeleton	
-71	2	2.4	2.4.3	开源 NAS 的分发形态	skeleton	
+71	2	2.4	2.4.2	网络存储的软件化过程	filled	
+71	2	2.4	2.4.3	开源 NAS 的分发形态	filled	
 71	2	2.4	2.4.4	项目治理与商业支持的衔接	skeleton	
 71	2	2.4	2.4.5	更名前后产品线的连续	skeleton	
 71	2	2.5	2.5.1	ZFS 在基本系统中的位次	skeleton	
@@ -85,9 +85,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 71	3	3.1	3.1.4	系统维护与业务连续的要求	skeleton	
 71	3	3.1	3.1.5	服务规模对内核的压力	skeleton	
 71	3	3.2	3.2.1	Open Connect 的边缘设备构成	filled	
-71	3	3.2	3.2.2	OCA 选型的性能依据	skeleton	
-71	3	3.2	3.2.3	边缘交付网络的部署边界	skeleton	
-71	3	3.2	3.2.4	流媒体交付的带宽账目	skeleton	
+71	3	3.2	3.2.2	OCA 选型的性能依据	filled	
+71	3	3.2	3.2.3	边缘交付网络的部署边界	filled	
+71	3	3.2	3.2.4	流媒体交付的带宽账目	filled	
 71	3	3.2	3.2.5	峰值流量的估计性质	skeleton	
 71	3	3.3	3.3.1	Yahoo 前端的 FreeBSD 集群	skeleton	
 71	3	3.3	3.3.2	门户网站的系统规模	skeleton	
@@ -178,7 +178,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 71	5	5.1	5.1.2	二进制分发中的声明保留	skeleton	
 71	5	5.1	5.1.3	宽松许可与闭源产品的兼容	filled	
 71	5	5.1	5.1.4	许可证文本的适用差异	skeleton	
-71	5	5.1	5.1.5	再分发链条的责任分配	skeleton	
+71	5	5.1	5.1.5	再分发链条的责任分配	filled	
 71	5	5.2	5.2.1	版权声明与品牌标识的分离	filled	
 71	5	5.2	5.2.2	产品文档中的权利归属	skeleton	
 71	5	5.2	5.2.3	声明保留义务的执行痕迹	skeleton	
