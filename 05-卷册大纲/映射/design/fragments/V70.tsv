@@ -1,0 +1,172 @@
+vol	chapter	sec_no	sub_no	title	status	evidence
+70	1	1.1	1.1.1	贝尔实验室与伯克利的最初接触	filled	
+70	1	1.1	1.1.2	远程调试启动的协作惯例	filled	
+70	1	1.1	1.1.3	三系联合购机的权宜安排	filled	
+70	1	1.1	1.1.4	DARPA 合同与 CSRG 的设立	filled	
+70	1	1.1	1.1.5	行政与开发的初次分工	filled	
+70	1	1.2	1.2.1	家族树作为分离与聚合的判据	skeleton	
+70	1	1.2	1.2.2	共同上游与派生分支的界定	skeleton	
+70	1	1.2	1.2.3	分叉时点的可考证据	skeleton	
+70	1	1.2	1.2.4	共用框架的取用通道	skeleton	
+70	1	1.2	1.2.5	模型适用范围的自我限定	skeleton	
+70	1	1.3	1.3.1	DARPA 统一操作系统层的选择	filled	
+70	1	1.3	1.3.2	委员会年度两次集会	filled	
+70	1	1.3	1.3.3	源码共享的同行惯例	filled	
+70	1	1.3	1.3.4	合同续签与经费量级	skeleton	
+70	1	1.3	1.3.5	学术网络中的工具扩散	filled	
+70	1	1.4	1.4.1	Multics 退场留下的空位	skeleton	
+70	1	1.4	1.4.2	PDP-7 上的一次副产物	skeleton	
+70	1	1.4	1.4.3	联合体构想中的集体计算	skeleton	
+70	1	1.4	1.4.4	被拒的机型提案与转向	skeleton	
+70	1	1.4	1.4.5	系统自举与命名的先后	skeleton	
+70	1	1.5	1.5.1	4.2BSD 与网络协议的整合	filled	
+70	1	1.5	1.5.2	发行份数与装机规模	filled	
+70	1	1.5	1.5.3	4.3BSD 的代码来源之争	filled	
+70	1	1.5	1.5.4	Net/2 的清理与六文件缺口	filled	
+70	1	1.5	1.5.5	厂商系统的网络子系统继承	filled	
+70	1	1.6	1.6.1	源码随发行物一并交付	filled	
+70	1	1.6	1.6.2	Networking Release 1 的许可条款	filled	
+70	1	1.6	1.6.3	磁带费与自由转取的安排	skeleton	
+70	1	1.6	1.6.4	版权声明保留的分发条件	filled	
+70	1	1.6	1.6.5	广告致谢条款的后续删除	skeleton	
+70	1	1.7	1.7.1	BSD UNIX 名称的混用年代	skeleton	
+70	1	1.7	1.7.2	厂商转向 System V 的时点	skeleton	
+70	1	1.7	1.7.3	伯克利磁带发行先于 CSRG 建制	skeleton	
+70	1	1.7	1.7.4	发行规模的逐年记录	skeleton	
+70	1	1.7	1.7.5	伯克利声望的外溢效应	skeleton	
+70	1	1.8	1.8.1	经费枯竭与关闭风险	filled	
+70	1	1.8	1.8.2	Net/2 缺件的技术底账	filled	
+70	1	1.8	1.8.3	许可依赖构成的天花板	filled	
+70	1	1.8	1.8.4	少数人承担的清理工程量	filled	
+70	1	1.8	1.8.5	解散决定与移交方式	filled	
+70	2	2.1	2.1.1	BSDI 广告与电话号的争执	filled	
+70	2	2.1	2.1.2	USL 诉状的诉因范围	filled	
+70	2	2.1	2.1.3	禁令驳回的四十页意见	filled	
+70	2	2.1	2.1.4	加州反诉的管辖选择	filled	
+70	2	2.1	2.1.5	Novell 收购与和解达成	filled	
+70	2	2.2	2.2.1	三文件移出与版权标注	filled	
+70	2	2.2	2.2.2	4.4BSD-Lite 的再许可	filled	
+70	2	2.2	2.2.3	重启代码库的合并代价	skeleton	
+70	2	2.2	2.2.4	名称使用权与源码许可的脱钩	filled	
+70	2	2.2	2.2.5	和解条款的溯及效力	filled	
+70	2	2.3	2.3.1	386BSD 的匿名取用与追随	filled	
+70	2	2.3	2.3.2	NetBSD 的四位发起人	filled	
+70	2	2.3	2.3.3	FreeBSD 补丁包积弊与撤回	filled	
+70	2	2.3	2.3.4	OpenBSD 的人事驱逐与分叉	filled	
+70	2	2.3	2.3.5	两次分立的性质差别	filled	
+70	2	2.4	2.4.1	反事实推演的设问条件	skeleton	
+70	2	2.4	2.4.2	法律冻结的时段与后果	skeleton	
+70	2	2.4	2.4.3	和解时点的外部变量	skeleton	
+70	2	2.4	2.4.4	若无诉讼的替代路径	skeleton	
+70	2	2.4	2.4.5	反事实论证的边界	skeleton	
+70	3	3.1	3.1.1	Ports 树的维护分工	skeleton	
+70	3	3.1	3.1.2	发行分支与冻结纪律	skeleton	
+70	3	3.1	3.1.3	Core Team 的集体决策	skeleton	
+70	3	3.1	3.1.4	安装器与 CD-ROM 发行	skeleton	
+70	3	3.1	3.1.5	回馈范围的自决权	skeleton	
+70	3	3.2	3.2.1	port 作为支持单位的口径	filled	
+70	3	3.2	3.2.2	三级分层与支持承诺	skeleton	
+70	3	3.2	3.2.3	逐平台清单的积累	skeleton	
+70	3	3.2	3.2.4	口号作为身份宣言	skeleton	
+70	3	3.2	3.2.5	架构独立的首位目标	skeleton	
+70	3	3.3	3.3.1	逐文件审计的方法定位	filled	
+70	3	3.3	3.3.2	六到十二人的审计小组	skeleton	
+70	3	3.3	3.3.3	默认安全配置的取向	skeleton	
+70	3	3.3	3.3.4	加拿大发行地的出口便利	skeleton	
+70	3	3.3	3.3.5	半年发行节奏的确定	filled	
+70	3	3.4	3.4.1	自 FreeBSD 4.8 分叉的起点	filled	
+70	3	3.4	3.4.2	令牌作为内核同步基础	skeleton	
+70	3	3.4	3.4.3	单系统映像的最初目标	skeleton	
+70	3	3.4	3.4.4	HAMMER 的历史保留设计	skeleton	
+70	3	3.4	3.4.5	虚拟内核的开发用途	filled	
+70	3	3.5	3.5.1	APSL 条款的开放边界	skeleton	
+70	3	3.5	3.5.2	Darwin 源码的按期发布	filled	
+70	3	3.5	3.5.3	开放核心与产品外壳的分层	skeleton	
+70	3	3.5	3.5.4	Rhapsody 的 NetBSD 基座	skeleton	
+70	3	3.5	3.5.5	许可模板的个案差异	skeleton	
+70	3	3.6	3.6.1	共同上游作为法律起点	skeleton	
+70	3	3.6	3.6.2	许可证共同体的单向通量	skeleton	
+70	3	3.6	3.6.3	家族相似的体例与工具	skeleton	
+70	3	3.6	3.6.4	四分支的身份分工	skeleton	
+70	3	3.6	3.6.5	差异共同体的自我表述	skeleton	
+70	4	4.1	4.1.1	服务器定位的技术支撑	skeleton	
+70	4	4.1	4.1.2	37000 个第三方应用的规模	skeleton	
+70	4	4.1	4.1.3	嵌入式平台的延伸	skeleton	
+70	4	4.1	4.1.4	基金会作为法律实体	skeleton	
+70	4	4.1	4.1.5	云场景中的机队部署	skeleton	
+70	4	4.2	4.2.1	移植清单的覆盖广度	skeleton	
+70	4	4.2	4.2.2	pkgsrc 的跨平台复用	skeleton	
+70	4	4.2	4.2.3	整批设备的接入方式	skeleton	
+70	4	4.2	4.2.4	向后兼容的长期守持	filled	
+70	4	4.2	4.2.5	互联网协作的组织遗产	skeleton	
+70	4	4.3	4.3.1	OpenSSH 的跨系统移植	skeleton	
+70	4	4.3	4.3.2	LibreSSL 分叉的动因	skeleton	
+70	4	4.3	4.3.3	审计结论的公开惯例	skeleton	
+70	4	4.3	4.3.4	安全声誉的外部评价	skeleton	
+70	4	4.3	4.3.5	许可筛选的准入规则	skeleton	
+70	4	4.4	4.4.1	SMP 锁重写的工程规模	skeleton	
+70	4	4.4	4.4.2	HAMMER2 的替代路线	filled	
+70	4	4.4	4.4.3	swapcache 的存储取舍	skeleton	
+70	4	4.4	4.4.4	性能取向的竞争参照	filled	
+70	4	4.4	4.4.5	与 FreeBSD 路线的分野	skeleton	
+70	4	4.5	4.5.1	bmake 自 NetBSD 的引入	skeleton	
+70	4	4.5	4.5.2	DRM 与 HDA 的双向移植	filled	
+70	4	4.5	4.5.3	pkgsrc 跨阵营的复用	skeleton	
+70	4	4.5	4.5.4	条款不设回馈义务	skeleton	
+70	4	4.5	4.5.5	跨支移植的记名做法	skeleton	
+70	4	4.6	4.6.1	竞争作为传播的加速器	skeleton	
+70	4	4.6	4.6.2	重复作业的结构代价	skeleton	
+70	4	4.6	4.6.3	回流三通道的构成	skeleton	
+70	4	4.6	4.6.4	取用多于回馈的常态	skeleton	
+70	4	4.6	4.6.5	家族自觉的对外整合	skeleton	
+70	5	5.1	5.1.1	OpenZFS 的跨平台拼合	filled	
+70	5	5.1	5.1.2	LLVM 重许可的法律基础	filled	
+70	5	5.1	5.1.3	Clang 默认化的替换节点	filled	
+70	5	5.1	5.1.4	重许可的专利保护条款	skeleton	
+70	5	5.1	5.1.5	工具链替换的连带清理	skeleton	
+70	5	5.2	5.2.1	许可改造的多年进程	skeleton	
+70	5	5.2	5.2.2	GPL 组件的退出路径	filled	
+70	5	5.2	5.2.3	共同上游的再次重建	skeleton	
+70	5	5.2	5.2.4	工程需求驱动的取用	skeleton	
+70	5	5.2	5.2.5	许可兼容性的可测条件	skeleton	
+70	5	5.3	5.3.1	Netflix 机队的 FreeBSD 基线	skeleton	
+70	5	5.3	5.3.2	视频分发的吞吐需求	skeleton	
+70	5	5.3	5.3.3	商业内嵌的选择性吸收	skeleton	
+70	5	5.3	5.3.4	基金会资助的公共品供给	skeleton	
+70	5	5.3	5.3.5	基础设施化的可见度落差	skeleton	
+70	5	5.4	5.4.1	Linux 兼容层的功能缺口	skeleton	
+70	5	5.4	5.4.2	cgroups 与命名空间的缺席	skeleton	
+70	5	5.4	5.4.3	打包体系的各自为政	skeleton	
+70	5	5.4	5.4.4	许可偏好的内部分歧	skeleton	
+70	5	5.4	5.4.5	统一性测度的分项化	skeleton	
+70	5	5.5	5.5.1	Par Lab 的 BSD 许可选择	skeleton	
+70	5	5.5	5.5.2	RISC-V 的 2010 年起点	skeleton	
+70	5	5.5	5.5.3	指令集规范的公有领域处置	skeleton	
+70	5	5.5	5.5.4	无专利申报的开放前提	skeleton	
+70	5	5.5	5.5.5	开放硬件与开源软件的分界	skeleton	
+70	5	5.6	5.6.1	FreeBSD 架构清单对 RISC-V 的收录	skeleton	
+70	5	5.6	5.6.2	NetBSD 移植的层级定位	skeleton	
+70	5	5.6	5.6.3	OpenBSD riscv64 板卡的覆盖	skeleton	
+70	5	5.6	5.6.4	DragonFly 的单平台发行	skeleton	
+70	5	5.6	5.6.5	支持深度的可比口径	skeleton	
+70	5	5.7	5.7.1	板卡清单作为移植证据	skeleton	
+70	5	5.7	5.7.2	固件与引导的适配门槛	skeleton	
+70	5	5.7	5.7.3	开放硬件的授权状态	skeleton	
+70	5	5.7	5.7.4	移植深度的分层记录	skeleton	
+70	5	5.7	5.7.5	开发板型号的整批登记	filled	
+70	5	5.8	5.8.1	免版税标准的聚合效力	skeleton	
+70	5	5.8	5.8.2	标准组织与实现的职责切分	skeleton	
+70	5	5.8	5.8.3	专有核实现的反例	skeleton	
+70	5	5.8	5.8.4	许可承诺的永久性	skeleton	
+70	5	5.8	5.8.5	聚合节点的成立门槛	skeleton	
+70	5	5.9	5.9.1	三段分期的结构划分	skeleton	
+70	5	5.9	5.9.2	循环模型的解释限度	skeleton	
+70	5	5.9	5.9.3	解散之后的权威分散	skeleton	
+70	5	5.9	5.9.4	分裂次序的家族树记录	skeleton	
+70	5	5.9	5.9.5	无回馈义务的长期效应	skeleton	
+70	5	5.9	5.9.6	卷末收束与后续卷的交接	skeleton	
+70	5	5.10	5.10.1	许可条款中的自由定义	skeleton	
+70	5	5.10	5.10.2	源代码作为言论的司法确认	skeleton	
+70	5	5.10	5.10.3	加密出口管制的松绑	skeleton	
+70	5	5.10	5.10.4	未限定用途的取用许可	skeleton	
+70	5	5.10	5.10.5	自由叙事的两种落点	skeleton	
