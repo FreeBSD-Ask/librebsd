@@ -3,7 +3,7 @@ port-alpha.messages.9376		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9383		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9417		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9418		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.9437	V42.1.4.2	de Raadt 与 SPARC 支持的早期维护	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.9437		—	挂账	复核错配：原拟 V42.1.4.2，alpha 无头服务器与 X 贡献（该块已在 V41 2.5.2 落位），非 de 
 port-alpha.messages.9462		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9468		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9478		—	挂账	待定位：与 418 题重合不足 6 项
@@ -21,7 +21,7 @@ port-alpha.messages.9606		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9624		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9642		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9646		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.9667	V42.2.1.6	分层清理的持续工程	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.9667		—	挂账	复核错配：原拟 V42.2.1.6，scsictl 低级格式化补丁未提交，非 MD／MI 分层清理
 port-alpha.messages.9672		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9697		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9732		—	挂账	待定位：与 418 题重合不足 6 项
@@ -32,7 +32,7 @@ port-alpha.messages.9987		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.9999		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10037		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10107		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.10117	V42.3.5.5	法律实体与项目人物	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.10117		—	挂账	复核错配：原拟 V42.3.5.5，wscons 与 X 共屏切换协议，非法律实体与项目人物
 port-alpha.messages.10123		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10190		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10195		—	挂账	待定位：与 418 题重合不足 6 项
@@ -42,26 +42,26 @@ port-alpha.messages.10250		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10265		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10362		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10363		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.10437	V42.1.4.3	去职公告的核心组说明（1994）	归入	文本与题名thesis 重合 3 项
-port-alpha.messages.10438	V42.1.4.3	去职公告的核心组说明（1994）	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.10437		—	挂账	复核错配：原拟 V42.1.4.3，内核挂起问题的日期标签二分，非 1994 去职公告
+port-alpha.messages.10438		—	挂账	复核错配：原拟 V42.1.4.3，同上：uvm／pmap 改动嫌疑排查，非去职公告
 port-alpha.messages.10469		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10477		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10478		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10488		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.10496	V42.2.1.6	分层清理的持续工程	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.10496		—	挂账	复核错配：原拟 V42.2.1.6，Tulip 新驱动未完成，非分层清理
 port-alpha.messages.10498		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10531		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10550		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10591		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10622		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.10623	V42.3.5.5	法律实体与项目人物	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.10623		—	挂账	复核错配：原拟 V42.3.5.5，TGA 三型与 wscons 支持，非法律实体
 port-alpha.messages.10629		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10721		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10727		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10762		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10801		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.10807	V42.2.1.6	分层清理的持续工程	归入	文本与题名thesis 重合 3 项
-port-alpha.messages.10819	V42.5.3.1	三十周年场次的存续之问	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.10807		—	挂账	复核错配：原拟 V42.2.1.6，Multia 转接卡改造网页，非分层清理
+port-alpha.messages.10819		—	挂账	复核错配：原拟 V42.5.3.1，COMPAT_OSF1 改进通告，非三十周年场次
 port-alpha.messages.10846		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10860		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.10867		—	挂账	待定位：与 418 题重合不足 6 项
@@ -76,7 +76,7 @@ port-alpha.messages.11058		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.11099		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.11110		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.11154		—	挂账	待定位：与 418 题重合不足 6 项
-port-alpha.messages.11156	V42.5.3.3	世代构成的公开讨论	归入	文本与题名thesis 重合 3 项
+port-alpha.messages.11156		—	挂账	复核错配：原拟 V42.5.3.3，Miata 机型版本与文档淡化，非世代构成
 port-alpha.messages.11325		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.11332		—	挂账	待定位：与 418 题重合不足 6 项
 port-alpha.messages.11338		—	挂账	待定位：与 418 题重合不足 6 项
@@ -92,27 +92,27 @@ tech-kern.messages.114798		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.114805		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.114809		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115248		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.115254	V42.1.3.2	祖拉斯在基金会中的职员角色	归入	文本与题名thesis 重合 3 项
+tech-kern.messages.115254		—	挂账	复核错配：原拟 V42.1.3.2，LM78 版权归属自述，非基金会职员角色
 tech-kern.messages.115400		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115410		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.115412	V42.1.3.5	长期维护与任期条款	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.115412		—	挂账	复核错配：原拟 V42.1.3.5，基金会许可条款与 Woods 版对照，属许可条文议题（V43／许可线），非任期条款
 tech-kern.messages.115415		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.115419	V42.1.3.5	长期维护与任期条款	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.115419		—	挂账	复核错配：原拟 V42.1.3.5，撤回对条款的质疑，属许可条文议题
 tech-kern.messages.115420		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115421		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.115422	V42.1.3.5	长期维护与任期条款	归入	文本与题名thesis 重合 4 项
-tech-kern.messages.115424	V42.1.5.3	commit 权限与成员资格	归入	文本与题名thesis 重合 4 项
-tech-kern.messages.115425	V42.1.3.2	祖拉斯在基金会中的职员角色	归入	文本与题名thesis 重合 3 项
+tech-kern.messages.115422		—	挂账	复核错配：原拟 V42.1.3.5，条款额外署名负担评议，属许可条文议题
+tech-kern.messages.115424		—	挂账	复核错配：原拟 V42.1.5.3，LM78 许可与代码转让主张，非 commit 权限与成员资格
+tech-kern.messages.115425		—	挂账	复核错配：原拟 V42.1.3.2，LM78 版权转让立场，非基金会职员角色
 tech-kern.messages.115428		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115430		—	删除	零内容：仅抬头无正文（bytes=206，sha=c968b4f6b830）
 tech-kern.messages.115431		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.115432	V42.3.1.5	组织化目标与基金会角色	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.115432		—	挂账	复核错配：原拟 V42.3.1.5，版权转让的限制疑问，属许可议题，非组织化目标
 tech-kern.messages.115433		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115435		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115436		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.115438		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.117626	V42.5.3.3	世代构成的公开讨论	归入	文本与题名thesis 重合 3 项
-tech-kern.messages.118239	V42.5.3.3	世代构成的公开讨论	归入	文本与题名thesis 重合 4 项
+tech-kern.messages.117626		—	挂账	复核错配：原拟 V42.5.3.3，追问他人是否持有 CVS 提交权限，非世代构成讨论
+tech-kern.messages.118239		—	挂账	复核错配：原拟 V42.5.3.3，cvs patch 对新文件的差异生成，非世代构成
 tech-kern.messages.119561		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.119562		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.122618		—	挂账	待定位：与 418 题重合不足 6 项
@@ -149,7 +149,7 @@ tech-kern.messages.155089		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.155099	V42.5.3.3	世代构成的公开讨论	归入	文本与题名thesis 重合 3 项
 tech-kern.messages.155100		—	挂账	待定位：与 418 题重合不足 6 项
 tech-kern.messages.155103		—	挂账	待定位：与 418 题重合不足 6 项
-tech-kern.messages.155106	V42.4.1.4	委员会的组建决议	归入	文本与题名thesis 重合 3 项
+tech-kern.messages.155106		—	挂账	复核错配：原拟 V42.4.1.4，空邮件（仅主题行），零内容块，不成立
 netbsd.duckdb		—	删除	零内容：仅抬头无正文（bytes=155，sha=3536ebe74e7c）
 tech-kern.messages.158778	V42.1.5.3	commit 权限与成员资格	归入	文本与题名thesis 重合 4 项
 tech-kern.messages.2322839		—	挂账	待定位：与 418 题重合不足 6 项
