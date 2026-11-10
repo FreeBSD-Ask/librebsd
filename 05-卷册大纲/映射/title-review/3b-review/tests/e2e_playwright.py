@@ -4,8 +4,8 @@
 每个场景使用独立工具副本与数据目录、独立随机端口，互不污染。
 无法稳定自动化的能力以 SKIP 记录原因，不伪造通过。
 
-运行：
-    C:\\Python314\\python.exe 05-卷册大纲\\映射\\title-review\\3b-review\\tests\\e2e_playwright.py
+运行（解释器基线 2026-11-10，路径含空格须加引号）：
+    "C:\\Program Files\\Python315\\python.exe" 05-卷册大纲\\映射\\title-review\\3b-review\\tests\\e2e_playwright.py
 """
 
 from __future__ import annotations
