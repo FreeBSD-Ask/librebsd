@@ -4,7 +4,7 @@ openbsd_mail.messages.221707		—	挂账	同题过量：择优保留 8 块（本
 openbsd_mail.messages.221711		—	挂账	待定位：第3章题面相似不足（最高 0.06／题名命中 0，节 210.5）
 openbsd_mail.messages.221891		—	挂账	同题过量：择优保留 8 块（本块 0.15）
 openbsd_mail.messages.221911		—	挂账	待定位：第3章题面相似不足（最高 0.06／题名命中 0，节 210.5）
-openbsd_mail.messages.221974		—	挂账	同题过量：择优保留 8 块（本块 0.14）
+openbsd_mail.messages.221974	V47.1.2.1	审计对象的文件级切分	归入	dump 记录保留新旧时间戳以便文件级审计
 openbsd_mail.messages.221981		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 0，节 210.5）
 openbsd_mail.messages.221985	V47.3.8.1	补丁提交的唯一入口	归入	题面与块文加权相似 0.25／题名命中 2（节 210.5）
 openbsd_mail.messages.221987		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 210.5）
@@ -15,7 +15,7 @@ openbsd_mail.messages.222093	V47.3.8.1	补丁提交的唯一入口	归入	题面
 openbsd_mail.messages.222094		—	挂账	同题过量：择优保留 8 块（本块 0.16）
 openbsd_mail.messages.222099		—	挂账	待定位：第3章题面相似不足（最高 0.15／题名命中 0，节 210.5）
 openbsd_mail.messages.222106		—	挂账	待定位：第3章题面相似不足（最高 0.09／题名命中 0，节 210.5）
-openbsd_mail.messages.222109		—	挂账	同题过量：择优保留 8 块（本块 0.14）
+openbsd_mail.messages.222109	V47.5.6.2	公告之外的变更留痕	归入	netstart 的 IPv6 DAD 延迟修复
 openbsd_mail.messages.222110		—	挂账	待定位：第3章题面相似不足（最高 0.13／题名命中 1，节 210.5）
 openbsd_mail.messages.222112		—	挂账	待定位：第3章题面相似不足（最高 0.09／题名命中 0，节 210.5）
 openbsd_mail.messages.222131		—	挂账	同题过量：择优保留 8 块（本块 0.17）
@@ -70,21 +70,21 @@ openbsd_mail.messages.223474		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.223544		—	挂账	待定位：第3章题面相似不足（最高 0.09／题名命中 1，节 210.5）
 openbsd_mail.messages.223555		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
 openbsd_mail.messages.223560		—	挂账	待定位：第3章题面相似不足（最高 0.08／题名命中 1，节 210.5）
-openbsd_mail.messages.223572		—	挂账	同题过量：择优保留 8 块（本块 0.13）
+openbsd_mail.messages.223572	V47.5.6.2	公告之外的变更留痕	归入	ppp 代理 ARP 修复（源自 FreeBSD）
 openbsd_mail.messages.223593		—	挂账	待定位：第3章题面相似不足（最高 0.06／题名命中 0，节 210.5）
 openbsd_mail.messages.223610		—	挂账	待定位：第3章题面相似不足（最高 0.13／题名命中 2，节 210.5）
 openbsd_mail.messages.223611		—	挂账	同题过量：择优保留 8 块（本块 0.17）
 openbsd_mail.messages.223612		—	挂账	同题过量：择优保留 8 块（本块 0.14）
 openbsd_mail.messages.223613		—	挂账	待定位：第3章题面相似不足（最高 0.11／题名命中 0，节 210.5）
 openbsd_mail.messages.223626		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 210.5）
-openbsd_mail.messages.223651		—	挂账	同题过量：择优保留 8 块（本块 0.18）
+openbsd_mail.messages.223651	V47.5.6.2	公告之外的变更留痕	归入	nc socks 响应字节消费修复
 openbsd_mail.messages.223713		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
 openbsd_mail.messages.223747		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 210.5）
 openbsd_mail.messages.223769		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
 openbsd_mail.messages.223806		—	挂账	待定位：第3章题面相似不足（最高 0.12／题名命中 2，节 210.5）
 openbsd_mail.messages.223811		—	挂账	待定位：第3章题面相似不足（最高 0.10／题名命中 0，节 210.5）
-openbsd_mail.messages.223831		—	挂账	同题过量：择优保留 8 块（本块 0.14）
-openbsd_mail.messages.223832		—	挂账	同题过量：择优保留 8 块（本块 0.19）
+openbsd_mail.messages.223831	V47.5.6.2	公告之外的变更留痕	归入	ppp 定时器竞态修复（改自 FreeBSD）
+openbsd_mail.messages.223832	V47.5.6.2	公告之外的变更留痕	归入	ppp NAT 死循环修复（改自 FreeBSD）
 openbsd_mail.messages.223848		—	挂账	同题过量：择优保留 8 块（本块 0.14）
 openbsd_mail.messages.223853		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 210.5）
 openbsd_mail.messages.223931		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 210.5）
@@ -103,7 +103,7 @@ openbsd_mail.messages.224216		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.224237		—	挂账	待定位：第3章题面相似不足（最高 0.13／题名命中 2，节 210.5）
 openbsd_mail.messages.224312		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
 openbsd_mail.messages.224332		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
-openbsd_mail.messages.224335		—	挂账	同题过量：择优保留 8 块（本块 0.16）
+openbsd_mail.messages.224335	V47.5.6.2	公告之外的变更留痕	归入	snmpd 路由过滤补丁的概念验证
 openbsd_mail.messages.224347		—	挂账	待定位：第3章题面相似不足（最高 0.08／题名命中 0，节 210.5）
 openbsd_mail.messages.224417		—	挂账	待定位：第3章题面相似不足（最高 0.12／题名命中 2，节 210.5）
 openbsd_mail.messages.224438		—	挂账	待定位：第3章题面相似不足（最高 0.12／题名命中 2，节 210.5）
@@ -126,7 +126,7 @@ openbsd_mail.messages.224800		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.224812		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
 openbsd_mail.messages.224829		—	挂账	待定位：第3章题面相似不足（最高 0.06／题名命中 0，节 210.5）
 openbsd_mail.messages.224833		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
-openbsd_mail.messages.224861		—	挂账	同题过量：择优保留 8 块（本块 0.21）
+openbsd_mail.messages.224861	V47.5.6.2	公告之外的变更留痕	归入	sasyncd carpdemote 计数修复
 openbsd_mail.messages.224866	V47.3.8.1	补丁提交的唯一入口	归入	题面与块文加权相似 0.23／题名命中 2（节 210.5）
 openbsd_mail.messages.224868		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 210.5）
 openbsd_mail.messages.224876		—	挂账	待定位：第3章题面相似不足（最高 0.14／题名命中 1，节 210.5）
@@ -533,7 +533,7 @@ openbsd_mail.messages.216080		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.216082		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 213.1）
 openbsd_mail.messages.216084		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 213.1）
 openbsd_mail.messages.216089		—	挂账	待定位：第3章题面相似不足（最高 0.08／题名命中 0，节 213.1）
-openbsd_mail.messages.216092		—	挂账	同题过量：择优保留 8 块（本块 0.16）
+openbsd_mail.messages.216092	V47.5.6.2	公告之外的变更留痕	归入	le 驱动修复提交 -current 并附稳定分支补丁
 openbsd_mail.messages.216095		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 0，节 213.1）
 openbsd_mail.messages.216097		—	挂账	待定位：第3章题面相似不足（最高 0.11／题名命中 0，节 213.1）
 openbsd_mail.messages.216100		—	挂账	待定位：第3章题面相似不足（最高 0.08／题名命中 0，节 213.1）
@@ -667,7 +667,7 @@ openbsd_mail.messages.226743		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.226750		—	挂账	待定位：第3章题面相似不足（最高 0.09／题名命中 0，节 216.3）
 openbsd_mail.messages.227203		—	挂账	同题过量：择优保留 8 块（本块 0.15）
 openbsd_mail.messages.227915		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 216.3）
-openbsd_mail.messages.227918		—	挂账	同题过量：择优保留 8 块（本块 0.15）
+openbsd_mail.messages.227918	V47.5.6.2	公告之外的变更留痕	归入	ldpctl 接口 uptime 修复并入 ldpd 与 ospfd
 openbsd_mail.messages.227931		—	挂账	待定位：第3章题面相似不足（最高 0.13／题名命中 2，节 216.3）
 openbsd_mail.messages.227941		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 216.3）
 openbsd_mail.messages.227974		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 216.3）
@@ -783,7 +783,7 @@ openbsd_mail.messages.229521		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.229523		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 1，节 216.3）
 openbsd_mail.messages.229524		—	挂账	待定位：第3章题面相似不足（最高 0.07／题名命中 0，节 216.3）
 openbsd_mail.messages.229526		—	挂账	待定位：第3章题面相似不足（最高 0.15／题名命中 0，节 216.3）
-openbsd_mail.messages.229528		—	挂账	同题过量：择优保留 8 块（本块 0.21）
+openbsd_mail.messages.229528	V47.5.6.2	公告之外的变更留痕	归入	usbd 管道关闭的内存泄漏修复
 openbsd_mail.messages.229533		—	挂账	待定位：第3章题面相似不足（最高 0.08／题名命中 1，节 216.3）
 openbsd_mail.messages.229544		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 216.3）
 openbsd_mail.messages.229548		—	挂账	待定位：第3章题面相似不足（最高 0.14／题名命中 0，节 216.3）
@@ -934,7 +934,7 @@ openbsd_mail.messages.218157		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.218158		—	挂账	待定位：第3章题面相似不足（最高 0.11／题名命中 0，节 215.2）
 openbsd_mail.messages.218260		—	挂账	待定位：第3章题面相似不足（最高 0.08／题名命中 0，节 215.2）
 openbsd_mail.messages.218264		—	挂账	待定位：第3章题面相似不足（最高 0.12／题名命中 0，节 215.2）
-openbsd_mail.messages.218265		—	挂账	同题过量：择优保留 8 块（本块 0.15）
+openbsd_mail.messages.218265	V47.5.6.2	公告之外的变更留痕	归入	Zebra 接口编号修复补丁的提交留痕
 openbsd_mail.messages.218266		—	挂账	待定位：第3章题面相似不足（最高 0.11／题名命中 0，节 215.2）
 openbsd_mail.messages.218269		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 215.2）
 openbsd_mail.messages.218270		—	挂账	待定位：第3章题面相似不足（最高 0.11／题名命中 0，节 215.2）
@@ -1019,7 +1019,7 @@ openbsd_mail.messages.219159		—	挂账	待定位：第3章题面相似不足�
 openbsd_mail.messages.219161		—	挂账	待定位：第3章题面相似不足（最高 0.09／题名命中 0，节 215.2）
 openbsd_mail.messages.219162		—	挂账	待定位：第3章题面相似不足（最高 0.06／题名命中 0，节 215.2）
 openbsd_mail.messages.219163		—	删除	库指针／存根（bytes=213）：无独立证据面
-openbsd_mail.messages.219165		—	挂账	同题过量：择优保留 8 块（本块 0.22）
+openbsd_mail.messages.219165	V47.5.6.2	公告之外的变更留痕	归入	cron 补丁经同意提交主干
 openbsd_mail.messages.219267		—	挂账	待定位：第3章题面相似不足（最高 0.09／题名命中 1，节 215.2）
 openbsd_mail.messages.219278		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 215.2）
 openbsd_mail.messages.219305		—	挂账	待定位：第3章题面相似不足（最高 0.00／题名命中 0，节 215.2）
