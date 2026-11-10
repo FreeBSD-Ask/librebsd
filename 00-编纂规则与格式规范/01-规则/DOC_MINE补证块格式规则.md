@@ -168,7 +168,7 @@
 | D1 | `exceptions` 每行 `status` ∈ 四态；`supplemented` 行须在 `supplement/V{NN}.tsv` 有对应记录且 `ref_id`／`claim_id` 非空 |
 | D2 | 每个 `DOC_MINE` 锚的 `CID` 在 `claim` 存在、`status='supported'`、`LV` 与库内 `evidence_level` 一致；抬头与 `source_type` 按 §4.1 相符；不得出现邮件抬头 |
 | D3 | 对应 `raw_source.source_id='SRC-ref:<REF_ID>'`、`namespace='ref'`、`local_pk` 指向该 ref、`banned_source=0`，且 `provenance_url` 与 `references.file_path` **至少一项非空**（本地 PDF／全文文献无网络 URL 属常态，溯源由 `file_path`＋`sha256` 承担），该 `ref_id` 在 `references` 存在 |
-| D4 | 新入 `references` 的四键（`sha256`／`isbn_doi`／`source_url`／三元组）在库内唯一，或已在 `reference_duplicates` 登记 |
+| D4 | 新入 `references` 的四键（`sha256`／`isbn_doi`／`source_url`／三元组）在库内唯一，或已在 `reference_duplicates` 登记。**重合判定以 `sha256`／`isbn_doi`／三元组为强证据（FAIL）**；`source_url` 单键重合而 `sha256`／三元组均不重合者，视为系列丛书共享集合页 URL（如贝尔官史六卷共用同一 archive.org collection），降 WARN 交人工判读，不自动判重 |
 | D5 | 含 `DOC_MINE` 的小节合计块数 ≤12、字节数 ≤16,797 |
 
 - **自检**：`--selftest` 须含正例与反例（错级、伪 CID、禁引来源、重复键、超体量各一），判据为空即视为未立规。

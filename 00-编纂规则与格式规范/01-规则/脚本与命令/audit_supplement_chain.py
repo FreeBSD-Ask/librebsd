@@ -353,20 +353,32 @@ def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[
 
         for rid in all_ids:
             r = refs[rid]
+            tri_key = f"{norm_title(r['title'])}|{surname(r['author'])}|{r['year'].strip()}"
+            strong_dup = (
+                len(by_hash.get(r["sha256"].strip().lower(), [])) > 1
+                or len(by_tri.get(tri_key, [])) > 1
+            )
             checks = [
-                ("sha256", by_hash.get(r["sha256"].strip().lower(), [])),
+                ("sha256", by_hash.get(r["sha256"].strip().lower(), []), True),
                 ("isbn_doi", by_doi.get(re.sub(r"^(https?://(dx\.)?doi\.org/|doi:)", "",
-                                              r["doi"].strip().lower()), [])),
-                ("source_url", by_url.get(norm_url(r["url"]), [])),
-                ("三元组", by_tri.get(f"{norm_title(r['title'])}|{surname(r['author'])}|{r['year'].strip()}", [])),
+                                               r["doi"].strip().lower()), []), True),
+                ("source_url", by_url.get(norm_url(r["url"]), []), False),
+                ("三元组", by_tri.get(tri_key, []), True),
             ]
-            for key, ids in checks:
+            for key, ids, is_strong in checks:
                 if len(ids) <= 1:
                     continue
                 others = [x for x in ids if x != rid]
                 if others and all((rid, o) in pairs for o in others):
                     continue
-                add("D4", "FAIL", f"ref{rid} 四键 {key} 与 {','.join(others[:5])} 重合且未在 reference_duplicates 登记")
+                # source_url 单键重合（sha256／三元组均不重合）＝系列丛书共享集合页 URL，
+                # 属人工判读面，降 WARN；sha256／isbn_doi／三元组重合＝同文献，FAIL。
+                if key == "source_url" and not strong_dup:
+                    add("D4", "WARN",
+                        f"ref{rid} source_url 与 {','.join(others[:5])} 重合但 sha256／三元组不重合"
+                        "（系列丛书共享集合页 URL？须人工判读）")
+                else:
+                    add("D4", "FAIL", f"ref{rid} 四键 {key} 与 {','.join(others[:5])} 重合且未在 reference_duplicates 登记")
 
     per_file: dict[str, dict] = {}
     for p in sorted(outline.rglob("*.md")):
@@ -485,6 +497,9 @@ def selftest() -> int:
     run_case("neg_d1", _block("CL-RM-000001", "L4", "官方文档"), exc_bad, [], [C], [R], "D1")
     R2 = ("2512", "b" * 64, "", "https://example.org/a/", "Test Doc", "Doe", "1993")
     run_case("neg_d4", _block("CL-RM-000001", "L4", "官方文档"), exc_ok, sup_ok, [C], [R, R2], "D4")
+    # 系列丛书共享集合页 URL（source_url 同、sha256／三元组均不同）→ 仅 WARN，不得 FAIL
+    R3 = ("2513", "c" * 64, "", "https://example.org/a", "Series Vol 2", "Smith", "1978")
+    run_case("pos_series_url", _block("CL-RM-000001", "L4", "官方文档"), exc_ok, sup_ok, [C], [R, R3], None)
     many = "".join(_block("CL-RM-000001", "L4", "官方文档") for _ in range(13))
     run_case("neg_d5", many, exc_ok, sup_ok, [C], [R], "D5")
     Cb = ("CL-RM-000001", "L4", "supported", "official_doc", "https://example.org/a", 1, "2511")
