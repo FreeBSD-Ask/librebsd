@@ -5,7 +5,8 @@
 版本锁定：duckdb==2.0.0
 Python 版本：3.15.2
 记录日期：2026-10-24（解释器口径 2026-11-10 更新，duckdb 锁定未变）
-解释器变更：2026-11-10 起解释器＝`C:/Program Files/Python315/python.exe`（Python 3.15.2），旧 `C:/Python314/` 同日失效；`duckdb==2.0.0` 由 user site（`%APPDATA%\Python\Python315\site-packages`）提供，故**需 duckdb 的脚本禁用 `-I`／`-s` 隔离模式**（隔离模式不加载 user site，import 直接失败）。判据正文见《流程规则/02-脚本与执行安全》"解释器基线"节。
+解释器变更：2026-11-10 起解释器＝`C:/Program Files/Python315/python.exe`（Python 3.15.2），旧 `C:/Python314/` 同日失效；`duckdb==2.0.0` 装于解释器全局 site（`C:/Program Files/Python315/Lib/site-packages`，同日 22:06 由 user site 迁入，ykla 令“卸载 duckdb 用户，改为全局安装”）。
+隔离模式：全局 site 下 `python -I -c "import duckdb"` 正常（已实测）；若 duckdb 只装在 user site，`-I`／`-s` 会因不加载 user site 而 import 失败——判“库坏了”前先核 duckdb 路径。判据正文见《流程规则/02-脚本与执行安全》“解释器基线”节。
 迁移状态：运行时已切换至 2.0.0（2026-10-24 18:55）；25 个正式库已完成迁移至 v2.0.0 存储格式（编号 69，旧库为 64），`changelog.duckdb` 暂缓仍为 v64
 存储版本读法：SELECT tags FROM duckdb_databases() 取 storage_version 键；禁读文件头偏移 12（2.0.0 起固定为弃用哨兵 999）
 回退方法：库回退用 `12-数据库备份/<库>/` 既有归档 `IMPORT DATABASE` 重灌；运行时可执行 pip install --proxy "" -i https://pypi.tuna.tsinghua.edu.cn/simple duckdb==1.5.5（但 1.5.5 无法读已迁移库）
