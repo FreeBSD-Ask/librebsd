@@ -55,7 +55,7 @@
 
 依赖：fontTools + brotli（解析 woff2）。须以带该依赖的解释器运行（字体子集脚本同源；
 任一含 fontTools＋brotli 的解释器均可，2026-10-11 校正——原指定 venv 已失效）：
-  C:/Python314/python.exe audit_page_assets.py
+  "C:/Program Files/Python315/python.exe" audit_page_assets.py
 
 字体源 tgz（B4 交叉核验用）位于 `script/_font_embed_20260905/`，该目录被 `.gitignore` 的
 `/script` 规则排除（临时目录规则），故**不依赖其存在**：B4 的基准是受版本控制的
@@ -279,7 +279,7 @@ def main():
     except ImportError:
         print("环境错误：缺少 fontTools（本门禁需解析 woff2）。")
         print("请以带该依赖的解释器运行，例如：")
-        print("  C:/Python314/python.exe audit_page_assets.py")
+        print('  "C:/Program Files/Python315/python.exe" audit_page_assets.py')
         return 2
 
     # 字符集定义与 font_subset_rebuild.py 同源（避免两脚本判据漂移）

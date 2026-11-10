@@ -1,7 +1,7 @@
-import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
+import { chromium } from './_pw_loader.mjs';
 import http from 'node:http';
 import path from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { pathToFileURL } from 'node:url';
 // Chromium 可执行路径解析（2026-10-04 立）：钉定修订版优先，环境更新后自动回落现存最高修订版。
 const __PW_DIR = 'C:/Users/ykla/AppData/Local/ms-playwright';
 const __PINNED = __PW_DIR + '/chromium-1200/chrome-win64/chrome.exe';
@@ -23,7 +23,7 @@ import fs from 'node:fs';
  * ========================================================================== */
 /* 路径推导（2026-10-23）：一律由本件位置求仓库内路径，不再写死盘符与绝对路径。
    tests/ → 目录/ → 05-卷册大纲/ → 仓库根。 */
-const __HERE = path.dirname(fileURLToPath(import.meta.url));   // tests/
+const __HERE = import.meta.dirname;                                 // tests/（Node 26 基线：稳定 API，替代 fileURLToPath 样板）
 const __DOC = path.resolve(__HERE, '..');                       // 05-卷册大纲/目录/
 const URL = pathToFileURL(path.join(__DOC, 'index.html')).href;
 const SHOT = 'D:/librebsd/script/_staging/polsplit/';   // 历史归档引用，勿改（批计划 §九披露）

@@ -15,11 +15,11 @@
 `bsd`／`freebsd`／`linux`／`历史` 等无区分度泛词由词表 `banned` 强制排除。
 
 用法：
-  C:/Python314/python.exe build_theme_index.py --check         # 结构＋哈希双射（快）
-  C:/Python314/python.exe build_theme_index.py --check --deep  # 全量重算比对（慢）
-  C:/Python314/python.exe build_theme_index.py --write         # 幂等写盘
-  C:/Python314/python.exe build_theme_index.py --list          # 统计
-  C:/Python314/python.exe build_theme_index.py --selftest      # 负向夹具自检
+  "C:/Program Files/Python315/python.exe" build_theme_index.py --check         # 结构＋哈希双射（快）
+  "C:/Program Files/Python315/python.exe" build_theme_index.py --check --deep  # 全量重算比对（慢）
+  "C:/Program Files/Python315/python.exe" build_theme_index.py --write         # 幂等写盘
+  "C:/Program Files/Python315/python.exe" build_theme_index.py --list          # 统计
+  "C:/Program Files/Python315/python.exe" build_theme_index.py --selftest      # 负向夹具自检
 """
 import argparse
 import copy

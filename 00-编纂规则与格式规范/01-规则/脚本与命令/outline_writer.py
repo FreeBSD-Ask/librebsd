@@ -34,15 +34,15 @@ stdout 可见 `[check]`／`[abort]`、exit 2、**零写入**；任一宿主写�
 用法
 ----
     # 只读核查（不写盘）
-    C:/Python314/python.exe outline_writer.py --narr <mount_narr.tsv> \\
+    "C:/Program Files/Python315/python.exe" outline_writer.py --narr <mount_narr.tsv> \\
         --claim-map <claim_map.json> --candidates <candidates.txt> --lib openbsd_mail --check-only
 
     # 写入（先 dry-run 看计划，再加 --write）
-    C:/Python314/python.exe outline_writer.py --narr ... --claim-map ... --candidates ... \\
+    "C:/Program Files/Python315/python.exe" outline_writer.py --narr ... --claim-map ... --candidates ... \\
         --lib openbsd_mail --anchor ob_b025 --ts 2026-10-22 [--tag "2026-10-22 openbsd_mail 战线"] --write
 
     # 判据非空自检
-    C:/Python314/python.exe outline_writer.py --selftest
+    "C:/Program Files/Python315/python.exe" outline_writer.py --selftest
 
 退出码：0 成功／dry-run 无坏件；1 自检失败；2 坏件、路径越界、断言失败或依赖缺失。
 

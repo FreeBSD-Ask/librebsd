@@ -32,10 +32,10 @@
 
 用法
 ----
-    C:/Python314/python.exe sync_outline_mirror.py --check     # 缺省：漂移报告，漂移 exit 1
-    C:/Python314/python.exe sync_outline_mirror.py --write     # 生成并原子写盘根级三件
-    C:/Python314/python.exe sync_outline_mirror.py --list      # 计数统计
-    C:/Python314/python.exe sync_outline_mirror.py --selftest  # 合成夹具自检（保留不清理）
+    "C:/Program Files/Python315/python.exe" sync_outline_mirror.py --check     # 缺省：漂移报告，漂移 exit 1
+    "C:/Program Files/Python315/python.exe" sync_outline_mirror.py --write     # 生成并原子写盘根级三件
+    "C:/Program Files/Python315/python.exe" sync_outline_mirror.py --list      # 计数统计
+    "C:/Program Files/Python315/python.exe" sync_outline_mirror.py --selftest  # 合成夹具自检（保留不清理）
 
 依赖：仅标准库。路径一律由本文件位置推导，不写死绝对路径。
 """

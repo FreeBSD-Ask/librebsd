@@ -1,5 +1,5 @@
 // 151 批主题探针：四态 data-theme 计算样式 + 修订面板数据 + 媒体回落 + 深检序列复现
-import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
+import { chromium } from './_pw_loader.mjs';
 import path from 'node:path';
 
 const FILE_URL = () => 'file:///' + path.resolve('index.html').replace(/\\/g, '/');

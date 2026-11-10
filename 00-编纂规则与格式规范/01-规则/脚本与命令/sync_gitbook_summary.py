@@ -16,8 +16,8 @@
 其他非节 .md（排除清单等；沿用现行相对序，新增者按名称序）→ `index.md`（「本章索引」，恒末，缩进 4）。
 
 用法:
-  C:/Python314/python.exe _sync_gitbook_summary.py --check   # 结构差异报告（不写盘）
-  C:/Python314/python.exe _sync_gitbook_summary.py --write   # 写盘
+  "C:/Program Files/Python315/python.exe" _sync_gitbook_summary.py --check   # 结构差异报告（不写盘）
+  "C:/Program Files/Python315/python.exe" _sync_gitbook_summary.py --write   # 写盘
 """
 import difflib, io, os, re, sys
 

@@ -23,9 +23,9 @@
     不采信追加件自报总数——否则批内脚本的常量漂移会直接污染台账。
 
 用法:
-    C:/Python314/python.exe mail2d_build_read_ledger.py                  # 重建
-    C:/Python314/python.exe mail2d_build_read_ledger.py --append <JSONL> # 追加合并
-    C:/Python314/python.exe mail2d_build_read_ledger.py --selftest       # 判据非空自检
+    "C:/Program Files/Python315/python.exe" mail2d_build_read_ledger.py                  # 重建
+    "C:/Program Files/Python315/python.exe" mail2d_build_read_ledger.py --append <JSONL> # 追加合并
+    "C:/Program Files/Python315/python.exe" mail2d_build_read_ledger.py --selftest       # 判据非空自检
 
 注：本件为 `script/_db_row_mining/_build_read_ledger.py` 的版本化副本（权威副本），
 `--append`／`--selftest` 仅在本副本实现；在途批次仍用 `script/` 原件，路径切换另批执行。

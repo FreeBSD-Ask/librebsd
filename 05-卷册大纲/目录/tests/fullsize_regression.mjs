@@ -1,5 +1,5 @@
 // 全尺寸回归：任何网页宽度下的「控件对齐、无重叠、无横滚、黄字隐藏、指标卡紧凑」断言
-import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
+import { chromium } from './_pw_loader.mjs';
 // Chromium 可执行路径解析（2026-10-04 立）：钉定修订版优先，环境更新后自动回落现存最高修订版。
 import fs from 'node:fs';
 const __PW_DIR = 'C:/Users/ykla/AppData/Local/ms-playwright';

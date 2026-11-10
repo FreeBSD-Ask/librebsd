@@ -1,4 +1,4 @@
-import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
+import { chromium } from './_pw_loader.mjs';
 // Chromium 可执行路径解析（2026-10-04 立）：钉定修订版优先，环境更新后自动回落现存最高修订版。
 import fs from 'node:fs';
 const __PW_DIR = 'C:/Users/ykla/AppData/Local/ms-playwright';
@@ -270,15 +270,22 @@ async function combo(name, { w, h, dpr, theme, scheme, fs, touch, deep }) {
     }));
     ok('修订史面板', rev.open, JSON.stringify(rev));
 
-    /* 研/阅切换（2026-10-11 View Transitions 批：切换经 startViewTransition 回调异步落地，
-       断言前等一拍让 DOM 变更写入；判据语义不变=点击后类翻转） */
+    /* 研/阅切换（2026-10-11 View Transitions 批：切换经 startViewTransition 回调异步落地；
+       判据语义不变=点击后类翻转。2026-11-11 由「固定等 150ms」改为「轮询至多 1500ms」——
+       实测深组合翻转落在 174ms，固定睡眠会把正确行为判成假红） */
     const mode = await page.evaluate(async () => {
       const b = document.getElementById('optMode');
       const before = document.body.className + '|' + document.documentElement.className;
       if (b) b.click();
-      await new Promise(r => setTimeout(r, 150));
-      const after = document.body.className + '|' + document.documentElement.className;
-      return { changed: before !== after };
+      let firstMs = null;
+      const t0 = performance.now();
+      for (let i = 0; i < 30; i++) {
+        await new Promise(r => setTimeout(r, 50));
+        if (document.body.className + '|' + document.documentElement.className !== before) {
+          firstMs = Math.round(performance.now() - t0); break;
+        }
+      }
+      return { changed: firstMs !== null, firstMs };
     });
     ok('研阅切换', mode.changed, JSON.stringify(mode));
 

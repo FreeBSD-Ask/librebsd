@@ -19,7 +19,7 @@ bsdnow_podcast.db 与 bsd_podcasts_external.db 不再被写入（mtime 稳定）
   python podcast_db_final_sync.py --sync-only  # 仅同步+校验，不归档不删除（试运行）
   python podcast_db_final_sync.py --check      # 仅前置检查（进程是否退出、库状态）
 
-依赖：duckdb、pandas（C:\\Python314\\python.exe 均已安装）。
+依赖：duckdb、pandas（C:\\Program Files\\Python315\\python.exe 均已安装）。
 日志：script/_podcast_final_sync_log.jsonl
 """
 import argparse

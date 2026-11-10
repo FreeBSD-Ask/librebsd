@@ -15,7 +15,7 @@
   7) 无 BOM、无 CRLF、无空行
   8) 全批 pk 升序唯一
 
-用法: C:/Python314/python.exe _vn_narr.py <tag> [N]
+用法: C:/Program Files/Python315/python.exe _vn_narr.py <tag> [N]
 """
 import io
 import json

@@ -54,7 +54,7 @@ MIN_TEXT = 50
 NUM_ID_RE = "^[0-9]+$"
 MERGED_BY = "fill_fulltext_duckdb_20261017"
 
-PDF_WORKER = """import fitz, sys, os
+PDF_WORKER = """import pymupdf as fitz, sys, os
 fitz.TOOLS.mupdf_display_errors(False)
 p = sys.argv[1]
 doc = fitz.open(p)

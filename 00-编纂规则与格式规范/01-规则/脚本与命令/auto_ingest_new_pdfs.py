@@ -295,7 +295,7 @@ def try_pdf_metadata(file_path: Path) -> Dict[str, str]:
     """尝试从 PDF 读取元数据"""
     result = {"author": "", "year": "", "page_count": ""}
     try:
-        import fitz  # PyMuPDF
+        import pymupdf as fitz  # PyMuPDF 2.x：fitz 别名已弃用
         doc = fitz.open(str(file_path))
         result["page_count"] = str(doc.page_count)
         meta = doc.metadata

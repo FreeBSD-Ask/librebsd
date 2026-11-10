@@ -31,10 +31,10 @@ Requirement: 加强复核（三轮回核））。
 
 用法
 ====
-    C:/Python314/python.exe verify_tuhs_wiki_sql.py --selftest
-    C:/Python314/python.exe verify_tuhs_wiki_sql.py --offline
-    C:/Python314/python.exe verify_tuhs_wiki_sql.py              # 含 V1 联网重派生
-    C:/Python314/python.exe verify_tuhs_wiki_sql.py --db <库> --root <语料目录> --round R2SQL
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki_sql.py --selftest
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki_sql.py --offline
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki_sql.py              # 含 V1 联网重派生
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki_sql.py --db <库> --root <语料目录> --round R2SQL
 
 退出码
 ======

@@ -14,13 +14,13 @@ r"""全项目长线任务状态聚合器（**只读**）。
 `script/_backup_longline/` 已于 2026-10-23 旁路备份封禁令下清除，不再重建。
 
 用法（cwd 任意，路径为仓库根相对）：
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py              # 快档总表
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --deep       # 追加各线自带状态命令
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --json       # 同结构 JSON
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --emit-block # 打印可粘贴进登记表的机读块
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --write-block# ★唯一的写操作：仅刷新登记表内的机读块
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --progress   # 全项目总进度（分档口径，不合并不可通约单位）
-  C:/Python314/python.exe 01-项目管理/01-编纂规划与报告归档/_longline_status.py --check      # 与登记表内嵌块比对，exit 1=不一致
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py              # 快档总表
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py --deep       # 追加各线自带状态命令
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py --json       # 同结构 JSON
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py --emit-block # 打印可粘贴进登记表的机读块
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py --write-block# ★唯一的写操作：仅刷新登记表内的机读块
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py --progress   # 全项目总进度（分档口径，不合并不可通约单位）
+  "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py --check      # 与登记表内嵌块比对，exit 1=不一致
   选项：--max-age-days N（默认 7）
 
 只读保证：仅以 read_only=True 开库；子进程白名单见 DEEP_ALLOW；**默认与 --check/--json/--emit-block
@@ -42,7 +42,7 @@ ROOT = r"D:\librebsd"
 DRM = os.path.join(ROOT, "script", "_db_row_mining")
 S64 = os.path.join(ROOT, "05-卷册大纲", "目录", "data", "outline.txt")
 TRAV = os.path.join(ROOT, "04-现代研究文献", "rowmine_traversal.duckdb")
-PY = r"C:/Python314/python.exe"
+PY = r"C:/Program Files/Python315/python.exe"
 REGISTRY = os.path.join(ROOT, "01-项目管理", "01-编纂规划与报告归档",
                         "长线任务总登记表.md")
 BLOCK_BEGIN = "<!-- LONGLINE_STATUS_BEGIN"

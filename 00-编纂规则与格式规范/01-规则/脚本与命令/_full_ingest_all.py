@@ -116,7 +116,7 @@ def extract_text(fp, low):
         return (text, "native_text") if len(text.strip()) > MIN_TEXT else None
     if low.endswith(".pdf"):
         try:
-            import fitz
+            import pymupdf as fitz
             fitz.TOOLS.mupdf_display_errors(False)
         except Exception:
             return None

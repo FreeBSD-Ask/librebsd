@@ -569,7 +569,7 @@ def selftest():
 
     # G1/G2 既有
     repo, g = newrepo("t_g1")
-    with open(os.path.join(repo, ".gitignore"), "w") as f:
+    with open(os.path.join(repo, ".gitignore"), "w", encoding="utf-8") as f:
         f.write("secret*.txt\n")
     open(os.path.join(repo, "secret.txt"), "wb").write(b"s")
     g("add", "-A")
@@ -591,7 +591,7 @@ def selftest():
     check("B2_根目录新条目拒", 1, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
     check("B2_批准放行", 0, run_gate(repo, "commit-msg", TAG_OWNER + " m\n"))
     repo, g = newrepo("t_b2b")
-    open(os.path.join(repo, ".autocorrectrc"), "w").write("rules: {}\n")
+    open(os.path.join(repo, ".autocorrectrc"), "w", encoding="utf-8").write("rules: {}\n")
     g("add", "-A")
     check("B2_白名单放行", 0, run_gate(repo, "commit-msg", "正常提交说明文本\n"))
 

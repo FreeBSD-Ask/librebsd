@@ -21,10 +21,10 @@
   status    打印该批当前状态
 
 用法示例
-  C:/Python314/python.exe _mail2d_run_batch.py new --db freebsd-elastic --offset 1500 --n 1000 \\
+  "C:/Program Files/Python315/python.exe" _mail2d_run_batch.py new --db freebsd-elastic --offset 1500 --n 1000 \\
       --tag fe_b063 --hosts 892,894,895 --changelog-msg "..."
-  C:/Python314/python.exe _mail2d_run_batch.py dump --tag fe_b063
-  C:/Python314/python.exe _mail2d_run_batch.py register --tag fe_b063 --apply
+  "C:/Program Files/Python315/python.exe" _mail2d_run_batch.py dump --tag fe_b063
+  "C:/Program Files/Python315/python.exe" _mail2d_run_batch.py register --tag fe_b063 --apply
 """
 import argparse
 import glob
@@ -46,7 +46,7 @@ VAULT = os.path.join(ROOT, "05-卷册大纲")
 HC = os.path.join(ROOT, "04-现代研究文献", "historical_claims.duckdb")
 CLDB = os.path.join(ROOT, "01-项目管理", "00-变更记录", "changelog.duckdb")
 MAILDIR = os.path.join(ROOT, "03-原始史料库", "11-邮件列表史料")
-PY_SYS = r"C:\Python314\python.exe"
+PY_SYS = r"C:\Program Files\Python315\python.exe"
 PY_MGD = os.path.join(os.path.expanduser("~"), ".workbuddy-ai", "binaries", "python",
                       "versions", "3.13.12", "python.exe")
 REG_TPL = os.path.join(HERE, "_register_fe_b051_20260915.py")

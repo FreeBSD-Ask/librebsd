@@ -45,10 +45,10 @@ V12 转换台账：每页有 `conversions` 行；`converter_version` 等于 `sch
 
 用法
 ====
-    C:/Python314/python.exe verify_tuhs_wiki.py
-    C:/Python314/python.exe verify_tuhs_wiki.py --skip-network
-    C:/Python314/python.exe verify_tuhs_wiki.py --round R2 --sample 30
-    C:/Python314/python.exe verify_tuhs_wiki.py --selftest
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki.py
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki.py --skip-network
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki.py --round R2 --sample 30
+    "C:/Program Files/Python315/python.exe" verify_tuhs_wiki.py --selftest
 
 参数
 ====

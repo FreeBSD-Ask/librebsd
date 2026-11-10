@@ -29,11 +29,11 @@ Wikitext／HTML／PDF → Markdown 归一 → 外链分类与一跳抓取 → �
 
 用法
 ====
-    C:/Python314/python.exe tuhs_wiki_crawl.py --selftest
-    C:/Python314/python.exe tuhs_wiki_crawl.py --dry-run
-    C:/Python314/python.exe tuhs_wiki_crawl.py --limit 5 --wiki-only
-    C:/Python314/python.exe tuhs_wiki_crawl.py            # 全量（Task 5 执行）
-    C:/Python314/python.exe tuhs_wiki_crawl.py --refresh   # 强制重抓
+    "C:/Program Files/Python315/python.exe" tuhs_wiki_crawl.py --selftest
+    "C:/Program Files/Python315/python.exe" tuhs_wiki_crawl.py --dry-run
+    "C:/Program Files/Python315/python.exe" tuhs_wiki_crawl.py --limit 5 --wiki-only
+    "C:/Program Files/Python315/python.exe" tuhs_wiki_crawl.py            # 全量（Task 5 执行）
+    "C:/Program Files/Python315/python.exe" tuhs_wiki_crawl.py --refresh   # 强制重抓
 
 参数
 ====
@@ -1069,7 +1069,7 @@ def pdf_to_markdown(pdf_path: Path, size_bytes: int) -> Tuple[str, str, List[str
     """返回（markdown, extraction_method, warnings）。"""
     warnings: List[str] = []
     try:
-        import fitz  # type: ignore
+        import pymupdf as fitz  # type: ignore
     except Exception:  # noqa: BLE001
         raise CrawlError("pymupdf 不可用，无法转换 PDF")
     doc = fitz.open(str(pdf_path))
@@ -2817,7 +2817,7 @@ def selftest() -> int:
 
     print("[selftest] PDF → Markdown")
     try:
-        import fitz  # type: ignore
+        import pymupdf as fitz  # type: ignore
     except Exception as exc:  # noqa: BLE001
         print(f"  SKIP PDF 转换（pymupdf 不可用：{exc}）")
     else:

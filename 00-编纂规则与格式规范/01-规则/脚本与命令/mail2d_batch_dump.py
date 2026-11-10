@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """邮件线通用批 dump（沿用本线 _gen_*_b*_survey.py 的 MAILDB/BATCH_OFF 口径）。
 
-用法: C:/Python314/python.exe _mail2d_batch_dump.py <库名> <BATCH_OFF> [BATCH_N] [tag]
-例:   C:/Python314/python.exe _mail2d_batch_dump.py freebsd-elastic 500 500 fe_b051
+用法: C:/Program Files/Python315/python.exe _mail2d_batch_dump.py <库名> <BATCH_OFF> [BATCH_N] [tag]
+例:   C:/Program Files/Python315/python.exe _mail2d_batch_dump.py freebsd-elastic 500 500 fe_b051
 
 产出（落 script/_db_row_mining/）：
   <tag>_forread.txt            全文 dump（pk 升序）

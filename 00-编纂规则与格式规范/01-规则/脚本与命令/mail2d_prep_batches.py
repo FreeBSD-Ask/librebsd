@@ -5,7 +5,7 @@
 幂等：已存在 spec 的 tag 跳过 new（除非 --force-new）；已存在的 digest 分件不重拆。
 
 用法:
-  C:/Python314/python.exe _prep_batches.py fhk_b003:4000:2000 fhk_b004:6000:2000 ...
+  "C:/Program Files/Python315/python.exe" _prep_batches.py fhk_b003:4000:2000 fhk_b004:6000:2000 ...
   可附 --hosts 885,916,...  --lib freebsd-hackers
 """
 import io
@@ -17,7 +17,7 @@ import time
 
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
-PYD = r"C:\Python314\python.exe"
+PYD = r"C:\Program Files\Python315\python.exe"
 RL = os.path.join(HERE, "review_logs")
 
 # 并发写者（其他会话）会令 claim 库读锁抛 IOException —— 按本线约定重试（间隔 6 秒、至多 8 次）

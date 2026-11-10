@@ -1,7 +1,7 @@
-import { chromium } from 'file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs';
+import { chromium } from './_pw_loader.mjs';
 import path from 'node:path';
 import fs from 'node:fs';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { pathToFileURL } from 'node:url';
 
 /* ============================================================================
  * 卷级回归（2026-11-06 立，ykla 令“以卷为单位跑回归测试”）
@@ -23,7 +23,7 @@ const __CHROME_EXE = fs.existsSync(__PINNED) ? __PINNED
       .find(p => fs.existsSync(p));
 if (!__CHROME_EXE) { console.error('未找到可用 Chromium（ms-playwright）'); process.exit(2); }
 
-const __HERE = path.dirname(fileURLToPath(import.meta.url));
+const __HERE = import.meta.dirname;   // Node 26 基线：稳定 API，替代 fileURLToPath 样板
 const __DOC = path.resolve(__HERE, '..');
 const PAGE_URL = pathToFileURL(path.join(__DOC, 'index.html')).href;
 const OUTLINE = path.join(__DOC, 'data', 'outline.txt');

@@ -16,9 +16,9 @@
   - 无章号结构的卷（第 20 卷：卷根直挂 00–219 条目，无 `第N章` 目录）不入本库。
 
 **用法**
-  C:/Python314/python.exe sync_chapter_keywords.py --check   # 漂移报告（不写盘，有漂移 exit 1）
-  C:/Python314/python.exe sync_chapter_keywords.py --write   # 写盘
-  C:/Python314/python.exe sync_chapter_keywords.py --list    # 打印当前统计
+  "C:/Program Files/Python315/python.exe" sync_chapter_keywords.py --check   # 漂移报告（不写盘，有漂移 exit 1）
+  "C:/Program Files/Python315/python.exe" sync_chapter_keywords.py --write   # 写盘
+  "C:/Program Files/Python315/python.exe" sync_chapter_keywords.py --list    # 打印当前统计
 """
 import io
 import json
