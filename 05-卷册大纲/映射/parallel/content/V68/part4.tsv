@@ -91,7 +91,7 @@ freebsd-hackers.messages.1302058		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-hackers.messages.1303191		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-hackers.messages.1303386		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-hackers.messages.1303392		—	挂账	题内容量已满（V68.5.3.1）
-freebsd-hackers.messages.1303395		—	挂账	题内容量已满（V68.5.3.1）
+freebsd-hackers.messages.1303395	V68.10.5.3	模糊测试的技术路线	归入	GSoC fuzzing 项目获选公告
 freebsd-hackers.messages.1303401		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-hackers.messages.1303424		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-hackers.messages.1303426		—	挂账	题内容量已满（V68.5.3.1）
@@ -148,7 +148,7 @@ freebsd-net.messages.1488142		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-net.messages.1452144		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-net.messages.1453980		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-net.messages.1454235		—	挂账	题内容量已满（V68.5.3.1）
-freebsd-net.messages.1455311		—	挂账	题内容量已满（V68.5.3.1）
+freebsd-net.messages.1455311	V68.15.1.2	实习生的公开自述	归入	实习生项目选择与同源关系
 freebsd-net.messages.1461040		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-net.messages.1463712		—	挂账	题内容量已满（V68.5.3.1）
 freebsd-pf.messages.1539534		—	挂账	题内容量已满（V68.5.3.1）
@@ -157,10 +157,10 @@ freebsd-net.messages.1471718		—	移出	仅导师／名额语义，非 GSoC 或
 youtube.episodes.CL-15-2595		—	移出	关键词弱命中，非 GSoC 或实习制度议题
 freebsd.duckdb		—	删除	数据库引用元块，无叙事内容
 freebsd.duckdb		—	删除	数据库引用元块，无叙事内容
-cu.messages.1418		—	挂账	题内容量已满（V68.5.3.1）
+cu.messages.1418	V68.7.1.3	基金会联合资助的出资次序	归入	联合出资请基金会资助的提议
 freebsd.duckdb		—	删除	数据库引用元块，无叙事内容
 youtube.episodes.CL-15-1711		—	挂账	题内容量已满（V68.5.3.1）
-freebsd-hackers.messages.2538510		—	挂账	题内容量已满（V68.5.3.1）
+freebsd-hackers.messages.2538510	V68.8.7.1	QEMU 加速的落点	归入	qemu 采用 vmm 为主要工作
 freebsd-hackers.messages.2539553		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 freebsd-hackers.messages.2540282		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
 freebsd-hackers.messages.1321787		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
@@ -195,7 +195,7 @@ tech-net.messages.263613		—	挂账	题内容量已满（V68.10.8.2）
 tech-net.messages.263861		—	挂账	题内容量已满（V68.10.8.2）
 tech-net.messages.264173		—	挂账	题内容量已满（V68.10.8.2）
 netbsd.duckdb		—	删除	数据库引用元块，无叙事内容
-tech-kern.messages.162564		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.162564	V68.16.11.2	来源列表的分布构成	归入	DragonFly vfs 配额源自 2010 GSoC
 tech-kern.messages.163926		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.163927		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.163928		—	挂账	题内容量已满（V68.10.8.2）
@@ -205,23 +205,23 @@ tech-kern.messages.163960		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.163970		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.163971		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.163976		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.159747		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.159747	V68.16.11.2	来源列表的分布构成	归入	kqueue 提案参照 Solaris Event Port
 tech-kern.messages.159751		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.159763		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.159763	V68.11.4.2	证据链的构成要件	归入	提案附 melange 与项目页链接
 tech-kern.messages.159765		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.164037		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.164141		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.164246		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.164384		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.164420		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.164420	V68.16.11.2	来源列表的分布构成	归入	lbuf 项目中期自述（2013）
 tech-kern.messages.159796		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.164505		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.159800		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.159802		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.159807		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.165152		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.165152	V68.13.2.2	未成立尝试的四条编号	归入	ext3 日志化 GSoC 尝试未果
 tech-kern.messages.166009		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
-tech-kern.messages.166989		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.166989	V68.16.11.2	来源列表的分布构成	归入	LabLua 入选指导组织并增内核 Lua 题
 netbsd.duckdb		—	删除	数据库引用元块，无叙事内容
 tech-kern.messages.160888		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.160891		—	挂账	题内容量已满（V68.10.8.2）
@@ -233,10 +233,10 @@ tech-kern.messages.161911		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.161913		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.161916		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.161959		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.161960		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.161960	V68.16.11.2	来源列表的分布构成	归入	ext2fs HTree 提案（2012）
 tech-kern.messages.161977		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-net.messages.263184		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.212029		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.212029	V68.10.5.1	导师而非学生的身份	归入	导师回应移植申请并留联系方式
 tech-kern.messages.212030		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
 netbsd.duckdb		—	删除	数据库引用元块，无叙事内容
 tech-kern.messages.214889		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
@@ -245,9 +245,9 @@ tech-kern.messages.215429		—	挂账	题内容量已满（V68.10.8.2）
 netbsd.duckdb		—	删除	数据库引用元块，无叙事内容
 youtube.episodes.CL-15-2480		—	挂账	题内容量已满（V68.10.8.2）
 netbsd.duckdb		—	删除	数据库引用元块，无叙事内容
-tech-kern.messages.217457		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.217589		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.217648		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.217457	V68.10.5.1	导师而非学生的身份	归入	导师在提案线程考察申请者经历
+tech-kern.messages.217589	V68.10.6.2	基金会自资补位的项目	归入	posix_spawn chdir 项目 wiki 更新
+tech-kern.messages.217648	V68.16.11.2	来源列表的分布构成	归入	Tickless 定时器项目目标（2020）
 tech-kern.messages.217654		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.217680		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.217889		—	挂账	题内容量已满（V68.10.8.2）
@@ -266,15 +266,15 @@ tech-kern.messages.234144		—	移出	仅导师／名额语义，非 GSoC 或实
 tech-kern.messages.234228		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
 tech-kern.messages.235653		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
 tech-kern.messages.236284		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.311121		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.311121	V68.16.4.2	留存的实测口径说明	归入	GSoC 2006 项目跨年推进申请
 tech-kern.messages.311139		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
-tech-kern.messages.311166		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.311166	V68.16.11.2	来源列表的分布构成	归入	主张提案先上列表讨论（2007）
 tech-kern.messages.311187		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.311358		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.228350		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.228545		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
 tech-kern.messages.228651		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.228797		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.228797	V68.16.11.2	来源列表的分布构成	归入	被 SoC 拒收的实时调度提案（2005）
 tech-kern.messages.228811		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.228814		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.228852		—	挂账	题内容量已满（V68.10.8.2）
@@ -285,11 +285,11 @@ tech-kern.messages.165437		—	删除	关键词误命中（源码符号／文件
 tech-kern.messages.165443		—	删除	关键词误命中（源码符号／文件名／产品名）
 tech-kern.messages.165445		—	删除	关键词误命中（源码符号／文件名／产品名）
 tech-kern.messages.155596		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.156613		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.156613	V68.9.3.3	一致性测试的判据	归入	POSIX 一致性测试框架与 300 用例
 tech-kern.messages.161897		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.161962		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.166564		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
-tech-kern.messages.212003		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.212003	V68.10.5.1	导师而非学生的身份	归入	导师欢迎回复引述申请者身份
 tech-kern.messages.212015		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.215028		—	挂账	题内容量已满（V68.10.8.2）
 usenet_mail.messages.186012		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
@@ -299,7 +299,7 @@ tech-kern.messages.211163		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.206876		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.206885		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.206919		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.207123		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.207123	V68.16.11.2	来源列表的分布构成	归入	Hyper-V 驱动移植自荐（2016）
 tech-kern.messages.207213		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.207294		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.207429		—	挂账	题内容量已满（V68.10.8.2）
@@ -309,12 +309,12 @@ tech-kern.messages.207451		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.207481		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.207497		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.207584		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.208256		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.208256	V68.10.5.1	导师而非学生的身份	归入	导师自述技术分工回应学生意向
 tech-kern.messages.208262		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.208294		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.208309		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.208310		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.209731		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.209731	V68.16.11.2	来源列表的分布构成	归入	复活 2012 SO_TIMESTAMPING 代码
 tech-kern.messages.211015		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.224281		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.224400		—	挂账	题内容量已满（V68.10.8.2）
@@ -324,7 +324,7 @@ tech-kern.messages.224654		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.227294		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.227302		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 tech-kern.messages.227333		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
-tech-kern.messages.227340		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.227340	V68.16.11.2	来源列表的分布构成	归入	用户态 PCI 第一里程碑（2026）
 tech-kern.messages.227344		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.227370		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.227389		—	挂账	题内容量已满（V68.10.8.2）
@@ -334,9 +334,9 @@ tech-kern.messages.227543		—	移出	Linux 峰会／邮件列表 GSoC 讨论，
 port-arm.messages.447882		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.219030		—	挂账	题内容量已满（V68.10.8.2）
 tech-kern.messages.219133		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.219147		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.219238		—	挂账	题内容量已满（V68.10.8.2）
-tech-kern.messages.219352		—	挂账	题内容量已满（V68.10.8.2）
+tech-kern.messages.219147	V68.10.6.2	基金会自资补位的项目	归入	posix_spawn chdir 内核实现难点
+tech-kern.messages.219238	V68.16.11.2	来源列表的分布构成	归入	ext4 extents 与 htree 实现状态（2021）
+tech-kern.messages.219352	V68.10.6.2	基金会自资补位的项目	归入	非正式 GSoC 身份的 chdir 项目自述
 tech-kern.messages.219432		—	移出	仅导师／名额语义，非 GSoC 或实习制度议题
 tech-kern.messages.219868		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
 port-arm.messages.446920		—	移出	Linux 峰会／邮件列表 GSoC 讨论，宿主 V76
