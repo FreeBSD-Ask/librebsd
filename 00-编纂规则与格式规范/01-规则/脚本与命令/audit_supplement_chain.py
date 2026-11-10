@@ -195,14 +195,14 @@ def ref_rows(db: Path, ids: list[str]) -> dict:
             chunk = ids[i:i + 500]
             ph = ",".join("?" * len(chunk))
             sql = (
-                'select id, sha256, isbn_doi, source_url, title, author, year '
+                'select id, sha256, isbn_doi, source_url, title, author, year, file_path '
                 f'from "references" where id in ({ph})'
             )
             for r in con.execute(sql, chunk).fetchall():
                 out[str(r[0])] = {
                     "id": str(r[0]), "sha256": r[1] or "", "doi": r[2] or "",
                     "url": r[3] or "", "title": r[4] or "",
-                    "author": r[5] or "", "year": r[6] or "",
+                    "author": r[5] or "", "year": r[6] or "", "file_path": r[7] or "",
                 }
     finally:
         con.close()
@@ -276,6 +276,8 @@ def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[
     cids = sorted({b["cid"] for b in live})
     claims = query_claims(claim_db, cids) if cids else {}
 
+    ref_ids_early = sorted({b["ref_id"] for b in live})
+    refs = ref_rows(ref_db, ref_ids_early) if ref_ids_early else {}
     for b in live:
         where = f"{b['file']}:{b['line']}"
         if b["head"] in MAIL_HEADS:
@@ -305,8 +307,9 @@ def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[
                 add("D2", "FAIL", f"{where} 纪律串中段与等级 {dm.group(1)} 不符")
         if c.get("banned") not in (0, None):
             add("D3", "FAIL", f"{where} CID {b['cid']} 来源 banned_source={c.get('banned')}")
-        if not (c.get("url") or "").strip():
-            add("D3", "FAIL", f"{where} CID {b['cid']} provenance_url 为空")
+        fp = refs.get(b["ref_id"], {}).get("file_path", "")
+        if not ((c.get("url") or "").strip() or fp.strip()):
+            add("D3", "FAIL", f"{where} CID {b['cid']} provenance_url 与 references.file_path 均为空")
         if (c.get("source_id") or "") != f"SRC-ref:{b['ref_id']}":
             add("D3", "FAIL", f"{where} raw_source.source_id={c.get('source_id')!r} 应为 SRC-ref:{b['ref_id']}")
         if (c.get("namespace") or "") != "ref":
@@ -314,9 +317,7 @@ def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[
         if (c.get("local_pk") or "") != b["ref_id"]:
             add("D3", "FAIL", f"{where} raw_source.local_pk={c.get('local_pk')!r} 应为 {b['ref_id']}")
 
-    ref_ids = sorted({b["ref_id"] for b in live})
-    refs = ref_rows(ref_db, ref_ids) if ref_ids else {}
-    for rid in ref_ids:
+    for rid in ref_ids_early:
         if rid not in refs:
             add("D3", "FAIL", f"ref{rid} 不在 references 表")
 
@@ -417,11 +418,11 @@ def _mk_ref_db(path: Path, rows: list[tuple]) -> None:
     con = duckdb.connect(str(path))
     con.execute(
         'create table "references"(id varchar, sha256 varchar, isbn_doi varchar, '
-        "source_url varchar, title varchar, author varchar, year varchar)"
+        "source_url varchar, title varchar, author varchar, year varchar, file_path varchar)"
     )
     con.execute("create table reference_duplicates(primary_reference_id varchar, duplicate_reference_id varchar)")
     for r in rows:
-        con.execute('insert into "references" values (?,?,?,?,?,?,?)', list(r))
+        con.execute('insert into "references" values (?,?,?,?,?,?,?,?)', list(r) + [f"cards/{r[0]}.md"])
     con.close()
 
 

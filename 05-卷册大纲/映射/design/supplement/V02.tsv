@@ -1,3 +1,6 @@
 subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
 V02.2.2.1	corpus_gap	10231;10232	CL-RM-493729;CL-RM-493730;CL-RM-493731	official_doc;reference_book	primary;secondary_authoritative	D2	supp-V02-b001	supplemented	NARA 里程碑页＋LII 法典编码；2 块（1890 原文／现行对照）
 V02.2.2.2	corpus_gap	10233	CL-RM-493732	reference_book	secondary_authoritative	D2	supp-V02-b001	supplemented	LII §18；1 块（1914／1950／1980 三层沿革）
+V02.1.2.1	corpus_gap	2614	CL-RM-493733;CL-RM-493734	official_doc	primary	D1	supp-V02-b002	supplemented	库内复用：1956 判决原文（ref2614 19 块）＋Temin/Galambos 全文（ref53 1,299 块）
+V02.1.2.4	corpus_gap	2614	CL-RM-493735;CL-RM-493736	official_doc	primary	D1	supp-V02-b002	supplemented	库内复用：1956 判决原文（ref2614 19 块）＋Temin/Galambos 全文（ref53 1,299 块）
+V02.1.5.5	corpus_gap	2614;53	CL-RM-493737;CL-RM-493738	official_doc;academic_work	primary;secondary_authoritative	D1	supp-V02-b002	supplemented	库内复用：1956 判决原文（ref2614 19 块）＋Temin/Galambos 全文（ref53 1,299 块）

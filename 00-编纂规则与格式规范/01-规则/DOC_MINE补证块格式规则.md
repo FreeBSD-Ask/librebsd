@@ -128,7 +128,7 @@
 
 三段写库，顺序不可颠倒：
 
-1. `raw_source`：`source_id='SRC-ref:<REF_ID>'`、`namespace='ref'`、`local_pk='<REF_ID>'`、`source_db='04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb'`、`source_table='references'`、`source_layer` 按 `controlled_vocab` 的层号取值（`official_doc`=3、`academic_work`=5、`talk_interview`／`memoir_blog`=4、`code_artifact`=1，表外类型按词表定义）、`source_type`（承 `controlled_vocab`）、`title`、`provenance_url`、`source_date`、`tier_basis`、`reliability_grade`、`banned_source=0`、`acquisition_method='web_supplement'`、`acquired_at`。**标识口径承库内既有约定**（`SRC-ref:<id>` ＋ `namespace='ref'`），不得自造 `namespace='ref:<id>'`。
+1. `raw_source`：`source_id='SRC-ref:<REF_ID>'`、`namespace='ref'`、`local_pk='<REF_ID>'`、`source_db='04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb'`、`source_table='references'`、`source_layer` 按 `controlled_vocab` 的层号取值（`official_doc`=3、`academic_work`=5、`talk_interview`／`memoir_blog`=4、`code_artifact`=1，表外类型按词表定义）、`source_type`（承 `controlled_vocab`）、`title`、`provenance_url` 或经 `references.file_path` 承担溯源（本地文献可空）、`source_date`、`tier_basis`、`reliability_grade`、`banned_source=0`、`acquisition_method='web_supplement'`、`acquired_at`。**标识口径承库内既有约定**（`SRC-ref:<id>` ＋ `namespace='ref'`），不得自造 `namespace='ref:<id>'`。
 2. `evidence`：`source_id` 指向上行、`evidence_id` 用 `EV-SUP-<六位>` 号段（与 `EV-KF-` 分开，免混入既有 KF 统计）、`anchor` 记 `url:<去 scheme 的 URL>#<BLOCK_INDEX 或片段锚>`、`quote` **逐字**取自原文、`fact_text` 为可独立成立的事实陈述、`evidence_kind`（`quote`／`article_text`／`fact`）、`quote_lang`、`event_date`、`event_date_precision`（`day`／`month`／`year`）、`confidence`。
 3. `claim`：`claim_id` 续 `CL-RM-` 号段（不新立前缀，以复用既有水位锁与全部下游正则）、`claim_text`、`evidence_level` 按 §4.2 定级、`status='supported'`、`created_by='supplement:<卷>-<批号>'`。
 
@@ -167,7 +167,7 @@
 | ---- | ---- |
 | D1 | `exceptions` 每行 `status` ∈ 四态；`supplemented` 行须在 `supplement/V{NN}.tsv` 有对应记录且 `ref_id`／`claim_id` 非空 |
 | D2 | 每个 `DOC_MINE` 锚的 `CID` 在 `claim` 存在、`status='supported'`、`LV` 与库内 `evidence_level` 一致；抬头与 `source_type` 按 §4.1 相符；不得出现邮件抬头 |
-| D3 | 对应 `raw_source.source_id='SRC-ref:<REF_ID>'`、`namespace='ref'`、`local_pk` 指向该 ref、`banned_source=0`、`provenance_url` 非空，且该 `ref_id` 在 `references` 存在 |
+| D3 | 对应 `raw_source.source_id='SRC-ref:<REF_ID>'`、`namespace='ref'`、`local_pk` 指向该 ref、`banned_source=0`，且 `provenance_url` 与 `references.file_path` **至少一项非空**（本地 PDF／全文文献无网络 URL 属常态，溯源由 `file_path`＋`sha256` 承担），该 `ref_id` 在 `references` 存在 |
 | D4 | 新入 `references` 的四键（`sha256`／`isbn_doi`／`source_url`／三元组）在库内唯一，或已在 `reference_duplicates` 登记 |
 | D5 | 含 `DOC_MINE` 的小节合计块数 ≤12、字节数 ≤16,797 |
 
