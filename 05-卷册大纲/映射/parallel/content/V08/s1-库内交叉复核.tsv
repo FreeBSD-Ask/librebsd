@@ -1,0 +1,48 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V08.1.3.2	陷阱与系统调用的衔接	ref_title	6119	6119	0.324	B	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219> 2021	可推	文献线索（须核全文再定 D1/D2）
+V08.1.6.1	多处理器支持的动因	claim	CL-7-021		1.20	B	FreeBSD 初始 SMP 支持沿用 UNIX 传统的粗粒度进程同步方式，一次只允许一个进程在内核态运行，不适应多处理器应用。	可推	claim 复用（S2 先库后网）
+V08.1.6.1	多处理器支持的动因	claim	CL-5-006		1.20	B	Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。	可推	claim 复用（S2 先库后网）
+V08.10.3.3	展示对共同体的凝聚	sacred	140		0.256	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V08.10.3.4	媒体报道的解读偏差	ref_title	3811	3811	0.470	B	2024 Orange v EntrOuvert legalis 报道存档 unknown 2024	可推	文献线索（须核全文再定 D1/D2）
+V08.10.4.3	异构网络的互连难题	fulltext_fact	7317	1541	0.237	C	Cerf 与 Kahn 提出通过网关互连异构分组交换网络的协议架构，成为 TCP/IP 的基础。	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.10.5.4	论文发表与共识形成	sacred	1198		0.236	C	136 大器晚成论 	可推	史观参照（不作证据，仅定题面归属）
+V08.10.5.5	课题计划的资助延续	fulltext_fact	kf-bell-10020-400	10020	0.220	C	1956年3月，EPBX基础开发获得资助并持续至1958年	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.10.6.4	科研环境随转换的重构	sacred	55		0.222	C	2.3 记忆的重构性	可推	史观参照（不作证据，仅定题面归属）
+V08.11.2.2	语言即操作系统的理念	claim	CL-1-114		1.10	A	C 语言于 1970 年代初被设计为新兴 Unix 操作系统的系统实现语言，源自无类型的 BCPL 语言并演化出类型结构。	可推	claim 复用（S2 先库后网）
+V08.11.2.2	语言即操作系统的理念	claim	CL-4-112		0.90	A	USL 起诉加州大学董事会与 BSDi，指控其分发计算机软件侵犯 USL 对 UNIX 操作系统的专有权利。	可推	claim 复用（S2 先库后网）
+V08.11.5.2	移植尝试的早期挫折	fulltext_fact	kf-bell-10021-021	10021	0.272	C	Frank B. Jewett 领导了 Bell Telephone Laboratories 的早期发展	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.11.5.2	移植尝试的早期挫折	claim	CL-RM-010410		1.30	A	1997 年 12 月 David E. Cross 在 AFS 列表开篇回顾数月前社区兴趣再起、移植等待 Transarc 法律许可的处境——FreeBSD AFS 移植尝试的起点记录。	可推	claim 复用（S2 先库后网）
+V08.11.5.3	二进制许可的转折	fulltext_fact	kf-bell-10018-347	10018	0.280	C	1925年是电话机设计的一个重大转折点	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.2.3.5	抽象层的史学位置	fulltext_summary	20	20	0.238	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V08.2.3.5	抽象层的史学位置	fulltext_summary	63	63	0.238	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V08.2.3.5	抽象层的史学位置	fulltext_summary	118	118	0.238	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V08.2.3.5	抽象层的史学位置	sacred	2677		0.238	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V08.2.4.4	统一接口的覆盖范围	sacred	3057		0.452	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V08.2.4.4	统一接口的覆盖范围	fulltext_fact	kf-bell-10024-834	10024	0.227	C	SLC-1的覆盖范围限于18,000英尺以内且用户线无加载线圈的区域	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.2.5.4	控制路径的分工界定	ref_title	5773	5773	0.233	C	[考据脚注：UNIX 开源路径与 DEC 商业闭源路径的对比经 Ceruzzi 2003 与 Campbell-Kelly & Aspray 1996 交叉验证确证 2003	可推	文献线索（须核全文再定 D1/D2）
+V08.3.3.5	两类设备的接口差异	claim	CL-RM-012946		0.90	A	Helge Hafting 在 lkml 讨论 cdrecord SCSI 设备寻址时对照 FreeBSD（uses CAM）、BSD-OS、OpenBSD 等系统的接口差异。	可推	claim 复用（S2 先库后网）
+V08.3.4.1	驱动程序的注册结构	ref_title	6119	6119	0.246	C	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219> 2021	可推	文献线索（须核全文再定 D1/D2）
+V08.3.6.5	管理工具的配套成形	claim	CL-RM-010722		1.30	A	1998 年 2 月 Ruslan Shevchenko 发布其管理系统 TCL API——FreeBSD 社区第三方 GUI 管理工具的当事人交付。	可推	claim 复用（S2 先库后网）
+V08.4.1.2	目标文件的节区编组	claim	CL-RM-010203		1.20	B	2001 年 3 月 NetBSD/news68k 默认目标文件格式切换为 ELF（含 X sets 的快照与升级说明一并发布）——m68k 系端口 a.out→ELF 迁移的节点	可推	claim 复用（S2 先库后网）
+V08.4.2.3	装载地址的重定位	sacred	2868		0.337	B	下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>	可推	史观参照（不作证据，仅定题面归属）
+V08.4.2.3	装载地址的重定位	sacred	2872		0.337	B	Termius 下载地址：<https://termius.com/download/>	可推	史观参照（不作证据，仅定题面归属）
+V08.4.2.3	装载地址的重定位	sacred	2854		0.239	C	WinSCP 官方下载地址：https://winscp.net/eng/download.php	可推	史观参照（不作证据，仅定题面归属）
+V08.4.3.4	静态链接的空间代价	claim	CL-RM-010962		1.30	A	1998 年 ITOH Yasufumi 提交 m68k 端口 Linux 仿真支持，使静态链接的 Linux/m68k 程序可在 NetBSD 上运行	可推	claim 复用（S2 先库后网）
+V08.6.3.2	重写后的可移植收益	sacred	72		0.305	B	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V08.6.3.4	重写风险的当事人评估	claim	CL-RM-010629		0.70	A	2011 年 6 月 Aleksej Saushev 评审 wip/clang-current 以构建 LLVM clang——clang 编译器早期入 pkgsrc 的当事人评审。	可推	claim 复用（S2 先库后网）
+V08.6.3.4	重写风险的当事人评估	claim	CL-RM-010003		0.70	A	Guy Harris 逐条解读 zs 驱动 parity error 中断设计并质疑其正确性，对内核技术决策的当事人评述	可推	claim 复用（S2 先库后网）
+V08.7.4.5	认证机制的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V08.8.11.2	与 Ports 树的共生关系	sacred	44		0.250	C	1.11 语言与本体论	可推	史观参照（不作证据，仅定题面归属）
+V08.8.11.3	语言准入的讨论脉络	sacred	708		0.259	C	论记忆 	可推	史观参照（不作证据，仅定题面归属）
+V08.8.6.1	虚拟机革命的产业背景	ref_title	10064	10064	0.258	C	OpenBSD Hackathons (g2k14/m2k14 背景) 2014	可推	文献线索（须核全文再定 D1/D2）
+V08.8.6.2	FreeBSD 的 JDK 移植历程	fulltext_fact	kf-tb3-3717-006	3717	0.233	C	p0034 Series/1 移植 UNIX 历时约两年方告成功，约 30% 代码被改动，66% 工作量投入 C 编译器。	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.8.6.3	许可证约束的移植障碍	fulltext_summary	114	114	0.260	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V08.8.6.3	许可证约束的移植障碍	fulltext_summary	942	942	0.260	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V08.8.6.3	许可证约束的移植障碍	fulltext_summary	949	949	0.260	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V08.8.6.3	许可证约束的移植障碍	fulltext_fact	kf-bell-10020-924	10020	0.222	C	在PBX中提供TOUCH-TONE呼叫的主要障碍是实现可市场化的成本	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.8.6.4	共同体的自组织移植	sacred	140		0.278	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V08.8.8.2	应用适配的困境案例	sacred	274		0.276	C	12.3 德福一致的困境	可推	史观参照（不作证据，仅定题面归属）
+V08.9.2.4	协议选型的争论记录	sacred	708		0.305	B	论记忆 	可推	史观参照（不作证据，仅定题面归属）
+V08.9.3.2	路由信息的维护工具	ref_title	5554	5554	0.223	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
+V08.9.4.4	标准化进程的收编	fulltext_fact	kf-bell-10024-796	10024	0.244	C	1925年电缆线对电容被标准化为每英里0.083 μf	可推	全文补证候选（S1 命中即复用，D1 型）
+V08.9.4.4	标准化进程的收编	claim	CL-RM-011657		1.60	A	John Quarterman（UT Austin）公告受 USENIX 董事会指派出任 IEEE P1003 标准委员会 USENIX 代表并承诺在 net.usenix 与 ;login: 报告——USENIX 参与标准化进程的组织史一	可推	claim 复用（S2 先库后网）

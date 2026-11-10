@@ -1,0 +1,25 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V04.1.2.5	采访自述的交代与留白	ref_title	3933	3933	0.266	C	unknown interview 采访录 Pradeep Sindhu 采访录 Pradeep Sindhu md v10 unknown 	可推	文献线索（须核全文再定 D1/D2）
+V04.1.3.1	道格·麦基尔罗伊与组件化构想	ref_title	5578	5578	0.251	C	一切历史都是思想史 	可推	文献线索（须核全文再定 D1/D2）
+V04.1.3.5	早期组件清单与职能分工	sacred	2399		0.235	C	分析 FreeBSD 的版本变更历史。	可推	史观参照（不作证据，仅定题面归属）
+V04.1.5.1	布莱恩·克尼汉的写作者身份	ref_title	55	55	0.353	A	UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 1lib.sk, z-lib.sk) Brian W. Kernighan. All 2021	可推	文献线索（须核全文再定 D1/D2）
+V04.1.6.5	作者身后的维护权交接	claim	CL-RM-010810		0.70	A	2024年2月 Gleb Popov 回应 Ashish SHUKLA 的维护自荐，围绕 go@ 失联与维护权交接展开讨论。	可推	claim 复用（S2 先库后网）
+V04.2.4.2	会议纪要与决策留痕	claim	CL-RM-011270		1.30	A	2000 年 1 月 Jim Wise 重新贴出系统包（syspkg）讨论的会议纪要与原始提案，重启 base 系统 pkg 化议程	可推	claim 复用（S2 先库后网）
+V04.3.1.2	哥伦比亚大学的采用契机	fulltext_fact	kf-bell-10021-425	10021	0.288	A	Lamb shift 由 W. E. Lamb 于1946年在哥伦比亚大学首次测量	可推	全文补证候选（S1 命中即复用，D1 型）
+V04.3.1.2	哥伦比亚大学的采用契机	claim	CL-1-019		1.70	A	第一个向 AT&T 索取 UNIX 的人是哥伦比亚大学的 Lou Katz 教授，Ken Thompson 将后来被称为第四版的内容复制给他。	可推	claim 复用（S2 先库后网）
+V04.3.1.2	哥伦比亚大学的采用契机	claim	CL-RM-010729		1.60	A	2006 年 10 月 Amitai Schlair 组织 NYCBSDCon（哥伦比亚大学）NetBSD 展位轮值——NetBSD 纽约大会社群的当事人组织。	可推	claim 复用（S2 先库后网）
+V04.4.1.1	三人协作的分工与默契	ref_title	55	55	0.291	C	UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 1lib.sk, z-lib.sk) Brian W. Kernighan. All 2021	可推	文献线索（须核全文再定 D1/D2）
+V04.4.1.3	彼得·温伯格的解释器实现	claim	CL-RM-118494		0.70	A	Jason R Thorpe 说明含空格的解释器名本来就不可用，解析会在空格处截断并把余下部分当参数	可推	claim 复用（S2 先库后网）
+V04.4.1.3	彼得·温伯格的解释器实现	claim	CL-RM-118493		0.70	A	Dave Huang 以实际命令演示含空格的解释器路径在现行 NetBSD 上同样无法使用	可推	claim 复用（S2 先库后网）
+V04.4.1.4	布莱恩·克尼汉的接口设计	ref_title	55	55	0.388	A	UNIX 传奇：历史与回忆 ([美]布莱恩·W.克尼汉（BrianW.Kernighan）) (z-library.sk, 1lib.sk, z-lib.sk) Brian W. Kernighan. All 2021	可推	文献线索（须核全文再定 D1/D2）
+V04.4.1.6	署名与致谢的版本变化	sacred	2399		0.252	C	分析 FreeBSD 的版本变更历史。	可推	史观参照（不作证据，仅定题面归属）
+V04.4.2.2	流编辑器的诞生场景	sacred	2145		0.309	B	UNICS 的诞生	可推	史观参照（不作证据，仅定题面归属）
+V04.4.2.5	工具命名的由来与流传	fulltext_fact	kf-bell-10019-1254	10019	0.271	C	AAP是Apollo Applications Program的缩写	可推	全文补证候选（S1 命中即复用，D1 型）
+V04.4.2.5	工具命名的由来与流传	fulltext_fact	kf-bell-10019-1255	10019	0.271	C	ABM是antiballistic missile的缩写	可推	全文补证候选（S1 命中即复用，D1 型）
+V04.4.2.5	工具命名的由来与流传	fulltext_fact	kf-bell-10019-1256	10019	0.271	C	DCTL是direct-coupled transistor logic的缩写	可推	全文补证候选（S1 命中即复用，D1 型）
+V04.5.4.1	口述史项目的发起背景	ref_title	827	827	0.246	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）
+V04.6.1.4	署名争议的典型个案	claim	CL-RM-010286		0.70	A	2001 年 1 月俄罗斯开发者 Nikolai Saoukh 公开求问'有人有 commit 权吗？我的补丁袋越来越鼓'——外围贡献者因 commit 权缺位而受阻的典型个案（后续自述'缺 committer 配合拖延'）	可推	claim 复用（S2 先库后网）
+V04.6.2.3	丹尼斯·里奇与肯·汤普森的回应立场	sacred	2134		0.255	C	UNIX 哲学是 UNIX 操作系统于长期开发实践中逐渐形成的设计理念，由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造。其核心主张可归纳为以下原则：	可推	史观参照（不作证据，仅定题面归属）
+V04.6.2.3	丹尼斯·里奇与肯·汤普森的回应立场	claim	CL-15-1350		1.10	A	据〔Ken Thompson 于计算机历史博物馆访谈〕讲者口述：他和丹尼斯·里奇在 PDP-7 上写出第一个 Unix 版本（同时期还有 Brush），当时机上尚无象棋程序；后来才有一个可单机直接加载运行的 MIT 象棋程序，他本人只下过一	可推	claim 复用（S2 先库后网）
+V04.6.2.3	丹尼斯·里奇与肯·汤普森的回应立场	claim	CL-15-1338		1.10	A	据〔来源不详〕讲者口述：1969 年贝尔实验室的计算机科学家常·汤普逊与丹尼斯·里奇开始开发自用程序，其后演化为如今广泛使用的 Unix 操作系统（原文 "Babs"、"Richie" 为 Bell Labs、Ritchie 之 ASR 讹	可推	claim 复用（S2 先库后网）
+V04.6.4.2	创造者与维护者的并置	claim	CL-RM-011142		0.70	A	2005年12月5日 Maksim Yevmenkin 回应 dbus 自动化蓝牙设备管理提议时明确表示对 d-bus 路线的怀疑，与 Linux BlueZ 维护者 Marcel Holtmann 的 dbus 倡议形成 BSD 与 Li	可推	claim 复用（S2 先库后网）

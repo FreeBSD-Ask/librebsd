@@ -1,0 +1,32 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V09.1.1.1	贝克莱主教的哲学遗产	sacred	2549		0.289	C	贝克莱哲学	可推	史观参照（不作证据，仅定题面归属）
+V09.1.1.1	贝克莱主教的哲学遗产	sacred	2541		0.229	C	贝克莱思想概述	可推	史观参照（不作证据，仅定题面归属）
+V09.2.3.1	工程教育的课程骨架	fulltext_summary	998	998	0.244	C	P: OS Improvements P:Advocacy & Education P:Infrastructure Support Program:General Fundraising Administrative Total Reve	可推	全文综述候选（D1 型，核对原文后落块）
+V09.2.3.1	工程教育的课程骨架	sacred	2693		0.240	C	不稳定的 ABI	可推	史观参照（不作证据，仅定题面归属）
+V09.2.3.5	教育传统的延续性	fulltext_summary	998	998	0.236	C	P: OS Improvements P:Advocacy & Education P:Infrastructure Support Program:General Fundraising Administrative Total Reve	可推	全文综述候选（D1 型，核对原文后落块）
+V09.2.4.1	实验室建制的建立	fulltext_fact	kf-bell-10020-585	10020	0.270	C	Bell Laboratories位于New Jersey州Holmdel的Hi-bay实验室建于1967年	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.2.4.4	校园网络的早期形态	fulltext_fact	kf-bell-10021-021	10021	0.224	C	Frank B. Jewett 领导了 Bell Telephone Laboratories 的早期发展	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.2.4.5	基础设施的经费来源	sacred	2107		0.225	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V09.2.4.5	基础设施的经费来源	claim	CL-RM-010619		1.30	A	2008 年 8 月 Aleksey Cheusov 发布 Linux DESTDIR 批量构建结果——pkgsrc 跨平台批量构建基础设施的一次实证成果。	可推	claim 复用（S2 先库后网）
+V09.2.4.5	基础设施的经费来源	claim	CL-RM-010602		1.30	A	2018 年 3 月 Mark Johnston 提出用 bhyve 自动配置测试虚拟机以强化内核转储代码测试——虚拟化测试基础设施的当事人提案。	可推	claim 复用（S2 先库后网）
+V09.2.5.5	巨型化的时代限度	sacred	79		0.225	C	3.1 现代性的假象	可推	史观参照（不作证据，仅定题面归属）
+V09.3.2.5	早期环境的史料状况	fulltext_fact	kf-bell-10022-928	10022	0.283	C	ARPANET是早期计算机网络	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.3.6.1	精简指令项目的立项背景	ref_title	10064	10064	0.242	C	OpenBSD Hackathons (g2k14/m2k14 背景) 2014	可推	文献线索（须核全文再定 D1/D2）
+V09.3.6.5	与 SPARC 的学术渊源	sacred	2631		0.228	C	NetBSD 的学术渊源可追溯至加州大学伯克利分校（UC Berkeley）的 Berkeley Software Distribution（BSD）项目，在操作系统可移植性研究领域占有一席之地。	可推	史观参照（不作证据，仅定题面归属）
+V09.4.1.5	治理结构的层级关系	sacred	2344		0.556	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V09.4.1.5	治理结构的层级关系	sacred	2346		0.556	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V09.4.1.5	治理结构的层级关系	sacred	232		0.437	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V09.4.1.5	治理结构的层级关系	fulltext_fact	kf-bell-10020-312	10020	0.261	C	全国长途拨号交换方案采用从National Center到Ordinary Toll Center的层级结构	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.4.1.5	治理结构的层级关系	fulltext_fact	kf-bell-10021-1079	10021	0.225	C	Panish和I. Hayashi将多层外延结构称为heterostructures	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.4.2.1	学生运动与治理的互动	sacred	2344		0.410	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V09.4.2.1	学生运动与治理的互动	sacred	2346		0.410	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V09.4.2.1	学生运动与治理的互动	ref_title	10063	10063	0.226	C	The OpenBSD Foundation — Foundation Activities (2014 GSoC 5 学生) 2014	可推	文献线索（须核全文再定 D1/D2）
+V09.4.2.1	学生运动与治理的互动	ref_title	10076	10076	0.226	C	FreeBSD Quarterly Status Report 2010Q2 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V09.4.2.1	学生运动与治理的互动	ref_title	10092	10092	0.226	C	FreeBSD Status Report April-June 2010 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V09.4.3.5	冷战遗产的史学评估	sacred	347		0.274	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V09.4.4.5	信托责任的当代争议	fulltext_fact	kf-bell-10018-106	10018	0.266	C	J.J. Carty 担任 AT&T Engineering Department 的 Chief Engineer	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.4.6.5	环境议题的组织参与	sacred	1911		0.220	C	本书的组织结构	可推	史观参照（不作证据，仅定题面归属）
+V09.5.1.1	实验室的创建与大科学	fulltext_fact	kf-bell-10019-1166	10019	0.224	C	1955 年底至 1956 年初 Sandia 人员迁至 Livermore 协助加州大学辐射实验室，后发展为 Lawrence Livermore Laboratory	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.5.1.4	大科学的资源体量	fulltext_fact	kf-bell-10020-587	10020	0.272	C	No. 5 crossbar系统架构提供了前所未有的交换灵活性	可推	全文补证候选（S1 命中即复用，D1 型）
+V09.5.2.1	科研共同体的成形条件	sacred	140		0.269	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V09.5.2.4	共同体的代际更替	sacred	140		0.257	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）

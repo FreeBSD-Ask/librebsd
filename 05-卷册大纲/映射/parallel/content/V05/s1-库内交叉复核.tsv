@@ -1,0 +1,13 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V05.1.12.4	构建环节的自动化	sacred	98		0.228	C	4.3 历史的重复性	可推	史观参照（不作证据，仅定题面归属）
+V05.1.12.5	可复现构建的早期追求	claim	CL-RM-010835		1.30	A	2026年2月Siva Mahadevan请求uboot@在维护者超时前评审PR 292260以推进Ports树可复现构建。	可推	claim 复用（S2 先库后网）
+V05.1.9.1	程序接口的稳定性承诺	claim	CL-2-004		0.90	A	磁盘子系统测试的最重要成果之一是修正了设备处理程序（RH750/RH780 接口）的时序参数，使部分情形性能提升超过 20%。	可推	claim 复用（S2 先库后网）
+V05.2.6.2	《UNIX 编程艺术》的文本结构	sacred	1911		0.245	C	本书的组织结构	可推	史观参照（不作证据，仅定题面归属）
+V05.2.6.3	引用网络与接受的扩张	claim	CL-RM-012087		1.30	A	Zwicky 问题清单修订版：加入 LISA II-IV 论文引用网络与商业产品名录（Unitech BACKUP.UNET/UBACKUP 等），明示作为 LISA 选题议程	可推	claim 复用（S2 先库后网）
+V05.4.2.2	课题布局与协作网络	sacred	2683		0.232	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V05.4.2.3	内部网络与基础设施	claim	CL-RM-010216		0.70	A	2012 年 11 月 ctm 生成机遭遇安全事件停摆并波及 svn 邮件列表——CTM 后期单一维护者依赖与基础设施脆弱性的注脚	可推	claim 复用（S2 先库后网）
+V05.4.5.1	公开发行与许可变迁	ref_title	5799	5799	0.321	B	B. (1991) Vim 1.14 首次公开发布（Fred Fish Disk #591） 1991	可推	文献线索（须核全文再定 D1/D2）
+V05.4.5.1	公开发行与许可变迁	fulltext_summary	114	114	0.240	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V05.4.5.1	公开发行与许可变迁	fulltext_summary	942	942	0.240	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V05.4.5.1	公开发行与许可变迁	fulltext_summary	949	949	0.240	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V05.4.5.1	公开发行与许可变迁	sacred	2603		0.230	C	BSD 一条款许可证（The 1-Clause BSD License，BSD-1-Clause）	可推	史观参照（不作证据，仅定题面归属）

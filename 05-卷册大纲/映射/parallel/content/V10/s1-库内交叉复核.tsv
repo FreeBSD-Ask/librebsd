@@ -1,0 +1,104 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V10.1.1.3	军方需求与基础研究的接榫	sacred	2242		0.232	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V10.1.2.5	制度定位的史学判读	sacred	347		0.260	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.1.3.3	专名凡例的书写约定	ref_title	2607	2607	0.236	C	US v. Microsoft, Findings of Fact, 84 F. Supp. 2d 9 (D.D.C. 1999)——Jackson 法官事实认定书 1999	可推	文献线索（须核全文再定 D1/D2）
+V10.1.3.4	名称与任务范围的联动	fulltext_fact	kf-bell-10019-1289	10019	0.299	C	Neil Armstrong与Apollo 11任务相关	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.1.4.4	早期项目的遴选记录	ref_title	10066	10066	0.280	C	DragonFly GSoC 2010 (3 项目) 2010	可推	文献线索（须核全文再定 D1/D2）
+V10.1.4.4	早期项目的遴选记录	ref_title	10070	10070	0.280	C	NetBSD: Changes and News in 2010 (6 项目) 2010	可推	文献线索（须核全文再定 D1/D2）
+V10.1.4.4	早期项目的遴选记录	ref_title	10071	10071	0.280	C	NetBSD Blog: NetBSD's GSoC Projects 2011 (9 项目) 2011	可推	文献线索（须核全文再定 D1/D2）
+V10.1.4.4	早期项目的遴选记录	sacred	2141		0.280	C	Multics 项目	可推	史观参照（不作证据，仅定题面归属）
+V10.1.5.3	政府实验室的协作方式	fulltext_fact	kf-bell-10024-1388	10024	0.249	C	Tin Goose是贝尔实验室的飞机	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.1.5.3	政府实验室的协作方式	claim	CL-1-122		1.30	A	美国国家研究委员会报告指出，个体企业的兴衰流变由人员在大学、政府实验室与私人公司之间的流动所驱动。	可推	claim 复用（S2 先库后网）
+V10.1.7.1	早期计算机研究的资助版图	fulltext_fact	kf-bell-10022-928	10022	0.313	B	ARPANET是早期计算机网络	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.1.8.2	首批项目的分布状况	ref_title	10066	10066	0.245	C	DragonFly GSoC 2010 (3 项目) 2010	可推	文献线索（须核全文再定 D1/D2）
+V10.1.8.2	首批项目的分布状况	ref_title	10070	10070	0.245	C	NetBSD: Changes and News in 2010 (6 项目) 2010	可推	文献线索（须核全文再定 D1/D2）
+V10.1.8.2	首批项目的分布状况	ref_title	10071	10071	0.245	C	NetBSD Blog: NetBSD's GSoC Projects 2011 (9 项目) 2011	可推	文献线索（须核全文再定 D1/D2）
+V10.1.8.2	首批项目的分布状况	sacred	2141		0.245	C	Multics 项目	可推	史观参照（不作证据，仅定题面归属）
+V10.2.1.2	人机共生的愿景文本	fulltext_summary	509	509	0.222	C	Recent Filesystem Optimisations in FreeBSD Ian Dowse <iedowse@freebsd.org> Corvil Networks. David Malone <dwmalone@freeb	可推	全文综述候选（D1 型，核对原文后落块）
+V10.2.1.4	承包大学的选择逻辑	fulltext_summary	101	101	0.258	C	OpenBSD meets 802.11n Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2016 Introduction to 802.11n The 802.11n standard im	可推	全文综述候选（D1 型，核对原文后落块）
+V10.2.1.4	承包大学的选择逻辑	sacred	318		0.231	C	14.4 百分之一的选择	可推	史观参照（不作证据，仅定题面归属）
+V10.2.1.4	承包大学的选择逻辑	fulltext_summary	89	89	0.230	C	SCSI Multipathing in OpenBSD David Gwynne <dlg@openbsd.org> Monday, 30 September 13 Introduction • who am I? • what's th	可推	全文综述候选（D1 型，核对原文后落块）
+V10.2.1.4	承包大学的选择逻辑	fulltext_summary	802	802	0.230	C	© Cambridge University Press www.cambridge.org Cambridge University Press 0521389291 - The Fall of the Bell System: A St	可推	全文综述候选（D1 型，核对原文后落块）
+V10.2.10.1	启动年度的节点事件	ref_title	10146	10146	0.251	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V10.2.3.1	资源共享的问题设定	claim	CL-3-062		1.30	A	Denning 1989 年记载 ARPANET 于 1969 年以四个节点开始运行，作为计算机间资源共享的实验。	可推	claim 复用（S2 先库后网）
+V10.2.3.4	共享理念的共同体扩散	sacred	140		0.226	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V10.2.4.1	分时合同的签订背景	ref_title	10064	10064	0.298	C	OpenBSD Hackathons (g2k14/m2k14 背景) 2014	可推	文献线索（须核全文再定 D1/D2）
+V10.2.4.2	机器共享的实验室建制	fulltext_fact	kf-bell-10020-585	10020	0.252	C	Bell Laboratories位于New Jersey州Holmdel的Hi-bay实验室建于1967年	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.2.4.2	机器共享的实验室建制	claim	CL-3-062		1.10	A	Denning 1989 年记载 ARPANET 于 1969 年以四个节点开始运行，作为计算机间资源共享的实验。	可推	claim 复用（S2 先库后网）
+V10.2.5.2	兰德公司与系统开发公司	ref_title	10137	10137	0.317	B	PostgreSQL list: 转发 Murray Stokely 2005 公告 (18 projects) 2005	可推	文献线索（须核全文再定 D1/D2）
+V10.2.5.3	斯坦福的课题布局	ref_title	5528	5528	0.272	C	Newton 1990 斯坦福“敲击实验”（tappers and listeners） 1990	可推	文献线索（须核全文再定 D1/D2）
+V10.2.7.1	共同体的制度基础	sacred	140		0.240	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V10.2.7.2	年度会议的聚合功能	ref_title	10146	10146	0.335	B	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V10.2.7.2	年度会议的聚合功能	fulltext_summary	881	881	0.251	C	Machine-Independent Virtual Memory Management for Paged Uniprocessor and Multiprocessor Architectures Richard Rashid, Av	可推	全文综述候选（D1 型，核对原文后落块）
+V10.2.7.2	年度会议的聚合功能	fulltext_summary	1011	1011	0.251	C	Faces of FreeBSD Are you aware of the tangible benefits derived from our support of the FreeBSD community? In conjunctio	可推	全文综述候选（D1 型，核对原文后落块）
+V10.2.7.4	共同体认同的文本表征	sacred	140		0.232	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V10.2.7.5	形成期的史学判读	sacred	347		0.298	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.2.8.1	单机局限的问题清单	claim	CL-RM-019291		0.70	A	Dawidek 列举当时 GEOM 存在的问题清单	可推	claim 复用（S2 先库后网）
+V10.2.8.3	资源共享的技术前提	claim	CL-3-062		1.30	A	Denning 1989 年记载 ARPANET 于 1969 年以四个节点开始运行，作为计算机间资源共享的实验。	可推	claim 复用（S2 先库后网）
+V10.3.1.2	管理结构的设置方案	sacred	2344		0.275	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V10.3.1.2	管理结构的设置方案	sacred	2346		0.275	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V10.3.10.5	项目线的档案现状	ref_title	10066	10066	0.238	C	DragonFly GSoC 2010 (3 项目) 2010	可推	文献线索（须核全文再定 D1/D2）
+V10.3.10.5	项目线的档案现状	ref_title	10070	10070	0.238	C	NetBSD: Changes and News in 2010 (6 项目) 2010	可推	文献线索（须核全文再定 D1/D2）
+V10.3.10.5	项目线的档案现状	ref_title	10071	10071	0.238	C	NetBSD Blog: NetBSD's GSoC Projects 2011 (9 项目) 2011	可推	文献线索（须核全文再定 D1/D2）
+V10.3.10.5	项目线的档案现状	sacred	2141		0.238	C	Multics 项目	可推	史观参照（不作证据，仅定题面归属）
+V10.3.11.5	管理侧的史料边界	sacred	7		0.248	C	重要约束 	可推	史观参照（不作证据，仅定题面归属）
+V10.3.11.5	管理侧的史料边界	sacred	347		0.231	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.3.2.5	资助决策的史学判读	sacred	347		0.269	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.3.3.3	计划评估的量化方法	fulltext_fact	kf-bell-10019-782	10019	0.254	C	1967年1月16日Bell Laboratories与Western Electric启动为期六个月的I-67计划评估研究	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.3.4.2	工程实现的团队构成	fulltext_fact	kf-bell-10022-671	10022	0.226	C	XDS（实验数字交换机）由 Alles、C. Christensen、R. W. Lucky 及其团队构建	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.3.4.5	BBN 角色的史学定位	sacred	347		0.256	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.3.7.4	评估报告的撰写要求	fulltext_fact	kf-tb3-3705-000	3705	0.233	C	The UNIX I/O System 一手文档：《The UNIX I/O System》由 Bell Labs 的 Dennis M. Ritchie 撰写，面向设备驱动编写者，比 UNIX Implementation 更细节。	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.3.8.2	演示应用的选取标准	ref_title	5704	5704	0.220	C	/IEC 14882:2020（C++ 20 标准） 2020	可推	文献线索（须核全文再定 D1/D2）
+V10.3.8.3	共同体的初次集结	sacred	140		0.248	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V10.3.8.4	制度化组织的诞生	sacred	2145		0.442	B	UNICS 的诞生	可推	史观参照（不作证据，仅定题面归属）
+V10.3.8.5	展示效应的史学评估	sacred	347		0.253	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.4.10.2	发行许可的资助背景	ref_title	10064	10064	0.279	C	OpenBSD Hackathons (g2k14/m2k14 背景) 2014	可推	文献线索（须核全文再定 D1/D2）
+V10.4.11.1	合同到期的转折点	fulltext_fact	kf-bell-10018-347	10018	0.254	C	1925年是电话机设计的一个重大转折点	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.4.11.4	解散过程的当事人追述	claim	CL-RM-010656		0.90	A	2025 年 12 月 Adrian Chadd 在 SGI Indy 上调试 R5000SC 处理器并定位修复缓存数学变更缺陷——SGI MIPS 硬件复兴工程的当事人现场。	可推	claim 复用（S2 先库后网）
+V10.4.11.4	解散过程的当事人追述	claim	CL-RM-010222		0.90	A	2018 年 12 月 Richard Scheffenegger 发布完整 RFC6675（SACK 恢复）支持补丁：Nth dupack 或 (N-1)*MSS SACK 字节即进入丢包恢复、兼顾 ACK thinning 场景——传输	可推	claim 复用（S2 先库后网）
+V10.4.2.1	VLSI 计划的招标背景	ref_title	10064	10064	0.271	C	OpenBSD Hackathons (g2k14/m2k14 背景) 2014	可推	文献线索（须核全文再定 D1/D2）
+V10.4.2.2	操作系统支持的需求表述	claim	CL-1-126		1.20	B	FreeBSD 的 bhyve 虚拟机监控器支持的客户机操作系统包括 *BSD、Linux、Windows 以及 Illumos、Plan 9 等。	可推	claim 复用（S2 先库后网）
+V10.4.2.3	招标文件的存世清单	ref_title	10161	10161	0.229	C	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V10.4.2.3	招标文件的存世清单	ref_title	10162	10162	0.229	C	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V10.4.2.3	招标文件的存世清单	ref_title	10163	10163	0.229	C	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V10.4.4.4	选择过程的当事人叙述	claim	CL-RM-010656		0.90	A	2025 年 12 月 Adrian Chadd 在 SGI Indy 上调试 R5000SC 处理器并定位修复缓存数学变更缺陷——SGI MIPS 硬件复兴工程的当事人现场。	可推	claim 复用（S2 先库后网）
+V10.4.4.4	选择过程的当事人叙述	claim	CL-RM-010222		0.90	A	2018 年 12 月 Richard Scheffenegger 发布完整 RFC6675（SACK 恢复）支持补丁：Nth dupack 或 (N-1)*MSS SACK 字节即进入丢包恢复、兼顾 ACK thinning 场景——传输	可推	claim 复用（S2 先库后网）
+V10.4.4.5	决策评价的史学立场	sacred	347		0.235	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.4.5.4	组建期的当事人回忆	doubt_open	2841		0.222	A	〔全量证据复核·待补｜批次 v59a｜源稿 v59a-三源核验-20261014.md｜条 4〕首届文件丢失/支付延误的当事人回忆与官方说明（1.4）。 ["首届文件丢失支付延误", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V10.4.6.4	学术自主与任务导向的平衡	fulltext_fact	kf-bell-10019-1289	10019	0.271	C	Neil Armstrong与Apollo 11任务相关	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.4.6.5	议程面的史料边界	sacred	7		0.223	C	重要约束 	可推	史观参照（不作证据，仅定题面归属）
+V10.4.7.1	协议集成的工程路线	claim	CL-RM-010609		0.70	A	2024 年 4 月 Igor Ostapenko 给出为 FreeBSD 测试套件添加 jail 执行环境支持的行动要点与阶段规划——测试隔离环境的工程路线图。	可推	claim 复用（S2 先库后网）
+V10.4.7.3	性能验证的实验底稿	fulltext_summary	77	77	0.335	B	What did exist before? How does it work? What are the ﬁndings? What is the Conclusion? Measuring Performance on OpenBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V10.4.7.3	性能验证的实验底稿	fulltext_summary	113	113	0.335	B	What did exist before? How does it work? What are the ﬁndings? What is the Conclusion? Measuring Performance on OpenBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V10.4.7.3	性能验证的实验底稿	fulltext_summary	589	589	0.335	B	SSH Bulk Transfer Performance Allan Jude -- allanjude@freebsd.org Introduction ●15 Years as FreeBSD Server Admin ●FreeBS	可推	全文综述候选（D1 型，核对原文后落块）
+V10.5.1.3	里程碑交付的文档清单	fulltext_fact	kf-bell-10022-786	10022	0.220	C	B. M. Oliver、J. R. Pierce和Shannon于1948年发表了里程碑式论文《The Philosophy of PCM》	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.5.2.1	政府项目的参与名录	ref_title	10161	10161	0.228	C	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V10.5.2.1	政府项目的参与名录	ref_title	10162	10162	0.228	C	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V10.5.2.1	政府项目的参与名录	ref_title	10163	10163	0.228	C	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V10.5.2.2	超算与实验室的应用类型	fulltext_fact	kf-bell-10024-1388	10024	0.246	C	Tin Goose是贝尔实验室的飞机	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.5.3.2	源码开放与审计便利	sacred	2496		0.270	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V10.5.3.5	平台定位的史学评价	sacred	347		0.247	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.5.6.2	CheriBSD 的分支定位	sacred	2377		0.301	B	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V10.5.6.2	CheriBSD 的分支定位	sacred	2386		0.301	B	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V10.5.6.5	技术路线的开放问题	sacred	1632		0.221	C	论能源与形式主义——技术路线之争的审视（q.md 行 284-293）	可推	史观参照（不作证据，仅定题面归属）
+V10.5.8.3	与 CheriBSD 的协作	fulltext_summary	72	72	0.221	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V10.5.8.3	与 CheriBSD 的协作	fulltext_summary	81	81	0.221	C	unwind(8) - florian@OpenBSD.org 1 A recursive name server for every laptop 2 Opportunistic DNSSEC validation 3 Captive-p	可推	全文综述候选（D1 型，核对原文后落块）
+V10.5.8.4	项目成果的发表面	sacred	2426		0.335	B	1993 年 6 月：FreeBSD 项目成立	可推	史观参照（不作证据，仅定题面归属）
+V10.6.1.3	部署案例的选取标准	ref_title	5704	5704	0.234	C	/IEC 14882:2020（C++ 20 标准） 2020	可推	文献线索（须核全文再定 D1/D2）
+V10.6.1.4	边界外的存疑处理	ref_title	1738	1738	0.276	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V10.6.1.4	边界外的存疑处理	ref_title	1739	1739	0.276	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V10.6.1.4	边界外的存疑处理	ref_title	1759	1759	0.276	C	DEFENSE TECHNICAL INFORMATION CENTER. ADA403525[R/OL]. [S.l.: DTIC], [s.d.]. [存疑 Kevin R. Smith March 2002	可推	文献线索（须核全文再定 D1/D2）
+V10.6.1.5	判据面的史学性质	sacred	347		0.254	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V10.6.2.1	国防应用的领域分布	sacred	None		0.220	C	3. shigang.md（2026-08-08 修订版）——既有哲学域分析	可推	史观参照（不作证据，仅定题面归属）
+V10.6.2.3	应用案例的文档构成	sacred	2296		0.263	C	以下是一些典型的应用案例。	可推	史观参照（不作证据，仅定题面归属）
+V10.6.3.1	指挥控制网络的演进	fulltext_fact	kf-bell-10018-1440	10018	0.326	B	Type L电子管经历了Code 101B(1915)、Code 101B(1919)、Code 101D(1920)、Code 101F(1927)的演进	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.6.3.1	指挥控制网络的演进	fulltext_fact	kf-bell-10020-759	10020	0.228	C	存储程序控制网络（SPC network）的概念被规划并开始实施	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.6.3.4	互联互通的标准努力	ref_title	5704	5704	0.224	C	/IEC 14882:2020（C++ 20 标准） 2020	可推	文献线索（须核全文再定 D1/D2）
+V10.6.4.1	无线分组成果的军事转化	fulltext_fact	kf-bell-10024-879	10024	0.260	C	Bell Laboratories在二战期间为军事应用设计了多台继电器计算机	可推	全文补证候选（S1 命中即复用，D1 型）
+V10.6.6.5	机构网的档案分布	ref_title	6169	6169	0.234	C	for Linux Project [EB/OL]. [2026-07-19]. <https://rust-for-linux.com/>（互联网档案馆存档，2026-07-04，<http://web.archive.org/web/2	可推	文献线索（须核全文再定 D1/D2）
+V10.6.7.2	国家科学基金会的接续资助	fulltext_summary	926	926	0.299	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V10.6.7.2	国家科学基金会的接续资助	fulltext_summary	928	928	0.299	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V10.6.7.2	国家科学基金会的接续资助	fulltext_summary	933	933	0.299	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V10.6.7.2	国家科学基金会的接续资助	claim	CL-3-063		1.70	A	Denning 1989 年记载美国国家科学基金会于 1984 年开始连接其超级计算中心，建立高带宽网络 NSFNET，作为社区网络与研究互联网的骨干。	可推	claim 复用（S2 先库后网）
+V10.6.8.3	协议栈的商业实现	ref_title	284	284	0.270	C	基于LM3S8962的TCPIP协议栈的设计与实现 刘凯 2020	可推	文献线索（须核全文再定 D1/D2）
+V10.6.8.3	协议栈的商业实现	ref_title	288	288	0.248	C	TCPIP协议栈的安全性分析 赵菁 2024	可推	文献线索（须核全文再定 D1/D2）

@@ -1,0 +1,10 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V03.1.3.2	VAX 的虚拟地址空间与向后兼容	claim	CL-2-011		1.60	A	VAX-11/780 于 1978 年推出，是 VAX 架构的首个实现；VAX 设计始于 1975 年，目标是成为 PDP-11 的兼容扩展以解决其虚拟地址空间限制，名称 VAX-11 源自“PDP-11 的虚拟地址扩展”。	可推	claim 复用（S2 先库后网）
+V03.1.3.2	VAX 的虚拟地址空间与向后兼容	claim	CL-RM-013976		1.40	A	指标准 malloc 不适大虚拟地址空间，16 位地址空间下性能亦差	可推	claim 复用（S2 先库后网）
+V03.1.4.2	二手与捐赠设备的流通	sacred	2705		0.230	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V03.2.3.5	反垄断诉讼与市场结构	fulltext_fact	kf-bell-10024-714	10024	0.282	C	1956年同意令结束了政府1949年的反垄断诉讼，改变了Bell System在移动无线电中的角色。	可推	全文补证候选（S1 命中即复用，D1 型）
+V03.2.5.3	操作系统与应用的捆绑关系	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V03.2.5.3	操作系统与应用的捆绑关系	claim	CL-6-016		1.10	A	Capsicum 是计划纳入 FreeBSD 9 的轻量级操作系统 capability 与沙箱框架。	可推	claim 复用（S2 先库后网）
+V03.2.6.3	虚拟化技术的历史继承	claim	CL-RM-010847		1.30	A	2020 年 4 月 Manuel Bouyer 在 bouyer-xenpvh 分支改进 cherry@ 开创的 Xen PVHVM 支持并请求合入 HEAD——Xen 半虚拟化技术延续。	可推	claim 复用（S2 先库后网）
+V03.3.4.5	用户委员会与治理结构	sacred	2344		0.317	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V03.3.4.5	用户委员会与治理结构	sacred	2346		0.317	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）

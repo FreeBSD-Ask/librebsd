@@ -1,0 +1,101 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V07.1.1.3	署名、致谢与发表经过	sacred	2089		0.227	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V07.1.4.1	图灵奖演讲的成文经过	claim	CL-RM-086283		1.30	A	作者引用 Ken Thompson 图灵奖演讲中编译器与登录程序合谋植入后门的设想，讨论信任问题。	可推	claim 复用（S2 先库后网）
+V07.1.4.1	图灵奖演讲的成文经过	claim	CL-RM-081499		1.30	A	Joshua Knight 引述 Ken Thompson 关于特洛伊木马与信任的论文出处，并附上同期的图灵奖演讲。	可推	claim 复用（S2 先库后网）
+V07.10.3.2	各方证据的层级排布	sacred	232		0.312	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V07.10.3.2	各方证据的层级排布	sacred	217		0.243	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V07.10.3.2	各方证据的层级排布	doubt_open	2948		0.225	C	〔全量证据复核·两说并陈｜批次 v63c｜源稿 v63c-三源核验-20261014.md｜条 7〕NeXTSTEP 溯源一手 README vs phoronix 二手（000714/000016 并陈） ["NeXTSTEP溯源", "	可推	释疑并案（先并到存疑库现有条目）
+V07.10.3.3	时间线的对勘程序	ref_title	2001	2001	0.223	C	MILLER L. The Easy Guide to Operating Systems. [S.l.]: [s.n.], [出版年待核]. MILLER L 	可推	文献线索（须核全文再定 D1/D2）
+V07.10.3.5	争议的裁断与登记	ref_title	1738	1738	0.242	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.10.3.5	争议的裁断与登记	ref_title	1739	1739	0.242	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.10.3.5	争议的裁断与登记	ref_title	1759	1759	0.242	C	DEFENSE TECHNICAL INFORMATION CENTER. ADA403525[R/OL]. [S.l.: DTIC], [s.d.]. [存疑 Kevin R. Smith March 2002	可推	文献线索（须核全文再定 D1/D2）
+V07.10.4.1	自反性主张的方法凭据	sacred	123		0.278	C	6.3 理论的自反性	可推	史观参照（不作证据，仅定题面归属）
+V07.10.4.1	自反性主张的方法凭据	sacred	None		0.270	C	## 自反性声明	可推	史观参照（不作证据，仅定题面归属）
+V07.10.4.1	自反性主张的方法凭据	sacred	339		0.256	C	15.5 自反性逻辑	可推	史观参照（不作证据，仅定题面归属）
+V07.10.4.3	史观映射的章目落点	sacred	3088		0.583	B	史观映射	可推	史观参照（不作证据，仅定题面归属）
+V07.10.4.3	史观映射的章目落点	sacred	3107		0.583	B	史观映射	可推	史观参照（不作证据，仅定题面归属）
+V07.10.4.3	史观映射的章目落点	sacred	3126		0.583	B	史观映射	可推	史观参照（不作证据，仅定题面归属）
+V07.11.1.3	版本序列的编年证据	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V07.11.2.2	伯克利侧的记述与留存	fulltext_summary	881	881	0.239	C	Machine-Independent Virtual Memory Management for Paged Uniprocessor and Multiprocessor Architectures Richard Rashid, Av	可推	全文综述候选（D1 型，核对原文后落块）
+V07.11.2.2	伯克利侧的记述与留存	fulltext_summary	1011	1011	0.239	C	Faces of FreeBSD Are you aware of the tangible benefits derived from our support of the FreeBSD community? In conjunctio	可推	全文综述候选（D1 型，核对原文后落块）
+V07.11.3.3	商业文献的体裁差异	fulltext_summary	98	98	0.225	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V07.11.3.5	断层面的补证渠道	ref_title	2492	2492	0.230	C	Doe 1 et al. v. GitHub, Inc., 4:22-cv-06823-JST (N.D. Cal. 2024)——AI 训练版权诉讼（Copilot/Codex，DMCA §1202(b) 与开源许可） United St	可推	文献线索（须核全文再定 D1/D2）
+V07.11.4.3	与制度卷的分工关系	sacred	288		0.274	C	12.10 个人幸福与制度不可能	可推	史观参照（不作证据，仅定题面归属）
+V07.11.4.4	边界处的存疑标记	ref_title	1738	1738	0.249	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.11.4.4	边界处的存疑标记	ref_title	1739	1739	0.249	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.11.4.4	边界处的存疑标记	ref_title	1759	1759	0.249	C	DEFENSE TECHNICAL INFORMATION CENTER. ADA403525[R/OL]. [S.l.: DTIC], [s.d.]. [存疑 Kevin R. Smith March 2002	可推	文献线索（须核全文再定 D1/D2）
+V07.12.2.2	文本挖掘的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V07.12.3.4	转向对本书的效应	sacred	1911		0.221	C	本书的组织结构	可推	史观参照（不作证据，仅定题面归属）
+V07.12.4.2	影像与全文的层级	sacred	232		0.349	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V07.12.4.2	影像与全文的层级	sacred	217		0.272	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V07.13.1.2	设计目标的对照表	ref_title	3837	3837	0.310	B	下载→卷对照表 unknown 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.13.3.5	方法面的自反声明	sacred	None		0.272	C	## 自反性声明	可推	史观参照（不作证据，仅定题面归属）
+V07.13.3.5	方法面的自反声明	sacred	123		0.254	C	6.3 理论的自反性	可推	史观参照（不作证据，仅定题面归属）
+V07.13.3.5	方法面的自反声明	sacred	2777		0.247	C	说明：	可推	史观参照（不作证据，仅定题面归属）
+V07.13.4.2	异系材料的取舍原则	fulltext_fact	kf-bell-10018-277	10018	0.236	C	Type A的split-winding receiver被采用新cobalt steel的permanent magnet取代	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.13.4.3	引用他系材料的规范	sacred	3061		0.236	C	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V07.13.4.4	争议条目的登记方式	ref_title	6146	6146	0.296	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V07.13.4.5	边界面的逐节核查	ref_title	10161	10161	0.231	C	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V07.13.4.5	边界面的逐节核查	ref_title	10162	10162	0.231	C	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V07.13.4.5	边界面的逐节核查	ref_title	10163	10163	0.231	C	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V07.2.1.2	历代版本的增补脉络	ref_title	6146	6146	0.231	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V07.2.1.4	印刷与发行的形制	fulltext_summary	98	98	0.227	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V07.2.2.4	与手册文献的互补	ref_title	6146	6146	0.264	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V07.2.2.4	与手册文献的互补	fulltext_summary	98	98	0.223	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V07.2.3.1	编年叙事的断限与分期	sacred	1420		0.266	C	二十一世纪四分之一处的 Unix 哲学观 	可推	史观参照（不作证据，仅定题面归属）
+V07.2.3.1	编年叙事的断限与分期	sacred	2054		0.266	C	二十一世纪四分之一处的 Unix 哲学观	可推	史观参照（不作证据，仅定题面归属）
+V07.2.3.5	该书作为通史的引用状况	fulltext_fact	kf-bell-10024-005	10024	0.354	B	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.2.4.3	花絮体例与知识普及	ref_title	6146	6146	0.266	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V07.2.5.2	第六版源码的覆盖范围	sacred	3057		0.369	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V07.2.5.2	第六版源码的覆盖范围	fulltext_fact	kf-bell-10024-834	10024	0.235	C	SLC-1的覆盖范围限于18,000英尺以内且用户线无加载线圈的区域	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.2.6.3	序言立场的自反性	sacred	123		0.346	B	6.3 理论的自反性	可推	史观参照（不作证据，仅定题面归属）
+V07.2.6.3	序言立场的自反性	sacred	None		0.259	C	## 自反性声明	可推	史观参照（不作证据，仅定题面归属）
+V07.2.6.3	序言立场的自反性	sacred	339		0.246	C	15.5 自反性逻辑	可推	史观参照（不作证据，仅定题面归属）
+V07.2.6.3	序言立场的自反性	fulltext_fact	kf-bell-10022-848	10022	0.229	C	INDSCAL程序由Carroll和Chang开发	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.3.1.1	技术报告系列的建制	claim	CL-7-052		1.30	A	FreeBSD 9.x 引入模块化拥塞控制框架，并由 CAIA 技术报告系统评估其性能影响。	可推	claim 复用（S2 先库后网）
+V07.3.4.1	文档计划的文献形态	fulltext_summary	98	98	0.222	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V07.3.4.2	文章与手册的分工	fulltext_summary	98	98	0.230	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V07.3.4.3	写作规范的文献证据	fulltext_fact	kf-bell-10018-1125	10018	0.223	C	1904年AT&TCo发布Engineering Bulletin No. 11规定PBX操作规范	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.4.1.4	引文网络的枢纽节点	fulltext_summary	147	147	0.295	C	Co pyrig ht © 2015 Pas cal Stumpf Pe rmiss ion to use, copy, modif y, and dis tribut e this work for any pur pos e wi th	可推	全文综述候选（D1 型，核对原文后落块）
+V07.4.1.4	引文网络的枢纽节点	fulltext_summary	157	157	0.295	C	Mininet on OpenBSD: Using rdomains for Interactive SDN Testing and Development Ayaka Koshibe akoshibe@openbsd.org Abstra	可推	全文综述候选（D1 型，核对原文后落块）
+V07.4.1.4	引文网络的枢纽节点	fulltext_summary	160	160	0.295	C	OpenBSD/x-ray Henning Brauer BS Web Services GmbH 1 Abstract Modern, digital x-ray machines are pretty com- plex systems	可推	全文综述候选（D1 型，核对原文后落块）
+V07.4.1.5	与会议文献的互补	fulltext_summary	33	33	0.243	C	AT&T Bell Laboratories Technical Journal Vol. 63, No.8, October 1984 Printed in U.S.A. The UNIX System: Program Design i	可推	全文综述候选（D1 型，核对原文后落块）
+V07.4.1.5	与会议文献的互补	fulltext_summary	877	877	0.243	C	AT&T Bell Laboratories Technical Journal Vol. 63, No.8, October 1984 Printed in U.S.A. The UNIX System: The Evolution of	可推	全文综述候选（D1 型，核对原文后落块）
+V07.4.1.5	与会议文献的互补	fulltext_summary	1044	1044	0.243	C	Support FreeBSD ® Donate to the Foundation! TM You already know that FreeBSD is an internationally recognized leader in 	可推	全文综述候选（D1 型，核对原文后落块）
+V07.5.1.1	图灵奖颂词的官方定性	ref_title	2549	2549	0.334	B	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V07.5.1.1	图灵奖颂词的官方定性	ref_title	2550	2550	0.334	B	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V07.5.1.1	图灵奖颂词的官方定性	ref_title	2552	2552	0.334	B	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V07.5.1.2	生平访谈的分期提问	ref_title	2446	2446	0.242	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V07.5.1.2	生平访谈的分期提问	ref_title	2660	2660	0.242	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V07.5.1.4	传记材料的可得程度	ref_title	2446	2446	0.234	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V07.5.1.4	传记材料的可得程度	ref_title	2660	2660	0.234	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V07.5.4.2	师承与合作的证据链	sacred	2089		0.252	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V07.5.4.2	师承与合作的证据链	fulltext_fact	kf-tb3-3703-000	3703	0.226	C	ETP 一手文档：《ETP Operational Procedures》由 A. L. Chellis 与 T. J. Kowalski 合著，Bell Labs PDP-11 与 VAX 硬件故障定位的官方操作手册。	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.5.4.4	生卒与职任的核对基准	fulltext_fact	kf-bell-10018-106	10018	0.240	C	J.J. Carty 担任 AT&T Engineering Department 的 Chief Engineer	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.6.1.1	机构史文献的分布	ref_title	5844	5844	0.242	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.6.1.1	机构史文献的分布	ref_title	5859	5859	0.242	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.6.3.2	邮件列表的史料价值	ref_title	2460	2460	0.428	B	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V07.6.3.2	邮件列表的史料价值	ref_title	5472	5472	0.304	B	BSD 邮件列表存档 [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>, 2006-2008 年间 vkernel 相关讨论 2006	可推	文献线索（须核全文再定 D1/D2）
+V07.6.3.2	邮件列表的史料价值	ref_title	2735	2735	0.301	B	COFF（Computer Old Farts Forum）邮件列表存档 2018-2026（87 个月度 txt） COFF Mailing List 2018	可推	文献线索（须核全文再定 D1/D2）
+V07.6.4.4	语言与译介的层面	fulltext_fact	kf-bell-10021-308	10021	0.221	C	Condon和Walstedt于1968年8月26日在Phys. Rev. Lett.发表银中磁畴的直接证据	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.7.1.1	经费记述的档案层级	ref_title	5844	5844	0.229	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.7.1.1	经费记述的档案层级	ref_title	5859	5859	0.229	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.7.2.3	资助线索的档案散布	ref_title	5844	5844	0.223	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.7.2.3	资助线索的档案散布	ref_title	5859	5859	0.223	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.7.3.2	收入记账的凭据与簿册	ref_title	5844	5844	0.262	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.7.3.2	收入记账的凭据与簿册	ref_title	5859	5859	0.262	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.8.1.1	判决文本的原始出处	ref_title	2641	2641	0.227	C	Data Protection Commissioner v. Facebook Ireland, C-311/18 (CJEU 2020-07-16)——Schrems II 判决 2020	可推	文献线索（须核全文再定 D1/D2）
+V07.8.1.2	软件附赠条款的记述	ref_title	5844	5844	0.282	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.8.1.2	软件附赠条款的记述	ref_title	5859	5859	0.282	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V07.8.1.2	软件附赠条款的记述	ref_title	2641	2641	0.270	C	Data Protection Commissioner v. Facebook Ireland, C-311/18 (CJEU 2020-07-16)——Schrems II 判决 2020	可推	文献线索（须核全文再定 D1/D2）
+V07.8.2.4	再许可的限制条件	fulltext_fact	kf-bell-10019-1199	10019	0.226	C	McNeely于1962年4月18日回信表示Webb提出的限制条件完全可接受	可推	全文补证候选（S1 命中即复用，D1 型）
+V07.9.1.1	学术史对象的界定论述	sacred	366		0.355	B	17.3 历史对象的存疑	可推	史观参照（不作证据，仅定题面归属）
+V07.9.1.3	与工程史书写的分界	ref_title	5656	5656	0.304	B	Campbell-Kelly 2007 对 UNIX 史书写的综述 2007	可推	文献线索（须核全文再定 D1/D2）
+V07.9.1.5	界定面的存疑登记	ref_title	1738	1738	0.251	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.9.1.5	界定面的存疑登记	ref_title	1739	1739	0.251	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V07.9.1.5	界定面的存疑登记	ref_title	1759	1759	0.251	C	DEFENSE TECHNICAL INFORMATION CENTER. ADA403525[R/OL]. [S.l.: DTIC], [s.d.]. [存疑 Kevin R. Smith March 2002	可推	文献线索（须核全文再定 D1/D2）
+V07.9.2.2	释义分歧的层次划分	sacred	388		0.225	C	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
+V07.9.2.3	教科书中的转述链	sacred	239		0.246	C	10.15 无为与有为的转化	可推	史观参照（不作证据，仅定题面归属）
+V07.9.2.5	概念史的考订要点	sacred	2422		0.226	C	1991 年：Net/2 与 1992 年 386BSD	可推	史观参照（不作证据，仅定题面归属）
+V07.9.4.5	边界面的自反声明	sacred	None		0.329	B	## 自反性声明	可推	史观参照（不作证据，仅定题面归属）
+V07.9.4.5	边界面的自反声明	sacred	123		0.308	B	6.3 理论的自反性	可推	史观参照（不作证据，仅定题面归属）
