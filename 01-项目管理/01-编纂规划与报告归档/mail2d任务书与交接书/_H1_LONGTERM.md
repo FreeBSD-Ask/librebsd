@@ -2,6 +2,8 @@
 
 # _H1_LONGTERM · mail2d H1 线长线档案（freebsd-questions）· 防会话中断入口
 
+> **解释器注记（2026-11-10）**：本文命令示例中的 `C:/Python314/python.exe` 已失效，一律按《流程规则/02-脚本与执行安全》“解释器基线”节改为 `"C:/Program Files/Python315/python.exe"`（路径含空格，须加引号）；文中其余内容按当时记录保留、不追改。
+
 > **H1 线的唯一长期入口**。新会话读到本文件即可续跑，无须先前对话记忆。
 > 活数据三源：**本文件（状态）** → `_h1_state.json` / `_h1_resume.py`（状态机）→ `mail2d_read_ledger.json`（台账真游标）。
 > **冲突时以台账与 `_h1_state.json` 实测值为准**，本文件是副本。

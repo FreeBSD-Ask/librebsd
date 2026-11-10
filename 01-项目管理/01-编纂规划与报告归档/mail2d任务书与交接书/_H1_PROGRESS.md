@@ -4,6 +4,8 @@
 
 # H1 逐批闭环记录（freebsd-questions）
 
+> **解释器注记（2026-11-10）**：本文命令示例中的 `C:/Python314/python.exe` 已失效，一律按《流程规则/02-脚本与执行安全》“解释器基线”节改为 `"C:/Program Files/Python315/python.exe"`（路径含空格，须加引号）；文中其余内容按当时记录保留、不追改。
+
 > 真相源：`_h1_state.json`。本文件为人类可读逐批流水，闭环即追加一行。
 > 门禁口径见文末；状态机：pending → dumped → split → cand → narrated → registered → outlined → committed。
 
