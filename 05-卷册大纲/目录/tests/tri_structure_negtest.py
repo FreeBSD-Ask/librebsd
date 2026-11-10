@@ -215,15 +215,21 @@ p14 = OUT / "n_i_unregistered_dup.html"
 h14 = h
 _NI_TITLE = "跨章节系统测试基线的重复题面"
 _NI_ANCHORS = ["NeXT 的创立与操作系统战略", "BSD UNIX 进入计算机工业", "伯克利软件研究与美国版权制度"]
+# 2026-11-09 修：第四级小节层上线后，有下位小节的节在渲染为
+#   `<li …><span class="sec-num">2.1</span> 题面\n<ul class="subsections">…`
+# 原锚 `题面(</li>)` 只对“无下位小节”的节成立 → N-i 夹具静默失效并抛 AssertionError
+# （HEAD 上 V56 1.1 已复现，非本批引入）。改为题面后接 `</li>` 或 `subsections` 表首两式皆可，
+# 仍只替换 group(1) 之后的题面文本，保留后续标记原样。
+_NI_TAIL = r'(\s*(?:</li>|<ul class="subsections">))'
 for _a in _NI_ANCHORS:
-    _m = re.search(r'(<span class="sec-num">[0-9.]+</span>\s*)' + re.escape(_a) + r'(</li>)', h14)
+    _m = re.search(r'(<span class="sec-num">[0-9.]+</span>\s*)' + re.escape(_a) + _NI_TAIL, h14)
     assert _m, "N-i 夹具无法定位目标节：%s" % _a
     # 2026-09-30 修（98 号文 §11.4 P0-1 落地时发现）：原实现作
     #   `h14[:_m.start(2)] + _NI_TITLE + h14[_m.end(2):]`，而 group(2) 恰为 `</li>` 的跨度，
     #   于是**把 `</li>` 换成了题面**——li 未闭合、且三章题面各不相同（新题被追挂在原题之后），
     #   N-i 判据因此**从未被真正自证**（该夹具当时 exit=1 系被 G 组「li 未闭合」等其他判据拦下，
     #   属「被别的缺陷顺带拦下而误判判据有效」）。现改为**仅替换锚题面文本**、保留 `</li>`。
-    _pre = _m.start(2) - len(_a)
+    _pre = _m.end(1)
     h14 = h14[:_pre] + _NI_TITLE + h14[_m.start(2):]
 p14.write_text(h14, encoding="utf-8", newline="\n")
 
@@ -334,12 +340,14 @@ p_s3.write_text(_s_head + _s_li.replace("</li>",
     '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.1.1</span> </li>'
     "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
 
-# S-4 F 组口径漂移：footer 四级串的小节数改 5（与实测 0 不符）
-m_ft = re.search(r"现行大纲目录 · (\d+ 卷 \d+ 章 \d+ 节) 0 小节", h)
+# S-4 F 组口径漂移：footer 四级串的小节数 +5（与实测值不符）
+# 2026-11-09 修：原锚写死「0 小节」（Task 5 零态时的口径），Task 8 起小节数非零 → 夹具静默失效
+#（HEAD 上即复现，非本批引入）。改为**取现值再 +5**，不锁具体数字，以抗逐卷回写。
+m_ft = re.search(r"现行大纲目录 · \d+ 卷 \d+ 章 \d+ 节 (\d+) 小节", h)
 assert m_ft, "S-4 夹具无法定位 footer 四级口径串"
 p_s4 = OUT / "_neg_s_quad_drift.html"
-p_s4.write_text(h[:m_ft.start()] + m_ft.group(0).replace(" 0 小节", " 5 小节", 1)
-                + h[m_ft.end():], encoding="utf-8", newline="\n")
+p_s4.write_text(h[:m_ft.start(1)] + str(int(m_ft.group(1)) + 5) + h[m_ft.end(1):],
+                encoding="utf-8", newline="\n")
 
 cases += [
     (p10, "N-e 年序回落", "N-e"),
