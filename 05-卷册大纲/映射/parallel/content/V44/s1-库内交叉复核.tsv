@@ -1,0 +1,57 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V44.1.3.2	早期发布物的缺档	sacred	2725		0.222	C	CheriBSD 官网	可推	史观参照（不作证据，仅定题面归属）
+V44.1.3.2	早期发布物的缺档	sacred	2728		0.222	C	FuguIta 官网	可推	史观参照（不作证据，仅定题面归属）
+V44.1.4.1	争论场域的会议与列表	ref_title	5762	5762	0.247	C	W. (2015.11.29) TUHS 邮件列表公开发布公告（tuhs.org/pipermail/tuhs/2015-November/007700.html，mid-1971 修正见 007703.html） 2015	可推	文献线索（须核全文再定 D1/D2）
+V44.1.5.3	核心与边缘的分层	sacred	407		0.327	B	20.5 中心与边缘	可推	史观参照（不作证据，仅定题面归属）
+V44.1.6.3	开发者集会的固定场合	sacred	2683		0.231	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V44.1.8.2	默认关闭的可用性代价	claim	CL-RM-011412		1.30	A	2020年12月Kronometrix的Stefan Parvu询问pkg安装后不自动启动服务的策略，Baptiste Daroussin解释HANDLE_RC_SCRIPT选项默认关闭的缘由。	可推	claim 复用（S2 先库后网）
+V44.1.8.2	默认关闭的可用性代价	claim	CL-RM-011203		1.30	A	2000年3月Jeroen van Gelderen指出Portmapper默认开启并引发Warner Losh等人关于全部网络服务默认关闭的讨论。	可推	claim 复用（S2 先库后网）
+V44.1.9.5	生态采用的反向证据	fulltext_fact	kf-bell-10018-1234	10018	0.257	C	Law系统被Philadelphia Exchange、Southern Bell Telephone Company、St. Louis及Oswego, N.Y.广泛采用	可推	全文补证候选（S1 命中即复用，D1 型）
+V44.2.1.5	专利到期后的默认变更	claim	CL-RM-011969		1.30	A	OpenBSD 2.8 发布（5 周年）：默认安装三年无远程漏洞、RSA 专利到期后 SSL 库入 base、OpenSSH 2.3.0（Friedl）、swap 加密改用 Rijndael	可推	claim 复用（S2 先库后网）
+V44.2.3.3	OSSH 分支的复起	fulltext_fact	7290	1531	0.263	C	C 语言的直接前身是 Thompson 为 PDP-7 编写的 B 语言，而 B 又是 BCPL（Martin Richards）的简化。	可推	全文补证候选（S1 命中即复用，D1 型）
+V44.2.9.3	商业衍生的合法性	sacred	176		0.259	C	9.4 测量的合法性问题	可推	史观参照（不作证据，仅定题面归属）
+V44.3.2.1	替代品的语法承接	sacred	379		0.225	C	18.4 替代品的幻觉	可推	史观参照（不作证据，仅定题面归属）
+V44.3.2.4	许可清理的连续性	ref_title	2548	2548	0.223	C	BSD-4-Clause（Original BSD License，广告条款版）官方文本 1990	可推	文献线索（须核全文再定 D1/D2）
+V44.3.2.5	等价物替换的既有惯例	fulltext_summary	190	190	0.284	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V44.3.4.1	旧组件的在树痕迹	fulltext_summary	190	190	0.343	B	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V44.3.4.1	旧组件的在树痕迹	fulltext_summary	537	537	0.236	C	Presenting FreeNAS ●Olivier COCHARD-LABBE (olivier@freenas.org) ●Presentation available at: http://www.freenas.org/bsdca	可推	全文综述候选（D1 型，核对原文后落块）
+V44.3.4.1	旧组件的在树痕迹	fulltext_summary	671	671	0.231	C	AUTOMATED FIREWALL TESTING KRISTOF PROVOST SHAMELESS SELF-PROMOTION WHO AM I? ▸Kristof Provost ▸kp@FreeBSD.org ▸pf (in F	可推	全文综述候选（D1 型，核对原文后落块）
+V44.3.4.2	版本序列中的组件更替	fulltext_summary	190	190	0.260	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V44.4.10.5	地址空间上限的调整	claim	CL-RM-010508		1.20	B	2017 年 12 月 Frank Wille 提议在 8.0 前移除 SunOS/68k 兼容层：其 28 位地址空间遗产正是 384MB 任务内存上限的元凶——三十年的兼容承诺走向终结。	可推	claim 复用（S2 先库后网）
+V44.4.13.1	包路径的查找规则	ref_title	10078	10078	0.223	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V44.4.13.1	包路径的查找规则	ref_title	10120	10120	0.223	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V44.4.13.5	文件系统的默认取舍	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V44.4.13.5	文件系统的默认取舍	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V44.4.2.4	整数溢出调用的替换	fulltext_summary	110	110	0.244	C	EuroBSD 2018 Removing ROP Gadgets from OpenBSD Todd Mortimer Overview ❖About Me ❖Return Oriented Programming ❖Polymorphi	可推	全文综述候选（D1 型，核对原文后落块）
+V44.4.2.4	整数溢出调用的替换	fulltext_summary	163	163	0.244	C	Removing ROP Gadgets from OpenBSD AsiaBSDCon 2019 Todd Mortimer mortimer@openbsd.org Overview • Return Oriented Programm	可推	全文综述候选（D1 型，核对原文后落块）
+V44.4.4.5	浮点代码的机器无关化	claim	CL-RM-010133		0.70	A	2009 年 Izumi Tsutsui 发布补丁使 mvme68k/stand 引导加载器改用 MI libsa 与 libkern——端口引导代码向机器无关化迁移的一步	可推	claim 复用（S2 先库后网）
+V44.4.5.5	反垃圾邮件的域级陷阱	claim	CL-RM-010621		1.30	A	2008 年 12 月 Petar Bogdanovic 提交 DCC 分布式校验和包，Greg Troxel 参与深入评审——反垃圾邮件基础设施入 pkgsrc 的当事人记录。	可推	claim 复用（S2 先库后网）
+V44.4.6.1	终端复用器的接替	claim	CL-RM-010622		1.30	A	2008 年 12 月 Fulvio Ciriaco 将 tmux 从 0.1 更新到 0.5，称其已真正可用——tmux 终端复用器早期入 pkgsrc 的当事人记录。	可推	claim 复用（S2 先库后网）
+V44.5.1.3	powerpc 的默认收敛	ref_title	10139	10139	0.309	B	DragonFly gsocprojectspage · 2014-03-12 快照 (补入2012)（Wayback 20140312013007；capture=wayback） 2014	可推	文献线索（须核全文再定 D1/D2）
+V44.5.10.3	解析默认的调整幅度	sacred	2480		0.243	C	2014 年 1 月 20 日：pkg 成为默认的软件包管理器	可推	史观参照（不作证据，仅定题面归属）
+V44.5.4.3	静态链接的析构修正	claim	CL-RM-010962		1.30	A	1998 年 ITOH Yasufumi 提交 m68k 端口 Linux 仿真支持，使静态链接的 Linux/m68k 程序可在 NetBSD 上运行	可推	claim 复用（S2 先库后网）
+V44.5.5.2	包管理的信任默认	sacred	2480		0.234	C	2014 年 1 月 20 日：pkg 成为默认的软件包管理器	可推	史观参照（不作证据，仅定题面归属）
+V44.5.6.1	默认邮件的换代过程	fulltext_fact	7343	1550	0.244	C	sendmail 由 Eric Allman 在 Berkeley 开发，是互联网早期最重要的邮件传输代理（MTA）之一。	可推	全文补证候选（S1 命中即复用，D1 型）
+V44.5.7.5	具名报告者的致谢	sacred	2089		0.233	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V44.5.9.1	等价物替换的覆盖范围	sacred	3057		0.330	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V44.5.9.2	许可自述的口语表达	ref_title	2577	2577	0.263	C	CC0-1.0 官方法律文本（2009） 2009	可推	文献线索（须核全文再定 D1/D2）
+V44.5.9.2	许可自述的口语表达	ref_title	2578	2578	0.263	C	CC BY 4.0 官方法律文本（2013） 2013	可推	文献线索（须核全文再定 D1/D2）
+V44.5.9.2	许可自述的口语表达	ref_title	2579	2579	0.263	C	CC BY-SA 4.0 官方法律文本（2013） 2013	可推	文献线索（须核全文再定 D1/D2）
+V44.5.9.3	文档许可的原文表述	sacred	320		0.239	C	14.5 文档与代码的本体平等	可推	史观参照（不作证据，仅定题面归属）
+V44.5.9.4	上游取代的许可动因	fulltext_fact	kf-bell-10024-1176	10024	0.255	C	1925年，Standard Cable Reference System被Master Reference System for Telephone Transmission取代	可推	全文补证候选（S1 命中即复用，D1 型）
+V44.6.5.3	为安全关掉的优化	fulltext_fact	kf-bell-10018-1105	10018	0.264	C	16赫兹信令因与电报不兼容而被135赫兹信令取代	可推	全文补证候选（S1 命中即复用，D1 型）
+V44.6.5.4	每次引导的唯一内核	fulltext_summary	125	125	0.263	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V44.6.5.4	每次引导的唯一内核	fulltext_summary	706	706	0.263	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V44.6.5.4	每次引导的唯一内核	fulltext_summary	831	831	0.263	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V44.6.7.4	网络守护进程的纳入	claim	CL-RM-011151		1.20	B	2009年1月30日 Maksim Yevmenkin 宣布从 NetBSD 导入 btpand(8) 守护进程为 FreeBSD 提供 PAN profile 支持，补齐网络 profile 短板。	可推	claim 复用（S2 先库后网）
+V44.6.8.3	语言运行时的适配	claim	CL-RM-010347		1.30	A	2012 年 Stanislav Sedov 以 fork 挂起与线程缺陷反对二次切换，内核开发者 Konstantin Belousov 与 Romain Tartière 相继加入排查——语言运行时缺陷升级为内核级会诊	可推	claim 复用（S2 先库后网）
+V44.6.8.3	语言运行时的适配	claim	CL-RM-010326		1.30	A	2022 年 Dave Cottlehuber 发布 OTP 25-rc2 测试征集：arm64 JIT 编译器需配合 FreeBSD 源码补丁，源文件还需手工改名下载——语言运行时与平台 ARM64 成熟的交汇	可推	claim 复用（S2 先库后网）
+V44.7.1.1	Apple 平台的多处理器修复	ref_title	6119	6119	0.242	C	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219> 2021	可推	文献线索（须核全文再定 D1/D2）
+V44.7.1.1	Apple 平台的多处理器修复	claim	CL-RM-010276		1.10	A	2002 年展会上 Ben Harris 用 Hydra 多 CPU 板（5 处理器）演示启动 NetBSD——RiscOS 圈子里的多处理器玩具与 ARM SMP 素材	可推	claim 复用（S2 先库后网）
+V44.7.10.2	加密指令的性能账	sacred	2780		0.267	C	# Device Mountpoint FStype Options Dump Pass# /dev/gpt/efiboot0 /boot/efi msdosfs rw 2 2 # EFI 分区 /dev/nda0p2 none swap 	可推	史观参照（不作证据，仅定题面归属）
+V44.7.5.5	固件安全公告的跟随	fulltext_summary	4	4	0.230	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V44.7.5.5	固件安全公告的跟随	fulltext_summary	93	93	0.230	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V44.7.5.5	固件安全公告的跟随	fulltext_summary	99	99	0.230	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V44.7.9.2	关联项目的公开名录	ref_title	10161	10161	0.341	B	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V44.7.9.2	关联项目的公开名录	ref_title	10162	10162	0.341	B	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V44.7.9.2	关联项目的公开名录	ref_title	10163	10163	0.341	B	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）

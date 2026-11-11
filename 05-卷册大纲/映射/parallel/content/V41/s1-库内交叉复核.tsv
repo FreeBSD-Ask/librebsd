@@ -1,0 +1,186 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V41.1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	ref_title	5536	5536	0.268	C	Grönvall 的 OSSH 为 OpenSSH fork 源头 	可推	文献线索（须核全文再定 D1/D2）
+V41.1.2.1	机器无关层与机器相关层的划界	claim	CL-6-212		1.30	A	FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。	可推	claim 复用（S2 先库后网）
+V41.1.5.2	硬件抽象层的三层布局	claim	CL-6-212		1.60	A	FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。	可推	claim 复用（S2 先库后网）
+V41.1.5.4	设备生命周期与解挂时机	sacred	200		0.232	C	10.2 信仰的历史生命周期	可推	史观参照（不作证据，仅定题面归属）
+V41.1.7.4	移植者协作的邮件惯例	ref_title	2460	2460	0.276	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V41.1.7.4	移植者协作的邮件惯例	ref_title	5763	5763	0.226	C	N. H. F. (2015.11.29) TUHS 邮件列表 OCR 版本提供（tuhs.org/pipermail/tuhs/2015-November/007705.html，UnixEditionZero-OCR.pdf） 2015	可推	文献线索（须核全文再定 D1/D2）
+V41.10.1.2	Xen 驱动与设备通道	fulltext_fact	kf-bell-10019-979	10019	0.250	C	四通道设备通过order-wire电路在1000 Hz处进行flat-gain控制实现线路均衡	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.10.1.3	PV 与 HVM 的实现分歧	fulltext_summary	708	708	0.250	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.1.3	PV 与 HVM 的实现分歧	fulltext_summary	982	982	0.236	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.1.5	虚拟化平台的适配账单	sacred	1917		0.229	C	第 6 章 虚拟化平台安装 FreeBSD：介绍使用 VMware Workstation Pro、VirtualBox、Hyper-V 安装 FreeBSD 的方法，以及基于 Apple M1 和 Parallels Desktop、VM	可推	史观参照（不作证据，仅定题面归属）
+V41.10.2.1	NVMM 的接口形制	fulltext_summary	708	708	0.335	B	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.2.1	NVMM 的接口形制	fulltext_summary	982	982	0.316	B	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.2.1	NVMM 的接口形制	fulltext_summary	152	152	0.291	C	Implementation of Xen PVHVM drivers in OpenBSD Mike Belopuhov Esdenera Networks GmbH mike@esdenera.com Abstract OpenBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.2.4	NVMM 的硬件依附	fulltext_summary	708	708	0.251	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.2.4	NVMM 的硬件依附	fulltext_summary	982	982	0.237	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.3.1	云镜像的制作流水	ref_title	10078	10078	0.221	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V41.10.3.1	云镜像的制作流水	ref_title	10120	10120	0.221	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V41.10.4.1	隔离形态的技术货架	fulltext_summary	708	708	0.233	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.4.1	隔离形态的技术货架	fulltext_summary	754	754	0.231	C	How far a naive FreeBSD container implementation can go EuroBSD 2022 - Vienna, 18.09.2022 Luca Pizzamiglio Menu of today	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.5.3	轻量方案的资源效率	ref_title	10078	10078	0.246	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V41.10.5.3	轻量方案的资源效率	ref_title	10120	10120	0.246	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V41.10.5.4	与既有虚拟化的接驳	fulltext_summary	708	708	0.255	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.5.4	与既有虚拟化的接驳	fulltext_summary	982	982	0.241	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
+V41.10.5.4	与既有虚拟化的接驳	fulltext_summary	152	152	0.222	C	Implementation of Xen PVHVM drivers in OpenBSD Mike Belopuhov Esdenera Networks GmbH mike@esdenera.com Abstract OpenBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.11.6.4	发行节奏的松紧变化	fulltext_summary	72	72	0.241	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V41.11.6.4	发行节奏的松紧变化	fulltext_summary	81	81	0.241	C	unwind(8) - florian@OpenBSD.org 1 A recursive name server for every laptop 2 Opportunistic DNSSEC validation 3 Captive-p	可推	全文综述候选（D1 型，核对原文后落块）
+V41.12.2.1	CVS 仓库的连续性	ref_title	5820	5820	0.300	B	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V41.12.2.1	CVS 仓库的连续性	ref_title	6007	6007	0.300	B	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V41.12.2.1	CVS 仓库的连续性	sacred	2377		0.245	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V41.12.2.1	CVS 仓库的连续性	sacred	2386		0.245	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V41.12.2.2	新平台引入的提交流程	ref_title	5459	5459	0.330	B	资助撤销事件 misc@ 邮件列表讨论 2003 [EB/OL]. <https://marc.info/?laccopenbsd-misc> 2003	可推	文献线索（须核全文再定 D1/D2）
+V41.12.2.2	新平台引入的提交流程	ref_title	2460	2460	0.276	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V41.12.2.2	新平台引入的提交流程	ref_title	5763	5763	0.226	C	N. H. F. (2015.11.29) TUHS 邮件列表 OCR 版本提供（tuhs.org/pipermail/tuhs/2015-November/007705.html，UnixEditionZero-OCR.pdf） 2015	可推	文献线索（须核全文再定 D1/D2）
+V41.12.3.2	MI 与 MD 代码的置放纪律	sacred	1954		0.249	C	第 43 章 FreeBSD 内核架构：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与机器无关的内核选项注解、GENERIC 内核选项注解（AMD64）、构建定制内核的方法，以及在 Linux 系统上交叉构建 FreeBSD	可推	史观参照（不作证据，仅定题面归属）
+V41.12.5.2	安装镜像的制作工序	sacred	2901		0.281	C	PkgBase 直接由 freebsd-src 构建：	可推	史观参照（不作证据，仅定题面归属）
+V41.12.5.2	安装镜像的制作工序	ref_title	10078	10078	0.239	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V41.12.5.2	安装镜像的制作工序	ref_title	10120	10120	0.239	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V41.12.6.1	批量构建的调度编排	fulltext_summary	520	520	0.297	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.12.6.1	批量构建的调度编排	fulltext_summary	527	527	0.297	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V41.12.6.1	批量构建的调度编排	fulltext_summary	107	107	0.275	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.12.7.1	man 页的一致性守则	sacred	None		0.230	C	**Relationship to Other Documents**: 本文为 shigang.md、dagang.md、lishidagang.md 的补充哲学源材料，需同步更新上述文件。	可推	史观参照（不作证据，仅定题面归属）
+V41.12.7.2	开发者文档的组织章法	fulltext_fact	kf-bell-10019-1289	10019	0.268	C	Neil Armstrong与Apollo 11任务相关	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.12.7.3	文档与代码的同步契约	sacred	320		0.394	A	14.5 文档与代码的本体平等	可推	史观参照（不作证据，仅定题面归属）
+V41.12.7.4	文档工程的工具底座	claim	CL-RM-010519		1.30	A	2004 年 1 月 Marcin Zieciak 宣告波兰文档项目（Polska Dokumentacja NetBSD）已启动并公开站点——地方文档工程的成型。	可推	claim 复用（S2 先库后网）
+V41.12.9.2	命名惯例的技术负载	ref_title	3870	3870	0.260	C	19841204 CityOfBerkeley BSD检索 bsd 1984 1204 res52501 unknown 1984	可推	文献线索（须核全文再定 D1/D2）
+V41.13.1.1	语言运行时的打包成规	claim	CL-RM-010347		1.30	A	2012 年 Stanislav Sedov 以 fork 挂起与线程缺陷反对二次切换，内核开发者 Konstantin Belousov 与 Romain Tartière 相继加入排查——语言运行时缺陷升级为内核级会诊	可推	claim 复用（S2 先库后网）
+V41.13.1.1	语言运行时的打包成规	claim	CL-RM-010326		1.30	A	2022 年 Dave Cottlehuber 发布 OTP 25-rc2 测试征集：arm64 JIT 编译器需配合 FreeBSD 源码补丁，源文件还需手工改名下载——语言运行时与平台 ARM64 成熟的交汇	可推	claim 复用（S2 先库后网）
+V41.13.1.3	语言生态的维护分派	ref_title	5554	5554	0.234	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
+V41.13.1.4	各语言打包规范的歧异	sacred	2786		0.258	C	文件名规范的差异	可推	史观参照（不作证据，仅定题面归属）
+V41.13.1.5	语言生态扩展的篱墙	sacred	2107		0.323	B	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V41.13.2.3	编译器升级的连锁震荡	claim	CL-RM-010365		0.90	A	2022 年，TeX 维护者 Muhammad Moinur Rahman 通报 TeX 系统刚更新至 2021 版后部分关联端口出现副作用，向社区征求受影响情况，记录 ports 大版本升级的连锁波及与协调过程。	可推	claim 复用（S2 先库后网）
+V41.2.1.3	VAX 内存管理的适配难点	fulltext_fact	7331	1546	0.251	C	PDP-11 的 16 位地址空间限制了系统扩展，促使 DEC 发展 32 位 VAX 架构。	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.2.2.3	嵌入式平台的裁剪尺度	claim	CL-6-203		1.30	A	FreeBSD 对 ARM 架构的支持历史上是草根式（grassroots）的，嵌入式平台支持长期依赖社区个人贡献。	可推	claim 复用（S2 先库后网）
+V41.2.2.3	嵌入式平台的裁剪尺度	claim	CL-RM-010651		1.10	B	2010 年 1 月 Manuel Bouyer 询问 mips NOFPU+SOFTFLOAT 状态，Matt Thomas 参与讨论无 MMU 平台的软浮点——嵌入式 MIPS 软浮点支持的当事人排查。	可推	claim 复用（S2 先库后网）
+V41.2.3.5	工作站移植的遗产台账	claim	CL-RM-010193		1.30	A	2018 年 8 月 Izumi Tsutsui 报告 NetBSD/ews4800mips 8.0 在 EWS4800/360SX 上运行（NVRAM 已坏仍可启动）——NEC 工作站移植在 2018 年的复活证据	可推	claim 复用（S2 先库后网）
+V41.2.3.5	工作站移植的遗产台账	claim	CL-RM-010175		1.10	B	2014 年 8 月日本 OSC 京都展报告：NetBSD 团队展出 OMRON Luna 工作站（'Luna=与 Sun 相对，很老的 UNIX 工作站'）——Jun Ebihara 系列展机报告样本，luna68k 移植的线下展示	可推	claim 复用（S2 先库后网）
+V41.2.4.5	ARM 移植的维护责任	sacred	2358		0.298	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V41.2.5.4	服务器场景的发行取向	claim	CL-RM-010485		1.60	A	2006 年 12 月 Marc G. Fournier 终于经 iLO 串口以 ALT_BREAK_TO_DEBUGGER 进入 DDB——远程内核调试在托管服务器场景的落地时刻。	可推	claim 复用（S2 先库后网）
+V41.3.3.1	文件系统驱动的用户态挂载	fulltext_summary	20	20	0.254	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.3.1	文件系统驱动的用户态挂载	fulltext_summary	63	63	0.254	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.3.1	文件系统驱动的用户态挂载	fulltext_summary	118	118	0.254	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.3.1	文件系统驱动的用户态挂载	sacred	2677		0.254	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.3.3.1	文件系统驱动的用户态挂载	ref_title	267	267	0.247	C	基于FUSE的用户态文件系统的设计与实现 黄永胜 2012	可推	文献线索（须核全文再定 D1/D2）
+V41.3.3.1	文件系统驱动的用户态挂载	fulltext_fact	8204	267	0.227	C	文献《基于FUSE的用户态文件系统的设计与实现》作者 黄永胜（2012）	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.3.4.3	回归测试的驱动覆盖面	sacred	3057		0.353	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V41.3.4.4	测试基础设施的分工边界	claim	CL-RM-010386		1.10	A	2016 年 6 月 Yuri 质疑系统安装器与 poudriere 所取镜像缺乏签名校验，引出 Glen Barber、Bryan Drewery 等关于供应链验证基础设施的讨论。	可推	claim 复用（S2 先库后网）
+V41.3.4.4	测试基础设施的分工边界	claim	CL-RM-010330		1.10	A	2017 年 Gabor Pali 公告 FreeBSD Haskell 内部邮件别名转为开放列表，供 Haskell 移植者协调重大变更——Haskell 栈社群基础设施的正式化	可推	claim 复用（S2 先库后网）
+V41.3.6.1	rump 的能力边线	fulltext_summary	72	72	0.232	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.6.1	rump 的能力边线	fulltext_summary	81	81	0.232	C	unwind(8) - florian@OpenBSD.org 1 A recursive name server for every laptop 2 Opportunistic DNSSEC validation 3 Captive-p	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.6.3	Anykernel 路线的辐射领域	fulltext_summary	20	20	0.235	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.6.3	Anykernel 路线的辐射领域	fulltext_summary	63	63	0.235	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.6.3	Anykernel 路线的辐射领域	fulltext_summary	118	118	0.235	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.3.6.3	Anykernel 路线的辐射领域	sacred	2677		0.235	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.4.1.5	单处理器模型的惯性负担	claim	CL-RM-011342		1.30	A	2013年3月31日开发者Phileas Fogg宣布NetBSD 6.0.1以单处理器模式成功启动PowerMac G5 11,2，此前修复了段寄存器初始化等底层问题	可推	claim 复用（S2 先库后网）
+V41.4.2.2	处理器间中断的职责	claim	CL-5-006		1.20	B	Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。	可推	claim 复用（S2 先库后网）
+V41.4.3.1	2.0 的 SMP 覆盖范围	sacred	3057		0.376	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V41.4.4.3	抢占能力与调度的联动	fulltext_summary	520	520	0.308	B	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.3	抢占能力与调度的联动	fulltext_summary	527	527	0.308	B	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.3	抢占能力与调度的联动	fulltext_summary	107	107	0.285	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.5	并发重构的遗留项	fulltext_summary	20	20	0.252	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.5	并发重构的遗留项	fulltext_summary	63	63	0.252	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.5	并发重构的遗留项	fulltext_summary	118	118	0.252	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.5	并发重构的遗留项	sacred	2677		0.252	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.4.5.1	VFS 层的并行化改造	fulltext_summary	20	20	0.232	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.5.1	VFS 层的并行化改造	fulltext_summary	63	63	0.232	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.5.1	VFS 层的并行化改造	fulltext_summary	118	118	0.232	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.5.1	VFS 层的并行化改造	sacred	2677		0.232	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.4.7.1	调度器在多核下的权衡	fulltext_summary	520	520	0.263	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.7.1	调度器在多核下的权衡	fulltext_summary	527	527	0.263	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.7.1	调度器在多核下的权衡	fulltext_summary	107	107	0.243	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.7.1	调度器在多核下的权衡	claim	CL-RM-016067		1.10	A	altq 与双核（多核）处理器共用时的异常观察（altq 与 QoS 调度在多核下的锁/调度问题），BBN 现场测试一手报告	可推	claim 复用（S2 先库后网）
+V41.5.1.2	交叉工具链的生成途径	claim	CL-RM-010159		1.30	A	2019 年 11 月 Ruslan Bukin 说明 FreeBSD riscv64 工具链状态：使用 ports 中的 GCC 8.3.0（devel/riscv64-*-gcc）——移植初期交叉工具链依赖 ports 而非 base 	可推	claim 复用（S2 先库后网）
+V41.5.1.5	构建体系的可重复保障	sacred	98		0.253	C	4.3 历史的重复性	可推	史观参照（不作证据，仅定题面归属）
+V41.5.2.4	树的版本控制形态	claim	CL-5-113		1.30	A	关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-31 才迁至 Subv	可推	claim 复用（S2 先库后网）
+V41.5.3.2	用户空间构建的依赖次第	fulltext_fact	kf-bell-10022-848	10022	0.220	C	INDSCAL程序由Carroll和Chang开发	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.5.4.1	发布工程的职能边界	ref_title	5932	5932	0.302	B	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V41.5.4.2	发布分支的冻结规则	sacred	2377		0.247	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V41.5.4.2	发布分支的冻结规则	sacred	2386		0.247	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V41.5.5.3	安装镜像的生成工艺	ref_title	10078	10078	0.229	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V41.5.5.3	安装镜像的生成工艺	ref_title	10120	10120	0.229	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V41.5.6.2	自动化测试的覆盖面	claim	CL-RM-010265		1.30	A	2007 年 8 月 ATF（Automated Testing Framework）首个邮件列表创立公告——Julio Merino 主导的 NetBSD 自动化测试框架从此拥有专属开发社区	可推	claim 复用（S2 先库后网）
+V41.5.6.5	测试体系的养护代价	claim	CL-RM-010614		1.30	A	2025 年 2 月 DJ Ware 为制作视频询问 FreeBSD 与 Linux 的 POSIX 合规测试对比——外部观察者对测试体系的关注与提问。	可推	claim 复用（S2 先库后网）
+V41.6.1.1	FFS 的磁盘布局继承	sacred	345		0.284	C	16.2 兼容性原则	可推	史观参照（不作证据，仅定题面归属）
+V41.6.1.4	文件系统接口的稳定核	claim	CL-5-012		1.20	B	Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修	可推	claim 复用（S2 先库后网）
+V41.6.3.5	日志文件系统的性能签名	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V41.6.3.5	日志文件系统的性能签名	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V41.6.4.2	软件 RAID 的组件梯级	fulltext_summary	20	20	0.225	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.4.2	软件 RAID 的组件梯级	fulltext_summary	63	63	0.225	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.4.2	软件 RAID 的组件梯级	fulltext_summary	118	118	0.225	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.4.2	软件 RAID 的组件梯级	sacred	2677		0.225	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.6.6.2	临时文件系统的资源围栏	fulltext_summary	20	20	0.273	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.6.2	临时文件系统的资源围栏	fulltext_summary	63	63	0.273	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.6.2	临时文件系统的资源围栏	fulltext_summary	118	118	0.273	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.6.2	临时文件系统的资源围栏	sacred	2677		0.273	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.6.6.2	临时文件系统的资源围栏	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V41.6.6.2	临时文件系统的资源围栏	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V41.6.6.3	扩展文件系统的挂接接口	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V41.6.6.3	扩展文件系统的挂接接口	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V41.6.7.1	ZFS 的引入路径	ref_title	5554	5554	0.240	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
+V41.6.7.2	外部文件系统的集成层级	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V41.6.7.2	外部文件系统的集成层级	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V41.6.7.3	ZFS 与 FFS 的并存账	ref_title	2424	2424	0.294	C	Artifex Software v. Hancom, Inc.：MTD 裁定（CMU 存档） U.S. District Court, N.D. Cal. 2017	可推	文献线索（须核全文再定 D1/D2）
+V41.6.7.3	ZFS 与 FFS 的并存账	sacred	318		0.235	C	14.4 百分之一的选择	可推	史观参照（不作证据，仅定题面归属）
+V41.6.7.5	外部文件系统的许可关卡	fulltext_summary	20	20	0.248	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.7.5	外部文件系统的许可关卡	fulltext_summary	63	63	0.248	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.7.5	外部文件系统的许可关卡	fulltext_summary	118	118	0.248	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.6.7.5	外部文件系统的许可关卡	sacred	2677		0.248	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V41.6.7.5	外部文件系统的许可关卡	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V41.6.7.5	外部文件系统的许可关卡	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V41.7.1.4	传统栈的边界收束	ref_title	5981	5981	0.296	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V41.7.3.5	网络驱动维护的派工	fulltext_summary	74	74	0.532	B	Implementation of Xen PVHVM drivers in OpenBSD Mike Belopuhov Esdenera Networks GmbH mikeb@openbsd.org Ottawa, June 10 2	可推	全文综述候选（D1 型，核对原文后落块）
+V41.7.3.5	网络驱动维护的派工	fulltext_summary	153	153	0.532	B	Implementation of Xen PVHVM drivers in OpenBSD Mike Belopuhov Esdenera Networks GmbH mike@esdenera.com Tokyo, March 12 2	可推	全文综述候选（D1 型，核对原文后落块）
+V41.7.3.5	网络驱动维护的派工	fulltext_summary	129	129	0.411	B	Update on OpenBSD Net- working Performance Im- provements Alexander Bluhm EuroBSDCon, September 2025 Agenda 01 History 0	可推	全文综述候选（D1 型，核对原文后落块）
+V41.7.3.5	网络驱动维护的派工	ref_title	5554	5554	0.254	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
+V41.7.4.2	无线驱动的接入形式	fulltext_summary	104	104	0.232	C	Getting started with OpenBSD device driver development Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2017 Clariﬁcations 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.7.4.2	无线驱动的接入形式	fulltext_summary	140	140	0.232	C	History of the OpenBSD Hardware Sensors Framework Constantine A. Murenin University of Waterloo AsiaBSDCon 2009 — 12/15 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.7.4.2	无线驱动的接入形式	fulltext_summary	143	143	0.232	C	OpenBSD audio & MIDI framework for music and desktop applications Alexandre Ratchov alex@caoua.org AsiaBSDCon 2010 — Tok	可推	全文综述候选（D1 型，核对原文后落块）
+V41.7.6.3	安全特性与性能的配平	claim	CL-5-002		1.10	A	Poul-Henning Kamp 在 1996 年论文中自称已设计、编写、测试并基准评测了一个针对现代虚拟内存系统工作特性与性能特征的新 malloc 实现。	可推	claim 复用（S2 先库后网）
+V41.7.7.3	协议栈隔离的栅栏	ref_title	470	470	0.342	B	未知作者_基于KVM虚拟化的TCP_IP协议栈隔离 	可推	文献线索（须核全文再定 D1/D2）
+V41.7.7.3	协议栈隔离的栅栏	ref_title	283	283	0.308	B	基于KVM虚拟化的TCPIP协议栈隔离 李亚南 2017	可推	文献线索（须核全文再定 D1/D2）
+V41.7.7.3	协议栈隔离的栅栏	fulltext_fact	8213	283	0.277	C	文献《基于KVM虚拟化的TCPIP协议栈隔离》作者 李亚南（2017）	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.8.1.1	Packages 集合的源头	fulltext_fact	kf-bell-10022-295	10022	0.264	C	Bell Laboratories对图像传输的兴趣可追溯至1920年代初期	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.8.3.2	基本系统与软件包的边界线	fulltext_summary	115	115	0.259	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.3.2	基本系统与软件包的边界线	fulltext_summary	117	117	0.259	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.3.2	基本系统与软件包的边界线	fulltext_summary	191	191	0.259	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.5.1	二进制包的仓库编目	ref_title	5820	5820	0.258	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V41.8.5.1	二进制包的仓库编目	ref_title	6007	6007	0.258	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V41.8.5.4	仓库同步的更新时点	ref_title	5820	5820	0.285	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V41.8.5.4	仓库同步的更新时点	ref_title	6007	6007	0.285	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V41.8.5.4	仓库同步的更新时点	ref_title	10141	10141	0.261	C	DragonFly gsocprojectspage · 2018-02-20 快照（Wayback 20180220192156；capture=wayback） 2018	可推	文献线索（须核全文再定 D1/D2）
+V41.8.6.1	季度分支的发行韵律	sacred	2377		0.268	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V41.8.6.1	季度分支的发行韵律	sacred	2386		0.268	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V41.8.6.3	版本升级的批量作业	fulltext_summary	520	520	0.252	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.6.3	版本升级的批量作业	fulltext_summary	527	527	0.252	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.6.3	版本升级的批量作业	fulltext_summary	107	107	0.233	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.6.3	版本升级的批量作业	claim	CL-RM-010365		1.30	A	2022 年，TeX 维护者 Muhammad Moinur Rahman 通报 TeX 系统刚更新至 2021 版后部分关联端口出现副作用，向社区征求受影响情况，记录 ports 大版本升级的连锁波及与协调过程。	可推	claim 复用（S2 先库后网）
+V41.8.6.4	长期维护的资源紧箍	claim	CL-RM-010307		1.30	A	2024 年 9 月 lang/tcl90 更新至 Tcl 9.0.0 正式版——Tcl 大版本 8→9 跨越即日进入 FreeBSD ports（Pietro Cerutti 长期维护的 tcltk@ 工作样本）	可推	claim 复用（S2 先库后网）
+V41.8.7.3	包审计的核查条目	ref_title	6146	6146	0.226	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V41.8.7.3	包审计的核查条目	sacred	2496		0.224	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V41.8.7.4	安全维护与上游的接力	fulltext_summary	943	943	0.298	C	Declarative, Temporal, and Practical Programming with Capabilities William R. Harris∗, Somesh Jha∗, Thomas Reps∗†, Jonat	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.7.4	安全维护与上游的接力	fulltext_summary	193	193	0.249	C	OpenBGPD Adding Diversity to Route Server Landscape Claudio Jeker claudio@openbsd.org Route server mono culture From Job	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.7.4	安全维护与上游的接力	fulltext_summary	1049	1049	0.249	C	1964 Timesharing systems started appearing in the early 1960’s, with one of the ﬁrst being the Atlas supervisor (designe	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.1.1	BSD 安全传统的技术脉络	fulltext_summary	186	186	0.258	C	Cryptography in OpenBSD: An overview Theo de Raadt Niklas Hallqvist Artur Grabowski Angelos D. Keromytis Niels Provos {d	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.1.1	BSD 安全传统的技术脉络	sacred	2496		0.236	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V41.9.2.4	kauth 与其他子系统的接榫	fulltext_fact	kf-bell-10024-1018	10024	0.247	C	T2载波系统设计了与Bell System标准遥测系统E2 telemetry的接口以实现远程监控	可推	全文补证候选（S1 命中即复用，D1 型）
+V41.9.3.2	完整性验证的触发位点	claim	CL-RM-010599		1.30	A	2023 年 8 月 Taylor R Campbell 指出 veriexec 及其内部 fileassoc(9) API 需要维护与同步修复——完整性验证基础设施的长期维护缺口。	可推	claim 复用（S2 先库后网）
+V41.9.3.2	完整性验证的触发位点	claim	CL-RM-010591		1.30	A	2017 年 8 月 Sevan Janiyan 提议分两步移除 veriexec 生成 SHA1/MD5 签名的能力——完整性验证基础设施的密码学现代化。	可推	claim 复用（S2 先库后网）
+V41.9.3.3	验证策略的配置章程	sacred	2817		0.220	C	$ file a.txt # 查看文件类型 a.txt: Unicode text, UTF-8 text	可推	史观参照（不作证据，仅定题面归属）
+V41.9.3.3	验证策略的配置章程	sacred	2819		0.220	C	$ file b.txt # 查看文件类型 b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line terminators	可推	史观参照（不作证据，仅定题面归属）
+V41.9.4.1	W^X 的内存页禁令	fulltext_summary	148	148	0.228	C	Co nve rting OpenBSD to PIE Pascal Stumpf <pascal@openbs d.org> As i aBS DCo n 2015, March 15, Tok yo Pascal Stumpf: Con	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.4.1	W^X 的内存页禁令	fulltext_summary	187	187	0.228	C	Synthetic Memory Protections An update on ROP mitigations Theo de Raadt OpenBSD Attack methods advance ● Smashing the St	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.4.1	W^X 的内存页禁令	fulltext_summary	803	803	0.228	C	Course Aims Operating Systems — Aims i Operating Systems • This course aims to: – explain the structure and functions of	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.4.3	兼容性与安全性的折冲	claim	CL-RM-011115		1.20	A	2000年9月9日ports管理者Satoshi Asami提议将XFree86-4设为默认，引发与Kris Kennaway、Greg Lehey等关于稳定性与安全性的争论，是ports生态最重大的默认值变更决策记录。	可推	claim 复用（S2 先库后网）
+V41.9.5.3	随机化与可移植性的龃龉	claim	CL-RM-014174		0.90	A	指 Yale Scheme 衍生版 T 已移植 Apollo/VAX Unix/VMS，效率与可移植性佳	可推	claim 复用（S2 先库后网）
+V41.9.5.3	随机化与可移植性的龃龉	claim	CL-RM-012339		0.70	A	Mindcraft 发布 C Portability Verifier：校验 POSIX.1/.2、ANSI C 与 XPG3 可移植性，测试工具商业化样本	可推	claim 复用（S2 先库后网）
+V41.9.5.4	默认启用的安全账单	claim	CL-RM-011512		1.10	A	2008年8月4日 Perry E. Metzger 提交补丁让所有 build.sh 构建默认启用 Joerg 的 BUILDSEED	可推	claim 复用（S2 先库后网）
+V41.9.6.4	访问控制的性能天花板	claim	CL-7-013		1.10	A	FreeBSD 是最早广泛部署的、提供强制访问控制（MAC）的自由操作系统之一。	可推	claim 复用（S2 先库后网）
+V41.9.6.4	访问控制的性能天花板	claim	CL-7-004		1.10	A	FreeBSD 是最早广泛部署的、提供强制访问控制（MAC）的自由操作系统之一。	可推	claim 复用（S2 先库后网）
+V41.9.7.1	密钥派生与存放位置	fulltext_summary	72	72	0.222	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.7.1	密钥派生与存放位置	fulltext_summary	81	81	0.222	C	unwind(8) - florian@OpenBSD.org 1 A recursive name server for every laptop 2 Opportunistic DNSSEC validation 3 Captive-p	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.8.2	内核数据访问的铁律	ref_title	5557	5557	0.243	C	2460 Internet Protocol, Version 6 (IPv6) Specification [S/OL]. S. Deering, R. Hinden, December 1998. <https://www.rfc-ed	可推	文献线索（须核全文再定 D1/D2）
+V41.9.8.2	内核数据访问的铁律	ref_title	5558	5558	0.243	C	8200 Internet Protocol, Version 6 (IPv6) Specification [S/OL]. S. Deering, R. Hinden, July 2017. <https://www.rfc-editor	可推	文献线索（须核全文再定 D1/D2）
+V41.9.8.2	内核数据访问的铁律	ref_title	5561	5561	0.243	C	Attorney General CCPA/CPRA Page [EB/OL]. <https://oag.ca.gov/privacy/ccpa> (2026-07-22 访问) 2026	可推	文献线索（须核全文再定 D1/D2）
+V41.9.8.4	硬件防护的失效情形	fulltext_summary	708	708	0.236	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V41.9.8.4	硬件防护的失效情形	fulltext_summary	982	982	0.223	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）

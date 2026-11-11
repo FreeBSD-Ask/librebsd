@@ -1,0 +1,24 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V46.1.6.5	时间基准的代际更新	claim	CL-RM-010355		0.70	A	2017 年 Romain Tartière 发起 Puppet 5 引入的联合测试并盘点 facter、cpp-hocon、leatherman 等端口群，puppet@ 团队构想随之浮现——配置管理栈的代际更新	可推	claim 复用（S2 先库后网）
+V46.1.7.3	团队规模的估算依据	claim	CL-RM-010344		1.30	A	2010 年 Philip M. Gollucci 自述 ruby@ 团队实际仅四人（stas、dinoex、pgollucci、clsung）并为 portupgrade 寻求志愿者——语言团队规模的当事人盘点	可推	claim 复用（S2 先库后网）
+V46.2.3.3	客户端工具的补位	sacred	2850		0.232	C	SSH 和 SCP 客户端	可推	史观参照（不作证据，仅定题面归属）
+V46.2.4.1	包过滤器的替换动因	ref_title	277	277	0.234	C	BSD包过滤器BPF的研究与改进 王汉江 2004	可推	文献线索（须核全文再定 D1/D2）
+V46.2.4.1	包过滤器的替换动因	claim	CL-RM-017070		1.20	B	Martin Blapp 答 MS Office 过滤器去向：『它们还在』——用户装 1.1.0_1 二进制只见 OO 文档过滤器的疑虑澄清——1.1 包过滤器完整性的官方确认。	可推	claim 复用（S2 先库后网）
+V46.3.1.5	交接记录的稀疏处	ref_title	5932	5932	0.276	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V46.3.2.2	字符串函数的作者署名	claim	CL-RM-013779		1.30	A	字符串函数命名变迁：V7 末刻改用 strn??? 并文档化 str???n，32V/3BSD 未改、4BSD 两版并存（strncpy 起源）	可推	claim 复用（S2 先库后网）
+V46.3.2.3	手册页中的作者栏	fulltext_summary	98	98	0.259	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V46.3.3.2	路由守护进程的并行推进	claim	CL-1-116		0.70	A	Hoare 提出输入输出是编程的基本原语，而通信顺序进程的并行组合是基本的程序结构方法。	可推	claim 复用（S2 先库后网）
+V46.3.4.4	权限分离的守护进程复用	claim	CL-3-068		0.70	A	BIND 运维指南记载伯克利互联网名字域（BIND）为 BSD 衍生操作系统实现互联网名字服务器，由名为 named 的守护进程与 resolver 库组成。	可推	claim 复用（S2 先库后网）
+V46.3.4.5	路由能力的逐年补齐	sacred	1326		0.231	C	174 浅论修仙小说类型划分 	可推	史观参照（不作证据，仅定题面归属）
+V46.4.1.1	基金会的法律形态	ref_title	2790	2790	0.270	C	A by-law relating generally to the conduct of the affairs of The OpenBSD Foundation（OpenBSD 基金会章程） The OpenBSD Foundatio	可推	文献线索（须核全文再定 D1/D2）
+V46.4.1.2	理事与收据的对接	sacred	2705		0.230	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V46.4.1.4	聚会资助的拨款口径	fulltext_summary	926	926	0.225	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.1.4	聚会资助的拨款口径	fulltext_summary	928	928	0.225	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.1.4	聚会资助的拨款口径	fulltext_summary	933	933	0.225	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.1.5	捐赠渠道的机构化	fulltext_summary	926	926	0.222	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.1.5	捐赠渠道的机构化	fulltext_summary	928	928	0.222	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.1.5	捐赠渠道的机构化	fulltext_summary	933	933	0.222	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.3.4	资助方的构成变化	fulltext_summary	926	926	0.224	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.3.4	资助方的构成变化	fulltext_summary	928	928	0.224	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V46.4.3.4	资助方的构成变化	fulltext_summary	933	933	0.224	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V46.5.2.3	固件许可证的分层处理	claim	CL-4-101		1.30	A	OpenBSD 严格区分固件许可证——可自由再分发的固件纳入 base 系统，许可证不兼容的固件另行单独分发。	可推	claim 复用（S2 先库后网）

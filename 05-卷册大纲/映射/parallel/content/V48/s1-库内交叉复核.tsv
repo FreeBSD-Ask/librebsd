@@ -1,0 +1,62 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V48.1.10.3	基础工具的版本更新	sacred	2375		0.249	C	FreeBSD 版本更迭	可推	史观参照（不作证据，仅定题面归属）
+V48.1.12.2	并发模型的两条分野	sacred	2369		0.246	C	2.3 FreeBSD 开发模型	可推	史观参照（不作证据，仅定题面归属）
+V48.1.4.1	分叉时点的两说并存	sacred	2418		0.238	C	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V48.1.5.4	镜像补丁的交付手段	ref_title	10078	10078	0.232	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V48.1.5.4	镜像补丁的交付手段	ref_title	10120	10120	0.232	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V48.1.6.1	创建期贡献者名单的构成	claim	CL-RM-011945		0.90	A	4.3BSD-Reno 贡献者名单与四条款 BSD 版权声明原文、Net/1 的 GTDA 出口通用许可：Utah/Jolitz/Torek/FSF/Guido van Rossum 等全名单	可推	claim 复用（S2 先库后网）
+V48.1.6.3	提交者名录的署名惯例	sacred	2358		0.256	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V48.1.9.4	漏洞信息的公开节奏	ref_title	5873	5873	0.233	C	Kaminsky 2008 DNS 漏洞披露 2008	可推	文献线索（须核全文再定 D1/D2）
+V48.2.2.1	首个发行版的时点	sacred	2412		0.248	C	1978 年 3 月 9 日：1BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V48.2.2.1	首个发行版的时点	claim	CL-RM-011044		1.10	A	2002年11月6日Julian Elischer说明firewire已进入5.0、将随4.8进入-stable而错过4.7约一周，明确驱动进入正式发行版的时间线	可推	claim 复用（S2 先库后网）
+V48.2.3.3	核心与外围的分层	fulltext_fact	kf-bell-10022-454	10022	0.246	C	1959 年初 Project Echo 项目成立，W. C. Jakes, Jr. 被任命为项目负责人	可推	全文补证候选（S1 命中即复用，D1 型）
+V48.2.4.1	调度器的两层拆分	fulltext_summary	520	520	0.239	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.4.1	调度器的两层拆分	fulltext_summary	527	527	0.239	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.4.1	调度器的两层拆分	fulltext_summary	107	107	0.221	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	520	520	0.257	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	527	527	0.257	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	107	107	0.238	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.8.2	内存文件系统的来源	fulltext_summary	20	20	0.275	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.8.2	内存文件系统的来源	fulltext_summary	63	63	0.275	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.8.2	内存文件系统的来源	fulltext_summary	118	118	0.275	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.8.2	内存文件系统的来源	sacred	2677		0.275	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V48.2.8.2	内存文件系统的来源	claim	CL-3-053		1.20	B	McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。	可推	claim 复用（S2 先库后网）
+V48.2.8.2	内存文件系统的来源	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V48.2.8.3	文件系统接口的继承	claim	CL-5-012		1.20	B	Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修	可推	claim 复用（S2 先库后网）
+V48.3.5.2	快照模型的语义差异	ref_title	10141	10141	0.221	C	DragonFly gsocprojectspage · 2018-02-20 快照（Wayback 20180220192156；capture=wayback） 2018	可推	文献线索（须核全文再定 D1/D2）
+V48.3.9.3	随机数熵源的更换	fulltext_summary	976	976	0.243	C	Total ASSETS Current Assets Bank Accounts 1000 Wells Fargo - Checking 811,157.93 1001 Wells Fargo - Electronic Payment 5	可推	全文综述候选（D1 型，核对原文后落块）
+V48.3.9.3	随机数熵源的更换	claim	CL-7-010		1.30	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
+V48.4.1.4	发行节奏的年度化	ref_title	10146	10146	0.247	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V48.4.7.3	内核内 Linux 接口的补齐	fulltext_summary	125	125	0.244	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V48.4.7.3	内核内 Linux 接口的补齐	fulltext_summary	706	706	0.244	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V48.4.7.3	内核内 Linux 接口的补齐	fulltext_summary	831	831	0.244	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V48.4.8.2	提交者结构的变化	sacred	2358		0.284	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V48.5.3.4	线程优先级的遗留	claim	CL-RM-015244		1.30	A	Dillon 给出 fork() 与 ^Z 竞态补丁：新 fork 进程在 trampoline 中被停止时未安装 passive release 函数，导致它休眠时仍保有 current process 身份，其他用户进程全部无法运行；附	可推	claim 复用（S2 先库后网）
+V48.5.7.2	桌面可用性的评估	claim	CL-RM-010242		1.30	A	2005 年 NetBSD-2.0 i386 Java 支持加挂指南帖（sun-jdk via linux emulation 时代）——Java 桌面可用性攻坚期的社区互助样本	可推	claim 复用（S2 先库后网）
+V48.5.8.1	基准选择与比较窗口	sacred	3042		0.268	C	文件系统 APFS 与 ZFS 比较	可推	史观参照（不作证据，仅定题面归属）
+V48.5.8.4	内存管理的对照要点	fulltext_summary	125	125	0.307	B	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V48.5.8.4	内存管理的对照要点	fulltext_summary	706	706	0.307	B	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V48.5.8.4	内存管理的对照要点	fulltext_summary	831	831	0.307	B	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V48.6.1.4	发行密度的年度化	ref_title	10146	10146	0.287	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V48.6.7.3	安全改进的零散条目	ref_title	6146	6146	0.251	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V48.6.7.3	安全改进的零散条目	sacred	1348		0.237	C	游戏 	可推	史观参照（不作证据，仅定题面归属）
+V48.6.7.3	安全改进的零散条目	sacred	1350		0.237	C	游戏 	可推	史观参照（不作证据，仅定题面归属）
+V48.6.7.4	维护窗口的时间安排	sacred	None		0.248	C	**Relationship to Other Documents**: 本文为 shigang.md、dagang.md、lishidagang.md 的补充哲学源材料，需同步更新上述文件。	可推	史观参照（不作证据，仅定题面归属）
+V48.7.1.4	最新版本的信息入口	ref_title	2789	2789	0.357	B	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V48.7.1.4	最新版本的信息入口	sacred	2339		0.238	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V48.7.10.2	长期维护的存续判据	claim	CL-RM-010307		1.30	A	2024 年 9 月 lang/tcl90 更新至 Tcl 9.0.0 正式版——Tcl 大版本 8→9 跨越即日进入 FreeBSD ports（Pietro Cerutti 长期维护的 tcltk@ 工作样本）	可推	claim 复用（S2 先库后网）
+V48.7.10.4	缺陷条目的披露痕迹	ref_title	6146	6146	0.252	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V48.7.11.4	性能序列的同代位次	fulltext_summary	1089	1089	0.268	C	TeachBSD To address the need for teaching systems fundamentals, we’ve created a multi-level course using FreeBSD to prov	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.2.2	硬件适配的具体内容	claim	CL-RM-010995		1.30	A	2014-12-05 FreeBSD Enlightenment 端口维护者 Grzegorz Blach 在 devel/efl 端口加入 NVIDIA workaround 选项以应对 ecore_x_vsync 高 CPU 占用，是 	可推	claim 复用（S2 先库后网）
+V48.7.3.4	远程挂载的实验状态	sacred	2736		0.243	C	截至 2026 年 6 月，DragonFly BSD 的最新版本为 6.4.2（2025 年 5 月发布）。6.4 系列新增了对第二类管理程序（Type-2 Hypervisor）的 NVMM 支持、amdgpu 显卡驱动，以及远程挂载 	可推	史观参照（不作证据，仅定题面归属）
+V48.7.5.1	amdgpu 的来源	fulltext_summary	104	104	0.232	C	Getting started with OpenBSD device driver development Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2017 Clariﬁcations 	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.5.1	amdgpu 的来源	fulltext_summary	140	140	0.232	C	History of the OpenBSD Hardware Sensors Framework Constantine A. Murenin University of Waterloo AsiaBSDCon 2009 — 12/15 	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.5.1	amdgpu 的来源	fulltext_summary	143	143	0.232	C	OpenBSD audio & MIDI framework for music and desktop applications Alexandre Ratchov alex@caoua.org AsiaBSDCon 2010 — Tok	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.5.2	覆盖范围的型号界限	sacred	3057		0.376	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V48.7.6.1	固件与 UEFI 的现状	fulltext_summary	20	20	0.228	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.6.1	固件与 UEFI 的现状	fulltext_summary	63	63	0.228	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.6.1	固件与 UEFI 的现状	fulltext_summary	118	118	0.228	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V48.7.6.1	固件与 UEFI 的现状	sacred	2677		0.228	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V48.7.7.2	平台讨论的载体分布	ref_title	2460	2460	0.229	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V48.7.7.3	议题归档的组织方式	sacred	2606		0.280	C	Copyright (c) [年份] [组织名称] [All rights reserved]. Redistribution and use in source and binary forms, with or without modi	可推	史观参照（不作证据，仅定题面归属）
+V48.7.7.3	议题归档的组织方式	claim	CL-3-073		0.70	A	Codd 1970 年提出数据的关系模型，主张大型数据银行的未来用户不必知道数据在机器中的组织方式。	可推	claim 复用（S2 先库后网）

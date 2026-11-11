@@ -1,0 +1,60 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V42.1.1.4	架构独立目标的早期表述	claim	CL-RM-010195		0.70	A	2005 年用户尝试将 NetBSD 移植到 NetGear WGT634U 路由器（Broadcom SiByte BCM53xx）——消费路由器硬件成为移植目标的早期案例	可推	claim 复用（S2 先库后网）
+V42.1.2.2	Charles M. Hannum 的署名形式	sacred	2656		0.338	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V42.1.2.2	Charles M. Hannum 的署名形式	doubt_open	3008		0.241	C	〔全量证据复核·待补｜批次 v65a｜源稿 v65a-三源核验-20261014.md｜条 3〕Xinuos 官方沿革页（注文指定一手） ["Xinuos官方沿革", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V42.1.2.6	从补丁困境到内核重建	fulltext_summary	216	216	0.246	C	Mach: A New Kernel Foundation For UNIX Development Mike Accetta, Robert Baron, William Bolosky, David Golub, Richard Ras	可推	全文综述候选（D1 型，核对原文后落块）
+V42.1.3.5	长期维护与任期条款	sacred	2242		0.270	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V42.1.3.5	长期维护与任期条款	claim	CL-RM-010599		1.20	B	2023 年 8 月 Taylor R Campbell 指出 veriexec 及其内部 fileassoc(9) API 需要维护与同步修复——完整性验证基础设施的长期维护缺口。	可推	claim 复用（S2 先库后网）
+V42.1.3.6	领导层记录的延续方式	sacred	2242		0.263	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V42.1.5.1	早期提交者群体的名单构成	sacred	2358		0.260	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V42.1.5.4	邮件列表协作的起点形态	ref_title	2460	2460	0.236	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V42.1.5.4	邮件列表协作的起点形态	claim	CL-RM-010336		0.70	A	2020 年 Gleb Popov 宣告 bapt@ 为 Haskell 相关端口建立 freebsd/freebsd-ports-haskell GitHub 仓库并开辟 ghc-upgrade-883 分支——Haskell 移植工程迁	可推	claim 复用（S2 先库后网）
+V42.1.6.4	当事人陈述的证据层级	ref_title	5932	5932	0.249	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V42.1.6.4	当事人陈述的证据层级	claim	CL-RM-010630		1.30	A	2011 年 12 月 Matthias Rampke 回应 chromium 包长期停摆，指出移植 chromium 工作量巨大——Chromium 入 pkgsrc 困境的当事人陈述。	可推	claim 复用（S2 先库后网）
+V42.1.6.4	当事人陈述的证据层级	claim	CL-RM-010605		1.30	A	2021 年 7 月 Lutz Donnerhacke 试图修复 libalias 测试揭示的错误却无法在本机复现——测试环境可复现性难题的当事人陈述。	可推	claim 复用（S2 先库后网）
+V42.2.1.5	可移植目标的官方自述	claim	CL-RM-010195		1.30	A	2005 年用户尝试将 NetBSD 移植到 NetGear WGT634U 路由器（Broadcom SiByte BCM53xx）——消费路由器硬件成为移植目标的早期案例	可推	claim 复用（S2 先库后网）
+V42.2.4.2	测试参与者与 organic tier 义务	claim	CL-RM-010387		1.30	A	2016 年 3 月 Glen Barber 再度发出以 pkg(8) 打包基础系统的公开测试号召，确认该能力瞄准 FreeBSD 11.0，进一步扩大测试参与者范围。	可推	claim 复用（S2 先库后网）
+V42.2.4.4	硬件捐赠者的间接参与	sacred	2107		0.279	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V42.2.4.4	硬件捐赠者的间接参与	sacred	2705		0.223	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V42.2.4.5	署名制度的边界与缺口	sacred	2705		0.243	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V42.2.5.1	官方口号与自述文本的层次	sacred	232		0.227	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V42.2.6.3	acorn26 的移除与 Attic 机制	sacred	2760		0.221	C	挂载的概念与机制	可推	史观参照（不作证据，仅定题面归属）
+V42.3.1.3	Crooks 的 pkgsrc-pmc 职责	fulltext_summary	926	926	0.241	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.1.3	Crooks 的 pkgsrc-pmc 职责	fulltext_summary	928	928	0.241	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.1.3	Crooks 的 pkgsrc-pmc 职责	fulltext_summary	933	933	0.241	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.1.4	pkgsrc guide 的作者署名	claim	CL-2-012		1.30	A	4.4BSD 架构手册的作者署名为 William Joy、Robert Fabry、Samuel Leffler、M. Kirk McKusick、Michael Karels，隶属伯克利计算机系统研究组（CSRG）。	可推	claim 复用（S2 先库后网）
+V42.3.1.5	组织化目标与基金会角色	sacred	2242		0.308	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V42.3.1.5	组织化目标与基金会角色	sacred	2354		0.227	C	在大部分国家，FreeBSD 商标由 FreeBSD 基金会持有。	可推	史观参照（不作证据，仅定题面归属）
+V42.3.2.2	开发者条目中的分工标注	ref_title	6146	6146	0.223	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V42.3.2.3	个人主页的自我介绍文本	claim	CL-RM-017143		1.20	B	Ade Barkah 回应 Greg Lehey 关于顾问信息并入主站 commercial.html 的建议：赞成方向，但 Julian 的自由格式页面难以直接转成 commercial.html 条目，等各方评论后再定挂链时机；顺带收编	可推	claim 复用（S2 先库后网）
+V42.3.2.5	bulk builds 与文档贡献	ref_title	6146	6146	0.250	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V42.3.2.6	公共表达的多语种载体	ref_title	5513	5513	0.228	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V42.3.3.1	Packages 组的成员名单	sacred	2358		0.277	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V42.3.4.1	GSoC 报告的署名体例	ref_title	5513	5513	0.225	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V42.3.4.3	定向资助项目的成果署名	fulltext_summary	926	926	0.226	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.4.3	定向资助项目的成果署名	fulltext_summary	928	928	0.226	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.4.3	定向资助项目的成果署名	fulltext_summary	933	933	0.226	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.5.1	理事会选举与开发者群体	ref_title	3754	3754	0.235	C	USENIX 2004 董事会选举候选人页（McKusick 本人声明） USENIX Association 	可推	文献线索（须核全文再定 D1/D2）
+V42.3.5.3	委员会中的沟通角色	sacred	2242		0.276	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V42.3.5.6	关系人物的记录分层	fulltext_summary	926	926	0.246	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.5.6	关系人物的记录分层	fulltext_summary	928	928	0.246	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V42.3.5.6	关系人物的记录分层	fulltext_summary	933	933	0.246	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.4.1.4	委员会的组建决议	fulltext_summary	926	926	0.231	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.4.1.4	委员会的组建决议	fulltext_summary	928	928	0.231	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V42.4.1.4	委员会的组建决议	fulltext_summary	933	933	0.231	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V42.4.2.6	章程细则与治理惯例	sacred	1905		0.228	C	对读者的要求	可推	史观参照（不作证据，仅定题面归属）
+V42.4.3.3	pullup 流程与分支状态	sacred	2377		0.222	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V42.4.3.3	pullup 流程与分支状态	sacred	2386		0.222	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V42.4.3.4	安全更新的终止公告	sacred	2377		0.227	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V42.4.3.4	安全更新的终止公告	sacred	2386		0.227	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V42.4.3.6	发布经理与发布工程师	ref_title	2446	2446	0.222	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V42.4.3.6	发布经理与发布工程师	ref_title	2660	2660	0.222	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V42.4.3.6	发布经理与发布工程师	claim	CL-2-052		0.90	A	McKusick、Karels 与 Bostic（1989）描述了 CSRG 以小团队开发与集成 4.3BSD 的发布工程策略：每个发布周期分为开发阶段与发布工程阶段，发布工程分三步（alpha、beta、最终发布）。	可推	claim 复用（S2 先库后网）
+V42.4.4.2	当事陈述的丙级证据定位	ref_title	5932	5932	0.315	B	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V42.5.1.3	资深成员的多角色兼任	ref_title	6146	6146	0.223	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V42.5.2.1	申请程序的赞助环节	sacred	2416		0.324	B	1980 年 4 月：DARPA 的赞助	可推	史观参照（不作证据，仅定题面归属）
+V42.5.2.1	申请程序的赞助环节	fulltext_fact	kf-bell-10022-848	10022	0.270	C	INDSCAL程序由Carroll和Chang开发	可推	全文补证候选（S1 命中即复用，D1 型）
+V42.5.2.3	新成员公告的发布流程	ref_title	5932	5932	0.282	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V42.5.4.3	互见网络的收束条目	ref_title	6146	6146	0.309	B	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V42.5.4.4	捐赠叙事与存续前景	sacred	2705		0.261	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V42.5.4.5	公共表达的长时段回望	ref_title	5513	5513	0.257	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）

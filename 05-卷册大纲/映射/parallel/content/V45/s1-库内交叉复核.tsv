@@ -1,0 +1,77 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V45.1.1.3	健壮性与自由再分发并置	claim	CL-RM-012044		0.70	A	Amdahl UTS 开发部 Karl Rowley 证言：NQS 由 NASA Ames 研制、已成 UNIX 批处理事实标准、源码经 COSMIC 售 6000 美元且增值后可自由再分发	可推	claim 复用（S2 先库后网）
+V45.1.1.3	健壮性与自由再分发并置	claim	CL-RM-011953		0.70	A	4.4BSD-Lite 发布信：USL 与加州大学就 Net/2 达成和解、可免许可自由再分发、强烈建议以 Lite 替换全部 Net/2 代码、1000 美元	可推	claim 复用（S2 先库后网）
+V45.1.10.4	缺陷库的共同维护	fulltext_summary	115	115	0.221	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.1.10.4	缺陷库的共同维护	fulltext_summary	117	117	0.221	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.1.10.4	缺陷库的共同维护	fulltext_summary	191	191	0.221	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.1.3.3	新手启用的学习路径	sacred	2699		0.351	B	安全考量	可推	史观参照（不作证据，仅定题面归属）
+V45.1.7.1	网络输入路径的收缩	sacred	2496		0.222	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V45.1.8.1	审计承诺的持续声明	sacred	2496		0.220	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V45.1.9.2	公告的签名与归档	ref_title	5788	5788	0.255	C	M., McKusick, K., Bostic, K. (1988-06) 4.3BSD-Tahoe 公告（tuhs.org 一手） 1988	可推	文献线索（须核全文再定 D1/D2）
+V45.1.9.3	公告邮寄的渠道清单	ref_title	2460	2460	0.222	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V45.1.9.4	受支持分支的时限	ref_title	10137	10137	0.260	C	PostgreSQL list: 转发 Murray Stokely 2005 公告 (18 projects) 2005	可推	文献线索（须核全文再定 D1/D2）
+V45.10.1.2	元数据排序的专用结构	ref_title	3870	3870	0.227	C	19841204 CityOfBerkeley BSD检索 bsd 1984 1204 res52501 unknown 1984	可推	文献线索（须核全文再定 D1/D2）
+V45.10.1.3	构建工具的分工蔓延	fulltext_summary	115	115	0.229	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.1.3	构建工具的分工蔓延	fulltext_summary	117	117	0.229	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.1.3	构建工具的分工蔓延	fulltext_summary	191	191	0.229	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.7.1	构建时的囚禁工具	fulltext_summary	115	115	0.239	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.7.1	构建时的囚禁工具	fulltext_summary	117	117	0.239	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.7.1	构建时的囚禁工具	fulltext_summary	191	191	0.239	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.7.3	文件系统的前提假设	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V45.10.7.3	文件系统的前提假设	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V45.10.8.1	正常使用以软件包为准	fulltext_summary	115	115	0.235	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.8.1	正常使用以软件包为准	fulltext_summary	117	117	0.235	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.8.1	正常使用以软件包为准	fulltext_summary	191	191	0.235	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.8.3	项目自产工具的软件包化	fulltext_summary	115	115	0.230	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.8.3	项目自产工具的软件包化	fulltext_summary	117	117	0.230	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.10.8.3	项目自产工具的软件包化	fulltext_summary	191	191	0.230	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.11.2.3	晚期架构的编译器补入	fulltext_fact	kf-bell-10022-959	10022	0.256	C	YACC（Yet Another Compiler-Compiler）生成器是贝尔实验室开发的编译器工具	可推	全文补证候选（S1 命中即复用，D1 型）
+V45.12.3.1	自由再分发的长期争取	claim	CL-RM-011950		1.60	A	4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（S2 先库后网）
+V45.12.3.1	自由再分发的长期争取	claim	CL-RM-000402		1.60	A	1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（S2 先库后网）
+V45.14.1.2	目录集合的作业单位	sacred	232		0.226	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V45.14.3.1	发布节奏的官方约定	claim	CL-RM-010393		1.10	A	2017 年 8 月 Glen Barber 通报 svn-src-head 近期一批 pkgbase 相关提交并说明取舍，是 2017 年该项目推进节奏的官方节点。	可推	claim 复用（S2 先库后网）
+V45.14.4.2	包规模的年代清点	fulltext_summary	115	115	0.242	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.14.4.2	包规模的年代清点	fulltext_summary	117	117	0.242	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.14.4.2	包规模的年代清点	fulltext_summary	191	191	0.242	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.15.3.1	机器无关的源码取向	claim	CL-RM-010929		1.30	A	2002年12月4日 John Baldwin 提交 change 21918 添加机器无关的 MI linux 模块，将 Linux 二进制兼容层架构化	可推	claim 复用（S2 先库后网）
+V45.2.1.2	缺陷分布的普遍性	sacred	24		0.295	C	1.3 非存在的普遍性	可推	史观参照（不作证据，仅定题面归属）
+V45.2.1.2	缺陷分布的普遍性	sacred	563		0.244	C	非存在的普遍性原理（√） 	可推	史观参照（不作证据，仅定题面归属）
+V45.2.1.3	内核与用户态的合并审计	claim	CL-7-010		1.60	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
+V45.2.1.3	内核与用户态的合并审计	claim	CL-6-103		1.40	A	2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态	可推	claim 复用（S2 先库后网）
+V45.2.10.4	内核随机熵的注入	ref_title	2663	2663	0.245	C	BSD Now EP278: McKusick Real McCoy 片段（2018） Marshall Kirk McKusick 2018	可推	文献线索（须核全文再定 D1/D2）
+V45.2.6.1	ASLR 的默认提供	fulltext_fact	kf-bell-10024-1337	10024	0.261	C	Type C carrier是首个被广泛使用的载波系统	可推	全文补证候选（S1 命中即复用，D1 型）
+V45.2.9.3	mips64 与 powerpc 的后续	ref_title	10139	10139	0.246	C	DragonFly gsocprojectspage · 2014-03-12 快照 (补入2012)（Wayback 20140312013007；capture=wayback） 2014	可推	文献线索（须核全文再定 D1/D2）
+V45.3.2.2	默认启用的版本节点	claim	CL-RM-011512		1.10	A	2008年8月4日 Perry E. Metzger 提交补丁让所有 build.sh 构建默认启用 Joerg 的 BUILDSEED	可推	claim 复用（S2 先库后网）
+V45.4.1.1	替代品的作者与动机	fulltext_summary	190	190	0.242	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V45.4.1.1	替代品的作者与动机	sacred	379		0.231	C	18.4 替代品的幻觉	可推	史观参照（不作证据，仅定题面归属）
+V45.4.5.1	虚拟地址的共享目标	claim	CL-RM-012760		1.30	A	2024 年 2 月，Fangrui Song 在 arm64 跳转标签补丁讨论的回复中给出共享库技术史笔记：1984 年 USENIX UniForum 会议论文集描述了类似今日 PLT 加 GOT 的库桩与链接表方案，1986 年夏季 	可推	claim 复用（S2 先库后网）
+V45.4.5.1	虚拟地址的共享目标	claim	CL-2-010		1.30	A	PDP-11 的 16 位虚拟地址空间到 1975 年已成为应用的真实限制，DEC 因而设计 32 位虚拟地址的 VAX 作为其继任者。	可推	claim 复用（S2 先库后网）
+V45.5.7.4	邮件列表的月度延迟	ref_title	2735	2735	0.273	C	COFF（Computer Old Farts Forum）邮件列表存档 2018-2026（87 个月度 txt） COFF Mailing List 2018	可推	文献线索（须核全文再定 D1/D2）
+V45.6.10.1	熵获取的专用系统调用	claim	CL-RM-010421		0.80	A	2001 年 10 月 Robert Watson 确认已为 OpenAFS 在 FreeBSD 5.0-CURRENT 分配专用系统调用号——分布式文件系统获得内核接口层正式身份。	可推	claim 复用（S2 先库后网）
+V45.6.12.1	加密合法性的属地依据	sacred	176		0.233	C	9.4 测量的合法性问题	可推	史观参照（不作证据，仅定题面归属）
+V45.6.3.1	预认证沙箱的默认开启	claim	CL-RM-011978		1.30	A	转发 Theo 的 OpenBSD 5.0 发布公告全文：第 30 个 CD 版、OpenSSH 5.9 预认证沙箱、OpenBSD Foundation、fw_update 非自由固件工具	可推	claim 复用（S2 先库后网）
+V45.6.5.2	口令散列的早期引入	claim	CL-RM-010572		1.20	B	2009 年 1 月 David Holland 提出 md5 已不可靠，应否在 passwd.conf 文档中弃用或建议更换——口令散列代际更替的早期信号。	可推	claim 复用（S2 先库后网）
+V45.6.8.1	高层接口的设计目标	claim	CL-RM-013056		0.70	A	Bellovin 史料：多新闻组跨贴是初版 netnews 的设计目标且以 link 实现，远早于 Eunice 出现	可推	claim 复用（S2 先库后网）
+V45.6.8.1	高层接口的设计目标	claim	CL-6-201		0.70	A	pkgbase 的设计目标包括：对 RELEASE、STABLE 与 CURRENT 分支提供二进制升级、实现无需 sendmail 与工具链的细粒度安装、由 pkg(8) 处理配置文件更新、允许开发者向用户提供测试软件包。	可推	claim 复用（S2 先库后网）
+V45.7.10.3	编译器缺位架构的软件包线	fulltext_summary	115	115	0.234	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.7.10.3	编译器缺位架构的软件包线	fulltext_summary	117	117	0.234	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.7.10.3	编译器缺位架构的软件包线	fulltext_summary	191	191	0.234	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.7.2.4	嵌入式架构的补入	claim	CL-RM-010548		1.60	A	2014 年 8 月 George Neville-Neil 重整 Howard Su 的 ARM DTrace 补丁并在 Beaglebone Black 上最小验证——可观测性向嵌入式架构的推进。	可推	claim 复用（S2 先库后网）
+V45.7.2.4	嵌入式架构的补入	claim	CL-6-203		1.10	B	FreeBSD 对 ARM 架构的支持历史上是草根式（grassroots）的，嵌入式平台支持长期依赖社区个人贡献。	可推	claim 复用（S2 先库后网）
+V45.7.4.1	移植包的大量修补	fulltext_summary	115	115	0.261	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.7.4.1	移植包的大量修补	fulltext_summary	117	117	0.261	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.7.4.1	移植包的大量修补	fulltext_summary	191	191	0.261	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.7.7.1	位置无关可执行件的实现者	claim	CL-RM-012760		1.10	A	2024 年 2 月，Fangrui Song 在 arm64 跳转标签补丁讨论的回复中给出共享库技术史笔记：1984 年 USENIX UniForum 会议论文集描述了类似今日 PLT 加 GOT 的库桩与链接表方案，1986 年夏季 	可推	claim 复用（S2 先库后网）
+V45.8.7.3	二进制更新工具的入树	claim	CL-RM-010257		1.30	A	2001 年 10 月 binup 列表批判：'我们当前的包框架不敷使用'—— FreeBSD 二进制更新项目对包体系（pkg/pkg_add）短板的当事人诊断（与 ports/pkgsrc 并行的更新基础设施探索）	可推	claim 复用（S2 先库后网）
+V45.8.7.3	二进制更新工具的入树	claim	CL-RM-010256		1.30	A	2002 年 12 月 Colin Percival 发布二进制安全更新试验（后成为 freebsd-update 的作者与直系前身；binup 项目（2001 起）为 FreeBSD 二进制更新基础设施的早期尝试，包框架'不敷使用'批判（	可推	claim 复用（S2 先库后网）
+V45.8.8.1	Ports 树的基础设施职能	claim	CL-RM-010244		1.30	A	2026 年 7 月 3 日 Ada Team Wiki 页建立——新语言社区的基础设施建设与列表首周活动（gnat15 构建告警、prettier-ada 新 port 提交）	可推	claim 复用（S2 先库后网）
+V45.8.8.1	Ports 树的基础设施职能	claim	CL-RM-010241		1.30	A	2002 年社区请求 Core 出面请 IBM 向 NetBSD 捐赠 VM 许可证——大型机移植对专有系统管理程序（VM/她克勒斯之前）的基础设施依赖	可推	claim 复用（S2 先库后网）
+V45.8.8.3	系统集与软件包的分野	fulltext_summary	115	115	0.235	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.8.8.3	系统集与软件包的分野	fulltext_summary	117	117	0.235	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.8.8.3	系统集与软件包的分野	fulltext_summary	191	191	0.235	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.8.9.1	基本系统的外移决定	fulltext_summary	115	115	0.225	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
+V45.8.9.1	基本系统的外移决定	fulltext_summary	117	117	0.225	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
+V45.8.9.1	基本系统的外移决定	fulltext_summary	191	191	0.225	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
+V45.9.7.2	解析链的逐级推进	ref_title	2795	2795	0.263	C	ZFS – The Last Word in File Systems（《ZFS——文件系统的最终答案》） Bill Moore（Sun Microsystems 高级员工工程师，Sr Staff Engineer） 2005	可推	文献线索（须核全文再定 D1/D2）
+V45.9.8.1	证书自动化的客户端	sacred	2850		0.258	C	SSH 和 SCP 客户端	可推	史观参照（不作证据，仅定题面归属）
+V45.9.9.1	邮件队列逻辑的重订	fulltext_fact	7344	1550	0.259	C	本文档系统说明 sendmail 的配置语法、邮件路由与队列处理机制，是 sendmail 运维与历史考据的一手资料。	可推	全文补证候选（S1 命中即复用，D1 型）
