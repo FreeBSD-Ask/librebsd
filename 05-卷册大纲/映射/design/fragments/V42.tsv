@@ -35,12 +35,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 42	1	1.6	1.6.4	当事人陈述的证据层级	skeleton	
 42	1	1.6	1.6.5	分裂事件的后续分岔	skeleton	
 42	1	1.6	1.6.6	分家记录的对读与考据	skeleton	
-42	2	2.1	2.1.1	MD 与 MI 代码的分界	skeleton	
-42	2	2.1	2.1.2	单一驱动与多平台复用	skeleton	
+42	2	2.1	2.1.1	MD 与 MI 代码的分界	filled	
+42	2	2.1	2.1.2	单一驱动与多平台复用	filled	
 42	2	2.1	2.1.3	驱动一次编写的工程原则	skeleton	
 42	2	2.1	2.1.4	架构独立理念的制度化	skeleton	
 42	2	2.1	2.1.5	可移植目标的官方自述	skeleton	
-42	2	2.1	2.1.6	分层清理的持续工程	skeleton	
+42	2	2.1	2.1.6	分层清理的持续工程	filled	
 42	2	2.2	2.2.1	portmaster 制度的职责条款	skeleton	
 42	2	2.2	2.2.2	m68k 系 port 的维护者名单	skeleton	
 42	2	2.2	2.2.3	SPARC 系 port 的维护分工	skeleton	
@@ -110,7 +110,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 42	4	4.2	4.2.1	理事会的职权范围	skeleton	
 42	4	4.2	4.2.2	理事人数与交错任期	skeleton	
 42	4	4.2	4.2.3	选举与罢免的表决门槛	skeleton	
-42	4	4.2	4.2.4	Active 成员的资格要求	skeleton	
+42	4	4.2	4.2.4	Active 成员的资格要求	filled	
 42	4	4.2	4.2.5	职员设置与兼任的实况	skeleton	
 42	4	4.2	4.2.6	章程细则与治理惯例	skeleton	
 42	4	4.3	4.3.1	releng 组的职责界定	skeleton	
@@ -128,10 +128,10 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 42	5	5.1	5.1.1	长期成员的名单留痕	skeleton	
 42	5	5.1	5.1.2	Emeritus 制度与资深成员	skeleton	
 42	5	5.1	5.1.3	资深成员的多角色兼任	skeleton	
-42	5	5.1	5.1.4	跨代维护者的职责延续	skeleton	
+42	5	5.1	5.1.4	跨代维护者的职责延续	filled	
 42	5	5.1	5.1.5	成员条目的分工标注	skeleton	
 42	5	5.1	5.1.6	留存记录的编写方式	skeleton	
-42	5	5.2	5.2.1	申请程序的赞助环节	skeleton	
+42	5	5.2	5.2.1	申请程序的赞助环节	filled	
 42	5	5.2	5.2.2	十四天评论期的评议机制	skeleton	
 42	5	5.2	5.2.3	新成员公告的发布流程	skeleton	
 42	5	5.2	5.2.4	成员资格的签署要件	skeleton	
