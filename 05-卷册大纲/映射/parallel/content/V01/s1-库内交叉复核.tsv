@@ -1,0 +1,66 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V01.1.3.1	弗雷格与罗素：逻辑主义的纲领与悖论	fulltext_fact	8280	395	0.231	C	文献《未知作者_论弗雷格的命题函项思想》	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.1.3.1	弗雷格与罗素：逻辑主义的纲领与悖论	sacred	1338		0.229	C	数学基础 	可推	史观参照（不作证据，仅定题面归属）
+V01.1.5.3	掺杂物与半导体器件的工艺基础	claim	CL-RM-424408		0.70	A	Nicolas Souchu：拟为 Philips 半导体器件编写 I2C 总线支持，设想通用总线层配 ISA 与并口等独立控制器驱动，来信征集意见与建议	可推	claim 复用（S2 先库后网）
+V01.1.5.4	贝尔实验室的晶体管研究	fulltext_fact	kf-bell-10021-073	10021	0.249	C	1945-1950年间Bell Labs发明了点接触晶体管和结型晶体管	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.1.5.4	贝尔实验室的晶体管研究	fulltext_fact	kf-bell-10023-073	10023	0.244	C	1951年Type A点接触晶体管在Allentown投入量产，锗片两面点接触间距约0.001英寸	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.1.5.4	贝尔实验室的晶体管研究	fulltext_fact	kf-bell-10024-1388	10024	0.239	A	Tin Goose是贝尔实验室的飞机	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.1.5.4	贝尔实验室的晶体管研究	claim	CL-RM-011617		1.60	A	Robert Lake 报道阿尔伯塔大学 PDP 11/45“Chatty Cathy”1986-01-14 运行满 10 万小时，并称该校为 1973 年末 UNIX 首批出贝尔实验室的三所大学之一	可推	claim 复用（S2 先库后网）
+V01.1.5.4	贝尔实验室的晶体管研究	claim	CL-RM-012885		1.30	A	dmr 亲笔：贝尔实验室以 Norman Wilson 的 v6 文件服务器挂载 RK05 磁盘镜像档案，尚存 VAX 11/750 可跑 Sixth Edition shell 并称有令人毛骨悚然的亲切感——V6 活态档案一手史料	可推	claim 复用（S2 先库后网）
+V01.1.5.6	物质基础与计算形态的耦合	sacred	205		0.222	C	10.4 神作为前提而非解释工具	可推	史观参照（不作证据，仅定题面归属）
+V01.10.1.2	进程文件系统的实现	claim	CL-RM-000010		1.20	B	OpenBSD 引入 pledge（原名 tame，首现于 5.9）与 unveil（首现于 6.4）两种进程与文件系统沙箱机制	可推	claim 复用（S2 先库后网）
+V01.10.1.2	进程文件系统的实现	claim	CL-4-008		1.20	B	Dennis M. Ritchie 的论文《The Evolution of the Unix Time-sharing System》(1984) 概述 UNIX 早期发展史，聚焦文件系统、进程控制机制与管道命令思想的演进。	可推	claim 复用（S2 先库后网）
+V01.10.2.3	课题选择的技术依据	sacred	2310		0.245	C	选择 FreeBSD 的技术原因	可推	史观参照（不作证据，仅定题面归属）
+V01.10.4.2	并行时间线的对齐	sacred	381		0.222	C	18.5 沥青滴落：历史的时间尺度	可推	史观参照（不作证据，仅定题面归属）
+V01.2.1.1	弹道计算需求与 ENIAC 的立项	fulltext_fact	kf-bell-10022-705	10022	0.272	C	1946年Bell Labs向NACA交付了一台Model V继电器计算机，1947年向陆军弹道研究实验室交付了另一台。	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.2.1.5	计算实验室的设立与学科组织	claim	CL-RM-010320		1.30	A	2005 年 OpenBSD-PT 于科英布拉大学物理系先进计算实验室举办聚会，NetBSD-PT 成员亦到场——同一大学实验室成为 BSD 各项目聚会的共享场地	可推	claim 复用（S2 先库后网）
+V01.2.2.5	UNIVAC 与计算机的商业化	claim	CL-1-012		1.20	B	Thompson 认为 UNIX 的流行是时机与机缘的结果，与计算机行业从中央大型机向自主小型机的转变相伴发生。	可推	claim 复用（S2 先库后网）
+V01.2.2.5	UNIVAC 与计算机的商业化	claim	CL-1-118		1.10	A	1974 年 7 月，Dennis Ritchie 与 Ken Thompson 在《Communications of the ACM》第 17 卷发表《The UNIX Time-Sharing System》，将 UNIX 描述为面向	可推	claim 复用（S2 先库后网）
+V01.3.3.3	DEC 的产品线策略	ref_title	2763	2763	0.373	B	PDP-7 Users Handbook（Programmed Data Processor-7） 数字设备公司（Digital Equipment Corporation, DEC） 1965	可推	文献线索（须核全文再定 D1/D2）
+V01.3.3.6	从大型机到小型机的制度后果	sacred	2145		0.235	C	UNICS 的诞生	可推	史观参照（不作证据，仅定题面归属）
+V01.3.4.5	大型机在云计算时代的角色	claim	CL-RM-010267		0.80	A	2014 年 11 月 Colin Percival 创立 freebsd-cloud 邮件列表——FreeBSD 云平台（EC2/GCE 等）讨论从此拥有专属社区，标志 FreeBSD 对云计算时代的制度化回应	可推	claim 复用（S2 先库后网）
+V01.4.5.5	微机操作系统的兼容性竞争	sacred	257		0.225	C	11.5 先进性的虚伪	可推	史观参照（不作证据，仅定题面归属）
+V01.4.5.5	微机操作系统的兼容性竞争	claim	CL-1-126		1.30	A	FreeBSD 的 bhyve 虚拟机监控器支持的客户机操作系统包括 *BSD、Linux、Windows 以及 Illumos、Plan 9 等。	可推	claim 复用（S2 先库后网）
+V01.4.5.5	微机操作系统的兼容性竞争	claim	CL-4-112		1.10	A	USL 起诉加州大学董事会与 BSDi，指控其分发计算机软件侵犯 USL 对 UNIX 操作系统的专有权利。	可推	claim 复用（S2 先库后网）
+V01.4.6.3	微机 BIOS 与硬件抽象层	claim	CL-6-212		0.90	A	FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。	可推	claim 复用（S2 先库后网）
+V01.4.6.6	微机操作系统源流的历史书写	claim	CL-1-126		1.30	A	FreeBSD 的 bhyve 虚拟机监控器支持的客户机操作系统包括 *BSD、Linux、Windows 以及 Illumos、Plan 9 等。	可推	claim 复用（S2 先库后网）
+V01.5.1.3	贝尔实验室的组织与经费框架	fulltext_fact	kf-bell-10024-1388	10024	0.221	A	Tin Goose是贝尔实验室的飞机	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.5.1.3	贝尔实验室的组织与经费框架	claim	CL-RM-011617		1.60	A	Robert Lake 报道阿尔伯塔大学 PDP 11/45“Chatty Cathy”1986-01-14 运行满 10 万小时，并称该校为 1973 年末 UNIX 首批出贝尔实验室的三所大学之一	可推	claim 复用（S2 先库后网）
+V01.5.1.3	贝尔实验室的组织与经费框架	claim	CL-RM-012885		1.30	A	dmr 亲笔：贝尔实验室以 Norman Wilson 的 v6 文件服务器挂载 RK05 磁盘镜像档案，尚存 VAX 11/750 可跑 Sixth Edition shell 并称有令人毛骨悚然的亲切感——V6 活态档案一手史料	可推	claim 复用（S2 先库后网）
+V01.5.2.6	机构生命周期的终结	claim	CL-RM-010142		1.20	A	2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（S2 先库后网）
+V01.5.2.6	机构生命周期的终结	claim	CL-RM-010329		1.10	A	2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（S2 先库后网）
+V01.5.3.2	办公空间与协作方式	sacred	2683		0.229	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V01.5.3.5	组织文化与 UNIX 的诞生条件	sacred	2145		0.299	C	UNICS 的诞生	可推	史观参照（不作证据，仅定题面归属）
+V01.5.4.1	科研组织的层级划分	sacred	232		0.264	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V01.6.3.3	伺服机构实验室的技术转移	fulltext_fact	kf-bell-10019-608	10019	0.268	C	F. J. Biondi 和 E. C. Tolman 将 Bell Labs 的 barrier 技术转移至 Columbia 大学的 SAM Lab	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.7.1.6	合作解体的早期信号	claim	CL-RM-010572		0.70	A	2009 年 1 月 David Holland 提出 md5 已不可靠，应否在 passwd.conf 文档中弃用或建议更换——口令散列代际更替的早期信号。	可推	claim 复用（S2 先库后网）
+V01.7.2.4	文件系统的层次结构	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V01.7.2.4	文件系统的层次结构	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V01.7.3.1	贝尔实验室退出的决策语境	fulltext_fact	kf-bell-10024-1388	10024	0.235	C	Tin Goose是贝尔实验室的飞机	可推	全文补证候选（S1 命中即复用，D1 型）
+V01.7.3.1	贝尔实验室退出的决策语境	claim	CL-RM-012885		1.30	A	dmr 亲笔：贝尔实验室以 Norman Wilson 的 v6 文件服务器挂载 RK05 磁盘镜像档案，尚存 VAX 11/750 可跑 Sixth Edition shell 并称有令人毛骨悚然的亲切感——V6 活态档案一手史料	可推	claim 复用（S2 先库后网）
+V01.7.3.1	贝尔实验室退出的决策语境	claim	CL-RM-012877		1.30	A	Turner 当事人回忆：1976 年在贝尔实验室与 PWB/UNIX（Edition 6 基础）开发者共事，inode 1 坏块文件方案失败缘由及 cpio（初为 cpi 与 cpo）起源——一手口述史	可推	claim 复用（S2 先库后网）
+V01.7.4.4	档案保存与口述史	ref_title	827	827	0.259	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）
+V01.7.5.3	文档记录的组织方式	claim	CL-3-073		0.70	A	Codd 1970 年提出数据的关系模型，主张大型数据银行的未来用户不必知道数据在机器中的组织方式。	可推	claim 复用（S2 先库后网）
+V01.7.5.4	口述史与档案的互补	ref_title	827	827	0.228	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）
+V01.7.7.5	同期系统的性能与规模	claim	CL-7-019		1.10	A	FreeBSD 项目约在 2001 年启动内核多线程化任务（SMPng），首要目标是通过允许并发访问内核来提升多处理器系统的性能。	可推	claim 复用（S2 先库后网）
+V01.8.1.3	机器的空闲时间与技术条件	claim	CL-RM-015227		1.10	A	Peter Avalos 报 w 与 finger 的空闲时间语义变更：旧行为仅用户真实交互才更新，现终端有任何输出（irc/邮件）即刷新，请求恢复旧行为。	可推	claim 复用（S2 先库后网）
+V01.8.1.4	从纸带到文件系统的雏形	claim	CL-RM-011302		0.70	A	2013年9月17日Justin T. Gibbs宣布OpenZFS跨平台项目成立，FreeBSD与illumos等平台联合保障ZFS文件系统的持续演进。	可推	claim 复用（S2 先库后网）
+V01.8.1.4	从纸带到文件系统的雏形	claim	CL-RM-010723		0.70	A	1998 年 4 月 allen campbell 论述读写 portal 文件系统的统一管理模型优势——FreeBSD 配置数据库（configfs）设计的当事人思辨。	可推	claim 复用（S2 先库后网）
+V01.8.1.5	偶然起点的史学处理	sacred	2203		0.230	C	开源不等于无版权	可推	史观参照（不作证据，仅定题面归属）
+V01.8.2.3	文件系统与设备接口	claim	CL-4-111		1.30	A	麒麟 LmBench 测试显示 Kylin 2.0 在系统调用开销、文件系统与虚存延迟上与 FreeBSD 5.3 基本相当，但与 RedHat 9.0 仍有差距。	可推	claim 复用（S2 先库后网）
+V01.8.2.3	文件系统与设备接口	claim	CL-4-110		1.30	A	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V01.8.3.4	分工与协作的早期形态	sacred	2683		0.243	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V01.8.3.6	团队规模的自我限制	claim	CL-RM-010344		1.30	A	2010 年 Philip M. Gollucci 自述 ruby@ 团队实际仅四人（stas、dinoex、pgollucci、clsung）并为 portupgrade 寻求志愿者——语言团队规模的当事人盘点	可推	claim 复用（S2 先库后网）
+V01.8.5.2	团队协作的史料分布	sacred	320		0.229	C	14.5 文档与代码的本体平等	可推	史观参照（不作证据，仅定题面归属）
+V01.8.5.5	口述史与档案的张力	ref_title	827	827	0.230	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）
+V01.8.5.6	起源史的反叙事写作	sacred	2683		0.241	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V01.8.7.5	档案缺口与补偿方法	ref_title	5908	5908	0.229	C	L. (2009/2011). The Day the Infant Internet Uttered its First Words [个人官方网站档案，基于 UCLA IMP Log 原始记录]. <https://www.lk.cs.	可推	文献线索（须核全文再定 D1/D2）
+V01.8.8.4	分工层级的形成前提	sacred	232		0.255	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V01.8.8.6	分工史的史料凭借	sacred	425		0.241	C	22.3 数字档案与历史保存	可推	史观参照（不作证据，仅定题面归属）
+V01.8.9.3	文件系统的组织方式	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V01.8.9.3	文件系统的组织方式	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V01.9.1.4	版本序列的快速迭代	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V01.9.2.1	B 语言与系统实现的过渡	claim	CL-1-013		1.10	A	C 语言与 UNIX 系统紧密关联——C 在 UNIX 系统上被开发，系统本身与运行其上的大部分程序均用 C 书写。	可推	claim 复用（S2 先库后网）
+V01.9.2.3	编译器与自举的衔接	claim	CL-RM-010331		1.10	B	2018 年 raichoo 报告为 GHC 添加 DTrace 探针后破坏了编译器作为 bootstrap 的能力，8.4.2 需以旗标禁用 DTrace 作临时对策——可观测性与自举链的意外冲突	可推	claim 复用（S2 先库后网）
+V01.9.4.5	语言与系统的共生现象	claim	CL-1-013		1.10	A	C 语言与 UNIX 系统紧密关联——C 在 UNIX 系统上被开发，系统本身与运行其上的大部分程序均用 C 书写。	可推	claim 复用（S2 先库后网）
+V01.9.8.6	第七版的历史位置	claim	CL-RM-012765		1.10	B	2025年5月2日，G. Branden Robinson 在 linux-man 邮件列表阐述 man 页对齐调整的历史：第七版 Unix（1979）在 nroff 模式渲染 man 页时禁用对齐，BSD 将该禁用保留“直到消亡”；Sun	可推	claim 复用（S2 先库后网）
