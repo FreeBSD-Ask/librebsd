@@ -1,0 +1,84 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V14.1.2.2	完整操作系统的属性跃迁	claim	CL-RM-000402		1.60	A	1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（S2 先库后网）
+V14.1.2.2	完整操作系统的属性跃迁	claim	CL-4-112		1.10	A	USL 起诉加州大学董事会与 BSDi，指控其分发计算机软件侵犯 USL 对 UNIX 操作系统的专有权利。	可推	claim 复用（S2 先库后网）
+V14.1.2.6	延续叙述的版本凭证	sacred	232		0.303	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.1.2.6	延续叙述的版本凭证	sacred	217		0.236	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.1.3.6	群体叙述的档案来源	ref_title	5791	5791	0.289	C	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V14.1.3.6	群体叙述的档案来源	ref_title	5848	5848	0.289	C	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档，Message-ID: <8812070154.AA18358@okeeffe.Berkeley.EDU>） 1988	可推	文献线索（须核全文再定 D1/D2）
+V14.1.4.1	Seismo 分支的公告起点	fulltext_summary	91	91	0.285	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V14.1.4.1	Seismo 分支的公告起点	ref_title	10158	10158	0.269	C	FreeBSD news.toml (2017 第13年公告) 2017	可推	文献线索（须核全文再定 D1/D2）
+V14.1.4.1	Seismo 分支的公告起点	ref_title	10159	10159	0.269	C	FreeBSD news.toml (2018 第14年公告) 2018	可推	文献线索（须核全文再定 D1/D2）
+V14.1.5.1	2.10BSD 的 1987 年时点	ref_title	5917	5917	0.221	C	官方版本年表（<https://www.sqlite.org/chronology.html，确>认 SQLite 1.0 于 2000 年 8 月发布） 2000	可推	文献线索（须核全文再定 D1/D2）
+V14.1.8.1	长期维护的传统成因	claim	CL-RM-010307		1.30	A	2024 年 9 月 lang/tcl90 更新至 Tcl 9.0.0 正式版——Tcl 大版本 8→9 跨越即日进入 FreeBSD ports（Pietro Cerutti 长期维护的 tcltk@ 工作样本）	可推	claim 复用（S2 先库后网）
+V14.1.8.4	持续更新的当代见证	claim	CL-RM-010252		1.30	A	2017 年 1 月 Ebihara 发布 netbsd-hpcmips 预构建镜像（20170109）并以持续更新的镜像系列维持设备可用性——与 zaurus 模式同源的'镜像生命线'	可推	claim 复用（S2 先库后网）
+V14.1.9.5	终点判定的时点依据	sacred	232		0.310	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.1.9.5	终点判定的时点依据	sacred	217		0.241	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.1.9.6	末版叙述的一手出处	ref_title	5932	5932	0.256	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.2.1.5	背景叙述的发行档案	sacred	232		0.272	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.2.10.6	比较叙述的层级控制	sacred	232		0.279	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.2.2.6	形成叙述的出版档案	sacred	3061		0.265	C	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V14.2.3.1	机器无关层的最终成形	claim	CL-6-212		1.50	A	FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。	可推	claim 复用（S2 先库后网）
+V14.2.4.4	与既有许可的衔接条件	ref_title	6029	6029	0.386	B	Project. *Feature Flags Documentation* [EB/OL]. 获取路径：<https://openzfs.github.io/openzfs-docs/Basic%20Concepts/Feature%20	可推	文献线索（须核全文再定 D1/D2）
+V14.2.4.4	与既有许可的衔接条件	ref_title	6030	6030	0.386	B	'o, T. (2006). *ext4: The Next Generation of Ext2/3 Filesystem* [C]//Linux Symposium 2006. [S.l.]: [s.n.], 2006. 获取路径：<h	可推	文献线索（须核全文再定 D1/D2）
+V14.2.5.1	版本构成的逐项清点	fulltext_fact	kf-bell-10024-005	10024	0.227	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V14.2.5.3	新增代码的来源构成	sacred	2924		0.284	C	FHS 与 FreeBSD 目录结构	可推	史观参照（不作证据，仅定题面归属）
+V14.2.5.5	构成叙述的发行文书	fulltext_fact	kf-bell-10024-005	10024	0.231	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V14.2.6.4	抽象层带来的移植预期	claim	CL-RM-017957		0.90	A	SysV/Xenix ar 拒绝它库中的 global（Symbol 库构建失败）——canranlib 差异带来的移植摩擦	可推	claim 复用（S2 先库后网）
+V14.2.6.6	路线叙述的档案支撑	sacred	232		0.269	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.2.7.1	核心开发者与移植分工	claim	CL-RM-010305		1.30	A	2018 年 3 月 OFED v4.9 大合并（bsd_rdma_4_9）中 Navdeep Parhar 阻击 Hans Petter Selasky：'别急——受影响方确认过 shim 够用吗'——厂商主导大规模合并遭遇核心开发者 K	可推	claim 复用（S2 先库后网）
+V14.2.7.1	核心开发者与移植分工	claim	CL-RM-000017		1.30	A	Matthew Dillon 是 DragonFlyBSD 创始人、前 FreeBSD 核心开发者，主导 HAMMER2 文件系统设计	可推	claim 复用（S2 先库后网）
+V14.2.7.3	外部贡献者的进场方式	claim	CL-RM-010232		1.60	A	2019 年 10 月 Sevan Janiyan 确认外部贡献者的 netcat 补丁已提交——NetBSD 基础工具现代化中外来补丁收编的微观样本（同库含 whois 递归修复与 OpenBSD 改动回拉）	可推	claim 复用（S2 先库后网）
+V14.2.7.3	外部贡献者的进场方式	claim	CL-4-105		1.30	A	CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。	可推	claim 复用（S2 先库后网）
+V14.3.1.2	源码许可的成本壁垒	ref_title	5845	5845	0.234	C	&T UNIX 许可费表（1983-1988） 1983	可推	文献线索（须核全文再定 D1/D2）
+V14.3.1.4	限制结构的法律条理	sacred	232		0.249	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.3.2.5	倡导叙述的一手文本	sacred	3061		0.348	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V14.3.2.5	倡导叙述的一手文本	ref_title	5682	5682	0.272	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.3.3.2	正式发行的口径来源	ref_title	5932	5932	0.300	B	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.3.3.3	诸说并列的年表差异	sacred	661		0.245	C	我们思想的来源是哪？ 	可推	史观参照（不作证据，仅定题面归属）
+V14.3.3.5	公告文本的档案存世	fulltext_summary	91	91	0.277	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V14.3.3.6	断代结论的表述分寸	ref_title	1738	1738	0.262	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V14.3.3.6	断代结论的表述分寸	ref_title	1739	1739	0.262	C	University of California, Berkeley. Changes to the Kernel in 4.1bsd[M]. [存疑] University of California, Berkeley 2026	可推	文献线索（须核全文再定 D1/D2）
+V14.3.3.6	断代结论的表述分寸	ref_title	1759	1759	0.262	C	DEFENSE TECHNICAL INFORMATION CENTER. ADA403525[R/OL]. [S.l.: DTIC], [s.d.]. [存疑 Kevin R. Smith March 2002	可推	文献线索（须核全文再定 D1/D2）
+V14.3.4.6	构成叙述的文档依据	sacred	232		0.250	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.3.5.1	许可证条款的框架	fulltext_summary	114	114	0.221	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V14.3.5.1	许可证条款的框架	fulltext_summary	942	942	0.221	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V14.3.5.1	许可证条款的框架	fulltext_summary	949	949	0.221	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V14.3.5.2	自由再分发的许可能级	claim	CL-RM-011950		1.60	A	4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（S2 先库后网）
+V14.3.5.2	自由再分发的许可能级	claim	CL-RM-000402		1.60	A	1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（S2 先库后网）
+V14.3.7.5	关系判定的档案支撑	sacred	232		0.277	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.3.9.5	历史书写的接收史	ref_title	5656	5656	0.240	C	Campbell-Kelly 2007 对 UNIX 史书写的综述 2007	可推	文献线索（须核全文再定 D1/D2）
+V14.3.9.5	历史书写的接收史	claim	CL-RM-010174		1.30	A	2013 年 1 月社区作者为庆祝 NetBSD 二十周年征集'20 件大事'并自述已完成多次早期历史访谈——社区自我历史书写的元时刻（该列表本身即史料）	可推	claim 复用（S2 先库后网）
+V14.4.1.4	形成背景的公告文本	sacred	232		0.230	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.4.2.1	序列中的时点站位	ref_title	5932	5932	0.272	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.4.3.2	OSI 网络支持的加入	fulltext_fact	kf-bell-10018-1663	10018	0.247	C	van der Bijl于1913年加入Western Electric，是University of Chicago的Michelson和Millikan的 protégé	可推	全文补证候选（S1 命中即复用，D1 型）
+V14.4.3.3	自由再分发 NFS 的并入	claim	CL-RM-011950		1.60	A	4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（S2 先库后网）
+V14.4.3.3	自由再分发 NFS 的并入	claim	CL-RM-000402		1.60	A	1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（S2 先库后网）
+V14.4.3.4	POSIX.1 设施的转化	sacred	239		0.288	C	10.15 无为与有为的转化	可推	史观参照（不作证据，仅定题面归属）
+V14.4.3.6	构成叙述的公告原文	ref_title	5693	5693	0.328	B	Foundation 2006-04-05 PRWeb 公告原文 2006	可推	文献线索（须核全文再定 D1/D2）
+V14.4.3.6	构成叙述的公告原文	ref_title	5854	5854	0.232	C	K. (1988.12.7) Net/1 USENET 公告原文（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V14.4.5.1	外部参与者的进场路径	sacred	2705		0.233	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V14.4.5.1	外部参与者的进场路径	sacred	2089		0.228	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V14.4.5.2	Guelph 的 NFS 移植	sacred	2089		0.237	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V14.4.7.6	性质判断的文本凭据	sacred	232		0.262	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.4.7.6	性质判断的文本凭据	fulltext_summary	91	91	0.242	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V14.4.8.4	与 Tahoe 定位的比较	fulltext_fact	1003	3565	0.261	C	UNIX 4.0 Overview 作者与定位（Dolotta/Haight/Petruccelli，PWB 线）	可推	全文补证候选（S1 命中即复用，D1 型）
+V14.4.9.3	商业支持的定价逻辑	sacred	2777		0.221	C	说明：	可推	史观参照（不作证据，仅定题面归属）
+V14.5.1.2	AT&T 代码的清退目标	ref_title	5682	5682	0.331	B	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.5.1.5	发起叙述的一手文本	ref_title	5682	5682	0.291	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.5.2.4	内核残留的清退难点	sacred	2496		0.248	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V14.5.2.6	推进叙述的时间表	ref_title	5682	5682	0.280	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.5.3.1	志愿者招募的组织形式	claim	CL-RM-018328		1.30	A	Baltimore 终端房志愿者招募（免费注册换取劳力）	可推	claim 复用（S2 先库后网）
+V14.5.3.2	匿名贡献的收集与核实	ref_title	5635	5635	0.228	C	BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实) 2026	可推	文献线索（须核全文再定 D1/D2）
+V14.5.3.6	招募叙述的当事记录	claim	CL-RM-010302		0.70	A	2013 年 10 月 Mellanox 工程师自述'Mellanox 最近才开始支持 FreeBSD'（9.2 驱动由 Isilon 前雇员移植）——硬件厂商多平台支持决策的当事记录	可推	claim 复用（S2 先库后网）
+V14.5.4.1	代码审计的范围划定	sacred	3057		0.368	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V14.5.4.2	残留文件的清退过程	ref_title	5682	5682	0.308	B	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.5.4.4	审计方法的可信度	sacred	2496		0.221	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V14.5.5.4	形成宣告的公告文书	fulltext_summary	91	91	0.243	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V14.5.5.4	形成宣告的公告文书	fulltext_fact	kf-bell-10024-005	10024	0.225	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V14.5.5.5	时点判定的年表对齐	ref_title	10073	10073	0.229	C	NetBSD GSoC project proposals/参与年表 (镜像) 2010	可推	文献线索（须核全文再定 D1/D2）
+V14.5.5.6	形成叙述的当事人注记	ref_title	5932	5932	0.297	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V14.5.6.5	构成叙述的一手公告	sacred	3061		0.356	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V14.5.7.4	关系判定的公告凭证	sacred	232		0.263	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V14.5.8.5	鸟群聚会的动员效应	ref_title	10146	10146	0.232	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V14.6.1.6	许可叙述的一手公告	sacred	3061		0.321	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V14.6.1.6	许可叙述的一手公告	fulltext_summary	1038	1038	0.223	C	FreeBSD Foundation Submission of Project Proposals Jan 2013 Introduction: The FreeBSD Foundation is a 501(c)(3) non-prof	可推	全文综述候选（D1 型，核对原文后落块）

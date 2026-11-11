@@ -1,0 +1,15 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V17.1.1.3	版本序列的时段刻度	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V17.1.2.5	共同体的地理分布	fulltext_fact	kf-bell-10024-1367	10024	0.244	C	A. G. Chynoweth 和 S. E. Miller 于1979年由 Academic Press 出版 Optical Fiber Telecommunications	可推	全文补证候选（S1 命中即复用，D1 型）
+V17.1.3.6	空缺叙述的文献依据	sacred	232		0.220	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V17.1.3.6	空缺叙述的文献依据	claim	CL-RM-025057		0.70	A	追问 unsigned char 提升的文献依据	可推	claim 复用（S2 先库后网）
+V17.2.1.6	作者叙述的一手材料	sacred	232		0.233	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V17.2.3.3	后续教材的效仿模式	fulltext_fact	kf-bell-10024-1367	10024	0.248	C	A. G. Chynoweth 和 S. E. Miller 于1979年由 Academic Press 出版 Optical Fiber Telecommunications	可推	全文补证候选（S1 命中即复用，D1 型）
+V17.3.1.3	二次开发的练习场	fulltext_fact	kf-bell-10024-1393	10024	0.227	C	Project X system 是为二战开发的系统	可推	全文补证候选（S1 命中即复用，D1 型）
+V17.3.2.6	路线叙述的论文出处	sacred	3061		0.346	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V17.4.1.4	学生资助与购机可能	ref_title	10063	10063	0.222	C	The OpenBSD Foundation — Foundation Activities (2014 GSoC 5 学生) 2014	可推	文献线索（须核全文再定 D1/D2）
+V17.4.1.4	学生资助与购机可能	ref_title	10076	10076	0.222	C	FreeBSD Quarterly Status Report 2010Q2 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V17.4.1.4	学生资助与购机可能	ref_title	10092	10092	0.222	C	FreeBSD Status Report April-June 2010 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V17.4.1.6	学制叙述的校方出处	sacred	232		0.227	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V17.4.2.2	入学后的 1988 年专业转向	ref_title	2446	2446	0.247	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V17.4.2.2	入学后的 1988 年专业转向	ref_title	2660	2660	0.247	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）

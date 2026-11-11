@@ -1,0 +1,144 @@
+db	path	table	rows	columns	key_columns	status	trigger_keywords
+original_sources	03-原始史料库/original_sources.duckdb	blocks	50	12	id	OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+original_sources	03-原始史料库/original_sources.duckdb	cross_references	56	12	id	OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+original_sources	03-原始史料库/original_sources.duckdb	files	605	22	id,file_path,title	OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+original_sources	03-原始史料库/original_sources.duckdb	kaoju_records	572	6	id	OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+original_sources	03-原始史料库/original_sources.duckdb	schema_meta	9	2		OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+original_sources	03-原始史料库/original_sources.duckdb	security_vulnerabilities	7	17	id	OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+original_sources	03-原始史料库/original_sources.duckdb	update_log	21	9	id	OK	当事人档案/手稿/备忘录/专利/判决/信件/技术报告
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	db_meta	4	3		OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	fact_check_records	49	9	id,file_path	OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	freebsd_sa	713	16	id,date	OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	material_cross_references	667	7	id	OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	materials	24129	23	id,title,author,commit_hash	OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	nvd_cve_metadata	1770	18		OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	references	17355	10	id	OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	schema_meta	13	2		OK	项目/文件/提交/开发者/仓库元数据
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	update_log	2	9	id	OK	项目/文件/提交/开发者/仓库元数据
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	branches	410	4	commit_hash	OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	codev_network	6	4		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	commit_files	8274603	7	id,commit_hash,file_path	OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	commits	1294851	12	commit_hash	OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	contributors	5671	7		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	db_meta	7	3		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	org_contributions	66	6		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	repos	3	14		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	tags	4042	8		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	tech_features	37	11		OK	FreeBSD/提交/修订/committer/内核
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	tech_roadmap	49	7		OK	FreeBSD/提交/修订/committer/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	branches	791	4	commit_hash	OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	commit_files	27271149	7	id,commit_hash,file_path	OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	commits	1999412	12	commit_hash	OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	contributors	1545	7		OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	db_meta	7	3		OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	org_contributions	24	6		OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	repos	2	14		OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	tech_features	37	11		OK	NetBSD/提交/修订/内核
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	tech_roadmap	49	7		OK	NetBSD/提交/修订/内核
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	branches	6	4	commit_hash	OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	commit_files	2307753	7	id,commit_hash,file_path	OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	commits	491195	12	commit_hash	OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	contributors	1031	7		OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	db_meta	7	3		OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	org_contributions	11	6		OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	repos	3	14		OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	tech_features	37	11		OK	OpenBSD/提交/修订/安全
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	tech_roadmap	46	7		OK	OpenBSD/提交/修订/安全
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	branches	129	4	commit_hash	OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	commit_files	1768429	7	id,commit_hash,file_path	OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	commits	656207	12	commit_hash	OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	contributors	213	7		OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	db_meta	7	3		OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	org_contributions	9	6		OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	repos	3	14		OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	tags	139	8		OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	tech_features	37	11		OK	DragonFly/提交/修订
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	tech_roadmap	46	7		OK	DragonFly/提交/修订
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	branches	65	4	commit_hash	OK	ZFS/OpenZFS/文件系统/提交
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	commit_files	84178	7	id,commit_hash,file_path	OK	ZFS/OpenZFS/文件系统/提交
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	commits	40615	12	commit_hash	OK	ZFS/OpenZFS/文件系统/提交
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	contributors	967	7		OK	ZFS/OpenZFS/文件系统/提交
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	db_meta	5	3		OK	ZFS/OpenZFS/文件系统/提交
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	repos	1	14		OK	ZFS/OpenZFS/文件系统/提交
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	tags	162	8		OK	ZFS/OpenZFS/文件系统/提交
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	branches	909	4	commit_hash	OK	衍生版/发行版/分支
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	commit_files	19575835	7	id,commit_hash,file_path	OK	衍生版/发行版/分支
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	commits	963557	12	commit_hash	OK	衍生版/发行版/分支
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	contributors	9744	7		OK	衍生版/发行版/分支
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	db_meta	6	3		OK	衍生版/发行版/分支
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	repos	8	14		OK	衍生版/发行版/分支
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	tags	4237	8		OK	衍生版/发行版/分支
+cross_source_identity	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/cross_source_identity.duckdb	alignment_log	5	5	id	OK	跨项目/同一人/跨库身份
+cross_source_identity	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/cross_source_identity.duckdb	identity_aliases	80	12		OK	跨项目/同一人/跨库身份
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	branches	4	4	commit_hash	OK	illumos/Solaris/提交
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	commit_files	298721	7	id,commit_hash,file_path	OK	illumos/Solaris/提交
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	commits	23238	12	commit_hash	OK	illumos/Solaris/提交
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	contributors	1161	7		OK	illumos/Solaris/提交
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	db_meta	5	3		OK	illumos/Solaris/提交
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	repos	1	14		OK	illumos/Solaris/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	branches	76	4	commit_hash	OK	SSH/OpenSSH/协议/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	commit_branches	76	3	commit_hash	OK	SSH/OpenSSH/协议/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	commits	14372	12	commit_hash	OK	SSH/OpenSSH/协议/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	contributors	172	7		OK	SSH/OpenSSH/协议/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	db_meta	6	3		OK	SSH/OpenSSH/协议/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	repos	1	14		OK	SSH/OpenSSH/协议/提交
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	tags	164	8		OK	SSH/OpenSSH/协议/提交
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	branches	1	4	commit_hash	OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	commit_branches	1	3	commit_hash	OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	commit_files	7459	7	id,commit_hash,file_path	OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	commits	35	12	commit_hash	OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	contributors	1	7		OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	db_meta	5	3		OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	repos	1	14		OK	Apple/SSH/移植
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	tags	36	8		OK	Apple/SSH/移植
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	branches	70	4	commit_hash	OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	commit_branches	40	3	commit_hash	OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	commit_files	362193	7	id,commit_hash,file_path	OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	commits	2016	12	commit_hash	OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	contributors	43	7		OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	db_meta	11	3		OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	repos	42	14		OK	Darwin/macOS/Apple/提交
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	tags	2058	8		OK	Darwin/macOS/Apple/提交
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	branches	1	4	commit_hash	OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	codev_network	3604	4		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	commit_files	3132751	7	id,commit_hash,file_path	OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	commits	1474341	12	commit_hash	OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	contributors	39865	7		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	db_meta	5	3		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	org_contributions	40	6		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	repos	1	14		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	tags	939	8		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	tech_features	37	11		OK	Linux/内核/提交/Linus
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	tech_roadmap	46	7		OK	Linux/内核/提交/Linus
+cross_indexes	10-交叉索引/cross_indexes.duckdb	blocks	21	12	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	concept_history	21	7	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	cross_references	15	12	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	files	55	22	id,file_path,title	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	organization_index	14	8	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	person_bio_research	2265	25		OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	person_records	1141	14	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	schema_meta	9	2		OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	terminology_index	256	11	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+cross_indexes	10-交叉索引/cross_indexes.duckdb	update_log	43	9	id	OK	人名/主题/命令/术语/年代/机构/概念/传记
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	blocks	9822	12	id	OK	章节元数据/交叉引用/引文记录/时间线
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	build_citation_records	4	12	id,reference_id	OK	章节元数据/交叉引用/引文记录/时间线
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	chapter_metadata	181	9	id,title	OK	章节元数据/交叉引用/引文记录/时间线
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	files	12	22	id,file_path,title	OK	章节元数据/交叉引用/引文记录/时间线
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	schema_meta	10	2		OK	章节元数据/交叉引用/引文记录/时间线
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	timeline_records	19	6	id	OK	章节元数据/交叉引用/引文记录/时间线
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	update_log	18	9	id	OK	章节元数据/交叉引用/引文记录/时间线
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_arrow	5	12		OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_arrow_alternative	1	9	id	OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_arrow_evidence	0	11	id,evidence_id	OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_arrow_status_log	0	8	id	OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_arrow_temporal	1	6		OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_chain	1	14		OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_counterfactual	0	14	id	OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	causal_node	6	13	title	OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	chain_cross_ref	0	7	id	OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	schema_meta	9	2		OK	因果/影响/前因后果
+causal_graph	04-现代研究文献/causal_graph.duckdb	update_log	4	5	id	OK	因果/影响/前因后果
+rowmine_traversal	04-现代研究文献/rowmine_traversal.duckdb	batch_log	43	11		OK	行级遍历/块定位/留痕
+rowmine_traversal	04-现代研究文献/rowmine_traversal.duckdb	bot_rules	35	4	id	OK	行级遍历/块定位/留痕
+rowmine_traversal	04-现代研究文献/rowmine_traversal.duckdb	event_window	9	12	id	OK	行级遍历/块定位/留痕
+rowmine_traversal	04-现代研究文献/rowmine_traversal.duckdb	msg_state	318453	5		OK	行级遍历/块定位/留痕

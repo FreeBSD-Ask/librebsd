@@ -1,0 +1,79 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V16.1.1.1	源代码共享的校园传统	sacred	2157		0.268	C	1.2 GNU 操作系统和自由软件运动	可推	史观参照（不作证据，仅定题面归属）
+V16.1.2.6	许可叙述的文本依据	sacred	232		0.242	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V16.1.3.5	前史概念的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V16.2.1.5	公告文本的一手存世	fulltext_summary	91	91	0.382	B	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.1.5	公告文本的一手存世	fulltext_summary	1086	1086	0.293	C	Writing for Translation No Ambiguity – No Worries Florian Nadge PRESENTED BY: Fedora Documentation team, Red Hat ECS CC-	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.1.5	公告文本的一手存世	fulltext_summary	1134	1134	0.249	C	Licensing of examples October 10, 2008 The Eclipse IP Advisory Committee recommends that the Eclipse board approve and a	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.1.5	公告文本的一手存世	ref_title	5471	5471	0.240	C	tainted code policy 公告 [EB/OL]. 2023. netbsd.org 2023	可推	文献线索（须核全文再定 D1/D2）
+V16.2.1.5	公告文本的一手存世	ref_title	5495	5495	0.240	C	CSRG 1999.7.22 William Hoskins 公告 1999	可推	文献线索（须核全文再定 D1/D2）
+V16.2.1.5	公告文本的一手存世	ref_title	5497	5497	0.240	C	PlayStation.Blog 2010.3.29 公告 ［EB/OL］. <https://blog.eu.playstation.com/2010/03/29/ps3-firmware-3-21-coming-april-1st/> 	可推	文献线索（须核全文再定 D1/D2）
+V16.2.1.6	提出叙述的口述校核	ref_title	5932	5932	0.317	B	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V16.2.10.4	进入过程的摩擦点	sacred	708		0.251	C	论记忆 	可推	史观参照（不作证据，仅定题面归属）
+V16.2.2.2	兼容策略的迁移便利	sacred	2741		0.261	C	4.1 Windows 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V16.2.2.2	兼容策略的迁移便利	sacred	2885		0.261	C	4.2 Linux 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V16.2.2.2	兼容策略的迁移便利	sacred	3032		0.261	C	4.3 macOS 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V16.2.2.3	比旧系统更大的抱负	ref_title	5693	5693	0.359	B	Foundation 2006-04-05 PRWeb 公告原文 2006	可推	文献线索（须核全文再定 D1/D2）
+V16.2.2.3	比旧系统更大的抱负	ref_title	5854	5854	0.254	C	K. (1988.12.7) Net/1 USENET 公告原文（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V16.2.2.6	目标叙述的文本依据	sacred	232		0.239	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V16.2.3.3	拒签保密条款的立场	claim	CL-RM-011256		0.70	A	2008-05-06 社区成员追问 NetBSD 对 GPL v3（含 Tivo 条款）的立场，展开许可证哲学讨论	可推	claim 复用（S2 先库后网）
+V16.2.5.1	基金会的注册时间	fulltext_fact	kf-bell-10018-064	10018	0.269	C	American Telephone & Telegraph Co.于1885年3月3日在纽约注册成立	可推	全文补证候选（S1 命中即复用，D1 型）
+V16.2.5.1	基金会的注册时间	fulltext_summary	926	926	0.237	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.5.1	基金会的注册时间	fulltext_summary	928	928	0.237	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.5.1	基金会的注册时间	fulltext_summary	933	933	0.237	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.5.2	会长制度的组织形态	ref_title	5932	5932	0.289	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V16.2.6.5	条目化的制度效果	ref_title	6146	6146	0.222	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V16.2.6.6	自由清单的阐释权威	sacred	661		0.221	C	我们思想的来源是哪？ 	可推	史观参照（不作证据，仅定题面归属）
+V16.2.7.6	概念定型的文本出处	sacred	3061		0.354	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.2.8.1	运动组织化的推进方式	sacred	2242		0.342	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V16.2.8.1	运动组织化的推进方式	fulltext_summary	926	926	0.241	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.8.1	运动组织化的推进方式	fulltext_summary	928	928	0.241	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.8.1	运动组织化的推进方式	fulltext_summary	933	933	0.241	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.2.8.4	组织资源的筹措渠道	sacred	2705		0.280	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V16.3.1.1	GCC 的首发年月	ref_title	5791	5791	0.399	B	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V16.3.1.1	GCC 的首发年月	ref_title	5848	5848	0.399	B	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档，Message-ID: <8812070154.AA18358@okeeffe.Berkeley.EDU>） 1988	可推	文献线索（须核全文再定 D1/D2）
+V16.3.1.4	首发公告的一手存档	sacred	3061		0.381	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.3.1.4	首发公告的一手存档	ref_title	10137	10137	0.304	B	PostgreSQL list: 转发 Murray Stokely 2005 公告 (18 projects) 2005	可推	文献线索（须核全文再定 D1/D2）
+V16.3.2.5	库许可的特别安排	fulltext_summary	982	982	0.276	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
+V16.3.3.2	工具链的底层定位	claim	CL-RM-010127		1.20	B	2007 年 5 月 Harald Servat 宣布将 PAPI（Performance API）移植到 FreeBSD，底层复用 Joseph Koshy 的 hwpmc(4)/libpmc(3)——FreeBSD 性能计数器生态与学术	可推	claim 复用（S2 先库后网）
+V16.3.3.5	底层工具的维护节奏	claim	CL-RM-010608		0.70	A	2024 年 1 月 Mark Johnston 提议重新导入 kyua，因上游仓库积累了大量错误修复——测试框架基系统化的维护节奏记录。	可推	claim 复用（S2 先库后网）
+V16.3.4.3	命令行编辑与历史功能	claim	CL-RM-012585		1.10	B	作者自述数年前所写 ile 行编辑器：将 VMS 风格命令行与历史编辑移植 Unix 并扩展 emacs 式功能	可推	claim 复用（S2 先库后网）
+V16.3.4.4	外壳工作的雇员身份	fulltext_summary	926	926	0.235	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.3.4.4	外壳工作的雇员身份	fulltext_summary	928	928	0.235	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V16.3.4.4	外壳工作的雇员身份	fulltext_summary	933	933	0.235	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.3.5.6	沿革叙述的版本档案	sacred	232		0.268	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V16.3.7.6	体系叙述的工具文档	sacred	3061		0.338	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.3.8.5	组件之间的接口约定	claim	CL-RM-013176		1.10	A	2013年1月10日 Kenn Humborg 依据其 Linux/VAX 移植经验解开 VS_REGS 0x20080000 之谜：那是 VAXstation 级主板外设中断线与 CPU 中断线之间的接口逻辑寄存器，与 MTPR/MFPR	可推	claim 复用（S2 先库后网）
+V16.3.8.6	清单叙述的发行文档	sacred	232		0.242	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V16.3.9.6	设计叙述的一手文献	sacred	3061		0.358	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.3.9.6	设计叙述的一手文献	fulltext_summary	91	91	0.241	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V16.3.9.6	设计叙述的一手文献	claim	CL-1-124		0.90	A	UTF-8 文本编码由 Rob Pike 与 Ken Thompson 在贝尔实验室 Plan 9 项目中设计，其 1993 年论文为 UTF-8 起源的一手文献。	可推	claim 复用（S2 先库后网）
+V16.4.1.4	制度化的组织载体	fulltext_summary	926	926	0.225	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.4.1.4	制度化的组织载体	fulltext_summary	928	928	0.225	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V16.4.1.4	制度化的组织载体	fulltext_summary	933	933	0.225	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.4.1.6	定型叙述的一手出处	sacred	3061		0.362	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.4.2.6	表述文本的引用规范	sacred	3061		0.339	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.4.3.6	纽带叙述的文本凭证	sacred	232		0.272	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V16.4.4.2	基金会的立场表达	fulltext_summary	926	926	0.230	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.4.4.2	基金会的立场表达	fulltext_summary	928	928	0.230	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V16.4.4.2	基金会的立场表达	fulltext_summary	933	933	0.230	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V16.5.1.5	定本与旧版的差异要点	sacred	3039		0.370	B	基本比较	可推	史观参照（不作证据，仅定题面归属）
+V16.5.2.4	库许可的 1999 年更名调整	fulltext_fact	kf-bell-10022-823	10022	0.242	C	Communications Social Science Research Center于1955年成立，1958年更名为Behavioral Research Center	可推	全文补证候选（S1 命中即复用，D1 型）
+V16.5.2.6	分野叙述的条款文本	sacred	3061		0.328	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V16.5.3.1	GPL v3 的发布日期	sacred	2418		0.282	C	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V16.6.1.1	开源话语的 1998 年分出	ref_title	2549	2549	0.238	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V16.6.1.1	开源话语的 1998 年分出	ref_title	2550	2550	0.238	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V16.6.1.1	开源话语的 1998 年分出	ref_title	2552	2552	0.238	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V16.6.1.2	阵营回应的原则申明	ref_title	2549	2549	0.347	B	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V16.6.1.2	阵营回应的原则申明	ref_title	2550	2550	0.347	B	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V16.6.1.2	阵营回应的原则申明	ref_title	2552	2552	0.347	B	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V16.6.2.6	演变叙述的公告存档	ref_title	5791	5791	0.341	B	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V16.6.2.6	演变叙述的公告存档	ref_title	5848	5848	0.341	B	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档，Message-ID: <8812070154.AA18358@okeeffe.Berkeley.EDU>） 1988	可推	文献线索（须核全文再定 D1/D2）
+V16.6.3.2	去职声明的程序事实	fulltext_summary	91	91	0.276	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V16.6.3.4	双重身份的剥离过程	sacred	2656		0.299	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V16.6.4.2	创始理想的延续声明	ref_title	5693	5693	0.387	B	Foundation 2006-04-05 PRWeb 公告原文 2006	可推	文献线索（须核全文再定 D1/D2）
+V16.6.4.2	创始理想的延续声明	ref_title	5854	5854	0.273	C	K. (1988.12.7) Net/1 USENET 公告原文（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V16.6.4.4	庆典叙述的官方文本	ref_title	2549	2549	0.275	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V16.6.4.4	庆典叙述的官方文本	ref_title	2550	2550	0.275	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V16.6.4.4	庆典叙述的官方文本	ref_title	2552	2552	0.275	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V16.6.5.2	自由与免费的对举口径	sacred	2200		0.255	C	自由/开源软件与免费	可推	史观参照（不作证据，仅定题面归属）

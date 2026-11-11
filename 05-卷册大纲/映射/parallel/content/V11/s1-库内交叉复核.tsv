@@ -1,0 +1,27 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V11.1.3.6	判定分歧的化解与留痕	sacred	388		0.273	C	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
+V11.1.4.1	大学实验室的承接方式	claim	CL-RM-010320		1.30	A	2005 年 OpenBSD-PT 于科英布拉大学物理系先进计算实验室举办聚会，NetBSD-PT 成员亦到场——同一大学实验室成为 BSD 各项目聚会的共享场地	可推	claim 复用（S2 先库后网）
+V11.1.4.1	大学实验室的承接方式	claim	CL-RM-011617		1.20	B	Robert Lake 报道阿尔伯塔大学 PDP 11/45“Chatty Cathy”1986-01-14 运行满 10 万小时，并称该校为 1973 年末 UNIX 首批出贝尔实验室的三所大学之一	可推	claim 复用（S2 先库后网）
+V11.1.4.3	政府实验室的协作网络	claim	CL-1-122		1.30	A	美国国家研究委员会报告指出，个体企业的兴衰流变由人员在大学、政府实验室与私人公司之间的流动所驱动。	可推	claim 复用（S2 先库后网）
+V11.1.5.2	项目监督的层级与频度	sacred	232		0.226	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V11.1.6.3	政府采纳的判定与登记	sacred	2116		0.246	C	何谓 UNIX？	可推	史观参照（不作证据，仅定题面归属）
+V11.1.6.3	政府采纳的判定与登记	sacred	2219		0.246	C	何谓 Linux？	可推	史观参照（不作证据，仅定题面归属）
+V11.1.7.4	技术转移的速度与衰减	fulltext_fact	kf-bell-10019-608	10019	0.231	C	F. J. Biondi 和 E. C. Tolman 将 Bell Labs 的 barrier 技术转移至 Columbia 大学的 SAM Lab	可推	全文补证候选（S1 命中即复用，D1 型）
+V11.2.1.6	收尾阶段的史料留痕	sacred	138		0.235	C	7.2 传统的断裂与重构	可推	史观参照（不作证据，仅定题面归属）
+V11.2.3.1	军民两用的概念界定	sacred	2247		0.397	B	UNIX-like 系统的概念界定	可推	史观参照（不作证据，仅定题面归属）
+V11.3.1.6	地图方法的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V11.3.3.1	麻省理工学院的资助地位	claim	CL-RM-031123		1.10	A	Karl Berry 自行找到 4.4bsd-lite 位于帝国理工学院的 doc.ic.ac.uk	可推	claim 复用（S2 先库后网）
+V11.3.6.2	政府实验室的委托研究	claim	CL-1-122		1.30	A	美国国家研究委员会报告指出，个体企业的兴衰流变由人员在大学、政府实验室与私人公司之间的流动所驱动。	可推	claim 复用（S2 先库后网）
+V11.4.11.1	检索路径的登记要素	doubt_open	2788		0.237	C	〔全量证据复核·待补｜批次 v55a｜源稿 v55a-三源核验-20261014.md｜条 6〕FreeBSD Foundation IRS 990 检索路径 ["FreeBSDFou", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V11.4.2.6	路径叙述的完整度	ref_title	2663	2663	0.246	C	BSD Now EP278: McKusick Real McCoy 片段（2018） Marshall Kirk McKusick 2018	可推	文献线索（须核全文再定 D1/D2）
+V11.4.4.2	资助到位与开发起步	fulltext_fact	kf-bell-10020-573	10020	0.292	C	1967年Automatic Intercept System No. 1A (AIS)开发启动	可推	全文补证候选（S1 命中即复用，D1 型）
+V11.4.7.2	国家档案馆的相关全宗	ref_title	5719	5719	0.302	B	Libraries ArchivesSpace MAC/LCS 全宗 Series 5. Grants and Contracts Files, 1963-1988（archivesspace.mit.edu/repositories/2/	可推	文献线索（须核全文再定 D1/D2）
+V11.4.7.6	档案叙述的层级结构	ref_title	5719	5719	0.257	C	Libraries ArchivesSpace MAC/LCS 全宗 Series 5. Grants and Contracts Files, 1963-1988（archivesspace.mit.edu/repositories/2/	可推	文献线索（须核全文再定 D1/D2）
+V11.4.8.1	项目档案的卷册组织	fulltext_fact	kf-bell-10019-1289	10019	0.232	C	Neil Armstrong与Apollo 11任务相关	可推	全文补证候选（S1 命中即复用，D1 型）
+V11.4.8.1	项目档案的卷册组织	ref_title	10146	10146	0.224	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V11.4.8.3	会议记录的留存情况	claim	CL-3-061		1.30	A	Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。	可推	claim 复用（S2 先库后网）
+V11.4.9.1	回忆材料的类型与存世	ref_title	2446	2446	0.240	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V11.4.9.1	回忆材料的类型与存世	ref_title	2660	2660	0.240	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V11.4.9.2	口述访谈的采集实践	ref_title	2657	2657	0.263	C	CoRecursive Podcast: Brian Kernighan 访谈（2020）——UNIX 史口述访谈 Kernighan, Brian W. 2020	可推	文献线索（须核全文再定 D1/D2）
+V11.4.9.5	口述史的引用规范	sacred	3061		0.348	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V11.4.9.5	口述史的引用规范	ref_title	827	827	0.241	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）

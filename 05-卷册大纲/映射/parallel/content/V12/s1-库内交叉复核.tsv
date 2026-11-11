@@ -1,0 +1,22 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V12.2.1.5	软件积累的目录面貌	sacred	2924		0.236	C	FHS 与 FreeBSD 目录结构	可推	史观参照（不作证据，仅定题面归属）
+V12.2.8.2	致谢名录的收录范围	sacred	2089		0.234	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V12.2.8.3	贡献者名单的复原	claim	CL-RM-011945		1.30	A	4.3BSD-Reno 贡献者名单与四条款 BSD 版权声明原文、Net/1 的 GTDA 出口通用许可：Utah/Jolitz/Torek/FSF/Guido van Rossum 等全名单	可推	claim 复用（S2 先库后网）
+V12.2.8.4	署名与致谢的层级	sacred	232		0.285	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V12.2.8.4	署名与致谢的层级	sacred	2089		0.242	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V12.2.8.4	署名与致谢的层级	sacred	217		0.222	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V12.3.10.6	平台换代的时间线	fulltext_fact	kf-bell-10018-1812	10018	0.280	C	人工交换的时间线为 1878 至 1897 年	可推	全文补证候选（S1 命中即复用，D1 型）
+V12.3.2.3	性能问题的修复记录	fulltext_summary	222	222	0.346	B	IEEE TRANSACTIONS ON COMPUTERS, VOL. 12, DECEMBER 1984 VLSI Processor Architecture JOHN L. HENNESSY Abstract - A process	可推	全文综述候选（D1 型，核对原文后落块）
+V12.3.4.2	终端能力描述的通用格式	claim	CL-3-057		1.20	B	Ken Arnold 1982 年记载屏幕更新与光标移动优化库（curses）的例程均使用 termcap(5) 数据库描述终端能力。	可推	claim 复用（S2 先库后网）
+V12.3.6.5	设计者意图的当事人陈述	claim	CL-RM-012003		0.70	A	Doug Gwyn 回忆与 Ron Natalie 数年前研究以 setreuid 语义扩展完整模拟 saved set-UID——BSD 与 SysV setuid 语义差异的设计史当事人陈述	可推	claim 复用（S2 先库后网）
+V12.3.6.5	设计者意图的当事人陈述	claim	CL-RM-011877		0.70	A	Jerry Schwarz 辩护 Bourne shell 显式 export 系有意设计（区分环境变量与局部变量）——shell 设计决策当事人陈述	可推	claim 复用（S2 先库后网）
+V12.3.9.2	附带文档中的贡献者署名	sacred	2358		0.228	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V12.4.1.3	母版本移植的起点条件	claim	CL-RM-010240		0.90	A	2001 年 4 月 Sridhar Ayengar 宣布将进行 S/390 内核开发——NetBSD 大型机移植的起点宣言（同线程 Dave McGuire 等旧机爱好者聚集，P/390E 卡 80 美元入手）	可推	claim 复用（S2 先库后网）
+V12.4.5.2	大内存带来的设计空间	claim	CL-3-053		1.30	A	McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。	可推	claim 复用（S2 先库后网）
+V12.4.9.4	资源分配的此消彼长	sacred	150		0.226	C	8.2 斩杀线：资源分配的历史哲学	可推	史观参照（不作证据，仅定题面归属）
+V12.5.1.1	作业控制的机制扩展	fulltext_fact	7316	1540	0.326	B	csh 引入作业控制（job control），支持前台/后台任务管理与信号处理，是交互式 shell 的重要创新。	可推	全文补证候选（S1 命中即复用，D1 型）
+V12.5.1.1	作业控制的机制扩展	claim	CL-RM-010065		1.30	A	Greg Ordy 报告带作业控制的 2.8.1 预发布能启动但数条命令即崩	可推	claim 复用（S2 先库后网）
+V12.5.3.1	文件系统的性能诉求	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V12.5.3.1	文件系统的性能诉求	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V12.5.4.2	版本序列的命名衔接	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V12.5.5.6	咬合叙述的档案支撑	sacred	232		0.268	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）

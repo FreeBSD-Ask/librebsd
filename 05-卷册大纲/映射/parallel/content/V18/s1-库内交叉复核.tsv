@@ -1,0 +1,131 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V18.1.1.5	产生叙述的当事文本	sacred	232		0.236	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.1.3.6	首发叙述的一手出处	sacred	3061		0.327	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V18.1.5.2	术语 v2 补丁的流转	ref_title	5682	5682	0.262	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.1.5.2	术语 v2 补丁的流转	claim	CL-RM-010564		1.30	A	2020 年 7 月 Linus Torvalds 亲自介入包容性术语补丁的讨论并建议删节——2020 George Floyd 事件后内核文化战争的最高层现场。	可推	claim 复用（S2 先库后网）
+V18.1.6.1	术语 v3 的定稿过程	ref_title	5682	5682	0.287	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.2.1.5	列表存档的史料地位	ref_title	2460	2460	0.277	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V18.2.2.6	公开化判定的时点依据	sacred	232		0.251	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.3.10.3	双方治理的各自保留	sacred	2344		0.316	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V18.3.10.3	双方治理的各自保留	sacred	2346		0.316	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V18.3.10.3	双方治理的各自保留	sacred	2683		0.252	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V18.3.10.6	生态叙述的史料底座	sacred	3061		0.355	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V18.3.3.4	接口分歧的处理方式	claim	CL-RM-010394		0.70	A	2017 年 12 月 Ed Maste 追查基础包 setuid 位丢失的回归，指出症结或在 libarchive 的处理方式，为权限问题提供权威技术归因。	可推	claim 复用（S2 先库后网）
+V18.3.5.5	早期用户的安装体验	claim	CL-RM-010063		0.70	A	Carter 记 2.8 磁带匆忙拼装的安装体验：文档称 8 小时装完，实际 Makefile 失灵、程序含拼写错误	可推	claim 复用（S2 先库后网）
+V18.3.6.6	组合叙述的文档凭据	sacred	232		0.237	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.3.8.4	分工格局的历史成因	claim	CL-RM-016094		0.70	A	Beverly Schwartz 就 mbuf 初始化提问：m_get 未初始化 mh_paddr 与 mh_len 的历史成因	可推	claim 复用（S2 先库后网）
+V18.3.8.6	格局叙述的文档支撑	sacred	232		0.250	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.4.10.4	理事会选举的量化观察	sacred	72		0.259	C	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V18.4.11.3	行为准则报告的处置流程	claim	CL-RM-010563		1.20	B	2019 年 8 月 Greg Kroah-Hartman 发布内核行为准则委员会首份工作报告（2018-09 至 2019-07）——CoC 治理进入定期报告制度。	可推	claim 复用（S2 先库后网）
+V18.4.11.5	文件系统治理立场的分歧	sacred	388		0.231	C	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
+V18.4.11.5	文件系统治理立场的分歧	fulltext_summary	20	20	0.227	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V18.4.11.5	文件系统治理立场的分歧	fulltext_summary	63	63	0.227	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V18.4.11.5	文件系统治理立场的分歧	fulltext_summary	118	118	0.227	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V18.4.11.5	文件系统治理立场的分歧	sacred	2677		0.227	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V18.4.12.4	个人平台与共同体诉求	sacred	140		0.304	B	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V18.4.12.6	宣言叙述的引用规范	sacred	3061		0.358	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V18.4.14.2	提名与投票的时点表	claim	CL-RM-012452		1.10	A	Quarterman 声明版主去留：USENIX 哲学上拒资助版主，若别处无款将开志愿者提名与 USENET 投票，力主保持版主制	可推	claim 复用（S2 先库后网）
+V18.4.14.6	复原叙述的档案链	ref_title	5682	5682	0.260	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.4.14.6	复原叙述的档案链	sacred	232		0.243	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.4.15.2	术语补丁的第一版冲击	claim	CL-RM-010564		1.30	A	2020 年 7 月 Linus Torvalds 亲自介入包容性术语补丁的讨论并建议删节——2020 George Floyd 事件后内核文化战争的最高层现场。	可推	claim 复用（S2 先库后网）
+V18.4.15.6	制度叙述的公告底料	sacred	232		0.275	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.4.16.1	维护者峰会的停办之争	ref_title	10146	10146	0.224	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V18.4.18.3	确认权边界的交锋	ref_title	5682	5682	0.357	B	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.4.18.4	基金会亏损的背景披露	fulltext_summary	926	926	0.255	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V18.4.18.4	基金会亏损的背景披露	fulltext_summary	928	928	0.255	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V18.4.18.4	基金会亏损的背景披露	fulltext_summary	933	933	0.255	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V18.4.2.2	1.0 的发布时点	sacred	2418		0.272	C	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V18.4.2.6	里程碑叙述的档案底本	ref_title	5932	5932	0.260	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.4.2.6	里程碑叙述的档案底本	sacred	232		0.230	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.4.3.6	治理叙述的文本依据	sacred	232		0.247	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.4.4.3	媒体与共同体的互动	sacred	140		0.268	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V18.4.6.6	标签之争的史料构成	ref_title	5682	5682	0.288	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.4.7.1	Reviewed-by 语义改革的缘起	sacred	2159		0.286	C	GNU 操作系统与自由软件运动的缘起	可推	史观参照（不作证据，仅定题面归属）
+V18.4.7.2	Link 标签提案的源头	ref_title	2462	2462	0.283	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.4.9.4	linux-next 标签的统计观察	sacred	72		0.244	C	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V18.5.1.1	版本说明之争的缘起	ref_title	5682	5682	0.234	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.5.1.6	缘起叙述的帖子序列	ref_title	5682	5682	0.271	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.5.10.5	规则文本的在档核验	ref_title	2666	2666	0.235	C	The Bell System Technical Journal, Vol.57, No.6, Part 2 (July-August 1978): UNIX Time-Sharing System 全卷（22 篇） Bell Telep	可推	文献线索（须核全文再定 D1/D2）
+V18.5.11.2	社会契约的措辞之争	sacred	255		0.323	B	11.4 社会契约论的错误	可推	史观参照（不作证据，仅定题面归属）
+V18.5.11.2	社会契约的措辞之争	sacred	704		0.230	C	论卢森堡主义与社会契约论 	可推	史观参照（不作证据，仅定题面归属）
+V18.5.12.3	名册条目的引用问题	ref_title	6146	6146	0.257	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V18.5.12.3	名册条目的引用问题	ref_title	1991	1991	0.256	C	Mounting NTFS partitions on FreeBSD[EB/OL]. [存疑：存根文件名 'mounting-ntfs-partions-in SIFE Abdelrazak 	可推	文献线索（须核全文再定 D1/D2）
+V18.5.12.3	名册条目的引用问题	ref_title	1840	1840	0.221	C	FreeBSD Magazine[Z]. 2022(3/4). [存疑：题名 Journal-MarchApril-2022] Journal-MarchApril- 2022	可推	文献线索（须核全文再定 D1/D2）
+V18.5.12.6	流程叙述的文档底本	sacred	232		0.259	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.5.13.1	报告文档的转正环节	fulltext_summary	91	91	0.242	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V18.5.14.2	缺陷库渠道的取舍	sacred	388		0.232	C	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
+V18.5.14.3	编译器选择的议题穿插	claim	CL-RM-011517		1.30	A	2011年5月17日 Joerg Sonnenberger 提交细粒度编译器选择补丁并弃用 USETOOLS_GCC/USETOOLS_PCC	可推	claim 复用（S2 先库后网）
+V18.5.15.6	议程叙述的在档线索	sacred	232		0.259	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.5.16.4	测试规则的讨论结论	sacred	736		0.231	C	论测评 	可推	史观参照（不作证据，仅定题面归属）
+V18.5.17.6	补丁投递之争的帖子汇编	ref_title	5682	5682	0.280	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.5.2.1	强制标签的提案内容	ref_title	2462	2462	0.232	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.5.3.3	终审人的公开表态	claim	CL-RM-011147		0.90	A	2008年7月10日 Iain Hibbert 在他人将 NetBSD 蓝牙栈移植回 FreeBSD 的讨论中记录 Maksim Yevmenkin 对 netgraph 框架前景的公开表态，呈现 FreeBSD 与 NetBSD 蓝牙代码	可推	claim 复用（S2 先库后网）
+V18.5.4.6	工具叙述的使用记录	sacred	1794		0.264	C	考据记录	可推	史观参照（不作证据，仅定题面归属）
+V18.5.5.6	声明文本的存档位置	ref_title	2666	2666	0.224	C	The Bell System Technical Journal, Vol.57, No.6, Part 2 (July-August 1978): UNIX Time-Sharing System 全卷（22 篇） Bell Telep	可推	文献线索（须核全文再定 D1/D2）
+V18.5.7.2	峰会筹备的议程征集	ref_title	5682	5682	0.298	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.5.7.2	峰会筹备的议程征集	ref_title	10146	10146	0.240	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V18.5.9.4	选举结果的同期披露	ref_title	3754	3754	0.223	C	USENIX 2004 董事会选举候选人页（McKusick 本人声明） USENIX Association 	可推	文献线索（须核全文再定 D1/D2）
+V18.5.9.6	定稿叙述的存档点	sacred	232		0.260	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.1.5	竞选公告的存档面貌	sacred	232		0.304	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.1.5	竞选公告的存档面貌	sacred	217		0.237	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.10.1	理事会名单的组成公告	ref_title	2647	2647	0.238	C	In re Sony PS3 OtherOS Litigation, 11-18066（9th Cir. 2014）——上诉意见存档 2014	可推	文献线索（须核全文再定 D1/D2）
+V18.6.10.2	纪要公开的推动者	ref_title	5682	5682	0.288	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.6.10.4	主席人选的确认流程	ref_title	2647	2647	0.225	C	In re Sony PS3 OtherOS Litigation, 11-18066（9th Cir. 2014）——上诉意见存档 2014	可推	文献线索（须核全文再定 D1/D2）
+V18.6.10.6	预案文本的在档核实	ref_title	2609	2609	0.338	B	Sonny Bono Copyright Term Extension Act, Pub. L. 105-298 (1998-10-27)——CTEA 法案文本 1998	可推	文献线索（须核全文再定 D1/D2）
+V18.6.10.6	预案文本的在档核实	ref_title	5635	5635	0.277	C	BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实) 2026	可推	文献线索（须核全文再定 D1/D2）
+V18.6.10.6	预案文本的在档核实	ref_title	2666	2666	0.228	C	The Bell System Technical Journal, Vol.57, No.6, Part 2 (July-August 1978): UNIX Time-Sharing System 全卷（22 篇） Bell Telep	可推	文献线索（须核全文再定 D1/D2）
+V18.6.12.3	延续性文档的评审链	ref_title	5682	5682	0.291	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.6.14.3	历届选举的公告序列	doubt_open	2787		0.232	C	〔全量证据复核·待补｜批次 v55a｜源稿 v55a-三源核验-20261014.md｜条 5〕历届 core 选举结果档案 ["历届core选举结果", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V18.6.15.1	章程条款的历史成因	claim	CL-RM-016094		0.70	A	Beverly Schwartz 就 mbuf 初始化提问：m_get 未初始化 mh_paddr 与 mh_len 的历史成因	可推	claim 复用（S2 先库后网）
+V18.6.15.6	章程叙述的当事人文本	sacred	232		0.255	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.16.6	自荐叙述的引用规范	sacred	3061		0.380	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V18.6.17.3	安全审计的议题夹带	sacred	2496		0.255	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V18.6.18.3	递补规则的官方公告	ref_title	2647	2647	0.284	C	In re Sony PS3 OtherOS Litigation, 11-18066（9th Cir. 2014）——上诉意见存档 2014	可推	文献线索（须核全文再定 D1/D2）
+V18.6.18.3	递补规则的官方公告	ref_title	2549	2549	0.231	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V18.6.18.3	递补规则的官方公告	ref_title	2550	2550	0.231	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V18.6.18.3	递补规则的官方公告	claim	CL-RM-010530		0.90	A	2000 年 9 月社区第一时间转发 RSA 算法进入公有领域的官方公告——密码学专利史上的标志性时刻在列表的原声。	可推	claim 复用（S2 先库后网）
+V18.6.18.4	资格与信任的对垒	fulltext_fact	kf-bell-10018-106	10018	0.222	C	J.J. Carty 担任 AT&T Engineering Department 的 Chief Engineer	可推	全文补证候选（S1 命中即复用，D1 型）
+V18.6.2.1	峰会筹备的逐步铺开	ref_title	10146	10146	0.235	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V18.6.2.1	峰会筹备的逐步铺开	fulltext_fact	kf-bell-10019-687	10019	0.225	C	ABM防御技术的逐步推进最终促成了1972年与苏联签订的SALT I协议	可推	全文补证候选（S1 命中即复用，D1 型）
+V18.6.2.2	子系统档案的评审链	ref_title	5682	5682	0.297	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.6.3.2	缺陷清理的大讨论	ref_title	5682	5682	0.339	B	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.6.3.6	缺陷讨论的帖证链	ref_title	5682	5682	0.279	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.6.3.6	缺陷讨论的帖证链	sacred	232		0.261	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.4.3	术语补丁的全文流转	claim	CL-RM-010564		1.30	A	2020 年 7 月 Linus Torvalds 亲自介入包容性术语补丁的讨论并建议删节——2020 George Floyd 事件后内核文化战争的最高层现场。	可推	claim 复用（S2 先库后网）
+V18.6.4.6	选举叙述的公告辑录	sacred	232		0.283	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.4.6	选举叙述的公告辑录	sacred	217		0.221	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.5.3	选举结果的公布数字	ref_title	3754	3754	0.226	C	USENIX 2004 董事会选举候选人页（McKusick 本人声明） USENIX Association 	可推	文献线索（须核全文再定 D1/D2）
+V18.6.7.2	过时代码的退役提案	ref_title	2462	2462	0.285	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.6.7.3	退役判据的两方僵持	sacred	388		0.235	C	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
+V18.6.7.5	退役提案的收束去向	ref_title	2462	2462	0.313	B	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.6.7.6	复原叙述的公告辑录	sacred	232		0.281	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.6.9.2	术语补丁的第三版流转	claim	CL-RM-010564		1.30	A	2020 年 7 月 Linus Torvalds 亲自介入包容性术语补丁的讨论并建议删节——2020 George Floyd 事件后内核文化战争的最高层现场。	可推	claim 复用（S2 先库后网）
+V18.7.1.6	转抄文本的在档位置	ref_title	2666	2666	0.244	C	The Bell System Technical Journal, Vol.57, No.6, Part 2 (July-August 1978): UNIX Time-Sharing System 全卷（22 篇） Bell Telep	可推	文献线索（须核全文再定 D1/D2）
+V18.7.10.2	不安全语义的碰撞	claim	CL-RM-010592		1.50	A	2020 年 2 月 Maxime Villard 指出 strlcpy 并不安全，应代之以更安全的替代——字符串复制安全语义的代际论战起点。	可推	claim 复用（S2 先库后网）
+V18.7.11.6	实证叙述的用户亲历	sacred	232		0.266	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.7.13.3	列表镜像的前提条件	ref_title	10073	10073	0.255	C	NetBSD GSoC project proposals/参与年表 (镜像) 2010	可推	文献线索（须核全文再定 D1/D2）
+V18.7.14.1	分流提案的首发原文	ref_title	2462	2462	0.245	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.7.14.3	生成内容的披露要求	ref_title	2462	2462	0.331	B	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.7.14.4	提案与要求的叠合	ref_title	2462	2462	0.272	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.7.14.6	提案叙述的首发全文	sacred	232		0.257	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.7.14.6	提案叙述的首发全文	ref_title	2462	2462	0.233	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.7.15.2	贡献门槛的收紧主张	sacred	532		0.221	C	29.3 元伦理学：伦理学主张的伦理学困境	可推	史观参照（不作证据，仅定题面归属）
+V18.7.15.6	保护墙名文的在档确认	ref_title	2666	2666	0.231	C	The Bell System Technical Journal, Vol.57, No.6, Part 2 (July-August 1978): UNIX Time-Sharing System 全卷（22 篇） Bell Telep	可推	文献线索（须核全文再定 D1/D2）
+V18.7.16.4	准则与政策的同框对读	sacred	1905		0.222	C	对读者的要求	可推	史观参照（不作证据，仅定题面归属）
+V18.7.16.6	准则叙述的当事人原话	sacred	232		0.251	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.7.18.1	档案评审的全链复原	ref_title	5682	5682	0.276	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.7.18.6	评审叙述的帖子长链	ref_title	5682	5682	0.293	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V18.7.4.6	落地叙述的当事原话	sacred	232		0.265	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.7.5.3	签署条款的适用对垒	claim	CL-RM-001504		1.10	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V18.7.6.4	演示与提案的同期展开	ref_title	2462	2462	0.238	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V18.7.6.5	分诊案例的操作步骤	claim	CL-RM-028143		0.70	A	给出 VAX 挂死时强制转储的操作步骤	可推	claim 复用（S2 先库后网）
+V18.7.6.6	分诊叙述的一手叙述	sacred	232		0.301	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.7.6.6	分诊叙述的一手叙述	sacred	217		0.235	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.7.7.4	厂商视角的一手陈述	sacred	42		0.248	C	1.10 人生的价值	可推	史观参照（不作证据，仅定题面归属）
+V18.7.7.4	厂商视角的一手陈述	claim	CL-RM-012023		0.70	A	经 Sun 内部人确认：S5R4 的 ldterm STREAMS 模块源自 SunOS 版本——SVR4 中 Sun 血统模块的一手陈述	可推	claim 复用（S2 先库后网）
+V18.7.7.4	厂商视角的一手陈述	claim	CL-RM-010996		0.70	A	2015-04-05 FreeBSD 开发者 Chris Petrik 宣布着手将 E 的登录管理器 entrance 移植到 FreeBSD 并为 enlightenment 增加启动选项，是 E 桌面完整栈 FreeBSD 整合的一手陈	可推	claim 复用（S2 先库后网）
+V18.7.8.2	缺陷库的整改条目	ref_title	6146	6146	0.268	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V18.7.8.4	圈层化批评的回应	claim	CL-RM-018544		0.90	A	maho 对严苛路线批评的回应与坚持	可推	claim 复用（S2 先库后网）
+V18.7.8.5	筹备与改革的交叠推进	sacred	411		0.295	C	21.1 革命与改革的分歧	可推	史观参照（不作证据，仅定题面归属）
+V18.7.9.6	推进叙述的当事原话	sacred	232		0.270	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V18.8.1.1	内核以 C 语言写就的事实	fulltext_summary	813	813	0.232	C	Course : B.E., Branch : Computer Science and Engineering Year : IV CSE Semester : VII CS2028 UNIX INTERNALS UNIT TOPIC I	可推	全文综述候选（D1 型，核对原文后落块）

@@ -1,0 +1,47 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V19.1.2.5	分拆叙述的一手史料	sacred	232		0.223	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.1.2.5	分拆叙述的一手史料	claim	CL-5-009		0.70	A	Kamp 与 Watson 的 Jails 论文（SANE 2000）记载：jails 工作由 servetheweb.com 赞助并捐赠给 FreeBSD 项目，FreeBSD 4.0-RELEASE 是首个包含该代码的发布，后续工作由 	可推	claim 复用（S2 先库后网）
+V19.1.3.2	软件运营机构的重组	fulltext_fact	kf-bell-10018-009	10018	0.226	C	H. B. Thayer于1925年担任AT&TCo总裁，阐述了1907年重组的目的	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.1.3.5	机构演进的当事人叙述	claim	CL-RM-010261		1.20	A	2021 年 10 月 ports 类别治理提案：为纯文本游戏增设 games-text 虚拟类别（2019 年起 games 类别过大的持续讨论）——ports 分类学演进的当事人记录	可推	claim 复用（S2 先库后网）
+V19.1.3.6	沿革叙述的公告底本	sacred	3061		0.402	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V19.1.5.6	企业化的史学评估	sacred	347		0.225	C	16.3 一刻哲学的史学原则	可推	史观参照（不作证据，仅定题面归属）
+V19.2.1.3	基金会的中立供应定位	fulltext_summary	926	926	0.238	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V19.2.1.3	基金会的中立供应定位	fulltext_summary	928	928	0.238	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V19.2.1.3	基金会的中立供应定位	fulltext_summary	933	933	0.238	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V19.2.1.5	技术路线的另起炉灶	fulltext_summary	926	926	0.265	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V19.2.1.5	技术路线的另起炉灶	fulltext_summary	928	928	0.265	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V19.2.1.5	技术路线的另起炉灶	fulltext_summary	933	933	0.265	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V19.2.2.1	UI 组织的成立时间点	fulltext_fact	kf-bell-10018-1792	10018	0.269	C	Acoustical Society of America 于1929年成立	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.2.2.1	UI 组织的成立时间点	fulltext_fact	kf-bell-10022-017	10022	0.269	C	Bell Laboratories 于1925年成立	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.2.3.6	标准之争的史料层级	claim	CL-RM-012142		1.30	A	Sun 销售宣称非 SPARC 不算真 UNIX 兼容，引发 ABI 二进制标准之争的原始提问	可推	claim 复用（S2 先库后网）
+V19.2.4.6	整合叙述的公告底本	sacred	3061		0.390	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V19.3.1.4	公司领导层的构成	ref_title	5844	5844	0.228	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V19.3.1.4	公司领导层的构成	ref_title	5859	5859	0.228	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V19.3.1.6	公司化叙述的公告底本	sacred	232		0.289	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.3.1.6	公司化叙述的公告底本	sacred	217		0.225	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.3.3.6	授权叙述的文书底稿	sacred	232		0.286	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.3.3.6	授权叙述的文书底稿	fulltext_fact	kf-bell-10024-005	10024	0.244	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.3.3.6	授权叙述的文书底稿	sacred	217		0.223	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.3.4.1	Univel 的对等合资架构	ref_title	5924	5924	0.250	C	Capital 投资公告 2002.9 2002	可推	文献线索（须核全文再定 D1/D2）
+V19.3.4.1	Univel 的对等合资架构	ref_title	5930	5930	0.250	C	Capital 投资公告 2007 2007	可推	文献线索（须核全文再定 D1/D2）
+V19.3.4.1	Univel 的对等合资架构	ref_title	5433	5433	0.220	C	Novell 与 UNIX System Laboratories 成立 Univel 合资公司新闻稿（Business Wire 1991-12-12；Wayback 快照 2021-12-24） Novell, Inc.; UNIX S	可推	文献线索（须核全文再定 D1/D2）
+V19.3.4.6	实验叙述的公告底料	sacred	232		0.262	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.3.5.3	双重处境的当事人处境	claim	CL-RM-010630		0.90	A	2011 年 12 月 Matthias Rampke 回应 chromium 包长期停摆，指出移植 chromium 工作量巨大——Chromium 入 pkgsrc 困境的当事人陈述。	可推	claim 复用（S2 先库后网）
+V19.3.5.3	双重处境的当事人处境	claim	CL-RM-010218		0.90	A	2007 年意大利用户自省区域列表困境：'大家更快去 netbsd-help 或 pkgsrc-users 提问，何况 NetBSD 在意大利用户基数可能最小'——区域列表存续困境的当事人自我诊断	可推	claim 复用（S2 先库后网）
+V19.3.5.5	处境叙述的克制要求	fulltext_fact	kf-bell-10024-005	10024	0.253	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.3.6.6	转移叙述的公告辑录	sacred	3061		0.407	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V19.4.1.5	重组叙述的文书底册	sacred	232		0.264	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.4.1.5	重组叙述的文书底册	fulltext_fact	kf-bell-10024-005	10024	0.225	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.4.2.1	BSD/386 的推出时点	fulltext_fact	kf-bell-10024-1391	10024	0.247	C	Type A carrier system 于 1919 年推出	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.4.2.4	产品化叙述的公告凭据	sacred	3061		0.373	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V19.4.2.4	产品化叙述的公告凭据	ref_title	10137	10137	0.297	C	PostgreSQL list: 转发 Murray Stokely 2005 公告 (18 projects) 2005	可推	文献线索（须核全文再定 D1/D2）
+V19.4.2.5	推出时点的多源对勘	ref_title	10073	10073	0.243	C	NetBSD GSoC project proposals/参与年表 (镜像) 2010	可推	文献线索（须核全文再定 D1/D2）
+V19.4.3.6	模式叙述的公告辑录	sacred	232		0.274	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.4.4.6	营销叙述的一手文书	fulltext_fact	kf-bell-10024-005	10024	0.237	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.4.5.6	定价叙述的公告凭据	sacred	3061		0.379	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V19.4.6.6	关系叙述的文书辑要	sacred	232		0.261	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V19.4.6.6	关系叙述的文书辑要	fulltext_fact	kf-bell-10024-005	10024	0.222	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V19.4.7.1	母体公司与衍生厂商的利害	ref_title	2549	2549	0.232	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V19.4.7.1	母体公司与衍生厂商的利害	ref_title	2550	2550	0.232	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V19.4.7.1	母体公司与衍生厂商的利害	ref_title	2552	2552	0.232	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V19.4.8.6	竞合叙述的公告辑录	sacred	3061		0.394	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
