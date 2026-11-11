@@ -1,4 +1,4 @@
-rowmine_id	subsection_id	source_file	block_seq	orig_reason
+rowmine_id	subsection_id	source_file	block_seq	orig_reason	disposition	judged_at	batch	host_subsection
 freebsd-fs.messages.1176034		旧大纲-20261023/第06卷-freebsd的核心技术革新/第132章-freebsd存储栈的ffs与ufs演进/132.1-FFS-与-UFS-UFS2-从-Berkeley-FFS-到-64/132.1.10-年10月BjörnJacke在linuxfsdevel的文件创建时间birtht.md	19	待定位：mount_mfs 挂载点权限竞态（属 1.12）
 freebsd-fs.messages.1176141		旧大纲-20261023/第06卷-freebsd的核心技术革新/第132章-freebsd存储栈的ffs与ufs演进/132.1-FFS-与-UFS-UFS2-从-Berkeley-FFS-到-64/132.1.11-年5月8日PaulEnglish的分区由数据恢复公司恢复只给了镜像他找到可用的备.md	1	待定位：newfs wtfs 末块验证回归（属 1.2 工具面）
 freebsd-fs.messages.1176149		旧大纲-20261023/第06卷-freebsd的核心技术革新/第132章-freebsd存储栈的ffs与ufs演进/132.1-FFS-与-UFS-UFS2-从-Berkeley-FFS-到-64/132.1.11-年5月8日PaulEnglish的分区由数据恢复公司恢复只给了镜像他找到可用的备.md	2	待定位：mkfs.c 错误检查回归与补丁（属 1.2 工具面）

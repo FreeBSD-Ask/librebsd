@@ -2,13 +2,17 @@
 # -*- coding: utf-8 -*-
 """audit_supplement_chain.py — DOC_MINE 补证链门禁（第四十三件，2026-11-10 立）
 
-判据正文：《DOC_MINE补证块格式规则》§八 D1–D5。
-  D1  例外台账 status 合法性；supplemented 行须在补证台账有记录且 ref_id／claim_id 非空
+判据正文：《DOC_MINE补证块格式规则》§八 D1–D6。
+  D1  例外台账 status 合法性；supplemented 行按 resolution_kind 分轨——
+      doc_mine 须在补证台账有记录且 ref_id／claim_id 非空；row_mine／structure 须有 resolution_ref
   D2  DOC_MINE 块形、抬头↔source_type、等级↔纪律串、CID 在库且 supported、等级与库内真值一致
   D3  raw_source.banned_source=0、provenance_url 非空、namespace=ref:<REF_ID>、ref 在 references
   D4  补证新增 ref 的四键（sha256／isbn_doi／source_url／标题＋第一作者＋年份）在库内唯一，
       或已在 reference_duplicates 登记
   D5  含 DOC_MINE 的小节，ROW_MINE＋DOC_MINE 合计 ≤12 块且 ≤16,797 B
+  D6  树内状态与例外台账双向一致：skeleton↔open／claimed、filled↔supplemented、
+      closed/unresolvable↔unresolvable；closed 须有 resolution_reason／closed_at／closed_ref；
+      structure 轨允许树件已删，但须有 approval 文号
 
 用法：
     python audit_supplement_chain.py --check
@@ -65,6 +69,9 @@ MAIL_HEADS = ("当事人自述", "二手转述", "背景性材料", "存疑材�
 MAX_BLOCKS = 12
 MAX_BYTES = 16797
 STATUS_OK = ("open", "supplemented", "unresolvable", "claimed")
+RESOLUTION_KIND_OK = ("none", "doc_mine", "row_mine", "exhausted", "structure")
+TREE_STATUS_OK = ("skeleton", "filled", "closed")
+CLOSED_REASON_OK = ("unresolvable", "merged", "retired")
 
 
 def rel(p: Path) -> str:
@@ -226,6 +233,57 @@ def dup_pairs(db: Path) -> set[tuple[str, str]]:
     return s
 
 
+def scan_tree_state(outline: Path, vol: str | None) -> dict[str, dict]:
+    """扫描树内小节 .md 的状态与块锚：{subsection_id: {...}}。"""
+    out: dict[str, dict] = {}
+    for d in sorted(outline.glob("第*卷-*")):
+        if not d.is_dir():
+            continue
+        m = re.match(r"第(\d+)卷", d.name)
+        if not m:
+            continue
+        v = f"V{int(m.group(1)):02d}"
+        if vol and v != vol:
+            continue
+        for p in d.rglob("*.md"):
+            try:
+                text = p.read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                continue
+            if not text.startswith("---"):
+                continue
+            end = text.find("\n---", 3)
+            if end < 0:
+                continue
+            fm: dict[str, str] = {}
+            for line in text[3:end].splitlines():
+                mm = re.match(r"^(\w+):\s*(.*?)\s*$", line)
+                if mm:
+                    fm[mm.group(1)] = mm.group(2)
+            if not fm.get("section") or not fm.get("subsection"):
+                continue
+            try:
+                sid = (f"{v}.{int(fm['chapter'])}.{fm['section'].split('.')[-1]}"
+                       f".{fm['subsection'].split('.')[-1]}")
+            except (KeyError, ValueError):
+                continue
+            anchors = {
+                f"{kind}:{anchor.strip()}"
+                for kind, anchor in re.findall(
+                    r"<!--\s*(ROW_MINE|MAIL_INSIGHT|DOC_MINE):\s*([^>]+?)\s*-->", text
+                )
+            }
+            out[sid] = {
+                "status": fm.get("status", ""),
+                "reason": fm.get("resolution_reason", ""),
+                "closed_at": fm.get("closed_at", ""),
+                "closed_ref": fm.get("closed_ref", ""),
+                "anchors": anchors,
+                "path": rel(p),
+            }
+    return out
+
+
 def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[dict]:
     F: list[dict] = []
 
@@ -246,23 +304,49 @@ def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[
                 sup_index[sid] = row
 
     total_exc = 0
+    exc_index: dict[str, dict] = {}
     for p in exc_files:
         for row in read_tsv(p):
             total_exc += 1
             sid = (row.get("subsection_id") or "").strip()
             st = (row.get("status") or "").strip()
+            rk = (row.get("resolution_kind") or "").strip()
+            rr = (row.get("resolution_ref") or "").strip()
+            if sid:
+                exc_index[sid] = row
             if st not in STATUS_OK:
                 add("D1", "FAIL", f"{p.name}:{sid} status 非法 {st!r}")
                 continue
+            if rk and rk not in RESOLUTION_KIND_OK:
+                add("D1", "FAIL", f"{p.name}:{sid} resolution_kind 非法 {rk!r}")
+                continue
             if st == "supplemented":
-                s = sup_index.get(sid)
-                if not s:
-                    add("D1", "FAIL", f"{p.name}:{sid} 标 supplemented 但补证台账无记录")
-                else:
-                    if not (s.get("ref_id") or "").strip():
-                        add("D1", "FAIL", f"{p.name}:{sid} 补证台账 ref_id 为空")
-                    if not (s.get("claim_id") or "").strip():
-                        add("D1", "FAIL", f"{p.name}:{sid} 补证台账 claim_id 为空")
+                # 兼容旧台账：无 resolution_kind 列时回退到补证台账判据
+                if not rk:
+                    rk = "doc_mine" if sid in sup_index else "row_mine"
+                if rk == "doc_mine":
+                    s = sup_index.get(sid)
+                    if not s:
+                        add("D1", "FAIL", f"{p.name}:{sid} doc_mine 但补证台账无记录")
+                    else:
+                        if not (s.get("ref_id") or "").strip():
+                            add("D1", "FAIL", f"{p.name}:{sid} 补证台账 ref_id 为空")
+                        if not (s.get("claim_id") or "").strip():
+                            add("D1", "FAIL", f"{p.name}:{sid} 补证台账 claim_id 为空")
+                elif rk == "row_mine":
+                    if not rr:
+                        add("D1", "FAIL", f"{p.name}:{sid} row_mine 但 resolution_ref 为空")
+                elif rk == "structure":
+                    if not rr:
+                        add("D1", "FAIL", f"{p.name}:{sid} structure 但 resolution_ref 为空")
+            elif st == "unresolvable":
+                if not rk:
+                    rk = "exhausted"
+                if rk != "exhausted":
+                    add("D1", "FAIL", f"{p.name}:{sid} unresolvable 但 resolution_kind={rk!r}")
+            elif st in ("open", "claimed"):
+                if rk not in ("", "none"):
+                    add("D1", "FAIL", f"{p.name}:{sid} {st} 但 resolution_kind={rk!r}")
 
     blocks, bad = scan_blocks(outline)
     for b in bad:
@@ -397,6 +481,62 @@ def check(outline: Path, claim_db: Path, ref_db: Path, vol: str | None) -> list[
         if size > MAX_BYTES:
             add("D5", "FAIL", f"{rel(p)} 字节 {size} > {MAX_BYTES}")
 
+    # D6 树内状态 ↔ 例外台账双向一致
+    states = scan_tree_state(outline, vol)
+    for sid, st in states.items():
+        status = st["status"]
+        if status not in TREE_STATUS_OK:
+            add("D6", "FAIL", f"{st['path']} status 非法 {status!r}")
+            continue
+        row = exc_index.get(sid)
+        if status == "skeleton":
+            if not row:
+                add("D6", "FAIL", f"{sid} skeleton 但缺证台账无对应行")
+            elif (row.get("status") or "") not in ("open", "claimed"):
+                add("D6", "FAIL", f"{sid} skeleton 但台账 status={row.get('status')!r}")
+        elif status == "closed":
+            if st["reason"] not in CLOSED_REASON_OK:
+                add("D6", "FAIL", f"{sid} closed 但 resolution_reason={st['reason']!r}")
+            if not st["closed_at"] or not st["closed_ref"]:
+                add("D6", "FAIL", f"{sid} closed 缺 closed_at／closed_ref")
+            if st["reason"] == "unresolvable" and (not row or row.get("status") != "unresolvable"):
+                add("D6", "FAIL", f"{sid} closed/unresolvable 但台账未记 unresolvable")
+        elif status == "filled" and row and (row.get("status") or "") != "supplemented":
+            add("D6", "FAIL", f"{sid} filled 但台账 status={row.get('status')!r}")
+
+    for sid, row in exc_index.items():
+        status = (row.get("status") or "").strip()
+        kind = (row.get("resolution_kind") or "").strip()
+        ref = (row.get("resolution_ref") or "").strip()
+        st = states.get(sid)
+        if status in ("open", "claimed"):
+            if st and st["status"] != "skeleton":
+                add("D6", "FAIL", f"{sid} 台账 {status} 但树 status={st['status']!r}")
+        elif status == "supplemented":
+            if not kind:
+                kind = "doc_mine" if sid in sup_index else "row_mine"
+            if kind == "structure":
+                if not ref:
+                    add("D6", "FAIL", f"{sid} structure 缺 resolution_ref")
+                if st and st["status"] != "closed":
+                    add("D6", "FAIL", f"{sid} structure 但树 status={st['status']!r}")
+                continue
+            if not st:
+                add("D6", "FAIL", f"{sid} 台账 supplemented 但树内无该小节")
+                continue
+            if st["status"] != "filled":
+                add("D6", "FAIL", f"{sid} 台账 supplemented 但树 status={st['status']!r}")
+            if kind == "row_mine":
+                if not ref:
+                    add("D6", "FAIL", f"{sid} row_mine 缺 resolution_ref")
+                elif ref not in st["anchors"]:
+                    add("D6", "FAIL", f"{sid} resolution_ref={ref!r} 树内无对应块锚")
+            elif kind != "doc_mine":
+                add("D6", "FAIL", f"{sid} resolution_kind 非法 {kind!r}")
+        elif status == "unresolvable":
+            if not st or st["status"] != "closed" or st["reason"] != "unresolvable":
+                add("D6", "FAIL", f"{sid} 台账 unresolvable 但树未 closed/unresolvable")
+
     add("INFO", "INFO",
         f"扫描：例外 {total_exc} 行／补证台账 {len(sup_index)} 行／DOC_MINE 块 {len(blocks)} 个"
         f"（合规 {len(live)}）／含块小节 {len(per_file)} 个")
@@ -456,7 +596,8 @@ def selftest() -> int:
     total = 0
 
     def run_case(name: str, blocks: str, exc_rows: list[tuple], sup_rows: list[tuple],
-                 claim_rows: list[tuple], ref_rows: list[tuple], want: str | None) -> None:
+                 claim_rows: list[tuple], ref_rows: list[tuple], want: str | None,
+                 tree_status: str = "filled") -> None:
         nonlocal ok, total
         total += 1
         base = tmp / name
@@ -464,14 +605,21 @@ def selftest() -> int:
         (base / "映射/design/supplement").mkdir(parents=True, exist_ok=True)
         (base / "第37卷-T/sub").mkdir(parents=True, exist_ok=True)
         with (base / "映射/design/exceptions/V37.tsv").open("w", encoding="utf-8", newline="\n") as fh:
-            fh.write("subsection_id\tkind\treason\tproposal\tstatus\tregistered_date\tdate_src\n")
+            fh.write("subsection_id\tkind\treason\tproposal\tstatus\tresolution_kind\t"
+                     "resolution_ref\tresolution_claim_id\tregistered_date\tdate_src\n")
             for r in exc_rows:
                 fh.write("\t".join(r) + "\n")
         with (base / "映射/design/supplement/V37.tsv").open("w", encoding="utf-8", newline="\n") as fh:
-            fh.write("subsection_id\tref_id\tclaim_id\tstatus\n")
+            fh.write("subsection_id\tkind\tref_id\tclaim_id\tsource_type\ttier\tblock_type\tbatch\tstatus\tnote\n")
             for r in sup_rows:
                 fh.write("\t".join(r) + "\n")
-        (base / "第37卷-T/sub/1.1.1-x.md").write_text(blocks, encoding="utf-8", newline="\n")
+        fm = (f"---\nstatus: {tree_status}\nvolume: 37\nchapter: 1\nsection: 1.1\n"
+              f"subsection: 1.1.1\nthesis: 测试\n")
+        if tree_status == "closed":
+            fm += ("resolution_reason: unresolvable\nclosed_at: 2026-11-11\n"
+                   "closed_ref: design/exceptions/V37.tsv#V37.1.1.1\n")
+        fm += "---\n\n"
+        (base / "第37卷-T/sub/1.1.1-x.md").write_text(fm + blocks, encoding="utf-8", newline="\n")
         cdb, rdb = base / "c.duckdb", base / "r.duckdb"
         _mk_claim_db(cdb, claim_rows)
         _mk_ref_db(rdb, ref_rows)
@@ -486,14 +634,17 @@ def selftest() -> int:
 
     C = ("CL-RM-000001", "L4", "supported", "official_doc", "https://example.org/a", 0, "2511")
     R = ("2511", "a" * 64, "", "https://example.org/a", "Test Doc", "Doe", "1993")
-    exc_ok = [("V37.1.1.1", "corpus_gap", "r", "p", "supplemented", "2026-11-09", "git")]
-    sup_ok = [("V37.1.1.1", "2511", "CL-RM-000001", "supplemented")]
+    exc_ok = [("V37.1.1.1", "corpus_gap", "r", "p", "supplemented", "doc_mine",
+               "ref:2511", "CL-RM-000001", "2026-11-09", "git")]
+    sup_ok = [("V37.1.1.1", "corpus_gap", "2511", "CL-RM-000001", "official_doc",
+               "primary", "D1", "b001", "supplemented", "")]
 
     run_case("pos_basic", _block("CL-RM-000001", "L4", "官方文档"), exc_ok, sup_ok, [C], [R], None)
     run_case("neg_level", _block("CL-RM-000001", "L3", "官方文档"), exc_ok, sup_ok, [C], [R], "D2")
     run_case("neg_cid", _block("CL-RM-000999", "L4", "官方文档"), exc_ok, sup_ok, [C], [R], "D2")
     run_case("neg_mailhead", _block("CL-RM-000001", "L4", "当事人自述"), exc_ok, sup_ok, [C], [R], "D2")
-    exc_bad = [("V37.1.1.1", "corpus_gap", "r", "p", "supplemented", "2026-11-09", "git")]
+    exc_bad = [("V37.1.1.1", "corpus_gap", "r", "p", "supplemented", "doc_mine",
+                "ref:2511", "CL-RM-000001", "2026-11-09", "git")]
     run_case("neg_d1", _block("CL-RM-000001", "L4", "官方文档"), exc_bad, [], [C], [R], "D1")
     R2 = ("2512", "b" * 64, "", "https://example.org/a/", "Test Doc", "Doe", "1993")
     run_case("neg_d4", _block("CL-RM-000001", "L4", "官方文档"), exc_ok, sup_ok, [C], [R, R2], "D4")
@@ -504,6 +655,11 @@ def selftest() -> int:
     run_case("neg_d5", many, exc_ok, sup_ok, [C], [R], "D5")
     Cb = ("CL-RM-000001", "L4", "supported", "official_doc", "https://example.org/a", 1, "2511")
     run_case("neg_d3", _block("CL-RM-000001", "L4", "官方文档"), exc_ok, sup_ok, [Cb], [R], "D3")
+    # D6：skeleton 无台账行、closed 无台账行，均须判 FAIL
+    run_case("neg_d6_skel", _block("CL-RM-000001", "L4", "官方文档"), [], [], [C], [R],
+             "D6", tree_status="skeleton")
+    run_case("neg_d6_closed", _block("CL-RM-000001", "L4", "官方文档"), [], [], [C], [R],
+             "D6", tree_status="closed")
 
     print(f"自检：{ok}/{total} 通过")
     return 0 if ok == total else 1

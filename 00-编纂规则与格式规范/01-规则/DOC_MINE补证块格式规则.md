@@ -142,10 +142,10 @@
 
 ### S5 回填与收口
 
-1. `exceptions/V{NN}.tsv` 该行 `status` 由 `open` 改为 `supplemented`（补证成功）或 `unresolvable`（穷尽查证无果，须同时在 `doubts_standalone.duckdb` 登记 `resolution_status=open`）。
-2. 小节 YAML `status`：有块即 `filled`；补证后退回无块者保持 `skeleton`。
-3. 门禁：`audit_supplement_chain.py` D1–D5 全绿；`audit_outline_landing.py` L1–L19；`audit_subsection_design.py`；`audit_title_consistency.py`；卷级回归 `tests/volume_regression.mjs --vol V{NN}`。
-4. 台账守恒：`exceptions` 行数批前批后相等；`open + supplemented + unresolvable = 原 open 总数`。
+1. `exceptions/V{NN}.tsv` 该行 `status` 由 `open` 改为 `supplemented`（补证成功）或 `unresolvable`（穷尽查证无果，须同时在 `doubts_standalone.duckdb` 登记 `resolution_status=open`）；并填 `resolution_kind`／`resolution_ref`／`resolution_claim_id`：doc_mine 记 `ref:<REF_ID>` 与 claim 号，row_mine 记块锚，exhausted 记 `doubts:<id>`，structure 记 approval 文号。
+2. 小节 YAML `status`：有块即 `filled`；穷尽无果改 `closed`＋`resolution_reason: unresolvable`；合并／退役改 `closed`＋`resolution_reason: merged`／`retired`（须结构工单）。不得把已决题留在 `skeleton`。
+3. 门禁：`audit_supplement_chain.py` D1–D6 全绿；`audit_outline_landing.py` L1–L19；`audit_subsection_design.py`；`audit_title_consistency.py`；卷级回归 `tests/volume_regression.mjs --vol V{NN}`。
+4. 台账守恒：`exceptions` 行数批前批后相等（结构处置除外）；`open + claimed + supplemented + unresolvable = 原 open 总数`。
 
 ## 七、禁止项
 
@@ -161,17 +161,18 @@
 ## 八、写入与校验
 
 - **写入**：补证块一律由脚本生成（台账 → 块文本），不得手工拼串；抬头与纪律串按 §4.1／§4.2 由 `source_type` 与 `LV` 两列查表生成，禁止硬编码单串。
-- **门禁**：`脚本与命令/audit_supplement_chain.py`（第四十三件，2026-11-10 立），五项判据：
+- **门禁**：`脚本与命令/audit_supplement_chain.py`（第四十三件，2026-11-10 立），六项判据：
 
 | 判据 | 内容 |
 | ---- | ---- |
-| D1 | `exceptions` 每行 `status` ∈ 四态；`supplemented` 行须在 `supplement/V{NN}.tsv` 有对应记录且 `ref_id`／`claim_id` 非空 |
+| D1 | `exceptions` 每行 `status` ∈ 四态、`resolution_kind` ∈ `none`／`doc_mine`／`row_mine`／`exhausted`／`structure`；`supplemented` 分轨：doc_mine 须在 `supplement/V{NN}.tsv` 有记录且 `ref_id`／`claim_id` 非空，row_mine／structure 须 `resolution_ref` 非空；`unresolvable` 须 `resolution_kind=exhausted` |
 | D2 | 每个 `DOC_MINE` 锚的 `CID` 在 `claim` 存在、`status='supported'`、`LV` 与库内 `evidence_level` 一致；抬头与 `source_type` 按 §4.1 相符；不得出现邮件抬头 |
 | D3 | 对应 `raw_source.source_id='SRC-ref:<REF_ID>'`、`namespace='ref'`、`local_pk` 指向该 ref、`banned_source=0`，且 `provenance_url` 与 `references.file_path` **至少一项非空**（本地 PDF／全文文献无网络 URL 属常态，溯源由 `file_path`＋`sha256` 承担），该 `ref_id` 在 `references` 存在 |
 | D4 | 新入 `references` 的四键（`sha256`／`isbn_doi`／`source_url`／三元组）在库内唯一，或已在 `reference_duplicates` 登记。**重合判定以 `sha256`／`isbn_doi`／三元组为强证据（FAIL）**；`source_url` 单键重合而 `sha256`／三元组均不重合者，视为系列丛书共享集合页 URL（如贝尔官史六卷共用同一 archive.org collection），降 WARN 交人工判读，不自动判重 |
 | D5 | 含 `DOC_MINE` 的小节合计块数 ≤12、字节数 ≤16,797 |
+| D6 | 树内 YAML `status` 与例外台账双向一致：`skeleton`↔`open`／`claimed`；`filled`↔`supplemented`；`closed/unresolvable`↔`unresolvable`；`closed` 须 `resolution_reason` ∈ `unresolvable`／`merged`／`retired` 且 `closed_at`／`closed_ref` 非空；structure 轨允许树件已删，但须 approval 文号 |
 
-- **自检**：`--selftest` 须含正例与反例（错级、伪 CID、禁引来源、重复键、超体量各一），判据为空即视为未立规。
+- **自检**：`--selftest` 须含正例与反例（错级、伪 CID、禁引来源、重复键、超体量、skeleton 无台账、closed 无台账各一），判据为空即视为未立规。
 
 ## 九、变更流程
 
