@@ -1,0 +1,82 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V39.1.1.2	学术协作的开放习惯	fulltext_summary	551	551	0.225	C	PmcTools: Whole-system, low-overhead performance measurement in FreeBSD Joseph Koshy FreeBSD Developer 18 April 2009 Jos	可推	全文综述候选（D1 型，核对原文后落块）
+V39.1.4.4	工具链的移植成本	claim	CL-RM-010127		1.20	B	2007 年 5 月 Harald Servat 宣布将 PAPI（Performance API）移植到 FreeBSD，底层复用 Joseph Koshy 的 hwpmc(4)/libpmc(3)——FreeBSD 性能计数器生态与学术	可推	claim 复用（S2 先库后网）
+V39.1.5.2	商业化压力下的收束	ref_title	5462	5462	0.260	C	Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.ssh.com/> 1999	可推	文献线索（须核全文再定 D1/D2）
+V39.1.8.3	发行节奏的稳定化	sacred	2426		0.228	C	1993 年 6 月：FreeBSD 项目成立	可推	史观参照（不作证据，仅定题面归属）
+V39.1.9.3	项目史料的层级划分	sacred	232		0.253	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V39.10.2.3	捐赠渠道的应急补位	fulltext_summary	926	926	0.257	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V39.10.2.3	捐赠渠道的应急补位	fulltext_summary	928	928	0.257	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V39.10.2.3	捐赠渠道的应急补位	fulltext_summary	933	933	0.257	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V39.10.3.3	心理健康的新议题	fulltext_summary	926	926	0.226	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V39.10.3.3	心理健康的新议题	fulltext_summary	928	928	0.226	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V39.10.3.3	心理健康的新议题	fulltext_summary	933	933	0.226	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V39.10.3.4	启示的适用范围界限	claim	CL-RM-035822		1.10	A	Max Laier 说明 pf 4.1 测试补丁的适用范围	可推	claim 复用（S2 先库后网）
+V39.10.3.4	启示的适用范围界限	claim	CL-RM-033541		1.10	A	PHK 回应中断线程补丁的适用范围与改进方向	可推	claim 复用（S2 先库后网）
+V39.11.1.3	基金会财务的误传	fulltext_summary	926	926	0.229	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V39.11.1.3	基金会财务的误传	fulltext_summary	928	928	0.229	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V39.11.1.3	基金会财务的误传	fulltext_summary	933	933	0.229	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V39.11.1.5	传言生命周期的观察	claim	CL-RM-021223		1.10	A	2007-09-26 Big-8 管理委员会发布 RESULT：经 LCC 与五日评论期后共识决定于 9 月 30 日移除 comp.unix.bsd.bsdi.announce，组史自 1995 年 2 月创建、五年间约百篇审批而终——新	可推	claim 复用（S2 先库后网）
+V39.11.1.5	传言生命周期的观察	claim	CL-RM-020760		1.10	A	Mewburn 答 obsolete 误标：修 sets 清单并述其法——2724 字节，分支维护与 shlib 生命周期的操作细节。	可推	claim 复用（S2 先库后网）
+V39.11.2.4	邮件签名的符号标记	sacred	2269		0.327	B	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V39.12.1.3	公告文本的修辞惯例	fulltext_summary	91	91	0.252	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V39.12.3.1	手册文体的规范底本	ref_title	5817	5817	0.341	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V39.12.3.2	FAQ 的问答体例	ref_title	3870	3870	0.275	C	19841204 CityOfBerkeley BSD检索 bsd 1984 1204 res52501 unknown 1984	可推	文献线索（须核全文再定 D1/D2）
+V39.12.3.3	官方文本的语气控制	ref_title	2549	2549	0.299	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V39.12.3.3	官方文本的语气控制	ref_title	2550	2550	0.299	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V39.12.3.3	官方文本的语气控制	ref_title	2552	2552	0.299	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V39.12.3.4	翻译文本的风格折损	sacred	2524		0.231	C	译文：	可推	史观参照（不作证据，仅定题面归属）
+V39.12.5.2	共同体回应的意见分化	ref_title	2462	2462	0.228	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V39.12.7.5	批评的自我约束限度	claim	CL-RM-017125		1.10	B	Jordan K. Hubbard 对 ports 管理体系批评的著名程序化回应：这类议题每半年准时上演一轮，遂贴出七步循环剧本——有人抱怨三年来人尽皆知的缺陷，他答『请提交原型代码』，抱怨者以没时间为由退场，真有热情者交出暂定方案却无人接	可推	claim 复用（S2 先库后网）
+V39.12.8.4	参照所用的风险提示	claim	CL-RM-015591		0.70	A	CVE-2011-1024 ipcomp 嵌套攻击与 IPsec 启用时的风险提示	可推	claim 复用（S2 先库后网）
+V39.2.1.4	完整交付的责任分配	sacred	2358		0.288	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.2.1.5	工程传统的断裂风险	sacred	138		0.257	C	7.2 传统的断裂与重构	可推	史观参照（不作证据，仅定题面归属）
+V39.2.3.3	文档与代码的同步要求	sacred	320		0.327	A	14.5 文档与代码的本体平等	可推	史观参照（不作证据，仅定题面归属）
+V39.2.3.3	文档与代码的同步要求	sacred	2358		0.289	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.2.7.1	保守选择的适用场合	claim	CL-RM-014002		0.70	A	John Levine 列 fdopen 的适用场合（含 popen 缺位时的管道用法）	可推	claim 复用（S2 先库后网）
+V39.2.7.3	取舍争议的裁决次序	ref_title	2585	2585	0.233	C	Software Freedom Conservancy v. Vizio, Inc., Orange County Superior Court, No. 30-2021-01226723-CU-BC-CJC, Minute Order 	可推	文献线索（须核全文再定 D1/D2）
+V39.3.3.3	文档风格的版本比对	sacred	3039		0.221	C	基本比较	可推	史观参照（不作证据，仅定题面归属）
+V39.3.7.2	法律裁决后的语义收窄	sacred	176		0.248	C	9.4 测量的合法性问题	可推	史观参照（不作证据，仅定题面归属）
+V39.4.1.3	语义漂移的关键节点	claim	CL-RM-010264		1.00	A	2005 年 m88k ELF 二进制链接里程碑达成——该架构从 a.out 时代向现代工具链迁移的关键节点（同期 GCC m88k 支持存续之问）	可推	claim 复用（S2 先库后网）
+V39.4.1.3	语义漂移的关键节点	claim	CL-RM-010653		0.70	A	2011 年 1 月 Matt Thomas 宣布将 matt-nb5-mips64 分支合并回 HEAD，影响所有 mips 端口——NetBSD MIPS64 工程主干化的关键节点。	可推	claim 复用（S2 先库后网）
+V39.4.2.3	吉祥物的二次创作	sacred	2269		0.344	B	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V39.4.4.1	公告文本的固定格式	fulltext_summary	91	91	0.245	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V39.4.4.1	公告文本的固定格式	sacred	2089		0.225	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V39.4.4.3	里程碑叙事的选择	ref_title	10146	10146	0.249	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V39.4.4.4	延期与跳票的措辞	sacred	2310		0.278	C	选择 FreeBSD 的技术原因	可推	史观参照（不作证据，仅定题面归属）
+V39.4.5.5	语言共同体的形成	sacred	2683		0.270	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V39.5.1.2	人员规模的扩张曲线	sacred	2358		0.261	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.5.3.2	候选人产生的实际路径	sacred	2358		0.259	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.5.3.4	任期更替的连续效应	sacred	2339		0.236	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V39.5.4.4	维护者与提交者的职责分工	sacred	2358		0.240	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.5.6.3	商业目标与项目议程	ref_title	2462	2462	0.261	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V39.5.6.3	商业目标与项目议程	sacred	2442		0.222	C	2000 年 9 月：首次核心团队选举	可推	史观参照（不作证据，仅定题面归属）
+V39.5.7.3	边缘贡献者的名录	sacred	2089		0.231	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V39.6.6.1	服务器叙事的黄金年代	fulltext_fact	kf-bell-10018-794	10018	0.234	C	1922至1925年是无线电传播测量的黄金时代	可推	全文补证候选（S1 命中即复用，D1 型）
+V39.6.6.5	位置变化的转折点	claim	CL-RM-011169		0.90	A	2016年5月10日 QLogic 的 David Somayajulu 询问 iflib 网络驱动框架何时并入 CURRENT，K. Macy 答复将随 ixl 更新连带 ixgbe、ixl 驱动一起提交并给出 NextBSD 分支试用途	可推	claim 复用（S2 先库后网）
+V39.6.7.2	用户诉求的过滤环节	sacred	2358		0.280	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.6.8.3	支持渠道的互助网络	sacred	2641		0.343	B	项目支持渠道	可推	史观参照（不作证据，仅定题面归属）
+V39.7.3.2	商业包装的法律余地	fulltext_summary	114	114	0.231	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V39.7.3.2	商业包装的法律余地	fulltext_summary	942	942	0.231	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V39.7.3.2	商业包装的法律余地	fulltext_summary	949	949	0.231	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V39.7.4.3	商业需求对议程的塑造	ref_title	2462	2462	0.274	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V39.7.4.3	商业需求对议程的塑造	sacred	2442		0.233	C	2000 年 9 月：首次核心团队选举	可推	史观参照（不作证据，仅定题面归属）
+V39.7.5.2	捐赠来源的年度结构	sacred	2705		0.236	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V39.7.5.2	捐赠来源的年度结构	ref_title	10146	10146	0.235	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V39.7.5.4	基金会与核心团队的界线	claim	CL-RM-010299		0.90	A	2006 年 7 月 www.uk.NetBSD.org 镜像关闭求助、Andrew Doran 接手——地区镜像基础设施兴衰与核心团队响应	可推	claim 复用（S2 先库后网）
+V39.7.5.4	基金会与核心团队的界线	claim	CL-3-058		0.70	A	Mockus、Fielding 与 Herbsleb 2002 年通过 Apache 与 Mozilla 两个开源项目的数据，量化开发者参与、核心团队规模、代码所有权、生产力、缺陷密度与问题解决间隔。	可推	claim 复用（S2 先库后网）
+V39.7.5.5	公益模式的可持续性	sacred	2705		0.232	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V39.7.5.5	公益模式的可持续性	claim	CL-RM-010280		0.70	A	2003 年用户直问'还有人积极维护 acorn32 吗'——小众端口的可持续性焦虑（同期 -current 构建屡断、Frank Wennmohs 呼吁补丁）	可推	claim 复用（S2 先库后网）
+V39.7.7.1	自由定义的两套文本	sacred	30		0.228	C	1.5a 形式主义的定义	可推	史观参照（不作证据，仅定题面归属）
+V39.7.8.2	共享范围的反复界定	sacred	708		0.223	C	论记忆 	可推	史观参照（不作证据，仅定题面归属）
+V39.8.3.4	分叉后的人员流向	sacred	2358		0.256	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V39.8.5.1	定位话语的调整轨迹	sacred	2725		0.233	C	CheriBSD 官网	可推	史观参照（不作证据，仅定题面归属）
+V39.8.5.1	定位话语的调整轨迹	sacred	2728		0.233	C	FuguIta 官网	可推	史观参照（不作证据，仅定题面归属）
+V39.8.5.1	定位话语的调整轨迹	ref_title	2446	2446	0.228	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V39.8.5.1	定位话语的调整轨迹	ref_title	2660	2660	0.228	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V39.8.6.2	执行机构的权限范围	sacred	2242		0.274	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V39.8.8.5	批评的自我修正能力	claim	CL-RM-017125		1.10	B	Jordan K. Hubbard 对 ports 管理体系批评的著名程序化回应：这类议题每半年准时上演一轮，遂贴出七步循环剧本——有人抱怨三年来人尽皆知的缺陷，他答『请提交原型代码』，抱怨者以没时间为由退场，真有热情者交出暂定方案却无人接	可推	claim 复用（S2 先库后网）
+V39.8.9.4	链条的不可通约处	sacred	780		0.276	C	胜负判定 	可推	史观参照（不作证据，仅定题面归属）
+V39.9.3.3	基础设施的沉默角色	claim	CL-RM-010725		1.30	A	2000 年 7 月 Jordan Hubbard 讨论类 Jumpstart 的自动化安装工具需求——FreeBSD 无人值守安装基础设施的当事人发起。	可推	claim 复用（S2 先库后网）
+V39.9.3.3	基础设施的沉默角色	claim	CL-RM-010619		1.30	A	2008 年 8 月 Aleksey Cheusov 发布 Linux DESTDIR 批量构建结果——pkgsrc 跨平台批量构建基础设施的一次实证成果。	可推	claim 复用（S2 先库后网）
+V39.9.4.3	与传统服务器叙事的断裂	sacred	138		0.241	C	7.2 传统的断裂与重构	可推	史观参照（不作证据，仅定题面归属）
+V39.9.6.3	中文社区的平台更替	sacred	2486		0.267	C	2018 年：FreeBSD 中文社区（CFC）成立	可推	史观参照（不作证据，仅定题面归属）

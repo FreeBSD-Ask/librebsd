@@ -1,0 +1,43 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V38.1.1.4	维护权交接的范围界定	claim	CL-RM-010809		1.60	A	2024年2月 Ashish SHUKLA 因 Go 团队失联自荐维护 lang/go* 端口——FreeBSD Go 端口维护权交接的当事人发起。	可推	claim 复用（S2 先库后网）
+V38.1.1.4	维护权交接的范围界定	claim	CL-RM-010810		1.30	A	2024年2月 Gleb Popov 回应 Ashish SHUKLA 的维护自荐，围绕 go@ 失联与维护权交接展开讨论。	可推	claim 复用（S2 先库后网）
+V38.2.1.3	规模扩张与效能失效	sacred	2358		0.251	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V38.2.1.5	表决通过的治理转折	claim	CL-RM-018130		0.70	A	John Quarterman 澄清 Stargate 与替代方案（首帖）：USENIX 董事会已介入、就长期与成本方案研讨——Stargate 从实验走向商业化的治理转折点	可推	claim 复用（S2 先库后网）
+V38.2.2.2	断续任职的典型个案	claim	CL-RM-010286		0.70	A	2001 年 1 月俄罗斯开发者 Nikolai Saoukh 公开求问'有人有 commit 权吗？我的补丁袋越来越鼓'——外围贡献者因 commit 权缺位而受阻的典型个案（后续自述'缺 committer 配合拖延'）	可推	claim 复用（S2 先库后网）
+V38.2.3.3	文档工程的三类职责	claim	CL-RM-010519		1.30	A	2004 年 1 月 Marcin Zieciak 宣告波兰文档项目（Polska Dokumentacja NetBSD）已启动并公开站点——地方文档工程的成型。	可推	claim 复用（S2 先库后网）
+V38.2.4.2	弹劾条款的适用情形	claim	CL-RM-001504		1.10	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V38.2.4.3	提前选举的触发条件	claim	CL-RM-046531		0.70	A	补充说明 HAMMER 根卷扩展后崩溃的触发条件及其与卸载、重启之间的关系	可推	claim 复用（S2 先库后网）
+V38.2.4.3	提前选举的触发条件	claim	CL-RM-025082		0.70	A	Brian Kantor 详解噬行虫缺陷的触发条件与修复	可推	claim 复用（S2 先库后网）
+V38.2.5.2	活跃门槛的年度口径	sacred	2358		0.239	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V38.2.5.3	提交者规模的数量级	sacred	2358		0.310	B	提交者	可推	史观参照（不作证据，仅定题面归属）
+V38.3.1.1	内存子系统的早期贡献	claim	CL-6-212		1.30	A	FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。	可推	claim 复用（S2 先库后网）
+V38.3.3.3	缺陷清理的组织方式	claim	CL-3-073		0.70	A	Codd 1970 年提出数据的关系模型，主张大型数据银行的未来用户不必知道数据在机器中的组织方式。	可推	claim 复用（S2 先库后网）
+V38.3.4.2	审计框架的移植范围	sacred	2496		0.238	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V38.3.7.4	基金会雇员的岗位分化	fulltext_summary	926	926	0.284	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.3.7.4	基金会雇员的岗位分化	fulltext_summary	928	928	0.284	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V38.3.7.4	基金会雇员的岗位分化	fulltext_summary	933	933	0.284	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.3.1	个人捐赠的分层名录	sacred	2705		0.228	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V38.4.3.3	实物捐赠的计价惯例	sacred	2705		0.233	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V38.4.3.5	赞助关系的长期维持	sacred	2705		0.242	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V38.4.4.6	企业参与的识别线索	sacred	2089		0.242	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V38.4.5.1	会议赞助的联络渠道	fulltext_summary	926	926	0.253	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.1	会议赞助的联络渠道	fulltext_summary	928	928	0.253	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.1	会议赞助的联络渠道	fulltext_summary	933	933	0.253	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.3	法律实体的对外代表	fulltext_summary	926	926	0.234	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.3	法律实体的对外代表	fulltext_summary	928	928	0.234	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.3	法律实体的对外代表	fulltext_summary	933	933	0.234	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.4	开发者峰会的组织者	fulltext_summary	926	926	0.225	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.4	开发者峰会的组织者	fulltext_summary	928	928	0.225	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.4	开发者峰会的组织者	fulltext_summary	933	933	0.225	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V38.4.5.4	开发者峰会的组织者	claim	CL-RM-000502		1.30	A	bhyve 于 2010 年末作为 NetApp 内部项目启动（作者 Neel Natu 与 Peter Grehan），2011-05 在 BSDCan 开发者峰会公布并将源码以 BSD 许可捐赠 FreeBSD，2013-01 并入 1	可推	claim 复用（S2 先库后网）
+V38.4.5.4	开发者峰会的组织者	claim	CL-6-209		1.30	A	GELI 加密启动引导代码开发中，gptldr 引导代码的 16 位汇编 64KB 复制限制问题由 Colin Percival 在 EuroBSDCon 2015 开发者峰会后通过 IRC 提交可扩展的可变 32KB 块复制方案解决。	可推	claim 复用（S2 先库后网）
+V38.5.2.4	闲置提交者的清理	sacred	2358		0.252	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V38.5.3.1	语言团队的自治结构	ref_title	2460	2460	0.235	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V38.5.3.3	母语审校的组织方式	claim	CL-RM-078532		0.70	A	询问 VAX 750 的 CMI 主存总线是否映射进系统地址空间，并推测答案取决于 Sysmap 的组织方式。	可推	claim 复用（S2 先库后网）
+V38.5.3.3	母语审校的组织方式	claim	CL-RM-071560		0.70	A	Nik Clayton 预告 freebsd-doc 将讨论 Handbook 的组织方式，打算调整章节结构便于查找，欢迎新手参与	可推	claim 复用（S2 先库后网）
+V38.5.3.5	构建确认的交付流程	sacred	2524		0.262	C	译文：	可推	史观参照（不作证据，仅定题面归属）
+V38.5.4.2	社区镜像的自愿供给	ref_title	5932	5932	0.249	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V38.5.4.2	社区镜像的自愿供给	ref_title	10078	10078	0.230	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V38.5.4.2	社区镜像的自愿供给	ref_title	10120	10120	0.230	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V38.6.4.2	名录之外的贡献者	sacred	2105		0.392	B	按字母顺序排列的贡献者名录	可推	史观参照（不作证据，仅定题面归属）
+V38.6.4.3	派生贡献者的层级	sacred	232		0.271	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）

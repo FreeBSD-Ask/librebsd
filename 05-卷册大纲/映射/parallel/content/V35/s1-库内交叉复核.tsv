@@ -1,0 +1,32 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V35.1.10.4	许可证记录的来源证据地位	fulltext_summary	114	114	0.249	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V35.1.10.4	许可证记录的来源证据地位	fulltext_summary	942	942	0.249	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V35.1.10.4	许可证记录的来源证据地位	fulltext_summary	949	949	0.249	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V35.1.11.4	名称更迭与记忆断裂的关联	sacred	2375		0.225	C	FreeBSD 版本更迭	可推	史观参照（不作证据，仅定题面归属）
+V35.1.13.4	血统可见度的层级差异	sacred	232		0.279	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V35.1.2.3	Internet 服务栈中 BSD 成分的隐名	fulltext_fact	kf-bell-10021-848	10021	0.225	C	Remalloy/Comol合金中17%Mo-12%Co-71%Fe成分的最大能量积为1.1×10^6 gauss-oersted	可推	全文补证候选（S1 命中即复用，D1 型）
+V35.1.5.6	命名扩散与历史记忆的耦合	sacred	2198		0.258	C	推论	可推	史观参照（不作证据，仅定题面归属）
+V35.1.6.1	GNU 文本对 BSD 系统的并置表述	ref_title	2549	2549	0.313	B	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V35.1.6.1	GNU 文本对 BSD 系统的并置表述	ref_title	2550	2550	0.313	B	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V35.1.6.1	GNU 文本对 BSD 系统的并置表述	ref_title	2552	2552	0.313	B	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V35.1.6.3	广告条款争议与许可记忆的重塑	sacred	55		0.296	C	2.3 记忆的重构性	可推	史观参照（不作证据，仅定题面归属）
+V35.1.7.3	基金会章程里的正名条款	fulltext_summary	926	926	0.245	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V35.1.7.3	基金会章程里的正名条款	fulltext_summary	928	928	0.245	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V35.1.7.3	基金会章程里的正名条款	fulltext_summary	933	933	0.245	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V35.1.9.1	文化挪用概念的定义域	sacred	1792		0.272	C	Linux 文化挪用研究	可推	史观参照（不作证据，仅定题面归属）
+V35.1.9.1	文化挪用概念的定义域	sacred	3055		0.222	C	Linux 文化挪用研究索引	可推	史观参照（不作证据，仅定题面归属）
+V35.1.9.2	描述性与规范性用法的分界	sacred	1792		0.304	B	Linux 文化挪用研究	可推	史观参照（不作证据，仅定题面归属）
+V35.1.9.2	描述性与规范性用法的分界	sacred	3055		0.247	C	Linux 文化挪用研究索引	可推	史观参照（不作证据，仅定题面归属）
+V35.2.1.4	安全基座的归名不对称	fulltext_summary	976	976	0.247	C	Total ASSETS Current Assets Bank Accounts 1000 Wells Fargo - Checking 811,157.93 1001 Wells Fargo - Electronic Payment 5	可推	全文综述候选（D1 型，核对原文后落块）
+V35.2.2.1	bionic 命名的 BSD 与 Linux 混合渊源	sacred	2514		0.240	C	BSD 之名的命名渊源可归纳如下：	可推	史观参照（不作证据，仅定题面归属）
+V35.2.2.3	许可隔离层的设计动机表述	ref_title	2549	2549	0.287	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V35.2.2.3	许可隔离层的设计动机表述	ref_title	2550	2550	0.287	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V35.2.2.3	许可隔离层的设计动机表述	ref_title	2552	2552	0.287	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V35.3.2.6	工具署名核查的程序设计	claim	CL-2-051		0.70	A	Pike 与 Kernighan（1984）提出 UNIX 操作系统的力量来自易于与其他程序组合的程序设计风格，其关键在于软件工具的使用。	可推	claim 复用（S2 先库后网）
+V35.3.2.6	工具署名核查的程序设计	claim	CL-1-051		0.70	A	Pike 与 Kernighan 1984 年论文中称 UNIX 的大部分力量来自一种使程序易于使用且更易于组合的程序设计风格，该风格以软件工具（software tools）的使用为特征，依赖程序如何融入编程环境——如何与其他程序协作——	可推	claim 复用（S2 先库后网）
+V35.3.3.2	标准化文本中的渊源脱嵌	sacred	2918		0.228	C	基本对比	可推	史观参照（不作证据，仅定题面归属）
+V35.3.3.6	接口归名的证据层级划分	sacred	232		0.309	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V35.3.3.6	接口归名的证据层级划分	sacred	217		0.241	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V35.3.6.1	sendmail 的 Berkeley 发行记录	fulltext_summary	207	207	0.222	C	Benchmarking Mythos-Linked Bug Rediscovery Isaac David University College London Arthur Gervais University College Londo	可推	全文综述候选（D1 型，核对原文后落块）
+V35.3.7.4	双向甄别的证据程序	sacred	783		0.232	C	八、事件流程与判定顺序 	可推	史观参照（不作证据，仅定题面归属）
+V35.3.9.6	个案结论的适用范围	claim	CL-RM-033541		0.70	A	PHK 回应中断线程补丁的适用范围与改进方向	可推	claim 复用（S2 先库后网）

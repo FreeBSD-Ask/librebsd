@@ -1,0 +1,36 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V32.1.4.1	二月底的联合创立	fulltext_fact	kf-bell-10018-1635	10018	0.330	B	Acoustical Society of America 于 1929 年正式成立，Fletcher 任首任主席	可推	全文补证候选（S1 命中即复用，D1 型）
+V32.1.5.1	准则文本的移植路径	claim	CL-RM-016931		0.70	A	Miguel Mendez 问 FreeBSD/MIPS 项目现状：在 daemonnews 读过早期报道后回归，比较 sgimips 平台上各 freenix 系统进度（Linux 最先进、NetBSD 支持 SCSI/网卡/串口但无键盘	可推	claim 复用（S2 先库后网）
+V32.1.5.2	自由再分发的首要条款	claim	CL-RM-011950		1.60	A	4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（S2 先库后网）
+V32.1.5.2	自由再分发的首要条款	claim	CL-RM-000402		1.60	A	1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（S2 先库后网）
+V32.1.5.4	社会契约的约束力	sacred	255		0.253	C	11.4 社会契约论的错误	可推	史观参照（不作证据，仅定题面归属）
+V32.1.7.1	BSD 许可的认证路径	sacred	2615		0.309	B	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V32.2.1.2	专职团队的对接方式	claim	CL-RM-011083		1.10	A	2022-05-22 NetBSD 核心开发者 Chuck Silvers 回应 Dmitry Vyukov 关于 netbsd-syzbot 订阅群组的讨论，促成 NetBSD 官方与 Google syzkaller 团队的对接。	可推	claim 复用（S2 先库后网）
+V32.2.1.4	基金会角色的企业推力	fulltext_summary	926	926	0.233	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V32.2.1.4	基金会角色的企业推力	fulltext_summary	928	928	0.233	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V32.2.1.4	基金会角色的企业推力	fulltext_summary	933	933	0.233	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V32.2.3.3	外部贡献者的比例	claim	CL-RM-010232		1.60	A	2019 年 10 月 Sevan Janiyan 确认外部贡献者的 netcat 补丁已提交——NetBSD 基础工具现代化中外来补丁收编的微观样本（同库含 whois 递归修复与 OpenBSD 改动回拉）	可推	claim 复用（S2 先库后网）
+V32.2.3.3	外部贡献者的比例	claim	CL-4-105		1.30	A	CSRG 用 SCCS 管理源码，1983 年设计 socket 接口并在其下实现 TCP/IP，允许少数受信任外部贡献者经 ARPAnet 直接更新源码。	可推	claim 复用（S2 先库后网）
+V32.2.3.4	开源项目的选型偏好	sacred	2107		0.278	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V32.2.3.4	开源项目的选型偏好	claim	CL-3-058		1.30	A	Mockus、Fielding 与 Herbsleb 2002 年通过 Apache 与 Mozilla 两个开源项目的数据，量化开发者参与、核心团队规模、代码所有权、生产力、缺陷密度与问题解决间隔。	可推	claim 复用（S2 先库后网）
+V32.2.3.4	开源项目的选型偏好	claim	CL-1-123		1.30	A	Mockus 等人通过对 Apache 与 Mozilla 两个开源项目的研究，量化了开发者参与、核心团队规模、代码所有权、生产率、缺陷密度与问题解决间隔等指标。	可推	claim 复用（S2 先库后网）
+V32.2.4.3	基金会接纳的制度步骤	fulltext_summary	926	926	0.232	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V32.2.4.3	基金会接纳的制度步骤	fulltext_summary	928	928	0.232	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V32.2.4.3	基金会接纳的制度步骤	fulltext_summary	933	933	0.232	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V32.2.6.3	政策工具的双重定位	ref_title	5932	5932	0.231	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V32.3.1.2	自由软件运动的起点年	sacred	2157		0.279	A	1.2 GNU 操作系统和自由软件运动	可推	史观参照（不作证据，仅定题面归属）
+V32.3.1.2	自由软件运动的起点年	sacred	2173		0.259	A	自由软件运动与开源运动的张力	可推	史观参照（不作证据，仅定题面归属）
+V32.3.1.2	自由软件运动的起点年	sacred	2159		0.250	A	GNU 操作系统与自由软件运动的缘起	可推	史观参照（不作证据，仅定题面归属）
+V32.3.1.2	自由软件运动的起点年	claim	CL-RM-000519		1.60	A	Stallman 于 1984 年启动 GNU 项目，1985 年成立 FSF 并发表《GNU 宣言》，1986 年阐明自由软件四项基本自由，1989 年发布 GPL v1；1998 年 OSI 成立标志自由软件运动与开源运动分野	可推	claim 复用（S2 先库后网）
+V32.3.2.1	四项自由的条款来源	sacred	2184		0.351	B	自由软件定义：四项基本自由	可推	史观参照（不作证据，仅定题面归属）
+V32.3.2.1	四项自由的条款来源	fulltext_summary	819	819	0.222	C	Southwick v City of New York 2024 NY Slip Op 32818(U) August 12, 2024 Supreme Court, New York County Docket Number: Inde	可推	全文综述候选（D1 型，核对原文后落块）
+V32.3.2.1	四项自由的条款来源	fulltext_summary	821	821	0.222	C	Jolitz - 1 Carolin Jolitz, Ph.D. Old Chemistry 116 E | Durham, NC 27708 Email: carolin.jolitz@duke.edu Website: https://	可推	全文综述候选（D1 型，核对原文后落块）
+V32.3.2.1	四项自由的条款来源	fulltext_summary	891	891	0.222	C	NBER WORKING PAPER SERIES THE SIMPLE ECONOMICS OF OPEN SOURCE Josh Lerner Jean Tirole Working Paper 7600 http://www.nber	可推	全文综述候选（D1 型，核对原文后落块）
+V32.3.2.3	定义文本的修订年表	sacred	2184		0.247	C	自由软件定义：四项基本自由	可推	史观参照（不作证据，仅定题面归属）
+V32.3.4.4	商业使用的伦理许可	sacred	2184		0.268	C	自由软件定义：四项基本自由	可推	史观参照（不作证据，仅定题面归属）
+V32.3.8.3	定义文本的权威来源	sacred	2184		0.258	C	自由软件定义：四项基本自由	可推	史观参照（不作证据，仅定题面归属）
+V32.3.8.3	定义文本的权威来源	sacred	2188		0.247	C	开源协议定义与开源软件定义	可推	史观参照（不作证据，仅定题面归属）
+V32.4.6.5	选择决策的档案痕迹	ref_title	5817	5817	0.338	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V32.4.7.2	重复许可的驳回理由	fulltext_fact	kf-bell-10018-113	10018	0.238	C	J.J. Carty 担任 Bell Telephone Laboratories 董事会主席	可推	全文补证候选（S1 命中即复用，D1 型）
+V32.4.7.3	Netscape 许可的双重定性	fulltext_fact	kf-bell-10018-1824	10018	0.226	C	Alexanderson被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V32.4.7.3	Netscape 许可的双重定性	fulltext_fact	kf-bell-10018-1825	10018	0.226	C	de Forest被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）

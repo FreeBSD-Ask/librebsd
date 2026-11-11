@@ -1,0 +1,142 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V36.1.2.3	光盘发行渠道的建立	claim	CL-RM-010128		1.10	A	2007 年 Servat 宣布 PAPI-3.5.0 进入 FreeBSD ports 树、对所有用户可用——从个人移植到正式发行渠道的里程碑	可推	claim 复用（S2 先库后网）
+V36.10.1.2	编译器默认的更换	sacred	2480		0.289	C	2014 年 1 月 20 日：pkg 成为默认的软件包管理器	可推	史观参照（不作证据，仅定题面归属）
+V36.10.3.3	包元数据的治理规则	ref_title	5820	5820	0.223	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.10.3.3	包元数据的治理规则	ref_title	6007	6007	0.223	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.10.6.2	嵌入式平台的门槛	claim	CL-6-203		1.30	A	FreeBSD 对 ARM 架构的支持历史上是草根式（grassroots）的，嵌入式平台支持长期依赖社区个人贡献。	可推	claim 复用（S2 先库后网）
+V36.10.6.2	嵌入式平台的门槛	claim	CL-RM-010651		1.10	B	2010 年 1 月 Manuel Bouyer 询问 mips NOFPU+SOFTFLOAT 状态，Matt Thomas 参与讨论无 MMU 平台的软浮点——嵌入式 MIPS 软浮点支持的当事人排查。	可推	claim 复用（S2 先库后网）
+V36.10.7.3	过渡后的兼容承诺	claim	CL-RM-010508		0.90	A	2017 年 12 月 Frank Wille 提议在 8.0 前移除 SunOS/68k 兼容层：其 28 位地址空间遗产正是 384MB 任务内存上限的元凶——三十年的兼容承诺走向终结。	可推	claim 复用（S2 先库后网）
+V36.11.6.1	历史平台的系统性退出	ref_title	5981	5981	0.253	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.11.6.3	退出后的维护责任	ref_title	5981	5981	0.229	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.11.8.3	平台更替的年度排期	ref_title	10146	10146	0.225	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V36.12.2.2	维护承诺的资源底账	fulltext_summary	926	926	0.267	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V36.12.2.2	维护承诺的资源底账	fulltext_summary	928	928	0.267	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V36.12.2.2	维护承诺的资源底账	fulltext_summary	933	933	0.267	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V36.12.2.3	长期维护的技术债	claim	CL-RM-010307		1.30	A	2024 年 9 月 lang/tcl90 更新至 Tcl 9.0.0 正式版——Tcl 大版本 8→9 跨越即日进入 FreeBSD ports（Pietro Cerutti 长期维护的 tcltk@ 工作样本）	可推	claim 复用（S2 先库后网）
+V36.12.3.1	退出按版次逐轮推进	ref_title	5981	5981	0.257	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.12.3.2	退出与连续性的平衡	ref_title	5820	5820	0.250	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.12.3.2	退出与连续性的平衡	ref_title	6007	6007	0.250	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.12.3.2	退出与连续性的平衡	ref_title	5981	5981	0.234	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.12.6.2	服务器硬件的规格差异	claim	CL-6-205		1.30	A	硅片厂商 Cavium 向 Semihalf 提供早期 ARMv8 开发板，并向 Sentex 托管设施捐赠初始开发服务器，使更多开发者能接触服务器硬件。	可推	claim 复用（S2 先库后网）
+V36.12.8.1	旧设计包袱的主动卸载	ref_title	5981	5981	0.232	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.12.8.3	卸载后的替代方案	claim	CL-RM-014646		0.90	A	容错 cpio 的替代方案（先读入文件再处理）1.6KB	可推	claim 复用（S2 先库后网）
+V36.12.9.2	Windows Server 的长期分支	sacred	2377		0.229	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.12.9.2	Windows Server 的长期分支	sacred	2386		0.229	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.13.1.3	层间迁移的时间表	claim	CL-5-003		1.10	A	FreeBSD 官方文献（FreeBSD Journal, 2022）记载：FreeBSD ports 树创建于 1994 年，以 CVS 跟踪至 2012 年 7 月 15 日 Subversion 接管；2021 年 4 月 6 日真实	可推	claim 复用（S2 先库后网）
+V36.13.4.2	分离后的兼容承诺	claim	CL-RM-010508		0.90	A	2017 年 12 月 Frank Wille 提议在 8.0 前移除 SunOS/68k 兼容层：其 28 位地址空间遗产正是 384MB 任务内存上限的元凶——三十年的兼容承诺走向终结。	可推	claim 复用（S2 先库后网）
+V36.14.3.1	退出与连续的解耦	ref_title	5820	5820	0.224	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.14.3.1	退出与连续的解耦	ref_title	6007	6007	0.224	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.14.5.1	后台检查的可用性	sacred	2432		0.263	C	1998 年 5 月：软更新（Soft Updates）	可推	史观参照（不作证据，仅定题面归属）
+V36.14.5.2	日志化 UFS 的维护手法	sacred	2432		0.245	C	1998 年 5 月：软更新（Soft Updates）	可推	史观参照（不作证据，仅定题面归属）
+V36.14.7.2	形态成熟的验收要件	ref_title	5820	5820	0.224	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.14.7.2	形态成熟的验收要件	ref_title	6007	6007	0.224	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.14.9.3	同源分支的节奏对照	sacred	2377		0.224	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.14.9.3	同源分支的节奏对照	sacred	2386		0.224	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.15.10.2	路线分歧的两侧主张	fulltext_summary	110	110	0.282	C	EuroBSD 2018 Removing ROP Gadgets from OpenBSD Todd Mortimer Overview ❖About Me ❖Return Oriented Programming ❖Polymorphi	可推	全文综述候选（D1 型，核对原文后落块）
+V36.15.10.2	路线分歧的两侧主张	fulltext_summary	163	163	0.282	C	Removing ROP Gadgets from OpenBSD AsiaBSDCon 2019 Todd Mortimer mortimer@openbsd.org Overview • Return Oriented Programm	可推	全文综述候选（D1 型，核对原文后落块）
+V36.15.10.3	争论结果的时间尺度	sacred	381		0.228	C	18.5 沥青滴落：历史的时间尺度	可推	史观参照（不作证据，仅定题面归属）
+V36.15.11.3	协调失灵的补救账目	fulltext_fact	kf-bell-10022-719	10022	0.224	C	G. H. Mealy和G. J. Hansen为IBM 704构建了Bell Operating System (BESYS)	可推	全文补证候选（S1 命中即复用，D1 型）
+V36.15.13.2	OpenBSD 7.x 的对照点	sacred	2377		0.231	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.15.13.2	OpenBSD 7.x 的对照点	sacred	2386		0.231	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.15.13.3	Windows 11 的服务分支	sacred	2377		0.235	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.15.13.3	Windows 11 的服务分支	sacred	2386		0.235	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.15.2.1	包生命周期的独立性	claim	CL-RM-010329		1.30	A	2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（S2 先库后网）
+V36.15.2.1	包生命周期的独立性	claim	CL-RM-010142		1.30	A	2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（S2 先库后网）
+V36.15.2.3	独立生命周期的风险	sacred	200		0.234	C	10.2 信仰的历史生命周期	可推	史观参照（不作证据，仅定题面归属）
+V36.15.2.3	独立生命周期的风险	claim	CL-RM-010329		1.10	A	2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（S2 先库后网）
+V36.15.2.3	独立生命周期的风险	claim	CL-RM-010142		1.10	A	2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（S2 先库后网）
+V36.15.5.3	密码迁移的长期性	sacred	2408		0.237	C	1973 年：UNIX 代码迁移到 C 语言	可推	史观参照（不作证据，仅定题面归属）
+V36.15.6.1	可复现构建的硬指标	claim	CL-RM-010835		1.30	A	2026年2月Siva Mahadevan请求uboot@在维护者超时前评审PR 292260以推进Ports树可复现构建。	可推	claim 复用（S2 先库后网）
+V36.15.6.2	制品属性的验收条目	ref_title	6146	6146	0.235	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V36.15.7.1	32 位退出的名单	sacred	2236		0.273	C	Chimera Linux 除外。	可推	史观参照（不作证据，仅定题面归属）
+V36.15.7.1	32 位退出的名单	ref_title	5981	5981	0.229	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.15.7.2	退出后的 armv7 例外	ref_title	5981	5981	0.265	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.15.7.3	退出与生态的连带	ref_title	5820	5820	0.226	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.15.7.3	退出与生态的连带	ref_title	6007	6007	0.226	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.16.1.2	组织方式的三项要件	ref_title	5820	5820	0.224	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.16.1.2	组织方式的三项要件	ref_title	6007	6007	0.224	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.16.2.3	退出后的介质组合	ref_title	5820	5820	0.255	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.16.2.3	退出后的介质组合	ref_title	6007	6007	0.255	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.16.2.3	退出后的介质组合	ref_title	5981	5981	0.239	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.16.5.3	汇合过程中的断点	ref_title	5820	5820	0.237	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.16.5.3	汇合过程中的断点	ref_title	6007	6007	0.237	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.16.7.3	连续性的代价分摊	sacred	2358		0.271	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V36.17.3.3	修正的复核环节点	sacred	2358		0.352	B	提交者	可推	史观参照（不作证据，仅定题面归属）
+V36.17.6.2	链接错误的定位术	fulltext_summary	98	98	0.224	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V36.17.9.3	回退方案的可用性	ref_title	5820	5820	0.286	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.17.9.3	回退方案的可用性	ref_title	6007	6007	0.286	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.18.1.3	二进制包的产出链	ref_title	5820	5820	0.283	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.18.1.3	二进制包的产出链	ref_title	6007	6007	0.283	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.18.4.2	基础设施的组件表	claim	CL-RM-010619		1.30	A	2008 年 8 月 Aleksey Cheusov 发布 Linux DESTDIR 批量构建结果——pkgsrc 跨平台批量构建基础设施的一次实证成果。	可推	claim 复用（S2 先库后网）
+V36.18.4.2	基础设施的组件表	claim	CL-RM-010602		1.30	A	2018 年 3 月 Mark Johnston 提出用 bhyve 自动配置测试虚拟机以强化内核转储代码测试——虚拟化测试基础设施的当事人提案。	可推	claim 复用（S2 先库后网）
+V36.18.4.3	冻结与解冻的程序	ref_title	5820	5820	0.251	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.18.4.3	冻结与解冻的程序	ref_title	6007	6007	0.251	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.19.2.1	文档工程的流程线	claim	CL-RM-010519		1.30	A	2004 年 1 月 Marcin Zieciak 宣告波兰文档项目（Polska Dokumentacja NetBSD）已启动并公开站点——地方文档工程的成型。	可推	claim 复用（S2 先库后网）
+V36.19.2.2	手册页的维护责任	sacred	2358		0.315	B	提交者	可推	史观参照（不作证据，仅定题面归属）
+V36.19.3.1	分类目录的层级数	sacred	232		0.248	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V36.19.4.2	服务部署的常见问题	ref_title	2411	2411	0.280	C	FSF GPL FAQ（GNU 许可证常见问题） Free Software Foundation 2026	可推	文献线索（须核全文再定 D1/D2）
+V36.19.5.1	内核话题的划归界	ref_title	5820	5820	0.279	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V36.19.5.1	内核话题的划归界	ref_title	6007	6007	0.279	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V36.19.6.1	未归条目的构成占比	ref_title	6146	6146	0.275	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V36.2.3.2	文件系统支持的扩展范围	fulltext_summary	20	20	0.253	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V36.2.3.2	文件系统支持的扩展范围	fulltext_summary	63	63	0.253	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V36.2.3.2	文件系统支持的扩展范围	fulltext_summary	118	118	0.253	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V36.2.3.2	文件系统支持的扩展范围	sacred	2677		0.253	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V36.2.6.2	二进制兼容的边界	claim	CL-RM-011287		1.30	A	2013年11月Martin Husemann公告sparc64默认编译器代码模型变更并警示二进制兼容性影响，旧用户态与新内核组合需谨慎处理	可推	claim 复用（S2 先库后网）
+V36.2.6.2	二进制兼容的边界	claim	CL-RM-010929		1.30	A	2002年12月4日 John Baldwin 提交 change 21918 添加机器无关的 MI linux 模块，将 Linux 二进制兼容层架构化	可推	claim 复用（S2 先库后网）
+V36.2.7.2	两年工程的收束点	fulltext_fact	kf-bell-10019-961	10019	0.236	C	Bell Laboratories于1957年4月结束Project COMPRST（Compass Radio Switching Test）工作	可推	全文补证候选（S1 命中即复用，D1 型）
+V36.3.10.3	Solaris 8 的文件系统	fulltext_summary	20	20	0.225	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V36.3.10.3	Solaris 8 的文件系统	fulltext_summary	63	63	0.225	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V36.3.10.3	Solaris 8 的文件系统	fulltext_summary	118	118	0.225	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V36.3.10.3	Solaris 8 的文件系统	sacred	2677		0.225	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V36.3.10.3	Solaris 8 的文件系统	claim	CL-7-006		1.30	A	GBDE（GEOM Based Disk Encryption）是 Poul-Henning Kamp 为 FreeBSD 提出的基于 GEOM 的磁盘加密设施，在磁盘（分区）级别运行，可保护任意类型的文件系统或数据库。	可推	claim 复用（S2 先库后网）
+V36.3.10.3	Solaris 8 的文件系统	claim	CL-1-017		1.30	A	运行于 PDP-11 的原 UNIX 系统采用简单优雅的文件系统，所有磁盘传输均为 512 字节块。	可推	claim 复用（S2 先库后网）
+V36.3.3.3	末代 3.x 的收束	fulltext_fact	kf-bell-10018-420	10018	0.257	C	世纪之交Bell System约有200万英里线路用于电话传输	可推	全文补证候选（S1 命中即复用，D1 型）
+V36.3.3.3	末代 3.x 的收束	fulltext_fact	kf-bell-10018-287	10018	0.247	C	世纪之交美国约有25家公司生产投币盒	可推	全文补证候选（S1 命中即复用，D1 型）
+V36.3.3.3	末代 3.x 的收束	sacred	2418		0.226	C	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V36.3.5.1	模块装载的运行时扩展	claim	CL-RM-012770		0.70	A	2004年4月6日，Jan-Benedict Glaw 在 sparclinux 邮件列表回复 amd7930 驱动补丁时自述：他已把该 amd 驱动移植到 VAX，其间也曾遇到同一编译期问题但懒于修复，并提及当时模块加载尚未完成、还需在运	可推	claim 复用（S2 先库后网）
+V36.4.4.1	长期运行的资源预算	fulltext_fact	kf-bell-10018-1824	10018	0.237	C	Alexanderson被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V36.4.4.1	长期运行的资源预算	fulltext_fact	kf-bell-10018-1825	10018	0.237	C	de Forest被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V36.4.4.3	内存分配器的替换	claim	CL-3-052		1.30	A	McKusick 与 Karels 1988 年记载 4.3BSD 内核拥有至少十种不同的内存分配器，并提出通用目的动态内存分配器以统一接口。	可推	claim 复用（S2 先库后网）
+V36.4.5.3	自 6.x 起的接口稳定	ref_title	5554	5554	0.238	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
+V36.5.1.2	重建对象的层级划分	sacred	232		0.238	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V36.5.10.1	企业参与的制度入口	sacred	2362		0.328	B	FreeBSD 核心小组	可推	史观参照（不作证据，仅定题面归属）
+V36.5.10.1	企业参与的制度入口	sacred	2358		0.266	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V36.5.10.2	提交者规模的扩张	sacred	2362		0.347	B	FreeBSD 核心小组	可推	史观参照（不作证据，仅定题面归属）
+V36.5.10.2	提交者规模的扩张	sacred	2358		0.282	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V36.5.10.3	引导期的师徒制度	sacred	2358		0.235	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V36.5.12.1	防火墙实现的引入	fulltext_summary	190	190	0.352	B	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V36.5.12.1	防火墙实现的引入	fulltext_summary	537	537	0.242	C	Presenting FreeNAS ●Olivier COCHARD-LABBE (olivier@freenas.org) ●Presentation available at: http://www.freenas.org/bsdca	可推	全文综述候选（D1 型，核对原文后落块）
+V36.5.12.1	防火墙实现的引入	fulltext_summary	671	671	0.238	C	AUTOMATED FIREWALL TESTING KRISTOF PROVOST SHAMELESS SELF-PROMOTION WHO AM I? ▸Kristof Provost ▸kp@FreeBSD.org ▸pf (in F	可推	全文综述候选（D1 型，核对原文后落块）
+V36.5.12.3	第三方软件与基本系统的界线	claim	CL-RM-011384		1.30	A	2021-11 Warner Losh 就大量第三方软件定义 _POSIX_C_SOURCE 却仍需 BSD 扩展符号的问题发起系统头文件暴露策略讨论，Konstantin Belousov 参与	可推	claim 复用（S2 先库后网）
+V36.5.4.1	访问控制的模块化	claim	CL-7-008		1.20	B	TrustedBSD MAC Framework 由 Robert Watson、Brian Feldman、Adam Migus 与 Chris Vance 在 Network Associates Laboratories 设计实现，为	可推	claim 复用（S2 先库后网）
+V36.5.4.1	访问控制的模块化	claim	CL-7-013		1.10	A	FreeBSD 是最早广泛部署的、提供强制访问控制（MAC）的自由操作系统之一。	可推	claim 复用（S2 先库后网）
+V36.5.4.3	能力模式的落地窗口	ref_title	6119	6119	0.259	C	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219> 2021	可推	文献线索（须核全文再定 D1/D2）
+V36.5.7.1	并行重建的组织方式	claim	CL-3-073		0.70	A	Codd 1970 年提出数据的关系模型，主张大型数据银行的未来用户不必知道数据在机器中的组织方式。	可推	claim 复用（S2 先库后网）
+V36.5.7.2	末代分支的收束点	sacred	2377		0.227	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.5.7.2	末代分支的收束点	sacred	2386		0.227	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V36.5.8.2	组件淘汰的清单化	sacred	1348		0.227	C	游戏 	可推	史观参照（不作证据，仅定题面归属）
+V36.5.8.2	组件淘汰的清单化	sacred	1350		0.227	C	游戏 	可推	史观参照（不作证据，仅定题面归属）
+V36.6.1.3	修复范围的组织方式	claim	CL-3-073		0.70	A	Codd 1970 年提出数据的关系模型，主张大型数据银行的未来用户不必知道数据在机器中的组织方式。	可推	claim 复用（S2 先库后网）
+V36.6.10.3	Solaris 10 的能力清单	fulltext_summary	20	20	0.245	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V36.6.10.3	Solaris 10 的能力清单	fulltext_summary	63	63	0.245	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V36.6.10.3	Solaris 10 的能力清单	fulltext_summary	118	118	0.245	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V36.6.10.3	Solaris 10 的能力清单	sacred	2677		0.245	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V36.6.2.2	巨锁退出的分步推进	ref_title	5981	5981	0.264	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.6.3.3	线程库的默认切换	claim	CL-RM-010844		0.90	A	2016 年 4 月 matthew green 将 amd64 与 i386 的默认 GCC 切换到 5.3——x86 工具链版本换代的技术决策。	可推	claim 复用（S2 先库后网）
+V36.6.4.2	文件系统的一致性维护	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V36.6.4.2	文件系统的一致性维护	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V36.6.5.3	审计框架的接入时机	sacred	2496		0.223	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V36.6.6.2	64 位环境的工程前提	claim	CL-RM-010609		1.30	A	2024 年 4 月 Igor Ostapenko 给出为 FreeBSD 测试套件添加 jail 执行环境支持的行动要点与阶段规划——测试隔离环境的工程路线图。	可推	claim 复用（S2 先库后网）
+V36.7.4.3	音频与 I/O 的并行化	claim	CL-RM-012887		0.90	A	Kittredge 给出精确文献：Boykin 与 Langerman 的 Mach/4.3BSD 并行化论文载 Computing Systems 1990 冬——Mach 多线程化 4.3BSD 的文献线索	可推	claim 复用（S2 先库后网）
+V36.7.8.1	旧假设的逐条失效	ref_title	5811	5811	0.248	C	V **R3.2** `/etc/shadow` 文件规范 (**1987**) 1987	可推	文献线索（须核全文再定 D1/D2）
+V36.7.8.2	旧平台的支持终止	ref_title	5981	5981	0.250	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V36.8.7.3	发行件的形态变化	ref_title	10078	10078	0.226	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V36.8.7.3	发行件的形态变化	ref_title	10120	10120	0.226	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V36.8.9.2	Windows Server 2008 R2 的虚拟化	fulltext_summary	708	708	0.246	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
+V36.8.9.2	Windows Server 2008 R2 的虚拟化	fulltext_summary	982	982	0.233	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
+V36.8.9.3	Solaris 11 Express 的容器	fulltext_summary	754	754	0.238	C	How far a naive FreeBSD container implementation can go EuroBSD 2022 - Vienna, 18.09.2022 Luca Pizzamiglio Menu of today	可推	全文综述候选（D1 型，核对原文后落块）
+V36.9.6.1	能力模式的系统位置	fulltext_summary	79	79	0.270	C	1/19 Design and Veriﬁcation of the TLS 1.3 Handshake State Machine in LibreSSL Theo Buehler tb@openbsd.org BSDCan – May 	可推	全文综述候选（D1 型，核对原文后落块）
+V36.9.6.1	能力模式的系统位置	fulltext_summary	206	206	0.270	C	Capsicum: practical capabilities for UNIX Robert N. Watson University of Cambridge Jonathan Anderson University of Cambr	可推	全文综述候选（D1 型，核对原文后落块）
+V36.9.6.1	能力模式的系统位置	fulltext_summary	185	185	0.262	C	Cryptography As An Operating System Service: A Case Study ANGELOS D. KEROMYTIS Columbia University JASON L. WRIGHT and T	可推	全文综述候选（D1 型，核对原文后落块）
+V36.9.6.1	能力模式的系统位置	ref_title	6119	6119	0.245	C	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219> 2021	可推	文献线索（须核全文再定 D1/D2）

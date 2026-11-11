@@ -1,0 +1,22 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V31.1.3.6	进程间通信的接口分层	claim	CL-RM-014570		1.30	A	论信号非 IPC：不应作为通用进程间通信机制 2.4KB	可推	claim 复用（S2 先库后网）
+V31.1.3.6	进程间通信的接口分层	claim	CL-3-055		1.30	A	Leffler 等 1983 年记载 BSD 进程间通信设施已成为 UNIX 的事实标准。	可推	claim 复用（S2 先库后网）
+V31.2.2.1	UFS 命名的诞生语境	sacred	2145		0.310	B	UNICS 的诞生	可推	史观参照（不作证据，仅定题面归属）
+V31.2.3.4	形成期的学位论文脉络	fulltext_summary	986	986	0.289	C	Antithesis: Pioneering Deterministic Hypervisors with FreeBSD and Bhyve CHALLENGE Reproducing bugs consistently poses a 	可推	全文综述候选（D1 型，核对原文后落块）
+V31.2.4.6	检查项目的清单口径	ref_title	10161	10161	0.400	B	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V31.2.4.6	检查项目的清单口径	ref_title	10162	10162	0.400	B	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V31.2.4.6	检查项目的清单口径	ref_title	10163	10163	0.400	B	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V31.3.4.6	形成面与本体面的分界	sacred	44		0.227	C	1.11 语言与本体论	可推	史观参照（不作证据，仅定题面归属）
+V31.4.1.4	移植分工的当事人记述	claim	CL-RM-010342		0.70	A	2010 年 Philip M. Gollucci 宣布 clsung 加入 ruby@ 团队并列出其在 GNATS 自动指派器与多个 ruby 端口上的贡献——语言团队扩容的当事人记录	可推	claim 复用（S2 先库后网）
+V31.4.1.4	移植分工的当事人记述	claim	CL-RM-010261		0.70	A	2021 年 10 月 ports 类别治理提案：为纯文本游戏增设 games-text 虚拟类别（2019 年起 games 类别过大的持续讨论）——ports 分类学演进的当事人记录	可推	claim 复用（S2 先库后网）
+V31.4.3.2	style(9) 的成文时刻	fulltext_summary	98	98	0.223	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V31.5.2.5	隔离用途的早期实践	claim	CL-RM-013001		0.70	A	Grandi 以 GPL+内核链接例外条款发布并行口驱动——Linux 诞生前关于 GPL 是否覆盖内核代码的早期实践	可推	claim 复用（S2 先库后网）
+V31.6.4.6	窗口内的形态记载	ref_title	5539	5539	0.334	B	rc.d(8) 手册页与 Mewburn USENIX 2001 论文（Mewburn 为 rc.d 设计者） 2001	可推	文献线索（须核全文再定 D1/D2）
+V31.6.4.6	窗口内的形态记载	fulltext_summary	98	98	0.237	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V31.7.3.2	Muuss 测评的仲裁角色	sacred	736		0.247	C	论测评 	可推	史观参照（不作证据，仅定题面归属）
+V31.7.6.1	许可证的发行规模	fulltext_summary	114	114	0.255	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V31.7.6.1	许可证的发行规模	fulltext_summary	942	942	0.255	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V31.7.6.1	许可证的发行规模	fulltext_summary	949	949	0.255	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V31.7.6.5	标准化进程的回响	claim	CL-RM-011657		1.60	A	John Quarterman（UT Austin）公告受 USENIX 董事会指派出任 IEEE P1003 标准委员会 USENIX 代表并承诺在 net.usenix 与 ;login: 报告——USENIX 参与标准化进程的组织史一	可推	claim 复用（S2 先库后网）
+V31.8.3.4	等待与不等待的套接字两态	sacred	373		0.226	C	18.1 等待与时间	可推	史观参照（不作证据，仅定题面归属）
+V31.8.5.6	PostgreSQL 分驻的说明	fulltext_fact	kf-bell-10022-823	10022	0.266	C	Communications Social Science Research Center于1955年成立，1958年更名为Behavioral Research Center	可推	全文补证候选（S1 命中即复用，D1 型）
