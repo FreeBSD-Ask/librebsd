@@ -6,7 +6,8 @@
   D1  例外台账 status 合法性；supplemented 行按 resolution_kind 分轨——
       doc_mine 须在补证台账有记录且 ref_id／claim_id 非空；row_mine／structure 须有 resolution_ref
   D2  DOC_MINE 块形、抬头↔source_type、等级↔纪律串、CID 在库且 supported、等级与库内真值一致
-  D3  raw_source.banned_source=0、provenance_url 非空、namespace=ref:<REF_ID>、ref 在 references
+  D3  raw_source.banned_source=0、provenance_url 或 references.file_path 非空、
+      source_id=SRC-ref:<REF_ID>、namespace=ref、local_pk=<REF_ID>、ref 在 references
   D4  补证新增 ref 的四键（sha256／isbn_doi／source_url／标题＋第一作者＋年份）在库内唯一，
       或已在 reference_duplicates 登记
   D5  含 DOC_MINE 的小节，ROW_MINE＋DOC_MINE 合计 ≤12 块且 ≤16,797 B

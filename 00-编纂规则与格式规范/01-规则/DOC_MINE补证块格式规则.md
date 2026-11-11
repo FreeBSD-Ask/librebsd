@@ -105,14 +105,14 @@
 
 ### S1 先库后网（去重前置）
 
-**顺序强制：先查库内，未命中方可联网。** 四键查重，任一命中即复用，不得重复采集或重复入库：
+**顺序强制：先查库内，再联网。** 四键查重，任一命中即复用其 `ref_id`，不得重复采集或重复入库；**联网核验为全 76 卷每题必经工序（2026-11-12 裁定），库内命中只作复用来源，不替代联网**：
 
 1. `sha256`：文件级精确比对 `references.sha256`。
 2. `isbn_doi`：DOI／ISBN 归一（小写、去 `https://doi.org/` 前缀）后比对。
 3. `source_url`：URL 归一（去 scheme、去尾斜杠、去 `utm_*` 查询参数、host 小写）后比对。
 4. 三元组：标题归一（去空格与标点、统一大小写）＋第一作者姓氏＋年份，三者全同即判重。
 
-命中处置：复用既有 `ref_id`，在补证台账记 `dedup_hit=<键名>`；**不新建 `references` 行、不重复存全文、不联网重抓**。四键均未命中方进入 S2。
+命中处置：复用既有 `ref_id`，在补证台账记 `dedup_hit=<键名>`；**不新建 `references` 行、不重复存全文**；仍须联网对题面事实独立核验并留检索记录（日期、人名、版次、合同号、案号等硬事实逐项复核）。四键均未命中方进入 S2。
 
 判据正文另见《流程规则/09-材料、文献与入库》“去重执行要求”（SHA-256 精确＋三元组模糊＋`reference_duplicates` 登记），本节只规定补证场景的执行顺序。
 
@@ -132,11 +132,11 @@
 2. `evidence`：`source_id` 指向上行、`evidence_id` 用 `EV-SUP-<六位>` 号段（与 `EV-KF-` 分开，免混入既有 KF 统计）、`anchor` 记 `url:<去 scheme 的 URL>#<BLOCK_INDEX 或片段锚>`、`quote` **逐字**取自原文、`fact_text` 为可独立成立的事实陈述、`evidence_kind`（`quote`／`article_text`／`fact`）、`quote_lang`、`event_date`、`event_date_precision`（`day`／`month`／`year`）、`confidence`。
 3. `claim`：`claim_id` 续 `CL-RM-` 号段（不新立前缀，以复用既有水位锁与全部下游正则）、`claim_text`、`evidence_level` 按 §4.2 定级、`status='supported'`、`created_by='supplement:<卷>-<批号>'`。
 
-写前门禁：`claimdb_guard.py --db historical_claims` 须 PASS；`register_waterlock.py probe → acquire → register → release` 全程留槽。写后对账：`raw_source`／`evidence`／`claim` 三表新增行数与台账行数相等，`banned_source` 全为 0。
+写前门禁：`claimdb_guard.py --db historical_claims` 须 PASS；`register_waterlock.py probe → acquire → register → release` 全程留槽。写后对账：`raw_source`／`evidence`／`claim` 三表新增行数与台账行数相等，`banned_source` 全为 0。**复核分层（2026-11-12 裁定）**：常规题出三份清单（初稿→独立复核→修复后复验）；涉日期、人名、版次、合同号、案号等硬事实者，另加严格复查一轮并出第四份清单，递归至无问题；各轮清单入批记。
 
 ### S4 入纲
 
-按 §二 写块至目标小节 `.md`；块头 `CID` 与 `LV` 取自库内真值（禁写死）；同批同步补证台账 `block_type`、`block_anchor`、`claim_id`。写盘走 `write_guard()` 或显式 LF，UTF-8 无 BOM。
+按 §二 写块至目标小节 `.md`；块头 `CID` 与 `LV` 取自库内真值（禁写死）；同批同步补证台账 `block_type`、`claim_id`、`batch`、`status` 与 `note`（块锚 `ref<ID>#<块序或 url>` 可按需记入 `note`；台账表头以 162 号文 §11.2 十列为准）。写盘走 `write_guard()` 或显式 LF，UTF-8 无 BOM。
 
 体量：每小节 `ROW_MINE`＋`DOC_MINE` 合计 ≤12 块且 ≤16,797 B（承《小节建制与题名规则》J2）；超者按 J4 阶梯处置，不得以补证为名突破。
 
@@ -177,6 +177,8 @@
 ## 九、变更流程
 
 本规则的块形、抬头表、纪律串、链路顺序与门禁判据的任何变更，须经 ykla 裁定并留痕；变更后须同步：`audit_supplement_chain.py`、补证写入脚本、已落盘块（存量按批次评估，不静默订正）。
+
+**2026-11-12 修订**：依 ykla 裁定统一联网口径（全 76 卷每题必经、库内命中不豁免）与复核分层；`raw_source` 标识口径统一为 `source_id='SRC-ref:<ID>'`／`namespace='ref'`／`local_pk='<ID>'`（与第四十三件 D3 实现一致）；`supplement` 台账列名以 162 号文 §11.2 十列为准。门禁判据逻辑未变。
 
 ## 十、立规依据
 
