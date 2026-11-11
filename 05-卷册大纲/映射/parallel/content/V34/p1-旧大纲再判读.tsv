@@ -1,0 +1,44 @@
+rowmine_id	disposition	host_subsection	host_kind	judged_at	batch	note
+lkml.messages.2634315	辑存			2026-11-11	task82-g4p1-v34	Apple PCIe DT bindings 上游提交（Kettenis），本卷无对应题面
+lkml.messages.2714948	辑存			2026-11-11	task82-g4p1-v34	Apple 中断控制器 DT bindings（Kettenis），同上
+lkml.messages.3762579	辑存			2026-11-11	task82-g4p1-v34	mseal 与 mprotect／munmap 语义偏离；宿主 1.2.1 已 17 块满
+lkml.messages.3790824	归入	V34.2.5.1	拟设	2026-11-11	task82-g4p1-v34	de Raadt 要求以实证而非感觉论证 API——可证事实的材料门槛
+lkml.messages.3797643	辑存			2026-11-11	task82-g4p1-v34	m 系列系统调用原子性偏离 POSIX；宿主 1.2.1 已满
+lkml.messages.3843029	归入	V34.2.5.1	拟设	2026-11-11	task82-g4p1-v34	以 BSD 全系统测试方法论对比 Linux 开发文化——举证标准
+lkml.messages.3891707	辑存			2026-11-11	task82-g4p1-v34	Unix 系统调用原子性原则与 OpenBSD 实现；宿主 1.2.1 已满
+lkml.messages.3919387	辑存			2026-11-11	task82-g4p1-v34	批评 mseal 克隆未透彻理解的内存子系统原理
+lkml.messages.5136171	辑存			2026-11-11	task82-g4p1-v34	netmap 自 FreeBSD 移植进 Linux；宿主 1.4.5 已 27 块满
+lkml.messages.7704537	辑存			2026-11-11	task82-g4p1-v34	Apple pinctrl DT bindings（Kettenis），无对应题面
+lkml.messages.7319459	辑存			2026-11-11	task82-g4p1-v34	drm client 双许可 GPL-2／MIT；宿主 1.4.5 已满
+ksummit.messages.296	辑存			2026-11-11	task82-g4p1-v34	GPL 执行与 BSD 许可的对照议论；宿主 1.4.5 已满
+ksummit.messages.3986	辑存			2026-11-11	task82-g4p1-v34	GPL enforcement actions 中的 BSD 比较；宿主 1.4.5 已满
+linux-fsdevel.messages.513930	辑存			2026-11-11	task82-g4p1-v34	dupfs 语义与 FreeBSD 既有实现；宿主 1.2.1 已满
+linux-fsdevel.messages.697152	归入	V34.1.2.3	拟设	2026-11-11	task82-g4p1-v34	openat2 新标志反向追问 Linux 先例——接口复刻路径
+linux-fsdevel.messages.530442	辑存			2026-11-11	task82-g4p1-v34	ext2／reiserfs 的 GPL 违规指控；宿主 1.4.5 已满
+linux-fsdevel.messages.446540	辑存			2026-11-11	task82-g4p1-v34	copyleft-next 许可证进 LICENSES；宿主 1.4.5 已满
+linux-fsdevel.messages.590217	归入	V34.1.2.3	拟设	2026-11-11	task82-g4p1-v34	strscpy 系 Linux 自造、strlcpy 转换不再必要——接口命名与来源
+linux-fsdevel.messages.626206	辑存			2026-11-11	task82-g4p1-v34	kdbus 与 capabilities 主令牌；与归名题面不合
+freebsd-hackers.messages.1322707	辑存			2026-11-11	task82-g4p1-v34	strlcpy 参数语义争议（Linus 回复）；宿主 1.2.1 已满
+netdev.messages.8341775	辑存			2026-11-11	task82-g4p1-v34	netmap 直接移植进 ixgbe 驱动；宿主 1.4.5 已满
+netdev.messages.8167541	辑存			2026-11-11	task82-g4p1-v34	ath(4) 代码改 GPL-only 与“Linux stealing our code”；宿主 1.4.5 已满
+netdev.messages.8146127	辑存			2026-11-11	task82-g4p1-v34	EXPORT_SYMBOL_GPL 不应强加于非衍生作品；宿主 1.4.5 已满
+linux-api.messages.22125	辑存			2026-11-11	task82-g4p1-v34	Capsicum 第二版移植 RFC；宿主 1.2.6 已 14 块满
+linux-api.messages.42724	辑存			2026-11-11	task82-g4p1-v34	Capsicum 下 /proc 失效的绕行；宿主 1.2.6 已满
+linux-api.messages.54878	辑存			2026-11-11	task82-g4p1-v34	能力权利限制与查询系统调用；宿主 1.2.6 已满
+linux-api.messages.47563	辑存			2026-11-11	task82-g4p1-v34	FreeBSD 进程描述符 API 映射（Thiago Macieira）；宿主 1.2.6 已满
+ob-172104	辑存			2026-11-11	task82-g4p1-v34	IBM 专利许可与 GPL 相容、与 BSD 不相容；宿主 1.4.5 已满
+fb-6325	辑存			2026-11-11	task82-g4p1-v34	OpenBSD 编印带序列号许可证之议；宿主 1.4.5 已满
+freebsd-hackers.messages.1274540	辑存			2026-11-11	task82-g4p1-v34	版权转让非必需与 GPL 对照；宿主 1.4.5 已满
+freebsd-hackers.messages.1292377	辑存			2026-11-11	task82-g4p1-v34	APSL 与 FreeBSD 立场（rwatson）；宿主 1.4.5 已满
+freebsd-hackers.messages.2536253	辑存			2026-11-11	task82-g4p1-v34	BSD 许可商业可持续性答辩；宿主 1.4.5 已满
+freebsd-hackers.messages.2623784	辑存			2026-11-11	task82-g4p1-v34	OpenMotif 许可与 GPL 评点；宿主 1.4.5 已满
+freebsd-hackers.messages.2640164	辑存			2026-11-11	task82-g4p1-v34	微软是否使用 BSD TCP/IP 之问；宿主 2.7.6 已 26 块满
+freebsd-hackers.messages.2597241	辑存			2026-11-11	task82-g4p1-v34	Apple 抉择与 MacOS X 渊源回顾；宿主 1.4.5 已满
+freebsd-hackers.messages.2639800	辑存			2026-11-11	task82-g4p1-v34	非 GPL 非 NDA 驱动进入 FreeBSD 之问；宿主 1.4.5 已满
+usenet_mail.messages.29426	辑存			2026-11-11	task82-g4p1-v34	FLEXlm 许可证管理程序普查；宿主 2.8.4 已 19 块满
+usenet_mail.messages.29620	辑存			2026-11-11	task82-g4p1-v34	nfswatch 3.0 源码 FTP 发布；同上
+usenet_mail.messages.136537	辑存			2026-11-11	task82-g4p1-v34	cron V2 提交伯克利并转 comp.sources.unix 发布；同上
+usenet_mail.messages.137042	辑存			2026-11-11	task82-g4p1-v34	MIT Athena undel 程序发布；同上
+usenet_mail.messages.137126	辑存			2026-11-11	task82-g4p1-v34	ofiles 修订与 Sun 头文件内嵌；同上
+usenet_mail.messages.135489	辑存			2026-11-11	task82-g4p1-v34	idled 1.00 空闲会话检测守护进程发布；同上
+usenet_mail.messages.136846	辑存			2026-11-11	task82-g4p1-v34	Pcomm 1.2 通信软件包发布；同上
