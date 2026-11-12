@@ -46,7 +46,7 @@ ANCHOR_RE = re.compile(r"^<!-- DOC_MINE: ref(\d+)#(\d+|url) -->$")
 ROW_RE = re.compile(r"<!-- ROW_MINE: [A-Za-z0-9_.\-]+\.messages\.\d+ -->")
 HEAD_RE = re.compile(
     r"^\*\*(?P<head>[^*]+)\*\*（证据等级：(?P<lv>L[1-5])，"
-    r"来源：`historical_claims\.duckdb\.claim\.(?P<cid>CL-RM-\d{6})`；(?P<batch>[^）]+)）$"
+    r"来源：`historical_claims\.duckdb\.claim\.(?P<cid>CL-RM-\d{6}|CL-\d{1,2}-\d{3,5})`；(?P<batch>[^）]+)）$"
 )
 DISC_RE = re.compile(r"引文按 (L[1-5]) 纪律：")
 
@@ -641,6 +641,13 @@ def selftest() -> int:
                "primary", "D1", "b001", "supplemented", "")]
 
     run_case("pos_basic", _block("CL-RM-000001", "L4", "官方文档"), exc_ok, sup_ok, [C], [R], None)
+    # 旧格式 claim（CL-<1-2>-<3-5>，建库早期号段）复用：D2 判据按规则 §48 只要求库内存在＋supported，不限定前缀
+    C_L = ("CL-3-061", "L3", "supported", "official_doc", "https://example.org/a", 0, "2511")
+    exc_L = [("V37.1.1.1", "corpus_gap", "r", "p", "supplemented", "doc_mine",
+              "ref:2511", "CL-3-061", "2026-11-09", "git")]
+    sup_L = [("V37.1.1.1", "corpus_gap", "2511", "CL-3-061", "official_doc",
+              "primary", "D1", "b002", "supplemented", "")]
+    run_case("pos_legacy_cid", _block("CL-3-061", "L3", "官方文档"), exc_L, sup_L, [C_L], [R], None)
     run_case("neg_level", _block("CL-RM-000001", "L3", "官方文档"), exc_ok, sup_ok, [C], [R], "D2")
     run_case("neg_cid", _block("CL-RM-000999", "L4", "官方文档"), exc_ok, sup_ok, [C], [R], "D2")
     run_case("neg_mailhead", _block("CL-RM-000001", "L4", "当事人自述"), exc_ok, sup_ok, [C], [R], "D2")
