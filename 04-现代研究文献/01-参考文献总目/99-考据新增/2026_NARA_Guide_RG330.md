@@ -34,6 +34,10 @@ National Archives and Records Administration. Records of the Office of the Secre
 
 > 330.11.2 Records of the Joint Intelligence Objectives Agency History: Transferred to OSD from the Joint Chiefs of Staff, October 15, 1962.
 
+研究与发展委员会项下的进度报告：
+
+> Progress reports of army, navy, and air force weapons research, 1946-54.
+
 ## 三、考据说明
 
 1. 该页把 RG 330 逐系列拆开叙述，每条含“系列号—系列名—年代—文种构成”，是档案侧证据链的骨架；合同类与项目类记录分属不同系列，故“合同—项目—机构”三者须分别定位后再勾连。
