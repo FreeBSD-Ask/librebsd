@@ -64,20 +64,20 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 71	2	2.5	2.5.3	OpenZFS 与 FreeBSD 的同步	skeleton	
 71	2	2.5	2.5.4	根文件系统与启动环境的支持	filled	
 71	2	2.5	2.5.5	存储可靠性的工程承诺	filled	
-71	2	2.6	2.6.1	TrueNAS CORE 的 FreeBSD 12 基线	skeleton	
-71	2	2.6	2.6.2	FreeNAS 更名后的品牌结构	skeleton	
+71	2	2.6	2.6.1	TrueNAS CORE 的 FreeBSD 12 基线	filled	
+71	2	2.6	2.6.2	FreeNAS 更名后的品牌结构	filled	
 71	2	2.6	2.6.3	CORE 与 Enterprise 的版本分流	skeleton	
 71	2	2.6	2.6.4	平台延续的发布节奏	skeleton	
-71	2	2.6	2.6.5	存储平台的许可取向	skeleton	
+71	2	2.6	2.6.5	存储平台的许可取向	filled	
 71	2	2.7	2.7.1	SCALE 的 Debian 底座选择	filled	
-71	2	2.7	2.7.2	容器需求与系统底座的重选	skeleton	
-71	2	2.7	2.7.3	双轨并行的过渡安排	skeleton	
-71	2	2.7	2.7.4	迁移说明与用户路径	skeleton	
-71	2	2.7	2.7.5	CORE 维护期的收束	skeleton	
+71	2	2.7	2.7.2	容器需求与系统底座的重选	filled	
+71	2	2.7	2.7.3	双轨并行的过渡安排	filled	
+71	2	2.7	2.7.4	迁移说明与用户路径	filled	
+71	2	2.7	2.7.5	CORE 维护期的收束	filled	
 71	2	2.8	2.8.1	底座更替中的软件共用比例	skeleton	
 71	2	2.8	2.8.2	中间件与接口的跨系统复用	skeleton	
 71	2	2.8	2.8.3	数据池迁移的技术前提	skeleton	
-71	2	2.8	2.8.4	产品连续性的事后评估	skeleton	
+71	2	2.8	2.8.4	产品连续性的事后评估	filled	
 71	2	2.8	2.8.5	底座更换的代价分摊	skeleton	
 71	3	3.1	3.1.1	服务器操作系统向服务层的位移	skeleton	
 71	3	3.1	3.1.2	互联网服务的系统选型惯例	skeleton	
