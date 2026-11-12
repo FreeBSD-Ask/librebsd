@@ -2,3 +2,4 @@ subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
 V67.1.2.2	corpus_gap	10269	CL-RM-493875	academic_work	secondary	D2	supp-V67-b001	supplemented	联网补证：https://www.usenix.org/legacy/publications/login/2005-06/openpdfs/history0506.pdf（task82-g7p2-v67-b001）
 V67.1.2.3	corpus_gap	10230	CL-RM-493876	official_doc	primary	D2	supp-V67-b001	supplemented	联网补证：https://www.usenix.org/about/history（task82-g7p2-v67-b001）
 V67.1.6.2	corpus_gap	3890	CL-3-061	academic_work	primary	D1	supp-V67-b002	supplemented	库内复用 claim＋联网核验（官方在线档案未索引 2017 eAgenda，以 ref 3890 OCR 全文 primary 为据）；块锚 ref3890#485778（task82-g7p2-v67-b002）
+V67.8.1.2	corpus_gap	576	CL-6-209	academic_work	primary	D1	supp-V67-b003	supplemented	库内复用 claim＋联网互证（papers.freebsd.org GELI Boot slides 三点互证）；块锚 ref576#105497（task82-g7p2-v67-b003）
