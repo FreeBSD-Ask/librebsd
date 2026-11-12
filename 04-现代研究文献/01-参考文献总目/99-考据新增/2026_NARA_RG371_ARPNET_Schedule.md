@@ -21,9 +21,9 @@ National Archives and Records Administration. Advanced Research Projects Agency 
 
 > 875-03 ARPANET Operational Management Files. Documents generated in the overall operational management of the ARPANET. Included are papers reflecting policies, procedures, and standards for operation and maintenance of the ARPANET; criteria for access to ARPANET by new, prospective users; papers governing operation and maintenance of ARPANET hardware, software, and Network Control Center; leases for node-to-node and very distant host-to-node communications lines; and related papers. Files arranged by subjects. Disposition: (a) Office of record - Permanent. Retire when no longer needed. Offer to NARS in 5 year blocks when 20 years old. (b) Others - Destroy when no longer needed.
 
-赞助方组文件的处置：
+赞助方组文件：
 
-> 875-02 ARPANET Sponsors Group Files. ... Disposition: (a) HQ.DCA - Permanent. Retire when no longer needed. Offer to NARS in 5 year blocks when 20 years old. (b) Others - Destroy when no longer needed.
+> 875-02 ARPANET Sponsors Group Files. Chaired by DCA, the group consists of representatives of various ARPANET sponsors who meet to provide advisory services, to include review and coordination of all actions affecting services rendered by the network. The group serves as a vehicle for coordinating proposed network changes which may affect sponsors or users; to exchange ideas and information on network operations, future plans for the network and common interests, and user acti_vities. Included are the group charter announcements, agenda, minutes, group reports (when required), recommendations, and related papers. Files arranged chronologically. Disposition: (a) HQ.DCA - Permanent. Retire when no longer needed. Offer to NARS in 5 year blocks when 20 years old. (b) Others - Destroy when no longer needed.
 
 ## 三、考据说明
 
