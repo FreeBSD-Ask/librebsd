@@ -20,6 +20,18 @@ Prof. Fano, in his 1964 proposal to ARPA for Project MAC funding, referred to CT
 
 "In 1970 GE sold its computer business to Honeywell"
 
+"Multiplexed" explicitly referred to the design practice of serially sharing access to hardware and software resources among users
+
+Multics ran on specialized expensive mainframe hardware whose CPU provided a segmented, paged, ring-structured virtual memory.
+
+Multics (Multiplexed Information and Computing Service) is a mainframe time-sharing operating system begun in 1965 and used until 2000.
+
+a supervisor program that managed all hardware resources, using symmetric multiprocessing, multiprogramming, and paging
+
+an innovative segmented memory addressing system supported by hardware
+
+a tree structured file system
+
 ## 提要
 
 multicians.org 记：Multics 设计始于 1965 年，为 MIT 的 Project MAC、贝尔电话实验室与通用电气大型计算机产品部的三方联合项目；贝尔实验室 1969 年退出研制；MIT 于 1969 年秋开始向用户提供 Multics 分时服务；1970 年通用电气把计算机业务售予霍尼韦尔。
