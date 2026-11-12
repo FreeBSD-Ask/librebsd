@@ -38,3 +38,6 @@ V37.1.9.1	corpus_gap	10316	CL-RM-494179	official_doc	primary	D2	supp-V37-g4p2-b0
 V37.3.5.1	corpus_gap	10315	CL-RM-494195	official_doc	primary	D2	supp-V37-g4p2-b012	supplemented	联网源：ref10315#url（2026-11-12）；互证 ref10326（bhyve(8)，同域手册页）
 V37.3.5.2	corpus_gap	10315	CL-RM-494196	official_doc	primary	D2	supp-V37-g4p2-b012	supplemented	联网源：ref10315#url（2026-11-12）；互证 ref10326（bhyve(8)，同域手册页）
 V37.3.5.4	corpus_gap	10326	CL-RM-494197	official_doc	primary	D2	supp-V37-g4p2-b012	supplemented	联网源：ref10326#url（2026-11-12）；互证 ref10315（vmm(4)，同域手册页）
+V37.3.5.3	corpus_gap	10326	CL-RM-494229	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10326#url（2026-11-13）；互证 ref10315（vmm(4)，同域手册页）
+V37.3.6.1	corpus_gap	10265	CL-RM-494230	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10265#url（2026-11-13）；互证 ref10326（bhyve(8)，同批异域官方文档）
+V37.3.8.3	corpus_gap	10326	CL-RM-494231	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10326#url（2026-11-13）；互证 同源异段（bhyve(8) PCI EMULATION 的 virtio-blk 项）
