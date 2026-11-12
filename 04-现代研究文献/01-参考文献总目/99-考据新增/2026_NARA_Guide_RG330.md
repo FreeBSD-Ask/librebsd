@@ -30,6 +30,10 @@ National Archives and Records Administration. Records of the Office of the Secre
 
 > 330.5.10 Records of the Office of Organizational and Management Planning Textual Records: Project files, 1961-62.
 
+系列移交事项（联合情报目标局）：
+
+> 330.11.2 Records of the Joint Intelligence Objectives Agency History: Transferred to OSD from the Joint Chiefs of Staff, October 15, 1962.
+
 ## 三、考据说明
 
 1. 该页把 RG 330 逐系列拆开叙述，每条含“系列号—系列名—年代—文种构成”，是档案侧证据链的骨架；合同类与项目类记录分属不同系列，故“合同—项目—机构”三者须分别定位后再勾连。
