@@ -1,0 +1,344 @@
+rowmine_id	disposition	host_subsection	host_kind	judged_at	batch	note
+freebsd-fs.messages.1176034	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年8月15日，YarTikhiy2003年8月15日报mount_mfs(8)挂载后挂载点权限是1777；claim CL-RM-263123 留库可溯
+freebsd-fs.messages.1176141	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年5月9日，LukasErtl熟悉UFS和FFS工具时发现sbin/newfs/mkfs.c里注释说验证；claim CL-RM-263132 留库可溯
+freebsd-fs.messages.1176149	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年5月9日，IanDowse指出缺失的错误检查是mkfs.c1.71引入的回归，此前wtfs()写入失败；claim CL-RM-263133 留库可溯
+freebsd-fs.messages.1176175	辑存			2026-11-13	task82-g4p1-v37	NFS 共享 vnode 锁移除提议（vfs_busy 互锁、Apple 独占锁经验），VFS 锁设计讨论，宿主 1.12 家族已满额
+freebsd-fs.messages.1176179	辑存			2026-11-13	task82-g4p1-v37	per-open cookie VOP 面提案（对位 Linux private_data），VFS 设计讨论，宿主已满额
+freebsd-fs.messages.1176212	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年11月25日，IanDowse判断vnode引用计数问题源于vfs_mount.c的checkdirs；claim CL-RM-263145 留库可溯
+freebsd-fs.messages.1176217	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年11月25日，JohnEHein确认可用amq-u复现，amd先卸载再于约一分钟内删除挂载点目录，此时；claim CL-RM-263146 留库可溯
+freebsd-fs.messages.1176307	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年9月24日，Rong-enFan用FreeBSD4.8-RELEASE做NFS服务器与客户端，发现客户；claim CL-RM-263160 留库可溯
+freebsd-fs.messages.1176309	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年9月25日，Rong-enFan援引另一封邮件的意见称客户端在非块边界写时必先读再写，除非全局挂载no；claim CL-RM-263161 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+freebsd-scsi.messages.2483130	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年10月20日，KenMenzel装/usr/ports/sysutils/asr-utils后写per；claim CL-RM-208746 留库可溯
+freebsd-scsi.messages.2483164	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年9月5日，HywelMallett的TandbergSLR60配Adaptec29160用dump备份；claim CL-RM-208756 留库可溯
+freebsd-scsi.messages.2483184	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2003年9月14日，AndrewSnow转述回复者告知该问题已由PaulSaab上周的提交修复、可等5.2R或；claim CL-RM-208759 留库可溯
+freebsd-scsi.messages.2498016	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：1999年12月9日，发帖人更新进展，称升级内核并重建系统十二小时后暂稳，故障间隔由加装盘后首次的约十七小时缩短；claim CL-RM-371021 留库可溯
+freebsd-scsi.messages.2498023	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：1999年12月12日，发帖人指出问题根源在于对方反复使用关闭即自动回卷的/dev/rsa0节点，建议改用不自动；claim CL-RM-371025 留库可溯
+freebsd-scsi.messages.2498034	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：1999年12月13日，发帖人说明该设备确为古老的HPDDS-1DAT驱动器，缺少更多内核日志难以判定其异常行为；claim CL-RM-371027 留库可溯
+freebsd-scsi.messages.2498056	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：1999年12月14日，发帖人告知Infortrend刚推出一系列基于PowerPC的控制器，可能缓解部分性能问；claim CL-RM-371031 留库可溯
+freebsd-scsi.messages.2498061	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：1999年12月14日，发帖人报告一台四个月未动过的稳定版机器突发异常而不可用，无法登录且命令行无响应但仍响应p；claim CL-RM-371032 留库可溯
+freebsd-scsi.messages.2498079	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：1999年12月16日，发帖人重申自己一贯看法，认为只有无法判断物理带尾的设备才需要写两个文件标记，据他所知仅半；claim CL-RM-371035 留库可溯
+freebsd-hardware.messages.1336068	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年1月22日，从PERC4/DC阵列备份到独立控制器的磁带时同样出现Toomanyretriesonco；claim CL-RM-229672 留库可溯
+freebsd-hardware.messages.1336070	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年1月23日，7.1下AsusP5QPro主板AR8121芯片用ale驱动ssh经常断开并报corrup；claim CL-RM-229673 留库可溯
+freebsd-hardware.messages.1336071	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年1月23日，针对Seagate7200.11固件变砖问题发起FLOSS工具提案目标是从Unix读取和修；claim CL-RM-229674 留库可溯
+freebsd-hardware.messages.1336074	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年1月26日，IBMx3650跑6.2时服务中断4至5分钟但system.log无相关记录用FreeIP；claim CL-RM-229675 留库可溯
+freebsd-hardware.messages.1336078	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年1月26日，新购两台Areca1210控制器接四块WD250GBSATA盘配RAID1零持续写入实测极；claim CL-RM-229676 留库可溯
+freebsd-hardware.messages.1336079	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年1月26日，如果该网卡在硬件上接到BMC用于远程IPMI那么它链路的起伏可能会写入SEL日志与作者观察；claim CL-RM-229677 留库可溯
+freebsd-hardware.messages.1336086	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年1月27日，MatroxG550是PCIex1显卡加载显卡与drm模块时报不是AGP卡无法初始化由于该；claim CL-RM-229678 留库可溯
+freebsd-hardware.messages.1336087	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年1月28日，平均自述经多轮内存测试后判定panic源于硬件问题两次panic都发生在长时间断电后启动第；claim CL-RM-229679 留库可溯
+freebsd-hardware.messages.1336092	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年7月1日，ASUSDRW-1814BL用刻录软件刻DVD时前约50%保持稳定8倍速之后光驱缓冲区在10；claim CL-RM-229680 留库可溯
+freebsd-hardware.messages.1336095	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年7月2日，同一光驱实际只运行UDMA66并报非法请求错误之前因UDMA33导致设备无法工作后来在启动配；claim CL-RM-229681 留库可溯
+freebsd-hardware.messages.1336106	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年7月16日，BlackEditionCPU超频到3.8GHz时7.2amd64稳定运行超过24小时但提；claim CL-RM-229683 留库可溯
+freebsd-hardware.messages.1336114	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年7月21日，HPPavilionDV7-1299EF笔记本开启ACPI从DVD启动到USB阶段即崩溃关；claim CL-RM-229685 留库可溯
+freebsd-hardware.messages.1336122	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年7月29日，另一台HPPavilionDV7-1199EF笔记本引导8-BETA2安装DVD时反复等待；claim CL-RM-229686 留库可溯
+freebsd-hardware.messages.1336125	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年7月31日，Intel024B服务器读150至180MB大文件时IDE硬盘报READ_DMA超时重试五；claim CL-RM-229687 留库可溯
+freebsd-hardware.messages.1336127	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年6月3日，DellXPS410空闲时select与sleep等待至少慢2.5%繁忙时正常在6-STAB；claim CL-RM-229688 留库可溯
+freebsd-hardware.messages.1336136	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年6月6日，7.2-STABLE上/dev/speaker节点自行消失但Ctrl-G仍能发声且硬件确实在；claim CL-RM-229690 留库可溯
+freebsd-hardware.messages.1336140	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年6月11日，7.1-RELEASE下Adaptec5405报aacu0COMMANDTIMEOUT后整；claim CL-RM-229692 留库可溯
+freebsd-hardware.messages.1336141	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年6月12日，他为CFI驱动发现SpansionS29AL032与S29GL064在字节模式下按偏移一位；claim CL-RM-229693 留库可溯
+freebsd-hardware.messages.1336150	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年6月29日，PC-BSD7.1下acd0因检出非ATA66线缆被限到UDMA33并报INQUIRYIL；claim CL-RM-229694 留库可溯
+freebsd-hardware.messages.1336153	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年3月4日，OliverFromme指出Intel82563并非以太网控制器而是MAC加PHY芯片Fre；claim CL-RM-229695 留库可溯
+freebsd-hardware.messages.1336154	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2009年3月4日，Badami更正前说串口接的GSM终端数小时后SMSServerTools会失去通信说明问题；claim CL-RM-229696 留库可溯
+freebsd-fs.messages.1208802	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1209043	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1210258	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1210259	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1210264	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2026年3月20日，Dag-ErlingSmørgrav纠正前说指SEEK_DATA与SEEK_HOLE在XN；claim CL-RM-316209 留库可溯
+freebsd-fs.messages.1210461	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1211505	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1211506	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1211777	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1211779	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1212413	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1212425	辑存			2026-11-13	task82-g4p1-v37	同块已在 V52 落位，本卷不重复落账
+freebsd-fs.messages.1212443	拒收			2026-11-13	task82-g4p1-v37	NetApp 专利号检索请求帖，非证据
+freebsd-scsi.messages.2484321	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2005年3月19日，iSCSI加tagqueueing后速度明显提升，但双至强开SMP跑restore时死锁卡；claim CL-RM-208891 留库可溯
+freebsd-scsi.messages.2486206	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年1月6日，Angelo用vmware虚拟机target与发起端均运行7.0-RELEASE做iscsi；claim CL-RM-209085 留库可溯
+freebsd-scsi.messages.2486211	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年1月7日，SossiAndrej在iscsi.conf加tags64后MD3000i读取吞吐升至约43；claim CL-RM-209087 留库可溯
+freebsd-scsi.messages.2486320	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2009年3月26日，DaisukeAoyama提交istgt的ports版本变更请求,自20090323起支持；claim CL-RM-209101 留库可溯
+freebsd-scsi.messages.2486648	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2010年7月27日，Danny作为iscsi_initiator作者请求有commit权限者应用补丁,当前发布；claim CL-RM-209144 留库可溯
+freebsd-scsi.messages.2487222	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2011年2月27日，DaisukeAoyama说明istgt有三种模式，QueueDepth=0为默认模式，每；claim CL-RM-209208 留库可溯
+freebsd-scsi.messages.2487369	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2011年5月17日，ToomasAas询问iSCSIinitiatoriscsi-2.3.1是否可用于Free；claim CL-RM-209232 留库可溯
+freebsd-scsi.messages.2487391	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2011年5月24日，DanielBraniss报告某些iscsi-target在tagopening大于1时会；claim CL-RM-209237 留库可溯
+freebsd-scsi.messages.2488497	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年9月11日，Trasz说新iSCSI栈只差最后几个小尾巴即可入树请给几天时间他会准备针对9-STABL；claim CL-RM-228107 留库可溯
+freebsd-scsi.messages.2488530	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年4月28日，KarlPielorz用10.x新iSCSI栈配iscsictl与ctld报告一旦远程ta；claim CL-RM-228109 留库可溯
+freebsd-scsi.messages.2488677	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年7月4日，ChristerEriksson报告内核原生iSCSItarget在10.0-STABLEr；claim CL-RM-228137 留库可溯
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+freebsd-fs.messages.1189514	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2012年8月9日，LawrenceStewart说明gpart会在唯一的MBR分区表条目上写入活动标志来改写保；claim CL-RM-284978 留库可溯
+freebsd-fs.messages.1189616	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2012年8月24日，AndreyV.Elsukov回复GNATS时说明，GPT使用的是逻辑块地址而不是字节偏移；claim CL-RM-284982 留库可溯
+freebsd-fs.messages.1190183	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2012年1月11日，Felder指出这是gmultipath的已知缺陷，补丁在9-STABLE中已几乎完全重写；claim CL-RM-285029 留库可溯
+freebsd-fs.messages.1190598	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2012年6月13日，发件人提问用gpart命令add选项写对齐参数4096与4k是否等价，附两次gpart命令；claim CL-RM-285069 留库可溯
+freebsd-fs.messages.1190601	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2012年6月13日，发件人回复认可对齐参数4k与8等价，并用gpart命令add写8后以show查看，分区起始；claim CL-RM-285070 留库可溯
+freebsd-fs.messages.1190695	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2012年6月29日，AttilioRao宣布处理非MPSAFE文件系统代码的安排：两个月后删除，未MPSAFE；claim CL-RM-285087 留库可溯
+freebsd-hackers.messages.1314783	辑存			2026-11-13	task82-g4p1-v37	JKH 论扩展属性与 Samba 分工、反对以 read/write 为金标准，API 需求之辨，宿主已满额
+freebsd-hackers.messages.1314880	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月1日，WojciechPuchar实测台式机3.5英寸SAMSUNGHD501LJ硬盘，向kern；claim CL-RM-158269 留库可溯
+freebsd-hackers.messages.1314882	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月1日，StevenHartland查看camata代码后指write_cache在当前代码下应只是；claim CL-RM-158270 留库可溯
+freebsd-hackers.messages.1314883	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月1日，StevenHartland进一步调查后发现有设备复位也能触发生效，建议改值后用camcon；claim CL-RM-158271 留库可溯
+freebsd-hackers.messages.1314885	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月1日，DieterBSD让提问者优先看其他后续回复确认改动生效，并说明命令排队启用时随意测试看不出；claim CL-RM-158272 留库可溯
+freebsd-hackers.messages.1314887	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月2日，WojciechPuchar发现camcontrolreset后关闭writecache性能；claim CL-RM-158273 留库可溯
+freebsd-hackers.messages.1314946	辑存			2026-11-13	task82-g4p1-v37	F_READAHEAD 零值语义与文档不符及补丁，API 语义发现，宿主已满额
+freebsd-hackers.messages.1314977	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月13日，WojciechPuchar报告SAMSUNGHD154UI大量写入数十GB后ahcich；claim CL-RM-158294 留库可溯
+freebsd-hackers.messages.1315022	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年2月20日，rank1seeker在目标存储上剩余20971440扇区、每扇区512字节，执行gpar；claim CL-RM-158306 留库可溯
+freebsd-hackers.messages.1315086	辑存			2026-11-13	task82-g4p1-v37	nullfs_statfs 保留 MNT_UNION 标志补丁，VFS 实现语义，宿主已满额
+freebsd-hackers.messages.1315212	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年1月15日，WojtekPuchar指出对方dd写入的是文件而非设备，故FreeBSD仍按默认128K；claim CL-RM-158341 留库可溯
+freebsd-hackers.messages.1306730	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2011年4月1日，Duane称FreeBSD其实并不检测只读介质，他在Juniper曾为此做过一个内部小项目，；claim CL-RM-147872 留库可溯
+freebsd-hackers.messages.1307092	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年8月11日，AndrewDuane反映在6.2上进程向NFS挂载目录转储核心时收到SIGINT一类信号；claim CL-RM-147958 留库可溯
+freebsd-hackers.messages.1307322	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年12月8日，PiotrNowak称在PowerPC目标与FreeBSD6.1上用gcc4.2.1遇到类；claim CL-RM-148017 留库可溯
+freebsd-hackers.messages.1307386	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年12月16日，CharlieMartin报告在7.2-PRERELEASE上多次出现smprendez；claim CL-RM-148034 留库可溯
+freebsd-hackers.messages.1307462	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年2月2日，AndrewDuane称其所在团队仍在使用FreeBSD6的malloc例程，程序遇到mal；claim CL-RM-148051 留库可溯
+freebsd-hackers.messages.1307869	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年1月13日，Stone说用gcc4.5.1编出的程序在FreeBSD8.1上启动时因movdqa指令触；claim CL-RM-148145 留库可溯
+freebsd-hackers.messages.1307960	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年1月23日，Mahmatkhanov说FreeBSD8.1Ramd64上以php-fpm为后端、ngi；claim CL-RM-148166 留库可溯
+freebsd-hackers.messages.1308446	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年6月6日，MatthewJacob回应I/OAT驱动的讨论，称其所在的Panasas曾考虑把它用于后台；claim CL-RM-148289 留库可溯
+freebsd-hackers.messages.1308470	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年6月9日，RyanStone称在公司把应用从FreeBSD6迁到8后，为守护进程设的1.5GB数据段与；claim CL-RM-148297 留库可溯
+freebsd-hackers.messages.1308545	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年6月24日，StevenHartland报告启用IPv6后openjdk6的UDP发送失败，同一套接字；claim CL-RM-148324 留库可溯
+freebsd-hackers.messages.1308629	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年3月8日，JonathanStuart询问未设UMA_ZONE_PAGEABLE的大zone在以M_Z；claim CL-RM-148348 留库可溯
+freebsd-hackers.messages.1308632	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2011年3月8日，JonathanStuart回应JohnBaldwin的提问，确认平台是amd64，称已缩小；claim CL-RM-148349 留库可溯
+freebsd-net.messages.1437522	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月26日，SamLeffler提交if_media补丁以支持11a/b/g多模无线网卡，用媒体字的空；claim CL-RM-114213 留库可溯
+freebsd-net.messages.1437624	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年8月6日，BruceMSimpson表示已获得IP-over-DVB硬件、天线与LNB，但所配Adap；claim CL-RM-114226 留库可溯
+freebsd-net.messages.1437726	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年8月20日，RobertWatson回忆其4.x时期实现过的bridgeX伪接口，称该接口仅服务于BP；claim CL-RM-114243 留库可溯
+freebsd-net.messages.1437729	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年8月20日，LuigiRizzo确认bridge启动时打印的BRIDGE020214是他标记代码最后修；claim CL-RM-114244 留库可溯
+freebsd-net.messages.1462513	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2010年2月23日，AlexanderEgorenkov称MCS32问题不在AP侧，客户端之所以用MCS32发；claim CL-RM-133293 留库可溯
+freebsd-net.messages.1462553	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2010年1月2日，BarneyCordoba依82576数据手册指出其中的ITR中断调节算法与实际所用不同，实；claim CL-RM-133302 留库可溯
+freebsd-net.messages.1462572	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2010年1月4日，ProkofievS.P.报告应用PyunYongHyeon的em.csum_tso补丁并重；claim CL-RM-133303 留库可溯
+freebsd-net.messages.1462629	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2010年1月11日，BenjaminKaduk在长期停滞后回报，称此前一直运行BernhardSchmidt仓；claim CL-RM-133308 留库可溯
+freebsd-net.messages.1462763	归入	V37.2.7.3	骨架题	2026-11-13	task82-g4p1-v37	em／igb 传统中断注册 PR（bus_setup_intr 空处理函数附补丁），驱动注册流程的当事人实例
+freebsd-net.messages.1462769	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2010年1月25日，TiborVidok称此前已就em驱动传统中断注册提交过PR140728，如今igb遇到同；claim CL-RM-133322 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+freebsd-net.messages.1473834	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年3月22日，NavdeepParhar回应cxgbe配合lagg时的睡眠恐慌，称这个t4sleepte；claim CL-RM-137314 留库可溯
+freebsd-net.messages.1474361	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年10月12日，mybsd报告FreeBSD8.4上基于Intel82580的lagg接口异常，改用Fr；claim CL-RM-137383 留库可溯
+freebsd-net.messages.1474718	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2013年9月30日，AndriyKopystyansky报告基于Intel82580双口igb的lagg接口发；claim CL-RM-137436 留库可溯
+freebsd-net.messages.1474887	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年4月19日，AndrewRybchenko复现了SolarflareSFN5162F双口10Gb网卡配；claim CL-RM-137467 留库可溯
+freebsd-net.messages.1475526	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年2月3日，ScottLong指出10.0上LACP失效是r253687的后果，建议检查net.link；claim CL-RM-137541 留库可溯
+freebsd-net.messages.1475957	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年1月17日，AttilaNagy报告运行于stable/9r260621的LACP端口成员在拔插网线后；claim CL-RM-137620 留库可溯
+freebsd-net.messages.1476333	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年7月18日，MarceloAraujo说明自己修改了lagg(4)补丁并用igb(4)、ixgbe(4；claim CL-RM-141770 留库可溯
+freebsd-net.messages.1476334	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2014年7月18日，AdrianChadd强烈反对这种轮询分发方式，认为单流带宽不足说明另有异常，并批评引入更；claim CL-RM-141771 留库可溯
+freebsd-net.messages.1476610	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2014年6月19日，JohnHay报告升级后vlan处理失效，并把问题定位到ifalias_af_common；claim CL-RM-141798 留库可溯
+freebsd-net.messages.1476628	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2014年6月20日，RogerPauMonné报告测试Xennetback配合if_bridge时触发内核缺页；claim CL-RM-141800 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+freebsd-mips.messages.1395222	辑存			2026-11-13	task82-g4p1-v37	MIPS 缓存行宽度与 ABI 之辨，架构移植设计讨论，无对应 open 题，留痕备查
+freebsd-mips.messages.1395225	辑存			2026-11-13	task82-g4p1-v37	机相关值不得入 ABI 的原则主张，架构移植设计讨论，无对应 open 题，留痕备查
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+freebsd-arch.messages.864808	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2005年8月2日，YousefOurabi询问FreeBSD6.0相对5.x分支在TCP/IP协议栈与KSE及；claim CL-RM-423258 留库可溯
+freebsd-arch.messages.867809	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2007年7月3日，elan619xi询问62版本是否有逐CPU计账补丁意在监控机器各处理器负载回复者请其更具体；claim CL-RM-423384 留库可溯
+freebsd-arch.messages.869090	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2008年12月17日，AndreiV.Lavreniyuk报告i386SMP内核配SSP与ZFS及自打mbuf；claim CL-RM-423431 留库可溯
+freebsd-ia64.messages.1355312	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年6月2日，AlanRobinson报告/dev/kmem读返回值双倍：从kld模块地址读8字节却返回1；claim CL-RM-016668 留库可溯
+freebsd-smp.messages.2504094	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2008年2月11日，AdelwildeJones自述数台服务器稳定运行近一年后出现kerneltrap12wi；claim CL-RM-130426 留库可溯
+freebsd-smp.messages.2504097	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2008年2月24日，PeterMuch自述在系统只有一颗CPU且无SMP内核时编译OpenOffice2.3.；claim CL-RM-130427 留库可溯
+freebsd-smp.messages.2504128	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2008年5月1日，DorrH.Clark自述已在6.3上复现kern/114370的核心转储挂起，写出测试代码；claim CL-RM-130438 留库可溯
+freebsd-smp.messages.2504131	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2008年5月21日，DorrH.Clark自述实测115801中的修复有效，只在崩溃转储期间控制台出现stra；claim CL-RM-130439 留库可溯
+freebsd-arch.messages.863932	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2004年3月25日，嘎倫斯·格羅斯尼说已把pkill与pgrep加入src/usr.bin并跑通，真正工作由p；claim CL-RM-423213 留库可溯
+freebsd-arch.messages.868362	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2007年11月11日，莫亭讨论获取内核线程栈用量的方法指出td_altkstack只是保存原始td_kstac；claim CL-RM-423416 留库可溯
+freebsd-arch.messages.868477	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2007年10月9日，狄龙描述DragonFly将SIGSTOP处理移至userret的做法简化了多条代码路径并；claim CL-RM-423417 留库可溯
+freebsd-isdn.messages.1367701	移出	V36	建议宿主	2026-11-13	task82-g4p1-v37	CAPI for BSD 1.0 发布（AVM B1 PCMCIA 等），i4b 线语料，建议宿主 FreeBSD 版本史卷
+freebsd-isdn.messages.1367685	移出	V36	建议宿主	2026-11-13	task82-g4p1-v37	CAPI2.0 并入 I4B 进展（实现约三千行、自创宏），i4b 线语料，建议宿主版本史卷
+freebsd-isdn.messages.1367633	移出	V36	建议宿主	2026-11-13	task82-g4p1-v37	new_ihfc 预发布兼容声明（可克隆 /dev/i4b、CAPI 库与 Linux 99% 兼容），建议宿主版本史卷
+freebsd-isdn.messages.1367635	移出	V36	建议宿主	2026-11-13	task82-g4p1-v37	三线格局回应（拒导入 HPS、c4b 导入在途），i4b 路线之争语料，建议宿主版本史卷
+freebsd-isdn.messages.1367641	移出	V36	建议宿主	2026-11-13	task82-g4p1-v37	讨论存档在 freebsd-isdn 档案的当事人指认，建议宿主版本史卷
+freebsd-ia64.messages.1355669	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2004年2月19日，Fujitsu-Siemens的Fehn在ZX6000实测20040214快照报三问题——；claim CL-RM-018862 留库可溯
+freebsd-ia64.messages.1355673	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2004年2月20日，Fehn欢呼内核终于起来：清零扇区0/1、格式化EFI分区后给出完整可行分区表——用户侧踩；claim CL-RM-018863 留库可溯
+freebsd-ia64.messages.1355741	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2004年6月15日，Dell工程师Muthu列出sysinstall破坏GPT等四大问题——OEM测试反馈直接；claim CL-RM-018872 留库可溯
+freebsd-ia64.messages.1355838	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2004年5月11日，Muthu提PRia64/66513：Disklabel编辑器不识外来分区、autopar；claim CL-RM-018866 留库可溯
+freebsd-ia64.messages.1355855	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2004年5月13日，Muthu报mountroot提示符回车即panic并附复现步骤——GEOM时代根挂载路径；claim CL-RM-018867 留库可溯
+freebsd-hackers.messages.1273104	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月18日，AlexSemenyaka就PRbin/51148征求评论，该报告建议在为vipw等工具调；claim CL-RM-093415 留库可溯
+freebsd-hackers.messages.1273109	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，DamionYates报告Digital21041网卡在4.8与5.0下均能被识别却因无法；claim CL-RM-093417 留库可溯
+freebsd-hackers.messages.1273112	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，FriedemannBecker补充说明其阻塞的NFS调用发生在4.6.2-RELEASE；claim CL-RM-093418 留库可溯
+freebsd-hackers.messages.1273115	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，BruceR.Montague为ohciUSB等时传输提交补丁，修复等时传送从不启动以及应；claim CL-RM-093419 留库可溯
+freebsd-hackers.messages.1273116	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，MartinBlapp修正其dhclient补丁的缺陷，指出旧版因state_link()；claim CL-RM-093420 留库可溯
+freebsd-hackers.messages.1273119	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，AlexSemenyaka将/bin/sh的算术由32位改为64位，说明补丁改用intma；claim CL-RM-093421 留库可溯
+freebsd-hackers.messages.1273120	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，AlexSemenyaka为上一封邮件误填邮件头字段致歉并重发修正版，重申其/bin/sh；claim CL-RM-093422 留库可溯
+freebsd-hackers.messages.1273121	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，AlexSemenyaka在termios讨论中追问，认为无输入数据时MIN大于0而TIM；claim CL-RM-093423 留库可溯
+freebsd-hackers.messages.1273122	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月19日，AlexSemenyaka补发/bin/sh64位算术补丁的实际diff，给出Makefi；claim CL-RM-093424 留库可溯
+freebsd-hackers.messages.1273125	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月20日，DmitrySivachenko应DonLewis之请，针对-STABLE上重复出现的ma；claim CL-RM-093426 留库可溯
+freebsd-hackers.messages.1273131	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月20日，AlexanderPohoyda建议将MartinBlappdhclient补丁中dhcl；claim CL-RM-093427 留库可溯
+freebsd-hackers.messages.1273138	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月20日，CristJ.Clark表示可复现JacquesA.Vidrine所述现象，即同一IPse；claim CL-RM-093428 留库可溯
+freebsd-hackers.messages.1273151	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月20日，MarcelMoolenaar询问pmap_kextract()是否允许fault，指出其；claim CL-RM-093431 留库可溯
+freebsd-hackers.messages.1273157	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2003年4月21日，Dirk-WillemvanGulik报告在低端主板上做wi网卡之间桥接时中断时间占比超过；claim CL-RM-093434 留库可溯
+freebsd-geom.messages.1218473	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2007年1月12日，Kitsana报geom_raid5开safeop传输数十GB后整机卡死——社区RAID5；claim CL-RM-019423 留库可溯
+freebsd-geom.messages.1218326	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：2007年2月1日，Anderson追问ataidle的sleep与idle部件能否并入atacontrol——；claim CL-RM-019424 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+freebsd.duckdb.commits	辑存			2026-11-13	task82-g4p1-v37	同块已在 V37;V39;V60;V63;V64 落位，本卷不重复落账
+freebsd-ports.messages.1565232	辑存			2026-11-13	task82-g4p1-v37	同块已在 V64 落位，本卷不重复落账
+freebsd-ports.messages.1565960	辑存			2026-11-13	task82-g4p1-v37	容量满额溢出的提交责任之辩块（src 提交者是否须为破坏端口负责），同节无可容题，辑存留痕
+freebsd-acpi.messages.824606	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2016年4月11日，DominicFandrey报告挂起恢复后hw.acpi.acline卡住并影响C状态、p；claim CL-RM-129899 留库可溯
+freebsd-acpi.messages.824610	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2016年4月21日，JohannesDieterich报告Elitebook745G3接上扩展坞后acpi_t；claim CL-RM-129900 留库可溯
+freebsd-acpi.messages.824620	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2016年8月18日，用户am_dxer报告HP15-n066us（AMDA10-5745M）上powerd无法；claim CL-RM-129904 留库可溯
+freebsd-acpi.messages.824625	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2016年8月18日，AnthonyJenkins贴出针对sys/x86/cpufreq/hwpstate.c的；claim CL-RM-129906 留库可溯
+freebsd-acpi.messages.824651	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2016年2月11日，HansPetterSelasky说明挂起本身无问题，难点在恢复时需完全复位XHCI并重新；claim CL-RM-129914 留库可溯
+freebsd-acpi.messages.824668	归入	V37.10.8.4	增密	2026-11-13	task82-g4p1-v37	HP 笔记本须 ACPI CMOS 补丁方可挂起关机，笔记本固件差异短板的当事人实例
+freebsd-acpi.messages.824683	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2016年1月20日，用户drhugin报告SupermicroX10SL7-F上执行acpiconf-s3报d；claim CL-RM-129924 留库可溯
+freebsd-acpi.messages.822528	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2011年4月30日，SaschaKlauder自述AcerAspireOneD250运行8.2-STABLE时；claim CL-RM-129410 留库可溯
+freebsd-acpi.messages.822537	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2011年8月21日，GarrettCooper自述在netbook上把挂起恢复问题定位到SMP，卡在ioapi；claim CL-RM-129415 留库可溯
+linux-mail-core-figures.core_figure_stats.Andrew Tridgell	拒收			2026-11-13	task82-g4p1-v37	与本卷题面无对应的技术琐记：安德鲁·特里奇尔（AndrewTridgell）作为Samba与rsync原作者、2005年FSF自由软件进步奖；claim CL-RM-012120 留库可溯
+freebsd-acpi.messages.824569	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2015年9月17日，ColinPercival否决Jung-ukKim所附补丁，称其只在重启阶段才禁用挂起，而；claim CL-RM-129891 留库可溯
+freebsd-acpi.messages.824577	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2015年9月20日，ColinPercival认为rc.shutdown在进入单用户模式前运行，因此内核调用或；claim CL-RM-129893 留库可溯
+cu.messages.3327	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2023年8月8日，Dag-ErlingSmørgrav报告ZFS死锁是在5月4日与6月26日的两次提交之间引入；claim CL-RM-123168 留库可溯
+freebsd-questions.messages.361	拒收			2026-11-13	task82-g4p1-v37	排障／运维个案（容量满额溢出，同节无可容题）：2024年3月4日，DanielFeenberg回应ZFSARC内存需求讨论，称其用于生产与备份的多个大型ZFS；claim CL-RM-092636 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据
+cross_indexes.duckdb.concept_history	拒收			2026-11-13	task82-g4p1-v37	跨库概念卡／播客派生（BSD Now EP70 Langille 起点叙事），L2 派生块不作证据
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v37	史观块／跨库概念卡（史家判断／概念演化卡，多为同文重复块），不作证据

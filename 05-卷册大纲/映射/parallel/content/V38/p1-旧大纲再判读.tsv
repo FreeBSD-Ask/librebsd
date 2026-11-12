@@ -1,0 +1,135 @@
+rowmine_id	disposition	host_subsection	host_kind	judged_at	batch	note
+usenet_mail.messages.167854	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Torvalds答xgc与x11perf性能极差：怀疑并非整机停顿而是浮点陷阱密集，自述387仿真器当初只为易实；claim CL-RM-074492 留库可溯
+usenet_mail.messages.166707	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Withrow谴责Lynne对Vixie的人身攻击：Lynne引其早年网络攻击并谓其正经历严重个人困扰，已远超可；claim CL-RM-074808 留库可溯
+usenet_mail.messages.167132	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Truscott说明386BSDip_input.c中向ip_csum赋值并非真缺陷：报文重传时ip_outpu；claim CL-RM-075222 留库可溯
+usenet_mail.messages.167502	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Bremner提层级建议：倾向先把comp.unix.bsd移作comp.os.bsd再下分386bsd等子组，；claim CL-RM-075299 留库可溯
+usenet_mail.messages.169803	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：定位386bsd0.1引导器wdbootblk.c在高速模式卡在控制器忙等待，加视频调试与延时修复后可连续引导三；claim CL-RM-075633 留库可溯
+usenet_mail.messages.171073	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Risner在486/33带64K缓存与16位IDE卡上跑iozone：15到17毫秒的130毫IDE盘于512；claim CL-RM-075849 留库可溯
+usenet_mail.messages.169445	辑存			2026-11-13	task82-g4p1-v38	AT&T 源码污染疑虑的局外人自述（L3 转述），清理语境块而非 Bostic 牵头证据，留痕备查
+usenet_mail.messages.168046	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Root反驳Ahmad关于0.1分发需先整体加载之说：谓装完bin01文件后完全不需要临时空间，并给出实用循环脚；claim CL-RM-074526 留库可溯
+usenet_mail.messages.169517	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：Neese与Eckhardt就SCSI卡之争：谓386BSD与1542B配合良好正因其总线主控、该优势在DOS下；claim CL-RM-075605 留库可溯
+usenet_mail.messages.132160	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：AdamDavid自述为让c-news的subst脚本在ash下跑通，改简引号并删去碍事的反斜杠，并愿分享可用版；claim CL-RM-045572 留库可溯
+usenet_mail.messages.156607	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：MichaelBorowiec指出4.3BSD有forkstat而FreeBSD没有，因Mach虚拟内存与写时复；claim CL-RM-027692 留库可溯
+usenet_mail.messages.164084	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：报告Cyrix486DLC在386BSD下正常且应视为高频386而非486兼容的结论。引用时按L3纪律：以上为邮；claim CL-RM-070026 留库可溯
+freebsd-hackers.messages.2619803	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年7月13日，FreeBSD开发者BrianF.Feldman在overcommit讨论中承认自己提出的；claim CL-RM-475922 留库可溯
+usenet_mail.messages.152862	辑存			2026-11-13	task82-g4p1-v38	基金会资助 pjd 开发 Capsicum 用户态框架，资助形态块无对应 open 题，留痕备查
+freebsd-hackers.messages.2567847	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1996年5月16日，Babkin用lmbench测得Pentium75机内存延迟高达500ns，其装60ns的；claim CL-RM-352953 留库可溯
+freebsd-hackers.messages.2585157	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年4月14日，DavidS.Miller质疑JimBryant称Linux网络糟糕虚拟内存更糟的说法，自；claim CL-RM-381441 留库可溯
+freebsd-hackers.messages.2588367	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年5月26日，他在三十二兆内存FreeBSD2.2-STABLE上用procmail投递大邮件报内存不足；claim CL-RM-385221 留库可溯
+freebsd-hackers.messages.2594426	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年9月25日，针对-current构建时isa.o报_isa_devtab_cam未定义符号的情况，Te；claim CL-RM-398930 留库可溯
+freebsd-hackers.messages.2596139	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年10月29日，MikeBurgett质疑ECC内存的性能开销是否真有那么大认为内存子系统本来就按行与L；claim CL-RM-400106 留库可溯
+freebsd-hackers.messages.2596696	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年11月6日，eric认为16650上有一个软件位可以把波特率翻四倍，但从它的运作方式来看，必须先确保振；claim CL-RM-403484 留库可溯
+freebsd-hackers.messages.2602750	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1998年3月4日，terry提出希望在开启softupdates的机器上比较磁盘写缓存开启与关闭两种情形的基准；claim CL-RM-416172 留库可溯
+freebsd-hackers.messages.2604633	归入	V38.2.3.4	骨架题	2026-11-13	task82-g4p1-v38	asami（Ports 团队负责人）论跨 BSD 友好化的事务协调保留，Ports 团队协调职守的当事人实例
+freebsd-bugs.messages.1052332	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1996年6月9日，JoergWunsch关闭docs/1303关于printf手册页内容争议的问题，注称pri；claim CL-RM-180462 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+freebsd-bugs.messages.1058739	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年6月2日，DavidGilbert列出四条弃用缓冲区设备的理由：原始设备名多打一字、st0与ccd0易；claim CL-RM-283211 留库可溯
+freebsd-bugs.messages.1059747	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年8月19日，JustinT.Gibbs紧接着又认领dump备份频繁崩溃的报障，只写了两句：这是我的驱动；claim CL-RM-285879 留库可溯
+freebsd-bugs.messages.1059837	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1997年8月23日，JoergWunsch关闭ed0与SeagateSCSI设备冲突无法解决的报障理由是报告者；claim CL-RM-285964 留库可溯
+freebsd-gecko.messages.1205355	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2009年12月9日，面对道格·巴顿催促enigmail1.0的追问，盖齐坦言团队缺少人手去修复全部依赖seam；claim CL-RM-058647 留库可溯
+freebsd-gecko.messages.1205880	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2010年8月3日，MatthiasAndree替BeatGaetzi公开催促portmgr的repo-copy；claim CL-RM-058707 留库可溯
+freebsd-perl.messages.1529727	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2018年8月22日，SteveWills把Flags从maintainer-feedback+改为mainta；claim CL-RM-179441 留库可溯
+usenet_mail.messages.174463	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2001年12月20日，PeterdaSilva阐明BSD核心由committer与coreteam的评审过程定；claim CL-RM-026101 留库可溯
+freebsd-stable.messages.2595811	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年3月4日，针对时区会因夏令时而改变的猜测MarcOlzheim只回一句Nope说普通进程会始终保持同一；claim CL-RM-232857 留库可溯
+freebsd-stable.messages.2596936	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年4月17日，3.1-STABLE上rpc.statd占用异常大的虚拟内存，自述此前一切正常；ps显示V；claim CL-RM-243155 留库可溯
+freebsd-stable.messages.2597451	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年5月7日，Nelson的3.1稳定版系统突发自发重启，定位为EDO非校验内存损坏，症状是随机陷阱多为S；claim CL-RM-243416 留库可溯
+freebsd-stable.messages.2598764	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年8月7日，WGeraldHicks称跑3.1等于没在trackingstable，建议生产系统这么做，；claim CL-RM-250044 留库可溯
+freebsd-newbies.messages.1500161	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1998年4月26日，Studded在回复新订阅者时说明本列表与freebsd-questions的分工：技术问；claim CL-RM-071480 留库可溯
+freebsd-newbies.messages.1501517	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1998年10月29日，NikClayton预告freebsd-doc将讨论Handbook的组织方式，打算调整；claim CL-RM-071560 留库可溯
+freebsd-hackers.messages.1293069	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2007年1月8日，StevenHartland排查用户下载缓慢的问题，发现同网两台机器结果迥异，Windows；claim CL-RM-115669 留库可溯
+freebsd-hackers.messages.1294335	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2007年5月11日，Dag-ErlingSmørgrav纠正IvanVoras对ACID的说法，指ACID不是；claim CL-RM-115949 留库可溯
+freebsd-hackers.messages.1294703	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2007年5月31日，JosephKoshy回复报称hwpmc初始化失败的一方，建议其在把图形界面接到hwpmc；claim CL-RM-121462 留库可溯
+freebsd-hackers.messages.1294714	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2007年11月1日，EduardoMorras回应他人提及lzo之问，称自己自1999年起从事压缩，其代码压缩；claim CL-RM-121465 留库可溯
+freebsd-sparc64.messages.2515029	辑存			2026-11-13	task82-g4p1-v38	Macy 论定向捐款不可行与付费开发，捐赠机制议论块，无对应 open 题，留痕备查
+freebsd-hackers.messages.1285993	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2005年3月29日，mohamedaslan于2005年3月29日回应称这并非骂战，坚称Linux的组织方式确；claim CL-RM-105515 留库可溯
+freebsd-hackers.messages.1287925	辑存			2026-11-13	task82-g4p1-v38	2006Q1 状态报告（基金会促成 Java／Xen／UltraSPARC T1），基金会职能块，留痕备查
+freebsd-hackers.messages.1289368	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2006年1月19日，大阪大学计算机本科生ChoyKhoYee自述为毕业论文开发了邮件列表归档管理系统MLwik；claim CL-RM-109104 留库可溯
+freebsd-hackers.messages.1289825	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2006年7月24日，RobertWatson承认此前回答误读了问题，指出对方并非主张直接返回EPERM，而是要；claim CL-RM-109224 留库可溯
+freebsd-acpi.messages.821007	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2009年12月9日，Intel的RobertMoore说明ACPICA表管理器专门设计成任何时刻都可用，甚至在；claim CL-RM-124128 留库可溯
+freebsd-doc.messages.1116130	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2005年10月15日，MarcFonvieille在docs/87445串中附和TomRhodes，后者称ke；claim CL-RM-185147 留库可溯
+freebsd-doc.messages.1116140	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2005年10月15日，HirokiSato不认为把现有handbook按版本各拆一份有助于维护，认为多数章节与；claim CL-RM-185149 留库可溯
+freebsd-hackers.messages.1328036	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2019年11月13日，GeorgeMitchell说FreeBSD-SA-19:25.mcepsc对CVE-2；claim CL-RM-200354 留库可溯
+freebsd-ppc.messages.2144719	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2018年10月28日，MarkMillard说明自己有时可接触的老PowerMac，含三台G5与若干G4，正用；claim CL-RM-151655 留库可溯
+cu.messages.8593	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2025年3月24日，MaximFilimonov报告AX201在设置compat.linuxkpi.iwlwi；claim CL-RM-127011 留库可溯
+cu.messages.8895	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2025年11月1日，DennisClarke在邮件列表指出15.0BETA4的amd64dvd1镜像已达515；claim CL-RM-127079 留库可溯
+freebsd-hackers.messages.2537452	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2024年11月8日，KristofProvost同意移除devel/kyuaport，认为从14分支起标记IG；claim CL-RM-299856 留库可溯
+sacred_sources.duckdb.blocks	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+freebsd-sparc64.messages.2517734	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2002年12月24日，KrisKennaway宣布sparc64的包构建终于完成，共得4362个包并已上传到f；claim CL-RM-138853 留库可溯
+freebsd-isdn.messages.1367602	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2004年10月21日，回应HPS是时候升级FreeBSD的ISDN子系统吗之问：既不支持整体替换现行子系统，本；claim CL-RM-018364 留库可溯
+freebsd-stable.messages.2605085	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2000年3月26日，针对FreeBSD与BSDi合并之说，Dag-ErlingSmorgrav表示FreeBS；claim CL-RM-273983 留库可溯
+freebsd-hackers.messages.1276169	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2003年11月8日，ChrisBond指出用ptrace的PT_ATTACH附加进程后，实施跟踪的一方会变成父；claim CL-RM-094477 留库可溯
+freebsd-ia64.messages.1360196	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2002年11月18日，Baldwin力挺ia64改动入DP2树并倡议设re-ia64——发布工程的平台建制化。；claim CL-RM-019236 留库可溯
+freebsd-hackers.messages.1298356	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2008年3月12日，WadeKlaver报告在7.0网桥上以ipfw与dummynet限速时并发管道被限制在1；claim CL-RM-125746 留库可溯
+freebsd-hackers.messages.1298622	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2008年5月6日，MarcOlzheim回应LukaszJaroszewski关于utmp.h中UT_HOST；claim CL-RM-127305 留库可溯
+freebsd-doc.messages.1122527	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2009年12月1日，环境8.0-STABLE，Glen依据contrib/pf的提交日志近十八个月无实质改动，；claim CL-RM-203736 留库可溯
+freebsd-hackers.messages.1308281	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2011年7月19日，EygeneRyabinkin回应DanielBraniss说网络子系统会把255.255；claim CL-RM-148235 留库可溯
+freebsd-isdn.messages.1368367	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2016年2月23日，2016年，AndreasLongwitz把困扰他的报错定位为0x1101即应用ID无效，；claim CL-RM-053751 留库可溯
+freebsd-isdn.messages.1367754	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2005年5月24日，FreeBSD核心开发者Poul-HenningKamp转述BSDcan开发者峰会的结论，；claim CL-RM-054487 留库可溯
+freebsd-arm.messages.898513	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2017年11月4日，Mark定位为r325320破坏了lld,因为lld里有使用fallocate的代码,会在；claim CL-RM-252018 留库可溯
+freebsd-arm.messages.898793	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2017年10月23日，Nathan称自己在用IXP425跑相当新的12-CURRENT当家用wifi路由器，认；claim CL-RM-252142 留库可溯
+freebsd-arm.messages.910805	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2025年11月1日，AdrianChadd表示在自己笔记本上交叉构建armv7能成功，怀疑交叉构建环境放宽了格；claim CL-RM-272145 留库可溯
+freebsd-security.messages.2510099	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年7月9日，发帖人实测指出Dante基于域名解析的代理在FreeBSD上不工作，可能已被修好，但只要用I；claim CL-RM-339336 留库可溯
+freebsd-security.messages.2514473	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2000年6月12日，发帖人报告日志中反复出现netscape记录/etc/pwd.db无效参数的异常，两条记录；claim CL-RM-342588 留库可溯
+freebsd-security.messages.2520486	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2001年6月8日，发帖人在4.3-STABLE上用ldd查看/bin/rmail，发现它依赖动态的/usr/l；claim CL-RM-348768 留库可溯
+freebsd-security.messages.2521719	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2001年8月15日，发帖人反对默认禁用全部网络服务，认为这样FreeBSD会被看成开箱什么都不做的系统，但这不；claim CL-RM-349189 留库可溯
+freebsd-security.messages.2496698	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2011年9月21日，发帖人代表反对意见明确表示反对再把这类软件导入base，认为现状运作良好，导入的收益必须远；claim CL-RM-330491 留库可溯
+freebsd.duckdb	辑存			2026-11-13	task82-g4p1-v38	同块已在 V35;V36;V39;V63;V64;V66;V69 落位，本卷不重复落账
+youtube.episodes.CL-15-382	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+freebsd.duckdb	辑存			2026-11-13	task82-g4p1-v38	同块已在 V35;V36;V39;V63;V64;V66;V69 落位，本卷不重复落账
+historical_claims.duckdb.claim	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+review_reports.duckdb.review_records	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：<MattDillon离开FreeBSD争议的历史背景>##文献-IngoSchwarze.bsdcan14-m
+freebsd-vendors.messages.11874	归入	V38.4.5.3	骨架题	2026-11-13	task82-g4p1-v38	Gibbs 以基金会身份向厂商说明 JDK 分发许可与商标协议，法律实体对外代表的当事人实例
+youtube.episodes.CL-15-1233	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.CL-15-1238	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.CL-15-1239	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.CL-15-1284	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+chapter_reviews	辑存			2026-11-13	task82-g4p1-v38	同块已在 V05;V09;V63;V64;V66;V71;V73;V74 落位，本卷不重复落账
+71337.914807275@gjp.erols.com	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：GaryPalmer/GregLehey，freebsd-hackers，1998年，Mess
+20020508221506.43B3F38CC@overcee.wemm.org	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：MikeSmith，freebsd-hackers，2002-05-08，Message-ID
+marc:105164507532606	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：BenGoren，openbsd-misc，2003年，Message-ID:`marc:10
+youtube.episodes.CL-15-686	归入	V38.2.3.1	增密	2026-11-13	task82-g4p1-v38	Percival 口述：副发布工程师 Karels 曾答应接 FreeBSD 13.4 发布（L1 转写存疑材料，采信前须另行考据）
+freebsd-ports.messages.1677829	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1996年4月7日，JustinT.Gibbs回应称他对wcarchive想用什么集合就用什么集合没有异议，不过；claim CL-RM-380021 留库可溯
+freebsd-ports.messages.1572458	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2005年4月14日，MikeSchroll提交swig补丁在WANT_SWIG_PHP4段添加--withou；claim CL-RM-157097 留库可溯
+freebsd-ports.messages.1736485	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2002年2月1日，MikhailTeterin提议以LIB_DEPENDS_ANY_VERSION列表与库名正；claim CL-RM-477336 留库可溯
+freebsd-ports.messages.1674530	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1995年4月6日，ThomasGellekum已上传icon.tar.gz到freefallincoming建；claim CL-RM-368299 留库可溯
+freebsd-ports.messages.1561678	归入	V38.5.1.2	增密	2026-11-13	task82-g4p1-v38	Laforet 答复 FOSDEM：ports 基础设施由 JKH 起手、今由 portmgr 团队维护并列成员名单
+freebsd-ports.messages.1676653	归入	V38.1.2.2	增密	2026-11-13	task82-g4p1-v38	JKH 与 Satoshi 长谈后处理 PLIST 与 @mode／@owner 弃用，初始包管理作者身份的在实践证据
+freebsd-ports.messages.1739818	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2002年7月25日，贝雷金接手net/p5-Net-Whois-RIPE工单责任人变更，称将与提交者协作推进。；claim CL-RM-481087 留库可溯
+freebsd-ports.messages.1743575	归入	V38.5.1.2	增密	2026-11-13	task82-g4p1-v38	Joe Marcus Clarke 将 gnome2 atk 递归问题 PR 转派 GNOME 团队，团队代理形式当事人实例
+freebsd-ports.messages.1743576	归入	V38.5.1.2	增密	2026-11-13	task82-g4p1-v38	Joe Marcus Clarke 将 Mozilla 1.2 发布 PR 转派 GNOME 团队维护者，团队代理形式的当事人实例
+freebsd-ports.messages.1560085	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2003年9月24日，net/openldap12维护者LachlanO'Dea对移除该端口没有异议，承认自己早；claim CL-RM-106066 留库可溯
+freebsd-ports.messages.1608248	辑存			2026-11-13	task82-g4p1-v38	portupgrade 维护者因个人时间移交 ruby 团队，维护交接块非构建集群题面，留痕备查
+freebsd-ports.messages.1633660	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2013年4月28日，软件无线电路线由DianeBruce与martymac在休假交替中接力推进，gnuradi；claim CL-RM-277590 留库可溯
+freebsd-ports.messages.1704910	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1999年11月14日，cpiazza把ports/14880即dagrab的NONBLOCK构建失败PR转给自；claim CL-RM-436298 留库可溯
+freebsd-ports.messages.1631656	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：2012年11月17日，此次redports宕机在当事人笔下既是基础设施迁移也是志愿产能的单点失效，它把镜像可用；claim CL-RM-277177 留库可溯
+youtube.episodes.-2E7vIunJ28 批w170	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.-Lpx9QuCEsw 批w170	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.-PNOug51HRg 批w170	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.-Qope9JmJmw 批w170	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.-R4mabCLz2I 批w170	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+linux-kernel.duckdb.commits	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：linux-kernel代码仓库：从1970年到2026年，共1,474,341次提交，39,865位贡献者参与
+9507251545.AA14801@ozymandias.austin.ibm.com	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：ScottBrickner（IBM奥斯汀），freebsd-security，1995-07-
+199507260318.UAA20861@kithrup.com	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：SeanEricFagan，freebsd-security，1995-07-26，Messa
+Pine.OSF.3.95q.970129092641.243B-100000@thurston.eng.umd.edu	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：ChuckRobey（马里兰大学，转发IanGoldberg/cryptography@c2.
+199507261149.EAA08682@tale.frihet.com	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：**邮件来源**：DavidE.Tweten（tale.frihet.com，PGP签名邮件），freebsd-
+youtube.episodes.CL-15-3294	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+freebsd.duckdb	辑存			2026-11-13	task82-g4p1-v38	同块已在 V35;V36;V39;V63;V64;V66;V69 落位，本卷不重复落账
+login-zazhi.articles.CL-1-128	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.CL-15-1140	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.CL-15-1304	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+chapter_reviews	辑存			2026-11-13	task82-g4p1-v38	同块已在 V05;V09;V63;V64;V66;V71;V73;V74 落位，本卷不重复落账
+doubts_resolved	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：>来源：`04-现代研究文献/06-存疑数据库/doubts_standalone.db`表`doubts_to
+chapter_reviews	辑存			2026-11-13	task82-g4p1-v38	同块已在 V05;V09;V63;V64;V66;V71;V73;V74 落位，本卷不重复落账
+login-zazhi.articles.CL-16-040	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+login-zazhi.articles.CL-1-128	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+login-zazhi.articles.CL-2-058	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+youtube.episodes.CL-15-224	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+freebsd-stable.messages.2579438	拒收			2026-11-13	task82-g4p1-v38	创始期之外的硬件问答，待定位，非人物题面证据；claim CL-RM-168575 留库可溯
+freebsd-hackers.messages.2516485	拒收			2026-11-13	task82-g4p1-v38	创始期之外的硬件问答，待定位，非人物题面证据；claim CL-RM-217407 留库可溯
+freebsd-hackers.messages.2516545	拒收			2026-11-13	task82-g4p1-v38	创始期之外的网络配置问答，待定位，非人物题面证据；claim CL-RM-217430 留库可溯
+freebsd-hackers.messages.2516623	拒收			2026-11-13	task82-g4p1-v38	创始期之外的驱动版本问答，待定位，非人物题面证据；claim CL-RM-217471 留库可溯
+usenet_mail.messages.172500	归入	V38.1.5.6	增密	2026-11-13	task82-g4p1-v38	BSDI 与 386BSD 之争双方立场转述（Kolstad／Jolitz），分叉叙事当事人立场（L3 转述）
+freebsd-hackers.messages.2606127	拒收			2026-11-13	task82-g4p1-v38	与本卷题面无对应的技术琐记：1998年5月23日，eivind答复说没有成体系的东西，只有一份计划成为设备驱动作者指南的材料，其余文档都在书；claim CL-RM-421520 留库可溯
+youtube.episodes.CL-15-1143	拒收			2026-11-13	task82-g4p1-v38	派生块（史家判断／播客／数据库引用），L1／L2 存疑材料不作证据
+freebsd.duckdb	辑存			2026-11-13	task82-g4p1-v38	同块已在 V35;V36;V39;V63;V64;V66;V69 落位，本卷不重复落账
+freebsd.duckdb	辑存			2026-11-13	task82-g4p1-v38	同块已在 V35;V36;V39;V63;V64;V66;V69 落位，本卷不重复落账
