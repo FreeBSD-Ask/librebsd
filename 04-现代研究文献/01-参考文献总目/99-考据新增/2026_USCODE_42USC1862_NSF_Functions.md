@@ -1,6 +1,6 @@
 # 42 U.S.C. § 1862 — Functions（美国国家科学基金会职权）引用卡
 
-> 用途：V02.2.4.3“联邦与大学的科研协作模式”内容补证（V02 补证批 b004）。
+> 用途：V02.2.4.6“资助格局对计算研究的导向”内容补证（V02 补证批 b006；本卡原为 b004 预取未用，2026-11-13 逐字复核后转用于本批，并补 (a)(4) 逐字引文）。
 
 ## 一、著录
 
@@ -22,6 +22,10 @@ United States Code, 2023 Edition, Title 42 — The Public Health and Welfare, Ch
 
 > to initiate and maintain a program for the determination of the total amount of money for scientific and engineering research, including money allocated for the construction of the facilities wherein such research is conducted, received by each educational institution and appropriate nonprofit organization in the United States, by grant, contract, or other arrangement from agencies of the Federal Government, and to report annually thereon to the President and the Congress
 
+§ 1862(a)(4)（2026-11-13 补，与 govinfo 原文逐字复核一致）：
+
+> (4) to foster and support the development and use of computer and other scientific and engineering methods and technologies, primarily for research and education in the sciences and engineering;
+
 ## 三、说明
 
-条文以“合同或其他安排（含拨款、贷款及其他形式的援助）”为基金会支持高校与科研机构基础研究的基本工具；并单列按“拨款、合同或其他安排”统计各教育机构获联邦科研经费的条款。属联邦法律原文。
+条文以“合同或其他安排（含拨款、贷款及其他形式的援助）”为基金会支持高校与科研机构基础研究的基本工具；并单列按“拨款、合同或其他安排”统计各教育机构获联邦科研经费的条款；其中 (a)(4) 把“计算机及其他科学与工程方法和技术的开发与使用”明文列入基金会职权，优先服务于科学与工程领域的研究和教育。属联邦法律原文。
