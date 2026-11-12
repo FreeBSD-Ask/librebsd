@@ -1,0 +1,34 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V56.1.7.5	保密材料的公开程序	ref_title	2546	2546	0.431	B	California Public Records Act（加州公共记录法，Cal. Gov. Code §§6250-6270）全文 California Legislature 	可推	文献线索（须核全文再定 D1/D2）
+V56.2.2.3	创始人身份的取证阻断	sacred	2656		0.245	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V56.2.4.5	地址空间目标的抬升	claim	CL-2-011		1.20	B	VAX-11/780 于 1978 年推出，是 VAX 架构的首个实现；VAX 设计始于 1975 年，目标是成为 PDP-11 的兼容扩展以解决其虚拟地址空间限制，名称 VAX-11 源自“PDP-11 的虚拟地址扩展”。	可推	claim 复用（S2 先库后网）
+V56.2.5.1	分布式文件规格的公开承诺	claim	CL-RM-010422		1.30	A	2008 年 2 月 Robert Watson 花一晚把 Arla 跑上 FreeBSD 8-CURRENT 并发布补丁——新 VFS 时代老分布式文件系统的续命尝试。	可推	claim 复用（S2 先库后网）
+V56.2.5.1	分布式文件规格的公开承诺	claim	CL-RM-010421		1.30	A	2001 年 10 月 Robert Watson 确认已为 OpenAFS 在 FreeBSD 5.0-CURRENT 分配专用系统调用号——分布式文件系统获得内核接口层正式身份。	可推	claim 复用（S2 先库后网）
+V56.2.5.5	许可与分发的工程约束	ref_title	2577	2577	0.238	C	CC0-1.0 官方法律文本（2009） 2009	可推	文献线索（须核全文再定 D1/D2）
+V56.2.5.5	许可与分发的工程约束	ref_title	2578	2578	0.238	C	CC BY 4.0 官方法律文本（2013） 2013	可推	文献线索（须核全文再定 D1/D2）
+V56.2.5.5	许可与分发的工程约束	ref_title	2579	2579	0.238	C	CC BY-SA 4.0 官方法律文本（2013） 2013	可推	文献线索（须核全文再定 D1/D2）
+V56.2.6.1	版本序列的分界记载	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V56.2.7.4	平台支持的存续范围	ref_title	5981	5981	0.229	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V56.2.8.1	虚拟内存的移植评估	claim	CL-RM-011600		1.30	A	Cray 为何弃用虚拟内存的多方回应汇总：base/limit 寄存器保护、内存带宽为超算瓶颈、CDC 205/ETA10 分页性能教训	可推	claim 复用（S2 先库后网）
+V56.2.8.3	规范开放的明言出处	ref_title	5693	5693	0.264	C	Foundation 2006-04-05 PRWeb 公告原文 2006	可推	文献线索（须核全文再定 D1/D2）
+V56.3.1.1	创立年份与人事清单	fulltext_fact	kf-bell-10021-033	10021	0.233	C	Bell Laboratories成立于1925年	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.3.1.1	创立年份与人事清单	fulltext_fact	kf-bell-10021-875	10021	0.233	C	Bell Laboratories成立于1925年	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.3.2.4	目标客户的行业定位	fulltext_fact	1003	3565	0.234	C	UNIX 4.0 Overview 作者与定位（Dolotta/Haight/Petruccelli，PWB 线）	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.3.5.1	Lite 发行的条款沿袭	sacred	2418		0.326	B	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V56.3.8.1	收购公告的时点依据（2001 年 4 月）	ref_title	5922	5922	0.422	B	Creek 收购公告 2000 2000	可推	文献线索（须核全文再定 D1/D2）
+V56.3.8.1	收购公告的时点依据（2001 年 4 月）	fulltext_fact	kf-bell-10019-1280	10019	0.289	C	Mercury Communications Network 于1961年6月完成	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.3.8.1	收购公告的时点依据（2001 年 4 月）	doubt_open	2986		0.252	C	〔全量证据复核·待补｜批次 v64a｜源稿 v64a-三源核验-20261014.md｜条 4〕Citrix 收购 NetScaler 公告与 BLX 文档 ["Citrix收购Ne", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V56.4.1.6	原始套接字的权限限制	claim	CL-RM-016268		1.30	A	Robert Elz（kre）对 Roy Marples 的 ROUTE_MSGFILTER 套接字选项提案详致长复：总体不错、类似的机制对 mobility socket 也有用（假若未来加 Mobile IP），并可扩展到普通原始套接字	可推	claim 复用（S2 先库后网）
+V56.4.1.6	原始套接字的权限限制	claim	CL-RM-015666		1.30	A	Dan McDonald（NRL）1995-02 报告 raw_ip.c 两字符修复——4.4BSD 原始套接字实现巴西。	可推	claim 复用（S2 先库后网）
+V56.4.4.2	1.1 规范的兼容承诺	claim	CL-RM-010508		1.10	A	2017 年 12 月 Frank Wille 提议在 8.0 前移除 SunOS/68k 兼容层：其 28 位地址空间遗产正是 384MB 任务内存上限的元凶——三十年的兼容承诺走向终结。	可推	claim 复用（S2 先库后网）
+V56.5.1.1	合流方向的技术原因	sacred	2310		0.289	C	选择 FreeBSD 的技术原因	可推	史观参照（不作证据，仅定题面归属）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-012885		1.30	A	dmr 亲笔：贝尔实验室以 Norman Wilson 的 v6 文件服务器挂载 RK05 磁盘镜像档案，尚存 VAX 11/750 可跑 Sixth Edition shell 并称有令人毛骨悚然的亲切感——V6 活态档案一手史料	可推	claim 复用（S2 先库后网）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-012877		1.30	A	Turner 当事人回忆：1976 年在贝尔实验室与 PWB/UNIX（Edition 6 基础）开发者共事，inode 1 坏块文件方案失败缘由及 cpio（初为 cpi 与 cpo）起源——一手口述史	可推	claim 复用（S2 先库后网）
+V56.5.2.4	广泛使用的当事人记述	fulltext_fact	kf-bell-10024-1337	10024	0.261	C	Type C carrier是首个被广泛使用的载波系统	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010635		0.70	A	2022 年 3 月 FreeBSD Security Officer 用测试列表测试 12.2 生命周期终止公告的多 MIME 格式——安全公告基础设施测试的当事人记录。	可推	claim 复用（S2 先库后网）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010634		0.70	A	2001 年 3 月 Jonathan M. Bresler 修改 resend 代码后重新测试——FreeBSD 邮件列表软件（Majordomo）运维代码修改的当事人记录。	可推	claim 复用（S2 先库后网）
+V56.5.3.1	工具集的重写工程	ref_title	5638	5638	0.324	B	FreeBSD FUSE Rust 重写工作 	可推	文献线索（须核全文再定 D1/D2）
+V56.5.6.6	产品文档的反向重建	fulltext_summary	68	68	0.358	B	mandoc: becoming the main BSD manual toolbox BSDCan 2015, June 13, Ottawa Ingo Schwarze <schwarze@openbsd.org> Cynthia L	可推	全文综述候选（D1 型，核对原文后落块）
+V56.5.6.6	产品文档的反向重建	fulltext_summary	59	59	0.282	C	FreeBSD Architecture Handbook Abstract Welcome to the FreeBSD Architecture Handbook. This manual is a work in progress a	可推	全文综述候选（D1 型，核对原文后落块）
+V56.5.6.6	产品文档的反向重建	fulltext_summary	95	95	0.240	C	mandoc from scratch to the standard BSD documentation toolkit in 6 years EuroBSDCon, Stockholm, October 4, 2015 Ingo Sch	可推	全文综述候选（D1 型，核对原文后落块）
+V56.5.7.1	接口相似的可证形式	sacred	3059		0.238	C	子文件结构	可推	史观参照（不作证据，仅定题面归属）

@@ -1,0 +1,42 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V58.1.2.2	个人计算机革命的入口叙述	claim	CL-1-112		1.70	A	计算机史常按机器设计世代分期——大型机世代、小型机时代、个人计算机革命。	可推	claim 复用（S2 先库后网）
+V58.1.2.2	个人计算机革命的入口叙述	claim	CL-RM-010980		1.30	A	Kazuhisa Shimizu 宣布其友 Masaru Oki 已将 NetBSD 移植至 SHARP X68030 个人计算机并由 Masanobu Saito 开设匿名 FTP 站点分发，是日本硬件社区对 NetBSD 的最早移植参与	可推	claim 复用（S2 先库后网）
+V58.1.3.4	四分之一售价与普及取向	fulltext_fact	kf-bell-10024-848	10024	0.233	C	N2 系统功耗约为 N1 系统的四分之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V58.2.6.2	BSD 子系统的首次商用	fulltext_fact	kf-bell-10020-349	10020	0.226	C	No. 1 ESS于1965年首次投入商用服务	可推	全文补证候选（S1 命中即复用，D1 型）
+V58.3.3.2	目标文件格式的切换	claim	CL-RM-010203		1.60	A	2001 年 3 月 NetBSD/news68k 默认目标文件格式切换为 ELF（含 X sets 的快照与升级说明一并发布）——m68k 系端口 a.out→ELF 迁移的节点	可推	claim 复用（S2 先库后网）
+V58.3.3.3	POSIX 接口的覆盖范围	sacred	3057		0.354	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V58.3.4.1	社区托管的组织形态	sacred	2339		0.221	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V58.3.5.5	争议双方文本的待取证	ref_title	2576	2576	0.277	C	OpenSSL License（OpenSSL + SSLeay 双许可证）官方文本 1998	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.5	争议双方文本的待取证	ref_title	2549	2549	0.229	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.5	争议双方文本的待取证	ref_title	2550	2550	0.229	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V58.3.6.5	合作与批评的并存格局	sacred	140		0.227	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V58.4.2.2	工具版本对照表的空缺	ref_title	3837	3837	0.233	C	下载→卷对照表 unknown 2026	可推	文献线索（须核全文再定 D1/D2）
+V58.4.3.3	审计框架的移植来源	sacred	2496		0.279	C	2024—2025：Alpha-Omega 审计	可推	史观参照（不作证据，仅定题面归属）
+V58.4.3.5	认证状态两说的待补	doubt_open	2684		0.247	C	〔全量证据复核·待补｜批次 v46b｜源稿 v46b-三源核验-20261013.md｜条 2〕Open Group 注册簿逐版直查（Lion 及以后各版注册状态，裁 ["OpenGroup注", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V58.4.6.5	版本周期的计数方法	sacred	3042		0.238	C	文件系统 APFS 与 ZFS 比较	可推	史观参照（不作证据，仅定题面归属）
+V58.5.1.1	移动系统的内核基座	fulltext_summary	216	216	0.285	C	Mach: A New Kernel Foundation For UNIX Development Mike Accetta, Robert Baron, William Bolosky, David Golub, Richard Ras	可推	全文综述候选（D1 型，核对原文后落块）
+V58.6.3.4	接口边界的层级划定	sacred	232		0.266	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V58.7.10.3	上游版本的对照失记	fulltext_summary	98	98	0.245	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.14.1	外溢项目的登记名录	ref_title	10078	10078	0.245	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.7.14.1	外溢项目的登记名录	ref_title	10120	10120	0.245	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V58.7.2.1	三条款的保留义务范围	sacred	2604		0.226	C	BSD 一条款许可证在零条款的基础上增加了版权声明的要求。	可推	史观参照（不作证据，仅定题面归属）
+V58.7.2.1	三条款的保留义务范围	sacred	2615		0.223	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.2.2	二进制分发的声明要求	claim	CL-RM-010333		1.30	A	2018 年用户报告 stack 工具在 FreeBSD 上找不到 ghc-8.4.3 的 freebsd64 二进制分发——Haskell 工具链与 ports 体系衔接缺口的当事人样本	可推	claim 复用（S2 先库后网）
+V58.7.2.2	二进制分发的声明要求	claim	CL-RM-010290		1.30	A	2004 年 cube（Quentin Garnier）立场被社区转引：'我们不维护二进制包，我们支持 50 种架构的 NetBSD'——pkgsrc 二进制分发定位之争（同期 GNUpg 打包疑问）	可推	claim 复用（S2 先库后网）
+V58.7.4.1	许可证契约的许可条款	sacred	2603		0.326	B	BSD 一条款许可证（The 1-Clause BSD License，BSD-1-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.4.1	许可证契约的许可条款	sacred	2609		0.311	B	BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.4.1	许可证契约的许可条款	sacred	2615		0.309	B	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.7.2	上游修订号的冻结	fulltext_summary	125	125	0.237	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.7.2	上游修订号的冻结	fulltext_summary	706	706	0.237	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.7.2	上游修订号的冻结	fulltext_summary	831	831	0.237	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.7.5	安全工具的取舍清单	fulltext_summary	190	190	0.278	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.9.3	许可证继承的识别	fulltext_summary	114	114	0.263	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.9.3	许可证继承的识别	fulltext_summary	942	942	0.263	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.9.3	许可证继承的识别	fulltext_summary	949	949	0.263	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V58.8.2.2	版本序列的年度制	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V58.8.3.4	首发排期的决策材料	ref_title	2623	2623	0.234	C	SFLC BusyBox v. High-Gain Antennas 和解新闻稿（2008-03-06） 2008	可推	文献线索（须核全文再定 D1/D2）
+V58.8.3.4	首发排期的决策材料	ref_title	2625	2625	0.234	C	SFLC BusyBox v. Verizon 和解新闻稿（2008-03） 2008	可推	文献线索（须核全文再定 D1/D2）
+V58.8.3.4	首发排期的决策材料	ref_title	3799	3799	0.234	C	2007-12-17 SFLC BusyBox Xterasys 和解新闻稿 unknown 2007	可推	文献线索（须核全文再定 D1/D2）
+V58.9.2.5	项目治理的结构安排	ref_title	10166	10166	0.343	B	libbe/bectl 2017 项目说明（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V58.9.3.1	开发工具链的组成	claim	CL-6-201		1.20	B	pkgbase 的设计目标包括：对 RELEASE、STABLE 与 CURRENT 分支提供二进制升级、实现无需 sendmail 与工具链的细粒度安装、由 pkg(8) 处理配置文件更新、允许开发者向用户提供测试软件包。	可推	claim 复用（S2 先库后网）
+V58.9.3.4	脚本式能力的分寸	ref_title	10166	10166	0.350	B	libbe/bectl 2017 项目说明（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）

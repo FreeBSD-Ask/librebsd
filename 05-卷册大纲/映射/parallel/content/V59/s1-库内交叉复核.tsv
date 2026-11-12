@@ -1,0 +1,84 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V59.1.1.3	联邦资助研究的权利保留	claim	CL-1-120		1.20	B	美国国家研究委员会 1999 年报告认为，二战后信息技术巨大进步的部分原因在于联邦资助的大学研究、联邦与私人资助的工业研究以及创业公司之间极富成效的互动。	可推	claim 复用（S2 先库后网）
+V59.1.2.2	保留所有权利一语的法源	fulltext_fact	kf-bell-10024-075	10024	0.280	C	Bell Laboratories与ITT合作建设通往布宜诺斯艾利斯附近的HF链路，1930年4月开始服务	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.1.8.3	清白目标的官方表述缺位	claim	CL-RM-012816		0.70	A	2004 年 8 月，reiser4 语义扩展（多流文件）之辩中，Joseph Fannin 引 Apple 对下一版 OS X 的官方表述：Tiger 将提供 Darwin 级 API 统一管理资源叉、文件系统元数据、安全信息与属性，使 	可推	claim 复用（S2 先库后网）
+V59.1.8.4	商标主张时点的考订	sacred	2242		0.234	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V59.2.2.3	致谢义务的触发条件	claim	CL-RM-025082		0.70	A	Brian Kantor 详解噬行虫缺陷的触发条件与修复	可推	claim 复用（S2 先库后网）
+V59.2.4.5	通知对象与分发渠道	claim	CL-RM-012906		0.70	A	v24INF1 组介绍：投稿方式、档案站点（uunet 等）与联系方式、brl.mil 邮件列表分发——组运营与分发渠道一手记录	可推	claim 复用（S2 先库后网）
+V59.2.5.3	清理政策的文本线索	claim	CL-RM-010324		1.30	A	2019 年 Dave Cottlehuber 提议弃用 OTP 15-18：上游 OTP 团队已声明仅支持 20+，依赖旧版者实为事实弃荒——语言栈版本清理政策的当事人陈述	可推	claim 复用（S2 先库后网）
+V59.2.7.5	两条款的适用场景	claim	CL-RM-001504		1.30	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V59.2.7.5	两条款的适用场景	claim	CL-RM-011394		1.10	B	2018-10 Mark Millard 在 powerpc64 C++ 异常处理考据中提出 GCC 运行时库 GPL 例外语句对 FreeBSD 的适用性问题，David Chisnall 回应指出 GCC 4.3 后豁免条款的差异	可推	claim 复用（S2 先库后网）
+V59.2.8.2	遗留致谢要求的覆盖范围	sacred	3057		0.292	C	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V59.3.2.1	会员表决与许可改定	fulltext_summary	1045	1045	0.229	C	Your donation counts! Make a difference. » Support New Development » FreeBSD Advocacy and Promotion » Support FreeBSD Co	可推	全文综述候选（D1 型，核对原文后落块）
+V59.3.2.2	四条款到两条款的置换	sacred	2621		0.279	C	BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V59.3.2.2	四条款到两条款的置换	sacred	2615		0.260	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V59.3.2.2	四条款到两条款的置换	sacred	2609		0.256	C	BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V59.3.3.2	贡献代码的默认选择	claim	CL-2-054		1.30	A	McKusick、Karels 与 Bostic（1989）记载 CSRG 一直是一个小型软件开发团队，需协调 CSRG 成员与贡献代码的外部社区成员。	可推	claim 复用（S2 先库后网）
+V59.3.3.3	特拉华州注册与章程	fulltext_fact	kf-bell-10019-1198	10019	0.326	A	Bellcomm于1962年3月21日在特拉华州注册成立，初始股本20万美元由AT&T和Western Electric各持一半	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.3.4.2	伯克利文本的照录处理	ref_title	2548	2548	0.226	C	BSD-4-Clause（Original BSD License，广告条款版）官方文本 1990	可推	文献线索（须核全文再定 D1/D2）
+V59.3.4.5	政策对许可选择的约束	sacred	2609		0.259	C	BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V59.3.7.3	许可文本目录与 SPDX 命名规程	sacred	1773		0.233	C	本目录与原文件的关系	可推	史观参照（不作证据，仅定题面归属）
+V59.3.9.1	基金会作为法律实体	fulltext_fact	kf-bell-10018-007	10018	0.233	C	Bell Laboratories于1925年成为法人实体，作为Bell System的研发单位	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.4.3.5	定义与 DFSG 的承继关系	sacred	3039		0.235	C	基本比较	可推	史观参照（不作证据，仅定题面归属）
+V59.4.6.4	零条款的分化实例	sacred	2596		0.240	C	BSD 零条款许可证（Zero-Clause BSD，0BSD）	可推	史观参照（不作证据，仅定题面归属）
+V59.4.9.3	BSD 系在名录内的分化	ref_title	5817	5817	0.236	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V59.5.10.3	生态分层的许可差异	claim	CL-RM-012948		1.10	A	ISC 员工 Dick Dunn 解释 AT&T 按 1-2 用户/无限用户分层的许可费是 386/ix 定价分层的直接根源	可推	claim 复用（S2 先库后网）
+V59.5.2.2	许可文本的两段结构	sacred	1471		0.229	C	第二段梦 	可推	史观参照（不作证据，仅定题面归属）
+V59.5.2.2	许可文本的两段结构	sacred	1814		0.229	C	第二段梦	可推	史观参照（不作证据，仅定题面归属）
+V59.5.2.4	极简文本的适用场合	claim	CL-RM-014002		0.70	A	John Levine 列 fdopen 的适用场合（含 popen 缺位时的管道用法）	可推	claim 复用（S2 先库后网）
+V59.5.5.1	文件级单位的界定	sacred	3057		0.347	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V59.5.6.3	较大作品的界定依据	claim	CL-RM-054254		1.10	A	Stefaan 指衍生作品的界定属法律问题	可推	claim 复用（S2 先库后网）
+V59.5.6.3	较大作品的界定依据	claim	CL-RM-033607		1.10	A	Les Mikesell 论 GPL 派生作品的界定与混合许可库的合规风险	可推	claim 复用（S2 先库后网）
+V59.5.9.1	双许可文本的选择权	ref_title	2576	2576	0.221	C	OpenSSL License（OpenSSL + SSLeay 双许可证）官方文本 1998	可推	文献线索（须核全文再定 D1/D2）
+V59.6.10.4	治理结构与维护连续性	sacred	2344		0.310	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V59.6.10.4	治理结构与维护连续性	sacred	2346		0.310	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V59.6.4.4	确认信凭证的未见	fulltext_summary	926	926	0.224	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.4.4	确认信凭证的未见	fulltext_summary	928	928	0.224	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.4.4	确认信凭证的未见	fulltext_summary	933	933	0.224	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.4.5	职责边界的分置未证	fulltext_summary	969	969	0.247	C	Program Fundraising Administrative Total Revenue Donations 1,250,000.00 $1,250,000.00 Total Revenue $1,250,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.4.5	职责边界的分置未证	fulltext_summary	993	993	0.247	C	12/2011 46 LET’S TALK I t also funds and manages development projects, sponsors FreeBSD events and Developer Summits, an	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.4.5	职责边界的分置未证	fulltext_summary	1133	1133	0.247	C	Eclipse Foundation Inc. Implementing the Eclipse IP Policy v. 5.0 Page 1 of 4 Implementing the IP Policy April 18, 2018 	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.5.2	章程与董事会结构	fulltext_summary	926	926	0.254	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.5.2	章程与董事会结构	fulltext_summary	928	928	0.254	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.5.2	章程与董事会结构	fulltext_summary	933	933	0.254	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.5.4	版权让与的接收程序	fulltext_summary	926	926	0.242	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.5.4	版权让与的接收程序	fulltext_summary	928	928	0.242	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.5.4	版权让与的接收程序	fulltext_summary	933	933	0.242	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.1	注册地的对照未行	fulltext_fact	kf-bell-10019-1198	10019	0.323	B	Bellcomm于1962年3月21日在特拉华州注册成立，初始股本20万美元由AT&T和Western Electric各持一半	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.6.8.1	注册地的对照未行	fulltext_summary	926	926	0.226	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.1	注册地的对照未行	fulltext_summary	928	928	0.226	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.1	注册地的对照未行	fulltext_summary	933	933	0.226	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.2	项目无法人资格的补足	fulltext_summary	926	926	0.226	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.2	项目无法人资格的补足	fulltext_summary	928	928	0.226	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.2	项目无法人资格的补足	fulltext_summary	933	933	0.226	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.3	资产与责任的分隔	fulltext_summary	926	926	0.283	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.3	资产与责任的分隔	fulltext_summary	928	928	0.283	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.3	资产与责任的分隔	fulltext_summary	933	933	0.283	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.4	分管格局的商标说明	fulltext_fact	kf-bell-10020-019	10020	0.305	B	UNIX 是 Bell Laboratories 的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.6.8.4	分管格局的商标说明	fulltext_fact	kf-bell-10020-1037	10020	0.305	B	COSMIC（Common System Main InterConnecting frame）是Western Electric Company的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.6.8.4	分管格局的商标说明	fulltext_fact	kf-bell-10020-1038	10020	0.305	B	DCTS（DIMENSION custom telephone service）是AT&T Company的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.6.8.4	分管格局的商标说明	fulltext_summary	926	926	0.234	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.4	分管格局的商标说明	fulltext_summary	928	928	0.234	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.6.8.4	分管格局的商标说明	fulltext_summary	933	933	0.234	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.7.11.3	规模估算的方法局限	ref_title	5820	5820	0.239	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V59.7.11.3	规模估算的方法局限	ref_title	6007	6007	0.239	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V59.7.4.3	许可证基础的共同点	fulltext_summary	969	969	0.249	C	Program Fundraising Administrative Total Revenue Donations 1,250,000.00 $1,250,000.00 Total Revenue $1,250,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V59.7.4.3	许可证基础的共同点	fulltext_summary	993	993	0.249	C	12/2011 46 LET’S TALK I t also funds and manages development projects, sponsors FreeBSD events and Developer Summits, an	可推	全文综述候选（D1 型，核对原文后落块）
+V59.7.4.3	许可证基础的共同点	fulltext_summary	1133	1133	0.249	C	Eclipse Foundation Inc. Implementing the Eclipse IP Policy v. 5.0 Page 1 of 4 Implementing the IP Policy April 18, 2018 	可推	全文综述候选（D1 型，核对原文后落块）
+V59.7.6.1	Apple 的 APSL 与公开源码	ref_title	5817	5817	0.316	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V59.7.6.1	Apple 的 APSL 与公开源码	ref_title	5932	5932	0.244	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V59.7.6.3	贡献记录观察的缺项	sacred	72		0.227	C	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V59.7.8.4	AGPL 的适用范围	claim	CL-RM-033541		1.30	A	PHK 回应中断线程补丁的适用范围与改进方向	可推	claim 复用（S2 先库后网）
+V59.8.4.2	分叉的组织依托关系	fulltext_summary	926	926	0.229	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.8.4.2	分叉的组织依托关系	fulltext_summary	928	928	0.229	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V59.8.4.2	分叉的组织依托关系	fulltext_summary	933	933	0.229	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V59.8.5.4	迁移与版本的分叉同步	claim	CL-6-004		0.90	A	ZFS 2001 年在 Sun 开始开发，2005 年以 CDDL 许可证开源；2010 年 Oracle 收购 Sun 后闭源，illumos（Solaris 最后开源版本的分叉）成为 ZFS 的新上游，ZFS 于 2007 年移植到 F	可推	claim 复用（S2 先库后网）
+V59.8.8.1	从四条款到两条款的沿革	sacred	2621		0.226	C	BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V59.9.12.3	官方函件的引用规范	sacred	3061		0.318	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V59.9.3.4	自由概念的法律落点	sacred	2125		0.232	C	法律上的商标	可推	史观参照（不作证据，仅定题面归属）
+V59.9.5.2	担保与责任的分离	claim	CL-RM-051277		1.30	A	继续软件担保与责任归属问题的争论	可推	claim 复用（S2 先库后网）
+V59.9.7.3	名称使用的商标边界	fulltext_fact	kf-bell-10020-019	10020	0.335	B	UNIX 是 Bell Laboratories 的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.9.7.3	名称使用的商标边界	fulltext_fact	kf-bell-10020-1037	10020	0.335	B	COSMIC（Common System Main InterConnecting frame）是Western Electric Company的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.9.7.3	名称使用的商标边界	fulltext_fact	kf-bell-10020-1038	10020	0.335	B	DCTS（DIMENSION custom telephone service）是AT&T Company的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V59.9.8.5	结构与后果的错配	ref_title	2608	2608	0.265	C	US v. Microsoft, Conclusions of Law, 87 F. Supp. 2d 30 (D.D.C. 2000)——法律结论 2000	可推	文献线索（须核全文再定 D1/D2）
+V59.9.9.4	不对称的历史成因	claim	CL-RM-016094		0.90	A	Beverly Schwartz 就 mbuf 初始化提问：m_get 未初始化 mh_paddr 与 mh_len 的历史成因	可推	claim 复用（S2 先库后网）

@@ -1,0 +1,52 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V60.1.2.4	随发行交付的文档名录	ref_title	5539	5539	0.340	B	rc.d(8) 手册页与 Mewburn USENIX 2001 论文（Mewburn 为 rc.d 设计者） 2001	可推	文献线索（须核全文再定 D1/D2）
+V60.1.4.1	逐版用户空间的构成统计	ref_title	5567	5567	0.223	C	House EO 14179 2025-01-20 全文撤销清单（未含 EO 14028） 2025	可推	文献线索（须核全文再定 D1/D2）
+V60.1.5.1	四条条款的原始文本	sacred	2621		0.227	C	BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-011950		1.60	A	4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（S2 先库后网）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-000402		1.60	A	1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（S2 先库后网）
+V60.11.1.4	文档工具的系统内嵌	fulltext_fact	kf-bell-10022-719	10022	0.236	C	G. H. Mealy和G. J. Hansen为IBM 704构建了Bell Operating System (BESYS)	可推	全文补证候选（S1 命中即复用，D1 型）
+V60.11.2.5	替换旧工具的动因说明	ref_title	10166	10166	0.324	B	libbe/bectl 2017 项目说明（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V60.11.3.2	清理幅度的记录缺环	sacred	2107		0.313	B	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V60.12.5.1	bmake 分支的立项线索	ref_title	5817	5817	0.340	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.12.7.1	工具重写的持续线索	ref_title	5932	5932	0.291	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V60.12.7.4	工具生命周期的分化	claim	CL-RM-010329		1.10	A	2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（S2 先库后网）
+V60.12.7.4	工具生命周期的分化	claim	CL-RM-010142		1.10	A	2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（S2 先库后网）
+V60.12.7.5	现代工具链中的席位	claim	CL-RM-010264		1.30	A	2005 年 m88k ELF 二进制链接里程碑达成——该架构从 a.out 时代向现代工具链迁移的关键节点（同期 GCC m88k 支持存续之问）	可推	claim 复用（S2 先库后网）
+V60.13.2.3	经费机构组合的记载	sacred	2089		0.223	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V60.13.2.4	语言平台起步的记载	ref_title	5817	5817	0.287	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.13.3.2	自由许可释出的公告	ref_title	2789	2789	0.430	B	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V60.13.8.2	分叉版本的发行频次	ref_title	6146	6146	0.230	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V60.14.11.3	错位的典型个案对照	claim	CL-RM-010286		1.10	A	2001 年 1 月俄罗斯开发者 Nikolai Saoukh 公开求问'有人有 commit 权吗？我的补丁袋越来越鼓'——外围贡献者因 commit 权缺位而受阻的典型个案（后续自述'缺 committer 配合拖延'）	可推	claim 复用（S2 先库后网）
+V60.14.13.3	生命周期观察的收获	sacred	72		0.223	C	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V60.14.3.5	模式与单作者的差别	fulltext_fact	kf-bell-10022-020	10022	0.225	C	R. W. Hamming 发明了首批检错与纠错码	可推	全文补证候选（S1 命中即复用，D1 型）
+V60.14.4.2	评审流程的层级设置	sacred	232		0.245	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V60.14.6.1	重写的触发条件判定	fulltext_summary	91	91	0.251	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	4	4	0.289	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	93	93	0.289	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	99	99	0.289	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.8.3	用户迁移的缓冲期	sacred	2741		0.316	B	4.1 Windows 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V60.14.8.3	用户迁移的缓冲期	sacred	2885		0.316	B	4.2 Linux 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V60.14.8.3	用户迁移的缓冲期	sacred	3032		0.316	B	4.3 macOS 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V60.14.9.2	提交信息的史料价值	sacred	2822		0.251	C	字符编码差异	可推	史观参照（不作证据，仅定题面归属）
+V60.2.1.2	行编辑与显示编辑的分工	fulltext_fact	kf-tb3-3687-000	3687	0.240	C	ged 一手文档：ged 是交互图形编辑器，用于在 Tektronix 4010 系列显示终端上显示、编辑与构造图形。	可推	全文补证候选（S1 命中即复用，D1 型）
+V60.2.2.1	屏幕作为文件的窗口	claim	CL-2-007		0.90	A	vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口。	可推	claim 复用（S2 先库后网）
+V60.2.3.4	标准文本编辑器的规格承接	claim	CL-2-007		1.10	A	vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口。	可推	claim 复用（S2 先库后网）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-015241		1.20	A	Dillon 定位 6/15 panic 根因：callout timer 模块用 SI_SUB_CPU/SI_ORDER_FIRST 初始化，与初始化序列冲突。	可推	claim 复用（S2 先库后网）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-016960		0.90	A	Rui Paulo 评审 RMI 处理器 SMP 初始补丁（C. Jayachandran 提供）：32 CPU 可进 multi-user、HEAD 更新前 buildworld 可成（现 HEAD 有挂起待查）；请 Neel 看头两个补	可推	claim 复用（S2 先库后网）
+V60.3.4.5	作业控制与 shell 的绑定	claim	CL-2-006		1.30	A	csh 的历史机制源于 Michael Ubell 的关键观察与原型实现，Eric Allman 提供评论，Mike O'Brien 建议路径名哈希机制，Jim Kulp 添加作业控制与目录栈原语。	可推	claim 复用（S2 先库后网）
+V60.3.5.1	文件名补全的并入	doubt_open	2995		0.221	C	〔全量证据复核·待补｜批次 v64a｜源稿 v64a-三源核验-20261014.md｜条 13〕Nintendo switch.html 页内 BSD/NetBSD 声明行逐字直取 ["Nintendosw", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V60.3.6.2	语法甜度与可移植性的权衡	claim	CL-RM-015565		0.80	A	Thor Simon 追问：AF_LOCAL 套接字为何不在最后 close 时从文件系统删除（所有系统上都发生 second socket bind failed 演示）——Unix 域套接字文件生命周期语义与可移植性的历史讨论开题	可推	claim 复用（S2 先库后网）
+V60.3.6.2	语法甜度与可移植性的权衡	claim	CL-RM-014174		0.70	A	指 Yale Scheme 衍生版 T 已移植 Apollo/VAX Unix/VMS，效率与可移植性佳	可推	claim 复用（S2 先库后网）
+V60.4.2.1	能力数据库的文本格式	claim	CL-2-009		1.10	A	curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上。	可推	claim 复用（S2 先库后网）
+V60.4.8.3	tmux 手册的三级组织	fulltext_summary	98	98	0.248	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V60.5.4.2	往返时延的测量口径	claim	CL-RM-057804		1.30	A	给出两台 3/50 与 3/60 上数据报往返时延的实测曲线与拐点	可推	claim 复用（S2 先库后网）
+V60.5.9.1	nc 三动作的最小接口	fulltext_summary	98	98	0.223	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V60.6.2.2	别名与转发的初版手册	fulltext_summary	60	60	0.273	C	FreeBSD Handbook Abstract Welcome to FreeBSD! This handbook covers the installation and day to day use of FreeBSD 15.0- 	可推	全文综述候选（D1 型，核对原文后落块）
+V60.7.1.5	名称缩写的项目文档	ref_title	5817	5817	0.401	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.7.2.4	厂商借调人员的维护史	ref_title	5554	5554	0.240	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
+V60.7.7.2	替代解析器的打包记录	ref_title	5817	5817	0.339	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.7.7.4	许可变更的公告原件	ref_title	5693	5693	0.283	C	Foundation 2006-04-05 PRWeb 公告原文 2006	可推	文献线索（须核全文再定 D1/D2）
+V60.8.3.4	套接字继承的副作用	claim	CL-RM-021706		1.10	B	John Cowan 总结 V7 mpx 为未获 BSD 与 System V 继承的不雅补丁、早于命名管道与套接字	可推	claim 复用（S2 先库后网）
+V60.8.8.5	管理工具的淘汰节奏	claim	CL-RM-010722		1.30	A	1998 年 2 月 Ruslan Shevchenko 发布其管理系统 TCL API——FreeBSD 社区第三方 GUI 管理工具的当事人交付。	可推	claim 复用（S2 先库后网）
+V60.9.1.1	远程登录的加密诉求	ref_title	2504	2504	0.238	C	OpenSSH: 一个协议跑遍全互联网的加密远程登录套件 cuberoot.me 2026	可推	文献线索（须核全文再定 D1/D2）
+V60.9.1.3	主机密钥的信任模型	claim	CL-RM-010582		1.30	A	2012 年 9 月 Taylor R Campbell 报告 NetBSD 6.0_RC1 首次启动默认生成主机密钥的缺陷——默认 sshd 主机密钥生成的一次工程审查。	可推	claim 复用（S2 先库后网）

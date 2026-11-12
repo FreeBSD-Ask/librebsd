@@ -1,0 +1,84 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V53.1.1.6	学术机构的署名约束	claim	CL-1-018		1.30	A	AT&T 对学术机构的 UNIX 许可证仅收取 150 美元磁带复制费，覆盖购买、写入并寄回磁带的成本。	可推	claim 复用（S2 先库后网）
+V53.1.4.2	创始人离开 NetBSD 核心组	sacred	2656		0.317	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V53.1.5.4	缓存一致性目标的降级	claim	CL-RM-012759		1.30	A	2003 年 9 月，Jamie Lokier 在 Linux 内核邮件列表汇总虚拟别名缓存一致性跨平台测试结果，参与平台包括运行 FreeBSD 的 x86 机器、运行 SunOS 5.7 的双 Xeon 机器与运行 Darwin（OS 	可推	claim 复用（S2 先库后网）
+V53.1.5.4	缓存一致性目标的降级	claim	CL-3-065		1.30	A	Macklem 1994 年记载 Not Quite NFS（NQNFS）是一种类 NFS 协议，旨在以崩溃容忍方式维持客户端之间完整的缓存一致性。	可推	claim 复用（S2 先库后网）
+V53.1.6.3	内核与用户空间同树维护	claim	CL-7-010		1.30	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
+V53.1.6.3	内核与用户空间同树维护	claim	CL-6-103		1.10	A	2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态	可推	claim 复用（S2 先库后网）
+V53.2.1.5	松散同心圆式的组织承接	sacred	2369		0.328	B	2.3 FreeBSD 开发模型	可推	史观参照（不作证据，仅定题面归属）
+V53.2.2.1	非发行版的自我定位	sacred	2893		0.276	C	理解 FreeBSD 的操作系统本质：并非发行版	可推	史观参照（不作证据，仅定题面归属）
+V53.2.2.2	标准跟进作为目标条目	ref_title	6146	6146	0.241	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V53.2.3.3	捐助与项目存续的关系	sacred	2200		0.261	C	自由/开源软件与免费	可推	史观参照（不作证据，仅定题面归属）
+V53.2.5.2	pkgsrc 在科学计算社群的使用	fulltext_fact	kf-bell-10018-1234	10018	0.234	C	Law系统被Philadelphia Exchange、Southern Bell Telephone Company、St. Louis及Oswego, N.Y.广泛采用	可推	全文补证候选（S1 命中即复用，D1 型）
+V53.2.5.2	pkgsrc 在科学计算社群的使用	claim	CL-RM-010682		1.30	A	2013 年 7 月 Christopher Umina 陈述 Fortran 在科学计算界的标准地位及其在 FreeBSD 上不断抗争的挫败——科学计算用户群的诉求。	可推	claim 复用（S2 先库后网）
+V53.2.6.5	安全成绩的宣示方式	sacred	2670		0.284	C	OpenBSD 被广泛认为是世界上最安全的操作系统。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间	可推	史观参照（不作证据，仅定题面归属）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	926	926	0.256	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	928	928	0.256	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	933	933	0.256	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.1.4	第三方软件的接入方式	claim	CL-RM-011384		1.30	A	2021-11 Warner Losh 就大量第三方软件定义 _POSIX_C_SOURCE 却仍需 BSD 扩展符号的问题发起系统头文件暴露策略讨论，Konstantin Belousov 参与	可推	claim 复用（S2 先库后网）
+V53.3.1.5	手册页作为系统构件	fulltext_summary	103	103	0.269	C	Why and how you ought to Keep multibyte character support simple EuroBSDCon, Beograd, September 25, 2016 Ingo Schwarze <	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.2.1	提交者的推送权限	sacred	2358		0.315	B	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.3.2.1	提交者的推送权限	ref_title	5820	5820	0.247	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V53.3.2.1	提交者的推送权限	ref_title	6007	6007	0.247	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V53.3.2.5	自动化测试的覆盖面	claim	CL-RM-010265		1.30	A	2007 年 8 月 ATF（Automated Testing Framework）首个邮件列表创立公告——Julio Merino 主导的 NetBSD 自动化测试框架从此拥有专属开发社区	可推	claim 复用（S2 先库后网）
+V53.3.3.1	默认编译器的更替	claim	CL-RM-011289		1.30	A	2021年4月matthew green将alpha、amd64、sparc*、riscv*、ia64与vax等端口默认编译器切换为GCC 10并征集回归报告	可推	claim 复用（S2 先库后网）
+V53.3.3.1	默认编译器的更替	claim	CL-RM-011287		1.30	A	2013年11月Martin Husemann公告sparc64默认编译器代码模型变更并警示二进制兼容性影响，旧用户态与新内核组合需谨慎处理	可推	claim 复用（S2 先库后网）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	20	20	0.227	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	63	63	0.227	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	118	118	0.227	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	sacred	2677		0.227	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V53.3.6.5	内存保护机制的首次落地	claim	CL-RM-010238		0.70	A	2018 年 10 月 Brooks Davis 经 fcp 列表发布 FCP-0101（弃用大部分 10/100 以太网驱动）并引发约 70 封激辩：Dokuchaev 异议、rl(4) 保卫战、生产服务器用户反对、Grimes/Losh	可推	claim 复用（S2 先库后网）
+V53.4.1.6	吉祥物与网页版面的绑定	sacred	2269		0.288	C	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V53.4.11.1	考据源清单的层级划分	sacred	232		0.230	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10161	10161	0.311	B	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10162	10162	0.311	B	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10163	10163	0.311	B	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V53.4.6.1	邮件列表的礼节条目	ref_title	2460	2460	0.235	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V53.4.7.1	标志使用与商业许可	ref_title	5462	5462	0.326	B	Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.ssh.com/> 1999	可推	文献线索（须核全文再定 D1/D2）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	926	926	0.298	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	928	928	0.298	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	933	933	0.298	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.8.2	man page 的 HISTORY 与 BUGS 段	ref_title	5662	5662	0.329	B	Annual Reports 1988-1992（待一手核实） 1988	可推	文献线索（须核全文再定 D1/D2）
+V53.4.9.3	同意令与源码许可的关联	claim	CL-RM-011637		0.70	A	Amdahl UTS/V Release 1 官方产品公告全文（1985-01-21）：SysV R2 on VM/SP、需求分页、3270 支持；源码版须先购 AT&T SysV R2 与 DWB 源码许可（欧洲经 UNIX Europe	可推	claim 复用（S2 先库后网）
+V53.4.9.3	同意令与源码许可的关联	claim	CL-RM-011620		0.70	A	哈佛官方（Bill Edwards）声明不再运行分发支持 Harvard Shell、推荐需 UNIX 源码许可的 tcsh；同期有 Waterloo CMS C 编译器与 Amdahl UTS 用户证言	可推	claim 复用（S2 先库后网）
+V53.5.4.1	符号重复作为可观察项	sacred	72		0.231	C	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V53.5.4.2	仪式重复与共同体节律	sacred	140		0.248	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V53.6.1.3	提交者投票通过的章程	sacred	2358		0.241	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.1.4	核心席位的选举基础	sacred	2358		0.242	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.1.5	和解条款的免诉承诺	ref_title	10074	10074	0.297	C	hubertf's NetBSD blog (GSoC 2013 项目, 5 项目) 2013	可推	文献线索（须核全文再定 D1/D2）
+V53.6.2.3	罢免所需的三分之二票	sacred	2358		0.255	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.2.4	提前选举的触发条件	claim	CL-RM-046531		0.70	A	补充说明 HAMMER 根卷扩展后崩溃的触发条件及其与卸载、重启之间的关系	可推	claim 复用（S2 先库后网）
+V53.6.2.4	提前选举的触发条件	claim	CL-RM-025082		0.70	A	Brian Kantor 详解噬行虫缺陷的触发条件与修复	可推	claim 复用（S2 先库后网）
+V53.6.2.5	章程修订的票数门槛	claim	CL-RM-018071		1.30	A	USENIX 新章程草案辩论：Deborah Scherrer（负责章程的董事）向 Mike Blake-Knox 说明特拉华州法要求 25% 成员方可否决议案、会员等级等问题，透露 1983 年底协会因成员费未续缴而成员剧减——USENI	可推	claim 复用（S2 先库后网）
+V53.6.3.4	董事会由开发者选出	sacred	2344		0.251	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V53.6.3.4	董事会由开发者选出	sacred	2346		0.251	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V53.6.4.4	基金会只承担经费职能	sacred	2107		0.271	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V53.6.5.5	网站与资源的个人维护	sacred	2656		0.266	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V53.6.5.6	提交者名单的公开程度	sacred	2358		0.230	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.6.4	琐碎修正的豁免口径	sacred	2358		0.238	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.6.5	活跃度的年度口径	sacred	2358		0.243	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.8.2	辱骂性言语的过滤规则	ref_title	5682	5682	0.260	C	Usenet comp.sources.bugs 1985-10-29 Mark Nudelman 帖子 1985	可推	文献线索（须核全文再定 D1/D2）
+V53.7.1.4	广告条款的撤销日期	ref_title	2548	2548	0.356	B	BSD-4-Clause（Original BSD License，广告条款版）官方文本 1990	可推	文献线索（须核全文再定 D1/D2）
+V53.7.3.5	许可授予记录的成文条目	sacred	2358		0.242	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.7.4.6	派生作品的源码义务	claim	CL-RM-033607		1.30	A	Les Mikesell 论 GPL 派生作品的界定与混合许可库的合规风险	可推	claim 复用（S2 先库后网）
+V53.7.5.1	商业采用的技术入口	fulltext_summary	190	190	0.270	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.5.1	商业采用的技术入口	fulltext_fact	kf-bell-10018-1824	10018	0.225	C	Alexanderson被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V53.7.5.1	商业采用的技术入口	fulltext_fact	kf-bell-10018-1825	10018	0.225	C	de Forest被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V53.7.5.1	商业采用的技术入口	fulltext_summary	537	537	0.221	C	Presenting FreeNAS ●Olivier COCHARD-LABBE (olivier@freenas.org) ●Presentation available at: http://www.freenas.org/bsdca	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	926	926	0.292	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	928	928	0.292	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	933	933	0.292	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.5	提交审查的常规要求	sacred	2358		0.223	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	926	926	0.242	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	928	928	0.242	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	933	933	0.242	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.8.3.6	远程漏洞计数的口号	sacred	2670		0.367	B	OpenBSD 被广泛认为是世界上最安全的操作系统。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间	可推	史观参照（不作证据，仅定题面归属）
+V53.8.5.1	Rhapsody 对 NetBSD 的取用	ref_title	5847	5847	0.230	C	K. (1988.12.7) Net/1 USENET 公告（gunkies.org 存档，明确记载价格 $400.00 US） 1988	可推	文献线索（须核全文再定 D1/D2）
+V53.9.3.1	NetBSD 旗标的载体用途	sacred	2242		0.313	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	926	926	0.221	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	928	928	0.221	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	933	933	0.221	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.2	换标与吉祥物的并存	sacred	2269		0.361	B	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V53.9.3.2	换标与吉祥物的并存	sacred	2270		0.235	C	FreeBSD 或者说 BSD 家族吉祥物是 BSD Daemon（守护进程），名为“beastie”，发音接近“BSD”，如下图所示：	可推	史观参照（不作证据，仅定题面归属）
+V53.9.3.3	BSD Daemon 图像的著作权归属	ref_title	6148	6148	0.232	C	J. (1988). 4.3BSD Daemon Color Illustration.（版权归 McKusick 所有，Lasseter 创作） 1988	可推	文献线索（须核全文再定 D1/D2）
+V53.9.6.4	材料边界的自我限定	sacred	2198		0.256	C	推论	可推	史观参照（不作证据，仅定题面归属）

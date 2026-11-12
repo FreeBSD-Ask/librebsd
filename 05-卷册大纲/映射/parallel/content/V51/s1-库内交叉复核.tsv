@@ -1,0 +1,50 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V51.1.3.1	逻辑延续说的提出与废弃	ref_title	2549	2549	0.269	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V51.1.3.1	逻辑延续说的提出与废弃	ref_title	2550	2550	0.269	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V51.1.3.1	逻辑延续说的提出与废弃	ref_title	2552	2552	0.269	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V51.1.3.6	定位变动的时间刻度	fulltext_summary	69	69	0.301	B	Ingo Schwarze: Forget reusability — New lessons from mandoc page 3: INTRO II Ottawa, June 8, 2018 1:00 →13:34:20 What’s 	可推	全文综述候选（D1 型，核对原文后落块）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010619		0.70	A	2008 年 8 月 Aleksey Cheusov 发布 Linux DESTDIR 批量构建结果——pkgsrc 跨平台批量构建基础设施的一次实证成果。	可推	claim 复用（S2 先库后网）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010602		0.70	A	2018 年 3 月 Mark Johnston 提出用 bhyve 自动配置测试虚拟机以强化内核转储代码测试——虚拟化测试基础设施的当事人提案。	可推	claim 复用（S2 先库后网）
+V51.2.3.5	架构变更的讨论渠道	claim	CL-RM-010927		1.10	A	2024年9月铃木在freebsd-users-jp引发关于FreeBSD发布周期变更的讨论，涉及freebsd-update维护负担	可推	claim 复用（S2 先库后网）
+V51.2.4.2	风格改动的仓库成本	ref_title	5820	5820	0.238	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V51.2.4.2	风格改动的仓库成本	ref_title	6007	6007	0.238	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V51.2.5.5	HAMMER2 成为默认文件系统	claim	CL-RM-010270		1.20	A	2019 年 2 月 FreeBSD 12.0-RELEASE ZFS root AMI 发布——云镜像默认文件系统从 UFS 向 ZFS 扩展的里程碑（此前 ZFS root 需自行构建）	可推	claim 复用（S2 先库后网）
+V51.3.10.1	提交者规模的量级	sacred	2358		0.274	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V51.3.4.2	修复提交的避让通报	sacred	2358		0.244	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V51.3.4.5	新工具入树的前置讨论	claim	CL-RM-010628		1.30	A	2011 年 3 月 Aleksey Cheusov 宣布 lmdbg 模块化 malloc 调试器已就绪可导入，支持 NetBSD/FreeBSD/DFBSD/MirBSD/Linux——内存调试工具入树的当事人请求。	可推	claim 复用（S2 先库后网）
+V51.3.4.5	新工具入树的前置讨论	claim	CL-RM-010626		1.30	A	2009 年 11 月 Jean-Yves Migeon 导入 libmicro 微基准测试并请求审查，Joerg Sonnenberger 参与讨论跨平台基准比较——性能基准工具入树的当事人记录。	可推	claim 复用（S2 先库后网）
+V51.3.7.2	播客访谈的持续线索	ref_title	2446	2446	0.229	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V51.3.7.2	播客访谈的持续线索	ref_title	2660	2660	0.229	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V51.3.9.2	名称借用的许可限制	sacred	2615		0.236	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V51.3.9.4	用途限制的条款缺席	sacred	2615		0.226	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V51.4.1.4	许可条款的公共参照	sacred	2615		0.259	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V51.4.1.6	许可取舍的务实表述	ref_title	5932	5932	0.227	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V51.4.3.3	第三方软件集的借用幅度	sacred	2904		0.266	A	freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储库。	可推	史观参照（不作证据，仅定题面归属）
+V51.4.3.3	第三方软件集的借用幅度	claim	CL-RM-011384		1.30	A	2021-11 Warner Losh 就大量第三方软件定义 _POSIX_C_SOURCE 却仍需 BSD 扩展符号的问题发起系统头文件暴露策略讨论，Konstantin Belousov 参与	可推	claim 复用（S2 先库后网）
+V51.4.3.4	分道所据的技术判断	claim	CL-RM-020273		0.70	A	Gwyn 论 ANSI 与 ISO 两标必须全同之共识：WG14 技术力量不及 X3J11、由 ISO 自定技术细节风险大，ANSI 为国际接受不惜延后进程，且点破三字符组绝非为取悦外人而是为 ISO-646 源码传输——双标关系的技术判断	可推	claim 复用（S2 先库后网）
+V51.4.5.1	应用供给的上游依赖	sacred	2904		0.227	C	freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储库。	可推	史观参照（不作证据，仅定题面归属）
+V51.4.6.2	二进制分发的声明复制	claim	CL-RM-010333		1.30	A	2018 年用户报告 stack 工具在 FreeBSD 上找不到 ghc-8.4.3 的 freebsd64 二进制分发——Haskell 工具链与 ports 体系衔接缺口的当事人样本	可推	claim 复用（S2 先库后网）
+V51.4.6.2	二进制分发的声明复制	claim	CL-RM-010290		1.30	A	2004 年 cube（Quentin Garnier）立场被社区转引：'我们不维护二进制包，我们支持 50 种架构的 NetBSD'——pkgsrc 二进制分发定位之争（同期 GNUpg 打包疑问）	可推	claim 复用（S2 先库后网）
+V51.4.7.1	提交者身份的账户依据	sacred	2358		0.267	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.4	文件系统基准的分项出入	sacred	2743		0.263	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.4	文件系统基准的分项出入	sacred	2749		0.263	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.4	文件系统基准的分项出入	sacred	2752		0.263	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.6	原创文件系统的外部定位	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V51.5.2.6	原创文件系统的外部定位	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V51.6.2.1	分叉周年的自述刻度	ref_title	2789	2789	0.376	B	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.2	习俗判定的存档凭据	ref_title	2460	2460	0.236	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.2	习俗判定的存档凭据	ref_title	5762	5762	0.231	C	W. (2015.11.29) TUHS 邮件列表公开发布公告（tuhs.org/pipermail/tuhs/2015-November/007700.html，mid-1971 修正见 007703.html） 2015	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.3	文件系统设计的单一架构师传统	ref_title	2460	2460	0.223	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.4	吉祥物在公告中的位置	sacred	2269		0.299	C	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V51.6.2.6	习俗识别的证据门槛	ref_title	10083	10083	0.229	C	Melange GSoC2014 接受项目列表 (Wayback)（Wayback 20150220093820；capture=wayback） 2014	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.6	习俗识别的证据门槛	ref_title	10085	10085	0.229	C	Melange GSoC2013 接受项目列表（Wayback 20130607110904；capture=wayback） 2013	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.6	习俗识别的证据门槛	ref_title	10087	10087	0.229	C	Melange GSoC2012 接受项目列表（Wayback 20120428203144；capture=wayback） 2012	可推	文献线索（须核全文再定 D1/D2）
+V51.7.2.3	自铸文件系统的命名归属	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V51.7.2.3	自铸文件系统的命名归属	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V51.7.2.4	后继文件系统的数字后缀	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V51.7.2.4	后继文件系统的数字后缀	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V51.7.4.2	毛绒玩偶的自发制作	sacred	2656		0.308	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V51.7.4.5	仪式形态的经验记录	sacred	2269		0.312	B	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2549	2549	0.372	B	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2550	2550	0.372	B	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2552	2552	0.372	B	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
