@@ -119,12 +119,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 44	3	3.5	3.5.3	撤资的时点与方式	skeleton	
 44	3	3.5	3.5.4	官方说明的措辞分寸	skeleton	
 44	3	3.5	3.5.5	撤资后的替代来源	skeleton	
-44	3	3.6	3.6.1	执行位分离的首批平台	skeleton	
+44	3	3.6	3.6.1	执行位分离的首批平台	filled	
 44	3	3.6	3.6.2	i386 的跟进时点	skeleton	
 44	3	3.6	3.6.3	默认强制的收紧节点	skeleton	
 44	3	3.6	3.6.4	GOT 与 PLT 的只读化	skeleton	
 44	3	3.6	3.6.5	代码与数据的分区	skeleton	
-44	3	3.7	3.7.1	栈保护的来源项目	skeleton	
+44	3	3.7	3.7.1	栈保护的来源项目	filled	
 44	3	3.7	3.7.2	栈布局的重排原理	filled	
 44	3	3.7	3.7.3	内核层的同款保护	skeleton	
 44	3	3.7	3.7.4	静态边界检查器的加入	filled	
@@ -141,8 +141,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 44	3	3.9	3.9.5	提交总量的规模基数	skeleton	
 44	3	3.10	3.10.1	从 ipf 到 pf 的换轨	filled	
 44	3	3.10	3.10.2	规则集的原子提交	filled	
-44	3	3.10	3.10.3	冗余协议的专利障碍	skeleton	
-44	3	3.10	3.10.4	CARP 的替代设计	skeleton	
+44	3	3.10	3.10.3	冗余协议的专利障碍	filled	
+44	3	3.10	3.10.4	CARP 的替代设计	filled	
 44	3	3.10	3.10.5	规则分组的嵌套层级	skeleton	
 44	3	3.11	3.11.1	标准组织的专利政策	skeleton	
 44	3	3.11	3.11.2	商业实现的许可门槛	skeleton	
@@ -239,7 +239,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 44	5	5.5	5.5.3	工具自上游的分叉	skeleton	
 44	5	5.5	5.5.4	工具接入新加密库	skeleton	
 44	5	5.5	5.5.5	发行公钥的轮替记录	skeleton	
-44	5	5.6	5.6.1	默认邮件的换代过程	skeleton	
+44	5	5.6	5.6.1	默认邮件的换代过程	filled	
 44	5	5.6	5.6.2	内部代码的库化改造	skeleton	
 44	5	5.6	5.6.3	默认弱算法的清除	skeleton	
 44	5	5.6	5.6.4	漫游功能的外部发现	skeleton	
@@ -258,7 +258,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 44	5	5.9	5.9.2	许可自述的口语表达	skeleton	
 44	5	5.9	5.9.3	文档许可的原文表述	skeleton	
 44	5	5.9	5.9.4	上游取代的许可动因	skeleton	
-44	5	5.9	5.9.5	加密栈的许可独立	skeleton	
+44	5	5.9	5.9.5	加密栈的许可独立	filled	
 44	5	5.10	5.10.1	协议扩展的接入批次	skeleton	
 44	5	5.10	5.10.2	加密协议的退役时点	skeleton	
 44	5	5.10	5.10.3	解析默认的调整幅度	skeleton	
@@ -269,13 +269,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 44	6	6.1	6.1.3	补丁渠道分发新工具	skeleton	
 44	6	6.1	6.1.4	默认镜像地址的设定	skeleton	
 44	6	6.1	6.1.5	升级工具的目录细节	skeleton	
-44	6	6.2	6.2.1	越权调用的进程终止	skeleton	
-44	6	6.2	6.2.2	承诺集合的单向收缩	skeleton	
-44	6	6.2	6.2.3	承诺项的增补办法	skeleton	
-44	6	6.2	6.2.4	承诺项的细化步骤	skeleton	
+44	6	6.2	6.2.1	越权调用的进程终止	filled	
+44	6	6.2	6.2.2	承诺集合的单向收缩	filled	
+44	6	6.2	6.2.3	承诺项的增补办法	filled	
+44	6	6.2	6.2.4	承诺项的细化步骤	filled	
 44	6	6.2	6.2.5	运行时可见性的建立	skeleton	
-44	6	6.3	6.3.1	文件访问的接口引入	skeleton	
-44	6	6.3	6.3.2	三重机制的配合条件	skeleton	
+44	6	6.3	6.3.1	文件访问的接口引入	filled	
+44	6	6.3	6.3.2	三重机制的配合条件	filled	
 44	6	6.3	6.3.3	相对路径的匹配逻辑	skeleton	
 44	6	6.3	6.3.4	路径解析的性能账	skeleton	
 44	6	6.3	6.3.5	受限程序的临时口	skeleton	
@@ -299,14 +299,14 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 44	6	6.7	6.7.3	语义收紧的连带代价	skeleton	
 44	6	6.7	6.7.4	网络守护进程的纳入	skeleton	
 44	6	6.7	6.7.5	监视工具的收权幅度	skeleton	
-44	6	6.8	6.8.1	新守护进程的模板	skeleton	
+44	6	6.8	6.8.1	新守护进程的模板	filled	
 44	6	6.8	6.8.2	内核接口的收敛过程	skeleton	
 44	6	6.8	6.8.3	语言运行时的适配	skeleton	
 44	6	6.8	6.8.4	首次调用的行为改写	skeleton	
 44	6	6.8	6.8.5	派生执行成为常态	skeleton	
 44	6	6.9	6.9.1	旧机制的锁定期望	skeleton	
 44	6	6.9	6.9.2	调用后的不可逆性	skeleton	
-44	6	6.9	6.9.3	旧承诺项的退场路径	skeleton	
+44	6	6.9	6.9.3	旧承诺项的退场路径	filled	
 44	6	6.9	6.9.4	新一代缓解机制的引入	skeleton	
 44	6	6.9	6.9.5	文件消失的风险提示	skeleton	
 44	7	7.1	7.1.1	Apple 平台的多处理器修复	skeleton	
