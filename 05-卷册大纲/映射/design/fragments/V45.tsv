@@ -55,13 +55,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 45	2	2.4	2.4.1	栈金丝雀的布置手法	skeleton	
 45	2	2.4	2.4.2	栈保护的系统级默认启用	skeleton	
 45	2	2.4	2.4.3	共享对象的独立金丝雀	skeleton	
-45	2	2.5	2.5.1	malloc 随机化的实现者	skeleton	
+45	2	2.5	2.5.1	malloc 随机化的实现者	filled	
 45	2	2.5	2.5.2	guard page 与延迟释放	skeleton	
 45	2	2.5	2.5.3	4.4 版的分配器再造	skeleton	
 45	2	2.6	2.6.1	ASLR 的默认提供	skeleton	
 45	2	2.6	2.6.2	库加载顺序的随机化	skeleton	
 45	2	2.6	2.6.3	i386 的地址随机映射	skeleton	
-45	2	2.7	2.7.1	栈顶随机空隙的加入	skeleton	
+45	2	2.7	2.7.1	栈顶随机空隙的加入	filled	
 45	2	2.7	2.7.2	每进程地址空间的独立	skeleton	
 45	2	2.7	2.7.3	启动时的库重链接	skeleton	
 45	2	2.8	2.8.1	trapsleds 的指令改写	skeleton	
@@ -106,36 +106,36 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 45	3	3.4	3.4.1	收窄接口的登记条目	skeleton	
 45	3	3.4	3.4.2	旧机制的退场理由	skeleton	
 45	3	3.4	3.4.3	首次出现的版本标注	skeleton	
-45	3	3.5	3.5.1	承诺字符串的声明形式	skeleton	
+45	3	3.5	3.5.1	承诺字符串的声明形式	filled	
 45	3	3.5	3.5.2	关键词表的排列形式	skeleton	
 45	3	3.5	3.5.3	空值参数的中性含义	skeleton	
-45	3	3.6	3.6.1	只减不增的收缩纪律	skeleton	
+45	3	3.6	3.6.1	只减不增的收缩纪律	filled	
 45	3	3.6	3.6.2	执行权限的承诺门控	skeleton	
 45	3	3.6	3.6.3	ioctl 的承诺通行集	skeleton	
 45	3	3.6	3.6.4	POSIX 行为的首处改易	skeleton	
-45	3	3.7	3.7.1	目录授权的递归范围	skeleton	
+45	3	3.7	3.7.1	目录授权的递归范围	filled	
 45	3	3.7	3.7.2	配置完成后的立即锁定	skeleton	
 45	3	3.7	3.7.3	未授权路径的错误码	skeleton	
 45	3	3.7	3.7.4	违规进程的记账标记	skeleton	
 45	3	3.8	3.8.1	两机制并用的异常模式	skeleton	
 45	3	3.8	3.8.2	执行后视图的继承	skeleton	
 45	3	3.8	3.8.3	隐藏符号的直开途径	skeleton	
-45	3	3.9	3.9.1	fork 与 exec 的承诺衔接	skeleton	
+45	3	3.9	3.9.1	fork 与 exec 的承诺衔接	filled	
 45	3	3.9	3.9.2	setuid 位与承诺冲突	skeleton	
 45	3	3.9	3.9.3	高位承诺的静默忽略	skeleton	
-45	3	3.10	3.10.1	进程状态的记账可见性	skeleton	
+45	3	3.10	3.10.1	进程状态的记账可见性	filled	
 45	3	3.10	3.10.2	文件命令的沙箱再造	filled	
 45	3	3.10	3.10.3	非 root 的离线读包	skeleton	
 45	3	3.11	3.11.1	pty 分配的权限改造	skeleton	
 45	3	3.11	3.11.2	信息共享的最小化	skeleton	
 45	3	3.11	3.11.3	传统权限模型的限度	skeleton	
-45	3	3.12	3.12.1	基础程序的分离扩散	skeleton	
+45	3	3.12	3.12.1	基础程序的分离扩散	filled	
 45	3	3.12	3.12.2	通用范式的适用实例	skeleton	
 45	3	3.12	3.12.3	承诺串格式的报错返回	skeleton	
-45	4	4.1	4.1.1	替代品的作者与动机	skeleton	
-45	4	4.1	4.1.2	非自由许可的替换动因	skeleton	
+45	4	4.1	4.1.1	替代品的作者与动机	filled	
+45	4	4.1	4.1.2	非自由许可的替换动因	filled	
 45	4	4.1	4.1.3	首发版本的年份标注	skeleton	
-45	4	4.2	4.2.1	默认有状态的过滤	skeleton	
+45	4	4.2	4.2.1	默认有状态的过滤	filled	
 45	4	4.2	4.2.2	末条匹配的判定流程	filled	
 45	4	4.2	4.2.3	规则集的原子切换	filled	
 45	4	4.2	4.2.4	并发操作的票据机制	skeleton	
@@ -143,7 +143,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 45	4	4.3	4.3.2	表项清除的批量操作	skeleton	
 45	4	4.3	4.3.3	表项结构的枚举长度	skeleton	
 45	4	4.4	4.4.1	流量规范化的两项	skeleton	
-45	4	4.4	4.4.2	规则集的树状嵌套	skeleton	
+45	4	4.4	4.4.2	规则集的树状嵌套	filled	
 45	4	4.4	4.4.3	过滤动作的三分类	skeleton	
 45	4	4.5	4.5.1	虚拟地址的共享目标	skeleton	
 45	4	4.5	4.5.2	最小配置的两要素	skeleton	
@@ -152,9 +152,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 45	4	4.6	4.6.1	状态同步的伪设备	filled	
 45	4	4.6	4.6.2	主机标识与状态归属	skeleton	
 45	4	4.6	4.6.3	同步接口的写入规程	skeleton	
-45	5	5.1	5.1.1	假邮件守护的功能性质	skeleton	
+45	5	5.1	5.1.1	假邮件守护的功能性质	filled	
 45	5	5.1	5.1.2	三类发送主机的判分	skeleton	
-45	5	5.1	5.1.3	灰名单的默认拖延	skeleton	
+45	5	5.1	5.1.3	灰名单的默认拖延	filled	
 45	5	5.1	5.1.4	黑名单的错误码选项	skeleton	
 45	5	5.2	5.2.1	时钟同步的多源设定	skeleton	
 45	5	5.2	5.2.2	协议版本的实现取舍	skeleton	
