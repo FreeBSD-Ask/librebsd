@@ -1,0 +1,199 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V64.1.11.1	首部章程的批准日	sacred	2358		0.257	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.1.11.2	活跃提交者的年度界定	sacred	2358		0.287	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.1.11.2	活跃提交者的年度界定	sacred	2361		0.245	A	非活跃提交者的权限将被暂停，但可以申请恢复。	可推	史观参照（不作证据，仅定题面归属）
+V64.1.11.2	活跃提交者的年度界定	sacred	2364		0.228	C	FreeBSD 核心小组选举每两年举行一次，成员可以连选连任。只有在过去 12 个月内有过提交的提交者（视为活跃提交者）才拥有选举权和被选举权。	可推	史观参照（不作证据，仅定题面归属）
+V64.1.11.2	活跃提交者的年度界定	ref_title	10146	10146	0.225	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V64.1.11.5	章程修订的表决门槛	sacred	2358		0.251	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.1.11.5	章程修订的表决门槛	claim	CL-RM-018071		1.30	A	USENIX 新章程草案辩论：Deborah Scherrer（负责章程的董事）向 Mike Blake-Knox 说明特拉华州法要求 25% 成员方可否决议案、会员等级等问题，透露 1983 年底协会因成员费未续缴而成员剧减——USENI	可推	claim 复用（S2 先库后网）
+V64.1.12.5	准则适用的场所清单	ref_title	2460	2460	0.221	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V64.1.13.3	年度选举的周期重置	ref_title	10146	10146	0.220	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V64.1.3.2	九人选举制的起草	sacred	2358		0.276	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.1.5.3	三分之一请愿的提前改选	sacred	2358		0.264	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.2.1.2	单一公司托管的隐患	claim	CL-5-015		1.20	B	McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设	可推	claim 复用（S2 先库后网）
+V64.2.11.1	商标持有人的登记	fulltext_summary	926	926	0.230	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.2.11.1	商标持有人的登记	fulltext_summary	928	928	0.230	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.2.11.1	商标持有人的登记	fulltext_summary	933	933	0.230	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.2.12.3	法律事务的代行清单	sacred	2354		0.243	C	在大部分国家，FreeBSD 商标由 FreeBSD 基金会持有。	可推	史观参照（不作证据，仅定题面归属）
+V64.2.12.5	章程批准日的参照作用	claim	CL-RM-000903		1.10	A	FreeBSD Core Team 章程（Core Bylaws）批准日期为 2000 年 8 月 28 日（freebsd.org/internal/bylaws 官方页面确证）	可推	claim 复用（S2 先库后网）
+V64.2.3.5	利益冲突的回避条款	claim	CL-RM-016796		1.30	A	Jesus Monroy Jr 发 RFD Part II「选举新主持人」：构造主持人因不再支持 386BSD 而利益冲突的三段论，推动更换 comp.os.386bsd.announce 主持——新闻组治理危机的正式程序文件	可推	claim 复用（S2 先库后网）
+V64.2.5.3	包构建集群的覆盖面	claim	CL-RM-010100		1.30	A	Murray Stokely 说明点版本包集约束：KDE 与 GNOME 全量构建需数周，4.6.X 包集只能基于 4.6 ports 树最少修改，并指 bento 包构建集群日志可查	可推	claim 复用（S2 先库后网）
+V64.2.5.4	集群刷新的预算份额	sacred	200		0.223	C	10.2 信仰的历史生命周期	可推	史观参照（不作证据，仅定题面归属）
+V64.2.7.1	开发宣传与基建三分	sacred	2242		0.312	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V64.2.7.1	开发宣传与基建三分	fulltext_summary	926	926	0.220	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.2.7.1	开发宣传与基建三分	fulltext_summary	928	928	0.220	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.2.7.1	开发宣传与基建三分	fulltext_summary	933	933	0.220	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.2.7.2	安全响应能力的资助方向	ref_title	6146	6146	0.237	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V64.2.7.5	培训支出的预算凭证	ref_title	6146	6146	0.225	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V64.2.7.5	培训支出的预算凭证	ref_title	5844	5844	0.220	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V64.2.7.5	培训支出的预算凭证	ref_title	5859	5859	0.220	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V64.2.8.1	个人与企业并行的捐源	sacred	2705		0.234	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.2.9.2	预算摘要的公开件	ref_title	10146	10146	0.277	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V64.3.1.1	四位创始人的署名	sacred	2656		0.299	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.3.1.5	提案人记载的差异	sacred	2656		0.295	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.3.11.2	历任核心名单的跨度	ref_title	5701	5701	0.243	C	EECS. Departmental History [EB/OL]. [2026-07-28]. <https://www.eecs.mit.edu/about/departmental-history/>（2026-07-28 WebF	可推	文献线索（须核全文再定 D1/D2）
+V64.3.11.4	现任席位的名单相续	ref_title	5701	5701	0.289	C	EECS. Departmental History [EB/OL]. [2026-07-28]. <https://www.eecs.mit.edu/about/departmental-history/>（2026-07-28 WebF	可推	文献线索（须核全文再定 D1/D2）
+V64.3.12.1	技术管理与法人事务的分工	fulltext_summary	926	926	0.249	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.3.12.1	技术管理与法人事务的分工	fulltext_summary	928	928	0.249	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.3.12.1	技术管理与法人事务的分工	fulltext_summary	933	933	0.249	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.3.2.3	核心小组的早期名单	sacred	2362		0.310	B	FreeBSD 核心小组	可推	史观参照（不作证据，仅定题面归属）
+V64.3.2.3	核心小组的早期名单	ref_title	5701	5701	0.226	C	EECS. Departmental History [EB/OL]. [2026-07-28]. <https://www.eecs.mit.edu/about/departmental-history/>（2026-07-28 WebF	可推	文献线索（须核全文再定 D1/D2）
+V64.3.2.4	目标次序的直接证据	claim	CL-RM-015916		0.70	A	★ Kirk McKusick（mckusick@ucbvax）1987-02-25 官方勘正 4.3BSD /usr/doc/smm/10.news 版权声明错误并附补丁——CSRG 对文档元数据负责的直接证据。	可推	claim 复用（S2 先库后网）
+V64.3.2.4	目标次序的直接证据	claim	CL-RM-015805		0.70	A	Rick Adams 1988-12-18 用一行确认 uuq 漏洞已 4.3-tahoe 修复——安全漏洞官方血液追溯的直接证据。	可推	claim 复用（S2 先库后网）
+V64.3.3.3	成员更替的长名单	ref_title	5701	5701	0.230	C	EECS. Departmental History [EB/OL]. [2026-07-28]. <https://www.eecs.mit.edu/about/departmental-history/>（2026-07-28 WebF	可推	文献线索（须核全文再定 D1/D2）
+V64.3.4.2	整包新增的准入程序	ref_title	5459	5459	0.247	C	资助撤销事件 misc@ 邮件列表讨论 2003 [EB/OL]. <https://marc.info/?laccopenbsd-misc> 2003	可推	文献线索（须核全文再定 D1/D2）
+V64.3.6.1	活跃成员的十二月线	sacred	2358		0.278	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.3.6.3	未达门槛者的申诉	sacred	2358		0.286	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.4.1.3	版权分散持有的前半段	claim	CL-RM-017344		1.20	B	J Wunsch：*BSD 版权天然由多位版权持有人分散持有（The Regents…），与需单一授权商的 GPL 不同（版权治理辨析）	可推	claim 复用（S2 先库后网）
+V64.4.1.5	税法身份的取得过程	sacred	2705		0.221	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.4.10.1	商标权属的法人持有	sacred	2354		0.484	B	在大部分国家，FreeBSD 商标由 FreeBSD 基金会持有。	可推	史观参照（不作证据，仅定题面归属）
+V64.4.10.1	商标权属的法人持有	fulltext_summary	926	926	0.245	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.10.1	商标权属的法人持有	fulltext_summary	928	928	0.245	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.10.1	商标权属的法人持有	fulltext_summary	933	933	0.245	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.10.3	知识产权条款的专章	claim	CL-RM-001506		1.40	B	罗盒诉风灵案（一审深圳市中级人民法院（2019）粤03民初3928号判赔 50 万元；二审最高人民法院知识产权法庭（2021）最高法知民终2063号，判决书 2024-11 公开）与罗盒诉玩友案共同构成中国 GPL 3.0 执行的"姊妹案"	可推	claim 复用（S2 先库后网）
+V64.4.10.3	知识产权条款的专章	claim	CL-RM-001505		1.20	B	罗盒诉玩友案（广州知识产权法院（2019）粤73知民初207号，2020-11-03 开庭审理后判决，双方均未上诉）系中国法院首次在司法判决中明确援引 GPL 3.0 第 8 条"自动终止授权"条款，确认 GPL 违约即丧失许可的法律后果，	可推	claim 复用（S2 先库后网）
+V64.4.10.5	营利许可的明令禁止	fulltext_summary	926	926	0.237	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.10.5	营利许可的明令禁止	fulltext_summary	928	928	0.237	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.10.5	营利许可的明令禁止	fulltext_summary	933	933	0.237	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.11.1	捐赠作为唯一进项	fulltext_summary	926	926	0.257	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.11.1	捐赠作为唯一进项	fulltext_summary	928	928	0.257	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.11.1	捐赠作为唯一进项	fulltext_summary	933	933	0.257	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.11.2	抵税声明页面的待查	fulltext_summary	926	926	0.222	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.11.2	抵税声明页面的待查	fulltext_summary	928	928	0.222	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.11.2	抵税声明页面的待查	fulltext_summary	933	933	0.222	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.13.1	宗旨限于推广开发	fulltext_summary	926	926	0.250	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.13.1	宗旨限于推广开发	fulltext_summary	928	928	0.250	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.13.1	宗旨限于推广开发	fulltext_summary	933	933	0.250	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.14.4	委员会成立与解散的实例	claim	CL-RM-012423		1.20	B	comp.text.sgml 新组成立（ISO 8879）：SMML 与 HyTime 等 ANSI 委员会成员在列，文档标准化生态扩张	可推	claim 复用（S2 先库后网）
+V64.4.14.4	委员会成立与解散的实例	claim	CL-RM-012206		1.10	A	ANSI X3B11.1 光盘卷与文件结构标准委员会 1989-06 成立并首会，光学文件系统标准化启动	可推	claim 复用（S2 先库后网）
+V64.4.3.2	分润限制的明文规定	fulltext_summary	926	926	0.226	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.3.2	分润限制的明文规定	fulltext_summary	928	928	0.226	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.3.2	分润限制的明文规定	fulltext_summary	933	933	0.226	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.3.4	注册代理的登记要件	fulltext_fact	kf-bell-10019-1198	10019	0.250	C	Bellcomm于1962年3月21日在特拉华州注册成立，初始股本20万美元由AT&T和Western Electric各持一半	可推	全文补证候选（S1 命中即复用，D1 型）
+V64.4.9.1	服务器的法人所有权	fulltext_summary	926	926	0.242	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.9.1	服务器的法人所有权	fulltext_summary	928	928	0.242	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.9.1	服务器的法人所有权	fulltext_summary	933	933	0.242	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.4.9.3	机位捐赠的依赖程度	sacred	2705		0.226	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.5.10.1	列表存档的回溯能力	ref_title	2460	2460	0.299	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V64.5.10.1	列表存档的回溯能力	ref_title	5472	5472	0.221	C	BSD 邮件列表存档 [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>, 2006-2008 年间 vkernel 相关讨论 2006	可推	文献线索（须核全文再定 D1/D2）
+V64.5.2.1	四个源码仓库的划分	ref_title	5820	5820	0.226	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V64.5.2.1	四个源码仓库的划分	ref_title	6007	6007	0.226	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V64.5.2.3	中央仓库的合并机制	ref_title	5820	5820	0.252	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V64.5.2.3	中央仓库的合并机制	ref_title	6007	6007	0.252	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V64.5.4.1	衍生项目的维护分工	ref_title	10161	10161	0.359	B	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V64.5.4.1	衍生项目的维护分工	ref_title	10162	10162	0.359	B	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V64.5.4.1	衍生项目的维护分工	ref_title	10163	10163	0.359	B	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V64.5.5.3	开发者导向的项目宗旨	sacred	2340		0.399	B	FreeBSD 项目宗旨	可推	史观参照（不作证据，仅定题面归属）
+V64.5.9.3	自治与协作的接口	sacred	2683		0.269	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V64.6.1.1	创始成员的原有身份	sacred	2656		0.309	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.6.1.1	创始成员的原有身份	sacred	2426		0.251	C	1993 年 6 月：FreeBSD 项目成立	可推	史观参照（不作证据，仅定题面归属）
+V64.6.1.4	历任名录中的除名	ref_title	5701	5701	0.289	C	EECS. Departmental History [EB/OL]. [2026-07-28]. <https://www.eecs.mit.edu/about/departmental-history/>（2026-07-28 WebF	可推	文献线索（须核全文再定 D1/D2）
+V64.6.10.4	定性断言的证据分量	ref_title	2549	2549	0.326	B	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V64.6.10.4	定性断言的证据分量	ref_title	2550	2550	0.326	B	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V64.6.10.4	定性断言的证据分量	ref_title	2552	2552	0.326	B	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V64.6.11.3	技术裁决所依的准绳	ref_title	2401	2401	0.220	C	Versata Software, Inc. et al. v. Ameriprise Financial, Inc. et al., No. 1:2014cv00012 (W.D. Tex. 2014-03-11)——Filing 28 	可推	文献线索（须核全文再定 D1/D2）
+V64.6.12.1	基金会承接法人事务的节点	fulltext_summary	926	926	0.232	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.6.12.1	基金会承接法人事务的节点	fulltext_summary	928	928	0.232	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.6.12.1	基金会承接法人事务的节点	fulltext_summary	933	933	0.232	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.6.12.2	基金会自有章程的成文	fulltext_summary	926	926	0.261	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.6.12.2	基金会自有章程的成文	fulltext_summary	928	928	0.261	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.6.12.2	基金会自有章程的成文	fulltext_summary	933	933	0.261	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.6.12.3	项目制度化的一步滞后	claim	CL-RM-010212		1.20	B	2006 年 9 月经 regional-jp 发布第二届 AsiaBSDCon 公告（2007-03 东京大学，CFP 开放）——亚洲 BSD 会议制度化的日本节点一手记录；同库存秋叶原 nomikai 聚饮、JNUG 年会、RING 镜	可推	claim 复用（S2 先库后网）
+V64.6.12.5	项目制度化的未竟处	claim	CL-RM-010212		1.20	B	2006 年 9 月经 regional-jp 发布第二届 AsiaBSDCon 公告（2007-03 东京大学，CFP 开放）——亚洲 BSD 会议制度化的日本节点一手记录；同库存秋叶原 nomikai 聚饮、JNUG 年会、RING 镜	可推	claim 复用（S2 先库后网）
+V64.6.3.1	创始人身份的联络方式	sacred	2656		0.296	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.6.4.3	加密整合的路线选择	fulltext_fact	kf-bell-10018-1824	10018	0.222	C	Alexanderson被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V64.6.4.3	加密整合的路线选择	fulltext_fact	kf-bell-10018-1825	10018	0.222	C	de Forest被列为无线电科学家之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V64.6.4.5	无独裁者的自述材料	doubt_open	2599		0.277	C	〔全量证据复核·待订正｜批次 v36e｜源稿 v36e-三源核验-20261012.md｜条 4〕**C14-14.2**：转述句「I don't care about style, I care about correctness」未获一	可推	释疑并案（先并到存疑库现有条目）
+V64.6.7.3	退出成本的现实效应	ref_title	5981	5981	0.225	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V64.6.8.3	改动即时上网的佐证	ref_title	3870	3870	0.243	C	19841204 CityOfBerkeley BSD检索 bsd 1984 1204 res52501 unknown 1984	可推	文献线索（须核全文再定 D1/D2）
+V64.7.1.3	加拿大税制的抵税限制	sacred	2705		0.230	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.7.1.5	大额捐赠的承接缺口	sacred	2438		0.250	C	2000 年 3 月 28 日：FreeBSD 基金会成立	可推	史观参照（不作证据，仅定题面归属）
+V64.7.11.3	项目页的公开背书	fulltext_summary	926	926	0.221	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.11.3	项目页的公开背书	fulltext_summary	928	928	0.221	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.11.3	项目页的公开背书	fulltext_summary	933	933	0.221	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.12.5	经费决定的参与分布	sacred	2242		0.294	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V64.7.13.3	技术路线的项目自决	fulltext_summary	926	926	0.227	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.13.3	技术路线的项目自决	fulltext_summary	928	928	0.227	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.13.3	技术路线的项目自决	fulltext_summary	933	933	0.227	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.14.2	筹款年度的结算公布	ref_title	10146	10146	0.239	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V64.7.14.3	捐赠总额的逐年披露	sacred	2705		0.230	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.7.2.1	公告的日期与署名人	fulltext_summary	926	926	0.231	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.2.1	公告的日期与署名人	fulltext_summary	928	928	0.231	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.2.1	公告的日期与署名人	fulltext_summary	933	933	0.231	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.2.3	单一联络点的定位	fulltext_summary	926	926	0.230	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.2.3	单一联络点的定位	fulltext_summary	928	928	0.230	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.2.3	单一联络点的定位	fulltext_summary	933	933	0.230	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.2.5	小额捐赠的原有渠道	sacred	2705		0.309	B	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.7.3.2	章程所依的联邦法	ref_title	2790	2790	0.308	B	A by-law relating generally to the conduct of the affairs of The OpenBSD Foundation（OpenBSD 基金会章程） The OpenBSD Foundatio	可推	文献线索（须核全文再定 D1/D2）
+V64.7.3.3	非慈善机构的自我说明	fulltext_summary	926	926	0.228	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.3.3	非慈善机构的自我说明	fulltext_summary	928	928	0.228	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.3.3	非慈善机构的自我说明	fulltext_summary	933	933	0.228	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.4.3	法人对接的第二职能	fulltext_summary	926	926	0.232	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.4.3	法人对接的第二职能	fulltext_summary	928	928	0.232	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.4.3	法人对接的第二职能	fulltext_summary	933	933	0.232	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.5.1	基础设施开支的承担	claim	CL-RM-010856		1.30	A	1999年7月Thor Lancelot Simon宣布pkgsrc与xsrc树接入匿名CVS，源码基础设施开放	可推	claim 复用（S2 先库后网）
+V64.7.5.2	电费与制冷费的支付	fulltext_summary	926	926	0.226	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.5.2	电费与制冷费的支付	fulltext_summary	928	928	0.226	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.5.2	电费与制冷费的支付	fulltext_summary	933	933	0.226	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.5.4	编号资源登记的年费科目	fulltext_summary	926	926	0.249	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.5.4	编号资源登记的年费科目	fulltext_summary	928	928	0.249	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.5.4	编号资源登记的年费科目	fulltext_summary	933	933	0.249	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.7.2	开发机与集群的采购分派	sacred	2242		0.291	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V64.7.7.3	网络接入与教育互联	fulltext_summary	926	926	0.246	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.7.3	网络接入与教育互联	fulltext_summary	928	928	0.246	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.7.3	网络接入与教育互联	fulltext_summary	933	933	0.246	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.7.5	基建预算的支出自陈	fulltext_summary	926	926	0.233	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.7.5	基建预算的支出自陈	fulltext_summary	928	928	0.233	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.7.5	基建预算的支出自陈	fulltext_summary	933	933	0.233	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.8.3	差旅与住宿的分担	sacred	2705		0.222	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.7.9.2	企业配捐的申请渠道	fulltext_summary	926	926	0.293	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.9.2	企业配捐的申请渠道	fulltext_summary	928	928	0.293	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.9.2	企业配捐的申请渠道	fulltext_summary	933	933	0.293	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V64.7.9.2	企业配捐的申请渠道	claim	CL-RM-012552		0.70	A	德国用户求购 AT&T SVR3 与 BSD 4.3 源码许可证的申请渠道与地址（BSD 源码许可在欧洲机构流通线索）	可推	claim 复用（S2 先库后网）
+V64.7.9.4	支票捐赠的票据开具	sacred	2705		0.288	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.7.9.5	捐赠用途的章程锁定	sacred	2705		0.222	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.8.10.1	包管理的框架选择	sacred	2903		0.444	B	安装第三方软件的 Ports 框架与 pkg 包管理器	可推	史观参照（不作证据，仅定题面归属）
+V64.8.10.1	包管理的框架选择	sacred	2904		0.224	C	freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储库。	可推	史观参照（不作证据，仅定题面归属）
+V64.8.10.2	网站与在线资源的个人维护	sacred	2656		0.296	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.10.4	资金账户的个人持有	sacred	2656		0.301	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.10.5	基础设施记载的残缺状况	claim	CL-5-015		1.20	B	McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设	可推	claim 复用（S2 先库后网）
+V64.8.11.1	创始人主导的延续	sacred	2656		0.286	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.12.1	未设非营利的自述	sacred	2705		0.265	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.8.12.2	无税收优惠的后果	sacred	2705		0.291	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.8.12.3	法人缺位下的资金归属	sacred	2656		0.295	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.13.2	捐赠名单的逐年公示	sacred	2705		0.238	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.8.13.4	硬件捐赠的交易免责	sacred	2705		0.239	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.8.13.5	创始人主持的收支	sacred	2656		0.316	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.2.4	创始人的多重角色	sacred	2656		0.300	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.2.4	创始人的多重角色	fulltext_fact	kf-bell-10018-1378	10018	0.243	C	V. E. Legg是molybdenum-permalloy-powder cores开发的主要贡献者之一。	可推	全文补证候选（S1 命中即复用，D1 型）
+V64.8.3.1	贡献名目的四类说法	fulltext_summary	67	67	0.240	C	New trends in mandoc: Enhancing the modern toolbox for the classic documentation formats Ingo Schwarze <schwarze@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V64.8.3.2	提交者名册的排列体例	sacred	2358		0.252	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.8.3.3	额外贡献者的另册	sacred	2358		0.282	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.8.3.4	议事场所的多元并置	ref_title	2460	2460	0.225	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V64.8.4.5	身份与权限的分离	sacred	2358		0.267	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.8.6.2	稳定观察的十个工作日	sacred	72		0.293	C	2.11 观察的局限性	可推	史观参照（不作证据，仅定题面归属）
+V64.8.7.2	个人提交占比的峰值与回落	fulltext_fact	kf-bell-10018-1615	10018	0.223	C	Sacia定义了'峰值因子'为P_i峰值与对应P_m值之比的平方根	可推	全文补证候选（S1 命中即复用，D1 型）
+V64.8.8.4	权限集中的制度描述	sacred	2656		0.263	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.8.9.2	决策记录的形态与限度	ref_title	2460	2460	0.221	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V64.9.1.2	FreeBSD 时期的提交者身份	sacred	2358		0.267	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.9.1.4	虚拟内存与 NFS 的贡献	claim	CL-3-050		1.20	B	McKusick 与 Karels 1986 年提出伯克利 UNIX 新虚拟内存实现方案：虚拟内存上限应为物理内存与交换空间之和，而非受预分配交换区大小限制。	可推	claim 复用（S2 先库后网）
+V64.9.10.2	经费归属的模糊地带	sacred	2656		0.270	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.10.3	技术裁量边界的实况	sacred	2656		0.383	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.10.3	技术裁量边界的实况	sacred	2901		0.251	C	PkgBase 直接由 freebsd-src 构建：	可推	史观参照（不作证据，仅定题面归属）
+V64.9.10.4	人事权限的默会成规	sacred	2656		0.299	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.11.2	赏金账户的个人代管	sacred	2656		0.292	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.11.3	捐赠名册的维护台账	sacred	2705		0.230	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.9.11.5	交易风险的自担约定	sacred	2705		0.250	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V64.9.12.3	共同体规模的下行曲线	sacred	2358		0.289	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.9.2.1	分叉公告的发布主体	sacred	2656		0.284	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.2.1	分叉公告的发布主体	ref_title	10083	10083	0.227	C	Melange GSoC2014 接受项目列表 (Wayback)（Wayback 20150220093820；capture=wayback） 2014	可推	文献线索（须核全文再定 D1/D2）
+V64.9.2.1	分叉公告的发布主体	ref_title	10085	10085	0.227	C	Melange GSoC2013 接受项目列表（Wayback 20130607110904；capture=wayback） 2013	可推	文献线索（须核全文再定 D1/D2）
+V64.9.2.1	分叉公告的发布主体	ref_title	10087	10087	0.227	C	Melange GSoC2012 接受项目列表（Wayback 20120428203144；capture=wayback） 2012	可推	文献线索（须核全文再定 D1/D2）
+V64.9.2.3	领导位置的直接确立	sacred	2656		0.303	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.2.5	领导合法性的根由	sacred	176		0.242	C	9.4 测量的合法性问题	可推	史观参照（不作证据，仅定题面归属）
+V64.9.3.1	创始人的多重职能	sacred	2656		0.312	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.3.1	创始人的多重职能	fulltext_fact	kf-bell-10018-1378	10018	0.252	C	V. E. Legg是molybdenum-permalloy-powder cores开发的主要贡献者之一。	可推	全文补证候选（S1 命中即复用，D1 型）
+V64.9.3.3	创始人所兼的法人角色	sacred	2656		0.313	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V64.9.3.5	团队页的分层名录	sacred	2358		0.255	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V64.9.4.3	提交入口的邮件化	ref_title	2460	2460	0.255	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V64.9.8.2	创始人标签的外加成分	sacred	2656		0.310	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）

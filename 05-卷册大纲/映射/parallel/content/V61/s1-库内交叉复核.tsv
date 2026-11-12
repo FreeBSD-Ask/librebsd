@@ -1,0 +1,66 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V61.1.11.1	安全公告的常规发布	ref_title	2789	2789	0.307	B	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V61.1.11.1	安全公告的常规发布	fulltext_summary	4	4	0.232	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.11.1	安全公告的常规发布	fulltext_summary	93	93	0.232	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.11.1	安全公告的常规发布	fulltext_summary	99	99	0.232	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.11.1	安全公告的常规发布	claim	CL-RM-010635		1.20	B	2022 年 3 月 FreeBSD Security Officer 用测试列表测试 12.2 生命周期终止公告的多 MIME 格式——安全公告基础设施测试的当事人记录。	可推	claim 复用（S2 先库后网）
+V61.1.6.4	补丁发布的公告依赖	fulltext_summary	91	91	0.247	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.8.4	披露渠道的分布状况	fulltext_summary	4	4	0.222	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.8.4	披露渠道的分布状况	fulltext_summary	93	93	0.222	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.8.4	披露渠道的分布状况	fulltext_summary	99	99	0.222	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V61.1.9.3	负责任披露的语义界定	claim	CL-RM-017488		1.60	A	Steve Summit 发现可攻破大量 Berkeley 机器的安全漏洞但拒绝公开细节，仅私下告知修复法（4.2 已修；1984-04 负责任披露的早期样态）	可推	claim 复用（S2 先库后网）
+V61.1.9.3	负责任披露的语义界定	claim	CL-RM-018000		1.30	A	Microport Unix 3.0e 严重安全洞公开：/dev/mem 驱动被加 ioctl 许可执行 386 I/O 指令，且未校验 minor 号，/dev/null 同用该驱动亦可触发；shell 即可利用，恶意者可 crash 系	可推	claim 复用（S2 先库后网）
+V61.2.10.3	主密钥的备份与恢复	fulltext_fact	9413	3728	0.296	C	DUMP (516-78, JES 1973)，磁带备份工具，用于系统备份与恢复	可推	全文补证候选（S1 命中即复用，D1 型）
+V61.2.3.2	内核状态的写入限制	fulltext_summary	125	125	0.269	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V61.2.3.2	内核状态的写入限制	fulltext_summary	706	706	0.269	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V61.2.3.2	内核状态的写入限制	fulltext_summary	831	831	0.269	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V61.2.4.3	与传统权限位的映射	sacred	2756		0.234	C	查看盘符和卷的映射关系：	可推	史观参照（不作证据，仅定题面归属）
+V61.2.4.4	文件系统标志的开关	claim	CL-5-012		1.20	B	Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修	可推	claim 复用（S2 先库后网）
+V61.2.6.3	超限动作的分级处置	ref_title	2769	2769	0.235	C	Casting the Net: From ARPANET to Internet and Beyond Peter H. Salus；Vinton G. Cerf 作序 1995	可推	文献线索（须核全文再定 D1/D2）
+V61.3.2.4	与完整性模型的镜像关系	claim	CL-7-005		1.30	A	Biba 完整性模型由 FreeBSD 的 mac_biba 模块直接支持。	可推	claim 复用（S2 先库后网）
+V61.3.7.2	角色继承的层级排布	sacred	232		0.260	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V61.4.12.4	内核与用户态的分工	claim	CL-7-010		1.60	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
+V61.4.12.4	内核与用户态的分工	claim	CL-6-103		1.40	A	2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态	可推	claim 复用（S2 先库后网）
+V61.4.3.2	地址空间的随机布局	sacred	2868		0.280	C	下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>	可推	史观参照（不作证据，仅定题面归属）
+V61.4.3.2	地址空间的随机布局	sacred	2872		0.280	C	Termius 下载地址：<https://termius.com/download/>	可推	史观参照（不作证据，仅定题面归属）
+V61.4.3.3	默认启用的历史节点	claim	CL-RM-011512		1.10	A	2008年8月4日 Perry E. Metzger 提交补丁让所有 build.sh 构建默认启用 Joerg 的 BUILDSEED	可推	claim 复用（S2 先库后网）
+V61.4.4.3	跳转目标的合法性表	sacred	176		0.232	C	9.4 测量的合法性问题	可推	史观参照（不作证据，仅定题面归属）
+V61.5.11.1	分支目标的初始设定	fulltext_fact	kf-bell-10020-784	10020	0.244	C	756 crossbar PBX的初始设计于1956年完成	可推	全文补证候选（S1 命中即复用，D1 型）
+V61.5.16.1	威胁模型的不同预设	claim	CL-RM-010536		1.30	A	2008 年 2 月普林斯顿冷启动攻击论文引发 cgd 全盘加密密钥残留在 RAM 的安全辩论，Bellovin 与 der Mouse 深入攻防——磁盘加密威胁模型的学术冲击现场。	可推	claim 复用（S2 先库后网）
+V61.5.16.5	思想差异的制度根由	sacred	2344		0.284	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V61.5.16.5	思想差异的制度根由	sacred	2346		0.284	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V61.5.17.4	志愿者规模的效应	claim	CL-RM-010344		1.10	B	2010 年 Philip M. Gollucci 自述 ruby@ 团队实际仅四人（stas、dinoex、pgollucci、clsung）并为 portupgrade 寻求志愿者——语言团队规模的当事人盘点	可推	claim 复用（S2 先库后网）
+V61.5.3.2	隔离强度的层级划分	sacred	232		0.223	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V61.5.4.5	三系框架的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V61.5.5.2	默认启用的时间差	claim	CL-RM-011512		1.10	A	2008年8月4日 Perry E. Metzger 提交补丁让所有 build.sh 构建默认启用 Joerg 的 BUILDSEED	可推	claim 复用（S2 先库后网）
+V61.5.5.4	内核与用户态的一致	claim	CL-7-010		1.60	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
+V61.5.5.4	内核与用户态的一致	claim	CL-6-103		1.40	A	2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态	可推	claim 复用（S2 先库后网）
+V61.5.7.3	密钥管理的接口种类	claim	CL-RM-010597		1.30	A	2022 年 8 月 Taylor R Campbell 提交补丁系列实现多盘共享单一 cgd 主密钥——磁盘加密密钥管理的现代化扩展。	可推	claim 复用（S2 先库后网）
+V61.5.8.1	包签名的覆盖幅度	sacred	3057		0.323	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V61.5.9.1	默认关闭的服务清单	claim	CL-RM-011412		1.30	A	2020年12月Kronometrix的Stefan Parvu询问pkg安装后不自动启动服务的策略，Baptiste Daroussin解释HANDLE_RC_SCRIPT选项默认关闭的缘由。	可推	claim 复用（S2 先库后网）
+V61.5.9.1	默认关闭的服务清单	claim	CL-RM-011203		1.30	A	2000年3月Jeroen van Gelderen指出Portmapper默认开启并引发Warner Losh等人关于全部网络服务默认关闭的讨论。	可推	claim 复用（S2 先库后网）
+V61.5.9.2	默认启用的加固项	claim	CL-RM-011512		1.10	A	2008年8月4日 Perry E. Metzger 提交补丁让所有 build.sh 构建默认启用 Joerg 的 BUILDSEED	可推	claim 复用（S2 先库后网）
+V61.6.11.4	受影响范围的判定	claim	CL-RM-010865		1.30	A	2024年3月NetBSD就xz压缩库后门事件发布官方声明，说明liblzma受影响范围	可推	claim 复用（S2 先库后网）
+V61.6.12.2	测试框架的接入深度	claim	CL-RM-010607		1.30	A	2022 年 1 月 Ryan Stone 发布 Sysunit 项目，让开发者能为 FreeBSD 内核编写单元测试——内核单元测试框架的原始公告。	可推	claim 复用（S2 先库后网）
+V61.6.13.1	公告与勘误的分流	fulltext_summary	4	4	0.229	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V61.6.13.1	公告与勘误的分流	fulltext_summary	93	93	0.229	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V61.6.13.1	公告与勘误的分流	fulltext_summary	99	99	0.229	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V61.6.13.1	公告与勘误的分流	claim	CL-7-051		1.10	A	FreeBSD 项目以安全公告（Security Advisories）与勘误通告（Errata Notices）作为其安全漏洞的正式披露与响应机制。	可推	claim 复用（S2 先库后网）
+V61.6.14.4	公告与移植的时序	ref_title	5932	5932	0.310	B	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V61.6.2.3	可执行页的利用门槛	fulltext_summary	125	125	0.293	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V61.6.2.3	可执行页的利用门槛	fulltext_summary	706	706	0.293	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V61.6.2.3	可执行页的利用门槛	fulltext_summary	831	831	0.293	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V61.6.2.4	缓解措施的覆盖盲区	sacred	3057		0.298	C	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V61.6.3.1	缓冲区溢出的形态	claim	CL-RM-013363		1.30	A	SA-11:05.unix：UNIX 套接字地址缓冲区溢出	可推	claim 复用（S2 先库后网）
+V61.6.3.5	修补与回归的成本	ref_title	10137	10137	0.223	C	PostgreSQL list: 转发 Murray Stokely 2005 公告 (18 projects) 2005	可推	文献线索（须核全文再定 D1/D2）
+V61.6.6.5	分支响应的同步次序	ref_title	5932	5932	0.264	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V61.6.7.1	公告分类下的文件系统漏洞	ref_title	5873	5873	0.247	C	Kaminsky 2008 DNS 漏洞披露 2008	可推	文献线索（须核全文再定 D1/D2）
+V61.6.7.1	公告分类下的文件系统漏洞	claim	CL-2-003		0.80	A	Kridle 与 McKusick（1983）在运行 4.2BSD 的 VAX-11/780 与 VAX-11/750 上测量了多种 I/O 操作下的 UNIX 文件系统吞吐量。	可推	claim 复用（S2 先库后网）
+V61.7.10.3	事后叙述的重构性	sacred	55		0.228	C	2.3 记忆的重构性	可推	史观参照（不作证据，仅定题面归属）
+V61.7.3.4	提交者身份的核验	sacred	2358		0.240	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V61.7.3.5	历史重写的干扰范围	ref_title	5820	5820	0.238	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V61.7.3.5	历史重写的干扰范围	ref_title	6007	6007	0.238	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V61.7.5.4	邮件列表的存档状态	ref_title	2460	2460	0.410	B	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V61.7.5.4	邮件列表的存档状态	ref_title	2735	2735	0.288	C	COFF（Computer Old Farts Forum）邮件列表存档 2018-2026（87 个月度 txt） COFF Mailing List 2018	可推	文献线索（须核全文再定 D1/D2）
+V61.7.5.4	邮件列表的存档状态	ref_title	5472	5472	0.255	C	BSD 邮件列表存档 [EB/OL]. <https://www.dragonflybsd.org/mailinglists/>, 2006-2008 年间 vkernel 相关讨论 2006	可推	文献线索（须核全文再定 D1/D2）
+V61.7.6.4	发现项的处置批次	ref_title	5932	5932	0.280	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）

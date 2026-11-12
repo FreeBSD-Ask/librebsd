@@ -1,0 +1,91 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V67.1.1.1	BSD 成果在 USENIX 的发表位置	ref_title	5799	5799	0.245	C	B. (1991) Vim 1.14 首次公开发布（Fred Fish Disk #591） 1991	可推	文献线索（须核全文再定 D1/D2）
+V67.1.6.2	口述史与会议记录的互补	claim	CL-3-061		0.70	A	Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。	可推	claim 复用（S2 先库后网）
+V67.10.2.3	学生资助的有限覆盖	ref_title	10063	10063	0.265	C	The OpenBSD Foundation — Foundation Activities (2014 GSoC 5 学生) 2014	可推	文献线索（须核全文再定 D1/D2）
+V67.10.2.3	学生资助的有限覆盖	ref_title	10076	10076	0.265	C	FreeBSD Quarterly Status Report 2010Q2 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V67.10.2.3	学生资助的有限覆盖	ref_title	10092	10092	0.265	C	FreeBSD Status Report April-June 2010 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V67.10.2.3	学生资助的有限覆盖	fulltext_fact	kf-bell-10018-801	10018	0.234	C	Alexander Graham Bell提出了覆盖全国的'Grand System'电话网络构想	可推	全文补证候选（S1 命中即复用，D1 型）
+V67.10.2.5	参与门槛的累积效应	claim	CL-RM-012556		1.30	A	说明 POSIX 邮件列表与标准草案的获取渠道及成本（1991 年 POSIX 标准化参与门槛的证据）	可推	claim 复用（S2 先库后网）
+V67.10.3.3	商业提案的排除条款	ref_title	2462	2462	0.237	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V67.10.4.1	议程语言的单语现实	sacred	1433		0.221	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V67.10.4.1	议程语言的单语现实	sacred	2067		0.221	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V67.10.4.2	演讲技巧的筛选效应	ref_title	2462	2462	0.268	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V67.10.5.4	未受邀者的参与位置	ref_title	5932	5932	0.225	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V67.10.6.5	覆盖差异的史料后果	fulltext_summary	881	881	0.225	C	Machine-Independent Virtual Memory Management for Paged Uniprocessor and Multiprocessor Architectures Richard Rashid, Av	可推	全文综述候选（D1 型，核对原文后落块）
+V67.10.6.5	覆盖差异的史料后果	fulltext_summary	1011	1011	0.225	C	Faces of FreeBSD Are you aware of the tangible benefits derived from our support of the FreeBSD community? In conjunctio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.1.2	基金会峰会的年度记录	fulltext_summary	926	926	0.278	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.1.2	基金会峰会的年度记录	fulltext_summary	928	928	0.278	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.1.2	基金会峰会的年度记录	fulltext_summary	933	933	0.278	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.1.4	存档责任的组织分担	sacred	2242		0.355	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V67.11.1.4	存档责任的组织分担	fulltext_summary	926	926	0.250	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.1.4	存档责任的组织分担	fulltext_summary	928	928	0.250	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.1.4	存档责任的组织分担	fulltext_summary	933	933	0.250	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.2.2	论文与幻灯片的并存	claim	CL-RM-012081		1.30	A	NIST Ken Manheimer 宣布 Depot 邮件列表创设：Depot 为跨 UNIX 平台共享软件安装的文件系统级框架，LISA 1990 论文与幻灯可自 durer.cme.nist.gov 匿名 FTP	可推	claim 复用（S2 先库后网）
+V67.11.3.3	AsiaBSDCon 的整册公开	ref_title	5799	5799	0.287	C	B. (1991) Vim 1.14 首次公开发布（Fred Fish Disk #591） 1991	可推	文献线索（须核全文再定 D1/D2）
+V67.11.3.4	EuroBSDCon 论文存档的届次落差	ref_title	4453	4453	0.358	B	2007 SCO v Novell doc377 memorandum decision 原文存档 unknown 2007	可推	文献线索（须核全文再定 D1/D2）
+V67.11.3.4	EuroBSDCon 论文存档的届次落差	ref_title	5854	5854	0.283	C	K. (1988.12.7) Net/1 USENET 公告原文（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V67.11.4.3	旧站停维的链接失效	fulltext_summary	881	881	0.259	C	Machine-Independent Virtual Memory Management for Paged Uniprocessor and Multiprocessor Architectures Richard Rashid, Av	可推	全文综述候选（D1 型，核对原文后落块）
+V67.11.4.3	旧站停维的链接失效	fulltext_summary	1011	1011	0.259	C	Faces of FreeBSD Are you aware of the tangible benefits derived from our support of the FreeBSD community? In conjunctio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.2.2.2	会议主持阵容的跨项目构成	doubt_open	2932		0.223	C	〔全量证据复核·待补｜批次 v63a｜源稿 v63a-三源核验-20261014.md｜条 5〕bsdnow.tv 创播时间与主持阵容直核（2.5）。 ["bsdnowtv创播", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V67.2.2.3	裁判论文的技术分场	fulltext_summary	813	813	0.324	B	Course : B.E., Branch : Computer Science and Engineering Year : IV CSE Semester : VII CS2028 UNIX INTERNALS UNIT TOPIC I	可推	全文综述候选（D1 型，核对原文后落块）
+V67.2.4.4	议题按子系统分场	fulltext_summary	813	813	0.298	C	Course : B.E., Branch : Computer Science and Engineering Year : IV CSE Semester : VII CS2028 UNIX INTERNALS UNIT TOPIC I	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.2.5	差旅资助的制度文本	claim	CL-RM-018079		0.70	A	华盛顿 UniForum 宣布：USENIX 赞助印刷 4.2BSD 手册：仅限持 BSD 许可证的机构会员可购，须机构代表签署指定 USENIX 为印刷代理人的协议；无印量承诺、印量越大成本越低——USENIX 官方印刷 BSD 手册的制	可推	claim 复用（S2 先库后网）
+V67.3.3.2	组织委员会的地方轮替	fulltext_summary	926	926	0.232	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.3.2	组织委员会的地方轮替	fulltext_summary	928	928	0.232	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.3.2	组织委员会的地方轮替	fulltext_summary	933	933	0.232	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.3.3	基金会作为常设机构	fulltext_summary	1045	1045	0.255	C	Your donation counts! Make a difference. » Support New Development » FreeBSD Advocacy and Promotion » Support FreeBSD Co	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.5.4	基金会站点的资料范围	ref_title	4453	4453	0.340	B	2007 SCO v Novell doc377 memorandum decision 原文存档 unknown 2007	可推	文献线索（须核全文再定 D1/D2）
+V67.3.5.4	基金会站点的资料范围	ref_title	5932	5932	0.336	B	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V67.3.5.4	基金会站点的资料范围	ref_title	5854	5854	0.323	B	K. (1988.12.7) Net/1 USENET 公告原文（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V67.3.5.4	基金会站点的资料范围	fulltext_summary	926	926	0.258	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.5.4	基金会站点的资料范围	fulltext_summary	928	928	0.258	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.3.5.4	基金会站点的资料范围	fulltext_summary	933	933	0.258	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.4.1.3	东京连续序列的形成	ref_title	10146	10146	0.251	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V67.4.4.1	KAME 成员的议程参与	fulltext_summary	1055	1055	0.273	C	GRANT REQUEST POLICY AND FORM The FreeBSD Foundation Grant Request Policy One of the functions of The FreeBSD Foundation	可推	全文综述候选（D1 型，核对原文后落块）
+V67.4.4.2	日本使用者的组织角色	claim	CL-RM-010308		1.20	B	2003 年 Masao Uebayashi 发出 regional-jp 列表测试信并定位其为旅日、不识日语的 NetBSD 使用者的沟通渠道——日本地区列表以英语为工作语言的自定位	可推	claim 复用（S2 先库后网）
+V67.4.5.1	整册论文集的免费下载	sacred	2725		0.266	C	CheriBSD 官网	可推	史观参照（不作证据，仅定题面归属）
+V67.4.5.1	整册论文集的免费下载	sacred	2728		0.266	C	FuguIta 官网	可推	史观参照（不作证据，仅定题面归属）
+V67.5.2.1	草根会议的技术偏向	ref_title	2462	2462	0.246	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V67.5.2.4	演讲录制的条件约定	ref_title	2461	2461	0.289	C	36C3: Stein — 演讲录像 STEIN L 2019	可推	文献线索（须核全文再定 D1/D2）
+V67.5.3.1	届次序列与周年节点	ref_title	10061	10061	0.227	C	Google Open Source Blog: May 2014 (十周年/津贴5500) 2014	可推	文献线索（须核全文再定 D1/D2）
+V67.5.3.2	开发者峰会的议题前置	claim	CL-RM-000502		1.30	A	bhyve 于 2010 年末作为 NetApp 内部项目启动（作者 Neel Natu 与 Peter Grehan），2011-05 在 BSDCan 开发者峰会公布并将源码以 BSD 许可捐赠 FreeBSD，2013-01 并入 1	可推	claim 复用（S2 先库后网）
+V67.5.3.2	开发者峰会的议题前置	claim	CL-6-209		1.30	A	GELI 加密启动引导代码开发中，gptldr 引导代码的 16 位汇编 64KB 复制限制问题由 Colin Percival 在 EuroBSDCon 2015 开发者峰会后通过 IRC 提交可扩展的可变 32KB 块复制方案解决。	可推	claim 复用（S2 先库后网）
+V67.5.4.5	赞助与议程的界线	ref_title	2462	2462	0.251	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V67.5.7.4	论文与幻灯片的体裁差别	claim	CL-RM-012081		1.30	A	NIST Ken Manheimer 宣布 Depot 邮件列表创设：Depot 为跨 UNIX 平台共享软件安装的文件系统级框架，LISA 1990 论文与幻灯可自 durer.cme.nist.gov 匿名 FTP	可推	claim 复用（S2 先库后网）
+V67.6.1.3	地区会议与年度主场的分工	ref_title	10146	10146	0.222	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V67.6.1.4	BSD-NL 的补充作用	ref_title	10146	10146	0.241	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V67.6.2.1	OSDEM 的起源与更名	fulltext_fact	kf-bell-10022-823	10022	0.345	B	Communications Social Science Research Center于1955年成立，1958年更名为Behavioral Research Center	可推	全文补证候选（S1 命中即复用，D1 型）
+V67.6.2.3	免费参与与赞助平衡	sacred	2705		0.308	B	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V67.6.3.2	组织主体的志愿与常设	fulltext_summary	926	926	0.221	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.3.2	组织主体的志愿与常设	fulltext_summary	928	928	0.221	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.3.2	组织主体的志愿与常设	fulltext_summary	933	933	0.221	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.4.1	ASF 官方会议序列	sacred	2244		0.368	B	Linux 基金会的官方网站是 <https://www.linuxfoundation.org>。	可推	史观参照（不作证据，仅定题面归属）
+V67.6.4.1	ASF 官方会议序列	fulltext_summary	926	926	0.306	B	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.4.1	ASF 官方会议序列	fulltext_summary	928	928	0.306	B	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.4.1	ASF 官方会议序列	fulltext_summary	933	933	0.306	B	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.4.5	基金会办会的资源结构	fulltext_summary	926	926	0.248	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.4.5	基金会办会的资源结构	fulltext_summary	928	928	0.248	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.4.5	基金会办会的资源结构	fulltext_summary	933	933	0.248	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.6.5.3	操作系统会议的年度排期与并址	fulltext_fact	kf-bell-10022-933	10022	0.234	C	1926年举办了贝尔系统教育会议	可推	全文补证候选（S1 命中即复用，D1 型）
+V67.6.5.3	操作系统会议的年度排期与并址	ref_title	10146	10146	0.226	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V67.6.5.3	操作系统会议的年度排期与并址	claim	CL-1-121		1.20	B	TrustedBSD MAC 框架是用于 FreeBSD 平台的操作系统访问控制扩展的灵活模块化环境，由 Robert Watson 等人在 DARPA 信息生存能力项目会议论文中描述。	可推	claim 复用（S2 先库后网）
+V67.6.5.4	地区会议与主场的错峰	ref_title	10146	10146	0.247	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V67.7.1.1	首届 hackathon 的时地	sacred	2448		0.331	B	2004 年 3 月：首届 AsiaBSDCon；5 月首届 BSDCan	可推	史观参照（不作证据，仅定题面归属）
+V67.7.1.4	会议与 hackathon 的功能分工	fulltext_summary	881	881	0.232	C	Machine-Independent Virtual Memory Management for Paged Uniprocessor and Multiprocessor Architectures Richard Rashid, Av	可推	全文综述候选（D1 型，核对原文后落块）
+V67.7.1.4	会议与 hackathon 的功能分工	fulltext_summary	1011	1011	0.232	C	Faces of FreeBSD Are you aware of the tangible benefits derived from our support of the FreeBSD community? In conjunctio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.7.4.1	基金会承担场地与住宿	fulltext_summary	926	926	0.246	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.7.4.1	基金会承担场地与住宿	fulltext_summary	928	928	0.246	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.7.4.1	基金会承担场地与住宿	fulltext_summary	933	933	0.246	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.8.1.2	开发者峰会的集结场合	claim	CL-RM-000502		1.30	A	bhyve 于 2010 年末作为 NetApp 内部项目启动（作者 Neel Natu 与 Peter Grehan），2011-05 在 BSDCan 开发者峰会公布并将源码以 BSD 许可捐赠 FreeBSD，2013-01 并入 1	可推	claim 复用（S2 先库后网）
+V67.8.1.2	开发者峰会的集结场合	claim	CL-6-209		1.30	A	GELI 加密启动引导代码开发中，gptldr 引导代码的 16 位汇编 64KB 复制限制问题由 Colin Percival 在 EuroBSDCon 2015 开发者峰会后通过 IRC 提交可扩展的可变 32KB 块复制方案解决。	可推	claim 复用（S2 先库后网）
+V67.8.3.1	走廊交谈的旅行记述	ref_title	3749	3749	0.278	C	EuroBSDcon 2025 参会旅行报告（Leah Budzicka） Leah Budzicka 	可推	文献线索（须核全文再定 D1/D2）
+V67.8.5.1	首发演讲的扩散路径	ref_title	2461	2461	0.284	C	36C3: Stein — 演讲录像 STEIN L 2019	可推	文献线索（须核全文再定 D1/D2）
+V67.8.6.3	基金会补贴的兜底	fulltext_summary	926	926	0.296	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.8.6.3	基金会补贴的兜底	fulltext_summary	928	928	0.296	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.8.6.3	基金会补贴的兜底	fulltext_summary	933	933	0.296	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.9.1.5	早期疫情记录的史料限度	ref_title	2460	2460	0.243	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V67.9.3.5	远程共同体的外沿	sacred	140		0.228	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V67.9.5.1	线上办公时间的新形态	fulltext_summary	926	926	0.300	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.9.5.1	线上办公时间的新形态	fulltext_summary	928	928	0.300	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V67.9.5.1	线上办公时间的新形态	fulltext_summary	933	933	0.300	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V67.9.5.4	录制回放的制度化	claim	CL-RM-020023		0.90	A	Ellie Young 公开征集 1993 年会议技术程序主席提案（Cincinnati 6/21-25，提案 8/15 截止交执行总监）：程序主席遴选向全员开放的制度化（1991-05-08；6-25 修正为 Summer'93）	可推	claim 复用（S2 先库后网）

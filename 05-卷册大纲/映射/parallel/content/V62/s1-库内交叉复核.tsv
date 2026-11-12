@@ -1,0 +1,23 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V62.1.10.3	OpenSSF 的项目治理结构	sacred	2344		0.282	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V62.1.10.3	OpenSSF 的项目治理结构	sacred	2346		0.282	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V62.1.14.3	可复现构建的判定条件	claim	CL-RM-010835		1.30	A	2026年2月Siva Mahadevan请求uboot@在维护者超时前评审PR 292260以推进Ports树可复现构建。	可推	claim 复用（S2 先库后网）
+V62.1.15.2	安全公告的发布体例	fulltext_summary	4	4	0.249	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V62.1.15.2	安全公告的发布体例	fulltext_summary	93	93	0.249	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V62.1.15.2	安全公告的发布体例	fulltext_summary	99	99	0.249	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V62.1.15.2	安全公告的发布体例	claim	CL-RM-010635		1.20	B	2022 年 3 月 FreeBSD Security Officer 用测试列表测试 12.2 生命周期终止公告的多 MIME 格式——安全公告基础设施测试的当事人记录。	可推	claim 复用（S2 先库后网）
+V62.1.2.5	国际标准化的采纳路径	fulltext_fact	kf-bell-10024-1178	10024	0.243	C	1926年，Master Reference System for Telephone Transmission被采纳为国际标准	可推	全文补证候选（S1 命中即复用，D1 型）
+V62.1.4.3	许可证字段的表达边界	ref_title	2608	2608	0.353	B	US v. Microsoft, Conclusions of Law, 87 F. Supp. 2d 30 (D.D.C. 2000)——法律结论 2000	可推	文献线索（须核全文再定 D1/D2）
+V62.1.6.3	二进制分发的声明附随	claim	CL-RM-010333		1.30	A	2018 年用户报告 stack 工具在 FreeBSD 上找不到 ghc-8.4.3 的 freebsd64 二进制分发——Haskell 工具链与 ports 体系衔接缺口的当事人样本	可推	claim 复用（S2 先库后网）
+V62.1.6.3	二进制分发的声明附随	claim	CL-RM-010290		1.30	A	2004 年 cube（Quentin Garnier）立场被社区转引：'我们不维护二进制包，我们支持 50 种架构的 NetBSD'——pkgsrc 二进制分发定位之争（同期 GNUpg 打包疑问）	可推	claim 复用（S2 先库后网）
+V62.2.4.1	草案到标准的层级	sacred	232		0.270	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V62.2.6.1	资助机构的早期推动	fulltext_fact	7355	1554	0.220	C	ARPANET 的分组交换思想来自 Baran 的分布式网络研究、Davies 的分组概念与 Kleinrock 的排队论分析；Licklider 与 Roberts 推动 ARPA 立项。	可推	全文补证候选（S1 命中即复用，D1 型）
+V62.3.6.5	能力可观测的工程指标	ref_title	5932	5932	0.250	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V62.4.10.4	责任结构的层级分化	sacred	232		0.223	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V62.4.5.1	提案形成的制度背景	fulltext_summary	186	186	0.256	C	Cryptography in OpenBSD: An overview Theo de Raadt Niklas Hallqvist Artur Grabowski Angelos D. Keromytis Niels Provos {d	可推	全文综述候选（D1 型，核对原文后落块）
+V62.4.5.3	适用范围与产品类别	claim	CL-RM-033541		1.30	A	PHK 回应中断线程补丁的适用范围与改进方向	可推	claim 复用（S2 先库后网）
+V62.4.6.4	两类主体的义务清单	ref_title	10155	10155	0.294	C	FreeBSD 季报 2015Q2 (GSoC 2015 两项) 2015	可推	文献线索（须核全文再定 D1/D2）
+V62.4.8.4	通报延迟的正当理由	fulltext_summary	186	186	0.251	C	Cryptography in OpenBSD: An overview Theo de Raadt Niklas Hallqvist Artur Grabowski Angelos D. Keromytis Niels Provos {d	可推	全文综述候选（D1 型，核对原文后落块）
+V62.4.9.3	管理人与监管的协作	fulltext_fact	kf-bell-10022-917	10022	0.231	C	E. E. Bailey于1974年8月在J. Public Econ.发表关于创新与监管的研究	可推	全文补证候选（S1 命中即复用，D1 型）
+V62.5.3.1	公告文本的承诺内容	fulltext_summary	91	91	0.233	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V62.5.5.4	编号分配的实务做法	sacred	2358		0.224	C	提交者	可推	史观参照（不作证据，仅定题面归属）

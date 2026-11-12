@@ -1,0 +1,75 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V65.1.1.1	提交者身份的界定标准	sacred	2358		0.239	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.1.2	贡献者与开发者的层级差异	sacred	2358		0.252	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.1.2	贡献者与开发者的层级差异	sacred	232		0.229	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V65.1.1.5	身份称谓与权限的对应层级	sacred	2358		0.283	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.10.2	表决权与提交位的绑定	sacred	2442		0.358	B	2000 年 9 月：首次核心团队选举	可推	史观参照（不作证据，仅定题面归属）
+V65.1.12.2	章程修订的两代文本	sacred	2358		0.243	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.12.2	章程修订的两代文本	claim	CL-RM-018071		1.30	A	USENIX 新章程草案辩论：Deborah Scherrer（负责章程的董事）向 Mike Blake-Knox 说明特拉华州法要求 25% 成员方可否决议案、会员等级等问题，透露 1983 年底协会因成员费未续缴而成员剧减——USENI	可推	claim 复用（S2 先库后网）
+V65.1.12.4	核心团队规模的调整	claim	CL-3-058		1.60	A	Mockus、Fielding 与 Herbsleb 2002 年通过 Apache 与 Mozilla 两个开源项目的数据，量化开发者参与、核心团队规模、代码所有权、生产力、缺陷密度与问题解决间隔。	可推	claim 复用（S2 先库后网）
+V65.1.12.4	核心团队规模的调整	claim	CL-1-123		1.60	A	Mockus 等人通过对 Apache 与 Mozilla 两个开源项目的研究，量化了开发者参与、核心团队规模、代码所有权、生产率、缺陷密度与问题解决间隔等指标。	可推	claim 复用（S2 先库后网）
+V65.1.13.2	所在机构对参与时间的支撑	ref_title	5507	5507	0.231	C	《存在与时间》 	可推	文献线索（须核全文再定 D1/D2）
+V65.1.13.4	权限构成的三个变量	sacred	162		0.297	C	8.7 权力与闲暇	可推	史观参照（不作证据，仅定题面归属）
+V65.1.14.2	准则覆盖的空间范围	sacred	2339		0.233	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V65.1.3.1	新提交者的提名与审批流程	sacred	2358		0.267	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.3.3	导师提名在新人准入中的作用	sacred	2358		0.245	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.4.3	受导期提交的批准环节	sacred	2358		0.312	B	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.6.3	紧急处置中的仓库管理员角色	ref_title	5820	5820	0.237	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V65.1.6.3	紧急处置中的仓库管理员角色	ref_title	6007	6007	0.237	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V65.1.6.6	核心团队驱逐成员的票数门槛	sacred	2358		0.280	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.1.8.1	受雇开发者的参与动因	claim	CL-5-010		1.30	A	McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDRO	可推	claim 复用（S2 先库后网）
+V65.2.10.3	KAME 项目的资助来源	claim	CL-RM-000008		1.30	A	DARPA 于 2003 年在 Theo de Raadt 反战评论后撤销对 OpenBSD 安全项目的资助	可推	claim 复用（S2 先库后网）
+V65.2.11.2	捐赠总额与支出规模的对照	sacred	2705		0.226	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V65.2.11.2	捐赠总额与支出规模的对照	ref_title	10146	10146	0.224	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V65.2.2.4	商业支持的业务范围	fulltext_summary	103	103	0.316	B	Why and how you ought to Keep multibyte character support simple EuroBSDCon, Beograd, September 25, 2016 Ingo Schwarze <	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.3.3	捐助名单的非广告原则	sacred	2089		0.244	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V65.2.3.4	捐助用途的指定方式	sacred	2107		0.257	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V65.2.5.4	志愿工作的组织化程度	claim	CL-RM-010417		1.20	A	2000 年 11 月 CMU 的 Nat Lanza 自荐统筹 OpenAFS FreeBSD 移植并已谈妥项目空间与邮件列表——开源后移植工作的组织化起点。	可推	claim 复用（S2 先库后网）
+V65.2.6.2	硬件采购的资助来源	sacred	2242		0.304	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V65.2.6.4	机房电力与冷却的成本项	fulltext_summary	926	926	0.228	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.6.4	机房电力与冷却的成本项	fulltext_summary	928	928	0.228	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.6.4	机房电力与冷却的成本项	fulltext_summary	933	933	0.228	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.6.5	硬件捐助的交付责任划分	sacred	2705		0.225	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V65.2.7.1	黑客松的资助名目	fulltext_summary	926	926	0.221	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.7.1	黑客松的资助名目	fulltext_summary	928	928	0.221	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.7.1	黑客松的资助名目	fulltext_summary	933	933	0.221	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.7.3	厂商峰会的组织方	fulltext_summary	926	926	0.231	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.7.3	厂商峰会的组织方	fulltext_summary	928	928	0.231	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.7.3	厂商峰会的组织方	fulltext_summary	933	933	0.231	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V65.2.7.4	活动资助的年度结算	ref_title	10146	10146	0.259	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V65.3.1.1	受薪维护的普遍程度	ref_title	10382	10382	0.223	C	Multics History multicians.org 编辑（参与者维护的史料汇编） 2026	可推	文献线索（须核全文再定 D1/D2）
+V65.3.1.1	受薪维护的普遍程度	ref_title	10383	10383	0.223	C	Project MAC multicians.org 编辑（参与者维护的史料汇编） 2026	可推	文献线索（须核全文再定 D1/D2）
+V65.3.1.4	基金会资助的岗位设置	claim	CL-RM-010552		1.50	A	2023 年 2 月 Christos Margiolis 启动 FreeBSD Foundation 赞助的 kinst provider 扩展项目并发布系列周报——基金会资助下新一代可观测性工程的样本。	可推	claim 复用（S2 先库后网）
+V65.3.1.4	基金会资助的岗位设置	claim	CL-RM-013489		1.30	A	基金会资助 Benno Rice 实现 UEFI 启动	可推	claim 复用（S2 先库后网）
+V65.3.2.5	位置转换的常见路径	sacred	2358		0.243	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.3.2.6	无偿者的退出机制	ref_title	5981	5981	0.221	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V65.3.3.4	静默退出的行为特征	ref_title	5762	5762	0.304	B	W. (2015.11.29) TUHS 邮件列表公开发布公告（tuhs.org/pipermail/tuhs/2015-November/007700.html，mid-1971 修正见 007703.html） 2015	可推	文献线索（须核全文再定 D1/D2）
+V65.3.3.4	静默退出的行为特征	ref_title	2460	2460	0.235	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V65.4.12.1	教堂与市集的两种组织	sacred	2132		0.231	C	表面上看是移动端的 Android 与 iOS 之争，实质上是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~	可推	史观参照（不作证据，仅定题面归属）
+V65.4.12.3	治理结构的常见类型	sacred	2344		0.346	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V65.4.12.3	治理结构的常见类型	sacred	2346		0.346	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V65.4.5.3	路线之争的裁决归属	claim	CL-RM-011986		1.30	A	Mike O'Dell 原文“RFS is dead meat”：小厂商免费搭 SVR3 便车但 NFS 已有现成移植——1987 年网络文件系统路线之争的标志性发言	可推	claim 复用（S2 先库后网）
+V65.4.6.1	纪律条款的成文化程度	sacred	2358		0.264	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V65.4.7.2	基金会与核心团队的联络机制	claim	CL-RM-010299		0.90	A	2006 年 7 月 www.uk.NetBSD.org 镜像关闭求助、Andrew Doran 接手——地区镜像基础设施兴衰与核心团队响应	可推	claim 复用（S2 先库后网）
+V65.4.7.2	基金会与核心团队的联络机制	claim	CL-3-058		0.70	A	Mockus、Fielding 与 Herbsleb 2002 年通过 Apache 与 Mozilla 两个开源项目的数据，量化开发者参与、核心团队规模、代码所有权、生产力、缺陷密度与问题解决间隔。	可推	claim 复用（S2 先库后网）
+V65.4.8.4	制度解释的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V65.4.9.2	人员分流与协作可能	sacred	2683		0.254	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V65.5.3.1	特拉华州法人的章程依据	claim	CL-RM-018071		1.30	A	USENIX 新章程草案辩论：Deborah Scherrer（负责章程的董事）向 Mike Blake-Knox 说明特拉华州法要求 25% 成员方可否决议案、会员等级等问题，透露 1983 年底协会因成员费未续缴而成员剧减——USENI	可推	claim 复用（S2 先库后网）
+V65.5.3.4	会员资格与表决程序	claim	CL-RM-027869		1.30	A	David Wolfskill 述 IBM 在 UNIX 上分而治之：虽宣布 AIX 为标准移植，仍有仅限学术界的 IBM/4.3 即 4.3BSD 移植产品，并及 SHARE 会员资格与 IBM 软件分类	可推	claim 复用（S2 先库后网）
+V65.5.4.1	加拿大非营利法人的构造	ref_title	2790	2790	0.302	A	A by-law relating generally to the conduct of the affairs of The OpenBSD Foundation（OpenBSD 基金会章程） The OpenBSD Foundatio	可推	文献线索（须核全文再定 D1/D2）
+V65.5.4.2	资助范围与关联项目	sacred	2340		0.230	C	FreeBSD 项目宗旨	可推	史观参照（不作证据，仅定题面归属）
+V65.5.4.3	资金用途的公开口径	sacred	2107		0.246	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V65.5.7.4	主席任命与委员选举的界限	fulltext_fact	kf-bell-10018-113	10018	0.257	C	J.J. Carty 担任 Bell Telephone Laboratories 董事会主席	可推	全文补证候选（S1 命中即复用，D1 型）
+V65.5.8.2	顾问委员会的咨询职能	fulltext_fact	kf-bell-10022-893	10022	0.276	C	F. W. Sinden、M. E. Terry、M. B. Wilk 和 E. E. Zajac 于1965年底开始就 FCC Docket 16258 提供咨询	可推	全文补证候选（S1 命中即复用，D1 型）
+V65.5.8.2	顾问委员会的咨询职能	ref_title	2778	2778	0.258	C	The Design and Implementation of the 4.4BSD Operating System Marshall Kirk McKusick（顾问）、Keith Bostic（Berkeley Software D	可推	文献线索（须核全文再定 D1/D2）
+V65.5.8.2	顾问委员会的咨询职能	fulltext_fact	kf-bell-10022-890	10022	0.241	C	Bell Laboratories 建立了经济学研究中心，创办了 Bell Journal of Economics and Management Science 并设立经济顾问委员会	可推	全文补证候选（S1 命中即复用，D1 型）
+V65.5.8.2	顾问委员会的咨询职能	claim	CL-RM-011569		1.30	A	Tighe 以会议笔记证明 Cray C 顾问委员会上 CRI 征询过 C++ 反馈且与会者共识“暂缓”，UNICOS 尚无 C++ 实现	可推	claim 复用（S2 先库后网）
+V65.5.8.2	顾问委员会的咨询职能	claim	CL-RM-010555		1.30	A	2006 年 7 月 James Bottomley 发出 OSDL 技术顾问委员会首个两年任期的提名征集——内核社区代议制治理的起点。	可推	claim 复用（S2 先库后网）
+V65.6.10.4	概念标签的误用与限度	sacred	2344		0.300	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V65.6.10.4	概念标签的误用与限度	sacred	2346		0.300	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V65.6.5.4	长期在位的制度代价	sacred	445		0.233	C	24.3 长期主义	可推	史观参照（不作证据，仅定题面归属）
+V65.6.6.1	创始人身份与代码主导	sacred	2656		0.310	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V65.6.6.4	决定权与协作的张力	sacred	2683		0.241	C	社区与协作	可推	史观参照（不作证据，仅定题面归属）
+V65.6.8.1	团队章程与核心团队批准	claim	CL-RM-010299		0.90	A	2006 年 7 月 www.uk.NetBSD.org 镜像关闭求助、Andrew Doran 接手——地区镜像基础设施兴衰与核心团队响应	可推	claim 复用（S2 先库后网）
+V65.6.8.1	团队章程与核心团队批准	claim	CL-3-058		0.70	A	Mockus、Fielding 与 Herbsleb 2002 年通过 Apache 与 Mozilla 两个开源项目的数据，量化开发者参与、核心团队规模、代码所有权、生产力、缺陷密度与问题解决间隔。	可推	claim 复用（S2 先库后网）
+V65.6.9.5	维护者的身份界定	claim	CL-RM-010210		0.90	A	2002 年公告 port-arm26 列表更名 port-acorn26（配合端口更名）——早期 ARM 无 MMU 方向的身份界定	可推	claim 复用（S2 先库后网）

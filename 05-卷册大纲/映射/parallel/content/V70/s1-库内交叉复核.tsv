@@ -1,0 +1,22 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V70.1.4.2	PDP-7 上的一次副产物	fulltext_fact	kf-bell-10022-726	10022	0.245	C	K. Thompson利用一台闲置的PDP-7从零构建了UNIX系统	可推	全文补证候选（S1 命中即复用，D1 型）
+V70.1.7.3	伯克利磁带发行先于 CSRG 建制	claim	CL-RM-010053		1.20	B	Mark 阐明 2.8BSD 定位为 V7 之上的叠加发行而非自足发行，原因是一卷磁带装不下完整发行且伯克利磁盘空间不足	可推	claim 复用（S2 先库后网）
+V70.3.1.5	回馈范围的自决权	ref_title	2600	2600	0.231	C	State Street Bank & Trust Co. v. Signature Financial Group, 149 F.3d 1368 (Fed. Cir. 1998)——商业方法专利 1998	可推	文献线索（须核全文再定 D1/D2）
+V70.3.5.5	许可模板的个案差异	ref_title	5817	5817	0.258	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V70.4.1.2	37000 个第三方应用的规模	claim	CL-RM-015398		1.30	A	Dillon 解释 machine 与 machine_arch 的命名沿革：MACHINE/MACHINE_ARCH（及 uname）设计糟糕，两者常返回同一字符串 i386，第三方应用混用致问题，故在最近发布前回退命名方案，构建系统仍保	可推	claim 复用（S2 先库后网）
+V70.4.1.3	嵌入式平台的延伸	claim	CL-6-203		1.30	A	FreeBSD 对 ARM 架构的支持历史上是草根式（grassroots）的，嵌入式平台支持长期依赖社区个人贡献。	可推	claim 复用（S2 先库后网）
+V70.4.1.3	嵌入式平台的延伸	claim	CL-RM-010651		1.10	B	2010 年 1 月 Manuel Bouyer 询问 mips NOFPU+SOFTFLOAT 状态，Matt Thomas 参与讨论无 MMU 平台的软浮点——嵌入式 MIPS 软浮点支持的当事人排查。	可推	claim 复用（S2 先库后网）
+V70.4.2.2	pkgsrc 的跨平台复用	claim	CL-RM-010162		1.10	B	2008 年 10 月 tech-multimedia 列表开篇：自由开发者提议跨平台 DVB API（源自 Linux-DVB 经验、要求向后兼容）——列表立项时的跨内核复用愿景	可推	claim 复用（S2 先库后网）
+V70.4.2.5	互联网协作的组织遗产	ref_title	10150	10150	0.251	C	GSoC 2017 Student Curtain Call (1309 起/1128 完) 2017	可推	文献线索（须核全文再定 D1/D2）
+V70.5.10.2	源代码作为言论的司法确认	ref_title	2095	2095	0.513	B	Bernstein v. U.S. Dept. of Justice, 176 F.3d 1132 (9th Cir. 1999). (源代码作为受第一修正案保 	可推	文献线索（须核全文再定 D1/D2）
+V70.5.10.3	加密出口管制的松绑	claim	CL-RM-012878		1.60	A	Gilmore 质问隐私技术为何非法：论 DES 出口管制对跨国公司研发的钳制——加密出口管制论战代表文献	可推	claim 复用（S2 先库后网）
+V70.5.10.3	加密出口管制的松绑	claim	CL-RM-011962		1.60	A	Fortify 1.1.4 公告（1998-02-09，悉尼）：为 Netscape 解锁全球无条件 128 位全强加密，x86 BSD/FreeBSD/BSDI 全平台覆盖，美国加密出口管制时代的社区应对	可推	claim 复用（S2 先库后网）
+V70.5.10.5	自由叙事的两种落点	sacred	693		0.271	C	论自由 	可推	史观参照（不作证据，仅定题面归属）
+V70.5.3.3	商业内嵌的选择性吸收	ref_title	2600	2600	0.254	C	State Street Bank & Trust Co. v. Signature Financial Group, 149 F.3d 1368 (Fed. Cir. 1998)——商业方法专利 1998	可推	文献线索（须核全文再定 D1/D2）
+V70.5.3.4	基金会资助的公共品供给	sacred	2242		0.300	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V70.5.3.4	基金会资助的公共品供给	claim	CL-RM-010552		1.50	A	2023 年 2 月 Christos Margiolis 启动 FreeBSD Foundation 赞助的 kinst provider 扩展项目并发布系列周报——基金会资助下新一代可观测性工程的样本。	可推	claim 复用（S2 先库后网）
+V70.5.3.4	基金会资助的公共品供给	claim	CL-RM-013489		1.30	A	基金会资助 Benno Rice 实现 UEFI 启动	可推	claim 复用（S2 先库后网）
+V70.5.3.5	基础设施化的可见度落差	claim	CL-RM-010531		1.20	B	2000 年 12 月 itojun 征询将 racoon IKE 守护进程纳入基系统并盘点体积与依赖顾虑——IPsec 基础设施基系统化的决策现场。	可推	claim 复用（S2 先库后网）
+V70.5.4.1	Linux 兼容层的功能缺口	sacred	2638		0.236	C	NetBSD 提供 Linux 兼容层，可运行部分 Linux 二进制程序，主要支持命令行工具和基础图形应用。	可推	史观参照（不作证据，仅定题面归属）
+V70.5.5.5	开放硬件与开源软件的分界	sacred	2196		0.252	A	自由软件与开源软件的包含关系	可推	史观参照（不作证据，仅定题面归属）
+V70.5.6.2	NetBSD 移植的层级定位	sacred	232		0.255	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）

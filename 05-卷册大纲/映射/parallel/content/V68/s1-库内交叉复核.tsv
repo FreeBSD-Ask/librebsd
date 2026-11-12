@@ -1,0 +1,211 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V68.1.1.5	首届公告的发布渠道	ref_title	10149	10149	0.391	B	Google 开源博客 2015-04 (137 orgs/1,051 students) 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.1.1.5	首届公告的发布渠道	ref_title	5513	5513	0.222	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.1.4.1	项目文件丢失的记载	ref_title	5817	5817	0.263	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V68.1.4.2	支付延误的成因与处置	claim	CL-RM-023980		0.80	A	Steve Hayman 将 NFS 生成带斜杠文件名的成因与处置补入 comp.unix.questions FAQ 新条目	可推	claim 复用（S2 先库后网）
+V68.10.1.1	连续九年的参与年表	ref_title	10073	10073	0.326	B	NetBSD GSoC project proposals/参与年表 (镜像) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.10.1.4	基金会年度报告的对应	fulltext_summary	1088	1088	0.324	B	32 FreeBSD Journal • September/October 2020 Google Summer of Code (GSoC) 2020 ended in September. This amazing initiativ	可推	全文综述候选（D1 型，核对原文后落块）
+V68.10.1.4	基金会年度报告的对应	fulltext_summary	1058	1058	0.322	B	• Founded in 1993, FreeBSD consists of several hundred “committers” and tens of thousands of contributors. • FreeBSD is 	可推	全文综述候选（D1 型，核对原文后落块）
+V68.10.1.4	基金会年度报告的对应	sacred	2454		0.262	C	2005 年：谷歌编程之夏	可推	史观参照（不作证据，仅定题面归属）
+V68.10.1.4	基金会年度报告的对应	ref_title	5529	5529	0.261	C	基金会 2008-2009 年编程之夏新闻稿（Antti Kantee 连续指导 Arnaud Ysmal 的“师徒传承”模式） 2008	可推	文献线索（须核全文再定 D1/D2）
+V68.10.1.4	基金会年度报告的对应	fulltext_summary	926	926	0.239	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.10.1.4	基金会年度报告的对应	claim	CL-RM-011492		1.30	A	2021年2月5日Gunther Schadow抨击FreeBSD在AWS EC2上长期性能落后（输掉与Linux的史诗竞赛），Sean Chittenden确认这是需要关注的已知问题，Brendan Gregg参与，社区推动进基金会年度调	可推	claim 复用（S2 先库后网）
+V68.10.1.4	基金会年度报告的对应	claim	CL-RM-013492		1.10	A	基金会 2013 年度项目提案征集（关键日期清单）	可推	claim 复用（S2 先库后网）
+V68.10.2.1	基金会年报的项目清单体例	ref_title	10161	10161	0.326	B	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.10.2.1	基金会年报的项目清单体例	ref_title	10162	10162	0.326	B	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V68.10.2.1	基金会年报的项目清单体例	ref_title	10163	10163	0.326	B	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V68.10.3.1	参与年表的显式跳年	ref_title	10073	10073	0.338	B	NetBSD GSoC project proposals/参与年表 (镜像) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.10.3.4	开发者幻灯的同年表	ref_title	10073	10073	0.253	C	NetBSD GSoC project proposals/参与年表 (镜像) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.10.6.3	名额与基金会角色的分化	sacred	2242		0.358	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V68.10.6.3	名额与基金会角色的分化	fulltext_summary	926	926	0.252	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.10.6.3	名额与基金会角色的分化	fulltext_summary	928	928	0.252	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.10.6.3	名额与基金会角色的分化	fulltext_summary	933	933	0.252	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.10.7.4	测试框架的产出成果	claim	CL-RM-010607		1.30	A	2022 年 1 月 Ryan Stone 发布 Sysunit 项目，让开发者能为 FreeBSD 内核编写单元测试——内核单元测试框架的原始公告。	可推	claim 复用（S2 先库后网）
+V68.11.1.1	基金会为参与主体	fulltext_summary	926	926	0.252	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.11.1.1	基金会为参与主体	fulltext_summary	928	928	0.252	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.11.1.1	基金会为参与主体	fulltext_summary	933	933	0.252	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.11.1.2	组织名单的年份跨度	sacred	2606		0.325	B	Copyright (c) [年份] [组织名称] [All rights reserved]. Redistribution and use in source and binary forms, with or without modi	可推	史观参照（不作证据，仅定题面归属）
+V68.11.1.2	组织名单的年份跨度	ref_title	10098	10098	0.310	B	OpenNet forum: GSoC 2012 组织名单 (illumos 旁证) 2012	可推	文献线索（须核全文再定 D1/D2）
+V68.11.1.3	家族序与时间序的取舍	ref_title	5507	5507	0.235	C	《存在与时间》 	可推	文献线索（须核全文再定 D1/D2）
+V68.11.1.5	退出声明与参与终结	fulltext_fact	kf-bell-10019-730	10019	0.281	C	Bell Laboratories于1960年10月1日宣布建立Kwajalein Field Station	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.11.1.5	退出声明与参与终结	ref_title	5981	5981	0.223	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V68.11.2.3	不进基本系统的自述	ref_title	10065	10065	0.340	B	GSoC 2014: Systemd replacement utilities (systembsd 学生自述) 2014	可推	文献线索（须核全文再定 D1/D2）
+V68.11.2.5	首年项目清单的收录范围	ref_title	10065	10065	0.361	B	GSoC 2014: Systemd replacement utilities (systembsd 学生自述) 2014	可推	文献线索（须核全文再定 D1/D2）
+V68.11.2.5	首年项目清单的收录范围	ref_title	10161	10161	0.329	B	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.11.2.5	首年项目清单的收录范围	ref_title	10162	10162	0.329	B	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V68.11.3.4	基金会记录的时点	fulltext_summary	926	926	0.254	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.11.3.4	基金会记录的时点	fulltext_summary	928	928	0.254	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.11.3.4	基金会记录的时点	fulltext_summary	933	933	0.254	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.11.4.5	归属存疑的标注规程	ref_title	6146	6146	0.244	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V68.11.5.1	退出声明的发表日	fulltext_fact	kf-bell-10019-1264	10019	0.462	B	Robert Watson-Watt于1945年9月15日在Nature发表《Radar in War and in Peace》	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.11.5.1	退出声明的发表日	fulltext_fact	kf-bell-10022-611	10022	0.462	B	Kaminow于1961年5月15日在Phys. Rev. Lett.发表《Microwave Modulation of the Electro-optic Effect in KH₂PO₄》	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.11.5.1	退出声明的发表日	ref_title	5981	5981	0.303	B	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V68.11.5.1	退出声明的发表日	fulltext_fact	kf-bell-10018-1494	10018	0.290	C	Shewhart 于 1924 年 1 月在 Bell System Technical Journal 发表 Some Applications of Statistical Methods to the Analysis of Phys	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.11.5.2	退出声明的两条理由	doubt_open	2852		0.236	C	〔全量证据复核·两说并陈｜批次 v59b｜源稿 v59b-三源核验-20261014.md｜条 5〕OpenBSD 退出理由「官僚负担」vs「新人回报不足」两层并用（7.5） ["OpenBSD退出理", "两说并陈"]	可推	释疑并案（先并到存疑库现有条目）
+V68.11.5.4	退出后组织页的取回	ref_title	10122	10122	0.255	C	illumos.org (GSoC 2017 组织页)（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V68.11.5.4	退出后组织页的取回	ref_title	10124	10124	0.255	C	FreeBSD (GSoC 2019 组织页)（capture=playwright） 2019	可推	文献线索（须核全文再定 D1/D2）
+V68.11.5.4	退出后组织页的取回	ref_title	10125	10125	0.255	C	The OpenBSD Foundation (GSoC 2015 组织页)（capture=wayback） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.11.6.1	免责声明的发布语境	ref_title	5981	5981	0.230	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V68.11.7.2	组织身份的差异内容	sacred	2242		0.306	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V68.11.7.4	退出机制的有无之别	ref_title	5981	5981	0.251	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
+V68.11.8.1	官方名单的记录状态	sacred	2606		0.279	C	Copyright (c) [年份] [组织名称] [All rights reserved]. Redistribution and use in source and binary forms, with or without modi	可推	史观参照（不作证据，仅定题面归属）
+V68.11.8.1	官方名单的记录状态	ref_title	10098	10098	0.267	C	OpenNet forum: GSoC 2012 组织名单 (illumos 旁证) 2012	可推	文献线索（须核全文再定 D1/D2）
+V68.11.8.5	缺口标注的层级划分	sacred	232		0.279	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V68.12.2.2	双双落选的年份节点	doubt_open	2851		0.289	C	〔全量证据复核·两说并陈｜批次 v59b｜源稿 v59b-三源核验-20261014.md｜条 4〕2014 年 BSD 系参与面收缩「被动落选（DragonFly/NetBSD）」vs「主动退出（OpenBSD，2017）」类型分立（8.	可推	释疑并案（先并到存疑库现有条目）
+V68.12.2.4	落选后的记录消失	ref_title	10098	10098	0.283	C	OpenNet forum: GSoC 2012 组织名单 (illumos 旁证) 2012	可推	文献线索（须核全文再定 D1/D2）
+V68.13.1.4	可比样本的选择依据	ref_title	5932	5932	0.220	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V68.13.2.5	库内与库外的对勘	ref_title	6146	6146	0.235	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V68.13.3.1	年份序列的四方并列	fulltext_fact	kf-bell-10023-650	10023	0.230	C	M. H. Read和C. Altman于1965年首次报道了β-Ta的四方结构	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.13.3.4	字段设计的最小集	sacred	2606		0.284	C	Copyright (c) [年份] [组织名称] [All rights reserved]. Redistribution and use in source and binary forms, with or without modi	可推	史观参照（不作证据，仅定题面归属）
+V68.13.3.5	对照表的使用规范	sacred	3061		0.345	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V68.13.3.5	对照表的使用规范	ref_title	3837	3837	0.283	C	下载→卷对照表 unknown 2026	可推	文献线索（须核全文再定 D1/D2）
+V68.13.4.1	遗失个案的邮件来源	sacred	2887		0.287	C	遗失的世界	可推	史观参照（不作证据，仅定题面归属）
+V68.13.4.3	个案的代表性判断	sacred	2887		0.353	B	遗失的世界	可推	史观参照（不作证据，仅定题面归属）
+V68.15.1.1	访谈篇目的年份跨度	ref_title	2446	2446	0.261	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.1	访谈篇目的年份跨度	ref_title	2660	2660	0.261	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.1	访谈篇目的年份跨度	ref_title	10323	10323	0.261	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.3	访谈体例的构成要素	ref_title	2446	2446	0.223	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.3	访谈体例的构成要素	ref_title	2660	2660	0.223	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.3	访谈体例的构成要素	ref_title	10323	10323	0.223	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.5	访谈作为史料的效力	ref_title	2446	2446	0.226	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.5	访谈作为史料的效力	ref_title	2660	2660	0.226	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.15.1.5	访谈作为史料的效力	ref_title	10323	10323	0.226	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.15.2.3	计酬方式的差异表现	fulltext_fact	kf-bell-10022-786	10022	0.222	C	B. M. Oliver、J. R. Pierce和Shannon于1948年发表了里程碑式论文《The Philosophy of PCM》	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.15.3.2	遴选环节的公开发布	ref_title	5836	5836	0.240	C	S. (2002) Sun 20 周年访谈 2002	可推	文献线索（须核全文再定 D1/D2）
+V68.15.3.3	Core 与基金会的分权	sacred	2242		0.371	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V68.15.3.3	Core 与基金会的分权	fulltext_summary	926	926	0.261	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.3.3	Core 与基金会的分权	fulltext_summary	928	928	0.261	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.3.3	Core 与基金会的分权	fulltext_summary	933	933	0.261	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.3.5	信息缺口的处置办法	ref_title	2446	2446	0.240	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.15.3.5	信息缺口的处置办法	ref_title	2660	2660	0.240	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.15.3.5	信息缺口的处置办法	ref_title	10323	10323	0.240	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.15.4.2	转化路径的入口条件	sacred	2358		0.255	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.15.5.1	其他基金会的资助项	fulltext_summary	926	926	0.241	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.1	其他基金会的资助项	fulltext_summary	928	928	0.241	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.1	其他基金会的资助项	fulltext_summary	933	933	0.241	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.3	项目自资的补位做法	fulltext_summary	926	926	0.256	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.3	项目自资的补位做法	fulltext_summary	928	928	0.256	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.3	项目自资的补位做法	fulltext_summary	933	933	0.256	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.4	跨基金会比较的界线	sacred	2344		0.408	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V68.15.5.4	跨基金会比较的界线	sacred	2346		0.408	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V68.15.5.4	跨基金会比较的界线	fulltext_summary	926	926	0.279	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.4	跨基金会比较的界线	fulltext_summary	928	928	0.279	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.4	跨基金会比较的界线	fulltext_summary	933	933	0.279	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.15.5.5	资助记录的台账形态	ref_title	5844	5844	0.242	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V68.15.5.5	资助记录的台账形态	ref_title	5859	5859	0.242	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V68.16.10.1	邮件列表的存档结构	ref_title	2460	2460	0.380	B	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V68.16.10.1	邮件列表的存档结构	ref_title	2735	2735	0.267	C	COFF（Computer Old Farts Forum）邮件列表存档 2018-2026（87 个月度 txt） COFF Mailing List 2018	可推	文献线索（须核全文再定 D1/D2）
+V68.16.10.1	邮件列表的存档结构	ref_title	5763	5763	0.236	C	N. H. F. (2015.11.29) TUHS 邮件列表 OCR 版本提供（tuhs.org/pipermail/tuhs/2015-November/007705.html，UnixEditionZero-OCR.pdf） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.16.10.2	博客自述的体裁特征	ref_title	5513	5513	0.272	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.16.11.1	库内条目的两套计数	ref_title	6146	6146	0.226	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V68.16.2.2	治理与模块化的关系	sacred	2344		0.356	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V68.16.2.2	治理与模块化的关系	sacred	2346		0.356	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V68.16.7.5	档案使用的引用规范	sacred	3061		0.390	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V68.16.8.2	双向评估表的双面性	sacred	33		0.262	C	1.6 形式主义的辩证两面性	可推	史观参照（不作证据，仅定题面归属）
+V68.16.9.2	访谈材料的性质判定	ref_title	2446	2446	0.253	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.2	访谈材料的性质判定	ref_title	2660	2660	0.253	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.2	访谈材料的性质判定	ref_title	10323	10323	0.253	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.3	两类材料的互补作用	ref_title	2446	2446	0.245	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.3	两类材料的互补作用	ref_title	2660	2660	0.245	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.3	两类材料的互补作用	ref_title	10323	10323	0.245	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.4	材料分工的层级划分	sacred	232		0.291	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V68.16.9.4	材料分工的层级划分	ref_title	2446	2446	0.238	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.4	材料分工的层级划分	ref_title	2660	2660	0.238	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.4	材料分工的层级划分	ref_title	10323	10323	0.238	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）
+V68.16.9.4	材料分工的层级划分	sacred	217		0.227	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V68.17.1.2	入口宽窄的年度变化	ref_title	10146	10146	0.242	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V68.17.4.1	付费模式的可持续性	claim	CL-RM-010280		0.70	A	2003 年用户直问'还有人积极维护 acorn32 吗'——小众端口的可持续性焦虑（同期 -current 构建屡断、Frank Wennmohs 呼吁补丁）	可推	claim 复用（S2 先库后网）
+V68.17.5.2	共同体产出的计量	sacred	2358		0.279	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.17.5.3	双重产出的官方表述	claim	CL-RM-012816		0.70	A	2004 年 8 月，reiser4 语义扩展（多流文件）之辩中，Joseph Fannin 引 Apple 对下一版 OS X 的官方表述：Tiger 将提供 Darwin 级 API 统一管理资源叉、文件系统元数据、安全信息与属性，使 	可推	claim 复用（S2 先库后网）
+V68.2.1.2	入选组织名单的筛选权	ref_title	10098	10098	0.263	C	OpenNet forum: GSoC 2012 组织名单 (illumos 旁证) 2012	可推	文献线索（须核全文再定 D1/D2）
+V68.2.2.5	组织数口径的三方记法	ref_title	5932	5932	0.228	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V68.2.3.5	改稿时限的硬约束	ref_title	2462	2462	0.281	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.2.4.3	一句话提案的成因	ref_title	2462	2462	0.244	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.2.5.2	英语在评审期的实际权重	ref_title	2462	2462	0.244	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.2.5.2	英语在评审期的实际权重	sacred	1433		0.232	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V68.2.5.2	英语在评审期的实际权重	sacred	2067		0.232	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V68.2.6.2	提前接触的官方鼓励	ref_title	2462	2462	0.221	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.2.7.4	名额落空的年度记录	ref_title	10146	10146	0.226	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V68.2.9.2	博客公告的第三口径	ref_title	5513	5513	0.232	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.2.9.5	聚合站数字的层级限制	sacred	232		0.249	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V68.3.3.1	归档页的未通过记录方式	ref_title	6146	6146	0.232	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V68.3.4.1	产出基调的原句来源	doubt_open	2839		0.274	C	〔全量证据复核·待补｜批次 v59a｜源稿 v59a-三源核验-20261014.md｜条 2〕「大多数不是革命性的」官方自述出处直引（3.4）。 ["大多数不是革命性的官", "待补"]	可推	释疑并案（先并到存疑库现有条目）
+V68.3.5.1	代码存活的判定难题	sacred	2347		0.237	C	源代码存储库	可推	史观参照（不作证据，仅定题面归属）
+V68.3.5.2	留存率的自述证据	sacred	2358		0.295	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.3.5.2	留存率的自述证据	sacred	2361		0.222	C	非活跃提交者的权限将被暂停，但可以申请恢复。	可推	史观参照（不作证据，仅定题面归属）
+V68.4.11.1	写作优势的评审效应	sacred	1433		0.252	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V68.4.11.1	写作优势的评审效应	sacred	2067		0.252	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V68.4.11.2	英语门槛的隐性加权	sacred	1433		0.233	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V68.4.11.2	英语门槛的隐性加权	sacred	2067		0.233	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V68.4.11.3	非母语提案的补偿	ref_title	2462	2462	0.223	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.4.12.4	沉默面对未通过统计的层级	sacred	232		0.257	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V68.4.12.4	沉默面对未通过统计的层级	claim	CL-RM-022898		0.70	A	D. Mitchell 报告 4.2 版 random() 未通过统计测试，查码发现指针处理缺陷，致其未按源码注释所称求值多项式。	可推	claim 复用（S2 先库后网）
+V68.4.12.5	补档的可能路径选择	ref_title	2460	2460	0.269	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V68.4.12.5	补档的可能路径选择	ref_title	5844	5844	0.237	C	&T 1984 年报 1984	可推	文献线索（须核全文再定 D1/D2）
+V68.4.12.5	补档的可能路径选择	ref_title	5859	5859	0.237	C	&T **1984 年** 报 1984	可推	文献线索（须核全文再定 D1/D2）
+V68.4.4.4	申请者的信息劣势	ref_title	2462	2462	0.235	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.4.6.1	免责声明的原文出处	fulltext_summary	926	926	0.221	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.4.6.1	免责声明的原文出处	fulltext_summary	928	928	0.221	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.4.6.1	免责声明的原文出处	fulltext_summary	933	933	0.221	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.4.6.4	声明的法律效力范围	claim	CL-RM-001504		1.10	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V68.5.1.4	导师池的成员范围扩展	sacred	2358		0.269	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.5.2.4	名额请求的排序依据	ref_title	2462	2462	0.242	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V68.5.4.1	转化路径的制度入口	sacred	2358		0.250	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.5.4.5	转化与项目需求的匹配	sacred	2339		0.224	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V68.5.5.4	遗失工作的可追回性	ref_title	5820	5820	0.233	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.5.5.4	遗失工作的可追回性	ref_title	6007	6007	0.233	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V68.5.6.1	四口径并列的计数规则	ref_title	10156	10156	0.231	C	FreeBSD 季报 2016Q3 (15 录取/12 成功) 2016	可推	文献线索（须核全文再定 D1/D2）
+V68.5.7.1	非提交者任共同导师	sacred	2358		0.366	B	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.5.7.2	外部仓库的正式接纳	ref_title	5820	5820	0.263	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.5.7.2	外部仓库的正式接纳	ref_title	6007	6007	0.263	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V68.5.7.4	变更后的导师结构	sacred	2358		0.261	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V68.6.1.1	Cisco 资助的移植立项	fulltext_summary	926	926	0.270	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.6.1.1	Cisco 资助的移植立项	fulltext_summary	928	928	0.270	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.6.1.1	Cisco 资助的移植立项	fulltext_summary	933	933	0.270	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.6.2.5	首年参与的定位描述	ref_title	10208	10208	0.293	C	FreeBSD Journal Mar/Apr 2015 “In FreeBSD”：The FreeBSD Project and Google Summer of Code（第 11 年参与） 2015	可推	文献线索（须核全文再定 D1/D2）
+V68.6.2.5	首年参与的定位描述	fulltext_fact	kf-bell-10018-1833	10018	0.225	C	J. S. Stone 于1892年参与无线电电话研究	可推	全文补证候选（S1 命中即复用，D1 型）
+V68.6.3.4	学生与导师的组合形式	ref_title	10063	10063	0.221	C	The OpenBSD Foundation — Foundation Activities (2014 GSoC 5 学生) 2014	可推	文献线索（须核全文再定 D1/D2）
+V68.6.3.4	学生与导师的组合形式	ref_title	10076	10076	0.221	C	FreeBSD Quarterly Status Report 2010Q2 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.6.3.4	学生与导师的组合形式	ref_title	10092	10092	0.221	C	FreeBSD Status Report April-June 2010 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.7.2.3	项目与框架的先后	sacred	2339		0.237	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V68.7.5.1	实习出身的归属判定	fulltext_summary	926	926	0.263	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.7.5.1	实习出身的归属判定	fulltext_summary	928	928	0.263	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.7.5.1	实习出身的归属判定	fulltext_summary	933	933	0.263	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.7.5.3	实习与项目的经费来源	fulltext_summary	926	926	0.241	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.7.5.3	实习与项目的经费来源	fulltext_summary	928	928	0.241	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.7.5.3	实习与项目的经费来源	fulltext_summary	933	933	0.241	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.7.6.2	末届项目的实际承担者	ref_title	10063	10063	0.234	C	The OpenBSD Foundation — Foundation Activities (2014 GSoC 5 学生) 2014	可推	文献线索（须核全文再定 D1/D2）
+V68.7.6.2	末届项目的实际承担者	ref_title	10076	10076	0.234	C	FreeBSD Quarterly Status Report 2010Q2 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.7.6.2	末届项目的实际承担者	ref_title	10092	10092	0.234	C	FreeBSD Status Report April-June 2010 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.7.6.5	十五年后的问题延续	claim	CL-RM-010443		1.30	A	2010 年 11 月 David Wolfskill 公告 freebsd-platforms 列表因缺乏活动而退役——从 1995 年架构梦想主战场到十五年后的安静谢幕。	可推	claim 复用（S2 先库后网）
+V68.8.1.3	口径之辨的并入条目	ref_title	6146	6146	0.224	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V68.8.2.2	UPB 条目的编号	ref_title	6146	6146	0.270	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V68.8.5.2	验证项目的实际承担方	ref_title	10063	10063	0.230	C	The OpenBSD Foundation — Foundation Activities (2014 GSoC 5 学生) 2014	可推	文献线索（须核全文再定 D1/D2）
+V68.8.5.2	验证项目的实际承担方	ref_title	10076	10076	0.230	C	FreeBSD Quarterly Status Report 2010Q2 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.8.5.2	验证项目的实际承担方	ref_title	10092	10092	0.230	C	FreeBSD Status Report April-June 2010 (18 学生) 2010	可推	文献线索（须核全文再定 D1/D2）
+V68.8.5.4	验证范围的里程碑一览	sacred	3057		0.285	C	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V68.8.5.4	验证范围的里程碑一览	claim	CL-RM-011005		0.70	A	2020-12-16 Tomasz CEDRO 宣布在 FreeBSD 上成功构建带 Wayland+DRM 支持的 EFL 与 E 并报告因 logind 缺失而启动受阻，是 E 桌面 FreeBSD Wayland 路线的里程碑一手记录	可推	claim 复用（S2 先库后网）
+V68.8.7.2	可启动镜像的验收	ref_title	10078	10078	0.266	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V68.8.7.2	可启动镜像的验收	ref_title	10120	10120	0.266	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V68.9.1.1	移植与立项的非项目属性	fulltext_summary	926	926	0.262	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.1.1	移植与立项的非项目属性	fulltext_summary	928	928	0.262	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.1.1	移植与立项的非项目属性	fulltext_summary	933	933	0.262	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.2.4	导师归属的更正记录	claim	CL-RM-017437		0.70	A	Julian Elischer 勘误补帖：指出自己上一帖列出的组名清单有误（组迁移指引的更正记录）	可推	claim 复用（S2 先库后网）
+V68.9.3.1	文件系统测试的取材	fulltext_summary	20	20	0.238	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.3.1	文件系统测试的取材	fulltext_summary	63	63	0.238	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.3.1	文件系统测试的取材	fulltext_summary	118	118	0.238	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.3.1	文件系统测试的取材	sacred	2677		0.238	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V68.9.3.1	文件系统测试的取材	claim	CL-4-111		1.20	B	麒麟 LmBench 测试显示 Kylin 2.0 在系统调用开销、文件系统与虚存延迟上与 FreeBSD 5.3 基本相当，但与 RedHat 9.0 仍有差距。	可推	claim 复用（S2 先库后网）
+V68.9.3.1	文件系统测试的取材	claim	CL-2-004		1.10	A	磁盘子系统测试的最重要成果之一是修正了设备处理程序（RH750/RH780 接口）的时序参数，使部分情形性能提升超过 20%。	可推	claim 复用（S2 先库后网）
+V68.9.3.4	与测试体系线的分工切口	doubt_open	2919		0.260	C	〔全量证据复核·待订正｜批次 v62b｜源稿 v62b-三源核验-20261012.md｜条 10〕**6.5 与 V63 第 3 章分工**：本节为**卷末总结**（C-77 维持 2026-10-11），**「六十年模型解释」归第六十三	可推	释疑并案（先并到存疑库现有条目）
+V68.9.5.1	ZSTD 条目的属性存疑	ref_title	10083	10083	0.296	C	Melange GSoC2014 接受项目列表 (Wayback)（Wayback 20150220093820；capture=wayback） 2014	可推	文献线索（须核全文再定 D1/D2）
+V68.9.5.1	ZSTD 条目的属性存疑	ref_title	10085	10085	0.296	C	Melange GSoC2013 接受项目列表（Wayback 20130607110904；capture=wayback） 2013	可推	文献线索（须核全文再定 D1/D2）
+V68.9.5.1	ZSTD 条目的属性存疑	ref_title	10087	10087	0.296	C	Melange GSoC2012 接受项目列表（Wayback 20120428203144；capture=wayback） 2012	可推	文献线索（须核全文再定 D1/D2）
+V68.9.5.2	基金会项目页的条目	fulltext_summary	926	926	0.276	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.5.2	基金会项目页的条目	fulltext_summary	928	928	0.276	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.5.2	基金会项目页的条目	fulltext_summary	933	933	0.276	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.5.4	存疑标注的操作规程	claim	CL-RM-040521		0.70	A	Stephen Walli 议 TCOS 规则，就最新流传的操作规程所附小型表决中剥夺机构代表投票权一事发问，自陈需受教。	可推	claim 复用（S2 先库后网）
+V68.9.5.5	存疑条目的后续核验	sacred	2242		0.337	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V68.9.5.5	存疑条目的后续核验	fulltext_summary	926	926	0.238	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.5.5	存疑条目的后续核验	fulltext_summary	928	928	0.238	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V68.9.5.5	存疑条目的后续核验	fulltext_summary	933	933	0.238	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
