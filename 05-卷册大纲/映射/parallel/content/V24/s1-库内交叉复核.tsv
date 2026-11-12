@@ -1,0 +1,6 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V24.1.3.2	内核与用户空间的配比	claim	CL-7-010		1.30	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
+V24.1.3.2	内核与用户空间的配比	claim	CL-6-103		1.10	A	2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与 bhyve 用户态	可推	claim 复用（S2 先库后网）
+V24.1.4.4	转轨背后的技术动因	claim	CL-RM-020548		0.70	A	Fagan 猜 MSC 5.1 定 0 之因：sprintf 原型混合具名与无名形参非法而 MSC 未能修复——零值定性的技术动因假说	可推	claim 复用（S2 先库后网）
+V24.1.6.4	六文件的特殊地位	fulltext_summary	813	813	0.230	C	Course : B.E., Branch : Computer Science and Engineering Year : IV CSE Semester : VII CS2028 UNIX INTERNALS UNIT TOPIC I	可推	全文综述候选（D1 型，核对原文后落块）
+V24.3.2.2	源码树的组织方式	claim	CL-3-073		0.90	A	Codd 1970 年提出数据的关系模型，主张大型数据银行的未来用户不必知道数据在机器中的组织方式。	可推	claim 复用（S2 先库后网）

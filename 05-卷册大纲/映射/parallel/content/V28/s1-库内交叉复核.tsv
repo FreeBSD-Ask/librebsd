@@ -1,0 +1,28 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V28.1.2.2	项目文书的管理方式	ref_title	5817	5817	0.249	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V28.2.1.4	创业与学术的分界	ref_title	2778	2778	0.246	C	The Design and Implementation of the 4.4BSD Operating System Marshall Kirk McKusick（顾问）、Keith Bostic（Berkeley Software D	可推	文献线索（须核全文再定 D1/D2）
+V28.2.2.1	文件系统论文的写作分工	claim	CL-1-016		1.60	A	McKusick 等人在 1984 年快速文件系统论文中明确称，UNIX 操作系统从 Multics 这一大型高性能操作系统借鉴了许多思想。	可推	claim 复用（S2 先库后网）
+V28.2.2.1	文件系统论文的写作分工	claim	CL-5-012		1.20	B	Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修	可推	claim 复用（S2 先库后网）
+V28.2.2.3	学位论文与系统设计的关系	fulltext_summary	986	986	0.313	B	Antithesis: Pioneering Deterministic Hypervisors with FreeBSD and Bhyve CHALLENGE Reproducing bugs consistently poses a 	可推	全文综述候选（D1 型，核对原文后落块）
+V28.2.2.3	学位论文与系统设计的关系	claim	CL-6-100		1.30	A	布加勒斯特理工大学（UPB）自 GSoC 2014 起以学位论文与硕士项目模式持续驱动 bhyve 功能开发，涵盖指令缓存、NE2000/ATA/HD-Audio 设备模拟、ARMv7/ARMv8 移植与 x86 状态保存-恢复（save-	可推	claim 复用（S2 先库后网）
+V28.2.2.5	后期档案整理的贡献	sacred	2705		0.234	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
+V28.2.3.5	身后纪念文献的类型	ref_title	3755	3755	0.271	C	Victor A. McKusick 讣告（Nature / EJHG） Nature / European Journal of Human Genetics 	可推	文献线索（须核全文再定 D1/D2）
+V28.2.6.1	名单官方来源的考订	sacred	2105		0.236	C	按字母顺序排列的贡献者名录	可推	史观参照（不作证据，仅定题面归属）
+V28.2.6.4	技术岗位的流动性	sacred	127		0.316	B	6.5 主体的流动性	可推	史观参照（不作证据，仅定题面归属）
+V28.3.1.2	导师制的实际运作	fulltext_fact	kf-bell-10024-1139	10024	0.224	C	T. H. Maiman于1960年在Hughes Aircraft Company首次实现了激光器的实际运行	可推	全文补证候选（S1 命中即复用，D1 型）
+V28.3.4.4	记录方式的特殊性	sacred	2089		0.246	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V28.4.1.2	作者名单的考订过程	sacred	2089		0.251	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V28.4.2.2	重写工程的统筹角色	ref_title	5638	5638	0.343	B	FreeBSD FUSE Rust 重写工作 	可推	文献线索（须核全文再定 D1/D2）
+V28.4.3.3	署名缺失的补救途径	sacred	2089		0.232	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V28.5.2.1	自动挂载程序的作者身份	fulltext_fact	kf-bell-10022-848	10022	0.248	C	INDSCAL程序由Carroll和Chang开发	可推	全文补证候选（S1 命中即复用，D1 型）
+V28.5.3.2	实验室承担的功能	claim	CL-1-110		0.90	A	ENIAC 中今天由固态器件承担的功能由真空管完成，该机器共有 20000 个真空管。	可推	claim 复用（S2 先库后网）
+V28.5.4.2	合同管理的具体流程	fulltext_fact	kf-bell-10019-818	10019	0.298	C	1950年12月，Bell Laboratories获得美国海军研究办公室的研究合同	可推	全文补证候选（S1 命中即复用，D1 型）
+V28.5.4.2	合同管理的具体流程	sacred	2373		0.277	C	具体流程：CURRENT → 分出 STABLE 分支 → ALPHA → BETA → RC → RELEASE。	可推	史观参照（不作证据，仅定题面归属）
+V28.5.4.2	合同管理的具体流程	fulltext_fact	kf-bell-10022-827	10022	0.230	C	1962年Holt从Bell Laboratories转至AT&T，AT&T成立了培训研究办公室（Office of Training Research）	可推	全文补证候选（S1 命中即复用，D1 型）
+V28.5.4.4	人员更替留下的痕迹	sacred	2089		0.252	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V28.5.4.5	在档案卷宗中的位置	ref_title	2473	2473	0.240	C	SCO Group, Inc. v. Novell, Inc., courtlistener 案卷页 	可推	文献线索（须核全文再定 D1/D2）
+V28.5.4.5	在档案卷宗中的位置	ref_title	3870	3870	0.232	C	19841204 CityOfBerkeley BSD检索 bsd 1984 1204 res52501 unknown 1984	可推	文献线索（须核全文再定 D1/D2）
+V28.6.2.1	采访文献的基本类型	ref_title	10148	10148	0.227	C	GSoC Mentor Guide (含 2005 口径) 2005	可推	文献线索（须核全文再定 D1/D2）
+V28.6.2.1	采访文献的基本类型	ref_title	5757	5757	0.226	C	D C / Ritchie L / Ritchie J / Meyer A 2018-2020 多次口述史访谈（CHM 102717373、102790971、102784979） 2018	可推	文献线索（须核全文再定 D1/D2）
+V28.6.2.1	采访文献的基本类型	ref_title	827	827	0.223	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）
+V28.6.4.3	未决问题的分项清单	ref_title	5567	5567	0.231	C	House EO 14179 2025-01-20 全文撤销清单（未含 EO 14028） 2025	可推	文献线索（须核全文再定 D1/D2）

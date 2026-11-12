@@ -1,0 +1,17 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V26.2.2.2	虚拟文件系统的引入	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V26.2.2.2	虚拟文件系统的引入	claim	CL-2-041		1.10	A	McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（S2 先库后网）
+V26.2.2.3	网络文件系统的商品化	claim	CL-5-012		1.20	B	Jails 论文列举 jailed root 的八项限制：禁止直接修改内核与加载内核模块、禁止修改网络配置（接口、地址、路由表）、禁止挂载/卸载文件系统、禁止创建设备节点、禁止访问 raw/divert/routing socket、禁止修	可推	claim 复用（S2 先库后网）
+V26.2.2.3	网络文件系统的商品化	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V26.2.3.4	末版之后的延长支持	ref_title	10146	10146	0.225	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V26.2.4.1	多处理器系统的调度设计	fulltext_summary	520	520	0.242	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V26.2.4.1	多处理器系统的调度设计	fulltext_summary	527	527	0.242	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V26.2.4.1	多处理器系统的调度设计	fulltext_summary	107	107	0.224	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V26.2.4.1	多处理器系统的调度设计	claim	CL-7-019		1.70	A	FreeBSD 项目约在 2001 年启动内核多线程化任务（SMPng），首要目标是通过允许并发访问内核来提升多处理器系统的性能。	可推	claim 复用（S2 先库后网）
+V26.2.4.1	多处理器系统的调度设计	claim	CL-5-100		1.60	A	Jason Evans 于 2006 年提出 jemalloc：FreeBSD 自第 5 版起持续推进多处理器扩展，使 C 库 malloc(3) 成为多线程应用在多处理器系统上的瓶颈，从而催生了新的可扩展并发分配器。	可推	claim 复用（S2 先库后网）
+V26.2.5.2	条带化文件系统的首例	claim	CL-RM-011302		0.90	A	2013年9月17日Justin T. Gibbs宣布OpenZFS跨平台项目成立，FreeBSD与illumos等平台联合保障ZFS文件系统的持续演进。	可推	claim 复用（S2 先库后网）
+V26.2.5.2	条带化文件系统的首例	claim	CL-RM-010723		0.90	A	1998 年 4 月 allen campbell 论述读写 portal 文件系统的统一管理模型优势——FreeBSD 配置数据库（configfs）设计的当事人思辨。	可推	claim 复用（S2 先库后网）
+V26.2.6.3	精简指令集平台的移植	claim	CL-1-102		1.30	A	Patterson 与 Sequin 1981 年在 RISC I 论文中质疑 CISC 架构，提出实现 CISC 所需的额外硬件是否是稀缺资源的最佳利用方式，由此引出精简指令集计算机（RISC）方案。	可推	claim 复用（S2 先库后网）
+V26.4.1.4	治理结构的横向比较	sacred	2344		0.311	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V26.4.1.4	治理结构的横向比较	sacred	2346		0.311	B	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V26.4.3.5	双向流动的史料证据	sacred	2089		0.239	C	致谢	可推	史观参照（不作证据，仅定题面归属）

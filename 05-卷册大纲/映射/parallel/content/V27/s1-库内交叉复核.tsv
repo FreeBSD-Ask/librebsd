@@ -1,0 +1,51 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V27.1.4.2	首版发行时点的两说	claim	CL-RM-012690		1.10	A	Torek 陈述“从未有单一的 C shell”——首版 VAX 发行时即有多个不同 csh——csh 变体史	可推	claim 复用（S2 先库后网）
+V27.1.5.1	核心团队的人员名单	sacred	2358		0.244	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V27.1.5.4	与用户社群的分层	ref_title	2460	2460	0.220	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V27.1.7.1	以个人计算机为主目标	claim	CL-RM-010980		1.30	A	Kazuhisa Shimizu 宣布其友 Masaru Oki 已将 NetBSD 移植至 SHARP X68030 个人计算机并由 Masanobu Saito 开设匿名 FTP 站点分发，是日本硬件社区对 NetBSD 的最早移植参与	可推	claim 复用（S2 先库后网）
+V27.1.7.1	以个人计算机为主目标	claim	CL-1-112		1.30	A	计算机史常按机器设计世代分期——大型机世代、小型机时代、个人计算机革命。	可推	claim 复用（S2 先库后网）
+V27.1.7.4	性能与稳定性的权衡	claim	CL-6-108		1.10	B	OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能	可推	claim 复用（S2 先库后网）
+V27.1.7.4	性能与稳定性的权衡	claim	CL-RM-010367		1.00	A	2022 年，KDE/ports 维护者 Tobias C. Berner 回应 TeX 2021 更新 RFC，主张趁 ports 树未再大幅漂移前尽快合入，并认为暂时标记 10 至 12 个端口为 broken 可接受，反映大版本更新与	可推	claim 复用（S2 先库后网）
+V27.1.8.1	分支身份的自我确认	ref_title	5932	5932	0.258	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V27.2.4.1	架构抽象的层次设计	sacred	1954		0.229	C	第 43 章 FreeBSD 内核架构：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与机器无关的内核选项注解、GENERIC 内核选项注解（AMD64）、构建定制内核的方法，以及在 Linux 系统上交叉构建 FreeBSD	可推	史观参照（不作证据，仅定题面归属）
+V27.2.5.4	基金会成立前的组织结构	sacred	1911		0.270	C	本书的组织结构	可推	史观参照（不作证据，仅定题面归属）
+V27.2.5.4	基金会成立前的组织结构	sacred	2438		0.234	C	2000 年 3 月 28 日：FreeBSD 基金会成立	可推	史观参照（不作证据，仅定题面归属）
+V27.2.5.4	基金会成立前的组织结构	claim	CL-5-015		1.30	A	McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设	可推	claim 复用（S2 先库后网）
+V27.3.4.2	首个正式版本的时点	claim	CL-RM-010275		1.20	B	2002 年 acorn32 准备 NetBSD 1.6 首个官方发布——ARM 老平台从快照分发进入正式版本序列（同期安装程序修复）	可推	claim 复用（S2 先库后网）
+V27.3.4.4	发行渠道的原始形态	claim	CL-RM-010128		1.30	A	2007 年 Servat 宣布 PAPI-3.5.0 进入 FreeBSD ports 树、对所有用户可用——从个人移植到正式发行渠道的里程碑	可推	claim 复用（S2 先库后网）
+V27.3.4.5	版本序列的编号清理	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V27.3.5.1	审计方法的引入路径	ref_title	5817	5817	0.319	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V27.3.5.1	审计方法的引入路径	sacred	2339		0.221	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V27.3.5.2	默认配置的逐项收紧	fulltext_summary	976	976	0.321	B	Total ASSETS Current Assets Bank Accounts 1000 Wells Fargo - Checking 811,157.93 1001 Wells Fargo - Electronic Payment 5	可推	全文综述候选（D1 型，核对原文后落块）
+V27.3.6.1	领导权的集中程度	sacred	2656		0.313	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V27.4.1.3	调度器的设计选择	fulltext_summary	520	520	0.276	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.1.3	调度器的设计选择	fulltext_summary	527	527	0.276	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.1.3	调度器的设计选择	fulltext_summary	107	107	0.255	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.1.4	转型期的共同体张力	ref_title	2460	2460	0.243	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V27.4.3.2	公告文本的措辞分寸	fulltext_summary	91	91	0.258	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.3.3	初始代码的取得途径	ref_title	5820	5820	0.294	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V27.4.3.3	初始代码的取得途径	ref_title	6007	6007	0.294	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V27.4.4.2	虚拟内存的设计分歧	claim	CL-RM-011600		1.30	A	Cray 为何弃用虚拟内存的多方回应汇总：base/limit 寄存器保护、内存带宽为超算瓶颈、CDC 205/ETA10 分页性能教训	可推	claim 复用（S2 先库后网）
+V27.4.4.2	虚拟内存的设计分歧	claim	CL-RM-011615		1.20	B	NASA Ames CCF 顾问诊断 UNICOS 6.0 的 sort 沿用为虚拟内存机器的设计而在无 VM 的 Cray 上低效，给出参数调优清单	可推	claim 复用（S2 先库后网）
+V27.4.5.2	中期的技术路线分化	fulltext_summary	20	20	0.238	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.5.2	中期的技术路线分化	fulltext_summary	63	63	0.238	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.5.2	中期的技术路线分化	fulltext_summary	118	118	0.238	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V27.4.5.2	中期的技术路线分化	sacred	2677		0.238	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V27.5.15.1	技术路线的实质冲突	fulltext_summary	20	20	0.229	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.15.1	技术路线的实质冲突	fulltext_summary	63	63	0.229	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.15.1	技术路线的实质冲突	fulltext_summary	118	118	0.229	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.15.1	技术路线的实质冲突	sacred	2677		0.229	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V27.5.15.4	条件命题的案例验证	fulltext_fact	kf-bell-10020-088	10020	0.224	C	No. 3交换机最多支持600条toll trunks	可推	全文补证候选（S1 命中即复用，D1 型）
+V27.5.2.5	机制解释的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V27.5.3.2	知识传播的渠道类型	fulltext_summary	67	67	0.312	B	New trends in mandoc: Enhancing the modern toolbox for the classic documentation formats Ingo Schwarze <schwarze@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.7.3	邮件列表的史料局限	ref_title	2460	2460	0.299	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V27.5.7.3	邮件列表的史料局限	ref_title	5763	5763	0.245	C	N. H. F. (2015.11.29) TUHS 邮件列表 OCR 版本提供（tuhs.org/pipermail/tuhs/2015-November/007705.html，UnixEditionZero-OCR.pdf） 2015	可推	文献线索（须核全文再定 D1/D2）
+V27.5.8.1	许可证的共同底本	fulltext_summary	114	114	0.253	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.8.1	许可证的共同底本	fulltext_summary	942	942	0.253	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.8.1	许可证的共同底本	fulltext_summary	949	949	0.253	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	可推	全文综述候选（D1 型，核对原文后落块）
+V27.5.8.5	遗产叙述的常见误区	sacred	2179		0.234	C	附录：自由软件与开源软件的常见误解辨析	可推	史观参照（不作证据，仅定题面归属）
+V27.5.9.4	传播过程中的滞后	fulltext_fact	kf-bell-10019-597	10019	0.241	C	K. G. Jansky 在研究无线电传播过程中发现了射电天文学的基础	可推	全文补证候选（S1 命中即复用，D1 型）
+V27.5.9.5	流动的史料证据链	sacred	2089		0.253	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V27.5.9.5	流动的史料证据链	ref_title	2446	2446	0.243	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V27.5.9.5	流动的史料证据链	ref_title	2660	2660	0.243	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V27.5.9.5	流动的史料证据链	ref_title	10323	10323	0.243	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	可推	文献线索（须核全文再定 D1/D2）

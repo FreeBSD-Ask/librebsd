@@ -1,0 +1,49 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V29.1.2.5	组织规模的合理估算	sacred	2089		0.238	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V29.1.4.3	评审与报告的节奏	ref_title	10146	10146	0.230	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V29.2.3.3	文件系统的设计取舍	fulltext_summary	20	20	0.224	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V29.2.3.3	文件系统的设计取舍	fulltext_summary	63	63	0.224	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V29.2.3.3	文件系统的设计取舍	fulltext_summary	118	118	0.224	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V29.2.3.3	文件系统的设计取舍	sacred	2677		0.224	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V29.2.3.3	文件系统的设计取舍	claim	CL-3-056		1.30	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V29.2.3.3	文件系统的设计取舍	claim	CL-4-110		1.20	B	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V29.2.4.2	数字档案的迁移步骤	sacred	425		0.222	C	22.3 数字档案与历史保存	可推	史观参照（不作证据，仅定题面归属）
+V29.2.4.3	引用规范的实际执行	sacred	3061		0.354	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
+V29.2.4.4	档案缺口的分布规律	claim	CL-RM-011948		1.30	A	CSRG 声明磁盘故障丢失约一年 4BSD bug 报告（1991 年以来），请求重新提交——档案缺口的官方一手记录	可推	claim 复用（S2 先库后网）
+V29.2.5.2	出口管制的实际约束	claim	CL-RM-010525		1.30	A	1999 年 9 月社区形成解法：需要美国境内与境外两组构建者，各自以合法来源的密码学代码构建发行——分布式构建对抗出口管制的制度设计。	可推	claim 复用（S2 先库后网）
+V29.3.2.2	缩写传播的媒介链	fulltext_summary	98	98	0.220	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V29.3.3.4	编号的断裂与重排	sacred	138		0.461	B	7.2 传统的断裂与重构	可推	史观参照（不作证据，仅定题面归属）
+V29.3.7.1	记录中的参与类型	sacred	2217		0.261	C	1.3 Linux 与类 UNIX	可推	史观参照（不作证据，仅定题面归属）
+V29.3.7.3	署名与致谢的处理成例	sacred	2089		0.259	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V29.4.1.2	回传渠道的建立经过	ref_title	2460	2460	0.261	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V29.4.1.5	形态转变的关键节点	claim	CL-RM-015491		0.70	A	dhcpcd-5 已导入 NetBSD-current（HEADS UP，dhcpcd 并入 base 的关键节点）	可推	claim 复用（S2 先库后网）
+V29.4.1.5	形态转变的关键节点	claim	CL-RM-010653		0.70	A	2011 年 1 月 Matt Thomas 宣布将 matt-nb5-mips64 分支合并回 HEAD，影响所有 mips 端口——NetBSD MIPS64 工程主干化的关键节点。	可推	claim 复用（S2 先库后网）
+V29.4.3.4	维护责任的分配实况	fulltext_fact	kf-bell-10018-106	10018	0.228	C	J.J. Carty 担任 AT&T Engineering Department 的 Chief Engineer	可推	全文补证候选（S1 命中即复用，D1 型）
+V29.4.6.3	教材与实验的配套情形	sacred	2375		0.227	C	FreeBSD 版本更迭	可推	史观参照（不作证据，仅定题面归属）
+V29.4.6.4	使用面的统计尝试	sacred	2089		0.270	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V29.4.6.5	基础设施化的完成年代	claim	CL-RM-010531		1.20	B	2000 年 12 月 itojun 征询将 racoon IKE 守护进程纳入基系统并盘点体积与依赖顾虑——IPsec 基础设施基系统化的决策现场。	可推	claim 复用（S2 先库后网）
+V29.4.8.4	裁量惯例的适用场合	claim	CL-RM-014002		0.70	A	John Levine 列 fdopen 的适用场合（含 popen 缺位时的管道用法）	可推	claim 复用（S2 先库后网）
+V29.5.1.2	规范化的关键节点	claim	CL-RM-010653		1.20	A	2011 年 1 月 Matt Thomas 宣布将 matt-nb5-mips64 分支合并回 HEAD，影响所有 mips 端口——NetBSD MIPS64 工程主干化的关键节点。	可推	claim 复用（S2 先库后网）
+V29.5.1.2	规范化的关键节点	claim	CL-RM-010366		0.90	A	2022 年，TeX 移植维护者 Muhammad Moinur Rahman 在 tex 列表发出 RFC，宣告已将 TeX 系统移植到 2021 版但仍有失败与注意事项，征询社区意见，是 ports 中 TeX 从 2015 跨代升级到	可推	claim 复用（S2 先库后网）
+V29.5.1.4	实践与规范的落差	sacred	62		0.246	C	2.6 实践与真理	可推	史观参照（不作证据，仅定题面归属）
+V29.5.3.3	气质的可证部分与推论	sacred	2198		0.258	C	推论	可推	史观参照（不作证据，仅定题面归属）
+V29.5.3.4	既有框架的适用场合	claim	CL-RM-014002		0.70	A	John Levine 列 fdopen 的适用场合（含 popen 缺位时的管道用法）	可推	claim 复用（S2 先库后网）
+V29.5.4.4	价值话语的适用场合	claim	CL-RM-014002		0.70	A	John Levine 列 fdopen 的适用场合（含 popen 缺位时的管道用法）	可推	claim 复用（S2 先库后网）
+V29.5.5.3	合作与分歧的实例	sacred	388		0.315	B	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
+V29.6.3.1	归属法律结构的梳理	ref_title	2608	2608	0.294	C	US v. Microsoft, Conclusions of Law, 87 F. Supp. 2d 30 (D.D.C. 2000)——法律结论 2000	可推	文献线索（须核全文再定 D1/D2）
+V29.6.4.3	两代之间的实质差异	claim	CL-RM-014011		0.70	A	问 FIFO 与 pipe 的实质差异（Ken Turkowski）	可推	claim 复用（S2 先库后网）
+V29.6.6.1	新身份的萌芽形态	ref_title	2460	2460	0.251	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V29.6.6.1	新身份的萌芽形态	sacred	2339		0.244	C	2.2 关于 FreeBSD 项目	可推	史观参照（不作证据，仅定题面归属）
+V29.7.3.2	旁证材料的层级划分	sacred	232		0.327	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V29.7.3.2	旁证材料的层级划分	sacred	217		0.255	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
+V29.8.1.1	词条的来源分布统计	ref_title	2515	2515	0.268	C	The Jargon File (version 4.4.7) - daemon 词条 Raymond E S (ed.) 2003	可推	文献线索（须核全文再定 D1/D2）
+V29.8.1.5	存疑词条的标注体例	ref_title	2515	2515	0.297	C	The Jargon File (version 4.4.7) - daemon 词条 Raymond E S (ed.) 2003	可推	文献线索（须核全文再定 D1/D2）
+V29.8.3.4	社群功能的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V29.8.4.4	常见误引的类型划分	sacred	1326		0.288	C	174 浅论修仙小说类型划分 	可推	史观参照（不作证据，仅定题面归属）
+V29.9.4.5	体例传播范围的核定	ref_title	10303	10303	0.231	C	Commits · 386bsd/386bsd · GitHub（2.0 分支） Jolitz B 2016	可推	文献线索（须核全文再定 D1/D2）
+V29.9.4.5	体例传播范围的核定	sacred	2377		0.231	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
+V29.9.4.5	体例传播范围的核定	sacred	2386		0.231	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
+V29.9.5.1	形象创作背景的考证	ref_title	10064	10064	0.232	C	OpenBSD Hackathons (g2k14/m2k14 背景) 2014	可推	文献线索（须核全文再定 D1/D2）
+V29.9.7.1	批评文本的主要类型	fulltext_summary	98	98	0.251	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	可推	全文综述候选（D1 型，核对原文后落块）
+V29.9.7.1	批评文本的主要类型	ref_title	5819	5819	0.233	C	T. (1996) USENIX 文章 1996	可推	文献线索（须核全文再定 D1/D2）
+V29.9.8.5	参照使用的分寸把握	ref_title	2401	2401	0.233	C	Versata Software, Inc. et al. v. Ameriprise Financial, Inc. et al., No. 1:2014cv00012 (W.D. Tex. 2014-03-11)——Filing 28 	可推	文献线索（须核全文再定 D1/D2）
