@@ -4,14 +4,14 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 41	1	1.1	1.1.3	三条代码承继线的分岔	skeleton	
 41	1	1.1	1.1.4	从 4.4BSD-Lite 到 NetBSD 的基线承接	skeleton	
 41	1	1.1	1.1.5	早期分支共享驱动的存量	skeleton	
-41	1	1.2	1.2.1	机器无关层与机器相关层的划界	skeleton	
-41	1	1.2	1.2.2	分层约定在源码树中的落位	skeleton	
-41	1	1.2	1.2.3	MI 接口的公共操作集	skeleton	
+41	1	1.2	1.2.1	机器无关层与机器相关层的划界	filled	
+41	1	1.2	1.2.2	分层约定在源码树中的落位	filled	
+41	1	1.2	1.2.3	MI 接口的公共操作集	filled	
 41	1	1.2	1.2.4	移植收益与分层开销的对照	skeleton	
 41	1	1.2	1.2.5	分层术语在文档中的固化	skeleton	
 41	1	1.3	1.3.1	机器描述文件的语法构造	skeleton	
 41	1	1.3	1.3.2	设备探测与附着次序	skeleton	
-41	1	1.3	1.3.3	间接配置与直接配置的区分	skeleton	
+41	1	1.3	1.3.3	间接配置与直接配置的区分	filled	
 41	1	1.3	1.3.4	内核配置表的裁剪能力	skeleton	
 41	1	1.3	1.3.5	自动配置与移植门槛的形成	filled	
 41	1	1.4	1.4.1	总线标签的封装方式	skeleton	
@@ -45,10 +45,10 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 41	2	2.2	2.2.4	多平台共用的总线抽象	skeleton	
 41	2	2.2	2.2.5	移植验收的硬件名册	skeleton	
 41	2	2.3	2.3.1	Alpha 移植所依的 LP64 模型	skeleton	
-41	2	2.3	2.3.2	TURBOchannel 设备的驱动覆盖	skeleton	
-41	2	2.3	2.3.3	工作站架构的维护降级	skeleton	
-41	2	2.3	2.3.4	Alpha 在发行矩阵中的位次	skeleton	
-41	2	2.3	2.3.5	工作站移植的遗产台账	skeleton	
+41	2	2.3	2.3.2	TURBOchannel 设备的驱动覆盖	filled	
+41	2	2.3	2.3.3	工作站架构的维护降级	filled	
+41	2	2.3	2.3.4	Alpha 在发行矩阵中的位次	filled	
+41	2	2.3	2.3.5	工作站移植的遗产台账	filled	
 41	2	2.4	2.4.1	ARM 移植的板级切分	skeleton	
 41	2	2.4	2.4.2	evbarm 的变体组织	skeleton	
 41	2	2.4	2.4.3	ARM 平台的引导装载链	skeleton	
@@ -134,7 +134,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 41	4	4.7	4.7.3	锁竞争的定位手法	skeleton	
 41	4	4.7	4.7.4	优化收益的平台落差	skeleton	
 41	4	4.7	4.7.5	性能优化的可测尽头	skeleton	
-41	5	5.1	5.1.1	build.sh 的脚本化封装	skeleton	
+41	5	5.1	5.1.1	build.sh 的脚本化封装	filled	
 41	5	5.1	5.1.2	交叉工具链的生成途径	skeleton	
 41	5	5.1	5.1.3	构建产物的落盘布局	skeleton	
 41	5	5.1	5.1.4	主机与目标平台的划分	skeleton	
