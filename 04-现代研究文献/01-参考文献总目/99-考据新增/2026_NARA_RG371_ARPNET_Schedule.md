@@ -1,6 +1,6 @@
 # NARA RG 371 记录日程：ARPANET Program Records（SF 115）引用卡
 
-> 用途：V11.4.7.3“合同文件的保管链条”内容补证（V11 补证批 b002）。
+> 用途：V11.4.7.3“合同文件的保管链条”内容补证（V11 补证批 b002）；V11.4.3.3“授权发放的流程与台账”、4.3.6“平台叙述的范围界定”内容补证（V11 补证批 b006）。
 
 ## 一、著录
 
@@ -25,9 +25,16 @@ National Archives and Records Administration. Advanced Research Projects Agency 
 
 > 875-02 ARPANET Sponsors Group Files. Chaired by DCA, the group consists of representatives of various ARPANET sponsors who meet to provide advisory services, to include review and coordination of all actions affecting services rendered by the network. The group serves as a vehicle for coordinating proposed network changes which may affect sponsors or users; to exchange ideas and information on network operations, future plans for the network and common interests, and user acti_vities. Included are the group charter announcements, agenda, minutes, group reports (when required), recommendations, and related papers. Files arranged chronologically. Disposition: (a) HQ.DCA - Permanent. Retire when no longer needed. Offer to NARS in 5 year blocks when 20 years old. (b) Others - Destroy when no longer needed.
 
+新用户与赞助方申请案卷：
+
+> 875-08 ARPANET User/Sponsor Requests. Case files developed by DCA in evaluating requests from new users (non-DoD government agencies and non-government organizations) for access to the ARPANET. Included are the new user's justification for access to the network; user readiness to provide funds for the type of service required; TSR; topology analysis; cost/charge information; site profile; DCA's decision (approval ot disapproval); necessary information furnished contractors; tasks assigned to DCEC, DCAOC, and DECCO; site survey authorization; funding arrangements; and related papers. Disposition: Destroy on withdrawal by user.
+
+（逐字保真：“approval ot disapproval”原文如此，为 OCR／原件讹字，未改。）
+
 ## 三、考据说明
 
 1. 日程按“系列（item）”逐条给处置：永久件满 20 年后按 5 年一批移交国家档案馆（NARS），非永久件按年限销毁——这正是“保管链条决定今存状态”的制度记录。
 2. 同一项目内不同系列命运不同（运行管理与赞助方组为永久，其他多按年限销毁），故“查无”不等于“未发生”，须先核该系列处置条款。
 3. 该日程的提交方为国防通信局系统（HQ.DCA 为 office of record 之一），说明 ARPANET 运行档案的保管主体与 ARPA 本部并非同一机构——空间与权属须分开叙述。
 4. 禁引核查：`.gov` 官方站，`banned_source=0`。OCR 噪声已在本卡声明，引用时不得“顺手美化”。
+5. 875-08 的处置为“Destroy on withdrawal by user”（用户退出即销毁），与 875-03／875-02 的永久件形成对照：接入审批的逐案卷宗本就不承担长期留存义务，今存缺环可由处置条款解释，不必然推为“未曾审批”。
