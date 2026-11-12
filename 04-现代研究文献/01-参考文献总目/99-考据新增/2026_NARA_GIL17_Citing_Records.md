@@ -30,6 +30,10 @@ National Archives and Records Administration. Citing Records in the National Arc
 
 > As a rule, a citation to archival records should contain as much information as necessary to allow someone to easily locate those records.
 
+要素并非一律齐备：
+
+> Not all citations have all the elements described above.
+
 ## 三、考据说明
 
 1. 六层要素（record item—file unit—series—subgroup—record group—repository）把“登记要素”从习惯做法变成可核对清单：缺哪一层，回溯就断在哪一层。
