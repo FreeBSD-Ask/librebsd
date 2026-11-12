@@ -30,6 +30,14 @@ Bolt Beranek and Newman Inc. Interface Message Processors for the ARPA Computer 
 
 > Principal Investigator: Mr. Frank E. Heart
 
+本季度进展的概括（报告体例）：
+
+> This Quarterly Technical Report No. 7 describes several aspects of our technical progress on the ARPA Computer Network during the third quarter of 1970.
+
+本季度可核的具体事项：
+
+> During this period, we installed IMPs No. 10 and No. 11 at Lincoln Laboratories and Stanford University, commenced experimental testing with 230.4 kilobit/sec circuits in the test cell at BBN, and completed retrofits of new control panels and auto restart circuitry.
+
 ## 三、考据说明
 
 1. 封面把“资助方（ARPA）—任务令号（Order No. 1260）—合同号（DAHC15-69-C-0179）—生效与终止日—合同金额”并列，是“直接资助的合同证据”最完整的单页形态：一份文书即可同时支撑资助方、年度、数额三项。
