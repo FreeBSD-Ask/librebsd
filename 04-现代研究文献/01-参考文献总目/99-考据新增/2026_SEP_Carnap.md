@@ -1,7 +1,7 @@
 # Rudolf Carnap（Stanford Encyclopedia of Philosophy）
 
 - 来源：https://plato.stanford.edu/entries/carnap/
-- 作者：André W. Carus（SEP 条目）
+- 作者：Hannes Leitgeb, André W. Carus（SEP 条目）
 - 出版者：The Metaphysics Research Lab, Stanford University
 - 访问日：2026-11-12
 - 用途：Task 8.2 V01-S2 b007，V01.1.3.5 逻辑经验主义与形式语言的哲学（D2 网页条目）
