@@ -30,6 +30,10 @@ WAFL 与 FreeBSD 的组合来源：
 
 > FreeBSD: FreeBSD is now the Data ONTAP foundation.
 
+以 FreeBSD 为操作系统的收益句（b029 补录）：
+
+> The use of FreeBSD as the operating system for Data ONTAP 8.0 allows for some significant benefits. Besides the fact that Data ONTAP will continuously benefit from the third-party work taking place within the FreeBSD community
+
 ## 三、考据说明
 
 - “combination of the WAFL file system and SpinFS running in a FreeBSD environment”是 2.3.2“WAFL 与 BSD 内核并置而非派生”的直接原文：组合体由两个来源拼成，WAFL 不是 BSD 内核演化的产物。

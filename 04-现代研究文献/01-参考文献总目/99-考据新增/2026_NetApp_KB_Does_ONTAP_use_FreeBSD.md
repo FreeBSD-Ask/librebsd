@@ -17,6 +17,10 @@ ONTAP 与 FreeBSD 的关系：
 
 > ONTAP leverages a highly customized derivative of the FreeBSD operating system for some tasks.
 
+组件细节指向法律通告（b029 补录）：
+
+> For additional details on the software components that are distributed with various versions of the ONTAP products, see Legal notices section of ONTAP Documentation
+
 ## 三、考据说明
 
 - “highly customized derivative”是厂商对派生关系的直接自述：确认 FreeBSD 为来源，同时声明高度定制且只用于部分任务——落块时保留“for some tasks”的限定，不得写成“ONTAP 即 FreeBSD”。
