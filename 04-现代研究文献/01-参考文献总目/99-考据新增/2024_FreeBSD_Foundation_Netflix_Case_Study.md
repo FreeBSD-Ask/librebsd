@@ -29,6 +29,14 @@ FreeBSD Foundation. Maintaining the World’s Fastest Content Delivery Network a
 
 > We moved bulk crypto into the kernel (from nginx) to preserve the sendfile pipeline.
 
+KTLS 的机制定义（b022 补录）：
+
+> KTLS is a technology that moves the processing of TLS (Transport Layer Security) from user applications to the operating system kernel.
+
+与社区的 KTLS 协作（b023 备用）：
+
+> The Netflix CDN team has also notably collaborated with the FreeBSD community to enhance the security and efficiency of data transmissions using Kernel TLS (KTLS).
+
 KTLS 后的吞吐口径：
 
 > It allows for efficient data handling and has enabled Netflix to achieve 400 Gb/s throughput on its CDN servers.

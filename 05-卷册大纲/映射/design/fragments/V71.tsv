@@ -96,16 +96,16 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 71	3	3.3	3.3.5	部署年代的上下限（可考始于 1995 年前后）	skeleton	
 71	3	3.4	3.4.1	开发分支进入生产的先例	filled	
 71	3	3.4	3.4.2	CURRENT 在边缘设备的使用	filled	
-71	3	3.4	3.4.3	跟进 HEAD 的风险管理	skeleton	
+71	3	3.4	3.4.3	跟进 HEAD 的风险管理	filled	
 71	3	3.4	3.4.4	反馈回路的工程价值	filled	
-71	3	3.4	3.4.5	分支策略与设备运维的配合	skeleton	
+71	3	3.4	3.4.5	分支策略与设备运维的配合	filled	
 71	3	3.5	3.5.1	WhatsApp 后端的 FreeBSD 选择	filled	
 71	3	3.5	3.5.2	Erlang 与系统并发的组合	skeleton	
 71	3	3.5	3.5.3	单机连接数的公开口径	skeleton	
 71	3	3.5	3.5.4	消息基础设施的扩容次序	skeleton	
 71	3	3.5	3.5.5	基金会捐赠与回馈形态	skeleton	
 71	3	3.6	3.6.1	网络栈优化的上游去向	filled	
-71	3	3.6	3.6.2	定制代码与基本系统的分界	skeleton	
+71	3	3.6	3.6.2	定制代码与基本系统的分界	filled	
 71	3	3.6	3.6.3	内核 TLS 卸载的落地	filled	
 71	3	3.6	3.6.4	性能补丁的评审环节	skeleton	
 71	3	3.6	3.6.5	商用负载驱动的内核改造	filled	

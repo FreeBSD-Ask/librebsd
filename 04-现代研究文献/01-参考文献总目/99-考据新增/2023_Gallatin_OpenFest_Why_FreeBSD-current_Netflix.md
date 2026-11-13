@@ -49,6 +49,10 @@ OCA 的系统与文件系统分工：
 
 > We notice & resolve new upstream bugs that impact us immediately
 
+上游协作的收益（b022 补录）：
+
+> Much easier to upstream code and collaborate with upstream developers
+
 ## 三、考据说明
 
 - 两处 CDN／OCA 定义句支撑 3.1.1“操作系统退到服务层之下”：对外单位是 CDN 与设备，系统只作为设备内部条件出现。
