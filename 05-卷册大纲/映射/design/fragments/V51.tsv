@@ -34,7 +34,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 51	2	2.1	2.1.3	提交信息的摘要体例	filled	
 51	2	2.1	2.1.4	列表中的方案论证	filled	
 51	2	2.1	2.1.5	令牌信条的文档印证	filled	
-51	2	2.1	2.1.6	公开讨论的参与边界	skeleton	
+51	2	2.1	2.1.6	公开讨论的参与边界	filled	
 51	2	2.2	2.2.1	令牌与 lockmgr 的分工	skeleton	
 51	2	2.2	2.2.2	锁层级与死锁的规避	skeleton	
 51	2	2.2	2.2.3	自旋锁的调试劣势	skeleton	
@@ -58,13 +58,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 51	2	2.5	2.5.3	备份 PFS 的主从等价	skeleton	
 51	2	2.5	2.5.4	从 v1 到 v2 的设计续接	filled	
 51	2	2.5	2.5.5	HAMMER2 成为默认文件系统	skeleton	
-51	2	2.6	2.6.1	锁简化与多核扩展	skeleton	
+51	2	2.6	2.6.1	锁简化与多核扩展	filled	
 51	2	2.6	2.6.2	固态盘与交换缓存的配合	skeleton	
-51	2	2.6	2.6.3	轻量消息的投递机制	skeleton	
+51	2	2.6	2.6.3	轻量消息的投递机制	filled	
 51	2	2.6	2.6.4	HAMMER 对 UFS／ZFS 的基准分项	skeleton	
 51	2	2.6	2.6.5	固态盘普及带来的定位	skeleton	
 51	2	2.6	2.6.6	项目节奏的自我预期	skeleton	
-51	2	2.7	2.7.1	架构否决权的行使范围	skeleton	
+51	2	2.7	2.7.1	架构否决权的行使范围	filled	
 51	2	2.7	2.7.2	非平凡修复的测试期惯例	filled	
 51	2	2.7	2.7.3	决策风格的书面痕迹	filled	
 51	2	2.7	2.7.4	代码树的共同体所有权	skeleton	
