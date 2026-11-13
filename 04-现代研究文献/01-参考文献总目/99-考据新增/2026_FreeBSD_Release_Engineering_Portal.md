@@ -17,6 +17,10 @@ FreeBSD Documentation Project. FreeBSD Release Engineering[EB/OL]. FreeBSD Docum
 
 > After a reasonable testing period, changes can then be merged to the stable/ branches. The default minimum timeframe before merging to stable/ branches is three (3) days.
 
+base system 的全部改动进主线（b013 补录）：
+
+> In general, all changes to the FreeBSD base system are committed to the main branch, which reflects the top of the source tree.
+
 stable 分支累积到发版：
 
 > After several months, and the number of changes in the stable/ branch have grown significantly, it is time to release the next version of FreeBSD.
