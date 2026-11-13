@@ -53,6 +53,14 @@ OCA 的系统与文件系统分工：
 
 > Much easier to upstream code and collaborate with upstream developers
 
+小改动一律上游的分流口径（b028 补录）：
+
+> Small changes & bugfixes are done upstream, and brought back via the 3-week upstream merge process (or via cherrypicks for critical issues)
+
+维护团队的身份构成（b028 补录）：
+
+> Most of us are FreeBSD committers or contributors
+
 ## 三、考据说明
 
 - 两处 CDN／OCA 定义句支撑 3.1.1“操作系统退到服务层之下”：对外单位是 CDN 与设备，系统只作为设备内部条件出现。
