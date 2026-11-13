@@ -45,6 +45,18 @@ KTLS 后的吞吐口径：
 
 > It allows for efficient data handling and has enabled Netflix to achieve 400 Gb/s throughput on its CDN servers.
 
+代码流的审慎管理（b027 补录）：
+
+> Netflix carefully manages the code flow between the in-house FreeBSD implementation and the wider FreeBSD community.
+
+当事人双重身份的直述（b027 补录）：
+
+> Gleb Smirnoff is a skilled software engineer and experienced FreeBSD committer who works at Netflix and manages the customized and performance-optimized FreeBSD-based firmware for Open Connect, the company’s content delivery network (CDN).
+
+跟踪 CURRENT 的协作收益（Smirnoff 受访引语，b027 补录）：
+
+> Tracking FreeBSD-CURRENT … allowed us to collaborate with upstream developers and get our changes into FreeBSD quickly.
+
 ## 三、考据说明
 
 - “adopted FreeBSD-CURRENT”支撑 3.1.1／3.4：系统被纳入自建的发布节奏，而非外部发行版。
