@@ -21,6 +21,10 @@ Latombo, Pee Jay. TrueNAS CORE 13.3 Plans[EB/OL]. iXsystems, 2024-03-20[2026-11-
 
 > Today, we are announcing our plans to release TrueNAS CORE 13.3 in the next few months.
 
+商业赞助与公开流程（b014 补录）：
+
+> At iXsystems, we have worked hard for many years to be the best possible corporate sponsors for open-source projects. Unlike proprietary vendors, our processes and planning are done in the open, and both community members and customers alike play an important role in how TrueNAS continues to evolve.
+
 两版并存：
 
 > Both TrueNAS CORE and TrueNAS SCALE will exist to address the needs of different users. The focus of TrueNAS CORE continues to be ensuring storage reliability, stability, and security for existing users.
