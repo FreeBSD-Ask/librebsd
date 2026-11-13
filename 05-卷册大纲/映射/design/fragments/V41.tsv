@@ -12,10 +12,10 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 41	1	1.3	1.3.1	机器描述文件的语法构造	filled	
 41	1	1.3	1.3.2	设备探测与附着次序	filled	
 41	1	1.3	1.3.3	间接配置与直接配置的区分	filled	
-41	1	1.3	1.3.4	内核配置表的裁剪能力	skeleton	
+41	1	1.3	1.3.4	内核配置表的裁剪能力	filled	
 41	1	1.3	1.3.5	自动配置与移植门槛的形成	filled	
-41	1	1.4	1.4.1	总线标签的封装方式	skeleton	
-41	1	1.4	1.4.2	内存屏障的语义约束	skeleton	
+41	1	1.4	1.4.1	总线标签的封装方式	filled	
+41	1	1.4	1.4.2	内存屏障的语义约束	filled	
 41	1	1.4	1.4.3	DMA 映射的地址翻译	skeleton	
 41	1	1.4	1.4.4	非一致缓存架构下的接口惯例	skeleton	
 41	1	1.4	1.4.5	总线抽象支撑的复用范围	skeleton	
