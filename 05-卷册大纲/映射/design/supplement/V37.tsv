@@ -39,11 +39,17 @@ V37.3.5.1	corpus_gap	10315	CL-RM-494195	official_doc	primary	D2	supp-V37-g4p2-b0
 V37.3.5.2	corpus_gap	10315	CL-RM-494196	official_doc	primary	D2	supp-V37-g4p2-b012	supplemented	联网源：ref10315#url（2026-11-12）；互证 ref10326（bhyve(8)，同域手册页）
 V37.3.5.4	corpus_gap	10326	CL-RM-494197	official_doc	primary	D2	supp-V37-g4p2-b012	supplemented	联网源：ref10326#url（2026-11-12）；互证 ref10315（vmm(4)，同域手册页）
 V37.3.5.3	corpus_gap	10326	CL-RM-494229	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10326#url（2026-11-13）；互证 ref10315（vmm(4)，同域手册页）
-V37.3.6.1	corpus_gap	10265	CL-RM-494230	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10265#url（2026-11-13）；互证 ref10326（bhyve(8)，同批异域官方文档）
-V37.3.8.3	corpus_gap	10326	CL-RM-494231	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10326#url（2026-11-13）；互证 同源异段（bhyve(8) PCI EMULATION 的 virtio-blk 项）
+V37.3.6.1	corpus_gap	10265	CL-RM-494231	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10265#url（2026-11-13）；互证 ref10326（bhyve(8)，同批异域官方文档）
+V37.3.8.3	corpus_gap	10326	CL-RM-494230	official_doc	primary	D2	supp-V37-g4p2-b013	supplemented	联网源：ref10326#url（2026-11-13）；互证 同源异段（bhyve(8) PCI EMULATION 的 virtio-blk 项）
 V37.3.1.1	corpus_gap	10417	CL-RM-494356	official_doc	primary	D2	v37-b014	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=chroot&sektion=2（2026-11-13 V37 b014）
 V37.3.1.1	corpus_gap	10418	CL-RM-494357	official_doc	primary	D2	v37-b014	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8（2026-11-13 V37 b014）
 V37.2.9.1	corpus_gap	10419	CL-RM-494358	official_doc	primary	D2	v37-b014	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=4（2026-11-13 V37 b014）
 V37.2.9.1	corpus_gap	10420	CL-RM-494359	official_doc	primary	D2	v37-b014	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=8（2026-11-13 V37 b014）
 V37.2.5.5	corpus_gap	10266	CL-RM-494360	official_doc	primary	D2	v37-b014	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=kqueue&sektion=2（2026-11-13 V37 b014）
 V37.2.5.5	corpus_gap	10421	CL-RM-494361	official_doc	primary	D2	v37-b014	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=kqueue&sektion=9（2026-11-13 V37 b014）
+V37.2.7.2	corpus_gap	10428	CL-RM-494486	official_doc	primary	D2	v37-b015	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=iflib&sektion=9（2026-11-13 V37 b015）
+V37.2.7.2	corpus_gap	10429	CL-RM-494487	official_doc	primary	D2	v37-b015	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=iflibtxrx&sektion=9（2026-11-13 V37 b015）
+V37.3.1.5	corpus_gap	10430	CL-RM-494488	official_doc	primary	D2	v37-b015	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=2（2026-11-13 V37 b015）
+V37.3.1.5	corpus_gap	10431	CL-RM-494489	official_doc	primary	D2	v37-b015	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=jail.conf&sektion=5（2026-11-13 V37 b015）
+V37.2.6.4	corpus_gap	10432	CL-RM-494490	official_doc	primary	D2	v37-b015	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=bpf&sektion=4（2026-11-13 V37 b015）
+V37.2.6.4	corpus_gap	10433	CL-RM-494491	official_doc	primary	D2	v37-b015	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=pcap&sektion=3（2026-11-13 V37 b015）
