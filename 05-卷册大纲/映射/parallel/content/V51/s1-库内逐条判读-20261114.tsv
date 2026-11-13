@@ -1,0 +1,59 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010619		0.70	A	[L4] 2008 年 8 月 Aleksey Cheusov 发布 Linux DESTDIR 批量构建结果——pkgsrc 跨平台批量构建基础设施的一次实证成果。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010602		0.70	A	[L4] 2018 年 3 月 Mark Johnston 提出用 bhyve 自动配置测试虚拟机以强化内核转储代码测试——虚拟化测试基础设施的当事人提案。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010599		0.70	A	[L4] 2023 年 8 月 Taylor R Campbell 指出 veriexec 及其内部 fileassoc(9) API 需要维护与同步修复——完整性验证基础设施的长期维护缺口。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010591		0.70	A	[L4] 2017 年 8 月 Sevan Janiyan 提议分两步移除 veriexec 生成 SHA1/MD5 签名的能力——完整性验证基础设施的密码学现代化。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010538		0.70	A	[L4] 2019 年 12 月 Taylor R Campbell 发布内核熵子系统重构补丁集，主张采用密码学界审定的原语——随机数基础设施的第二代大改。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010513		0.70	A	[L4] 2003 年 6 月 Wojciech Puchar 发起以旧换新捐盘运动为 ftp.pl.netbsd.org 镜像募集 160GB 硬盘——地方镜像基础设施的民间筹资样本。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010477		0.70	A	[L4] 2017 年 6 月 Joerg Sonnenberger 宣布 CVS-Fossil-Git 转换设施迁至旧 cvs.NetBSD.org 主机——转换基础设施的正式归位。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010449		0.70	A	[L4] 2009 年 8 月 Stephen Montgomery-Smith 因生成机将被移入防火墙后而发问还有谁依赖 CTM——单一志愿者与单台大学电脑承载关键基础设施的脆弱性暴露。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010386		0.70	A	[L4] 2016 年 6 月 Yuri 质疑系统安装器与 poudriere 所取镜像缺乏签名校验，引出 Glen Barber、Bryan Drewery 等关于供应链验证基础设施的讨论。	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010330		0.70	A	[L4] 2017 年 Gabor Pali 公告 FreeBSD Haskell 内部邮件别名转为开放列表，供 Haskell 移植者协调重大变更——Haskell 栈社群基础设施的正式化	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010256		0.70	A	[L4] 2002 年 12 月 Colin Percival 发布二进制安全更新试验（后成为 freebsd-update 的作者与直系前身；binup 项目（2001 起）为 FreeBSD 二进制更新基础设施的早期尝试，包框	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-RM-010168		0.70	A	[L4] 2023 年 7 月 FDP Primer 新增 Weblate 专章：为新人提供在线/离线加入翻译团队的分步指南——翻译基础设施的文档化	可推	claim 复用（先库后网，不重复建）
+V51.2.3.2	无锁线程基础设施的替代路径	claim	CL-6-110		0.70	A	[L3] 2019 年 bsdcan 上，Free Software Foundation Europe 的 Albert Dengg 展示了用 Ansible 在 FreeBSD 上构建 jail 容器基础设施的完整流程，调用 	可推	claim 复用（先库后网，不重复建）
+V51.2.3.5	架构变更的讨论渠道	claim	CL-RM-010927		1.10	A	[L4] 2024年9月铃木在freebsd-users-jp引发关于FreeBSD发布周期变更的讨论，涉及freebsd-update维护负担	可推	claim 复用（先库后网，不重复建）
+V51.2.5.5	HAMMER2 成为默认文件系统	claim	CL-RM-010270		1.20	A	[L4] 2019 年 2 月 FreeBSD 12.0-RELEASE ZFS root AMI 发布——云镜像默认文件系统从 UFS 向 ZFS 扩展的里程碑（此前 ZFS root 需自行构建）	可推	claim 复用（先库后网，不重复建）
+V51.3.10.1	提交者规模的量级	sacred	2358		0.264	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V51.3.4.2	修复提交的避让通报	sacred	2358		0.227	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V51.3.4.5	新工具入树的前置讨论	claim	CL-RM-010628		1.30	A	[L4] 2011 年 3 月 Aleksey Cheusov 宣布 lmdbg 模块化 malloc 调试器已就绪可导入，支持 NetBSD/FreeBSD/DFBSD/MirBSD/Linux——内存调试工具入树的当事人请求。	可推	claim 复用（先库后网，不重复建）
+V51.3.4.5	新工具入树的前置讨论	claim	CL-RM-010626		1.30	A	[L4] 2009 年 11 月 Jean-Yves Migeon 导入 libmicro 微基准测试并请求审查，Joerg Sonnenberger 参与讨论跨平台基准比较——性能基准工具入树的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V51.4.3.3	第三方软件集的借用幅度	claim	CL-RM-011384		1.30	A	[L4] 2021-11 Warner Losh 就大量第三方软件定义 _POSIX_C_SOURCE 却仍需 BSD 扩展符号的问题发起系统头文件暴露策略讨论，Konstantin Belousov 参与	可推	claim 复用（先库后网，不重复建）
+V51.4.3.4	分道所据的技术判断	claim	CL-RM-020273		0.70	A	[L3] Gwyn 论 ANSI 与 ISO 两标必须全同之共识：WG14 技术力量不及 X3J11、由 ISO 自定技术细节风险大，ANSI 为国际接受不惜延后进程，且点破三字符组绝非为取悦外人而是为 ISO-646 源码传输—	可推	claim 复用（先库后网，不重复建）
+V51.4.6.2	二进制分发的声明复制	claim	CL-RM-010333		1.30	A	[L4] 2018 年用户报告 stack 工具在 FreeBSD 上找不到 ghc-8.4.3 的 freebsd64 二进制分发——Haskell 工具链与 ports 体系衔接缺口的当事人样本	可推	claim 复用（先库后网，不重复建）
+V51.4.6.2	二进制分发的声明复制	claim	CL-RM-010290		1.30	A	[L3] 2004 年 cube（Quentin Garnier）立场被社区转引：'我们不维护二进制包，我们支持 50 种架构的 NetBSD'——pkgsrc 二进制分发定位之争（同期 GNUpg 打包疑问）	可推	claim 复用（先库后网，不重复建）
+V51.4.6.2	二进制分发的声明复制	claim	CL-RM-010235		1.10	B	[L4] 1998 年 11 月 Kazuki Sakamoto 发布 BeBox 移植二进制快照（含 tsubai 共享库补丁）——NetBSD/bebox 早期分发的节点	可推	claim 复用（先库后网，不重复建）
+V51.4.7.1	提交者身份的账户依据	sacred	2358		0.225	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.4	文件系统基准的分项出入	sacred	2743		0.233	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.4	文件系统基准的分项出入	sacred	2749		0.233	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.4	文件系统基准的分项出入	sacred	2752		0.233	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V51.5.2.6	原创文件系统的外部定位	claim	CL-3-056		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（先库后网，不重复建）
+V51.5.2.6	原创文件系统的外部定位	claim	CL-2-041		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（先库后网，不重复建）
+V51.6.2.1	分叉周年的自述刻度	ref_title	2789	2789	0.315	B	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V51.6.2.4	吉祥物在公告中的位置	sacred	2269		0.254	C	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V51.7.2.3	自铸文件系统的命名归属	claim	CL-3-056		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（先库后网，不重复建）
+V51.7.2.3	自铸文件系统的命名归属	claim	CL-2-041		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（先库后网，不重复建）
+V51.7.2.4	后继文件系统的数字后缀	claim	CL-3-056		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（先库后网，不重复建）
+V51.7.2.4	后继文件系统的数字后缀	claim	CL-2-041		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（先库后网，不重复建）
+V51.7.4.2	毛绒玩偶的自发制作	sacred	2656		0.245	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V51.7.4.5	仪式形态的经验记录	sacred	2269		0.310	B	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2549	2549	0.262	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2550	2550	0.262	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2552	2552	0.262	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2553	2553	0.262	C	GNU GPL v1.0 官方文本（1989） 1989	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2554	2554	0.262	C	GNU GPL v2.0 官方文本（1991） 1991	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2555	2555	0.262	C	GNU LGPL v2.0（Library GPL）官方文本（1991） 1991	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2556	2556	0.262	C	GNU LGPL v2.1（Lesser GPL）官方文本（1999） 1999	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2557	2557	0.262	C	GNU LGPL v3.0 官方文本（2007） 2007	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2558	2558	0.262	C	GNU AGPL v3.0 官方文本（2007） 2007	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2559	2559	0.262	C	MIT License 官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2560	2560	0.262	C	Apache License 1.0 官方文本（1995） 1995	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2561	2561	0.262	C	Apache License 1.1 官方文本（2000） 2000	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2562	2562	0.262	C	Apache License 2.0 官方文本（2004） 2004	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2563	2563	0.262	C	Mozilla Public License 1.0 官方文本（1998） 1998	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2564	2564	0.262	C	Mozilla Public License 1.1 官方文本（1999） 1999	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2565	2565	0.262	C	Mozilla Public License 2.0 官方文本（2012） 2012	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2566	2566	0.262	C	Eclipse Public License 1.0 官方文本 2004	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2567	2567	0.262	C	Eclipse Public License 2.0 官方文本（2017） 2017	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2568	2568	0.262	C	CDDL-1.0 官方文本（2004） 2004	可推	文献线索（须核全文再定 D1/D2）
+V51.7.5.5	简洁与可懂性的并置陈述	ref_title	2569	2569	0.262	C	ISC License 官方文本 	可推	文献线索（须核全文再定 D1/D2）
