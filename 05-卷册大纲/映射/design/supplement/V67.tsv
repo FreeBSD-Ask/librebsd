@@ -5,3 +5,5 @@ V67.1.6.2	corpus_gap	3890	CL-3-061	academic_work	primary	D1	supp-V67-b002	supple
 V67.8.1.2	corpus_gap	576	CL-6-209	academic_work	primary	D1	supp-V67-b003	supplemented	库内复用 claim＋联网互证（papers.freebsd.org GELI Boot slides 三点互证）；块锚 ref576#105497（task82-g7p2-v67-b003）
 V67.5.3.2	corpus_gap	10412	CL-RM-494328	official_doc	primary	D2	task82-g7p2-v67-b004	supplemented	联网补证：BSDCan 2011 议程页 Talk 273（2011-05-13，Public FreeBSD Devsummit 轨）；块锚 ref10412#url
 V67.5.3.2	corpus_gap	10413	CL-RM-494329	official_doc	primary	D2	task82-g7p2-v67-b004	supplemented	联网补证：FreeBSD Foundation Journal 刊文（2011-05 公布、NetApp 捐赠）；块锚 ref10413#url；exceptions resolution_ref 取主锚 ref:10412
+V67.11.3.1	corpus_gap	10435	CL-RM-494502	official_doc	primary	D2	task82-g7p2-v67-b005	supplemented	联网补证：;login: 2008-04 会刊通知（2008-03-12 宣布全部会议录免费）；块锚 ref10435#url
+V67.11.3.1	corpus_gap	10436	CL-RM-494503	official_doc	primary	D2	task82-g7p2-v67-b005	supplemented	联网补证：usenix.org/about 机构自述（banished paywalls in 2008）；块锚 ref10436#url；exceptions resolution_ref 取主锚 ref:10435
