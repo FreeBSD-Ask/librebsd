@@ -34,3 +34,14 @@ USENIX. BSDCon 2002: Refereed Papers and Invited Talks[EB/OL]. 2002[2026-11-14].
 - 五轨名与题面“硬件、内核、文件系统、网络与系统管理”一一对应（Hardware & Documentation＝硬件、Kernel Stuff＝内核、File Systems＝文件系统、Networking＝网络、System Administration＝系统管理）。
 - 轨名系页面原文（含 “Kernel Stuff” 之口语命名），照录不改写。
 - 页面标题即 Refereed Papers and Invited Talks，五轨均属裁判论文分场；特邀演讲不在此五轨内，不混写。
+
+## 四、二访补录（b014 批，V67.2.2.4 分栏题）
+
+页面主标题逐字：
+
+> Technical Sessions
+
+两类条目同页并置（分栏形态）：裁判论文列于带轨名与主席的 “REFEREED PAPERS” 轴下，特邀演讲以 “INVITED TALKS” 栏标列出、无链接、仅题名＋讲者。特邀演讲条目逐字例：
+
+> Spam--Roles and Responsibilities
+> Paul A. Vixie, Concerned Citizen
