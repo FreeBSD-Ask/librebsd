@@ -46,14 +46,14 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 71	2	2.1	2.1.5	设备层 BSD 成分的核对方法	filled	
 71	2	2.2	2.2.1	OneFS 的 FreeBSD 内核出身	filled	
 71	2	2.2	2.2.2	BSD 基底与专有文件系统的结合	filled	
-71	2	2.2	2.2.3	OneFS 版本与内核对齐	skeleton	
+71	2	2.2	2.2.3	OneFS 版本与内核对齐	filled	
 71	2	2.2	2.2.4	集群文件系统的系统层依赖	filled	
 71	2	2.2	2.2.5	存储设备的开源基础披露	filled	
 71	2	2.3	2.3.1	ONTAP 的 FreeBSD 组件范围	filled	
-71	2	2.3	2.3.2	WAFL 与 BSD 内核的并置	skeleton	
+71	2	2.3	2.3.2	WAFL 与 BSD 内核的并置	filled	
 71	2	2.3	2.3.3	NetApp 上游回馈的规模	filled	
 71	2	2.3	2.3.4	bhyve 进入基本系统的经过	filled	
-71	2	2.3	2.3.5	厂商 fork 与主线的关系	skeleton	
+71	2	2.3	2.3.5	厂商 fork 与主线的关系	filled	
 71	2	2.4	2.4.1	FreeNAS 项目的起源与定位	filled	
 71	2	2.4	2.4.2	网络存储的软件化过程	filled	
 71	2	2.4	2.4.3	开源 NAS 的分发形态	filled	
