@@ -240,9 +240,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	5	5.1	5.1.4	DAC 检查的调用路线	filled	
 37	5	5.1	5.1.5	自主访问控制的局限	skeleton	
 37	5	5.2	5.2.1	OpenBSM 的审计事件构型	filled	
-37	5	5.2	5.2.2	审计日志的记录格式	skeleton	
-37	5	5.2	5.2.3	内核审计的挂钩点	skeleton	
-37	5	5.2	5.2.4	审计策略的配置粒度	skeleton	
+37	5	5.2	5.2.2	审计日志的记录格式	filled	
+37	5	5.2	5.2.3	内核审计的挂钩点	filled	
+37	5	5.2	5.2.4	审计策略的配置粒度	filled	
 37	5	5.2	5.2.5	合规审计的工程含义	skeleton	
 37	5	5.3	5.3.1	MAC Framework 的策略插槽	skeleton	
 37	5	5.3	5.3.2	强制访问控制的模块化	skeleton	
