@@ -97,7 +97,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.7	2.7.1	Iflib 统一驱动框架的设计	filled	
 37	2	2.7	2.7.2	中断与队列的抽象	filled	
 37	2	2.7	2.7.3	网卡注册的模板化	filled	
-37	2	2.7	2.7.4	多队列硬件的适配	skeleton	
+37	2	2.7	2.7.4	多队列硬件的适配	filled	
 37	2	2.7	2.7.5	驱动迁移的收益评估	skeleton	
 37	2	2.8	2.8.1	kTLS 的对称加密卸载	skeleton	
 37	2	2.8	2.8.2	kTLS 的会话状态管理	skeleton	
@@ -105,7 +105,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.8	2.8.4	加密加速的硬件接口	skeleton	
 37	2	2.8	2.8.5	协议实现的性能取舍	skeleton	
 37	2	2.9	2.9.1	WireGuard 的接口设计	filled	
-37	2	2.9	2.9.2	内核 VPN 的路由接入	skeleton	
+37	2	2.9	2.9.2	内核 VPN 的路由接入	filled	
 37	2	2.9	2.9.3	密钥协商的会话模型	skeleton	
 37	2	2.9	2.9.4	移动场景的漫游支持	skeleton	
 37	2	2.9	2.9.5	VPN 栈的部署惯例	filled	
