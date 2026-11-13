@@ -45,7 +45,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	1	1.9	1.9.4	运维惯例的路径依赖	filled	
 37	1	1.9	1.9.5	性能对照的适用场景	filled	
 37	1	1.10	1.10.1	Gibbs 主导的 CAM 工程	skeleton	
-37	1	1.10	1.10.2	SCSI 子系统的主导者	skeleton	
+37	1	1.10	1.10.2	SCSI 子系统的主导者	filled	
 37	1	1.10	1.10.3	ATA 与 NVMe 的接续	skeleton	
 37	1	1.10	1.10.4	驱动维护的交接班	skeleton	
 37	1	1.10	1.10.5	贡献者角色的多重身份	skeleton	
@@ -112,7 +112,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.10	2.10.1	Kqueue 的内核数据结构	skeleton	
 37	2	2.10	2.10.2	过滤器注册的语义	skeleton	
 37	2	2.10	2.10.3	事件队列的唤醒路径	skeleton	
-37	2	2.10	2.10.4	并发访问的锁保护	skeleton	
+37	2	2.10	2.10.4	并发访问的锁保护	filled	
 37	2	2.10	2.10.5	机制本体与应用面的划界	skeleton	
 37	3	3.1	3.1.1	UNIX 隔离传统的来源	filled	
 37	3	3.1	3.1.2	Jail 的边界设定	skeleton	
@@ -128,7 +128,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	3	3.3	3.3.2	VNET 的实例化路线	filled	
 37	3	3.3	3.3.3	全局变量的隔离改造	filled	
 37	3	3.3	3.3.4	多实例并行的资源账	filled	
-37	3	3.3	3.3.5	虚拟网络的路由界限	skeleton	
+37	3	3.3	3.3.5	虚拟网络的路由界限	filled	
 37	3	3.4	3.4.1	Xen 的半虚拟化接入	skeleton	
 37	3	3.4	3.4.2	DomU 的内核适配	skeleton	
 37	3	3.4	3.4.3	早期虚拟化的试验田	skeleton	
