@@ -134,3 +134,39 @@ Whirlwind 预算削减与项目濒危（1.3.4 容忍的限度）：
 > Often, the delays run into decades, making it difficult to tell midcourse how effective a particular program has been.
 
 注：Box 4.1 与 Chapter 5 均取 NAP 官方开放章节页（chapter/6、chapter/7），访问日 2026-11-13。
+
+## 七、补充引文（b037 取用，Chapter 4 与 Chapter 5）
+
+大学实验室的承接（1.4.1 大学实验室的承接方式）：
+
+> In 1956, at the request of the Air Force, the Massachusetts Institute of Technology (MIT) created Project Lincoln, now known as the Lincoln Laboratory, with a broad charter to study problems in air defense to protect the nation from nuclear attack.
+
+大计划中的企业名单（1.4.2 企业实验室的参与路径）：
+
+> While Lincoln Laboratory was given primary responsibility for SAGE, the project also involved several private firms such as IBM, RAND, Systems Development Corporation (the spin-off from RAND), Burroughs, Western Electric, RCA, and AT&T.
+
+企业的收益位置（1.4.2 参与的回报形态）：
+
+> IBM built 56 computers for SAGE, earning over $500 million, which helped contribute to its becoming the world's largest computer manufacturer
+
+合作研制与量产（1.4.5 合同安排下的协作产物）：
+
+> The Air Force subsequently purchased production versions of the computer (designed in a cooperative effort between MIT and IBM) to equip each of its 23 Direction Centers.
+
+人员投入规模（1.4.6 人员、设备与场地的投入）：
+
+> At its peak, between 7,000 and 8,000 IBM employees worked on the project.
+
+大学与企业的资助配比（1.4.4 三类机构的分工与互补）：
+
+> By funding a mix of work in universities and industry, it was able to marry long-term objectives to real-world problems.
+
+研究与系统研制的配比（1.4.4 分工的另一轴）：
+
+> By funding a mix of fundamental research and system development activities, for example, government was able to promote the long-term health of the field and to demonstrate new technologies.
+
+设备投入的联邦份额（1.4.6 设备投入）：
+
+> Between 1981 and 1995, the federal government provided between 59 and 76 percent of annual research equipment expenditures in computer science and between 64 and 83 percent of annual research equipment expenditures in electrical engineering.
+
+注：本组引文取 NAP 开放章节页 chapter/6（Chapter 4）与 chapter/7（Chapter 5），访问日 2026-11-13。
