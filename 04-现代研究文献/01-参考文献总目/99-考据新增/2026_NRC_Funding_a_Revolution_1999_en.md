@@ -110,3 +110,27 @@ IPTO 成立两年内 DARPA 成为计算机科学研究的最大资助者（1.2.2
 > Building such flexibility into federal structures for managing research requires both skilled program managers—who understand, articulate, and promote the visions of researchers—and an organizational culture that accepts and promotes exploratory efforts.
 
 注：本章页引文取 NAP 官方开放章节页（chapter/5 为 Chapter 3，chapter/7 为 Chapter 5），访问日 2026-11-13；与 Executive Summary 章引文（第二、四节）分列，不混用页码。
+
+## 六、补充引文（b036 取用，Chapter 4 Box 4.1 与 Chapter 5）
+
+效益量化之难（1.3.2 成果判定的尺度）：
+
+> Quantifying the benefits of federal research support is a difficult, if not impossible, task for several reasons.
+
+SAGE 之“技术成功”与“建成即过时”（1.3.2 判定的多轴）：
+
+> Although a technical success, SAGE was already outdated by the time of its completion.
+
+Whirlwind 预算削减与项目濒危（1.3.4 容忍的限度）：
+
+> ONR planned to reduce Whirlwind's annual budget from $1.15 million to $250 thousand in 1951, threatening the viability of the project
+
+时间尺度超出规划视野（1.3.4 容忍的代价）：
+
+> The time needed for such programs to yield tangible results was often measured in decades, far beyond the planning horizons of many companies.
+
+中途难判（1.3.6 判定分歧的成因）：
+
+> Often, the delays run into decades, making it difficult to tell midcourse how effective a particular program has been.
+
+注：Box 4.1 与 Chapter 5 均取 NAP 官方开放章节页（chapter/6、chapter/7），访问日 2026-11-13。
