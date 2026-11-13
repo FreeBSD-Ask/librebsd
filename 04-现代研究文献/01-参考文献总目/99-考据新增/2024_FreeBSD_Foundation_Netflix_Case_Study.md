@@ -37,6 +37,10 @@ KTLS 的机制定义（b022 补录）：
 
 > The Netflix CDN team has also notably collaborated with the FreeBSD community to enhance the security and efficiency of data transmissions using Kernel TLS (KTLS).
 
+关键贡献清单（b024 补录）：
+
+> Through key contributions, like optimized sendfile operations and advanced transport layer security(TLS) support, Netflix has effectively managed extensive internet traffic, demonstrating the formidable power of open source collaboration in high-demand, large-scale environments.
+
 KTLS 后的吞吐口径：
 
 > It allows for efficient data handling and has enabled Netflix to achieve 400 Gb/s throughput on its CDN servers.

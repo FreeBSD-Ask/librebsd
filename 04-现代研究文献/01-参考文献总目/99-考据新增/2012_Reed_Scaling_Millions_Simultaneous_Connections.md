@@ -25,6 +25,14 @@ Reed, Rick. Scaling to Millions of Simultaneous Connections[R/OL]. Erlang Factor
 
 > Peaked at 2.8M conns before we intervened
 
+标准配置与首段瓶颈（b024 补录）：
+
+> Our standard configuration Dual Westmere Hex-core (24 logical CPUs) 100GB RAM, SSD Dual NIC
+
+> Initial bottlenecks appeared around 425k
+
+> First round of fixes got us to 1M conns
+
 ## 三、考据说明
 
 - “Erlang has awesome SMP scalability … FreeBSD shines as well”是 3.5.2“组合分工在语言层与系统层”的当事人表述：两侧各自贡献扩展性，而非一方独任。
