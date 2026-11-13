@@ -59,6 +59,10 @@ OpenZFS 2.0 整合与池迁移（b007 补录）：
 
 > We also wanted to be more inclusive, broadening our community by inviting users and developers that are familiar with Linux.
 
+Web 界面现代化与底座无关（b015 补录）：
+
+> Web user interface was modernized using Angular and the new APIs. It is also OS independent.
+
 ## 三、考据说明
 
 - “preferred BSD license”是 2.6.5“许可取向”的直接表述；厂商自述，按 L3 采信。
