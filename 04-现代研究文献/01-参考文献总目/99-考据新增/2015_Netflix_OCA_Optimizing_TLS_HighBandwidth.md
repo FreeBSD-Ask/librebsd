@@ -21,6 +21,10 @@ OCA 的规格与并发规模：
 
 > running FreeBSD 10.1 and Nginx 1.5
 
+设计带宽区间（b021 补录）：
+
+> The servers are also designed to deliver between 10Gbps and 40Gbps of continuous bandwidth utilization.
+
 ## 三、考据说明
 
 - 规格句给出“服务规模”的可核对口径（容量区间、并发会话区间、带宽区间），是 3.1.5“规模对内核的压力”的量化依据；区间值照录，不取中点外推。

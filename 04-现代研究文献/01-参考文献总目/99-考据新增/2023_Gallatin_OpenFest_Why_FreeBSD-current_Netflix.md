@@ -35,6 +35,20 @@ OCA 的系统与文件系统分工：
 
 > Greatly simplifies server workload
 
+设备与软件栈团队（b021 补录）：
+
+> Open Connect Appliances are Netflix’s CDN servers.
+
+> Team within Netflix that maintains the software stack for our OCAs
+
+故障与合并节奏（b021 补录）：
+
+> Storage fails in place
+
+> Merge upstream from FreeBSD-current every 3 weeks
+
+> We notice & resolve new upstream bugs that impact us immediately
+
 ## 三、考据说明
 
 - 两处 CDN／OCA 定义句支撑 3.1.1“操作系统退到服务层之下”：对外单位是 CDN 与设备，系统只作为设备内部条件出现。
