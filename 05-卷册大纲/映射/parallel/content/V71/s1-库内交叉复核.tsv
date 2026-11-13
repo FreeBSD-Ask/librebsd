@@ -1,0 +1,34 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V71.1.6.3	长期维护的分担结构	sacred	2358		0.258	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V71.1.6.3	长期维护的分担结构	claim	CL-RM-010307		1.30	A	2024 年 9 月 lang/tcl90 更新至 Tcl 9.0.0 正式版——Tcl 大版本 8→9 跨越即日进入 FreeBSD ports（Pietro Cerutti 长期维护的 tcltk@ 工作样本）	可推	claim 复用（S2 先库后网）
+V71.1.8.3	设备内部基础设施的层次	claim	CL-RM-010599		0.90	A	2023 年 8 月 Taylor R Campbell 指出 veriexec 及其内部 fileassoc(9) API 需要维护与同步修复——完整性验证基础设施的长期维护缺口。	可推	claim 复用（S2 先库后网）
+V71.1.8.3	设备内部基础设施的层次	claim	CL-RM-010330		0.90	A	2017 年 Gabor Pali 公告 FreeBSD Haskell 内部邮件别名转为开放列表，供 Haskell 移植者协调重大变更——Haskell 栈社群基础设施的正式化	可推	claim 复用（S2 先库后网）
+V71.1.8.5	设备生命周期的维护责任	claim	CL-RM-010329		1.10	A	2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（S2 先库后网）
+V71.1.8.5	设备生命周期的维护责任	claim	CL-RM-010142		1.10	A	2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（S2 先库后网）
+V71.2.2.2	BSD 基底与专有文件系统的结合	claim	CL-RM-029754		0.70	A	Guy Harris 指出并非所有 UNIX 站点都有文件系统调试工具，且他不便向新手推荐使用它。	可推	claim 复用（S2 先库后网）
+V71.2.2.4	集群文件系统的系统层依赖	claim	CL-4-110		1.10	A	麒麟操作系统的系统服务层基于 FreeBSD 改进，提供 UFS2 文件系统与 BSD 网络协议。	可推	claim 复用（S2 先库后网）
+V71.2.2.4	集群文件系统的系统层依赖	claim	CL-3-056		1.10	A	McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（S2 先库后网）
+V71.2.4.5	更名前后产品线的连续	sacred	2743		0.241	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V71.2.4.5	更名前后产品线的连续	sacred	2749		0.241	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V71.2.4.5	更名前后产品线的连续	sacred	2752		0.241	C	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V71.3.1.1	服务器操作系统向服务层的位移	ref_title	5594	5594	0.266	A	服务器操作系统内核 	可推	文献线索（须核全文再定 D1/D2）
+V71.3.1.1	服务器操作系统向服务层的位移	claim	CL-3-068		1.20	B	BIND 运维指南记载伯克利互联网名字域（BIND）为 BSD 衍生操作系统实现互联网名字服务器，由名为 named 的守护进程与 resolver 库组成。	可推	claim 复用（S2 先库后网）
+V71.3.1.3	服务基础设施的层次划分	claim	CL-RM-010315		1.20	B	2004 年 Rui Paulo 公告葡萄牙 CVSup 镜像服务器建成（非官方，每 12 小时自 cvsup.jp.netbsd.org 同步，仅对葡国内 ISP IP 段开放）——伊比利亚节点自建分发基础设施	可推	claim 复用（S2 先库后网）
+V71.3.1.3	服务基础设施的层次划分	claim	CL-RM-010184		1.20	B	ops-announce 记录大型邮件服务商启用并强制 DMARC 后 FreeBSD.org 邮件列表受冲击——开源项目邮件基础设施适应 DMARC 时代的事件	可推	claim 复用（S2 先库后网）
+V71.3.10.2	预装虚拟机镜像的形态	claim	CL-RM-010970		1.70	A	2013-05-31 Glen Barber 宣布 head 分支首次提供预装虚拟机镜像，快照交付形式从安装 ISO 扩展到 VM 镜像	可推	claim 复用（S2 先库后网）
+V71.3.12.4	迁移工程的分期实施	claim	CL-RM-010463		1.30	A	2008 年 7 月 David Holland 发布 NetBSD 版本控制系统需求的初步清单，开启为期多年的 VCS 选型大辩论——迁移工程的需求工程起点。	可推	claim 复用（S2 先库后网）
+V71.3.5.3	单机连接数的公开口径	fulltext_summary	207	207	0.282	C	Benchmarking Mythos-Linked Bug Rediscovery Isaac David University College London Arthur Gervais University College Londo	可推	全文综述候选（D1 型，核对原文后落块）
+V71.3.5.4	消息基础设施的扩容次序	claim	CL-RM-010619		1.10	A	2008 年 8 月 Aleksey Cheusov 发布 Linux DESTDIR 批量构建结果——pkgsrc 跨平台批量构建基础设施的一次实证成果。	可推	claim 复用（S2 先库后网）
+V71.3.5.4	消息基础设施的扩容次序	claim	CL-RM-010602		1.10	A	2018 年 3 月 Mark Johnston 提出用 bhyve 自动配置测试虚拟机以强化内核转储代码测试——虚拟化测试基础设施的当事人提案。	可推	claim 复用（S2 先库后网）
+V71.3.7.2	提交者身份的双重归属	sacred	2358		0.280	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V71.3.7.3	商业需求进入路线图的方式	sacred	2242		0.300	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V71.3.7.3	商业需求进入路线图的方式	sacred	2358		0.267	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V71.3.7.5	技术流动的计量困难	ref_title	5918	5918	0.304	B	Girgensohn PostgreSQL 提交统计 2004-12 至 2026-06） 2004	可推	文献线索（须核全文再定 D1/D2）
+V71.3.8.5	判定标准的适用边界	claim	CL-RM-001504		0.70	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V71.3.9.2	雇主邮箱与提交身份的偏差	ref_title	5918	5918	0.292	C	Girgensohn PostgreSQL 提交统计 2004-12 至 2026-06） 2004	可推	文献线索（须核全文再定 D1/D2）
+V71.3.9.3	长期维护的不对称承担	claim	CL-RM-010307		1.30	A	2024 年 9 月 lang/tcl90 更新至 Tcl 9.0.0 正式版——Tcl 大版本 8→9 跨越即日进入 FreeBSD ports（Pietro Cerutti 长期维护的 tcltk@ 工作样本）	可推	claim 复用（S2 先库后网）
+V71.3.9.5	维护责任的转移机制	sacred	2242		0.293	C	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V71.4.3.1	Vita 系统清单中的 BSD 条目	ref_title	6146	6146	0.249	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V71.5.10.2	交付链中的回馈流向	sacred	2358		0.250	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V71.5.6.4	标准化进程的制度动力	claim	CL-RM-011657		1.60	A	John Quarterman（UT Austin）公告受 USENIX 董事会指派出任 IEEE P1003 标准委员会 USENIX 代表并承诺在 net.usenix 与 ;login: 报告——USENIX 参与标准化进程的组织史一	可推	claim 复用（S2 先库后网）
+V71.5.9.5	计量结果的引用规范	sacred	3061		0.322	B	引用规范	可推	史观参照（不作证据，仅定题面归属）
