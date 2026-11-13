@@ -17,6 +17,10 @@ Latombo, Pee Jay. TrueNAS CORE 13.3 Plans[EB/OL]. iXsystems, 2024-03-20[2026-11-
 
 > No, you didn’t miss a release; we simply re-numbered the 13.1 release to 13.3 to align with its updated FreeBSD 13.3 operating system!
 
+发版计划由厂商宣告（b012 补录）：
+
+> Today, we are announcing our plans to release TrueNAS CORE 13.3 in the next few months.
+
 两版并存：
 
 > Both TrueNAS CORE and TrueNAS SCALE will exist to address the needs of different users. The focus of TrueNAS CORE continues to be ensuring storage reliability, stability, and security for existing users.

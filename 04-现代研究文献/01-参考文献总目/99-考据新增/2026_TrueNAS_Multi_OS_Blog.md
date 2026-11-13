@@ -49,6 +49,12 @@ OpenZFS 2.0 整合与池迁移（b007 补录）：
 
 > Collaboration with Open Source component projects like Samba and rclone to ensure we would have portability of key components.
 
+操作系统成为基础设施（b012 补录）：
+
+> The OS became nothing but a necessary cog in the stack.
+
+> An operating system, like the hardware that runs it, is now just thought of as part of the “infrastructure”.
+
 ## 三、考据说明
 
 - “preferred BSD license”是 2.6.5“许可取向”的直接表述；厂商自述，按 L3 采信。
