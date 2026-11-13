@@ -21,6 +21,12 @@ base system 的全部改动进主线（b013 补录）：
 
 > In general, all changes to the FreeBSD base system are committed to the main branch, which reflects the top of the source tree.
 
+发布排期由发布工程团队提前决定（b019 补录）：
+
+> Approximately two months before the start of the release cycle, the FreeBSD Release Engineering Team decides on a schedule for the release.
+
+> The schedule includes the various milestone points of the release cycle, such as freeze dates, branch dates, and build dates.
+
 stable 分支累积到发版：
 
 > After several months, and the number of changes in the stable/ branch have grown significantly, it is time to release the next version of FreeBSD.

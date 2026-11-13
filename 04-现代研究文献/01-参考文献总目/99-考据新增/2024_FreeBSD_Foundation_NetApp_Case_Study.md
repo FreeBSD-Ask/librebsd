@@ -25,6 +25,10 @@ FreeBSD Foundation. FreeBSD provides Flexibility and Performance for NetApp’s 
 
 > NetApp has upstreamed nearly 300 changes
 
+经第三方上游（b019 补录）：
+
+> NetApp has partnered with Klara Systems for their commercial support and upstreams through Klara, as well.
+
 上优先（upstream-first）纪律：
 
 > Limit private customizations to business critical IP and upstream-first everything else.
