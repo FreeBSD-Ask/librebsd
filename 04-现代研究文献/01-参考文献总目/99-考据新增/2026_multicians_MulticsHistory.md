@@ -44,6 +44,12 @@ device support for peripherals and terminals
 
 "Starting in October 1969, the MIT Information Processing Center took over operational responsibility for the GE-645 computer. At that time, Multics performance and capacity exceeded that of CTSS, and were continuing to improve."
 
+"In the early 1970s, Honeywell decided to offer Multics as a product, targeting universities (like MIT), high-tech companies (like Ford and GM), and military customers (like the US Air Force, to whom Honeywell had sold a large number of computers as part of WWMCCS)."
+
+"A two-CPU system with 768KB of memory, 8MB of bulk store, 1.6GB of disk, 8 tape drives, and two DN355s, like MIT's system, had a purchase price of about $7 million."
+
+"Over time, hope was replaced by frustration as the group effort initially failed to produce an economically useful system. Bell Labs withdrew from the effort in 1969 but a small band of users at Bell Labs Computing Science Research Center in Murray Hill -- Ken Thompson, Dennis Ritchie, Doug McIlroy, and J. F. Ossanna -- continued to seek the Holy Grail."
+
 ## 提要
 
 multicians.org 记：Multics 设计始于 1965 年，为 MIT 的 Project MAC、贝尔电话实验室与通用电气大型计算机产品部的三方联合项目；贝尔实验室 1969 年退出研制；MIT 于 1969 年秋开始向用户提供 Multics 分时服务；1970 年通用电气把计算机业务售予霍尼韦尔。

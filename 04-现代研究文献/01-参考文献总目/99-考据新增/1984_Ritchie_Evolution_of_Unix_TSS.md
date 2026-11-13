@@ -24,6 +24,8 @@
 
 "Another shake-up that occurred during this period was the organizational separation of computing services and computing research."
 
+"From the point of view of the group that was to be most involved in the beginnings of Unix (K. Thompson, Ritchie, M. D. McIlroy, J. F. Ossanna), the decline and fall of Multics had a directly felt effect."
+
 ## 提要
 
 Ritchie 1984 年追述：1968–1969 年贝尔计算社区的不安定主因是实验室对 Multics 项目的退出——缓慢而显然不可避免，症结是 Multics 迟迟交不出任何可用系统；同期 Murray Hill 计算中心还在运行一台代价高昂的 GE 645（对 GE 635 的不充分模拟）；Multics 当时虽不能支持多用户，却以高昂代价维持贝尔小组的使用；贝尔小组要保存的不仅是编程环境，更是可形成社群的系统。
