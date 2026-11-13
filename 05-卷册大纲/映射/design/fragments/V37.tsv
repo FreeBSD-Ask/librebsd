@@ -243,7 +243,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	5	5.2	5.2.2	审计日志的记录格式	filled	
 37	5	5.2	5.2.3	内核审计的挂钩点	filled	
 37	5	5.2	5.2.4	审计策略的配置粒度	filled	
-37	5	5.2	5.2.5	合规审计的工程含义	skeleton	
+37	5	5.2	5.2.5	合规审计的工程含义	filled	
 37	5	5.3	5.3.1	MAC Framework 的策略插槽	skeleton	
 37	5	5.3	5.3.2	强制访问控制的模块化	skeleton	
 37	5	5.3	5.3.3	策略组合的优先级	skeleton	
@@ -474,8 +474,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	9	9.7	9.7.3	多线程缓存的布局	skeleton	
 37	9	9.7	9.7.4	分配统计的可观测性	skeleton	
 37	9	9.7	9.7.5	调优参数的暴露途径	skeleton	
-37	9	9.8	9.8.1	文件描述符的极限	skeleton	
-37	9	9.8	9.8.2	网络缓冲的容量值	skeleton	
+37	9	9.8	9.8.1	文件描述符的极限	filled	
+37	9	9.8	9.8.2	网络缓冲的容量值	filled	
 37	9	9.8	9.8.3	调度参数的调整法	skeleton	
 37	9	9.8	9.8.4	并发连接的压测法	skeleton	
 37	9	9.8	9.8.5	内核调优的限度判定	skeleton	
