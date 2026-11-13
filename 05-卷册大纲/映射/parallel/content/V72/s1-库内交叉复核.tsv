@@ -1,0 +1,39 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V72.1.3.4	加州大学反诉的权利主张	ref_title	2520	2520	0.274	C	加州大学校董会诉 USL 反诉状（Regents of the University of California v. USL, 1992） 	可推	文献线索（须核全文再定 D1/D2）
+V72.1.6.3	犹他州诉讼的权利基础	ref_title	2539	2539	0.383	B	SCO 与 Novell 资产购买协议（1995-09-19，APA 原文） 	可推	文献线索（须核全文再定 D1/D2）
+V72.1.6.4	版权未随资产转移的终审认定	ref_title	2472	2472	0.259	C	SCO Group, Inc. v. Novell, Inc., Order（2007-09-07, Novell-453, 无陪审团） 	可推	文献线索（须核全文再定 D1/D2）
+V72.1.7.3	第三方代码的剔除与替换	claim	CL-RM-001504		1.30	A	数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GPL 3.0 传染性条	可推	claim 复用（S2 先库后网）
+V72.1.7.5	审计结果公开的渠道	ref_title	5762	5762	0.229	C	W. (2015.11.29) TUHS 邮件列表公开发布公告（tuhs.org/pipermail/tuhs/2015-November/007700.html，mid-1971 修正见 007703.html） 2015	可推	文献线索（须核全文再定 D1/D2）
+V72.2.3.3	商标注册的类别划分	fulltext_fact	kf-bell-10020-019	10020	0.273	C	UNIX 是 Bell Laboratories 的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V72.2.3.3	商标注册的类别划分	fulltext_fact	kf-bell-10020-1037	10020	0.273	C	COSMIC（Common System Main InterConnecting frame）是Western Electric Company的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V72.2.3.3	商标注册的类别划分	fulltext_fact	kf-bell-10020-1038	10020	0.273	C	DCTS（DIMENSION custom telephone service）是AT&T Company的商标	可推	全文补证候选（S1 命中即复用，D1 型）
+V72.2.3.4	认证与商标使用的绑定	sacred	2122		0.243	C	根据当前 UNIX 商标持有者开放组织（The Open Group）官网 UNIX® Certification 所述：“Only systems that are fully compliant and certified accord	可推	史观参照（不作证据，仅定题面归属）
+V72.3.1.1	资产购买协议的标的构成	ref_title	2539	2539	0.333	A	SCO 与 Novell 资产购买协议（1995-09-19，APA 原文） 	可推	文献线索（须核全文再定 D1/D2）
+V72.3.3.2	商标许可与源码许可的分立	claim	CL-RM-011637		0.70	A	Amdahl UTS/V Release 1 官方产品公告全文（1985-01-21）：SysV R2 on VM/SP、需求分页、3270 支持；源码版须先购 AT&T SysV R2 与 DWB 源码许可（欧洲经 UNIX Europe	可推	claim 复用（S2 先库后网）
+V72.3.3.2	商标许可与源码许可的分立	claim	CL-RM-011620		0.70	A	哈佛官方（Bill Edwards）声明不再运行分发支持 Harvard Shell、推荐需 UNIX 源码许可的 tcsh；同期有 Waterloo CMS C 编译器与 Amdahl UTS 用户证言	可推	claim 复用（S2 先库后网）
+V72.3.5.1	版权归属的初审与上诉	ref_title	5500	5500	0.224	C	v. SCEA 案 2011 撤销裁定与 2014 上诉法院推翻裁定 2011	可推	文献线索（须核全文再定 D1/D2）
+V72.3.5.2	源码比对的技术举证	fulltext_summary	813	813	0.305	B	Course : B.E., Branch : Computer Science and Engineering Year : IV CSE Semester : VII CS2028 UNIX INTERNALS UNIT TOPIC I	可推	全文综述候选（D1 型，核对原文后落块）
+V72.4.1.1	许可条件的可执行性	claim	CL-RM-001506		0.70	A	罗盒诉风灵案（一审深圳市中级人民法院（2019）粤03民初3928号判赔 50 万元；二审最高人民法院知识产权法庭（2021）最高法知民终2063号，判决书 2024-11 公开）与罗盒诉玩友案共同构成中国 GPL 3.0 执行的"姊妹案"	可推	claim 复用（S2 先库后网）
+V72.4.11.1	版权归属判决的延伸适用	ref_title	2428	2428	0.235	C	SCO Group v. Novell, Inc.：第十巡回上诉法院判决（2011-08-30，确认 Novell 拥有 Unix 版权） U.S. Court of Appeals, Tenth Circuit 2011	可推	文献线索（须核全文再定 D1/D2）
+V72.4.3.2	初审法院的定性分歧	ref_title	2591	2591	0.252	C	Welte v. Fortinet（2005-04-14 临时禁令，LG München I）——gpl-violations 新闻稿存档 2005	可推	文献线索（须核全文再定 D1/D2）
+V72.4.3.2	初审法院的定性分歧	ref_title	2592	2592	0.241	C	Welte v. Fortinet（2005-04-14 临时禁令，LG München I）——openfoundry 案例研究存档 2005	可推	文献线索（须核全文再定 D1/D2）
+V72.4.3.3	联邦巡回法院的改判	ref_title	2428	2428	0.220	C	SCO Group v. Novell, Inc.：第十巡回上诉法院判决（2011-08-30，确认 Novell 拥有 Unix 版权） U.S. Court of Appeals, Tenth Circuit 2011	可推	文献线索（须核全文再定 D1/D2）
+V72.4.3.4	案件管辖的技术原因	sacred	2310		0.233	C	选择 FreeBSD 的技术原因	可推	史观参照（不作证据，仅定题面归属）
+V72.4.7.1	首例 GPL 侵权诉讼	ref_title	2490	2490	0.325	B	Andersen and Landley v. Monsoon Multimedia, 07-CV-8205 (S.D.N.Y. 2007)——美国首个 GPL 版权侵权诉讼（BusyBox） Software Freedom Law Ce	可推	文献线索（须核全文再定 D1/D2）
+V72.4.7.1	首例 GPL 侵权诉讼	fulltext_fact	kf-bell-10018-147	10018	0.265	C	Bell管理层于1878年对Edison提起专利侵权诉讼，1879年庭外和解	可推	全文补证候选（S1 命中即复用，D1 型）
+V72.4.7.3	禁令请求的救济限度	ref_title	2469	2469	0.245	C	SCO Group, Inc. v. Novell, Inc., 2:04-cv-00139 起诉状（2004-02-06） 	可推	文献线索（须核全文再定 D1/D2）
+V72.4.7.3	禁令请求的救济限度	ref_title	2624	2624	0.245	C	Andersen & Landley v. Verizon Communications, 1:07-cv-11070-LTS (S.D.N.Y. 2007)——BusyBox 起诉状 2007	可推	文献线索（须核全文再定 D1/D2）
+V72.4.7.3	禁令请求的救济限度	ref_title	2626	2626	0.245	C	Andersen & Landley v. Bell Microproducts, 08-CV-5270 (S.D.N.Y. 2008)——BusyBox 起诉状 2008	可推	文献线索（须核全文再定 D1/D2）
+V72.4.7.4	案件管辖与案号登记	ref_title	2603	2603	0.245	C	MGM v. Grokster, 259 F. Supp. 2d 1029 (C.D. Cal. 2003)——地院 Grokster I 2003	可推	文献线索（须核全文再定 D1/D2）
+V72.4.9.1	Welte 诉 Sitecom 的程序性驳回	ref_title	2584	2584	0.241	C	Hellwig v. VMware, OLG Hamburg, Urteil 2019-02-28（德语原文，维持程序性驳回） 2019	可推	文献线索（须核全文再定 D1/D2）
+V72.4.9.1	Welte 诉 Sitecom 的程序性驳回	ref_title	2402	2402	0.237	C	Hellwig v. VMware, Inc. (LG Hamburg, 310 O 89/15, 2016-07-08 程序性驳回) 判决英文翻译版 PDF 2016	可推	文献线索（须核全文再定 D1/D2）
+V72.5.11.3	救济结构的判决要旨	ref_title	2650	2650	0.250	C	SCO Group v. DaimlerChrysler, 04-056587-CK——DaimlerChrysler 答辩状 2004	可推	文献线索（须核全文再定 D1/D2）
+V72.5.3.3	专利诉讼触发的终止	fulltext_fact	kf-bell-10018-1464	10018	0.221	C	新Supply Contract于1908年1月1日生效	可推	全文补证候选（S1 命中即复用，D1 型）
+V72.5.5.3	三年周期的例外机制	fulltext_fact	kf-bell-10019-003	10019	0.275	C	本书ISBN为0-932764-00-2，美国国会图书馆编目卡号为75-31499	可推	全文补证候选（S1 命中即复用，D1 型）
+V72.6.3.2	加拿大出口清单的宽松度	claim	CL-RM-028349		1.30	A	Theo de Raadt 说明 ITAR 只约束经美国的加密技术，OpenBSD 从加拿大出口故不受其限	可推	claim 复用（S2 先库后网）
+V72.6.4.3	上诉法院的三项理由	ref_title	2428	2428	0.234	C	SCO Group v. Novell, Inc.：第十巡回上诉法院判决（2011-08-30，确认 Novell 拥有 Unix 版权） U.S. Court of Appeals, Tenth Circuit 2011	可推	文献线索（须核全文再定 D1/D2）
+V72.6.4.4	撤回令的原文缺载	ref_title	2636	2636	0.232	C	In re Sony PS3 OtherOS Litigation, 10-cv-01811——驳回令 2011	可推	文献线索（须核全文再定 D1/D2）
+V72.6.5.1	书与软盘的差别待遇	sacred	251		0.243	C	11.3 自由的形式主义	可推	史观参照（不作证据，仅定题面归属）
+V72.6.5.3	诉讼请求的宪法依据	sacred	693		0.240	C	论自由 	可推	史观参照（不作证据，仅定题面归属）
+V72.6.6.4	上诉审的表达手段确认	ref_title	2095	2095	0.432	B	Bernstein v. U.S. Dept. of Justice, 176 F.3d 1132 (9th Cir. 1999). (源代码作为受第一修正案保 	可推	文献线索（须核全文再定 D1/D2）
+V72.6.8.4	现行 EAR 的分类框架	sacred	None		0.230	C	# 第二部分：论现实	可推	史观参照（不作证据，仅定题面归属）

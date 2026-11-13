@@ -1,0 +1,13 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V76.1.2.6	贡献责任的归属链条	sacred	2358		0.230	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V76.1.4.2	安全披露的协调渠道	ref_title	5873	5873	0.238	C	Kaminsky 2008 DNS 漏洞披露 2008	可推	文献线索（须核全文再定 D1/D2）
+V76.4.11.2	审查发现的公开跟踪	sacred	2358		0.247	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V76.4.11.5	算力捐赠的现实约束	claim	CL-RM-017822		0.70	A	Carmen Hardina 摘引 Chris Torek：『CSRG are just five people』——交付与测试的现实约束（4.3BSD 时代 CSRG 规模自述）	可推	claim 复用（S2 先库后网）
+V76.4.12.1	malloc 统一的接口设想	ref_title	2462	2462	0.230	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V76.4.12.5	生命周期的回收统一	claim	CL-RM-010329		1.30	A	2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（S2 先库后网）
+V76.4.12.5	生命周期的回收统一	claim	CL-RM-010142		1.30	A	2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（S2 先库后网）
+V76.4.4.1	报告文档的全文张贴	fulltext_summary	91	91	0.247	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V76.4.5.1	支持小组的机制构想	sacred	3057		0.302	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V76.4.5.1	支持小组的机制构想	sacred	2358		0.241	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V76.4.5.2	压力应对的经验共享	ref_title	2462	2462	0.233	C	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	可推	文献线索（须核全文再定 D1/D2）
+V76.4.9.2	大型项目的设计目标	claim	CL-6-201		0.70	A	pkgbase 的设计目标包括：对 RELEASE、STABLE 与 CURRENT 分支提供二进制升级、实现无需 sendmail 与工具链的细粒度安装、由 pkg(8) 处理配置文件更新、允许开发者向用户提供测试软件包。	可推	claim 复用（S2 先库后网）

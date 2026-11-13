@@ -1,0 +1,40 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V73.2.2.2	发布公告的历史自述	ref_title	2789	2789	0.278	C	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V73.2.3.3	开源运动叙事的席位分配	sacred	2369		0.244	C	2.3 FreeBSD 开发模型	可推	史观参照（不作证据，仅定题面归属）
+V73.2.3.3	开源运动叙事的席位分配	sacred	2132		0.243	C	表面上看是移动端的 Android 与 iOS 之争，实质上是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~	可推	史观参照（不作证据，仅定题面归属）
+V73.2.5.2	视频演讲的现场记录	claim	CL-RM-019755		0.70	A	MIPS 公司 SPEC Bench-a-Thon 实况：1989-06-05 至 09 七厂商十种架构在一周内跑通 24 项基准，产出含 gcc、spice、tomcatv 等 11 程序的 Alpha 磁带已分发各参与方，Beta 定于	可推	claim 复用（S2 先库后网）
+V73.2.5.2	视频演讲的现场记录	claim	CL-RM-018097		0.70	A	1985 年 1 月 23 日达拉斯 UniForum 现场：InfoMart 当天获执照并准时开幕；Sun Microsystems 在展览宣布其分布式文件系统，技术与规格将大部分进入公有领域，被现场评价"实为相当令人印象深刻的逆标准"—	可推	claim 复用（S2 先库后网）
+V73.3.11.2	基金会资助的荣誉属性	sacred	2492		0.257	C	2024 年 8 月：德国主权技术基金赞助 FreeBSD 项目实施基础设施现代化	可推	史观参照（不作证据，仅定题面归属）
+V73.3.11.2	基金会资助的荣誉属性	claim	CL-RM-010552		1.50	A	2023 年 2 月 Christos Margiolis 启动 FreeBSD Foundation 赞助的 kinst provider 扩展项目并发布系列周报——基金会资助下新一代可观测性工程的样本。	可推	claim 复用（S2 先库后网）
+V73.3.11.2	基金会资助的荣誉属性	claim	CL-RM-013489		1.30	A	基金会资助 Benno Rice 实现 UEFI 启动	可推	claim 复用（S2 先库后网）
+V73.3.2.1	创始人叙事的集中效应	sacred	2656		0.281	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V73.3.2.2	核心开发者的栏目署名	claim	CL-3-011		1.60	A	BSD 开发体现少数核心开发者的优势：他们充分理解整个系统并协调彼此工作以产出连贯系统，大型开发组织难以复制。	可推	claim 复用（S2 先库后网）
+V73.3.2.2	核心开发者的栏目署名	claim	CL-RM-000017		1.30	A	Matthew Dillon 是 DragonFlyBSD 创始人、前 FreeBSD 核心开发者，主导 HAMMER2 文件系统设计	可推	claim 复用（S2 先库后网）
+V73.3.2.3	普通提交者的隐身状态	sacred	2358		0.262	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V73.3.3.2	集体作品的作者归属	claim	CL-RM-020184		0.70	A	pp-number 提案人 Schwarz（贝尔实验室）现身声明：该构想出自其第一轮公众评审意见，动机为厘清 1ex 类词法难题而非简化实现，承认 0xe+b 为缺陷但属小节——关键语言特性的作者归属一手确认	可推	claim 复用（S2 先库后网）
+V73.3.3.2	集体作品的作者归属	claim	CL-RM-014882		0.70	A	primes(1)/factor(1) 作者署名 research!rhm——V6 谱系经典小工具的作者归属线索（re 提问行的当事人指引）	可推	claim 复用（S2 先库后网）
+V73.3.4.1	发行商支持的历史位置	claim	CL-RM-000019		0.90	A	FreeBSD 已停支持的历史架构最后版本：Alpha 6.4、IA-64 10.4、MIPS 13.5、PC98 11.4、SPARC64 12.4	可推	claim 复用（S2 先库后网）
+V73.3.6.2	提交统计的覆盖缺口	ref_title	5918	5918	0.287	C	Girgensohn PostgreSQL 提交统计 2004-12 至 2026-06） 2004	可推	文献线索（须核全文再定 D1/D2）
+V73.3.7.4	讣告文本的史观比较	ref_title	3755	3755	0.241	C	Victor A. McKusick 讣告（Nature / EJHG） Nature / European Journal of Human Genetics 	可推	文献线索（须核全文再定 D1/D2）
+V73.4.1.3	命题审判的证据层级	ref_title	2540	2540	0.271	C	Bernstein v. United States Dept. of State, 922 F. Supp. 1426 (N.D. Cal. 1996) 一审判决书 	可推	文献线索（须核全文再定 D1/D2）
+V73.4.1.4	传统叙述的承袭路径	sacred	2173		0.222	C	自由软件运动与开源运动的张力	可推	史观参照（不作证据，仅定题面归属）
+V73.4.2.2	自由软件运动的组织形态	sacred	2157		0.262	A	1.2 GNU 操作系统和自由软件运动	可推	史观参照（不作证据，仅定题面归属）
+V73.4.2.2	自由软件运动的组织形态	sacred	2173		0.235	A	自由软件运动与开源运动的张力	可推	史观参照（不作证据，仅定题面归属）
+V73.4.2.2	自由软件运动的组织形态	sacred	2159		0.234	A	GNU 操作系统与自由软件运动的缘起	可推	史观参照（不作证据，仅定题面归属）
+V73.4.2.2	自由软件运动的组织形态	claim	CL-RM-000519		1.60	A	Stallman 于 1984 年启动 GNU 项目，1985 年成立 FSF 并发表《GNU 宣言》，1986 年阐明自由软件四项基本自由，1989 年发布 GPL v1；1998 年 OSI 成立标志自由软件运动与开源运动分野	可推	claim 复用（S2 先库后网）
+V73.4.2.5	自由软件传统的源流	claim	CL-RM-010288		1.20	B	2003 年 Gilbert Fernandes 与 Emmanuel Dreyfus 参加 RMLL 2003（Metz）并发布摊位报告——法语 NetBSD 社区借自由软件会议建立展台传统的早期记录	可推	claim 复用（S2 先库后网）
+V73.4.3.1	源码共享的早期做法	claim	CL-RM-010214		1.30	A	1996 年 9 月公告 OpenBSD 源码经由 CTM 分发—— FreeBSD 发明的邮件差分机制被新生的 OpenBSD 直接复用，项目分叉后基础设施共享的早期实例	可推	claim 复用（S2 先库后网）
+V73.4.3.3	4.4BSD 的清理与再发布	sacred	2418		0.275	C	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V73.4.4.2	磁带分发与版本封装	sacred	2900		0.232	C	新特性首先提交到 CURRENT（main 分支），经测试后 MFC 到 STABLE 分支，再进入点版本 RELEASE。stable/ 分支从 main 分支切出，大版本（dot-zero 版本）的 releng/ 分支再从 stabl	可推	史观参照（不作证据，仅定题面归属）
+V73.4.5.2	文化继承的许可条件	sacred	2089		0.221	C	致谢	可推	史观参照（不作证据，仅定题面归属）
+V73.4.5.5	继承叙事的争议焦点	sacred	176		0.227	C	9.4 测量的合法性问题	可推	史观参照（不作证据，仅定题面归属）
+V73.4.7.3	书写选择的责任归属	claim	CL-RM-033353		0.70	A	反问缺陷与不支持版本的责任归属	可推	claim 复用（S2 先库后网）
+V73.5.1.2	商标与通名的界线	sacred	2122		0.299	C	根据当前 UNIX 商标持有者开放组织（The Open Group）官网 UNIX® Certification 所述：“Only systems that are fully compliant and certified accord	可推	史观参照（不作证据，仅定题面归属）
+V73.5.2.4	指称变迁的文献凭据	sacred	2400		0.291	C	2.4 FreeBSD 简史	可推	史观参照（不作证据，仅定题面归属）
+V73.5.5.4	许可证文本的核对	sacred	2609		0.377	B	BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V73.5.5.4	许可证文本的核对	sacred	2603		0.293	C	BSD 一条款许可证（The 1-Clause BSD License，BSD-1-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V73.5.5.4	许可证文本的核对	sacred	2615		0.277	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V73.5.7.4	衍生作品的识别难点	claim	CL-RM-041324		1.30	A	回应关于再发行衍生作品的追问 称自第六版起即可 可经其编译器与链接器生成并售卖可执行程序而不必公开源码 并建议若要保密则勿使用某些自由软件	可推	claim 复用（S2 先库后网）
+V73.5.8.5	首创争议的复核方法	ref_title	2469	2469	0.270	C	SCO Group, Inc. v. Novell, Inc., 2:04-cv-00139 起诉状（2004-02-06） 	可推	文献线索（须核全文再定 D1/D2）
+V73.5.8.5	首创争议的复核方法	ref_title	2624	2624	0.270	C	Andersen & Landley v. Verizon Communications, 1:07-cv-11070-LTS (S.D.N.Y. 2007)——BusyBox 起诉状 2007	可推	文献线索（须核全文再定 D1/D2）
+V73.5.8.5	首创争议的复核方法	ref_title	2626	2626	0.270	C	Andersen & Landley v. Bell Microproducts, 08-CV-5270 (S.D.N.Y. 2008)——BusyBox 起诉状 2008	可推	文献线索（须核全文再定 D1/D2）

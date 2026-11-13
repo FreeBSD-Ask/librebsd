@@ -1,0 +1,103 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V75.1.3.2	版本序列的链条完整	claim	CL-RM-010284		1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（S2 先库后网）
+V75.1.4.1	手册页的跨版本对读	sacred	2918		0.222	C	基本对比	可推	史观参照（不作证据，仅定题面归属）
+V75.1.8.1	采访录的体例字段	ref_title	3933	3933	0.278	C	unknown interview 采访录 Pradeep Sindhu 采访录 Pradeep Sindhu md v10 unknown 	可推	文献线索（须核全文再定 D1/D2）
+V75.1.8.5	配套采访录的挂靠方式	ref_title	3933	3933	0.261	C	unknown interview 采访录 Pradeep Sindhu 采访录 Pradeep Sindhu md v10 unknown 	可推	文献线索（须核全文再定 D1/D2）
+V75.10.10.3	悖论描述的量化前提	sacred	324		0.250	C	14.7 去中心化的悖论	可推	史观参照（不作证据，仅定题面归属）
+V75.10.11.1	沉默证据的判准界定	sacred	2203		0.228	C	开源不等于无版权	可推	史观参照（不作证据，仅定题面归属）
+V75.10.14.4	基础设施与共同体扩展	sacred	2107		0.285	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V75.10.14.4	基础设施与共同体扩展	sacred	140		0.259	C	7.3 知音与共同体	可推	史观参照（不作证据，仅定题面归属）
+V75.10.14.4	基础设施与共同体扩展	claim	CL-RM-010461		1.30	A	2022 年 4 月 Julian Stacey 发现 freebsd.org 侧部分 CTM 增量邮件列表遭删除，Philip Paeps 与 Baptiste Daroussin 确认——官方基础设施与社区自建并行格局的正式分野。	可推	claim 复用（S2 先库后网）
+V75.10.14.4	基础设施与共同体扩展	claim	CL-RM-010143		1.30	A	1998 年 3 月 Steve Passe 在 freebsd-realtime 确认'并不存在 rt-FreeBSD'，自述正将 P1003.1B 实时扩展基础设施与调度器部件置入 -current——FreeBSD 实时能力的真实状态	可推	claim 复用（S2 先库后网）
+V75.10.4.3	制度化资助的预算凭证	ref_title	10146	10146	0.227	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V75.10.5.1	通用语言的优势落差	sacred	1433		0.238	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V75.10.5.1	通用语言的优势落差	sacred	2067		0.238	C	$ ls 英语 English	可推	史观参照（不作证据，仅定题面归属）
+V75.10.7.4	叙事校正的档案基础	ref_title	5719	5719	0.314	B	Libraries ArchivesSpace MAC/LCS 全宗 Series 5. Grants and Contracts Files, 1963-1988（archivesspace.mit.edu/repositories/2/	可推	文献线索（须核全文再定 D1/D2）
+V75.11.1.1	用户组档案的分散存留	ref_title	10141	10141	0.259	C	DragonFly gsocprojectspage · 2018-02-20 快照（Wayback 20180220192156；capture=wayback） 2018	可推	文献线索（须核全文再定 D1/D2）
+V75.11.1.2	记录代表性的明示要求	ref_title	2663	2663	0.220	C	BSD Now EP278: McKusick Real McCoy 片段（2018） Marshall Kirk McKusick 2018	可推	文献线索（须核全文再定 D1/D2）
+V75.11.1.3	列表存档的完整性考疑	ref_title	2460	2460	0.295	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.11.2.1	会议记录的保存缺口	claim	CL-3-061		1.30	A	Marshall Kirk McKusick（住址 1689 San Pablo Avenue, Berkeley）出现在 2017 年 5 月 30 日伯克利市议会会议记录的通信列表中，由议员 Worthington 提交。	可推	claim 复用（S2 先库后网）
+V75.11.4.1	年度预算的公开列支	ref_title	10146	10146	0.245	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V75.11.5.1	地区档案的载体分散	ref_title	5513	5513	0.227	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V75.11.6.1	访谈体裁的播客转录	ref_title	2446	2446	0.331	B	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V75.11.6.1	访谈体裁的播客转录	ref_title	2660	2660	0.331	B	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V75.12.1.4	卷间衔接的档案底座	ref_title	5719	5719	0.323	B	Libraries ArchivesSpace MAC/LCS 全宗 Series 5. Grants and Contracts Files, 1963-1988（archivesspace.mit.edu/repositories/2/	可推	文献线索（须核全文再定 D1/D2）
+V75.12.3.1	记忆机构的馆藏分工	ref_title	5719	5719	0.303	B	Libraries ArchivesSpace MAC/LCS 全宗 Series 5. Grants and Contracts Files, 1963-1988（archivesspace.mit.edu/repositories/2/	可推	文献线索（须核全文再定 D1/D2）
+V75.2.1.2	基金会档案的法人层	sacred	2624		0.243	C	Copyright (c) <年份> <持有者>. All rights reserved. Redistribution and use in source and binary forms, with or without modifi	可推	史观参照（不作证据，仅定题面归属）
+V75.2.10.2	软件仓库的边界内件	ref_title	6199	6199	0.225	C	Index of /pub/OpenBSD/（官方发行仓库） The OpenBSD Project 2025	可推	文献线索（须核全文再定 D1/D2）
+V75.2.4.1	官方页面与自述尺度	claim	CL-RM-000703		1.10	A	第一届 IETF 会议于 1986 年 1 月 16-17 日在加州圣地亚哥 Linkabit 举行，21 人参会（IETF 官方 past meetings 页面与第一届 Proceedings 一手核验）	可推	claim 复用（S2 先库后网）
+V75.2.4.4	列表存档的起点月份	ref_title	2460	2460	0.287	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.2.4.5	多源三角的验证惯例	ref_title	3813	3813	0.244	C	SCO v RedHat 网页快照 sco redhat unknown 2004	可推	文献线索（须核全文再定 D1/D2）
+V75.2.6.1	列表存档的延续时段	ref_title	10150	10150	0.256	C	GSoC 2017 Student Curtain Call (1309 起/1128 完) 2017	可推	文献线索（须核全文再定 D1/D2）
+V75.2.6.1	列表存档的延续时段	ref_title	2460	2460	0.245	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.2.7.3	文档滞后于实现的处理	claim	CL-RM-010312		1.30	A	2006 年经网友指认 ftp.dti.ad.jp 保持更新可替代失效的 RING 镜像，Uebayashi 自认应更新 htdocs——镜像文档滞后于现实的一手样本	可推	claim 复用（S2 先库后网）
+V75.2.8.4	引入时间的交叉考订	ref_title	2656	2656	0.267	C	US v. Microsoft, 253 F.3d 34 (D.C. Cir. 2001)——交叉确认用官方 PDF 2001	可推	文献线索（须核全文再定 D1/D2）
+V75.2.9.2	源码获取的公开渠道	sacred	320		0.226	C	14.5 文档与代码的本体平等	可推	史观参照（不作证据，仅定题面归属）
+V75.3.1.3	经验优先的取材先后	sacred	343		0.325	B	16.1 经验优先的合理性	可推	史观参照（不作证据，仅定题面归属）
+V75.3.12.3	专题史的边界划定	claim	CL-RM-013758		0.90	A	CSNET 跨网络中继宗旨：分层通信规划与跨网转发的边界划定	可推	claim 复用（S2 先库后网）
+V75.3.13.2	组织创立的公告凭据	sacred	2656		0.304	B	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V75.3.16.4	提交流水的分支覆盖	sacred	3057		0.335	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V75.3.4.3	会议文献的归档链条	ref_title	6201	6201	0.221	C	BSD-Lite（含 4.4BSD-Lite2 README 原文） （归档）4.4BSD-Lite Release 2 2025	可推	文献线索（须核全文再定 D1/D2）
+V75.3.6.4	话语材料的语境辨析	ref_title	2460	2460	0.226	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.4.10.1	批评史料的保存位置	ref_title	2460	2460	0.290	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.4.10.2	列表存档的分面检索	ref_title	2460	2460	0.248	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.4.11.3	谈话记录中的符号自述	ref_title	2549	2549	0.278	C	BSD-3-Clause（New/Revised BSD License）官方文本 1999	可推	文献线索（须核全文再定 D1/D2）
+V75.4.11.3	谈话记录中的符号自述	ref_title	2550	2550	0.278	C	BSD-2-Clause（Simplified/FreeBSD License）官方文本 	可推	文献线索（须核全文再定 D1/D2）
+V75.4.11.3	谈话记录中的符号自述	ref_title	2552	2552	0.278	C	0BSD（Zero-Clause BSD）官方文本 2015	可推	文献线索（须核全文再定 D1/D2）
+V75.4.13.3	版本树的镜像差异	ref_title	10078	10078	0.243	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V75.4.13.3	版本树的镜像差异	ref_title	10120	10120	0.243	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V75.4.19.1	配套采访录的挂靠体例	ref_title	3933	3933	0.263	C	unknown interview 采访录 Pradeep Sindhu 采访录 Pradeep Sindhu md v10 unknown 	可推	文献线索（须核全文再定 D1/D2）
+V75.4.21.1	治理文件的成文层级	ref_title	5932	5932	0.291	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V75.4.22.2	名录版本的时点标注	ref_title	3870	3870	0.225	C	19841204 CityOfBerkeley BSD检索 bsd 1984 1204 res52501 unknown 1984	可推	文献线索（须核全文再定 D1/D2）
+V75.4.4.2	可信渠道的入口清单	ref_title	5635	5635	0.235	C	BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-07-28 WebFetch 核实) 2026	可推	文献线索（须核全文再定 D1/D2）
+V75.4.8.1	发布公告的仪式面向	ref_title	2789	2789	0.322	B	The OpenBSD 2.0 release（OpenBSD 2.0 发布公告） Theo de Raadt（deraadt@theos.com） 1996	可推	文献线索（须核全文再定 D1/D2）
+V75.4.8.3	仪式现场的记述文本	ref_title	5932	5932	0.266	C	与 Spencer 1985-12 net.sources 公告 1985	可推	文献线索（须核全文再定 D1/D2）
+V75.4.9.1	仓库群的整体布局	ref_title	5820	5820	0.226	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V75.4.9.1	仓库群的整体布局	ref_title	6007	6007	0.226	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V75.5.1.2	治理结构的演进文本	sacred	2344		0.275	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V75.5.1.2	治理结构的演进文本	sacred	2346		0.275	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V75.5.1.4	规程文本的读者面向	sacred	2358		0.247	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V75.5.12.3	缺口补查的推进安排	fulltext_fact	kf-bell-10018-1826	10018	0.304	B	第一台电子中继器被记录在案	可推	全文补证候选（S1 命中即复用，D1 型）
+V75.5.12.3	缺口补查的推进安排	fulltext_fact	kf-bell-10018-1821	10018	0.296	C	北京无线电电话系统被记录在案	可推	全文补证候选（S1 命中即复用，D1 型）
+V75.5.2.3	注册档案的三方互勘	fulltext_summary	1129	1129	0.306	B	Version 8.0.1 – 2026.03.18 1 INTELLECTUAL PROPERTY POLICY of Eclipse Foundation AISBL a Belgian incorporated internation	可推	全文综述候选（D1 型，核对原文后落块）
+V75.5.2.3	注册档案的三方互勘	fulltext_summary	1019	1019	0.281	C	FreeBSD Foundation April 2016 Update Upcoming Events OSCON 2016 May 16-19, 2016 Austin, TX BSDCan 2016 June 10-11, 2016 	可推	全文综述候选（D1 型，核对原文后落块）
+V75.5.3.1	选举周期的公告节奏	sacred	2442		0.266	C	2000 年 9 月：首次核心团队选举	可推	史观参照（不作证据，仅定题面归属）
+V75.5.3.3	董事会选举的同类参照	claim	CL-RM-020020		1.30	A	Peter Salus 任 1992 年董事会选举提名委员会主席：Donner（IBM）/Hume（AT&T）/Sauer（Dell）/Zwicky（SRI）入列，并明言委员承诺不参选（1991-05-20）	可推	claim 复用（S2 先库后网）
+V75.5.3.3	董事会选举的同类参照	claim	CL-RM-018204		1.30	A	USENIX 1988 董事会选举官方结果（654 张选票、37% 回复）：Alan Nemeth 当选总统、Scherrer 副总统、Kolstad 秘书、Johnson 财务；董事 McKusick/Murrel/O'Dell/Quar	可推	claim 复用（S2 先库后网）
+V75.5.4.2	数量峰谷的统计基础	sacred	2358		0.294	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V75.5.5.1	关键争论的存档价值	ref_title	2460	2460	0.258	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.5.5.3	技术讨论的列表分列	sacred	232		0.258	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V75.5.6.3	年度报告的机构自述	ref_title	10227	10227	0.239	C	ACM History ACM History Committee 不详	可推	文献线索（须核全文再定 D1/D2）
+V75.5.6.3	年度报告的机构自述	ref_title	10228	10228	0.239	C	The 1950s and 1960s IEEE Computer Society 不详	可推	文献线索（须核全文再定 D1/D2）
+V75.5.6.3	年度报告的机构自述	ref_title	10229	10229	0.239	C	The 1970s IEEE Computer Society 不详	可推	文献线索（须核全文再定 D1/D2）
+V75.5.7.2	采访渠道的入口清点	ref_title	2446	2446	0.234	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V75.5.7.2	采访渠道的入口清点	ref_title	2660	2660	0.234	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V75.5.8.4	媒体呈现的认知影响	ref_title	6146	6146	0.236	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
+V75.5.9.2	制度事实的文书根基	fulltext_fact	kf-bell-10024-005	10024	0.237	C	该书ISBN为0-932764-08-8	可推	全文补证候选（S1 命中即复用，D1 型）
+V75.6.14.2	字数与流量的换算风险	ref_title	10078	10078	0.223	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V75.6.14.2	字数与流量的换算风险	ref_title	10120	10120	0.223	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V75.6.15.3	基础设施面的登记缺位	ref_title	10078	10078	0.221	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
+V75.6.15.3	基础设施面的登记缺位	ref_title	10120	10120	0.221	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
+V75.6.2.4	旧版译本的存档检索	fulltext_summary	60	60	0.231	C	FreeBSD Handbook Abstract Welcome to FreeBSD! This handbook covers the installation and day to day use of FreeBSD 15.0- 	可推	全文综述候选（D1 型，核对原文后落块）
+V75.6.3.2	列表存档的不可撤回	ref_title	2460	2460	0.263	C	OpenBSD 邮件列表存档（marc.info） marc.info 	可推	文献线索（须核全文再定 D1/D2）
+V75.6.6.3	视听材料的平台归集	ref_title	2446	2446	0.228	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	可推	文献线索（须核全文再定 D1/D2）
+V75.6.6.3	视听材料的平台归集	ref_title	2660	2660	0.228	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	可推	文献线索（须核全文再定 D1/D2）
+V75.6.7.4	快照时点的选点约束	ref_title	3813	3813	0.443	B	SCO v RedHat 网页快照 sco redhat unknown 2004	可推	文献线索（须核全文再定 D1/D2）
+V75.7.2.2	迁移路径的提交记录	sacred	2408		0.251	C	1973 年：UNIX 代码迁移到 C 语言	可推	史观参照（不作证据，仅定题面归属）
+V75.7.3.1	公告文本的发布语义	fulltext_summary	91	91	0.246	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V75.7.3.1	公告文本的发布语义	fulltext_summary	1086	1086	0.234	C	Writing for Translation No Ambiguity – No Worries Florian Nadge PRESENTED BY: Fedora Documentation team, Red Hat ECS CC-	可推	全文综述候选（D1 型，核对原文后落块）
+V75.7.5.1	口述证据的会议场景	ref_title	2662	2662	0.285	C	BSD Now EP278: Kirk McKusick 现场访谈（2018，BSDCan 2018 录制） Marshall Kirk McKusick 2018	可推	文献线索（须核全文再定 D1/D2）
+V75.7.5.1	口述证据的会议场景	ref_title	2658	2658	0.237	C	BSD Now EP278: Michael Karels 现场访谈片段（2018，BSDCan 2018 录制） Michael John Karels 2018	可推	文献线索（须核全文再定 D1/D2）
+V75.7.5.2	技术博客的记录体裁	ref_title	5513	5513	0.235	C	Stallion 2010.8.13 博客 2010	可推	文献线索（须核全文再定 D1/D2）
+V75.7.5.3	博文存档的保存必要性	ref_title	4453	4453	0.287	C	2007 SCO v Novell doc377 memorandum decision 原文存档 unknown 2007	可推	文献线索（须核全文再定 D1/D2）
+V75.7.5.3	博文存档的保存必要性	ref_title	5854	5854	0.227	C	K. (1988.12.7) Net/1 USENET 公告原文（gunkies.org 存档） 1988	可推	文献线索（须核全文再定 D1/D2）
+V75.7.7.1	表述措辞的层级落差	sacred	232		0.238	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V75.8.1.3	非英语判例的对译校验	ref_title	3808	3808	0.223	C	2016 Hellwig v VMware LG-Hamburg Urteil 2016-07-08 德语原文 unknown 2016	可推	文献线索（须核全文再定 D1/D2）
+V75.8.3.4	治理文件的查阅入口	sacred	2358		0.243	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V75.9.12.2	释出记录的研究疆界	ref_title	5820	5820	0.237	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	可推	文献线索（须核全文再定 D1/D2）
+V75.9.12.2	释出记录的研究疆界	ref_title	6007	6007	0.237	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	可推	文献线索（须核全文再定 D1/D2）
+V75.9.13.2	关键抉择的偶然性	sacred	111		0.257	C	5.1 规律的偶然性	可推	史观参照（不作证据，仅定题面归属）
+V75.9.17.4	图外贡献者的史料稀缺	ref_title	827	827	0.250	C	Doing-Oral-History-做口述史 Ritchie 2003	可推	文献线索（须核全文再定 D1/D2）
+V75.9.9.4	沟通载体的文化释读	sacred	3082		0.246	C	释读	可推	史观参照（不作证据，仅定题面归属）
+V75.9.9.4	沟通载体的文化释读	sacred	3102		0.246	C	释读	可推	史观参照（不作证据，仅定题面归属）
+V75.9.9.4	沟通载体的文化释读	sacred	3120		0.246	C	释读	可推	史观参照（不作证据，仅定题面归属）
