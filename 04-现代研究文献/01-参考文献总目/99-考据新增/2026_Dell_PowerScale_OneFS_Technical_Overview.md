@@ -33,6 +33,14 @@ BSD 基底与语义支持：
 
 > OneFS is not only the operating system but also the underlying file system that drives and stores data in the cluster.
 
+集群通信依赖后端网络（b017 补录）：
+
+> All intra-node communication in a cluster is performed across a dedicated backend network, consisting of either 10 Gb, 40 Gb, 100 Gb, or 200 Gb Ethernet, or low-latency QDR Infiniband (IB).
+
+维护窗口内的滚动升级（b017 补录）：
+
+> For periodic system maintenance and software updates, this functionality allows for per-node rolling upgrades affording full-availability throughout the duration of the maintenance window.
+
 ## 三、考据说明
 
 - “built on a BSD-based UNIX operating system foundation”＋“From OneFS 8.2 onwards… FreeBSD 11”直接支撑 2.1.1／2.1.2／2.2.3。
