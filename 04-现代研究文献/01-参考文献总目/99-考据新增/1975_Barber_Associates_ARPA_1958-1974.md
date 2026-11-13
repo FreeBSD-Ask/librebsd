@@ -27,3 +27,11 @@
 1. 性质：受资助方委托的机构史（official_doc，`source_tier=primary`，L3），非当事人即时证词；其史料价值在于机构自我描述与“独特性”问题意识的同期表达。
 2. OCR 有损，故本卡只引元数据页摘要；如需引用正文语段，须以影印本逐页核对后再入卡（现存影印本可查 archive.org 全 595 MB 扫描件）。
 3. `banned_source=0`；两次独立访问一致。
+
+## 四、影印本前言语段（OCR 核读；b038 取用）
+
+说明：以下语段读自 archive.org 全本扫描件前置说明（OCR 有损），已与同页可辨文句相互校读；引用时按 OCR 文本照录，不代改识别讹字。
+
+档案缺环（1.5.3 成果管理的归档要求）：
+
+> there are immense gaps in the Agency's files, especially up to 1967, and only spotty coverage in the records of other agencies and in the open literature

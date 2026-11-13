@@ -170,3 +170,27 @@ Whirlwind 预算削减与项目濒危（1.3.4 容忍的限度）：
 > Between 1981 and 1995, the federal government provided between 59 and 76 percent of annual research equipment expenditures in computer science and between 64 and 83 percent of annual research equipment expenditures in electrical engineering.
 
 注：本组引文取 NAP 开放章节页 chapter/6（Chapter 4）与 chapter/7（Chapter 5），访问日 2026-11-13。
+
+## 八、补充引文（b038 取用，Chapter 5）
+
+组织的目标尺度（1.5.1 合同执行的进度与报告）：
+
+> The organization as a whole aimed to generate order-of-magnitude improvements in computing technology by funding a combination of fundamental research and large system-building efforts.
+
+裁量与吸引力互为因果（1.5.2 项目监督的层级与频度）：
+
+> organizations that promote exploration and allow program managers to exercise their own discretion in selecting new directions for research tend to attract individuals who are effective program managers and who earn the respect of the research community
+
+具名的监督层（1.5.2 监督层的构成）：
+
+> It was able to attract visionary leaders, such as J.C.R. Licklider, Ivan Sutherland, Robert Taylor, Lawrence Roberts, Vinton Cerf, and Robert Kahn.
+
+短期任职（1.5.6 监督关系的实际运作）：
+
+> Many of these leaders were drawn from the research community for short tours of duty.
+
+进度不成即削减（1.5.5 续约与终止的决策依据）：
+
+> The federal government, too, cut back on some programs that failed to show initial progress (such as machine translation and, for a time, speech recognition), but it continued to make strong investments in AI research
+
+注：本组取 NAP 开放章节页 chapter/7（Chapter 5），访问日 2026-11-13。

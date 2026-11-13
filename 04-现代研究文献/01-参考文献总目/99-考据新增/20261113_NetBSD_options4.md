@@ -1,0 +1,13 @@
+<!-- 网页存档｜来源：https://man.netbsd.org/options.4｜抓取：2026-11-13｜curl 直取两次一致，HTML 标签剥离与空白归一 -->
+
+# options.4 — NetBSD 手册页（NetBSD 内核选项（PaX／Veriexec 相关节选））
+
+## 抓取正文（节选，空白已归一）
+
+```
+cript is run during system startup. See the manual page for init(8) for details on the implications of this. The kernel secure level may manipulated by the superuser by altering the kern.securelevel sysctl(3) variable (the secure level may only be lowered by a call from process ID 1, i.e., init(8) ). See also secmodel_securelevel(9) , sysctl(8) and sysctl(3) . options VERIFIED_EXEC_FP_SHA256 Enables support for SHA256 hashes in Veriexec. options VERIFIED_EXEC_FP_SHA384 Enables support for SHA384 hashes in Veriexec. options VERIFIED_EXEC_FP_SHA512 Enables support for SHA512 hashes in Veriexec. options PAX_MPROTECT=value Enables PaX MPROTECT, mprotect(2) restrictions from the PaX project. The value is the default value for the global knob, see sysctl(3) . If 0, PaX MPROTECT will be enabled only if explicitly set on programs using paxctl(8) . If 1, PaX MPROTECT will be enabled for all programs. Pro- grams can be exempted using paxctl(8) . See security(7) for more details.
+```
+
+## 用途注记
+
+Task 8.2 G5-P2 · V41《NetBSD 技术专题史》第 9 章利用缓解机制联网补证（D2 块；官方手册页，collection=NetBSD-current）。

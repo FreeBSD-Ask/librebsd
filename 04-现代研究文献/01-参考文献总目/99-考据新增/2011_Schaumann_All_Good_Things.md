@@ -21,6 +21,14 @@ FreeBSD 系统的无人值守部署：
 
 > deployed on nearly 100K machines
 
+FreeBSD 系统无人值守克隆的工程实现（b026 补录）：
+
+> I wrote the code to enable unattended cloning of our FreeBSD systems to go hand in hand with the existing RHEL (kickstart-based) deployment.
+
+工具开源（b026 补录）：
+
+> scanmaster was open sourced
+
 ## 三、考据说明
 
 - “unattended cloning of our FreeBSD systems”说明到 2000 年代后期 Yahoo 仍在规模化部署 FreeBSD，是 3.3.5 上限侧的当事人记录。
