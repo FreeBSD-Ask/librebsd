@@ -3,7 +3,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	1	1.1	1.1.2	CSRG 解散与多组并存	filled	
 53	1	1.1	1.1.3	源代码可得性的传统	skeleton	
 53	1	1.1	1.1.4	FreeBSD 自述的源流接续	skeleton	
-53	1	1.1	1.1.5	网络发行版与完整系统的分界	skeleton	
+53	1	1.1	1.1.5	网络发行版与完整系统的分界	filled	
 53	1	1.1	1.1.6	学术机构的署名约束	skeleton	
 53	1	1.2	1.2.1	Net/2 缺失文件的补齐	skeleton	
 53	1	1.2	1.2.2	匿名 FTP 分发的最初形态	skeleton	
@@ -61,7 +61,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	2	2.3	2.3.6	pkgsrc 外包与资源汇聚	skeleton	
 53	2	2.4	2.4.1	受支持平台的清单构成	skeleton	
 53	2	2.4	2.4.2	旧硬件支持的长期承诺	filled	
-53	2	2.4	2.4.3	未解决问题在优先级中的位置	skeleton	
+53	2	2.4	2.4.3	未解决问题在优先级中的位置	filled	
 53	2	2.4	2.4.4	TCP/IP 网络在强项清单的位次	skeleton	
 53	2	2.4	2.4.5	ARM 平台的支持方式	filled	
 53	2	2.4	2.4.6	硬件淘汰与平台退役	skeleton	
@@ -287,7 +287,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	7	7.3	7.3.4	背书条款的弃用理由	skeleton	
 53	7	7.3	7.3.5	许可授予记录的成文条目	skeleton	
 53	7	7.3	7.3.6	OpenBSD 基本系统的 GPL 遗留	skeleton	
-53	7	7.4	7.4.1	源码交付义务的对照	skeleton	
+53	7	7.4	7.4.1	源码交付义务的对照	filled	
 53	7	7.4	7.4.2	GPL 对商业使用的阻力	filled	
 53	7	7.4	7.4.3	自由分享的悖论陈述	skeleton	
 53	7	7.4	7.4.4	OpenBSD 基本系统的 GPL 排除	skeleton	
@@ -299,7 +299,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	7	7.5	7.5.4	商业分支的合法空间	skeleton	
 53	7	7.5	7.5.5	商用内嵌与资助的脱节	skeleton	
 53	7	7.5	7.5.6	学术用途与商业用途的重叠	skeleton	
-53	7	7.6	7.6.1	pf 的替代性起源	skeleton	
+53	7	7.6	7.6.1	pf 的替代性起源	filled	
 53	7	7.6	7.6.2	OpenSSH 的分叉起点	skeleton	
 53	7	7.6	7.6.3	可移植版本的双轨发行	skeleton	
 53	7	7.6	7.6.4	NetBSD 许可条款与伯克利许可的相容	filled	
@@ -340,7 +340,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	8	8.3	8.3.3	默认关闭非必要服务	skeleton	
 53	8	8.3	8.3.4	审计产出的新技术	skeleton	
 53	8	8.3	8.3.5	OpenSSH 的外溢效应	skeleton	
-53	8	8.3	8.3.6	远程漏洞计数的口号	skeleton	
+53	8	8.3	8.3.6	远程漏洞计数的口号	filled	
 53	8	8.4	8.4.1	LWKT 与用户线程两级调度	skeleton	
 53	8	8.4	8.4.2	虚拟内核的调试用途	skeleton	
 53	8	8.4	8.4.3	HAMMER 的默认快照保留	skeleton	
@@ -350,7 +350,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	8	8.5	8.5.1	Rhapsody 对 NetBSD 的取用	skeleton	
 53	8	8.5	8.5.2	商业内核的定制深度	skeleton	
 53	8	8.5	8.5.3	闭源再分发的许可通道	skeleton	
-53	8	8.5	8.5.4	修复先行的论坛通用语	skeleton	
+53	8	8.5	8.5.4	修复先行的论坛通用语	filled	
 53	8	8.5	8.5.5	苹果对开源位置的自我陈说	skeleton	
 53	8	8.5	8.5.6	开源发布的两条获取通道	skeleton	
 53	8	8.6	8.6.1	图形栈自 Linux 的回移	skeleton	
@@ -414,3 +414,4 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	9	9.8	9.8.5	大程序的可维护性代价	skeleton	
 53	9	9.8	9.8.6	例外条款与通则的关系	skeleton	
 53	9	9.8	9.8.7	正确之物的概念命名	skeleton	
+

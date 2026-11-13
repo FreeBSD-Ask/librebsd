@@ -73,7 +73,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	3	3.2	3.2.3	命令语言与编程语言的错位	filled	
 60	3	3.2	3.2.4	历史机制的词级实现	filled	
 60	3	3.2	3.2.5	目录栈与作业控制的分工	filled	
-60	3	3.3	3.3.1	历史替换的命名方式	skeleton	
+60	3	3.3	3.3.1	历史替换的命名方式	filled	
 60	3	3.3	3.3.2	别名展开的先后时机	skeleton	
 60	3	3.3	3.3.3	编辑命令的复用范围	skeleton	
 60	3	3.3	3.3.4	历史文件的文本依据	skeleton	
@@ -83,7 +83,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	3	3.4	3.4.3	终端归属的控制权	skeleton	
 60	3	3.4	3.4.4	命令行解析的执行链	skeleton	
 60	3	3.4	3.4.5	作业控制与 shell 的绑定	skeleton	
-60	3	3.5	3.5.1	文件名补全的并入	skeleton	
+60	3	3.5	3.5.1	文件名补全的并入	filled	
 60	3	3.5	3.5.2	增强项的标注体例	skeleton	
 60	3	3.5	3.5.3	未文档行为的保留范围	skeleton	
 60	3	3.5	3.5.4	向后兼容的实现代价	skeleton	
@@ -101,7 +101,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	4	4.1	4.1.1	屏幕刷新的带宽约束	skeleton	
 60	4	4.1	4.1.2	光标定位的控制序列	skeleton	
 60	4	4.1	4.1.3	多终端型号的维护负担	skeleton	
-60	4	4.1	4.1.4	转义序列的可移植困境	skeleton	
+60	4	4.1	4.1.4	转义序列的可移植困境	filled	
 60	4	4.1	4.1.5	终端会话的状态管理	skeleton	
 60	4	4.2	4.2.1	能力数据库的文本格式	skeleton	
 60	4	4.2	4.2.2	短名与长名的并存	skeleton	
@@ -179,7 +179,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	5	5.8	5.8.4	兼容实现的并行维护	filled	
 60	5	5.8	5.8.5	nc 对 telnet 的替代对照	filled	
 60	5	5.9	5.9.1	nc 三动作的最小接口	skeleton	
-60	5	5.9	5.9.2	脚本友好的输入输出	skeleton	
+60	5	5.9	5.9.2	脚本友好的输入输出	filled	
 60	5	5.9	5.9.3	连接扫描的附带用途	skeleton	
 60	5	5.9	5.9.4	代理用途的意外扩散	skeleton	
 60	5	5.9	5.9.5	工具定位的模糊性	skeleton	
@@ -424,7 +424,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	13	13.2	13.2.4	语言平台起步的记载	skeleton	
 60	13	13.2	13.2.5	成果公开的两种载体	skeleton	
 60	13	13.3	13.3.1	改名引入的记载断档	skeleton	
-60	13	13.3	13.3.2	自由许可释出的公告	skeleton	
+60	13	13.3	13.3.2	自由许可释出的公告	filled	
 60	13	13.3	13.3.3	接管治理的记录空档	skeleton	
 60	13	13.3	13.3.4	版本号重置的编号台阶	skeleton	
 60	13	13.3	13.3.5	产品化转换的可靠性前提	skeleton	
@@ -528,3 +528,4 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	14	14.13	14.13.3	生命周期观察的收获	skeleton	
 60	14	14.13	14.13.4	安全页面的处置说明	skeleton	
 60	14	14.13	14.13.5	后续研究的方向条目	skeleton	
+

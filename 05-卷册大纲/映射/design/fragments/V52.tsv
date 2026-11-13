@@ -74,7 +74,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 52	2	2.5	2.5.2	SMPng 与 LWKT 对 NUMA 的预设差异	skeleton	
 52	2	2.5	2.5.3	OpenBSD 大锁模型的保守收益	skeleton	
 52	2	2.5	2.5.4	NetBSD 调度器模块化的可选余地	skeleton	
-52	2	2.5	2.5.5	OpenBSD rthread 的一对一实现	skeleton	
+52	2	2.5	2.5.5	OpenBSD rthread 的一对一实现	filled	
 52	2	2.5	2.5.6	SMPng 收尾目标的公开表述	skeleton	
 52	3	3.1	3.1.1	vkernel 作为用户态 DragonFly 系统的定位	skeleton	
 52	3	3.1	3.1.2	用户态内核的 gdb 直接调试手段	skeleton	
@@ -112,7 +112,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 52	4	4.2	4.2.5	同一 MACHINE_ARCH 的用户态共享	skeleton	
 52	4	4.2	4.2.6	长期失修移植平台的限期清退	skeleton	
 52	4	4.3	4.3.1	OpenBSD 的 4.4BSD 派生身份	skeleton	
-52	4	4.3	4.3.2	项目宗旨中的主动安全条款	skeleton	
+52	4	4.3	4.3.2	项目宗旨中的主动安全条款	filled	
 52	4	4.3	4.3.3	DragonFly 从 RELENG_4 切出的时点	skeleton	
 52	4	4.3	4.3.4	以消息传递区分于 FreeBSD 5 的立场	skeleton	
 52	4	4.3	4.3.5	分叉时的提交者规模	skeleton	
@@ -261,3 +261,4 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 52	7	7.6	7.6.4	发行节奏的可比尺度	skeleton	
 52	7	7.6	7.6.5	发行公告中的云平台条目	skeleton	
 52	7	7.6	7.6.6	netmap 跨系统实现的既有范围	skeleton	
+
