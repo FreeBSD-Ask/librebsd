@@ -32,6 +32,8 @@ an innovative segmented memory addressing system supported by hardware
 
 a tree structured file system
 
+device support for peripherals and terminals
+
 ## 提要
 
 multicians.org 记：Multics 设计始于 1965 年，为 MIT 的 Project MAC、贝尔电话实验室与通用电气大型计算机产品部的三方联合项目；贝尔实验室 1969 年退出研制；MIT 于 1969 年秋开始向用户提供 Multics 分时服务；1970 年通用电气把计算机业务售予霍尼韦尔。
