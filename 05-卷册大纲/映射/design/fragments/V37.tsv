@@ -239,7 +239,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	5	5.1	5.1.3	setuid 的信任界线	filled	
 37	5	5.1	5.1.4	DAC 检查的调用路线	filled	
 37	5	5.1	5.1.5	自主访问控制的局限	skeleton	
-37	5	5.2	5.2.1	OpenBSM 的审计事件构型	skeleton	
+37	5	5.2	5.2.1	OpenBSM 的审计事件构型	filled	
 37	5	5.2	5.2.2	审计日志的记录格式	skeleton	
 37	5	5.2	5.2.3	内核审计的挂钩点	skeleton	
 37	5	5.2	5.2.4	审计策略的配置粒度	skeleton	
@@ -252,8 +252,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	5	5.4	5.4.1	Capsicum 的能力句柄	filled	
 37	5	5.4	5.4.2	能力模式的进程沙箱	filled	
 37	5	5.4	5.4.3	文件描述符的权利收缩	filled	
-37	5	5.4	5.4.4	cap_enter 的边界语义	skeleton	
-37	5	5.4	5.4.5	能力模型的应用迁移	skeleton	
+37	5	5.4	5.4.4	cap_enter 的边界语义	filled	
+37	5	5.4	5.4.5	能力模型的应用迁移	filled	
 37	5	5.5	5.5.1	Jail 的安全设计前提	skeleton	
 37	5	5.5	5.5.2	越权路径的逐项封堵	skeleton	
 37	5	5.5	5.5.3	多租户隔离的可信度	skeleton	
