@@ -88,7 +88,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.5	2.5.2	高并发连接的等待队列	filled	
 37	2	2.5	2.5.3	边缘触发与水平触发	filled	
 37	2	2.5	2.5.4	事件通知的开销对照	filled	
-37	2	2.5	2.5.5	服务器框架的适配层	skeleton	
+37	2	2.5	2.5.5	服务器框架的适配层	filled	
 37	2	2.6	2.6.1	Netmap 的零拷贝收包	filled	
 37	2	2.6	2.6.2	环形缓冲的共享布局	filled	
 37	2	2.6	2.6.3	网卡驱动的旁路模式	filled	
@@ -104,7 +104,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.8	2.8.3	用户态与内核态的边界	skeleton	
 37	2	2.8	2.8.4	加密加速的硬件接口	skeleton	
 37	2	2.8	2.8.5	协议实现的性能取舍	skeleton	
-37	2	2.9	2.9.1	WireGuard 的接口设计	skeleton	
+37	2	2.9	2.9.1	WireGuard 的接口设计	filled	
 37	2	2.9	2.9.2	内核 VPN 的路由接入	skeleton	
 37	2	2.9	2.9.3	密钥协商的会话模型	skeleton	
 37	2	2.9	2.9.4	移动场景的漫游支持	skeleton	
@@ -114,7 +114,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.10	2.10.3	事件队列的唤醒路径	skeleton	
 37	2	2.10	2.10.4	并发访问的锁保护	skeleton	
 37	2	2.10	2.10.5	机制本体与应用面的划界	skeleton	
-37	3	3.1	3.1.1	UNIX 隔离传统的来源	skeleton	
+37	3	3.1	3.1.1	UNIX 隔离传统的来源	filled	
 37	3	3.1	3.1.2	Jail 的边界设定	skeleton	
 37	3	3.1	3.1.3	chroot 的局限与超越	filled	
 37	3	3.1	3.1.4	早期容器的安全争论	filled	
@@ -794,4 +794,3 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	17	17.5	17.5.3	问答线程的整理法	skeleton	
 37	17	17.5	17.5.4	档案残片的辨识法	skeleton	
 37	17	17.5	17.5.5	邮件编目的收束表	skeleton	
-
