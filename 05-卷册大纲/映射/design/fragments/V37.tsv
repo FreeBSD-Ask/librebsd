@@ -249,9 +249,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	5	5.3	5.3.3	策略组合的优先级	skeleton	
 37	5	5.3	5.3.4	MAC 与 DAC 的叠加	skeleton	
 37	5	5.3	5.3.5	TrustedBSD 的框架来源	skeleton	
-37	5	5.4	5.4.1	Capsicum 的能力句柄	skeleton	
-37	5	5.4	5.4.2	能力模式的进程沙箱	skeleton	
-37	5	5.4	5.4.3	文件描述符的权利收缩	skeleton	
+37	5	5.4	5.4.1	Capsicum 的能力句柄	filled	
+37	5	5.4	5.4.2	能力模式的进程沙箱	filled	
+37	5	5.4	5.4.3	文件描述符的权利收缩	filled	
 37	5	5.4	5.4.4	cap_enter 的边界语义	skeleton	
 37	5	5.4	5.4.5	能力模型的应用迁移	skeleton	
 37	5	5.5	5.5.1	Jail 的安全设计前提	skeleton	
