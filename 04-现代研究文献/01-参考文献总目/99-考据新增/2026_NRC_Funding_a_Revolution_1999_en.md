@@ -66,3 +66,47 @@ National Research Council (Committee on Innovations in Computing and Communicati
 量化限度（3.1.6 方法边界）：
 
 > The effects of federal support for computing research are difficult to quantify but pervasive.
+
+## 五、补充引文（b035 取用，Chapter 3 与 Chapter 5 章页）
+
+大学研究经费对联邦的依赖（1.2.2 受助机构资助结构）：
+
+> Since 1973, federal agencies have provided roughly 70 percent of all funding for university research in computer science.
+
+IPTO 成立两年内 DARPA 成为计算机科学研究的最大资助者（1.2.2 资助来源集中度）：
+
+> within 2 years of establishing its Information Processing Techniques Office in 1962, the Defense Advanced Research Projects Agency (DARPA) became the dominant source of funding, providing more support for computer science research than all other federal agencies combined.
+
+大计划—多机构—卓越中心（1.2.1 项目制科研的组织形态）：
+
+> DARPA, for example, has tended to award contracts for large programs involving multiple researchers and research organizations. It has concentrated its funding for computer research on a limited number of centers of excellence, such as MIT, Stanford University, Carnegie Mellon University, and UC-Berkeley.
+
+项目经理的遴选裁量（1.2.5 项目遴选与方向设定）：
+
+> Program managers have generally been given significant discretion in selecting and shaping new research initiatives.
+
+两级批准制（1.2.3 高自主性的制度条件）：
+
+> Especially in the 1960s and 1970s, DARPA gave program managers sufficient funds to shape coherent research programs, and program budgets required only two levels of approval: one by the office director and one by the DARPA director.
+
+研究者的智识自由（1.2.3 自主性的边界与弹性）：
+
+> Researchers need sufficient intellectual freedom to follow their intuition and to modify research plans based on preliminary results.
+
+按某些尺度失败的项目（1.2.6 高风险研究的容错）：
+
+> By some measures, Project Whirlwind and SAGE were failures (see Chapter 4).
+
+未达原定目标仍有产出（1.2.6 容错的知识产出）：
+
+> even research projects that do not achieve their original objectives can produce meaningful results or generate valuable knowledge for guiding future research efforts.
+
+大学研究的长期取向（1.2.2 受助机构的自主性来源）：
+
+> Because they are not usually subject to commercial pressures, university researchers often have greater ability than their industrial counterparts to explore ideas with uncertain long-term payoffs.
+
+弹性须由人与文化共同承担（1.2.3 条件的互补性）：
+
+> Building such flexibility into federal structures for managing research requires both skilled program managers—who understand, articulate, and promote the visions of researchers—and an organizational culture that accepts and promotes exploratory efforts.
+
+注：本章页引文取 NAP 官方开放章节页（chapter/5 为 Chapter 3，chapter/7 为 Chapter 5），访问日 2026-11-13；与 Executive Summary 章引文（第二、四节）分列，不混用页码。
