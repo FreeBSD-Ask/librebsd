@@ -476,9 +476,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	9	9.7	9.7.5	调优参数的暴露途径	skeleton	
 37	9	9.8	9.8.1	文件描述符的极限	filled	
 37	9	9.8	9.8.2	网络缓冲的容量值	filled	
-37	9	9.8	9.8.3	调度参数的调整法	skeleton	
-37	9	9.8	9.8.4	并发连接的压测法	skeleton	
-37	9	9.8	9.8.5	内核调优的限度判定	skeleton	
+37	9	9.8	9.8.3	调度参数的调整法	filled	
+37	9	9.8	9.8.4	并发连接的压测法	filled	
+37	9	9.8	9.8.5	内核调优的限度判定	filled	
 37	9	9.9	9.9.1	动态追踪的路线分流	skeleton	
 37	9	9.9	9.9.2	DTrace 与 eBPF 的比照	skeleton	
 37	9	9.9	9.9.3	perf 工具的位置	skeleton	
