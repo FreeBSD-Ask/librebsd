@@ -1,0 +1,33 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V52.1.3.6	池取代单盘文件系统的范围	claim	CL-RM-024123		0.70	A	[L4] 内存盘对tmp大量读写比普通盘文件系统慢约一倍因多一次拷贝且无法异步写	可推	claim 复用（先库后网，不重复建）
+V52.1.3.6	池取代单盘文件系统的范围	claim	CL-RM-010048		0.70	A	[L2] Donn Seeley 记录 Bill Jolitz 在 USENIX 提醒 PDP-11 与 VAX 长整数字序相反、共享盘文件系统需翻转字序，Seeley 遂自行改造 C 编译器实现内存 VAX 序、寄存器 PDP-	可推	claim 复用（先库后网，不重复建）
+V52.1.3.6	池取代单盘文件系统的范围	claim	CL-3-053		0.70	A	[L4] McKusick、Karels 与 Bostic 1990 年提出在可换页内存而非专用内存中构建 RAM 磁盘文件系统原型，以避免专用内存带来的性能损失。	可推	claim 复用（先库后网，不重复建）
+V52.2.1.2	OpenBSD 多处理器支持的 2000 年起点	claim	CL-7-021		1.20	B	[L4] FreeBSD 初始 SMP 支持沿用 UNIX 传统的粗粒度进程同步方式，一次只允许一个进程在内核态运行，不适应多处理器应用。	可推	claim 复用（先库后网，不重复建）
+V52.2.1.2	OpenBSD 多处理器支持的 2000 年起点	claim	CL-5-006		1.20	B	[L4] Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。	可推	claim 复用（先库后网，不重复建）
+V52.2.1.4	处理器亲和性与运行队列的分置	claim	CL-5-108		1.60	A	[L4] ULE 交互式调度器具备处理器亲和性，并由内核依据交互性评分动态设置优先级，与 4BSD 共享调度器的多级反馈队列相区分。	可推	claim 复用（先库后网，不重复建）
+V52.2.1.4	处理器亲和性与运行队列的分置	claim	CL-5-107		1.60	A	[L4] FreeBSD 原调度器源自 4.3BSD 调度器，不支持多 CPU 的处理器亲和性，核心算法随进程数呈 O(n) 复杂度。	可推	claim 复用（先库后网，不重复建）
+V52.3.1.2	用户态内核的 gdb 直接调试手段	claim	CL-RM-000011		1.10	B	[L3] Apple 官方内核编程指南记载 OS X 内核的 BSD 部分主要源自 FreeBSD；macOS 多数用户态工具与 C 库源自 FreeBSD 版本	可推	claim 复用（先库后网，不重复建）
+V52.3.1.3	内核内存由临时文件承载的回收机制	fulltext_summary	125	125	0.223	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V52.3.1.3	内核内存由临时文件承载的回收机制	fulltext_summary	706	706	0.223	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V52.3.1.3	内核内存由临时文件承载的回收机制	fulltext_summary	831	831	0.223	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V52.3.2.5	串行控制台与图形控制台的缺省	claim	CL-RM-013160		0.90	A	[L4] Martin Husemann 确认 4000/60 与 4000/90 的 SPX 图形控制台在 -current 可用而 X 只能作 dumb framebuffer，披露与 Blaz 讨论 rasops 加速 X 	可推	claim 复用（先库后网，不重复建）
+V52.4.1.4	NetBSD 四位创始人的组成	sacred	2656		0.224	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V52.4.3.5	分叉时的提交者规模	sacred	2358		0.275	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V52.4.4.5	包管理工具在基本系统中的位置	claim	CL-RM-010491		1.30	A	[L4] 2016 年 6 月用户感叹 DL580 G3 无 ipm 设备可用，呼吁 HP 开源 hpasm 源码——闭源管理工具在系统演进中的持续之痛。	可推	claim 复用（先库后网，不重复建）
+V52.4.4.5	包管理工具在基本系统中的位置	claim	CL-RM-000712		1.30	A	[L3] FreeBSD 10.0-RELEASE 发布公告明确：pkg(7) 成为默认软件包管理工具，pkg_add(1)、pkg_delete(1) 及相关工具被移除，GCC 不再默认安装	可推	claim 复用（先库后网，不重复建）
+V52.4.6.4	CDDL 与二进制分发条件	claim	CL-RM-010333		1.30	A	[L4] 2018 年用户报告 stack 工具在 FreeBSD 上找不到 ghc-8.4.3 的 freebsd64 二进制分发——Haskell 工具链与 ports 体系衔接缺口的当事人样本	可推	claim 复用（先库后网，不重复建）
+V52.4.6.4	CDDL 与二进制分发条件	claim	CL-RM-010290		1.30	A	[L3] 2004 年 cube（Quentin Garnier）立场被社区转引：'我们不维护二进制包，我们支持 50 种架构的 NetBSD'——pkgsrc 二进制分发定位之争（同期 GNUpg 打包疑问）	可推	claim 复用（先库后网，不重复建）
+V52.4.8.1	Junos 的 FreeBSD 出身	sacred	2743		0.355	B	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V52.4.8.1	Junos 的 FreeBSD 出身	sacred	2749		0.355	B	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V52.4.8.1	Junos 的 FreeBSD 出身	sacred	2752		0.355	B	文件系统基础	可推	史观参照（不作证据，仅定题面归属）
+V52.5.1.4	Ports 树 2021 年的迁移	fulltext_fact	kf-bell-10022-353	10022	0.244	C	1949年研究团队从纽约463 West Street的Biscuit Building迁至Murray Hill, New Jersey	可推	全文补证候选（S1 命中即复用，D1 型）
+V52.5.2.6	主线与稳定线的合并等待	sacred	373		0.238	C	18.1 等待与时间	可推	史观参照（不作证据，仅定题面归属）
+V52.5.6.6	手册页与内核接口的对应	ref_title	10432	10432	0.285	C	bpf(4) — FreeBSD 内核接口手册页（Berkeley Packet Filter） The FreeBSD Project 2026	可推	文献线索（须核全文再定 D1/D2）
+V52.5.6.6	手册页与内核接口的对应	ref_title	10458	10458	0.232	C	ipsec(4) — FreeBSD 内核接口手册页（IPsec 协议） The FreeBSD Project 2026	可推	文献线索（须核全文再定 D1/D2）
+V52.5.6.6	手册页与内核接口的对应	ref_title	10419	10419	0.230	C	wg(4) — FreeBSD 内核接口手册页（WireGuard 协议驱动） The FreeBSD Project 2026	可推	文献线索（须核全文再定 D1/D2）
+V52.5.7.2	制表符缩进与八字符宽度	claim	CL-RM-040140		1.30	A	[L3] 解释管道符号须与命令同处一行，故须写成 cat 加 here 文档再管道，并介绍减号写法允许制表符缩进 here 文档。	可推	claim 复用（先库后网，不重复建）
+V52.6.4.3	零拷贝与内核内存保护的兼顾	fulltext_summary	125	125	0.245	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
+V52.6.4.3	零拷贝与内核内存保护的兼顾	fulltext_summary	706	706	0.245	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
+V52.6.4.3	零拷贝与内核内存保护的兼顾	fulltext_summary	831	831	0.245	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
+V52.7.2.2	自研文件系统的作者意图	claim	CL-3-056		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry 1984 年记载快速文件系统（FFS）的文件访问速率可达传统 UNIX 文件系统的十倍。	可推	claim 复用（先库后网，不重复建）
+V52.7.2.2	自研文件系统的作者意图	claim	CL-2-041		1.10	A	[L4] McKusick、Joy、Leffler 与 Fabry（1984）描述了从原始 512 字节 UNIX 文件系统到 4.2BSD 发布的新文件系统（快速文件系统 FFS）的变更。	可推	claim 复用（先库后网，不重复建）
