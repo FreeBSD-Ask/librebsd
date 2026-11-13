@@ -40,6 +40,10 @@ device support for peripherals and terminals
 
 "Multics was designed to be secure from the beginning. In the 1980s, the system was awarded the B2 security rating by the US government NCSC, the first (and for years only) system to get a B2 rating."
 
+"Bell was paying rent on its GE-645 and dedicating valuable people to the Multics effort, and continuing would prolong these costs with no trustworthy end date."
+
+"Starting in October 1969, the MIT Information Processing Center took over operational responsibility for the GE-645 computer. At that time, Multics performance and capacity exceeded that of CTSS, and were continuing to improve."
+
 ## 提要
 
 multicians.org 记：Multics 设计始于 1965 年，为 MIT 的 Project MAC、贝尔电话实验室与通用电气大型计算机产品部的三方联合项目；贝尔实验室 1969 年退出研制；MIT 于 1969 年秋开始向用户提供 Multics 分时服务；1970 年通用电气把计算机业务售予霍尼韦尔。
