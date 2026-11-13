@@ -34,6 +34,12 @@ a tree structured file system
 
 device support for peripherals and terminals
 
+"Bell Labs chose to withdraw from the Multics project in April 1969. Their goal in joining was to obtain a time-sharing system for use by members of the technical staff at Bell Labs. When the planned time had passed, Multics was not ready to use, and it was clear that there was much more work to do."
+
+"The GE-645 installation that Multics was implemented on occupied as much space as an average home, cost millions of dollars, and ran at 435 KIPS."
+
+"Multics was designed to be secure from the beginning. In the 1980s, the system was awarded the B2 security rating by the US government NCSC, the first (and for years only) system to get a B2 rating."
+
 ## 提要
 
 multicians.org 记：Multics 设计始于 1965 年，为 MIT 的 Project MAC、贝尔电话实验室与通用电气大型计算机产品部的三方联合项目；贝尔实验室 1969 年退出研制；MIT 于 1969 年秋开始向用户提供 Multics 分时服务；1970 年通用电气把计算机业务售予霍尼韦尔。
