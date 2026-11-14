@@ -57,7 +57,7 @@
 
 ## 7. 现在依据
 
-- **官方与规格**：DuckDB 2.0.0 LTS 于 2026-10-21 发布；新库 storage version 69（v1.0–1.5 为 64）；仅保证向后兼容读取。来源：`.trae/specs/upgrade-duckdb-to-2-0-0-20261024/spec.md`（已批准的 Why／Constraints／Requirement）。
+- **官方与规格**：DuckDB 2.0.0 LTS 于 2026-10-21 发布；新库 storage version 69（v1.0—1.5 为 64）；仅保证向后兼容读取。来源：`.trae/specs/upgrade-duckdb-to-2-0-0-20261024/spec.md`（已批准的 Why／Constraints／Requirement）。
 - **本机实测**：2026-10-24 于 `d:\librebsd`，`C:/Python314/python.exe` 实测 `duckdb.__version__ == 1.5.5`、Python 3.14.2；基线文件已落盘；三脚本实跑通过。
 - **证据路径**：`00-编纂规则与格式规范/01-规则/脚本与命令/duckdb-version-baseline.txt`；`claimdb_guard.py`／`audit_databases.py`／`analyze_all_databases.py` 的 `require_duckdb_version()` 与实跑输出；`12-数据库备份/backup_databases.py` 的 `SCOPE`（26 库）与 `verify_archive()`；`12-数据库备份/backup_log.jsonl`。
 - **证据等级说明**：版本与 storage version 结论本 ADR 取官方发布与已批准 spec 为一证；第二证（独立 venv 装 2.0.0 只读打开 1.5.5 库、前后 SHA-256 相等、存储版本仍 64）按 spec“双版本只读验证”在 Task 3 补齐，未完成前不得宣称兼容性已实测。
@@ -115,8 +115,8 @@
 | 项 | 实测值 |
 | -- | ------ |
 | 2.0.0 对 v64 库真实写入＋`CHECKPOINT` | 存储版本仍为 **64**（不就地升级）→ 故 `changelog` 暂缓成立 |
-| `historical_claims` 导出／导入 | 1.32 s／8.07 s；643,837,952 B → 424,423,424 B（−34.1%） |
-| 等价核对 | 34 表／2,109,042 行／255 列／12 约束／`schema_meta` 24 行／抽样 sha256 全 PASS；用户宏 0；唯一差异为引擎内置宏 |
+| `historical_claims` 导出／导入 | 1.32 s／8.07 s；643 837 952 B → 424 423 424 B（−34.1%） |
+| 等价核对 | 34 表／2 109 042 行／255 列／12 约束／`schema_meta` 24 行／抽样 sha256 全 PASS；用户宏 0；唯一差异为引擎内置宏 |
 | 原子替换演练 | 活跃只读句柄 → `PermissionError [WinError 5]`；释放后成功；SHA-256 与新库一致 |
 
 **失效条件补充**：若后续实测发现 2.0.0 在某些写入路径（如 `VACUUM`／大版本 `CHECKPOINT`）会升级 v64 库，则“`changelog` 暂缓且保持 v64”的前提失效，须改为与运行时切换同批迁移 `changelog`。
@@ -129,18 +129,18 @@ ykla 当日“批准继续迁移”后执行完毕，逐库台账见 `duckdb-2.0
 | -- | ---- |
 | 范围 | 25 库全部完成；`changelog` 按裁置暂缓，仍为 v64 |
 | 存储版本 | v64 → **69（`v2.0.0`）**，25/25；按 `duckdb_databases()` 的 tags 复核：25 个 `v2.0.0+`、`changelog` 为 `v1.0.0+` |
-| 体积 | 10,513,068,032 B（9.79 GiB）→ 9,114,529,792 B（8.49 GiB），**−13.30%** |
+| 体积 | 10 513 068 032 B（9.79 GiB）→ 9 114 529 792 B（8.49 GiB），**−13.30%** |
 | 等价核对 | 表清单／视图／列定义／约束／索引／逐表行数／抽样 100 行 sha256／`schema_meta` 全 PASS，失败 0 库 |
 | 原子替换 | 25/25 一次成功，无 `SWAP_BLOCKED`、无活跃句柄冲突 |
-| 迁移后体检 | `audit_databases` 236 表／74,368,467 行（较迁移前 +1 行＝本轮 changelog 记录），错误 0；`claimdb_guard` 对 `changelog`／`historical_claims` 均 PASS |
+| 迁移后体检 | `audit_databases` 236 表／74 368 467 行（较迁移前 +1 行＝本轮 changelog 记录），错误 0；`claimdb_guard` 对 `changelog`／`historical_claims` 均 PASS |
 
-**与 §4 预期不符之处（如实披露）**：迁移并非普遍缩小体积——`linux-kernel` **+22.8%**（2,038 → 2,504 MB）、`dragonfly` +6.8%、`metadata_interfaces` +10.0%；总账 −13.30% 主要由 `doubts_standalone`（−91.2%）、`openzfs`（−64.1%）、`historical_claims`（−34.1%）等少数库贡献。故“迁移可省空间”不可作为通用理由。
+**与 §4 预期不符之处（如实披露）**：迁移并非普遍缩小体积——`linux-kernel` **+22.8%**（2 038 → 2 504 MB）、`dragonfly` +6.8%、`metadata_interfaces` +10.0%；总账 −13.30% 主要由 `doubts_standalone`（−91.2%）、`openzfs`（−64.1%）、`historical_claims`（−34.1%）等少数库贡献。故“迁移可省空间”不可作为通用理由。
 
 **执行差异**：因 1.5.5 已于 18:55 卸载，导出与导入均由 2.0.0 完成（导出体为 Parquet 逻辑导出，与引擎版本无关）；§1 所述“旧版导出 → 新版导入”在本批实际等价于“2.0.0 导出 → 2.0.0 导入新库”。
 
 ## 15. 存储版本号的口径更正（2026-10-24）
 
-**先前错误**：本批前期报告（`duckdb-2.0-readonly-verification.md`、`duckdb-2.0-claims-and-swap-rehearsal.md`、`duckdb-2.0-migration-ledger.md`）据“文件头字节 12–15 的 uint32”判定存储版本，读到 2.0.0 新建库为 **999**，并把“999 与官方文档 69 不符”挂为待核。
+**先前错误**：本批前期报告（`duckdb-2.0-readonly-verification.md`、`duckdb-2.0-claims-and-swap-rehearsal.md`、`duckdb-2.0-migration-ledger.md`）据“文件头字节 12—15 的 uint32”判定存储版本，读到 2.0.0 新建库为 **999**，并把“999 与官方文档 69 不符”挂为待核。
 
 **根因（源码实证）**：DuckDB 2.0.0 的 `src/include/duckdb/storage/storage_info.hpp` 中
 `MainHeader.version_number` 已标注 “The main header storage version is now deprecated”，

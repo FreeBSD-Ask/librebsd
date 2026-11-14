@@ -27,14 +27,14 @@ pandoc <input.epub> -t markdown_strict -o <output.md>
 ## 与 Tesseract 的关系
 
 - **EPUB**：直接使用 pandoc 转换，无需 OCR。EPUB 本身为文本格式，pandoc 可直接解析其内部 XHTML 与元数据
-- **PDF**：使用 Tesseract OCR 转换。PDF 为版式文档，须 OCR 识别页面文字
+- **PDF**：使用 Tesseract OCR 转换。PDF 为版式文档，应 OCR 识别页面文字
 
 两工具按文献格式择一使用，互不替代。
 
 ## 校对规则
 
-EPUB 转换后的 Markdown 仍须按 0 信任原则与原 EPUB 抽样核对：
+EPUB 转换后的 Markdown 仍应按 0 信任原则与原 EPUB 抽样核对：
 
 - 抽样核对页数与内容完整性
 - 警惕章节结构、脚注、表格、引文在转换中丢失或错位
-- 转换结果须在 manifest `ocr_status` 字段标注，规则同 Tesseract OCR 校对规则
+- 转换结果应在 manifest `ocr_status` 字段标注，规则同 Tesseract OCR 校对规则

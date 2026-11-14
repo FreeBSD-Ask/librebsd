@@ -29,8 +29,8 @@ tesseract <input.pdf> <output_basename> -l eng+chi_sim+fra+deu --psm 1
 
 按 0 信任原则执行 OCR 校对：
 
-- **抽样核对**：OCR 文本须与原 PDF 抽样核对，每 100 页抽 5 页比对
-- **警惕重点**：技术术语、版本号、人名、命令、路径等易错讹内容须重点核对
+- **抽样核对**：OCR 文本应与原 PDF 抽样核对，每 100 页抽 5 页比对
+- **警惕重点**：技术术语、版本号、人名、命令、路径等易错讹内容应重点核对
 - **manifest 字段标注**：在 manifest `ocr_status` 字段按错讹率分级标注
   - 错讹率 < 5% 标 `verified`
   - 错讹率 ≥ 5% 标 `needs_review`
@@ -39,4 +39,4 @@ tesseract <input.pdf> <output_basename> -l eng+chi_sim+fra+deu --psm 1
 
 - 若 Tesseract 未安装或执行失败，标记 `ocr_status=failed`，记录错误信息
 - OCR 失败不阻塞下载流程，下载流程继续处理下一条目
-- 失败条目须在后续单独排查并重试 OCR
+- 失败条目应在后续单独排查并重试 OCR

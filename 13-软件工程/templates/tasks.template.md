@@ -1,6 +1,6 @@
 # 任务清单：<FEATURE>
 
-**规格**：<SPEC_PATH> | **验收**：<CHECKLIST_PATH> | **日期**：<DATE>
+**规格**：<SPEC_PATH> | **验收**：<CHECKLIST_PATH> | **日期**：<DATE> | **标准文献清单**：<路径> | **风险级别**：低／中／高 | **复核轮次**：<n>
 
 ## Phase 1 需求与设计
 

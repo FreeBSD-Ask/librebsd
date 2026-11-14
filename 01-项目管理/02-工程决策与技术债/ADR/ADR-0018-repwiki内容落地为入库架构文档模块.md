@@ -17,7 +17,7 @@
 
 ## 2. 矛盾
 
-- **背景（不做会怎样）**：`.qoder/repowiki` 是工具生成的全仓 wiki，含大量与现行规则冲突的断言（见 `script/_repowiki_audit/REPORT.md` 第三节 14 项）：把 `assemble_index.py` 的产物写成 `SUMMARY.md`、虚构 G6–G9 阶段与 CI／PR 流水线、把 `targets.tsv` 节点数写成 4,303（实 4,578）、把 `status` 取值写成四种（实为 active／retired）、引用四个不存在的脚本。若原样入库，等于在规则体系旁并列一套错误口径，且无门禁可拦。
+- **背景（不做会怎样）**：`.qoder/repowiki` 是工具生成的全仓 wiki，含大量与现行规则冲突的断言（见 `script/_repowiki_audit/REPORT.md` 第三节 14 项）：把 `assemble_index.py` 的产物写成 `SUMMARY.md`、虚构 G6–G9 阶段与 CI／PR 流水线、把 `targets.tsv` 节点数写成 4 303（实 4 578）、把 `status` 取值写成四种（实为 active／retired）、引用四个不存在的脚本。若原样入库，等于在规则体系旁并列一套错误口径，且无门禁可拦。
 - **受影响者**：接手会话（会把 wiki 当权威）、门禁维护者（错误阶段映射会被当真）、用户（阅读面出现自相矛盾的两套说法）。
 
 ## 3. 正面
@@ -48,7 +48,7 @@
 
 ## 7. 现在依据
 
-- **实测**：2026-10-28 对 35 篇全量扫描（路径／脚本名／数字）与真值文件对码，错误清单已落 `script/_repowiki_audit/REPORT.md`；`targets.tsv` 4,578 行、`mapping.tsv` 37,484 行、`layout.tsv` 15,206 行、口径 76／544／3,951 均为当批实测。
+- **实测**：2026-10-28 对 35 篇全量扫描（路径／脚本名／数字）与真值文件对码，错误清单已落 `script/_repowiki_audit/REPORT.md`；`targets.tsv` 4 578 行、`mapping.tsv` 37 484 行、`layout.tsv` 15 206 行、口径 76／544／3 951 均为当批实测。
 - **规则**：`工程实践规则.md` §2.1（新增目录须先落 ADR）、§7（既有规则治理：审计条目、前后对照、迁移指针）、`流程规则/11-治理与体例裁定.md`（去重规则）。
 
 ## 8. 将来失效条件
