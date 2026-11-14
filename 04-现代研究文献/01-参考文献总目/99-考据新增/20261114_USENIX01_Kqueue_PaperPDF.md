@@ -22,6 +22,12 @@ Jonathan Lemon. Kqueue: A generic and scalable event notification facility (full
 
 > These problems stem from the fact that poll() and select() are stateless by design; that is, the kernel does not keep any record of what the application is interested in between system calls and must recalculate it every time.
 
+## 四、二访补录（b019 批，V67.2.3.3 接口设计题）
+
+3 Design Goals（设计目标，连字已归一）：
+
+> When designing a replacement facility, the primary goal was to create a system that would be efficient and scalable to a large number of descriptors, on the order of several thousand. The secondary goal was to make the system flexible. UNIX based machines have traditionally lacked a robust facility for event notification. The poll and select interfaces are limited to socket and pipe descriptors; the user is unable to wait for other types of events, like file creation or deletion.
+
 ## 三、核对记录
 
 - 本卡与 ref 10559（论文摘要页）为**同一论文的两种载体**（会序摘要页／全文 PDF）：题面“论文以 select 与 poll 在描述符增多时不可扩展作为问题起点”本即关于该论文自身表述，两载体分别证摘要与引言两处行文；独立性限度如实披露——第三方独立佐证（论文引用标注 [1][2][10]，含 Banga／Mogul 1998 一类先行工作）留扩展批。

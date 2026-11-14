@@ -24,6 +24,12 @@ Jonathan Lemon. Kqueue: A generic and scalable event notification facility[EB/OL
 
 全文链接：full_papers/lemon/lemon.pdf（PDF 已另行下载，104,951 B）。
 
+## 三、摘要逐字（英文，未翻译；b019 批补录）
+
+> Applications running on a UNIX platform need to be notified when some activity occurs on a socket or other descriptor, and this is traditionally done with the select() or poll() system calls. However, it has been shown that the performance of these calls does not scale well with an increasing number of descriptors. These interfaces are also limited in the respect that they are unable to handle other potentially interesting activities that an application might be interested in, these might include signals, file system changes, and AIO completions. This paper presents a generic event delivery mechanism, which allows an application to select from a wide range of event sources, and be notified of activity on these sources in a scalable and efficient manner. The mechanism may be extended to cover future event sources without changing the application interface.
+
+（摘要由页面正文提取；与 PDF 版摘要一致，连字归一同 PDF 卡说明。）
+
 ## 三、核对记录
 
 - 论文页属 2001 FREENIX 轨道技术议程——题面“2001 年 FREENIX 轨道再出完整论文”直证；轨道属 2001 USENIX 年会（6 月 25–30，波士顿，见技术议程页 technical.html）。
