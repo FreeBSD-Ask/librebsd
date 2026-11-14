@@ -49,6 +49,10 @@ FreeBSD Foundation. FreeBSD provides Flexibility and Performance for NetApp’s 
 
 > When the test encounters issues with FreeBSD, NetApp reports them through Klara, and Klara changes upstream.
 
+选型声明与理由（b030 补录）：
+
+> NetApp chose to base ONTAP on FreeBSD for its performance-focused BSD distribution and trust their use of FreeBSD due to inherent stability of FreeBSD releases along with support from other commercial FreeBSD users.
+
 ## 三、考据说明
 
 - 许可考量句支撑 2.1.3“厂商选择 BSD 因许可与成熟度”的 NetApp 侧；“mature and proven”句由 OneFS 文档承担 Isilon 侧，两源互证。

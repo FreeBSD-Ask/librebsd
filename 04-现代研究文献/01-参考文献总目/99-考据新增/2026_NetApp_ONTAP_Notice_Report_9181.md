@@ -17,6 +17,14 @@ NetApp. NetApp Notice Report: ONTAP 9.18.1P8[R/OL]. NetApp, 2026[2026-11-14]. ht
 
 > The following copyright statements and licenses apply to the software components that are distributed with the ONTAP version 9.18.1P8 product. This product does not necessarily use all the software components referred to below.
 
+FreeBSD 各版本条目（组件表，b030 补录）：
+
+> FreeBSD 11.0 BSD 2-clause "Simplified" License FreeBSD 12.0 BSD 2-clause "Simplified" License FreeBSD 14.0.0
+
+历史版本组件条目（组件表，b030 补录）：
+
+> FreeBSD 2.2.5 BSD 4-clause "Original" or "Old" License FreeBSD 4.4 BSD 4-clause "Original" or "Old" License FreeBSD 5.2
+
 ## 三、考据说明
 
 - 该句同时给出组件披露的两个边界：清单按**具体版本**（9.18.1P8）分发、且**分发清单不等于使用清单**（does not necessarily use all）——支撑 3.8.1“组件级继承叙述另有独立载体”与 3.8.5“判定依赖披露面”的边界侧。

@@ -34,6 +34,14 @@ WAFL 与 FreeBSD 的组合来源：
 
 > The use of FreeBSD as the operating system for Data ONTAP 8.0 allows for some significant benefits. Besides the fact that Data ONTAP will continuously benefit from the third-party work taking place within the FreeBSD community
 
+组件直接运行于 FreeBSD（b030 补录）：
+
+> Although 7-mode runs in FreeBSD with a new data component called the D-blade and a new management component called the M-host, it acts very much like Data ONTAP 7G.
+
+相对 7G 的代际转向（b030 补录）：
+
+> Although FreeBSD is familiar to Data ONTAP GX users, it is a departure from Data ONTAP 7G.
+
 ## 三、考据说明
 
 - “combination of the WAFL file system and SpinFS running in a FreeBSD environment”是 2.3.2“WAFL 与 BSD 内核并置而非派生”的直接原文：组合体由两个来源拼成，WAFL 不是 BSD 内核演化的产物。
