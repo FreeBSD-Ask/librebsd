@@ -57,7 +57,7 @@
 | 10 | `10-交叉索引/` | 八类索引（人名／主题／命令／术语／年代 G9／组织机构 G10／概念史 G2／人物传记 G3）已入 `cross_indexes.duckdb`（10 表）；顶层存 `S03-历史对象登记表.md` 与 `S03-historical_objects.json` |
 | 11 | `11-元数据接口/` | `01-章节元数据/chapter_index.json`、`02-交叉引用/cross_reference_map.csv`、`09-文件夹数据库索引/`（`folder_db_registry.csv`＋`cross_db_references.csv`＋`dashboard.md`）＋`metadata_interfaces.duckdb`（含 `build_citation_records` 引文记录＝G7／`timeline_records`）＋`ndb构建脚本-20260922/` |
 | 12 | `12-数据库备份/` | 备份与归档层（补编号缺口 12）；`backup_databases.py`（SCOPE 28 库＝16 功能/史料库＋12 代码仓库库；`--all` 实轮 27 库，historical_claims 由 hc 专项独担）＋`backup_outline.py`（`05-卷册大纲/` tar.gz）；运行日志 `backup_log.jsonl`；**删除本目录任何内容应用户明示** |
-| 13 | `13-软件工程/` | 工程实践方法论基线（原 `13-engineering-doctrine/`，2026-10-29 改名；`ADR-0001` 采纳）：`00-philosophy.md`–`10-standards-first.md` 十一篇（含项目侧增补 08 意图确证、09 反思与理论化、10 标准先行，2026-10-29／2026-11-14）＋`templates/` 九件模板＋`NOTICE.md` 回流记录。**正文不直接改**，可普适条款按 `NOTICE.md` 版本化回流（见 `工程实践规则.md`）；本项目无 PR 平台，模板以批次提交核对清单落地 |
+| 13 | `13-软件工程/` | 工程实践方法论基线（原 `13-engineering-doctrine/`，2026-10-29 改名；`ADR-0001` 采纳）：`00-philosophy.md`—`10-standards-first.md` 十一篇（含项目侧增补 08 意图确证、09 反思与理论化、10 标准先行，2026-10-29／2026-11-14）＋`templates/` 九件模板＋`NOTICE.md` 回流记录。**正文不直接改**，可普适条款按 `NOTICE.md` 版本化回流（见 `工程实践规则.md`）；本项目无 PR 平台，模板以批次提交核对清单落地 |
 
 **编号缺口 06、09**：06 为正文层停用后的空号，09 为保留空号；两号不应复用。
 
@@ -106,7 +106,7 @@
 | ------ | -------- |
 | 史料考据、来源可信度、许可证与判例、存疑处理 | `考据规则.md` |
 | 文字标点、术语与翻译、加粗与代码、手册页引用、结构化大纲 | `写作规则.md` |
-| 工作流程、修改前后复核、脚本安全、文件编码、数据库与备份、目录页门禁、G0–G5 阶段与裁剪 | `流程规则/00-索引.md` |
+| 工作流程、修改前后复核、脚本安全、文件编码、数据库与备份、目录页门禁、G0—G5 阶段与裁剪 | `流程规则/00-索引.md` |
 | 工程类批次的需求基线、ADR、技术债、04／05／06 专项、复审、G6 反思与理论化与既有规则治理 | `工程实践规则.md` |
 | 角色卡与技能模板（title-designer／block-triage／gate-reviewer／volume-merger；四技能）及其使用映射 | `13-软件工程/templates/qoder-plugin/README.md`（E11 接线） |
 | 任何任务开工前的目标与方向判定（含内容编纂、考据、数据库、大纲、归档与一次性小任务） | `流程规则/01-复核与验证.md`“意图确证（知难行易；全任务适用；2026-10-29 立）”＋`工程实践规则.md` §0.6（工程类批次落地细目） |
@@ -119,7 +119,7 @@
 | 操作系统功能对比与结果回写代码仓库数据库 | `功能对比与数据库回写规则.md` |
 | 历史镜像站挖掘与扫描件 OCR 流水线 | `镜像站挖掘与OCR流水线规则.md` |
 | ROW_MINE 块体格式（块头、自述抬头、证据等级真值来源） | `ROW_MINE块体格式规则.md` |
-| 非邮件来源补证块（DOC_MINE 块形、抬头表、补证链 S0–S5、先库后网去重、与 ROW_MINE 分治） | `DOC_MINE补证块格式规则.md` |
+| 非邮件来源补证块（DOC_MINE 块形、抬头表、补证链 S0—S5、先库后网去重、与 ROW_MINE 分治） | `DOC_MINE补证块格式规则.md` |
 | 小节建制、题名、四源合成、空骨架、升格、卷级批准与全量标题 | `小节建制与题名规则.md` |
 | 任务轮替与归档（长线／其他任务六态、批次史与版本史轮替、工程批次规格留存、归档目录维护） | `任务轮替与归档规则.md` |
 | 书籍下载与 OCR 操作细节 | `04-现代研究文献/03-文献下载/README.md` |
@@ -130,7 +130,7 @@
 
 ### 编纂指导思想（全部写作与复核的方法论底色）
 
-**双核心，应同时参考，不可偏废**：① `02-sacred源材料/shigang.md`（第三部分 §2–§33 共 32 个哲学域，回答“为什么这样写”）；② `02-sacred源材料/lishidagang.md`（仿 QAA SBS 格式，回答“怎样写才算合格”——写作时逐条对照其第四部分“基准标准：最低阈值与超越基线”，复核时按其第五部分“质量控制体系”）。二者哲学基础为 `sacred_sources.duckdb` 中 29 章 191 子节原文。
+**双核心，应同时参考，不可偏废**：① `02-sacred源材料/shigang.md`（第三部分 §2—§33 共 32 个哲学域，回答“为什么这样写”）；② `02-sacred源材料/lishidagang.md`（仿 QAA SBS 格式，回答“怎样写才算合格”——写作时逐条对照其第四部分“基准标准：最低阈值与超越基线”，复核时按其第五部分“质量控制体系”）。二者哲学基础为 `sacred_sources.duckdb` 中 29 章 191 子节原文。
 
 **七条方法论规范**（shigang.md §32“结论：BSD 史编纂方法论”32.1 节）：自反性声明（每卷开头声明所书皆为形式主义化的重构，不声称呈现“真实的 BSD 历史”）｜拒绝进步叙事｜循环结构呈现｜偶然性优先｜多方平等｜经验优先（当事人一手史料优先）｜动手者叙事。
 
@@ -166,7 +166,7 @@
 2. **不手改装配产物**：`05-卷册大纲/目录/index.html` 是装配产物，一切修改走 `assemble_index.py`；内容只改 `data/outline.txt`，非正文文案只改 `data/ui-strings.json`；不应在源中写 HTML 标记，不应硬编码口径数字（应用占位符）。
 3. **0 信任与联网复核**：事实改写应联网复核；聚合站不应作一手；“未获一手确证”≠“不存在”。
 4. **引号**：一律用弯引号 “”‘’；**禁直角引号（U+300C／U+300D／U+300E／U+300F）**。**引用与代码块逐字保真**，禁“顺手美化”。**文档类文件（.md/.txt，非内容层）的直角引号由 pre-commit hook（`git_commit_gate.py`）自动转弯引号**（仅围栏代码块与行内代码段之外的文本；内容层与逐字保真档案不在改正面，应人工改）。不可见字符清理为全口径、与引号改正面不同（见红线 5）。
-5. **禁 AI 不可见字符**（不可见字符由 pre-commit hook **F2 全口径自动清理**——Cf 删除＋Zs 归一半角空格；U+FFFD 只披露；commit-msg **B4 兜底阻断**，批准标记 `APPROVED-BY-OWNER:` 放行）。**清理口径（2026-10-17 ykla 裁定，详见 `流程规则/03-文件、编码与路径.md`“AI 不可见字符清理规则”）**：①零宽／格式控制符（Unicode Cf 全体，含 U+200B–U+200F、U+2060–U+206F、U+FEFF、U+00AD 等）一律删除；②空格类（U+3000、U+00A0、U+202F 等 Zs 除 U+0020）一律改 1 个半角空格并合并空白串，行首／行尾整段删除；③U+FFFD 系编码损坏标记，默认只报告；经 ykla 明示可清理（2026-10-21 令），应先落台账（文件／位置／前后文），可确证缺字者恢复原字母，无从确证者删除、不臆造字符；④引文内的原文残留字符经 2026-10-17 ykla 明示一并清除（逐字保真红线的明示豁免）；⑤换行形态逐行保留，写盘 UTF-8 无 BOM。工具：`脚本与命令/scan_md_invisible.py`（复扫判据）＋`脚本与命令/fix_md_invisible.py`（执行器，默认 dry-run）；分层总览见 `流程规则/03-文件、编码与路径.md`“统一门禁分层总览”。
+5. **禁 AI 不可见字符**（不可见字符由 pre-commit hook **F2 全口径自动清理**——Cf 删除＋Zs 归一半角空格；U+FFFD 只披露；commit-msg **B4 兜底阻断**，批准标记 `APPROVED-BY-OWNER:` 放行）。**清理口径（2026-10-17 ykla 裁定，详见 `流程规则/03-文件、编码与路径.md`“AI 不可见字符清理规则”）**：①零宽／格式控制符（Unicode Cf 全体，含 U+200B—U+200F、U+2060—U+206F、U+FEFF、U+00AD 等）一律删除；②空格类（U+3000、U+00A0、U+202F 等 Zs 除 U+0020）一律改 1 个半角空格并合并空白串，行首／行尾整段删除；③U+FFFD 系编码损坏标记，默认只报告；经 ykla 明示可清理（2026-10-21 令），应先落台账（文件／位置／前后文），可确证缺字者恢复原字母，无从确证者删除、不臆造字符；④引文内的原文残留字符经 2026-10-17 ykla 明示一并清除（逐字保真红线的明示豁免）；⑤换行形态逐行保留，写盘 UTF-8 无 BOM。工具：`脚本与命令/scan_md_invisible.py`（复扫判据）＋`脚本与命令/fix_md_invisible.py`（执行器，默认 dry-run）；分层总览见 `流程规则/03-文件、编码与路径.md`“统一门禁分层总览”。
 6. **含反引号或 `$` 的文本禁用 `python -c` 双引号内联**（bash 命令替换会掏空内容）；一律写临时脚本（`script/`，UTF-8 无 BOM＋LF）再跑。
 7. **时区与时钟**：取本地时间用系统 `date`／`Get-Date`，勿加 TZ 覆盖；**会话注入的 current_time ≠ 机器时钟**，“是否到点／超时”以实测双源互证。
 8. **根目录不应新建文件、脚本或目录**，未经显式批准。
@@ -188,7 +188,7 @@
 | 向 `05-卷册大纲/` 写回证据等级标注块 | `audit_evidence_level_labels.py` | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引” | 第六件 |
 | 改动 `05-卷册大纲/` 的 BEGIN/END 标记（常备） | `audit_anchor_pair_order.py` | `TD-022-成对锚处置判据书.md` §四 D4、§十 | 第三十四件 |
 | 改动 `05-卷册大纲/` 内容或入纲写入后（常备） | `audit_outline_dup.py` | `流程规则/06-门禁体系.md`“大纲重复锚与重复块门禁” | 第三十五件 |
-| 写／改 `DOC_MINE` 补证块、补证台账或例外台账状态后 | `audit_supplement_chain.py`（`--selftest` → `--check`） | `DOC_MINE补证块格式规则.md` §八（D1–D6） | 第四十三件 |
+| 写／改 `DOC_MINE` 补证块、补证台账或例外台账状态后 | `audit_supplement_chain.py`（`--selftest` → `--check`） | `DOC_MINE补证块格式规则.md` §八（D1—D6） | 第四十三件 |
 | 改规则、模板、号文或新增读者可见文档后 | `audit_proofread_forms.py`（`--selftest` → 默认） | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”；`流程规则/01-复核与验证.md`“校对规程” | 第四十四件 |
 | 改动 `05-卷册大纲/` 内容落地、映射台账、`targets.tsv`／`layout.tsv` 再生（常备） | `audit_outline_landing.py` | `流程规则/06-门禁体系.md`“大纲落地一致性门禁（L1–L17）” | 第三十七件 |
 | 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | `流程规则/05-目录页与重构2026.md`“DATA 数据完整性门禁” | DATA 门禁 |
@@ -212,14 +212,14 @@
 | 小节设计台账（`映射/design/`）任何写入后 | `audit_subsection_design.py`（D1 outline↔台账／D2 台账↔树 .md／L land.ok；零态合法） | `ADR-0020`；《小节建制与题名规则.md》§九 | 第三十八件 |
 | 小节标题台账（`映射/title-design/`）任何写入后 | `audit_title_consistency.py --check` | `小节建制与题名规则.md` §九；`05-卷册大纲/映射/title-design/风格规范.md` §八 | 第三十九件 |
 | 标题台账术语形态（官方名／人物名／版次） | `audit_title_term_forms.py` | `小节建制与题名规则.md` §4.4；`05-卷册大纲/映射/title-design/风格规范.md` §八 | 第四十一件 |
-| 规则语料任何写入后（常备） | `audit_rule_dup.py` | `流程规则/11-治理与体例裁定.md`“规则语料单一落点与去重规则”（R1–R4） | 第四十二件 |
-| 新增／修改 ADR、技术债、工程实践规则或模板 | `audit_engineering_practice.py` | `工程实践规则.md`“门禁与模板接线”（E1–E10） | 第二十九件 |
-| 新任务准入、复核、收口与台账轮替 | `audit_task_lifecycle.py` | `工程实践规则.md`“任务强制审计、复核与轮替”（L1–L12） | 第三十二件 |
+| 规则语料任何写入后（常备） | `audit_rule_dup.py` | `流程规则/11-治理与体例裁定.md`“规则语料单一落点与去重规则”（R1—R4） | 第四十二件 |
+| 新增／修改 ADR、技术债、工程实践规则或模板 | `audit_engineering_practice.py` | `工程实践规则.md`“门禁与模板接线”（E1—E10） | 第二十九件 |
+| 新任务准入、复核、收口与台账轮替 | `audit_task_lifecycle.py` | `工程实践规则.md`“任务强制审计、复核与轮替”（L1—L12） | 第三十二件 |
 | 改动闸面内 `.md` 文件 | `audit_markdown_lint.py` | `流程规则/06-门禁体系.md`“文档格式门禁” | 第十件 |
 | 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | `流程规则/05-目录页与重构2026.md`“重构大纲目录口径同步规则” | 口径同步 |
 | **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py`＋`audit_sidecar_backup.py`＋`audit_rule_dup.py` | `流程规则/05-目录页与重构2026.md`“重构大纲目录口径同步规则”“门禁体系元门禁”“旁路备份残留扫描门禁”；`任务轮替与归档规则.md`；`流程规则/11-治理与体例裁定.md`“规则语料单一落点与去重规则” | 口径同步·长线·元门禁·旁路备份·语料去重 |
 
-**件次索引**（判据正文见 `流程规则/00-索引.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）｜第三十七件＝大纲落地一致性门禁（`audit_outline_landing.py`）｜第三十八件＝小节设计台账一致性门禁（`audit_subsection_design.py`；Task 5.4a，ADR-0020）｜第三十九件＝小节标题一致性与证据完整性门禁（`audit_title_consistency.py`）｜第四十一件＝题名术语形态门禁（`audit_title_term_forms.py`）｜第四十二件＝规则语料单一落点与去重门禁（`audit_rule_dup.py`）｜第四十三件＝DOC_MINE 补证链门禁（`audit_supplement_chain.py`，D1–D6）。
+**件次索引**（判据正文见 `流程规则/00-索引.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）｜第三十七件＝大纲落地一致性门禁（`audit_outline_landing.py`）｜第三十八件＝小节设计台账一致性门禁（`audit_subsection_design.py`；Task 5.4a，ADR-0020）｜第三十九件＝小节标题一致性与证据完整性门禁（`audit_title_consistency.py`）｜第四十一件＝题名术语形态门禁（`audit_title_term_forms.py`）｜第四十二件＝规则语料单一落点与去重门禁（`audit_rule_dup.py`）｜第四十三件＝DOC_MINE 补证链门禁（`audit_supplement_chain.py`，D1—D6）。
 
 **门禁纪律**：判据非空、自检连跑、门禁自身会失效三条见 `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”→“门禁纪律”。
 

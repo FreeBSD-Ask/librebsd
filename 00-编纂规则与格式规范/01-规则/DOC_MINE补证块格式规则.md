@@ -3,7 +3,7 @@
 > **性质**：本规则是 `05-卷册大纲/` 树内**非邮件来源补证块**的唯一格式判据源，约束联网补证产出的块体结构、抬头词表、证据等级取真值与写入链。
 > **适用对象**：`05-卷册大纲/**/*.md` 中以 `<!-- DOC_MINE: ... -->` 标记开头、来源为 `references_fulltext.duckdb` 已登记文献或网页条目的补证块。
 > **与 ROW_MINE 规则的关系**：邮件列表来源块仍由《ROW_MINE块体格式规则》约束；两份抬头表**按块型分治，不应跨用**（划界见 §五）。冲突时以各自适用块型为准。
-> **授权依据**：ykla 2026-11-10 三项裁定——① 新立 `DOC_MINE` 与 `ROW_MINE` 并列；② 等级承库内 L1–L5 口径并为补证块新立抬头表；③ 先落规程、规则与门禁，再以三卷试点后按卷铺开。
+> **授权依据**：ykla 2026-11-10 三项裁定——① 新立 `DOC_MINE` 与 `ROW_MINE` 并列；② 等级承库内 L1—L5 口径并为补证块新立抬头表；③ 先落规程、规则与门禁，再以三卷试点后按卷铺开。
 
 ## 一、适用范围
 
@@ -22,7 +22,7 @@
 1  <!-- DOC_MINE: ref<REF_ID>#<BLOCK_INDEX> -->
 2  **<抬头>**（证据等级：<LV>，来源：`historical_claims.duckdb.claim.<CID>`；<采纳批次>）
 3  （空行）
-4  [<YYYY 年 M 月 D 日，>]<摘要 30—80 字>引文出处：<著录简式>；引文按 <LV> 纪律：<等级中段>，具体结论仍须回核原文与同期一手材料，不得单独引为定论。
+4  [<YYYY 年 M 月 D 日，>]<摘要 30—80 字>引文出处：<著录简式>；引文按 <LV> 纪律：<等级中段>，具体结论仍须回核原文与同期一手材料，不应单独引为定论。
 5  （空行）
 ```
 
@@ -32,7 +32,7 @@
 1  <!-- DOC_MINE: ref<REF_ID>#url -->
 2  **<抬头>**（证据等级：<LV>，来源：`historical_claims.duckdb.claim.<CID>`；<采纳批次>）
 3  （空行）
-4  [<YYYY 年 M 月 D 日，>]<摘要 30—80 字>引文出处：<著录简式＋访问日>；引文按 <LV> 纪律：<等级中段>，具体结论仍须回核原文与同期一手材料，不得单独引为定论。
+4  [<YYYY 年 M 月 D 日，>]<摘要 30—80 字>引文出处：<著录简式＋访问日>；引文按 <LV> 纪律：<等级中段>，具体结论仍须回核原文与同期一手材料，不应单独引为定论。
 5  （空行）
 ```
 
@@ -44,7 +44,7 @@
 | ---- | -------- |
 | `REF_ID` | `references.id`，逐字取自库，不应手写近似值 |
 | `BLOCK_INDEX` | `fulltext_blocks.block_index`（该文献内块序），应能在库内按 `reference_id` 命中 |
-| `LV` | `claim.evidence_level` **真值**，取值 `L1`–`L5`；不应写死字面或凭印象定级 |
+| `LV` | `claim.evidence_level` **真值**，取值 `L1`—`L5`；不应写死字面或凭印象定级 |
 | `CID` | `claim.claim_id`，应在库内存在且 `status='supported'` |
 | `采纳批次` | 形如 `2026-11-12 V37 补证批 b003`；批次号与补证台账一致 |
 | 摘要 | 30—80 字，忠实原文；不应删改原意，不应夹带判词与元评论 |
@@ -93,7 +93,7 @@
 3. 反向亦禁：邮件块不应套用本规则抬头表。
 4. 违反第 2、3 条者，由 `audit_supplement_chain.py` 的 D2 判 FAIL。此条针对 2026-08-31“16,618 块抬头全量错标”事故的同类风险面，不设人工豁免。
 
-## 六、补证链（S0–S5）
+## 六、补证链（S0—S5）
 
 本节是补证作业的**唯一流程正文**；《小节建制与题名规则》只写触发条件与本节点指针，不复制判据。
 
@@ -144,7 +144,7 @@
 
 1. `exceptions/V{NN}.tsv` 该行 `status` 由 `open` 改为 `supplemented`（补证成功）或 `unresolvable`（穷尽查证无果，应同时在 `doubts_standalone.duckdb` 登记 `resolution_status=open`）；并填 `resolution_kind`／`resolution_ref`／`resolution_claim_id`：doc_mine 记 `ref:<REF_ID>` 与 claim 号，row_mine 记块锚，exhausted 记 `doubts:<id>`，structure 记 approval 文号。
 2. 小节 YAML `status`：有块即 `filled`；穷尽无果改 `closed`＋`resolution_reason: unresolvable`；合并／退役改 `closed`＋`resolution_reason: merged`／`retired`（应结构工单）。不应把已决题留在 `skeleton`。
-3. 门禁：`audit_supplement_chain.py` D1–D6 全绿；`audit_outline_landing.py` L1–L19；`audit_subsection_design.py`；`audit_title_consistency.py`；卷级回归 `tests/volume_regression.mjs --vol V{NN}`。
+3. 门禁：`audit_supplement_chain.py` D1—D6 全绿；`audit_outline_landing.py` L1—L19；`audit_subsection_design.py`；`audit_title_consistency.py`；卷级回归 `tests/volume_regression.mjs --vol V{NN}`。
 4. 台账守恒：`exceptions` 行数批前批后相等（结构处置除外）；`open + claimed + supplemented + unresolvable = 原 open 总数`。
 
 ## 七、禁止项

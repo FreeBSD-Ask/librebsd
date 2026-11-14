@@ -122,7 +122,7 @@
 - 自然键：wiki＝`page_key`（DokuWiki 页面 ID 原样），external＝`canonical_url`；先查后写／`MERGE`，`id` 动态取 `max+1`，重复运行不产生重复行；内容变化写 `update_log`。
 - 溯源字段：`pages.url`／`fetched_at`／`sha256_source`（原始响应字节）／`sha256_markdown`（落盘 md）／`conversions.converter_version`。
 
-### 6.4 验证与复核（V1–V12）
+### 6.4 验证与复核（V1—V12）
 
 抓取后应两套验证器各跑一遍，并做第三轮人工抽样：
 
@@ -141,8 +141,8 @@
 | V11 | 转换保真（30 页标题／链接／代码块差异为零；表格行数 wiki 为零、外链 HTML 按“绝对差 ≤ max(2, 20% 源行数)”容差；布局表折叠的标题层级丢失记 INFO；warnings 逐条披露） | 主验证器 |
 | V12 | 转换台账（每页 conversions 行；版本与 md 哈希一致） | 主验证器／SQL 复核器 |
 
-- **第一轮**：`verify_tuhs_wiki.py` 全量 V1–V12，结果写 `verification`（round `R1`）。
-- **第二轮**：`verify_tuhs_wiki_sql.py` 以独立 SQL 复算 V1–V5／V10／V12（round `R2SQL`），不复用主验证器判据代码；两轮结论不一致即判 FAIL。
+- **第一轮**：`verify_tuhs_wiki.py` 全量 V1—V12，结果写 `verification`（round `R1`）。
+- **第二轮**：`verify_tuhs_wiki_sql.py` 以独立 SQL 复算 V1—V5／V10／V12（round `R2SQL`），不复用主验证器判据代码；两轮结论不一致即判 FAIL。
 - **第三轮**：人工抽样 30 页（覆盖 14 个命名空间，含 ≥5 个外链页），逐字比对源站／外链源与库内 Markdown，抽样清单附报告附录。
 
 ### 6.5 执行件与登记
