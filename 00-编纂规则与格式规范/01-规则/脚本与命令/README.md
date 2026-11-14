@@ -114,6 +114,7 @@
 | [audit_supplement_chain.py](audit_supplement_chain.py) | **DOC_MINE 补证链门禁（固定脚本，2026-11-10 立，第四十三件）**：D1 例外台账四态与补证台账对账／D2 `DOC_MINE` 块形、抬头↔`source_type`、等级↔纪律串、CID 存在且 `supported`、等级等于库内真值／D3 `raw_source.banned_source=0`、`provenance_url` 非空、`namespace=ref:<REF_ID>`／D4 补证新增 ref 四键（`sha256`／`isbn_doi`／`source_url`／标题＋第一作者＋年份）不与既有重合或已登记 `reference_duplicates`／D5 小节合计 ≤12 块且 ≤16 797 B。`--check` 只读、`--json`、`--vol` 单卷；`--selftest` 一正七反（错级／伪 CID／邮件抬头／台账缺行／重复键／超体量／禁引来源） | `DOC_MINE补证块格式规则.md` §八；`小节建制与题名规则.md` §九；`audit_gate_registry.py` REGISTRY |
 
 | [audit_proofread_forms.py](audit_proofread_forms.py) | **文档校对形式门禁（固定脚本，2026-11-14 立，第四十四件）**：对规则语料、操作手册与治理台账扫描六类形式差错——P1 数值与单位符号之间缺半角空格（GB 3100-1993 §6.2.4，°／′／″ 例外）；P2 多位数千分撇（应为千分空，GB/T 3101-1993 §3.3.1）；P3 年份／数值区间 U+2013（应为一字线 U+2014，GB/T 15834-2011 §4.13）；P4`、以及`（A.3）；P5 省略号＋`等`（A.9.2）；P6 同形括号套用（只报告，§4.9.3.6）。豁免围栏代码、行内代码、URL 与 frontmatter；`--root`／`--json`／`--all`／`--selftest`（六判据负向夹具＋正样本零误报）；FAIL 退出码 1 | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”；`流程规则/01-复核与验证.md`“校对规程”；`写作规则.md` 数字／量和单位节；`audit_gate_registry.py` REGISTRY |
+| [audit_rule_modality.py](audit_rule_modality.py) | **条文用语门禁（固定脚本，2026-11-15 立，第四十五件）**：查规则语料要求型正文里的停用词 必须／不得／严禁／务必／禁止（GB/T 1.1-2020 附录 C 四档；`流程规则/11` §二）。`--diff [rev]` 只判相对 HEAD 的新增行（判据面）；`--all` 全量巡检只报不判；豁免标题、表格行、行内代码、弯引号、书名号、直角引号、加粗标签、裸列表项与追溯性叙述；`--selftest` 八判据；FAIL 退出码 1 | `流程规则/11-治理与体例裁定.md` §四；`audit_gate_registry.py` REGISTRY（TD-032 偿还件） |
 
 ## 程序命令
 

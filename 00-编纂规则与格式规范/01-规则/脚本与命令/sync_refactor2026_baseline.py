@@ -59,7 +59,7 @@ def target_files():
 BEGIN_RE = re.compile(r"^\s*<!--\s*BEGIN 口径基准（脚本自动维护[^>]*?）\s*-->\s*$")
 END_RE = re.compile(r"^\s*<!--\s*END 口径基准（脚本自动维护）\s*-->\s*$")
 # 2026-11-06（ADR-0020）四级口径：组 4＝小节数（可选）——旧三级行兼容（组 4 缺省不判）。
-QUAD_RE = re.compile(r"(\d{1,3})\s*卷\s*(\d{1,4})\s*章(?:\s*([\d,]{2,7})\s*节)(?:\s*(\d{1,6})\s*小节)?")
+QUAD_RE = re.compile(r"(\d{1,3})\s*卷\s*(\d{1,4})\s*章(?:\s*([\d, ]{2,9})\s*节)(?:\s*([\d, ]{1,9})\s*小节)?")
 TRIPLE_RE = QUAD_RE   # 向后别名：本文件其余引用点均已升级为四组语义
 # 现在时态现行口径声明（标记块外仍出现即视为漂移，需人工）
 PRESENT_RE = re.compile(r"(适用范围|本书全部|全书全部|现行大纲目录|现行目录|当前大纲)")
@@ -99,6 +99,18 @@ def write_text(p: Path, s: str) -> None:
     p.write_bytes(s.replace("\r\n", "\n").encode("utf-8"))
 
 
+def _num(s: str | None) -> int | None:
+    """兼容千分空／千分撇／半角空格：读数前去掉 , , 与空白（GB/T 3101-1993 §3.3.1）。"""
+    if s is None:
+        return None
+    return int(s.replace(",", "").replace(" ", "").replace("　", "").replace(" ", ""))
+
+
+def seg(n: int | None) -> str:
+    """口径数字按三位分节、以半角空格分节（GB/T 3101-1993 §3.3.1；GB/T 15835-2011 §5.1.1）。"""
+    return "—" if n is None else f"{n:,}".replace(",", " ")
+
+
 def parse_authoritative() -> tuple:
     html = read_text(INDEX_HTML)
     m = re.search(r"总卷数</span><strong[^>]*>\s*(\d+)\s*</strong>", html)
@@ -135,9 +147,9 @@ def parse_jsonld_metrics():
 
 
 def fmt(v: tuple) -> str:
-    s = f"{v[0]} 卷 {v[1]} 章 {v[2]} 节"
+    s = f"{seg(v[0])} 卷 {seg(v[1])} 章 {seg(v[2])} 节"
     if len(v) > 3 and v[3] is not None:
-        s += f" {v[3]} 小节"
+        s += f" {seg(v[3])} 小节"
     return s
 
 
@@ -146,9 +158,9 @@ def classify_triple(ln: str, tm, v: tuple, in_block: bool) -> str:
 
     返回 "ok" | "drift" | "stale" | "exempt" | "blind"。
     """
-    declared = (int(tm.group(1)), int(tm.group(2)),
-                int(tm.group(3).replace(",", "")) if tm.group(3) else None,
-                int(tm.group(4)) if (tm.lastindex or 0) >= 4 and tm.group(4) else None)
+    declared = (_num(tm.group(1)), _num(tm.group(2)),
+                _num(tm.group(3)),
+                _num(tm.group(4)) if (tm.lastindex or 0) >= 4 else None)
     same = declared[0] == v[0] and declared[1] == v[1] and (
         declared[2] is None or declared[2] == v[2]) and (
         declared[3] is None or len(v) < 4 or v[3] is None or declared[3] == v[3])
@@ -209,9 +221,9 @@ def scan(v: tuple):
             for tm in TRIPLE_RE.finditer(ln):
                 had_triple = True
                 cat = classify_triple(ln, tm, v, in_block)
-                declared = (int(tm.group(1)), int(tm.group(2)),
-                            int(tm.group(3).replace(",", "")) if tm.group(3) else None,
-                            int(tm.group(4)) if (tm.lastindex or 0) >= 4 and tm.group(4) else None)
+                declared = (_num(tm.group(1)), _num(tm.group(2)),
+                            _num(tm.group(3)),
+                            _num(tm.group(4)) if (tm.lastindex or 0) >= 4 else None)
                 if cat == "ok":
                     ok.append((fp, i, ln.strip(), declared))
                 elif cat == "drift":
@@ -350,9 +362,9 @@ def cmd_check(v, verbose: bool):
         _f92 = (Path(__file__).resolve().parents[3] / "05-卷册大纲" / "目录" /
                 "92-目录内容调整建议书-综合释疑库与未实施建议.md")
         _head = "\n".join(_f92.read_text(encoding="utf-8").split("\n")[:10])
-        _m92 = re.search(r"(\d+) 卷 (\d+) 章 (\d+) 节(?:\s*(\d{1,6})\s*小节)?", _head)
-        _d92 = ((int(_m92.group(1)), int(_m92.group(2)), int(_m92.group(3)),
-                 int(_m92.group(4)) if _m92.group(4) else None) if _m92 else None)
+        _m92 = re.search(r"([\d, ]{1,9}) 卷 ([\d, ]{1,9}) 章 ([\d, ]{1,9}) 节(?:\s*([\d, ]{1,9})\s*小节)?", _head)
+        _d92 = ((_num(_m92.group(1)), _num(_m92.group(2)), _num(_m92.group(3)),
+                 _num(_m92.group(4))) if _m92 else None)
         d92_bad = 0 if (_d92 == v) else 1
         if d92_bad:
             print(f"❌ 92号文口径漂移：frontmatter 现 {_d92} ≠ 权威基准 {fmt(v)}（施工后未回写）")
@@ -389,9 +401,9 @@ def cmd_sync(v):
             if in_block:
                 tm = QUAD_RE.search(ln)
                 if tm:
-                    repl = f"{v[0]} 卷 {v[1]} 章" + (f" {v[2]} 节" if tm.group(3) else "")
+                    repl = f"{seg(v[0])} 卷 {seg(v[1])} 章" + (f" {seg(v[2])} 节" if tm.group(3) else "")
                     if (tm.lastindex or 0) >= 4 and tm.group(4):
-                        repl += f" {v[3]} 小节"
+                        repl += f" {seg(v[3])} 小节"
                     new = QUAD_RE.sub(repl, ln, count=1)
                     if new != ln:
                         dirty = True

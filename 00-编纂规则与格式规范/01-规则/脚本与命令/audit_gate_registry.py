@@ -297,6 +297,10 @@ REGISTRY = [
          object="03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb 的 V1–V12 完整性与保真判据",
          trigger="TUHS Wiki 抓取或重抓后、交付前",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="第四十五件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_rule_modality.py",
+         kind="门禁", object="条文用语（能愿动词）停用词：必须／不得／严禁／务必／禁止 作为要求型用语",
+         trigger="改规则语料后（只判相对 HEAD 的新增行；2026-11-15 立）",
+         selftest="--selftest", in_tests_readme=False),
     dict(no="第四十四件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_proofread_forms.py",
          kind="门禁", object="文档校对形式（单位空格／千分空／连接号／、以及／省略号＋等／同形括号）",
          trigger="改规则、模板、号文或新增读者可见文档后（2026-11-14 立）",
@@ -339,6 +343,7 @@ ALL_STAGES = {"G0", "G1", "G2", "G3", "G4", "G5"}
 STAGE_MAP = {
     "audit_data_integrity.py": "G4",
     "audit_proofread_forms.py": "G3,G4",
+    "audit_rule_modality.py": "G4",
     "sync_refactor2026_baseline.py": "G5",
     "audit_sequence_continuity.py": "G4",
     "visual_regression.mjs": "G4",

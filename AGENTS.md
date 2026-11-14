@@ -16,8 +16,8 @@
 - **书评挂靠与外迁**：目录页“本章书目述评”以编号小节挂靠宿主章，卷级综述升格“卷末书目述评”章（每卷至多 1 个）；折叠体全文外迁 `08-核查报告与多轮复核/12-重构大纲书目述评/`，目录页禁载全文（见 28 号文与 `流程规则/00-索引.md`）。
 - **范围**：**禁止编纂正文**；工作范围限于大纲、考据、数据库与目录页。
 
-<!-- BEGIN 口径基准（脚本自动维护，勿手改数字，最后同步 2026-11-12） -->
-- **现行大纲目录口径：76 卷 544 章 3954 节 19468 小节**（四级；小节数随 Task 8 卷批逐卷回写，2026-11-06 起 V01／V02／V03／V04／V11／V21／V31／V51／V61 等卷已落，逐卷清单见 92 号文 §十一；src 标注见 index.html doc-metrics；本行由 `00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --sync` 自动维护）。
+<!-- BEGIN 口径基准（脚本自动维护，勿手改数字，最后同步 2026-11-15） -->
+- **现行大纲目录口径：76 卷 544 章 3 954 节 19 468 小节**（四级；小节数随 Task 8 卷批逐卷回写，2026-11-06 起 V01／V02／V03／V04／V11／V21／V31／V51／V61 等卷已落，逐卷清单见 92 号文 §十一；src 标注见 index.html doc-metrics；本行由 `00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --sync` 自动维护）。
 <!-- END 口径基准（脚本自动维护） -->
 
 卷章数只在标记块与 `05-卷册大纲/目录/index.html` 的 `doc-metrics` 维护，别处不应手写。
@@ -190,6 +190,7 @@
 | 改动 `05-卷册大纲/` 内容或入纲写入后（常备） | `audit_outline_dup.py` | `流程规则/06-门禁体系.md`“大纲重复锚与重复块门禁” | 第三十五件 |
 | 写／改 `DOC_MINE` 补证块、补证台账或例外台账状态后 | `audit_supplement_chain.py`（`--selftest` → `--check`） | `DOC_MINE补证块格式规则.md` §八（D1—D6） | 第四十三件 |
 | 改规则、模板、号文或新增读者可见文档后 | `audit_proofread_forms.py`（`--selftest` → 默认） | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”；`流程规则/01-复核与验证.md`“校对规程” | 第四十四件 |
+| 改规则语料（`AGENTS.md`／`01-规则/**`／`02-操作手册/**`）后 | `audit_rule_modality.py --selftest` → `--diff`（默认 HEAD） | `流程规则/11-治理与体例裁定.md` §二、§四 | 第四十五件 |
 | 改动 `05-卷册大纲/` 内容落地、映射台账、`targets.tsv`／`layout.tsv` 再生（常备） | `audit_outline_landing.py` | `流程规则/06-门禁体系.md`“大纲落地一致性门禁（L1–L17）” | 第三十七件 |
 | 目录页 DATA 段（persons／refs／revs） | `audit_data_integrity.py`、`embed.py --check` | `流程规则/05-目录页与重构2026.md`“DATA 数据完整性门禁” | DATA 门禁 |
 | 页面资产（字体子集／品牌件／自包含性） | `audit_page_assets.py` | `流程规则/05-目录页与重构2026.md`“重构大纲目录页面资产层完整性门禁” | 第九件 |
@@ -219,7 +220,7 @@
 | 目录页结构或计数变动 | `sync_refactor2026_baseline.py --check` | `流程规则/05-目录页与重构2026.md`“重构大纲目录口径同步规则” | 口径同步 |
 | **常备（每批必跑，不涉改动亦跑）** | `sync_refactor2026_baseline.py --check`＋`_longline_status.py --check`＋`audit_gate_registry.py`＋`audit_sidecar_backup.py`＋`audit_rule_dup.py` | `流程规则/05-目录页与重构2026.md`“重构大纲目录口径同步规则”“门禁体系元门禁”“旁路备份残留扫描门禁”；`任务轮替与归档规则.md`；`流程规则/11-治理与体例裁定.md`“规则语料单一落点与去重规则” | 口径同步·长线·元门禁·旁路备份·语料去重 |
 
-**件次索引**（判据正文见 `流程规则/00-索引.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）｜第三十七件＝大纲落地一致性门禁（`audit_outline_landing.py`）｜第三十八件＝小节设计台账一致性门禁（`audit_subsection_design.py`；Task 5.4a，ADR-0020）｜第三十九件＝小节标题一致性与证据完整性门禁（`audit_title_consistency.py`）｜第四十一件＝题名术语形态门禁（`audit_title_term_forms.py`）｜第四十二件＝规则语料单一落点与去重门禁（`audit_rule_dup.py`）｜第四十三件＝DOC_MINE 补证链门禁（`audit_supplement_chain.py`，D1—D6）。
+**件次索引**（判据正文见 `流程规则/00-索引.md` 同名小节）：第五件＝目录页交叉引用门禁（`xref_audit.py`）｜第六件＝大纲注入块证据等级门禁｜第七件＝目录页结构自检门禁｜第八件＝目录页四层解耦与装配｜第九件＝目录页页面资产层完整性门禁｜第十件＝文档格式门禁｜第十一件＝目录页服务器契约门禁｜第十二件＝目录页结构负向自检（`tests/tri_structure_negtest.py`）｜第十三件＝目录页测试夹具新鲜度门禁｜第十四件＝分工注四判据门禁（`audit_note_xref.py`）｜第十五件＝人物库语义完整性门禁｜第十六件＝门禁体系元门禁｜第十七件＝改号同源守卫｜第十八件＝页面版本号递增兜底门禁｜第十九件＝锚解析审计门禁｜第二十件＝重构静默丢失守卫｜第二十二件＝目录页无障碍自动化门禁｜第二十三件＝目录页行为源块作用域门禁｜第二十四件＝全库 Markdown 直角引号清零门禁（`audit_md_quote_glyphs.py`）｜第二十八件＝Markdown 加粗空格门禁（`audit_md_bold_spacing.py`）｜第二十九件＝工程实践基线门禁（`audit_engineering_practice.py`）｜第三十二件＝任务强制审计、复核与轮替门禁（`audit_task_lifecycle.py`）｜第三十三件＝成对锚配平门禁（`audit_anchor_pairs.py`）｜第三十四件＝BEGIN/END 章内配对门禁（`audit_anchor_pair_order.py`）｜第三十五件＝大纲重复锚与重复块门禁（`audit_outline_dup.py`）｜第三十六件＝旁路备份残留扫描门禁（`audit_sidecar_backup.py`）｜第三十七件＝大纲落地一致性门禁（`audit_outline_landing.py`）｜第三十八件＝小节设计台账一致性门禁（`audit_subsection_design.py`；Task 5.4a，ADR-0020）｜第三十九件＝小节标题一致性与证据完整性门禁（`audit_title_consistency.py`）｜第四十一件＝题名术语形态门禁（`audit_title_term_forms.py`）｜第四十二件＝规则语料单一落点与去重门禁（`audit_rule_dup.py`）｜第四十三件＝DOC_MINE 补证链门禁（`audit_supplement_chain.py`，D1—D6）｜第四十五件＝条文用语门禁（`audit_rule_modality.py`）。
 
 **门禁纪律**：判据非空、自检连跑、门禁自身会失效三条见 `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”→“门禁纪律”。
 
