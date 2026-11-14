@@ -1,0 +1,55 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V55.1.3.5	开发者峰会的合办关系	claim	CL-RM-000502		1.30	A	[L3] bhyve 于 2010 年末作为 NetApp 内部项目启动（作者 Neel Natu 与 Peter Grehan），2011-05 在 BSDCan 开发者峰会公布并将源码以 BSD 许可捐赠 FreeBSD，20	可推	claim 复用（先库后网，不重复建）
+V55.1.3.5	开发者峰会的合办关系	claim	CL-6-209		1.30	A	[L3] GELI 加密启动引导代码开发中，gptldr 引导代码的 16 位汇编 64KB 复制限制问题由 Colin Percival 在 EuroBSDCon 2015 开发者峰会后通过 IRC 提交可扩展的可变 32KB 	可推	claim 复用（先库后网，不重复建）
+V55.1.3.5	开发者峰会的合办关系	claim	CL-6-006		1.30	A	[L4] 2013 年 11 月 OpenZFS 项目组织开发者峰会，让各平台开发者分享工作与未来构想并寻找解决方案。	可推	claim 复用（先库后网，不重复建）
+V55.10.1.3	不广为人知的三种原因	claim	CL-RM-037871		1.30	A	[L3] 质疑finger与sendmail漏洞早已广为人知的传言，要求对方举证，并反问若真早知为何不通知伯克利CSRG，称该传言流传已久却无实据。	可推	claim 复用（先库后网，不重复建）
+V55.10.2.1	巨型锁的自适应处理	ref_title	10462	10462	0.227	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.1	巨型锁的自适应处理	ref_title	10463	10463	0.227	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.1	巨型锁的自适应处理	ref_title	10464	10464	0.227	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.1	巨型锁的自适应处理	ref_title	10519	10519	0.227	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.2	保守配置的回退选项	ref_title	10462	10462	0.221	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.2	保守配置的回退选项	ref_title	10463	10463	0.221	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.2	保守配置的回退选项	ref_title	10464	10464	0.221	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.2	保守配置的回退选项	ref_title	10519	10519	0.221	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.3	调度器名称的运行时查询	ref_title	10462	10462	0.249	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.3	调度器名称的运行时查询	ref_title	10463	10463	0.249	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.3	调度器名称的运行时查询	ref_title	10464	10464	0.249	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V55.10.2.3	调度器名称的运行时查询	ref_title	10519	10519	0.249	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V55.11.1.2	云市场镜像的接入	ref_title	10462	10462	0.245	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V55.11.1.2	云市场镜像的接入	ref_title	10463	10463	0.245	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V55.11.1.2	云市场镜像的接入	ref_title	10464	10464	0.245	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V55.11.1.2	云市场镜像的接入	ref_title	10519	10519	0.245	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V55.11.2.1	默认编译器的更换	claim	CL-RM-011289		1.30	A	[L4] 2021年4月matthew green将alpha、amd64、sparc*、riscv*、ia64与vax等端口默认编译器切换为GCC 10并征集回归报告	可推	claim 复用（先库后网，不重复建）
+V55.11.2.1	默认编译器的更换	claim	CL-RM-011287		1.30	A	[L4] 2013年11月Martin Husemann公告sparc64默认编译器代码模型变更并警示二进制兼容性影响，旧用户态与新内核组合需谨慎处理	可推	claim 复用（先库后网，不重复建）
+V55.11.2.1	默认编译器的更换	claim	CL-RM-011241		1.30	A	[L4] 2011年8月7日 matthew green 宣布 i386 与 amd64 默认编译器切换至 GCC 4.5.3	可推	claim 复用（先库后网，不重复建）
+V55.11.3.3	移植树迁移的后置	sacred	2344		0.225	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V55.11.3.3	移植树迁移的后置	sacred	2346		0.225	C	FreeBSD 治理结构	可推	史观参照（不作证据，仅定题面归属）
+V55.12.1.3	镜像托管的基础设施	claim	CL-RM-010457		1.10	A	[L4] 2018 年 10 月 Ed Maste 指出 FreeBSD 托管的 CTM 基础设施早已关停而 ctm(1) 客户端仍留在基系统，引发 Warner Losh、PHK、Rodney Grimes 参与的去留辩论。	可推	claim 复用（先库后网，不重复建）
+V55.12.1.3	镜像托管的基础设施	claim	CL-RM-010244		0.70	A	[L4] 2026 年 7 月 3 日 Ada Team Wiki 页建立——新语言社区的基础设施建设与列表首周活动（gnat15 构建告警、prettier-ada 新 port 提交）	可推	claim 复用（先库后网，不重复建）
+V55.12.1.3	镜像托管的基础设施	claim	CL-RM-010241		0.70	A	[L4] 2002 年社区请求 Core 出面请 IBM 向 NetBSD 捐赠 VM 许可证——大型机移植对专有系统管理程序（VM/她克勒斯之前）的基础设施依赖	可推	claim 复用（先库后网，不重复建）
+V55.12.4.4	核心开发者负担的量化	claim	CL-RM-010305		1.30	A	[L4] 2018 年 3 月 OFED v4.9 大合并（bsd_rdma_4_9）中 Navdeep Parhar 阻击 Hans Petter Selasky：'别急——受影响方确认过 shim 够用吗'——厂商主导大规模合	可推	claim 复用（先库后网，不重复建）
+V55.12.4.4	核心开发者负担的量化	claim	CL-RM-000017		1.30	A	[L4] Matthew Dillon 是 DragonFlyBSD 创始人、前 FreeBSD 核心开发者，主导 HAMMER2 文件系统设计	可推	claim 复用（先库后网，不重复建）
+V55.12.4.4	核心开发者负担的量化	claim	CL-5-013		1.30	A	[L4] Jason Evans 2000 年 KSE 论文提及，将异步 I/O 集成进 libc_r 需先稳定 AIO 实现，再把基于 poll() 的事件循环切换为基于 kqueue() 的事件循环，以在同一循环中集成 I/O	可推	claim 复用（先库后网，不重复建）
+V55.12.4.4	核心开发者负担的量化	claim	CL-5-001		1.30	A	[L4] FreeBSD 核心开发者 Poul-Henning Kamp（phk）1996 年撰文指出，大多数 UNIX 内核已从 swap/segment 转向虚拟内存/页式内存管理，但 malloc/free API 的实现并	可推	claim 复用（先库后网，不重复建）
+V55.12.4.4	核心开发者负担的量化	claim	CL-3-011		1.30	A	[L4] BSD 开发体现少数核心开发者的优势：他们充分理解整个系统并协调彼此工作以产出连贯系统，大型开发组织难以复制。	可推	claim 复用（先库后网，不重复建）
+V55.12.4.4	核心开发者负担的量化	claim	CL-2-055		1.30	A	[L4] McKusick、Karels 与 Bostic（1989）认为 BSD 开发的优势在于少数核心开发者能理解整个系统并协调工作，这是大型开发组织难以复制的。	可推	claim 复用（先库后网，不重复建）
+V55.13.1.2	移植对照的实验方法	fulltext_summary	107	107	0.251	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
+V55.2.1.5	首作者的文件系统实现资历	claim	CL-7-006		0.90	A	[L4] GBDE（GEOM Based Disk Encryption）是 Poul-Henning Kamp 为 FreeBSD 提出的基于 GEOM 的磁盘加密设施，在磁盘（分区）级别运行，可保护任意类型的文件系统或数据库。	可推	claim 复用（先库后网，不重复建）
+V55.2.1.5	首作者的文件系统实现资历	claim	CL-1-017		0.90	A	[L4] 运行于 PDP-11 的原 UNIX 系统采用简单优雅的文件系统，所有磁盘传输均为 512 字节块。	可推	claim 复用（先库后网，不重复建）
+V55.2.1.5	首作者的文件系统实现资历	claim	CL-2-003		0.70	A	[L4] Kridle 与 McKusick（1983）在运行 4.2BSD 的 VAX-11/780 与 VAX-11/750 上测量了多种 I/O 操作下的 UNIX 文件系统吞吐量。	可推	claim 复用（先库后网，不重复建）
+V55.2.2.1	专著题名与出版社著录	fulltext_fact	kf-bell-10022-836	10022	0.226	C	经典度量多维标度法（metric MDS）由普林斯顿大学研究组在1950年代初发明	可推	全文补证候选（S1 命中即复用，D1 型）
+V55.4.2.4	IO-Lite 的缓存统一命题	fulltext_summary	15	15	0.222	C	Programming R. Morris Techniques Editor On the Criteria To Be Used in Decomposing Systems into Modules D.L. Parnas Carne	可推	全文综述候选（D1 型，核对原文后落块）
+V55.5.2.4	执行董事的持续任期	sacred	2456		0.227	C	2005 年 8 月：首位执行董事	可推	史观参照（不作证据，仅定题面归属）
+V55.6.3.1	剑桥项目的资助来源	claim	CL-RM-000008		1.10	A	[L4] DARPA 于 2003 年在 Theo de Raadt 反战评论后撤销对 OpenBSD 安全项目的资助	可推	claim 复用（先库后网，不重复建）
+V55.6.3.6	日本非营利机构的角色	claim	CL-RM-050969		1.10	A	[L4] 求购二手 BSDI 拷贝，说明是非营利机构经费紧张	可推	claim 复用（先库后网，不重复建）
+V55.6.3.6	日本非营利机构的角色	claim	CL-RM-045179		1.10	A	[L3] X3J11成员Jim Williams答无ANSI C标准机读版，因ANSI靠售标准获利，并主张标准应由受资助的非营利机构制定	可推	claim 复用（先库后网，不重复建）
+V55.6.4.4	程序委员会名单的所属缺载	claim	CL-RM-011665		1.70	A	[L4] USENIX Summer 1991（Nashville，主题“多媒体”）征稿与程序委员会名单（主席 Deborah Scherrer/mt Xinu，委员含 Eric Allman、Tom Duff、Avadis Te	可推	claim 复用（先库后网，不重复建）
+V55.6.4.4	程序委员会名单的所属缺载	claim	CL-RM-012083		1.30	A	[L4] LISA V 征稿启事（第五届，1991 秋圣地亚哥）：提出以不可简单放大解决来定义大型安装，程序委员会 Romig/Satdeva/Simmons/Wilson，摘要 6/17、全文 7/8 截稿	可推	claim 复用（先库后网，不重复建）
+V55.8.3.3	公告发布的归档载体	fulltext_summary	94	94	0.234	C	using routing domains / routing tables in a production network Peter Hessler phessler@openbsd.org OpenBSD 27 September, 	可推	全文综述候选（D1 型，核对原文后落块）
+V55.8.4.1	免税条款的适用条件	claim	CL-RM-001504		1.10	A	[L3] 数字天堂诉柚子科技案（"中国 GPL 第一案"，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成"独立作品"而非"演绎作品"，GP	可推	claim 复用（先库后网，不重复建）
+V55.9.2.4	自由再分发的许可条款	claim	CL-RM-011950		1.60	A	[L4] 4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（先库后网，不重复建）
+V55.9.2.4	自由再分发的许可条款	claim	CL-RM-000402		1.60	A	[L3] 1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（先库后网，不重复建）
+V55.9.2.4	自由再分发的许可条款	claim	CL-RM-000401		1.60	A	[L3] 1989 年 6 月，伯克利在 BSD 许可证下发布 Networking Release 1（Net/1），这是第一个可自由再分发的 BSD 版本。	可推	claim 复用（先库后网，不重复建）
+V55.9.2.4	自由再分发的许可条款	claim	CL-4-101		1.60	A	[L4] OpenBSD 严格区分固件许可证——可自由再分发的固件纳入 base 系统，许可证不兼容的固件另行单独分发。	可推	claim 复用（先库后网，不重复建）
+V55.9.2.4	自由再分发的许可条款	claim	CL-RM-011953		1.30	A	[L4] 4.4BSD-Lite 发布信：USL 与加州大学就 Net/2 达成和解、可免许可自由再分发、强烈建议以 Lite 替换全部 Net/2 代码、1000 美元	可推	claim 复用（先库后网，不重复建）
+V55.9.2.4	自由再分发的许可条款	claim	CL-RM-011949		1.30	A	[L4] CSRG 解散公告（McKusick/Bostic）：筹资艰难、厂商自建研究组、BSD 自由再分发致销量下降、Karels 离开致低于临界规模，最终版后关闭	可推	claim 复用（先库后网，不重复建）

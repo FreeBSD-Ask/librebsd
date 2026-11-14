@@ -1,0 +1,56 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V56.1.7.5	保密材料的公开程序	ref_title	2546	2546	0.388	B	California Public Records Act（加州公共记录法，Cal. Gov. Code §§6250-6270）全文 California Legislature 	可推	文献线索（须核全文再定 D1/D2）
+V56.2.3.4	共享库绑定的记录缺环	ref_title	10462	10462	0.264	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V56.2.3.4	共享库绑定的记录缺环	ref_title	10463	10463	0.264	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V56.2.3.4	共享库绑定的记录缺环	ref_title	10464	10464	0.264	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V56.2.3.4	共享库绑定的记录缺环	ref_title	10519	10519	0.264	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V56.2.4.5	地址空间目标的抬升	claim	CL-2-011		1.20	B	[L4] VAX-11/780 于 1978 年推出，是 VAX 架构的首个实现；VAX 设计始于 1975 年，目标是成为 PDP-11 的兼容扩展以解决其虚拟地址空间限制，名称 VAX-11 源自“PDP-11 的虚拟地址扩展	可推	claim 复用（先库后网，不重复建）
+V56.2.5.1	分布式文件规格的公开承诺	claim	CL-RM-010422		1.30	A	[L4] 2008 年 2 月 Robert Watson 花一晚把 Arla 跑上 FreeBSD 8-CURRENT 并发布补丁——新 VFS 时代老分布式文件系统的续命尝试。	可推	claim 复用（先库后网，不重复建）
+V56.2.5.1	分布式文件规格的公开承诺	claim	CL-RM-010421		1.30	A	[L4] 2001 年 10 月 Robert Watson 确认已为 OpenAFS 在 FreeBSD 5.0-CURRENT 分配专用系统调用号——分布式文件系统获得内核接口层正式身份。	可推	claim 复用（先库后网，不重复建）
+V56.2.5.1	分布式文件规格的公开承诺	claim	CL-RM-010412		1.30	A	[L4] 1997 年 12 月 Rob Mallory 发布 Coda 启动包，提议把 CMU 的 Coda 分布式文件系统整合进 FreeBSD-current——授权受阻的 AFS 之外的开源替代路线。	可推	claim 复用（先库后网，不重复建）
+V56.2.5.3	补丁磁带的发行惯例	ref_title	10462	10462	0.270	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V56.2.5.3	补丁磁带的发行惯例	ref_title	10463	10463	0.270	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V56.2.5.3	补丁磁带的发行惯例	ref_title	10464	10464	0.270	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V56.2.5.3	补丁磁带的发行惯例	ref_title	10519	10519	0.270	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V56.2.6.1	版本序列的分界记载	ref_title	10462	10462	0.261	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V56.2.6.1	版本序列的分界记载	ref_title	10463	10463	0.261	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V56.2.6.1	版本序列的分界记载	ref_title	10464	10464	0.261	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V56.2.6.1	版本序列的分界记载	ref_title	10519	10519	0.261	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V56.2.6.1	版本序列的分界记载	claim	CL-RM-010284		1.30	A	[L4] 1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（先库后网，不重复建）
+V56.2.8.1	虚拟内存的移植评估	claim	CL-RM-011600		1.30	A	[L2] Cray 为何弃用虚拟内存的多方回应汇总：base/limit 寄存器保护、内存带宽为超算瓶颈、CDC 205/ETA10 分页性能教训	可推	claim 复用（先库后网，不重复建）
+V56.3.1.1	创立年份与人事清单	fulltext_fact	kf-bell-10021-033	10021	0.226	C	Bell Laboratories成立于1925年	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.3.1.1	创立年份与人事清单	fulltext_fact	kf-bell-10021-875	10021	0.226	C	Bell Laboratories成立于1925年	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.3.5.1	Lite 发行的条款沿袭	sacred	2418		0.276	C	1983 年 8 月：4.2BSD 发布	可推	史观参照（不作证据，仅定题面归属）
+V56.3.8.1	收购公告的时点依据（2001 年 4 月）	ref_title	5922	5922	0.416	B	Creek 收购公告 2000 2000	可推	文献线索（须核全文再定 D1/D2）
+V56.3.8.1	收购公告的时点依据（2001 年 4 月）	fulltext_fact	kf-bell-10019-1280	10019	0.296	C	Mercury Communications Network 于1961年6月完成	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.4.1.6	原始套接字的权限限制	claim	CL-RM-016268		1.30	A	[L3] Robert Elz（kre）对 Roy Marples 的 ROUTE_MSGFILTER 套接字选项提案详致长复：总体不错、类似的机制对 mobility socket 也有用（假若未来加 Mobile IP），并可	可推	claim 复用（先库后网，不重复建）
+V56.4.1.6	原始套接字的权限限制	claim	CL-RM-015666		1.30	A	[L2] Dan McDonald（NRL）1995-02 报告 raw_ip.c 两字符修复——4.4BSD 原始套接字实现巴西。	可推	claim 复用（先库后网，不重复建）
+V56.4.4.2	1.1 规范的兼容承诺	claim	CL-RM-010508		1.10	A	[L4] 2017 年 12 月 Frank Wille 提议在 8.0 前移除 SunOS/68k 兼容层：其 28 位地址空间遗产正是 384MB 任务内存上限的元凶——三十年的兼容承诺走向终结。	可推	claim 复用（先库后网，不重复建）
+V56.5.1.1	合流方向的技术原因	sacred	2310		0.273	C	选择 FreeBSD 的技术原因	可推	史观参照（不作证据，仅定题面归属）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-012885		1.30	A	[L4] dmr 亲笔：贝尔实验室以 Norman Wilson 的 v6 文件服务器挂载 RK05 磁盘镜像档案，尚存 VAX 11/750 可跑 Sixth Edition shell 并称有令人毛骨悚然的亲切感——V6 活态	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-012877		1.30	A	[L4] Turner 当事人回忆：1976 年在贝尔实验室与 PWB/UNIX（Edition 6 基础）开发者共事，inode 1 坏块文件方案失败缘由及 cpio（初为 cpi 与 cpo）起源——一手口述史	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-012560		1.30	A	[L4] Byron Rakitzis 发布 rc shell 的 Unix 实现——贝尔实验室 Plan 9 与 Unix 第 10 版所用 shell 的重实现（附设计说明长文一手公告）	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-012056		1.30	A	[L3] AT&T 贝尔实验室 Griff Smith 介绍其磁带机访问控制资源管理器：限学术使用、仅 SunOS/BSD、因许可暂不发源码、详见 1989 巴尔的摩夏季 USENIX 论文集	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-011627		1.30	A	[L4] AT&T 贝尔实验室 Gary Lindgren 为 UNIX 国际化征集 8 位位使用点清单（如 shell 以第 8 位记引号）——8-bit clean 化工程的起点一手记录	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-011617		1.30	A	[L4] Robert Lake 报道阿尔伯塔大学 PDP 11/45“Chatty Cathy”1986-01-14 运行满 10 万小时，并称该校为 1973 年末 UNIX 首批出贝尔实验室的三所大学之一	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-RM-000513		1.30	A	[L3] Fernando Corbató 与 Robert Daley 等于 1961 年 11 月在 MIT 建成并演示 CTSS，为首个可运行的分时系统；1965 年 MIT、贝尔实验室与通用电气联合启动 Multics；C	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-1-124		1.30	A	[L4] UTF-8 文本编码由 Rob Pike 与 Ken Thompson 在贝尔实验室 Plan 9 项目中设计，其 1993 年论文为 UTF-8 起源的一手文献。	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-1-108		1.30	A	[L4] 1969 年，贝尔实验室团队（主要是 Ossanna、Thompson、Ritchie）开始为 Multics 寻找替代方案，并游说购买中型机器（DEC PDP-10 或 SDS Sigma 7）。	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-1-003		1.30	A	[L4] Unix 的诞生是对 Multics 在贝尔实验室默里山（BTL-MH）开发拖期、无法提供交互能力的直接反应——默里山团队被迫退回到运行 GECOS 的状态	可推	claim 复用（先库后网，不重复建）
+V56.5.1.4	贝尔实验室发行的终止	claim	CL-1-001		1.30	A	[L4] Multics 最初是 MIT、贝尔实验室（BTL）、通用电气（GE）三方联合项目，其开发跨度多年	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	fulltext_fact	kf-bell-10024-1337	10024	0.249	C	Type C carrier是首个被广泛使用的载波系统	可推	全文补证候选（S1 命中即复用，D1 型）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010635		0.70	A	[L4] 2022 年 3 月 FreeBSD Security Officer 用测试列表测试 12.2 生命周期终止公告的多 MIME 格式——安全公告基础设施测试的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010634		0.70	A	[L4] 2001 年 3 月 Jonathan M. Bresler 修改 resend 代码后重新测试——FreeBSD 邮件列表软件（Majordomo）运维代码修改的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010633		0.70	A	[L4] 2000 年 1 月 Jonathan M. Bresler 报告有人因邮件循环收到退信，并检查 freebsd-test 是否同样受影响——FreeBSD 邮件列表运维调试的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010627		0.70	A	[L4] 2010 年 3 月 wen heping 提交 py-pip 包，称 pip 是 easy_install 的替代——pip Python 包管理器早期入 pkgsrc 的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010626		0.70	A	[L4] 2009 年 11 月 Jean-Yves Migeon 导入 libmicro 微基准测试并请求审查，Joerg Sonnenberger 参与讨论跨平台基准比较——性能基准工具入树的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010624		0.70	A	[L4] 2009 年 3 月 Michael Stapelberg 提交 wip/i3，i3 平铺窗口管理器由其作者本人打包——i3 早期入 pkgsrc 的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010622		0.70	A	[L4] 2008 年 12 月 Fulvio Ciriaco 将 tmux 从 0.1 更新到 0.5，称其已真正可用——tmux 终端复用器早期入 pkgsrc 的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010621		0.70	A	[L4] 2008 年 12 月 Petar Bogdanovic 提交 DCC 分布式校验和包，Greg Troxel 参与深入评审——反垃圾邮件基础设施入 pkgsrc 的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010342		0.70	A	[L4] 2010 年 Philip M. Gollucci 宣布 clsung 加入 ruby@ 团队并列出其在 GNATS 自动指派器与多个 ruby 端口上的贡献——语言团队扩容的当事人记录	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010261		0.70	A	[L4] 2021 年 10 月 ports 类别治理提案：为纯文本游戏增设 games-text 虚拟类别（2019 年起 games 类别过大的持续讨论）——ports 分类学演进的当事人记录	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010233		0.70	A	[L4] 2024 年 1 月 Alan Somers 就 aio_read2()/aio_write2() 补丁征询异议（此前 workaround 讨论后）——AIO API 扩展评审收尾的当事人记录（同库 Vinícius 	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010222		0.70	A	[L4] 2018 年 12 月 Richard Scheffenegger 发布完整 RFC6675（SACK 恢复）支持补丁：Nth dupack 或 (N-1)*MSS SACK 字节即进入丢包恢复、兼顾 ACK thinn	可推	claim 复用（先库后网，不重复建）
+V56.5.2.4	广泛使用的当事人记述	claim	CL-RM-010158		0.70	A	[L4] 2019 年 3 月 Dennis Clarke 以'test test .. dead mail list?'试探列表，得'Nope, no humans here'与'与真正的 RISC-V 无关'自嘲回复——fre	可推	claim 复用（先库后网，不重复建）
+V56.5.3.1	工具集的重写工程	ref_title	5638	5638	0.272	C	FreeBSD FUSE Rust 重写工作 	可推	文献线索（须核全文再定 D1/D2）
+V56.5.6.6	产品文档的反向重建	fulltext_summary	68	68	0.282	C	mandoc: becoming the main BSD manual toolbox BSDCan 2015, June 13, Ottawa Ingo Schwarze <schwarze@openbsd.org> Cynthia L	可推	全文综述候选（D1 型，核对原文后落块）
