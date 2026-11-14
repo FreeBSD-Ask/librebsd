@@ -1,3 +1,5 @@
 subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
 V39.11.1.3	corpus_gap	928	CL-RM-495000	academic_work	primary	D1	supp-V39-kunei-b001	supplemented	库内复用：ref928 备案财务文件全文在库（全文块 1）；一 claim 一 evidence
 V39.11.1.3	corpus_gap	926	CL-RM-495001	academic_work	primary	D1	supp-V39-kunei-b001	supplemented	库内复用：ref926 备案财务文件全文在库（全文块 3）；一 claim 一 evidence
+V39.3.4.5	corpus_gap	3782	CL-RM-495099	academic_work	primary	D1	g4p2-liutipan-b001	supplemented	库内复用：ref3782 访谈全文在库（154 块；block_index 全 0，库内 evidence 锚按行 id）
+V39.3.4.5	corpus_gap	10571	CL-RM-495100	news	primary	D2	g4p2-liutipan-b001	supplemented	联网新建：Hacker News 讨论串（news.ycombinator.com 2026-11-14 经 Algolia API 取全文）
