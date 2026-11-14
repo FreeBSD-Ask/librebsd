@@ -28,6 +28,8 @@ E7b `流程规则/00-索引.md` 总索引（2026-11-06 立，ykla“重复行合
    D4 FLOW_INDEX 块 bullet 与全体 H2 多重集一致（缺项、重复、多出皆 FAIL）。
 E8 意图确证接线（理论件／全局节／G0／AGENTS／模板 I）
 E11 角色卡与技能模板接线（agents 4／skills 4／plugin.json／README 登记）
+E13 标准化文献先行阅读接线（理论件／README 登记／工程实践规则 §0.8／AGENTS／模板 I；
+   2026-11-14 立，TG-016）
 
 用法
 ----
@@ -64,6 +66,7 @@ INDEX_BEGIN = "<!-- FLOW_INDEX_BEGIN -->"
 INDEX_END = "<!-- FLOW_INDEX_END -->"
 INTENT_KEYS = ["用户原话", "目标", "非目标", "验收判据", "手段自由度", "未知"]
 FLOW_INTENT_KEYS = ["全任务适用", "档 A", "档 B"]
+STD_KEYS = ["知难行易", "启发式阅读", "吃透", "落地", "失效条件"]
 
 
 def _paths(root: pathlib.Path):
@@ -84,6 +87,7 @@ def _paths(root: pathlib.Path):
         "debt": gov / "技术债登记.md",
         "templates": root / "00-编纂规则与格式规范" / "02-操作手册" / "14-工程实践模板",
         "doctrine": root / "13-软件工程" / "08-intent-first.md",
+        "doctrine10": root / "13-软件工程" / "10-standards-first.md",
         "doctrine_readme": root / "13-软件工程" / "README.md",
         "templ_i": root / "00-编纂规则与格式规范" / "02-操作手册" / "14-工程实践模板"
                    / "模板I-批次提交核对清单.md",
@@ -513,6 +517,31 @@ def run_checks(root: pathlib.Path):
     rows.append(("E11", "角色卡与技能模板接线", not e11_bad,
                  "；".join(e11_bad) if e11_bad else
                  "角色卡 4／技能 4／plugin.json 引用可达／README 登记一致"))
+
+    # E13 标准化文献先行阅读接线（2026-11-14 立，TG-016）
+    e13_bad = []
+    if not p["doctrine10"].exists():
+        e13_bad.append("缺 13-软件工程/10-standards-first.md")
+    else:
+        d10 = _read(p["doctrine10"])
+        lack = [k for k in STD_KEYS if k not in d10]
+        if lack:
+            e13_bad.append("10-standards-first.md 缺关键词：%s" % "、".join(lack))
+    readme13 = _read(p["doctrine_readme"]).splitlines()
+    if not any(line.strip().startswith("|") and "10-standards-first.md" in line
+               for line in readme13):
+        e13_bad.append("13-软件工程/README.md 未在表格行登记 10-standards-first.md")
+    if "0.8 标准化文献先行阅读" not in rule_text or "10-standards-first.md" not in rule_text:
+        e13_bad.append("工程实践规则.md 缺 §0.8 节或 10-standards-first.md 引用")
+    agents13_ok = any("标准化文献" in line and "工程实践规则.md" in line
+                      for line in _read(p["agents"]).splitlines())
+    if not agents13_ok:
+        e13_bad.append("AGENTS.md 无同一行含“标准化文献”与“工程实践规则.md”")
+    if not p["templ_i"].exists() or "标准化文献" not in _read(p["templ_i"]):
+        e13_bad.append("模板I-批次提交核对清单.md 缺失或未含“标准化文献”项")
+    rows.append(("E13", "标准化文献先行阅读接线", not e13_bad,
+                 "；".join(e13_bad) if e13_bad else
+                 "理论件／README 登记／§0.8／AGENTS 行／模板 I 接线一致"))
     return rows, rule_date
 
 
@@ -555,7 +584,9 @@ def _write_fixture(root: pathlib.Path):
     for name in ("模板G-架构决策记录.md", "模板H-技术债登记.md",
                  "模板J-工程实践复审.md"):
         (p["templates"] / name).write_text("# %s\n" % name, encoding="utf-8")
-    p["templ_i"].write_text("# 模板I\n- [ ] 意图确证单已写\n", encoding="utf-8")
+    p["templ_i"].write_text(
+        "# 模板I\n- [ ] 意图确证单已写\n- [ ] 标准化文献清单已锁定并完成四问抽取\n",
+        encoding="utf-8")
     (p["templates"] / "00-模板说明.md").write_text(
         "# 说明\n\n模板G-架构决策记录.md 模板H-技术债登记.md "
         "模板I-批次提交核对清单.md 模板J-工程实践复审.md\n",
@@ -565,7 +596,8 @@ def _write_fixture(root: pathlib.Path):
         "# 工程实践规则\n\n- **复审日期**：2027-01-22\n\n"
         "模板G-架构决策记录.md 模板H-技术债登记.md "
         "模板I-批次提交核对清单.md 模板J-工程实践复审.md\n"
-        "意图确证 见 08-intent-first.md\n",
+        "意图确证 见 08-intent-first.md\n\n"
+        "## 0.8 标准化文献先行阅读\n\n判据见 10-standards-first.md\n",
         encoding="utf-8",
     )
     p["rule_readme"].write_text("工程实践规则.md\n", encoding="utf-8")
@@ -575,14 +607,22 @@ def _write_fixture(root: pathlib.Path):
         "档 A：用户原话、目标、非目标、验收判据、手段自由度、未知\n",
         encoding="utf-8",
     )
+    p["doctrine10"].write_text(
+        "# 10 标准先行：开工前标准化文献启发式阅读\n\n"
+        "知难行易第二体现：开工前分级检索标准化文献，启发式阅读后吃透并落地；失效条件见下。\n",
+        encoding="utf-8",
+    )
     p["doctrine_readme"].write_text(
         "# 13-软件工程\n\n| 文件 | 内文 | 必读 |\n| ---- | ---- | ---- |\n"
-        "| `08-intent-first.md` | x | 是 |\n\n"
+        "| `08-intent-first.md` | x | 是 |\n"
+        "| `10-standards-first.md` | x | 是 |\n\n"
         "templates/agents 与 templates/skills：角色卡与技能模板见 templates/qoder-plugin/README.md。\n",
         encoding="utf-8",
     )
     p["agents"].write_text(
-        "工程实践规则.md\n任何任务开工前先写意图确证（所有任务）\n", encoding="utf-8")
+        "工程实践规则.md\n任何任务开工前先写意图确证（所有任务）\n"
+        "工程类批次开工前的标准化文献启发式阅读（工程实践规则.md §0.8）\n",
+        encoding="utf-8")
     p["flow_dir"].mkdir(parents=True, exist_ok=True)
     (p["flow_dir"] / "01-测试分册.md").write_text(
         "# 测试分册\n\n## 工程实践生命周期与阶段门禁（G0–G5）\n\n"
@@ -751,6 +791,28 @@ def cmd_selftest():
             # E8 README 表格行判定（2026-10-29 补）：仅非表格行提及 08-intent-first.md 须 FAIL
             ("E8", lambda: (tmp / "13-软件工程/README.md").write_text(
                 "# 13-软件工程\n\n08-intent-first.md\n", encoding="utf-8")),
+            # E13 负向之一（2026-11-14 立）：缺理论件
+            ("E13", lambda: (tmp / "13-软件工程/10-standards-first.md").unlink()),
+            # E13 负向之二：规则文件缺 §0.8 节（其余接线保持，只 E13 FAIL）
+            ("E13", lambda: (tmp / "00-编纂规则与格式规范/01-规则/工程实践规则.md").write_text(
+                "# 工程实践规则\n\n- **复审日期**：2027-01-22\n\n"
+                "模板G-架构决策记录.md 模板H-技术债登记.md "
+                "模板I-批次提交核对清单.md 模板J-工程实践复审.md\n"
+                "意图确证 见 08-intent-first.md\n",
+                encoding="utf-8")),
+            # E13 负向之三：AGENTS 行缺“标准化文献”（意图确证行保持）
+            ("E13", lambda: (tmp / "AGENTS.md").write_text(
+                "工程实践规则.md\n任何任务开工前先写意图确证（所有任务）\n", encoding="utf-8")),
+            # E13 负向之四：模板 I 缺“标准化文献”项（意图确证项保持）
+            ("E13", lambda: (tmp / "00-编纂规则与格式规范/02-操作手册/14-工程实践模板"
+                            "/模板I-批次提交核对清单.md").write_text(
+                "# 模板I\n- [ ] 意图确证单已写\n", encoding="utf-8")),
+            # E13 负向之五：README 表格行缺 10-standards-first.md（08 行与 agents/skills 行保持）
+            ("E13", lambda: (tmp / "13-软件工程/README.md").write_text(
+                "# 13-软件工程\n\n| 文件 | 内文 | 必读 |\n| ---- | ---- | ---- |\n"
+                "| `08-intent-first.md` | x | 是 |\n\n"
+                "templates/agents 与 templates/skills：角色卡与技能模板见 templates/qoder-plugin/README.md。\n",
+                encoding="utf-8")),
         ]
         for code, mutate in cases:
             _write_fixture(tmp)
@@ -766,7 +828,7 @@ def cmd_selftest():
         for f in failures:
             print("     - %s" % f)
         return 1
-    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8/E7b/E11 %d 项负向夹具均命中" % len(cases))
+    print("  ✅ 判据非空自检通过：正样本 0 FAIL；E1–E8/E7b/E11/E13 %d 项负向夹具均命中" % len(cases))
     return 0
 
 
@@ -785,7 +847,7 @@ def main():
         print("对象：")
         for key in ("rule", "rule_readme", "flow", "flow_dir", "agents", "gov", "adr_dir",
                     "index", "debt", "templates", "cmd_readme", "registry",
-                    "doctrine", "doctrine_readme", "templ_i"):
+                    "doctrine", "doctrine10", "doctrine_readme", "templ_i"):
             print("  %-10s %s" % (key, _paths(root)[key]))
         return 0
 

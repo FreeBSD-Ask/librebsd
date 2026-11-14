@@ -57,7 +57,7 @@
 | 10 | `10-交叉索引/` | 八类索引（人名／主题／命令／术语／年代 G9／组织机构 G10／概念史 G2／人物传记 G3）已入 `cross_indexes.duckdb`（10 表）；顶层存 `S03-历史对象登记表.md` 与 `S03-historical_objects.json` |
 | 11 | `11-元数据接口/` | `01-章节元数据/chapter_index.json`、`02-交叉引用/cross_reference_map.csv`、`09-文件夹数据库索引/`（`folder_db_registry.csv`＋`cross_db_references.csv`＋`dashboard.md`）＋`metadata_interfaces.duckdb`（含 `build_citation_records` 引文记录＝G7／`timeline_records`）＋`ndb构建脚本-20260922/` |
 | 12 | `12-数据库备份/` | 备份与归档层（补编号缺口 12）；`backup_databases.py`（SCOPE 28 库＝16 功能/史料库＋12 代码仓库库；`--all` 实轮 27 库，historical_claims 由 hc 专项独担）＋`backup_outline.py`（`05-卷册大纲/` tar.gz）；运行日志 `backup_log.jsonl`；**删除本目录任何内容须用户明示** |
-| 13 | `13-软件工程/` | 工程实践方法论基线（原 `13-engineering-doctrine/`，2026-10-29 改名；`ADR-0001` 采纳）：`00-philosophy.md`–`09-reflection-generalization.md` 十篇（含项目侧增补 08 意图确证、09 反思与理论化，2026-10-29）＋`templates/` 九件模板＋`NOTICE.md` 回流记录。**正文不直接改**，可普适条款按 `NOTICE.md` 版本化回流（见 `工程实践规则.md`）；本项目无 PR 平台，模板以批次提交核对清单落地 |
+| 13 | `13-软件工程/` | 工程实践方法论基线（原 `13-engineering-doctrine/`，2026-10-29 改名；`ADR-0001` 采纳）：`00-philosophy.md`–`10-standards-first.md` 十一篇（含项目侧增补 08 意图确证、09 反思与理论化、10 标准先行，2026-10-29／2026-11-14）＋`templates/` 九件模板＋`NOTICE.md` 回流记录。**正文不直接改**，可普适条款按 `NOTICE.md` 版本化回流（见 `工程实践规则.md`）；本项目无 PR 平台，模板以批次提交核对清单落地 |
 
 **编号缺口 06、09**：06 为正文层停用后的空号，09 为保留空号；两号不得复用。
 
@@ -110,6 +110,7 @@
 | 工程类批次的需求基线、ADR、技术债、04／05／06 专项、复审、G6 反思与理论化与既有规则治理 | `工程实践规则.md` |
 | 角色卡与技能模板（title-designer／block-triage／gate-reviewer／volume-merger；四技能）及其使用映射 | `13-软件工程/templates/qoder-plugin/README.md`（E11 接线） |
 | 任何任务开工前的目标与方向判定（含内容编纂、考据、数据库、大纲、归档与一次性小任务） | `流程规则/01-复核与验证.md`“意图确证（知难行易；全任务适用；2026-10-29 立）”＋`工程实践规则.md` §0.6（工程类批次落地细目） |
+| 工程类批次开工前的标准化文献启发式阅读（ISO／IEEE／国标／官方文档／规范／建议；知难行易第二体现） | `13-软件工程/10-standards-first.md`＋`工程实践规则.md` §0.8 |
 | 高风险任务、长线收口、结构加级后的反思、普适性判定与全局回流 | `13-软件工程/09-reflection-generalization.md`＋`工程实践规则.md` §0.7 |
 | 不可逆里程碑的 tag 命名、annotated 说明、台账与禁移动/force | `13-软件工程/09-reflection-generalization.md` §2.10＋`工程实践规则.md` §11 |
 | 临时文件、垃圾文件、旁路副本、缓存与错名目录的清理 | `工程实践规则.md` §12＋`脚本与命令/cleanup_temp.py`＋`audit_temp_residue.py`（第四十件） |
