@@ -16,6 +16,8 @@
 
 "MIT started providing time-sharing service on Multics to users in fall of 1969."
 
+## 提要
+
 Prof. Fano, in his 1964 proposal to ARPA for Project MAC funding, referred to CTSS as a "community utility... capable of supplying computer power to each customer where, when, and in the amount that he needs it..." [Fano64]
 
 "In 1970 GE sold its computer business to Honeywell"
