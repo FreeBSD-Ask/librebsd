@@ -1,0 +1,86 @@
+vol	subsection_id	title	object_id	ref_id	score	snippet	判读处置	判读理由
+32	V32.2.6.3	政策工具的双重定位	5932	5932	0.231	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+32	V32.4.6.5	选择决策的档案痕迹	5817	5817	0.338	T. E. (1993-1996) ncurses 项目文档 1993	拒收（域错路由）	ncurses 项目文档（GNU 系），与 FreeBSD 手册文体/许可选择题域不符
+33	V33.1.5.3	周年纪念的人物名单	5590	5590	0.259	Point 公司档案（portersfiveforce.com、Check Point 2014-10-14 公告、Ch	拒收（域错路由）	Check Point 公司档案，与 BSD 周年纪念人物题域无关
+33	V33.1.9.5	访谈与邮件的互补	2446	2446	0.233	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	转补遗批/维持open	V33.2.1.3 经补遗批联网取证落块（ACM Queue 访谈＋Sleepycat License 双 D2）；其余题核读不成对维持 open
+33	V33.2.1.3	报备与商用分轨的设计	2576	2576	0.234	OpenSSL License（OpenSSL + SSLeay 双许可证）官方文本 1998	拒收（域错路由）	OpenSSL 双许可是 GPL 兼容型，非题面研究轨/商用轨分轨型
+33	V33.2.2.5	品牌条款的后续影响	5462	5462	0.252	Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.s	拒收（域错路由）	ssh.com 1999 商业声明，与研究发行收束/品牌条款题域不符
+33	V33.3.1.3	行动剧目的符号与展演	5932	5932	0.225	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+35	V35.1.6.1	GNU 文本对 BSD 系统的并置表述	2552	2552	0.313	0BSD（Zero-Clause BSD）官方文本 2015	拒收（域错路由）	ref 身份与题面域不符
+35	V35.2.2.3	许可隔离层的设计动机表述	2552	2552	0.287	0BSD（Zero-Clause BSD）官方文本 2015	拒收（域错路由）	ref 身份与题面域不符
+36	V36.10.3.3	包元数据的治理规则	5820	5820	0.223	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.10.3.3	包元数据的治理规则	6007	6007	0.223	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.11.6.1	历史平台的系统性退出	5981	5981	0.253	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.11.6.3	退出后的维护责任	5981	5981	0.229	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.12.3.1	退出按版次逐轮推进	5981	5981	0.257	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.12.3.2	退出与连续性的平衡	5820	5820	0.250	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.12.3.2	退出与连续性的平衡	6007	6007	0.250	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.12.3.2	退出与连续性的平衡	5981	5981	0.234	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.12.8.1	旧设计包袱的主动卸载	5981	5981	0.232	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.14.3.1	退出与连续的解耦	5820	5820	0.224	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.14.3.1	退出与连续的解耦	6007	6007	0.224	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.14.7.2	形态成熟的验收要件	5820	5820	0.224	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.14.7.2	形态成熟的验收要件	6007	6007	0.224	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.15.6.2	制品属性的验收条目	6146	6146	0.235	UPDATING 20251001 条目 2025	拒收（域错路由）	FreeBSD UPDATING 20251000 条目，与题面验收/功能清单语义不符
+36	V36.15.7.1	32 位退出的名单	5981	5981	0.229	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.15.7.2	退出后的 armv7 例外	5981	5981	0.265	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.15.7.3	退出与生态的连带	5820	5820	0.226	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.15.7.3	退出与生态的连带	6007	6007	0.226	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.16.1.2	组织方式的三项要件	5820	5820	0.224	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.16.1.2	组织方式的三项要件	6007	6007	0.224	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.16.2.3	退出后的介质组合	5820	5820	0.255	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.16.2.3	退出后的介质组合	6007	6007	0.255	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.16.2.3	退出后的介质组合	5981	5981	0.239	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.16.5.3	汇合过程中的断点	5820	5820	0.237	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.16.5.3	汇合过程中的断点	6007	6007	0.237	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.17.9.3	回退方案的可用性	5820	5820	0.286	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.17.9.3	回退方案的可用性	6007	6007	0.286	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.18.1.3	二进制包的产出链	5820	5820	0.283	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.18.1.3	二进制包的产出链	6007	6007	0.283	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.18.4.3	冻结与解冻的程序	5820	5820	0.251	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.18.4.3	冻结与解冻的程序	6007	6007	0.251	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.19.5.1	内核话题的划归界	5820	5820	0.279	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+36	V36.19.5.1	内核话题的划归界	6007	6007	0.279	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+36	V36.19.6.1	未归条目的构成占比	6146	6146	0.275	UPDATING 20251001 条目 2025	拒收（域错路由）	FreeBSD UPDATING 20251000 条目，与题面验收/功能清单语义不符
+36	V36.4.5.3	自 6.x 起的接口稳定	5554	5554	0.238	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-	拒收（域错路由）	Josey Unix 标准 FAQ，与 6.x ABI 题域无关
+36	V36.5.4.3	能力模式的落地窗口	6119	6119	0.259	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. 	拒收（域错路由）	WireGuard 入内核新闻，与能力模式题域无关
+36	V36.6.2.2	巨锁退出的分步推进	5981	5981	0.264	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.7.8.1	旧假设的逐条失效	5811	5811	0.248	V **R3.2** `/etc/shadow` 文件规范 (**1987**) 1987	拒收（域错路由）	SVR3.2 /etc/shadow 规范条目，与 FreeBSD 旧假设题域无关
+36	V36.7.8.2	旧平台的支持终止	5981	5981	0.250	BitKeeper 退出 	拒收（域错路由）	BitKeeper 退出条目（Linux 语境），与 FreeBSD 平台退出题域不符
+36	V36.9.6.1	能力模式的系统位置	6119	6119	0.245	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. 	拒收（域错路由）	WireGuard 入内核新闻，与能力模式题域无关
+38	V38.5.3.1	语言团队的自治结构	2460	2460	0.235	OpenBSD 邮件列表存档（marc.info） marc.info 	拒收（域错路由）	OpenBSD 邮件列表存档，V38/V40 题域错配（FreeBSD 人物志/NetBSD 卷）
+38	V38.5.4.2	社区镜像的自愿供给	5932	5932	0.249	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+39	V39.1.5.2	商业化压力下的收束	5462	5462	0.260	Communications Security 1999 商业许可证声明 [EB/OL]. <https://www.s	拒收（域错路由）	ssh.com 1999 商业声明，与研究发行收束/品牌条款题域不符
+39	V39.12.3.1	手册文体的规范底本	5817	5817	0.341	T. E. (1993-1996) ncurses 项目文档 1993	拒收（域错路由）	ncurses 项目文档（GNU 系），与 FreeBSD 手册文体/许可选择题域不符
+39	V39.12.3.3	官方文本的语气控制	2552	2552	0.299	0BSD（Zero-Clause BSD）官方文本 2015	拒收（域错路由）	ref 身份与题面域不符
+39	V39.12.5.2	共同体回应的意见分化	2462	2462	0.228	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	拒收（域错路由）	Fabry 1980 VLSI OS 提案（DTIC），与 FreeBSD 文化卷商业题域无关
+39	V39.5.6.3	商业目标与项目议程	2462	2462	0.261	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	拒收（域错路由）	Fabry 1980 VLSI OS 提案（DTIC），与 FreeBSD 文化卷商业题域无关
+39	V39.7.4.3	商业需求对议程的塑造	2462	2462	0.274	Fabry 提案：A VLSI Design OS（DTIC ADA094691） FABRY R S 1980	拒收（域错路由）	Fabry 1980 VLSI OS 提案（DTIC），与 FreeBSD 文化卷商业题域无关
+39	V39.8.5.1	定位话语的调整轨迹	2446	2446	0.228	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	转补遗批/维持open	V33.2.1.3 经补遗批联网取证落块（ACM Queue 访谈＋Sleepycat License 双 D2）；其余题核读不成对维持 open
+40	V40.1.2.5	邮件列表上的公开争执	5812	5812	0.324	&T UNIX Software Operation (1990.3.28) 公开邮件列表（确认 SVR4 商业 $10	拒收（域错路由）	TUHS 1990 SVR4 商业化问答存档，与 NetBSD 卷题域错配
+40	V40.1.2.5	邮件列表上的公开争执	2460	2460	0.223	OpenBSD 邮件列表存档（marc.info） marc.info 	拒收（域错路由）	OpenBSD 邮件列表存档，V38/V40 题域错配（FreeBSD 人物志/NetBSD 卷）
+40	V40.2.5.5	贡献记录的可考程度	5820	5820	0.238	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.2.5.5	贡献记录的可考程度	6007	6007	0.238	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+40	V40.3.6.5	共享代码的实际比例	5820	5820	0.253	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.3.6.5	共享代码的实际比例	6007	6007	0.253	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+40	V40.4.5.1	包数量的增长曲线	5820	5820	0.255	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.4.5.1	包数量的增长曲线	6007	6007	0.255	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+40	V40.4.5.2	二进制仓库的运营	5820	5820	0.257	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.4.5.2	二进制仓库的运营	6007	6007	0.257	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+40	V40.4.7.5	外部声音的进入渠道	2460	2460	0.256	OpenBSD 邮件列表存档（marc.info） marc.info 	拒收（域错路由）	OpenBSD 邮件列表存档，V38/V40 题域错配（FreeBSD 人物志/NetBSD 卷）
+40	V40.5.5.1	维护人手的实际规模	5820	5820	0.226	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.5.5.1	维护人手的实际规模	6007	6007	0.226	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+40	V40.5.6.6	公开讨论的史料凭据	5812	5812	0.240	&T UNIX Software Operation (1990.3.28) 公开邮件列表（确认 SVR4 商业 $10	拒收（域错路由）	TUHS 1990 SVR4 商业化问答存档，与 NetBSD 卷题域错配
+40	V40.6.5.1	发布工程的职责划分	5932	5932	0.272	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+40	V40.6.6.5	定位叙述的自我修正	5932	5932	0.317	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+40	V40.6.8.1	ARM 多核的实现要点	5635	5635	0.222	BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-0	拒收（域错路由）	OpenJDK BSD Port 项目页，与 NetBSD ARM/发行题域无关
+40	V40.8.1.6	背景材料的甄别办法	5932	5932	0.301	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+40	V40.8.7.4	9.0 的功能条目	6146	6146	0.251	UPDATING 20251001 条目 2025	拒收（域错路由）	FreeBSD UPDATING 20251000 条目，与题面验收/功能清单语义不符
+40	V40.9.1.5	目标的公开表述形式	2446	2446	0.244	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	转补遗批/维持open	V33.2.1.3 经补遗批联网取证落块（ACM Queue 访谈＋Sleepycat License 双 D2）；其余题核读不成对维持 open
+40	V40.9.5.1	贡献者结构的统计	5820	5820	0.222	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.9.5.1	贡献者结构的统计	6007	6007	0.222	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
+40	V40.9.6.6	路线与现实的落差	6146	6146	0.226	UPDATING 20251001 条目 2025	拒收（域错路由）	FreeBSD UPDATING 20251000 条目，与题面验收/功能清单语义不符
+40	V40.9.7.4	发行公告的技术要点	5635	5635	0.230	BSD Port Project (openjdk.java.net/projects/bsd-port/，2026-0	拒收（域错路由）	OpenJDK BSD Port 项目页，与 NetBSD ARM/发行题域无关
+40	V40.9.7.6	公告日期与镜像时间戳的错位	5932	5932	0.283	与 Spencer 1985-12 net.sources 公告 1985	拒收（域错路由）	Spencer 1985 sudo 公告，与各卷发布工程/镜像/政策题域无关
+40	V40.9.9.6	包管理权的归属争议	5820	5820	0.228	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/r	拒收（域错路由）	neovim GitHub release 条目，与题面域无关（Release/版本同词错路由）
+40	V40.9.9.6	包管理权的归属争议	6007	6007	0.228	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:5	拒收（域错路由）	openzfs 仓库 tag 条目，与题面域无关（版本号同词错路由）
