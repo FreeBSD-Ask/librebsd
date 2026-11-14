@@ -63,3 +63,16 @@ This software distribution is only available on two
 Q13（发行信：Net/2 替换建议）:
 We strongly recommend that you
 replace any Net/2 source or binary code with 4.4BSD-Lite.
+
+## b002 追加引文（2026-11-14）
+
+Q14（停摆陈述全句）:
+Because the Computer Systems Research Group has shut down (other than a brief reunion to put together this release)
+
+Q15（无人应援后果）:
+there will not be anyone available at Berkeley to assist with problems, so
+sites are encouraged to ensure enough local expertise to
+find and fix any problems that are encountered.
+
+Q16（署名行）:
+Marshall Kirk McKusick

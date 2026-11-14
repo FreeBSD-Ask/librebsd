@@ -17,3 +17,8 @@ Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.
 
 Q3（blk86，三系以 Lite 为基重启）:
 So, all the BSD groups that were doing releases at that time, BSDI, NetBSD, and FreeBSD, had to restart their code
+
+## b002 追加引文（2026-11-14）
+
+Q4（blk88，交棒让位）:
+we felt that it was time to let others with fresh ideas and boundless enthusiasm take over.

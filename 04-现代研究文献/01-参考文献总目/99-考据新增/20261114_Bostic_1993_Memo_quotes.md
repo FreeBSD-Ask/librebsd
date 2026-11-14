@@ -26,3 +26,9 @@ Q5（blk0，末次发行明言）:
 This  distribution is the final
 release that will be done by the Computer  Systems  Research
 Group  (CSRG).
+
+## b002 追加引文（2026-11-14）
+
+Q6（blk0，终局专节预告）:
+For details on the demise of CSRG, see ``The
+End of BSD from Berkeley'' below.
