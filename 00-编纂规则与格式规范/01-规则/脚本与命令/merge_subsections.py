@@ -50,7 +50,7 @@ SUB_LINE_RE = re.compile(r"^  -\s+(\d{1,3})\.(\d{1,3})\.(\d{1,4})(\s+)(.*)$")
 
 
 def _cn2int(s):
-    """中文数字 → int（1–99；阿拉伯直返；失败 None）。"""
+    """中文数字 → int（1—99；阿拉伯直返；失败 None）。"""
     if s.isdigit():
         return int(s)
     if s in CN2:

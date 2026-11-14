@@ -17,7 +17,7 @@
 口径
 ----
 - 节数：targets 实测；已批卷改用该卷台账实测（V01 因 2.3 拆节记 61，ykla 2026-10-29 已批）。
-- 标题估算：J3 每节 2–12，中位 6；已批卷改用 `title.ok` 的 `title_count` 实测。
+- 标题估算：J3 每节 2—12，中位 6；已批卷改用 `title.ok` 的 `title_count` 实测。
 - 状态：由 `title-design/approved/V{NN}.title.ok` 派生（存在且台账在盘即 approved，否则 pending）；
   不再按卷号写死。
 - `no_corpus_sections`：mapping.tsv 命中 0 行的节数，与标题层 `corpus_gap` 例外口径不同。
@@ -131,9 +131,9 @@ def render_card(r, sha=""):
                  "`映射/里程碑tag台账.tsv`。本组不再重复作业。\n"
                  % (tmid, (sha or "?")[:8]))
     if status == "approved":
-        title_line = "- 已定稿标题：%s 条（台账实测；J3 每节 2–12）\n" % tmid
+        title_line = "- 已定稿标题：%s 条（台账实测；J3 每节 2—12）\n" % tmid
     else:
-        title_line = "- 预计标题：%s–%s（中位 %s；J3 每节 2–12）\n" % (tmin, tmax, tmid)
+        title_line = "- 预计标题：%s–%s（中位 %s；J3 每节 2—12）\n" % (tmin, tmax, tmid)
     return "".join([
         "# %s 第 %s 卷 标题设计任务组\n\n" % (gid, vol),
         "> 协议：`../README.md`；注册表：`../taskgroups.tsv`（本组数值以该行为准）。\n",

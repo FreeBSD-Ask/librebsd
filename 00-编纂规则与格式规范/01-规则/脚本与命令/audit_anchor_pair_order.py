@@ -238,7 +238,7 @@ def cmd_selftest():
             print("  " + b, file=sys.stderr)
         return 1
     print("判据非空自检 PASS：10 项（数值序配对 1／字典序负向对照 2／P1 3／P2 4／"
-          "中文形态 5／block 豁免 6／P4 7／跨章拆解 8–10）")
+          "中文形态 5／block 豁免 6／P4 7／跨章拆解 8—10）")
     return 0
 
 

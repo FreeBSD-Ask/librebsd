@@ -47,12 +47,14 @@ import tarfile
 import tempfile
 
 # ===== 路径常量（机器固定值，迁移时同步更新）=====
-INDEX_HTML = r'D:/librebsd/05-卷册大纲/目录/index.html'
-DOC_CSS = r'D:/librebsd/05-卷册大纲/目录/assets/doc.css'
-DOC_JS = r'D:/librebsd/05-卷册大纲/目录/assets/doc.js'
-THEME_JS = r'D:/librebsd/05-卷册大纲/目录/assets/theme-preset.js'
-CATALOG_JSON = r'D:/librebsd/05-卷册大纲/目录/data/catalog.json'
-FONT_SOURCE_TGZ = r'D:/librebsd/script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz'
+_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+_DOC = os.path.join(_ROOT, "05-卷册大纲", "目录")
+INDEX_HTML = os.path.join(_DOC, "index.html")
+DOC_CSS = os.path.join(_DOC, "assets", "doc.css")
+DOC_JS = os.path.join(_DOC, "assets", "doc.js")
+THEME_JS = os.path.join(_DOC, "assets", "theme-preset.js")
+CATALOG_JSON = os.path.join(_DOC, "data", "catalog.json")
+FONT_SOURCE_TGZ = os.path.join(_ROOT, "script", "_font_embed_20260905", "lxgw-wenkai-screen-webfont-1.7.0.tgz")
 FONT_FAMILY = 'LXGW WenKai Screen'
 # 装配器与仓库根（写回 doc.css 后强制装配，TD-018／ADR-0012）
 REPO = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),

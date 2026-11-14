@@ -243,7 +243,7 @@ def refresh_source_cmap():
         "# 字体源：script/_font_embed_20260905/lxgw-wenkai-screen-webfont-1.7.0.tgz\n"
         "#   字体源 sha256：%s\n"
         "#   分片数：%d ／ 合并后码位数：%d\n"
-        "# 格式：每行一个码位区间 `XXXX-YYYY`，单码位写作 `XXXX`（十六进制大写，4–6 位）\n"
+        "# 格式：每行一个码位区间 `XXXX-YYYY`，单码位写作 `XXXX`（十六进制大写，4—6 位）\n"
         % (sha, n, len(cps))
     )
     txt = head + ranges_to_text(cmap_to_ranges(cps)) + "\n"

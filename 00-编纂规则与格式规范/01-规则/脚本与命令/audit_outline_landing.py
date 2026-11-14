@@ -211,7 +211,7 @@ _CN2 = "一二三四五六七八九十"
 
 
 def _cn2int(s):
-    """中文数字 → int（1–99；阿拉伯直返；失败 None）。"""
+    """中文数字 → int（1—99；阿拉伯直返；失败 None）。"""
     if s.isdigit():
         return int(s)
     if s in _CN2:

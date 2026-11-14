@@ -19,7 +19,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(r"D:/librebsd")
+ROOT = Path(__file__).resolve().parents[3]
 TD = ROOT / "05-卷册大纲/映射/title-design"
 
 # —— R29：官方名白名单（半角为唯一合法形态）——

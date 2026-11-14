@@ -148,27 +148,27 @@ p8 = OUT / "n_c_long_title.html"
 old3 = re.search(r"<h2>(第[一二三四五六七八九十]+卷)\s\s*UNIX 技术专题史[^<]*</h2>", h)
 assert old3, "N-c 夹具无法定位 UNIX 技术专题史卷题"
 p8.write_text(h.replace(old3.group(0),
-                        "<h2>%s  UNIX 技术专题史：内核、进程、文件系统、网络栈、存储、软件工程与工程文化的横向综览（1971–1989）</h2>"
+                        "<h2>%s  UNIX 技术专题史：内核、进程、文件系统、网络栈、存储、软件工程与工程文化的横向综览（1971—1989）</h2>"
                         % old3.group(1), 1),
               encoding="utf-8", newline="\n")
 
-p9 = OUT / "n_d_half_hyphen.html"
-# 半角连字符：把 BSD–Linux 改回 BSD-Linux（项目名复合词形）
-assert "BSD–Linux" in h or "BSD–UNIX" in h, "N-d 夹具无法定位复合词"
-p9.write_text(h.replace("BSD–Linux", "BSD-Linux", 1).replace("BSD–UNIX", "BSD-UNIX", 1), encoding="utf-8", newline="\n")
+p9 = OUT / "n_d_compound_endash.html"
+# 复合词连接号旧形（en dash）：2026-11-14 J1 后项目名复合词用短横线“-”，en dash 形为违规形
+assert "BSD-Linux" in h or "BSD-UNIX" in h, "N-d 夹具无法定位复合词"
+p9.write_text(h.replace("BSD-Linux", "BSD-Linux", 1).replace("BSD-UNIX", "BSD-UNIX", 1), encoding="utf-8", newline="\n")
 
 cases += [
     (p6, "N-a2 层序反转", "N-a2"),
     (p7, "N-b1 缺卷导言", "N-b1"),
     (p8, "N-c 卷名超长", "N-c"),
-    (p9, "N-d 半角连字符", "N-d"),
+    (p9, "N-d 复合词 en dash 旧形", "N-d"),
 ]
 
 # ── N-e～N-i（2026-09-27 补遗追加）：五种节级结构裁决缺陷 ────────────────────
-# N-e 年序回落：把卷 5 ch1 1.5 的年份 1975–1976 改为 1970（早于 ch1 前节 1974）
+# N-e 年序回落：把卷 5 ch1 1.5 的年份 1975—1976 改为 1970（早于 ch1 前节 1974）
 p10 = OUT / 'n_e_year_regress.html'
-assert 'Berkeley Pascal（1975–1976）' in h, 'N-e 夹具无法定位'
-p10.write_text(h.replace('Berkeley Pascal（1975–1976）', 'Berkeley Pascal（1970–1976）', 1), encoding='utf-8', newline='\n')
+assert 'Berkeley Pascal（1975—1976）' in h, 'N-e 夹具无法定位'
+p10.write_text(h.replace('Berkeley Pascal（1975—1976）', 'Berkeley Pascal（1970—1976）', 1), encoding='utf-8', newline='\n')
 
 # N-f 节题长度（**软限**，2026-09-27 ykla 裁定）：把卷 3 ch1 1.2 节题拉长到新计数口径下逾 60 字（不含注）。
 #   该条**不在**「拦下」式 cases 内（软限不阻断），另以软限断言核验：须报 WARN 且门禁 exit 0。
@@ -420,7 +420,7 @@ targets = {"K 无章之卷": "无章之卷 1", "K 无节之章": "无节之章 1
            "N-a2 层序反转": "N-a2 后设层",
            "N-b1 缺卷导言": "N-b1 缺卷导言",
            "N-c 卷名超长": "N-c 卷名超 36 字",
-           "N-d 半角连字符": "N-d 题文复合词用半角连字符",
+           "N-d 复合词 en dash 旧形": "N-d 题文复合词用 en dash 旧形",
            "N-e 年序回落": "N-e 年序回落",
            "N-g 述评非末位": "N-g",
            "N-h 节数超载": "N-h",

@@ -24,7 +24,7 @@ B2 候选 pk 唯一、全在 `pk_range` 内，且候选数 `<= n`（判读后子
    即 FAIL；抽样行若 `length(正文)==65535` 另加一行 WARN（疑字段截断，不判 FAIL）；
    未给 `--srcdb` 时本项标注 SKIP（源库存在性未核，不得视为 PASS）
 B3 `--narr` 行数等于候选行数，pk 集合等于候选 pk 集合；
-   另按 H 线口径校验叙述语义：每行叙述 60–140 字且句末不带标点
+   另按 H 线口径校验叙述语义：每行叙述 60—140 字且句末不带标点
    （`--narr-min`／`--narr-max` 可调；`--no-narr-semantics` 可关闭）
 B4 `--claim-map` 键集合等于候选 pk 集合
 B5 `--db`：claim_map 的 claim_id 全部在库内存在；本批 min–max 号段连续无洞

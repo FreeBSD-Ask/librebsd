@@ -5,7 +5,7 @@
 生成两件派生权威件（均写大纲树根级）：
 
   * `chapter_keywords.json`：schema `theme-index/4`
-      章（544）／节（3,951）全覆盖；普通节 3–6 词、元节 1–3 词；
+      章（544）／节（3,951）全覆盖；普通节 3—6 词、元节 1—3 词；
       小节只存与所属节的差分；附 `technical_terms`／`projects`／`subs_sha1`。
   * `theme_index.json`：schema `theme-reverse/2`
       主题→章／节／小节反查，供 claim 库与大纲库按主题分流与上卷。
@@ -317,7 +317,7 @@ def extract_tech(text, themes, by_id):
 
 
 def auto_terms(title, existing, banned, vocab_labels):
-    """标题内 2–6 字中文名词补位（最多 2 个，不臆造）。"""
+    """标题内 2—6 字中文名词补位（最多 2 个，不臆造）。"""
     out = []
     for run in re.findall(r"[\u4e00-\u9fff]{2,6}", title):
         if run in banned or run in vocab_labels or run in existing or run in out:

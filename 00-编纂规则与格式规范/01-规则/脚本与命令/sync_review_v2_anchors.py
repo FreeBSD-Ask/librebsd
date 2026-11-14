@@ -42,7 +42,7 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = "D:/librebsd"
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 SUITE = os.path.join(HERE, "review_v2_full.py")
 OUTLINE = "05-卷册大纲/目录/data/outline.txt"
 

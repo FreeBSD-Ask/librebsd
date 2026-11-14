@@ -21,7 +21,7 @@
 --------
 A 台账结构（表头、唯一性、层级对位、order 连续、status 枚举）
 B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度、
-   年代括注：全角括号＋U+2013，含全角括号内 ASCII 连字符年份区间（2026-11-04 增补，G-19））
+   年代括注：全角括号＋U+2014 一字线，含全角括号内 ASCII 连字符与 U+2013 年份区间（2026-11-04 增补，G-19；2026-11-14 按 J1 改一字线））
 C 字符 C1–C3／C5–C9（中英空格、直角引号、ASCII 句读、空白与不可见字符、术语、
    禁词：Q2「谱系」＋《释读规则》读者面禁名＋进步叙事与等级修辞（R31）＋劳动禁词（R32）；
    技术义「失败」（构建／装载／校验失败等及「失败日志」类技术对象形态）白名单豁免，见
@@ -149,9 +149,10 @@ PATTERN_TECH = re.compile(r"[A-Za-z]{2,}|POSIX|IEEE|ANSI|ISO|RFC|USENIX|ACM")
 STANDARD = re.compile(r"(IEEE\s*Std|POSIX|ISO/IEC|ANSI|RFC\s*\d+|USENIX)")
 YEAR_IN = re.compile(r"\d{4}")
 BAD_PAREN = re.compile(r"\(\s*\d{4}|\d{4}\s*\)")
-# B7 扩展（2026-11-04 增补，G-19／3A6-2 R42）：全角括号内年份区间用 ASCII 连字符
-# （如「（1980-2026）」）判 FAIL，须改 U+2013「–」（T7 正形）；既有 BAD_PAREN 语义不变。
+# B7 扩展（2026-11-04 增补，G-19／3A6-2 R42；2026-11-14 按 J1 改一字线）：全角括号内年份区间用
+# ASCII 连字符或 U+2013 判 FAIL，须改 U+2014「—」（T7 正形）；既有 BAD_PAREN 语义不变。
 BAD_PAREN_FW_HYPHEN = re.compile(u"（[^（）]*\\d{4}\\s*-\\s*\\d{4}[^（）]*）")
+BAD_PAREN_EN_DASH = re.compile(u"（[^（）]*\\d{4}\\s*–\\s*\\d{4}[^（）]*）")
 CROSS_REF = re.compile(u"（另见[^）]*）")
 # D3 卷段豁免（2026-11-04 入库，G-02／3A6-2 R04）：ykla 2026-11-02 改判——V01–V50 卷段
 # 「同节字数极差 ≤14」不作要求（字数相似豁免）。豁免仅限 D3 本判据与 V01–V50 两界，
@@ -374,12 +375,12 @@ def run(root, collect=None):
 
     bad_t6 = ["%s（%d 字）" % (r["subsection_id"], _title_len(r["title"]))
               for _, _, r in all_rows if not (8 <= _title_len(r["title"]) <= 40)]
-    f("B6", "B6 长度 8–40 字（去空格）", bad_t6,
+    f("B6", "B6 长度 8—40 字（去空格）", bad_t6,
       "越界 %d 处：%s" % (len(bad_t6), "、".join(bad_t6[:5]) or "无"))
 
     bad_t7 = [r["subsection_id"] for _, _, r in all_rows
-              if BAD_PAREN.search(r["title"]) or BAD_PAREN_FW_HYPHEN.search(r["title"])]
-    f("B7", "B7 年代括注须全角括号与 U+2013（全角括号内禁 ASCII 连字符年份区间）", bad_t7,
+              if BAD_PAREN.search(r["title"]) or BAD_PAREN_FW_HYPHEN.search(r["title"]) or BAD_PAREN_EN_DASH.search(r["title"])]
+    f("B7", "B7 年代括注须全角括号与 U+2014（全角括号内禁 ASCII 连字符与 U+2013 年份区间）", bad_t7,
       "命中 %d 处：%s" % (len(bad_t7), "、".join(bad_t7[:5]) or "无"))
 
     # ---------------- C 字符
@@ -834,7 +835,7 @@ def cmd_selftest():
     进步叙事与等级修辞＋历史必然词组＋劳动禁词，R31／R32）／C9（原 C4 重编，G-01）／
     C8a／C8b／C8c／F2／F3／G1／H1／A2／A3／D1／G2／H2／H3，另含 B7 全角括号内
     ASCII 连字符（G-19）、D3 V01–V50 豁免（EXEMPT 且 B2 照判不外溢，G-02）与
-    D3 V51+ 照判两组豁免用例；正例含「偶然性与必然性」辩证合法用例与 B7 U+2013
+    D3 V51+ 照判两组豁免用例；正例含「偶然性与必然性」辩证合法用例与 B7 U+2014
     正形各一（零误报）。
     """
     good = ["自动计算的观念源流", "差分机与通用计算的分离", "形式化纲领的边界"]
@@ -1005,11 +1006,15 @@ def cmd_selftest():
     expect("反例 B7 全角括号内 ASCII 连字符", "B7",
            ["网络栈的重构（1980-2026）", good[1], good[2]], sources=src3)
 
-    # B7 U+2013 正形不误报：零 FAIL。
-    tmp = build("04", ["网络栈的重构（1980–2026）", good[1], good[2]], sources=src3)
+    # B7 扩展：全角括号内 U+2013 年份区间命中（J1 后旧形）。
+    expect("反例 B7 全角括号内 U+2013", "B7",
+           ["网络栈的重构（1980—2026）", good[1], good[2]], sources=src3)
+
+    # B7 U+2014 正形不误报：零 FAIL。
+    tmp = build("04", ["网络栈的重构（1980—2026）", good[1], good[2]], sources=src3)
     rows = run(tmp)
     n_fail = sum(1 for _, _, ok, _ in rows if not ok)
-    cases.append(("B7 正例：U+2013 正形（零 FAIL）", n_fail == 0, "FAIL=%d" % n_fail))
+    cases.append(("B7 正例：U+2014 正形（零 FAIL）", n_fail == 0, "FAIL=%d" % n_fail))
 
     # ---- 2026-11-04 P4 增补自检：collect 逐题命中（--json 数据面）＋例外台账扩展列兼容
     col = {}
@@ -1047,7 +1052,7 @@ def cmd_selftest():
     odir = os.path.join(t_j, "05-卷册大纲", "目录", "data")
     os.makedirs(odir, exist_ok=True)
     w(os.path.join(odir, "outline.txt"),
-      "# 第六十八卷 编程之夏（2005–2026）\n"
+      "# 第六十八卷 编程之夏（2005—2026）\n"
       "- 1.1 编程之夏的创立动机与首届组织\n"
       "- 1.2 津贴制度与付费开源的起点记述\n"
       "- 1.3 选拔机制的多口径对照\n"
@@ -1074,14 +1079,14 @@ def cmd_selftest():
     cases.append(("J3 节题禁 AI 词命中（1.6 赋能／闭环）",
                   _jok("J3", False) and any("赋能" in det for c, _, ok, det in rj if c == "J3"),
                   "期望 FAIL 且点名赋能"))
-    cases.append(("J4 孤立节（1.5–1.11 台账无族）",
+    cases.append(("J4 孤立节（1.5—1.11 台账无族）",
                   _jok("J4", False) and any("台账无族" in det for c, _, ok, det in rj if c == "J4"),
                   "期望 FAIL 且台账无族"))
     # 干净正形：同夹具仅保留对位四行 → J1–J4 全 PASS
     t_j2 = build("68", j_titles, sources=src3, secs=[1, 2, 3, 4])
     os.makedirs(os.path.join(t_j2, "05-卷册大纲", "目录", "data"), exist_ok=True)
     w(os.path.join(t_j2, "05-卷册大纲", "目录", "data", "outline.txt"),
-      "# 第六十八卷 编程之夏（2005–2026）\n"
+      "# 第六十八卷 编程之夏（2005—2026）\n"
       "- 1.1 编程之夏的创立动机与首届组织\n"
       "- 1.2 津贴制度与付费开源的起点记述\n"
       "- 1.3 选拔机制的多口径对照\n"
@@ -1097,7 +1102,7 @@ def cmd_selftest():
     odir3 = os.path.join(t_j3, "05-卷册大纲", "目录", "data")
     os.makedirs(odir3, exist_ok=True)
     w(os.path.join(odir3, "outline.txt"),
-      "# 第六十八卷 编程之夏（2005–2026）\n"
+      "# 第六十八卷 编程之夏（2005—2026）\n"
       "- 1.1 编程之夏的创立动机与首届组织\n"
       "- 1.2 短题甲\n"
       "- 1.3 短题乙\n"

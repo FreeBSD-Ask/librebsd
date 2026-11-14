@@ -23,7 +23,7 @@ R3 **无漏接线**：`脚本与命令/audit_*.py` 全部已登记（防“写�
 R4 **有规则引用**：每个登记脚本名至少出现在 `流程规则.md`／`AGENTS.md`／
    `脚本与命令/README.md`／`05-卷册大纲/目录/tests/README.md` 之一（AGENTS.md 要求固定脚本须由规则文件引用）
 R5 **套件清单一致**：标记 `in_tests_readme` 的登记件，其文件名须出现在 `tests/README.md`
-R6 **自检覆盖**（仅报告）：无判据非空自检的登记件
+R6 **自检覆盖**：无判据非空自检且未登记 TD-030 债务的登记件（FAIL）
 R7 **未登记脚本**（仅报告）：规则目录内既不在登记表、也未在 README 索引的 `.py`
 R8 **阶段映射**：每个登记件须在 `STAGE_MAP` 有合法 G0–G5 阶段；映射无悬空键；阶段覆盖仅报告
 
@@ -153,7 +153,7 @@ REGISTRY = [
          kind="同步器/门禁", object="大纲根级三件（SUMMARY 双射；主题索引委派 build_theme_index.py，含 theme-index/4 与 theme-reverse/2）", trigger="大纲结构变动后（批 8 / 后续重编号）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第二十七件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_keyword_index.py",
-         kind="门禁", object="主题词索引 A–G 七组：schema／覆盖双射／词质（3–6、元节 1–3、禁用词、中文、补位、单主题占比、零使用）／侧面／对齐码／反查一致／尺寸"
+         kind="门禁", object="主题词索引 A–G 七组：schema／覆盖双射／词质（3—6、元节 1—3、禁用词、中文、补位、单主题占比、零使用）／侧面／对齐码／反查一致／尺寸"
          , trigger="主题索引再生或大纲结构／题面变动后（常备，随批实跑；2026-10-21 立）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第二十八件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_md_bold_spacing.py",
@@ -199,7 +199,7 @@ REGISTRY = [
          kind="门禁（旁路备份残留扫描，独立计数）",
          object="全库旁路备份副本残留：命中族与 .gitignore 封禁段、git_commit_gate B5 同口径（.prebak*／.preback*／.pre／.pre-*／.pre_*／.bak*／-bak*／_bak*／.orig*／.rej／结尾 ~，及 prebak*／_bak* 备份目录下全部内容）；豁免仅 script/_bak/20261017/（AGENTS.md 记载的重写前全史备份镜像）与 12-数据库备份/ 内正式归档体（.tar.gz／.tgz／.parquet／.sql／.jsonl／.gz）；非正式命名的写前快照不豁免",
          trigger="每批收口必跑（不涉改动亦跑）；旁路备份清扫批次收口（2026-10-23 立）",
-         selftest="", in_tests_readme=False),
+         selftest="--selftest", in_tests_readme=False),
     dict(no="第三十七件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_outline_landing.py",
          kind="门禁（大纲落地一致性 L1–L17，独立计数）",
          object="目录真值／映射台账／磁盘落点／派生件四者自洽：L1 落点层级守恒（2026-11-06 四级：卷/章/节/小节，ADR-0020）／L2 已确认映射落地／L3 落点无多余 .md／L4 H1 与路径一致／L5 旧三段号未决／L6 落点无重复内容／L7 SUMMARY 链接齐全／L8 主题索引口径／L9 落点编码／L10 无散件／L11 布局零漂移／L12 TARGET_LOST 挂账／L13 路径合规／L14 活动复合键唯一／L15 REMAP 挂账与后继／L16 旧二段号未决／L17 节占位互斥；L2/L3/L5/L6/L7/L11/L12/L13/L15/L16 依赖 mapping.tsv 与 layout.tsv，缺失时标 SKIP 不计 FAIL；mapping 缺 status 列等表头违约 exit 2",
@@ -212,7 +212,7 @@ REGISTRY = [
          selftest="--selftest", in_tests_readme=False),
     dict(no="第三十九件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_title_consistency.py",
          kind="门禁（小节标题一致性与证据完整性，独立计数）",
-         object="`映射/title-design` 与 `title-evidence` 台账：A 台账结构（id 唯一／层级对位／order 连续／status 枚举）／B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度 8–40、年代括注）／C 字符 C1–C6（中英空格、直角引号、ASCII 句读、控制字符、空白与不可见字符、Port 术语）／D 语义下限（thesis 非空、层级一致、同节字数极差 ≤14、例外登记）／E 证据齐（字段枚举、每标题有证、id 不悬空）／F 四源覆盖（计数一致、≥2 源、专名／标准号／年代题 ≥3 源、单源题为 0）／G 重复题（同节、同卷）／H 批准一致（title.ok hash、approvals 行、已批卷无 draft）／I 例外（id 在册、枚举）；零态（无 V*.tsv）标 N/A 并 PASS；表头违约 exit 2",
+         object="`映射/title-design` 与 `title-evidence` 台账：A 台账结构（id 唯一／层级对位／order 连续／status 枚举）／B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度 8—40、年代括注）／C 字符 C1–C6（中英空格、直角引号、ASCII 句读、控制字符、空白与不可见字符、Port 术语）／D 语义下限（thesis 非空、层级一致、同节字数极差 ≤14、例外登记）／E 证据齐（字段枚举、每标题有证、id 不悬空）／F 四源覆盖（计数一致、≥2 源、专名／标准号／年代题 ≥3 源、单源题为 0）／G 重复题（同节、同卷）／H 批准一致（title.ok hash、approvals 行、已批卷无 draft）／I 例外（id 在册、枚举）；零态（无 V*.tsv）标 N/A 并 PASS；表头违约 exit 2",
          trigger="标题台账任何写入后；每卷标题批呈审前；全量标题线推进期（2026-10-29 立，Task 3A.3）",
          selftest="--selftest", in_tests_readme=False),
     dict(no="第四十一件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_title_term_forms.py",
@@ -239,7 +239,7 @@ REGISTRY = [
          selftest="--check", in_tests_readme=True),
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/guard_source_chars.py",
          kind="写盘前守卫", object="装配源字符（直角引号／U+3000／TAB／BOM）", trigger="写装配源前",
-         selftest=None, in_tests_readme=False),
+         selftest="--selftest", in_tests_readme=False),
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_databases.py",
          kind="一次性审计（**非固定脚本**）", object="12 功能库 + 15 代码库 + 4 邮件库一次性盘点（英文 docstring，绑 06 号文设计）",
          trigger="—", selftest=None, in_tests_readme=False, fixed=False),
@@ -297,12 +297,35 @@ REGISTRY = [
          object="03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb 的 V1–V12 完整性与保真判据",
          trigger="TUHS Wiki 抓取或重抓后、交付前",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="第四十四件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_proofread_forms.py",
+         kind="门禁", object="文档校对形式（单位空格／千分空／连接号／、以及／省略号＋等／同形括号）",
+         trigger="改规则、模板、号文或新增读者可见文档后（2026-11-14 立）",
+         selftest="--selftest", in_tests_readme=False),
     dict(no="—", script="00-编纂规则与格式规范/01-规则/脚本与命令/verify_tuhs_wiki_sql.py",
          kind="验证器（独立 SQL 复核，独立计数）",
          object="同一语料库的 V1–V5／V10／V12 独立 SQL 复算（不复用主验证器判据代码）",
          trigger="主验证器通过后，交叉复核轮",
          selftest="--selftest", in_tests_readme=False),
 ]
+
+
+SELFTEST_DEBT = {name: "TD-030" for name in (
+    "audit_data_integrity.py",
+    "audit_sequence_continuity.py",
+    "visual_regression.mjs",
+    "audit_evidence_level_labels.py",
+    "audit_index_structure.py",
+    "tri_structure_negtest.py",
+    "audit_anchor_resolution.py",
+    "audit_silent_loss_guard.py",
+    "outline_selfcheck.py",
+    "audit_databases.py",
+    "audit_folder_db_integrity.py",
+    "font_subset_rebuild.py",
+    "review_v2_full.py",
+    "serve_refactor2026.py",
+    "guard_source_chars.py",
+)}
 
 # ── 阶段映射（R8 唯一真值；键＝脚本文件名） ──────────────────────────────
 # 允许单阶段或逗号分隔多阶段；阶段集合固定为 G0–G5。
@@ -315,6 +338,7 @@ REGISTRY = [
 ALL_STAGES = {"G0", "G1", "G2", "G3", "G4", "G5"}
 STAGE_MAP = {
     "audit_data_integrity.py": "G4",
+    "audit_proofread_forms.py": "G3,G4",
     "sync_refactor2026_baseline.py": "G5",
     "audit_sequence_continuity.py": "G4",
     "visual_regression.mjs": "G4",
@@ -429,12 +453,16 @@ def run(cmd_dir: pathlib.Path, tests_dir: pathlib.Path, registry, check_extra=Tr
     rows.append(("R5", "标记 in_tests_readme 者出现在 tests/README.md", not tbad,
                  "未出现 %s" % (", ".join(tbad) or "无")))
 
-    # R6 自检覆盖（仅报告，不判 FAIL —— 存量多件无自检，属既有债）
-    no_st = [e["no"] + " " + pathlib.Path(e["script"]).name
-             for e in registry if not e["selftest"]]
-    rows.append(("R6", "（仅报告）无判据非空自检的登记件", True,
-                 "%d/%d 件：%s" % (len(no_st), len(registry),
-                                   "、".join(no_st) if no_st else "无")))
+    # R6 自检覆盖：无 --selftest 且未挂 TD-030 债务者 FAIL
+    no_st, debt = [], []
+    for e in registry:
+        if e["selftest"]:
+            continue
+        name = pathlib.Path(e["script"]).name
+        (debt if name in SELFTEST_DEBT else no_st).append(e["no"] + " " + name)
+    rows.append(("R6", "无判据非空自检且未登记债务的登记件", not no_st,
+                 "未登记 %d 件：%s；已挂 TD-030 %d 件"
+                 % (len(no_st), "、".join(no_st) if no_st else "无", len(debt))))
 
     # R7 未登记脚本（仅报告）：规则目录内既不在登记表、也未在 README 索引者
     readme = _read(cmd_dir / "README.md")
