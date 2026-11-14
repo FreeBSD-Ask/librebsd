@@ -18,7 +18,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	1	1.3	1.3.5	架构独立与 i386 取向的分野	skeleton	
 53	1	1.3	1.3.6	补丁散落与 NetBSD 建项	skeleton	
 53	1	1.4	1.4.1	分叉年份的文本记载	filled	
-53	1	1.4	1.4.2	创始人离开 NetBSD 核心组	skeleton	
+53	1	1.4	1.4.2	创始人离开 NetBSD 核心组	filled	
 53	1	1.4	1.4.3	公开讨论与公众审视	filled	
 53	1	1.4	1.4.4	技术优劣作为决策依据	skeleton	
 53	1	1.4	1.4.5	半年发行节律的成文规定	skeleton	
@@ -304,7 +304,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	7	7.6	7.6.3	可移植版本的双轨发行	skeleton	
 53	7	7.6	7.6.4	NetBSD 许可条款与伯克利许可的相容	filled	
 53	7	7.6	7.6.5	代码外流的准入门槛	skeleton	
-53	7	7.6	7.6.6	OpenSSH 的开发归属与许可	skeleton	
+53	7	7.6	7.6.6	OpenSSH 的开发归属与许可	filled	
 53	7	7.7	7.7.1	捐助经基金会的接收	skeleton	
 53	7	7.7	7.7.2	无产权负担发行的由来	skeleton	
 53	7	7.7	7.7.3	非营利资格的缺位	skeleton	
@@ -339,7 +339,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	8	8.3	8.3.2	完全披露原则的先行	skeleton	
 53	8	8.3	8.3.3	默认关闭非必要服务	skeleton	
 53	8	8.3	8.3.4	审计产出的新技术	skeleton	
-53	8	8.3	8.3.5	OpenSSH 的外溢效应	skeleton	
+53	8	8.3	8.3.5	OpenSSH 的外溢效应	filled	
 53	8	8.3	8.3.6	远程漏洞计数的口号	filled	
 53	8	8.4	8.4.1	LWKT 与用户线程两级调度	skeleton	
 53	8	8.4	8.4.2	虚拟内核的调试用途	skeleton	
@@ -414,4 +414,3 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	9	9.8	9.8.5	大程序的可维护性代价	skeleton	
 53	9	9.8	9.8.6	例外条款与通则的关系	skeleton	
 53	9	9.8	9.8.7	正确之物的概念命名	skeleton	
-

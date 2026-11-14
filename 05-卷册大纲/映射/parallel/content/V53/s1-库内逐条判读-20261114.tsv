@@ -1,0 +1,167 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V53.1.1.6	学术机构的署名约束	claim	CL-1-018		1.30	A	[L4] AT&T 对学术机构的 UNIX 许可证仅收取 150 美元磁带复制费，覆盖购买、写入并寄回磁带的成本。	可推	claim 复用（先库后网，不重复建）
+V53.1.4.2	创始人离开 NetBSD 核心组	sacred	2656		0.295	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V53.1.5.4	缓存一致性目标的降级	claim	CL-RM-012759		1.30	A	[L4] 2003 年 9 月，Jamie Lokier 在 Linux 内核邮件列表汇总虚拟别名缓存一致性跨平台测试结果，参与平台包括运行 FreeBSD 的 x86 机器、运行 SunOS 5.7 的双 Xeon 机器与运行 	可推	claim 复用（先库后网，不重复建）
+V53.1.5.4	缓存一致性目标的降级	claim	CL-3-065		1.30	A	[L4] Macklem 1994 年记载 Not Quite NFS（NQNFS）是一种类 NFS 协议，旨在以崩溃容忍方式维持客户端之间完整的缓存一致性。	可推	claim 复用（先库后网，不重复建）
+V53.1.6.3	内核与用户空间同树维护	claim	CL-7-010		1.30	A	[L4] Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（先库后网，不重复建）
+V53.1.6.3	内核与用户空间同树维护	claim	CL-6-103		1.10	A	[L4] 2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与	可推	claim 复用（先库后网，不重复建）
+V53.2.1.5	松散同心圆式的组织承接	sacred	2369		0.309	B	2.3 FreeBSD 开发模型	可推	史观参照（不作证据，仅定题面归属）
+V53.2.2.1	非发行版的自我定位	sacred	2893		0.252	C	理解 FreeBSD 的操作系统本质：并非发行版	可推	史观参照（不作证据，仅定题面归属）
+V53.2.3.3	捐助与项目存续的关系	sacred	2200		0.223	C	自由/开源软件与免费	可推	史观参照（不作证据，仅定题面归属）
+V53.2.5.2	pkgsrc 在科学计算社群的使用	fulltext_fact	kf-bell-10018-1234	10018	0.230	C	Law系统被Philadelphia Exchange、Southern Bell Telephone Company、St. Louis及Oswego, N.Y.广泛采用	可推	全文补证候选（S1 命中即复用，D1 型）
+V53.2.5.2	pkgsrc 在科学计算社群的使用	claim	CL-RM-010682		1.30	A	[L4] 2013 年 7 月 Christopher Umina 陈述 Fortran 在科学计算界的标准地位及其在 FreeBSD 上不断抗争的挫败——科学计算用户群的诉求。	可推	claim 复用（先库后网，不重复建）
+V53.2.6.5	安全成绩的宣示方式	sacred	2670		0.263	C	OpenBSD 被广泛认为是世界上最安全的操作系统。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间	可推	史观参照（不作证据，仅定题面归属）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	926	926	0.248	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	928	928	0.248	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	933	933	0.248	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	934	934	0.248	C	Jan - Jun '11 Ordinary Income/Expense Income Contributions Income Unrestricted 152,802.24 Total Contributions Income 152	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	935	935	0.248	C	Jun 30, 12 ASSETS Current Assets Checking/Savings Conference 629.86 Bank - Checking 200,312.57 Bank - Electronic Payment	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	936	936	0.248	C	Jan - Jun 12 Ordinary Income/Expense Income Contributions Income Unrestricted 180,766.86 Total Contributions Income 180,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	937	937	0.248	C	Sep 30, 12 ASSETS Current Assets Checking/Savings Bank - Checking 170,955.12 Bank - Electronic Payment 546.88 Donations 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	938	938	0.248	C	Jan - Sep 12 Ordinary Income/Expense Income Contributions Income Unrestricted 202,881.79 Total Contributions Income 202,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	939	939	0.248	C	Jun 30, 13 ASSETS Current Assets Checking/Savings Bank - Checking 371,408.52 Bank - Electronic Payment 19,275.98 Total C	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	940	940	0.248	C	Jan - Jun 13 Ordinary Income/Expense Income Contributions Income Unrestricted 380,274.66 Total Contributions Income 380,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	941	941	0.248	C	Sep 30, 13 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,294.72 Cash On Hand - EUR 13.36 Bank - Checking 1	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	948	948	0.248	C	Sep 30, 14 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,454.72 Cash On Hand - EUR 63.05 Bank - Checking 3	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	970	970	0.248	C	2021 IMPACT REPORT 1-720-207-5142 info@freebsdfoundation.org www.freebsdfoundation.org 3980 Broadway Street STE #103-107	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	974	974	0.248	C	Program Fundraising Administrative Total Revenue Donations 1,400,000.00 $1,400,000.00 Total Revenue $1,400,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	1020	1020	0.248	C	FreeBSD Foundation April 2018 Update Upcoming Events Rootconf 2018 May 10-11, 2018 Bangalore, India BSDCan 2018 FreeBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	1021	1021	0.248	C	FreeBSD Foundation August 2016 Update Upcoming Events WomENcourage 2016 September 12-13, 2016 Linz, Austria EuroBSDCon 2	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	1022	1022	0.248	C	FreeBSD Foundation December 2016 Update Upcoming Events Linux.conf.au 2017 January 16-20, 2017 Hobart, Tasmania, Austral	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	1023	1023	0.248	C	FreeBSD Foundation February 2018 Update Upcoming Events AsiaBSDCon 2018 FreeBSD Developers Summit March 8-9, 2018 Tokyo,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	1024	1024	0.248	C	FreeBSD Foundation January 2018 Update Upcoming Events FreeBSD Mini-Dev Summit 2018 February 2, 2018 Brussels, Belgium F	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	fulltext_summary	1025	1025	0.248	C	FreeBSD Foundation July 2016 Update Upcoming Events BSDCam 2016 August 15-17, 2016 Cambridge, UK WomENcourage 2016 Septe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.2.7.4	NetBSD 基金会的法人与商标	ref_title	2509	2509	0.248	C	OpenBSD基金会 (wikiwand, Wikipedia frontend) wikiwand 	可推	文献线索（须核全文再定 D1/D2）
+V53.2.7.4	NetBSD 基金会的法人与商标	ref_title	3753	3753	0.248	C	In Memory of Mike Karels（FreeBSD 基金会） FreeBSD Foundation 	可推	文献线索（须核全文再定 D1/D2）
+V53.2.7.4	NetBSD 基金会的法人与商标	sacred	2352		0.248	C	FreeBSD 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.3.1.4	第三方软件的接入方式	claim	CL-RM-011384		1.30	A	[L4] 2021-11 Warner Losh 就大量第三方软件定义 _POSIX_C_SOURCE 却仍需 BSD 扩展符号的问题发起系统头文件暴露策略讨论，Konstantin Belousov 参与	可推	claim 复用（先库后网，不重复建）
+V53.3.1.5	手册页作为系统构件	fulltext_summary	103	103	0.271	C	Why and how you ought to Keep multibyte character support simple EuroBSDCon, Beograd, September 25, 2016 Ingo Schwarze <	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.2.1	提交者的推送权限	sacred	2358		0.243	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.3.2.5	自动化测试的覆盖面	claim	CL-RM-010265		1.30	A	[L4] 2007 年 8 月 ATF（Automated Testing Framework）首个邮件列表创立公告——Julio Merino 主导的 NetBSD 自动化测试框架从此拥有专属开发社区	可推	claim 复用（先库后网，不重复建）
+V53.3.3.1	默认编译器的更替	claim	CL-RM-011289		1.30	A	[L4] 2021年4月matthew green将alpha、amd64、sparc*、riscv*、ia64与vax等端口默认编译器切换为GCC 10并征集回归报告	可推	claim 复用（先库后网，不重复建）
+V53.3.3.1	默认编译器的更替	claim	CL-RM-011287		1.30	A	[L4] 2013年11月Martin Husemann公告sparc64默认编译器代码模型变更并警示二进制兼容性影响，旧用户态与新内核组合需谨慎处理	可推	claim 复用（先库后网，不重复建）
+V53.3.3.1	默认编译器的更替	claim	CL-RM-011241		1.30	A	[L4] 2011年8月7日 matthew green 宣布 i386 与 amd64 默认编译器切换至 GCC 4.5.3	可推	claim 复用（先库后网，不重复建）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	20	20	0.221	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	63	63	0.221	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	118	118	0.221	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	728	728	0.221	C	The ZFS filesystem One day workshop Short talk — LinuxConfAu 2020 Philip Paeps 14 January 2020 Gold Coast, QLD, Australi	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	868	868	0.221	C	The UNIX Time- Sharing System Dennis M. Ritchie and Ken Thompson Bell Laboratories UNIX is a general-purpose, multi-user	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	fulltext_summary	869	869	0.221	C	365 Electronic version recreated by Eric A. Brewer University of California at Berkeley Communications July 1974 of Volu	可推	全文综述候选（D1 型，核对原文后落块）
+V53.3.4.1	UFS 之后的替代选择	sacred	2677		0.221	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
+V53.3.6.5	内存保护机制的首次落地	claim	CL-RM-010238		0.70	A	[L4] 2018 年 10 月 Brooks Davis 经 fcp 列表发布 FCP-0101（弃用大部分 10/100 以太网驱动）并引发约 70 封激辩：Dokuchaev 异议、rl(4) 保卫战、生产服务器用户反对、G	可推	claim 复用（先库后网，不重复建）
+V53.4.1.6	吉祥物与网页版面的绑定	sacred	2269		0.276	C	吉祥物	可推	史观参照（不作证据，仅定题面归属）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10161	10161	0.265	C	FreeBSD GSoC 2015 项目清单（capture=playwright） 2015	可推	文献线索（须核全文再定 D1/D2）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10162	10162	0.265	C	FreeBSD GSoC 2016 项目清单（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10163	10163	0.265	C	FreeBSD GSoC 2017 项目清单（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10164	10164	0.265	C	FreeBSD GSoC 2018 项目清单（capture=playwright） 2018	可推	文献线索（须核全文再定 D1/D2）
+V53.4.4.3	悬赏页与项目清单的并列	ref_title	10165	10165	0.265	C	FreeBSD GSoC 2019 项目清单（capture=playwright） 2019	可推	文献线索（须核全文再定 D1/D2）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	926	926	0.223	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	928	928	0.223	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	933	933	0.223	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	934	934	0.223	C	Jan - Jun '11 Ordinary Income/Expense Income Contributions Income Unrestricted 152,802.24 Total Contributions Income 152	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	935	935	0.223	C	Jun 30, 12 ASSETS Current Assets Checking/Savings Conference 629.86 Bank - Checking 200,312.57 Bank - Electronic Payment	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	936	936	0.223	C	Jan - Jun 12 Ordinary Income/Expense Income Contributions Income Unrestricted 180,766.86 Total Contributions Income 180,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	937	937	0.223	C	Sep 30, 12 ASSETS Current Assets Checking/Savings Bank - Checking 170,955.12 Bank - Electronic Payment 546.88 Donations 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	938	938	0.223	C	Jan - Sep 12 Ordinary Income/Expense Income Contributions Income Unrestricted 202,881.79 Total Contributions Income 202,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	939	939	0.223	C	Jun 30, 13 ASSETS Current Assets Checking/Savings Bank - Checking 371,408.52 Bank - Electronic Payment 19,275.98 Total C	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	940	940	0.223	C	Jan - Jun 13 Ordinary Income/Expense Income Contributions Income Unrestricted 380,274.66 Total Contributions Income 380,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	941	941	0.223	C	Sep 30, 13 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,294.72 Cash On Hand - EUR 13.36 Bank - Checking 1	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	948	948	0.223	C	Sep 30, 14 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,454.72 Cash On Hand - EUR 63.05 Bank - Checking 3	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	970	970	0.223	C	2021 IMPACT REPORT 1-720-207-5142 info@freebsdfoundation.org www.freebsdfoundation.org 3980 Broadway Street STE #103-107	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	974	974	0.223	C	Program Fundraising Administrative Total Revenue Donations 1,400,000.00 $1,400,000.00 Total Revenue $1,400,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	1020	1020	0.223	C	FreeBSD Foundation April 2018 Update Upcoming Events Rootconf 2018 May 10-11, 2018 Bangalore, India BSDCan 2018 FreeBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	1021	1021	0.223	C	FreeBSD Foundation August 2016 Update Upcoming Events WomENcourage 2016 September 12-13, 2016 Linz, Austria EuroBSDCon 2	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	1022	1022	0.223	C	FreeBSD Foundation December 2016 Update Upcoming Events Linux.conf.au 2017 January 16-20, 2017 Hobart, Tasmania, Austral	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	1023	1023	0.223	C	FreeBSD Foundation February 2018 Update Upcoming Events AsiaBSDCon 2018 FreeBSD Developers Summit March 8-9, 2018 Tokyo,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	1024	1024	0.223	C	FreeBSD Foundation January 2018 Update Upcoming Events FreeBSD Mini-Dev Summit 2018 February 2, 2018 Brussels, Belgium F	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	fulltext_summary	1025	1025	0.223	C	FreeBSD Foundation July 2016 Update Upcoming Events BSDCam 2016 August 15-17, 2016 Cambridge, UK WomENcourage 2016 Septe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.4.7.1	标志使用与商业许可	ref_title	2509	2509	0.223	C	OpenBSD基金会 (wikiwand, Wikipedia frontend) wikiwand 	可推	文献线索（须核全文再定 D1/D2）
+V53.4.7.1	标志使用与商业许可	ref_title	3753	3753	0.223	C	In Memory of Mike Karels（FreeBSD 基金会） FreeBSD Foundation 	可推	文献线索（须核全文再定 D1/D2）
+V53.4.7.1	标志使用与商业许可	sacred	2352		0.223	C	FreeBSD 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.4.8.2	man page 的 HISTORY 与 BUGS 段	ref_title	5662	5662	0.271	C	Annual Reports 1988-1992（待一手核实） 1988	可推	文献线索（须核全文再定 D1/D2）
+V53.4.9.3	同意令与源码许可的关联	claim	CL-RM-011637		0.70	A	[L4] Amdahl UTS/V Release 1 官方产品公告全文（1985-01-21）：SysV R2 on VM/SP、需求分页、3270 支持；源码版须先购 AT&T SysV R2 与 DWB 源码许可（欧洲经 U	可推	claim 复用（先库后网，不重复建）
+V53.4.9.3	同意令与源码许可的关联	claim	CL-RM-011620		0.70	A	[L4] 哈佛官方（Bill Edwards）声明不再运行分发支持 Harvard Shell、推荐需 UNIX 源码许可的 tcsh；同期有 Waterloo CMS C 编译器与 Amdahl UTS 用户证言	可推	claim 复用（先库后网，不重复建）
+V53.5.1.1	信念措辞的引用来源	ref_title	10418	10418	0.293	C	jail(8) — FreeBSD 系统管理手册页 The FreeBSD Project 2026	可推	文献线索（须核全文再定 D1/D2）
+V53.6.1.5	和解条款的免诉承诺	ref_title	10074	10074	0.269	C	hubertf's NetBSD blog (GSoC 2013 项目, 5 项目) 2013	可推	文献线索（须核全文再定 D1/D2）
+V53.6.2.3	罢免所需的三分之二票	sacred	2358		0.240	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.6.2.4	提前选举的触发条件	claim	CL-RM-046531		0.70	A	[L4] 补充说明 HAMMER 根卷扩展后崩溃的触发条件及其与卸载、重启之间的关系	可推	claim 复用（先库后网，不重复建）
+V53.6.2.4	提前选举的触发条件	claim	CL-RM-025082		0.70	A	[L4] Brian Kantor 详解噬行虫缺陷的触发条件与修复	可推	claim 复用（先库后网，不重复建）
+V53.6.2.5	章程修订的票数门槛	claim	CL-RM-018071		1.30	A	[L3] USENIX 新章程草案辩论：Deborah Scherrer（负责章程的董事）向 Mike Blake-Knox 说明特拉华州法要求 25% 成员方可否决议案、会员等级等问题，透露 1983 年底协会因成员费未续缴而成	可推	claim 复用（先库后网，不重复建）
+V53.6.4.4	基金会只承担经费职能	sacred	2107		0.243	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V53.6.5.5	网站与资源的个人维护	sacred	2656		0.237	C	Theo de Raadt（OpenBSD 创始人）	可推	史观参照（不作证据，仅定题面归属）
+V53.6.6.4	琐碎修正的豁免口径	sacred	2358		0.225	C	提交者	可推	史观参照（不作证据，仅定题面归属）
+V53.7.1.4	广告条款的撤销日期	ref_title	2548	2548	0.311	B	BSD-4-Clause（Original BSD License，广告条款版）官方文本 1990	可推	文献线索（须核全文再定 D1/D2）
+V53.7.3.5	许可授予记录的成文条目	ref_title	10507	10507	0.341	B	committer(7) — DragonFly 提交者指南 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V53.7.4.6	派生作品的源码义务	claim	CL-RM-033607		1.30	A	[L3] Les Mikesell 论 GPL 派生作品的界定与混合许可库的合规风险	可推	claim 复用（先库后网，不重复建）
+V53.7.5.1	商业采用的技术入口	fulltext_summary	190	190	0.234	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	926	926	0.254	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	928	928	0.254	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	933	933	0.254	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	934	934	0.254	C	Jan - Jun '11 Ordinary Income/Expense Income Contributions Income Unrestricted 152,802.24 Total Contributions Income 152	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	935	935	0.254	C	Jun 30, 12 ASSETS Current Assets Checking/Savings Conference 629.86 Bank - Checking 200,312.57 Bank - Electronic Payment	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	936	936	0.254	C	Jan - Jun 12 Ordinary Income/Expense Income Contributions Income Unrestricted 180,766.86 Total Contributions Income 180,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	937	937	0.254	C	Sep 30, 12 ASSETS Current Assets Checking/Savings Bank - Checking 170,955.12 Bank - Electronic Payment 546.88 Donations 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	938	938	0.254	C	Jan - Sep 12 Ordinary Income/Expense Income Contributions Income Unrestricted 202,881.79 Total Contributions Income 202,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	939	939	0.254	C	Jun 30, 13 ASSETS Current Assets Checking/Savings Bank - Checking 371,408.52 Bank - Electronic Payment 19,275.98 Total C	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	940	940	0.254	C	Jan - Jun 13 Ordinary Income/Expense Income Contributions Income Unrestricted 380,274.66 Total Contributions Income 380,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	941	941	0.254	C	Sep 30, 13 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,294.72 Cash On Hand - EUR 13.36 Bank - Checking 1	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	948	948	0.254	C	Sep 30, 14 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,454.72 Cash On Hand - EUR 63.05 Bank - Checking 3	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	970	970	0.254	C	2021 IMPACT REPORT 1-720-207-5142 info@freebsdfoundation.org www.freebsdfoundation.org 3980 Broadway Street STE #103-107	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	974	974	0.254	C	Program Fundraising Administrative Total Revenue Donations 1,400,000.00 $1,400,000.00 Total Revenue $1,400,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	1020	1020	0.254	C	FreeBSD Foundation April 2018 Update Upcoming Events Rootconf 2018 May 10-11, 2018 Bangalore, India BSDCan 2018 FreeBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	1021	1021	0.254	C	FreeBSD Foundation August 2016 Update Upcoming Events WomENcourage 2016 September 12-13, 2016 Linz, Austria EuroBSDCon 2	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	1022	1022	0.254	C	FreeBSD Foundation December 2016 Update Upcoming Events Linux.conf.au 2017 January 16-20, 2017 Hobart, Tasmania, Austral	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	1023	1023	0.254	C	FreeBSD Foundation February 2018 Update Upcoming Events AsiaBSDCon 2018 FreeBSD Developers Summit March 8-9, 2018 Tokyo,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	1024	1024	0.254	C	FreeBSD Foundation January 2018 Update Upcoming Events FreeBSD Mini-Dev Summit 2018 February 2, 2018 Brussels, Belgium F	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	fulltext_summary	1025	1025	0.254	C	FreeBSD Foundation July 2016 Update Upcoming Events BSDCam 2016 August 15-17, 2016 Cambridge, UK WomENcourage 2016 Septe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.7.1	捐助经基金会的接收	ref_title	2509	2509	0.254	C	OpenBSD基金会 (wikiwand, Wikipedia frontend) wikiwand 	可推	文献线索（须核全文再定 D1/D2）
+V53.7.7.1	捐助经基金会的接收	ref_title	3753	3753	0.254	C	In Memory of Mike Karels（FreeBSD 基金会） FreeBSD Foundation 	可推	文献线索（须核全文再定 D1/D2）
+V53.7.7.1	捐助经基金会的接收	sacred	2352		0.254	C	FreeBSD 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	926	926	0.236	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	928	928	0.236	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	933	933	0.236	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	934	934	0.236	C	Jan - Jun '11 Ordinary Income/Expense Income Contributions Income Unrestricted 152,802.24 Total Contributions Income 152	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	935	935	0.236	C	Jun 30, 12 ASSETS Current Assets Checking/Savings Conference 629.86 Bank - Checking 200,312.57 Bank - Electronic Payment	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	936	936	0.236	C	Jan - Jun 12 Ordinary Income/Expense Income Contributions Income Unrestricted 180,766.86 Total Contributions Income 180,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	937	937	0.236	C	Sep 30, 12 ASSETS Current Assets Checking/Savings Bank - Checking 170,955.12 Bank - Electronic Payment 546.88 Donations 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	938	938	0.236	C	Jan - Sep 12 Ordinary Income/Expense Income Contributions Income Unrestricted 202,881.79 Total Contributions Income 202,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	939	939	0.236	C	Jun 30, 13 ASSETS Current Assets Checking/Savings Bank - Checking 371,408.52 Bank - Electronic Payment 19,275.98 Total C	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	940	940	0.236	C	Jan - Jun 13 Ordinary Income/Expense Income Contributions Income Unrestricted 380,274.66 Total Contributions Income 380,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	941	941	0.236	C	Sep 30, 13 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,294.72 Cash On Hand - EUR 13.36 Bank - Checking 1	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	948	948	0.236	C	Sep 30, 14 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,454.72 Cash On Hand - EUR 63.05 Bank - Checking 3	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	970	970	0.236	C	2021 IMPACT REPORT 1-720-207-5142 info@freebsdfoundation.org www.freebsdfoundation.org 3980 Broadway Street STE #103-107	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	974	974	0.236	C	Program Fundraising Administrative Total Revenue Donations 1,400,000.00 $1,400,000.00 Total Revenue $1,400,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	1020	1020	0.236	C	FreeBSD Foundation April 2018 Update Upcoming Events Rootconf 2018 May 10-11, 2018 Bangalore, India BSDCan 2018 FreeBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	1021	1021	0.236	C	FreeBSD Foundation August 2016 Update Upcoming Events WomENcourage 2016 September 12-13, 2016 Linz, Austria EuroBSDCon 2	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	1022	1022	0.236	C	FreeBSD Foundation December 2016 Update Upcoming Events Linux.conf.au 2017 January 16-20, 2017 Hobart, Tasmania, Austral	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	1023	1023	0.236	C	FreeBSD Foundation February 2018 Update Upcoming Events AsiaBSDCon 2018 FreeBSD Developers Summit March 8-9, 2018 Tokyo,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	1024	1024	0.236	C	FreeBSD Foundation January 2018 Update Upcoming Events FreeBSD Mini-Dev Summit 2018 February 2, 2018 Brussels, Belgium F	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	fulltext_summary	1025	1025	0.236	C	FreeBSD Foundation July 2016 Update Upcoming Events BSDCam 2016 August 15-17, 2016 Cambridge, UK WomENcourage 2016 Septe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.7.9.3	捐助页的公开征集	ref_title	2509	2509	0.236	C	OpenBSD基金会 (wikiwand, Wikipedia frontend) wikiwand 	可推	文献线索（须核全文再定 D1/D2）
+V53.7.9.3	捐助页的公开征集	ref_title	3753	3753	0.236	C	In Memory of Mike Karels（FreeBSD 基金会） FreeBSD Foundation 	可推	文献线索（须核全文再定 D1/D2）
+V53.7.9.3	捐助页的公开征集	sacred	2352		0.236	C	FreeBSD 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.9.3.1	NetBSD 旗标的载体用途	sacred	2242		0.305	B	Linus 与 Linux 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	926	926	0.220	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	928	928	0.220	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	933	933	0.220	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	934	934	0.220	C	Jan - Jun '11 Ordinary Income/Expense Income Contributions Income Unrestricted 152,802.24 Total Contributions Income 152	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	935	935	0.220	C	Jun 30, 12 ASSETS Current Assets Checking/Savings Conference 629.86 Bank - Checking 200,312.57 Bank - Electronic Payment	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	936	936	0.220	C	Jan - Jun 12 Ordinary Income/Expense Income Contributions Income Unrestricted 180,766.86 Total Contributions Income 180,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	937	937	0.220	C	Sep 30, 12 ASSETS Current Assets Checking/Savings Bank - Checking 170,955.12 Bank - Electronic Payment 546.88 Donations 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	938	938	0.220	C	Jan - Sep 12 Ordinary Income/Expense Income Contributions Income Unrestricted 202,881.79 Total Contributions Income 202,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	939	939	0.220	C	Jun 30, 13 ASSETS Current Assets Checking/Savings Bank - Checking 371,408.52 Bank - Electronic Payment 19,275.98 Total C	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	940	940	0.220	C	Jan - Jun 13 Ordinary Income/Expense Income Contributions Income Unrestricted 380,274.66 Total Contributions Income 380,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	941	941	0.220	C	Sep 30, 13 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,294.72 Cash On Hand - EUR 13.36 Bank - Checking 1	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	948	948	0.220	C	Sep 30, 14 ASSETS Current Assets Checking/Savings Cash on Hand - CAD 1,454.72 Cash On Hand - EUR 63.05 Bank - Checking 3	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	970	970	0.220	C	2021 IMPACT REPORT 1-720-207-5142 info@freebsdfoundation.org www.freebsdfoundation.org 3980 Broadway Street STE #103-107	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	974	974	0.220	C	Program Fundraising Administrative Total Revenue Donations 1,400,000.00 $1,400,000.00 Total Revenue $1,400,000.00 Expens	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	1020	1020	0.220	C	FreeBSD Foundation April 2018 Update Upcoming Events Rootconf 2018 May 10-11, 2018 Bangalore, India BSDCan 2018 FreeBSD 	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	1021	1021	0.220	C	FreeBSD Foundation August 2016 Update Upcoming Events WomENcourage 2016 September 12-13, 2016 Linz, Austria EuroBSDCon 2	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	1022	1022	0.220	C	FreeBSD Foundation December 2016 Update Upcoming Events Linux.conf.au 2017 January 16-20, 2017 Hobart, Tasmania, Austral	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	1023	1023	0.220	C	FreeBSD Foundation February 2018 Update Upcoming Events AsiaBSDCon 2018 FreeBSD Developers Summit March 8-9, 2018 Tokyo,	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	1024	1024	0.220	C	FreeBSD Foundation January 2018 Update Upcoming Events FreeBSD Mini-Dev Summit 2018 February 2, 2018 Brussels, Belgium F	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	fulltext_summary	1025	1025	0.220	C	FreeBSD Foundation July 2016 Update Upcoming Events BSDCam 2016 August 15-17, 2016 Cambridge, UK WomENcourage 2016 Septe	可推	全文综述候选（D1 型，核对原文后落块）
+V53.9.3.1	NetBSD 旗标的载体用途	ref_title	2509	2509	0.220	C	OpenBSD基金会 (wikiwand, Wikipedia frontend) wikiwand 	可推	文献线索（须核全文再定 D1/D2）
+V53.9.3.1	NetBSD 旗标的载体用途	ref_title	3753	3753	0.220	C	In Memory of Mike Karels（FreeBSD 基金会） FreeBSD Foundation 	可推	文献线索（须核全文再定 D1/D2）
+V53.9.3.1	NetBSD 旗标的载体用途	sacred	2352		0.220	C	FreeBSD 基金会	可推	史观参照（不作证据，仅定题面归属）
+V53.9.3.2	换标与吉祥物的并存	sacred	2269		0.290	C	吉祥物	可推	史观参照（不作证据，仅定题面归属）
