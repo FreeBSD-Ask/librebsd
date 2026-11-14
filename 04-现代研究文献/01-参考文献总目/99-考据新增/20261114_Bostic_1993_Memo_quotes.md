@@ -19,3 +19,10 @@ Q4（blk2，PSD:5 架构手册引用）:
 described in the ``Berke-
 ley Software Architecture Manual'' (see UNIX Programmer's
 Manual, Supplementary Documents, PSD:5).
+
+## b001 追加引文（2026-11-14）
+
+Q5（blk0，末次发行明言）:
+This  distribution is the final
+release that will be done by the Computer  Systems  Research
+Group  (CSRG).

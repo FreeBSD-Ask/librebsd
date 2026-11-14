@@ -53,3 +53,13 @@ A Special Note
 Q11（1994-03 公告语）:
 We are delighted, at long last, to send you information
 about our March 1994 release of 4.4BSD-Lite.
+
+## b001 追加引文（2026-11-14）
+
+Q12（发行信：介质限定）:
+This software distribution is only available on two
+6250bpi 1/2" 9-track tapes or one 8mm Exabyte cassette.
+
+Q13（发行信：Net/2 替换建议）:
+We strongly recommend that you
+replace any Net/2 source or binary code with 4.4BSD-Lite.
