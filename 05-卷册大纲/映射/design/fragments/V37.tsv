@@ -301,7 +301,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	6	6.2	6.2.5	配置文件的版本管理	skeleton	
 37	6	6.3	6.3.1	buildworld 的阶段分区	skeleton	
 37	6	6.3	6.3.2	工具链的自举顺序	skeleton	
-37	6	6.3	6.3.3	并行构建的作业调度	skeleton	
+37	6	6.3	6.3.3	并行构建的作业调度	filled	
 37	6	6.3	6.3.4	构建缓存的复用跨度	skeleton	
 37	6	6.3	6.3.5	用户空间构建的验证	filled	
 37	6	6.4	6.4.1	buildkernel 的依赖链	skeleton	
@@ -309,12 +309,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	6	6.4	6.4.3	配置与源码的对应	skeleton	
 37	6	6.4	6.4.4	构建产物的安装进路	skeleton	
 37	6	6.4	6.4.5	内核构建的错误诊断	filled	
-37	6	6.5	6.5.1	DESTDIR 的安装根	skeleton	
+37	6	6.5	6.5.1	DESTDIR 的安装根	filled	
 37	6	6.5	6.5.2	交叉构建的目标描述	filled	
 37	6	6.5	6.5.3	工具链前缀的约定	skeleton	
 37	6	6.5	6.5.4	暂存目录的清理法	skeleton	
 37	6	6.5	6.5.5	跨架构构建的验证	skeleton	
-37	6	6.6	6.6.1	基本系统与 Ports 树的分界	skeleton	
+37	6	6.6	6.6.1	基本系统与 Ports 树的分界	filled	
 37	6	6.6	6.6.2	第三方代码的引入规则	skeleton	
 37	6	6.6	6.6.3	许可审查的准入线	skeleton	
 37	6	6.6	6.6.4	内嵌第三方代码的维护	filled	
