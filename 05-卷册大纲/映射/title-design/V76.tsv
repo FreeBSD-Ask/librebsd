@@ -173,7 +173,7 @@ V76.5.5.1	76	5	5	随机化实现的保守对标	OpenBSD 的 mmap 随机化被引
 V76.5.5.2	76	5	5	映射基址的随机化口径	映射基址、栈与 VDSO 页纳入随机化范围的口径，构成地址空间加固的实现细节。	2	4	史料;联网;目录;规则	final
 V76.5.5.3	76	5	5	固定映射的先例援引	Napierala 2017-12-14 在 MAP_FIXED_SAFE 线提议沿用 FreeBSD 名并逐字引 FreeBSD mmap(2)（“if MAP_EXCL is specified, the request will fail if a mapping already exists within the range”）；Hocko 答以语义不同、同名致乱（“reusing a name with a different semantics would be a bad idea”），先例援引全过程在档。	3	3	史料;目录;规则	final
 V76.5.5.4	76	5	5	内存封禁的同类参照	密封类接口把 XNU 与 OpenBSD 的既有实现明文列为参照，跨系先例进入提案正文。	4	3	史料;目录;规则	final
-V76.5.5.5	76	5	5	页回收算法的对比缺口	2000 年代初 Linux MM 串的脏页清洗优先级与 FreeBSD 对照未命中（检索面：lore、“on probation”、本机 LKML 档 vm_pageout＋FreeBSD 组词 1999–2005）；FreeBSD vm_pageout 与 Linux 回收器谱系差异无官方文档可比对。	5	3	史料;目录;规则	final
+V76.5.5.5	76	5	5	页回收算法的对比缺口	2000 年代初 Linux MM 串的脏页清洗优先级与 FreeBSD 对照未命中（检索面：lore、“on probation”、本机 LKML 档 vm_pageout＋FreeBSD 组词 1999—2005）；FreeBSD vm_pageout 与 Linux 回收器谱系差异无官方文档可比对。	5	3	史料;目录;规则	final
 V76.5.6.1	76	5	6	ZFS 调试的交叉验证	以代码相近的 FreeBSD 服务器作对照排查 ZFS 故障，跨系交叉验证成为调试方法。	1	4	史料;联网;目录;规则	final
 V76.5.6.2	76	5	6	隐藏标志的归属争辩	多个 BSD 派生文件系统皆支持的隐藏标志，构成 Linux VFS 抽象的反例。	2	3	史料;目录;规则	final
 V76.5.6.3	76	5	6	范围同步的 NetBSD 蓝本	范围同步调用以 NetBSD 命名空间为蓝本移植，文件系统接口的移植路径被记录。	3	3	史料;目录;规则	final

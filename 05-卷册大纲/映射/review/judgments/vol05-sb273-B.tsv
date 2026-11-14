@@ -2,7 +2,7 @@ source_id	target_id	reason	strategy	pass_id
 S-011887	V39-8.4	内容主题“市场分析报告与媒体报导立场偏见、Linux 厂商赞助”命中 V39-8.4“市场份额解释”话语节	B	sb273
 S-011888	V38-6.4	内容主题“约 200 名 committer 中约 60% 在社区记忆中被忽视、贡献散落 commit log”命中 V38-6.4“人物史的记忆、代际与未及收录者”	B	sb273
 S-011889	V39-5.7	内容主题“测试反馈/文档翻译/PR 提交者经 send-pr 参与未获 commit 权限”命中 V39-5.7“非 committer 贡献者的历史位置”	B	sb273
-S-011890	V38-2.5	内容主题“4.0–4.11 贡献者群体与版本对应关系需从 commit log 重建”命中 V38-2.5“commit bit 授予人群的结构性统计（1993–2026）”	B	sb273
+S-011890	V38-2.5	内容主题“4.0—4.11 贡献者群体与版本对应关系需从 commit log 重建”命中 V38-2.5“commit bit 授予人群的结构性统计（1993—2026）”	B	sb273
 S-011891	V37-11.9	内容主题“边缘贡献者史料仅 commit log 与 PR 数据库可查、部分 PR 迁移丢失”命中 V37-11.9“缺陷跟踪平台的更替：从 GNATS 到 Bugzilla”	B	sb273
 S-011892	V69-1.9	内容主题“freebsd-doc 团队改写难懂文档与手册页”命中 V69-1.9“文档维护者与知识生产”	B	sb273
 S-011893	V39-6.8	内容主题“新手写在线日记公开排障、经验分享供帮助者查看”命中 V39-6.8“用户做了什么：报告、文档、支持与本地化中的无偿投入”	B	sb273
@@ -15,7 +15,7 @@ S-011899	V37-2.5	内容主题“kqueue/kevent 替代 select/poll（C10k 问题�
 S-011900	V37-3.1	内容主题“jail(2) 于 4.0-RELEASE 引入、Kamp 初始实现、chroot 扩展进程隔离”命中 V37-3.1“UNIX 隔离传统与 FreeBSD Jail”	B	sb273
 S-011901	V37-1.3	内容主题“Soft Updates 延迟写入（McKusick 等设计、3.0 合入、4.x 完善）”命中 V37-1.3	B	sb273
 S-011902	V37-4.6	内容主题“4BSD 调度器 estcpu/nice/全局运行队列与 Giant 锁延续局限”命中 V37-4.6“调度器历史：4BSD 到 ULE”	B	sb273
-S-011903	V36-4.8	内容主题“2000–2003 Linux 2.4／Windows XP／Solaris 9／Mac OS X 比较”与 V36-4.8 比较维度一致	B	sb273
+S-011903	V36-4.8	内容主题“2000—2003 Linux 2.4／Windows XP／Solaris 9／Mac OS X 比较”与 V36-4.8 比较维度一致	B	sb273
 S-011904	V37-3.7	内容主题“Jails 2000／kqueue 2000 领先 Linux，cgroups/epoll 均晚于 FreeBSD”对映 V37-3.7“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较”	B	sb273
 S-011905	V59-7.12	内容主题“BSD 许可证允许 Apple(Darwin)、Sony(PS3) 商业使用不强制回馈”命中 V59-7.12“Apple、Sony、Juniper 等商业产品的许可结构”	B	sb273
 S-011906	V55-13.1	内容主题“技术比较研究文献受社区立场影响需区分客观与立场”命中 V55-13.1“当代 BSD 与 Linux 的比较研究文献”	B	sb273

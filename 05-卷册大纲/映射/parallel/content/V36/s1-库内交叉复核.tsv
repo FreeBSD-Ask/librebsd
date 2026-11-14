@@ -8,7 +8,7 @@ V36.10.6.2	嵌入式平台的门槛	claim	CL-RM-010651		1.10	B	2010 年 1 月 Ma
 V36.10.7.3	过渡后的兼容承诺	claim	CL-RM-010508		0.90	A	2017 年 12 月 Frank Wille 提议在 8.0 前移除 SunOS/68k 兼容层：其 28 位地址空间遗产正是 384MB 任务内存上限的元凶——三十年的兼容承诺走向终结。	可推	claim 复用（S2 先库后网）
 V36.11.6.1	历史平台的系统性退出	ref_title	5981	5981	0.253	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
 V36.11.6.3	退出后的维护责任	ref_title	5981	5981	0.229	C	BitKeeper 退出 	可推	文献线索（须核全文再定 D1/D2）
-V36.11.8.3	平台更替的年度排期	ref_title	10146	10146	0.225	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V36.11.8.3	平台更替的年度排期	ref_title	10146	10146	0.225	C	GSoC Past Programs (2016—2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
 V36.12.2.2	维护承诺的资源底账	fulltext_summary	926	926	0.267	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
 V36.12.2.2	维护承诺的资源底账	fulltext_summary	928	928	0.267	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
 V36.12.2.2	维护承诺的资源底账	fulltext_summary	933	933	0.267	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
@@ -136,7 +136,7 @@ V36.8.7.3	发行件的形态变化	ref_title	10120	10120	0.226	C	FreeBSD Status 
 V36.8.9.2	Windows Server 2008 R2 的虚拟化	fulltext_summary	708	708	0.246	C	CheriABI Enforcing/Valid/Pointer/Provenance/ and/Minimizing/Pointer/Privilege/in/ the/POSIX/C/Run?time/Environment Brook	可推	全文综述候选（D1 型，核对原文后落块）
 V36.8.9.2	Windows Server 2008 R2 的虚拟化	fulltext_summary	982	982	0.233	C	2026 Budget Program Revenue Expense Program: Software Development Program:Infrastructure Support Program:General Fundrai	可推	全文综述候选（D1 型，核对原文后落块）
 V36.8.9.3	Solaris 11 Express 的容器	fulltext_summary	754	754	0.238	C	How far a naive FreeBSD container implementation can go EuroBSD 2022 - Vienna, 18.09.2022 Luca Pizzamiglio Menu of today	可推	全文综述候选（D1 型，核对原文后落块）
-V36.9.6.1	能力模式的系统位置	fulltext_summary	79	79	0.270	C	1/19 Design and Veriﬁcation of the TLS 1.3 Handshake State Machine in LibreSSL Theo Buehler tb@openbsd.org BSDCan – May 	可推	全文综述候选（D1 型，核对原文后落块）
+V36.9.6.1	能力模式的系统位置	fulltext_summary	79	79	0.270	C	1/19 Design and Veriﬁcation of the TLS 1.3 Handshake State Machine in LibreSSL Theo Buehler tb@openbsd.org BSDCan-May 	可推	全文综述候选（D1 型，核对原文后落块）
 V36.9.6.1	能力模式的系统位置	fulltext_summary	206	206	0.270	C	Capsicum: practical capabilities for UNIX Robert N. Watson University of Cambridge Jonathan Anderson University of Cambr	可推	全文综述候选（D1 型，核对原文后落块）
 V36.9.6.1	能力模式的系统位置	fulltext_summary	185	185	0.262	C	Cryptography As An Operating System Service: A Case Study ANGELOS D. KEROMYTIS Columbia University JASON L. WRIGHT and T	可推	全文综述候选（D1 型，核对原文后落块）
 V36.9.6.1	能力模式的系统位置	ref_title	6119	6119	0.245	C	WireGuard 将进入 FreeBSD 内核 [EB/OL]. (2021-03-16)[2026-07-22]. <https://www.solidot.org/story?sid=67219> 2021	可推	文献线索（须核全文再定 D1/D2）

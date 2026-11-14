@@ -1,6 +1,6 @@
 source_id	old	new	reason
 S-013157	2004 年 9 月 29 日，Intelli7 的 Brenden Grace 自述为一块 em(4) 兼容芯片编写网卡驱动时，em 驱动总先于其驱动附加	2004 年 9 月 29 日，Intelli7 的 Brenden Grace 自述为一块 em(4) 兼容芯片编写网卡驱动时，em 驱动总先于其驱动附加	保留：D1 为 em(4) 手册页引用，题面完整
-S-013236	2007 年 12 月 19 日，Dan Langille 通知 BSDCan 2008 定于 2008 年 5 月 16-17 日在 University of Ottawa 举办，5 月 14-15 日 tutorials	2007 年 12 月 19 日，Dan Langille 通知 BSDCan 2008 定于 5 月 16–17 日在 University of Ottawa 举办，14–15 日 tutorials，征稿重技术内容	补齐 H1 截断，收在实义；F1 缩短（全题见 H1）
+S-013236	2007 年 12 月 19 日，Dan Langille 通知 BSDCan 2008 定于 2008 年 5 月 16-17 日在 University of Ottawa 举办，5 月 14-15 日 tutorials	2007 年 12 月 19 日，Dan Langille 通知 BSDCan 2008 定于 5 月 16—17 日在 University of Ottawa 举办，14—15 日 tutorials，征稿重技术内容	补齐 H1 截断，收在实义；F1 缩短（全题见 H1）
 S-013165	2002 年 3 月 20 日，Cedric Pouydebat 自述常去 freebsdquestions 却是本列表新人	2002 年 3 月 20 日，Cedric Pouydebat 自述常去 freebsd-questions 却是本列表新人	A2 列表名连写补连字符
 S-013176	2003 年 7 月 14 日，Hendrik Scholz 将网络性能调优文章初稿发布于 home.raisdorf.net／public／networkperf／	2003 年 7 月 14 日，Hendrik Scholz 将网络性能调优文章初稿发布于 home.raisdorf.net／public／networkperf／	H1 同步：H1 半角斜杠全角化同步
 S-013237	2022 年 9 月 16 日，Luna Jernberg 转 EuroBSDCON 2022 维也纳 FreeBSD Dev Summit 第二天直播 议题见 wiki.freebsd.org／DevSummit／202209	2022 年 9 月 16 日，Luna Jernberg 转 EuroBSDCON 2022 维也纳 FreeBSD Dev Summit 次日直播，议题见 wiki.freebsd.org／DevSummit／202209，后续见官网 program	补齐 H1 截断；半角斜杠全角化
@@ -23,12 +23,12 @@ S-013234	2005 年 9 月 19 日，Mikhail Teterin 在 FreeBSD 5.4-STABLE i386 环
 S-013235	2004 年 9 月 1 日，Jon Drews 说 Boulder 的新 BSD 用户组已列入 BSDUserGroups.org，首次会议定在 9 月 21 日	2004 年 9 月 1 日，Jon Drews 说 Boulder 的新 BSD 用户组已列入 BSDUserGroups.org，首次会议定在 9 月 21 日	保留：A3 BSDUserGroups.org 为真专名
 S-013143	要点：除企业核心外，FreeBSD 贡献者横跨多国——德国、法国、俄罗斯等地域 ccTLD 与多所大学（如 Stony Brook）的学术贡献显著	要点：除企业核心外，FreeBSD 贡献者横跨德国、法国、俄罗斯等地域 ccTLD，Stony Brook 等大学的学术贡献显著	D1 校名括注折入，收在实义
 S-013144	要点：FreeBSD 核心提交者（@freebsd.org）构成持续投入的主干，FreeBSD Foundation（约 2000 年成立，501(c)(3)）提供法律	要点：核心提交者多以 @freebsd.org 地址提交并构成持续投入的主干，FreeBSD Foundation 约 2000 年成立并提供法律、资金与招聘托管	补齐截断并折入括注，收在实义
-S-012695	要点：DARPA 在 1996-2010 持续投入操作系统研究 (包括 BSD 相关项目)；USCYBERCOM(2009.6 宣布设立	要点：DARPA 在 1996–2010 持续投入操作系统研究，含 BSD 相关项目；USCYBERCOM 于 2009 年 6 月宣布设立，FreeBSD 部分研究获其资助	D2 改 U+2013；折入括注补齐截断
-S-012696	要点：开源主流化：1998 OSDL 成立、2003 MITRE 报告、2004 oss 委员会；微软反垄断 (US v. Microsoft 1998-2001	要点：开源主流化：1998 OSDL 成立、2003 MITRE 报告、2004 oss 委员会；US v. Microsoft（1998–2001）与 EU v. Microsoft（2004）诸案后走向主流	D2 改 U+2013；补齐截断，收在实义
+S-012695	要点：DARPA 在 1996-2010 持续投入操作系统研究 (包括 BSD 相关项目)；USCYBERCOM(2009.6 宣布设立	要点：DARPA 在 1996—2010 持续投入操作系统研究，含 BSD 相关项目；USCYBERCOM 于 2009 年 6 月宣布设立，FreeBSD 部分研究获其资助	D2 改 U+2013；折入括注补齐截断
+S-012696	要点：开源主流化：1998 OSDL 成立、2003 MITRE 报告、2004 oss 委员会；微软反垄断 (US v. Microsoft 1998-2001	要点：开源主流化：1998 OSDL 成立、2003 MITRE 报告、2004 oss 委员会；US v. Microsoft（1998—2001）与 EU v. Microsoft（2004）诸案后走向主流	D2 改 U+2013；补齐截断，收在实义
 S-012697	要点：京都议定书 (1997 签署，2005.2.16 生效)、哥本哈根会议 (2009.12)；气候议题影响数据中心能效与 BSD 服务器优化方向	要点：京都议定书 1997 年签署、2005 年 2 月 16 日生效，哥本哈根会议 2009 年 12 月召开，气候议题影响数据中心能效与 BSD 服务器优化	B2 题尾向字改实义收尾；折入括注
 S-012698	要点：基础科学与 CS：量子计算从理论 (Shor 1994、Grover 1996) 走向实验 (Chuang 2001 实现 Shor 算法)	要点：基础科学与 CS：量子计算从 Shor 1994 与 Grover 1996 的理论走向 Chuang 2001 实现 Shor 算法的实验	D1 括注折入题面，收在实义
 S-012711	2007 年 8 月 5 日，Predrag Punosevac2007-08-05 称 Sun 说 Solaris 10 最年轻用户为 12 至 13 岁男孩而他认为 FreeBSD 用户群更广自己 4	2007 年 8 月 5 日，Predrag Punosevac 称 Sun 说 Solaris 10 最年轻用户为 12 至 13 岁男孩，他认为 FreeBSD 用户群更广，自己 4 个月大的女儿即其中之一	A2 姓名与日期连写拆开；补齐 H1 截断
-S-012693	要点：1996-2010 经济：互联网泡沫 (1999-2001)、2001 衰退、2008 金融危机 (Lehman 破产 2008.9.15)、TARP(2008.10.3)	要点：1996–2010 经济：互联网泡沫（1999–2001）、2001 年衰退、2008 年 Lehman 破产引发金融危机，TARP 与 ARRA 相继立法，影响开源商业生态	D2 改 U+2013；折入括注补齐截断
+S-012693	要点：1996-2010 经济：互联网泡沫 (1999-2001)、2001 衰退、2008 金融危机 (Lehman 破产 2008.9.15)、TARP(2008.10.3)	要点：1996—2010 经济：互联网泡沫（1999—2001）、2001 年衰退、2008 年 Lehman 破产引发金融危机，TARP 与 ARRA 相继立法，影响开源商业生态	D2 改 U+2013；折入括注补齐截断
 S-012716	2016 年 1 月 10 日，2016-01-10 bugzilla 通知：Bug 188031（FAQ 与 Handbook 之间存在矛盾）的 Assignee 由 freebsd-advocacy	2016 年 1 月 10 日 bugzilla 通知：Bug 188031 关于 FAQ 与 Handbook 矛盾的 Assignee 由 freebsd-advocacy 改为 rene at FreeBSD.org	去重日期；折入括注并补齐截断；F1 缩短
 S-012712	2007 年 9 月 27 日，Julian Stacey 巴黎 Antoine G. 起诉 Acer laptop 捆绑 Microsoft 案获 Rebate 311 Euros 500 damages	2007 年 9 月 27 日，Julian Stacey 转巴黎 Antoine G. 诉 Acer 捆绑 Microsoft 案获 311 欧元返还、500 欧元赔偿与 150 欧元诉讼费	补齐 H1 截断；F1 缩短（全题见 H1）
 S-012771	2001 年 1 月 13 日，Neil Blakey-Milner 回复 GLOBALLINK2001 称 FreeBSD 有一个 FreeBSD Documentation Project 文档项目	2001 年 1 月 13 日，Neil Blakey-Milner 回复 GLOBALLINK2001 称 FreeBSD 有 Documentation Project，欢迎新投稿，联系 doc@FreeBSD.org	补齐 H1 截断；F1 缩短（全题见 H1）
@@ -36,21 +36,21 @@ S-012718	1998 年 4 月 30 日，Don Wilde 列出多条 FreeBSD 标语候选 其
 S-012719	1998 年 5 月 8 日，Greg Lehey 转发中提到过去多年自己向 O'Reilly 劝说，加上该书销售良好的证据	1998 年 5 月 8 日，Greg Lehey 转发中提到过去多年自己向 O’Reilly 劝说，加上该书销售良好的证据	C2 撇号弯化为 ’
 S-012720	1998 年 5 月 13 日，Ron Rosson 对 Jason Wells 关于 FreeBSD Advocacy Group 章程的动议给出第三附议，原话是 If I have any say in	1998 年 5 月 13 日，Ron Rosson 就 Jason Wells 的 Advocacy Group 章程动议给出第三附议，原话是 If I have any say in this I third it	补齐 H1 截断，收在实义
 S-012722	1998 年 6 月 21 日，don morrison 说在华盛顿大学书店填建议卡推荐 Greg Lehey 的“The Complete FreeBSD”后几天内见 4 本陈列在 Unix 区	1998 年 6 月 21 日，don morrison 说在华盛顿大学书店填建议卡推荐 Greg Lehey 的“The Complete FreeBSD”后几天内见 4 本陈列在 Unix 区	H1 同步：题面已收在 Unix 区，H1 同步全角化
-S-012687	要点：1996-2010 美国总统科技政策：Clinton 第二任期 (Telecom Act 1996.2.8、DMCA 1998.10.28	要点：1996–2010 美国总统科技政策：Clinton 任期有 Telecom Act 与 DMCA，Bush 43 任期有 PATRIOT Act，Obama 任期有 ARRA 与 ACA	D2 改 U+2013；折入括注补齐截断
+S-012687	要点：1996-2010 美国总统科技政策：Clinton 第二任期 (Telecom Act 1996.2.8、DMCA 1998.10.28	要点：1996—2010 美国总统科技政策：Clinton 任期有 Telecom Act 与 DMCA，Bush 43 任期有 PATRIOT Act，Obama 任期有 ARRA 与 ACA	D2 改 U+2013；折入括注补齐截断
 S-012731	2001 年 12 月 20 日，Jeremy Reed 引 Open Group 名单称 Apple 为支持 Single UNIX Specification 的平台厂商后 Anthony	2001 年 12 月 20 日，Jeremy Reed 引 Open Group 名单称 Apple 为支持 Single UNIX Specification 的平台厂商，Anthony Atkielski 反问其是否付认证费	补齐 H1 截断，收在实义
 S-012738	1998 年 11 月 27 日，Matthew Orgass 说明若三家 free BSD 甚至 BSDI 采用同一包系统可消除大量重复工作，虽各家仍保留自有设备驱动但多数最终都会汇入三家	1998 年 11 月 27 日，Matthew Orgass 说明若三家 free BSD 甚至 BSDI 采用同一包系统可消除大量重复工作，虽各家仍保留自有设备驱动但多数最终都会汇入三家	H1 同步：题面已收在三家，H1 同步全角化
 S-012740	1999 年 2 月 22 日，Brian Ostrom 宣布在 MozillaTest 页添加 Tinderbox 持续构建，覆盖 AIX FreeBSD BSDI HP-UX OSF／1 与	1999 年 2 月 22 日，Brian Ostrom 宣布在 MozillaTest 页添加 Tinderbox 持续构建，覆盖 OSF／1 与 AlphaLinux 等六个平台，FreeBSD 为绿	B2 题尾与字改实义收尾；斜杠全角化
-S-012688	要点：1996-2010 伯克利校长：Chang-Lin Tien(1990-1997)、Robert M. Berdahl(1997-2004)	要点：1996–2010 伯克利校长为 Chang-Lin Tien、Robert M. Berdahl 与 Robert J. Birgeneau，三人对 CSRG 遗产与 BSD 态度不同	D2 改 U+2013；折入年份括注，收在实义
+S-012688	要点：1996-2010 伯克利校长：Chang-Lin Tien(1990-1997)、Robert M. Berdahl(1997-2004)	要点：1996—2010 伯克利校长为 Chang-Lin Tien、Robert M. Berdahl 与 Robert J. Birgeneau，三人对 CSRG 遗产与 BSD 态度不同	D2 改 U+2013；折入年份括注，收在实义
 S-012753	1999 年 8 月 3 日，Bill Fumerola 建议 advocacy.freebsd.org 改成 CNAME 指向 freefall 以保留旧链，他实测 nslookup 已返回	1999 年 8 月 3 日，Bill Fumerola 建议 advocacy.freebsd.org 改 CNAME 指向 freefall 以保留旧链，实测 nslookup 报域名解析失败	补齐 H1 截断，收在实义
 S-012755	1999 年 8 月 17 日，Eric A. Griff 拿到 ColdFusion 4.5 beta 版，希望在 FreeBSD 的 linux 仿真下跑	1999 年 8 月 17 日，Eric A. Griff 拿到 ColdFusion 4.5 beta 版，希望在 FreeBSD 的 linux 仿真下跑	保留：A3 ColdFusion 为真专名，非挤压
 S-012761	2000 年 4 月 27 日，Peter Seebach 指出 BSD／OS 是活跃的 BSD Unix 分支，有开发与明确市场定位，很多列举三个开源系统的列表都漏掉了它，令人误以为它是家族里的黑羊	2000 年 4 月 27 日，Peter Seebach 指出 BSD／OS 是活跃的 BSD Unix 分支，有开发与明确市场定位，很多列举三个开源系统的列表都漏掉了它，令人误以为它是家族里的黑羊	H1 同步：H1 半角斜杠全角化同步
-S-012689	要点：1996-2010 集成电路发展：Intel Pentium II 至 Core 系列	要点：1996–2010 集成电路发展：Intel Pentium II 至 Core 系列	D2 年代区间改用 U+2013
+S-012689	要点：1996-2010 集成电路发展：Intel Pentium II 至 Core 系列	要点：1996—2010 集成电路发展：Intel Pentium II 至 Core 系列	D2 年代区间改用 U+2013
 S-012768	2000 年 11 月 1 日，Micke Josefsson 转述 freebsd-questions 的新手帖，新手想知道 MS Office 日常用途的替代工具是否存在，回帖提到 StarOffice	2000 年 11 月 1 日，Micke Josefsson 转 freebsd-questions 新手帖，问 MS Office 日常用途有无替代工具，回帖提到 StarOffice 与 WordPerfect	补齐 H1 截断，收在实义
 S-012770	2000 年 11 月 22 日，Kenneth P. Stox 说其公司服务的客户从 Lutherans 到 Evangelicals 到 catholic brotherhood 都用 FreeBSD	2000 年 11 月 22 日，Kenneth P. Stox 说其客户从 Lutherans 到 Evangelicals 到 catholic brotherhood 都用 FreeBSD 且很满意	补齐 H1 句意，收在实义；F1 缩短
-S-012690	要点：1996-2010 英美哲学：实验哲学 (X-phi, Knobe 2003)、后人类主义 (Hayles 1999)、思辨实在论 (Brassier 2007	要点：1996–2010 英美哲学有 Knobe 2003 的实验哲学、Hayles 1999 的后人类主义与 Brassier 2007 的思辨实在论	C7 半角逗号全角化；D2 改 U+2013
-S-012691	要点：1996-2010 文化运动：开源运动主流化、Web 2.0(2004)、社交网络崛起 (Facebook 2004／Twitter 2006)	要点：1996–2010 文化运动：开源运动主流化、Web 2.0、社交网络与 Wikipedia 崛起，反全球化、反战与 Obama 竞选并行	D2 改 U+2013；折入括注并同步 H1
-S-012692	要点：1996-2010 地缘：苏联已解体 (1991) 但冷战遗产延续；9／11(2001.9.11) 改变美国优先级	要点：1996–2010 地缘：苏联解体后冷战遗产延续，9／11 改变美国优先级，反恐战争与 Cyber Command 成立	D2 改 U+2013；折入年份括注
-S-012694	要点：1996-2010 软件工程：C99(1999 ISO／IEC 9899)、敏捷宣言 (2001)、C++11(2011 草案)	要点：1996–2010 软件工程有 1999 年 ISO／IEC 9899 即 C99、2001 年敏捷宣言与 2011 年 C++11 草案，FreeBSD 5.x／6.x 逐步迁移 C99	D2 改 U+2013；折入括注并补齐句尾
+S-012690	要点：1996-2010 英美哲学：实验哲学 (X-phi, Knobe 2003)、后人类主义 (Hayles 1999)、思辨实在论 (Brassier 2007	要点：1996—2010 英美哲学有 Knobe 2003 的实验哲学、Hayles 1999 的后人类主义与 Brassier 2007 的思辨实在论	C7 半角逗号全角化；D2 改 U+2013
+S-012691	要点：1996-2010 文化运动：开源运动主流化、Web 2.0(2004)、社交网络崛起 (Facebook 2004／Twitter 2006)	要点：1996—2010 文化运动：开源运动主流化、Web 2.0、社交网络与 Wikipedia 崛起，反全球化、反战与 Obama 竞选并行	D2 改 U+2013；折入括注并同步 H1
+S-012692	要点：1996-2010 地缘：苏联已解体 (1991) 但冷战遗产延续；9／11(2001.9.11) 改变美国优先级	要点：1996—2010 地缘：苏联解体后冷战遗产延续，9／11 改变美国优先级，反恐战争与 Cyber Command 成立	D2 改 U+2013；折入年份括注
+S-012694	要点：1996-2010 软件工程：C99(1999 ISO／IEC 9899)、敏捷宣言 (2001)、C++11(2011 草案)	要点：1996—2010 软件工程有 1999 年 ISO／IEC 9899 即 C99、2001 年敏捷宣言与 2011 年 C++11 草案，FreeBSD 5.x／6.x 逐步迁移 C99	D2 改 U+2013；折入括注并补齐句尾
 S-013134	2011 年 2 月 26 日，自述 FreeBSD 官方 ftp 站点 8.2-RELEASE 的 packages 软链接指向 ..／..／..／ports／amd64／packages-8.2-release 疑为坏链接	2011 年 2 月 26 日，自述 FreeBSD 官方 ftp 站点 8.2-RELEASE 的 packages 软链接指向 ..／..／..／ports／amd64／packages-8.2-release 疑为坏链接	H1 同步：H1 半角斜杠全角化同步
 S-013072	2004 年 1 月 14 日，某运营者自述其一直使用较老的 SysKonnect SK-9843 芯片网卡且相当满意，称这类卡的分组缓存明显多于多数其他网卡	2004 年 1 月 14 日，某运营者自述其一直使用较老的 SysKonnect SK-9843 芯片网卡且相当满意，称这类卡的分组缓存明显多于多数其他网卡	保留：A3 SysKonnect 为厂商真专名
 S-013073	2004 年 7 月 21 日，某管理员自述其双网卡 FreeBSD 桥接机做流量整形效果良好，但透明 squid 代理始终未能配置成功，并列出自己尝试过的规则	2004 年 7 月 21 日，某管理员自述其双网卡 FreeBSD 桥接机做流量整形效果良好，但透明 squid 代理始终未能配置成功，列出尝试过的规则条目	B2 规则收尾误判，改规则条目实义收尾
@@ -62,11 +62,11 @@ S-013104	2007 年 8 月 30 日，Puchar 报告服务器 re(4) 网卡整天运行
 S-013141	freebsd-questions 邮件 2406965（空模板件）	freebsd-questions 邮件 2406965：空模板件	D1 非时间括注折入题面
 S-013066	要点：FreeBSD 5.3-RELEASE（2004 年 11 月，release／5.3.0 tag 为 2004-11-04	要点：FreeBSD 5.3-RELEASE 于 2004 年 11 月正式从 OpenBSD 导入 PF 防火墙，作为 IPFilter 的替代选择	补齐截断，折入括注，收在实义
 S-013067	要点：FreeBSD 5.x 全系列中 sendmail 仍为 base system 的默认 MTA（Mail Transfer Agent）	要点：FreeBSD 5.x 全系列中 sendmail 仍为 base system 默认邮件传输代理，版本为 8.12.x 至 8.13.x	D1 括注折入题面，收在实义
-S-013240	要点：Linux 2.4（2001.1）是稳定的服务器内核，2.5 开发线（2002-2003）引入 O(1) 调度器、抢占式内核、反向映射 VM 等	要点：Linux 2.4（2001.1）是稳定服务器内核，2.5 开发线（2002–2003）引入 O(1) 调度器、抢占式内核与反向映射 VM	B2 等字收尾改实义；D2 改 U+2013
+S-013240	要点：Linux 2.4（2001.1）是稳定的服务器内核，2.5 开发线（2002-2003）引入 O(1) 调度器、抢占式内核、反向映射 VM 等	要点：Linux 2.4（2001.1）是稳定服务器内核，2.5 开发线（2002—2003）引入 O(1) 调度器、抢占式内核与反向映射 VM	B2 等字收尾改实义；D2 改 U+2013
 S-013252	1998 年 5 月 10 日，Brett Glass 回应 Jason Nordwick，认为他们确实不想卷进 Linux vs BSD 之争	1998 年 5 月 10 日，Brett Glass 回应 Jason Nordwick，称不想卷入 Linux vs BSD 之争，但会挑销售最好的平台支持	补齐 H1 截断，收在实义
 S-013253	2001 年 4 月 21 日，Mikhail Kruk 转发 PC Magazine 评测，讥其把 Mac OS X 称为基于 mach3 Unix	2001 年 4 月 21 日，Mikhail Kruk 转发 PC Magazine 评测，讥其称 Mac OS X 为 mach3 内核与 bsd Linux	补齐 H1 截断；F1 缩短（全题见 H1）
 S-013256	1999 年 4 月 13 日，Brett Glass 指责 Jordan 多年来拖累 FreeBSD 的 PR 使系统在市场份额与可见度上远远落后	1999 年 4 月 13 日，Brett Glass 指责 Jordan 多年拖累 FreeBSD 的 PR，使份额与可见度远落后 Linux 并说恐追不上	补齐 H1 截断，收在实义；F1 缩短
 S-013241	要点：Microsoft Windows XP（2001.10）统一了消费与商业桌面，Windows Server 2003（2003.4）强化了服务器能力	要点：Microsoft Windows XP（2001.10）统一消费与商业桌面，Windows Server 2003（2003.4）强化服务器能力，二者基于 NT 内核	补齐 H1 句尾二者基于 NT 内核
 S-013242	要点：NetBSD 1.6（2002.9）带来 SMP 改进（如新的锁框架）与广泛的平台支持；与 FreeBSD 5.x 的 SMPng 类似	要点：NetBSD 1.6（2002.9）带来以新锁框架为主的 SMP 改进与广泛平台支持，与 FreeBSD 5.x 的 SMPng 类似	D1 括注折入题面，收在实义
-S-013243	要点：OpenBSD 3.0-3.3（2002-2003）持续强化安全（如 W^X 雏形、特权分离），对 SMP 关注较少，保持单处理器为主的简洁设计	要点：OpenBSD 3.0–3.3（2002–2003）持续强化安全，有 W^X 雏形与特权分离，对 SMP 关注较少而保持单处理器简洁设计	D2 改 U+2013；折入括注补齐句尾
+S-013243	要点：OpenBSD 3.0-3.3（2002-2003）持续强化安全（如 W^X 雏形、特权分离），对 SMP 关注较少，保持单处理器为主的简洁设计	要点：OpenBSD 3.0—3.3（2002—2003）持续强化安全，有 W^X 雏形与特权分离，对 SMP 关注较少而保持单处理器简洁设计	D2 改 U+2013；折入括注补齐句尾
 S-013249	2003 年 9 月 3 日，Terry Lambert 提议用最能说明问题的演示，在五台机器的实验网里放一两台 FreeBSD 与若干台最新	2003 年 9 月 3 日，Terry Lambert 提议五机实验网放一两台 FreeBSD 与若干最新 Windows，染 So.Big 蠕虫以显 FreeBSD 无恙	补齐 H1 截断；F1 缩短（全题见 H1）

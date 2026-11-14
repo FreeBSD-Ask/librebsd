@@ -1,5 +1,5 @@
 source_id	target_id	reason	strategy	pass_id
-S-014119	V36-7.9	题面“性能基准的横向比较”与 V36-7.9 同期比较节（Linux 2.6.26–2.6.32、Windows 7、Solaris 10 U5–6，2008–2009 性能基准）唯一对应	A	sb366
+S-014119	V36-7.9	题面“性能基准的横向比较”与 V36-7.9 同期比较节（Linux 2.6.26—2.6.32、Windows 7、Solaris 10 U5—6，2008—2009 性能基准）唯一对应	A	sb366
 S-014120		题面“比较辨析”零命中	A	sb366
 S-014121		题面“比较史料辨析”零命中	A	sb366
 S-014122		题面“OpenSSL DTLS 漏洞群”“vendor branch 同步”零命中（OpenSSL 节均系 2014 Heartbleed/LibreSSL，时段与主旨不符）	A	sb366

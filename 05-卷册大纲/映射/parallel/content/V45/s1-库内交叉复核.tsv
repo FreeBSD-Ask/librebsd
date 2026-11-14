@@ -72,6 +72,6 @@ V45.8.8.3	系统集与软件包的分野	fulltext_summary	191	191	0.235	C	Breaki
 V45.8.9.1	基本系统的外移决定	fulltext_summary	115	115	0.225	C	Debug Packages in OpenBSD Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita Research and Development Laboratory	可推	全文综述候选（D1 型，核对原文后落块）
 V45.8.9.1	基本系统的外移决定	fulltext_summary	117	117	0.225	C	Architectures vs the Ports tree: a losing battle ? Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> OpenBSD project 	可推	全文综述候选（D1 型，核对原文后落块）
 V45.8.9.1	基本系统的外移决定	fulltext_summary	191	191	0.225	C	Breaking bad: there and back again Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> September 22, 2017 Marc Espie <e	可推	全文综述候选（D1 型，核对原文后落块）
-V45.9.7.2	解析链的逐级推进	ref_title	2795	2795	0.263	C	ZFS – The Last Word in File Systems（《ZFS——文件系统的最终答案》） Bill Moore（Sun Microsystems 高级员工工程师，Sr Staff Engineer） 2005	可推	文献线索（须核全文再定 D1/D2）
+V45.9.7.2	解析链的逐级推进	ref_title	2795	2795	0.263	C	ZFS-The Last Word in File Systems（《ZFS——文件系统的最终答案》） Bill Moore（Sun Microsystems 高级员工工程师，Sr Staff Engineer） 2005	可推	文献线索（须核全文再定 D1/D2）
 V45.9.8.1	证书自动化的客户端	sacred	2850		0.258	C	SSH 和 SCP 客户端	可推	史观参照（不作证据，仅定题面归属）
 V45.9.9.1	邮件队列逻辑的重订	fulltext_fact	7344	1550	0.259	C	本文档系统说明 sendmail 的配置语法、邮件路由与队列处理机制，是 sendmail 运维与历史考据的一手资料。	可推	全文补证候选（S1 命中即复用，D1 型）

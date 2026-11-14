@@ -1,4 +1,4 @@
-# Task 8.4 判读规程卡（V71"BSD 的隐性遗产与不可见性（1978–2026）"卷批）
+# Task 8.4 判读规程卡（V71"BSD 的隐性遗产与不可见性（1978—2026）"卷批）
 
 > 本卡是本会话（主代理，单写者，不使用子代理）的判据来源。目标、非目标见
 > `00-意图确证.md`。批次：Task 8.4（V71 全卷 5 章 50 节 225 题）。
@@ -6,8 +6,8 @@
 
 ## 一、你在做什么
 
-旧树对 Junos（288 章）、TrueNAS（285 章）、PlayStation（289–291 章）、Netflix（292 章）、
-沉默企业（293–294 章）有专章，但机器块仅 102 个（旧节多为五字段纯叙述件，0 块）。
+旧树对 Junos（288 章）、TrueNAS（285 章）、PlayStation（289—291 章）、Netflix（292 章）、
+沉默企业（293—294 章）有专章，但机器块仅 102 个（旧节多为五字段纯叙述件，0 块）。
 故本卷料域改用**全库关键词分流**：按产品专名（Juniper/Junos/NetScaler/Wind River／
 Isilon/OneFS/NetApp/ONTAP/WAFL/FreeNAS/TrueNAS／Netflix/Open Connect/WhatsApp／
 PlayStation/PS3/PS4/PS5）＋披露术语（开源公告／组件清单／许可证文本等）从全库

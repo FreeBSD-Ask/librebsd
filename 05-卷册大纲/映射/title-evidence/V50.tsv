@@ -1,375 +1,375 @@
 subsection_id	query	url	source_type	tier	accessed	quote	conflict
 V50.1.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	生平概略与前段承接：FreeBSD 岁月	none
-V50.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“DI”／收尾“作品”；T6 长度 18 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“DI”／收尾“作品”；T6 长度 18 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.1.1	早年编译器作品	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matthew Dillon is known for creating the DICE C compiler on the Amiga, and later co-founding BEST Internet in San Francisco.	none
 V50.1.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.1 生平概略与前段承接：FreeBSD 岁月@@〔溯源：claim 1392〕〔说明：详第三十八卷第3章〕	none
-V50.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“Fr”／收尾“贡献”；T6 长度 21 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“Fr”／收尾“贡献”；T6 长度 21 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.1.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.8-mattdillon的freebsd贡献前史与个人技术履历/236.8.1-dillon在freebsd的早期贡献1994-2003.md	史料	A	2026-10-30	freebsd.duckdb 显示 Matt Dillon 在 freebsd-src 仓库的首个 commit 可追溯至 1998-08-26	none
 V50.1.1.2	FreeBSD 与 Linux 内核贡献	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt has also contributed code to The FreeBSD Project and the Linux kernel for subsystems such as VM and NFS.	none
 V50.1.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	1.1 生平概略与前段承接：FreeBSD 岁月	none
-V50.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“在线”／收尾“维护”；T6 长度 12 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“在线”／收尾“维护”；T6 长度 12 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.1.3	网站与在线资源	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is also the principal code contributor to DragonFly BSD and supports the website and other online resources for this project.	none
-V50.1.1.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.2 技术观点与路线辩论中的个人立场@@〔溯源：旧编号 05-V11 §215.1–215.2〕	none
-V50.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“家用”／收尾“自述”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.1.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.2 技术观点与路线辩论中的个人立场@@〔溯源：旧编号 05-V11 §215.1—215.2〕	none
+V50.1.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“家用”／收尾“自述”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.1.4	自述带宽与托管	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	Hopefully my T1 can handle the cvsup load. Eventually I'll colocate some boxes to deal with that issue.	none
 V50.1.1.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 1 章 Matt Dillon	none
-V50.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“Fr”／收尾“写作”；T6 长度 15 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“Fr”／收尾“写作”；T6 长度 15 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.1.5	development(7) 作者与初版	https://man.dragonflybsd.org/?command=development&section=7	联网	A	2026-10-30	The development manual page was originally written by Matthew Dillon < dillon@FreeBSD.org > and first appeared in FreeBSD 5.0, December 2002.	none
 V50.1.2.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	技术观点与路线辩论中的个人立场	none
-V50.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“互斥”／收尾“取舍”；T6 长度 14 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“互斥”／收尾“取舍”；T6 长度 14 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.2.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第235章-dragonflybsd的诞生fork公告与启动/235.1-mattdillon发布dragonflybsd公告我考虑过以5x/235.1.2-4x基线选择的技术论证.md	史料	A	2026-10-30	Dillon 在 2003.7.16 公告原文中明确表述 “it is simply too heavily mutexed”	none
 V50.1.2.1	基线取舍的技术理由	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.	none
-V50.1.2.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.2 技术观点与路线辩论中的个人立场@@〔溯源：旧编号 05-V11 §215.1–215.2〕	none
-V50.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“无锁”／收尾“主张”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.2.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.2 技术观点与路线辩论中的个人立场@@〔溯源：旧编号 05-V11 §215.1—215.2〕	none
+V50.1.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“无锁”／收尾“主张”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.2.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第235章-dragonflybsd的诞生fork公告与启动/235.2-2004年onlamp采访/235.2.1-采访中dillon的核心主张.md	史料	A	2026-10-30	Dillon 在 ONLamp 2004 年采访	none
 V50.1.2.2	LWKT 的设计主张	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	This proving work involved implementing much of the earlier UP->SMP converstion work that was done when 5.x first branched, but under an entirely new mutex-free light weight kernel threading infrastructure.	none
 V50.1.2.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	1.2 技术观点与路线辩论中的个人立场	none
-V50.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“单系”／收尾“目标”；T6 长度 12 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“单系”／收尾“目标”；T6 长度 12 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.2.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.2-dragonfly早期发展方向争议的四层辩证链/238.2.1-批评层-对早期发展方向不明确与代码同步停止的批评.md	史料	A	2026-10-30	DragonFly 官方 history 页面（dragonflybsd.org/history/	none
 V50.1.2.3	原生集群的初始目标	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The ultimate goal of the DragonFly project at its inception was to provide native clustering support in the kernel.	none
 V50.1.2.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.3 分叉决策的当事记录@@〔溯源：旧编号 05-V11；事件面：第二十七卷第1章〕	none
-V50.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“架构”／收尾“保留”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“架构”／收尾“保留”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.2.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.2-dragonfly早期发展方向争议的四层辩证链/238.2.2-反批评层-dragonfly阵营的反批评.md	史料	A	2026-10-30	官方 history 页面明确将方向转变表述为演化而非跳跃	none
 V50.1.2.4	原始方向的遗留影响	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This original design direction, although no longer the primary goal of the DragonFly project, has influenced many of the design decisions made in the intervening years.	none
 V50.1.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.1 生平概略与前段承接：FreeBSD 岁月@@〔溯源：claim 1392〕〔说明：详第三十八卷第3章〕	none
-V50.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“分道”／收尾“表述”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“分道”／收尾“表述”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.2.5	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.0-章级综合/236.0.6-核心要点.md	史料	A	2026-10-30	Dillon 1998-08-26 起活跃于 FreeBSD 提交	none
 V50.1.2.5	分叉动因的官方叙述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Matthew Dillon, one of the developers for FreeBSD, was growing increasingly frustrated with the FreeBSD Project's direction for release 5.	none
 V50.1.3.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	分叉决策的当事记录	none
-V50.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“分叉”／收尾“时间”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“分叉”／收尾“时间”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.3.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第235章-dragonflybsd的诞生fork公告与启动/235.1-mattdillon发布dragonflybsd公告我考虑过以5x/235.1.1-fork公告原文与发布时机.md	史料	A	2026-10-30	2003 年 7 月 16 日（太平洋夏令时 Wed Jul 16 12:41:34 PDT 2003）	none
 V50.1.3.1	公告的起始自述	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	For the last few months I have been investigating and then working on a new approach to the BSD kernel.	none
 V50.1.3.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.3 分叉决策的当事记录@@〔溯源：旧编号 05-V11；事件面：第二十七卷第1章〕	none
-V50.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“项目”／收尾“声明”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“项目”／收尾“声明”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.3.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第235章-dragonflybsd的诞生fork公告与启动/235.2-2004年onlamp采访/235.2.1-采访中dillon的核心主张.md	史料	A	2026-10-30	LWKT 轻量级线程子系统、消息传递机制、用户态 vkernel	none
 V50.1.3.2	三项项目意图	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	It is the intent of this project to take over development of the 4.x tree, to move kernel development along an entirely new path towards SMP, and to completely rewrite the packaging and distribution system.	none
 V50.1.3.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	1.3 分叉决策的当事记录	none
-V50.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“初始”／收尾“限制”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“初始”／收尾“限制”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.3.3	平台限制的原文	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	For obvious reasons the codebase will only run on i386 for now, and ports to other platforms will not happen until the MD infrastructure is cleaned up and finalized.	none
 V50.1.3.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.4 领导权长期集中的记录与边界@@〔溯源：旧编号 05-V11 §225.1〕	none
-V50.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“公告”／收尾“措辞”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“公告”／收尾“措辞”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.3.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第235章-dragonflybsd的诞生fork公告与启动/235.3-dillon谈与freebsd社区的关系/235.3.5-freebsdcoreteam与committer群体对dillon批评的回应层.md	史料	A	2026-10-30	freebsd-current 邮件列表 2003-07-16 至 2003-07-17 出现多条跟帖	none
 V50.1.3.4	开放参与的措辞	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	Anyone interested in working on or discussing the project is welcome!	none
-V50.1.3.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.2 技术观点与路线辩论中的个人立场@@〔溯源：旧编号 05-V11 §215.1–215.2〕	none
-V50.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“自我”／收尾“预期”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.3.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.2 技术观点与路线辩论中的个人立场@@〔溯源：旧编号 05-V11 §215.1—215.2〕	none
+V50.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“自我”／收尾“预期”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.3.5	推进节奏的自述	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I expect the project to start fairly slowly but then for momentum to build.	none
 V50.1.4.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	领导权长期集中的记录与边界	none
-V50.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“单一”／收尾“空缺”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“单一”／收尾“空缺”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.4.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.8-mattdillon的freebsd贡献前史与个人技术履历/236.8.2-dillon单一决策核心治理风格的形成与演化.md	史料	A	2026-10-30	Dillon 的单一决策核心治理风格（single decision-maker governance）	none
 V50.1.4.1	最终裁定权的表述	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no formal entry/rejection process, though final say on all code submissions goes to Matt Dillon, as originator of this project.	none
 V50.1.4.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.4 领导权长期集中的记录与边界@@〔溯源：旧编号 05-V11 §225.1〕	none
-V50.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“重大”／收尾“决权”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“重大”／收尾“决权”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.4.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.1-dillon主导的治理结构特征.md	史料	A	2026-10-30	DragonFly 无 Core Team 选举机制、无 Foundation 法律实体	none
 V50.1.4.2	架构否决权条款	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	All major architectural changes must be discussed on the kernel@ mailing list and he retains veto power.	none
 V50.1.4.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	1.4 领导权长期集中的记录与边界	none
-V50.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“否决”／收尾“记录”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“否决”／收尾“记录”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.4.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.4-治理相关邮件与发言考据.md	史料	A	2026-10-30	Dillon 的 commit message 中偶有“this is the right approach”、“no compromise”等表述反映其决策风格	none
 V50.1.4.3	否决罕用的原文	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Nothing ever really gets vetoed.	none
 V50.1.4.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.5 领导权交接的讨论与记录@@〔溯源：旧编号 05-V11（待补）〕	none
-V50.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“基金”／收尾“缺位”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“基金”／收尾“缺位”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.4.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.3-与deraadt模式及linus模式的比较.md	史料	A	2026-10-30	Matt Dillon 无任何 Foundation 法律实体（dragonflybsd.org/foundation/ 页面 404）	none
 V50.1.4.4	非营利法人的缺位	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	DragonFly is not yet incorporated as a non-profit, meaning no tax benefit is available for donating time or goods to the project.	none
 V50.1.4.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.3 分叉决策的当事记录@@〔溯源：旧编号 05-V11；事件面：第二十七卷第1章〕	none
-V50.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“决策”／收尾“耦合”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“决策”／收尾“耦合”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.4.5	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第246章-dragonfly3x时代的治理与dillon主导/246.1-dragonfly的治理与dillon个人主导20112018/246.1.1-dillon主导的治理结构特征.md	史料	A	2026-10-30	dragonfly.duckdb 显示 2011-2015 年间 Dillon（<dillon@apollo.backplane.com> 与 <dillon@backplane.com> 邮箱）commit 量按年	none
 V50.1.4.5	第一阶段的内核重写	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	During the first major phase of the project, which lasted until early 2007, the DragonFly project focused on rewriting most of the major kernel subsystems to implement required abstractions	none
 V50.1.5.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	领导权交接的讨论与记录	none
-V50.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“领导”／收尾“标注”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“领导”／收尾“标注”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.5.1	领导职衔的标注	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Matt is the founder of The DragonFly Project.	none
 V50.1.5.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.5 领导权交接的讨论与记录@@〔溯源：旧编号 05-V11（待补）〕	none
-V50.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“协助”／收尾“构成”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“协助”／收尾“构成”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.5.2	协助联系人名单	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	If you need assistance please contact Antonio Huete, Matthew Dillon, Sascha Wildner or Justin Sherrill directly	none
 V50.1.5.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	1.5 领导权交接的讨论与记录	none
-V50.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“捐款”／收尾“方式”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“捐款”／收尾“方式”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.5.3	账户掌管的原文	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	Matthew Dillon manages the account separately, and all money goes to DragonFly hardware or code bounties .	none
 V50.1.5.4	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 1.4 领导权长期集中的记录与边界@@〔溯源：旧编号 05-V11 §225.1〕	none
-V50.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“发布”／收尾“更替”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“发布”／收尾“更替”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.5.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.4-要点dragonflyduckdbdragonflysrc仓库tags表共131.md	史料	A	2026-10-30	dragonfly.duckdb dragonfly-src 仓库 tags 表共 131 个 tag，按 tagger_date 升序首 tag 为 v2.1.1	none
 V50.1.5.4	发布序列的末项	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	6.4.x : 6.4.2 (May 9, 2025)	none
 V50.1.5.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 1 章 Matt Dillon	none
-V50.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“交接”／收尾“空档”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.1.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“交接”／收尾“空档”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.1.5.5	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.2-巴士因子极低风险与项目停滞事件.md	史料	A	2026-10-30	巴士因子实测约 5	none
 V50.1.5.5	名录的不完整声明	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Here's the list but it may be incomplete.	none
-V50.2.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003–2005）	none
-V50.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“八天”／收尾“时点”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003—2005）	none
+V50.2.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“八天”／收尾“时点”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.1.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.1-jeffreyhsu评价dragonfly/236.1.2-hsu从freebsd转向dragonfly的过程.md	史料	A	2026-10-30	Hsu 在 FreeBSD 5.x 开发期间对 SMPng 路线产生不满，2003-07-24 在 dragonfly-src 首 commit	none
 V50.2.1.1	提交者名录中的 Hsu	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Jeffrey Hsu <hsu@>	none
-V50.2.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.1 Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003–2005）@@〔溯源：claim 331；旧编号 05-V11 §215.1〕	none
-V50.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“SM”／收尾“分歧”；T6 长度 13 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.1 Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003—2005）@@〔溯源：claim 331；旧编号 05-V11 §215.1〕	none
+V50.2.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“SM”／收尾“分歧”；T6 长度 13 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.1.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.1-jeffreyhsu评价dragonfly/236.1.1-hsu评价的具体内容.md	史料	A	2026-10-30	Jeffrey Hsu 作为从 FreeBSD 转向 DragonFly 的核心开发者	none
 V50.2.1.2	提交前讨论的场域	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Discussion prior to committing usually occurs on the kernel@ , submit@ , or bugs@ mailing lists and depends on the work involved.	none
-V50.2.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	2.1 Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003–2005）	none
-V50.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“LW”／收尾“立场”；T6 长度 14 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	2.1 Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003—2005）	none
+V50.2.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“LW”／收尾“立场”；T6 长度 14 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.1.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.1-jeffreyhsu评价dragonfly/236.1.1-hsu评价的具体内容.md	史料	A	2026-10-30	认为 LWKT 消息传递架构比 FreeBSD 5.x SMPng 细粒度锁更清晰	none
 V50.2.1.3	令牌与可维护性	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	One of the fundamental synchronization concepts that DragonFly uses throughout the kernel, the token, lends itself directly to ease of maintenance and understandability of the kernel.	none
 V50.2.1.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.2 早期 committer 群体@@〔溯源：旧编号 05-V11〕	none
-V50.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“网络”／收尾“接续”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“网络”／收尾“接续”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.1.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.2-社区萎缩与核心贡献者留存.md	史料	A	2026-10-30	Sepherosa Ziehau（4834 条，2005-08-28 至 2021-03-29 后淡出）	none
 V50.2.1.4	网络栈的并发改进	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	Also during this period the network stack underwent a continuous stream of small SMP improvements to the point where today all major protocols, including both ipfw and PF, are fully concurrent with few locking collisions.	none
 V50.2.1.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 2 章 早期成员与分叉当事人	none
-V50.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“淡出”／收尾“空白”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“淡出”／收尾“空白”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.1.5	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.4-重要贡献者与边缘者dillon之外的dragonfly贡献者/238.4.1-jeffreyhsu与saschawildner的贡献.md	史料	A	2026-10-30	2007 年后停止贡献	none
 V50.2.1.5	缺陷库与列表的绑定	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	The bugs@ and submit@ lists are tied into the bug tracker at bugs.dragonflybsd.org .	none
 V50.2.2.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	早期 committer 群体	none
-V50.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“co”／收尾“规模”；T6 长度 14 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“co”／收尾“规模”；T6 长度 14 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.2.1	提交者名录的读法	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Committers To send an email to one of the committers append dragonflybsd.org .	none
 V50.2.2.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.2 早期 committer 群体@@〔溯源：旧编号 05-V11〕	none
-V50.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“早期”／收尾“路径”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“早期”／收尾“路径”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.2.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.1-jeffreyhsu评价dragonfly/236.1.3-与其他核心开发者评价的比较.md	史料	A	2026-10-30	2003-2004 年间转向 DragonFly 的 committer 包括 Hiten Pandya	none
 V50.2.2.2	无资格审核的准入	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	There is no qualification process; anyone may submit own code, documentation, or designs, for use in the Project.	none
 V50.2.2.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	2.2 早期 committer 群体	none
-V50.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“提交”／收尾“审议”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“提交”／收尾“审议”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.2.3	小改动的免预告	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Simple and obvious work such as documentation edits or additions doesn't really need a heads up.	none
 V50.2.2.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.3 与 FreeBSD core 的人员往来@@〔溯源：旧编号 05-V11 §215.2〕〔说明：见第三十八卷第2章〕	none
-V50.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“成员”／收尾“分布”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“成员”／收尾“分布”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.2.4	地理分散的团队	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	The DragonFly Project, like many open source projects, is a technical project supported by a team of geographically separated people.	none
-V50.2.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.1 Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003–2005）@@〔溯源：claim 331；旧编号 05-V11 §215.1〕	none
-V50.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“名录”／收尾“献者”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.1 Jeffrey Hsu：跨项目的技术贡献与早期介绍（2003—2005）@@〔溯源：claim 331；旧编号 05-V11 §215.1〕	none
+V50.2.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“名录”／收尾“献者”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.2.5	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.4-重要贡献者与边缘者dillon之外的dragonfly贡献者/238.4.2-边缘贡献者的融入困境与流失.md	史料	A	2026-10-30	Max Okumoto（603 条，2004-12-08 至 2005-09-24，活跃期不足 1 年）	none
 V50.2.2.5	附加贡献者一栏	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Additional contributors Joe Angrisano	none
 V50.2.3.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	与 FreeBSD core 的人员往来	none
-V50.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“撤权”／收尾“依据”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“撤权”／收尾“依据”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.3.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.2-freebsdcoreteam撤销mattdillon提交权限dillon/236.2.1-撤权决策与程序依据.md	史料	A	2026-10-30	FreeBSD Core Team 依据《Committer's Big List of Rules》	none
 V50.2.3.1	撤权后的列表去向	https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html	联网	A	2026-10-30	I will be posting periodic updates to freebsd-hackers as well.	none
 V50.2.3.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.3 与 FreeBSD core 的人员往来@@〔溯源：旧编号 05-V11 §215.2〕〔说明：见第三十八卷第2章〕	none
-V50.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“同期”／收尾“反应”；T6 长度 16 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“同期”／收尾“反应”；T6 长度 16 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.3.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.3-dragonfly与freebsd的分裂后紧张dillon被撤销提交权限后与/237.3.5-邮件列表敌意话语的批评层-committer跟帖中的负面话语与coreteam的.md	史料	A	2026-10-30	Julian Stacey 在 2003-07-17 06:01:34 BST 跟帖	none
 V50.2.3.2	分叉后的开发进度	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	Development has proceeded at a very quick rate since then, with Matt Dillon and a group of developers fixing longstanding BSD bugs and modernizing the new DragonFly system.	none
 V50.2.3.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	2.3 与 FreeBSD core 的人员往来	none
-V50.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“撤权”／收尾“紧张”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“撤权”／收尾“紧张”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.3.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.3-dragonfly与freebsd的分裂后紧张dillon被撤销提交权限后与/237.3.1-撤权后的长期交恶表现.md	史料	A	2026-10-30	Dillon 选择自 FreeBSD 4.8 而非 5.x 分叉	none
 V50.2.3.3	延续说的过时判定	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	The project was originally billed as "the logical continuation of the FreeBSD 4.x series", as quoted in the announcement , but this description has long since become obsolete.	none
 V50.2.3.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.4 分裂记忆在 DragonFly 侧的再叙述：作为记忆之场的‘比萨饼’轶事@@〔溯源：旧编号 05-V11 §215.5〕	none
-V50.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“共享”／收尾“分化”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“共享”／收尾“分化”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.3.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第239章-dragonflybsd早期演进的vkernel虚拟内核/239.2-dragonflyuserland与freebsd的差异/239.2.2-userland逐渐分化的历程2x-6x期间.md	史料	A	2026-10-30	2003-2010 年间 DragonFly userland 经多次差异化重构	none
 V50.2.3.4	子系统层面的重写	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This involved a great deal of work in nearly every subsystem, particularly the filesystem APIs and kernel core.	none
 V50.2.3.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.2 早期 committer 群体@@〔溯源：旧编号 05-V11〕	none
-V50.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“修复”／收尾“边界”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“修复”／收尾“边界”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.3.5	共用打包框架的动机	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	in order to pool our resources with other BSD projects using this framework	none
 V50.2.4.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	分裂记忆在 DragonFly 侧的再叙述：作为记忆之场的‘比萨饼’轶事	none
-V50.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“隐喻”／收尾“并存”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“隐喻”／收尾“并存”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.4.1	官方归档可核	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	By web archive lists.dragonflybsd.org (official, all groups)	none
 V50.2.4.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 2.4 分裂记忆在 DragonFly 侧的再叙述：作为记忆之场的‘比萨饼’轶事@@〔溯源：旧编号 05-V11 §215.5〕	none
-V50.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“十人”／收尾“差异”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“十人”／收尾“差异”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.4.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.5-bsd分裂的讽刺如果你把10个bsd开发者锁在一个房间里打开门时你会发现比萨饼不/236.5.4-隐喻出处与版本考据.md	史料	A	2026-10-30	比萨饼隐喻存在多个版本，涉及 “10 个” 或 “3 个” 开发者	none
 V50.2.4.2	旧官方归档	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	leaf.dragonflybsd.org/mailarchive/ (old official, all groups)	none
 V50.2.4.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	2.4 分裂记忆在 DragonFly 侧的再叙述：作为记忆之场的‘比萨饼’轶事	none
-V50.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“记忆”／收尾“构成”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.2.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“记忆”／收尾“构成”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.2.4.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第236章-dragonflybsd的诞生hsu评价与早期反馈/236.5-bsd分裂的讽刺如果你把10个bsd开发者锁在一个房间里打开门时你会发现比萨饼不/236.5.1-比萨饼隐喻的原始出处.md	史料	A	2026-10-30	这一比萨饼隐喻在 BSD 社区长期流传，原始出处已难以考证	none
 V50.2.4.3	第三方归档	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	marc.info (all groups except hammer and test, in BSD section)	none
-V50.3.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004–2026）	none
-V50.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“发行”／收尾“一年”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004—2026）	none
+V50.3.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“发行”／收尾“一年”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.1.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	Sherrill 在 2011-2025 年间担任 DragonFly BSD 的 release engineer	none
 V50.3.1.1	早期发行序列的起点	https://www.dragonflybsd.org/releases/	联网	A	2026-10-30	3.0.x : 3.0.1 (February 22, 2012)	none
-V50.3.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.1 Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004–2026）@@〔溯源：claim 55〕	none
-V50.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“Di”／收尾“更新”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.1 Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004—2026）@@〔溯源：claim 55〕	none
+V50.3.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“Di”／收尾“更新”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.1.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	Sherrill 同时维护 DragonFly BSD Digest 博客（dragonflydigest.com）	none
 V50.3.1.2	Digest 的自我描述	https://www.dragonflydigest.com/	联网	B	2026-10-30	A running description of activity related to DragonFly BSD.	none
-V50.3.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	3.1 Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004–2026）	none
-V50.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“镜像”／收尾“角色”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	3.1 Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004—2026）	none
+V50.3.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“镜像”／收尾“角色”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.1.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	Sherrill 的 release engineering 工作将 Dillon 的工程产出形式化为可发布的 release tag	none
 V50.3.1.3	镜像页登记联系人	https://www.dragonflybsd.org/mirrors/	联网	A	2026-10-30	Contact justin@dragonflybsd.org if you want to be added to this page, or add your own entry if you are comfortable doing so.	none
 V50.3.1.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.2 DPorts 与包维护者群体@@〔溯源：旧编号 05-V11〕	none
-V50.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“访谈”／收尾“身份”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“访谈”／收尾“身份”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.1.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	受访者：Justin C. Sherrill，时任 DragonFly BSD release engineer（2011-2025）与 DragonFly BSD Digest 博客维护者	none
 V50.3.1.4	Sherrill 访谈条目	https://www.dragonflybsd.org/presentations/	联网	A	2026-10-30	BSDTalk episode 169 interview of Justin Sherrill MP3 , OGG 04 January 2009	none
 V50.3.1.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 3 章 长期维护与发行工程	none
-V50.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“博客”／收尾“规模”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“博客”／收尾“规模”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.1.5	博客页脚统计	https://www.dragonflydigest.com/	联网	B	2026-10-30	Total Stats 9,179 Posts 6,762 Comments	none
 V50.3.2.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	DPorts 与包维护者群体	none
-V50.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“月度”／收尾“节律”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“月度”／收尾“节律”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.2.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第243章-dragonfly2x时代fork必要性的外部批评/243.3-dragonflybsd2x时期的技术淘汰/243.3.2-freebsdportspkgsrc采纳与dports雏形2005-2011.md	史料	A	2026-10-30	2005 年 DragonFly 决定采纳 NetBSD 的 pkgsrc 作为补充软件包管理路径	none
 V50.3.2.1	月度分支的建立	https://www.dragonflybsd.org/docs/howtos/DPortsContributions/	联网	A	2026-10-30	Around the 15th of each month a monthly branch is created in a local clone of the freebsd ports repository.	none
 V50.3.2.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.2 DPorts 与包维护者群体@@〔溯源：旧编号 05-V11〕	none
-V50.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“构建”／收尾“快照”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”0 次	none
+V50.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“构建”／收尾“快照”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”0 次	none
 V50.3.2.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第243章-dragonfly2x时代fork必要性的外部批评/243.3-dragonflybsd2x时期的技术淘汰/243.3.8-批评层-对pkgsrc采纳与dports雏形的质疑2005-2011.md	史料	A	2026-10-30	2005 年 DragonFly 采纳 NetBSD 的 pkgsrc 后，pkgsrc 与 FreeBSD ports 在 DragonFly 中并行存在	none
 V50.3.2.2	暂存构建	https://www.dragonflybsd.org/docs/howtos/DPortsContributions/	联网	A	2026-10-30	In the staged build box a full build of the potential tree is built.	none
 V50.3.2.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	3.2 DPorts 与包维护者群体	none
-V50.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“补丁”／收尾“路径”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“补丁”／收尾“路径”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.2.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第243章-dragonfly2x时代fork必要性的外部批评/243.3-dragonflybsd2x时期的技术淘汰/243.3.9-反批评层-dragonfly阵营对pkgsrcdports批评的回应2005-2.md	史料	A	2026-10-30	DragonFly 阵营对 pkgsrc/DPorts 批评的回应以分离必要性与跨 BSD 协作为核心	none
 V50.3.2.3	补丁回流的仓库	https://www.dragonflybsd.org/docs/howtos/DPortsContributions/	联网	A	2026-10-30	Many examples exists already in the DeltaPorts repository, you can get most of the things you'll need to do from there.	none
 V50.3.2.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.3 文档与网站的成员@@〔溯源：旧编号 05-V11〕	none
-V50.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“测试”／收尾“分工”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“测试”／收尾“分工”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.2.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第243章-dragonfly2x时代fork必要性的外部批评/243.3-dragonflybsd2x时期的技术淘汰/243.3.10-再批评层与合图层-对pkgsrcdports的再审视与项目史观总纲第6条第8条的.md	史料	A	2026-10-30	对 pkgsrc/DPorts 反批评的再审视可见 2.x 时代 DragonFly 软件包管理演化的双重面相	none
 V50.3.2.4	缺陷报告的两条入口	https://www.dragonflybsd.org/docs/howtos/DPortsContributions/	联网	A	2026-10-30	The easiest thing you can do is to try to use the ports yourself and reports any issues, either by opening a Github issue , or through our bugtracker , where there's a specific DPorts category.	none
-V50.3.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.1 Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004–2026）@@〔溯源：claim 55〕	none
-V50.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“包维”／收尾“空缺”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.1 Justin Sherrill：发行工程、DragonFly Digest 与公共界面（2004—2026）@@〔溯源：claim 55〕	none
+V50.3.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“包维”／收尾“空缺”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.2.5	名录中的包维护者	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	John Marino <marino@>	none
 V50.3.3.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	文档与网站的成员	none
-V50.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“手册”／收尾“惯例”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“手册”／收尾“惯例”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.3.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.4-重要贡献者与边缘者dillon之外的dragonfly贡献者/238.4.1-jeffreyhsu与saschawildner的贡献.md	史料	A	2026-10-30	Sascha Wildner（合并 <saw@online.de> 与 <swildner@dragonflybsd.org>）共 10846 条 commit	none
 V50.3.3.1	文档改订的放行	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	If any developer commits new work, the documentation guys have free rein to go in and correct mdoc(7) errors.	none
 V50.3.3.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.3 文档与网站的成员@@〔溯源：旧编号 05-V11〕	none
-V50.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“网站”／收尾“留痕”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“网站”／收尾“留痕”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.3.2	人物页的编辑时间	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Last edited Mon Dec 4 19:22:48 2023	none
 V50.3.3.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	3.3 文档与网站的成员	none
-V50.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“开发”／收尾“列名”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“开发”／收尾“列名”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.3.3	开发者待办清单	https://www.dragonflybsd.org/docs/documentation/	联网	A	2026-10-30	Developer Notes Alex Hornung To-do Antonio Huete To-do Jan Lentfer (lentferj@)	none
 V50.3.3.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.4 服务器与镜像的资助者们@@〔溯源：旧编号 05-V11、V16〕	none
-V50.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“社区”／收尾“邀约”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“社区”／收尾“邀约”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.3.4	社区维基的邀约	https://www.dragonflybsd.org/docs/	联网	A	2026-10-30	Community Wiki (contributions are welcome!)	none
 V50.3.3.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.2 DPorts 与包维护者群体@@〔溯源：旧编号 05-V11〕	none
-V50.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“过时”／收尾“档层”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“过时”／收尾“档层”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.3.5	过时文档归档	https://www.dragonflybsd.org/docs/	联网	A	2026-10-30	Obsolete documentation Archive the historical documentation that is no longer applicable to DragonFly BSD.	none
 V50.3.4.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	服务器与镜像的资助者们	none
-V50.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“镜像”／收尾“名单”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“镜像”／收尾“名单”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.4.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.3-与deraadt模式及linus模式的比较.md	史料	A	2026-10-30	项目资产（域名、镜像、git 仓库）所有权归属	none
 V50.3.4.1	美洲镜像条目	https://www.dragonflybsd.org/mirrors/	联网	A	2026-10-30	Mirror Sites America Canada Manitoba Unix User Group Contents: releases, packages HTTPS: https://muug.ca/mirror/dragonflybsd/	none
 V50.3.4.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.4 服务器与镜像的资助者们@@〔溯源：旧编号 05-V11、V16〕	none
-V50.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“大学”／收尾“托管”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“大学”／收尾“托管”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.4.2	高校镜像条目	https://www.dragonflybsd.org/mirrors/	联网	A	2026-10-30	Japan Advanced Institute of Science and Technology (JAIST) Contents: releases, snapshots, packages	none
 V50.3.4.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	3.4 服务器与镜像的资助者们	none
-V50.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“硬件”／收尾“流程”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“硬件”／收尾“流程”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.4.3	硬件捐赠的流程	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	For hardware donation. please contact the requestor directly (and CC: donations at dragonflybsd.org).	none
 V50.3.4.4	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 3.3 文档与网站的成员@@〔溯源：旧编号 05-V11〕	none
-V50.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“捐款”／收尾“限定”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“捐款”／收尾“限定”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.4.4	捐款页的用途声明	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	We list donors here but we don't link back; this is not for advertising.	none
 V50.3.4.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 3 章 长期维护与发行工程	none
-V50.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“镜像”／收尾“沿革”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“镜像”／收尾“沿革”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.3.4.5	主镜像的域名并称	https://www.dragonflybsd.org/mirrors/	联网	A	2026-10-30	avalon.dragonflybsd.org also known as mirror-master.dragonflybsd.org	none
 V50.4.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	贡献者规模与轮换	none
-V50.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“年度”／收尾“谷值”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“年度”／收尾“谷值”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.1.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.2-社区萎缩与核心贡献者留存.md	史料	A	2026-10-30	2005 年峰值 4194 条/年降至 2024 年谷值 277 条/年，降幅 93.4%	none
 V50.4.1.1	开发重心的转移	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	From 2009 onward many developers have focused on SMP scalability while others have put an emphasis on new feature development and driver porting.	none
 V50.4.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.1 贡献者规模与轮换@@〔溯源：旧编号 05-V11〕	none
-V50.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“贡献”／收尾“进出”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“贡献”／收尾“进出”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.1.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.4-重要贡献者与边缘者dillon之外的dragonfly贡献者/238.4.1-jeffreyhsu与saschawildner的贡献.md	史料	A	2026-10-30	Jeffrey Hsu（<hsu@dragonflybsd.org>）共 280 条 commit，活跃期 2003-07-24 至 2007-11-06	none
 V50.4.1.2	名录中的早期成员	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Thomas E. Spanjaard <tgen@>	none
 V50.4.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	4.1 贡献者规模与轮换	none
-V50.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“核心”／收尾“分层”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“核心”／收尾“分层”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.1.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.1-dragonfly邮件列表与irc文化/238.1.2-新用户融入的被冷落现象.md	史料	A	2026-10-30	213 条贡献者记录中 Top 25 贡献者占总 commit 量约 99%	none
 V50.4.1.3	提交权限的分层	https://www.dragonflybsd.org/docs/handbook/introduction/	联网	A	2026-10-30	A certain number of developers have access to commit changes to the DragonFly source, and can do so after review on that list.	none
 V50.4.1.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.2 关键人物依赖的利与弊@@〔溯源：旧编号 05-V11 §225.x〕	none
-V50.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“五人”／收尾“构成”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“五人”／收尾“构成”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.1.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.2-巴士因子极低风险与项目停滞事件.md	史料	A	2026-10-30	巴士因子实测约 5（Dillon/Wildner/Aaron LI/Kusumi/Huete Jimenez）	none
 V50.4.1.4	多方补位的贡献	https://www.dragonflybsd.org/team/	联网	A	2026-10-30	Many individuals have stepped up to contribute various pieces of code, documentation, ideas, and feedback to The DragonFly Project.	none
 V50.4.1.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 4 章 小社区的人员结构	none
-V50.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“统计”／收尾“限定”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“统计”／收尾“限定”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.1.5	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.3-与netbsd及openbsd现状的比较.md	史料	A	2026-10-30	2024 年：DragonFly 277 条、OpenBSD 5097 条	none
 V50.4.1.5	订阅与发帖的门槛	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	Subscribers to these lists will receive all output, but to post to those lists, you need to have an account.	none
 V50.4.2.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	关键人物依赖的利与弊	none
-V50.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“决策”／收尾“来源”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“决策”／收尾“来源”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.2.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.2-dragonfly项目内部的dillon个人主导模式dragonfly长期由/237.2.2-巴士因子极低风险与项目停滞事件.md	史料	A	2026-10-30	Dillon 个人精力与健康状况直接影响项目存续	none
 V50.4.2.1	裁定后的调整	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	This isn't usually an issue with any work. At best if something doesn't look right architecturally he'll chip in with adjustments to make it fit in.	none
 V50.4.2.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.2 关键人物依赖的利与弊@@〔溯源：旧编号 05-V11 §225.x〕	none
-V50.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“冲突”／收尾“盲区”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“冲突”／收尾“盲区”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.2.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第246章-dragonfly3x时代的治理与dillon主导/246.2-dragonfly3x5x时期hammer2开发延迟争议/246.2.4-再回应层-批评方对dragonfly阵营反批评的再回应社区可持续性巴士因子与设计.md	史料	A	2026-10-30	对 DragonFly 阵营反批评的再回应集中于三点——其一，设计复杂度不能掩盖社区可持续性的代价	none
 V50.4.2.2	冲突裁决的责任	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	On the occasion that a major code conflict occurs, for example if two people are doing major work in the same area of the source tree and forgot to collaborate with each other, the project leader will be responsible for resolving the conflict.	none
 V50.4.2.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	4.2 关键人物依赖的利与弊	none
-V50.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“共享”／收尾“边界”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“共享”／收尾“边界”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.2.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第246章-dragonfly3x时代的治理与dillon主导/246.1-dragonfly的治理与dillon个人主导20112018/246.1.3-巴士因子极低风险.md	史料	A	2026-10-30	DragonFly 的巴士因子（bus factor）极低	none
 V50.4.2.3	共同体财产的声明	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	All committed work becomes community property.	none
-V50.4.2.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.3 与商业机构的人员交叉（2003–2026）@@〔溯源：旧编号 05-V13 C263（互见）〕	none
-V50.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“子系”／收尾“断层”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.2.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.3 与商业机构的人员交叉（2003—2026）@@〔溯源：旧编号 05-V13 C263（互见）〕	none
+V50.4.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“子系”／收尾“断层”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.2.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.1-dragonfly的现状社区规模小但持续维护/237.1.2-社区萎缩与核心贡献者留存.md	史料	A	2026-10-30	Jeffrey Hsu（280 条，2003-07-24 至 2007-11-06 后停止）	none
 V50.4.2.4	子系统的逐个扩展	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	Major kernel subsystems were also scaled one after another.	none
 V50.4.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.1 贡献者规模与轮换@@〔溯源：旧编号 05-V11〕	none
-V50.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“赏金”／收尾“对照”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“赏金”／收尾“对照”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.2.5	赏金的定义	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	A code bounty is a certain financial stimulant to encourage someone to put his or her effort into a project.	none
-V50.4.3.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	与商业机构的人员交叉（2003–2026）	none
-V50.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“商业”／收尾“范围”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.3.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	与商业机构的人员交叉（2003—2026）	none
+V50.4.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“商业”／收尾“范围”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.3.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.4-媒体反响与社区舆论/237.4.1-本子节汇总与本章主题相关的新闻报道与社区舆论按批评类故障类冲突类里程碑事件类外部.md	史料	A	2026-10-30	商业产业新闻类	none
 V50.4.3.1	商业名录的收录标准	https://www.dragonflybsd.org/commercial/	联网	A	2026-10-30	Any commercial site selling DragonFly related material can be listed in this section.	none
-V50.4.3.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.3 与商业机构的人员交叉（2003–2026）@@〔溯源：旧编号 05-V13 C263（互见）〕	none
-V50.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“集成”／收尾“类型”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.3.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.3 与商业机构的人员交叉（2003—2026）@@〔溯源：旧编号 05-V13 C263（互见）〕	none
+V50.4.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“集成”／收尾“类型”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.3.2	集成与顾问的服务项	https://www.dragonflybsd.org/commercial/	联网	A	2026-10-30	BackWatcher, Inc. While specialising in security, BackWatcher handles installation and configuration, systems integration, performance tuning, disaster recovery, network architecture, programming and general system administration of DragonFly BSD, FreeBSD, OpenBSD, NetBSD, Linux and many commercial UNIX flavors.	none
-V50.4.3.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	4.3 与商业机构的人员交叉（2003–2026）	none
-V50.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“企业”／收尾“稀少”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.3.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	4.3 与商业机构的人员交叉（2003—2026）	none
+V50.4.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“企业”／收尾“稀少”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.3.3	捐赠名单中的公司	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	Red Dog Hosting	none
 V50.4.3.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.4 匿名与单次提交者@@〔溯源：旧编号 05-V11〕	none
-V50.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“商业”／收尾“声明”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“商业”／收尾“声明”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.3.4	交易责任的免责	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	The DragonFly BSD Project is not responsible for any transactions.	none
 V50.4.4.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	匿名与单次提交者	none
-V50.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“非提”／收尾“存在”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“非提”／收尾“存在”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.4.1	非提交者的账户	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	Because non-committers can have leaf accounts, leaf is not considered a secure machine.	none
 V50.4.4.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.4 匿名与单次提交者@@〔溯源：旧编号 05-V11〕	none
-V50.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“匿名”／收尾“识别”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“匿名”／收尾“识别”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.4.2	化名完成者的记名	https://www.dragonflybsd.org/docs/developer/Code_Bounties/	联网	A	2026-10-30	Completed by: yusisamerican@ (Yusuf)	none
 V50.4.4.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	4.4 匿名与单次提交者	none
-V50.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“边缘”／收尾“困境”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 甲族“X 的形成／确立／扩散／衰退／再起／分化”）；形：起首“边缘”／收尾“困境”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.4.3	活跃区段的礼让	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	However, if a developer is actively working on a portion of the source tree and you find a bug or other issue, courtesy dictates that you post to kernel@ and/or email the developer.	none
-V50.4.4.4	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.3 与商业机构的人员交叉（2003–2026）@@〔溯源：旧编号 05-V13 C263（互见）〕	none
-V50.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“名录”／收尾“方式”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.4.4.4	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 4.3 与商业机构的人员交叉（2003—2026）@@〔溯源：旧编号 05-V13 C263（互见）〕	none
+V50.4.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“名录”／收尾“方式”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.4.4.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.4-重要贡献者与边缘者dillon之外的dragonfly贡献者/238.4.2-边缘贡献者的融入困境与流失.md	史料	A	2026-10-30	典型早期边缘贡献者如 Max Okumoto	none
 V50.4.4.4	待办清单中的列名	https://www.dragonflybsd.org/docs/documentation/	联网	A	2026-10-30	Jan Lentfer (lentferj@)	none
 V50.5.1.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	小规模项目的记录状况	none
-V50.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“官方”／收尾“整度”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“官方”／收尾“整度”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.1.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.1-dragonfly邮件列表与irc文化/238.1.4-要点DragonFlyBSD邮件列表存档listsdragonflybsdorg.md	史料	A	2026-10-30	DragonFly BSD 邮件列表存档（lists.dragonflybsd.org）自 2003 年 fork 起完整保存	none
 V50.5.1.1	列表管理工具	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	DragonFly uses Mailman to manage all mailing lists.	none
 V50.5.1.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.1 小规模项目的记录状况@@〔溯源：旧编号 05-V11、第七十三卷〕	none
-V50.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“第三”／收尾“互补”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“第三”／收尾“互补”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.1.2	第三方归档范围	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	Gmane.org (all groups except docs, hammer and test)	none
 V50.5.1.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	5.1 小规模项目的记录状况	none
-V50.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“IR”／收尾“残缺”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“IR”／收尾“残缺”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.1.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.1-dragonfly邮件列表与irc文化/238.1.4-要点DragonFlyBSD邮件列表存档listsdragonflybsdorg.md	史料	A	2026-10-30	IRC 频道 #dragonflybsd（EFnet）日志保存不系统，部分频道已无日志	none
 V50.5.1.3	IRC 渠道	https://www.dragonflybsd.org/mailinglists/	联网	A	2026-10-30	For more immediate communication, DragonFly users and developers are often available via IRC on #dragonflybsd, on EFNet.	none
 V50.5.1.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.2 媒体中的 DragonFly 与人物@@〔溯源：旧编号 05-V11“媒体反响”素材〕	none
-V50.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“提交”／收尾“用性”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“提交”／收尾“用性”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.1.4	提交信息的体例	https://man.dragonflybsd.org/?command=committer&section=7	联网	A	2026-10-30	STRUCTURE OF COMMIT MESSAGES As many git(1) tools display the first line of a commit message as a summary, structure your commit messages like this, if possible:	none
 V50.5.1.5	上位章题（条目归属）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	## 第 5 章 记录与史料状况	none
-V50.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“记录”／收尾“划分”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“记录”／收尾“划分”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.1.5	代码浏览入口	https://www.dragonflybsd.org/docs/	联网	A	2026-10-30	Gitweb For browsing the source code.	none
 V50.5.2.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	媒体中的 DragonFly 与人物	none
-V50.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“新闻”／收尾“节点”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“新闻”／收尾“节点”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.2.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.4-媒体反响与社区舆论/237.4.1-本子节汇总与本章主题相关的新闻报道与社区舆论按批评类故障类冲突类里程碑事件类外部.md	史料	A	2026-10-30	DragonFly BSD 2.0 operating system complete	none
 V50.5.2.1	报道目录的开头	https://www.dragonflybsd.org/presentations/	联网	A	2026-10-30	In the press Title Released Date Behind DragonFly BSD 08 July 2004	none
 V50.5.2.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.2 媒体中的 DragonFly 与人物@@〔溯源：旧编号 05-V11“媒体反响”素材〕	none
-V50.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“访谈”／收尾“编排”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“访谈”／收尾“编排”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.2.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	采访形式：自述文章（release tag 序列、commit message 与 DragonFly BSD Digest 博客文章）	none
 V50.5.2.2	首条访谈条目	https://www.dragonflybsd.org/presentations/	联网	A	2026-10-30	BSDTalk episode 22 interview of Matthew Dillon MP3 OGG 07 March 2006	none
 V50.5.2.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	5.2 媒体中的 DragonFly 与人物	none
-V50.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“外部”／收尾“框架”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“外部”／收尾“框架”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.2.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.4-媒体反响与社区舆论/237.4.4-DragonFlyBSDFreeOA长文概述含狄龙治理模式起源叙事DragonF.md	史料	A	2026-10-30	DragonFly BSD（FreeOA 长文概述，含狄龙治理模式起源叙事）	none
 V50.5.2.3	综述类条目	https://www.dragonflybsd.org/presentations/	联网	A	2026-10-30	DragonFly BSD 2.6: towards a free clustering operating system 21 April 2010	none
 V50.5.2.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.3 开发分支与实验代码的参与记录@@〔溯源：旧编号 05-V11〕〔说明：vkernel、HAMMER2 实验期〕	none
-V50.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“社区”／收尾“分层”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“社区”／收尾“分层”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.2.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.4-媒体反响与社区舆论/237.4.5-HAMMER2IsNowTheDefaultFileSystemForDrago.md	史料	A	2026-10-30	HAMMER2IsNowTheDefaultFileSystem	none
 V50.5.2.4	三类载体的归并	https://www.dragonflybsd.org/docs/	联网	A	2026-10-30	Presentations, Interviews & Articles Presentation from various conferences, interviews (e.g., BSDTalk) and articles about DragonFly BSD.	none
 V50.5.2.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.1 小规模项目的记录状况@@〔溯源：旧编号 05-V11、第七十三卷〕	none
-V50.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“转载”／收尾“痕迹”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“转载”／收尾“痕迹”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.2.5	转载的旧痕	https://www.dragonflydigest.com/	联网	B	2026-10-30	I was finding wholesale copies of this Digest back in I think 2008 or so.	none
 V50.5.3.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	开发分支与实验代码的参与记录	none
-V50.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“vk”／收尾“用途”；T6 长度 12 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“vk”／收尾“用途”；T6 长度 12 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.3.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第239章-dragonflybsd早期演进的vkernel虚拟内核/239.1-vkernel虚拟内核详述/239.1.1-vkernel的设计理念与用户态内核实例.md	史料	A	2026-10-30	sys/platform/vkernel/ 目录首次引入于 2006-10-22 commit	none
 V50.5.3.1	虚拟内核的设计意图	https://www.dragonflybsd.org/docs/handbook/vkernel/	联网	A	2026-10-30	The idea behind the development of the vkernel architecture was to find an elegant solution to debugging of the kernel and its components.	none
 V50.5.3.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.3 开发分支与实验代码的参与记录@@〔溯源：旧编号 05-V11〕〔说明：vkernel、HAMMER2 实验期〕	none
-V50.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“HA”／收尾“验期”；T6 长度 11 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“HA”／收尾“验期”；T6 长度 11 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.3.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第245章-dragonfly3x的hammer2雏形设计/245.1-dragonfly3032的hammer2雏形20112012/245.1.1-hammer2设计讨论.md	史料	A	2026-10-30	DragonFly v3.0.0 tagger_date = 2012-01-22	none
 V50.5.3.2	HAMMER2 的开发起点	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	HAMMER2, the successor of HAMMER, is under active development since 2012 and now the official default filesystem for DragonFly.	none
 V50.5.3.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	5.3 开发分支与实验代码的参与记录	none
-V50.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“分支”／收尾“与者”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“分支”／收尾“与者”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.3.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第238章-dragonflybsd早期演进邮件列表与irc文化/238.4-重要贡献者与边缘者dillon之外的dragonfly贡献者/238.4.4-要点dragonflyduckdbdragonflysrc仓库commits表m.md	史料	A	2026-10-30	commits 表 message_subject 与 message_body 字段保留 commit message 原文	none
 V50.5.3.3	工作分支的建立	https://man.dragonflybsd.org/?command=development&section=7	联网	A	2026-10-30	It is not recommended to work directly in the master branch.	none
 V50.5.3.4	后序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.4 卷末收束：作为第五十一卷的前导@@〔溯源：收束节〕〔说明：文化卷〕	none
-V50.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“代码”／收尾“入口”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 己族“X 的实现路径／接口约定／兼容层／移植策略／物质基础”）；形：起首“代码”／收尾“入口”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.3.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第239章-dragonflybsd早期演进的vkernel虚拟内核/239.1-vkernel虚拟内核详述/239.1.3-vkernel的应用场景与对开发效率的效应.md	史料	A	2026-10-30	sys/platform/vkernel/ 目录在 2006-2026 年间持续有 commit 活动	none
 V50.5.3.4	第二套代码浏览入口	https://www.dragonflybsd.org/docs/	联网	A	2026-10-30	OpenGrok Various grok sites including ours.	none
 V50.5.3.5	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.2 媒体中的 DragonFly 与人物@@〔溯源：旧编号 05-V11“媒体反响”素材〕	none
-V50.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“分支”／收尾“散失”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“分支”／收尾“散失”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.3.5	分支删除的轻易	https://man.dragonflybsd.org/?command=development&section=7	联网	A	2026-10-30	Branches can be deleted just as easy: git branch -d work	none
 V50.5.4.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	卷末收束：作为第五十一卷的前导	none
-V50.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“人物”／收尾“分工”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“人物”／收尾“分工”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.4.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第258章-卷末书目述评/258.1-卷末书目述评/258.1.1-引言.md	史料	A	2026-10-30	卷末书目述评	none
 V50.5.4.1	项目史与站内资料的分置	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	Further and more up to date information on the project goals and status are available on this website	none
 V50.5.4.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.4 卷末收束：作为第五十一卷的前导@@〔溯源：收束节〕〔说明：文化卷〕	none
-V50.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“记录”／收尾“接口”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“记录”／收尾“接口”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.4.2	用户与开发者的分栏	https://www.dragonflybsd.org/docs/documentation/	联网	A	2026-10-30	Information for Users The handbook How to work with dports	none
 V50.5.4.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	5.4 卷末收束：作为第五十一卷的前导	none
-V50.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“卷末”／收尾“核性”；T6 长度 10 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“卷末”／收尾“核性”；T6 长度 10 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.4.3	捐赠页的修订时点	https://www.dragonflybsd.org/donations/	联网	A	2026-10-30	Last edited Tue Oct 13 13:25:21 2026	none
 V50.5.5.1	本节题名（条目范围）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	口述与访谈规程：四要素、署名与批评记录的证据标准	none
-V50.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“访谈”／收尾“力差”；T6 长度 8 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丙族“X 与 Y／X 对 Y 的影响／X 在 Y 中的位置／X 之于 Y／X 与 Y 的错位”）；形：起首“访谈”／收尾“力差”；T6 长度 8 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.5.1	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.1-本子节为第102章DragonFlyBSD的诞生20032004的配套采访录覆盖.md	史料	A	2026-10-30	本子节为第102章DragonFlyBSD的诞生20032004的配套采访录覆盖	none
 V50.5.5.1	访谈关系的界定	https://oralhistory.org/principles-and-best-practices-revised-2018/	联网	A	2026-10-30	reemphasizes the dynamic, collaborative relationship between interviewer and narrator, with a commitment to ongoing participation and engagement and sensitivity to differences in power, constraints, interests and expectations.	none
 V50.5.5.2	本节条目行（含溯源注）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.5 口述与访谈规程：四要素、署名与批评记录的证据标准@@〔新增：依目录执行建议书〕	none
-V50.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“受访”／收尾“尊重”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 戊族“X 的治理结构／许可安排／决策链／代表制／章程与惯例”）；形：起首“受访”／收尾“尊重”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.5.2	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	受访者：Justin C. Sherrill	none
 V50.5.5.2	对叙述者与社群的尊重	https://oralhistory.org/principles-and-best-practices-revised-2018/	联网	A	2026-10-30	reaffirms not only respect for narrators and their communities	none
 V50.5.5.3	本节行号与节题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	5.5 口述与访谈规程：四要素、署名与批评记录的证据标准	none
-V50.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“弱势”／收尾“留意”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 乙族“X 的构成／三层结构／与 Y 的分界／内外分层／边界重划”）；形：起首“弱势”／收尾“留意”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.5.3	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.5-本则外部技术评估的证据来自多个独立来源的交叉验证1dragonflyduckdb.md	史料	A	2026-10-30	本则外部技术评估的证据来自多个独立来源的交叉验证	none
 V50.5.5.3	弱势对象的留意	https://oralhistory.org/principles-and-best-practices-revised-2018/	联网	A	2026-10-30	the importance of being attentive to those who are especially vulnerable	none
 V50.5.5.4	前序节题（分工对照）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	- 5.4 卷末收束：作为第五十一卷的前导@@〔溯源：收束节〕〔说明：文化卷〕	none
-V50.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“访谈”／收尾“取材”；T6 长度 9 字在 8–40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
+V50.5.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族（§二 丁族“X 事件／X 的转折／X 的临界点／X 之后的重组”）；形：起首“访谈”／收尾“取材”；T6 长度 9 字在 8—40 内；C8b 卷内同尾 ≤3；C8c 单题“的”1 次	none
 V50.5.5.4	旧树/库内史料（块级摘要）	旧大纲-20261023/第11卷-dragonflybsd的历史/第237章-dragonflybsd早期演进现状与维护/237.5-采访录/237.5.4-受访者JustinCSherrill时任DragonFlyBSDreleasee.md	史料	A	2026-10-30	受访者：Justin C. Sherrill，时任 DragonFly BSD release engineer	none
 V50.5.5.4	访谈序列中的一条	https://www.dragonflybsd.org/presentations/	联网	A	2026-10-30	BSDTalk episode 98 interview of Matthew Dillon MP3 , OGG 07 February 2007	none

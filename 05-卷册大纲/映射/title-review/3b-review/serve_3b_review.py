@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """3B 逐卷人工审定：本地 HTTP 审阅服务。
 
-只读源台账（outline.txt、V01–V75.tsv、机判结果.tsv、人判总表.tsv），
+只读源台账（outline.txt、V01—V75.tsv、机判结果.tsv、人判总表.tsv），
 把答案、配置、候选与导出写入本工具目录下的 data/，不改动任何源文件。
 第 76 卷整卷排除。仅使用 Python 标准库，无第三方依赖。
 """
@@ -350,7 +350,7 @@ def validate_config_patch(incoming, base):
     if "vol_start" not in errors and "vol_end" not in errors and config["vol_start"] > config["vol_end"]:
         errors["vol_range"] = "vol_start 不得大于 vol_end"
     if not _is_int(config.get("daily_goal")) or not (1 <= config["daily_goal"] <= 5000):
-        errors["daily_goal"] = "daily_goal 须为 1–5000 的整数"
+        errors["daily_goal"] = "daily_goal 须为 1—5000 的整数"
     if config.get("theme") not in ("amoled", "day"):
         errors["theme"] = "theme 须为 amoled 或 day"
     if config.get("font_size") not in ("s", "m", "l"):
@@ -364,7 +364,7 @@ def validate_config_patch(incoming, base):
         for label_key in ("ok", "reroll", "custom"):
             label_value = labels.get(label_key)
             if not isinstance(label_value, str) or not (1 <= len(label_value.strip()) <= 8):
-                errors["labels"] = f"labels.{label_key} 须为 1–8 字字符串"
+                errors["labels"] = f"labels.{label_key} 须为 1—8 字字符串"
                 break
     if errors:
         return None, errors
@@ -488,7 +488,7 @@ class App:
                 add(0, f"合计 {key} 为 {actual[key]}，期望 {expected}")
 
         if diff_vols:
-            lines = ["自校验失败：1–75 卷的 outline 与 title-design 台账不一致。"]
+            lines = ["自校验失败：1—75 卷的 outline 与 title-design 台账不一致。"]
             for vol in sorted(diff_vols):
                 label = "全局" if vol == 0 else f"第 {vol} 卷"
                 lines.append(f"  {label}：")
@@ -600,7 +600,7 @@ class App:
                     else:
                         machine_unknown += 1
         if machine_unknown:
-            print(f"提示：机判结果中有 {machine_unknown} 条 FAIL 记录映射不到 1–75 卷小节，已忽略。")
+            print(f"提示：机判结果中有 {machine_unknown} 条 FAIL 记录映射不到 1—75 卷小节，已忽略。")
 
         if self.human_path.exists():
             with self.human_path.open("r", encoding="utf-8-sig", newline="") as handle:
@@ -802,7 +802,7 @@ class App:
         if len(result["custom_title"]) > 120:
             raise ValueError("custom_title 不得超过 120 字")
         if verdict == "custom" and not result["custom_title"].strip():
-            raise ValueError("custom 判定须提供 1–120 字的自定义题名")
+            raise ValueError("custom 判定须提供 1—120 字的自定义题名")
         if len(result["note"]) > 500:
             raise ValueError("note 不得超过 500 字")
         tags = value.get("tags", [])
@@ -1003,7 +1003,7 @@ class App:
         batch_id = payload.get("batch_id")
         candidates = payload.get("candidates")
         if not isinstance(batch_id, str) or not re.fullmatch(r"[A-Za-z0-9._-]{1,80}", batch_id):
-            raise ApiError(400, "invalid_batch_id", "batch_id 须为 1–80 位字母、数字、点、下划线或连字符")
+            raise ApiError(400, "invalid_batch_id", "batch_id 须为 1—80 位字母、数字、点、下划线或连字符")
         if not isinstance(candidates, dict) or not candidates:
             raise ApiError(400, "invalid_candidates", "candidates 必须是非空对象")
         invalid = []
@@ -1794,7 +1794,7 @@ def main(argv=None) -> int:
         SUGGEST_DIR = DATA_DIR / "suggest"
 
     if not (0 <= args.port <= 65535):
-        print("端口须在 0–65535 之间", file=sys.stderr)
+        print("端口须在 0—65535 之间", file=sys.stderr)
         return 2
 
     root = Path(args.root).resolve() if args.root else DEFAULT_ROOT

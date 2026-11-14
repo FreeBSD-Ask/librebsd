@@ -3,7 +3,7 @@ V49.1.4.3	自旋锁与 token 的分层配合	sacred	320		0.226	C	14.5 文档与�
 V49.2.2.1	1.x 世代的内核基础设施铺开	fulltext_summary	216	216	0.253	C	Mach: A New Kernel Foundation For UNIX Development Mike Accetta, Robert Baron, William Bolosky, David Golub, Richard Ras	可推	全文综述候选（D1 型，核对原文后落块）
 V49.2.3.5	并发模型与硬件核数的适配	sacred	2369		0.242	C	2.3 FreeBSD 开发模型	可推	史观参照（不作证据，仅定题面归属）
 V49.2.5.1	调度器在多核下的负载均衡	claim	CL-RM-016067		1.10	A	altq 与双核（多核）处理器共用时的异常观察（altq 与 QoS 调度在多核下的锁/调度问题），BBN 现场测试一手报告	可推	claim 复用（S2 先库后网）
-V49.2.5.2	用户线程调度器的选择逻辑	fulltext_summary	520	520	0.246	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V49.2.5.2	用户线程调度器的选择逻辑	fulltext_summary	520	520	0.246	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V49.2.5.2	用户线程调度器的选择逻辑	fulltext_summary	527	527	0.246	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V49.2.5.2	用户线程调度器的选择逻辑	fulltext_summary	107	107	0.228	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V49.2.5.2	用户线程调度器的选择逻辑	claim	CL-5-106		1.10	A	ULE 是 Jeff Roberson 于 2003 年为 FreeBSD 设计的现代调度器，论文指出既有线程调度器已不适应项目变化后的优先级与硬件目标。	可推	claim 复用（S2 先库后网）

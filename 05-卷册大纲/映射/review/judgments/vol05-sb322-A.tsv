@@ -3,7 +3,7 @@ S-013063		题面“makeconf中给出SUP取usrbincsup”零命中	A	sb322
 S-013064		题面为证据等级来源模板，零语义	A	sb322
 S-013065		题面“ports新装后Commandnot”命中仅 OpenBSD ports 诸节（V45-8.8 等），语义不符，留空	A	sb322
 S-013066		题面“PF 防火墙从 OpenBSD 引入”命中 pf 形成面多候选（V45-4.1、V31-5.1 等），无单主导，留空	A	sb322
-S-013067		题面“sendmail 作为默认 MTA”命中 sendmail 多节（V31-8.1、V60-6.3–6.7），无单主导，留空	A	sb322
+S-013067		题面“sendmail 作为默认 MTA”命中 sendmail 多节（V31-8.1、V60-6.3—6.7），无单主导，留空	A	sb322
 S-013068		题面“第三方软件变更核心特征”零节题命中（“IPFilter”命中 4 节无主导），留空	A	sb322
 S-013069		题面为证据等级来源模板，零语义	A	sb322
 S-013070		题面“ISP 防火墙 流量”零命中	A	sb322

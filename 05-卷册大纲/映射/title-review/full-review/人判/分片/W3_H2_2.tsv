@@ -1,7 +1,7 @@
 queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposition	reviewer
-	V57	section	V57.4.3	OPNsense：pfSense 系的分叉（2014–2015）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V57	section	V57.4.3	OPNsense：pfSense 系的分叉（2014—2015）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V57	section	V57.5.1	厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V57	section	V57.5.2	FreeBSD 系进入专用设备：源流与证据（1999–2026）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V57	section	V57.5.2	FreeBSD 系进入专用设备：源流与证据（1999—2026）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V57	section	V57.6.1	项目终止的类型、归因与社区迁移	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.2.1	NeXT 的创立与操作系统战略	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.2.2	NeXTSTEP 的 BSD 层：4.3BSD-Tahoe 与 BSD Reno 演进	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
@@ -11,8 +11,8 @@ queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposit
 	V58	section	V58.3.1	Darwin 发布与 Apple 开源战略	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.3.2	XNU：Mach 3.0、BSD 子系统与 Apple 扩展	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.3.3	Darwin 用户空间与 BSD 工具链	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V58	section	V58.4.2	Panther–Tiger：UNIX 工具链成熟（2003–2005）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V58	section	V58.4.3	Leopard 与 UNIX 03 认证（2007–2009）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V58	section	V58.4.2	Panther-Tiger：UNIX 工具链成熟（2003—2005）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V58	section	V58.4.3	Leopard 与 UNIX 03 认证（2007—2009）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.4.8	Apple Silicon 与现代 Darwin	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.6.1	UNIX 03 认证历程	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V58	section	V58.7.11	macOS 与 FreeBSD 的代码交换	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
@@ -104,7 +104,7 @@ queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposit
 	V59	section	V59.9.9	自由话语与许可条件的不对称	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V60	section	V60.10.1	pf	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V60	section	V60.10.4	OpenSMTPD	H-2	有问题	P1	合 3／不合 2；V60.10.4.1“自写协议的文档待录”、V60.10.4.2“扩展范围的文档待录”均嵌入待办标记（S3）	预授权落账	W3-H2-2
-	V60	section	V60.11.3	LibreSSL（2014–）	H-2	有问题	P1	合 4／不合 1；V60.11.3.3“自有库重写的文档待考”题名嵌入待办标记“待考”（S3）	预授权落账	W3-H2-2
+	V60	section	V60.11.3	LibreSSL（2014—）	H-2	有问题	P1	合 4／不合 1；V60.11.3.3“自有库重写的文档待考”题名嵌入待办标记“待考”（S3）	预授权落账	W3-H2-2
 	V60	section	V60.13.1	4.4BSD 与 Berkeley DB	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V60	section	V60.13.10	独立化的案例：BDB、PostgreSQL 与 MySQL	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V60	section	V60.13.2	Berkeley POSTGRES 的研究起源	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
@@ -145,7 +145,7 @@ queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposit
 	V61	section	V61.2.7	内存保护机制	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V61	section	V61.2.8	系统审计与日志	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V61	section	V61.3.1	从权限控制到安全模型	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V61	section	V61.3.2	Bell–LaPadula 机密性模型	H-2	有问题	P1	合 3／不合 2；V61.3.2.3“敏感级与隔间的偏序”与 V61.3.2.4“支配关系的判定规则”论题近同（0.83），题名同义重复（S3）	呈裁	W3-H2-2
+	V61	section	V61.3.2	Bell-LaPadula 机密性模型	H-2	有问题	P1	合 3／不合 2；V61.3.2.3“敏感级与隔间的偏序”与 V61.3.2.4“支配关系的判定规则”论题近同（0.83），题名同义重复（S3）	呈裁	W3-H2-2
 	V61	section	V61.3.6	参考监视器与可信计算基础	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V61	section	V61.3.7	DAC、MAC 与 RBAC	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V61	section	V61.3.8	能力模型与最小权限原则	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
@@ -206,10 +206,10 @@ queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposit
 	V64	section	V64.1.1	1993 年 FreeBSD 项目的形成	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V64	section	V64.1.11	FreeBSD 核心章程的形成（2000）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V64	section	V64.1.12	行为准则的三代文本（2015、2018、2020）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V64	section	V64.1.14	1993–2026 年 FreeBSD 治理制度的调整	H-2	有问题	P1	合 4／不合 1；V64.1.14.4“讥评出处的帖文待录”题名嵌入待办标记“待录”（S3）	预授权落账	W3-H2-2
+	V64	section	V64.1.14	1993—2026 年 FreeBSD 治理制度的调整	H-2	有问题	P1	合 4／不合 1；V64.1.14.4“讥评出处的帖文待录”题名嵌入待办标记“待录”（S3）	预授权落账	W3-H2-2
 	V64	section	V64.1.3	提交者制度与核心团队的形成	H-2	有问题	P1	合 4／不合 1；V64.1.3.1“核心层规模的待实取”题名嵌入待办标记“待实取”（S3）	预授权落账	W3-H2-2
 	V64	section	V64.1.5	核心团队选举制度	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V64	section	V64.2.1	基金会成立前的项目资源形态（1993–2000）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V64	section	V64.2.1	基金会成立前的项目资源形态（1993—2000）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V64	section	V64.2.12	基金会与 核心团队 的关系	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V64	section	V64.2.2	FreeBSD 基金会的成立（2000）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V64	section	V64.2.4	基金会与 FreeBSD 项目的制度分离	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
@@ -297,7 +297,7 @@ queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposit
 	V67	section	V67.3.5	EuroBSDCon 会议资料的公开渠道现状	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V67	section	V67.4.1	AsiaBSDCon 与亚洲 BSD 共同体	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V67	section	V67.5.1	BSDCan 的创立与渥太华	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V67	section	V67.5.3	历年议题统计与分布（2004–2026）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V67	section	V67.5.3	历年议题统计与分布（2004—2026）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V67	section	V67.5.5	FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 的参与：谁来讲、讲什么	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V67	section	V67.5.6	Newcons、ARM64、bhyve 等首次公开演讲的会议场景	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V67	section	V67.5.7	开放获取政策的实际边界	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
@@ -330,30 +330,30 @@ queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposit
 	V71	section	V71.2.2	Isilon OneFS 与 FreeBSD 内核基础	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.2.3	NetApp 与 Data ONTAP 中的 BSD 组件	H-2	待裁	P1	合 3／不合 2；V71.2.3.3“NetApp 上游回馈的规模”、V71.2.3.4“bhyve 进入基本系统的经过”述上游回馈，疑越“Data ONTAP 中的 BSD 组件”范围（S2 存疑）	呈裁	W3-H2-2
 	V71	section	V71.2.4	FreeNAS 的形成与网络存储软件化	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V71	section	V71.2.6	TrueNAS CORE 与 FreeBSD 平台（2011–2026）	H-2	有问题	P2	合 4／不合 1；V71.2.6.1“TrueNAS CORE 的 FreeBSD 12 基线”28 字，同节最短 9 字，极差 19＞14（D3 粒度不齐）	观察	W3-H2-2
+	V71	section	V71.2.6	TrueNAS CORE 与 FreeBSD 平台（2011—2026）	H-2	有问题	P2	合 4／不合 1；V71.2.6.1“TrueNAS CORE 的 FreeBSD 12 基线”28 字，同节最短 9 字，极差 19＞14（D3 粒度不齐）	观察	W3-H2-2
 	V71	section	V71.2.7	CORE 向 SCALE 的转移	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.3.10	公有云平台上的 FreeBSD：镜像、托管服务与平台工程	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.3.12	Hotmail 的 FreeBSD 生产部署	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.3.2	Netflix Open Connect	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V71	section	V71.3.3	Yahoo 的 FreeBSD 生产部署（1996–2010 年代）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V71	section	V71.3.3	Yahoo 的 FreeBSD 生产部署（1996—2010 年代）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.3.5	WhatsApp 与高并发服务器	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.3.9	企业工程师与上游维护者：长期维护的不对等承担	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.4.2	PlayStation 3 中的 FreeBSD 与 NetBSD	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V71	section	V71.4.4	PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013–2020）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V71	section	V71.4.4	PlayStation 4 与 PlayStation 5 中的 FreeBSD 内核成分（2013—2020）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.5.10	OCA 的交付链：设备层的 BSD 成分与上游回馈的不对等	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.5.5	从“BSD 系统”到“设备内部组件”	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V71	section	V71.5.7	商业品牌取代操作系统身份	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.1.4	4.4BSD-Lite 与代码清理：版权净化与合规程序	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.1.6	SCO Group 与 UNIX 版权主张	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.1.7	BSD 代码源流与版权清理	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
-	V72	section	V72.3.4	SCO Group 与 Linux／IBM 诉讼及资产继受（2003–2011）	H-2	有问题	P1	合 3／不合 2；V72.3.4.4“专家费用的财报待核”嵌入待办标记（S3）；V72.3.4.1 括注年份致极差 15＞14（D3）	预授权落账	W3-H2-2
+	V72	section	V72.3.4	SCO Group 与 Linux／IBM 诉讼及资产继受（2003—2011）	H-2	有问题	P1	合 3／不合 2；V72.3.4.4“专家费用的财报待核”嵌入待办标记（S3）；V72.3.4.1 括注年份致极差 15＞14（D3）	预授权落账	W3-H2-2
 	V72	section	V72.3.5	SCO 系列诉讼的法律与技术争议	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.3.6	System V 遗产的产业形态（2021 年后）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.4.9	不同法域中的许可证解释	H-2	有问题	P2	合 4／不合 1；V72.4.9.1“Welte 诉 Sitecom：首例 GPL 禁令”25 字且为同节唯一冒号主副题，同节最短 9 字，极差 16＞14（D3）	观察	W3-H2-2
 	V72	section	V72.6.1	美国密码出口管制的历史背景	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.6.2	加密软件进入 BSD 系统	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.6.3	出口管制下的法律地理：OpenBSD 的加拿大开发与分发安排	H-2	有问题	P1	合 4／不合 1；V72.6.3.3“非美籍招募的征集待考”题名嵌入待办标记“待考”（S3）	预授权落账	W3-H2-2
-	V72	section	V72.6.4	Bernstein 诉 United States（1995–1999）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
+	V72	section	V72.6.4	Bernstein 诉 United States（1995—1999）	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.6.5	Karn 诉美国国务院	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.6.6	Junger 诉 Daley	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2
 	V72	section	V72.6.7	源代码与受管制技术信息	H-2	通过	无	合 5／不合 0；	无需处置	W3-H2-2

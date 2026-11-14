@@ -1,9 +1,9 @@
 source_id	target_id	reason	strategy	pass_id
-S-026328	V58-4.2	首段与《Panther–Tiger：UNIX 工具链成熟》重合 13 个二元组	RULE_B	vol12-sb6
-S-026329	V58-4.6	首段与《10.12–10.15：从 Sierra 到 C》重合 7 个二元组	RULE_B	vol12-sb6
+S-026328	V58-4.2	首段与《Panther-Tiger：UNIX 工具链成熟》重合 13 个二元组	RULE_B	vol12-sb6
+S-026329	V58-4.6	首段与《10.12—10.15：从 Sierra 到 C》重合 7 个二元组	RULE_B	vol12-sb6
 S-026330		内容为五字段模板或复核留痕，章级承载，无对应节	RULE_B	vol12-sb6
 S-026331	V58-7.11	首段与《macOS 与 FreeBSD 的代码交换》重合 9 个二元组	RULE_B	vol12-sb6
-S-026332	V58-4.6	首段与《10.12–10.15：从 Sierra 到 C》重合 13 个二元组	RULE_B	vol12-sb6
+S-026332	V58-4.6	首段与《10.12—10.15：从 Sierra 到 C》重合 13 个二元组	RULE_B	vol12-sb6
 S-026333	V58-8.6	首段与《visionOS：空间计算与 macOS 血缘（》重合 8 个二元组	RULE_B	vol12-sb6
 S-026334	V58-8.1	首段与《iPhone OS 的诞生与 Darwin 共基》重合 11 个二元组	RULE_B	vol12-sb6
 S-026335		内容为新闻聚类条目，章级附属	RULE_B	vol12-sb6

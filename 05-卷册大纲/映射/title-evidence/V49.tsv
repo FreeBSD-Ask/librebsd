@@ -344,19 +344,19 @@ V49.4.3.4	文件系统线与集群线的交叠范围有限	https://www.dragonfly
 V49.4.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“HAMMER 与分布式存储思想的联系”；本节题为其下位论题	none
 V49.4.3.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.4.3.5	两条技术线联系的证据强度不均	https://www.dragonflybsd.org/hammer/	联网	A	2026-10-30	Slave-to-slave mirroring streams are supported, allowing mirrors to be chained together.	none
-V49.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003–2008）”；本节题为其下位论题	none
+V49.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003—2008）”；本节题为其下位论题	none
 V49.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.4.4.1	集群构想的提出时点可由演讲与邮件确定	http://apollo.backplane.com/DFlyMisc/hammer2.txt	联网	A	2026-10-30	MASTER - A MASTER in the cluster, can source and sink data on quorum agreement.	none
-V49.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003–2008）”；本节题为其下位论题	none
+V49.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003—2008）”；本节题为其下位论题	none
 V49.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.4.4.2	单系统映像的接口设想涉及进程、设备与文件三个层面	http://apollo.backplane.com/DFlyMisc/hammer2.txt	联网	A	2026-10-30	The synchronizer revalidates the cluster bottom-up by validating a sub-topology and propagating the highest modify_tid in the validated sub-topology up via the update_tid field.	none
-V49.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003–2008）”；本节题为其下位论题	none
+V49.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003—2008）”；本节题为其下位论题	none
 V49.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.4.4.3	构想期的实验记录以原型构建与测试为主	http://apollo.backplane.com/DFlyMisc/hammer2.txt	联网	A	2026-10-30	In addition, this mechanism will fully correct any out of sync nodes in the cluster as long as a sufficient number of other nodes agree on what the proper state should be.	none
-V49.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003–2008）”；本节题为其下位论题	none
+V49.4.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003—2008）”；本节题为其下位论题	none
 V49.4.4.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.4.4.4	构想终止的组织原因包括人手不足与优先级转移	http://apollo.backplane.com/DFlyMisc/hammer2.txt	联网	A	2026-10-30	Each low-level H2 device would be able to accommodate nodes belonging to multiple cluster components as well as nodes that are simply local to the device or machine.	none
-V49.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003–2008）”；本节题为其下位论题	none
+V49.4.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“集群与单系统映像构想的提出（2003—2008）”；本节题为其下位论题	none
 V49.4.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.4.4.5	五年构想期可按原型、集成与停滞三段划分	http://apollo.backplane.com/DFlyMisc/hammer2.txt	联网	A	2026-10-30	modify_tid - This is a cluster-centric (as in across all the nodes used to build a cluster) transaction id which tracks filesystem-level updates.	none
 V49.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“实现限制：内核对象与消息传递的工程边界”；本节题为其下位论题	none
@@ -779,49 +779,49 @@ V49.8.5.4	实验成果以代码、文档与邮件三种形态沉淀	https://www.
 V49.8.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 5 节“实验性架构与长期维护之间的关系”；本节题为其下位论题	none
 V49.8.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.5.5	维护压力下的取舍有具体实例可举	https://www.dragonflybsd.org/release30/	联网	A	2026-10-30	As a pleasant side effect, the giant kernel lock has been removed from much of the system and this release performs significantly better on multi-core systems than previous DragonFly versions.	none
-V49.8.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003–2026）”；本节题为其下位论题	none
+V49.8.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003—2026）”；本节题为其下位论题	none
 V49.8.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.6.1	二十余年演进可按内核、存储与生态三条线分期	https://www.dragonflybsd.org/release210/	联网	A	2026-10-30	Overall Performance - DragonFly now offers significant performance gains over previous releases, especially for machines using AHCI or implementing swapcache(8).	none
-V49.8.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003–2026）”；本节题为其下位论题	none
+V49.8.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003—2026）”；本节题为其下位论题	none
 V49.8.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.6.2	技术成就的评估口径须先声明	https://www.dragonflybsd.org/release58/	联网	A	2026-10-30	It's also working as an informal performance measure, with many of the changes in this release to speed up DragonFly when building multiple dependent packages.	none
-V49.8.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003–2026）”；本节题为其下位论题	none
+V49.8.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003—2026）”；本节题为其下位论题	none
 V49.8.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.6.3	未竟事项应列成清单	https://www.dragonflybsd.org/release48/	联网	A	2026-10-30	However, users should not worry about it too much because the most serious performance fix IS in the release (a fix to the cluster_write() code for filesystem writes).	none
-V49.8.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003–2026）”；本节题为其下位论题	none
+V49.8.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003—2026）”；本节题为其下位论题	none
 V49.8.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.6.4	评价与编年数据须分工	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	libc now features symbol versioning which can enable binaries created on Release 4.4 to execute on DragonFly for years into the future.	none
-V49.8.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003–2026）”；本节题为其下位论题	none
+V49.8.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 6 节“技术演进的总体评价（2003—2026）”；本节题为其下位论题	none
 V49.8.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.6.5	总体评价的史料支撑有限	https://www.dragonflybsd.org/release60/	联网	A	2026-10-30	DragonFly version 6.0 is the next step from the 5.8 release series in 2020.	none
-V49.8.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003–2026）”；本节题为其下位论题	none
+V49.8.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003—2026）”；本节题为其下位论题	none
 V49.8.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.7.1	安全公告与响应次序构成安全工程的外显流程	https://www.dragonflybsd.org/release22/	联网	A	2026-10-30	Fixed CVE-2008-2476 IPv6 security issue with modified patches from NetBSD.	none
-V49.8.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003–2026）”；本节题为其下位论题	none
+V49.8.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003—2026）”；本节题为其下位论题	none
 V49.8.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.7.2	漏洞修复受人手约束	https://www.dragonflybsd.org/release50/	联网	A	2026-10-30	This fixes issues during bulk builds via synth where third-party programs erroneously signal process -1 after a fork() failure.	none
-V49.8.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003–2026）”；本节题为其下位论题	none
+V49.8.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003—2026）”；本节题为其下位论题	none
 V49.8.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.7.3	安全实践与通用做法比对可见差距主要在响应速度与披露规范。	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	If WPA Supplicant from base is used, there will be a 10-second delay during boot as a message is displayed that strongly recommends that the DPorts version (security/wpa_supplicant) be used instead.	none
-V49.8.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003–2026）”；本节题为其下位论题	none
+V49.8.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003—2026）”；本节题为其下位论题	none
 V49.8.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.7.4	资源约束下的优先级排序以可利用性与攻击面为尺度	https://www.dragonflybsd.org/release42/	联网	A	2026-10-30	OpenBSD had refused to support IPV4-mapped IPv6 addresses a long time ago, mostly on security grounds.	none
-V49.8.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003–2026）”；本节题为其下位论题	none
+V49.8.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 7 节“小规模项目的安全工程与资源约束（2003—2026）”；本节题为其下位论题	none
 V49.8.7.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.7.5	安全工程的可见成果包括公告数量与修复周期	https://www.dragonflybsd.org/release46/	联网	A	2026-10-30	4.6.2 was a catchup release containing all 4.6 fixes before the 4.8 release.	none
-V49.8.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0–6.4.2（2004–2026）”；本节题为其下位论题	none
+V49.8.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0—6.4.2（2004—2026）”；本节题为其下位论题	none
 V49.8.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.8.1	1.0 至 2.0 的发行节点标志早期节奏	https://www.dragonflybsd.org/release44/	联网	A	2026-10-30	Version 4.4.2 was released to include OpenSSL 1.0.1r, plus updates to iwm(4) and other miscellaneous bugfixes.	none
-V49.8.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0–6.4.2（2004–2026）”；本节题为其下位论题	none
+V49.8.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0—6.4.2（2004—2026）”；本节题为其下位论题	none
 V49.8.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.8.2	3.x 世代的发行间隔反映出稳定周期	https://www.dragonflybsd.org/release24/	联网	A	2026-10-30	Both the bare-bones CD ISO and a bootable USB disk-key image are available for the 64-bit release.	none
-V49.8.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0–6.4.2（2004–2026）”；本节题为其下位论题	none
+V49.8.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0—6.4.2（2004—2026）”；本节题为其下位论题	none
 V49.8.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.8.3	4.x 与 5.x 的节奏间距显示维护模式变化	https://www.dragonflybsd.org/release24/	联网	A	2026-10-30	DVD ISO HAMMER install bugs (2.4.0 only) - You will get a 'guard1x fail @...' loader panic.	none
-V49.8.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0–6.4.2（2004–2026）”；本节题为其下位论题	none
+V49.8.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0—6.4.2（2004—2026）”；本节题为其下位论题	none
 V49.8.8.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.8.4	6.x 系列的收尾版本确定时间线终点	https://www.dragonflybsd.org/download/	联网	A	2026-10-30	Uncompressed ISO: dfly-x86_64-6.4.2_REL.iso (For use with VPS providers as an install image.)	none
-V49.8.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0–6.4.2（2004–2026）”；本节题为其下位论题	none
+V49.8.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 8 节“版本发行时间线：DragonFly 1.0—6.4.2（2004—2026）”；本节题为其下位论题	none
 V49.8.8.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V49.8.8.5	point release 与主版本的关系体现维护策略	https://www.dragonflybsd.org/release28/	联网	A	2026-10-30	Release ISOs and IMGs now start up with emergency interrupt polling turned on to improve the chances of being able to boot on a wider range of systems.	none
 V49.9.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 9 章第 1 节“git 流程：2008 年 11 月自 CVS 转入 git 及其史料后果”；本节题为其下位论题	none

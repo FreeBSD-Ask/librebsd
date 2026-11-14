@@ -1,7 +1,7 @@
 # Task 8 V31 卷批判读规程卡（主会话自判，不派子代理）
 
 > 判读人＝主会话单写者（ykla 2026-11-06 令“不使用子代理”）；本卡即主会话判据。
-> 批次：Task 8.4（V31《BSD UNIX 技术专题史（1974–1995）》，8 章 34 节 204 题，料域抽样 817 块）。
+> 批次：Task 8.4（V31《BSD UNIX 技术专题史（1974—1995）》，8 章 34 节 204 题，料域抽样 817 块）。
 > 立卡：2026-11-06。
 
 ## 一、你在做什么
@@ -29,11 +29,11 @@
 - 1.2 调度与时间片：收调度器、优先级、重调度节奏；不收 SMP 并行化（属后 1995 专题卷）。
 - 1.3 管道与 IPC：收管道承袭、共享内存、信号与 IPC 机制；不收 socket（7.1）。
 
-### 第 2 章　FFS 与 UFS（1974–1995）
+### 第 2 章　FFS 与 UFS（1974—1995）
 - 2.1 FFS 柱面组与布局；2.2 UFS 命名与形态；2.3 soft updates（至 1995）；2.4 fsck 与磁盘可靠性。不收 ZFS／日志文件系统（属后 1995 卷）、不收 FreeBSD 存储栈现代演化。
 
 ### 第 3 章　虚拟内存与地址空间
-- 3.1 VAX 虚存与 BSD；3.2 分页／交换／置换；3.3 mmap 与共享内存；3.4 虚存对象抽象。不收 Mach VM 移植后的 FreeBSD 时代（属 V05–V08 料域）。
+- 3.1 VAX 虚存与 BSD；3.2 分页／交换／置换；3.3 mmap 与共享内存；3.4 虚存对象抽象。不收 Mach VM 移植后的 FreeBSD 时代（属 V05—V08 料域）。
 
 ### 第 4 章　工具链与移植
 - 4.1 Berkeley Pascal 与系统软件教育；4.2 GCC 进入 BSD；4.3 KNF 与 style(9)。不收 C 语言诞生（属 V01）、不收 GCC 自身演化史（属 GNU 卷）。
@@ -44,8 +44,8 @@
 ### 第 6 章　终端、编辑器与 Shell
 - 6.1 ed/ex/vi；6.2 vi 模态设计；6.3 termcap；6.4 curses；6.5 Job Control；6.6 C Shell。不收 emacs／GNU 对抗（属 V16）、不收后世编辑器谱系。
 
-### 第 7 章　网络栈：Berkeley TCP／IP（1974–1995）
-- 7.1 sockets 接口；7.2 BBN 与 Berkeley TCP／IP 两线；7.3 栈重写与代码归属（1988–1991）；7.4 路由／子网／网关；7.5 Tahoe 与 Reno 拥塞控制；7.6 BSD TCP／IP 的被参照。不收 IPv6／KAME（属 FreeBSD 网络卷）、不收网际网基础设施社会史（V08 后段）。
+### 第 7 章　网络栈：Berkeley TCP／IP（1974—1995）
+- 7.1 sockets 接口；7.2 BBN 与 Berkeley TCP／IP 两线；7.3 栈重写与代码归属（1988—1991）；7.4 路由／子网／网关；7.5 Tahoe 与 Reno 拥塞控制；7.6 BSD TCP／IP 的被参照。不收 IPv6／KAME（属 FreeBSD 网络卷）、不收网际网基础设施社会史（V08 后段）。
 
 ### 第 8 章　服务层
 - 8.1 sendmail；8.2 BIND 与 DNS；8.3 inetd；8.4 Web 服务器（至 1995）；8.5 Ingres／POSTGRES／Berkeley DB。不收 MySQL／PostgreSQL 后世生态（属 V08 后段）、不收 opensmtpd（属 V10）。
@@ -74,7 +74,7 @@
 - `action` 五者之一；`reason` ≤60 字，只写判据。
 - **行数守恒**：该片块数 N，输出恰好 N 行数据，每块出现且仅出现一次。
 
-其余六列由 `_vol_merge.py V31 --parts 4` 机器补全；落 `design/V31-C1.tsv`（P1）／`V31-C2.tsv`（P2–P4）。
+其余六列由 `_vol_merge.py V31 --parts 4` 机器补全；落 `design/V31-C1.tsv`（P1）／`V31-C2.tsv`（P2—P4）。
 
 ## 六、硬约束
 
@@ -86,4 +86,4 @@
 
 ## 七、验收
 
-行数守恒＋多重集相等（merge 脚本硬校验）；随后 L1–L19、第三十八／三十九件、`volume_regression --vol V31` 6/6。
+行数守恒＋多重集相等（merge 脚本硬校验）；随后 L1—L19、第三十八／三十九件、`volume_regression --vol V31` 6/6。

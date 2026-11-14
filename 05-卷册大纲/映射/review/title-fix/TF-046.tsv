@@ -59,7 +59,7 @@ S-012891	2005 年 11 月 28 日，Wojciech Puchar 回应 mount_udf(8) 与 dvd+rw
 S-012898	2005 年 9 月 19 日，mailtrail 用 K6／166 加 WD8003 ISA 卡护 ISDN 线，该箱曾在 4.3-stable 上运行多年、该卡当时作 ed0	2005 年 9 月 19 日，mailtrail 用 K6／166 加 WD8003 ISA 卡护 ISDN 线，该箱曾在 4.3-stable 上运行多年、该卡当时作 ed0	H1 同步：H1 的 K6 与 166 斜杠同步为全角
 S-012900	2006 年 4 月 1 日，O'Neill 认为 irq 22 未必过度使用，自己一台机器 irq 19 被用了 4 次，设备有时共享中断	2006 年 4 月 1 日，O’Neill 认为 irq 22 未必过度使用，自己一台机器 irq 19 被用了 4 次，设备有时共享中断	C2：O Neill 直撇号改弯撇号
 S-012902	2006 年 4 月 13 日，10016 Ultra133 TX2 卡上挂 160GB 硬盘，开 DMA 跑一两天后系统挂在 DMA TIMEOUT 上，改 PIO 模式已运行约一年无问题，升级到 5.4	2006 年 4 月 13 日，10016 Ultra133 TX2 卡上挂 160GB 硬盘，开 DMA 跑一两天后系统挂在 DMA TIMEOUT 上，改 PIO 模式已运行约一年无问题，升级到 5.4 也没解决	B3：按 H1 补也没解决，收在语义边界
-S-013750	要点：Windows Vista(2006.11, NT 6.0) 与 Solaris 10(2005.1, Update 1-8 至 2008) 同期	要点：Windows Vista 与 Solaris 10 同期，前者 NT 6.0 于 2006 年 11 月发布，后者 Update 1–8 持续至 2008 年	C7：半角括注与逗号改全角并折入题面
+S-013750	要点：Windows Vista(2006.11, NT 6.0) 与 Solaris 10(2005.1, Update 1-8 至 2008) 同期	要点：Windows Vista 与 Solaris 10 同期，前者 NT 6.0 于 2006 年 11 月发布，后者 Update 1—8 持续至 2008 年	C7：半角括注与逗号改全角并折入题面
 S-014701	ZFS 从实验性状态 → 一等文件系统（8.0，2009.11.25）	ZFS 从实验性状态升为一等文件系统：FreeBSD 8.0 于 2009 年 11 月 25 日宣布生产就绪	C5：删箭头，改述为宣布生产就绪
 S-013345	2003 年 11 月 1 日，Eric Anholt 在 GNATS 上把 kern／42404 TIOCSCTTY not implemented in linuxulator 的责任人从 freebsd-bugs 转给 emulation	2003 年 11 月 1 日，Eric Anholt 在 GNATS 上把 kern／42404 TIOCSCTTY not implemented in linuxulator 的责任人转给 emulation	B3 且 F1：按 H1 续至转给 emulation
 S-013357	2007 年 1 月 21 日，Tijl Coosemans 称 wiki misc bugs 说 linux ldd 不工作并不准确，用 Linux shell 可用，只是似乎只对 DSO 有效，如 ／compat／linux／bin／sh	2007 年 1 月 21 日，Tijl Coosemans 称 wiki 说 linux ldd 不工作并不准确，用 Linux shell 可用，但似乎只对 DSO 有效	B3 且 F1：按 H1 收在只对 DSO 有效

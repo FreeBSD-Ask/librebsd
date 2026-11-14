@@ -35,7 +35,7 @@ V61.1.7.2	事件报告的汇集流程	确证	SEI 史页：作为中立方接收�
 V61.1.7.3	通告文本的固定体例	确证	SEI 1996 公告集 CA-1996-01 原文分节 “I. Description”“II. Impact”“III. Solution”，带原始发布日、修订日与修订史——固定体例在场。		https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
 V61.1.7.4	响应职能的机构化	确证	SEI 史页：DARPA 委设常设队于 FFRDC；SEI 公告集：CERT Division 署名、发行声明与逐份修订记录——职责与对外口径成文。		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management https://www.sei.cmu.edu/documents/503/1996_019_001_496172.pdf	2026-11-02
 V61.1.7.5	从响应到研究	形态	响应之外的研究职能（恶意代码分析、脆弱性研究）未在本批取到一手页；SEI 史页仅证设立与协调中立方角色，作阻断披露不编造。〔2026-11-03 存疑清零：研究职能无一手，题面改缺口披露〕		https://www.sei.cmu.edu/history-of-innovation/fostering-growth-in-professional-cyber-incident-management	2026-11-02
-V61.1.8.1	报告者与厂商的时序	确证	Christey–Wysopal 草案：发布日由 vendor 与 reporter／coordinator 协商（“work with the Reporter and involved Coordinators to arrange a date”）——时序本身成制度对象。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
+V61.1.8.1	报告者与厂商的时序	确证	Christey-Wysopal 草案：发布日由 vendor 与 reporter／coordinator 协商（“work with the Reporter and involved Coordinators to arrange a date”）——时序本身成制度对象。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.8.2	披露时限的惯例形成	确证	草案惯例文本：回执 7 日（MUST within 7 days）、处置 30 日、宽限至多 30 日。历时演化轨迹未逐点取证，以成文惯例数字为据。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.8.3	公告与补丁的同步	确证	草案：Resolution 先于 Release 阶段、30 日处置目标、发布日协商——公告发布以修复就绪为前提。“同步失败即倒计时”分句为阐释语。		https://datatracker.ietf.org/doc/html/draft-christey-wysopal-vuln-disclosure-00	2026-11-02
 V61.1.8.4	披露渠道的分布面	形态	多渠道并存的分布归纳，体例题，离线核查。			2026-11-02
@@ -50,7 +50,7 @@ V61.1.10.2	编号机构的授权分层	确证	cve.org CNAs：“authorized by th
 V61.1.10.3	记录字段的最小集合	确证	CVEProject/cve-schema：CVE Record Format 为 JSON schema，仓库附 “Example with minimum required fields”——最小字段集有规范文本。		https://github.com/CVEProject/cve-schema	2026-11-02
 V61.1.10.4	漏洞库之间的映射表	形态	NVD 自述全量承接 CVE 指称（“All vulnerabilities in the NVD have been assigned a CVE identifier”）——层级关系可证；“映射误差沿引用链逐级放大”为分析性断言，未获量化一手。〔2026-11-03 存疑清零：误差放大为分析性论断，题面收至层级关系〕		https://nvd.nist.gov/vuln	2026-11-02
 V61.1.10.5	标准化后的统计困境	形态	NVD 页仅证指称统一；“计数口径受收录策略影响”未获一手（2024 年 NVD 积压事件官方文未及取回），作阻断披露。〔2026-11-03 存疑清零：计数口径无一手，题面收至标准化与口径并列〕		https://nvd.nist.gov/vuln	2026-11-02
-V61.1.11.1	安全公告的常规发布	确证	FreeBSD 官方 SA 页列 2024–2026 近月度公告流水（SA-26:xx 至 SA-24:xx），“按期发布”节奏在场。		https://www.freebsd.org/security/advisories/	2026-11-02
+V61.1.11.1	安全公告的常规发布	确证	FreeBSD 官方 SA 页列 2024—2026 近月度公告流水（SA-26:xx 至 SA-24:xx），“按期发布”节奏在场。		https://www.freebsd.org/security/advisories/	2026-11-02
 V61.1.11.2	团队职能的专门化	确证	FreeBSD administration 页：Security Team（secteam@FreeBSD.org）与 Ports Security Team 等专队清单、职责与联系方式成文——分工写进流程文本。		https://www.freebsd.org/administration/	2026-11-02
 V61.1.11.3	工具链的加固转向面	确证	OpenBSD 3.2（2002-11-01）：非执行栈多平台默认、OpenSSH “Privilege separation is now enabled by default”、setuid 程序大减——运行期缓解进入默认构建。“编译器加固项”半边未在本页直证。		https://www.openbsd.org/32.html	2026-11-02
 V61.1.11.4	与认证体系的接入	确证	TrustedBSD 官方页：审计实现源自 “in support of the Mac OS X CAPP evaluation”——审计子系统以通用准则保护轮廓为目标，安全工程与认证话语接轨。		http://www.trustedbsd.org/audit.html	2026-11-02
@@ -97,7 +97,7 @@ V61.2.8.4	审计管道的实时跟踪	确证	audit(4)：auditpipe(4) “provide 
 V61.2.8.5	已登记覆盖缺口的分布	确证	audit(4) BUGS：“some system calls do not generate audit records, or generate audit records with incomplete argument information”——缺口在手册列明而非默认完备。		https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	2026-11-02
 V61.2.9.1	指纹数据库的内核驻留	确证	NetBSD 指南：Veriexec“kernel based, hence can provide some protection even in the case of a root compromise”，签名表经 syscall 载入内核。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
 V61.2.9.2	执行前的校验时机	确证	指南：严格级 1 起“deny access to files with a fingerprint mismatch”——访问／执行钩子处校验；“时机前移压缩窗口”为阐释。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
-V61.2.9.3	严格级别的锁定效力	确证	指南：四级 0–3（learning／IDS／IPS／lockdown）；级别 0 为“the only strict level in which you can load new entries to the kernel”——升档即锁库。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
+V61.2.9.3	严格级别的锁定效力	确证	指南：四级 0—3（learning／IDS／IPS／lockdown）；级别 0 为“the only strict level in which you can load new entries to the kernel”——升档即锁库。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
 V61.2.9.4	基线生成的既定流程	确证	指南：cksum 族按算法产出 ASCII 指纹、存 /etc/signatures、rc.conf 启用——流程固定使跨主机有一致起点。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
 V61.2.9.5	校验范围的取舍界限	确证	指南：条目可标 DIRECT／INDIRECT／FILE，覆盖可执行、解释器、共享库与配置文件——“界线通常落在可执行文件”为概括。		https://www.netbsd.org/docs/guide/en/chap-veriexec.html	2026-11-02
 V61.2.10.1	块设备层的加密分工	确证	geli(8)：“used to configure encryption on GEOM providers”加“performs simple sector-to-sector encryption”——块层变换，文件系统无需改动。		https://www.freebsd.org/cgi/man.cgi?query=geli&sektion=8	2026-11-02
@@ -125,7 +125,7 @@ V61.3.2.2	星属性约束的写限制	确证	mac_mls(4)：“Subjects may not wr
 V61.3.2.3	敏感级与隔间的偏序	确证	mac_mls(4)：标签由 sensitivity level 与 compartments 组成、“permit all labels to be placed in a partial order…based on a dominance operator”。		https://man.freebsd.org/mac_mls	2026-11-02
 V61.3.2.4	支配关系的判定规则	确证	mac_mls(4)：dominance 定义为“higher or equal active sensitivity level”且“at least all of the same compartments”。与 3.2.3 题面近重出，呈报告层。		https://man.freebsd.org/mac_mls	2026-11-02
 V61.3.2.5	与完整性模型的镜像关系	确证	mac_biba(4)：“the dominance operator and access rules are reversed…MLS protects the confidentiality, rather than the integrity”——同偏序、读写反向逐字在场。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
-V61.3.3.1	完整级的三档划分	确证	mac_biba(4)：biba/low／biba/equal／biba/high 三特殊值，等级域 0–65535——三档可比较。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
+V61.3.3.1	完整级的三档划分	确证	mac_biba(4)：biba/low／biba/equal／biba/high 三特殊值，等级域 0—65535——三档可比较。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
 V61.3.3.2	读写方向的倒置规则	确证	mac_biba(4)：“A subject at a higher integrity level than an object may write to the object, but not read the object”——高写低、不可读，倒置逐字。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	2026-11-02
 V61.3.3.3	低水位标记的变体	确证	mac_biba(4)：“Biba is a fixed label policy…whereas LOMAC is a floating label policy”，LOMAC 允许高完整级读低但降级主体——固定与浮动分道逐字。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4 https://man.freebsd.org/mac_lomac	2026-11-02
 V61.3.3.4	可信代码基的保护对象	确证	mac_biba(4)：“the Biba integrity model is used to protect the Trusted Code Base (TCB)”；mac_lomac(4)：防“corruption of the operating system”。		https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4 https://man.freebsd.org/mac_lomac	2026-11-02
@@ -147,14 +147,14 @@ V61.3.6.4	形式证明的适用前提	形态	证明边界论述为方法论体�
 V61.3.6.5	评估标准的判据出处	形态	评估标准转译论述为体例题，离线核查。			2026-11-02
 V61.3.7.1	三类模型的授权主体	确证	NIST RBAC 页：“Each user is assigned one or more roles”（岗位授权）；mac(4)：强制层由策略授权；chmod(2)：自主层由属主改位——三类主体可辨。		https://csrc.nist.gov/projects/role-based-access-control https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4 https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=2	2026-11-02
 V61.3.7.2	角色继承的层级排布	确证	NIST RBAC 页：“Complexities introduced by mutually exclusive roles or role hierarchies are handled by the RBAC software”——层级与互斥在场。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
-V61.3.7.3	标准化的角色定义	确证	NIST RBAC 页：Ferraiolo–Kuhn 1992 形式化、ANSI／INCITS 359-2004 采纳（2004-02-11）、359-2012 修订——“用户、角色、权限、操作、对象”元素成条款。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
+V61.3.7.3	标准化的角色定义	确证	NIST RBAC 页：Ferraiolo-Kuhn 1992 形式化、ANSI／INCITS 359-2004 采纳（2004-02-11）、359-2012 修订——“用户、角色、权限、操作、对象”元素成条款。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
 V61.3.7.4	三类模型的组合序位	形态	组合次序与日志归因论述为体例题，离线核查。			2026-11-02
 V61.3.7.5	管理成本的对照结论	确证	NIST RBAC 页：“it reduces this cost”加 RTI 2010 经济分析（业界节省 $1.1 billion）——“抬高初始建模成本”分句未见直述，以成本对照在场为据。		https://csrc.nist.gov/projects/role-based-access-control	2026-11-02
 V61.3.8.1	不可伪造凭证的语义	确证	capsicum(4)：“Capabilities are unforgeable tokens of authority that can be delegated and must be presented to perform an action”；Levy 第 1 章：“a token, ticket, or key that gives the possessor permission to access an entity”。		https://man.freebsd.org/capsicum https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf	2026-11-02
 V61.3.8.2	能力的传递与收回	确证	capsicum(4)：“can be delegated”（传递在场）；Levy：能力表随主体持有、凭索引指称对象。“难以集中收回”分句为能力系统通说，本批页面未直述（Levy 第 10 章议题未及取回）。		https://man.freebsd.org/capsicum https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf	2026-11-02
 V61.3.8.3	最小权限的操作化	确证	capsicum(4)：“achieves many of the benefits of least-privilege operation”；cap_rights_limit 将描述符细化到只读写、不可 fchmod——细粒度切分在场。		https://man.freebsd.org/capsicum	2026-11-02
 V61.3.8.4	与访问控制表的对照	确证	Levy：能力表随主体（“Each user, program, or procedure…has access to a list of capabilities”）；acl(5)：ACL 随客体（“Every object can be thought of as having associated with it an ACL”）——两种载体对照可证。		https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf https://man7.org/linux/man-pages/man5/acl.5.html	2026-11-02
-V61.3.8.5	能力系统的历史源流	确证	Levy 第 1 章表 1-1：Dennis–Van Horn 1966、CAL-TSS 1968、Plessey 250 1969、CAP 1970、Hydra 1971、StarOS 1975、System/38 1978、iAPX 432 1981；capsicum(4)：现代重现于沙箱框架（“lightweight OS capability and sandbox framework”）。		https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf https://man.freebsd.org/capsicum	2026-11-02
+V61.3.8.5	能力系统的历史源流	确证	Levy 第 1 章表 1-1：Dennis-Van Horn 1966、CAL-TSS 1968、Plessey 250 1969、CAP 1970、Hydra 1971、StarOS 1975、System/38 1978、iAPX 432 1981；capsicum(4)：现代重现于沙箱框架（“lightweight OS capability and sandbox framework”）。		https://homes.cs.washington.edu/~levy/capabook/Chapter1.pdf https://man.freebsd.org/capsicum	2026-11-02
 V61.4.1.1	进程级隔离的边界	形态	进程隔离边界为通用系统学叙事，离线核查。			2026-11-02
 V61.4.1.2	特权分离的拆分点	确证	OpenBSD 3.2：“Privilege separation is now enabled by default for greater robustness”——单一特权程序拆为监视／执行两进程的实践默认化（OpenSSH）。		https://www.openbsd.org/32.html	2026-11-02
 V61.4.1.3	权限下降的时机窗口	形态	特权窗口时机论述为设计体例，离线核查。			2026-11-02

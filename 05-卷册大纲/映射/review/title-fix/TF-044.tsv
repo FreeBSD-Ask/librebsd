@@ -35,7 +35,7 @@ S-007250	要点：Linux 2.0(1996.6) 引入 SMP 支持 (粗粒度大内核锁)、
 S-007251	要点：Windows NT 4.0(1996.7) 将图形驱动移入内核以提升性能，引入 IIS 2.0 与 TCP／IP 栈改进	要点：Windows NT 4.0(1996.7) 将图形驱动移入内核以提升性能，引入 IIS 2.0 与 TCP／IP 栈改进	H1 同步：H1 半角斜杠全角化同步
 S-007252	要点：Solaris 2.4(1994.11)、2.5(1995.11)、2.6(1997.5) 在企业级网络栈成熟度上领先，2.6 引入 IPv6 与	要点：Solaris 2.4（1994.11）、2.5（1995.11）、2.6（1997.5）在企业级网络栈成熟度上领先，2.6 引入 IPv6 与 sendfilev	B2 题尾与字续接 sendfilev；括号全角化
 S-007254	不同时期人员的采访录（详见同卷采访录目录）	不同时期人员的采访录，详见同卷采访录目录	D1 括注折入题面
-S-007255	数据库引用（freebsd.duckdb）：本子节对应 freebsd 代码仓库	freebsd 代码仓库 1994–1998 年提交量数据库引用	去 .duckdb 杂质并避开 40 字符截断
+S-007255	数据库引用（freebsd.duckdb）：本子节对应 freebsd 代码仓库	freebsd 代码仓库 1994—1998 年提交量数据库引用	去 .duckdb 杂质并避开 40 字符截断
 S-007256	Ingo Schwarze《bsdcan14-mandoc》（2014）	Ingo Schwarze 的 mandoc 系列 BSDCan 讲稿（2014、2015、2018）文献	补齐截断，按 260 限收短
 S-007258	John DiMarco 应和 Mary Baker 并首倡‘Historic Opportunity facing Free Unix’：自由 Unix	John DiMarco 应和 Mary Baker，首倡自由 Unix 变体主打桌面成为可能，为大辩论主帖源头	补齐截断，按 260 限收短
 S-007259	称微软内部为 Windows95 产品发布所用的 Web 服务器选用了 BSDI，此事经广泛传播后已无法再 telnet 取得 BSDI 提示符	微软内部为 Windows95 发布所用的 Web 服务器选用 BSDI，此事经广泛传播后再无法 telnet 取得 BSDI 提示符	B1 悬头称字改名词起头
@@ -106,4 +106,4 @@ S-007427	1997 年 1 月 12 日，John Fieber 继续 html 讨论，称解析标�
 S-011867	- 要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0	要点：Windows 2000（2000.2）以 Active Directory 与 IIS 5.0 吸引部分企业用户，但 FreeBSD 在 ISP 场景仍占优势	去题首残留短横，补齐句尾
 S-011885	要点：Windows 2000(2000.2) 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0	要点：Windows 2000 在企业市场与 FreeBSD 竞争，Active Directory 与 IIS 5.0 吸引部分企业用户	补齐 H1 句尾，与 4.8.1 区分
 S-012186	要点：2000 年 Linux 处于 2.2／2.4 开发期（2.4 于 2001.1 发布），由 Torvalds	要点：2000 年 Linux 处于 2.2／2.4 开发期，由 Torvalds 个人把关并被称为“仁慈的终身独裁者”	补齐由 Torvalds 截断；全角斜杠
-S-011903	要点：2000-2003 年同期 Linux 2.4(2001.1) 引入 SMP 改进、iptables、ReiserFS	要点：2000–2003 年同期 Linux 2.4（2001.1）引入 SMP 改进、iptables、ReiserFS	D2 年代区间改用 U+2013；括号全角化
+S-011903	要点：2000-2003 年同期 Linux 2.4(2001.1) 引入 SMP 改进、iptables、ReiserFS	要点：2000—2003 年同期 Linux 2.4（2001.1）引入 SMP 改进、iptables、ReiserFS	D2 年代区间改用 U+2013；括号全角化

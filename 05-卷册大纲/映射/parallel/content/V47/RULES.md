@@ -1,4 +1,4 @@
-# Task 8.4 判读规程卡（V47“OpenBSD 文化、社会与哲学（1995–2026）”卷批）
+# Task 8.4 判读规程卡（V47“OpenBSD 文化、社会与哲学（1995—2026）”卷批）
 
 > 唯一判据来源。批次：V47 全卷 7 章 30 节 132 题，旧树第 10 卷 102 件 3,500 块（P1 630／P2 1,486／P3 1,384）。
 > 生成：2026-11-08。判读者＝主会话单写者；判读方式＝机助定址四道闸＋磁石题防集中＋抽样复核。
@@ -25,7 +25,7 @@
 
 ## 四、输出
 
-`…/V47/part<K>.tsv`（K＝1–3），UTF-8 无 BOM、LF、制表符；表头 `rowmine_id	subsection_id	title	action	reason`；行数＝该片块数，多重集一致；reason ≤60 字。
+`…/V47/part<K>.tsv`（K＝1—3），UTF-8 无 BOM、LF、制表符；表头 `rowmine_id	subsection_id	title	action	reason`；行数＝该片块数，多重集一致；reason ≤60 字。
 
 ## 五、禁止
 

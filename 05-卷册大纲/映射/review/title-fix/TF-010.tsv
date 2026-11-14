@@ -32,8 +32,8 @@ S-002513	DavidDymm用20万次循环实测strlen与strcpy在UNIX与VMS上的耗�
 S-002519	给出42BSDtroff下划线缺陷的修正办法建议只给单个单词加下划线或关闭断词	给出 4.2BSD troff 下划线缺陷的修正办法，建议只给单个单词加下划线或关闭断词	A1 补空格；42BSDtroff 依正文正名 4.2BSD troff
 S-002522	RobertBradbury讨论shmat失败返回1而非NULL担心该位模式可能与合法指针混淆	Robert Bradbury 讨论 shmat 失败返回 -1 而非 NULL，担心该位模式可能与合法指针混淆	A1 补空格；返回 1 依正文正名返回 -1
 S-002524	70跑29时Interlan板一获主机内存DMA即令系统崩溃作者疑网络缓冲管理中	11／70 跑 2.9 时 Interlan 板一获主机内存 DMA 即令系统崩溃，作者疑网络缓冲管理中 UNIBUS 映射代码有隐微 bug	A1 补空格；70跑29 依正文正名 11／70 跑 2.9；B4 续接
-S-003703	BSD 商业衍生路径 → CSRG 成员创办 Sun／BSDi 与商业授权模式（1982-1995）	从 BSD 商业衍生路径到 CSRG 成员创办 Sun／BSDi 与商业授权模式（1982–1995）	C5 箭头改从到结构；D2 年代区间改 U+2013
-S-003685	McKusick 的 CSRG Archive CD-ROM 套装：4 CD 集 1978-1995 完整源码档案	McKusick 的 CSRG Archive CD-ROM 套装：4 CD 集 1978–1995 完整源码档案	D2 年代区间 1978-1995 改 U+2013 连接符
+S-003703	BSD 商业衍生路径 → CSRG 成员创办 Sun／BSDi 与商业授权模式（1982-1995）	从 BSD 商业衍生路径到 CSRG 成员创办 Sun／BSDi 与商业授权模式（1982—1995）	C5 箭头改从到结构；D2 年代区间改 U+2013
+S-003685	McKusick 的 CSRG Archive CD-ROM 套装：4 CD 集 1978-1995 完整源码档案	McKusick 的 CSRG Archive CD-ROM 套装：4 CD 集 1978—1995 完整源码档案	D2 年代区间 1978-1995 改 U+2013 连接符
 S-003655	被遗忘的 CSRG 行政人员	CSRG 被遗忘的行政人员	B1 悬头被字重拟为 CSRG 名词起头
 S-003840	与中国的关系：CSRG 时期伯克利-中国高校合作的早期档案；CSRG 时期中国留学生与学者在伯克利 CS 的参与	伯克利与中国的关系：CSRG 时期与中国高校合作的早期档案及中国留学生与学者的参与情况	B1 题首与字重构；B2 题尾与字改参与情况收实义
 S-003843	学术成绩：CSRG 时期伯克利 CS 的代表性学术成绩（FFS、TCP／IP、sendmail、Ingres／Postgres 等）	学术成绩：CSRG 时期伯克利 CS 的代表性学术成绩（FFS、TCP／IP、sendmail、Ingres／Postgres 等）	H1 同步：D1 提示保留（括注为列举）；H1 半角斜杠同步全角

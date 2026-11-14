@@ -458,19 +458,19 @@ V61.3.1.4	入口检查未覆盖	https://man.freebsd.org/cgi/man.cgi?query=mac_ml
 V61.3.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“从权限控制到安全模型”；本节题为其下位论题	none
 V61.3.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.1.5	移植代价	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.1-传统-UNIX-自主访问控制-DAC-基础-FreeBSD-安全模型的历史起点/149.1.2-root用户的全能性与安全限制演进.md	史料	A	2026-10-30	149.1.2 root 用户的全能性与安全限制演进	none
-V61.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
+V61.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell-LaPadula 机密性模型”；本节题为其下位论题	none
 V61.3.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.2.1	读方向的约束	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
 V61.3.2.1	按机密性的严格信息流	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	The mac_mls policy module implements the Multi-Level Security, or MLS model, which controls access between subjects and objects based on their confidentiality by means of a strict information flow policy.	none
-V61.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
+V61.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell-LaPadula 机密性模型”；本节题为其下位论题	none
 V61.3.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.2.2	写方向的约束	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
 V61.3.2.2	不得写入更低密级	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	Subjects may not write to objects with a lower classification level than its own clearance level.	none
-V61.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
+V61.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell-LaPadula 机密性模型”；本节题为其下位论题	none
 V61.3.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.2.3	标签偏序	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
 V61.3.2.3	敏感级与隔间	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	In MLS, all system subjects and objects are assigned confidentiality labels, made up of a sensitivity level and zero or more compartments.	none
-V61.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell–LaPadula 机密性模型”；本节题为其下位论题	none
+V61.3.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“Bell-LaPadula 机密性模型”；本节题为其下位论题	none
 V61.3.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.2.4	与完整性模型的镜像	旧大纲-20261023/第07卷-freebsd的工程体系重构/第149章-freebsd安全模型的unix-dac与权限机制/149.3-MAC-Mandatory-Access-Control-框架-BSD-框架下的/149.3.2-bibamlslomac等策略模块的工程实现.md	史料	A	2026-10-30	149.3.2 Biba/MLS/LOMAC 等策略模块的工程实现	none
 V61.3.2.4	与 Biba 并用保护 TCB	https://man.freebsd.org/cgi/man.cgi?query=mac_mls&sektion=4	联网	A	2026-10-30	In traditional trusted operating systems, the MLS confidentiality model is used in concert with the Biba integrity model in order to protect the Trusted Code Base (TCB).	none
@@ -489,17 +489,17 @@ V61.3.3.4	用于保护 TCB	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&se
 V61.3.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“Biba 完整性模型”；本节题为其下位论题	none
 V61.3.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.3.5	严格信息流策略	https://man.freebsd.org/cgi/man.cgi?query=mac_biba&sektion=4	联网	A	2026-10-30	The mac_biba policy module implements the Biba integrity model, which protects the integrity of system objects and subjects by means of a strict information flow policy.	none
-V61.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
+V61.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark-Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
+V61.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark-Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V61.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
+V61.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark-Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.4.3	可配置的安全事件记录	https://man.freebsd.org/cgi/man.cgi?query=audit&sektion=4	联网	A	2026-10-30	Security Event Audit is a facility to provide fine-grained, configurable logging of security-relevant events, and is intended to meet the requirements of the Common Criteria (CC) Common Access Protection Profile (CAPP) evaluation.	none
-V61.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
+V61.3.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark-Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.4.4	不同用户不应有相同权限	https://web.mit.edu/Saltzer/www/publications/protection/Basic.html	联网	A	2026-10-30	The key concern in this paper is multiple use. For those applications in which all users should not have identical authority, some scheme is needed to ensure that the computer system implements the desired authority structure.	none
-V61.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark–Wilson 事务完整性模型”；本节题为其下位论题	none
+V61.3.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“Clark-Wilson 事务完整性模型”；本节题为其下位论题	none
 V61.3.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V61.3.4.5	强制策略只能在基础策略上收缩	https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4	联网	A	2026-10-30	due to its nature, MAC security policies may only restrict access relative to one another and the base system policy; they cannot override traditional Unix security provisions such as file permissions and superuser checks.	none
 V61.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“Chinese Wall 利益冲突模型”；本节题为其下位论题	none

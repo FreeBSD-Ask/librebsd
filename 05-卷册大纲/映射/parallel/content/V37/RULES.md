@@ -1,6 +1,6 @@
 # Task 8 V37 卷批判读规程卡（主会话自判，不派子代理）
 
-> 判读人＝主会话单写者（ykla 令“不使用子代理”）。批次：V37《FreeBSD 技术专题史（1993–2026）》17 章 159 节 795 题。
+> 判读人＝主会话单写者（ykla 令“不使用子代理”）。批次：V37《FreeBSD 技术专题史（1993—2026）》17 章 159 节 795 题。
 > 立卡：2026-11-08。输入：`titles.tsv`（795 题）、`parts.tsv`、`part<K>.blocks.jsonl`、`rank.tsv`（仅线索）。
 > 料域与排除策略见同目录 `00-意图确证.md` §二；与 V36（FreeBSD 通史）同料域，块级排除由 `_vol_build.py exclude_landed` 自动执行。
 
@@ -14,24 +14,24 @@
 
 | 片 | 服务新章 | 主题 |
 | --- | --- | --- |
-| P1 | 1.1–1.5 | FFS/UFS、软更新、GEOM、CAM、RAID |
-| P2 | 1.6–1.9 | ZFS 引入与 OpenZFS、UFS/ZFS 共存 |
-| P3 | 1.10–1.13 | Gibbs 与 CAM 系、13.x 淘汰、其他组件、多样性 |
-| P4 | 2.1–2.5 | TCP/IP 源流、KAME、Netgraph、Dummynet、Kqueue 应用 |
-| P5 | 2.6–2.10 | Netmap、Iflib、kTLS、WireGuard、Kqueue 本体 |
-| P6 | 3.1–3.10 | Jail 全链、VNET、Xen、bhyve、比较、云、团队、无名工程师 |
-| P7 | 4.1–4.8 | 单核模型、SMP 初期、SMPng、Giant、线程、调度器、NUMA、子系统并发 |
-| P8 | 4.9–4.14 | 3.0 挑战、5.0 周期、CAM 替代、3x/5x 团队、5.x 架构 |
-| P9 | 5.1–5.11 | DAC、审计、MAC、Capsicum、Jail 安全、GELI、CHERI、9.x |
-| P10 | 6.1–6.13 ＋14 章 | 2.x 主干（源码树/构建/发布）、CVS→SVN→Git、2.x 批评与驱动维护者；邮件线索归 14.x |
-| P11 | 7.1–7.10 | Ports 全链、pkgng、pkg、Ports 批评 |
-| P12 | 8.1–8.7 | 用户空间传统、GCC→Clang、LLVM 体系、LLD、可重复构建 |
-| P13 | 9.1–9.9 | 调试传统、ktrace、DTrace、PMC、jemalloc、路线分野 |
-| P14 | 10.1–10.12 | i386/旧架构/IA64/AMD64/ARM/RISC-V/ACPI/GPU/6.x 对比与淘汰/无名贡献者 |
-| P15 | 11.1–11.10 | Git 迁移、评审测试 MFC、发布工程、14.0 发布 |
-| P16 | 12.1–12.13 | 工程美学、协同、定位、遗产、世代更替、科研、时间线、桌面、time_t |
-| P17 | 13.1–13.4 | Modula-3/CVSup、libc++、Rust 准入、Rust for Linux |
-| P18 | 15–17 章 | 2.x 构建与共同体、4.0 系统与网络、4.0 应用与管理（邮件档案章） |
+| P1 | 1.1—1.5 | FFS/UFS、软更新、GEOM、CAM、RAID |
+| P2 | 1.6—1.9 | ZFS 引入与 OpenZFS、UFS/ZFS 共存 |
+| P3 | 1.10—1.13 | Gibbs 与 CAM 系、13.x 淘汰、其他组件、多样性 |
+| P4 | 2.1—2.5 | TCP/IP 源流、KAME、Netgraph、Dummynet、Kqueue 应用 |
+| P5 | 2.6—2.10 | Netmap、Iflib、kTLS、WireGuard、Kqueue 本体 |
+| P6 | 3.1—3.10 | Jail 全链、VNET、Xen、bhyve、比较、云、团队、无名工程师 |
+| P7 | 4.1—4.8 | 单核模型、SMP 初期、SMPng、Giant、线程、调度器、NUMA、子系统并发 |
+| P8 | 4.9—4.14 | 3.0 挑战、5.0 周期、CAM 替代、3x/5x 团队、5.x 架构 |
+| P9 | 5.1—5.11 | DAC、审计、MAC、Capsicum、Jail 安全、GELI、CHERI、9.x |
+| P10 | 6.1—6.13 ＋14 章 | 2.x 主干（源码树/构建/发布）、CVS→SVN→Git、2.x 批评与驱动维护者；邮件线索归 14.x |
+| P11 | 7.1—7.10 | Ports 全链、pkgng、pkg、Ports 批评 |
+| P12 | 8.1—8.7 | 用户空间传统、GCC→Clang、LLVM 体系、LLD、可重复构建 |
+| P13 | 9.1—9.9 | 调试传统、ktrace、DTrace、PMC、jemalloc、路线分野 |
+| P14 | 10.1—10.12 | i386/旧架构/IA64/AMD64/ARM/RISC-V/ACPI/GPU/6.x 对比与淘汰/无名贡献者 |
+| P15 | 11.1—11.10 | Git 迁移、评审测试 MFC、发布工程、14.0 发布 |
+| P16 | 12.1—12.13 | 工程美学、协同、定位、遗产、世代更替、科研、时间线、桌面、time_t |
+| P17 | 13.1—13.4 | Modula-3/CVSup、libc++、Rust 准入、Rust for Linux |
+| P18 | 15—17 章 | 2.x 构建与共同体、4.0 系统与网络、4.0 应用与管理（邮件档案章） |
 
 ## 三、处置阶梯
 
@@ -41,9 +41,9 @@
 
 ## 四、逐章边界与题面菜单（159 节 795 题）
 
-### 第 1 章　FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）
+### 第 1 章　FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）
 
-- 收：文件系统与存储栈的机制、取舍、边界（FFS 柱面组/超级块、UFS1→UFS2、软更新、GEOM 类层次、CAM、RAID/GELI、ZFS 引入与 OpenZFS、UFS/ZFS 共存、Gibbs 系 CAM 工程、13.x 架构退役、devfs/mdconfig/tmpfs/sendfile/VFS、2008–2018 贡献者与企业参与）。
+- 收：文件系统与存储栈的机制、取舍、边界（FFS 柱面组/超级块、UFS1→UFS2、软更新、GEOM 类层次、CAM、RAID/GELI、ZFS 引入与 OpenZFS、UFS/ZFS 共存、Gibbs 系 CAM 工程、13.x 架构退役、devfs/mdconfig/tmpfs/sendfile/VFS、2008—2018 贡献者与企业参与）。
 - 不收：ZFS 的 CDDL 法律论战（归 V32 类许可卷，块若纯法律可移出）；存储以外的内核子系统；商业公司通史。
 
 **1.1**

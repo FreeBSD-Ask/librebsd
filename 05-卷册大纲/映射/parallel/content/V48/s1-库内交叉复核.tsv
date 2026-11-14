@@ -10,10 +10,10 @@ V48.1.9.4	漏洞信息的公开节奏	ref_title	5873	5873	0.233	C	Kaminsky 2008 
 V48.2.2.1	首个发行版的时点	sacred	2412		0.248	C	1978 年 3 月 9 日：1BSD 发布	可推	史观参照（不作证据，仅定题面归属）
 V48.2.2.1	首个发行版的时点	claim	CL-RM-011044		1.10	A	2002年11月6日Julian Elischer说明firewire已进入5.0、将随4.8进入-stable而错过4.7约一周，明确驱动进入正式发行版的时间线	可推	claim 复用（S2 先库后网）
 V48.2.3.3	核心与外围的分层	fulltext_fact	kf-bell-10022-454	10022	0.246	C	1959 年初 Project Echo 项目成立，W. C. Jakes, Jr. 被任命为项目负责人	可推	全文补证候选（S1 命中即复用，D1 型）
-V48.2.4.1	调度器的两层拆分	fulltext_summary	520	520	0.239	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.4.1	调度器的两层拆分	fulltext_summary	520	520	0.239	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V48.2.4.1	调度器的两层拆分	fulltext_summary	527	527	0.239	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V48.2.4.1	调度器的两层拆分	fulltext_summary	107	107	0.221	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
-V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	520	520	0.257	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	520	520	0.257	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	527	527	0.257	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V48.2.6.4	调度器的 CPU 绑定	fulltext_summary	107	107	0.238	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V48.2.8.2	内存文件系统的来源	fulltext_summary	20	20	0.275	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
@@ -26,7 +26,7 @@ V48.2.8.3	文件系统接口的继承	claim	CL-5-012		1.20	B	Jails 论文列举 
 V48.3.5.2	快照模型的语义差异	ref_title	10141	10141	0.221	C	DragonFly gsocprojectspage · 2018-02-20 快照（Wayback 20180220192156；capture=wayback） 2018	可推	文献线索（须核全文再定 D1/D2）
 V48.3.9.3	随机数熵源的更换	fulltext_summary	976	976	0.243	C	Total ASSETS Current Assets Bank Accounts 1000 Wells Fargo - Checking 811,157.93 1001 Wells Fargo - Electronic Payment 5	可推	全文综述候选（D1 型，核对原文后落块）
 V48.3.9.3	随机数熵源的更换	claim	CL-7-010		1.30	A	Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（S2 先库后网）
-V48.4.1.4	发行节奏的年度化	ref_title	10146	10146	0.247	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V48.4.1.4	发行节奏的年度化	ref_title	10146	10146	0.247	C	GSoC Past Programs (2016—2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
 V48.4.7.3	内核内 Linux 接口的补齐	fulltext_summary	125	125	0.244	C	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
 V48.4.7.3	内核内 Linux 接口的补齐	fulltext_summary	706	706	0.244	C	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
 V48.4.7.3	内核内 Linux 接口的补齐	fulltext_summary	831	831	0.244	C	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
@@ -37,7 +37,7 @@ V48.5.8.1	基准选择与比较窗口	sacred	3042		0.268	C	文件系统 APFS 与
 V48.5.8.4	内存管理的对照要点	fulltext_summary	125	125	0.307	B	How OpenBSD’s malloc helps the developer Otto Moerbeek EuroBSDCon 2023, Coimbra Portugal • Otto Moerbeek, OpenBSD develo	可推	全文综述候选（D1 型，核对原文后落块）
 V48.5.8.4	内存管理的对照要点	fulltext_summary	706	706	0.307	B	NUMA Mark Johnston markj@FreeBSD.org FreeBSD Bay Area Vendor Summit October 11, 2019 Non-Uniform Memory Access CPU CPU C	可推	全文综述候选（D1 型，核对原文后落块）
 V48.5.8.4	内存管理的对照要点	fulltext_summary	831	831	0.307	B	Understanding the Linux Kernel, 3rd Edition By Daniel P. Bovet, Marco Cesati ...........................................	可推	全文综述候选（D1 型，核对原文后落块）
-V48.6.1.4	发行密度的年度化	ref_title	10146	10146	0.287	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V48.6.1.4	发行密度的年度化	ref_title	10146	10146	0.287	C	GSoC Past Programs (2016—2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
 V48.6.7.3	安全改进的零散条目	ref_title	6146	6146	0.251	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
 V48.6.7.3	安全改进的零散条目	sacred	1348		0.237	C	游戏 	可推	史观参照（不作证据，仅定题面归属）
 V48.6.7.3	安全改进的零散条目	sacred	1350		0.237	C	游戏 	可推	史观参照（不作证据，仅定题面归属）

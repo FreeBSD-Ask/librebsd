@@ -92,7 +92,7 @@ sec	S-000691	V18/C5/5.2	用户态语言生态：发行版打包与脚本语言	P
 sec	S-001164	V36/C3/3.10	Jordan Hubbard 与 Ports 构建宏的源流	PASS	PASS	保持	格式与题面相符，独立复核无实质异议
 sec	S-001165	V36/C3/3.11	Ports 数量的增长曲线与社区贡献模式	PASS	PASS	保持	格式与题面相符，独立复核无实质异议
 sec	S-001183	V36/C5/5.10	FreeBSD 5.x 时期的技术淘汰：GEOM、UFS2、rcNG 与 ULE	PASS	PASS	保持	格式与题面相符，独立复核无实质异议
-sec	S-001184	V36/C5/5.11	FreeBSD 5.x 时期的贡献者多样性与企业参与	PASS	WARN	保持	章题已含 2003–2005；补年份会与章题冲突，维持
+sec	S-001184	V36/C5/5.11	FreeBSD 5.x 时期的贡献者多样性与企业参与	PASS	WARN	保持	章题已含 2003—2005；补年份会与章题冲突，维持
 sec	S-001185	V36/C5/5.12	1996—2010 年的时代语境：总统科技政策、伯克利校园、集成电路与英美哲学	PASS	WARN	改题	补回政策主体“总统”（证据 109.1.1）
 sec	S-001186	V36/C5/5.13	第三方软件变更：PF 防火墙的引入与 MTA 格局	PASS	PASS	保持	格式与题面相符，独立复核无实质异议
 sec	S-001301	V37/C1/1.10	Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统	PASS	PASS	保持	格式与题面相符，独立复核无实质异议
@@ -248,5 +248,5 @@ bucket	B-000048	S-002119	DragonFly 的现状：社区规模与持续维护	PASS	
 bucket	B-000049	S-002471	BSDi（Berkeley Software Design）的商业与诉讼史	PASS	新增复核	改题	去机器连写／数字串／禁用词，补分隔与主谓
 bucket	B-000050	S-003607	各国司法实践差异矩阵：GPL 可执行性与合同性质	PASS	新增复核	改题	去机器连写／数字串／禁用词，补分隔与主谓
 bucket	B-000051	S-003616	GPL 与 BSD 许可证的司法实践：国内外判例综述	PASS	新增复核	改题	去机器连写／数字串／禁用词，补分隔与主谓
-vol	V-076	-	Rust 入核与 BSD–Linux 技术承袭（1991–2026）	PASS	WARN	保持	卷题为批准方案，复核建议的“内核史料”未覆盖第2、3章，不改
+vol	V-076	-	Rust 入核与 BSD-Linux 技术承袭（1991—2026）	PASS	WARN	保持	卷题为批准方案，复核建议的“内核史料”未覆盖第2、3章，不改
 overview	V-076-overview	-	（卷导言）	PASS	FAIL	改题	按现行章题重写，删“五层”数词，改双向流动

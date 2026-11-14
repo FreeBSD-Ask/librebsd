@@ -5,10 +5,10 @@
 
 ## 一、范围
 
-- 卷题：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 技术发展史的横向比较（1993–2026）
+- 卷题：FreeBSD、NetBSD、OpenBSD 与 DragonFly BSD 技术发展史的横向比较（1993—2026）
 - 章数 7；节数 44（V01 已含 2.3 拆节 6 节，其余卷按 `targets.tsv` 实测）；`mapping.tsv` 命中 0 行的节 44 个
 - 旧料：映射件 0 件、0 字节（`mapping.tsv` 该卷节点命中）
-- 预计标题：88–528（中位 264；J3 每节 2–12）
+- 预计标题：88—528（中位 264；J3 每节 2—12）
 
 ## 二、产出（只写这些）
 

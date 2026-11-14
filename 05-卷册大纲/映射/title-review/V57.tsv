@@ -34,8 +34,8 @@ V57.5.2.2	可扩展目标的工程取舍	确证	同新闻稿引 Henrich：“we 
 V57.5.2.3	派生项目的软件栈借用	形态	方法论题（借用范围与维护归属），无单点事实断言；案例细节未单独取证			2026-11-01
 V57.5.2.4	案例总目的来源与用途	确证			https://freebsdfoundation.org/end-user-stories/	2026-11-02
 V57.5.2.5	专用设备衍生的判定要件	形态	方法论题（判定要件与边界），无新增外部断言			2026-11-01
-V57.1.1.1	分叉、变种与移植的三重判准	确证	目录锚：第二十六卷第 1 章题“源流总览：授权线、自由化与三形态判准”——“三形态判准”系 V26 明立的卷章框架（本机 outline 1062–1070 行实测）		05-卷册大纲/目录/data/outline.txt（第二十六卷卷头）	2026-11-01
-V57.1.1.2	判准自商业授权期向后分裂期的沿用	确证	目录锚：V26 卷题“BSD 的早期变种与商业授权源流（1982–1995）”——判准原生于商业授权期成立；沿用至后分裂期为本卷方法论声明		05-卷册大纲/目录/data/outline.txt（第二十六卷卷题）	2026-11-01
+V57.1.1.1	分叉、变种与移植的三重判准	确证	目录锚：第二十六卷第 1 章题“源流总览：授权线、自由化与三形态判准”——“三形态判准”系 V26 明立的卷章框架（本机 outline 1062—1070 行实测）		05-卷册大纲/目录/data/outline.txt（第二十六卷卷头）	2026-11-01
+V57.1.1.2	判准自商业授权期向后分裂期的沿用	确证	目录锚：V26 卷题“BSD 的早期变种与商业授权源流（1982—1995）”——判准原生于商业授权期成立；沿用至后分裂期为本卷方法论声明		05-卷册大纲/目录/data/outline.txt（第二十六卷卷题）	2026-11-01
 V57.1.1.3	同一判准在两期语境下的适用边界	形态	方法论题（判准非等权适用的边界划定），无新增外部断言			2026-11-01
 V57.1.1.4	分叉与派生的判定次序	形态	方法论题（判定次序约定），无新增外部断言			2026-11-01
 V57.1.1.5	移植项在三种形态中的位置	形态	方法论题（移植的归类界定），无新增外部断言；家族树参照件缺失已转呈（见 1.2.5）			2026-11-01
@@ -119,7 +119,7 @@ V57.7.2.2	微虚拟机的构建工具	确证	以工具生成微虚拟机可核�
 V57.7.2.3	嵌入式构建框架的定位	确证	smolBSD 面向定制系统可核。smolBSD 官网记载“Build BSD systems like you build software: fast, reproducible, and minimal”与“Composable: Pick only the components you need, from kernel to services”（A 级一手）。		https://smolbsd.org/	2026-11-01
 V57.7.2.4	微虚拟机的启动开销	确证	微虚拟机以毫秒级启动可核。smolBSD 官网记载“PVH boot and various optimizations enable NetBSD/amd64 and NetBSD/i386 to directly boot QEMU or Firecracker in about 10 ms on modern x86 CPUs”（A 级一手）。		https://smolbsd.org/	2026-11-01
 V57.7.2.5	最小系统的构建约束	确证	构建微虚拟机不要求预装系统可核。smolBSD 官网记载“No prior NetBSD installation is required. Create and start a microvm from any GNU/Linux, NetBSD, or macOS system”（A 级一手）。		https://smolbsd.org/	2026-11-01
-V57.7.3.1	取证套件的内容构成	确证	取证套件基于 NetBSD 可核。ArchiveOS 记载“irBSD – a digital forensics kit based on the NetBSD operating system designed for cryptography, penetration testing, data recovery, reverse engineering, privacy protection and other security tasks”（B 级独立二手）。		https://archiveos.org/irbsd/	2026-11-01
+V57.7.3.1	取证套件的内容构成	确证	取证套件基于 NetBSD 可核。ArchiveOS 记载“irBSD-a digital forensics kit based on the NetBSD operating system designed for cryptography, penetration testing, data recovery, reverse engineering, privacy protection and other security tasks”（B 级独立二手）。		https://archiveos.org/irbsd/	2026-11-01
 V57.7.3.2	Live 光盘的启动流程	形态	无外部事实断言，体例题。			2026-11-01
 V57.7.3.3	打包框架的跨项目复用	确证	打包框架被多个 BSD 项目共用可核。pkgsrc.org 记载“It is the default package manager of NetBSD and SmartOS, and can be used to enable freely available software to be built easily on a large number of other UNIX-like platforms”（A 级一手），其支持平台列表含 FreeBSD、OpenBSD、DragonFlyBSD 等 BSD 系统。		https://www.pkgsrc.org/	2026-11-01
 V57.7.3.4	子项目页面的状态记录	形态	无外部事实断言，体例题。			2026-11-01

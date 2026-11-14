@@ -23,7 +23,7 @@ V67.1.5.1	67	1	5	DECUS 与 UNIX 讨论线的并置	DECUS 的 UNIX 特别兴趣�
 V67.1.5.2	67	1	5	DEC 产品发布会的会场选择	1982 年 DEC 选择在 USENIX 技术会议发布其 UNIX 产品，厂商发布与学会会议场合重叠。	2	3	目录;规则;联网	final
 V67.1.5.3	67	1	5	两组织成员重叠的不可核	官网、Salus 年表与 1987、1989 年两份用户组综述只并列叙述两组织的办会与联络方式；DECUS 与 USENIX 会员名册均未公开，重叠与往返两说无可核证据。	3	3	目录;规则;联网	final
 V67.1.5.4	67	1	5	两线分化的技术动因	硬件厂商用户组以机型为轴，UNIX 用户组以操作系统为轴，分类原则不同导致议程分流。	4	3	目录;规则;联网	final
-V67.1.5.5	67	1	5	合办记载的所指分辨	合办记载只见 USENIX 与 /usr/group（1983-01 圣迭戈联合会议、1984-01 华盛顿会议、1987–1992 同城异址与班车往返）；1988 年 UNIX 会历明言“The sponsors of the USENIX, EUUG, AUUG and DECUS conferences are the organizations of the same names”，DECUS 研讨会与 USENIX 会议分条并列，未见两线合办专题。	5	3	目录;规则;联网	final
+V67.1.5.5	67	1	5	合办记载的所指分辨	合办记载只见 USENIX 与 /usr/group（1983-01 圣迭戈联合会议、1984-01 华盛顿会议、1987—1992 同城异址与班车往返）；1988 年 UNIX 会历明言“The sponsors of the USENIX, EUUG, AUUG and DECUS conferences are the organizations of the same names”，DECUS 研讨会与 USENIX 会议分条并列，未见两线合办专题。	5	3	目录;规则;联网	final
 V67.1.6.1	67	1	6	参与者自述作为会议史源	参会者的会后自述与会议总结，构成会议史的主要一手来源。	1	4	目录;规则;联网;史料	final
 V67.1.6.2	67	1	6	口述史与会议记录的互补	口述补充议程之外的走廊交涉，与会议录形成互补的两类记录。	2	3	目录;规则;联网	final
 V67.1.6.3	67	1	6	会议总结的刊物化	会议总结经会刊刊布，个人观察转为可引用的公开文本。	3	3	目录;规则;联网	final
@@ -198,7 +198,7 @@ V67.8.1.1	67	8	1	年度会期的人员汇集	年会把分散在各地的维护�
 V67.8.1.2	67	8	1	开发者峰会的集结场合	基金会年度峰会集中决策者与工程师，兼作面对面讨论场合。	2	3	目录;规则;联网	final
 V67.8.1.3	67	8	1	并址会议的联合集结	并址会议使不同社群在同一城市与同一周集结。	3	3	目录;规则;联网	final
 V67.8.1.4	67	8	1	集结规模的量级差异	从百人专会到万人大会，集结量级相差两个数量级。	4	3	目录;规则;联网	final
-V67.8.1.5	67	8	1	年会周期与发布节拍	BSDCan 2026 定 6 月 17–20 日、AsiaBSDCon 2024 定 3 月 21–24 日，会议周期确为年度；FreeBSD releases 页列 14.4（2026-03-10）、15.1（2026-06-16）、14.5（2026-09-08），一年三次，与年度会期的对齐无明文。	5	3	目录;规则;联网	final
+V67.8.1.5	67	8	1	年会周期与发布节拍	BSDCan 2026 定 6 月 17—20 日、AsiaBSDCon 2024 定 3 月 21—24 日，会议周期确为年度；FreeBSD releases 页列 14.4（2026-03-10）、15.1（2026-06-16）、14.5（2026-09-08），一年三次，与年度会期的对齐无明文。	5	3	目录;规则;联网	final
 V67.8.2.1	67	8	2	跨项目议程的共席	议程安排各项目同场报告，形成横向联系。	1	3	目录;规则;联网	final
 V67.8.2.2	67	8	2	联合委员会的跨项目组合	委员会跨项目组成为项目间协商提供场合。	2	3	目录;规则;联网	final
 V67.8.2.3	67	8	2	并址会议的项目接口	并址使项目代表可就近交接，沟通成本下降。	3	3	目录;规则;联网	final
@@ -206,7 +206,7 @@ V67.8.2.4	67	8	2	单一隶属的署名惯例	BSDCon 2003 程序委员会与 BSDC
 V67.8.2.5	67	8	2	联系机制的非正式层	正式议程之外的走廊交涉承担多数项目间联系。	5	3	目录;规则;联网	final
 V67.8.3.1	67	8	3	走廊交谈的旅行记述	BSDCan 2026 旅行报告记“I spent some time catching up with a few colleagues in the hallways”“talking to Mark Johnston and John Baldwin about our ongoing srcmgr activities”；2008 年 DevSummit 笔记明言峰会“It is not a place to make decisions”，决策功能无据。	1	3	目录;规则;联网	final
 V67.8.3.2	67	8	3	BoF 的议题收束	BoF 把分散意见收束为可执行议题。	2	3	目录;规则;联网	final
-V67.8.3.3	67	8	3	峰会与议程的先后编排	BSDCan 2024 indico 将“FreeBSD Dev Summit First Day/Second Day”排在 5 月 29–30 日，正式演讲自 5 月 31 日起；2026 博客记两个项目各办两日峰会；2008 笔记记“Following the schedule given on the Wiki”，并明言峰会不作决定。	3	3	目录;规则;联网	final
+V67.8.3.3	67	8	3	峰会与议程的先后编排	BSDCan 2024 indico 将“FreeBSD Dev Summit First Day/Second Day”排在 5 月 29—30 日，正式演讲自 5 月 31 日起；2026 博客记两个项目各办两日峰会；2008 笔记记“Following the schedule given on the Wiki”，并明言峰会不作决定。	3	3	目录;规则;联网	final
 V67.8.3.4	67	8	3	无议程的官方说明	hackathons 页逐字“In our form, hackathons do not have talks, nor a specific schedule.”，可证无正式议程；讨论记录缺失属全称否定，仅列为缺口。	4	3	目录;规则;联网	final
 V67.8.3.5	67	8	3	正式议程与非正式层的分工	正式议程定发表，非正式层定方向，两者分层。	5	3	目录;规则;联网	final
 V67.8.4.1	67	8	4	展位权益的成文条款	BSDCan 2024 赞助权益页载“We will reserve an 8-foot table with two chairs and an electrical outlet in the exhibition hall”；权益表与赞助页无招聘条款，人才接触功能无一手。	1	3	目录;规则;联网	final
@@ -227,7 +227,7 @@ V67.8.6.5	67	8	6	经费与议程的独立	经费来源不改变议程决定权�
 V67.9.1.1	67	9	1	疫情年份的会议序列状况	2003 年 BSD 专有会议尚未创办，疫情冲击落在既有综合会议。	1	4	目录;规则;联网;史料	final
 V67.9.1.2	67	9	1	AsiaBSDCon 2003 取消叙事之误	首届 AsiaBSDCon 为 2004 年，2003 年取消说属史实错误。	2	3	目录;规则;联网	final
 V67.9.1.3	67	9	1	SARS 年份的会议照常	FreeBSD 2003 年活动页所列 BSDCon 2003 与 BSDCon Japan 2003 均照常举行；freebsd-advocacy 2003 年 9 月档为 AsiaBSDCon 2004 征稿公告；线上替代之说所引 IRC 日志与 CVS log 未见公开存档。	3	3	目录;规则;联网	final
-V67.9.1.4	67	9	1	流感年份的会期照常	BSDCan 2009（5 月 6–9 日，渥太华大学）与 EuroBSDCon 2009（9 月，剑桥大学）均按原议程举行；两页无 H1N1 防疫或远程演讲预案记载，2009.eurobsdcon.org 抓取为空。	4	3	目录;规则;联网	final
+V67.9.1.4	67	9	1	流感年份的会期照常	BSDCan 2009（5 月 6—9 日，渥太华大学）与 EuroBSDCon 2009（9 月，剑桥大学）均按原议程举行；两页无 H1N1 防疫或远程演讲预案记载，2009.eurobsdcon.org 抓取为空。	4	3	目录;规则;联网	final
 V67.9.1.5	67	9	1	早期疫情记录的史料限度	早期疫情记录稀疏，须以会议公告与邮件列表补证。	5	3	目录;规则;联网	final
 V67.9.2.1	67	9	2	大流行年份的线上转轨	2020 年 BSDCan 改为全线上会议，演讲预先录制。	1	4	目录;规则;联网;史料	final
 V67.9.2.2	67	9	2	EuroBSDCon 2020 的停办	2020 年 EuroBSDCon 停办，2021 年方转线上。	2	3	目录;规则;联网	final

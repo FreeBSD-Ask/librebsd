@@ -1,4 +1,4 @@
-# Task 8.4 判读规程卡（V48“分叉之后的多核实验：DragonFly BSD 操作系统的历史（2003–2026）”卷批）
+# Task 8.4 判读规程卡（V48“分叉之后的多核实验：DragonFly BSD 操作系统的历史（2003—2026）”卷批）
 
 > 批次：V48 全卷 7 章 44 节 271 题，旧树第 11 卷 192 件 2,167 块（P1 469／P2 818／P3 880）。
 > 生成：2026-11-08。判读者＝主会话单写者；方式＝机助定址四道闸＋磁石题防集中＋抽样复核。
@@ -24,7 +24,7 @@
 
 ## 四、输出
 
-`…/V48/part<K>.tsv`（K＝1–3），UTF-8 无 BOM、LF；表头 `rowmine_id	subsection_id	title	action	reason`；行数＝该片块数；reason ≤60 字。
+`…/V48/part<K>.tsv`（K＝1—3），UTF-8 无 BOM、LF；表头 `rowmine_id	subsection_id	title	action	reason`；行数＝该片块数；reason ≤60 字。
 
 ## 五、禁止
 

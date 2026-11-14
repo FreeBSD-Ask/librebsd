@@ -8,7 +8,7 @@ M-B2	机判	题名形态	禁日期起头	命中 0	第三十九件 audit_title_co
 M-B3	机判	题名形态	禁转述动词作主干（称／说／问／答／宣布等长名单）	命中 0	第三十九件 audit_title_consistency.py	长名单为下限，语义转述须 H-1 判	P1	引语式专名不在此列	机判明细行	同上
 M-B4	机判	题名形态	禁纯版本号与行号独立成题	命中 0	第三十九件 audit_title_consistency.py	无	P1	无	机判明细行	同上
 M-B5	机判	题名形态	禁工序状态词（未判定／待定／杂项等）	命中 0	第三十九件 audit_title_consistency.py	无	P1	无	机判明细行	同上
-M-B6	机判	题名形态	长度 8–40 字（去空格计）	越界 0	第三十九件 audit_title_consistency.py	2026-10-31 ykla 裁定不设中位数限制，仅保留 8–40 硬界；短题人工复核	P1	四字专名题须补中心语	机判明细行（id、字数）	同上
+M-B6	机判	题名形态	长度 8—40 字（去空格计）	越界 0	第三十九件 audit_title_consistency.py	2026-10-31 ykla 裁定不设中位数限制，仅保留 8—40 硬界；短题人工复核	P1	四字专名题须补中心语	机判明细行（id、字数）	同上
 M-B7	机判	题名形态	年代括注用全角括号与 U+2013	命中 0	第三十九件 audit_title_consistency.py	无	P1	无	机判明细行	同上
 M-C1	机判	字符标点	中英、中数之间各一个半角空格	紧邻 0	第三十九件 audit_title_consistency.py	无	P1	标识符内部不拆	机判明细行	FAIL 入异常队列；符合预授权者直接修
 M-C2	机判	字符标点	弯引号；禁直角引号与 ASCII 直引号	命中 0	第三十九件 audit_title_consistency.py	无	P1	无	机判明细行（含字符码位）	同上
@@ -24,7 +24,7 @@ M-C8c	机判	字符标点	单题“的”字 ≤2	超限 0	第三十九件 audit
 M-C8i	机判	字符标点	AI 腔临界词披露（不拦退出码）	只披露	第三十九件 audit_title_consistency.py	披露面不阻断	P2	无	披露清单	入指标卡披露栏，交 H-7
 M-D1	机判	语义下限	thesis 非空且 ≥8 字	不符 0	第三十九件 audit_title_consistency.py	8 字为机器下限，题旨充分性须 H-1	P1	无	机判明细行	同上
 M-D2	机判	语义下限	上下位一致（依赖 A2 层级对位）	同 A2	第三十九件 audit_title_consistency.py	纯结构判定，语义上下位须 H-2	P1	无	机判明细行	同上
-M-D3	机判	语义下限	同节字数极差 ≤14	越界 0	第三十九件 audit_title_consistency.py	2026-11-04 已写入脚本（G-02）：V01–V50 命中标 EXEMPT、不拦退出码；现跑零误报	P2	V01–V50 全段豁免	机判明细行	机判明细行；豁免改判已入判据
+M-D3	机判	语义下限	同节字数极差 ≤14	越界 0	第三十九件 audit_title_consistency.py	2026-11-04 已写入脚本（G-02）：V01—V50 命中标 EXEMPT、不拦退出码；现跑零误报	P2	V01—V50 全段豁免	机判明细行	机判明细行；豁免改判已入判据
 M-D4	机判	语义下限	单源题进例外后不得成题	违例 0	第三十九件 audit_title_consistency.py	无	P0	无	机判明细行与例外行	同上
 M-E1	机判	证据完备	证据行字段枚举与 accessed 日期格式	不符 0	第三十九件 audit_title_consistency.py	只判格式，不判证据真值	P1	无	机判明细行	同上
 M-E2	机判	证据完备	每条标题至少一行证据	缺证 0	第三十九件 audit_title_consistency.py	行数下限，证据质量须 H-5	P1	无	机判明细行	同上
@@ -47,7 +47,7 @@ M-K1	机判	风格一致	跨卷句式模板与长度分布	无机判	风格规�
 M-K2	机判	风格一致	跨节近似重复（thesis 相似度 ≥0.995）	重复 0	一次性扫描（2026-11-03）	无常态门禁；2026-11-03 扫过一次并清零	P1	平行章可保留近义题	相似度明细	Phase B 复扫，FAIL 入异常队列
 M-L1	机判	结构闭环	title.ok／台账／证据／id 四点对位	缺一 0	第三十九件 audit_title_consistency.py	无	P0	无	机判明细行	同上
 M-L2	机判	结构闭环	76 卷复核报告齐备	76 份	title-review/V*-复核报告.md	Phase A 实测 74 份，V28／V38 缺报告	P1	无	目录清单	Phase B 补齐或披露归属
-M-L3	机判	结构闭环	预检统计齐备	76 行	title-review/stats.tsv	实测 73 行，V74–V76 缺统计	P2	无	行数与卷号比对	Phase B 补齐
+M-L3	机判	结构闭环	预检统计齐备	76 行	title-review/stats.tsv	实测 73 行，V74—V76 缺统计	P2	无	行数与卷号比对	Phase B 补齐
 M-M1	机判	基线完整	基线计数与磁盘一致	76 卷／19,470 题／76 台账／76 证据／76 title.ok／14,872 例外	full-review/基线-20261103.tsv	实测一致	P2	无	基线表与本轮复算	每批判定前复算
 M-M2	机判	基线完整	approvals 行数与 kind 分布	kind=title 覆盖 76 卷；landing 行随内容批	title-design/approvals.tsv	实测 252 行全为 title（Phase A 251＋P4 前置批 V56 重批 1）；landing 0 行属内容批前正常态	P2	重批产生多行同卷	行数与卷号去重	披露
 H-1	人判	题文一致	S1：题名所指为正文实际论证者；空骨架以 thesis 与四源为准	逐题判定	无（人判）	机判只能给 machine floor（M-B1／D1）	P1	无史料节按 thesis 判	逐题结论与证据引文	FAIL 入异常队列；P0／P1 预授权修，争议呈裁

@@ -1,397 +1,397 @@
 subsection_id	query	url	source_type	tier	accessed	quote	conflict
 V47.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“OpenBSD 分化轴的形成：从 BSD 工程传统到主动安全原则”；本节题为其下位论题	none
-V47.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.1.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Our open software development model permits us to take a more uncompromising view towards increased security than most vendors are able to.	none
 V47.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“OpenBSD 分化轴的形成：从 BSD 工程传统到主动安全原则”；本节题为其下位论题	none
-V47.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.1.2	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	OpenBSD can exist as it does today because of the example set by the Computer Systems Research Group at Berkeley and the battles which they and others fought to create a Unix source distribution un-encumbered by proprietary code and commercial licensing.	none
 V47.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“OpenBSD 分化轴的形成：从 BSD 工程传统到主动安全原则”；本节题为其下位论题	none
-V47.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.1.3	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Much of OpenBSD is originally based on and evolved from NetBSD, since some of the OpenBSD developers were involved in the NetBSD project.	none
 V47.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“分化的物质基础：代码审计、默认安全配置与架构重构”；本节题为其下位论题	none
-V47.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.2.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	The process we follow to increase security is simply a comprehensive file-by-file analysis of every critical software component.	none
 V47.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“分化的物质基础：代码审计、默认安全配置与架构重构”；本节题为其下位论题	none
-V47.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.2.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	All non-essential services are disabled.	none
 V47.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“分化的物质基础：代码审计、默认安全配置与架构重构”；本节题为其下位论题	none
-V47.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.2.3	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	ASLR : OpenBSD 3.4 was the first widely used operating system to provide it by default.	none
 V47.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节““安全优先”的观念形成：从工程选择到项目身份”；本节题为其下位论题	none
-V47.1.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.3.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	OpenBSD believes in strong security.	none
 V47.1.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节““安全优先”的观念形成：从工程选择到项目身份”；本节题为其下位论题	none
-V47.1.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.3.2	实测页面：index	https://www.openbsd.org/index.html	联网	A	2026-10-30	Our efforts emphasize portability, standardization, correctness, proactive security and integrated cryptography .	none
 V47.1.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节““安全优先”的观念形成：从工程选择到项目身份”；本节题为其下位论题	none
-V47.1.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.3.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Our aspiration is to be NUMBER ONE in the industry for security (if we are not already there).	none
 V47.1.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“边界：性能与兼容性的代价”；本节题为其下位论题	none
-V47.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.4.1	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Strictly enforced by default since OpenBSD 6.0: a program can only violate it if the executable is marked with PT_OPENBSD_WXNEEDED and it is located on a filesystem mounted with the wxallowed mount(8) option.	none
 V47.1.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“边界：性能与兼容性的代价”；本节题为其下位论题	none
-V47.1.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.4.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Many sloppy practices in userland code had to be repaired to allow this.	none
 V47.1.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“边界：性能与兼容性的代价”；本节题为其下位论题	none
-V47.1.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.4.3	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	OpenBSD attempts to minimize the need for customization and tweaking.	none
 V47.1.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“OpenBSD 项目史要：本项目本体事件与制品事件的层次”；本节题为其下位论题	none
-V47.1.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.5.1	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	In June of 1999, OpenBSD held the first hackathon.	none
 V47.1.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“OpenBSD 项目史要：本项目本体事件与制品事件的层次”；本节题为其下位论题	none
-V47.1.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.5.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Imported September 26, 1999 and first released with OpenBSD 2.6.	none
 V47.1.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“OpenBSD 项目史要：本项目本体事件与制品事件的层次”；本节题为其下位论题	none
-V47.1.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.1.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.1.5.3	实测页面：v56	https://www.openbsd.org/56.html	联网	A	2026-10-30	This release forks OpenSSL into LibreSSL , a version of the TLS/crypto stack with goals of modernizing the codebase, improving security, and applying best practice development processes.	none
 V47.2.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“设计信条的文本化：邮件列表、代码提交与技术讨论”；本节题为其下位论题	none
-V47.2.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.1.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Like many readers of the BUGTRAQ mailing list , we believe in full disclosure of security problems.	none
 V47.2.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“设计信条的文本化：邮件列表、代码提交与技术讨论”；本节题为其下位论题	none
-V47.2.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.1.2	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Be as politics-free as possible; solutions should be decided on the basis of technical merit.	none
 V47.2.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“设计信条的文本化：邮件列表、代码提交与技术讨论”；本节题为其下位论题	none
-V47.2.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.1.3	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Copyright law is complex, OpenBSD policy is simple — OpenBSD strives to provide code that can be freely used, copied, modified, and distributed by anyone and for any purpose.	none
 V47.2.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“代码证据：审计、重写与删除旧代码的工程文化”；本节题为其下位论题	none
-V47.2.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.2.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	We have been auditing since the summer of 1996.	none
 V47.2.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“代码证据：审计、重写与删除旧代码的工程文化”；本节题为其下位论题	none
-V47.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.2.2	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Replacement by equivalent, more freely licensed tools is a long-term desideratum.	none
 V47.2.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“代码证据：审计、重写与删除旧代码的工程文化”；本节题为其下位论题	none
-V47.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.2.3	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Deleted after OpenBSD 7.7 because pkgconf is more actively maintained and more efficient.	none
 V47.2.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““正确性优先”的技术价值观”；本节题为其下位论题	none
-V47.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.3.1	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	Our goals place emphasis on correctness, security, standardization, and portability.	none
 V47.2.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““正确性优先”的技术价值观”；本节题为其下位论题	none
-V47.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.3.2	实测页面：styles9	https://man.openbsd.org/style.9	联网	A	2026-10-30	This is enough to break precedents in the existing code and use the current style guidelines.	none
 V47.2.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节““正确性优先”的技术价值观”；本节题为其下位论题	none
-V47.2.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.3.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	We are not so much looking for security holes, as we are looking for basic software bugs, and if years later someone discovers the problem used to be a security issue, and we fixed it because it was just a bug, well, all the better.	none
 V47.2.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“工具链政治：GCC、clang、pcc 与自主控制”；本节题为其下位论题	none
-V47.2.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.4.1	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	As a consequence, no additional software bound by the GPL terms will be considered for inclusion into the OpenBSD base system.	none
 V47.2.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“工具链政治：GCC、clang、pcc 与自主控制”；本节题为其下位论题	none
-V47.2.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.4.2	实测页面：62	https://www.openbsd.org/62.html	联网	A	2026-10-30	Assorted improvements: The i386 and amd64 platforms have switched to using clang(1) as the base system compiler.	none
 V47.2.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“工具链政治：GCC、clang、pcc 与自主控制”；本节题为其下位论题	none
-V47.2.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.4.3	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Such material can be included in OpenBSD, while those parts that are subject to GPL or various individual copyright terms that are at odds with the OpenBSD license can not be included in OpenBSD.	none
 V47.2.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“OpenSSL 至 LibreSSL：fork 作为工程哲学事件”；本节题为其下位论题	none
-V47.2.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.5.1	实测页面：libressl	https://www.libressl.org/	联网	A	2026-10-30	LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014, with goals of modernizing the codebase, improving security, and applying best practice development processes.	none
 V47.2.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“OpenSSL 至 LibreSSL：fork 作为工程哲学事件”；本节题为其下位论题	none
-V47.2.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.5.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Started by Ted Unangst, Bob Beck, Joel Sing, Miod Vallat, Philip Guenther, and Theo de Raadt on April 13, 2014, as a fork of OpenSSL 1.0.1g.	none
 V47.2.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“OpenSSL 至 LibreSSL：fork 作为工程哲学事件”；本节题为其下位论题	none
-V47.2.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.5.3	实测页面：libressl	https://www.libressl.org/	联网	A	2026-10-30	Primary development occurs inside the OpenBSD source tree with the usual care the project is known for.	none
 V47.2.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“性能观：安全机制带来的成本与取舍”；本节题为其下位论题	none
-V47.2.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.6.1	实测页面：76	https://www.openbsd.org/76.html	联网	A	2026-10-30	Changed pledge(2) , mmap(2) 's MAP_STACK and pinsyscalls(2) failures to use uprintf(9) rather than writing into dmesg(8)	none
 V47.2.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“性能观：安全机制带来的成本与取舍”；本节题为其下位论题	none
-V47.2.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.6.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	msyscall(2) mechanism also becomes redundant (and is removed a bit later), because immutable memory + pinsyscalls together are cheaper and more effective targeting.	none
 V47.2.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“性能观：安全机制带来的成本与取舍”；本节题为其下位论题	none
-V47.2.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.6.3	实测页面：styles9	https://man.openbsd.org/style.9	联网	A	2026-10-30	Optimizing compilers such as gcc can generally do a better job of choosing which variables to place in registers to improve code performance.	none
 V47.2.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“de Raadt 的技术决断风格：争议个案”；本节题为其下位论题	none
-V47.2.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.7.1	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	solution implemented by Theo de Raadt in May 2016, enabled by default since OpenBSD 6.0.	none
 V47.2.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“de Raadt 的技术决断风格：争议个案”；本节题为其下位论题	none
-V47.2.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.7.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Security is like an arms race; the best attackers will continue to search for more complicated exploits, so we will too.	none
 V47.2.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“de Raadt 的技术决断风格：争议个案”；本节题为其下位论题	none
-V47.2.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.2.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.2.7.3	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	This mechanism was removed because later work on immutable memory + pinned system calls was even better.	none
 V47.3.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Theo de Raadt 与 OpenBSD 的创立（1995 年 10 月）”；本节题为其下位论题	none
-V47.3.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.1.1	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	The CVS import of the OpenBSD src tree was done at 08:37:01, Oct 18, 1995 GMT .	none
 V47.3.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Theo de Raadt 与 OpenBSD 的创立（1995 年 10 月）”；本节题为其下位论题	none
-V47.3.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.1.2	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The general NetBSD license terms are compatible with the Berkeley license and permit such use.	none
 V47.3.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“Theo de Raadt 与 OpenBSD 的创立（1995 年 10 月）”；本节题为其下位论题	none
-V47.3.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.1.3	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	In the months leading up to this, either Theo or Niels Provos had coined this new word hackathon .	none
 V47.3.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“源码树的两级访问制：开发者读写与公众只读”；本节题为其下位论题	none
-V47.3.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.2.1	实测页面：anoncvs	https://www.openbsd.org/anoncvs.html	联网	A	2026-10-30	There are two levels of source tree access: Read-write access for developers Read-only access for everyone	none
 V47.3.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“源码树的两级访问制：开发者读写与公众只读”；本节题为其下位论题	none
-V47.3.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.2.2	实测页面：anoncvs	https://www.openbsd.org/anoncvs.html	联网	A	2026-10-30	Anonymous CVS works directly against a central source code repository.	none
 V47.3.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“源码树的两级访问制：开发者读写与公众只读”；本节题为其下位论题	none
-V47.3.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.2.3	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Provide full source access to developers and users, including the ability to look at CVS tree changes directly .	none
 V47.3.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“OpenBSD 社区的进入门槛体现为成文的参与纪律”；本节题为其下位论题	none
-V47.3.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.3.1	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Reading or writing to the mailing lists is more appropriate than sending in a bug report.	none
 V47.3.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“OpenBSD 社区的进入门槛体现为成文的参与纪律”；本节题为其下位论题	none
-V47.3.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.3.2	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Test the problem at least twice, with source updated a few days apart.	none
 V47.3.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“OpenBSD 社区的进入门槛体现为成文的参与纪律”；本节题为其下位论题	none
-V47.3.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.3.3	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	Hackathon attendees come by invitation only.	none
 V47.3.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“OpenBSD 邮件列表按分工运作”；本节题为其下位论题	none
-V47.3.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.4.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	If you understand security issues, watch our source-changes mailing list and keep an eye out for things which appear security related.	none
 V47.3.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“OpenBSD 邮件列表按分工运作”；本节题为其下位论题	none
-V47.3.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.4.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	If we discover that a problem definitely matters for security, patches will show up here VERY quickly.	none
 V47.3.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 4 节“OpenBSD 邮件列表按分工运作”；本节题为其下位论题	none
-V47.3.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.4.3	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	If you cannot use sendbug on a functional OpenBSD machine, please send your bug report to bugs@openbsd.org .	none
 V47.3.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“名称形成：OpenBSD 的“开放”语义”；本节题为其下位论题	none
-V47.3.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.5.1	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The source is free.	none
 V47.3.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“名称形成：OpenBSD 的“开放”语义”；本节题为其下位论题	none
-V47.3.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.5.2	实测页面：index	https://www.openbsd.org/index.html	联网	A	2026-10-30	The OpenBSD project produces a FREE , multi-platform 4.4BSD-based UNIX-like operating system.	none
 V47.3.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 5 节“名称形成：OpenBSD 的“开放”语义”；本节题为其下位论题	none
-V47.3.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.5.3	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	All parts of OpenBSD have reasonable copyright terms permitting free redistribution.	none
 V47.3.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“hackathon：“只写代码”的非会议型开发聚会”；本节题为其下位论题	none
-V47.3.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.6.1	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	A bunch of developers from around the world congregated into a house in Calgary, and within the week had the first IPv6 and IPSEC stacks completely integrated into an operating system	none
 V47.3.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“hackathon：“只写代码”的非会议型开发聚会”；本节题为其下位论题	none
-V47.3.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.6.2	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	In our form, hackathons do not have talks, nor a specific schedule.	none
 V47.3.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“hackathon：“只写代码”的非会议型开发聚会”；本节题为其下位论题	none
-V47.3.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.6.3	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	Every shirt contains at least one developer in-joke, so don't worry if you can't understand the shirt.	none
 V47.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“项目语汇与内部文化：“hack”“diff”“commit”等词汇体系”；本节题为其下位论题	none
-V47.3.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.7.1	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	Hackathons are about writing code.	none
 V47.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“项目语汇与内部文化：“hack”“diff”“commit”等词汇体系”；本节题为其下位论题	none
-V47.3.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.7.2	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	In OpenBSD developer circles few memes carry as strongly as "The 3 line diff".	none
 V47.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“项目语汇与内部文化：“hack”“diff”“commit”等词汇体系”；本节题为其下位论题	none
-V47.3.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.7.3	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Describing problems by saying "it crashes" or "I get strange interrupt issues on this one box that I built" is not helpful.	none
 V47.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“OpenBSD 的外部贡献路径不走平台化机制”；本节题为其下位论题	none
-V47.3.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.8.1	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-11-04	If possible, use the sendbug(1) command to help generate your bug report. It will automatically include some useful information about your hardware that helps diagnose many issues. This tool requires that your system can properly send email. If you cannot use sendbug on a functional OpenBSD machine, please send your bug report to bugs@openbsd.org .	noted
 V47.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“OpenBSD 的外部贡献路径不走平台化机制”；本节题为其下位论题	none
-V47.3.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.8.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	With significant contributions from Claudio Jeker, Theo Buehler, and Job Snijders.	none
 V47.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“OpenBSD 的外部贡献路径不走平台化机制”；本节题为其下位论题	none
-V47.3.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.3.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.3.8.3	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Focus on being developer-oriented in all senses, including holding developer-only events called hackathons .	none
 V47.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“ISC 许可证：极简法律文本背后的工程观”；本节题为其下位论题	none
-V47.4.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.1.1	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The ISC copyright is functionally equivalent to a two-term BSD copyright with language removed that is made unnecessary by the Berne convention.	none
 V47.4.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“ISC 许可证：极简法律文本背后的工程观”；本节题为其下位论题	none
-V47.4.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.1.2	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	making the code less free by adding additional restrictions regarding its use, copying, modification or distribution;	none
 V47.4.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“ISC 许可证：极简法律文本背后的工程观”；本节题为其下位论题	none
-V47.4.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.1.3	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999.	none
 V47.4.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“OpenBSD 的共享观成文于项目目标页”；本节题为其下位论题	none
-V47.4.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.2.1	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	We want to make available source code that anyone can use for ANY PURPOSE, with no restrictions.	none
 V47.4.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“OpenBSD 的共享观成文于项目目标页”；本节题为其下位论题	none
-V47.4.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.2.2	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Integrate good code from any source with acceptable licenses .	none
 V47.4.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 2 节“OpenBSD 的共享观成文于项目目标页”；本节题为其下位论题	none
-V47.4.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.2.3	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	OpenBSD as a whole is freely redistributable, but some optional components may not be.	none
 V47.4.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OpenBSD 成果的对外扩散：路径与证据”；本节题为其下位论题	none
-V47.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.3.1	实测页面：support	https://www.openbsd.org/support.html	联网	B	2026-10-30	We are the main developers behind “bsd.plumbing”, relayd, httpd, iked, snmpd, trunk and many other projects and tools in OpenBSD.	none
 V47.4.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OpenBSD 成果的对外扩散：路径与证据”；本节题为其下位论题	none
-V47.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.3.2	实测页面：index	https://www.openbsd.org/index.html	联网	A	2026-10-30	As an example of the effect OpenBSD has, the popular OpenSSH software comes from OpenBSD.	none
 V47.4.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 3 节“OpenBSD 成果的对外扩散：路径与证据”；本节题为其下位论题	none
-V47.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.3.3	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	The concept is now used in many OpenBSD programs, for example	none
 V47.4.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“LibreSSL：许可证、代码控制与安全治理”；本节题为其下位论题	none
-V47.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.4.1	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	This is the preferred license for new code incorporated into OpenBSD.	none
 V47.4.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“LibreSSL：许可证、代码控制与安全治理”；本节题为其下位论题	none
-V47.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.4.2	实测页面：v56	https://www.openbsd.org/56.html	联网	A	2026-10-30	No support for legacy MacOS, Netware, OS/2, VMS and Windows platforms, as well as antique compilers.	none
 V47.4.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 4 节“LibreSSL：许可证、代码控制与安全治理”；本节题为其下位论题	none
-V47.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.4.3	实测页面：libressl	https://www.libressl.org/	联网	A	2026-10-30	On a regular basis the code is re-packaged for portable use by other operating systems (Linux, FreeBSD, Windows, etc).	none
 V47.4.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenBSD 商业采用的两级形态：组件级与整机级第三方集成”；本节题为其下位论题	none
-V47.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.5.1	实测页面：support	https://www.openbsd.org/support.html	联网	B	2026-10-30	The following individuals and organizations have indicated that they are able to provide support as indicated. However, the OpenBSD Project does not necessarily endorse any of these.	none
 V47.4.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenBSD 商业采用的两级形态：组件级与整机级第三方集成”；本节题为其下位论题	none
-V47.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.5.2	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	There are commercial spin-offs of OpenBSD.	none
 V47.4.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“OpenBSD 商业采用的两级形态：组件级与整机级第三方集成”；本节题为其下位论题	none
-V47.4.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.5.3	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The maintainers of OpenBSD support the project largely from their own pockets.	none
 V47.4.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“安全工具的公共品属性：判据与边界”；本节题为其下位论题	none
-V47.4.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.6.1	实测页面：policy	https://www.openbsd.org/policy.html	联网	A	2026-10-30	The original Berkeley copyright poses no restrictions on private or commercial use of the software and imposes only simple and uniform requirements for maintaining copyright notices in redistributed versions and crediting the originator of the material only in advertising.	none
 V47.4.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“安全工具的公共品属性：判据与边界”；本节题为其下位论题	none
-V47.4.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.6.2	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	We strive to make our software robust and secure, and encourage companies to use whichever pieces they want to.	none
 V47.4.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 6 节“安全工具的公共品属性：判据与边界”；本节题为其下位论题	none
-V47.4.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.6.3	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	The facilities are always chosen to be highly economical; generally near Universities or in cheaper locales.	none
 V47.4.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“公共品的来源：无偿维护与商业采用”；本节题为其下位论题	none
-V47.4.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.7.1	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	The OpenBSD developers are not independently wealthy, and even small contributions of time, equipment and resources make a big difference.	none
 V47.4.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“公共品的来源：无偿维护与商业采用”；本节题为其下位论题	none
-V47.4.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.7.2	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	The event space and accommodation is typically funded by donations to the OpenBSD Project , or by the OpenBSD Foundation , however most developers pay for their own travel.	none
 V47.4.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“公共品的来源：无偿维护与商业采用”；本节题为其下位论题	none
-V47.4.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.4.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.4.7.3	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Please remember that the OpenBSD project's resources are limited.	none
-V47.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节““默认安装仅 N 个远程漏洞”口号的文本流变（1997–2026）”；本节题为其下位论题	none
-V47.5.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节““默认安装仅 N 个远程漏洞”口号的文本流变（1997—2026）”；本节题为其下位论题	none
+V47.5.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.1.1	实测页面：index	https://www.openbsd.org/index.html	联网	A	2026-10-30	Only two remote holes in the default install, in a heck of a long time!	none
-V47.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节““默认安装仅 N 个远程漏洞”口号的文本流变（1997–2026）”；本节题为其下位论题	none
-V47.5.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节““默认安装仅 N 个远程漏洞”口号的文本流变（1997—2026）”；本节题为其下位论题	none
+V47.5.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.1.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	For security advisories for specific releases, click below:	none
-V47.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节““默认安装仅 N 个远程漏洞”口号的文本流变（1997–2026）”；本节题为其下位论题	none
-V47.5.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节““默认安装仅 N 个远程漏洞”口号的文本流变（1997—2026）”；本节题为其下位论题	none
+V47.5.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.1.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Thus we think that full disclosure helps the people who really care about security.	none
-V47.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“安全声誉的社会建构：口号、事故与外部批评（1995–2026）”；本节题为其下位论题	none
-V47.5.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“安全声誉的社会建构：口号、事故与外部批评（1995—2026）”；本节题为其下位论题	none
+V47.5.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.2.1	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	OpenBSD is thought of as the most secure UNIX-like operating system by many security professionals as a result of the never-ending comprehensive source code audit.	none
-V47.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“安全声誉的社会建构：口号、事故与外部批评（1995–2026）”；本节题为其下位论题	none
-V47.5.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“安全声誉的社会建构：口号、事故与外部批评（1995—2026）”；本节题为其下位论题	none
+V47.5.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.2.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	The most intense part of our security auditing happened immediately before the OpenBSD 2.0 release and during the 2.0→2.1 transition	none
-V47.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“安全声誉的社会建构：口号、事故与外部批评（1995–2026）”；本节题为其下位论题	none
-V47.5.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“安全声誉的社会建构：口号、事故与外部批评（1995—2026）”；本节题为其下位论题	none
+V47.5.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.2.3	实测页面：events	https://www.openbsd.org/events.html	联网	A	2026-10-30	Theo de Raadt explained the security auditing process and subsequent secure configuration choices made in OpenBSD, in a talk entitled "Secure by Default".	none
 V47.5.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“默认安装远程漏洞编年：IPv6 与 OpenSMTPD 两次事故”；本节题为其下位论题	none
-V47.5.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.3.1	实测页面：errata66	https://www.openbsd.org/errata66.html	联网	A	2026-10-30	021: SECURITY FIX: February 24, 2020 All architectures An out of bounds read in smtpd allows an attacker to inject arbitrary commands into the envelope file which are then executed as root.	none
 V47.5.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“默认安装远程漏洞编年：IPv6 与 OpenSMTPD 两次事故”；本节题为其下位论题	none
-V47.5.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.3.2	实测页面：errata41	https://www.openbsd.org/errata41.html	联网	A	2026-10-30	IPv6 type 0 route headers can be used to mount a DoS attack against hosts and networks. This is a design flaw in IPv6 and not a bug in OpenBSD.	none
 V47.5.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“默认安装远程漏洞编年：IPv6 与 OpenSMTPD 两次事故”；本节题为其下位论题	none
-V47.5.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.3.3	实测页面：errata67	https://www.openbsd.org/errata67.html	联网	A	2026-10-30	Incorrect use of getpeername(2) storage for outgoing IPv6 connections corrupts stack memory.	none
 V47.5.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“对 OpenBSD 外部批评的集中议题”；本节题为其下位论题	none
-V47.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.4.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Many vendors, even of free software, still try to hide issues from their users.	none
 V47.5.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“对 OpenBSD 外部批评的集中议题”；本节题为其下位论题	none
-V47.5.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.4.2	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Panic reports without the panic message, traceback and ps output are useless .	none
 V47.5.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“对 OpenBSD 外部批评的集中议题”；本节题为其下位论题	none
-V47.5.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.4.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	We do not find as many problems anymore, it is simply a case of diminishing returns.	none
 V47.5.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“安全投入与开发资源的张力：记录与限度”；本节题为其下位论题	none
-V47.5.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.5.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Thousands (yes, thousands) of security issues were fixed rapidly over this year-long period	none
 V47.5.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“安全投入与开发资源的张力：记录与限度”；本节题为其下位论题	none
-V47.5.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.5.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	We do not have the time resources to make these changes available in the above format.	none
 V47.5.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“安全投入与开发资源的张力：记录与限度”；本节题为其下位论题	none
-V47.5.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.5.3	实测页面：goals	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Make a release approximately every six months.	none
 V47.5.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“OpenBSD 参与安全认证的公开记录：检索范围与结果”；本节题为其下位论题	none
-V47.5.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.6.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Our security auditing team typically has between six and twelve members who continue to search for and fix new security holes.	none
 V47.5.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“OpenBSD 参与安全认证的公开记录：检索范围与结果”；本节题为其下位论题	none
-V47.5.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.6.2	实测页面：anoncvs	https://www.openbsd.org/anoncvs.html	联网	A	2026-10-30	In addition to following the bleeding edge of development, it is also possible to track the errata patches of a release.	none
 V47.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“OpenBSD 参与安全认证的公开记录：检索范围与结果”；本节题为其下位论题	none
-V47.5.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.6.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	We make a limited guarantee that these problems are of minimal impact and unproven exploitability.	none
 V47.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“OpenBSD 技术遗产：项目产出与安全形象的再审视”；本节题为其下位论题	none
-V47.5.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.7.1	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	This is a list of software and ideas developed or maintained by the OpenBSD project	none
 V47.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“OpenBSD 技术遗产：项目产出与安全形象的再审视”；本节题为其下位论题	none
-V47.5.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.7.2	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	OpenBSD integrates cutting-edge security technology suitable for building firewalls and private network services in a distributed environment.	none
 V47.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“OpenBSD 技术遗产：项目产出与安全形象的再审视”；本节题为其下位论题	none
-V47.5.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.5.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.5.7.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Our proactive auditing process has really paid off.	none
 V47.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“OpenBSD 传言考据”；本节题为其下位论题	none
-V47.6.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.6.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.6.1.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Statements like This problem was fixed in OpenBSD about 6 months ago have become commonplace in security forums like BUGTRAQ .	none
 V47.6.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“OpenBSD 传言考据”；本节题为其下位论题	none
-V47.6.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.6.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.6.1.2	实测页面：support	https://www.openbsd.org/support.html	联网	B	2026-10-30	OpenBSD has attracted a critical mass of developers, support organizations and consultants such that it is now safe to commit to using OpenBSD in your projects.	none
 V47.6.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“OpenBSD 传言考据”；本节题为其下位论题	none
-V47.6.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.6.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.6.1.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	If you find a new security problem, you can mail it to security@openbsd.org .	none
 V47.6.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“OpenBSD 习俗考据”；本节题为其下位论题	none
-V47.6.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.6.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.6.2.1	实测页面：hackathons	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	Here are some details about past and future events, also showing a part of the artwork from the event T-shirt (if there was one made).	none
 V47.6.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“OpenBSD 习俗考据”；本节题为其下位论题	none
-V47.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.6.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.6.2.2	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Every 6 months the OpenBSD project has the pleasure to release our software with artwork and possibly a matching song.	none
 V47.6.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 2 节“OpenBSD 习俗考据”；本节题为其下位论题	none
-V47.6.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.6.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.6.2.3	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	We even had T-shirts made with "Workstations of Mass Development" artwork for those developers who attended (sorry, they are not for sale).	none
 V47.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：commit log、邮件语体、man 页、发行歌曲与 CD artwork”；本节题为其下位论题	none
-V47.7.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.1.1	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	To match the art released with the historical CD sets, we joined up with some musicians we know to make at least one song.	none
 V47.7.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：commit log、邮件语体、man 页、发行歌曲与 CD artwork”；本节题为其下位论题	none
-V47.7.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.1.2	实测页面：styles9	https://man.openbsd.org/style.9	联网	A	2026-10-30	Note that documentation follows its own style guide, as documented in mdoc(7) .	none
 V47.7.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“美学的证据与载体：commit log、邮件语体、man 页、发行歌曲与 CD artwork”；本节题为其下位论题	none
-V47.7.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.1.3	实测页面：events	https://www.openbsd.org/events.html	联网	A	2026-10-30	There was an OpenBSD booth where people dropped by for information or to get their T-shirts, polos, caps and 2.7 CDs.	none
 V47.7.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“代码美学：删减与形式的偏好”；本节题为其下位论题	none
-V47.7.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.2.1	实测页面：styles9	https://man.openbsd.org/style.9	联网	A	2026-10-30	This file specifies the preferred style for kernel source files in the OpenBSD source tree.	none
 V47.7.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“代码美学：删减与形式的偏好”；本节题为其下位论题	none
-V47.7.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.2.2	实测页面：innovations	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Deleted after OpenBSD 5.9 because pledge(2) is even better.	none
 V47.7.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 2 节“代码美学：删减与形式的偏好”；本节题为其下位论题	none
-V47.7.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.2.3	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	They plan and polish one KNF after another.	none
 V47.7.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“语体：de Raadt 邮件与 man 页的极简”；本节题为其下位论题	none
-V47.7.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.3.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.3.1	实测页面：report	https://www.openbsd.org/report.html	联网	A	2026-10-30	Try to pinpoint the exact problem.	none
 V47.7.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“语体：de Raadt 邮件与 man 页的极简”；本节题为其下位论题	none
-V47.7.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.3.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.3.2	实测页面：styles9	https://man.openbsd.org/style.9	联网	A	2026-10-30	New core kernel code should be reasonably compliant with the style guides.	none
 V47.7.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 3 节“语体：de Raadt 邮件与 man 页的极简”；本节题为其下位论题	none
-V47.7.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.3.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.3.3	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	We can make changes the vendors would not make.	none
 V47.7.4.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“视觉与符号：Puffy、CD artwork 与版本身份”；本节题为其下位论题	none
-V47.7.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.4.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.4.1	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Ty Semaka has been drawing Puffy-inspired parody artwork for us for many releases.	none
 V47.7.4.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“视觉与符号：Puffy、CD artwork 与版本身份”；本节题为其下位论题	none
-V47.7.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.4.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.4.2	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	The OpenBSD 4.4 release artwork honoured the (Berkeley) CSRG guys for their efforts with the BSD 4.4 release — they fought and managed to free the code.	none
 V47.7.4.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 4 节“视觉与符号：Puffy、CD artwork 与版本身份”；本节题为其下位论题	none
-V47.7.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.4.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.4.3	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	As we did for the 3.3 release, we have once again tried making release artwork and music which are allegorical of recent happenings.	none
 V47.7.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“仪式：发行歌曲与仪式性场合”；本节题为其下位论题	none
-V47.7.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.5.1	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Theo and some other developers mutate a theme (from a classical setting, a movie, or some genre) into the fishy world of Puffy, to describe some advance, event or controversy the project went through over the previous six months.	none
 V47.7.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“仪式：发行歌曲与仪式性场合”；本节题为其下位论题	none
-V47.7.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.5.2	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Ty Semaka works for approximately two months to design and draw artwork that will fit the designated theme, and coordinates with his music buddies to write and record a song that also matches the theme.	none
 V47.7.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 5 节“仪式：发行歌曲与仪式性场合”；本节题为其下位论题	none
-V47.7.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.5.3	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	The 2nd OpenBSD Audio CD "The Songs 4.1 - 5.1" celebrates the artwork and songs that have been released with each OpenBSD release.	none
 V47.7.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“极简与默认安全：美学上的取舍”；本节题为其下位论题	none
-V47.7.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.6.1	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	Secure by Default To ensure that novice users of OpenBSD do not need to become security experts overnight (a viewpoint which other vendors seem to have), we ship the operating system in a Secure by Default mode.	none
 V47.7.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“极简与默认安全：美学上的取舍”；本节题为其下位论题	none
-V47.7.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.6.2	实测页面：security	https://www.openbsd.org/security.html	联网	A	2026-10-30	As the user/administrator becomes more familiar with the system, he will discover that he has to enable daemons and other parts of the system.	none
 V47.7.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 6 节“极简与默认安全：美学上的取舍”；本节题为其下位论题	none
-V47.7.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.6.3	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	I'm secure by default stay off, stay off, stay off By The Plaid Tongued Devils.	none
 V47.7.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“美学批评：形式的边界与兼容性代价”；本节题为其下位论题	none
-V47.7.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.7.1	实测页面：62	https://www.openbsd.org/62.html	联网	A	2026-10-30	Disable some optimizations in clang(1) due to incompatibility with security.	none
 V47.7.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“美学批评：形式的边界与兼容性代价”；本节题为其下位论题	none
-V47.7.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.7.2	实测页面：62	https://www.openbsd.org/62.html	联网	A	2026-10-30	The kernel no longer handles IPv6 Stateless Address Autoconfiguration (RFC 4862), allowing cleanup and simplification of the IPv6 network stack.	none
 V47.7.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 7 节“美学批评：形式的边界与兼容性代价”；本节题为其下位论题	none
-V47.7.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.7.3	实测页面：faq1	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	For the vast majority of users, it just works on their hardware for their application.	none
 V47.7.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
-V47.7.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.8.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.8.1	实测页面：styles9	https://man.openbsd.org/style.9	联网	A	2026-10-30	It is also a guide for preferred userspace code style.	none
 V47.7.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
-V47.7.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.8.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.8.2	实测页面：lyrics	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	Lyrics based on the 3.1 song "Systemagic" by Ty Semaka.	none
 V47.7.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 8 节“参照：美学史与软件美学研究”；本节题为其下位论题	none
-V47.7.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8–40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
+V47.7.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、B6 长度 8—40、S2 上下位一致、S3 同节平行；句式与去 AI 味见风格规范 §二、§十一	none
 V47.7.8.3	实测页面：events	https://www.openbsd.org/events.html	联网	A	2026-10-30	Some other OpenBSD developers attended to provide international colour, and there were tshirts, CDs, and posters on hand.	none

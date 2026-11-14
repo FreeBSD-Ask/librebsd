@@ -1,11 +1,11 @@
 source_id	target_id	reason	strategy	pass_id
 S-013951	V44-3.8	旧 112.6 外部批评块对应 OpenBSD 3.x 时期批评层，落 V44-3.8 外部批评：性能、可移植性与维护成本	C	sb359
-S-013952	V63-3.4	Linux netfilter 自建而非移植 PF 属 BSD–Linux 技术路线分野后续，落 V63-3.4 路线之争的后续	C	sb359
+S-013952	V63-3.4	Linux netfilter 自建而非移植 PF 属 BSD-Linux 技术路线分野后续，落 V63-3.4 路线之争的后续	C	sb359
 S-013953	V44-3.8	随旧 112.6 外部批评块批评分析层落 V44-3.8	C	sb359
 S-013954	V44-3.8	随旧 112.6 批评块史料辨析层落 V44-3.8	C	sb359
 S-013955	V61-5.18	PF 与 netfilter 为跨 OS 防火墙机制比较，落 V61-5.18 与 Linux、Windows、Solaris、macOS 安全路线比较	C	sb359
-S-013956	V63-3.4	Linux 自建 nftables 否定 PF 路线属 BSD–Linux 路线之争后续，落 V63-3.4	C	sb359
-S-013957	V63-3.4	PF 在 Linux 生态被边缘化属 BSD–Linux 关系史路线层，落 V63-3.4	C	sb359
+S-013956	V63-3.4	Linux 自建 nftables 否定 PF 路线属 BSD-Linux 路线之争后续，落 V63-3.4	C	sb359
+S-013957	V63-3.4	PF 在 Linux 生态被边缘化属 BSD-Linux 关系史路线层，落 V63-3.4	C	sb359
 S-013958	V63-3.4	随旧 112.8 对 PF 路线批评块批评分析层落 V63-3.4	C	sb359
 S-013959	V63-3.4	随旧 112.8 批评块史料辨析层落 V63-3.4	C	sb359
 S-013960	V38-3.6	FreeBSD pf 移植工程师属 FreeBSD 人物志网络方向作者群，落 V38-3.6 存储与网络方向的作者群	C	sb359

@@ -1,252 +1,252 @@
 subsection_id	query	url	source_type	tier	accessed	quote	conflict
 V37.1.1.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.2-linuxvserver到docker的演化.md	史料	A	2026-10-30	Linux VServer(2001)、OpenVZ(2005)、LXC(2008) 逐步演化，Docker(2013) 基于 LXC 但加入镜像与编排层，实现市场突破；Linux 容器生态在 2010 年代全面胜利	none
-V37.1.1.1	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
+V37.1.1.1	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
 V37.1.1.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.1.1	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	When a ﬁle is deleted, a directory block, an inode block, and one or more cylinder group bitmaps are modiﬁed.	none
 V37.1.1.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.2-linuxvserver到docker的演化.md	史料	A	2026-10-30	Linux VServer(2001)、OpenVZ(2005)、LXC(2008) 逐步演化，Docker(2013) 基于 LXC 但加入镜像与编排层，实现市场突破；Linux 容器生态在 2010 年代全面胜利	none
-V37.1.1.2	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
+V37.1.1.2	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
 V37.1.1.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.1.2	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	When a snapshot ﬁle is created, the inode number of the snapshot ﬁle is recorded in the superblock.	none
 V37.1.1.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.2-linuxvserver到docker的演化.md	史料	A	2026-10-30	Linux VServer(2001)、OpenVZ(2005)、LXC(2008) 逐步演化，Docker(2013) 基于 LXC 但加入镜像与编排层，实现市场突破；Linux 容器生态在 2010 年代全面胜利	none
-V37.1.1.3	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
+V37.1.1.3	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
 V37.1.1.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.1.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=newfs&sektion=8&format=html	联网	A	2026-10-30	-a maxcontig Specify the maximum number of contiguous blocks that will be laid out before forcing a rotational delay.	none
 V37.1.1.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.2-linuxvserver到docker的演化.md	史料	A	2026-10-30	Linux VServer(2001)、OpenVZ(2005)、LXC(2008) 逐步演化，Docker(2013) 基于 LXC 但加入镜像与编排层，实现市场突破；Linux 容器生态在 2010 年代全面胜利	none
-V37.1.1.4	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
+V37.1.1.4	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
 V37.1.1.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.1.4	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=dumpfs&sektion=8&format=html	联网	A	2026-10-30	If -f is specified, a sorted list of all free fragments and free fragment ranges, as represented in cylinder group block free lists, is printed.	none
 V37.1.1.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.9-与同时期操作系统的比较-Solaris-Zones-与/103.9.2-linuxvserver到docker的演化.md	史料	A	2026-10-30	Linux VServer(2001)、OpenVZ(2005)、LXC(2008) 逐步演化，Docker(2013) 基于 LXC 但加入镜像与编排层，实现市场突破；Linux 容器生态在 2010 年代全面胜利	none
-V37.1.1.5	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
+V37.1.1.5	第 1 章第 1 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 1 节“FFS：FreeBSD 存储系统的历史起点（1983）”；本节题为其下位论题	none
 V37.1.1.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.1.5	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	Traditionally, the BSD fast ﬁlesystem (FFS) [McKu- sick et al, 1984] and its derivatives hav e used syn- chronous writes to properly sequence stable storage changes.	none
-V37.1.2.1	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
+V37.1.2.1	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
 V37.1.2.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.2.1	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=newfs&sektion=8&format=html	联网	A	2026-10-30	-O filesystem-type Use 1 to specify that a UFS1 format file system be built; use 2 to specify that a UFS2 format file system be built.	none
-V37.1.2.2	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
+V37.1.2.2	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
 V37.1.2.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.2.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/disks/	联网	A	2026-10-30	To reduce the time needed for recovery, a journal-enabled UFS or ZFS file system can be used instead.	none
-V37.1.2.3	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
+V37.1.2.3	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
 V37.1.2.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.2.3	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	A peripheral beneﬁt of soft updates is that fsck can trust the allocation information in the bitmaps.	none
-V37.1.2.4	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
+V37.1.2.4	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
 V37.1.2.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.2.4	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=newfs&sektion=8&format=html	联网	A	2026-10-30	When set, the file system preference routines will try to save the specified amount of space immediately following the inode blocks in each cylinder group for use by metadata blocks.	none
-V37.1.2.5	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
+V37.1.2.5	第 1 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 2 节“UFS1 与 UFS2：文件系统扩展与大容量存储”；本节题为其下位论题	none
 V37.1.2.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.2.5	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	When run in background cleanup mode, fsck starts by taking a snapshot of the ﬁlesystem to be checked.	none
 V37.1.3.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.7-freebsd8x的开发者群体与虚拟化团队/115.7.7-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现.md	史料	A	2026-10-30	2008 年 5 月 11 日，Andriy Gapon 自述在 PIIX4 系统上折腾 SMBus 外设时发现自己对总线不够客气，期间注意到 intpm.c 的调试输出有两处小毛病，会打出两个 unknown，为此附上修补补丁。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.3.1	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
+V37.1.3.1	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
 V37.1.3.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.3.1	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	Speciﬁcally, using soft updates in BSD FFS eliminates most syn- chronous writes and provides performance that is within 5 percent of ideal (i.e., the same ﬁlesystem with no update ordering).	none
 V37.1.3.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.7-freebsd8x的开发者群体与虚拟化团队/115.7.7-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现.md	史料	A	2026-10-30	2008 年 5 月 11 日，Andriy Gapon 自述在 PIIX4 系统上折腾 SMBus 外设时发现自己对总线不够客气，期间注意到 intpm.c 的调试输出有两处小毛病，会打出两个 unknown，为此附上修补补丁。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.3.2	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
+V37.1.3.2	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
 V37.1.3.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.3.2	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	With soft updates, the ﬁlesystem uses delayed writes (i.e., write-back caching) for metadata changes, tracks dependencies between updates, and enforces these dependencies at write-back time.	none
 V37.1.3.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.7-freebsd8x的开发者群体与虚拟化团队/115.7.7-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现.md	史料	A	2026-10-30	2008 年 5 月 11 日，Andriy Gapon 自述在 PIIX4 系统上折腾 SMBus 外设时发现自己对总线不够客气，期间注意到 intpm.c 的调试输出有两处小毛病，会打出两个 unknown，为此附上修补补丁。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.3.3	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
+V37.1.3.3	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
 V37.1.3.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.3.3	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	By ensuring that the only inconsistencies are unclaimed blocks or inodes, soft updates can eliminate the need to run a ﬁlesystem check program after every system crash.	none
 V37.1.3.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.7-freebsd8x的开发者群体与虚拟化团队/115.7.7-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现.md	史料	A	2026-10-30	2008 年 5 月 11 日，Andriy Gapon 自述在 PIIX4 系统上折腾 SMBus 外设时发现自己对总线不够客气，期间注意到 intpm.c 的调试输出有两处小毛病，会打出两个 unknown，为此附上修补补丁。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.3.4	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
+V37.1.3.4	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
 V37.1.3.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.3.4	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	The third test compares the performance of the central mail server for Berkeley Software Design, Inc.	none
 V37.1.3.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.7-freebsd8x的开发者群体与虚拟化团队/115.7.7-年5月11日AndriyGapon自述在PIIX4系统上折腾SMBus外设时发现.md	史料	A	2026-10-30	2008 年 5 月 11 日，Andriy Gapon 自述在 PIIX4 系统上折腾 SMBus 外设时发现自己对总线不够客气，期间注意到 intpm.c 的调试输出有两处小毛病，会打出两个 unknown，为此附上修补补丁。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.3.5	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
+V37.1.3.5	第 1 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 3 节“Soft Updates：一致性、性能与文件系统设计”；本节题为其下位论题	none
 V37.1.3.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.3.5	主题页逐字引文	https://www.usenix.org/legacy/events/usenix99/full_papers/mckusick/mckusick.pdf	联网	A	2026-10-30	NCR_Corporation, Journaling File System Adminis- trator Guide, Release 2.00, NCR Document D1-2724-A (April 1992).	none
 V37.1.4.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.9-重要贡献者与边缘者-8-x-时期-XEN-VNET-移植的无名工程师-8-x/115.9.103-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据.md	史料	A	2026-10-30	2011 年 7 月 22 日，grarpamp 分享其为 Silicon Image 存储控制器找到的数据手册与板级原理图链接，称这些资料似未公开，并分型号列出 SiI3114、SiI3132 与 SiI3512 等的文档地址。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.4.1	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
+V37.1.4.1	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
 V37.1.4.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.4.1	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=4&format=html	联网	A	2026-10-30	* The geoms on top of the disk receive the orphanization event and orphan all their providers in turn.	none
 V37.1.4.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.9-重要贡献者与边缘者-8-x-时期-XEN-VNET-移植的无名工程师-8-x/115.9.103-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据.md	史料	A	2026-10-30	2011 年 7 月 22 日，grarpamp 分享其为 Silicon Image 存储控制器找到的数据手册与板级原理图链接，称这些资料似未公开，并分型号列出 SiI3114、SiI3132 与 SiI3512 等的文档地址。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.4.2	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
+V37.1.4.2	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
 V37.1.4.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.4.2	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=4&format=html	联网	A	2026-10-30	ORPHANIZATION is the process by which a provider is removed while it poten- tially is still being used.	none
 V37.1.4.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.9-重要贡献者与边缘者-8-x-时期-XEN-VNET-移植的无名工程师-8-x/115.9.103-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据.md	史料	A	2026-10-30	2011 年 7 月 22 日，grarpamp 分享其为 Silicon Image 存储控制器找到的数据手册与板级原理图链接，称这些资料似未公开，并分型号列出 SiI3114、SiI3132 与 SiI3512 等的文档地址。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.4.3	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
+V37.1.4.3	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
 V37.1.4.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.4.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=4&format=html	联网	A	2026-10-30	Now for the fine print: If any of the paths through the MBR or BSD module were open, they would have opened downwards with an exclusive bit thus rendering it impossible to open da0 for writing in that case.	none
 V37.1.4.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.9-重要贡献者与边缘者-8-x-时期-XEN-VNET-移植的无名工程师-8-x/115.9.103-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据.md	史料	A	2026-10-30	2011 年 7 月 22 日，grarpamp 分享其为 Silicon Image 存储控制器找到的数据手册与板级原理图链接，称这些资料似未公开，并分型号列出 SiI3114、SiI3132 与 SiI3512 等的文档地址。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.4.4	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
+V37.1.4.4	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
 V37.1.4.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.4.4	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geom&sektion=4&format=html	联网	A	2026-10-30	Typical examples are MBR disk partition, BSD disklabel, and RAID5 classes.	none
 V37.1.4.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第115章-freebsd8x的虚拟化与网络栈演进/115.9-重要贡献者与边缘者-8-x-时期-XEN-VNET-移植的无名工程师-8-x/115.9.103-年7月22日grarpamp分享其为SiliconImage存储控制器找到的数据.md	史料	A	2026-10-30	2011 年 7 月 22 日，grarpamp 分享其为 Silicon Image 存储控制器找到的数据手册与板级原理图链接，称这些资料似未公开，并分型号列出 SiI3114、SiI3132 与 SiI3512 等的文档地址。引用时按 L4 纪律：以上为邮件列表当事人一手自述	none
-V37.1.4.5	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
+V37.1.4.5	第 1 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 4 节“GEOM：存储抽象层的形成”；本节题为其下位论题	none
 V37.1.4.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.4.5	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=gpart&sektion=8&format=html	联网	A	2026-10-30	MBR bootcode contains Volume Serial Number by de- fault, and gpart tries to preserve it when installing new bootstrap code.	none
 V37.1.5.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.676-年7月29日史密斯推断这次内核陷阱很可能源自写MSR的指令调用该调用只在处理器自.md	史料	A	2026-10-30	1997 年 7 月 29 日，史密斯推断这次内核陷阱很可能源自写 MSR 的指令调用，该调用只在处理器自报型号属于特定第五第六代时才会执行，他建议另编一个通用内核、在时钟校准例程里去掉相关调用并改用引导软盘来验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据	none
-V37.1.5.1	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
+V37.1.5.1	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
 V37.1.5.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.5.1	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	ARCHITECTURE The CAM subsystem glues together the upper layers of the system to the storage devices.	none
 V37.1.5.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.676-年7月29日史密斯推断这次内核陷阱很可能源自写MSR的指令调用该调用只在处理器自.md	史料	A	2026-10-30	1997 年 7 月 29 日，史密斯推断这次内核陷阱很可能源自写 MSR 的指令调用，该调用只在处理器自报型号属于特定第五第六代时才会执行，他建议另编一个通用内核、在时钟校准例程里去掉相关调用并改用引导软盘来验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据	none
-V37.1.5.2	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
+V37.1.5.2	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
 V37.1.5.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.5.2	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	Enabling this option for normal use is not recommended, since it slows debugging of SCSI problems.	none
 V37.1.5.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.676-年7月29日史密斯推断这次内核陷阱很可能源自写MSR的指令调用该调用只在处理器自.md	史料	A	2026-10-30	1997 年 7 月 29 日，史密斯推断这次内核陷阱很可能源自写 MSR 的指令调用，该调用只在处理器自报型号属于特定第五第六代时才会执行，他建议另编一个通用内核、在时钟校准例程里去掉相关调用并改用引导软盘来验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据	none
-V37.1.5.3	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
+V37.1.5.3	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
 V37.1.5.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.5.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	CAM_MAX_HIGHPOWER=4 This sets the maximum allowable number of concurrent "high power" commands.	none
 V37.1.5.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.676-年7月29日史密斯推断这次内核陷阱很可能源自写MSR的指令调用该调用只在处理器自.md	史料	A	2026-10-30	1997 年 7 月 29 日，史密斯推断这次内核陷阱很可能源自写 MSR 的指令调用，该调用只在处理器自报型号属于特定第五第六代时才会执行，他建议另编一个通用内核、在时钟校准例程里去掉相关调用并改用引导软盘来验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据	none
-V37.1.5.4	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
+V37.1.5.4	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
 V37.1.5.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.5.4	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	ada (4) ATA or SATA device nda (4) NVME device sdda (4) An SD or MMC block storage device.	none
 V37.1.5.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.676-年7月29日史密斯推断这次内核陷阱很可能源自写MSR的指令调用该调用只在处理器自.md	史料	A	2026-10-30	1997 年 7 月 29 日，史密斯推断这次内核陷阱很可能源自写 MSR 的指令调用，该调用只在处理器自报型号属于特定第五第六代时才会执行，他建议另编一个通用内核、在时钟校准例程里去掉相关调用并改用引导软盘来验证。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据	none
-V37.1.5.5	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
+V37.1.5.5	第 1 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 5 节“CAM：设备访问模型与存储硬件现代化”；本节题为其下位论题	none
 V37.1.5.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.5.5	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	Target mode is supported for some adapters, but is not yet complete for this version of the CAM SCSI subsystem.	none
 V37.1.6.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.2-30的smp实现.md	史料	A	2026-10-30	FreeBSD 3.0(1998.10) 引入初步 SMP，采用单一 Giant Lock 但允许中断在任意 CPU 处理，IPI(处理器间中断) 机制用于 CPU 间通信；SMP 支持通过 SMP 内核选项启用，默认 UP 内核仍可用	none
-V37.1.6.1	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
+V37.1.6.1	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
 V37.1.6.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.6.1	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/disks/	联网	A	2026-10-30	Hardware or software RAID, which minimizes or avoids downtime when a disk fails.	none
 V37.1.6.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.2-30的smp实现.md	史料	A	2026-10-30	FreeBSD 3.0(1998.10) 引入初步 SMP，采用单一 Giant Lock 但允许中断在任意 CPU 处理，IPI(处理器间中断) 机制用于 CPU 间通信；SMP 支持通过 SMP 内核选项启用，默认 UP 内核仍可用	none
-V37.1.6.2	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
+V37.1.6.2	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
 V37.1.6.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.6.2	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&format=html	联网	A	2026-10-30	DATA AUTHENTICATION geli can verify data integrity when an authentication algorithm is speci- fied.	none
 V37.1.6.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.2-30的smp实现.md	史料	A	2026-10-30	FreeBSD 3.0(1998.10) 引入初步 SMP，采用单一 Giant Lock 但允许中断在任意 CPU 处理，IPI(处理器间中断) 机制用于 CPU 间通信；SMP 支持通过 SMP 内核选项启用，默认 UP 内核仍可用	none
-V37.1.6.3	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
+V37.1.6.3	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
 V37.1.6.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.6.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geli&sektion=8&format=html	联网	A	2026-10-30	This is only used for providers which are attached on boot, before the root filesystem is mounted.	none
 V37.1.6.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.2-30的smp实现.md	史料	A	2026-10-30	FreeBSD 3.0(1998.10) 引入初步 SMP，采用单一 Giant Lock 但允许中断在任意 CPU 处理，IPI(处理器间中断) 机制用于 CPU 间通信；SMP 支持通过 SMP 内核选项启用，默认 UP 内核仍可用	none
-V37.1.6.4	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
+V37.1.6.4	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
 V37.1.6.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.6.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/disks/	联网	A	2026-10-30	Can be used in an already deployed environment to add additional redundancy.	none
 V37.1.6.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.2-30的smp实现.md	史料	A	2026-10-30	FreeBSD 3.0(1998.10) 引入初步 SMP，采用单一 Giant Lock 但允许中断在任意 CPU 处理，IPI(处理器间中断) 机制用于 CPU 间通信；SMP 支持通过 SMP 内核选项启用，默认 UP 内核仍可用	none
-V37.1.6.5	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
+V37.1.6.5	第 1 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 6 节“RAID、GELI 与存储可靠性体系”；本节题为其下位论题	none
 V37.1.6.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.6.5	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=graid&sektion=8&format=html	联网	A	2026-10-30	kern.geom.raid.read_err_thresh : 10 Number of read errors equated to disk failure.	none
-V37.1.7.1	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
+V37.1.7.1	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
 V37.1.7.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.7.1	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Splitting a Storage Pool ZFS can split a pool consisting of one or more mirror vdevs into two pools.	none
-V37.1.7.2	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
+V37.1.7.2	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
 V37.1.7.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.7.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Adding new vdevs expands a pool at any time, and removing top-level vdevs is possible within limits.	none
-V37.1.7.3	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
+V37.1.7.3	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
 V37.1.7.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.7.3	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Each named feature set corresponds to a file in /usr/share/zfs/compatibility.d , and the default value off allows every feature.	none
-V37.1.7.4	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
+V37.1.7.4	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
 V37.1.7.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.7.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	If the data is not identical, ZFS will note the hash collision and store the two blocks separately.	none
-V37.1.7.5	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
+V37.1.7.5	第 1 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 7 节“ZFS 引入 FreeBSD：从 Sun ZFS 到系统核心能力”；本节题为其下位论题	none
 V37.1.7.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.7.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Setting it to full exposes the volume as a GEOM provider with maximal functionality, and geom is an alias for full .	none
 V37.1.8.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.1-2003-2006-年-5-0-耗时-3-年开发的工程挑战/107.1.6-细粒度锁替代giantlock.md	史料	A	2026-10-30	细粒度锁替代 Giant Lock 的工程：(1) 识别临界区；(2) 替换为 mutex/sx;(3) 验证无死锁；(4) 性能调优；**witness(4)** 框架自动检测锁顺序违规	none
-V37.1.8.1	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
+V37.1.8.1	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
 V37.1.8.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.8.1	主题页逐字引文	https://openzfs.github.io/openzfs-docs/	联网	A	2026-10-30	This resource provides documentation for users and developers working with (or contributing to) the OpenZFS project.	none
 V37.1.8.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.1-2003-2006-年-5-0-耗时-3-年开发的工程挑战/107.1.6-细粒度锁替代giantlock.md	史料	A	2026-10-30	细粒度锁替代 Giant Lock 的工程：(1) 识别临界区；(2) 替换为 mutex/sx;(3) 验证无死锁；(4) 性能调优；**witness(4)** 框架自动检测锁顺序违规	none
-V37.1.8.2	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
+V37.1.8.2	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
 V37.1.8.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.8.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Instead, each on-disk format change is an individual feature flag , described in zpool-features(7) .	none
 V37.1.8.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.1-2003-2006-年-5-0-耗时-3-年开发的工程挑战/107.1.6-细粒度锁替代giantlock.md	史料	A	2026-10-30	细粒度锁替代 Giant Lock 的工程：(1) 识别临界区；(2) 替换为 mutex/sx;(3) 验证无死锁；(4) 性能调优；**witness(4)** 框架自动检测锁顺序违规	none
-V37.1.8.3	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
+V37.1.8.3	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
 V37.1.8.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.8.3	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	See the upstream OpenZFS issue openzfs/zfs#7734 for details.	none
 V37.1.8.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.1-2003-2006-年-5-0-耗时-3-年开发的工程挑战/107.1.6-细粒度锁替代giantlock.md	史料	A	2026-10-30	细粒度锁替代 Giant Lock 的工程：(1) 识别临界区；(2) 替换为 mutex/sx;(3) 验证无死锁；(4) 性能调优；**witness(4)** 框架自动检测锁顺序违规	none
-V37.1.8.4	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
+V37.1.8.4	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
 V37.1.8.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.8.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Some drives report 512-byte sectors for compatibility while using 4096-byte sectors internally.	none
 V37.1.8.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.1-2003-2006-年-5-0-耗时-3-年开发的工程挑战/107.1.6-细粒度锁替代giantlock.md	史料	A	2026-10-30	细粒度锁替代 Giant Lock 的工程：(1) 识别临界区；(2) 替换为 mutex/sx;(3) 验证无死锁；(4) 性能调优；**witness(4)** 框架自动检测锁顺序违规	none
-V37.1.8.5	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
+V37.1.8.5	第 1 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 8 节“OpenZFS 时代：跨平台存储基础设施”；本节题为其下位论题	none
 V37.1.8.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.8.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Attempts to destroy a held snapshot fail with an EBUSY error until releasing every hold with zfs release .	none
 V37.1.9.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.1057-年7月9日terry说FreeBSD支持多线程但不支持内核线程除非打补丁列出三种.md	史料	A	2026-10-30	1998 年 7 月 9 日，terry 说 FreeBSD 支持多线程但不支持内核线程，除非打补丁，列出三种在内核取得进程上下文的方式，含 init_main.c 推广的机制与 John Dyson 的补丁，还带 SMP CPU affinity 支持。引用时按 L4 纪律：以	none
-V37.1.9.1	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
+V37.1.9.1	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
 V37.1.9.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.9.1	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Volumes can be useful for running other file system formats on top of ZFS, such as UFS virtualization, or exporting iSCSI extents.	none
 V37.1.9.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.1057-年7月9日terry说FreeBSD支持多线程但不支持内核线程除非打补丁列出三种.md	史料	A	2026-10-30	1998 年 7 月 9 日，terry 说 FreeBSD 支持多线程但不支持内核线程，除非打补丁，列出三种在内核取得进程上下文的方式，含 init_main.c 推广的机制与 John Dyson 的补丁，还带 SMP CPU affinity 支持。引用时按 L4 纪律：以	none
-V37.1.9.2	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
+V37.1.9.2	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
 V37.1.9.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.9.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Boot Environments and Applications A boot environment contains only the datasets under zroot/ROOT .	none
 V37.1.9.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.1057-年7月9日terry说FreeBSD支持多线程但不支持内核线程除非打补丁列出三种.md	史料	A	2026-10-30	1998 年 7 月 9 日，terry 说 FreeBSD 支持多线程但不支持内核线程，除非打补丁，列出三种在内核取得进程上下文的方式，含 init_main.c 推广的机制与 John Dyson 的补丁，还带 SMP CPU affinity 支持。引用时按 L4 纪律：以	none
-V37.1.9.3	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
+V37.1.9.3	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
 V37.1.9.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.9.3	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Alternatively, create a new encrypted dataset, migrate the data using zfs send and zfs receive , and then run zpool trim --secure to erase the freed space.	none
 V37.1.9.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.1057-年7月9日terry说FreeBSD支持多线程但不支持内核线程除非打补丁列出三种.md	史料	A	2026-10-30	1998 年 7 月 9 日，terry 说 FreeBSD 支持多线程但不支持内核线程，除非打补丁，列出三种在内核取得进程上下文的方式，含 init_main.c 推广的机制与 John Dyson 的补丁，还带 SMP CPU affinity 支持。引用时按 L4 纪律：以	none
-V37.1.9.4	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
+V37.1.9.4	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
 V37.1.9.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.9.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	Delegate , replicate , snapshot , jail allows administering and destroying each dataset as a unit.	none
 V37.1.9.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.1057-年7月9日terry说FreeBSD支持多线程但不支持内核线程除非打补丁列出三种.md	史料	A	2026-10-30	1998 年 7 月 9 日，terry 说 FreeBSD 支持多线程但不支持内核线程，除非打补丁，列出三种在内核取得进程上下文的方式，含 init_main.c 推广的机制与 John Dyson 的补丁，还带 SMP CPU affinity 支持。引用时按 L4 纪律：以	none
-V37.1.9.5	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
+V37.1.9.5	第 1 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 9 节“UFS 与 ZFS 的长期共存”；本节题为其下位论题	none
 V37.1.9.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.9.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	The zfs utility allows creating, destroying, and managing datasets, both file systems and volumes .	none
 V37.1.10.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.3-984ule的双队列设计2026-09-11整改按磁盘实况984归位三次重复合并.md	史料	A	2026-10-30	- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（com	none
-V37.1.10.1	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
+V37.1.10.1	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
 V37.1.10.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.10.1	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	AUTHORS The CAM SCSI subsystem was written by Justin Gibbs and Kenneth Merry.	none
 V37.1.10.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.3-984ule的双队列设计2026-09-11整改按磁盘实况984归位三次重复合并.md	史料	A	2026-10-30	- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（com	none
-V37.1.10.2	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
+V37.1.10.2	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
 V37.1.10.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.10.2	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	In most cases, though, this should be enabled, since it speeds the interpreta- tion of SCSI error messages.	none
 V37.1.10.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.3-984ule的双队列设计2026-09-11整改按磁盘实况984归位三次重复合并.md	史料	A	2026-10-30	- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（com	none
-V37.1.10.3	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
+V37.1.10.3	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
 V37.1.10.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.10.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=cam&sektion=4&format=html	联网	A	2026-10-30	The adapters take requests from the upper layers and do all IO between the SCSI, ATA, NVMe, or MMC / SD bus and the system.	none
 V37.1.10.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.3-984ule的双队列设计2026-09-11整改按磁盘实况984归位三次重复合并.md	史料	A	2026-10-30	- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（com	none
-V37.1.10.4	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
+V37.1.10.4	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
 V37.1.10.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.10.4	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Security related changes may override a maintainerâs wishes at the Security Officerâs discretion.	none
 V37.1.10.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.0-章级综合/107.0.3-984ule的双队列设计2026-09-11整改按磁盘实况984归位三次重复合并.md	史料	A	2026-10-30	- 要点：ULE 调度器采用三个 per-CPU 队列 (current/next/idle) 设计，目标 O(1) 复杂度、CPU 亲和性、SMP 优化、交互式响应优先；算法基于时间片与交互性评分；ULE 首次 commit 于 2003-01-26T05:23:15Z（com	none
-V37.1.10.5	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
+V37.1.10.5	第 1 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 10 节“Justin Gibbs 与 CAM、SCSI、ATA、NVMe 子系统”；本节题为其下位论题	none
 V37.1.10.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.10.5	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Consider the points raised under Respect other committers and apply them also to contributors.	none
 V37.1.11.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第110章-freebsd6x回归稳定/110.12-FreeBSD-6-x-时期的技术淘汰-Giant-锁-→MPSAFE-VFS/110.12.42-年9月3日PeterGrehan答复Cell处理器尚无FreeBSD移植也没听说.md	史料	A	2026-10-30	2007 年 9 月 3 日，Peter Grehan 答复 Cell 处理器尚无 FreeBSD 移植，也没听说有在做的项目，自己同样希望把 FreeBSD 弄上 PS3，只是缺空闲时间。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与	none
-V37.1.11.1	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
+V37.1.11.1	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
 V37.1.11.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.11.1	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	Support for the MIPS architecture, and related hardware, has been removed.	none
 V37.1.11.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第110章-freebsd6x回归稳定/110.12-FreeBSD-6-x-时期的技术淘汰-Giant-锁-→MPSAFE-VFS/110.12.42-年9月3日PeterGrehan答复Cell处理器尚无FreeBSD移植也没听说.md	史料	A	2026-10-30	2007 年 9 月 3 日，Peter Grehan 答复 Cell 处理器尚无 FreeBSD 移植，也没听说有在做的项目，自己同样希望把 FreeBSD 弄上 PS3，只是缺空闲时间。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与	none
-V37.1.11.2	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
+V37.1.11.2	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
 V37.1.11.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.11.2	主题页逐字引文	https://www.freebsd.org/releases/13.0R/relnotes/	联网	A	2026-10-30	A new ossl(4) driver supports optimized software cryptography on aarch64, amd64, and i386 using assembly routines from OpenSSL.	none
 V37.1.11.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第110章-freebsd6x回归稳定/110.12-FreeBSD-6-x-时期的技术淘汰-Giant-锁-→MPSAFE-VFS/110.12.42-年9月3日PeterGrehan答复Cell处理器尚无FreeBSD移植也没听说.md	史料	A	2026-10-30	2007 年 9 月 3 日，Peter Grehan 答复 Cell 处理器尚无 FreeBSD 移植，也没听说有在做的项目，自己同样希望把 FreeBSD 弄上 PS3，只是缺空闲时间。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与	none
-V37.1.11.3	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
+V37.1.11.3	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
 V37.1.11.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.11.3	主题页逐字引文	https://www.freebsd.org/releases/13.0R/relnotes/	联网	A	2026-10-30	9ce875d9b59d (Sponsored by The FreeBSD Foundation) arm64 The 64-bit ARM architecture known as arm64 or AArch64 is promoted to Tier-1 status for FreeBSD 13.	none
 V37.1.11.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第110章-freebsd6x回归稳定/110.12-FreeBSD-6-x-时期的技术淘汰-Giant-锁-→MPSAFE-VFS/110.12.42-年9月3日PeterGrehan答复Cell处理器尚无FreeBSD移植也没听说.md	史料	A	2026-10-30	2007 年 9 月 3 日，Peter Grehan 答复 Cell 处理器尚无 FreeBSD 移植，也没听说有在做的项目，自己同样希望把 FreeBSD 弄上 PS3，只是缺空闲时间。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与	none
-V37.1.11.4	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
+V37.1.11.4	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
 V37.1.11.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.11.4	主题页逐字引文	https://www.freebsd.org/releases/13.0R/relnotes/	联网	A	2026-10-30	97e251327f95 (Sponsored by Chelsio Communications) Removed the deprecated ufm(4) driver for USB FM tuners.	none
 V37.1.11.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第110章-freebsd6x回归稳定/110.12-FreeBSD-6-x-时期的技术淘汰-Giant-锁-→MPSAFE-VFS/110.12.42-年9月3日PeterGrehan答复Cell处理器尚无FreeBSD移植也没听说.md	史料	A	2026-10-30	2007 年 9 月 3 日，Peter Grehan 答复 Cell 处理器尚无 FreeBSD 移植，也没听说有在做的项目，自己同样希望把 FreeBSD 弄上 PS3，只是缺空闲时间。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与	none
-V37.1.11.5	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
+V37.1.11.5	第 1 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 11 节“FreeBSD 13.x 时期的技术淘汰与架构支持变动”；本节题为其下位论题	none
 V37.1.11.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.11.5	主题页逐字引文	https://www.freebsd.org/releases/13.0R/relnotes/	联网	A	2026-10-30	Kernel still supports ELFv1, so jails and chroots using older FreeBSD versions are still compatible.	none
 V37.1.12.1	旧树同节料件（块级摘要）	旧大纲-20261023/第07卷-freebsd的工程体系重构/第153章-freebsd网络栈的smpng性能问题与优化/153.1-5-x-网络栈性能倒退-SMPng-过渡期间网络子系统的锁竞争导致网络性能显著下/153.1.1-smpng过渡期间网络子系统锁竞争的技术分析.md	史料	A	2026-10-30	SMPng（SMP Next Generation）项目于 2000-2002 年间设计与实现（本文件所引 SMPng 论文即 2001 年），FreeBSD 5.0（2003 年 1 月）为首个搭载该架构的版本，目标是将 FreeBSD 内核从传统的单 Giant 锁模型迁移到	none
-V37.1.12.1	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
+V37.1.12.1	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
 V37.1.12.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.12.1	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/disks/	联网	A	2026-10-30	Refer to devfs.rules(5) for more information about this file.	none
 V37.1.12.2	旧树同节料件（块级摘要）	旧大纲-20261023/第07卷-freebsd的工程体系重构/第153章-freebsd网络栈的smpng性能问题与优化/153.1-5-x-网络栈性能倒退-SMPng-过渡期间网络子系统的锁竞争导致网络性能显著下/153.1.1-smpng过渡期间网络子系统锁竞争的技术分析.md	史料	A	2026-10-30	SMPng（SMP Next Generation）项目于 2000-2002 年间设计与实现（本文件所引 SMPng 论文即 2001 年），FreeBSD 5.0（2003 年 1 月）为首个搭载该架构的版本，目标是将 FreeBSD 内核从传统的单 Giant 锁模型迁移到	none
-V37.1.12.2	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
+V37.1.12.2	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
 V37.1.12.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.12.2	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=mount&sektion=8&format=html	联网	A	2026-10-30	To mount the snapshot /var/snapshot/snap1 : mdconfig -a -t vnode -f /var/snapshot/snap1 -u 4 mount -r /dev/md4 /mnt You can now cruise around your frozen /var file system at /mnt .	none
 V37.1.12.3	旧树同节料件（块级摘要）	旧大纲-20261023/第07卷-freebsd的工程体系重构/第153章-freebsd网络栈的smpng性能问题与优化/153.1-5-x-网络栈性能倒退-SMPng-过渡期间网络子系统的锁竞争导致网络性能显著下/153.1.1-smpng过渡期间网络子系统锁竞争的技术分析.md	史料	A	2026-10-30	SMPng（SMP Next Generation）项目于 2000-2002 年间设计与实现（本文件所引 SMPng 论文即 2001 年），FreeBSD 5.0（2003 年 1 月）为首个搭载该架构的版本，目标是将 FreeBSD 内核从传统的单 Giant 锁模型迁移到	none
-V37.1.12.3	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
+V37.1.12.3	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
 V37.1.12.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.12.3	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/disks/	联网	A	2026-10-30	Allowing untrusted users to mount arbitrary media, by enabling vfs.usermount as described below, should not be considered safe from a security point of view.	none
 V37.1.12.4	旧树同节料件（块级摘要）	旧大纲-20261023/第07卷-freebsd的工程体系重构/第153章-freebsd网络栈的smpng性能问题与优化/153.1-5-x-网络栈性能倒退-SMPng-过渡期间网络子系统的锁竞争导致网络性能显著下/153.1.1-smpng过渡期间网络子系统锁竞争的技术分析.md	史料	A	2026-10-30	SMPng（SMP Next Generation）项目于 2000-2002 年间设计与实现（本文件所引 SMPng 论文即 2001 年），FreeBSD 5.0（2003 年 1 月）为首个搭载该架构的版本，目标是将 FreeBSD 内核从传统的单 Giant 锁模型迁移到	none
-V37.1.12.4	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
+V37.1.12.4	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
 V37.1.12.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.12.4	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=sendfile&sektion=2&format=html	联网	A	2026-10-30	The sendfile () system call does not support SCTP sockets, it will return -1 and set errno to EINVAL.	none
 V37.1.12.5	旧树同节料件（块级摘要）	旧大纲-20261023/第07卷-freebsd的工程体系重构/第153章-freebsd网络栈的smpng性能问题与优化/153.1-5-x-网络栈性能倒退-SMPng-过渡期间网络子系统的锁竞争导致网络性能显著下/153.1.1-smpng过渡期间网络子系统锁竞争的技术分析.md	史料	A	2026-10-30	SMPng（SMP Next Generation）项目于 2000-2002 年间设计与实现（本文件所引 SMPng 论文即 2001 年），FreeBSD 5.0（2003 年 1 月）为首个搭载该架构的版本，目标是将 FreeBSD 内核从传统的单 Giant 锁模型迁移到	none
-V37.1.12.5	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
+V37.1.12.5	第 1 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 12 节“其他存储栈组件：devfs、mdconfig、tmpfs、sendfile 与 VFS”；本节题为其下位论题	none
 V37.1.12.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.12.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/zfs/	联网	A	2026-10-30	That requires setting the FreeBSD vfs.usermount sysctl(8) to 1 to allow non-root users to mount a file system.	none
 V37.1.13.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.1-smp引入的工程语境.md	史料	A	2026-10-30	1996-1998 年多 CPU 服务器在 ISP 与企业普及，FreeBSD 2.x 的 Giant Lock 在 4 CPU 以上扩展性极差，迫使 3.0 引入初步 SMP；同期 Linux 2.0(1996) 已有粗粒度 SMP，Solaris 2.6(1997) 已有细粒	none
-V37.1.13.1	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
+V37.1.13.1	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
 V37.1.13.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.13.1	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Changes in doc/shared/contrib-additional.adoc Additional FreeBSD Contributors maintenance.	none
 V37.1.13.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.1-smp引入的工程语境.md	史料	A	2026-10-30	1996-1998 年多 CPU 服务器在 ISP 与企业普及，FreeBSD 2.x 的 Giant Lock 在 4 CPU 以上扩展性极差，迫使 3.0 引入初步 SMP；同期 Linux 2.0(1996) 已有粗粒度 SMP，Solaris 2.6(1997) 已有细粒	none
-V37.1.13.2	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
+V37.1.13.2	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
 V37.1.13.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.13.2	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Other authors were either not sponsored or chose not to list sponsorship.	none
 V37.1.13.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.1-smp引入的工程语境.md	史料	A	2026-10-30	1996-1998 年多 CPU 服务器在 ISP 与企业普及，FreeBSD 2.x 的 Giant Lock 在 4 CPU 以上扩展性极差，迫使 3.0 引入初步 SMP；同期 Linux 2.0(1996) 已有粗粒度 SMP，Solaris 2.6(1997) 已有细粒	none
-V37.1.13.3	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
+V37.1.13.3	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
 V37.1.13.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.13.3	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	MFH: If the commit is to be merged into a ports quarterly branch name, specify the quarterly branch.	none
 V37.1.13.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.1-smp引入的工程语境.md	史料	A	2026-10-30	1996-1998 年多 CPU 服务器在 ISP 与企业普及，FreeBSD 2.x 的 Giant Lock 在 4 CPU 以上扩展性极差，迫使 3.0 引入初步 SMP；同期 Linux 2.0(1996) 已有粗粒度 SMP，Solaris 2.6(1997) 已有细粒	none
-V37.1.13.4	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
+V37.1.13.4	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
 V37.1.13.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.13.4	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Any questions or concerns should immediately be brought to the attention of the core team.	none
 V37.1.13.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第100章-freebsd3x-smp时代/100.1-1998-2000-年-3-0-引入初步-SMP-的工程挑战/100.1.1-smp引入的工程语境.md	史料	A	2026-10-30	1996-1998 年多 CPU 服务器在 ISP 与企业普及，FreeBSD 2.x 的 Giant Lock 在 4 CPU 以上扩展性极差，迫使 3.0 引入初步 SMP；同期 Linux 2.0(1996) 已有粗粒度 SMP，Solaris 2.6(1997) 已有细粒	none
-V37.1.13.5	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993–2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
+V37.1.13.5	第 1 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章“FreeBSD 存储体系：从 4.2BSD FFS 到 OpenZFS 时代（1993—2026）”第 13 节“FreeBSD 2008—2018 年的贡献者多样性与企业参与”；本节题为其下位论题	none
 V37.1.13.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.1.13.5	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Do not forget that your work as a contributor was very important to you.	none
 V37.2.1.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第107章-freebsd50的开发挑战与工程困境/107.1-2003-2006-年-5-0-耗时-3-年开发的工程挑战/107.1.28-年12月23日Sharma问ia64平台的cvsup二进制包何处可寻基础设施缺口.md	史料	A	2026-10-30	2002 年 12 月 23 日，Sharma 问 ia64 平台的 cvsup 二进制包何处可寻——基础设施缺口的又一格。引用时按 L3 纪律：以上为邮件列表当事人陈述，属过程性证据，具体事实与量化结论仍须交叉复核，不得单独引为定论。	none
@@ -405,23 +405,23 @@ V37.2.8.5	第 2 章第 8 节节题与上位章题	05-卷册大纲/目录/data/ou
 V37.2.8.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.2.8.5	主题页逐字引文	https://www.freebsd.org/status/report-2020-10-2020-12/	联网	A	2026-10-30	This should improve download performance especially at peak times.	none
 V37.2.9.1	旧树同节料件（块级摘要）	旧大纲-20261023/第06卷-freebsd的核心技术革新/第134章-freebsd9x版本基础与内核子系统/134.9-Capsicum-能力模式-罗伯特-N-M-沃森-Robert-Watson-与/134.9.1-capsicum能力模型与90内核支持.md	史料	A	2026-10-30	Capsicum Capability Mode 在 9.0-RELEASE 中首次进入 GENERIC 内核（CAPABILITIES 与 CAPABILITY_MODE 选项），由 罗伯特·N. M. 沃森（rwatson@）、Jonathan Anderson 等在剑桥大学	none
-V37.2.9.1	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末–2026）”；本节题为其下位论题	none
+V37.2.9.1	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末—2026）”；本节题为其下位论题	none
 V37.2.9.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.2.9.1	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=8&format=html	联网	A	2026-10-30	If interfaces is specified, prints a list of all WireGuard interfaces, one per line, and quits.	none
 V37.2.9.2	旧树同节料件（块级摘要）	旧大纲-20261023/第06卷-freebsd的核心技术革新/第134章-freebsd9x版本基础与内核子系统/134.9-Capsicum-能力模式-罗伯特-N-M-沃森-Robert-Watson-与/134.9.1-capsicum能力模型与90内核支持.md	史料	A	2026-10-30	Capsicum Capability Mode 在 9.0-RELEASE 中首次进入 GENERIC 内核（CAPABILITIES 与 CAPABILITY_MODE 选项），由 罗伯特·N. M. 沃森（rwatson@）、Jonathan Anderson 等在剑桥大学	none
-V37.2.9.2	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末–2026）”；本节题为其下位论题	none
+V37.2.9.2	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末—2026）”；本节题为其下位论题	none
 V37.2.9.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.2.9.2	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=8&format=html	联网	A	2026-10-30	SEE ALSO wg-quick (8) , ip (8) , ip-link (8) , ip-address (8) , ip-route (8) .	none
 V37.2.9.3	旧树同节料件（块级摘要）	旧大纲-20261023/第06卷-freebsd的核心技术革新/第134章-freebsd9x版本基础与内核子系统/134.9-Capsicum-能力模式-罗伯特-N-M-沃森-Robert-Watson-与/134.9.1-capsicum能力模型与90内核支持.md	史料	A	2026-10-30	Capsicum Capability Mode 在 9.0-RELEASE 中首次进入 GENERIC 内核（CAPABILITIES 与 CAPABILITY_MODE 选项），由 罗伯特·N. M. 沃森（rwatson@）、Jonathan Anderson 等在剑桥大学	none
-V37.2.9.3	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末–2026）”；本节题为其下位论题	none
+V37.2.9.3	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末—2026）”；本节题为其下位论题	none
 V37.2.9.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.2.9.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=8&format=html	联网	A	2026-10-30	If set to always , some- thing invalid, or unset, then private and preshared keys will be printed as "(hidden)".	none
 V37.2.9.4	旧树同节料件（块级摘要）	旧大纲-20261023/第06卷-freebsd的核心技术革新/第134章-freebsd9x版本基础与内核子系统/134.9-Capsicum-能力模式-罗伯特-N-M-沃森-Robert-Watson-与/134.9.1-capsicum能力模型与90内核支持.md	史料	A	2026-10-30	Capsicum Capability Mode 在 9.0-RELEASE 中首次进入 GENERIC 内核（CAPABILITIES 与 CAPABILITY_MODE 选项），由 罗伯特·N. M. 沃森（rwatson@）、Jonathan Anderson 等在剑桥大学	none
-V37.2.9.4	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末–2026）”；本节题为其下位论题	none
+V37.2.9.4	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末—2026）”；本节题为其下位论题	none
 V37.2.9.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.2.9.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/advanced-networking/	联网	A	2026-10-30	Clients learned on a particular segment of the bridge cannot roam to another segment.	none
 V37.2.9.5	旧树同节料件（块级摘要）	旧大纲-20261023/第06卷-freebsd的核心技术革新/第134章-freebsd9x版本基础与内核子系统/134.9-Capsicum-能力模式-罗伯特-N-M-沃森-Robert-Watson-与/134.9.1-capsicum能力模型与90内核支持.md	史料	A	2026-10-30	Capsicum Capability Mode 在 9.0-RELEASE 中首次进入 GENERIC 内核（CAPABILITIES 与 CAPABILITY_MODE 选项），由 罗伯特·N. M. 沃森（rwatson@）、Jonathan Anderson 等在剑桥大学	none
-V37.2.9.5	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末–2026）”；本节题为其下位论题	none
+V37.2.9.5	第 2 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章“FreeBSD 网络体系：从 BSD TCP／IP 到高速网络平台”第 9 节“WireGuard 与内核 VPN 接口（2010s 末—2026）”；本节题为其下位论题	none
 V37.2.9.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.2.9.5	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=wg&sektion=8&format=html	联网	A	2026-10-30	ENVIRONMENT VARIABLES WG_COLOR_MODE If set to always , always print ANSI colorized output.	none
 V37.2.10.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第103章-freebsd-jails容器的先驱/103.0-章级综合/103.0.21-总纲3不存在进步只有权力再分配面对jail是否安全的激烈争论Lucas给出绝对化.md	史料	A	2026-10-30	- 总纲3 不存在进步，只有权力再分配：面对 jail 是否安全的激烈争论，Lucas 给出绝对化否定：“absolutely nothing is truly secure”（411.52-415.84）——不运行虚拟化的计算机同样层层内含可攻击的操作系统，硬盘与 RAID 控	none
@@ -548,19 +548,19 @@ V37.3.6.5	旧树同节料件（块级摘要）	旧大纲-20261023/第06卷-freeb
 V37.3.6.5	第 3 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 6 节“Jail 与虚拟机的技术分工”；本节题为其下位论题	none
 V37.3.6.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.3.6.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/jails/	联网	A	2026-10-30	This makes it possible to run more jails on the same hardware without consuming excessive resources.	none
-V37.3.7.1	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000–2020）”；本节题为其下位论题	none
+V37.3.7.1	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000—2020）”；本节题为其下位论题	none
 V37.3.7.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.3.7.1	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/jails/	联网	A	2026-10-30	Jails and Containers Table of Contents 17.1.	none
-V37.3.7.2	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000–2020）”；本节题为其下位论题	none
+V37.3.7.2	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000—2020）”；本节题为其下位论题	none
 V37.3.7.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.3.7.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/virtualization/	联网	A	2026-10-30	Some operations such as migrations are only available under hypervisor accelerators such as KVM, Xen, etc.	none
-V37.3.7.3	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000–2020）”；本节题为其下位论题	none
+V37.3.7.3	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000—2020）”；本节题为其下位论题	none
 V37.3.7.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.3.7.3	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/jails/	联网	A	2026-10-30	Grant these permissions deliberately, and only to jails that are trusted to manage their own storage.	none
-V37.3.7.4	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000–2020）”；本节题为其下位论题	none
+V37.3.7.4	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000—2020）”；本节题为其下位论题	none
 V37.3.7.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.3.7.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/jails/	联网	A	2026-10-30	Jail Upgrading Upgrading FreeBSD Jails ensures that the isolated environments remain secure, up-to-date, and in line with the latest features and improvements available in the FreeBSD ecosystem.	none
-V37.3.7.5	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000–2020）”；本节题为其下位论题	none
+V37.3.7.5	第 3 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章“FreeBSD 虚拟化体系：从 Jail 到 bhyve”第 7 节“FreeBSD Jail／bhyve 与 Linux 容器／KVM 的路线比较（2000—2020）”；本节题为其下位论题	none
 V37.3.7.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.3.7.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/jails/	联网	A	2026-10-30	In case a host system has few jails, an entry for each jail can be added in the file /etc/jail.conf .	none
 V37.3.8.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第097章-freebsd2x站稳脚跟/097.5-freebsd2x的开发者群体与core-team代际更替/097.5.529-年1月23日JWunsch回应DonYuniskis关于内核映像不含config.md	史料	A	2026-10-30	1997 年 1 月 23 日，J Wunsch回应Don Yuniskis关于内核映像不含config文本的忧虑称该文本现已恢复尽管仍有少数人对此持不同意见。引用时按 L4 纪律：以上为邮件列表当事人一手自述，属过程性证据，具体技术结论仍须以源码与提交记录复核为准，不得单独引为	none
@@ -938,19 +938,19 @@ V37.5.6.4	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=geli&s
 V37.5.6.5	第 5 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 6 节“GELI 与系统加密基础”；本节题为其下位论题	none
 V37.5.6.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.5.6.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/disks/	联网	A	2026-10-30	For this example, add these lines to /etc/rc.conf : geli_devices="da2" geli_da2_flags="-k /root/da2.key" This configures /dev/da2 as a geli provider with a master key of /root/da2.key .	none
-V37.5.7.1	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s–）”；本节题为其下位论题	none
+V37.5.7.1	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s—）”；本节题为其下位论题	none
 V37.5.7.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.5.7.1	主题页逐字引文	https://cheribsd.org/	联网	A	2026-10-30	Approved for public release; distribution is unlimited.	none
-V37.5.7.2	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s–）”；本节题为其下位论题	none
+V37.5.7.2	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s—）”；本节题为其下位论题	none
 V37.5.7.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.5.7.2	主题页逐字引文	https://www.freebsd.org/status/report-2020-10-2020-12/	联网	A	2026-10-30	Kernel spatial memory safety (pure-capability kernel) - The current CheriBSD kernel is a hybrid C program where only pointers to userspace are CHERI capabilities.	none
-V37.5.7.3	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s–）”；本节题为其下位论题	none
+V37.5.7.3	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s—）”；本节题为其下位论题	none
 V37.5.7.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.5.7.3	主题页逐字引文	https://www.usenix.org/legacy/event/sec10/tech/full_papers/Watson.pdf	联网	A	2026-10-30	Watson University of Cambridge Jonathan Anderson University of Cambridge Ben Laurie Google UK Ltd.	none
-V37.5.7.4	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s–）”；本节题为其下位论题	none
+V37.5.7.4	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s—）”；本节题为其下位论题	none
 V37.5.7.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.5.7.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/security/	联网	A	2026-10-30	Capsicum Capsicum is a lightweight OS capability and sandbox framework implementing a hybrid capability system model.	none
-V37.5.7.5	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s–）”；本节题为其下位论题	none
+V37.5.7.5	第 5 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 7 节“CHERI：能力架构硬件路线（2000s—）”；本节题为其下位论题	none
 V37.5.7.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.5.7.5	主题页逐字引文	https://cheribsd.org/	联网	A	2026-10-30	This work was supported in part by the UK Industrial Strategy Challenge Fund (ICSCF) and Innovate UK project Digital Security by Design (DSbD) Technology Platform Prototype, 105694.	none
 V37.5.8.1	第 5 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章“FreeBSD 安全架构：隔离、能力与系统防护”第 8 节“CheriBSD 与 Morello：研究原型到工业原型”；本节题为其下位论题	none
@@ -1814,23 +1814,23 @@ V37.10.8.5	第 10 章第 8 节节题与上位章题	05-卷册大纲/目录/data/
 V37.10.8.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.10.8.5	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=acpi&sektion=4&format=html	联网	A	2026-10-30	COMPATIBILITY ACPI is only found and supported on i386/ia32 and amd64.	none
 V37.10.9.1	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第098章-freebsd-ports系统的起源与jordan-hubbard谱系/098.3-cvsup-同步机制-John-Polstra-的设计与版权-CVSup-是/098.3.4-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md	史料	A	2026-10-30	CVSup 史料保存较好，因 Polstra 个人维护网站与文档，但 Modula-3 编译器的衰落导致 CVSup 在后期难以构建，部分镜像站点已不可访问	none
-V37.10.9.1	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s–2026）”；本节题为其下位论题	none
+V37.10.9.1	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s—2026）”；本节题为其下位论题	none
 V37.10.9.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.10.9.1	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	For now, only the PCI subsystem is supported, and only video firmware for Intel and AMD GPUs is known.	none
 V37.10.9.2	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第098章-freebsd-ports系统的起源与jordan-hubbard谱系/098.3-cvsup-同步机制-John-Polstra-的设计与版权-CVSup-是/098.3.4-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md	史料	A	2026-10-30	CVSup 史料保存较好，因 Polstra 个人维护网站与文档，但 Modula-3 编译器的衰落导致 CVSup 在后期难以构建，部分镜像站点已不可访问	none
-V37.10.9.2	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s–2026）”；本节题为其下位论题	none
+V37.10.9.2	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s—2026）”；本节题为其下位论题	none
 V37.10.9.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.10.9.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	Links A lynx-like web browser with text and graphics modes with many features like displaying tables, menus, etc.	none
 V37.10.9.3	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第098章-freebsd-ports系统的起源与jordan-hubbard谱系/098.3-cvsup-同步机制-John-Polstra-的设计与版权-CVSup-是/098.3.4-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md	史料	A	2026-10-30	CVSup 史料保存较好，因 Polstra 个人维护网站与文档，但 Modula-3 编译器的衰落导致 CVSup 在后期难以构建，部分镜像站点已不可访问	none
-V37.10.9.3	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s–2026）”；本节题为其下位论题	none
+V37.10.9.3	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s—2026）”；本节题为其下位论题	none
 V37.10.9.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.10.9.3	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	(Sponsored by The FreeBSD Foundation) The rtw88(4) driver for Realtek wireless PCI interfaces has been updated.	none
 V37.10.9.4	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第098章-freebsd-ports系统的起源与jordan-hubbard谱系/098.3-cvsup-同步机制-John-Polstra-的设计与版权-CVSup-是/098.3.4-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md	史料	A	2026-10-30	CVSup 史料保存较好，因 Polstra 个人维护网站与文档，但 Modula-3 编译器的衰落导致 CVSup 在后期难以构建，部分镜像站点已不可访问	none
-V37.10.9.4	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s–2026）”；本节题为其下位论题	none
+V37.10.9.4	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s—2026）”；本节题为其下位论题	none
 V37.10.9.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.10.9.4	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	2b9cbc85d727 59f6f5e23c1a UEFI firmware boot compatibility is improved for amd64.	none
 V37.10.9.5	旧树同节料件（块级摘要）	旧大纲-20261023/第05卷-freebsd的工程化奠基/第098章-freebsd-ports系统的起源与jordan-hubbard谱系/098.3-cvsup-同步机制-John-Polstra-的设计与版权-CVSup-是/098.3.4-要点CVSup史料保存较好因Polstra个人维护网站与文档但Modula3编译.md	史料	A	2026-10-30	CVSup 史料保存较好，因 Polstra 个人维护网站与文档，但 Modula-3 编译器的衰落导致 CVSup 在后期难以构建，部分镜像站点已不可访问	none
-V37.10.9.5	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s–2026）”；本节题为其下位论题	none
+V37.10.9.5	第 10 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章“FreeBSD 硬件架构支持：从 i386 到多架构系统”第 9 节“GPU 与无线设备支持（2000s—2026）”；本节题为其下位论题	none
 V37.10.9.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.10.9.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	A desktop environment can range from a simple window manager to a complete suite of desktop applications.	none
 V37.10.10.1	旧树同节料件（块级摘要）	旧大纲-20261023/第07卷-freebsd的工程体系重构/第156章-工具链替换与架构支持/156.3-工具链组件替换-libc++-lld-lldb-ELF-Tool-Chain/156.3.1-libc与libcxxrtc标准库的bsd化.md	史料	A	2026-10-30	GCC 4.2.1 携带的 libstdc++ 版本过老，完全不支持 C++11 标准（2011 年发布），这是 Clang 迁移必须解决的 C++ 标准库问题。David Chisnall（戴维·奇斯纳尔）（theraven@）主导了 BSD 许可的 C++ 标准栈在 Free	none
@@ -1923,19 +1923,19 @@ V37.11.2.4	主题页逐字引文	https://docs.freebsd.org/en/articles/committers
 V37.11.2.5	第 11 章第 2 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 2 节“代码风格纪律：style(9)、cstyle 与提交前的格式门槛”；本节题为其下位论题	none
 V37.11.2.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.11.2.5	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	In cases where the dispute involves a change to the codebase and the participants do not appear to be reaching an amicable agreement, core may appoint a mutually-agreeable third party to resolve the dispute.	none
-V37.11.3.1	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s–2020s）”；本节题为其下位论题	none
+V37.11.3.1	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s—2020s）”；本节题为其下位论题	none
 V37.11.3.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.11.3.1	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	If a patch was submitted to a mailing list for review, and the review was favorable, then just include the list name.	none
-V37.11.3.2	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s–2020s）”；本节题为其下位论题	none
+V37.11.3.2	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s—2020s）”；本节题为其下位论题	none
 V37.11.3.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.11.3.2	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Reviews may be conducted by email, in Bugzilla, in Phabricator, or by another mechanism.	none
-V37.11.3.3	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s–2020s）”；本节题为其下位论题	none
+V37.11.3.3	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s—2020s）”；本节题为其下位论题	none
 V37.11.3.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.11.3.3	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	It should include the entire URL to the pull request, as these often act as code reviews for the code.	none
-V37.11.3.4	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s–2020s）”；本节题为其下位论题	none
+V37.11.3.4	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s—2020s）”；本节题为其下位论题	none
 V37.11.3.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.11.3.4	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Access to data within the license archive will be available on request to the core@FreeBSD.org .	none
-V37.11.3.5	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s–2020s）”；本节题为其下位论题	none
+V37.11.3.5	第 11 章第 3 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 3 节“评审：从邮件评审到 Phabricator（2000s—2020s）”；本节题为其下位论题	none
 V37.11.3.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.11.3.5	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Before the migration to git allowed separate author and committer fields, this was used for contributed patches.	none
 V37.11.4.1	第 11 章第 4 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章“软件工程：评审、测试、MFC 与发布工程”第 4 节“测试：Kyua、CI 与 tinderbox”；本节题为其下位论题	none
@@ -2118,19 +2118,19 @@ V37.12.5.4	主题页逐字引文	https://www.freebsd.org/about/	联网	A	2026-10
 V37.12.5.5	第 12 章第 5 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 5 节“FreeBSD 技术遗产与持续发展”；本节题为其下位论题	none
 V37.12.5.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.5.5	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	FreeBSD has hundreds of active developers and hundreds of thousands of commits spanning decades of history.	none
-V37.12.6.1	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s–2026）”；本节题为其下位论题	none
+V37.12.6.1	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s—2026）”；本节题为其下位论题	none
 V37.12.6.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.6.1	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	225639e7db68 Improvements have been made in DPAA2 (second generation Data Path Acceleration Architectureâââa hardware-level networking architecture found in some NXP SoCs).	none
-V37.12.6.2	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s–2026）”；本节题为其下位论题	none
+V37.12.6.2	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s—2026）”；本节题为其下位论题	none
 V37.12.6.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.6.2	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	If the commit message is still accurate, just exit the editor.	none
-V37.12.6.3	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s–2026）”；本节题为其下位论题	none
+V37.12.6.3	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s—2026）”；本节题为其下位论题	none
 V37.12.6.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.6.3	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	This is a relatively easy task, but remains a good first test of version control skills.	none
-V37.12.6.4	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s–2026）”；本节题为其下位论题	none
+V37.12.6.4	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s—2026）”；本节题为其下位论题	none
 V37.12.6.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.6.4	主题页逐字引文	https://docs.freebsd.org/en/articles/committers-guide/	联网	A	2026-10-30	Each new hardware architecture supported by FreeBSD adds substantially to the cost of code maintenance, toolchain support, and release engineering.	none
-V37.12.6.5	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s–2026）”；本节题为其下位论题	none
+V37.12.6.5	第 12 章第 6 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 6 节“技术世代更替：既有实现与既有技能的退出（1990s—2026）”；本节题为其下位论题	none
 V37.12.6.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.6.5	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	30cd6fd75d46 (Sponsored by The FreeBSD Foundation) Some obsolete section 9 pages have been removed.	none
 V37.12.7.1	第 12 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 7 节“科研计算中的 FreeBSD：HPC、集群与国家实验室”；本节题为其下位论题	none
@@ -2148,19 +2148,19 @@ V37.12.7.4	主题页逐字引文	https://www.freebsd.org/about/	联网	A	2026-10
 V37.12.7.5	第 12 章第 7 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 7 节“科研计算中的 FreeBSD：HPC、集群与国家实验室”；本节题为其下位论题	none
 V37.12.7.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.7.5	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=tuning&sektion=7&format=html	联网	A	2026-10-30	Each cluster represents approxi- mately 2K of memory, so a value of 1024 represents 2M of kernel memory re- served for network buffers.	none
-V37.12.8.1	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s–2026）”；本节题为其下位论题	none
+V37.12.8.1	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s—2026）”；本节题为其下位论题	none
 V37.12.8.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.8.1	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=tuning&sektion=7&format=html	联网	A	2026-10-30	This tells the file system to issue media writes as full clusters are collected, which typically oc- curs when writing large sequential files.	none
-V37.12.8.2	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s–2026）”；本节题为其下位论题	none
+V37.12.8.2	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s—2026）”；本节题为其下位论题	none
 V37.12.8.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.8.2	主题页逐字引文	https://www.freebsd.org/status/report-2021-01-2021-03/	联网	A	2026-10-30	The work this quarter focused on making sure the 13.0-RELEASE ships with Linuxulator in a good shape, and fixing problems reported by users.	none
-V37.12.8.3	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s–2026）”；本节题为其下位论题	none
+V37.12.8.3	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s—2026）”；本节题为其下位论题	none
 V37.12.8.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.8.3	主题页逐字引文	https://man.freebsd.org/cgi/man.cgi?query=tuning&sektion=7&format=html	联网	A	2026-10-30	The kern.sched.name sysctl reports which scheduler is used.	none
-V37.12.8.4	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s–2026）”；本节题为其下位论题	none
+V37.12.8.4	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s—2026）”；本节题为其下位论题	none
 V37.12.8.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.8.4	主题页逐字引文	https://www.freebsd.org/projects/	联网	A	2026-10-30	Each test sleeps for a random number of seconds before it starts up in a random number of invocations.	none
-V37.12.8.5	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s–2026）”；本节题为其下位论题	none
+V37.12.8.5	第 12 章第 8 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 8 节“高性能生态位：与 Linux 集群的对比（2000s—2026）”；本节题为其下位论题	none
 V37.12.8.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.8.5	主题页逐字引文	https://www.freebsd.org/projects/	联网	A	2026-10-30	FreeBSD Resources for Newbies : A list of resources to help those new to FreeBSD and UNIXÂ® in general.	none
 V37.12.9.1	第 12 章第 9 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 9 节“FreeBSD 在自然科学计算中的应用”；本节题为其下位论题	none
@@ -2193,34 +2193,34 @@ V37.12.10.4	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnote
 V37.12.10.5	第 12 章第 10 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 10 节“FreeBSD 在医学、社会科学与数字人文中的应用”；本节题为其下位论题	none
 V37.12.10.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.10.5	主题页逐字引文	https://www.freebsd.org/projects/	联网	A	2026-10-30	Kernel Stress Test Suite : The purpose of this stress test is to crash the system.	none
-V37.12.11.1	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0–15.x（1993–2026）”；本节题为其下位论题	none
+V37.12.11.1	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0—15.x（1993—2026）”；本节题为其下位论题	none
 V37.12.11.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.11.1	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	We will provide an update on the status of armv7 for both 15.x and 16.x at the time of 15.0 release.	none
-V37.12.11.2	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0–15.x（1993–2026）”；本节题为其下位论题	none
+V37.12.11.2	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0—15.x（1993—2026）”；本节题为其下位论题	none
 V37.12.11.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.11.2	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	If the mount point is /boot/efi , this file will translate to /boot/efi/efi/freebsd/loader.efi .	none
-V37.12.11.3	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0–15.x（1993–2026）”；本节题为其下位论题	none
+V37.12.11.3	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0—15.x（1993—2026）”；本节题为其下位论题	none
 V37.12.11.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.11.3	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	Ports will not include support for deprecated 32-bit platforms for FreeBSD 15.0 and later releases.	none
-V37.12.11.4	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0–15.x（1993–2026）”；本节题为其下位论题	none
+V37.12.11.4	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0—15.x（1993—2026）”；本节题为其下位论题	none
 V37.12.11.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.11.4	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	Use FreeBSD 14.0-RELEASE and following releases, or the stable/14 branch, to migrate off 32-bit platforms.	none
-V37.12.11.5	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0–15.x（1993–2026）”；本节题为其下位论题	none
+V37.12.11.5	第 12 章第 11 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 11 节“版本发行时间线：FreeBSD 1.0—15.x（1993—2026）”；本节题为其下位论题	none
 V37.12.11.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.11.5	主题页逐字引文	https://www.freebsd.org/releases/14.0R/relnotes/	联网	A	2026-10-30	Security and Errata This section lists the various Security Advisories and Errata Notices since 13.2-RELEASE.	none
-V37.12.12.1	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）”；本节题为其下位论题	none
+V37.12.12.1	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992—2026）”；本节题为其下位论题	none
 V37.12.12.1	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.12.1	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	Minimal Plasma installation To install a minimal Plasma desktop, execute: # pkg install plasma6-plasma This installation is really minimal.	none
-V37.12.12.2	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）”；本节题为其下位论题	none
+V37.12.12.2	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992—2026）”；本节题为其下位论题	none
 V37.12.12.2	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.12.2	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	More information about LibreOffice can be found at libreoffice.org .	none
-V37.12.12.3	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）”；本节题为其下位论题	none
+V37.12.12.3	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992—2026）”；本节题为其下位论题	none
 V37.12.12.3	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.12.3	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	Prerequisites: Readers of this chapter should already understand how to install either the X Window System or Wayland on FreeBSD.	none
-V37.12.12.4	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）”；本节题为其下位论题	none
+V37.12.12.4	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992—2026）”；本节题为其下位论题	none
 V37.12.12.4	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.12.4	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	Konqueror Konqueror is more than a web browser as it is also a file manager and a multimedia viewer.	none
-V37.12.12.5	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992–2026）”；本节题为其下位论题	none
+V37.12.12.5	第 12 章第 12 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 12 节“BSD 桌面图形栈：XFree86、X.Org 与 Wayland（1992—2026）”；本节题为其下位论题	none
 V37.12.12.5	题名判据与风格规范条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；C8 去 AI 味见风格规范 §十一	none
 V37.12.12.5	主题页逐字引文	https://docs.freebsd.org/en/books/handbook/desktop/	联网	A	2026-10-30	LXQT LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt technologies.	none
 V37.12.13.1	第 12 章第 13 节节题与上位章题	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章“FreeBSD 技术路线与应用领域综合：系统工程与长期演进”第 13 节“time_t 类型与 2038 年问题：64 位时间迁移”；本节题为其下位论题	none

@@ -10927,17 +10927,17 @@ W02	S-010925	5	第100章-freebsd3x-smp时代	100.10-FreeBSD-3-0-时期的技术�
 W02	S-010926	5	第100章-freebsd3x-smp时代	100.10-FreeBSD-3-0-时期的技术淘汰-a-out-→-ELF-迁移与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
 W02	S-010927	5	第100章-freebsd3x-smp时代	100.10-FreeBSD-3-0-时期的技术淘汰-a-out-→-ELF-迁移与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
 W02	S-010928	5	第100章-freebsd3x-smp时代	100.10-FreeBSD-3-0-时期的技术淘汰-a-out-→-ELF-迁移与	UNMAPPED			0.115	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
-W02	S-010929	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	PENDING	V45-1.5	S-001073	0.016	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_parent_ge2
-W02	S-010930	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	PENDING	V04-3.4	S-001073	0.000	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_parent_ge2
-W02	S-010931	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	DISPUTED		S-001073	0.290	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_parent_ge2
-W02	S-010932	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED			0.161	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
-W02	S-010933	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.119	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
-W02	S-010934	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.104	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
-W02	S-010935	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-010936	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.087	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
-W02	S-010937	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.219	REVIEW	APPROVED_NEW_SUBSEC	B-000010	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_parent_ge2
-W02	S-010938	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.085	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
-W02	S-010939	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998–2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.146	REVIEW	APPROVED_NEW_SUBSEC	B-000010	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_parent_ge2
+W02	S-010929	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	PENDING	V45-1.5	S-001073	0.016	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_parent_ge2
+W02	S-010930	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	PENDING	V04-3.4	S-001073	0.000	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_parent_ge2
+W02	S-010931	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	DISPUTED		S-001073	0.290	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_parent_ge2
+W02	S-010932	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED			0.161	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-010933	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.119	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
+W02	S-010934	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.104	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
+W02	S-010935	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-010936	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.087	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
+W02	S-010937	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.219	REVIEW	APPROVED_NEW_SUBSEC	B-000010	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_parent_ge2
+W02	S-010938	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.085	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000010	LOW		weak_overlap→cluster_parent_ge2
+W02	S-010939	5	第100章-freebsd3x-smp时代	100.11-多元群体贡献-FreeBSD-1998—2000-时期的贡献者多样性-企业	UNMAPPED		S-001073	0.146	REVIEW	APPROVED_NEW_SUBSEC	B-000010	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_parent_ge2
 W02	S-010940	5	第100章-freebsd3x-smp时代	100.12-与同时期操作系统的比较-1998-2000-年同期-Linux-2-2-1999	DISPUTED	V13-4.11		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_lt5
 W02	S-010941	5	第100章-freebsd3x-smp时代	100.12-与同时期操作系统的比较-1998-2000-年同期-Linux-2-2-1999	DISPUTED	V13-4.11		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_lt5
 W02	S-010942	5	第100章-freebsd3x-smp时代	100.12-与同时期操作系统的比较-1998-2000-年同期-Linux-2-2-1999	DISPUTED			0.298	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→meta_layer
@@ -13140,104 +13140,104 @@ W02	S-013138	5	第109章-freebsd5x的时代语境与社会背景	109.3-第三方
 W02	S-013139	5	第109章-freebsd5x的时代语境与社会背景	109.3-第三方软件变更-PF-防火墙引入与-MTA-格局	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
 W02	S-013140	5	第109章-freebsd5x的时代语境与社会背景	109.3-第三方软件变更-PF-防火墙引入与-MTA-格局	DISPUTED			0.185	REVIEW	THEMATIC_AGGREGATION	P-0086	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
 W02	S-013141	5	第109章-freebsd5x的时代语境与社会背景	109.3-第三方软件变更-PF-防火墙引入与-MTA-格局	DISPUTED			0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0086	LOW		zero_overlap→cluster_ge20_no_parent
-W02	S-013142	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED	V39-5.6		0.099	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-013143	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.182	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-013144	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED	V64-2.2		0.207	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-013145	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
-W02	S-013146	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013147	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013148	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED	V37-3.1		0.188	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-013149	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.188	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013150	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.192	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013151	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.183	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013152	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.089	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013153	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013154	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013155	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.141	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013156	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED	V41-9.9		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-013157	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.126	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013158	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	PENDING	V60-13.7		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-013159	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013160	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.093	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013161	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013162	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013163	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013164	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013165	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013166	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.087	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013167	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013168	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013169	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.069	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013170	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.085	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013171	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.082	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013172	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.215	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013173	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013174	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013175	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.231	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013176	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.174	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013177	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013178	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013179	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.089	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013180	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.113	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013181	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013182	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013183	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.167	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013184	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.085	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013185	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013186	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013187	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.098	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013188	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.146	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013189	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.117	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013190	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.109	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013191	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013192	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.181	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013193	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013194	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013195	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.215	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013196	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013197	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.148	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013198	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.095	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013199	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.133	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013200	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013201	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013202	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013203	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.073	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013204	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.114	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013205	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.127	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→meta_layer
-W02	S-013206	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013207	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.109	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013208	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.148	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013209	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.097	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013210	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013211	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013212	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.193	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013213	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.142	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013214	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013215	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.085	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013216	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013217	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013218	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.098	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013219	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013220	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013221	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013222	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013223	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013224	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.134	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-013225	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013226	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013227	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013228	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.126	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013229	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013230	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013231	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013232	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013233	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013234	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	DISPUTED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-013235	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	PENDING	V66-1.5		0.183	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判父卷越出允许集（域约束改判）	domain_out_of_scope→cluster_ge20_no_parent
-W02	S-013236	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	PENDING	V54-1.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-013237	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	PENDING	V54-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-013238	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-013239	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013142	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED	V39-5.6		0.099	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-013143	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.182	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-013144	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED	V64-2.2		0.207	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-013145	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-013146	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013147	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013148	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED	V37-3.1		0.188	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-013149	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.188	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013150	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.192	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013151	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.183	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013152	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.089	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013153	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013154	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013155	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.141	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013156	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED	V41-9.9		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-013157	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.126	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013158	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	PENDING	V60-13.7		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-013159	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013160	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.093	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013161	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013162	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013163	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013164	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013165	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013166	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.087	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013167	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013168	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013169	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.069	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013170	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.085	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013171	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.082	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013172	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.215	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013173	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013174	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013175	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.231	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013176	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.174	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013177	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013178	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013179	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.089	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013180	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.113	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013181	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013182	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013183	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.167	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013184	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.085	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013185	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013186	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013187	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.098	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013188	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.146	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013189	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.117	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013190	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.109	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013191	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013192	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.181	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013193	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013194	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013195	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.215	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013196	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013197	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.148	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013198	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.095	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013199	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.133	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013200	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013201	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013202	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013203	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.073	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013204	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.114	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013205	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.127	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→meta_layer
+W02	S-013206	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013207	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.109	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013208	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.148	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013209	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.097	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013210	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013211	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013212	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.193	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013213	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.142	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013214	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013215	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.085	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013216	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013217	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013218	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.098	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013219	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013220	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013221	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013222	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013223	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013224	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.134	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-013225	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013226	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013227	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013228	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.126	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013229	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013230	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013231	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013232	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013233	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013234	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	DISPUTED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0084	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-013235	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	PENDING	V66-1.5		0.183	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判父卷越出允许集（域约束改判）	domain_out_of_scope→cluster_ge20_no_parent
+W02	S-013236	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	PENDING	V54-1.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-013237	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	PENDING	V54-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0084	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-013238	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-013239	5	第109章-freebsd5x的时代语境与社会背景	109.4-多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
 W02	S-013240	5	第109章-freebsd5x的时代语境与社会背景	109.5-与同时期操作系统的比较-2002-2003-年同期操作系统-Linux-2-4	PENDING	V48-1.12	S-001090	0.062	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000011	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_parent_ge2
 W02	S-013241	5	第109章-freebsd5x的时代语境与社会背景	109.5-与同时期操作系统的比较-2002-2003-年同期操作系统-Linux-2-4	DISPUTED		S-001090	0.170	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000011	LOW		weak_overlap→cluster_parent_ge2
 W02	S-013242	5	第109章-freebsd5x的时代语境与社会背景	109.5-与同时期操作系统的比较-2002-2003-年同期操作系统-Linux-2-4	DISPUTED	V44-3.10	S-001090	0.210	AGGREGATE_CANDIDATE	APPROVED_NEW_SUBSEC	B-000011	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_parent_ge2
@@ -15804,120 +15804,120 @@ W02	S-015802	6	第133章-freebsd存储栈的分区与io调度	133.3-DragonFly-BS
 W02	S-015803	6	第133章-freebsd存储栈的分区与io调度	133.3-DragonFly-BSD-HAMMER-HAMMER2-与外部批评	PENDING	V37-1.3	S-001198	0.243	EXISTING_SECTION	EXISTING_SECTION		MED		existing_confirm
 W02	S-015804	6	第133章-freebsd存储栈的分区与io调度	133.4-存储栈贡献者群体	DISPUTED	V37-1.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_lt5
 W02	S-015805	6	第133章-freebsd存储栈的分区与io调度	133.4-存储栈贡献者群体	PENDING	V37-1.2	S-001197	0.300	EXISTING_SECTION	EXISTING_SECTION		HIGH		existing_confirm
-W02	S-015806	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-015807	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-015808	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-015809	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
-W02	S-015810	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015811	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015812	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015813	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015814	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED			0.086	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-015815	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015816	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015817	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015818	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015819	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015820	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015821	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015822	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
-W02	S-015823	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	PENDING	V37-1.6		0.140	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015824	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015825	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015826	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	PENDING	V37-1.6		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015827	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015828	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015829	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015830	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015831	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015832	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015833	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015834	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015835	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015836	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015837	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015838	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015839	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015840	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015841	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015842	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015843	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015844	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015845	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015846	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015847	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015848	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015849	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015850	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015851	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015852	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015853	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.180	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015854	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015855	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015856	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015857	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015858	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015859	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015860	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015861	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015862	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.185	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015863	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015864	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015865	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015866	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015867	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	PENDING	V37-1.4		0.045	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015868	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015869	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015870	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
-W02	S-015871	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015872	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015873	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015874	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015875	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015876	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.185	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015877	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015878	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015879	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015880	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015881	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015882	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015883	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015884	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015885	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015886	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015887	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015888	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015889	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015890	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015891	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015892	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015893	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015894	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015895	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015896	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015897	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015898	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015899	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015900	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015901	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015902	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015903	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015904	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015905	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015906	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015907	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015908	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V37-1.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015909	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.184	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015910	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015911	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015912	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015913	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015914	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED			0.161	REVIEW	THEMATIC_AGGREGATION	P-0090	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-015915	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015916	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015917	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-015918	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.183	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-015919	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008–2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015806	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-015807	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-015808	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-015809	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-015810	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015811	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015812	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015813	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015814	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED			0.086	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-015815	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015816	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015817	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015818	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015819	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015820	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015821	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015822	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
+W02	S-015823	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	PENDING	V37-1.6		0.140	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015824	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015825	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015826	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	PENDING	V37-1.6		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015827	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015828	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015829	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015830	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015831	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015832	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015833	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015834	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015835	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015836	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015837	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015838	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015839	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015840	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015841	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015842	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015843	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015844	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015845	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015846	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015847	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015848	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015849	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015850	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015851	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015852	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015853	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.180	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015854	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015855	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015856	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015857	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015858	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015859	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015860	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015861	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015862	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.185	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015863	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015864	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015865	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015866	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015867	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	PENDING	V37-1.4		0.045	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015868	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015869	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015870	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
+W02	S-015871	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015872	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015873	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015874	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015875	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015876	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.185	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015877	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015878	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015879	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015880	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015881	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015882	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015883	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015884	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015885	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015886	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015887	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015888	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015889	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015890	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015891	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015892	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015893	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015894	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015895	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015896	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015897	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015898	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015899	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015900	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015901	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015902	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015903	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015904	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015905	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015906	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015907	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015908	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V37-1.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015909	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.184	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015910	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015911	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015912	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015913	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015914	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED			0.161	REVIEW	THEMATIC_AGGREGATION	P-0090	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-015915	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015916	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015917	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-015918	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.183	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0090	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-015919	6	第133章-freebsd存储栈的分区与io调度	133.5-多元群体贡献-FreeBSD-2008—2018-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
 W02	S-015920	6	第133章-freebsd存储栈的分区与io调度	133.6-与同时期操作系统的比较-FreeBSD-非-ZFS-存储栈	PENDING	V37-1.6		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
 W02	S-015921	6	第133章-freebsd存储栈的分区与io调度	133.6-与同时期操作系统的比较-FreeBSD-非-ZFS-存储栈	DISPUTED	V37-1.6		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
 W02	S-015922	6	第133章-freebsd存储栈的分区与io调度	133.6-与同时期操作系统的比较-FreeBSD-非-ZFS-存储栈	DISPUTED	V37-1.6		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
@@ -16357,49 +16357,49 @@ W02	S-016355	6	第135章-freebsd9x图形架构与社区治理	135.6-FreeBSD-9-x-
 W02	S-016356	6	第135章-freebsd9x图形架构与社区治理	135.6-FreeBSD-9-x-时期的技术淘汰-BSD-patch-取代	DISPUTED			0.124	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
 W02	S-016357	6	第135章-freebsd9x图形架构与社区治理	135.7-外部批评与边缘贡献者	UNMAPPED			0.133	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_lt5
 W02	S-016358	6	第135章-freebsd9x图形架构与社区治理	135.7-外部批评与边缘贡献者	UNMAPPED			0.145	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-016359	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
-W02	S-016360	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
-W02	S-016361	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
-W02	S-016362	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
-W02	S-016363	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016364	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016365	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016366	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016367	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016368	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016369	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016370	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016371	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016372	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016373	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016374	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016375	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016376	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016377	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016378	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016379	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016380	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016381	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016382	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016383	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016384	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016385	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016386	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016387	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016388	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016389	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016390	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016391	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016392	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016393	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016394	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016395	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016396	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
-W02	S-016397	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.109	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
-W02	S-016398	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-016399	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.138	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→no_legal_parent
-W02	S-016400	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.095	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
-W02	S-016401	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009–2012-时期的贡献者多样性-企业	UNMAPPED			0.109	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
+W02	S-016359	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
+W02	S-016360	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
+W02	S-016361	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
+W02	S-016362	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-016363	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016364	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016365	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016366	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016367	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016368	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016369	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016370	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016371	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016372	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016373	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016374	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016375	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016376	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016377	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016378	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016379	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016380	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016381	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016382	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016383	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016384	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016385	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016386	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016387	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016388	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016389	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016390	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016391	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016392	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016393	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016394	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016395	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016396	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	DISPUTED	V06-2.3		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
+W02	S-016397	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.109	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
+W02	S-016398	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-016399	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.138	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→no_legal_parent
+W02	S-016400	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.095	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
+W02	S-016401	6	第135章-freebsd9x图形架构与社区治理	135.8-多元群体贡献-FreeBSD-2009—2012-时期的贡献者多样性-企业	UNMAPPED			0.109	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
 W02	S-016402	6	第135章-freebsd9x图形架构与社区治理	135.9-同期操作系统生态比较	UNMAPPED			0.340	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_lt5
 W02	S-016403	6	第135章-freebsd9x图形架构与社区治理	135.9-同期操作系统生态比较	UNMAPPED			0.159	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_lt5
 W02	S-016404	6	第136章-freebsd9x安全响应与史观反思	136.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
@@ -16847,10 +16847,10 @@ W02	S-016845	6	第146章-freebsd12x的贡献者多样性与os比较	146.0-章级
 W02	S-016846	6	第146章-freebsd12x的贡献者多样性与os比较	146.0-章级综合	UNMAPPED			0.161	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W02	S-016847	6	第146章-freebsd12x的贡献者多样性与os比较	146.0-章级综合	UNMAPPED			0.161	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W02	S-016848	6	第146章-freebsd12x的贡献者多样性与os比较	146.0-章级综合	UNMAPPED			0.204	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
-W02	S-016849	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017–2019-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-016850	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017–2019-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-016851	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017–2019-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-016852	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017–2019-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-016849	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017—2019-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-016850	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017—2019-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-016851	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017—2019-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-016852	6	第146章-freebsd12x的贡献者多样性与os比较	146.1-多元群体贡献-FreeBSD-2017—2019-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
 W02	S-016853	6	第146章-freebsd12x的贡献者多样性与os比较	146.2-与同时期操作系统比较	UNMAPPED			0.158	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→cluster_lt5
 W02	S-016854	6	第146章-freebsd12x的贡献者多样性与os比较	146.2-与同时期操作系统比较	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
 W02	S-016855	6	第146章-freebsd12x的贡献者多样性与os比较	146.3-12-x-周期漏洞与安全响应综览-SVN→Git-过渡期与-OpenSSL-1	UNMAPPED			0.277	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
@@ -17445,10 +17445,10 @@ W02	S-017443	7	第155章-freebsd网络栈的netmap与iflib框架	155.1-网络子
 W02	S-017444	7	第155章-freebsd网络栈的netmap与iflib框架	155.1-网络子系统关键技术-netmap-iflib-SCTP-IPv6-KAME	PENDING	V37-5.4		0.167	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
 W02	S-017445	7	第155章-freebsd网络栈的netmap与iflib框架	155.1-网络子系统关键技术-netmap-iflib-SCTP-IPv6-KAME	UNMAPPED			0.080	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→cluster_lt5
 W02	S-017446	7	第155章-freebsd网络栈的netmap与iflib框架	155.1-网络子系统关键技术-netmap-iflib-SCTP-IPv6-KAME	DISPUTED	V37-7.6		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_lt5
-W02	S-017447	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010–2020-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-017448	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010–2020-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-017449	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010–2020-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-017450	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010–2020-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-017447	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010—2020-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-017448	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010—2020-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-017449	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010—2020-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-017450	7	第155章-freebsd网络栈的netmap与iflib框架	155.2-多元群体贡献-FreeBSD-2010—2020-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
 W02	S-017451	7	第155章-freebsd网络栈的netmap与iflib框架	155.3-与同时期操作系统的比较-FreeBSD-网络栈-与-Linux-DPDK-ill	UNMAPPED			0.282	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→meta_layer
 W02	S-017452	7	第155章-freebsd网络栈的netmap与iflib框架	155.3-与同时期操作系统的比较-FreeBSD-网络栈-与-Linux-DPDK-ill	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→meta_layer
 W02	S-017453	7	第155章-freebsd网络栈的netmap与iflib框架	155.3-与同时期操作系统的比较-FreeBSD-网络栈-与-Linux-DPDK-ill	UNMAPPED			0.150	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_lt5
@@ -17964,10 +17964,10 @@ W02	S-017962	7	第167章-freebsd14x技术淘汰与base精简	167.1-14-x-时期�
 W02	S-017963	7	第167章-freebsd14x技术淘汰与base精简	167.1-14-x-时期的技术淘汰与-base-system-精简	UNMAPPED			0.139	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→no_legal_parent
 W02	S-017964	7	第167章-freebsd14x技术淘汰与base精简	167.1-14-x-时期的技术淘汰与-base-system-精简	UNMAPPED			0.111	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→no_legal_parent
 W02	S-017965	7	第167章-freebsd14x技术淘汰与base精简	167.1-14-x-时期的技术淘汰与-base-system-精简	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-017966	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021–2023-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-017967	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021–2023-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-017968	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021–2023-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-017969	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021–2023-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-017966	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021—2023-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-017967	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021—2023-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-017968	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021—2023-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-017969	7	第167章-freebsd14x技术淘汰与base精简	167.2-多元群体贡献-FreeBSD-2021—2023-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
 W02	S-017970	7	第167章-freebsd14x技术淘汰与base精简	167.3-FreeBSD-30-周年纪念与重要人事变动	UNMAPPED			0.159	REVIEW	UNMAPPED_KEEP		LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_lt5
 W02	S-017971	7	第167章-freebsd14x技术淘汰与base精简	167.3-FreeBSD-30-周年纪念与重要人事变动	UNMAPPED			0.072	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→cluster_lt5
 W02	S-017972	7	第167章-freebsd14x技术淘汰与base精简	167.3-FreeBSD-30-周年纪念与重要人事变动	UNMAPPED			0.114	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		weak_overlap→cluster_lt5
@@ -18095,113 +18095,113 @@ W02	S-018093	8	第173章-freebsd的社区叙事与未来想象	173.0-章级综�
 W02	S-018094	8	第173章-freebsd的社区叙事与未来想象	173.0-章级综合	UNMAPPED			0.130	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W02	S-018095	8	第173章-freebsd的社区叙事与未来想象	173.0-章级综合	UNMAPPED			0.075	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W02	S-018096	8	第173章-freebsd的社区叙事与未来想象	173.0-章级综合	UNMAPPED			0.165	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W02	S-018097	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-018098	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-018099	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
-W02	S-018100	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
-W02	S-018101	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.163	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018102	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018103	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.195	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018104	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018105	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.136	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018106	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.142	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018107	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018108	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018109	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018110	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018111	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018112	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018113	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.092	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018114	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.148	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018115	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018116	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.165	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018117	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.079	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018118	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018119	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018120	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018121	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.117	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018122	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.175	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018123	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018124	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018125	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018126	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	DISPUTED	V37-7.6		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018127	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.076	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018128	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018129	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018130	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018131	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018132	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.098	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018133	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.093	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018134	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018135	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018136	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018137	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018138	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.240	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018139	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.161	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018140	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018141	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.215	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018142	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018143	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018144	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018145	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018146	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018147	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018148	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018149	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018150	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018151	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.082	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018152	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018153	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018154	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018155	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018156	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.148	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018157	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018158	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018159	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018160	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.070	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018161	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018162	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.109	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018163	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.163	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018164	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018165	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018166	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018167	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018168	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018169	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.160	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018170	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.094	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018171	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V45-1.5		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018172	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018173	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018174	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.117	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018175	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018176	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018177	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.155	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018178	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018179	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018180	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018181	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V37-5.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018182	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018183	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018184	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V37-5.4		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
-W02	S-018185	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018186	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018187	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018188	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.184	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018189	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	PENDING	V37-5.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
-W02	S-018190	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
-W02	S-018191	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018192	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018193	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018194	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018195	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018196	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018197	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018198	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018199	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018200	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018201	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
-W02	S-018202	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
-W02	S-018203	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010–2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018097	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-018098	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-018099	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_ge20_no_parent
+W02	S-018100	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-018101	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.163	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018102	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018103	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.195	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018104	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018105	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.136	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018106	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.142	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018107	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018108	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018109	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018110	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018111	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018112	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018113	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.092	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018114	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.148	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018115	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018116	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.165	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018117	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.079	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018118	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018119	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018120	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018121	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.117	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018122	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.175	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018123	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018124	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018125	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018126	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	DISPUTED	V37-7.6		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018127	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.076	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018128	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018129	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018130	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018131	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018132	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.098	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018133	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.093	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018134	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018135	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018136	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018137	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018138	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.240	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018139	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.161	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018140	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018141	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.215	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018142	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018143	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018144	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018145	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018146	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018147	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018148	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018149	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018150	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018151	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.082	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018152	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.139	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018153	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018154	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018155	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018156	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.148	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018157	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018158	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018159	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018160	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.070	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018161	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.089	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018162	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.109	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018163	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.163	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018164	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018165	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.115	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018166	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018167	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018168	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018169	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.160	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018170	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.094	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018171	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V45-1.5		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018172	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V37-1.2		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018173	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018174	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.117	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018175	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018176	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018177	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.155	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018178	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018179	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018180	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018181	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V37-5.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018182	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018183	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.103	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018184	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V37-5.4		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
+W02	S-018185	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018186	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018187	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018188	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.184	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018189	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	PENDING	V37-5.4		0.000	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→cluster_ge20_no_parent
+W02	S-018190	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	THEMATIC_AGGREGATION	P-0119	LOW		weak_overlap→cluster_ge20_no_parent
+W02	S-018191	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018192	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018193	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018194	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018195	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.149	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018196	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018197	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018198	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018199	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018200	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.130	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018201	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.122	REVIEW	THEMATIC_AGGREGATION	P-0119	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_ge20_no_parent
+W02	S-018202	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
+W02	S-018203	8	第173章-freebsd的社区叙事与未来想象	173.1-多元群体贡献-FreeBSD-2010—2026-时期的贡献者多样性-企业	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→title_polluted
 W02	S-018204	8	第173章-freebsd的社区叙事与未来想象	173.2-与同时期操作系统的比较-FreeBSD-在艺术-科学-人文维度的社区文化-与	UNMAPPED		S-001303	0.207	REVIEW	APPROVED_NEW_SUBSEC	B-000025	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_parent_ge2
 W02	S-018205	8	第173章-freebsd的社区叙事与未来想象	173.2-与同时期操作系统的比较-FreeBSD-在艺术-科学-人文维度的社区文化-与	UNMAPPED		S-001303	0.228	REVIEW	APPROVED_NEW_SUBSEC	B-000025	LOW	低分带（最终处置转聚合，不留 REVIEW）	weak_band→cluster_parent_ge2
 W02	S-018206	8	第173章-freebsd的社区叙事与未来想象	173.2-与同时期操作系统的比较-FreeBSD-在艺术-科学-人文维度的社区文化-与	PENDING	V44-6.2	S-001660	0.331	EXISTING_SECTION	EXISTING_SECTION		MED	改判（2026-10-26 重审）	reassign_stronger
@@ -19289,10 +19289,10 @@ W02	S-019287	8	第183章-freebsd16x贡献者多样性与os比较	183.0-章级综
 W02	S-019288	8	第183章-freebsd16x贡献者多样性与os比较	183.0-章级综合	UNMAPPED			0.075	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W02	S-019289	8	第183章-freebsd16x贡献者多样性与os比较	183.0-章级综合	UNMAPPED			0.161	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W02	S-019290	8	第183章-freebsd16x贡献者多样性与os比较	183.0-章级综合	UNMAPPED			0.161	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W02	S-019291	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024–2026-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-019292	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024–2026-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-019293	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024–2026-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W02	S-019294	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024–2026-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W02	S-019291	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024—2026-时期的贡献者多样性-企业	UNMAPPED			0.143	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-019292	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024—2026-时期的贡献者多样性-企业	UNMAPPED			0.182	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-019293	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024—2026-时期的贡献者多样性-企业	UNMAPPED			0.290	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W02	S-019294	8	第183章-freebsd16x贡献者多样性与os比较	183.1-多元群体贡献-FreeBSD-2024—2026-时期的贡献者多样性-企业	UNMAPPED			0.190	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
 W02	S-019295	8	第183章-freebsd16x贡献者多样性与os比较	183.2-与同时期操作系统的比较-FreeBSD-16-x-Current-发展分支-与	DISPUTED	V37-7.6		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
 W02	S-019296	8	第183章-freebsd16x贡献者多样性与os比较	183.2-与同时期操作系统的比较-FreeBSD-16-x-Current-发展分支-与	UNMAPPED			0.206	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→no_legal_parent
 W02	S-019297	8	第183章-freebsd16x贡献者多样性与os比较	183.2-与同时期操作系统的比较-FreeBSD-16-x-Current-发展分支-与	PENDING	V44-6.2		0.053	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
@@ -27294,10 +27294,10 @@ W04	S-027292	14	第299章-多元群体贡献与企业协同	299.0-章级综合	U
 W04	S-027293	14	第299章-多元群体贡献与企业协同	299.0-章级综合	UNMAPPED			0.060	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W04	S-027294	14	第299章-多元群体贡献与企业协同	299.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W04	S-027295	14	第299章-多元群体贡献与企业协同	299.0-章级综合	UNMAPPED			0.128	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W04	S-027296	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995–2010-时期的贡献者多样性-企业	PENDING	V65-2.1		0.064	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W04	S-027297	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995–2010-时期的贡献者多样性-企业	PENDING	V66-1.7		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W04	S-027298	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995–2010-时期的贡献者多样性-企业	PENDING	V64-2.12		0.440	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
-W04	S-027299	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995–2010-时期的贡献者多样性-企业	PENDING	V75-6.12		0.067	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
+W04	S-027296	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995—2010-时期的贡献者多样性-企业	PENDING	V65-2.1		0.064	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W04	S-027297	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995—2010-时期的贡献者多样性-企业	PENDING	V66-1.7		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W04	S-027298	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995—2010-时期的贡献者多样性-企业	PENDING	V64-2.12		0.440	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→cluster_lt5
+W04	S-027299	14	第299章-多元群体贡献与企业协同	299.1-多元群体贡献-FreeBSD-1995—2010-时期的贡献者多样性-企业	PENDING	V75-6.12		0.067	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	near-dup：无锚点，转聚合	near_dup_no_anchor→meta_layer
 W04	S-027300	14	第299章-多元群体贡献与企业协同	299.2-与同时期操作系统的比较-同期-Linux-的商业模式-Red-Hat-1999	PENDING	V63-4.4		0.104	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
 W04	S-027301	14	第299章-多元群体贡献与企业协同	299.2-与同时期操作系统的比较-同期-Linux-的商业模式-Red-Hat-1999	PENDING	V69-7.5		0.022	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→no_legal_parent
 W04	S-027302	14	第299章-多元群体贡献与企业协同	299.2-与同时期操作系统的比较-同期-Linux-的商业模式-Red-Hat-1999	PENDING	V63-4.4		0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	原判题面证据不足（禁硬塞整改）	weak_overlap→meta_layer
@@ -37297,39 +37297,39 @@ W06	S-037295	22	第420章-对编程之夏的批评二镀金付费与共同体门
 W06	S-037296	22	第420章-对编程之夏的批评二镀金付费与共同体门槛	420.4-英语写作偏差	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037297	22	第420章-对编程之夏的批评二镀金付费与共同体门槛	420.5-沉默面未入选者与中途退出者的无档案	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037298	22	第420章-对编程之夏的批评二镀金付费与共同体门槛	420.6-批评的辩护与回应官方口径与社区声音的对勘	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037299	22	第421章-freebsd的gsoc参与史2005–2026	421.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037300	22	第421章-freebsd的gsoc参与史2005–2026	421.1-freebsd与gsoc2005年首届起的长程参与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037301	22	第421章-freebsd的gsoc参与史2005–2026	421.2-组织方角色组织申请slot分配与导师池	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037302	22	第421章-freebsd的gsoc参与史2005–2026	421.3-从提案到main学生产出的落地路径与门槛	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037303	22	第421章-freebsd的gsoc参与史2005–2026	421.4-学生向committer的转化与维护者队伍的补充	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037304	22	第421章-freebsd的gsoc参与史2005–2026	421.5-未完成与遗失失败样本与仓库迁移中的工作失落	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037305	22	第421章-freebsd的gsoc参与史2005–2026	421.6-逐年项目计数与口径说明2005–2026	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037306	22	第421章-freebsd的gsoc参与史2005–2026	421.7-2016年的两项制度变更非src提交者任共同导师与外部仓库的接纳	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037307	22	第421章-freebsd的gsoc参与史2005–2026	421.8-核心技术线的gsoc参与及其分工	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037308	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037309	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037310	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.1-–2009连续参与期的组织与导师安排	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037311	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.2-基金会年度报告中的编程之夏记载	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037312	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.3-20142015年两年缺席与2016年回归	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037313	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.4-–2019导师峰会与项目的再次参与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037314	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.5-kamilrytarowski与内核模糊测试线2018–2019导师身份之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037315	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.6-2021年的单一名额与基金会自资补位	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037316	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.7-产出方向可移植性内核子系统与测试框架	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037317	22	第422章-netbsd的gsoc参与史2005–2013与2016年回归	422.8-档案状态与文献缺口	PENDING	V68-10.8	S-003213	0.448	EXISTING_SECTION	EXISTING_SECTION		HIGH		existing_confirm
-W06	S-037318	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037319	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037320	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.1-openbsd与gsoc参与形态与组织身份之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037321	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.2-2014年首度参与5名学生与systembsd的来历	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037322	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.3-2015年的第二次也是最后一次参与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037323	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.4-散见参与项目归属与证据链的构成	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037324	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.5-2017年4月3日的退出声明及其理由	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037325	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.6-免责声明的制度语境与项目自决边界	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037326	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.7-与freebsdnetbsd参与形态的差异	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037327	22	第423章-openbsd的gsoc参与史2014–2015与2017年退出	423.8-官方组织名单中的记录状态与文献缺口	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→meta_layer
-W06	S-037328	22	第424章-dragonflybsd的gsoc参与史2008–2013	424.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037329	22	第424章-dragonflybsd的gsoc参与史2008–2013	424.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037330	22	第424章-dragonflybsd的gsoc参与史2008–2013	424.1-dragonflybsd的gsoc参与记录2008–2013	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037331	22	第424章-dragonflybsd的gsoc参与史2008–2013	424.2-2013年的谢幕与2014年起的落选	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037299	22	第421章-freebsd的gsoc参与史2005—2026	421.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037300	22	第421章-freebsd的gsoc参与史2005—2026	421.1-freebsd与gsoc2005年首届起的长程参与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037301	22	第421章-freebsd的gsoc参与史2005—2026	421.2-组织方角色组织申请slot分配与导师池	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037302	22	第421章-freebsd的gsoc参与史2005—2026	421.3-从提案到main学生产出的落地路径与门槛	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037303	22	第421章-freebsd的gsoc参与史2005—2026	421.4-学生向committer的转化与维护者队伍的补充	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037304	22	第421章-freebsd的gsoc参与史2005—2026	421.5-未完成与遗失失败样本与仓库迁移中的工作失落	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037305	22	第421章-freebsd的gsoc参与史2005—2026	421.6-逐年项目计数与口径说明2005—2026	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037306	22	第421章-freebsd的gsoc参与史2005—2026	421.7-2016年的两项制度变更非src提交者任共同导师与外部仓库的接纳	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037307	22	第421章-freebsd的gsoc参与史2005—2026	421.8-核心技术线的gsoc参与及其分工	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037308	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037309	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037310	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.1-–2009连续参与期的组织与导师安排	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037311	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.2-基金会年度报告中的编程之夏记载	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037312	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.3-20142015年两年缺席与2016年回归	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037313	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.4-–2019导师峰会与项目的再次参与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037314	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.5-kamilrytarowski与内核模糊测试线2018—2019导师身份之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037315	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.6-2021年的单一名额与基金会自资补位	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037316	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.7-产出方向可移植性内核子系统与测试框架	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037317	22	第422章-netbsd的gsoc参与史2005—2013与2016年回归	422.8-档案状态与文献缺口	PENDING	V68-10.8	S-003213	0.448	EXISTING_SECTION	EXISTING_SECTION		HIGH		existing_confirm
+W06	S-037318	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037319	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037320	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.1-openbsd与gsoc参与形态与组织身份之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037321	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.2-2014年首度参与5名学生与systembsd的来历	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037322	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.3-2015年的第二次也是最后一次参与	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037323	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.4-散见参与项目归属与证据链的构成	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037324	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.5-2017年4月3日的退出声明及其理由	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037325	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.6-免责声明的制度语境与项目自决边界	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037326	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.7-与freebsdnetbsd参与形态的差异	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037327	22	第423章-openbsd的gsoc参与史2014—2015与2017年退出	423.8-官方组织名单中的记录状态与文献缺口	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→meta_layer
+W06	S-037328	22	第424章-dragonflybsd的gsoc参与史2008—2013	424.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037329	22	第424章-dragonflybsd的gsoc参与史2008—2013	424.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037330	22	第424章-dragonflybsd的gsoc参与史2008—2013	424.1-dragonflybsd的gsoc参与记录2008—2013	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037331	22	第424章-dragonflybsd的gsoc参与史2008—2013	424.2-2013年的谢幕与2014年起的落选	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037332	22	第425章-illumos的gsoc参与史2011年首次与2017年再在列	425.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W06	S-037333	22	第425章-illumos的gsoc参与史2011年首次与2017年再在列	425.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W06	S-037334	22	第425章-illumos的gsoc参与史2011年首次与2017年再在列	425.1-illumos的首次参与2011年组织加入与两名学生	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
@@ -37351,7 +37351,7 @@ W06	S-037349	22	第427章-outreachy与多元化实习	427.5-互补与竞争多�
 W06	S-037350	22	第427章-outreachy与多元化实习	427.6-多元化目标的批评与辩护	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037351	22	第428章-基金会实习项目	428.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W06	S-037352	22	第428章-基金会实习项目	428.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037353	22	第428章-基金会实习项目	428.1-freebsd基金会实习与waterloo访谈系列2018–2023	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037353	22	第428章-基金会实习项目	428.1-freebsd基金会实习与waterloo访谈系列2018—2023	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037354	22	第428章-基金会实习项目	428.2-mitchellhorne实习访谈	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037355	22	第428章-基金会实习项目	428.3-cyrilzhang实习自述补丁仍不确定是否会被合入	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037356	22	第428章-基金会实习项目	428.4-实习学生与gsoc学生的差异全职与暑期导师制与自由探索	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
@@ -37372,33 +37372,33 @@ W06	S-037370	22	第430章-编程之夏与开源共同体的功能	430.2-共同�
 W06	S-037371	22	第430章-编程之夏与开源共同体的功能	430.3-与基金会的关系赞助控制与自治	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037372	22	第430章-编程之夏与开源共同体的功能	430.4-付费模式与开源软件的可持续性	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037373	22	第430章-编程之夏与开源共同体的功能	430.5-gsoc的意义技术与共同体的双重产出	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037374	22	第431章-bhyve的gsoc参与史2014–2025	431.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037375	22	第431章-bhyve的gsoc参与史2014–2025	431.1-bhyve的立项与gsoc参与之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037376	22	第431章-bhyve的gsoc参与史2014–2025	431.2-unikernel支持upb	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037377	22	第431章-bhyve的gsoc参与史2014–2025	431.3-设备模型扩展ahci与virtio	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037378	22	第431章-bhyve的gsoc参与史2014–2025	431.4-虚拟机暂停与恢复saverestore	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037379	22	第431章-bhyve的gsoc参与史2014–2025	431.5-2019bhyve指令模拟的验证maheshtudu导师johnbaldwin	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037380	22	第431章-bhyve的gsoc参与史2014–2025	431.6-2022bhyve调试服务器增强bojannovković	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037381	22	第431章-bhyve的gsoc参与史2014–2025	431.7-2025qemuvmm4加速与年末移交	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037382	22	第431章-bhyve的gsoc参与史2014–2025	431.8-bhyve线的口径之辨基金会资助独立项目与gsoc之界	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037383	22	第432章-capsicum的gsoc参与史2011–2026	432.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037384	22	第432章-capsicum的gsoc参与史2011–2026	432.1-capsicum的立项与gsoc参与之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037385	22	第432章-capsicum的gsoc参与史2011–2026	432.2-capsicum沙箱化项目	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037386	22	第432章-capsicum的gsoc参与史2011–2026	432.3-应用capsicum化chromium与编译工具链	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037387	22	第432章-capsicum的gsoc参与史2011–2026	432.4-2020基本系统的capsicum沙箱化shubhgupta	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037388	22	第432章-capsicum的gsoc参与史2011–2026	432.5-2023年基金会实习与gsoc之界非gsoc之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037389	22	第432章-capsicum的gsoc参与史2011–2026	432.6-2026capsicumizefts3jitendrabhati	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037390	22	第432章-capsicum的gsoc参与史2011–2026	432.7-跨项目传播dragonflybsd的沙箱化工作	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037391	22	第433章-zfs工具与测试的gsoc参与史2017–2022	433.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037392	22	第433章-zfs工具与测试的gsoc参与史2017–2022	433.1-zfs的立项与gsoc参与之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037393	22	第433章-zfs工具与测试的gsoc参与史2017–2022	433.2-libbe重写与bectl进入基本系统	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037394	22	第433章-zfs工具与测试的gsoc参与史2017–2022	433.3-测试基础设施pjdfstest与文件系统一致性测试	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037395	22	第433章-zfs工具与测试的gsoc参与史2017–2022	433.4-openzfs生态中的参与边界	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037396	22	第433章-zfs工具与测试的gsoc参与史2017–2022	433.5-2020年zfs主题的存否之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037397	22	第434章-dtrace的gsoc参与与其局限2008–2022	434.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
-W06	S-037398	22	第434章-dtrace的gsoc参与与其局限2008–2022	434.1-dtrace的立项与2008年移植非gsoc	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037399	22	第434章-dtrace的gsoc参与与其局限2008–2022	434.2-dtracetoolkit移植项目	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
-W06	S-037400	22	第434章-dtrace的gsoc参与与其局限2008–2022	434.3-指令级追踪providerkinst	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037374	22	第431章-bhyve的gsoc参与史2014—2025	431.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037375	22	第431章-bhyve的gsoc参与史2014—2025	431.1-bhyve的立项与gsoc参与之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037376	22	第431章-bhyve的gsoc参与史2014—2025	431.2-unikernel支持upb	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037377	22	第431章-bhyve的gsoc参与史2014—2025	431.3-设备模型扩展ahci与virtio	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037378	22	第431章-bhyve的gsoc参与史2014—2025	431.4-虚拟机暂停与恢复saverestore	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037379	22	第431章-bhyve的gsoc参与史2014—2025	431.5-2019bhyve指令模拟的验证maheshtudu导师johnbaldwin	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037380	22	第431章-bhyve的gsoc参与史2014—2025	431.6-2022bhyve调试服务器增强bojannovković	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037381	22	第431章-bhyve的gsoc参与史2014—2025	431.7-2025qemuvmm4加速与年末移交	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037382	22	第431章-bhyve的gsoc参与史2014—2025	431.8-bhyve线的口径之辨基金会资助独立项目与gsoc之界	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037383	22	第432章-capsicum的gsoc参与史2011—2026	432.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037384	22	第432章-capsicum的gsoc参与史2011—2026	432.1-capsicum的立项与gsoc参与之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037385	22	第432章-capsicum的gsoc参与史2011—2026	432.2-capsicum沙箱化项目	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037386	22	第432章-capsicum的gsoc参与史2011—2026	432.3-应用capsicum化chromium与编译工具链	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037387	22	第432章-capsicum的gsoc参与史2011—2026	432.4-2020基本系统的capsicum沙箱化shubhgupta	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037388	22	第432章-capsicum的gsoc参与史2011—2026	432.5-2023年基金会实习与gsoc之界非gsoc之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037389	22	第432章-capsicum的gsoc参与史2011—2026	432.6-2026capsicumizefts3jitendrabhati	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037390	22	第432章-capsicum的gsoc参与史2011—2026	432.7-跨项目传播dragonflybsd的沙箱化工作	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037391	22	第433章-zfs工具与测试的gsoc参与史2017—2022	433.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037392	22	第433章-zfs工具与测试的gsoc参与史2017—2022	433.1-zfs的立项与gsoc参与之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037393	22	第433章-zfs工具与测试的gsoc参与史2017—2022	433.2-libbe重写与bectl进入基本系统	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037394	22	第433章-zfs工具与测试的gsoc参与史2017—2022	433.3-测试基础设施pjdfstest与文件系统一致性测试	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037395	22	第433章-zfs工具与测试的gsoc参与史2017—2022	433.4-openzfs生态中的参与边界	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037396	22	第433章-zfs工具与测试的gsoc参与史2017—2022	433.5-2020年zfs主题的存否之辨	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037397	22	第434章-dtrace的gsoc参与与其局限2008—2022	434.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
+W06	S-037398	22	第434章-dtrace的gsoc参与与其局限2008—2022	434.1-dtrace的立项与2008年移植非gsoc	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037399	22	第434章-dtrace的gsoc参与与其局限2008—2022	434.2-dtracetoolkit移植项目	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
+W06	S-037400	22	第434章-dtrace的gsoc参与与其局限2008—2022	434.3-指令级追踪providerkinst	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037401	23	第436章-卷总览	436.1-卷级导言	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW		zero_overlap→cluster_lt5
 W06	S-037402	23	第437章-386bsd的出现与pcbsd时代的开始1992-1993	437.0-章级综合	UNMAPPED			0.000	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer
 W06	S-037403	23	第437章-386bsd的出现与pcbsd时代的开始1992-1993	437.0-章级综合	UNMAPPED			0.105	AGGREGATE_CANDIDATE	UNMAPPED_KEEP		LOW	章级综合元数据层（不新落节）	meta_layer→meta_layer

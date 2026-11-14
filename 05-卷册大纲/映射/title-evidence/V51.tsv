@@ -530,7 +530,7 @@ V51.3.10.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	
 V51.3.10.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.10.1	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
 V51.3.10.1	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
-V51.3.10.1	提交者规模的逐年复算	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	史料	A	2026-11-03	dragonfly-src 按 author_email 去重：2003–2026 年活跃提交者 10–46 人（2010 年 46 人、2015 年 28 人、2022 年 12 人）	none
+V51.3.10.1	提交者规模的逐年复算	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	史料	A	2026-11-03	dragonfly-src 按 author_email 去重：2003—2026 年活跃提交者 10—46 人（2010 年 46 人、2015 年 28 人、2022 年 12 人）	none
 V51.3.10.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 10 节“小规模社区的维护压力与代际变化”；本节题为其下位论题	none
 V51.3.10.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.3.10.2	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
@@ -669,7 +669,7 @@ V51.4.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V51.4.5.3	贡献者规模的自述	https://news.lavx.hu/article/dragonfly-bsd-founder-matthew-dillon-on-os-evolution-linux-rivalry-and-the-crisis-in-open-source	联网	C	2026-10-30	Yet, with only “one or two dozen” regular contributors, the project embodies a broader trend: “All BSDs are aging out.”	none
 V51.4.5.3	支持窗口的缺失	https://www.faun.dev/toolbox/dragonfly-bsd/review/	联网	C	2026-10-30	There is no published support window for a release.	none
 V51.4.5.3	开发规模与发布轨道	https://en.wikipedia.org/wiki/DragonFly_BSD	联网	B	2026-10-30	Unlike its parent FreeBSD, DragonFly has both stable and unstable releases in a single source tree, due to a smaller developer base.	none
-V51.4.5.3	提交者规模的逐年复算	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	史料	A	2026-11-03	dragonfly-src 按 author_email 去重：2003–2026 年活跃提交者 10–46 人（2010 年 46 人、2015 年 28 人、2022 年 12 人）	none
+V51.4.5.3	提交者规模的逐年复算	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	史料	A	2026-11-03	dragonfly-src 按 author_email 去重：2003—2026 年活跃提交者 10—46 人（2010 年 46 人、2015 年 28 人、2022 年 12 人）	none
 V51.4.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 5 节“小型基础设施项目的生态位置”；本节题为其下位论题	none
 V51.4.5.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V51.4.5.4	pkgsrc 的引入理由	https://www.dragonflybsd.org/history/	联网	A	2026-10-30	This resulted in the adoption of the pkgsrc framework for management of all non-base-system third-party applications in order to pool our resources with other BSD projects using this framework.	none

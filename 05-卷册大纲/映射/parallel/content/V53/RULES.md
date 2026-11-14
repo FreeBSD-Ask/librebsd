@@ -15,7 +15,7 @@
 | --- | --- | --- |
 | 415 题 | `映射/parallel/content/V53/titles.tsv` | thesis 为归属第一判据 |
 | 件清单 | `…/V53/parts.tsv` | 17 件、逐件块数 |
-| 块档 | `…/V53/part<K>.blocks.jsonl`（K＝1–4） | 块边界与哈希真值 |
+| 块档 | `…/V53/part<K>.blocks.jsonl`（K＝1—4） | 块边界与哈希真值 |
 
 | 片 | 块数 | 料域 | 主战场 |
 | --- | --- | --- | --- |

@@ -12,7 +12,7 @@ S-014695	h1	115.10.1	1.6.3	# 115.10.1 2010.3.30 陪审团确认 Novell 持有 UN
 S-014698	h1	115.10.4	1.6.5	# 115.10.4 SCO v. Novell 终局对 BSD 生态法律环境的最终澄清	rewritten
 S-027915	h1	311.2.1	5.10.2	# 311.2.1 copyleft 与非 copyleft 条款对比	rewritten
 S-027916	h1	311.2.2	5.10.3	# 311.2.2 两种自由观的演变	rewritten
-S-027919	h1	311.2.5	5.10.1	# 311.2.5 当事人素材与叙述章——BSD vs GPL 的哲学差异（2004–2025）	rewritten
+S-027919	h1	311.2.5	5.10.1	# 311.2.5 当事人素材与叙述章——BSD vs GPL 的哲学差异（2004—2025）	rewritten
 S-027920	h1	311.2.6	5.10.4	# 311.2.6 本章claim取自dslinux_claimsduckdb之2822关键词子集c	rewritten
 S-027922	h1	311.2.8	5.10.5	# 311.2.8 当事人Theo主张接口不可版权调API不构成侵权以上为邮件列表当事人一手自述属过	rewritten
 S-027923	h1	311.2.9	5.10.6	# 311.2.9 保罗史密斯假定作者已让与自由软件基金会版权并获改许可之权却未行使以驳第泰奥之论并	rewritten
@@ -108,6 +108,6 @@ S-029113	h1	325.5.44	2.8.34	# 325.5.44 同期BSD接口正从边缘渗入Linux用
 S-029114	h1	325.5.45	2.8.35	# 325.5.45 与同时期 UNIX 的横向比较：Solaris、HP-UX、AIX 与 macOS 作为 BSD 的参照系	rewritten
 S-029115	h1	325.5.46	2.8.36	# 325.5.46 与同时期 UNIX 的技术对照：BSD、Solaris 与 System V 的 API 分岔	rewritten
 S-029116	h1	325.5.47	2.8.37	# 325.5.47 从 madvise(2) 到 close(2)：BSD 与 POSIX 标准化的交汇	rewritten
-S-029117	h1	325.5.48	2.8.3	# 325.5.48 2010–2026：Solaris、illumos 与 XNU 作为 BSD 之外的接口锚点	rewritten
+S-029117	h1	325.5.48	2.8.3	# 325.5.48 2010—2026：Solaris、illumos 与 XNU 作为 BSD 之外的接口锚点	rewritten
 S-029118	h1	325.5.49	2.8.2	# 325.5.49 BSD 虚拟内存作为 Linux 内核设计的对标参照系：1998 至 2004 的换页、rmap 与 rusage	rewritten
 S-029119	h1	325.5.50	2.8.38	# 325.5.50 血统考古与语义分叉：flock 与 POSIX 锁、文件变更监视接口，以及 minixfs、sysv 与 UFS 的共同祖先	rewritten

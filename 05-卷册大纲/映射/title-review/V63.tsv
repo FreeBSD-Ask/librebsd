@@ -67,7 +67,7 @@ V63.2.5.1	维护团队的构成与分工	确证	维护者 Aurelien Jarno 一手�
 V63.2.5.2	内核版本跟随的节奏	形态				2026-11-03
 V63.2.5.3	补丁回流的协作渠道	形态				2026-11-03
 V63.2.5.4	维护人力的接续方式	确证	接续中断→停滞有一手终点：2023-07 Jarno 官宣终止（lack of interest and volunteers）。		https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
-V63.2.6.1	移植退场的时间次序	有误	论题次序“先退出稳定版，再退出测试版”与一手方向相抵：kfreebsd 未进 Jessie（testing 剔除在前，2014–2015），既有 stable（Wheezy）随生命周期结束，2023 终止后归档。论题层已修正落账。	退场次序修正（论题层）	https://wiki.debian.org/Debian_GNU/kFreeBSD https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
+V63.2.6.1	移植退场的时间次序	有误	论题次序“先退出稳定版，再退出测试版”与一手方向相抵：kfreebsd 未进 Jessie（testing 剔除在前，2014—2015），既有 stable（Wheezy）随生命周期结束，2023 终止后归档。论题层已修正落账。	退场次序修正（论题层）	https://wiki.debian.org/Debian_GNU/kFreeBSD https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
 V63.2.6.2	存档与快照的保留	确证	退场后归档与快照可取：archive.debian.org 与快照面（检索线索级，归档实体在案）。		https://wiki.debian.org/Debian_GNU/kFreeBSD	2026-11-03
 V63.2.6.3	终止原因的多种解释	确证	终止归因一手：Jarno 逐字 lack of interest and volunteers，另有构建负担与收益诸说并存。		https://blog.aurel32.net/goodbye-kfreebsd.html	2026-11-03
 V63.2.6.4	终止事件的历史分量	形态				2026-11-03

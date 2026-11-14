@@ -46,7 +46,7 @@ Q03603	V55	title	V55.7.4.2	年度收支的三项数字	H-4	通过	无	2024 财�
 Q03604	V55	title	V55.9.3.5	两类书写的取材分界	H-4	通过	无	社区史取材于公告、邮件与口述，学术史另须同行评议文献与可复现数据（论题句）	无需处置	W1-S3-2
 Q03607	V56	title	V56.1.6.1	源流辨认的三类痕迹	H-4	通过	无	All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by th	无需处置	W1-S3-2
 Q03608	V56	title	V56.3.7.1	分流的两个时点（1993 与 1995）	H-4	有问题	P2	In the mid-1990s, OpenBSD spun off from the NetBSD group.｜题名两时点 1993、1995 无引文到年	观察	W1-S3-2
-Q03609	V56	title	V56.3.8.1	收购公告与交割（2001 年 4–5 月）	H-4	有问题	P2	“2001 年 4 月收购”（证据行原文）｜题名作“2001 年 4–5 月”，5 月无引文	观察	W1-S3-2
+Q03609	V56	title	V56.3.8.1	收购公告与交割（2001 年 4—5 月）	H-4	有问题	P2	“2001 年 4 月收购”（证据行原文）｜题名作“2001 年 4—5 月”，5 月无引文	观察	W1-S3-2
 Q03610	V56	title	V56.5.8.1	可证成分的三类划分	H-4	通过	无	Although most of the vendors had started the switch back to System V, large parts of 4.3BSD were carried over into their systems, particularly the networking su	无需处置	W1-S3-2
 Q03611	V57	title	V57.1.1.5	移植项在三种形态中的位置	H-4	通过	无	The UNIX system family tree: Research and BSD	无需处置	W1-S3-2
 Q03612	V57	title	V57.1.3.1	项目更名的三类情形	H-4	通过	无	With a heavy heart, the TrueOS Project’s core team has decided to discontinue the development of TrueOS for the foreseeable future. We’ll still be heavily invol	无需处置	W1-S3-2
@@ -160,7 +160,7 @@ Q03718	V67	title	V67.9.1.2	AsiaBSDCon 2003 取消叙事之误	H-4	待裁	无	htt
 Q03719	V67	title	V67.9.2.2	EuroBSDCon 2020 的停办	H-4	通过	无	2021, September 17 - 19, Online	无需处置	W1-S3-2
 Q03721	V68	title	V68.1.2.1	首届四十个项目与四百名学生	H-4	通过	无	In GSoC’s first year, 40 projects and 400 students participated.	无需处置	W1-S3-2
 Q03729	V68	title	V68.10.7.1	产出方向的三个面向	H-4	通过	无	产出集中于可移植性、内核子系统与测试框架三面（论题句）	无需处置	W1-S3-2
-Q03730	V68	title	V68.10.8.4	本地档案的两件藏件	H-4	通过	无	本地档案：mat 7625（2005–2009 项目档案，含项目列表与导师分配）、mat 7627（基金会年度报告）	无需处置	W1-S3-2
+Q03730	V68	title	V68.10.8.4	本地档案的两件藏件	H-4	通过	无	本地档案：mat 7625（2005—2009 项目档案，含项目列表与导师分配）、mat 7627（基金会年度报告）	无需处置	W1-S3-2
 Q03731	V68	title	V68.11.5.2	退出声明的两条理由	H-4	通过	无	理由为投入过多与回报不足，两点并列。	无需处置	W1-S3-2
 Q03732	V68	title	V68.12.1.1	官方页的年份止于 2012	H-4	通过	无	Have a look at our SoC pages from 2008, 2009, 2010, 2011, and 2012, to get an overview about prior year's projects.	无需处置	W1-S3-2
 Q03733	V68	title	V68.12.1.3	自称第六次入选的计法	H-4	通过	无	项目方自称 2013 年为第 6 次入选，与页面年份数不符。	无需处置	W1-S3-2
@@ -207,7 +207,7 @@ Q03766	V72	title	V72.2.1.5	两类权利的并用场合	H-4	通过	无	you don't 
 Q03767	V72	title	V72.2.8.5	两条路线的长期并存	H-4	通过	无	Xinuos and SCO have been building operating systems for enterprise environments for more than 40 years	无需处置	W1-S3-2
 Q03768	V72	title	V72.3.1.3	UNIX 商标的另持与 APA 商标例外（1995）	H-4	有问题	P1	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.｜1995 年 APA 商标例外无引文	呈裁	W1-S3-2
 Q03769	V72	title	V72.3.3.1	三类权利的归属分工	H-4	通过	无	UNIX and UnixWare are registered trademarks of The Open Group in the United States and other countries.	无需处置	W1-S3-2
-Q03770	V72	title	V72.3.4.1	起诉 IBM 的索赔加码（2003–2004）	H-4	有问题	P2	2003 年 SCO Group 诉 IBM 案声称 IBM 将 UNIX 源码（含 BSD 衍生代码）移植至 Linux，索赔 50 亿美元｜题名区间至 2004 无引文	观察	W1-S3-2
+Q03770	V72	title	V72.3.4.1	起诉 IBM 的索赔加码（2003—2004）	H-4	有问题	P2	2003 年 SCO Group 诉 IBM 案声称 IBM 将 UNIX 源码（含 BSD 衍生代码）移植至 Linux，索赔 50 亿美元｜题名区间至 2004 无引文	观察	W1-S3-2
 Q03771	V72	title	V72.4.5.5	以和解撤诉结案（2018 年 1 月）	H-4	有问题	P1	Defendant concedes that for purposes of this motion that it did in fact breach the GPL.｜2018 年 1 月和解撤诉无引文	呈裁	W1-S3-2
 Q03772	V72	title	V72.5.1.3	同一程序的两类保护	H-4	通过	无	A U.S. patent gives the patent owner the right to exclude others from making, using, offering for sale, selling throughout, or importing an invention into the U	无需处置	W1-S3-2
 Q03774	V72	title	V72.5.10.4	两种自由观的许可分野	H-4	通过	无	The GNU General Public License is intended to guarantee your freedom to share and change free software--to make sure the software is free for all its users.	无需处置	W1-S3-2

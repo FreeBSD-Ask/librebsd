@@ -1,6 +1,6 @@
 work_id	cat	vol	subsection_id	field	before	after	rationale	evidence	confidence	action
 P6-2-0001	H1-semantic	V01	V01.6.2.1	thesis	Corbató 的分时构想由团队工程化，构想与实现之间隔着组织与机器的约束。	科尔巴托的分时构想由团队工程化，构想与实现之间隔着组织与机器的约束。	题名已用既定中译；论题层 Corbató 为教科书级人物拉丁形，按 §4.4 二改中译，题名不动。	§4.4 二：教科书级人物用既定中译…科尔巴托…	A	改
-P6-2-0002	H1-semantic	V12	V12.1.1.3	thesis	1973–1974 年可证者为会议接触与远程调试介入（Thompson 自新泽西拨号读崩溃转储），正式邀请属 1975 年访问教授任期，不在本节立论。	1973–1974 年可证者为会议接触与远程调试介入（汤普森自新泽西拨号读崩溃转储），正式邀请属 1975 年访问教授任期，不在本节立论。	题名无人物名；论题层 Thompson 为教科书级人物拉丁形，按 §4.4 二改中译。	§4.4 二：教科书级人物用既定中译…汤普森…	A	改
+P6-2-0002	H1-semantic	V12	V12.1.1.3	thesis	1973—1974 年可证者为会议接触与远程调试介入（Thompson 自新泽西拨号读崩溃转储），正式邀请属 1975 年访问教授任期，不在本节立论。	1973—1974 年可证者为会议接触与远程调试介入（汤普森自新泽西拨号读崩溃转储），正式邀请属 1975 年访问教授任期，不在本节立论。	题名无人物名；论题层 Thompson 为教科书级人物拉丁形，按 §4.4 二改中译。	§4.4 二：教科书级人物用既定中译…汤普森…	A	改
 P6-2-0003	H1-semantic	V13	V13.2.8.5	title	力量更替的交接留痕	人员更替的交接留痕	论题作人员更替，同节 .1/.4 亦用人员构成、人员规模；力量更替非人事概念，改题从论题与同节族。	V13.2.8.1 人员构成的时段变化；V13.2.8.4 经费波动与人员规模	B	改
 P6-2-0004	H1-semantic	V18	V18.5.7.3	title	链接惯例与筹备的并行	收束与筹备的并行	史料作 Link: 收束＋KS2019 筹备，论题亦作收束；题名链接惯例与收束不同指，改题对齐论题。	399.20.1 导言：2019-08/09 Link: 收束+KS2019 筹备	A	改
 P6-2-0005	H1-semantic	V18	V18.6.14.5	thesis	延续议题的收口可考，收口的记录见后续。	资格议题的收口可考，收口的记录见后续。	史料明载 2007-2021 资格之争；题名资格议题有据，论题延续议题失指，改论题从题名。	399.28.1 导言：2007-2021 历届选举公告与资格之争	A	改
@@ -38,7 +38,7 @@ P6-2-0036	H1-semantic	V60	V60.1.2.1	thesis	补丁集合转整套磁带的发行�
 P6-2-0037	H1-semantic	V64	V64.5.8.2	thesis	黑客松一词由 Theo 或 Niels Provos 所造，归属存两说。	黑客松一词由希欧·德若特或尼尔斯·普罗沃斯所造，归属存两说。	题名两说与论题同指；catalog 作希欧·德若特、尼尔斯·普罗沃斯，改论题人名。	catalog：希欧·德若特；尼尔斯·普罗沃斯；openbsd.org/hackathons 两说原文	B	改
 P6-2-0038	H1-semantic	V64	V64.9.2.4	thesis	名册列出 Franco Fichtner 等成员，成员构成以名册为据。	名册列出 Franco Fichtner 等成员，成员构成以名册为据。	Fichtner 无 catalog 译名，§4.4 二无译名者保留拉丁；论题不构成缺陷，转呈。	catalog 无 Fichtner 条目；§4.4 二无译名者保留拉丁	B	不改-转呈
 P6-2-0039	H1-semantic	V67	V67.2.2.5	thesis	2003 年会议由 Sendmail 的 Shapiro 任主席，委员会仍跨三大项目。	2003 年会议由 Sendmail 的格雷戈里·尼尔·夏皮罗任主席，委员会仍跨三大项目。	题名程序委员会与论题同指；catalog 作格雷戈里·尼尔·夏皮罗，bsdcon03 页同证，改论题。	catalog：格雷戈里·尼尔·夏皮罗；usenix bsdcon03: Program Chair Gregory Neil Shapiro	A	改
-P6-2-0040	H1-semantic	V69	V69.2.14.2	thesis	McKusick 的十二讲课程以录像流传。	麦库西克的十五讲课程以录像流传。	McKusick 课程页列 Preface＋Lecture 1–15 并售录像；题名十五讲正确，论题十二讲误，改论题并译名。	mckusick.com/courses：Preface＋Lecture 1–15；Buying the class on video	A	改
+P6-2-0040	H1-semantic	V69	V69.2.14.2	thesis	McKusick 的十二讲课程以录像流传。	麦库西克的十五讲课程以录像流传。	McKusick 课程页列 Preface＋Lecture 1—15 并售录像；题名十五讲正确，论题十二讲误，改论题并译名。	mckusick.com/courses：Preface＋Lecture 1—15；Buying the class on video	A	改
 P6-2-0041	H1-semantic	V72	V72.2.6.1	thesis	BSD Daemon 图形的著作权归 McKusick 个人，形象权属与项目商标权属分属不同主体。	BSD Daemon 图形的著作权归麦库西克个人，形象权属与项目商标权属分属不同主体。	题名与论题权属同指；论题 McKusick 为教科书级拉丁形，改麦库西克。	§4.4 二：…麦库西克…	A	改
 P6-2-0042	H1-semantic	V73	V73.2.3.2	title	McKusick 回忆文章的叙述框架	麦库西克回忆文章的叙述框架	题名径用拉丁 McKusick，触 §4.4 二；改既定中译麦库西克。	§4.4 二：…麦库西克…	A	改
 P6-2-0043	H1-semantic	V73	V73.3.9.4	thesis	CSRG 后期主持通行记载为 McKusick（Karels 同在）；莱弗勒离任后由卡雷尔斯接替之说未见一手（检索面：CSRG 年报、McKusick 回忆）。	CSRG 后期主持通行记载为麦库西克（Karels 同在）；莱弗勒离任后由卡雷尔斯接替之说未见一手（检索面：CSRG 年报、麦库西克回忆）。	题名已按 2026-11-03 存疑清零定为更替与衰减，保留；论题 McKusick 改麦库西克。	§4.4 二：…麦库西克…；题名按 2026-11-03 存疑清零保留	A	改
@@ -48,4 +48,4 @@ P6-2-0046	P0	V64	V64.1.7.3	thesis	FDP Primer 正文未实取命中，doceng 章�
 P6-2-0047	P0	V67	V67.9.2.1	title	大流行年份的线下转轨	大流行年份的线上转轨	BSDCan 2020 官网明言 online、not in person；题名线下转轨方向相反，改为线上。	bsdcan.org/2020：It will not be in person. All events will be streamed online.	A	改
 P6-2-0048	P0	V68	V68.3.1.3	thesis	2020 与 2021 升至九成以上，2016 为全序列低点。	2020 与 2021 升至九成以上，2016 为相对低谷而非全序列低点。	官方统计 2016 为 85.6%，2005 为 80%，2016 非全序列低点；题名相对低谷无误，改论题。	gsoc stats：2016 85.6%／2020 92.32%／2021 93.27%；2005 80%	A	改
 P6-2-0049	P0	V68	V68.8.3.1	thesis	2015 年项目同时扩充 AHCI 与 virtio 两类设备模型。	2015 年项目同时扩充 NE2000 设备模型与 ptnetmap 支持。	2015 报告载 bhyve 三项为 NE2000、ARM 移植、ptnetmap，无 AHCI／virtio；题名正确，改论题。	report-2015-07/09：NE2000 device emulation…ptnetmap support	A	改
-P6-2-0050	P0	V69	V69.2.14.2	thesis	McKusick 的十二讲课程以录像流传。	麦库西克的十五讲课程以录像流传。	P0-006 预授权落账；与 H1 同题同改，此处为 P0 账逐条留痕，改法一致。	mckusick.com/courses：Preface＋Lecture 1–15；Buying the class on video	A	改
+P6-2-0050	P0	V69	V69.2.14.2	thesis	McKusick 的十二讲课程以录像流传。	麦库西克的十五讲课程以录像流传。	P0-006 预授权落账；与 H1 同题同改，此处为 P0 账逐条留痕，改法一致。	mckusick.com/courses：Preface＋Lecture 1—15；Buying the class on video	A	改

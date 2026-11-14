@@ -1,21 +1,21 @@
 subsection_id	query	url	source_type	tier	accessed	quote	conflict
 V46.1.1.1	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-011352）	史料	A	2026-10-30	1994年初 Theo de Raadt 宣布 SPARC 源码正式纳入 NetBSD 内核树	none
-V46.1.1.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968–1995）提要”；本节题为其下位论题	none
+V46.1.1.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968—1995）提要”；本节题为其下位论题	none
 V46.1.1.1	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.1.1	创始名单与移植起点	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	The NetBSD project was founded by Chris Demetriou, Theo de Raadt, Adam Glass and Charles M. Hannum.	none
 V46.1.1.2	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-011357）	史料	A	2026-10-30	1994年11月 Theo de Raadt 总结 NetBSD/SPARC 的每一步进展几乎都来自硬件捐赠	none
-V46.1.1.2	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968–1995）提要”；本节题为其下位论题	none
+V46.1.1.2	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968—1995）提要”；本节题为其下位论题	none
 V46.1.1.2	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
-V46.1.1.2	早期捐赠名单	https://www.openbsd.org/donations.html	联网	A	2026-10-30	The following is a chronological list of people and organizations who contributed direct to OpenBSD, OpenSSH, and our related projects during the early years (1997–2011).	none
+V46.1.1.2	早期捐赠名单	https://www.openbsd.org/donations.html	联网	A	2026-10-30	The following is a chronological list of people and organizations who contributed direct to OpenBSD, OpenSSH, and our related projects during the early years (1997—2011).	none
 V46.1.1.3	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-049442）	史料	A	2026-10-30	Theo de Raadt 长文回应 NetBSD core 未就争议与其沟通	none
-V46.1.1.3	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968–1995）提要”；本节题为其下位论题	none
+V46.1.1.3	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968—1995）提要”；本节题为其下位论题	none
 V46.1.1.3	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.1.3	NetBSD 立项目标	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993.	none
 V46.1.1.4	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-012720）	史料	A	2026-10-30	Theo de Raadt 分享多架构二进制分发脚本	none
-V46.1.1.4	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968–1995）提要”；本节题为其下位论题	none
+V46.1.1.4	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968—1995）提要”；本节题为其下位论题	none
 V46.1.1.4	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.1.4	邮件列表的功能	https://www.openbsd.org/mail.html	联网	A	2026-10-30	Mailing lists are an important means of communication among users and developers of OpenBSD.	none
-V46.1.1.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968–1995）提要”；本节题为其下位论题	none
+V46.1.1.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“卷首断代与承接：前段岁月（1968—1995）提要”；本节题为其下位论题	none
 V46.1.1.5	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.1.5	NetBSD 初创焦点	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	NetBSD's original focus was quality and architecture independence.	none
 V46.1.2.1	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-000704）	史料	A	2026-10-30	Theo de Raadt 于 1994 年 12 月 20 日被 NetBSD core 要求辞职	none
@@ -58,41 +58,41 @@ V46.1.3.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/ou
 V46.1.3.5	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.3.5	无政治化原则	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Be as politics-free as possible; solutions should be decided on the basis of technical merit.	none
 V46.1.4.1	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-000008）	史料	A	2026-10-30	DARPA 于 2003 年在 Theo de Raadt 反战评论后撤销对 OpenBSD 安全项目的资助	none
-V46.1.4.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995–2026）”；本节题为其下位论题	none
+V46.1.4.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995—2026）”；本节题为其下位论题	none
 V46.1.4.1	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.4.1	c2k3 资助来源	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	c2k3: General hackathon May 8 - 20, 2003 Calgary, Alberta, Canada 51 developers Funded by NLnet (after DARPA pulled out their support).	none
 V46.1.4.2	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-012108）	史料	A	2026-10-30	2006年2月11日trustedbsd-discuss转贴Cryptonomicon.Net分析：DARPA停止资助OpenBSD或与de Raadt言论无关	none
-V46.1.4.2	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995–2026）”；本节题为其下位论题	none
+V46.1.4.2	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995—2026）”；本节题为其下位论题	none
 V46.1.4.2	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.4.2	c2k2 资助来源	https://www.openbsd.org/hackathons.html	联网	A	2026-10-30	c2k2: General hackathon Jun 4 - 12, 2002 Calgary, Alberta, Canada 42 developers Funded by DARPA.	none
 V46.1.4.3	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-055707）	史料	A	2026-10-30	Theo de Raadt 反驳 Curt Sampson	none
-V46.1.4.3	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995–2026）”；本节题为其下位论题	none
+V46.1.4.3	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995—2026）”；本节题为其下位论题	none
 V46.1.4.3	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.4.3	全面披露立场	https://www.openbsd.org/security.html	联网	A	2026-10-30	In the operating system arena, we were probably the first to embrace the concept.	none
 V46.1.4.4	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-104696）	史料	A	2026-10-30	de Raadt 详述其真正自由软件观，反对 GPL 附加限制	none
-V46.1.4.4	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995–2026）”；本节题为其下位论题	none
+V46.1.4.4	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995—2026）”；本节题为其下位论题	none
 V46.1.4.4	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.4.4	nvi 许可问题	https://www.openbsd.org/plus20.html	联网	A	2026-10-30	vim is replacing nvi, since nvi does not have a pure BSD license, and vim also works better.	none
 V46.1.4.5	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-002005）	史料	A	2026-10-30	Theo de Raadt 引语"Linux people do what they do because they hate Microsoft. We do what we do because we love Unix."	none
-V46.1.4.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995–2026）”；本节题为其下位论题	none
+V46.1.4.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“批评史与当事人回应（1995—2026）”；本节题为其下位论题	none
 V46.1.4.5	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.4.5	歌词注释中的厂商批评	https://www.openbsd.org/lyrics.html	联网	A	2026-10-30	A particularly nasty player in this regard has been the Linux vendors and some Linux developers	none
 V46.1.5.1	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-011980）	史料	A	2026-10-30	转发 Bob Beck 的 OpenBSD 5.1 发布公告全文	none
-V46.1.5.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995–2026 年领导期的分期与评价”；本节题为其下位论题	none
+V46.1.5.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995—2026 年领导期的分期与评价”；本节题为其下位论题	none
 V46.1.5.1	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.5.1	5.0 发布日期与版权署名	https://www.openbsd.org/50.html	联网	A	2026-10-30	Released Nov 1, 2011 Copyright 1997-2011, Theo de Raadt.	none
 V46.1.5.2	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-035577）	史料	A	2026-10-30	2.2.0 是首个出自 OpenBSD 5.8 开发周期的版本	none
-V46.1.5.2	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995–2026 年领导期的分期与评价”；本节题为其下位论题	none
+V46.1.5.2	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995—2026 年领导期的分期与评价”；本节题为其下位论题	none
 V46.1.5.2	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.5.2	5.7 发布日期	https://www.openbsd.org/57.html	联网	A	2026-10-30	Released May 1, 2015 Copyright 1997-2015, Theo de Raadt.	none
-V46.1.5.3	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995–2026 年领导期的分期与评价”；本节题为其下位论题	none
+V46.1.5.3	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995—2026 年领导期的分期与评价”；本节题为其下位论题	none
 V46.1.5.3	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.5.3	审计与安全评价	https://www.openbsd.org/faq/faq1.html	联网	A	2026-10-30	OpenBSD is thought of as the most secure UNIX-like operating system by many security professionals as a result of the never-ending comprehensive source code audit.	none
 V46.1.5.4	claim 库记录（史料）	04-现代研究文献/historical_claims.duckdb（claim CL-RM-025765）	史料	A	2026-10-30	de Raadt 宣 pledge 高速推进进源码树（动员令）	none
-V46.1.5.4	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995–2026 年领导期的分期与评价”；本节题为其下位论题	none
+V46.1.5.4	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995—2026 年领导期的分期与评价”；本节题为其下位论题	none
 V46.1.5.4	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.5.4	6.1 发布与版权署名	https://www.openbsd.org/61.html	联网	A	2026-10-30	Released April 11, 2017 Copyright 1997-2017, Theo de Raadt.	none
-V46.1.5.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995–2026 年领导期的分期与评价”；本节题为其下位论题	none
+V46.1.5.5	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 5 节“1995—2026 年领导期的分期与评价”；本节题为其下位论题	none
 V46.1.5.5	题名判据（规则）	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、T3 禁转述动词、S2 上下位一致、S3 同节平行；句式见《风格规范》§二，去 AI 味见 §十一	none
 V46.1.5.5	6.3 发布与版权署名	https://www.openbsd.org/63.html	联网	A	2026-10-30	Released Apr 15, 2018 Copyright 1997-2018, Theo de Raadt.	none
 V46.1.6.1	节题与上位章题（目录分析）	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 6 节“OpenBSD 5.x 时期的技术淘汰与新旧交替（2011—2016）”；本节题为其下位论题	none

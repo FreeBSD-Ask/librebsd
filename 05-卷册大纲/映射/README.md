@@ -44,7 +44,7 @@ L2／L7 必然 FAIL。2026-10-24 已回退 53 条 `CONFIRMED` → `PENDING`（`r
 | `ref-rewrite.tsv`／`ref-unresolved.tsv`／`ref-sync.tsv` | 引用改写台账／未决挂账／同步留痕 | Task 7／11 |
 | `review/` | 复核工作包（`packs/<旧卷>.tsv`、`disputes.tsv`） | Task 4／5 |
 | `挂账清单/` | Task 6 四类挂账清单（`01-unmapped-by-volume-chapter.tsv` 旧卷×旧章 UNMAPPED 计数、`02-unmapped-no-target-detail.tsv` UNMAPPED 无目标明细（裁决入口）、`03-disputed-by-volume-chapter.tsv` 旧卷×旧章 DISPUTED 计数（分规则通过与规则未决）、`04-backlog-summary-by-volume.tsv` 分卷汇总；生成器 `script/_landing_production_20261024/_task6_backlog.py` 只读可复跑） | Task 6 |
-| `缺口族分析/` | 结构缺口内容分析批数据表 26 件（01–05 旧 vol20 逐章与 395 分流、06–11 UNMAPPED 逐行分层与规则、12–16 D7/D8 数据修正方案、17–21 V-076 五章与三套节粒度映射、22–24 语言史章补证／设计／边界、25 对账表、26 题命中改判 422 行；生成器 `script/_landing_gap_analysis_20261025/` p00–p10 只读可复跑、二跑零增量；报告＝`01-项目管理/01-编纂规划与报告归档/05-大纲落地-结构缺口内容分析-20261025.md`） | 结构缺口内容分析批 20261025 |
+| `缺口族分析/` | 结构缺口内容分析批数据表 26 件（01—05 旧 vol20 逐章与 395 分流、06—11 UNMAPPED 逐行分层与规则、12—16 D7/D8 数据修正方案、17—21 V-076 五章与三套节粒度映射、22—24 语言史章补证／设计／边界、25 对账表、26 题命中改判 422 行；生成器 `script/_landing_gap_analysis_20261025/` p00—p10 只读可复跑、二跑零增量；报告＝`01-项目管理/01-编纂规划与报告归档/05-大纲落地-结构缺口内容分析-20261025.md`） | 结构缺口内容分析批 20261025 |
 | `reference/` | 18 件历史映射表（章级/节级映射表、关键词/文献/人物/时间线-章节映射表等），只作候选生成参考 | Task 2.5 |
 | `drift/` | 目录变动漂移报告 | Task 3 |
 | `title-standardization.tsv`／`title-review.tsv`／`path-overlong.tsv` | 标题标准化台账／杂质名待裁决／超长路径裁决 | Task 2 |
@@ -70,7 +70,7 @@ L2／L7 必然 FAIL。2026-10-24 已回退 53 条 `CONFIRMED` → `PENDING`（`r
 ## 五、后续入口
 
 - 本批 spec：`.trae/specs/migrate-refactor2026-into-outline-20261023/`（`spec.md`／`tasks.md`／`checklist.md`）。
-- 施工计划：`01-项目管理/01-编纂规划与报告归档/05-大纲落地生产搬迁批计划-20261023.md`；执行排程：`05-大纲落地生产执行计划-20261024.md`（B1–B4／B5–B7／W1–W6）。
+- 施工计划：`01-项目管理/01-编纂规划与报告归档/05-大纲落地生产搬迁批计划-20261023.md`；执行排程：`05-大纲落地生产执行计划-20261024.md`（B1—B4／B5—B7／W1—W6）。
 - 长线登记：`01-项目管理/01-编纂规划与报告归档/长线任务总登记表.md` 第 5 条与第 13 条（landing05，真值 `mapping.tsv`）。
 
 ## 六、本批施工记录（2026-10-24，M1＝Task 2 收尾）

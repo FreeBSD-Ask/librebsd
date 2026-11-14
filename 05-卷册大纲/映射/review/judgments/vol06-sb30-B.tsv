@@ -3,7 +3,7 @@ S-015509	V37-1.5	U320 盘 WRITE(06) 报 ABORTED，属 CAM 排障	B	sb30
 S-015510	V37-1.5	关闭 packetized 协议解决故障，属 CAM 传输层问题	B	sb30
 S-015511	V37-1.5	cam_ccb.h 的 PATH_INQ 标记控制 6 字节命令门控	B	sb30
 S-015512	V37-1.5	ServeRAID 4Lx 的 ips 探测失败属存储驱动支持	B	sb30
-S-015513	V37-1.5	2003–2004 年 ahd 与 SCSI 故障及补丁汇编	B	sb30
+S-015513	V37-1.5	2003—2004 年 ahd 与 SCSI 故障及补丁汇编	B	sb30
 S-015514	V37-1.5	2004 年 SCSI 驱动故障与补丁讨论汇编	B	sb30
 S-015515	V37-1.5	aacp 作为 CAM 透传别名用于固件升级与监控	B	sb30
 S-015516	V37-1.5	XPT_SCAN_BUS 触发扫描属 CAM 总线探测机制	B	sb30

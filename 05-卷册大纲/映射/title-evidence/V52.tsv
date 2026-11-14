@@ -673,7 +673,7 @@ V52.6.5.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与�
 V52.6.5.1	WireGuard 的配置目标	https://www.wireguard.com/	联网	A	2026-10-30	WireGuard aims to be as easy to configure and deploy as SSH.	none
 V52.6.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
 V52.6.5.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
-V52.6.5.2	WireGuard 的连接建立	https://www.wireguard.com/	联网	A	2026-10-30	A VPN connection is made simply by exchanging very simple public keys – exactly like exchanging SSH keys – and all the rest is transparently handled by WireGuard.	none
+V52.6.5.2	WireGuard 的连接建立	https://www.wireguard.com/	联网	A	2026-10-30	A VPN connection is made simply by exchanging very simple public keys-exactly like exchanging SSH keys-and all the rest is transparently handled by WireGuard.	none
 V52.6.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 5 节“WireGuard 与现代 BSD 网络实现”；本节题为其下位论题	none
 V52.6.5.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V52.6.5.3	WireGuard 的可审计性	https://www.wireguard.com/	联网	A	2026-10-30	It is meant to be easily implemented in very few lines of code, and easily auditable for security vulnerabilities.	none

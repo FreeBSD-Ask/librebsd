@@ -20,7 +20,7 @@ V65.1.6.6	核心团队驱逐成员的票数门槛	sacred	2358		0.280	C	提交者
 V65.1.8.1	受雇开发者的参与动因	claim	CL-5-010		1.30	A	McKusick 与 Benno Rice 在《The Evolution of FreeBSD Governance》（FreeBSD Journal, 2017）中记载：BSDi 于 2000 年收购 Walnut Creek CDRO	可推	claim 复用（S2 先库后网）
 V65.2.10.3	KAME 项目的资助来源	claim	CL-RM-000008		1.30	A	DARPA 于 2003 年在 Theo de Raadt 反战评论后撤销对 OpenBSD 安全项目的资助	可推	claim 复用（S2 先库后网）
 V65.2.11.2	捐赠总额与支出规模的对照	sacred	2705		0.226	C	捐赠 OpenBSD	可推	史观参照（不作证据，仅定题面归属）
-V65.2.11.2	捐赠总额与支出规模的对照	ref_title	10146	10146	0.224	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V65.2.11.2	捐赠总额与支出规模的对照	ref_title	10146	10146	0.224	C	GSoC Past Programs (2016—2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
 V65.2.2.4	商业支持的业务范围	fulltext_summary	103	103	0.316	B	Why and how you ought to Keep multibyte character support simple EuroBSDCon, Beograd, September 25, 2016 Ingo Schwarze <	可推	全文综述候选（D1 型，核对原文后落块）
 V65.2.3.3	捐助名单的非广告原则	sacred	2089		0.244	C	致谢	可推	史观参照（不作证据，仅定题面归属）
 V65.2.3.4	捐助用途的指定方式	sacred	2107		0.257	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
@@ -36,7 +36,7 @@ V65.2.7.1	黑客松的资助名目	fulltext_summary	933	933	0.221	C	Jun 30, '11 
 V65.2.7.3	厂商峰会的组织方	fulltext_summary	926	926	0.231	C	Sep 30, '10 ASSETS Current Assets Checking/Savings Bank - Checking 203,749.55 Bank - Electronic Payment 4,956.06 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
 V65.2.7.3	厂商峰会的组织方	fulltext_summary	928	928	0.231	C	Jan - Sep '10 Ordinary Income/Expense Income Contributions Income Unrestricted 160,588.80 Total Contributions Income 160	可推	全文综述候选（D1 型，核对原文后落块）
 V65.2.7.3	厂商峰会的组织方	fulltext_summary	933	933	0.231	C	Jun 30, '11 ASSETS Current Assets Checking/Savings Bank - Checking 319,223.16 Bank - Electronic Payment 9,461.31 Donatio	可推	全文综述候选（D1 型，核对原文后落块）
-V65.2.7.4	活动资助的年度结算	ref_title	10146	10146	0.259	C	GSoC Past Programs (2016–2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
+V65.2.7.4	活动资助的年度结算	ref_title	10146	10146	0.259	C	GSoC Past Programs (2016—2025 年度 orgs/projects)（capture=playwright） 2016	可推	文献线索（须核全文再定 D1/D2）
 V65.3.1.1	受薪维护的普遍程度	ref_title	10382	10382	0.223	C	Multics History multicians.org 编辑（参与者维护的史料汇编） 2026	可推	文献线索（须核全文再定 D1/D2）
 V65.3.1.1	受薪维护的普遍程度	ref_title	10383	10383	0.223	C	Project MAC multicians.org 编辑（参与者维护的史料汇编） 2026	可推	文献线索（须核全文再定 D1/D2）
 V65.3.1.4	基金会资助的岗位设置	claim	CL-RM-010552		1.50	A	2023 年 2 月 Christos Margiolis 启动 FreeBSD Foundation 赞助的 kinst provider 扩展项目并发布系列周报——基金会资助下新一代可观测性工程的样本。	可推	claim 复用（S2 先库后网）

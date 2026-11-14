@@ -11,16 +11,16 @@ V45.1.1.3	项目目标页再分发条款	https://www.openbsd.org/goals.html	联�
 V45.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“OpenBSD 分叉背景与安全目标的形成”；本条为第 4 条下位论题（去空格 9 字）	none
 V45.1.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“技术判断的去政治化”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.1.1.4	项目目标页政治中立条款	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Be as politics-free as possible; solutions should be decided on the basis of technical merit.	none
-V45.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996–1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 1 条下位论题（去空格 9 字）	none
+V45.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996—1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.1.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二丁 事件／节点族，题名“审计起点的季节记载”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.1.2.1	审计起点句	https://www.openbsd.org/security.html	联网	A	2026-10-30	We have been auditing since the summer of 1996.	none
-V45.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996–1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 2 条下位论题（去空格 9 字）	none
+V45.1.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996—1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 2 条下位论题（去空格 9 字）	none
 V45.1.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“审计强度的时间分布”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.1.2.2	审计强度时段句	https://www.openbsd.org/security.html	联网	A	2026-10-30	The most intense part of our security auditing happened immediately before the OpenBSD 2.0 release and during the 2.0→2.1 transition, over the last third of 1996 and first half of 1997.	none
-V45.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996–1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 3 条下位论题（去空格 9 字）	none
+V45.1.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996—1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 3 条下位论题（去空格 9 字）	none
 V45.1.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“缺陷规模的数量记载”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.1.2.3	缺陷规模句	https://www.openbsd.org/security.html	联网	A	2026-10-30	Thousands (yes, thousands) of security issues were fixed rapidly over this year-long period; bugs like the standard buffer overflows, protocol implementation weaknesses, information gathering, and filesystem races.	none
-V45.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996–1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 4 条下位论题（去空格 10 字）	none
+V45.1.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“1996—1997 年大规模代码审计（2.0 至 2.1 过渡期）与系统清理”；本条为第 4 条下位论题（去空格 10 字）	none
 V45.1.2.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“系统清理后的缺陷递减”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.1.2.4	清理收束句	https://www.openbsd.org/security.html	联网	A	2026-10-30	Hence most of the security problems that we encountered were fixed before our 2.1 release, and then a far smaller number needed fixing for our 2.2 release.	none
 V45.1.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Secure by Default：默认安全理念”；本条为第 1 条下位论题（去空格 9 字）	none
@@ -515,16 +515,16 @@ V45.5.6.2	libtls 内存加载句	https://www.openbsd.org/57.html	联网	A	2026-1
 V45.5.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“网络协议实现中的最小权限设计”；本条为第 3 条下位论题（去空格 9 字）	none
 V45.5.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“守护进程的降级协同”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.6.3	carp demotion 选项	https://man.openbsd.org/bgpd	联网	A	2026-10-30	The options are as follows: -c Force bgpd to do carp(4) demotion at startup when the demote functionality is used.	none
-V45.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996–2026）”；本条为第 1 条下位论题（去空格 10 字）	none
+V45.5.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996—2026）”；本条为第 1 条下位论题（去空格 10 字）	none
 V45.5.7.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“仅拦模式的外部地址集”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.7.1	黑名单模式句	https://man.openbsd.org/spamd	联网	A	2026-10-30	When spamd is run in blacklist-only mode, using the -b flag, it will consult a pre-defined set of blacklist addresses to decide whether to tarpit the host or not.	none
-V45.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996–2026）”；本条为第 2 条下位论题（去空格 8 字）	none
+V45.5.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996—2026）”；本条为第 2 条下位论题（去空格 8 字）	none
 V45.5.7.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“邮件落盘的双格式”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.7.2	smtpd 投递句	https://man.openbsd.org/smtpd	联网	A	2026-10-30	It can relay messages through remote mail transfer agents or store them locally using either the mbox or maildir format.	none
-V45.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996–2026）”；本条为第 3 条下位论题（去空格 10 字）	none
+V45.5.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996—2026）”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.5.7.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“灰名单时间的参数调校”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.7.3	时间参数选项	https://man.openbsd.org/spamd	联网	A	2026-10-30	-G passtime : greyexp : whiteexp Adjust the three time parameters for greylisting.	none
-V45.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996–2026）”；本条为第 4 条下位论题（去空格 9 字）	none
+V45.5.7.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“邮件反垃圾战争：RBL、ORBS 与内容过滤（1996—2026）”；本条为第 4 条下位论题（去空格 9 字）	none
 V45.5.7.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“邮寄清单的月度延迟”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.5.7.4	36 天默认句	https://man.openbsd.org/spamd	联网	A	2026-10-30	The default is 36 days to allow for the delivery of monthly mailing list digests without greylist delays every time.	none
 V45.6.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 1 节“OpenSSH 的产生与 SSH 协议实现”；本条为第 1 条下位论题（去空格 9 字）	none
@@ -832,7 +832,7 @@ V45.8.8.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与�
 V45.8.8.3	pkg_add 边界句	https://man.openbsd.org/pkg_add	联网	A	2026-10-30	System distribution files, e.g., base71.tgz, comp71.tgz, are not packages and may not be installed using pkg_add .	none
 V45.8.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 9 节“OpenBSD 用户空间统一性”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.8.9.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“基础系统的外移决定”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
-V45.8.9.1	nginx 外移句	https://www.openbsd.org/57.html	联网	A	2026-10-30	Routing daemons and other userland network improvements: nginx has been removed from base – use the package if you need it.	none
+V45.8.9.1	nginx 外移句	https://www.openbsd.org/57.html	联网	A	2026-10-30	Routing daemons and other userland network improvements: nginx has been removed from base-use the package if you need it.	none
 V45.8.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 9 节“OpenBSD 用户空间统一性”；本条为第 2 条下位论题（去空格 9 字）	none
 V45.8.9.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“同类工具入口的统一”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.8.9.2	mandoc 统一句	https://www.openbsd.org/57.html	联网	A	2026-10-30	mandoc 1.13.3: man(1) , apropos(1) , and mandoc(1) now have a unified user interface, all with the same options, and are in fact all implemented by the same binary program.	none
@@ -1037,13 +1037,13 @@ V45.11.1.2	平台清单句	https://www.openbsd.org/plat.html	联网	A	2026-10-30
 V45.11.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“从 i386 到 amd64”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.11.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“amd64 的清单席位”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.11.1.3	amd64 条目	https://www.openbsd.org/plat.html	联网	A	2026-10-30	amd64 AMD64-based systems	none
-V45.11.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“m68k、vax、SPARC 等历史架构的退役与保留（1996–2014）”；本条为第 1 条下位论题（去空格 10 字）	none
+V45.11.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“m68k、vax、SPARC 等历史架构的退役与保留（1996—2014）”；本条为第 1 条下位论题（去空格 10 字）	none
 V45.11.2.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“旧架构在清单中的位置”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.11.2.1	hppa 条目	https://www.openbsd.org/plat.html	联网	A	2026-10-30	hppa Hewlett-Packard Precision Architecture (PA-RISC) systems	none
-V45.11.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“m68k、vax、SPARC 等历史架构的退役与保留（1996–2014）”；本条为第 2 条下位论题（去空格 9 字）	none
+V45.11.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“m68k、vax、SPARC 等历史架构的退役与保留（1996—2014）”；本条为第 2 条下位论题（去空格 9 字）	none
 V45.11.2.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“自举能力的保留条件”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.11.2.2	自举判据片段	https://www.openbsd.org/plat.html	联网	A	2026-10-30	that the architecture can self-compile itself	none
-V45.11.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“m68k、vax、SPARC 等历史架构的退役与保留（1996–2014）”；本条为第 3 条下位论题（去空格 10 字）	none
+V45.11.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“m68k、vax、SPARC 等历史架构的退役与保留（1996—2014）”；本条为第 3 条下位论题（去空格 10 字）	none
 V45.11.2.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“晚期架构的编译器补入”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.11.2.3	mips64 clang 句	https://www.openbsd.org/65.html	联网	A	2026-10-30	Improved hardware support, including: clang(1) is now provided on mips64.	none
 V45.11.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“arm64 平台支持”；本条为第 1 条下位论题（去空格 11 字）	none
@@ -1184,22 +1184,22 @@ V45.13.10.2	自建代价句	https://www.openbsd.org/security.html	联网	A	2026-
 V45.13.10.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 10 节“技术路线的能力范围与工程边界”；本条为第 3 条下位论题（去空格 9 字）	none
 V45.13.10.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“变更披露的时间限制”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.10.3	披露资源句	https://www.openbsd.org/security.html	联网	A	2026-10-30	We do not have the time resources to make these changes available in the above format.	none
-V45.13.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995–2026）”；本条为第 1 条下位论题（去空格 9 字）	none
+V45.13.11.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995—2026）”；本条为第 1 条下位论题（去空格 9 字）	none
 V45.13.11.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“创新清单的时间排序”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.11.1	清单起首句	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	This is a list of software and ideas developed or maintained by the OpenBSD project, sorted in order of approximate introduction.	none
-V45.13.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995–2026）”；本条为第 2 条下位论题（去空格 8 字）	none
+V45.13.11.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995—2026）”；本条为第 2 条下位论题（去空格 8 字）	none
 V45.13.11.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“论文与机制的对应”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.11.2	论文入口句	https://www.openbsd.org/innovations.html	联网	A	2026-10-30	Some of them are explained in detail in our research papers .	none
-V45.13.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995–2026）”；本条为第 3 条下位论题（去空格 9 字）	none
+V45.13.11.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 11 节“OpenBSD 安全技术演进（1995—2026）”；本条为第 3 条下位论题（去空格 9 字）	none
 V45.13.11.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“首个加密栈的提供者”去空格 9 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.11.3	IPsec 首发句	https://www.openbsd.org/crypto.html	联网	A	2026-10-30	OpenBSD was the first operating system to ship with an IPsec stack.	none
-V45.13.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2–7.9（1996–2026）”；本条为第 1 条下位论题（去空格 8 字）	none
+V45.13.12.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2—7.9（1996—2026）”；本条为第 1 条下位论题（去空格 8 字）	none
 V45.13.12.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“发行物的常规供给”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.12.1	发行与快照句	https://www.openbsd.org/plat.html	联网	A	2026-10-30	new releases always exist, and there are attempts to make snapshots available on a regular basis	none
-V45.13.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2–7.9（1996–2026）”；本条为第 2 条下位论题（去空格 10 字）	none
+V45.13.12.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2—7.9（1996—2026）”；本条为第 2 条下位论题（去空格 10 字）	none
 V45.13.12.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“当前树的安全优势假设”去空格 10 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.12.2	当前树优势句	https://www.openbsd.org/security.html	联网	A	2026-10-30	Users can make the assumption that the current source tree always has stronger security than the previous release.	none
-V45.13.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2–7.9（1996–2026）”；本条为第 3 条下位论题（去空格 8 字）	none
+V45.13.12.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 12 节“版本发行时间线：OpenBSD 1.2—7.9（1996—2026）”；本条为第 3 条下位论题（去空格 8 字）	none
 V45.13.12.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行、C8c 单题“的”≤2；本立意用《风格规范》§二甲 机制／过程族（收尾实义名词变体），题名“勘误页的版本留痕”去空格 8 字（题域见 05-卷册大纲/映射/title-design/风格规范.md）	none
 V45.13.12.3	5.7 勘误页句	https://www.openbsd.org/57.html	联网	A	2026-10-30	Have a look at the 5.7 errata page for a list of bugs and workarounds.	none
 V45.14.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 14 章第 1 节“CVS 流程与提交纪律：commit log 体例与审查”；本条为第 1 条下位论题（去空格 8 字）	none

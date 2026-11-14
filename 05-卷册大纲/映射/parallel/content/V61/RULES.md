@@ -30,9 +30,9 @@
 
 | 章 | 章题 | 收什么 | 不收什么 |
 | --- | --- | --- | --- |
-| 1 | UNIX 网络化与现代安全工程的形成（1988–1995） | 超级用户／UID-GID／setuid／受信主机／口令文件；联网攻击面；sendmail／fingerd／rsh 漏洞；Morris 蠕虫事件与技术解剖；早期信任缺陷；CERT／CC 与响应制度；披露制度（全披露／协调／CVE）；BSD 进入现代安全体系 | 具体标准合规流程（V62）、法律条文（V72） |
+| 1 | UNIX 网络化与现代安全工程的形成（1988—1995） | 超级用户／UID-GID／setuid／受信主机／口令文件；联网攻击面；sendmail／fingerd／rsh 漏洞；Morris 蠕虫事件与技术解剖；早期信任缺陷；CERT／CC 与响应制度；披露制度（全披露／协调／CVE）；BSD 进入现代安全体系 | 具体标准合规流程（V62）、法律条文（V72） |
 | 2 | BSD 安全工程共同基础 | UID-GID 权限、chroot、securelevel、ACL、MAC、rlimit、内存保护、审计日志、文件完整性、磁盘加密、随机数与 PKI、软件签名 | 安全模型理论（第 3 章）、跨 BSD 比较（第 5 章）、具体漏洞案例（第 6 章） |
-| 3 | 安全模型理论 | Bell–LaPadula、Biba、Clark–Wilson、Chinese Wall、参考监视器／TCB、DAC-MAC-RBAC、能力模型与最小权限 | 具体实现（Ch2／Ch4）、BSD 分支差异（Ch5） |
+| 3 | 安全模型理论 | Bell-LaPadula、Biba、Clark-Wilson、Chinese Wall、参考监视器／TCB、DAC-MAC-RBAC、能力模型与最小权限 | 具体实现（Ch2／Ch4）、BSD 分支差异（Ch5） |
 | 4 | 现代防护机制 | jail／sandbox、内存安全与执行保护、W^X／ASLR、CFI、模糊测试、形式化验证、安全启动、CHERI／BERI、编译期缓解、Capsicum／CloudABI、后量子迁移 | 纯理论（Ch3）、历史事件（Ch1） |
 | 5 | 跨 BSD 比较 | DAC-MAC、能力、jail／sandbox、pf／ipfw／NPF、W^X、完整性、密码设施、供应链、安全默认、pledge-unveil vs Capsicum、历史原因、FreeBSD／NetBSD／OpenBSD／DragonFly 路线、安全文化、与 Linux／Windows／Solaris／macOS 比较 | 单一分支实现细节（Ch2／Ch4） |
 | 6 | 漏洞与响应 | 权限提升、内核内存破坏、用户空间、信息泄露、网络协议（含 TCP SACK 2019）、文件系统、隔离边界、虚拟化、认证、第三方组件与供应链事件、补丁与回归、安全公告体系、第三方库响应 | 披露制度史（Ch1）、史料形态（Ch7） |

@@ -76,7 +76,7 @@ S-002348	DavidHinnant征询作家工作台WritersWorkbench之能力与可得性	
 S-002349	BrianSturgill转述所获指点为Ultrix20编驱动须自配置探测例程中	Brian Sturgill 转述所获指点：为 Ultrix 2.0 编驱动须自配置探测例程删除 br 与 cvec 两行	A1/B4 复全句至语义边界
 S-002351	1984年10月24日RonChristian自述当年在1123上普通用户可把nice调成负值	1984 年 10 月 24 日，Ron Christian 自述当年在 11／23 上普通用户可把 nice 调成负值	A1 型号正名补空格
 S-002353	VAX-11／750 支持	VAX-11／750 支持	H1 同步：题面合规；H1 半角斜杠同步
-S-003240	AT&T UNIX SVR3 ／ SVR3.2（1987-1988）	AT&T UNIX SVR3 ／ SVR3.2（1987–1988）	D2 年代区间改 U+2013
+S-003240	AT&T UNIX SVR3 ／ SVR3.2（1987-1988）	AT&T UNIX SVR3 ／ SVR3.2（1987—1988）	D2 年代区间改 U+2013
 S-003255	CharlesAnderson转述MacGeek的说法称AUX20将支持声音管理	Charles Anderson 转述 MacGeek 的说法，称 A／UX 2.0 将支持声音管理器	A1/A2/B4 拆名复全句
 S-003257	苹果AUX的BobLantz说明System文件在AUX下即usrlibmac需	苹果 A／UX 的 Bob Lantz 说明 System 文件在 A／UX 下即 ／usr／lib／mac，需先添加 DA	A1/B4 复全句路径全角
 S-003258	作者报告AUX10的usrincludesystypesh中physadr的ty	作者报告 A／UX 1.0 的 ／usr／include／sys／types.h 中 physadr 的 typedef 漏掉分号	A1/A2/B3/B4 复全句路径全角
@@ -97,12 +97,12 @@ S-003250	用户转述彩色显示缺陷CS32与CS24只能其一为256色切换后
 S-003251	Apple支援人员回应MacIIcx与IIfx互换性	Apple 支援人员回应 Mac IIcx 与 IIfx 互换性	A1 型号正名补空格
 S-003254	MatthiasUrlichs说SLICE被改回5来自某个安装脚本	Matthias Urlichs 说 SLICE 被改回 5 来自某个安装脚本	A1/A2 拆名补空格
 S-000774	MikeKarels宣布推迟43BSD发布的政治问题已解决预计两个月内打包二月中	Mike Karels 宣布推迟 4.3BSD 发布的政治问题已解决，预计两个月内打包	A1/B4 补空格
-S-003236	4.2BSD 混杂代码结构 → 4.3BSD-Tahoe 机器相关／无关代码分离（1986-1988）	从 4.2BSD 混杂代码结构到 4.3BSD-Tahoe 机器相关／无关代码分离（1986–1988）	C5 箭头改从到；D2 改 U+2013
-S-003217	1986-1990 年分离工作的过程	1986–1990 年分离工作的过程	D2 年代区间改 U+2013
+S-003236	4.2BSD 混杂代码结构 → 4.3BSD-Tahoe 机器相关／无关代码分离（1986-1988）	从 4.2BSD 混杂代码结构到 4.3BSD-Tahoe 机器相关／无关代码分离（1986—1988）	C5 箭头改从到；D2 改 U+2013
+S-003217	1986-1990 年分离工作的过程	1986—1990 年分离工作的过程	D2 年代区间改 U+2013
 S-003223	43BSDTahoe1986主要特性包括机器相关无关代码初步分离	4.3BSD Tahoe 主要特性包括机器相关／无关代码初步分离（1988）	A1 正名年份依正文改 1988
 S-003216	机器相关／无关代码分离的语境	机器相关／无关代码分离的语境	H1 同步：题面合规；H1 半角斜杠同步
 S-003220	CCI Power 6／32 硬件规格与 Tahoe 适配代码规模	CCI Power 6／32 硬件规格与 Tahoe 适配代码规模	H1 同步：题面合规；H1 半角斜杠同步
 S-003221	Tahoe 时期的虚拟内存状况——非 “重写” 而是机器相关代码分离（澄清缺口 2ah 的前提错误）	Tahoe 时期的虚拟内存状况——非 “重写” 而是机器相关代码分离（澄清缺口 2ah 的前提错误）	保留：D1 提示保留：括注为勘误说明
-S-002124	DARPA 测试确认 BSD 版本更优（1985-1986，4.3BSD 发布前）	DARPA 测试确认 BSD 版本更优（1985–1986，4.3BSD 发布前）	D2 年代区间改 U+2013；D1 留
+S-002124	DARPA 测试确认 BSD 版本更优（1985-1986，4.3BSD 发布前）	DARPA 测试确认 BSD 版本更优（1985—1986，4.3BSD 发布前）	D2 年代区间改 U+2013；D1 留
 S-002144	BIND（Berkeley Internet Name Domain）	BIND 域名服务器（Berkeley Internet Name Domain）的开发与重写	E1 补描述性题面
 S-002038	1983年10月伯克利的CarlSmith在网路回应PSUnix之争称29BSD是完整发行	1983 年 10 月，伯克利的 Carl Smith 在网路回应 PSUnix 之争，称 2.9BSD 是完整发行	A1 补空格版本正名

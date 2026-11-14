@@ -3,7 +3,7 @@ S-013063		内容为 make.conf 给出 SUP 取 csup 并拷示例 supfile 个案（
 S-013064		内容为模板头 claim 载体，叙事主题零命中	B	sb322
 S-013065		内容为 ports 新装后 Command not found 个案（细节级邮件），“ports”仅命中 OpenBSD ports 诸节，语义不符，留空	B	sb322
 S-013066		内容为 FreeBSD 5.3 导入 OpenBSD PF（Max Laier 移植、ALTQ、pfsync），FreeBSD 侧无防火墙专节，“IPFilter／pf”命中 OpenBSD 侧形成节（V45-4.1），归卷不符，留空	B	sb322
-S-013067		内容为 FreeBSD 5.x sendmail 默认 MTA 延续与 Postfix 未入 base，“sendmail／Postfix”命中作品史多节（V60-6.3–6.7），默认 MTA 无专节，留空	B	sb322
+S-013067		内容为 FreeBSD 5.x sendmail 默认 MTA 延续与 Postfix 未入 base，“sendmail／Postfix”命中作品史多节（V60-6.3—6.7），默认 MTA 无专节，留空	B	sb322
 S-013068		内容为 5.x 第三方软件“引入而非替换”特征综述（要点层），“IPFilter”命中多节无主导，留空	B	sb322
 S-013069		内容为模板头 claim 载体，叙事主题零命中	B	sb322
 S-013070		内容为南非 ISP 用 FreeBSD 做防火墙与按用户统计流量个案（细节级邮件），“流量”仅命中流量控制类节，语义不符，留空	B	sb322

@@ -8,7 +8,7 @@ S-000691	sec	PASS	FAIL	PASS	FAIL	主题错：4 条来源全部为 kernel-doc／m
 S-001164	sec	PASS	PASS	PASS	PASS			旧三级节名“098.1-Jordan-Hubbard-的-port-make-macros-谱系”；来源 S-007296“port make macros 的起源”、S-007297“从早期结构到框架演化”及多条 S-007341 JordanKHubbard 帖
 S-001165	sec	PASS	PASS	PASS	PASS			旧三级节名“098.2-从零到-34-000+-端口的增长曲线与社区贡献模式”；来源 S-007599“Port 增长曲线”、S-007600“社区贡献模式”
 S-001183	sec	PASS	WARN	PASS	WARN	限定不足：UFS2、ULE 仅见于旧三级节名，本节 193 条来源中无 UFS2／ULE 专门条目，内容集中于 GEOM、rcNG 及磁盘／镜像帖		来源 S-012772“GEOM 框架取代旧式 disk 子系统”、S-012774“rcNG（rc.d）取代旧式 rc 脚本”；UFS2／ULE 未取得对应条目
-S-001184	sec	PASS	PASS	PASS	PASS			旧三级节名“多元群体贡献-FreeBSD-2002–2005-时期的贡献者多样性-企业…”；来源 S-013142“企业工程力量的有组织贡献”、S-013143“地域与学术的志愿者多样性”、S-013144“项目官方核心与基金会治理”
+S-001184	sec	PASS	PASS	PASS	PASS			旧三级节名“多元群体贡献-FreeBSD-2002—2005-时期的贡献者多样性-企业…”；来源 S-013142“企业工程力量的有组织贡献”、S-013143“地域与学术的志愿者多样性”、S-013144“项目官方核心与基金会治理”
 S-001185	sec	PASS	PASS	PASS	PASS			旧三级节名“109.1-时代语境-1996-2010-总统科技政策-伯克利校园-IC-英美哲学”；来源 S-012687“总统科技政策…”、S-012688“伯克利校长谱系”、S-012689“集成电路演进…”、S-012690“英美哲学历程”
 S-001186	sec	PASS	PASS	PASS	PASS			旧三级节名“109.3-第三方软件变更-PF-防火墙引入与-MTA-格局”；来源 S-013066“PF 防火墙从 OpenBSD 引入”、S-013067“sendmail 作为默认 MTA 的延续”
 S-001301	sec	PASS	PASS	WARN	WARN	重复：同章“CAM：设备访问模型与存储硬件现代化”与本节点共有 CAM 核心对象，未加区分限定		旧三级节名“132.3-CAM-SCSI-ATA-NVMe-子系统-从-Justin-Gibbs-的”；来源 S-015504“ATA/SATA 子系统演进与 ahci(4)”、S-015505“NVMe 支持：nvd(4) 与 nda(4)”、S-015510 含 JustinGibbs 建议

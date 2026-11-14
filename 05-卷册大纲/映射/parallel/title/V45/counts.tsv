@@ -2,7 +2,7 @@ at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:35:30	start				开工：3A.6 派单 V31-V50
 2026-10-30T20:12:18	takeover			ykla 2026-10-30 批准 10 子代理接管；原 session=wb3a6-v31-50 无 done.json，按简报 §二接管
 2026-10-30T20:30:00	claim	0	0	0	接管后重建 claim：session=resume-3a6-20261030-V45
-2026-10-30T20:56:00	draft	135	434	434	逐节拟题完成：15 章 135 节 434 条；每节 2–4 条，题长 8–17 字
+2026-10-30T20:56:00	draft	135	434	434	逐节拟题完成：15 章 135 节 434 条；每节 2—4 条，题长 8—17 字
 2026-10-30T20:56:00	exception	135	434	434	434 条 corpus_gap：19 节 mapping 命中件为题外散件（FreeBSD 侧／2.x 邮件散记），不援引不充数
 2026-10-30T20:56:00	selfcheck	135	434	434	audit_title_consistency.py --check 40 项 FAIL 0（exit 0）
 2026-10-30T20:56:00	done	135	434	434	ledger_sha256=fb40fcd77538d1152c0c70ad7a9706efee1fc900ee6f692a074f76a0e7641763；呈审报告已写

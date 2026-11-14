@@ -315,31 +315,31 @@ V56.3.6.4	并入库	旧大纲-20261023/第14卷-商业生态与企业案例/第3
 V56.3.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 6 节“BSD／OS 的产品化道路”；本节题为其下位论题	none
 V56.3.6.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.6.5	与社区版比价	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.13-BSDi-Berkeley-Software-Design,-Inc-BSDi/305.13.3-与walnutcreek商业模型的比较.md	史料	A	2026-10-30	**BSDi** 销售专有商业 **BSD/OS** 操作系统，**Walnut Creek** 则销售 **FreeBSD** 廉价 CD-ROM，前者高定价低销量，后者低定价高销量。	none
-V56.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）”；本节题为其下位论题	none
+V56.3.7.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993—1995）”；本节题为其下位论题	none
 V56.3.7.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.7.1	分流时点	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	In the mid-1990s, OpenBSD spun off from the NetBSD group.	none
-V56.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）”；本节题为其下位论题	none
+V56.3.7.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993—1995）”；本节题为其下位论题	none
 V56.3.7.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.7.2	社区基线选择	https://www.oreilly.com/openbook/opensources/book/kirkmck.html	联网	A	2026-10-30	So, all the BSD groups that were doing releases at that time, BSDI, NetBSD, and FreeBSD, had to restart their code base with the 4.4BSD-Lite sources into which they then merged their enhancements and improvements.	none
-V56.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993–1995）”；本节题为其下位论题	none
+V56.3.7.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 7 节“商业 BSD 与社区驱动 BSD 项目的分流（1993—1995）”；本节题为其下位论题	none
 V56.3.7.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.7.3	人才流向	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	effectively ceded the territory to Linux during a critical period in which there was a leadership vacuum and lots of Fear, Uncertainty and Doubt in the BSD community	none
-V56.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001—2003）”；本节题为其下位论题	none
 V56.3.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.8.1	收购时点	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.19-Wind-River-VxWorks-Wind-River-1981-年成立/305.19.2-windriver收购bsdi的事件.md	史料	A	2026-10-30	**Wind River** 2001 年 4 月收购 **BSDi** 的 **BSD/OS** 与 **FreeBSD Mall** 业务，意图将 **BSD/OS** 并入其嵌入式产品线，但 2003 年后逐步停止 **BSD/OS** 独立发行。	none
-V56.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001—2003）”；本节题为其下位论题	none
 V56.3.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.8.2	停售停支年份	04-现代研究文献/historical_claims.duckdb#CL-RM-022575	史料	A	2026-10-30	Jason Bourne指出Wind River已于2003年止售BSD/OS、2004年止支持	none
-V56.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001—2003）”；本节题为其下位论题	none
 V56.3.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.8.3	末版发行号	04-现代研究文献/historical_claims.duckdb#CL-RM-022586	史料	A	2026-10-30	称BSD/OS5.1是Wind River公司的最后一个BSD版本	none
-V56.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001—2003）”；本节题为其下位论题	none
 V56.3.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.8.4	并入嵌入式	旧大纲-20261023/第14卷-商业生态与企业案例/第305章-商业unix谱系对比/305.19-Wind-River-VxWorks-Wind-River-1981-年成立/305.19.4-windriver公告与收购记录考据.md	史料	A	2026-10-30	**Wind River** 2018 年被 **TPG Capital** 以约 35 亿美元从 **Intel** 收购，**Intel** 2009 年以 8.84 亿美元收购 **Wind River**，历次所有权变更影响产品策略。	none
-V56.3.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001—2003）”；本节题为其下位论题	none
 V56.3.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.8.5	公司更名去向	https://klarasystems.com/articles/history-of-freebsd-part-2-bsdi-and-usl-lawsuits/	联网	B	2026-10-30	The following year, BSDi sold its software business to Wind River Systems, and the remaining company was then renamed to iXsystems.	none
-V56.3.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001–2003）”；本节题为其下位论题	none
+V56.3.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 8 节“BSD／OS 的出售与停售：Wind River 时代（2001—2003）”；本节题为其下位论题	none
 V56.3.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V56.3.8.6	售后移交反应	04-现代研究文献/historical_claims.duckdb#CL-RM-023060	史料	A	2026-10-30	2001年问有否收到Wind River的续费通知反映并购后售后更替	none
 V56.4.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 1 节“4.2BSD 中的 socket 抽象”；本节题为其下位论题	none

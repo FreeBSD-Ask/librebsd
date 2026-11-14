@@ -1,7 +1,7 @@
 queue_id	vol	item_kind	item_key	title	h_group	verdict	severity	evidence	disposition	reviewer
 S-001	V13	title	V13.1.8.1	N00039 合同的资助窗口	H-4	通过		题名无日期断言（仅“资助窗口”），机器按引文日期缺失误报	无需处置	W1-SELF
 S-002	V13	title	V13.1.8.2	订单 4031 的立项脉络	H-4	通过		题名“订单 4031 的立项脉络”无论题短语，无日期断言，机器误报	无需处置	W1-SELF
-S-003	V13	title	V13.2.1.4	1981–1983 的会期节奏	H-4	通过		维基 4.2BSD 原文：The committee met from April 1981 to June 1983，直证区间	无需处置	W1-SELF
+S-003	V13	title	V13.2.1.4	1981—1983 的会期节奏	H-4	通过		维基 4.2BSD 原文：The committee met from April 1981 to June 1983，直证区间	无需处置	W1-SELF
 S-004	V13	title	V13.2.2.1	4.1a 的 1982 年春交付	H-4	通过		证据“4.1a BSD (March ’82)”，1982 年 3 月属春，支持“1982 年春交付”	无需处置	W1-SELF
 S-005	V14	title	V14.1.2.1	2.9BSD 的 1983 年发行	H-4	通过		TUHS 年表“2.9 BSD July, 1983”，直证 1983 年发行	无需处置	W1-SELF
 S-006	V14	title	V14.1.4.1	Seismo 分支的 1985 年公告	H-4	通过		TUHS 年表“2.9 BSD-Seismo August, 1985”，直证 1985 年公告	无需处置	W1-SELF
@@ -52,7 +52,7 @@ S-050	V52	title	V52.4.7.2	eBPF 在 Linux 的 2014 年发端	H-4	通过		BSDCan �
 S-051	V54	title	V54.4.3.3	SPARC 随 Sun-4 进入产品线（1987）	H-4	通过		Britannica“In 1987 Sun became the first large computer company to use RISC”	无需处置	W1-SELF
 S-052	V55	title	V55.5.1.5	开发者访谈的可回溯起点（2006 年 1 月）	H-4	有问题	P1	题名硬断“2006 年 1 月”；唯一证据为 2006-02 的 McKusick 访谈，月份无据	呈裁	W1-SELF
 S-053	V56	title	V56.3.7.1	分流的两个时点（1993 与 1995）	H-4	有问题	P1	题名硬断 1993 与 1995；证据仅“mid-1990s … OpenBSD spun off”，1993 无据	呈裁	W1-SELF
-S-054	V56	title	V56.3.8.1	收购公告与交割（2001 年 4–5 月）	H-4	有问题	P1	题名断 2001 年 4–5 月的公告与交割；证据仅“2001 年 4 月收购”，交割月份无据	呈裁	W1-SELF
+S-054	V56	title	V56.3.8.1	收购公告与交割（2001 年 4—5 月）	H-4	有问题	P1	题名断 2001 年 4—5 月的公告与交割；证据仅“2001 年 4 月收购”，交割月份无据	呈裁	W1-SELF
 S-055	V59	title	V59.2.8.4	函件与 1999 年公告的对应	H-4	通过		freebsd.org 版权页载函件日期 July 22, 1999，日级直证 1999 年公告	无需处置	W1-SELF
 S-056	V59	title	V59.3.3.4	让与书样本的未见	H-4	有问题	P1	缺席命题仅在 thesis 内限定两页，题名与证据行均无检索面限定语	呈裁	W1-SELF
 S-057	V59	title	V59.6.4.4	确认信凭证的未见	H-4	有问题	P1	缺席命题无限定；旧大纲 313.2.1 有“确认信文本与法律要点”，与“未见”相抵	呈裁	W1-SELF
@@ -66,6 +66,6 @@ S-064	V68	title	V68.12.1.1	官方页的年份止于 2012	H-4	通过		DragonFly w
 S-065	V70	title	V70.4.1.2	37000 个第三方应用的规模	H-4	通过		题名断言为数量 37000 而非日期；Handbook 原文“over 37000 third-party applications”	无需处置	W1-SELF
 S-066	V71	title	V71.3.3.5	部署年代的上下限（可考始于 1995 年前后）	H-4	通过		题名已限定“可考”“前后”；旧大纲记 1996 年起，与“1995 年前后”相容	无需处置	W1-SELF
 S-067	V72	title	V72.3.1.3	UNIX 商标的另持与 APA 商标例外（1995）	H-4	有问题	P1	题名标注（1995）；两条 A 级证据仅证商标归属，1995 年交割年份无据	呈裁	W1-SELF
-S-068	V72	title	V72.3.4.1	起诉 IBM 的索赔加码（2003–2004）	H-4	有问题	P1	题名断 2003–2004 索赔加码；证据只述 2003 年 50 亿美元，2004 加码无据	呈裁	W1-SELF
+S-068	V72	title	V72.3.4.1	起诉 IBM 的索赔加码（2003—2004）	H-4	有问题	P1	题名断 2003—2004 索赔加码；证据只述 2003 年 50 亿美元，2004 加码无据	呈裁	W1-SELF
 S-069	V72	title	V72.4.5.5	以和解撤诉结案（2018 年 1 月）	H-4	有问题	P1	题名断 2018 年 1 月和解撤诉；thesis 却述判决执行，证据仅被告认违约	呈裁	W1-SELF
 S-070	V75	title	V75.2.6.3	迁移期的散佚记录	H-4	通过		题名“迁移期的散佚记录”为论题而非缺席断言；旧大纲记 2012 年迁移丢失，相符	无需处置	W1-SELF

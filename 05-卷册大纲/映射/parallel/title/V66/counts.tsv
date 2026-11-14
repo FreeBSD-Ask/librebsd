@@ -1,9 +1,9 @@
 at	event	sections_done	titles_done	exceptions_open	note
 2026-10-30T09:26:42	claim	0	0	0	派单者建 claim（session=claude-main-v51-76-20261030）
 2026-10-30T22:52:03	start	0	0	0	S1 盘料：82 节核对；mapping.tsv 实查命中 32 节／127 件／143,835 B，0 行节 50
-2026-10-30T22:52:03	design_ch1_2	27	83	65	第 1–2 章 parts 写入并合并
-2026-10-30T22:52:03	design_ch3_4	51	150	103	第 3–4 章 parts 写入并合并
-2026-10-30T22:52:03	design_ch5_6	72	206	126	第 5–6 章 parts 写入并合并
+2026-10-30T22:52:03	design_ch1_2	27	83	65	第 1—2 章 parts 写入并合并
+2026-10-30T22:52:03	design_ch3_4	51	150	103	第 3—4 章 parts 写入并合并
+2026-10-30T22:52:03	design_ch5_6	72	206	126	第 5—6 章 parts 写入并合并
 2026-10-30T22:52:03	design_complete	82	236	126	第 7 章写入；7 章 82 节齐
 2026-10-30T22:52:03	assemble	82	236	126	lint hard=0 warn=0；sha256=2232bc77fb57
 2026-10-30T22:52:03	audit	82	236	126	audit_title_consistency --check：40 项 FAIL 0

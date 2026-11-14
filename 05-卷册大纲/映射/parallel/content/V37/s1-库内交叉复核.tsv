@@ -68,7 +68,7 @@ V37.13.3.5	共同体接受的界限判定	ref_title	5981	5981	0.221	C	BitKeeper 
 V37.13.4.3	内核 API 的抽象负荷	ref_title	5554	5554	0.265	C	FAQ Version 1.18 [EB/OL]. Andrew Josey 维护。(2025-05-25)[2026-07-23]. <https://www.opengroup.org/austin/papers/posix_faq.h	可推	文献线索（须核全文再定 D1/D2）
 V37.13.4.3	内核 API 的抽象负荷	fulltext_summary	5	5	0.238	C	CIAPTER UNIX FOR BEGINNERS depends not Only On where they end w but how they got there。 Every character yOU type is imme	可推	全文综述候选（D1 型，核对原文后落块）
 V37.13.4.3	内核 API 的抽象负荷	fulltext_summary	82	82	0.238	C	Hans-Jörg Höxer Confidential Computing with OpenBSD — The Next Step Confidential Computing with OpenBSD Agenda • Introdu	可推	全文综述候选（D1 型，核对原文后落块）
-V37.13.4.3	内核 API 的抽象负荷	fulltext_summary	144	144	0.238	C	sndio – OpenBSD audio & MIDI framework for music and desktop applications Alexandre Ratchov alex@caoua.org AsiaBSDCon 20	可推	全文综述候选（D1 型，核对原文后落块）
+V37.13.4.3	内核 API 的抽象负荷	fulltext_summary	144	144	0.238	C	sndio-OpenBSD audio & MIDI framework for music and desktop applications Alexandre Ratchov alex@caoua.org AsiaBSDCon 20	可推	全文综述候选（D1 型，核对原文后落块）
 V37.14.1.4	实现分歧的争点集	sacred	388		0.225	C	19.2 前理解与分歧的产生	可推	史观参照（不作证据，仅定题面归属）
 V37.14.2.2	硬件兼容的报告条目	ref_title	6146	6146	0.244	C	UPDATING 20251001 条目 2025	可推	文献线索（须核全文再定 D1/D2）
 V37.14.4.3	换页行为的观察记	fulltext_summary	148	148	0.247	C	Co nve rting OpenBSD to PIE Pascal Stumpf <pascal@openbs d.org> As i aBS DCo n 2015, March 15, Tok yo Pascal Stumpf: Con	可推	全文综述候选（D1 型，核对原文后落块）
@@ -140,7 +140,7 @@ V37.4.12.3	邮件列表的决策场合	ref_title	2460	2460	0.263	C	OpenBSD 邮�
 V37.4.12.5	团队规模的世代变化	claim	CL-RM-010344		1.30	A	2010 年 Philip M. Gollucci 自述 ruby@ 团队实际仅四人（stas、dinoex、pgollucci、clsung）并为 portupgrade 寻求志愿者——语言团队规模的当事人盘点	可推	claim 复用（S2 先库后网）
 V37.4.14.1	5.x 工程组织的层级	sacred	232		0.298	C	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
 V37.4.14.1	5.x 工程组织的层级	sacred	217		0.232	C	10.7 科学、哲学、宗教的层级	可推	史观参照（不作证据，仅定题面归属）
-V37.4.2.4	共享数据的竞争热点	fulltext_summary	520	520	0.254	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V37.4.2.4	共享数据的竞争热点	fulltext_summary	520	520	0.254	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V37.4.2.4	共享数据的竞争热点	fulltext_summary	527	527	0.254	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V37.4.2.4	共享数据的竞争热点	fulltext_summary	107	107	0.235	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V37.4.9.5	开发窗口的时间压力	fulltext_fact	kf-bell-10023-357	10023	0.268	C	M4040由R. J. Collier、G. D. Helm、J. P. Laico和K. M. Striny在极端时间压力下开发	可推	全文补证候选（S1 命中即复用，D1 型）

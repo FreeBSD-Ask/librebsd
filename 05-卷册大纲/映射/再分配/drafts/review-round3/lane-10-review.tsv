@@ -1,5 +1,5 @@
 object_id	kind	format	fit	dup	verdict	issues	proposed_title	evidence_note
-S-001603	sec	PASS	PASS	WARN	WARN	重复:与 6.2 多核优化与系统性能提升、6.3 ARM 生态扩展主题交叠，须限定为 7.0 个案		来源 S-023022 ARM 多核支持的改进、S-023023 树莓派 RPI2/RPI3 的移植（旧 205.1，NetBSD 7.0 与 ARM 生态深度支持 2015–2017）
+S-001603	sec	PASS	PASS	WARN	WARN	重复:与 6.2 多核优化与系统性能提升、6.3 ARM 生态扩展主题交叠，须限定为 7.0 个案		来源 S-023022 ARM 多核支持的改进、S-023023 树莓派 RPI2/RPI3 的移植（旧 205.1，NetBSD 7.0 与 ARM 生态深度支持 2015—2017）
 S-001610	sec	PASS	PASS	WARN	WARN	重复:与 7.2 ARM64 支持的发展实质同题，仅加版本与别名限定		来源 S-021821 aarch64 支持的开发历程（旧 198.1，NetBSD 8.0 与 64 位 ARM）
 S-001618	sec	PASS	PASS	WARN	WARN	重复:与 8.2 ZFS 集成过程实质同题，未加 9.0 之外的分工限定		来源 S-021987 ZFS 集成的工程挑战、S-021988 GPU 支持的改进（旧 199.1，NetBSD 9.0 发布与 ZFS 集成）
 S-001628	sec	PASS	WARN	PASS	WARN	断代:来源 206.2 覆盖 2010—2026（pkgsrc 3.0／4.0 持续演进），所在章区间为 2024—2026		来源 S-023316 Pkgin 软件包管理器前端、S-023317 二进制软件包仓库（旧 206.2，pkgsrc 与现代软件包管理 2010—2026）
@@ -12,4 +12,4 @@ S-001716	sec	PASS	WARN	WARN	WARN	限定:来源多为 pkgsrc 内 perl／python／
 S-001804	sec	PASS	FAIL	WARN	FAIL	系统错:来源为第 08 卷 FreeBSD 173.1，题面写明 FreeBSD，所在章为 OpenBSD 2.x;断代错:来源区间 2010—2026，章区间 1996—2001;重复:与 2.8 社区贡献者与边缘开发者交叠	FreeBSD 的贡献者多样性与企业参与：企业、地域与基金会（2010—2026）	来源 S-018097 企业工程力量的有组织贡献、S-018098 地域与学术的志愿者多样性（旧 173.1 多元群体贡献 FreeBSD 2010—2026）
 S-001815	sec	PASS	WARN	WARN	WARN	覆盖:来源 154.4 为 FreeBSD 侧 ipfw 与 pf 移植、CARP／if_bridge 线程，ipfilter 无直接条目;限定:题面列入 FreeBSD 原生 ipfw，在 OpenBSD 3.x 章内系统归属不明;重复:与 3.3 pf 的设计、实现与作者群体、3.2 IPFilter 许可证争议交叠		来源 S-017376 ipfw：FreeBSD 原生防火墙框架、S-017377 pf：从 OpenBSD 移植的现代防火墙
 S-001825	sec	PASS	WARN	WARN	WARN	限定:来源 S-023504 为与 FreeBSD malloc／Linux SLAB 的比较，“分配器替换”仅见于旧节路径题（210.1 引入 malloc 替代）;重复:与 4.2 malloc 随机化与内存安全工程、4.12 pf 防火墙的持续演进交叠		来源 S-023503 pf 语法的改进与扩展、S-023504 与 FreeBSD malloc/Linux SLAB 的比较（旧 210.1）
-S-001826	sec	PASS	PASS	WARN	WARN	重复:来源 211.1.2 gcc → pcc／clang 转向前期与 4.4 pcc 探索与 clang 引入准备（2006–2010）同物		来源 S-023770 XFree86 → X.org 转换（2007）、S-023771 gcc → pcc 尝试与 clang/LLVM 转向前期（2010 起）
+S-001826	sec	PASS	PASS	WARN	WARN	重复:来源 211.1.2 gcc → pcc／clang 转向前期与 4.4 pcc 探索与 clang 引入准备（2006—2010）同物		来源 S-023770 XFree86 → X.org 转换（2007）、S-023771 gcc → pcc 尝试与 clang/LLVM 转向前期（2010 起）

@@ -1,17 +1,17 @@
 subsection_id	query	url	source_type	tier	accessed	quote	conflict
-V41.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991—1993）”；本节题为其下位论题	none
 V41.1.1.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.1.1.1	官方站／手册页	https://www.netbsd.org/releases/formal-1.4/NetBSD-1.4.html	联网	A	2026-10-30	---- -- ------- The NetBSD Operating System is a fully functional Open Source Unix-like operating system descended from the Berkeley Networking Release 2 (Net/2), 4.4BSD-Lite, and 4.4BSD-Lite2 sources.	none
-V41.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991—1993）”；本节题为其下位论题	none
 V41.1.1.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.1.1.2	官方站／手册页	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993.	none
-V41.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991—1993）”；本节题为其下位论题	none
 V41.1.1.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.1.1.3	官方站／手册页	https://www.netbsd.org/about/history.html	联网	A	2026-10-30	The History of the NetBSD Project NetBSD took its roots from the original UCB 4.3BSD via the Net/2 release and 386BSD .	none
-V41.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991—1993）”；本节题为其下位论题	none
 V41.1.1.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.1.1.4	官方站／手册页	https://www.netbsd.org/releases/formal-1.0/NetBSD-1.0.html	联网	A	2026-10-30	NetBSD 1.0 is based on 4.4BSD Lite and Berkeley Networking Release 2 sources.	none
-V41.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991–1993）”；本节题为其下位论题	none
+V41.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 1 节“4.3BSD-Net／2 与 386BSD：技术遗产链（前史，1991—1993）”；本节题为其下位论题	none
 V41.1.1.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.1.1.5	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	Kernel interfaces have continued to be refined, and more subsystems and device drivers are shared among the different ports.	none
 V41.1.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 2 节“MI／MD 分层思想的形成”；本节题为其下位论题	none
@@ -1006,19 +1006,19 @@ V41.10.4.4	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026
 V41.10.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“隔离环境与部署形态”；本节题为其下位论题	none
 V41.10.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.10.4.5	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	nvmm_gpa_map () maps into the guest physical memory beginning on address gpa the buffer of size size located at address hva of the calling process' virtual address space.	none
-V41.10.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020—2026）”；本节题为其下位论题	none
 V41.10.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.10.5.1	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	NetBSD Virtual Machine Monitor ( nvmm(4) ) improvements: Allow the host to suspend and resume while a virtual machine is running.	none
-V41.10.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020—2026）”；本节题为其下位论题	none
 V41.10.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.10.5.2	官方站／手册页	https://man.netbsd.org/libnvmm.3	联网	A	2026-10-30	nvmm_gpa_unmap () removes the guest physical memory area beginning on address gpa and of size size from the machine mach .	none
-V41.10.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020—2026）”；本节题为其下位论题	none
 V41.10.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.10.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Enhanced compliance with POSIX.1-2024 and C23 programming interface standards.	none
-V41.10.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020—2026）”；本节题为其下位论题	none
 V41.10.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.10.5.4	官方站／手册页	https://www.netbsd.org/ports/xen/	联网	A	2026-10-30	NetBSD/xen is a port of NetBSD to the Xen virtual machine monitor.	none
-V41.10.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020–2026）”；本节题为其下位论题	none
+V41.10.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 5 节“微型虚拟机与轻量隔离（2020—2026）”；本节题为其下位论题	none
 V41.10.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.10.5.5	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Security and quality assurance Compatibility with WireGuard ®: A new interface, wg(4) , provides a VPN tunnel compatible with the WireGuard ® specification.	none
 V41.11.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“可移植性的技术意义”；本节题为其下位论题	none
@@ -1081,34 +1081,34 @@ V41.11.4.4	官方站／手册页	https://www.netbsd.org/ports/	联网	A	2026-10-
 V41.11.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 4 节“技术路线中的工程限制”；本节题为其下位论题	none
 V41.11.4.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.4.5	官方站／手册页	https://www.netbsd.org/releases/formal-5/NetBSD-5.0.html	联网	A	2026-10-30	Your generous donations during the 2007 fund drive allowed us to sponsor much of the above development in the areas of SMP performance and scalability.	none
-V41.11.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000—2026）”；本节题为其下位论题	none
 V41.11.5.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.5.1	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Machine-independent device drivers New machine-independent drivers: apei(4) - New driver for ACPI Platform Error Interfaces.	none
-V41.11.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000—2026）”；本节题为其下位论题	none
 V41.11.5.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.5.2	官方站／手册页	https://www.netbsd.org/releases/formal-10/NetBSD-10.0.html	联网	A	2026-10-30	Improved drivers: Synced the GPU drivers in the kernel with Linux 5.6, bringing lots of new hardware support for accelerated graphics, for Intel (via i915 ), Nvidia (via nouveau ), and AMD (via amdgpu and radeon ) graphics processors.	none
-V41.11.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000—2026）”；本节题为其下位论题	none
 V41.11.5.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.5.3	官方站／手册页	https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html	联网	A	2026-10-30	Initial support for the Qualcomm Snapdragon X Elite platform.	none
-V41.11.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000—2026）”；本节题为其下位论题	none
 V41.11.5.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.5.4	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	Formal releases of NetBSD are intended to provide a stable, supported platform on which people can base their work.	none
-V41.11.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000–2026）”；本节题为其下位论题	none
+V41.11.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 5 节“技术路线的代际影响（2000—2026）”；本节题为其下位论题	none
 V41.11.5.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.5.5	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	NetBSD Formal Releases The latest formal release is NetBSD 11.0 .	none
-V41.11.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8—11.0（1993—2026）”；本节题为其下位论题	none
 V41.11.6.1	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.6.1	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	Information about NetBSD 1.2 Information about NetBSD 1.2 NetBSD 1.2 was the fifth release of the NetBSD operating system.	none
-V41.11.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8—11.0（1993—2026）”；本节题为其下位论题	none
 V41.11.6.2	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.6.2	官方站／手册页	https://www.netbsd.org/releases/formal.html	联网	A	2026-10-30	Because they are well-tested and made only when ready, formal releases are useful for people who don't want to be on the " bleeding edge " of development, or who just want to run applications.	none
-V41.11.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8—11.0（1993—2026）”；本节题为其下位论题	none
 V41.11.6.3	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.6.3	官方站／手册页	https://www.netbsd.org/releases/formal-1.2/	联网	A	2026-10-30	NetBSD 1.2 was released on October 4, 1996.	none
-V41.11.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8—11.0（1993—2026）”；本节题为其下位论题	none
 V41.11.6.4	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.6.4	官方站／手册页	https://www.netbsd.org/releases/formal-1.3/	联网	A	2026-10-30	The latest patch release, NetBSD 1.3.3, was released on December 23, 1998.	none
-V41.11.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8–11.0（1993–2026）”；本节题为其下位论题	none
+V41.11.6.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 6 节“版本发行时间线：NetBSD 0.8—11.0（1993—2026）”；本节题为其下位论题	none
 V41.11.6.5	题名判据	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语、T2 禁日期起头、S2 上下位一致、S3 同节平行；句式见风格规范 §二	none
 V41.11.6.5	官方站／手册页	https://www.netbsd.org/releases/formal-1.0/NetBSD-1.0.html	联网	A	2026-10-30	Demetriou) Newsgroups: comp.os.386bsd.announce Subject: Announcing the release of NetBSD 1.0 Date: 8 Nov 1994 11:17:59 -0800 I am pleased to announce the availability of release 1.0 of the NetBSD operating system, a freely available and redistributable BSD system that runs on a variety of hardware platforms.	none
 V41.12.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“交叉构建的工作流：一套构建、多平台产出”；本节题为其下位论题	none

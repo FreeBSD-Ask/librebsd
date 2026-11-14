@@ -410,19 +410,19 @@ V60.4.7.4	泄漏位置	https://man.freebsd.org/cgi/man.cgi?query=termcap&sektion
 V60.4.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“终端抽象的软件工程意义”；本节题为其下位论题	none
 V60.4.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.4.7.5	复用面	https://man.freebsd.org/cgi/man.cgi?query=tmux&sektion=1&format=html	联网	A	2026-10-30	A session is a single collection of pseudo terminals under the management of tmux .	none
-V60.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007– ）”；本节题为其下位论题	none
+V60.4.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007— ）”；本节题为其下位论题	none
 V60.4.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.4.8.1	分离与重连	https://man.freebsd.org/cgi/man.cgi?query=tmux&sektion=1&format=html	联网	A	2026-10-30	tmux may be detached from a screen and continue running in the background, then later reat- tached.	none
-V60.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007– ）”；本节题为其下位论题	none
+V60.4.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007— ）”；本节题为其下位论题	none
 V60.4.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.4.8.2	伪终端结构	https://man.freebsd.org/cgi/man.cgi?query=tmux&sektion=1&format=html	联网	A	2026-10-30	Any number of tmux instances may connect to the same session, and any number of windows may be present in the same session.	none
-V60.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007– ）”；本节题为其下位论题	none
+V60.4.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007— ）”；本节题为其下位论题	none
 V60.4.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.4.8.3	三级单位	https://man.freebsd.org/cgi/man.cgi?query=tmux&sektion=1&format=html	联网	A	2026-10-30	When tmux is started it creates a new session with a single window and dis- plays it on screen.	none
-V60.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007– ）”；本节题为其下位论题	none
+V60.4.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007— ）”；本节题为其下位论题	none
 V60.4.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.4.8.4	持久化价值	https://man.freebsd.org/cgi/man.cgi?query=tmux&sektion=1&format=html	联网	A	2026-10-30	Once all sessions are killed, tmux exits.	none
-V60.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007– ）”；本节题为其下位论题	none
+V60.4.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“tmux 与终端复用器的 BSD 生态位置（2007— ）”；本节题为其下位论题	none
 V60.4.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.4.8.5	终端库衔接	https://man.freebsd.org/cgi/man.cgi?query=curses&sektion=3&format=html	联网	A	2026-10-30	ncurses permits control of the terminal screen's contents;	none
 V60.5.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“BSD socket API 的形成”；本节题为其下位论题	none
@@ -687,19 +687,19 @@ V60.6.8.4	声明的调整	https://www.freebsd.org/copyright/license/	联网	A	20
 V60.6.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 8 节“Unix 邮件软件的历史归属问题”；本节题为其下位论题	none
 V60.6.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.6.8.5	编纂处置	https://docs.freebsd.org/44doc/usd/07.mail/paper.html	联网	A	2026-10-30	Version 5.5 March 14, 1997	none
-V60.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003–2015）”；本节题为其下位论题	none
+V60.6.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003—2015）”；本节题为其下位论题	none
 V60.6.9.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.6.9.1	发信域授权	https://www.rfc-editor.org/rfc/rfc7208.txt	联网	A	2026-10-30	ADMDs can explicitly authorize the hosts that are allowed to use their domain names, and a receiving host can check such authorization.	none
-V60.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003–2015）”；本节题为其下位论题	none
+V60.6.9.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003—2015）”；本节题为其下位论题	none
 V60.6.9.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.6.9.2	签名与作者	https://www.rfc-editor.org/rfc/rfc6376.txt	联网	A	2026-10-30	DKIM separates the question of the identity of the Signer of the message from the purported author of the message.	none
-V60.6.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003–2015）”；本节题为其下位论题	none
+V60.6.9.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003—2015）”；本节题为其下位论题	none
 V60.6.9.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.6.9.3	域级策略	https://www.rfc-editor.org/rfc/rfc7489.txt	联网	A	2026-10-30	DMARC is a scalable mechanism by which a mail-originating organization can express domain-level policies and preferences for message validation, disposition, and reporting	none
-V60.6.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003–2015）”；本节题为其下位论题	none
+V60.6.9.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003—2015）”；本节题为其下位论题	none
 V60.6.9.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.6.9.4	回馈报告	https://www.rfc-editor.org/rfc/rfc7489.txt	联网	A	2026-10-30	Receivers can provide feedback to Domain Owners about the use of their domains;	none
-V60.6.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003–2015）”；本节题为其下位论题	none
+V60.6.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 6 章第 9 节“SPF、DKIM 与 DMARC：邮件认证标准的形成（2003—2015）”；本节题为其下位论题	none
 V60.6.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；甲族；S1	none
 V60.6.9.5	定稿年	https://www.rfc-editor.org/rfc/rfc7208.txt	联网	A	2026-10-30	RFC 7208 Sender Policy Framework (SPF) April 2014	none
 V60.7.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 7 章第 1 节“DNS 与 Berkeley 软件环境”；本节题为其下位论题	none
@@ -1123,50 +1123,50 @@ V60.10.4.4	主作者	https://www.opensmtpd.org/	联网	A	2026-10-30	OpenSMTPD is
 V60.10.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 10 章第 4 节“OpenSMTPD”；本节题为其下位论题	none
 V60.10.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.10.4.5	替代关系	https://www.opensmtpd.org/	联网	A	2026-10-30	OpenSMTPD 7.8 released October 30, 2025	none
-V60.11.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代–）”；本节题为其下位论题	none
+V60.11.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代—）”；本节题为其下位论题	none
 V60.11.1.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.11.1.1	统一解析	https://man.openbsd.org/mandoc	联网	A	2026-10-30	By default, mandoc reads mdoc(7) or man(7) text from stdin and produces -T locale output.	none
-V60.11.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代–）”；本节题为其下位论题	none
+V60.11.1.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代—）”；本节题为其下位论题	none
 V60.11.1.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.11.1.2	宏包兼容	https://man.openbsd.org/mandoc	联网	A	2026-10-30	The mandoc utility formats manual pages for display.	none
-V60.11.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代–）”；本节题为其下位论题	none
+V60.11.1.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代—）”；本节题为其下位论题	none
 V60.11.1.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.11.1.3	替代动机	https://www.openbsd.org/goals.html	联网	A	2026-10-30	Integrate good code from any source with acceptable licenses .	none
-V60.11.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代–）”；本节题为其下位论题	none
+V60.11.1.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代—）”；本节题为其下位论题	none
 V60.11.1.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.11.1.4	系统内位置	https://man.openbsd.org/mandoc	联网	A	2026-10-30	-c Copy the formatted manual pages to the standard output without using less(1) to paginate them.	none
-V60.11.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代–）”；本节题为其下位论题	none
+V60.11.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 1 节“mandoc（2000 年代—）”；本节题为其下位论题	none
 V60.11.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.11.1.5	质量检测	https://man.openbsd.org/mandoc	联网	A	2026-10-30	mandoc(1) - OpenBSD manual pages	none
-V60.11.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014–）”；本节题为其下位论题	none
+V60.11.2.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014—）”；本节题为其下位论题	none
 V60.11.2.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.11.2.1	三项功能	https://man.openbsd.org/signify	联网	A	2026-10-30	The signify utility creates and verifies cryptographic signatures.	none
-V60.11.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014–）”；本节题为其下位论题	none
+V60.11.2.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014—）”；本节题为其下位论题	none
 V60.11.2.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.11.2.2	密钥格式	https://man.openbsd.org/signify	联网	A	2026-10-30	signify -G [ -n ] [ -c comment ] -p pubkey -s seckey	none
-V60.11.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014–）”；本节题为其下位论题	none
+V60.11.2.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014—）”；本节题为其下位论题	none
 V60.11.2.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.11.2.3	发行校验	https://man.openbsd.org/signify	联网	A	2026-10-30	A signature verifies the integrity of a message .	none
-V60.11.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014–）”；本节题为其下位论题	none
+V60.11.2.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014—）”；本节题为其下位论题	none
 V60.11.2.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.11.2.4	信任链取向	https://man.openbsd.org/signify	联网	A	2026-10-30	-V [ -eqz ] [ -p pubkey ] [ -t keytype ] [ -x sigfile ] -m message	none
-V60.11.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014–）”；本节题为其下位论题	none
+V60.11.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 2 节“signify（2014—）”；本节题为其下位论题	none
 V60.11.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.11.2.5	许可动因	https://www.openbsd.org/goals.html	联网	A	2026-10-30	the GPL is not acceptable when adding new code, NDAs are never acceptable.	none
-V60.11.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014–）”；本节题为其下位论题	none
+V60.11.3.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014—）”；本节题为其下位论题	none
 V60.11.3.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；甲族；S1	none
 V60.11.3.1	分叉时点	https://www.libressl.org/	联网	A	2026-10-30	LibreSSL is a version of the TLS/crypto stack forked from OpenSSL in 2014	none
 V60.11.3.1	Heartbleed 与 fork	旧大纲-20261023/第10卷-openbsd的历史/第227章-libressl的fork与早期发展/227.1-heartbleed漏洞20144与libressl的诞生/227.1.1-要点20140407OpenSSL爆发HeartbleedCVE20140160.md	史料	A	2026-10-30	2014-04-07 OpenSSL 爆发 Heartbleed（CVE-2014-0160）严重漏洞，允许远程攻击者通过 TLS heartbeat extension 读取服务器内存（最多 64KB/请求），影响全球约 17% 的 HTTPS 站点	none
-V60.11.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014–）”；本节题为其下位论题	none
+V60.11.3.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014—）”；本节题为其下位论题	none
 V60.11.3.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.11.3.2	清理目标	https://www.libressl.org/	联网	A	2026-10-30	with goals of modernizing the codebase, improving security, and applying best practice development processes.	none
-V60.11.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014–）”；本节题为其下位论题	none
+V60.11.3.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014—）”；本节题为其下位论题	none
 V60.11.3.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；己族；S1	none
 V60.11.3.3	自有库	https://www.libressl.org/	联网	A	2026-10-30	a new TLS library, designed to make it easier to write foolproof applications	none
-V60.11.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014–）”；本节题为其下位论题	none
+V60.11.3.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014—）”；本节题为其下位论题	none
 V60.11.3.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.11.3.4	兼容边界	https://www.libressl.org/	联网	A	2026-10-30	LibreSSL releases contain several parts:	none
-V60.11.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014–）”；本节题为其下位论题	none
+V60.11.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 11 章第 3 节“LibreSSL（2014—）”；本节题为其下位论题	none
 V60.11.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.11.3.5	接受度	https://www.libressl.org/	联网	A	2026-10-30	LibreSSL is supported financially by the OpenBSD Foundation and the OpenBSD Project .	none
 V60.12.1.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 12 章第 1 节“pkg”；本节题为其下位论题	none
@@ -1383,19 +1383,19 @@ V60.13.7.4	客户端库	https://docs.freebsd.org/en/books/porters-handbook/	联�
 V60.13.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 7 节“外部数据库在 BSD 平台的部署：MySQL 移植与 Ports 生态”；本节题为其下位论题	none
 V60.13.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.13.7.5	分层位置	https://www.postgresql.org/about/	联网	A	2026-10-30	PostgreSQL runs on all major operating systems	none
-V60.13.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009–2026）”；本节题为其下位论题	none
+V60.13.8.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009—2026）”；本节题为其下位论题	none
 V60.13.8.1	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.13.8.1	起源场景	https://valkey.io/	联网	A	2026-10-30	Valkey is an open source (BSD) high-performance key/value datastore that supports a variety of workloads such as caching, message queues, and can act as a primary database.	none
-V60.13.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009–2026）”；本节题为其下位论题	none
+V60.13.8.2	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009—2026）”；本节题为其下位论题	none
 V60.13.8.2	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；戊族；S1	none
 V60.13.8.2	许可调整	https://valkey.io/	联网	A	2026-10-30	Valkey Latest release Valkey 9.1.3	none
-V60.13.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009–2026）”；本节题为其下位论题	none
+V60.13.8.3	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009—2026）”；本节题为其下位论题	none
 V60.13.8.3	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；丙族；S1	none
 V60.13.8.3	分叉动因	https://valkey.io/	联网	A	2026-10-30	Valkey is an open source (BSD) high-performance key/value datastore	none
-V60.13.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009–2026）”；本节题为其下位论题	none
+V60.13.8.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009—2026）”；本节题为其下位论题	none
 V60.13.8.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.13.8.4	时序对照	https://docs.oracle.com/cd/E17076_02/html/index.html	联网	B	2026-10-30	11.2.5.3 December 19, 2011	none
-V60.13.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009–2026）”；本节题为其下位论题	none
+V60.13.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 8 节“Redis、NoSQL 与商业数据库边界之争（2009—2026）”；本节题为其下位论题	none
 V60.13.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1；乙族；S1	none
 V60.13.8.5	立场局限	https://valkey.io/	联网	A	2026-10-30	Durability and Beyond October 29, 2026	none
 V60.13.9.1	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 13 章第 9 节“BSD 软件源流与 Berkeley 科研传统的区别”；本节题为其下位论题	none

@@ -222,7 +222,7 @@ V52.6.4.4	4	iflib 对驱动样板代码的收拢	in	direct	keep	引文“It is d
 V52.6.4.5	4	驱动框架的三层职能划分	in	partial	keep	引文“There are three logical components to iflib each of which is described in its own manual page.”证三层分立；“设备无关／相关／收发”的名目未在引文，thesis 收窄。					不改（thesis 收窄）
 V52.6.4.6	4	SCTP 多流与多宿主的内核实现	in	partial	rewrite	引文“The SCTP protocol directly supports multi-homing.”只证多宿主，“多流”无引文，缩题。	SCTP 协议的多宿主支持	SCTP 协议栈直接支持多宿主。			改题
 V52.6.5.1	5	WireGuard 以极简接口为设计目标	in	direct	keep	引文“WireGuard aims to be as easy to configure and deploy as SSH.”直证设计目标。					不改
-V52.6.5.2	5	公钥交换替代连接状态管理	in	direct	keep	引文“A VPN connection is made simply by exchanging very simple public keys – exactly like exchanging SSH keys – and all the rest is transparently handled by WireGuard.”直证替代。					不改
+V52.6.5.2	5	公钥交换替代连接状态管理	in	direct	keep	引文“A VPN connection is made simply by exchanging very simple public keys-exactly like exchanging SSH keys-and all the rest is transparently handled by WireGuard.”直证替代。					不改
 V52.6.5.3	5	可审计性对代码规模的要求	in	direct	keep	引文“It is meant to be easily implemented in very few lines of code, and easily auditable for security vulnerabilities.”直证规模约束。					不改
 V52.6.5.4	5	从 Linux 内核到 BSD 的移植起点	in	direct	keep	引文“Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android)”直证次序；与 4.5.6 同句，两节各证一层（传播史／实现本体），保留。					不改
 V52.6.5.5	5	内核内实现的吞吐优势	in	partial	rewrite	引文“…WireGuard lives inside the Linux kernel means that secure networking can be very high-speed”只陈 Linux 侧主张，未及“BSD 侧的可行边界”，改题限主张本身。	内核内实现的吞吐主张	官方以“置于 Linux 内核”解释其高速，BSD 侧实现形态另见本体卷。			改题

@@ -1104,199 +1104,199 @@ new_ch	new_chapter	old_chapter	old_section	rows	bytes	sample_titles
 4	早期内核史料与邮件考古	405	33.25	1	1661	405.33.25 198.24 linus-next集成树
 4	早期内核史料与邮件考古	405	33.26	1	943	405.33.26 198.25 LLM标注与合规
 4	早期内核史料与邮件考古	405	33.28	1	928	405.33.28 198.27 MAINTAINERS列表变革
-5	BSD–Linux 技术承袭	395	1.4	1	13139	395.1.4 154.3 BSD谱系
-5	BSD–Linux 技术承袭	395	1.5	1	1245	395.1.5 154.4 杂项
-5	BSD–Linux 技术承袭	395	2.3	1	15184	395.2.3 Linux社区MarkCaveAyland用QEMU仿真sunhme卡时发现内核
-5	BSD–Linux 技术承袭	395	2.4	1	15852	395.2.4 Linux社区LouisLiu讨论SunNetraE4900上SILO引导加载器
-5	BSD–Linux 技术承袭	395	2.5	1	15575	395.2.5 Linux社区ChrisNewport就内核崩溃转储设计建议在SPARC上借鉴S
-5	BSD–Linux 技术承袭	395	2.6	1	15514	395.2.6 Linux社区在讨论允许sparc64sbus建立大于1MB映射的补丁时补丁作者
-5	BSD–Linux 技术承袭	395	2.7	1	15520	395.2.7 Linux社区LudwigRydberg提交为SPARC架构增加clone3系统
-5	BSD–Linux 技术承袭	395	2.8	1	15559	395.2.8 Linux社区SergeiTrofimovich指出glibc手册把O_NDEL
-5	BSD–Linux 技术承袭	395	2.11	1	11542	395.2.11 155.4 许可证
-5	BSD–Linux 技术承袭	395	3.3	1	16040	395.3.3 Linux社区AndyLutomirski在linuxapi上与EricBied
-5	BSD–Linux 技术承袭	395	3.4	1	4472	395.3.4 Linux社区AndyLutomirski在openat2OPENAT2_REG
-5	BSD–Linux 技术承袭	395	3.7	1	15951	395.3.7 Linux社区SukadevBhattiprolu发布clone3系统调用补丁集
-5	BSD–Linux 技术承袭	395	3.8	1	16059	395.3.8 Linux社区MADV_FREE提案引用jemalloc实践指出该能力在BSD与
-5	BSD–Linux 技术承袭	395	3.9	1	15770	395.3.9 Linux社区PaoloBonzini在评论FreeBSDCapsicum移植补
-5	BSD–Linux 技术承袭	395	3.10	1	15845	395.3.10 Linux社区ChristianBrauner在close_range系统调用补
-5	BSD–Linux 技术承袭	395	3.11	1	15755	395.3.11 Linux社区LinusTorvalds在mincore特权化讨论中转引Matt
-5	BSD–Linux 技术承袭	395	3.12	1	15795	395.3.12 Linux社区CambdaZhu发现Linux的kill允许把线程ID当作进程I
-5	BSD–Linux 技术承袭	395	3.13	1	815	395.3.13 Linux社区JoshTriplett在CLONE_FD补丁讨论中回应David
-5	BSD–Linux 技术承袭	395	4.2	1	1054	395.4.2 157.1 杂项
-5	BSD–Linux 技术承袭	395	4.3	1	5834	395.4.3 157.2 BSD谱系
-5	BSD–Linux 技术承袭	395	4.5	1	16108	395.4.5 Linux社区内核构建解耦用户态头文件起因之一即用户态头可能处于不兼容许可证并提
-5	BSD–Linux 技术承袭	395	4.6	1	16063	395.4.6 Linux社区AlanCox回应链接器表系列关于模块许可标记的讨论指出模块与内核
-5	BSD–Linux 技术承袭	395	4.7	1	15828	395.4.7 Linux社区NateKarstens在closeonfork补丁争议中为POS
-5	BSD–Linux 技术承袭	395	4.8	1	16052	395.4.8 Linux社区akpm转发的CreatearchKconfig补丁中Linus建
-5	BSD–Linux 技术承袭	395	4.9	1	11166	395.4.9 Linux社区PeterZijlstra就freelist补丁征询Cameron
-5	BSD–Linux 技术承袭	395	5.2	1	16076	395.5.2 Linux社区Sun3x平台的ESPSCSI驱动清理补丁属BSD谱系硬件Sun3
-5	BSD–Linux 技术承袭	395	5.3	1	15998	395.5.3 Linux社区补丁清理aic79xx与aic7xxx驱动的MODULE_PARM
-5	BSD–Linux 技术承袭	395	5.4	1	15785	395.5.4 Linux社区MarkFortescue在sparc32上调试ESP与QLGCI
-5	BSD–Linux 技术承袭	395	5.5	1	15830	395.5.5 Linux社区用户态iSCSItarget库选型讨论中JeffGarzik表示已
-5	BSD–Linux 技术承袭	395	5.6	1	15893	395.5.6 Linux社区针对aic7xxx语法文件缺分号的小补丁Gibbs表示FreeBS
-5	BSD–Linux 技术承袭	395	5.7	1	15896	395.5.7 Linux社区LSImpt2sas驱动Kconfig配置文件包含GNUGPL许可
-5	BSD–Linux 技术承袭	395	5.8	1	15998	395.5.8 Linux社区MODULE_VERSION补丁的diff暴露驱动注释的历史来源作
-5	BSD–Linux 技术承袭	395	5.9	1	15987	395.5.9 Linux社区2002年5月DouglasGilbert回应Linux2425S
-5	BSD–Linux 技术承袭	395	5.10	1	15692	395.5.10 Linux社区DouglasGilbert发布sg3_utils工具包声明已移植
-5	BSD–Linux 技术承袭	395	5.11	1	15878	395.5.11 Linux社区磁带stioctl文档MT_ST_SYSV选项的语义颠倒问题Aar
-5	BSD–Linux 技术承袭	395	5.12	1	15999	395.5.12 Linux社区kernelbugzilla80711关于SG_FLAG_LUN_
-5	BSD–Linux 技术承袭	395	5.13	1	15880	395.5.13 Linux社区AndreHedrick转发LinusTorvalds关于维护者否
-5	BSD–Linux 技术承袭	395	6.2	1	15872	395.6.2 Linux社区AmeerHamza提议为openat增加O_EMPTY_PATH
-5	BSD–Linux 技术承袭	395	6.3	1	15828	395.6.3 Linux社区fsync_range与fsync语义讨论中ChristophHe
-5	BSD–Linux 技术承袭	395	6.4	1	15726	395.6.4 Linux社区DavidDrysdale在CLONE_FD讨论中直接以FreeB
-5	BSD–Linux 技术承袭	395	6.5	1	15847	395.6.5 Linux社区DavidMiller在BTRFS分区起始位置的讨论中指出Sun磁
-5	BSD–Linux 技术承袭	395	6.6	1	15909	395.6.6 Linux社区AlViro在POSIX分歧讨论中把BSD系Unix的实际行为抬升
-5	BSD–Linux 技术承袭	395	6.7	1	15724	395.6.7 Linux社区fuseuapi类型补丁引发BSD可移植性讨论ArndBergma
-5	BSD–Linux 技术承袭	395	6.8	1	15997	395.6.8 Linux社区在用户命名空间补丁讨论中TrondMyklebust建议EricB
-5	BSD–Linux 技术承袭	395	6.9	1	15980	395.6.9 Linux社区LSF与MM大会参会意向登记中AntonAltaparmakov陈
-5	BSD–Linux 技术承袭	395	6.10	1	15689	395.6.10 Linux社区在storefree路径遍历的性能讨论中ChristophHell
-5	BSD–Linux 技术承袭	395	6.11	1	16035	395.6.11 Linux社区AlViro提交vfsgit分支workufs的UFS清理系列共1
-5	BSD–Linux 技术承袭	395	6.12	1	15972	395.6.12 Linux社区JonathanKowalski评审pidfd轮询支持时建议改用P
-5	BSD–Linux 技术承袭	395	6.13	1	16043	395.6.13 Linux社区utimensat写权限检查修复补丁的评审回帖中MichaelKe
-5	BSD–Linux 技术承袭	395	6.14	1	15828	395.6.14 Linux社区MichaelKerrisk在linuxfsdevel报告writ
-5	BSD–Linux 技术承袭	395	6.15	1	15870	395.6.15 Linux社区LinusTorvalds在fsufs挂载崩溃的讨论中公开为UFS
-5	BSD–Linux 技术承袭	395	6.16	1	15892	395.6.16 Linux社区AurelienJarno在FS_IOC_GETFLAGS与FS_
-5	BSD–Linux 技术承袭	395	6.17	1	15490	395.6.17 Linux社区2005年SergeEHallyn在命名空间隔离讨论中引用自己实现
-5	BSD–Linux 技术承袭	395	6.18	1	15847	395.6.18 Linux社区ThomasGleixner就selfteststests_sys
-5	BSD–Linux 技术承袭	395	6.19	1	15988	395.6.19 Linux社区EricBiederman在无mntput发生IO的补丁讨论中说明
-5	BSD–Linux 技术承袭	395	6.20	1	15794	395.6.20 Linux社区PhillipPotter向fsufs提交注释格式补丁改动s_u2
-5	BSD–Linux 技术承袭	395	6.21	1	15908	395.6.21 Linux社区MatthewWilcox在iomap_writepage移除讨论
-5	BSD–Linux 技术承袭	395	6.22	1	15536	395.6.22 Linux社区JanBlunck为联合文件系统新增whiteout文件类型时直接
-5	BSD–Linux 技术承袭	395	6.23	1	15678	395.6.23 Linux社区2025年ChristianBrauner提交让core_patt
-5	BSD–Linux 技术承袭	395	6.24	1	15628	395.6.24 Linux社区在FUSE于close返回EBADF的争论中被引的AntonioS
-5	BSD–Linux 技术承袭	395	6.25	1	16014	395.6.25 Linux社区AmirGoldstein在原子文件数据替换接口之争中提议直接沿用
-5	BSD–Linux 技术承袭	395	6.26	1	16076	395.6.26 Linux社区fsufs挂载几何校验补丁论证圆柱摘要缓冲区需按ufs1与ufs2
-5	BSD–Linux 技术承袭	395	6.27	1	15989	395.6.27 Linux社区AlViro回应UFS的UBSAN移位越界报告称将复活旧补丁为uf
-5	BSD–Linux 技术承袭	395	6.28	1	13120	395.6.28 Linux社区ChristianBrauner在文件系统信任与维护治理议题中延续
-5	BSD–Linux 技术承袭	395	7.2	1	15980	395.7.2 Linux社区AndrewMorton汇总2559mm1补丁时BillDavid
-5	BSD–Linux 技术承袭	395	7.3	1	15785	395.7.3 Linux社区Linux地址空间随机化RFC讨论中作者以OpenBSD的mmap
-5	BSD–Linux 技术承袭	395	7.4	1	15963	395.7.4 Linux社区ChristophHellwig于2002年提交的BKchange
-5	BSD–Linux 技术承袭	395	7.5	1	15729	395.7.5 Linux社区24内核reversemapping之争中Biederman明确以
-5	BSD–Linux 技术承袭	395	7.6	1	15813	395.7.6 Linux社区2000年7月17日VM替换算法讨论中AlanCox以FreeBS
-5	BSD–Linux 技术承袭	395	7.7	1	15986	395.7.7 Linux社区2004年2月18日invalidate_mmap_range非G
-5	BSD–Linux 技术承袭	395	7.8	1	15950	395.7.8 Linux社区2021年8月移除MAP_DENYWRITE讨论中DavidLai
-5	BSD–Linux 技术承袭	395	7.9	1	15703	395.7.9 Linux社区BenjaminCRLaHaise在本封中引用RikvanRiel
-5	BSD–Linux 技术承袭	395	7.10	1	15946	395.7.10 Linux社区同一mincore线程延续VlastimilBabka在权限与语义
-5	BSD–Linux 技术承袭	395	7.11	1	15832	395.7.11 Linux社区getrusageru_maxrss补丁的变更日志记录旧测试程序触
-5	BSD–Linux 技术承袭	395	7.12	1	15777	395.7.12 Linux社区2001年AlanCox在无盘节点swap讨论的回复帖中引有nei
-5	BSD–Linux 技术承袭	395	7.13	1	15574	395.7.13 Linux社区2019年6月TejunHeo就memcg的get_mem_cgr
-5	BSD–Linux 技术承袭	395	7.14	1	15932	395.7.14 Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral
-5	BSD–Linux 技术承袭	395	7.15	1	16043	395.7.15 Linux社区LinusTorvalds就x86模块依赖外部PAGE_KERNE
-5	BSD–Linux 技术承袭	395	7.16	1	15952	395.7.16 Linux社区FreeBSDpageoutdaemon算法讨论DanielPhi
-5	BSD–Linux 技术承袭	395	7.17	1	16048	395.7.17 Linux社区khugepagedmTHP讨论中KirylShutsemau转引
-5	BSD–Linux 技术承袭	395	7.18	1	15965	395.7.18 Linux社区PedroFalcato在msealRFC讨论中以OpenBSD动
-5	BSD–Linux 技术承袭	395	7.19	1	15589	395.7.19 Linux社区NadiaChambers在64k基础页大小的LSFMMBPF讨论
-5	BSD–Linux 技术承袭	395	7.20	1	16009	395.7.20 Linux社区20000524linuxmm讨论234版VM队列重构RFC时Ma
-5	BSD–Linux 技术承袭	395	7.21	1	3764	395.7.21 Linux社区讨论kmalloc_obj类型化slab缓存时引用iOS与XNU的
-5	BSD–Linux 技术承袭	395	8.2	1	15760	395.8.2 Linux社区AlanCox对BSDJailLSM补丁提出接口设计意见认为jai
-5	BSD–Linux 技术承袭	395	8.3	1	15934	395.8.3 Linux社区perskb控制消息补丁讨论中DavidMiller在Stephe
-5	BSD–Linux 技术承袭	395	8.4	1	16080	395.8.4 Linux社区TIME_WAIT状态行为讨论中参与者追问Linux为何在SO_R
-5	BSD–Linux 技术承袭	395	8.5	1	15726	395.8.5 Linux社区DougMcNaught指出Stevens教材描述的是44BSDL
-5	BSD–Linux 技术承袭	395	8.6	1	16018	395.8.6 Linux社区VladYasevich讨论组播自收行为差异时说明客户正从BSD迁
-5	BSD–Linux 技术承袭	395	8.7	1	15922	395.8.7 Linux社区PekkaSavola转发默认地址选择性能顾虑称所引顾虑出自一位B
-5	BSD–Linux 技术承袭	395	8.8	1	16060	395.8.8 Linux社区EricDumazet在tcp多端口bind修复的问题讨论中转发用
-5	BSD–Linux 技术承袭	395	8.9	1	16050	395.8.9 Linux社区讨论IPv6UDP绑定语义时面对为何保留这一反直觉行为的提问Eri
-5	BSD–Linux 技术承袭	395	8.10	1	15782	395.8.10 Linux社区VegardNossum质疑CONFIG_NET_KEY帮助文本与
-5	BSD–Linux 技术承袭	395	8.11	1	15573	395.8.11 Linux社区StephenHemminger用jhash2替换ipv6addr
-5	BSD–Linux 技术承袭	395	8.12	1	15873	395.8.12 Linux社区MichaelSTsirkin在流量控制与端口镜像测试讨论中引用s
-5	BSD–Linux 技术承袭	395	8.13	1	15884	395.8.13 Linux社区TomaszTorcz在netdev转发FreeBSD53网络栈改
-5	BSD–Linux 技术承袭	395	8.14	1	15974	395.8.14 Linux社区Davem以BSDAPI兼容性为由否决了一个DiffServ路由补
-5	BSD–Linux 技术承袭	395	8.15	1	15987	395.8.15 Linux社区IPv6流标签补丁评审中FlorentFourcot反对该新行为并
-5	BSD–Linux 技术承袭	395	8.16	1	15853	395.8.16 Linux社区虚拟CAN网络设备驱动补丁入树vcanc的模块许可证声明为Dual
-5	BSD–Linux 技术承袭	395	8.17	1	16073	395.8.17 Linux社区EvgeniyPolyakov为把CARP放进内核而非用户态辩护称
-5	BSD–Linux 技术承袭	395	8.18	1	15764	395.8.18 Linux社区jamal转发LennertBuytenhek关于etherip的
-5	BSD–Linux 技术承袭	395	8.19	1	16058	395.8.19 Linux社区关于内核层socket包装符是否该用EXPORT_SYMBOL_G
-5	BSD–Linux 技术承袭	395	8.20	1	15816	395.8.20 Linux社区TCPBIC11讨论中提出是否考虑YeeTingLi的ABC补丁并
-5	BSD–Linux 技术承袭	395	8.21	1	16071	395.8.21 Linux社区i40e驱动故障讨论中引用FreeBSD侧修复并被IntelFre
-5	BSD–Linux 技术承袭	395	8.22	1	15923	395.8.22 Linux社区XDP讨论中ThomasGraf引述FlorianWestphal
-5	BSD–Linux 技术承袭	395	8.23	1	15939	395.8.23 Linux社区RolandDreier的InfiniBandMAD补丁与其系列补
-5	BSD–Linux 技术承袭	395	8.24	1	15680	395.8.24 Linux社区MichaelWu梳理Linux80211现状时指出Madwifi
-5	BSD–Linux 技术承袭	395	8.25	1	15951	395.8.25 Linux社区Linux挪用BSD代码指控的争论中AdrianBunk澄清两件被
-5	BSD–Linux 技术承袭	395	8.26	1	15890	395.8.26 Linux社区IPsec在2561的讨论中USAGI的KazunoriMiyaz
-5	BSD–Linux 技术承袭	395	8.27	1	15872	395.8.27 Linux社区IPv6隧道链路本地地址自动配置讨论中PekkaSavola以Fr
-5	BSD–Linux 技术承袭	395	8.28	1	15896	395.8.28 Linux社区VladYasevich接续FreeBSD客户机导致skb_war
-5	BSD–Linux 技术承袭	395	8.29	1	15932	395.8.29 Linux社区ipsysctltxt字母序整理补丁触及tcp_stdurg说明文
-5	BSD–Linux 技术承袭	395	8.30	1	16045	395.8.30 Linux社区AdrianChadd在排队时延与bufferbloat讨论中自述
-5	BSD–Linux 技术承袭	395	8.31	1	15976	395.8.31 BSD邮件列表被当作BPF语义的权威判定来源谱系实证`netdevmessage
-5	BSD–Linux 技术承袭	395	8.32	1	15903	395.8.32 Linux社区IPv6组播转发缓存阈值补丁讨论中提交者AngWayChuang依
-5	BSD–Linux 技术承袭	395	8.34	1	16018	395.8.34 Linux社区RealtekRTL8211EPHY隐藏RGMII控制寄存器0x1
-5	BSD–Linux 技术承袭	395	8.35	1	15779	395.8.35 Linux社区MichalSoltys解释HFSCRT曲线的弹性语义指出BSD系
-5	BSD–Linux 技术承袭	395	8.36	1	16045	395.8.36 Linux社区SCTP自动ASCONF套接字选项补丁中WeiYongjun在实现
-5	BSD–Linux 技术承袭	395	8.37	1	15790	395.8.37 Linux社区WolfgangGrandegger提交SJA1000CAN控制器
-5	BSD–Linux 技术承袭	395	8.38	1	15815	395.8.38 Linux社区SO_BPF_EXTENSIONS补丁讨论中DavidLaight
-5	BSD–Linux 技术承袭	395	8.39	1	15955	395.8.39 Linux社区DaveTaht在Allow00008asavalidaddres
-5	BSD–Linux 技术承袭	395	8.40	1	15691	395.8.40 Linux社区SO_REUSEADDR讨论延续前帖有人批评BSD的绑定不对称设计
-5	BSD–Linux 技术承袭	395	8.41	1	16059	395.8.41 Linux社区ChristophLameter在回复multicast过滤讨论时
-5	BSD–Linux 技术承袭	395	8.43	1	15911	395.8.43 Linux社区MT7531DSA绑定把reset改为可选的争论中HeikoStu
-5	BSD–Linux 技术承袭	395	8.44	1	15680	395.8.44 Linux社区netdev线程把Linuxsunrpc的RPCSEC_GSS序列
-5	BSD–Linux 技术承袭	395	8.45	1	15844	395.8.45 Linux社区IPv6扩展头权限白名单讨论中BSD的接口谱系地位被点出Sowmi
-5	BSD–Linux 技术承袭	395	8.46	1	16060	395.8.46 Linux社区UrsThuermann的CANbroadcastmanager补
-5	BSD–Linux 技术承袭	395	8.47	1	15926	395.8.47 Linux社区作者发现netlink代码生成器产物的SPDX标记与其规格不一致生
-5	BSD–Linux 技术承袭	395	8.48	1	15798	395.8.48 Linux社区20090415多播重复投递补丁争论NeilHorman以跨系统成
-5	BSD–Linux 技术承袭	395	8.49	1	15780	395.8.49 Linux社区Linux是否窃取代码的转帖中BSD派生源码的许可身份被点明讨论者
-5	BSD–Linux 技术承袭	395	8.50	1	4417	395.8.50 Linux社区BenHutchings在IPv6TCLASS套接字选项一致性争议
-5	BSD–Linux 技术承袭	395	9.45	1	15898	395.9.45 Linux社区治理议题LinuxFoundationTAB宣布2019年选举转电
-5	BSD–Linux 技术承袭	395	9.50	1	15748	395.9.50 Linux社区20180910MAINTAINERSSUMMITBugintro
-5	BSD–Linux 技术承袭	395	9.51	1	15860	395.9.51 Linux社区AndrewTurner在Devicetree工作坊征询中代表Fr
-5	BSD–Linux 技术承袭	395	10.2	1	16028	395.10.2 Linux社区TheodoreTso发布KernelSummit2014征题Ch
-5	BSD–Linux 技术承袭	395	10.12	1	16025	395.10.12 Linux社区JoshTriplettvimfugitive工作流推荐Gblam
-5	BSD–Linux 技术承袭	395	10.42	1	15491	395.10.42 Linux社区StevenRostedt针对Kara转述的共识Linus已同意p
-5	BSD–Linux 技术承袭	395	10.44	1	15783	395.10.44 Linux社区FengguangWu回应Pinchart的0day状态页请求给出
-5	BSD–Linux 技术承袭	395	10.46	1	15525	395.10.46 Linux社区MelGorman就Weiner内存抖动议题给出VM机制诊断现有压
-5	BSD–Linux 技术承袭	395	10.52	1	15310	395.10.52 Linux社区LuisRRodriguez就固件加载安全语义与Lutomirsk
-5	BSD–Linux 技术承袭	395	10.55	1	15574	395.10.55 Linux社区DavidWoodhouse把签名讨论收拢回最小可行方案给requ
-5	BSD–Linux 技术承袭	395	10.107	1	16011	395.10.107 Linux社区SarahSharp论QRoops之社会面指Bjorn等维护者用b
-5	BSD–Linux 技术承袭	395	10.119	1	15904	395.10.119 Linux社区KeesCook附和Martin盼patchwork捕获cover
-5	BSD–Linux 技术承袭	395	10.126	1	15915	395.10.126 Linux社区Geert追问关键修复补丁不合标准+提交者跑路永不跟进你怎么办被禁
-5	BSD–Linux 技术承袭	395	10.151	1	15994	395.10.151 Linux社区DanWilliams将矛盾概括为customerfirstvsu
-5	BSD–Linux 技术承袭	395	10.152	1	13189	395.10.152 Linux社区TedTsoKS首轮邀请发出至少两名Gmail用户邀请进垃圾箱SP
-5	BSD–Linux 技术承袭	395	11.3	1	15963	395.11.3 Linux社区Colomar描述在shadow项目中先尝试改用NetBSD的st
-5	BSD–Linux 技术承袭	395	11.4	1	16029	395.11.4 Linux社区Robinson认为统一署名方案与GNU的做法一致AUTHORS文
-5	BSD–Linux 技术承袭	395	11.5	1	15731	395.11.5 Linux社区翻译者质疑exec3为何用frontend而非wrapper描述e
-5	BSD–Linux 技术承袭	395	11.6	1	15678	395.11.6 Linux社区aligned_alloc3的HISTORY段梳理C11两处UBs
-5	BSD–Linux 技术承袭	395	11.7	1	15976	395.11.7 Linux社区Schwarze说明mandoc版apropos1以TH宏的第一参
-5	BSD–Linux 技术承袭	395	11.8	1	16075	395.11.8 Linux社区Kerrisk在修订vfork2时增补42BSD手册原文的arch
-5	BSD–Linux 技术承袭	395	11.9	1	7474	395.11.9 Linux社区AlejandroColomar提议在manpages增设PARA
-5	BSD–Linux 技术承袭	395	12.3	1	11690	395.12.3 205.1 【Linux社区】BSD 谱系：BSD 技术采纳与对照
-5	BSD–Linux 技术承袭	395	12.5	1	967	395.12.5 205.3 【Linux社区】BSD 人物在 LKML 的出场
-5	BSD–Linux 技术承袭	395	12.6	1	855	395.12.6 205.4 【Linux社区】BSD 治理智慧反哺 Linux
-5	BSD–Linux 技术承袭	395	13.4	1	15812	395.13.4 Linux社区2014年7月EricWBiederman在LKML回复David
-5	BSD–Linux 技术承袭	395	13.5	1	4023	395.13.5 Linux社区2002年GeoffreyLee就connect到端口0的行为询问
-5	BSD–Linux 技术承袭	395	13.6	1	12728	395.13.6 206.2 【Linux社区】系统调用与内存管理
-5	BSD–Linux 技术承袭	395	13.7	1	5452	395.13.7 206.3 【Linux社区】文件系统与磁盘
-5	BSD–Linux 技术承袭	395	13.8	1	7214	395.13.8 206.4 【Linux社区】分区与硬件
-5	BSD–Linux 技术承袭	395	13.9	1	1783	395.13.9 206.5 【Linux社区】jail与容器
-5	BSD–Linux 技术承袭	395	13.10	1	4939	395.13.10 206.6 【Linux社区】其他技术承袭
-5	BSD–Linux 技术承袭	395	14.4	1	2296	395.14.4 207.2 【Linux社区】BSD 人物在 LKML 的出场（续）
-5	BSD–Linux 技术承袭	395	14.5	1	2654	395.14.5 207.3 【Linux社区】BSD 治理智慧反哺 Linux（续）
-5	BSD–Linux 技术承袭	395	15.3	1	2308	395.15.3 208.1 【Linux社区】dtrace 与内核追踪
-5	BSD–Linux 技术承袭	395	15.4	1	1088	395.15.4 208.2 【Linux社区】capsicum 能力模型
-5	BSD–Linux 技术承袭	395	15.5	1	852	395.15.5 208.3 【Linux社区】KAME 与 IPv6/IPsec
-5	BSD–Linux 技术承袭	395	15.6	1	927	395.15.6 208.4 【Linux社区】strlcpy 与 API 移植
-5	BSD–Linux 技术承袭	395	15.7	1	423	395.15.7 208.5 【Linux社区】kqueue/kevent 事件机制
-5	BSD–Linux 技术承袭	395	15.8	1	440	395.15.8 208.6 【Linux社区】arc4random 与 fork 安全
-5	BSD–Linux 技术承袭	395	15.10	1	477	395.15.10 208.8 【Linux社区】BSD 守护进程惯例
-5	BSD–Linux 技术承袭	395	15.11	1	483	395.15.11 208.9 【Linux社区】IP_PORTRANGE 与端口管理
-5	BSD–Linux 技术承袭	395	15.13	1	804	395.15.13 208.11 【Linux社区】BSD 治理智慧（续 207.3）
-5	BSD–Linux 技术承袭	395	16.3	1	863	395.16.3 209.1 【Linux社区】BSD 谱系（ZFS 交叉验证与 NFSv4 ACL 参照）
-5	BSD–Linux 技术承袭	395	17.3	1	3921	395.17.3 210.1 【Linux社区】BSD 血统技术被 Linux 采用（10 条）
-5	BSD–Linux 技术承袭	395	18.4	1	8647	395.18.4 211.2 【Linux社区】BSD 血统与 Linux 技术流向（24 条）
-5	BSD–Linux 技术承袭	395	19.4	1	15876	395.19.4 Linux社区2009年8月RobertWatsonrwatson@freebs
-5	BSD–Linux 技术承袭	395	19.5	1	12887	395.19.5 Linux社区2024年1月23日TheodeRaadtderaadt@open
-5	BSD–Linux 技术承袭	395	19.7	1	1212	395.19.7 212.3 【Linux社区】BSD 人物在 lkml 的张力出场（3 条）
-5	BSD–Linux 技术承袭	395	20.3	1	5870	395.20.3 213.1 【Linux社区】BSD 技术在 systemd 讨论中的张力（15 条）
-5	BSD–Linux 技术承袭	395	20.5	1	754	395.20.5 213.3 【Linux社区】BSD 人物在 systemd-devel 的出场（2 条）
-5	BSD–Linux 技术承袭	395	21.3	1	3265	395.21.3 214.1 【Linux社区】BSD 技术在 Kernel Summit 的张力（8 条）
-5	BSD–Linux 技术承袭	395	22.4	1	789	395.22.4 215.2 【Linux社区】BSD 血统与 Linux 技术流向（2 条）
-5	BSD–Linux 技术承袭	395	23.3	1	7764	395.23.3 216.1 【Linux社区】BSD 文件系统技术反向输出（21 条）
-5	BSD–Linux 技术承袭	395	23.4	1	4444	395.23.4 216.2 【Linux社区】BSD 文件系统血统与 Linux 技术流向（13 条）
-5	BSD–Linux 技术承袭	395	23.6	1	1237	395.23.6 216.4 【Linux社区】BSD 治理智慧与 Linux 移植争议（3 条）
-5	BSD–Linux 技术承袭	395	24.3	1	1777	395.24.3 217.1 【Linux社区】BSD 安全谱系与 Linux 能力模型（6 条）
-5	BSD–Linux 技术承袭	395	24.4	1	2224	395.24.4 217.2 【Linux社区】BSD 安全技术反向输出与 Linux 采纳（7 条）
-5	BSD–Linux 技术承袭	395	25.3	1	2010	395.25.3 218.1 【Linux社区】BSD 网络技术反向输出（6 条）
-5	BSD–Linux 技术承袭	395	26.3	1	2359	395.26.3 219.1 【Linux社区】Capsicum 移植尝试（2014 David Drysdale 移植 FreeBSD 能力框架，未合入）（9 条）
-5	BSD–Linux 技术承袭	395	26.4	1	1068	395.26.4 219.2 【Linux社区】O_BENEATH 与受限路径解析（FreeBSD 语义进入 openat，未以原名合入）（4 条）
-5	BSD–Linux 技术承袭	395	26.5	1	813	395.26.5 219.3 【Linux社区】CLONE_FD 进程生命周期通知（FreeBSD pdfork 移植，未合入）（3 条）
-5	BSD–Linux 技术承袭	395	26.6	1	863	395.26.6 219.4 【Linux社区】Landlock 权利集继承（2016-2021 合入主线，Capsicum 唯一落地后代）（3 条）
-5	BSD–Linux 技术承袭	395	26.7	1	845	395.26.7 219.5 【Linux社区】openat2 与 RESOLVE_IN_ROOT（FreeBSD 路径约束语义的最终落地形态）（3 条）
-5	BSD–Linux 技术承袭	395	26.8	1	850	395.26.8 219.6 【Linux社区】附录对照：横向引用、反向流向与词面噪声（3 条）
+5	BSD-Linux 技术承袭	395	1.4	1	13139	395.1.4 154.3 BSD谱系
+5	BSD-Linux 技术承袭	395	1.5	1	1245	395.1.5 154.4 杂项
+5	BSD-Linux 技术承袭	395	2.3	1	15184	395.2.3 Linux社区MarkCaveAyland用QEMU仿真sunhme卡时发现内核
+5	BSD-Linux 技术承袭	395	2.4	1	15852	395.2.4 Linux社区LouisLiu讨论SunNetraE4900上SILO引导加载器
+5	BSD-Linux 技术承袭	395	2.5	1	15575	395.2.5 Linux社区ChrisNewport就内核崩溃转储设计建议在SPARC上借鉴S
+5	BSD-Linux 技术承袭	395	2.6	1	15514	395.2.6 Linux社区在讨论允许sparc64sbus建立大于1MB映射的补丁时补丁作者
+5	BSD-Linux 技术承袭	395	2.7	1	15520	395.2.7 Linux社区LudwigRydberg提交为SPARC架构增加clone3系统
+5	BSD-Linux 技术承袭	395	2.8	1	15559	395.2.8 Linux社区SergeiTrofimovich指出glibc手册把O_NDEL
+5	BSD-Linux 技术承袭	395	2.11	1	11542	395.2.11 155.4 许可证
+5	BSD-Linux 技术承袭	395	3.3	1	16040	395.3.3 Linux社区AndyLutomirski在linuxapi上与EricBied
+5	BSD-Linux 技术承袭	395	3.4	1	4472	395.3.4 Linux社区AndyLutomirski在openat2OPENAT2_REG
+5	BSD-Linux 技术承袭	395	3.7	1	15951	395.3.7 Linux社区SukadevBhattiprolu发布clone3系统调用补丁集
+5	BSD-Linux 技术承袭	395	3.8	1	16059	395.3.8 Linux社区MADV_FREE提案引用jemalloc实践指出该能力在BSD与
+5	BSD-Linux 技术承袭	395	3.9	1	15770	395.3.9 Linux社区PaoloBonzini在评论FreeBSDCapsicum移植补
+5	BSD-Linux 技术承袭	395	3.10	1	15845	395.3.10 Linux社区ChristianBrauner在close_range系统调用补
+5	BSD-Linux 技术承袭	395	3.11	1	15755	395.3.11 Linux社区LinusTorvalds在mincore特权化讨论中转引Matt
+5	BSD-Linux 技术承袭	395	3.12	1	15795	395.3.12 Linux社区CambdaZhu发现Linux的kill允许把线程ID当作进程I
+5	BSD-Linux 技术承袭	395	3.13	1	815	395.3.13 Linux社区JoshTriplett在CLONE_FD补丁讨论中回应David
+5	BSD-Linux 技术承袭	395	4.2	1	1054	395.4.2 157.1 杂项
+5	BSD-Linux 技术承袭	395	4.3	1	5834	395.4.3 157.2 BSD谱系
+5	BSD-Linux 技术承袭	395	4.5	1	16108	395.4.5 Linux社区内核构建解耦用户态头文件起因之一即用户态头可能处于不兼容许可证并提
+5	BSD-Linux 技术承袭	395	4.6	1	16063	395.4.6 Linux社区AlanCox回应链接器表系列关于模块许可标记的讨论指出模块与内核
+5	BSD-Linux 技术承袭	395	4.7	1	15828	395.4.7 Linux社区NateKarstens在closeonfork补丁争议中为POS
+5	BSD-Linux 技术承袭	395	4.8	1	16052	395.4.8 Linux社区akpm转发的CreatearchKconfig补丁中Linus建
+5	BSD-Linux 技术承袭	395	4.9	1	11166	395.4.9 Linux社区PeterZijlstra就freelist补丁征询Cameron
+5	BSD-Linux 技术承袭	395	5.2	1	16076	395.5.2 Linux社区Sun3x平台的ESPSCSI驱动清理补丁属BSD谱系硬件Sun3
+5	BSD-Linux 技术承袭	395	5.3	1	15998	395.5.3 Linux社区补丁清理aic79xx与aic7xxx驱动的MODULE_PARM
+5	BSD-Linux 技术承袭	395	5.4	1	15785	395.5.4 Linux社区MarkFortescue在sparc32上调试ESP与QLGCI
+5	BSD-Linux 技术承袭	395	5.5	1	15830	395.5.5 Linux社区用户态iSCSItarget库选型讨论中JeffGarzik表示已
+5	BSD-Linux 技术承袭	395	5.6	1	15893	395.5.6 Linux社区针对aic7xxx语法文件缺分号的小补丁Gibbs表示FreeBS
+5	BSD-Linux 技术承袭	395	5.7	1	15896	395.5.7 Linux社区LSImpt2sas驱动Kconfig配置文件包含GNUGPL许可
+5	BSD-Linux 技术承袭	395	5.8	1	15998	395.5.8 Linux社区MODULE_VERSION补丁的diff暴露驱动注释的历史来源作
+5	BSD-Linux 技术承袭	395	5.9	1	15987	395.5.9 Linux社区2002年5月DouglasGilbert回应Linux2425S
+5	BSD-Linux 技术承袭	395	5.10	1	15692	395.5.10 Linux社区DouglasGilbert发布sg3_utils工具包声明已移植
+5	BSD-Linux 技术承袭	395	5.11	1	15878	395.5.11 Linux社区磁带stioctl文档MT_ST_SYSV选项的语义颠倒问题Aar
+5	BSD-Linux 技术承袭	395	5.12	1	15999	395.5.12 Linux社区kernelbugzilla80711关于SG_FLAG_LUN_
+5	BSD-Linux 技术承袭	395	5.13	1	15880	395.5.13 Linux社区AndreHedrick转发LinusTorvalds关于维护者否
+5	BSD-Linux 技术承袭	395	6.2	1	15872	395.6.2 Linux社区AmeerHamza提议为openat增加O_EMPTY_PATH
+5	BSD-Linux 技术承袭	395	6.3	1	15828	395.6.3 Linux社区fsync_range与fsync语义讨论中ChristophHe
+5	BSD-Linux 技术承袭	395	6.4	1	15726	395.6.4 Linux社区DavidDrysdale在CLONE_FD讨论中直接以FreeB
+5	BSD-Linux 技术承袭	395	6.5	1	15847	395.6.5 Linux社区DavidMiller在BTRFS分区起始位置的讨论中指出Sun磁
+5	BSD-Linux 技术承袭	395	6.6	1	15909	395.6.6 Linux社区AlViro在POSIX分歧讨论中把BSD系Unix的实际行为抬升
+5	BSD-Linux 技术承袭	395	6.7	1	15724	395.6.7 Linux社区fuseuapi类型补丁引发BSD可移植性讨论ArndBergma
+5	BSD-Linux 技术承袭	395	6.8	1	15997	395.6.8 Linux社区在用户命名空间补丁讨论中TrondMyklebust建议EricB
+5	BSD-Linux 技术承袭	395	6.9	1	15980	395.6.9 Linux社区LSF与MM大会参会意向登记中AntonAltaparmakov陈
+5	BSD-Linux 技术承袭	395	6.10	1	15689	395.6.10 Linux社区在storefree路径遍历的性能讨论中ChristophHell
+5	BSD-Linux 技术承袭	395	6.11	1	16035	395.6.11 Linux社区AlViro提交vfsgit分支workufs的UFS清理系列共1
+5	BSD-Linux 技术承袭	395	6.12	1	15972	395.6.12 Linux社区JonathanKowalski评审pidfd轮询支持时建议改用P
+5	BSD-Linux 技术承袭	395	6.13	1	16043	395.6.13 Linux社区utimensat写权限检查修复补丁的评审回帖中MichaelKe
+5	BSD-Linux 技术承袭	395	6.14	1	15828	395.6.14 Linux社区MichaelKerrisk在linuxfsdevel报告writ
+5	BSD-Linux 技术承袭	395	6.15	1	15870	395.6.15 Linux社区LinusTorvalds在fsufs挂载崩溃的讨论中公开为UFS
+5	BSD-Linux 技术承袭	395	6.16	1	15892	395.6.16 Linux社区AurelienJarno在FS_IOC_GETFLAGS与FS_
+5	BSD-Linux 技术承袭	395	6.17	1	15490	395.6.17 Linux社区2005年SergeEHallyn在命名空间隔离讨论中引用自己实现
+5	BSD-Linux 技术承袭	395	6.18	1	15847	395.6.18 Linux社区ThomasGleixner就selfteststests_sys
+5	BSD-Linux 技术承袭	395	6.19	1	15988	395.6.19 Linux社区EricBiederman在无mntput发生IO的补丁讨论中说明
+5	BSD-Linux 技术承袭	395	6.20	1	15794	395.6.20 Linux社区PhillipPotter向fsufs提交注释格式补丁改动s_u2
+5	BSD-Linux 技术承袭	395	6.21	1	15908	395.6.21 Linux社区MatthewWilcox在iomap_writepage移除讨论
+5	BSD-Linux 技术承袭	395	6.22	1	15536	395.6.22 Linux社区JanBlunck为联合文件系统新增whiteout文件类型时直接
+5	BSD-Linux 技术承袭	395	6.23	1	15678	395.6.23 Linux社区2025年ChristianBrauner提交让core_patt
+5	BSD-Linux 技术承袭	395	6.24	1	15628	395.6.24 Linux社区在FUSE于close返回EBADF的争论中被引的AntonioS
+5	BSD-Linux 技术承袭	395	6.25	1	16014	395.6.25 Linux社区AmirGoldstein在原子文件数据替换接口之争中提议直接沿用
+5	BSD-Linux 技术承袭	395	6.26	1	16076	395.6.26 Linux社区fsufs挂载几何校验补丁论证圆柱摘要缓冲区需按ufs1与ufs2
+5	BSD-Linux 技术承袭	395	6.27	1	15989	395.6.27 Linux社区AlViro回应UFS的UBSAN移位越界报告称将复活旧补丁为uf
+5	BSD-Linux 技术承袭	395	6.28	1	13120	395.6.28 Linux社区ChristianBrauner在文件系统信任与维护治理议题中延续
+5	BSD-Linux 技术承袭	395	7.2	1	15980	395.7.2 Linux社区AndrewMorton汇总2559mm1补丁时BillDavid
+5	BSD-Linux 技术承袭	395	7.3	1	15785	395.7.3 Linux社区Linux地址空间随机化RFC讨论中作者以OpenBSD的mmap
+5	BSD-Linux 技术承袭	395	7.4	1	15963	395.7.4 Linux社区ChristophHellwig于2002年提交的BKchange
+5	BSD-Linux 技术承袭	395	7.5	1	15729	395.7.5 Linux社区24内核reversemapping之争中Biederman明确以
+5	BSD-Linux 技术承袭	395	7.6	1	15813	395.7.6 Linux社区2000年7月17日VM替换算法讨论中AlanCox以FreeBS
+5	BSD-Linux 技术承袭	395	7.7	1	15986	395.7.7 Linux社区2004年2月18日invalidate_mmap_range非G
+5	BSD-Linux 技术承袭	395	7.8	1	15950	395.7.8 Linux社区2021年8月移除MAP_DENYWRITE讨论中DavidLai
+5	BSD-Linux 技术承袭	395	7.9	1	15703	395.7.9 Linux社区BenjaminCRLaHaise在本封中引用RikvanRiel
+5	BSD-Linux 技术承袭	395	7.10	1	15946	395.7.10 Linux社区同一mincore线程延续VlastimilBabka在权限与语义
+5	BSD-Linux 技术承袭	395	7.11	1	15832	395.7.11 Linux社区getrusageru_maxrss补丁的变更日志记录旧测试程序触
+5	BSD-Linux 技术承袭	395	7.12	1	15777	395.7.12 Linux社区2001年AlanCox在无盘节点swap讨论的回复帖中引有nei
+5	BSD-Linux 技术承袭	395	7.13	1	15574	395.7.13 Linux社区2019年6月TejunHeo就memcg的get_mem_cgr
+5	BSD-Linux 技术承袭	395	7.14	1	15932	395.7.14 Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral
+5	BSD-Linux 技术承袭	395	7.15	1	16043	395.7.15 Linux社区LinusTorvalds就x86模块依赖外部PAGE_KERNE
+5	BSD-Linux 技术承袭	395	7.16	1	15952	395.7.16 Linux社区FreeBSDpageoutdaemon算法讨论DanielPhi
+5	BSD-Linux 技术承袭	395	7.17	1	16048	395.7.17 Linux社区khugepagedmTHP讨论中KirylShutsemau转引
+5	BSD-Linux 技术承袭	395	7.18	1	15965	395.7.18 Linux社区PedroFalcato在msealRFC讨论中以OpenBSD动
+5	BSD-Linux 技术承袭	395	7.19	1	15589	395.7.19 Linux社区NadiaChambers在64k基础页大小的LSFMMBPF讨论
+5	BSD-Linux 技术承袭	395	7.20	1	16009	395.7.20 Linux社区20000524linuxmm讨论234版VM队列重构RFC时Ma
+5	BSD-Linux 技术承袭	395	7.21	1	3764	395.7.21 Linux社区讨论kmalloc_obj类型化slab缓存时引用iOS与XNU的
+5	BSD-Linux 技术承袭	395	8.2	1	15760	395.8.2 Linux社区AlanCox对BSDJailLSM补丁提出接口设计意见认为jai
+5	BSD-Linux 技术承袭	395	8.3	1	15934	395.8.3 Linux社区perskb控制消息补丁讨论中DavidMiller在Stephe
+5	BSD-Linux 技术承袭	395	8.4	1	16080	395.8.4 Linux社区TIME_WAIT状态行为讨论中参与者追问Linux为何在SO_R
+5	BSD-Linux 技术承袭	395	8.5	1	15726	395.8.5 Linux社区DougMcNaught指出Stevens教材描述的是44BSDL
+5	BSD-Linux 技术承袭	395	8.6	1	16018	395.8.6 Linux社区VladYasevich讨论组播自收行为差异时说明客户正从BSD迁
+5	BSD-Linux 技术承袭	395	8.7	1	15922	395.8.7 Linux社区PekkaSavola转发默认地址选择性能顾虑称所引顾虑出自一位B
+5	BSD-Linux 技术承袭	395	8.8	1	16060	395.8.8 Linux社区EricDumazet在tcp多端口bind修复的问题讨论中转发用
+5	BSD-Linux 技术承袭	395	8.9	1	16050	395.8.9 Linux社区讨论IPv6UDP绑定语义时面对为何保留这一反直觉行为的提问Eri
+5	BSD-Linux 技术承袭	395	8.10	1	15782	395.8.10 Linux社区VegardNossum质疑CONFIG_NET_KEY帮助文本与
+5	BSD-Linux 技术承袭	395	8.11	1	15573	395.8.11 Linux社区StephenHemminger用jhash2替换ipv6addr
+5	BSD-Linux 技术承袭	395	8.12	1	15873	395.8.12 Linux社区MichaelSTsirkin在流量控制与端口镜像测试讨论中引用s
+5	BSD-Linux 技术承袭	395	8.13	1	15884	395.8.13 Linux社区TomaszTorcz在netdev转发FreeBSD53网络栈改
+5	BSD-Linux 技术承袭	395	8.14	1	15974	395.8.14 Linux社区Davem以BSDAPI兼容性为由否决了一个DiffServ路由补
+5	BSD-Linux 技术承袭	395	8.15	1	15987	395.8.15 Linux社区IPv6流标签补丁评审中FlorentFourcot反对该新行为并
+5	BSD-Linux 技术承袭	395	8.16	1	15853	395.8.16 Linux社区虚拟CAN网络设备驱动补丁入树vcanc的模块许可证声明为Dual
+5	BSD-Linux 技术承袭	395	8.17	1	16073	395.8.17 Linux社区EvgeniyPolyakov为把CARP放进内核而非用户态辩护称
+5	BSD-Linux 技术承袭	395	8.18	1	15764	395.8.18 Linux社区jamal转发LennertBuytenhek关于etherip的
+5	BSD-Linux 技术承袭	395	8.19	1	16058	395.8.19 Linux社区关于内核层socket包装符是否该用EXPORT_SYMBOL_G
+5	BSD-Linux 技术承袭	395	8.20	1	15816	395.8.20 Linux社区TCPBIC11讨论中提出是否考虑YeeTingLi的ABC补丁并
+5	BSD-Linux 技术承袭	395	8.21	1	16071	395.8.21 Linux社区i40e驱动故障讨论中引用FreeBSD侧修复并被IntelFre
+5	BSD-Linux 技术承袭	395	8.22	1	15923	395.8.22 Linux社区XDP讨论中ThomasGraf引述FlorianWestphal
+5	BSD-Linux 技术承袭	395	8.23	1	15939	395.8.23 Linux社区RolandDreier的InfiniBandMAD补丁与其系列补
+5	BSD-Linux 技术承袭	395	8.24	1	15680	395.8.24 Linux社区MichaelWu梳理Linux80211现状时指出Madwifi
+5	BSD-Linux 技术承袭	395	8.25	1	15951	395.8.25 Linux社区Linux挪用BSD代码指控的争论中AdrianBunk澄清两件被
+5	BSD-Linux 技术承袭	395	8.26	1	15890	395.8.26 Linux社区IPsec在2561的讨论中USAGI的KazunoriMiyaz
+5	BSD-Linux 技术承袭	395	8.27	1	15872	395.8.27 Linux社区IPv6隧道链路本地地址自动配置讨论中PekkaSavola以Fr
+5	BSD-Linux 技术承袭	395	8.28	1	15896	395.8.28 Linux社区VladYasevich接续FreeBSD客户机导致skb_war
+5	BSD-Linux 技术承袭	395	8.29	1	15932	395.8.29 Linux社区ipsysctltxt字母序整理补丁触及tcp_stdurg说明文
+5	BSD-Linux 技术承袭	395	8.30	1	16045	395.8.30 Linux社区AdrianChadd在排队时延与bufferbloat讨论中自述
+5	BSD-Linux 技术承袭	395	8.31	1	15976	395.8.31 BSD邮件列表被当作BPF语义的权威判定来源谱系实证`netdevmessage
+5	BSD-Linux 技术承袭	395	8.32	1	15903	395.8.32 Linux社区IPv6组播转发缓存阈值补丁讨论中提交者AngWayChuang依
+5	BSD-Linux 技术承袭	395	8.34	1	16018	395.8.34 Linux社区RealtekRTL8211EPHY隐藏RGMII控制寄存器0x1
+5	BSD-Linux 技术承袭	395	8.35	1	15779	395.8.35 Linux社区MichalSoltys解释HFSCRT曲线的弹性语义指出BSD系
+5	BSD-Linux 技术承袭	395	8.36	1	16045	395.8.36 Linux社区SCTP自动ASCONF套接字选项补丁中WeiYongjun在实现
+5	BSD-Linux 技术承袭	395	8.37	1	15790	395.8.37 Linux社区WolfgangGrandegger提交SJA1000CAN控制器
+5	BSD-Linux 技术承袭	395	8.38	1	15815	395.8.38 Linux社区SO_BPF_EXTENSIONS补丁讨论中DavidLaight
+5	BSD-Linux 技术承袭	395	8.39	1	15955	395.8.39 Linux社区DaveTaht在Allow00008asavalidaddres
+5	BSD-Linux 技术承袭	395	8.40	1	15691	395.8.40 Linux社区SO_REUSEADDR讨论延续前帖有人批评BSD的绑定不对称设计
+5	BSD-Linux 技术承袭	395	8.41	1	16059	395.8.41 Linux社区ChristophLameter在回复multicast过滤讨论时
+5	BSD-Linux 技术承袭	395	8.43	1	15911	395.8.43 Linux社区MT7531DSA绑定把reset改为可选的争论中HeikoStu
+5	BSD-Linux 技术承袭	395	8.44	1	15680	395.8.44 Linux社区netdev线程把Linuxsunrpc的RPCSEC_GSS序列
+5	BSD-Linux 技术承袭	395	8.45	1	15844	395.8.45 Linux社区IPv6扩展头权限白名单讨论中BSD的接口谱系地位被点出Sowmi
+5	BSD-Linux 技术承袭	395	8.46	1	16060	395.8.46 Linux社区UrsThuermann的CANbroadcastmanager补
+5	BSD-Linux 技术承袭	395	8.47	1	15926	395.8.47 Linux社区作者发现netlink代码生成器产物的SPDX标记与其规格不一致生
+5	BSD-Linux 技术承袭	395	8.48	1	15798	395.8.48 Linux社区20090415多播重复投递补丁争论NeilHorman以跨系统成
+5	BSD-Linux 技术承袭	395	8.49	1	15780	395.8.49 Linux社区Linux是否窃取代码的转帖中BSD派生源码的许可身份被点明讨论者
+5	BSD-Linux 技术承袭	395	8.50	1	4417	395.8.50 Linux社区BenHutchings在IPv6TCLASS套接字选项一致性争议
+5	BSD-Linux 技术承袭	395	9.45	1	15898	395.9.45 Linux社区治理议题LinuxFoundationTAB宣布2019年选举转电
+5	BSD-Linux 技术承袭	395	9.50	1	15748	395.9.50 Linux社区20180910MAINTAINERSSUMMITBugintro
+5	BSD-Linux 技术承袭	395	9.51	1	15860	395.9.51 Linux社区AndrewTurner在Devicetree工作坊征询中代表Fr
+5	BSD-Linux 技术承袭	395	10.2	1	16028	395.10.2 Linux社区TheodoreTso发布KernelSummit2014征题Ch
+5	BSD-Linux 技术承袭	395	10.12	1	16025	395.10.12 Linux社区JoshTriplettvimfugitive工作流推荐Gblam
+5	BSD-Linux 技术承袭	395	10.42	1	15491	395.10.42 Linux社区StevenRostedt针对Kara转述的共识Linus已同意p
+5	BSD-Linux 技术承袭	395	10.44	1	15783	395.10.44 Linux社区FengguangWu回应Pinchart的0day状态页请求给出
+5	BSD-Linux 技术承袭	395	10.46	1	15525	395.10.46 Linux社区MelGorman就Weiner内存抖动议题给出VM机制诊断现有压
+5	BSD-Linux 技术承袭	395	10.52	1	15310	395.10.52 Linux社区LuisRRodriguez就固件加载安全语义与Lutomirsk
+5	BSD-Linux 技术承袭	395	10.55	1	15574	395.10.55 Linux社区DavidWoodhouse把签名讨论收拢回最小可行方案给requ
+5	BSD-Linux 技术承袭	395	10.107	1	16011	395.10.107 Linux社区SarahSharp论QRoops之社会面指Bjorn等维护者用b
+5	BSD-Linux 技术承袭	395	10.119	1	15904	395.10.119 Linux社区KeesCook附和Martin盼patchwork捕获cover
+5	BSD-Linux 技术承袭	395	10.126	1	15915	395.10.126 Linux社区Geert追问关键修复补丁不合标准+提交者跑路永不跟进你怎么办被禁
+5	BSD-Linux 技术承袭	395	10.151	1	15994	395.10.151 Linux社区DanWilliams将矛盾概括为customerfirstvsu
+5	BSD-Linux 技术承袭	395	10.152	1	13189	395.10.152 Linux社区TedTsoKS首轮邀请发出至少两名Gmail用户邀请进垃圾箱SP
+5	BSD-Linux 技术承袭	395	11.3	1	15963	395.11.3 Linux社区Colomar描述在shadow项目中先尝试改用NetBSD的st
+5	BSD-Linux 技术承袭	395	11.4	1	16029	395.11.4 Linux社区Robinson认为统一署名方案与GNU的做法一致AUTHORS文
+5	BSD-Linux 技术承袭	395	11.5	1	15731	395.11.5 Linux社区翻译者质疑exec3为何用frontend而非wrapper描述e
+5	BSD-Linux 技术承袭	395	11.6	1	15678	395.11.6 Linux社区aligned_alloc3的HISTORY段梳理C11两处UBs
+5	BSD-Linux 技术承袭	395	11.7	1	15976	395.11.7 Linux社区Schwarze说明mandoc版apropos1以TH宏的第一参
+5	BSD-Linux 技术承袭	395	11.8	1	16075	395.11.8 Linux社区Kerrisk在修订vfork2时增补42BSD手册原文的arch
+5	BSD-Linux 技术承袭	395	11.9	1	7474	395.11.9 Linux社区AlejandroColomar提议在manpages增设PARA
+5	BSD-Linux 技术承袭	395	12.3	1	11690	395.12.3 205.1 【Linux社区】BSD 谱系：BSD 技术采纳与对照
+5	BSD-Linux 技术承袭	395	12.5	1	967	395.12.5 205.3 【Linux社区】BSD 人物在 LKML 的出场
+5	BSD-Linux 技术承袭	395	12.6	1	855	395.12.6 205.4 【Linux社区】BSD 治理智慧反哺 Linux
+5	BSD-Linux 技术承袭	395	13.4	1	15812	395.13.4 Linux社区2014年7月EricWBiederman在LKML回复David
+5	BSD-Linux 技术承袭	395	13.5	1	4023	395.13.5 Linux社区2002年GeoffreyLee就connect到端口0的行为询问
+5	BSD-Linux 技术承袭	395	13.6	1	12728	395.13.6 206.2 【Linux社区】系统调用与内存管理
+5	BSD-Linux 技术承袭	395	13.7	1	5452	395.13.7 206.3 【Linux社区】文件系统与磁盘
+5	BSD-Linux 技术承袭	395	13.8	1	7214	395.13.8 206.4 【Linux社区】分区与硬件
+5	BSD-Linux 技术承袭	395	13.9	1	1783	395.13.9 206.5 【Linux社区】jail与容器
+5	BSD-Linux 技术承袭	395	13.10	1	4939	395.13.10 206.6 【Linux社区】其他技术承袭
+5	BSD-Linux 技术承袭	395	14.4	1	2296	395.14.4 207.2 【Linux社区】BSD 人物在 LKML 的出场（续）
+5	BSD-Linux 技术承袭	395	14.5	1	2654	395.14.5 207.3 【Linux社区】BSD 治理智慧反哺 Linux（续）
+5	BSD-Linux 技术承袭	395	15.3	1	2308	395.15.3 208.1 【Linux社区】dtrace 与内核追踪
+5	BSD-Linux 技术承袭	395	15.4	1	1088	395.15.4 208.2 【Linux社区】capsicum 能力模型
+5	BSD-Linux 技术承袭	395	15.5	1	852	395.15.5 208.3 【Linux社区】KAME 与 IPv6/IPsec
+5	BSD-Linux 技术承袭	395	15.6	1	927	395.15.6 208.4 【Linux社区】strlcpy 与 API 移植
+5	BSD-Linux 技术承袭	395	15.7	1	423	395.15.7 208.5 【Linux社区】kqueue/kevent 事件机制
+5	BSD-Linux 技术承袭	395	15.8	1	440	395.15.8 208.6 【Linux社区】arc4random 与 fork 安全
+5	BSD-Linux 技术承袭	395	15.10	1	477	395.15.10 208.8 【Linux社区】BSD 守护进程惯例
+5	BSD-Linux 技术承袭	395	15.11	1	483	395.15.11 208.9 【Linux社区】IP_PORTRANGE 与端口管理
+5	BSD-Linux 技术承袭	395	15.13	1	804	395.15.13 208.11 【Linux社区】BSD 治理智慧（续 207.3）
+5	BSD-Linux 技术承袭	395	16.3	1	863	395.16.3 209.1 【Linux社区】BSD 谱系（ZFS 交叉验证与 NFSv4 ACL 参照）
+5	BSD-Linux 技术承袭	395	17.3	1	3921	395.17.3 210.1 【Linux社区】BSD 血统技术被 Linux 采用（10 条）
+5	BSD-Linux 技术承袭	395	18.4	1	8647	395.18.4 211.2 【Linux社区】BSD 血统与 Linux 技术流向（24 条）
+5	BSD-Linux 技术承袭	395	19.4	1	15876	395.19.4 Linux社区2009年8月RobertWatsonrwatson@freebs
+5	BSD-Linux 技术承袭	395	19.5	1	12887	395.19.5 Linux社区2024年1月23日TheodeRaadtderaadt@open
+5	BSD-Linux 技术承袭	395	19.7	1	1212	395.19.7 212.3 【Linux社区】BSD 人物在 lkml 的张力出场（3 条）
+5	BSD-Linux 技术承袭	395	20.3	1	5870	395.20.3 213.1 【Linux社区】BSD 技术在 systemd 讨论中的张力（15 条）
+5	BSD-Linux 技术承袭	395	20.5	1	754	395.20.5 213.3 【Linux社区】BSD 人物在 systemd-devel 的出场（2 条）
+5	BSD-Linux 技术承袭	395	21.3	1	3265	395.21.3 214.1 【Linux社区】BSD 技术在 Kernel Summit 的张力（8 条）
+5	BSD-Linux 技术承袭	395	22.4	1	789	395.22.4 215.2 【Linux社区】BSD 血统与 Linux 技术流向（2 条）
+5	BSD-Linux 技术承袭	395	23.3	1	7764	395.23.3 216.1 【Linux社区】BSD 文件系统技术反向输出（21 条）
+5	BSD-Linux 技术承袭	395	23.4	1	4444	395.23.4 216.2 【Linux社区】BSD 文件系统血统与 Linux 技术流向（13 条）
+5	BSD-Linux 技术承袭	395	23.6	1	1237	395.23.6 216.4 【Linux社区】BSD 治理智慧与 Linux 移植争议（3 条）
+5	BSD-Linux 技术承袭	395	24.3	1	1777	395.24.3 217.1 【Linux社区】BSD 安全谱系与 Linux 能力模型（6 条）
+5	BSD-Linux 技术承袭	395	24.4	1	2224	395.24.4 217.2 【Linux社区】BSD 安全技术反向输出与 Linux 采纳（7 条）
+5	BSD-Linux 技术承袭	395	25.3	1	2010	395.25.3 218.1 【Linux社区】BSD 网络技术反向输出（6 条）
+5	BSD-Linux 技术承袭	395	26.3	1	2359	395.26.3 219.1 【Linux社区】Capsicum 移植尝试（2014 David Drysdale 移植 FreeBSD 能力框架，未合入）（9 条）
+5	BSD-Linux 技术承袭	395	26.4	1	1068	395.26.4 219.2 【Linux社区】O_BENEATH 与受限路径解析（FreeBSD 语义进入 openat，未以原名合入）（4 条）
+5	BSD-Linux 技术承袭	395	26.5	1	813	395.26.5 219.3 【Linux社区】CLONE_FD 进程生命周期通知（FreeBSD pdfork 移植，未合入）（3 条）
+5	BSD-Linux 技术承袭	395	26.6	1	863	395.26.6 219.4 【Linux社区】Landlock 权利集继承（2016-2021 合入主线，Capsicum 唯一落地后代）（3 条）
+5	BSD-Linux 技术承袭	395	26.7	1	845	395.26.7 219.5 【Linux社区】openat2 与 RESOLVE_IN_ROOT（FreeBSD 路径约束语义的最终落地形态）（3 条）
+5	BSD-Linux 技术承袭	395	26.8	1	850	395.26.8 219.6 【Linux社区】附录对照：横向引用、反向流向与词面噪声（3 条）

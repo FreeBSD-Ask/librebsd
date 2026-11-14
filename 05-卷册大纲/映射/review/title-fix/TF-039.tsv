@@ -43,18 +43,18 @@ S-034873	每 cgroup 交换分区控制	每 cgroup 交换分区控制	H1 同步�
 S-034874	linux-next 反馈	linux-next 反馈	H1 同步：题面不变；仅 H1 去陈旧块序号前缀
 S-037422	porting-unix-to-the-386逐月公开的分步移植	《Porting UNIX to the 386》逐月公开的分步移植	A1 slug 挤压，依正文文章名正形；H1 同步
 S-004106	DDJ连载使386BSD在国际技术社区获得知名度吸引荷兰澳大利亚日本等地开发者尝试	DDJ 连载使 386BSD 在国际技术社区获得知名度，吸引荷兰、澳大利亚、日本等地开发者尝试	A1 补中英空格；顿逗分列国名；H1 截断污染清理
-S-004179	VAX 小型机／中小型机 → Intel 80386 32 位 PC 平台迁移（1991-1992）	VAX 小型机／中小型机至 Intel 80386 32 位 PC 平台迁移（1991–1992）	C5 去箭头改至；D2 年代改全角破折号；H1 同步
-S-004180	Net／2 含争议代码 → 386BSD 单人维护补丁积压模式（1992-1993）	Net／2 含争议代码下的 386BSD 单人维护补丁积压模式（1992–1993）	C5 去箭头；D2 年代改–；补“下的”避 40 字符峰
+S-004179	VAX 小型机／中小型机 → Intel 80386 32 位 PC 平台迁移（1991-1992）	VAX 小型机／中小型机至 Intel 80386 32 位 PC 平台迁移（1991—1992）	C5 去箭头改至；D2 年代改全角破折号；H1 同步
+S-004180	Net／2 含争议代码 → 386BSD 单人维护补丁积压模式（1992-1993）	Net／2 含争议代码下的 386BSD 单人维护补丁积压模式（1992—1993）	C5 去箭头；D2 年代改–；补“下的”避 40 字符峰
 S-037404	Net／2 作为 386BSD 的自由代码基线	Net／2 作为 386BSD 的自由代码基线	H1 同步：题面不变；仅 H1 半角斜杠正形同步
 S-037425	386bsd-release-10全新内核设计的再出发	386BSD Release 1.0 全新内核设计的再出发	A1 slug 挤压，依正文 386BSD Release 1.0 正形；H1 同步
 S-037426	reference-cd-rom-cd-rom时代的发行与畅销	Reference CD-ROM：CD-ROM 时代的发行与畅销	A1 slug 挤压，依正文 Reference CD-ROM 正形；H1 同步
 S-004252	1993年开源项目命名需考虑与已有商标冲突（386BSDBSDi等）	1993 年开源项目命名需考虑与已有商标冲突（386BSD、BSDi 等）	A1 补中英空格；括注内补顿逗空格；H1 截断污染清理
 S-004307	FreeBSD诞生配套采访录覆盖1993年项目创建时期当事人	FreeBSD 诞生配套采访录覆盖 1993 年项目创建时期当事人	A1 补中英空格；H1 污染题清理同步
-S-004290	386BSD 单人维护 → FreeBSD Core Team 集体治理模式（1993-1994）	386BSD 单人维护至 FreeBSD Core Team 集体治理模式（1993–1994）	C5 去箭头改至；D2 年代改全角破折号；H1 同步
-S-004292	补丁包维护 → CVS 版本控制系统（1993-1995）	补丁包维护至 CVS 版本控制系统（1993–1995）	C5 去箭头改至；D2 年代改全角破折号；H1 同步
+S-004290	386BSD 单人维护 → FreeBSD Core Team 集体治理模式（1993-1994）	386BSD 单人维护至 FreeBSD Core Team 集体治理模式（1993—1994）	C5 去箭头改至；D2 年代改全角破折号；H1 同步
+S-004292	补丁包维护 → CVS 版本控制系统（1993-1995）	补丁包维护至 CVS 版本控制系统（1993—1995）	C5 去箭头改至；D2 年代改全角破折号；H1 同步
 S-004601	没有必然性只有偶然性：OpenBSD的诞生源于具体的NetBSD冲突与一次CSRG入侵事件	没有必然性只有偶然性：OpenBSD 的诞生源于具体的 NetBSD 冲突与一次 CSRG 入侵事件	A1 补中英空格；H1 “总纲5”前缀污染清理同步
 S-004606	OpenBSD 从 NetBSD 分叉的批评——对 Theo de Raadt 被逐出 NetBSD 核心团队与 OpenBSD 分叉造成 BSD 社区分裂的批评（批评层）	OpenBSD 从 NetBSD 分叉的批评——对 Theo de Raadt 被逐出 NetBSD 核心团队与 OpenBSD 分叉造成 BSD 社区分裂的批评（批评层）	保留：无硬判据且 H1 同题；D1 实义括注（批评层）保留
-S-029955	伯克利市的命名由来：Anglican Bishop George Berkeley（1685-1753）与爱尔兰哲学家	伯克利市的命名由来：Anglican Bishop George Berkeley（1685–1753）与爱尔兰哲学家	D2 年代半角连字符改全角破折号；H1 同题保留
+S-029955	伯克利市的命名由来：Anglican Bishop George Berkeley（1685-1753）与爱尔兰哲学家	伯克利市的命名由来：Anglican Bishop George Berkeley（1685—1753）与爱尔兰哲学家	D2 年代半角连字符改全角破折号；H1 同题保留
 S-029950	苏格拉底 daimon 与古希腊多神教中的 daemon（守护神语境）	苏格拉底 daimon 与古希腊多神教中的 daemon（守护神语境）	保留：无硬判据且 H1 同题；D1 实义括注（守护神语境）保留
 S-029952	MIT Project MAC 与 Unix 文化中的 daemon：Maxwell's demon 思想实验起源	MIT Project MAC 与 Unix 文化中的 daemon：Maxwell’s demon 思想实验起源	C2 ASCII 直撇号改弯撇号；H1 同题保留
 S-030167	BSD 专属俚语：daemon、MFC／MFH／MFV、commit bit、core team、tainted code 与 BSD is dying 梗	BSD 专属俚语：daemon、MFC／MFH／MFV、commit bit、core team、tainted code 与 BSD is dying 梗	H1 同步：题面不变；仅 H1 半角斜杠正形同步

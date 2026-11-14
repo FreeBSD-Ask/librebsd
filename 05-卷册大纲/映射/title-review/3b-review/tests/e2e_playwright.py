@@ -355,7 +355,7 @@ def scenario_verdict_options_custom_note_clear(server, page, errors):
     textarea.fill("")
     expect(box.locator(".ct-count")).to_have_text("0 / 120")
     box.locator('[data-act="custom-save"]').click()
-    expect(box.locator(".ct-err")).to_have_text("题名须为 1–120 字")
+    expect(box.locator(".ct-err")).to_have_text("题名须为 1—120 字")
     expect(card(page, key)).to_have_attribute("data-status", "reroll")
     assert server.answer(key)["verdict"] == "reroll"
 

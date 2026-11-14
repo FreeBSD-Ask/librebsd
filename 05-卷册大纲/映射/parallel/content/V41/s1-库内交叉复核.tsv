@@ -36,7 +36,7 @@ V41.12.3.2	MI 与 MD 代码的置放纪律	sacred	1954		0.249	C	第 43 章 FreeB
 V41.12.5.2	安装镜像的制作工序	sacred	2901		0.281	C	PkgBase 直接由 freebsd-src 构建：	可推	史观参照（不作证据，仅定题面归属）
 V41.12.5.2	安装镜像的制作工序	ref_title	10078	10078	0.239	C	FreeBSD Quarterly Status Report 2013Q2 (freebsd.be 镜像) 2013	可推	文献线索（须核全文再定 D1/D2）
 V41.12.5.2	安装镜像的制作工序	ref_title	10120	10120	0.239	C	FreeBSD Status Report Q3 2016 (www2.uk 镜像; 15/12) 2016	可推	文献线索（须核全文再定 D1/D2）
-V41.12.6.1	批量构建的调度编排	fulltext_summary	520	520	0.297	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.12.6.1	批量构建的调度编排	fulltext_summary	520	520	0.297	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V41.12.6.1	批量构建的调度编排	fulltext_summary	527	527	0.297	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V41.12.6.1	批量构建的调度编排	fulltext_summary	107	107	0.275	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V41.12.7.1	man 页的一致性守则	sacred	None		0.230	C	**Relationship to Other Documents**: 本文为 shigang.md、dagang.md、lishidagang.md 的补充哲学源材料，需同步更新上述文件。	可推	史观参照（不作证据，仅定题面归属）
@@ -75,7 +75,7 @@ V41.3.6.3	Anykernel 路线的辐射领域	sacred	2677		0.235	C	文件系统	可�
 V41.4.1.5	单处理器模型的惯性负担	claim	CL-RM-011342		1.30	A	2013年3月31日开发者Phileas Fogg宣布NetBSD 6.0.1以单处理器模式成功启动PowerMac G5 11,2，此前修复了段寄存器初始化等底层问题	可推	claim 复用（S2 先库后网）
 V41.4.2.2	处理器间中断的职责	claim	CL-5-006		1.20	B	Greg Lehey 2001 年论文指出，FreeBSD 初始 SMP 支持只允许一个进程同时在内核态运行，并在多处理器间屏蔽中断，导致 I/O 密集系统性能严重次优；该论文描述移除这一瓶颈的工作，即 SMPng。	可推	claim 复用（S2 先库后网）
 V41.4.3.1	2.0 的 SMP 覆盖范围	sacred	3057		0.376	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
-V41.4.4.3	抢占能力与调度的联动	fulltext_summary	520	520	0.308	B	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.4.3	抢占能力与调度的联动	fulltext_summary	520	520	0.308	B	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.4.3	抢占能力与调度的联动	fulltext_summary	527	527	0.308	B	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.4.3	抢占能力与调度的联动	fulltext_summary	107	107	0.285	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.4.5	并发重构的遗留项	fulltext_summary	20	20	0.252	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	可推	全文综述候选（D1 型，核对原文后落块）
@@ -86,7 +86,7 @@ V41.4.5.1	VFS 层的并行化改造	fulltext_summary	20	20	0.232	C	A Fast File S
 V41.4.5.1	VFS 层的并行化改造	fulltext_summary	63	63	0.232	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.5.1	VFS 层的并行化改造	fulltext_summary	118	118	0.232	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.5.1	VFS 层的并行化改造	sacred	2677		0.232	C	文件系统	可推	史观参照（不作证据，仅定题面归属）
-V41.4.7.1	调度器在多核下的权衡	fulltext_summary	520	520	0.263	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.4.7.1	调度器在多核下的权衡	fulltext_summary	520	520	0.263	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.7.1	调度器在多核下的权衡	fulltext_summary	527	527	0.263	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.7.1	调度器在多核下的权衡	fulltext_summary	107	107	0.243	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V41.4.7.1	调度器在多核下的权衡	claim	CL-RM-016067		1.10	A	altq 与双核（多核）处理器共用时的异常观察（altq 与 QoS 调度在多核下的锁/调度问题），BBN 现场测试一手报告	可推	claim 复用（S2 先库后网）
@@ -151,7 +151,7 @@ V41.8.5.4	仓库同步的更新时点	ref_title	6007	6007	0.285	C	B. zfs-0.4.1. 
 V41.8.5.4	仓库同步的更新时点	ref_title	10141	10141	0.261	C	DragonFly gsocprojectspage · 2018-02-20 快照（Wayback 20180220192156；capture=wayback） 2018	可推	文献线索（须核全文再定 D1/D2）
 V41.8.6.1	季度分支的发行韵律	sacred	2377		0.268	C	CURRENT 分支	可推	史观参照（不作证据，仅定题面归属）
 V41.8.6.1	季度分支的发行韵律	sacred	2386		0.268	C	STABLE 分支	可推	史观参照（不作证据，仅定题面归属）
-V41.8.6.3	版本升级的批量作业	fulltext_summary	520	520	0.252	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8–12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
+V41.8.6.3	版本升级的批量作业	fulltext_summary	520	520	0.252	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	可推	全文综述候选（D1 型，核对原文后落块）
 V41.8.6.3	版本升级的批量作业	fulltext_summary	527	527	0.252	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	可推	全文综述候选（D1 型，核对原文后落块）
 V41.8.6.3	版本升级的批量作业	fulltext_summary	107	107	0.233	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	可推	全文综述候选（D1 型，核对原文后落块）
 V41.8.6.3	版本升级的批量作业	claim	CL-RM-010365		1.30	A	2022 年，TeX 维护者 Muhammad Moinur Rahman 通报 TeX 系统刚更新至 2021 版后部分关联端口出现副作用，向社区征求受影响情况，记录 ports 大版本升级的连锁波及与协调过程。	可推	claim 复用（S2 先库后网）

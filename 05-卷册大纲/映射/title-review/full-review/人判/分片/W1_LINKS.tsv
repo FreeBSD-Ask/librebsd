@@ -107,7 +107,7 @@ L-105	V65	url	https://openbsdfoundation.org/activities.html		H-5	通过		HTTP 20
 L-106	V62	url	https://openchainproject.org/license-compliance		H-5	通过		HTTP 200；页题“OpenChain ISO/IEC 5230 &#8211; License Com”；最终 URL 同原址	无需处置	W1-LINK
 L-107	V59;V70	url	https://opensource.apple.com/license/apsl/		H-5	通过		WebFetch 实测返回 APSL 2.0 全文（2003-08-06 版）；最终 URL 同原址	无需处置	W1-LINK
 L-108	V32	url	https://opensource.google/about		H-5	通过		HTTP 200；页题“About &nbsp;|&nbsp; Google Open Source”；最终 URL 同原址	无需处置	W1-LINK
-L-109	V67	url	https://papers.freebsd.org/		H-5	通过		WebFetch 实测返回 FreeBSD Presentations and Papers 年份索引（1995–2025）	无需处置	W1-LINK
+L-109	V67	url	https://papers.freebsd.org/		H-5	通过		WebFetch 实测返回 FreeBSD Presentations and Papers 年份索引（1995—2025）	无需处置	W1-LINK
 L-110	V61	url	https://security.freebsd.org/advisories/FreeBSD-SA-19:08.rack.asc		H-5	通过		HTTP 200；返回 SA-19:08.rack 公告原文（PGP 签名文本）；最终 URL 同原址（已跳 www.freebsd.org）	无需处置	W1-LINK
 L-111	V69	url	https://slashdot.org/story/26/07/15/1727252/freebsd-16-retires-the-last-of-its-gpl-code		H-5	通过		HTTP 200；页题“FreeBSD 16 Retires the Last of Its GPL Cod”；最终 URL 同原址	无需处置	W1-LINK
 L-112	V68	url	https://summerofcode.withgoogle.com/rules		H-5	通过		HTTP 200；页题“Google Summer of Code”；最终 URL 同原址	无需处置	W1-LINK
