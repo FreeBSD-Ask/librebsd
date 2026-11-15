@@ -75,8 +75,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 34	2	2.6	2.6.2	高风险条目的优先次序	filled	
 34	2	2.6	2.6.3	反例与例外条目的处理	filled	
 34	2	2.6	2.6.4	复核记录的可追溯格式	filled	
-34	2	2.6	2.6.5	结论修订的触发条件	skeleton	
-34	2	2.6	2.6.6	复核后的清单状态标注	skeleton	
+34	2	2.6	2.6.5	结论修订的触发条件	filled	
+34	2	2.6	2.6.6	复核后的清单状态标注	filled	
 34	2	2.7	2.7.1	SCCS 的版本文件与增量存储	filled	
 34	2	2.7	2.7.2	RCS 的反向增量设计	filled	
 34	2	2.7	2.7.3	CVS 的集中式协作模型	filled	
@@ -88,4 +88,4 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 34	2	2.8	2.8.3	大规模采集与去重的管线	filled	
 34	2	2.8	2.8.4	源流查询接口的使用方式	filled	
 34	2	2.8	2.8.5	自动化比对的证据链	filled	
-34	2	2.8	2.8.6	档案覆盖不全的判定风险	skeleton	
+34	2	2.8	2.8.6	档案覆盖不全的判定风险	filled	
