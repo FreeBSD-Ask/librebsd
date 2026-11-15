@@ -7,3 +7,9 @@
 - **考据注**：页面自述“2BSD was the second Berkeley Software Distribution”并载 spencer_2bsd.tar.gz 为 Henry Spencer 捐赠；清单段以 FileSizeDate 表逐文件列出字节量与日期（READ_ME 351 B 1980-02-18 起），是“TUHS 以网页界面提供旧源码逐层浏览”的直接证据。注意：本页 READ_ME 时间戳 1980-02-18 与 ref5814（2bsd.tar.gz 带 READ_ME 1979-04-19）为不同快照，两 ref 分立、不混用
 - **本批落点**：V75.1.1.2 第 1 块（D1#0，全文入库）
 - **考据日期**：2026-11-15（supp-V75-b002；web_archive／L3）
+
+## supp-V75-b009 追加引文（2026-11-16）
+
+- **quote 2（逐字）**：The files here come from spencer_2bsd.tar.gz, donated by Henry Spencer.
+- **考据注**：2BSD 树页自述文件来源为 Spencer 捐赠的源码包——存档页对题赠来源的就地标注，与 Archive/updates 的捐赠条目互为印证（1.6.4 第二源）
+- **本批落点**：V75.1.6.4 第 2 块（D2 #2）
