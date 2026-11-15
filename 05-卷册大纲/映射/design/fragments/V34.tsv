@@ -34,12 +34,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 34	1	1.6	1.6.3	设计参照的文献形态	filled	
 34	1	1.6	1.6.4	代码来源的物证要求	filled	
 34	1	1.6	1.6.5	三类关系的混同与澄清	filled	
-34	1	1.6	1.6.6	参照关系在判定中的权重	skeleton	
+34	1	1.6	1.6.6	参照关系在判定中的权重	filled	
 34	1	1.7	1.7.1	POSIX 标准的接口抽象层	filled	
 34	1	1.7	1.7.2	标准文本与实现之间的空隙	filled	
 34	1	1.7	1.7.3	符合性测试的裁决功能	filled	
 34	1	1.7	1.7.4	Linux 对 POSIX 的选择性实现	filled	
-34	1	1.7	1.7.5	BSD 在标准形成中的参与	skeleton	
+34	1	1.7	1.7.5	BSD 在标准形成中的参与	filled	
 34	1	1.7	1.7.6	标准中介的限度与副作用	filled	
 34	2	2.1	2.1.1	版权声明的格式与要件	filled	
 34	2	2.1	2.1.2	许可证文本的权属表达	filled	
@@ -54,7 +54,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 34	2	2.2	2.2.5	重构与改写造成的噪声	filled	
 34	2	2.2	2.2.6	比对结论的可复现要求	filled	
 34	2	2.3	2.3.1	逐字相同的判定阈值	filled	
-34	2	2.3	2.3.2	结构同构与表达唯一的区分	skeleton	
+34	2	2.3	2.3.2	结构同构与表达唯一的区分	filled	
 34	2	2.3	2.3.3	注释与标识符的指纹作用	filled	
 34	2	2.3	2.3.4	编译产物与调试信息的旁证	filled	
 34	2	2.3	2.3.5	多文件一致性的加权规则	filled	
@@ -67,7 +67,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 34	2	2.4	2.4.6	归属主张的举证责任	filled	
 34	2	2.5	2.5.1	可证事实的材料门槛	filled	
 34	2	2.5	2.5.2	推测的合理性与表述限度	filled	
-34	2	2.5	2.5.3	缺失证据的推定禁区	skeleton	
+34	2	2.5	2.5.3	缺失证据的推定禁区	filled	
 34	2	2.5	2.5.4	口述回忆的采信尺度	filled	
 34	2	2.5	2.5.5	存疑标记的使用规范	filled	
 34	2	2.5	2.5.6	结论强度的分级表述	filled	
