@@ -1,3 +1,9 @@
 subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
 V75.1.2.1	corpus_gap	1812;2657	CL-RM-493766	academic_work	secondary_authoritative	D1	supp-V75-b001	supplemented	库内复用（FreeBSD Journal 2020-11/12＋CoRecursive 转写文稿）
 V75.1.2.2	corpus_gap	1812;2657	CL-RM-493767	academic_work	secondary_authoritative	D1	supp-V75-b001	supplemented	库内复用（FreeBSD Journal 2020-11/12＋CoRecursive 转写文稿）
+V75.1.1.1	corpus_gap	1656	CL-RM-495541	academic_work	primary	D1	supp-V75-b002	supplemented	库内复用（Spinellis MSR 2015 全文块#2）＋GitHub API 独立核验
+V75.1.1.1	corpus_gap	1636	CL-RM-495542	academic_work	primary	D1	supp-V75-b002	supplemented	库内复用（Toomey IEEE Annals 2010 全文块#0）
+V75.1.1.2	corpus_gap	10699	CL-RM-495543	web_archive	primary	D1	supp-V75-b002	supplemented	联网新建＋全文入库（TUHS utree.pl 2BSD 浏览页）
+V75.1.1.2	corpus_gap	10700	CL-RM-495544	web_archive	primary	D1	supp-V75-b002	supplemented	联网新建＋全文入库（TUHS utree.pl V6/usr/source 浏览页）
+V75.1.1.3	corpus_gap	5803	CL-RM-495545	web_archive	primary	D2	supp-V75-b002	supplemented	库内复用（4.1BSD reconstructed README DKC 卡，仅条目；著录本批修规范）
+V75.1.1.3	corpus_gap	5814	CL-RM-495546	web_archive	primary	D2	supp-V75-b002	supplemented	库内复用（2bsd.tar.gz READ_ME DKC 卡，仅条目；著录本批修规范）
