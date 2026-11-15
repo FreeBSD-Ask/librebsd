@@ -9,3 +9,10 @@
 - **考据注**：第 1 处为服务器端钩子（repo.freebsd.org 校验 Commit 字段与 committer 信息）；第 2 处为三库客户端钩子安装规程（doc 软链 .hooks/prepare-commit-msg、ports 用 core.hooksPath .hooks、src 软链 tools/tools/git/hooks/prepare-commit-msg）。两处均为 Git 迁移后基础设施自动化面的可考痕迹
 - **本批落点**：V75.1.2.3 第 1 块（D2 ref10664#url）与第 2 块（D2 ref10664#2）
 - **考据日期**：2026-11-16（supp-V75-b003；official_doc／L3）
+
+## supp-V75-b004 追加引文（2026-11-16）
+
+- **quote 3（逐字；折行按单空格归一）**：For changes beyond those described here, committers should seek review from committers with the appropriate bit in the target repository. When in doubt, seek review, even if you have a commit bit in the repo.
+- **quote 4（逐字）**：Committers are encouraged to seek review for their work as part of the normal development process, regardless of the area of the tree where the work is occurring.
+- **考据注**：第 3 处为 4.1.2 非显然改动送审规则＋存疑即送审句（Pre-Commit Review 面）；第 4 处为送审文化句（常规开发过程组成部分、不限区域）。本段引文与原卡（提交位／许可留档／非 BSD 安置）及 b003 引文面（commit hook／钩子安装）不重叠
+- **本批落点**：V75.1.2.4 两块（D2 ref10664#url／#2）
