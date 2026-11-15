@@ -16,3 +16,9 @@
 - **quote 4（逐字）**：Committers are encouraged to seek review for their work as part of the normal development process, regardless of the area of the tree where the work is occurring.
 - **考据注**：第 3 处为 4.1.2 非显然改动送审规则＋存疑即送审句（Pre-Commit Review 面）；第 4 处为送审文化句（常规开发过程组成部分、不限区域）。本段引文与原卡（提交位／许可留档／非 BSD 安置）及 b003 引文面（commit hook／钩子安装）不重叠
 - **本批落点**：V75.1.2.4 两块（D2 ref10664#url／#2）
+
+## supp-V75-b005 追加引文（2026-11-16）
+
+- **quote 5（逐字；折行按单空格归一）**：The access and mentors files are stored in an orphan branch, internal/admin , in each repository.
+- **考据注**：access 与 mentors 名册存于孤儿分支 internal/admin——行政记录与源码树分列，开发态与行政态的边界由分支机制承载。与前四段引文面（提交位／许可留档／非 BSD 安置／commit hook 与钩子安装／送审规则）不重叠
+- **本批落点**：V75.1.3.4 第 2 块（D2 ref10664#url）
