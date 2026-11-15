@@ -1,7 +1,7 @@
 # InfoWorld 1999-07-01 “Join the Jini community”（新 ref）引用卡
 
 - **性质**：InfoWorld 文章页（1999-07-01 发表，述 Jini 社区注册流程与三种项目模式）；本机 Chrome UA urllib 直取 232,760 B，去 script／style 与标签后 10,381 字符（页面含广告与推荐位，正文只在“To empower the community…”至“microcosm approach”一段）
-- **数据库**：新建 ref（2026-11-16 V33 P2 联网补证批 b024；source_url 四键查重：库内 infoworld.com 条目为 2009 年 Windows 7 Sins 报道（ref10721 系列的邻件）与 Sun 相关条目均无 `/article/2163690` 重合）
+- **数据库**：新建 ref（2026-11-16 V33 P2 联网补证批 b024；source_url 四键查重：库内 infoworld.com 条目为 2009 年 Windows 7 Sins 报道（ref10720 起各批）与 Sun 相关条目均无 `/article/2163690` 重合；本件实得 ref10725）
 - **source_url**：<https://www.infoworld.com/article/2163690/join-the-jini-community.html>
 - **quote（逐字，两处）**：
   1. To empower the community and enable rapid growth and acceptance of Jini, Sun is making core Jini technology, including the source code for Sun's implementation, available for download from the community site.
