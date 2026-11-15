@@ -7,3 +7,9 @@
 - **考据注**：第 1 处为规则面明文（技术列话题须保持技术性）；第 2 处为非技术出口（无特定话题的自由讨论应改用 chat 列）——两者合证体裁区分不只是列表命名，而是 Handbook 成文规则把“技术讨论”与“自由闲聊”划归不同列
 - **本批落点**：V75.1.5.2 第 2 块（D2）
 - **考据日期**：2026-11-16（supp-V75-b007；official_doc／L3）
+
+## supp-V75-b008 追加引文（2026-11-16）
+
+- **quote 3（逐字；折行按单空格归一）**：The topic of any posting should adhere to the basic description of the list it is posted to. If the list is about technical issues, the posting should contain technical discussion.
+- **考据注**：Rules of the road 首条——发帖话题须贴合所在列表的基本描述；技术列须含技术讨论。与 b007 引文面（技术列保持技术性／闲聊改用 chat）不重叠：本条是可执行的话题适配规则，b007 是体裁归属规则
+- **本批落点**：V75.1.5.4 第 2 块（D2 ref10636 所在卡 #2）
