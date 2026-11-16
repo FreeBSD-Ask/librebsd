@@ -28,11 +28,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	2	2.2	2.2.3	与 FFS 的名实关系	filled	
 31	2	2.2	2.2.4	后续演进的时段外登记	filled	
 31	2	2.2	2.2.5	分支时代的沿革回溯	filled	
-31	2	2.2	2.2.6	名实对应的判定规程	skeleton	
+31	2	2.2	2.2.6	名实对应的判定规程	filled	
 31	2	2.3	2.3.1	有序写替代同步写的思路	filled	
 31	2	2.3	2.3.2	依赖跟踪的排序章法	filled	
 31	2	2.3	2.3.3	崩溃一致性的恢复成本	filled	
-31	2	2.3	2.3.4	形成期的学位论文脉络	skeleton	
+31	2	2.3	2.3.4	形成期的学位论文脉络	filled	
 31	2	2.3	2.3.5	与日志方案的语义对照	filled	
 31	2	2.3	2.3.6	主文献的时段外落位	filled	
 31	2	2.4	2.4.1	fsck 的全量扫描程序	filled	
@@ -42,9 +42,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	2	2.4	2.4.5	可靠性的工程权衡	filled	
 31	2	2.4	2.4.6	检查项目的清单口径	skeleton	
 31	3	3.1	3.1.1	缺引用位下的分页难题	filled	
-31	3	3.1	3.1.2	可回收页的软件模拟	skeleton	
+31	3	3.1	3.1.2	可回收页的软件模拟	filled	
 31	3	3.1	3.1.3	3BSD 的分页落地	filled	
-31	3	3.1	3.1.4	交换到分页的转换	skeleton	
+31	3	3.1	3.1.4	交换到分页的转换	filled	
 31	3	3.1	3.1.5	负载控制的策略选择	filled	
 31	3	3.1	3.1.6	硬件约束的史学意味	skeleton	
 31	3	3.2	3.2.1	全局时钟置换算法	filled	
