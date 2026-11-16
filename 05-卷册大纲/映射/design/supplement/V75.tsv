@@ -146,3 +146,11 @@ V75.2.9.3	corpus_gap	10853	CL-RM-495991	official_doc	primary	D2	supp-V75-b020	su
 V75.2.9.3	corpus_gap	10853	CL-RM-495992	official_doc	primary	D2	supp-V75-b020	supplemented	同 ref xnu 第二块（混合内核三成分，#2）
 V75.2.9.4	corpus_gap	10853	CL-RM-495993	official_doc	primary	D2	supp-V75-b020	supplemented	同 ref xnu 异文件块（源树 bsd／osfmk 对照）
 V75.2.9.4	corpus_gap	10853	CL-RM-495994	official_doc	primary	D2	supp-V75-b020	supplemented	同 ref xnu 异文件块（EXTERNAL_HEADERS 同步要求，#2）
+V75.2.10.1	corpus_gap	10855	CL-RM-496007	official_doc	primary	D2	supp-V75-b021	supplemented	联网新建（列表总册页，D2，逐列用途）
+V75.2.10.1	corpus_gap	10855	CL-RM-496008	official_doc	primary	D2	supp-V75-b021	supplemented	同 ref li 第二块（catch-all 兜底，#2）
+V75.2.10.2	corpus_gap	10856	CL-RM-496009	official_doc	primary	D2	supp-V75-b021	supplemented	联网新建（dports 包库总览，D2，独立成库）
+V75.2.10.2	corpus_gap	10856	CL-RM-496010	official_doc	primary	D2	supp-V75-b021	supplemented	同 ref dp 第二块（DPorts Builder 提交流，#2）
+V75.2.10.2	corpus_gap	10825	CL-RM-496011	official_doc	primary	D2	supp-V75-b021	supplemented	复用 10825 追加段（gitweb 总表并列源库与包库）
+V75.2.10.3	corpus_gap	10826	CL-RM-496012	official_doc	primary	D2	supp-V75-b021	supplemented	复用 10826 一块（主源库最后提交时刻）
+V75.2.10.3	corpus_gap	10832	CL-RM-496013	web_archive	primary	D2	supp-V75-b021	supplemented	复用 10832 一块（存档最新月档）
+V75.2.10.3	corpus_gap	2338	CL-RM-496014	official_doc	primary	D2	supp-V75-b021	supplemented	复用 2338 一块（发行最新版日期）
