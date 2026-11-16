@@ -15,3 +15,9 @@
 - **quote 3（逐字；制表缩进按单空格归一）**：updates - Details of the latest updates to the archive
 - **考据注**：Archive 顶层设 updates 区并自注其职责为“载归档最新增补详情”——与 updates 文件的逐条日志构成区划与内容的对应（1.6.3 第二源）
 - **本批落点**：V75.1.6.3 第 3 块（D2 #2）
+
+## supp-V75-b010 追加引文（2026-11-16）
+
+- **quote 4（逐字）**：Most of the material in the Archive is tainted with source code that was originally owned by AT&T, Novell, SCO and others. Please read the Caldera-license.pdf, and also the individual copyright notices for each piece of software in this archive.
+- **考据注**：README 版权告示——存档多数材料含 AT&T／Novell／SCO 原属源码，使用前须读 Caldera 许可与各件版权声明（受限类缺档的表述面）
+- **本批落点**：V75.1.7.1 第 1 块（D2 #url）
