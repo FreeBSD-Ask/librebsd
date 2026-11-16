@@ -1,0 +1,8 @@
+subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
+V03.1.1.2	corpus_gap	3896	CL-RM-495698	official_doc	primary	D1	supp-V03-b001	supplemented	库内复用＋全文取证（DEC PDP-11 Processor Handbook 1976，ref3896#0）
+V03.1.1.2	corpus_gap	10771	CL-RM-495699	academic_work	primary	D1	supp-V03-b001	supplemented	联网新 ref＋全文入库（Bell 1977，D1#3）
+V03.1.1.2	corpus_gap	10772	CL-RM-495700	web_archive	secondary_authoritative	D2	supp-V03-b001	supplemented	联网新 ref（CHM 1970s 年表，D2 #url）
+V03.1.1.3	corpus_gap	3896	CL-RM-495701	official_doc	primary	D1	supp-V03-b001	supplemented	库内复用（DEC 手册，ref3896#0，异引文）
+V03.1.1.3	corpus_gap	10771	CL-RM-495702	academic_work	primary	D1	supp-V03-b001	supplemented	同 ref 异节引文（Bell 1977，D1#1）
+V03.1.1.4	corpus_gap	3896	CL-RM-495703	official_doc	primary	D1	supp-V03-b001	supplemented	库内复用（DEC 手册，ref3896#0，异引文）
+V03.1.1.4	corpus_gap	10771	CL-RM-495704	academic_work	primary	D1	supp-V03-b001	supplemented	同 ref 异节引文（Bell 1977，D1#2）
