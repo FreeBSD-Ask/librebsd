@@ -1,0 +1,51 @@
+subsection_id	title	source	object_id	score	quality	snippet	拟用途	判读结论	判读依据
+V27.1.4.2	首版发行时点的两说	claim	CL-RM-012690	1.10	A	Torek 陈述“从未有单一的 C shell”——首版 VAX 发行时即有多个不同 csh——csh 变体史	claim 复用（S2 先库后网）	拒收留痕	claim 证 4.2BSD VAX 首版发行时 csh 变体构成，不证 FreeBSD 1.0 发行时点（11月/12月两说）；题轴为时点断代，异题异代
+V27.1.5.1	核心团队的人员名单	sacred	2358	0.244	C	提交者	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.1.5.4	与用户社群的分层	ref_title	2460	0.220	C	OpenBSD 邮件列表存档（marc.info） marc.info 	文献线索（须核全文再定 D1/D2）	拒收留痕	marc.info 为 OpenBSD 邮件列表存档站泛库，题为 FreeBSD 社群分层；无具体帖，联网批取 FreeBSD lists 具体帖
+V27.1.7.1	以个人计算机为主目标	claim	CL-RM-010980	1.30	A	Kazuhisa Shimizu 宣布其友 Masaru Oki 已将 NetBSD 移植至 SHARP X68030 个人计算机并由 Masanobu Saito 开设匿名 FTP 站点分发，是日本硬件社区对 NetBSD 的最早移植参与	claim 复用（S2 先库后网）	拒收留痕	claim 为 NetBSD/X68030 移植事件（CH2 语料），题为 FreeBSD 1.0 的 i386 个人计算机取向与工作站取舍；跨项目
+V27.1.7.1	以个人计算机为主目标	claim	CL-1-112	1.30	A	计算机史常按机器设计世代分期——大型机世代、小型机时代、个人计算机革命。	claim 复用（S2 先库后网）	拒收留痕	通史分期套话（L3），不证 FreeBSD 目标市场取舍
+V27.1.7.4	性能与稳定性的权衡	claim	CL-6-108	1.10	B	OpenBSD 自 2005 年起对 SCSI 中间层（SCSI midlayer）实施重大重构，引入 mpath(4) 多路径虚拟总线与 iopools 资源池、将适配器命令处理器改为回调式 scsi_done API，以改善稳定性、性能	claim 复用（S2 先库后网）	拒收留痕	OpenBSD SCSI 中层重构（2005）跨项目＋超卷域；题轴为 FreeBSD 1.x 早期稳定性取向
+V27.1.7.4	性能与稳定性的权衡	claim	CL-RM-010367	1.00	A	2022 年，KDE/ports 维护者 Tobias C. Berner 回应 TeX 2021 更新 RFC，主张趁 ports 树未再大幅漂移前尽快合入，并认为暂时标记 10 至 12 个端口为 broken 可接受，反映大版本更新与	claim 复用（S2 先库后网）	拒收留痕	FreeBSD ports TeX RFC（2022）超卷域（1992–2005）；2022 端口维护话题不证 1993 年取舍
+V27.1.8.1	分支身份的自我确认	ref_title	5932	0.258	C	与 Spencer 1985-12 net.sources 公告 1985	文献线索（须核全文再定 D1/D2）	拒收留痕	1985 net.sources 公告为前史时点，题为 FreeBSD 分支自我确认（1993 后公告与文档）
+V27.2.4.1	架构抽象的层次设计	sacred	1954	0.229	C	第 43 章 FreeBSD 内核架构：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与机器无关的内核选项注解、GENERIC 内核选项注解（AMD64）、构建定制内核的方法，以及在 Linux 系统上交叉构建 FreeBSD	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.2.5.4	基金会成立前的组织结构	sacred	1911	0.270	C	本书的组织结构	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.2.5.4	基金会成立前的组织结构	sacred	2438	0.234	C	2000 年 3 月 28 日：FreeBSD 基金会成立	史观参照（不作证据，仅定题面归属）	史观参照	且为 FreeBSD 基金会日期，题属 NetBSD 章，归属亦不合，仅作参照记录
+V27.2.5.4	基金会成立前的组织结构	claim	CL-5-015	1.30	A	McKusick 在 BSDCan 2018 演讲中记载：Yahoo 完全基于 FreeBSD 运行并同意托管 CVS 仓库与发行版，Justin Gibbs 创立 FreeBSD Foundation 旨在提供 FreeBSD 项目基础设	claim 复用（S2 先库后网）	拒收留痕	FreeBSD 基金会（Gibbs 创立／Yahoo 托管 CVS）材料，题为 NetBSD 核心组＋志愿者组织形态；跨项目错配，TNF 组织史留联网批
+V27.3.4.2	首个正式版本的时点	claim	CL-RM-010275	1.20	B	2002 年 acorn32 准备 NetBSD 1.6 首个官方发布——ARM 老平台从快照分发进入正式版本序列（同期安装程序修复）	claim 复用（S2 先库后网）	拒收留痕	NetBSD acorn32 1.6 发布（2002），题为 OpenBSD 首个正式版时点（1996 秋断代基准）；跨项目
+V27.3.4.4	发行渠道的原始形态	claim	CL-RM-010128	1.30	A	2007 年 Servat 宣布 PAPI-3.5.0 进入 FreeBSD ports 树、对所有用户可用——从个人移植到正式发行渠道的里程碑	claim 复用（S2 先库后网）	拒收留痕	FreeBSD ports PAPI（2007），题为 OpenBSD 光盘＋镜像发行形态；跨项目＋超卷域
+V27.3.4.5	版本序列的编号清理	claim	CL-RM-010284	1.30	A	1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	claim 复用（S2 先库后网）	拒收留痕	FreeBSD 3.3-RELEASE oltr 驱动（1999），题为 OpenBSD 版本编号清理；跨项目
+V27.3.5.1	审计方法的引入路径	ref_title	5817	0.319	B	T. E. (1993-1996) ncurses 项目文档 1993	文献线索（须核全文再定 D1/D2）	拒收留痕	ncurses 项目文档与 OpenBSD 审计方法引入无涉（关键词噪声）
+V27.3.5.1	审计方法的引入路径	sacred	2339	0.221	C	2.2 关于 FreeBSD 项目	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.3.5.2	默认配置的逐项收紧	fulltext_summary	976	0.321	B	Total ASSETS Current Assets Bank Accounts 1000 Wells Fargo - Checking 811,157.93 1001 Wells Fargo - Electronic Payment 5	全文综述候选（D1 型，核对原文后落块）	拒收留痕	基金会年度财务报表（2024）与 OpenBSD 默认配置收紧无涉；财务面属治理卷语料
+V27.3.6.1	领导权的集中程度	sacred	2656	0.313	B	Theo de Raadt（OpenBSD 创始人）	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.4.1.3	调度器的设计选择	fulltext_summary	520	0.276	C	USENIX Association Proceedings of BSDCon ’03 San Mateo, CA, USA September 8—12, 2003 THE ADVANCED COMPUTING SYSTEMS ASSO	全文综述候选（D1 型，核对原文后落块）	落块候选	Roberson ULE 调度器论文（BSDCon'03，卷域内）：ULE 即 FreeBSD 5.x 新调度器、Dillon 分叉争议对象，直证题面；落块批核原文引句
+V27.4.1.3	调度器的设计选择	fulltext_summary	527	0.276	C	5­ September 2004 QUEUE rants: feedback@acmqueue.com in FreeBSD 5.2 Thread Scheduling QUEUE September 2004 59 more queue	全文综述候选（D1 型，核对原文后落块）	落块候选	QUEUE 2004 FreeBSD 5.2 线程调度专文（卷域内），同一题域；与 ref520 同批落块核原文
+V27.4.1.3	调度器的设计选择	fulltext_summary	107	0.255	C	Your scheduler is not the problem Martin Pieuchot mpi@openbsd.org EuroBSDcon, Paris September 2017 Your OS doesn’t work 	全文综述候选（D1 型，核对原文后落块）	拒收留痕	Pieuchot 调度器演讲（EuroBSDCon 2017）超卷域且为 OpenBSD 语境；题为 FreeBSD5/DFLY 调度争议
+V27.4.1.4	转型期的共同体张力	ref_title	2460	0.243	C	OpenBSD 邮件列表存档（marc.info） marc.info 	文献线索（须核全文再定 D1/D2）	拒收留痕	泛库无具体帖；题为 DFLY 转型张力，联网批取 lists.dragonflybsd.org 具体帖
+V27.4.3.2	公告文本的措辞分寸	fulltext_summary	91	0.258	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	全文综述候选（D1 型，核对原文后落块）	拒收留痕	mandoc 手册工具教程（2014）与 DFLY 公告措辞分寸题域错配
+V27.4.3.3	初始代码的取得途径	ref_title	5820	0.294	C	GitHub 仓库 v0.1.0 Release（<https://github.com/neovim/neovim/releases/tag/v0.1.0>，2015-11-01） 2015	文献线索（须核全文再定 D1/D2）	拒收留痕	neovim v0.1.0 release（2015）跨域（非 BSD 系）；题为 DFLY 初始代码取自 FreeBSD 公开仓库
+V27.4.3.3	初始代码的取得途径	ref_title	6007	0.294	C	B. zfs-0.4.1. openzfs-zfs 仓库 tag [DB/OL]. 2009-01-21T12:25:52-08:00. tag: zfs-0.4.1 2009	文献线索（须核全文再定 D1/D2）	拒收留痕	openzfs zfs-0.4.1 tag（2009）为 ZFS 移植外围案例，不证 DFLY 初始代码取得途径
+V27.4.4.2	虚拟内存的设计分歧	claim	CL-RM-011600	1.30	A	Cray 为何弃用虚拟内存的多方回应汇总：base/limit 寄存器保护、内存带宽为超算瓶颈、CDC 205/ETA10 分页性能教训	claim 复用（S2 先库后网）	拒收留痕	Cray 弃用 VM 汇总（L2）为异代异轴对比；题轴为 FreeBSD5 转型中 VM-调度耦合分歧（DFLY 分叉缘起），Cray 无 VM 设计不证本题分歧
+V27.4.4.2	虚拟内存的设计分歧	claim	CL-RM-011615	1.20	B	NASA Ames CCF 顾问诊断 UNICOS 6.0 的 sort 沿用为虚拟内存机器的设计而在无 VM 的 Cray 上低效，给出参数调优清单	claim 复用（S2 先库后网）	拒收留痕	NASA Ames UNICOS sort 调优（无 VM Cray），同上不证 FreeBSD5/DFLY VM-调度耦合分歧
+V27.4.5.2	中期的技术路线分化	fulltext_summary	20	0.238	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	全文综述候选（D1 型，核对原文后落块）	拒收留痕	FFS 论文（1984）为分化前共同底本（前史），题为 DFLY 中期锁与 FS 分化（HAMMER）；不证分化本身
+V27.4.5.2	中期的技术路线分化	fulltext_summary	63	0.238	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	全文综述候选（D1 型，核对原文后落块）	拒收留痕	Pledge&Unveil（2018，OpenBSD 安全机制）超卷域且题域错配
+V27.4.5.2	中期的技术路线分化	fulltext_summary	118	0.238	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	全文综述候选（D1 型，核对原文后落块）	拒收留痕	krw blocks-to-booting（2022，OpenBSD）超卷域且题域错配
+V27.4.5.2	中期的技术路线分化	sacred	2677	0.238	C	文件系统	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.5.15.1	技术路线的实质冲突	fulltext_summary	20	0.229	C	A Fast File System for UNIX MARSHALL K. MCKUSICK, WILLIAM N. LEFFLER, and ROBERT S. FABRY Computer Systems Research Grou	全文综述候选（D1 型，核对原文后落块）	拒收留痕	同 4.5.2 判：前史底本，不证锁/调度/FS 三处分歧
+V27.5.15.1	技术路线的实质冲突	fulltext_summary	63	0.229	C	Pledge, and Unveil, in OpenBSD Bob Beck beck@openbsd.org Pledge: Realistic subsets of POSIX functionality ●Named subsets	全文综述候选（D1 型，核对原文后落块）	拒收留痕	同 4.5.2 判：超卷域且题域错配
+V27.5.15.1	技术路线的实质冲突	fulltext_summary	118	0.229	C	From Blocks to Filesystems to Booting How OpenBSD makes bags of blocks useful K. Westerback, krw@openbsd.org 17 Septembe	全文综述候选（D1 型，核对原文后落块）	拒收留痕	同 4.5.2 判：超卷域且题域错配
+V27.5.15.1	技术路线的实质冲突	sacred	2677	0.229	C	文件系统	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.5.15.4	条件命题的案例验证	fulltext_fact	kf-bell-10020-088	0.224	C	No. 3交换机最多支持600条toll trunks	全文补证候选（S1 命中即复用，D1 型）	拒收留痕	贝尔 No.3 交换机容量与本题四案例（卷域 BSD 分叉案例）无涉
+V27.5.2.5	机制解释的适用边界	claim	CL-RM-001504	0.70	A	"数字天堂诉柚子科技案（""中国 GPL 第一案""，北京知识产权法院 2015-2018 年审理）中，法院认定 HBuilder 软件中 GPL 3.0 第三方代码与数字天堂自有插件代码构成""独立作品""而非""演绎作品""，GPL 3.0 传染性条"	claim 复用（S2 先库后网）	拒收留痕	数字天堂 GPL 案（2015–2018）超卷域（1992–2005）；题为机制解释适用边界方法论题，卷域内案例留联网批
+V27.5.3.2	知识传播的渠道类型	fulltext_summary	67	0.312	B	New trends in mandoc: Enhancing the modern toolbox for the classic documentation formats Ingo Schwarze <schwarze@openbsd	全文综述候选（D1 型，核对原文后落块）	拒收留痕	mandoc 工具演进（2014）非代码/文档/人员三渠道的证据
+V27.5.7.3	邮件列表的史料局限	ref_title	2460	0.299	C	OpenBSD 邮件列表存档（marc.info） marc.info 	文献线索（须核全文再定 D1/D2）	线索核全文	marc.info 即 OpenBSD 邮件列表留存载体，与题面“留存不全，局限须登记”直接相关；落块批核存档覆盖面与断档实例再定 D1/D2
+V27.5.7.3	邮件列表的史料局限	ref_title	5763	0.245	C	N. H. F. (2015.11.29) TUHS 邮件列表 OCR 版本提供（tuhs.org/pipermail/tuhs/2015-November/007705.html，UnixEditionZero-OCR.pdf） 2015	文献线索（须核全文再定 D1/D2）	线索核全文	TUHS 存档 OCR 补全事件（2015 帖）即“留存不全→补全”题面案例；落块批核原帖
+V27.5.8.1	许可证的共同底本	fulltext_summary	114	0.253	C	Advanced ports toolkit: near-perfect packing-list generation Marc Espie <espie@openbsd.org>, <espie@lse.epita.fr> Epita 	全文综述候选（D1 型，核对原文后落块）	拒收留痕	ports plist 生成（2019）与许可共同底本无涉
+V27.5.8.1	许可证的共同底本	fulltext_summary	942	0.253	C	Jan - Sep 13 Ordinary Income/Expense Income Contributions Income Unrestricted 403,912.18 Total Contributions Income 403,	全文综述候选（D1 型，核对原文后落块）	拒收留痕	基金会 2013 财务报表与许可底本无涉
+V27.5.8.1	许可证的共同底本	fulltext_summary	949	0.253	C	Jan - Sep 14 Ordinary Income/Expense Income Unrelated Income FreeBSD Journal Advertising Inc 2,687.50 Total Unrelated In	全文综述候选（D1 型，核对原文后落块）	拒收留痕	基金会 2014 财务报表与许可底本无涉
+V27.5.8.5	遗产叙述的常见误区	sacred	2179	0.234	C	附录：自由软件与开源软件的常见误解辨析	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.5.9.4	传播过程中的滞后	fulltext_fact	kf-bell-10019-597	0.241	C	K. G. Jansky 在研究无线电传播过程中发现了射电天文学的基础	全文补证候选（S1 命中即复用，D1 型）	拒收留痕	Jansky 射电发现系“传播”关键词噪声；题为 BSD 知识传播滞后
+V27.5.9.5	流动的史料证据链	sacred	2089	0.253	C	致谢	史观参照（不作证据，仅定题面归属）	史观参照	仅定题面归属，不作证据
+V27.5.9.5	流动的史料证据链	ref_title	2446	0.243	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	文献线索（须核全文再定 D1/D2）	线索核全文	Berkeley DB 访谈（Seltzer/Olson）为“访谈构成证据链”的类型实例（内容涉卷域 BDB 史）；落块批核访谈文本再定
+V27.5.9.5	流动的史料证据链	ref_title	2660	0.243	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	文献线索（须核全文再定 D1/D2）	线索核全文	bsdtalk McKusick 访谈（2006）同上类型实例；访谈日期略超卷域一年，落块批核题面时点宽容度再定
+V27.5.9.5	流动的史料证据链	ref_title	10323	0.243	C	The unknown hackers（Salon.com 访谈） Chalmers R 2000	文献线索（须核全文再定 D1/D2）	线索核全文	Salon 访谈（2000，卷域内）为访谈/媒体证据链示例；落块批核文本
