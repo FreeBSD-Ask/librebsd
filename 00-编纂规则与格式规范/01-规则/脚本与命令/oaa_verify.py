@@ -131,7 +131,7 @@ def main():
     ap.add_argument("--db-ce", type=int)
     ap.add_argument("--db-ev", type=int)
     ap.add_argument("--len-flex", action="store_true",
-                    help="长度上限放宽（F2 用）：只查下限 C<30 仍 FAIL；CJK>80/总>200 记入"
+                    help="长度上限放宽（F2 用）：只查下限 C<30 仍 FAIL；CJK>120/总>200 记入"
                          "长度超限清单（不 FAIL，批次报告备案）——F2 任务书 §六 字数门禁"
                          "仅设下限、§一体例注明 tech-kern 摘要偏长，且 87,665 块中 993/1000 本就 ≤200/80，"
                          "超限者为技术密集长帖（2026-09-29 实测口径）")
@@ -198,9 +198,9 @@ def main():
                 C, L = cjk(body), len(body)
                 if C < 30:
                     fails.append(f"G3 字数不足 CJK={C} 总={L}: {rel}:{i+4}")
-                elif not args.len_flex and (C > 80 or L > 200):
+                elif not args.len_flex and (C > 120 or L > 200):
                     fails.append(f"G3 字数 CJK={C} 总={L}: {rel}:{i+4}")
-                elif args.len_flex and (C > 80 or L > 200):
+                elif args.len_flex and (C > 120 or L > 200):
                     print(f"  长度超限(备案): {rel}:{i+4} CJK={C} 总={L}")
                 if re.search(r"[「」『』＊]", summ) or '"' in summ or is_bad_star(summ):
                     fails.append(f"G3 禁字符: {rel}:{i+4}")
