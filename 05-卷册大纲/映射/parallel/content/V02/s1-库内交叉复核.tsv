@@ -1,2 +1,4 @@
 subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
 V02.2.5.3	两网的协议基础与互联方式	fulltext_fact	7319	1541	0.241	A	本文提出的协议设计最终演化为 TCP（传输控制协议）与 IP（互联网协议），构成互联网的协议基础。	已认领(claimed)	全文补证候选（S1 命中即复用，D1 型）
+V02.2.1.4	大学合同的拨款与核算制度	no_hit			0	—	四库无同题块：claims LIKE 与 fulltext facts 均无 31 U.S.C. § 6304／2 CFR § 200.403 的对题记载	未命中	转 P2 联网
+V02.2.3.1	分拆后组织链条的子公司化	fulltext_block	1120	53	0.62	A	Temin 书 block 1120：American Bell 分离子公司资本化计划、1983-01-01 启动、软件能力自西电与贝尔实验室转入	已认领(claimed)	全文补证候选（D1 型）
