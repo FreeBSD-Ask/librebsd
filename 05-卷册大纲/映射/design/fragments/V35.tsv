@@ -12,12 +12,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 35	1	1.2	1.2.5	从发行说明到运维手册的出处淡出	skeleton	
 35	1	1.2	1.2.6	基础设施归名的证据链与缺口	skeleton	
 35	1	1.3	1.3.1	POSIX 接口吸收 BSD 惯例的标准化路径	skeleton	
-35	1	1.3	1.3.2	socket 从 BSD 实现到通用接口的泛化	skeleton	
+35	1	1.3	1.3.2	socket 从 BSD 实现到通用接口的泛化	filled	
 35	1	1.3	1.3.3	通用化之后的出处脱嵌现象	skeleton	
-35	1	1.3	1.3.4	标准文本中的渊源注记密度	skeleton	
+35	1	1.3	1.3.4	标准文本中的渊源注记密度	filled	
 35	1	1.3	1.3.5	从项目专名到技术通名的语义滑移	skeleton	
 35	1	1.3	1.3.6	通用技术归名的判定指标	skeleton	
-35	1	1.4	1.4.1	商标认证话语对 UNIX 涵义的收窄	skeleton	
+35	1	1.4	1.4.1	商标认证话语对 UNIX 涵义的收窄	filled	
 35	1	1.4	1.4.2	“UNIX 技术”称谓的扩容与漂移	filled	
 35	1	1.4	1.4.3	“BSD 技术”作为独立传统的立名条件	skeleton	
 35	1	1.4	1.4.4	两套称谓在文献中的互换实例	skeleton	
@@ -102,7 +102,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 35	3	3.2	3.2.5	归名误判与纠正的成本	skeleton	
 35	3	3.2	3.2.6	工具署名核查的程序设计	skeleton	
 35	3	3.3	3.3.1	socket 接口的 4.2BSD 起点	skeleton	
-35	3	3.3	3.3.2	标准化文本中的渊源脱嵌	skeleton	
+35	3	3.3	3.3.2	标准化文本中的渊源脱嵌	filled	
 35	3	3.3	3.3.3	通用接口叙事的形成机制	skeleton	
 35	3	3.3	3.3.4	socket 与 POSIX 的称谓递换	skeleton	
 35	3	3.3	3.3.5	误归传统的问题化路径	skeleton	
