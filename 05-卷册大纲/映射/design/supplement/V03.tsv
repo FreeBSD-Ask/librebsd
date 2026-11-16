@@ -6,3 +6,7 @@ V03.1.1.3	corpus_gap	3896	CL-RM-495701	official_doc	primary	D1	supp-V03-b001	sup
 V03.1.1.3	corpus_gap	10771	CL-RM-495702	academic_work	primary	D1	supp-V03-b001	supplemented	同 ref 异节引文（Bell 1977，D1#1）
 V03.1.1.4	corpus_gap	3896	CL-RM-495703	official_doc	primary	D1	supp-V03-b001	supplemented	库内复用（DEC 手册，ref3896#0，异引文）
 V03.1.1.4	corpus_gap	10771	CL-RM-495704	academic_work	primary	D1	supp-V03-b001	supplemented	同 ref 异节引文（Bell 1977，D1#2）
+V03.1.1.5	corpus_gap	10771	CL-RM-495815	academic_work	primary	D1	supp-V03-b002	supplemented	Bell 1977：UNIBUS 中断向量免除轮询、自动上下文保存、四次内存周期
+V03.1.1.5	corpus_gap	3896	CL-RM-495816	official_doc	primary	D1	supp-V03-b002	supplemented	PDP-11 处理机手册：中断服务硬件自动保存状态、设备与服务程序优先级独立
+V03.1.2.4	corpus_gap	878	CL-RM-495817	academic_work	primary	D1	supp-V03-b002	supplemented	Ritchie 1984：B 未取代汇编之因、1973 内核以 C 重写
+V03.1.2.4	corpus_gap	1531	CL-RM-495818	academic_work	primary	D1	supp-V03-b002	supplemented	Ritchie 1993：C 与 UNIX 并行形成、1977—1979 可移植性演示期
