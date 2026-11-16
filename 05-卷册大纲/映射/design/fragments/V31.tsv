@@ -1,5 +1,5 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
-31	1	1.1	1.1.1	内核结构的三段演化	skeleton	
+31	1	1.1	1.1.1	内核结构的三段演化	filled	
 31	1	1.1	1.1.2	PDP-11 时代的内核约束	filled	
 31	1	1.1	1.1.3	VAX 移植与 3BSD 的分野	filled	
 31	1	1.1	1.1.4	4.2BSD 的功能跃迁	filled	
@@ -13,7 +13,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	1	1.2	1.2.6	调度参数的口径记载	filled	
 31	1	1.3	1.3.1	管道机制的承袭与限度	filled	
 31	1	1.3	1.3.2	信号机制的语义约定	filled	
-31	1	1.3	1.3.3	共享内存的引入动因	skeleton	
+31	1	1.3	1.3.3	共享内存的引入动因	filled	
 31	1	1.3	1.3.4	套接字作通用的进程间通道	filled	
 31	1	1.3	1.3.5	与异构系统通信机制的对照	filled	
 31	1	1.3	1.3.6	进程间通信的接口分层	skeleton	
@@ -23,11 +23,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	2	2.1	2.1.4	布局策略的两级构造	skeleton	
 31	2	2.1	2.1.5	参数化与磁盘特性耦合	filled	
 31	2	2.1	2.1.6	吞吐提升的量级记载	skeleton	
-31	2	2.2	2.2.1	UFS 命名的诞生语境	skeleton	
+31	2	2.2	2.2.1	UFS 命名的诞生语境	filled	
 31	2	2.2	2.2.2	文件系统形态的分期盘点	filled	
 31	2	2.2	2.2.3	与 FFS 的名实关系	filled	
 31	2	2.2	2.2.4	后续演进的时段外登记	filled	
-31	2	2.2	2.2.5	分支时代的沿革回溯	skeleton	
+31	2	2.2	2.2.5	分支时代的沿革回溯	filled	
 31	2	2.2	2.2.6	名实对应的判定规程	skeleton	
 31	2	2.3	2.3.1	有序写替代同步写的思路	filled	
 31	2	2.3	2.3.2	依赖跟踪的排序章法	filled	
