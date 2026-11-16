@@ -13,49 +13,59 @@ V75.1.1.4	corpus_gap	10706	CL-RM-495564	official_doc	primary	D2	supp-V75-b003	su
 V75.1.1.5	corpus_gap	2657	CL-RM-493768	academic_work	secondary_authoritative	D1	supp-V75-b003	supplemented	绑既有 claim CL-RM-493768（b001 登记未绑块件本批转正绑块）
 V75.1.1.5	corpus_gap	10634	CL-RM-495565	talk_interview	primary	D2	supp-V75-b003	supplemented	新 claim 挂既有 evidence EV-SUP-001499（ref10634 复用）
 V75.1.2.3	corpus_gap	10664	CL-RM-495566	official_doc	primary	D2	supp-V75-b003	supplemented	复用 ref10664 新取引文（服务器端 commit hook）
-V75.1.2.3	corpus_gap	10664	CL-RM-495567	official_doc	primary	D1	supp-V75-b003	supplemented	复用 ref10664 新取引文（三库钩子安装规程，第二块 #2）
+V75.1.2.3	corpus_gap	10664	CL-RM-495567	official_doc	primary	D2	supp-V75-b003	supplemented	复用 ref10664 新取引文（三库钩子安装规程，第二块 #2）
 V75.1.2.4	corpus_gap	10664	CL-RM-495576	official_doc	primary	D2	supp-V75-b004	supplemented	复用 ref10664 新取引文（4.1.2 送审规则）
-V75.1.2.4	corpus_gap	10664	CL-RM-495577	official_doc	primary	D1	supp-V75-b004	supplemented	复用 ref10664 新取引文（送审文化句，第二块 #2）
+V75.1.2.4	corpus_gap	10664	CL-RM-495577	official_doc	primary	D2	supp-V75-b004	supplemented	复用 ref10664 新取引文（送审文化句，第二块 #2）
 V75.1.2.5	corpus_gap	1656	CL-RM-495578	academic_work	primary	D1	supp-V75-b004	supplemented	库内复用全文块#2（规模计量句，ref1656）
 V75.1.2.5	corpus_gap	1656	CL-RM-495579	academic_work	primary	D1	supp-V75-b004	supplemented	库内复用全文块#13（归属覆盖句，ref1656）
 V75.1.3.1	corpus_gap	10711	CL-RM-495580	official_doc	primary	D2	supp-V75-b004	supplemented	联网新建（FreeBSD Release Information 页，D2）
-V75.1.3.1	corpus_gap	10711	CL-RM-495581	official_doc	primary	D1	supp-V75-b004	supplemented	同 ref 第二块（15.1 条目文档入口面，#2）
+V75.1.3.1	corpus_gap	10711	CL-RM-495581	official_doc	primary	D2	supp-V75-b004	supplemented	同 ref 第二块（15.1 条目文档入口面，#2）
 V75.1.3.2	corpus_gap	10715	CL-RM-495594	web_archive	primary	D1	supp-V75-b005	supplemented	联网新建＋全文入库（TUHS UCB 发行目录索引页）
 V75.1.3.2	corpus_gap	902	CL-RM-495595	academic_work	primary	D1	supp-V75-b005	supplemented	库内复用全文块#28（69 releases 标签序列句，ref902）
 V75.1.3.3	corpus_gap	10716	CL-RM-495596	official_doc	primary	D2	supp-V75-b005	supplemented	联网新建（FreeBSD 15.1-RELEASE 公告页，D2）
-V75.1.3.3	corpus_gap	10716	CL-RM-495597	official_doc	primary	D1	supp-V75-b005	supplemented	同 ref 第二块（六架构可用面句，#2）
+V75.1.3.3	corpus_gap	10716	CL-RM-495597	official_doc	primary	D2	supp-V75-b005	supplemented	同 ref 第二块（六架构可用面句，#2）
 V75.1.3.4	corpus_gap	902	CL-RM-495598	academic_work	primary	D1	supp-V75-b005	supplemented	库内复用全文块#28（导入集排除模式句，ref902）
 V75.1.3.4	corpus_gap	10664	CL-RM-495599	official_doc	primary	D2	supp-V75-b005	supplemented	复用 ref10664 新取引文（孤儿分支 internal/admin，复用卡追加）
 V75.1.4.1	corpus_gap	10721	CL-RM-495614	official_doc	primary	D1	supp-V75-b006	supplemented	联网新建＋全文入库（FreeBSD 手册页服务器首页，D1#1）
 V75.1.4.1	corpus_gap	10722	CL-RM-495615	official_doc	primary	D2	supp-V75-b006	supplemented	联网新建（2.2.8 版 ls(1) 页，D2，引文双段）
 V75.1.4.2	corpus_gap	10721	CL-RM-495616	official_doc	primary	D1	supp-V75-b006	supplemented	同 ref man 首页异引文（manpath 远古段，同块#1 分题）
 V75.1.4.2	corpus_gap	10723	CL-RM-495617	official_doc	primary	D2	supp-V75-b006	supplemented	联网新建（docs.freebsd.org 文档门户，D2）
-V75.1.4.3	corpus_gap	10723	CL-RM-495618	official_doc	primary	D1	supp-V75-b006	supplemented	同 ref docs 门户异引文（体裁面，第二块 #2）
+V75.1.4.3	corpus_gap	10723	CL-RM-495618	official_doc	primary	D2	supp-V75-b006	supplemented	同 ref docs 门户异引文（体裁面，第二块 #2）
 V75.1.4.3	corpus_gap	10724	CL-RM-495619	official_doc	primary	D2	supp-V75-b006	supplemented	联网新建（FreeBSD 15.1-RELEASE 勘误页，D2）
 V75.1.5.1	corpus_gap	10733	CL-RM-495635	official_doc	primary	D1	supp-V75-b007	supplemented	联网新建＋全文入库（lists.freebsd.org 列表索引页，D1#1）
 V75.1.5.1	corpus_gap	10734	CL-RM-495636	official_doc	primary	D2	supp-V75-b007	supplemented	联网新建（官网社区总览页，D2）
 V75.1.5.2	corpus_gap	10733	CL-RM-495637	official_doc	primary	D1	supp-V75-b007	supplemented	同 ref 索引页异引文（三列体裁描述，同块#1 分题）
 V75.1.5.3	corpus_gap	10733	CL-RM-495638	official_doc	primary	D1	supp-V75-b007	supplemented	同 ref 索引页第三引文（dev-commits-src 族，同块#1 分题）
 V75.1.5.5	corpus_gap	10735	CL-RM-495639	official_doc	primary	D2	supp-V75-b007	supplemented	联网新建（mailing-list FAQ，D2，三段引文）
-V75.1.5.5	corpus_gap	10735	CL-RM-495640	official_doc	primary	D1	supp-V75-b007	supplemented	同 ref FAQ 第二块（MIME 段单独引，#2）
+V75.1.5.5	corpus_gap	10735	CL-RM-495640	official_doc	primary	D2	supp-V75-b007	supplemented	同 ref FAQ 第二块（MIME 段单独引，#2）
 V75.1.5.2	corpus_gap	10736	CL-RM-495641	official_doc	primary	D2	supp-V75-b007	supplemented	联网新建（Handbook Resources on the Internet，D2）
 V75.1.5.3	corpus_gap	10737	CL-RM-495642	official_doc	primary	D2	supp-V75-b007	supplemented	联网新建（dev-commits-src-main 归档索引页，D2）
 V75.1.5.4	corpus_gap	10740	CL-RM-495646	official_doc	primary	D2	supp-V75-b008	supplemented	联网新建（freebsd-questions 官方文章，D2，两段省略号）
-V75.1.5.4	corpus_gap	10736	CL-RM-495647	official_doc	primary	D1	supp-V75-b008	supplemented	复用 ref10736 新取引文（Handbook 话题适配规则，复用卡追加＋哈希回刷）
+V75.1.5.4	corpus_gap	10736	CL-RM-495647	official_doc	primary	D2	supp-V75-b008	supplemented	复用 ref10736 新取引文（Handbook 话题适配规则，复用卡追加＋哈希回刷）
 V75.1.6.1	corpus_gap	10741	CL-RM-495648	web_archive	primary	D2	supp-V75-b008	supplemented	联网新建（TUHS 首页，D2，宗旨文句）
 V75.1.6.1	corpus_gap	10742	CL-RM-495649	web_archive	primary	D2	supp-V75-b008	supplemented	联网新建（Unix Archive README，D2，收藏范围）
-V75.1.6.2	corpus_gap	10742	CL-RM-495650	web_archive	primary	D1	supp-V75-b008	supplemented	同 ref README 异引文（顶层六区归置，第二块 #2）
-V75.1.6.2	corpus_gap	10741	CL-RM-495651	web_archive	primary	D1	supp-V75-b008	supplemented	同 ref TUHS 首页异引文（多镜像取用，第二块 #2）
+V75.1.6.2	corpus_gap	10742	CL-RM-495650	web_archive	primary	D2	supp-V75-b008	supplemented	同 ref README 异引文（顶层六区归置，第二块 #2）
+V75.1.6.2	corpus_gap	10741	CL-RM-495651	web_archive	primary	D2	supp-V75-b008	supplemented	同 ref TUHS 首页异引文（多镜像取用，第二块 #2）
 V75.1.6.3	corpus_gap	10744	CL-RM-495655	web_archive	primary	D1	supp-V75-b009	supplemented	联网新建＋全文入库（Archive/updates 增补日志，D1#0）
 V75.1.6.3	corpus_gap	10744	CL-RM-495656	web_archive	primary	D1	supp-V75-b009	supplemented	同 ref 第二引文（TOC 清单脚本，同块#0）
-V75.1.6.3	corpus_gap	10742	CL-RM-495657	web_archive	primary	D1	supp-V75-b009	supplemented	库内复用（Archive README 的 updates 区职责句，ref10742 追加段）
+V75.1.6.3	corpus_gap	10742	CL-RM-495657	web_archive	primary	D2	supp-V75-b009	supplemented	库内复用（Archive README 的 updates 区职责句，ref10742 追加段）
 V75.1.6.4	corpus_gap	10744	CL-RM-495658	web_archive	primary	D1	supp-V75-b009	supplemented	同 ref 第三引文（Norman Wilson 捐第十版，同块#0）
-V75.1.6.4	corpus_gap	10699	CL-RM-495659	web_archive	primary	D1	supp-V75-b009	supplemented	库内复用（2BSD 树页捐赠来源句，ref10699 追加段）
+V75.1.6.4	corpus_gap	10699	CL-RM-495659	web_archive	primary	D2	supp-V75-b009	supplemented	库内复用（2BSD 树页捐赠来源句，ref10699 追加段）
 V75.1.7.1	corpus_gap	10742	CL-RM-495705	web_archive	primary	D2	supp-V75-b010	supplemented	库内复用（Archive README 版权告示句，ref10742 追加）
 V75.1.7.1	corpus_gap	5803	CL-RM-495706	web_archive	primary	D2	supp-V75-b010	supplemented	库内复用（4.1BSD reconstruct README 失存面句，ref5803 追加）
 V75.1.7.2	corpus_gap	10777	CL-RM-495707	web_archive	primary	D2	supp-V75-b010	supplemented	联网新建（TUHS OralHistory 镜像页，D2，镜像自述）
-V75.1.7.2	corpus_gap	10777	CL-RM-495708	web_archive	primary	D1	supp-V75-b010	supplemented	同 ref 第二块（cached here also 接续句，#2）
+V75.1.7.2	corpus_gap	10777	CL-RM-495708	web_archive	primary	D2	supp-V75-b010	supplemented	同 ref 第二块（cached here also 接续句，#2）
 V75.1.7.3	corpus_gap	10744	CL-RM-495709	web_archive	primary	D2	supp-V75-b010	supplemented	库内复用（updates 损坏补救句，ref10744 追加）
-V75.1.7.3	corpus_gap	10716	CL-RM-495710	official_doc	primary	D1	supp-V75-b010	supplemented	库内复用（15.1 公告 SHA 校验句，ref10716 追加）
-V75.1.7.4	corpus_gap	10744	CL-RM-495711	web_archive	primary	D1	supp-V75-b010	supplemented	同 ref updates 第二块（2016 补全成果句，#2）
-V75.1.7.4	corpus_gap	5803	CL-RM-495712	web_archive	primary	D1	supp-V75-b010	supplemented	同 ref 5803 第二块（征集诉求句，#2）
+V75.1.7.3	corpus_gap	10716	CL-RM-495710	official_doc	primary	D2	supp-V75-b010	supplemented	库内复用（15.1 公告 SHA 校验句，ref10716 追加）
+V75.1.7.4	corpus_gap	10744	CL-RM-495711	web_archive	primary	D2	supp-V75-b010	supplemented	同 ref updates 第二块（2016 补全成果句，#2）
+V75.1.7.4	corpus_gap	5803	CL-RM-495712	web_archive	primary	D2	supp-V75-b010	supplemented	同 ref 5803 第二块（征集诉求句，#2）
+V75.1.8.1	corpus_gap	10788	CL-RM-495780	web_archive	primary	D2	supp-V75-b011	supplemented	联网新建（CHM 口述史目录，D2，受访者＋采访者字段）
+V75.1.8.1	corpus_gap	10789	CL-RM-495781	web_archive	primary	D2	supp-V75-b011	supplemented	联网新建（bsdtalk 首页，D2，集目帖字段）
+V75.1.8.2	corpus_gap	10791	CL-RM-495782	web_archive	primary	D2	supp-V75-b011	supplemented	联网新建（BSD Now RSS 全量，D2，689 条计数）
+V75.1.8.2	corpus_gap	10790	CL-RM-495783	web_archive	primary	D2	supp-V75-b011	supplemented	联网新建（bsdtalk 2005 归档页，D2，首三集）
+V75.1.8.3	corpus_gap	10777	CL-RM-495784	web_archive	primary	D2	supp-V75-b011	supplemented	同 ref 10777 首块（索引表 precis／transcript 四栏，#url）
+V75.1.8.3	corpus_gap	10777	CL-RM-495785	web_archive	primary	D2	supp-V75-b011	supplemented	同 ref 10777 第二块（页脚集稿草案与转录现行版本，#2）
+V75.1.8.4	corpus_gap	878	CL-RM-495786	academic_work	primary	D1	supp-V75-b011	supplemented	库内复用（Ritchie 1984 论文 As I recall 句，块 21，D1）
+V75.1.8.4	corpus_gap	3778	CL-RM-495787	academic_work	primary_hand	D1	supp-V75-b011	supplemented	库内复用（McKusick 1999 回忆章核账句，块 65，D1）
+V75.1.8.5	corpus_gap	10789	CL-RM-495788	web_archive	primary	D2	supp-V75-b011	supplemented	同 ref bsdtalk 首页第二块（Ogg 直链挂靠，#2）
+V75.1.8.5	corpus_gap	10777	CL-RM-495789	web_archive	primary	D2	supp-V75-b011	supplemented	同 ref 10777 第三块（Gromnitsky e-book 回挂，另一小节文件）
