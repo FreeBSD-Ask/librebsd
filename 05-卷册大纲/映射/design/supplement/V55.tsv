@@ -1,3 +1,9 @@
 subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
 V55.6.2.4	corpus_gap	926	CL-RM-495228	academic_work	primary	D1	supp-V55-b001	supplemented	库内复用：（2026-11-14 V55 库内逐条判读批 b001）
 V55.6.2.4	corpus_gap	941	CL-RM-495229	academic_work	primary	D1	supp-V55-b001	supplemented	库内复用：（2026-11-14 V55 库内逐条判读批 b001）
+V55.1.1.1	corpus_gap	10885	CL-RM-496198	official_doc	primary	D1	supp-V55-b002	supplemented	复用 ref1587 全文块#0（主论文作者块）——批前 J26 修著录
+V55.1.1.1	corpus_gap	1587	CL-RM-496199	academic_work	secondary_authoritative	D1	supp-V55-b002	supplemented	新建 TR-941（UCAM-CL-TR-941 全文 43 页 D1，扉页块）
+V55.1.1.2	corpus_gap	10886	CL-RM-496200	official_doc	primary	D2	supp-V55-b002	supplemented	新建 CHERI publications 页（ISA 版本链索引卡）
+V55.1.1.2	corpus_gap	10885	CL-RM-496201	official_doc	primary	D1	supp-V55-b002	supplemented	复用 TR-941 修订注块（页 1，间歇更新证据）
+V55.1.1.3	corpus_gap	10885	CL-RM-496202	official_doc	primary	D1	supp-V55-b002	supplemented	复用 TR-941 界定句块（页 5，共同设计界定）
+V55.1.1.3	corpus_gap	4158	CL-RM-496203	official_doc	primary	D2	supp-V55-b002	supplemented	复用 ref4158（J90 订正为 CTSRD 项目页，joint project 句）
