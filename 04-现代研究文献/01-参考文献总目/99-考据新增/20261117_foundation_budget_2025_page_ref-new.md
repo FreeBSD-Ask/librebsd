@@ -8,3 +8,8 @@
 - **考据注**：口径说明：人力成本以 staff 与短长期 contractors 计列且跨类摊布——1.2.2“两项计数”的页载体；页另链预算批准件 PDF（本批另一 ref）。
 - **本批落点**：V55.1.2.2 一块（#url）
 - **考据日期**：2026-11-17（supp-V55-b004；official_doc／L3）
+
+## supp-V55-b005 追加引文
+
+- Here’s a quick breakdown of the overall budget for 2025 along with a breakout of the funding going towards software development work
+- 追加说明：b005 1.2.5 c22 引句（总预算与软件开发资金拆分）；卡经追加，哈希由引擎 card_resync 三处回刷（references.sha256／file_size＋raw_source.content_hash）。
