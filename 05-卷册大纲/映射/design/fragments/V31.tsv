@@ -7,7 +7,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	1	1.1	1.1.6	结构分层的可考证据	filled	
 31	1	1.2	1.2.1	时间片与重调度节奏	filled	
 31	1	1.2	1.2.2	优先级递减的负反馈	filled	
-31	1	1.2	1.2.3	交互优先的调度取向	skeleton	
+31	1	1.2	1.2.3	交互优先的调度取向	filled	
 31	1	1.2	1.2.4	内核态不可抢占的约定	filled	
 31	1	1.2	1.2.5	nice 值与用户让渡	filled	
 31	1	1.2	1.2.6	调度参数的口径记载	filled	
@@ -118,7 +118,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	6	6.3	6.3.3	异构终端的适配层	filled	
 31	6	6.3	6.3.4	描述语言的表达力	filled	
 31	6	6.3	6.3.5	与终端库的分工界面	filled	
-31	6	6.3	6.3.6	抽象层的扩散影响	skeleton	
+31	6	6.3	6.3.6	抽象层的扩散影响	filled	
 31	6	6.4	6.4.1	光标优化的库设计	filled	
 31	6	6.4	6.4.2	屏幕更新的抽象层	filled	
 31	6	6.4	6.4.3	应用界面的库化历程	filled	
