@@ -194,3 +194,12 @@ Whirlwind 预算削减与项目濒危（1.3.4 容忍的限度）：
 > The federal government, too, cut back on some programs that failed to show initial progress (such as machine translation and, for a time, speech recognition), but it continued to make strong investments in AI research
 
 注：本组取 NAP 开放章节页 chapter/7（Chapter 5），访问日 2026-11-13。
+
+
+## b041 追加引文（V11.2.1.5，2026-11-17）
+
+延续资助承接（2.1.5）：
+
+> Conversely, NSF has provided continued support for projects that DARPA pioneered but was unwilling to sustain after the major research challenges were resolved.
+
+注：本段取 NAP 开放章节页 chapter/2（Executive Summary），访问日 2026-11-17；与既有 chapter/7（Chapter 5）取段不重叠。
