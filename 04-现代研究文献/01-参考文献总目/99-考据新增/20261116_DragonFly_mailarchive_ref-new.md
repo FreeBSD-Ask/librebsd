@@ -11,3 +11,10 @@
 - **考据注**：第 1—2 处为换代自述（新列表迁至 lists.dragonflybsd.org，旧页仅作历史存留）；第 3 处为八个列表名（bugs／commits／docs／hammer／kernel／submit／test／users），第 4 处为月份序列尾端即存档起点 2004-09。库内 dragonfly_mail.duckdb 收 72,062 封（另线维护），与本档互补，本批不重复取件。
 - **本批落点**：V75.2.4.4 两块（D2 ref-new#url／#2）
 - **考据日期**：2026-11-16（supp-V75-b015；web_archive／L3）
+
+## supp-V75-b017 追加（2.6.4 一块）
+
+- **追加引文（逐字一处）**：This page archives posts on the DragonFly BSD mailing lists/newsgroups.
+- **追加考据注**：此句与 lists 现行站（新 ref10829）首段同文，说明两域承同一套存档与同一页脚；旧域另自述仅作历史存留（b015 已引），新域另管订阅配置——两域互补勘验时按域计数，不得把同文两份当作两条独立证词。
+- **本批落点**：V75.2.6.4 一块（D2 ref10816#url）
+- **考据日期**：2026-11-16（supp-V75-b017）
