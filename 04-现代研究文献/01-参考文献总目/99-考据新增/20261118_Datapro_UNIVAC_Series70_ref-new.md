@@ -13,3 +13,7 @@ That the fundamental premise in that strategy was questionable was pointed out w
 ## b005 另见句（未入 quote，卡内备参）
 
 The almost unavoidable conclusion to have been drawn from the Spectra 70 sales performance was that IBM's position in the marketplace is so strong that most users who want IBM-style equipment will elect to buy it from IBM rather than from an alternate supplier-even when the alternate supplier is a nationally-known manufacturer with a product line offering (in many cases) significant price/performance advantages.
+
+## b006 引文（2026-11-18 逐字录入；承 1972-01-01 接管与装机基数两句）
+
+With the formal takeover of RCA's American, Canadian, and Mexican computer customer base on January 1, 1972, for $70 million plus on-going royalties … the installed Series 70 base consisted of some 520 accounts with nearly 900 computer systems.
