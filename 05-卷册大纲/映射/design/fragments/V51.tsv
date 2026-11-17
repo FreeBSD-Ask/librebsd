@@ -1,10 +1,10 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
 51	1	1.1	1.1.1	4.x 基线的选取理由	filled	DOC_MINE×1
 51	1	1.1	1.1.2	互斥锁路线的工程代价	filled	
-51	1	1.1	1.1.3	分叉公告的自我定位	skeleton	
+51	1	1.1	1.1.3	分叉公告的自我定位	filled	
 51	1	1.1	1.1.4	5.x 发布延宕的时间成本	filled	
 51	1	1.1	1.1.5	两条可扩展性路线的分歧	filled	DOC_MINE×1
-51	1	1.1	1.1.6	分化轴在后继叙述中的延续	skeleton	
+51	1	1.1	1.1.6	分化轴在后继叙述中的延续	filled	
 51	1	1.2	1.2.1	轻量内核线程的调度单元	filled	
 51	1	1.2	1.2.2	消息投递与线程的配对	filled	
 51	1	1.2	1.2.3	令牌对阻塞语义的改写	skeleton	
