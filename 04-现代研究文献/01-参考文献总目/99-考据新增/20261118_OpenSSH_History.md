@@ -1,0 +1,52 @@
+<!-- 网页存档｜来源：https://www.openssh.com/history.html｜抓取：2026-11-18（exa 通道，直连 openssh.com 超时）｜HTML 标签剥离与空白归一｜本卡为 Task 8.2 V51—V55 五卷线 V53 b002 引文载体 -->
+
+# OpenSSH: Project History
+
+（页面头部与小节标题以下逐字；引文取自本卡以下段落）
+
+## Open SSH Project History
+
+In 1999, some OpenBSD developers set to the task of freeing SSH, cleaning up the license mess, and maintaining the codebase towards the future.
+
+OpenSSH is a derivative of the original free ssh 1.2.12 release from Tatu Ylönen. That version was the last one free enough for reuse. Parts of OpenSSH still bear Tatu's license, which was contained in that release. That version, and earlier ones, used mathematical functions from the libgmp library, which was directly included at the time. It is now made available under the Lesser GNU Public License, but versions of that era were under the regular GNU Public License.
+
+A combined license for all the pieces is available at https://cvsweb.openbsd.org/src/usr.bin/ssh/LICENCE,v.
+
+Rapidly after Tatu's 1.2.12 release, newer versions bore successively more restrictive licenses, even though libgmp was still included and necessary for using the software. That effectively made SSH a GPL violation. The first of the restrictive licenses forbade people from making a Windows or DOS version. Later licenses restricted the use of ssh in a commercial environment, instead requiring companies to buy an expensive version from a company called Datafellows.
+
+Early in 1999, Björn Grönvall re-discovered the old free release and started fixing bugs. His version of ssh was called OSSH and had only support for the SSH 1.3 protocol. Word of mouth has it that OSSH was integrated at the time into some commercial products in Sweden. OSSH never graduated to SSH 2 protocol support. Björn probably ceased development as OpenSSH became mature.
+
+OpenBSD project members became aware of Björn's work less than two months before the OpenBSD 2.6 release. We wanted to include support for the ssh protocol in the 2.6 release, but we had to make sure that it was perfect. Therefore, we decided to immediately fork from the OSSH release, and pursue rapid development using the same process as the original OpenBSD security auditing process. The initial import was done on Sep 26, 1999, and, at the time of release two months later, many of the source code files were already at RCS revision 1.34... some as high as 1.66. Development went very fast indeed, since we had a deadline to meet.
+
+The following team members participated:
+
+- Theo de Raadt (CANADA) started by removing non-portabilities which made the code harder to read — the goal being simpler source code, so that security holes and other issues could be spotted easier.
+- Niels Provos (GERMANY but living in USA) quickly removed the remaining cryptographic and GPL'd components by doing road trips to Canada, so that we could end up with a completely freely reusable source code base.
+- Markus Friedl (GERMANY) jumped in and very quickly managed to replace the SSH 1.3 protocol code from the 1.2.12 release, with an SSH 1.5 protocol implementation compatible with the modern "ssh 1.2.27" series (this change was needed to operate with a lot of SSH-compatible Windows clients which lack support for SSH 1.3 protocol). He added SSH 1.5 protocol support in such a way that SSH 1.3 protocol support remained operational. Later, he also added support for SSH 2 protocol and SFTP.
+- Bob Beck (CANADA) helped with Makefile magic to ensure that we could compile OpenSSL without patented algorithms. Because OpenBSD 2.6 was shipping before the RSA patent expiration date, we needed to ship our CD with libssl and libcrypto shared libraries which lacked RSA. At install time, the user was able to replace these libraries via FTP/HTTP over the Internet. Luckily this kind of hackery is no longer needed.
+- Aaron Campbell (CANADA) improved numerous documentation flaws and a few other code problems. It is mostly due to him that the manual pages are so complete.
+- Dug Song (USA) helped with some authentication issues in the KerberosIV case (his changes were carefully checked to ensure they stayed away from any cryptography, and only touched on authentication issues).
+
+Therefore, the version of OpenSSH was based on these older versions of ssh 1.2.12, but with many bugs removed and newer features re-added:
+
+- has all components of a restrictive nature (i.e. patents, see ssl) directly removed from the source code; any licensed or patented components are chosen from external libraries.
+- supports one-time password authentication with skey.
+- hundreds of other changes that people can spot in the new man pages, and in the source code changes.
+
+That marked the OpenSSH 1.2.2 release, which was shipped with OpenBSD 2.6 in December 1, 1999. As of that time, most OpenSSH development had been done by Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt, and Dug Song. We thank the many people who have found bugs and reported them.
+
+### Porting OpenSSH
+
+Almost immediately after we shipped our protocol 1 implementation, various non-OpenBSD groups got very, very interested. Damien Miller, Philip Hands, and a handful of others started porting OpenSSH to Linux and various other Unix operating systems. From the start of our own efforts, we have felt that even the original ssh code was too complicated. It simply had too many operating system dependencies to deal with. Our approach to writing completely secure and rock solid code avoids dealing with excessive differences like that. Thus, to make the entire development process easier on us all, we decided to split our core development efforts from portability developments. This has worked out very well for us. (As a case in point, compare the number of lines of code between the baseline and portable versions).
+
+### SSH 2 Protocol Support
+
+With the OpenBSD 2.6 release out of the way, Markus Friedl decided to pursue SSH 2 protocol support. Slaving away for months, he managed to keep OpenSSH slim and lean, while at the same time managing to turn it into a single piece of software that could do both the SSH 1 and SSH 2 protocols. This version, called OpenSSH 2.0, shipped with OpenBSD 2.7 on June 15, 2000. Most of the checking of Markus' changes were done by Niels Provos and Theo de Raadt. Bob Beck is to be thanked for updating the external SSL library to a newer version.
+
+### SFTP Support
+
+Support for the server side of the SFTP sub-protocol was written by Markus Friedl and released in the 2.3.0 release, in November 2000. Soon after, Damien Miller started work on an sftp client, which first shipped in 2.5.0.
+
+### Scanning SSH Server Versions
+
+To facilitate the monitoring of deployed SSH servers, e.g. for a company network, Niels Provos wrote the scanssh tool. scanssh scans a list of addresses and networks for running SSH servers and their version numbers. It supports random selection of IP addresses from large network ranges and is useful for gathering statistics on the use of SSH servers in a company or the Internet as a whole. The statistics include the SSH protocol supported, and the software versions that are being used.
