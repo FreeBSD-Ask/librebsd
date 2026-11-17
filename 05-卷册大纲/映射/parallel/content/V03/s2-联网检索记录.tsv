@@ -1,0 +1,11 @@
+subsection_id	title	query	site	hit	conclusion	accessed
+V03.1.2.6	耦合关系的史学评估边界	Berkeley UNIX 32/V VAX port swap based virtual memory	库内 ref1575 全文块（oreilly.com Open Sources 原书 PDF）	命中	32/V 系 Bell Labs 移植、未用 VAX 虚拟内存的版本差异句在库内 #5 窗直述；配 ref1546 回顾段补评估面	2026-11-17
+V03.1.3.2	VAX 的虚拟地址空间与向后兼容	VAX-11/780 Technical Summary virtual address 4 gigabyte compatibility mode bitsavers	bitsavers.trailing-edge.com/pdf/dec/vax/	命中（原件取回）	Oct1981 全家系 Technical Summary 226 页含文本层，惟 102 MB 且内容与 Datapro 报告重复度低；改以已登记 ref2049 原件补全（27 页文本层）承 32 位与兼容模式两面	2026-11-17
+V03.1.3.6	三十二位计算的产业含义	DEC VAX-11 product sales guide price 48900 445000 Datapro	bitsavers.trailing-edge.com/pdf/dec/vax/	命中（价格与产品带面）	Sales Guide 222 页无文本层（弃）；Datapro M11-384-40 页 1 载 48,900—445,000 美元产品带；1.3.6b 用 ref1546 设计约束段，价格面留 Datapro 后批	2026-11-17
+V03.1.4.1	设备可得性的多重约束	Berkeley VAX-11/780 Fateman NSF proposal departmental funds budget	库内 ref1575 全文块（同上）	命中	“fulfilled the requirements and was available within budget”＋NSF 申请金与系经费合并句直述预算与渠道双约束	2026-11-17
+V03.1.4.2	二手与捐赠设备的流通	PDP-11 donated university 1970s DEC donation program computer science	WebSearch（多源）	未命中捐赠一手记录	检索未获 1970—80 年代设备捐赠一手文献；改以二手流通两侧证据落块（ref2006 RK07 转卖价 7,500 美元＋Columbia 11/50 退役置换 RP06）；捐赠侧缺口如实披露	2026-11-17
+V03.1.4.2	二手与捐赠设备的流通	Columbia PDP-11/50 retired sold off 1982 traded RP06	www.columbia.edu/cu/computinghistory/pdp11.html	命中（直述置换）	curl 两次被 Cloudflare 挑战拦截、wayback 不可达；web_reader 全文捕获成功，置换句逐字取证入 ref10922	2026-11-17
+V03.1.4.3	折旧周期与更新节奏	DARPA sites computers end of useful lifetime replaced porting cost	库内 ref1575 全文块（同上）	命中	#8 窗直述 DARPA 站点机器到寿与移植成本为换代最重项；配 ref2006 首年保修与婴儿期故障句补节奏面	2026-11-17
+V03.1.4.4	采购决策中的非技术因素	Berkeley department used to Unix environment VMS continue using	库内 ref1575 全文块（同上）	命中	系内既有 Unix 环境习惯压过 DEC 默认 VMS 的非技术因素直述；配 ref2006 第二厂商站点经验门槛句	2026-11-17
+V03.1.4.5	硬件偶然性对技术演化的作用	Berkeley single VAX development production Virtual VAX Unix Christmas	库内 ref1575 全文块（同上）	命中	单台 VAX 兼生产与开发、圣诞窗用户在两系统间反复登录的偶然约束直述；配 ref10771 设计目标被超出句	2026-11-17
+V03.1.4.6	可得性命题的史学方法论	Bell PDP-11 availability price electronic technology outside control designer	库内 ref10771 全文块（NATO ASI 1977）	命中	“availability and price…outside the control of the designer”直述可得性作为设计外生变量；配 ref2006 价格波动与记录主观性告警句	2026-11-17
