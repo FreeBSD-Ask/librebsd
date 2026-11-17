@@ -13,3 +13,10 @@
 - **quote 2（逐字）**：The files here come from spencer_2bsd.tar.gz, donated by Henry Spencer.
 - **考据注**：2BSD 树页自述文件来源为 Spencer 捐赠的源码包——存档页对题赠来源的就地标注，与 Archive/updates 的捐赠条目互为印证（1.6.4 第二源）
 - **本批落点**：V75.1.6.4 第 2 块（D2 #2）
+
+## supp-V12-b019 追加引文（2026-11-18）
+
+- **quote 3（逐字；清单段剥标签＋空白归一）**：READ_ME 351 1980-02-18 … setup 195 1980-02-18
+- **考据注**：File／Size／Date 清单段载 READ_ME 351 B 与 setup 195 B 等全件时戳 1980-02-18——spencer_2bsd.tar.gz 快照时点，与 ref5814（UCB Archive 2bsd.tar.gz，READ_ME 自署 1979-04-19）为两层时点；支撑 V12 3.1.5 取舍理由与 3.1.6 表述分寸。
+- **本批落点**：V12.3.1.5／V12.3.1.6（#url）
+- **考据日期**：2026-11-18（supp-V12-b019；web_archive 表定抬头／L3）
