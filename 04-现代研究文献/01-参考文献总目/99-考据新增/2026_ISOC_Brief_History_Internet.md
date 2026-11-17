@@ -1,6 +1,7 @@
 # A Brief History of the Internet（Internet Society）引用卡
 
 > 用途：V02.2.5.3“两网的协议基础与互联方式”第二来源（V02 补证批 b001）。
+> 追加用途：V02.2.9.6“互构关系的史料骨架与分寸”第二来源（V02 补证批 b015，J96）。
 
 ## 一、著录
 
@@ -20,6 +21,12 @@ CSNET 创立与 NSF 初始资助：
 1981 年 CSNET 流量共享 ARPANET 基础设施的协议：
 
 > An unprecedented 1981 agreement between Farber, acting for CSNET and the NSF, and DARPA's Kahn, permitted CSNET traffic to share ARPANET infrastructure on a statistical and no-metered-settlements basis.
+
+2026-11-17 追加（b015；curl 直取页原文剥标签，引文逐字录入）：
+
+官方史回顾——协议并入受支持操作系统是普及关键要素之一（2.9.6 用）：
+
+> Looking back, the strategy of incorporating Internet protocols into a supported operating system for the research community was one of the key elements in the successful widespread adoption of the Internet.
 
 ## 三、说明
 
