@@ -11,7 +11,9 @@
 
 1. "The NetBSD project was founded by Chris Demetriou, Theo de Raadt, Adam Glass and Charles M. Hannum."
 
-2. "Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993."（本批未取用，留作 1.1.3 线索）
+2. "Frustration with the quality of patches in the wild and the inability to get patches included in 386BSD led to the founding of the NetBSD project in 1993."（b001 未取用；b002 1.1.3 取用）
+
+3. "NetBSD 0.8 (20 Apr 1993)"（发行年表条目逐字；b002 1.1.5 取用）＋"NetBSD 1.0 (26 Oct 1994)"（年表条目逐字；b002 1.1.5 取用）——两条为页面发行年表列表项，中间隔 0.9 等条目，块内以省略号并置。
 
 ## 备注
-页面含发行年表（NetBSD 0.8 20 Apr 1993 起）；本批只取第 1 条。
+页面含发行年表（NetBSD 0.8 20 Apr 1993 起）；b001 取第 1 条（创始名单），b002 取第 2 条（1993 立项缘起）与第 3 条（发行年表两条界标）——同 ref 异段异锚复用。
