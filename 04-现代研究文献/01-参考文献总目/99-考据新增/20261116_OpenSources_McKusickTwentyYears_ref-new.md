@@ -19,3 +19,14 @@
 - **考据注**：三句均出 2BSD 段（mid-1978 动源／定名流传／年发货约七十五盘），支撑 V12 3.1.1 诸说分梳、3.1.2 发货对勘与 3.1.4 异说流传。断行按单空格归一；当事人事后追述（L4）口径承本卡首段。
 - **本批落点**：V12.3.1.1／V12.3.1.2／V12.3.1.4 各一块（#url）
 - **考据日期**：2026-11-18（supp-V12-b019；academic_work 表定抬头／L4）
+
+## supp-V12-b020 追加引文（2026-11-18）
+
+- **quote 7（逐字，遇断行并句未改字）**：The Pascal system had been made markedly more robust through feedback from its expanding user community, and had been split into two passes so that it could be run on PDP-11/34s.
+- **quote 8（逐字）**：Once again Bill Joy single-handedly put together distributions, answered the phone, and incorporated user feedback into the system.
+- **quote 9（逐字，quote 7 尾段）**：had been split into two passes so that it could be run on PDP-11/34s
+- **考据注**：三句均出 2BSD 段——Pascal robust 化与为 11/34 而两遍拆分（改进主体，3.2.1A；尾段复用于 3.2.6B 版本对照，同句两段分承两题、批记披露）；Joy 一人整包发行并接电话收反馈（反馈渠道，3.2.4A）。
+- **quote 10（逐字）**：Along with the enhanced Pascal system, vi and termcap for several terminals was included.
+- **quote 10 考据注**：2BSD 随包清单句（增强 Pascal＋vi＋termcap），支撑 V12 3.2.5 对应面。
+- **本批落点**：V12.3.2.1／V12.3.2.4／V12.3.2.6 各一块（#url）
+- **考据日期**：2026-11-18（supp-V12-b020；academic_work 表定抬头／L4）

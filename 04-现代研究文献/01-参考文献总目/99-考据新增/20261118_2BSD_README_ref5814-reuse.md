@@ -7,3 +7,10 @@
 - **考据注**：2BSD 根级 READ_ME 首行自署时点 Thu Apr 19 23:25:43 PST 1979——一手件自带时点；与 ref1994／1995（Second Distribution 发行通告，著录 1979）相容、与 ref10699（spencer_2bsd.tar.gz 快照全件 1980-02-18）分属两层时点。三源一致（DKC 件、ref5814 题名、ref10699 卡注），第四份严格复核通过。自署时点为装机说明件时点，不作径直发行日使用。
 - **本批落点**：V12.3.1.3 一块（#url）
 - **考据日期**：2026-11-18（supp-V12-b019；web_archive 表定抬头／L3）
+
+## supp-V12-b020 追加引文（2026-11-18）
+
+- **quote 2（逐字；install.ms 提取段）**：To extract the tape you will need a 800 BPI tape drive and a file system with 12000 blocks of free space.
+- **考据注**：install.ms 记 2BSD 磁带提取需 800 BPI 磁带机与 12000 块空闲空间——打包载体与升级成本的实载记录；支撑 V12 3.2.2 打包发行。源件 DKC md 只读，本卡独立承载、不开 card_resync。
+- **本批落点**：V12.3.2.2 一块（#url）
+- **考据日期**：2026-11-18（supp-V12-b020；web_archive 表定抬头／L3）
