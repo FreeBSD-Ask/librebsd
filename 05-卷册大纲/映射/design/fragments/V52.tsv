@@ -1,10 +1,10 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
 52	1	1.1	1.1.1	池化存储与卷管理角色的合并	filled	
 52	1	1.1	1.1.2	原子事务提交与一致性前提	filled	
-52	1	1.1	1.1.3	校验和随数据写入的取向	skeleton	
+52	1	1.1	1.1.3	校验和随数据写入的取向	filled	
 52	1	1.1	1.1.4	两人小组的 2001 年起步	skeleton	
-52	1	1.1	1.1.5	三项设计目标的并列陈述	skeleton	
-52	1	1.1	1.1.6	ZFS 的 Solaris 原生出身	skeleton	
+52	1	1.1	1.1.5	三项设计目标的并列陈述	filled	
+52	1	1.1	1.1.6	ZFS 的 Solaris 原生出身	filled	
 52	1	1.2	1.2.1	FreeBSD 7.0 引入 ZFS 的时点	skeleton	
 52	1	1.2	1.2.2	OpenZFS 成立后上游回流的方向	filled	
 52	1	1.2	1.2.3	ZFS 源码的 CDDL 发布条件	skeleton	
