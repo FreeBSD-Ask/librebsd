@@ -26,3 +26,13 @@
 7. [1.2.3 用] One way to deal with the general problem is have every daemon and subsystem run with a separate userid. That way, the command and data files for each subsystem could be protected in such a way that only that subsystem could have write (and perhaps read) access to the files.
 
 8. [语境照录，含断词 sys-tem，不入引] A security flaw not exploited by the Worm, but now becoming obvious, is that many sys tem services have configuration and command files owned by a common userid.
+
+## b003 追加引文池（2026-11-18 V61 b003 取用，同源异句异锚）
+
+9. [1.3.1 用] The bug exploited in sendmail had to do with functionality provided by a debugging option in the code. The Worm would issue the DEBUG command to sendmail and then specify a set of commands instead of a user address as the recipient of the message.
+
+10. [1.3.2 用] The bug exploited to break fingerd involved overrunning the buffer the daemon used for input. The standard C library has a few routines that read input without checking for bounds on the buffer involved. In particular, the gets call takes input to a buffer without doing any bounds checking; this was the call exploited by the Worm.
+
+11. [1.3.4 用] A worm is a program that can run by itself and can propagate a fully working version of itself to other machines. It is derived from the word tapeworm, a parasitic organism that lives inside a host and saps its resources to maintain itself.
+
+12. [1.3.5 用] Although the Worm exploited flaws in only two server programs, its behavior has served to illustrate a few fundamental problems that have not yet been widely addressed.
