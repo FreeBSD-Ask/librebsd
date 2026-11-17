@@ -1,0 +1,5 @@
+subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
+V09.1.4.3	corpus_gap	10968	CL-RM-496734	official_doc	primary	D2	supp-V09-b001	supplemented	berkeley.edu 史页（D2 L3 官方文档）；exa 通道取件，卡 20261118_ucb-history-milestones_ref-new
+V09.1.4.3	corpus_gap	10970	CL-RM-496735	reference_book	secondary_authoritative	D2	supp-V09-b001	supplemented	britannica.com Berkeley 条目（D2 L2 工具书记载）；web_reader 全页，卡 20261118_britannica-berkeley-city_ref-new
+V09.2.1.1	corpus_gap	10969	CL-RM-496736	reference_book	secondary_authoritative	D2	supp-V09-b001	supplemented	britannica.com UC 条目（D2 L2 工具书记载）；web_reader 全页，卡 20261118_britannica-uc_ref-new
+V09.2.1.1	corpus_gap	10970	CL-RM-496737	reference_book	secondary_authoritative	D2	supp-V09-b001	supplemented	britannica.com Berkeley 条目（D2 L2 工具书记载）；同 ref 第二块分处 2.1.1，与 UC 条目为同出版者对照双源
