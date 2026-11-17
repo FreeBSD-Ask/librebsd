@@ -1,0 +1,5 @@
+<!-- 网页存档｜来源：https://man.netbsd.org/secmodel.9｜抓取：2026-11-18｜curl 直取成功，HTML 标签剥离与空白归一 -->
+# secmodel.9 — NetBSD 手册页（security model development guidelines）
+
+## 抓取正文（DESCRIPTION 节选，空白已归一） ``` NetBSD provides a complete abstraction of the underlying security model used within the operating system through a set of kauth(9) scopes and actions. It allows maintaining the traditional security model (based on a single super-user and above-super-user restrictions known as securelevel ) while decoupling it easily from the system. It is possible to modify the security model -- either slightly or using an entirely different model -- by attaching/detaching kauth(9) listeners. This can be done via the secmodel pluggable framework. A secmodel is typically implemented as a kernel module(9) , and can be either built-in statically or loaded dynamically at run-time. They base their decisions on available information, either directly from kernel, from a userspace daemon or even from a centralized network authorization server. ```
+## 用途注记 Task 8.2 V41—V45 五卷线 · V41《NetBSD 技术专题史》9.1.4（安全机制与可移植性的捆绑——可插拔框架统一挂接面）联网补证（D2 块；官方手册页，collection=NetBSD-current）。
