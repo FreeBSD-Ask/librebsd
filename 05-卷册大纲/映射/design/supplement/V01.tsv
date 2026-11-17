@@ -74,3 +74,9 @@ V01.7.5.3	corpus_gap	10787;10785	CL-RM-495751;CL-RM-495752	academic_work	seconda
 V01.7.5.4	corpus_gap	10787;10785	CL-RM-495753;CL-RM-495754	academic_work	secondary_authoritative	D2	supp-V01-b030	supplemented	multicians MSPM 页（扫描本取自 Saltzer 书架、副本不一致）＋multicians 首页（征集更正与轶事）；2 块 2 源（D2＋D2）
 V01.7.5.5	corpus_gap	10562;10787	CL-RM-495755;CL-RM-495756	academic_work	primary;secondary_authoritative	D2	supp-V01-b030	supplemented	Corbató／Clingen 1979（三组织重视程度不同）＋multicians MSPM 页（“过程创新”、设计几乎未按原样实现）；2 块 2 源（D2＋D2）
 V01.7.5.6	corpus_gap	10787;10786	CL-RM-495757;CL-RM-495758	academic_work	secondary_authoritative	D2	supp-V01-b030	supplemented	multicians MSPM 页（同行评审、多次重写）＋multicians 辨误页（承认未获永久成功）；2 块 2 源（D2＋D2）
+V01.7.6.1	corpus_gap	878;869	CL-RM-496477;CL-RM-496478	academic_work	primary	D1	supp-V01-b032	supplemented	Ritchie 1984（文件系统基本设计＋自认设备文件，D1）＋Ritchie&Thompson 1974 CACM（文件系统三类，D1，ref869）；2 块 2 源（D1＋D1）
+V01.7.6.2	corpus_gap	878;10786	CL-RM-496479;CL-RM-496480	academic_work	primary;secondary_authoritative	D1;D2	supp-V01-b032	supplemented	Ritchie 1984（1969 游说购机 PDP-10/Sigma7，D1）＋multicians 辨误页（UNIX 是回应、有方面未复现，D2）；2 块 2 源（D1＋D2）
+V01.7.6.3	corpus_gap	878;878	CL-RM-496481;CL-RM-496482	academic_work	primary	D1	supp-V01-b032	supplemented	Ritchie 1984（分时本质是密切交流／文件系统与进程控制对照，D1，同 ref 两段）；2 块 2 源（D1＋D1）
+V01.7.6.4	corpus_gap	10786;878	CL-RM-496483;CL-RM-496484	academic_work	secondary_authoritative;primary	D2;D1	supp-V01-b032	supplemented	multicians 辨误页（否认源自 Multics，D2）＋Ritchie 1984（管道思想非全新、Dartmouth 通信文件，D1）；2 块 2 源（D2＋D1）
+V01.7.6.5	corpus_gap	878;10786	CL-RM-496485;CL-RM-496486	academic_work	primary;secondary_authoritative	D1;D2	supp-V01-b032	supplemented	Ritchie 1984（shell 用户级实现，D1）＋multicians 辨误页（Multics 开创性原则，D2）；2 块 2 源（D1＋D2）
+V01.7.6.6	corpus_gap	878;10382	CL-RM-496487;CL-RM-496488	academic_work	primary;secondary_authoritative	D1;D2	supp-V01-b032	supplemented	Ritchie 1984（管道 1972、McIlroy，D1）＋multicians History（1965 三方启动、1969 退出，D2）；2 块 2 源（D1＋D2）
