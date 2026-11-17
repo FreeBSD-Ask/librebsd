@@ -1,0 +1,15 @@
+# Python 依赖基线（项目声明源，2026-11-17 建，批 A）
+# 解释器唯一声明源仍是 duckdb-version-baseline.txt 的“解释器”行；本件只管 Python 第三方依赖。
+# 变更纪律：改本件 → 钉定解释器安装 → 同批复跑受影响门禁（列于“守护”列）。
+
+解释器：C:/Program Files/Python315/python.exe（Python 3.15.2）
+
+| 依赖 | 钉定版本 | 安装通道 | 安装位置 | 守护门禁 |
+| ---- | -------- | -------- | -------- | -------- |
+| duckdb | 2.0.0 | 见 duckdb-version-baseline.txt（ADR-0017） | 全局 site | 三脚本启动校验 |
+| fonttools | 4.68.0 | pip（--proxy "" -i 清华源） | 用户 site（Roaming/Python/Python315） | 第九件 audit_page_assets（woff2 解析）；font_subset_rebuild |
+| brotli | 1.2.1 | pip（同上） | 用户 site | 第九件 B2（woff2 解压前置；缺则 ImportError） |
+| requests | 2.34.2 | pip（同上） | 用户 site | TUHS 抓取器 `tuhs_wiki_crawl.py`（V9 幂等二跑依赖；缺则 exit 2） |
+| playwright（JS） | 随 tests/node_modules 树 | bun（禁 npm，见 流程规则/02） | 05-卷册大纲/目录/tests/node_modules | 第二十二件 audit_a11y |
+
+注：fonttools 装在用户 site，故 `python -I` 模式下不可见；audit_page_assets 不以 -I 启动，判据不受影响。若日后需 -I 运行，应先迁全局 site（参照 duckdb 2026-11-10 处置）。

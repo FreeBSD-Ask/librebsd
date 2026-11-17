@@ -90,8 +90,17 @@ def load_vocab(path=VOCAB):
 
 def build_matcher(vocab):
     trie, latin, by_id = {}, {}, {}
+    # 2026-11-17 批 D：banned 原只作用于 slug 自动词（auto_terms），**不作用于主题取词**，
+    # 致「邮件列表」等泛词按正文高频铺满全库（C5 覆盖 31.4%）。现把 prefLabel／altLabel
+    # 命中 banned 的概念整体移出匹配面（概念本体保留在词表，只是不再自动取词）。
+    _banned = {w.strip().lower() for w in (vocab.get("banned") or []) if w and w.strip()}
+    def _is_banned(c):
+        labels = [c.get("prefLabel") or ""] + list(c.get("altLabels") or [])
+        return any(l.strip().lower() in _banned for l in labels if l and l.strip())
     for c in vocab["concepts"]:
         by_id[c["id"]] = c
+        if _is_banned(c):
+            continue
         for p in [c["prefLabel"]] + list(c.get("altLabels") or []):
             p = p.strip()
             if not p:

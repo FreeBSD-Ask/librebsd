@@ -115,6 +115,7 @@
 
 | [audit_proofread_forms.py](audit_proofread_forms.py) | **文档校对形式门禁（固定脚本，2026-11-14 立，第四十四件）**：对规则语料、操作手册与治理台账扫描六类形式差错——P1 数值与单位符号之间缺半角空格（GB 3100-1993 §6.2.4，°／′／″ 例外）；P2 多位数千分撇（应为千分空，GB/T 3101-1993 §3.3.1）；P3 年份／数值区间 U+2013（应为一字线 U+2014，GB/T 15834-2011 §4.13）；P4`、以及`（A.3）；P5 省略号＋`等`（A.9.2）；P6 同形括号套用（只报告，§4.9.3.6）。豁免围栏代码、行内代码、URL 与 frontmatter；`--root`／`--json`／`--all`／`--selftest`（六判据负向夹具＋正样本零误报）；FAIL 退出码 1 | `流程规则/06-门禁体系.md`“目录页与文档门禁判据索引”；`流程规则/01-复核与验证.md`“校对规程”；`写作规则.md` 数字／量和单位节；`audit_gate_registry.py` REGISTRY |
 | [audit_rule_modality.py](audit_rule_modality.py) | **条文用语门禁（固定脚本，2026-11-15 立，第四十五件）**：查规则语料要求型正文里的停用词 必须／不得／严禁／务必／禁止（GB/T 1.1-2020 附录 C 四档；`流程规则/11` §二）。`--diff [rev]` 只判相对 HEAD 的新增行（判据面）；`--all` 全量巡检只报不判；豁免标题、表格行、行内代码、弯引号、书名号、直角引号、加粗标签、裸列表项与追溯性叙述；`--selftest` 八判据；FAIL 退出码 1 | `流程规则/11-治理与体例裁定.md` §四；`audit_gate_registry.py` REGISTRY（TD-032 偿还件） |
+| [audit_tag_ledger.py](audit_tag_ledger.py) | **里程碑标签台账门禁（固定脚本，2026-11-17 立，第四十六件；G-01 偿还）**：对象＝仓库 tag 集合 ↔ `01-项目管理/02-工程决策与技术债/里程碑标签台账.tsv`（唯一台账）。**T1** 双向覆盖（tag 未入台账／台账含不存在的 tag 均 FAIL）；**T2** 台账 target_sha 可解析（`git cat-file -e`）；**T3** 台账 sha == tag 当前指向（检测移动／force 改写）；**T4** 提交日期 ≥ 2026-11-17 的 lightweight tag → FAIL，存量 lightweight → WARN；**T5** 命名 `<项目>-<状态>-<YYYYMMDD>`，存量旧代命名 → WARN（不回改历史）。`--dump` 由 git 生成／补齐台账（只增不改、幂等）；`--list` 摘要；`--selftest` 四例（正例＋T1 缺行／T2 sha 不可解析／T4 lightweight）；台账缺失或 git 不可用退出码 2 | `13-软件工程/09-reflection-generalization.md` §2.10；`工程实践规则.md` §11；`audit_gate_registry.py` REGISTRY |
 
 ## 程序命令
 

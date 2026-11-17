@@ -6,6 +6,13 @@
    在锚点同步前**不得作为现行门禁**；现行判据以 `audit_index_structure.py`／
    `audit_sequence_continuity.py`／`xref_audit.py` 为准；锚点同步走
    `sync_review_v2_anchors.py`。本横幅只作披露，不改变退出码与调用方式。
+⚠ 2026-11-17 批 B 改判为**废止**（理由：本套件 D3 等判据的前提是“卷末述评章”体例
+   ——342 正章＋10 述评章＝352；该体例已整体迁出、全书改正章制，锚点语义失去对象，
+   单纯重锚不能恢复判据强度。同批修掉 J1 处 `NameError`（`HEAD` 未定义）使其可编译；
+   现行为只是历史遗留脚本，**不应**纳入任何批次门禁。现行代行者：第七件结构自检、
+   第十七件改号守卫、第二十件静默丢失守卫、第五件交叉引用、第三十七件 L19 三向双射、
+   第十八／十三／九件页面族。依据：`09-reflection-generalization.md` §2.6＋
+   `00-philosophy.md` §9（不自反的规则应降级）。）
 ==========================================================================
 
 复核原则（比 v1 更严）：
@@ -1002,7 +1009,7 @@ print("J. 版本取证与述评覆盖率（5 项；J1–J3 自 2026-10-23 起改
 print("=" * 78)
 import subprocess as _sp
 _bk_rel = "05-卷册大纲/目录/index.html"
-_head_bytes = _sp.run(["git", "show", "%s:%s" % (HEAD, _bk_rel)], cwd=ROOT,
+_head_bytes = _sp.run(["git", "show", "%s:%s" % ("HEAD", _bk_rel)], cwd=ROOT,
                       capture_output=True).stdout
 chk("J1 改动前版本可由 Git 取证（HEAD:index.html 非空）", len(_head_bytes) > 0, len(_head_bytes))
 chk("J2 历史备份件已按 2026-10-23 旁路备份封禁令清除（零副本）",

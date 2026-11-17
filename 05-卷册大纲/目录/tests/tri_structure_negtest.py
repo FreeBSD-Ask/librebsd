@@ -45,6 +45,20 @@ h = SRC.read_text(encoding="utf-8")
 # 会让夹具的 re.search/h.index 先命中静态目录而非正文 → 剥掉静态目录，夹具以正文为真源。
 h = re.sub(r'<noscript>.*?</noscript>', '', h, flags=re.S)
 
+# 2026-11-17 批 B（P5 根治）：所有章题／节题夹具一律锚定在**文档区**。
+# 缘由：TOC 侧栏（`toc-sec-list`）与正文节行同带 `<span class="sec-num">`，此前的题面锚
+# 多先命中侧栏，注入只改侧栏、正文不变，而判据只读正文 → 「注入成功、判据 0 命中」的假自证
+# （N-d／N-e／N-i 三项即因此长期空转）。DOC0 之后即正文 doc-block 区。
+DOC0 = h.index('<section class="doc-block"')
+
+
+def _doc_apply(mutate, note=""):
+    """把只作用于文档区的改写函数应用到整页文本；返回新全文。"""
+    d = h[DOC0:]
+    d2 = mutate(d)
+    assert d2 != d, "夹具：文档区未发生改写（%s）" % (note or "未命名")
+    return h[:DOC0] + d2
+
 
 def run(path, tag, want_group):
     """跑门禁，返回（是否被拦下，该组行）。"""
@@ -78,10 +92,31 @@ p1.write_text(h[:m2.start(1)] + re.sub(r'<h3 class="chapter".*?</ul>', "", vol2,
               + h[m2.end(1):], encoding="utf-8", newline="\n")
 
 p2 = OUT / "_neg_k_nosection.html"
-p2.write_text(h[:m2.start(1)]
-              + re.sub(r'(<h3 class="chapter" id="vol-2-ch-1".*?<ul class="sections">).*?(</ul>)',
-                       r"\1\2", vol2, count=1, flags=re.S)
-              + h[m2.end(1):], encoding="utf-8", newline="\n")
+# 2026-11-17 批 B 修复：装配形态演进后节 `<li>` 内含 `<ul class="toc-sub-list">` 子表，
+# 原非贪婪 `.*?</ul>` 只会清空第一个**子表**（节行仍在）→ 判据「无节之章」不再命中。
+# 改为对 `<ul class="sections">` 做**标签配对**求其闭合位，整表清空。
+def _match_ul(text, open_idx):
+    """text[open_idx:] 以 '<ul' 开头；返回其配对 '</ul>' 末位（不含）。"""
+    depth, i = 0, open_idx
+    while True:
+        nxt_open = text.find("<ul", i)
+        nxt_close = text.find("</ul>", i)
+        if nxt_close == -1:
+            raise AssertionError("夹具：未找到配对 </ul>")
+        if nxt_open != -1 and nxt_open < nxt_close:
+            depth += 1
+            i = text.find(">", nxt_open) + 1
+        else:
+            depth -= 1
+            i = nxt_close + 5
+            if depth == 0:
+                return i
+
+_h3 = vol2.index('<h3 class="chapter" id="vol-2-ch-1"')
+_ul_open = vol2.index('<ul class="sections">', _h3)
+_ul_end = _match_ul(vol2, _ul_open)
+vol2_nosec = vol2[:_ul_open] + '<ul class="sections"></ul>' + vol2[_ul_end:]
+p2.write_text(h[:m2.start(1)] + vol2_nosec + h[m2.end(1):], encoding="utf-8", newline="\n")
 
 p3 = OUT / "_neg_k_strayli.html"
 p3.write_text(h[:m2.end(1)] + '<ul class="sections"><li>孤立节</li></ul>' + h[m2.end(1):],
@@ -91,10 +126,27 @@ p3.write_text(h[:m2.end(1)] + '<ul class="sections"><li>孤立节</li></ul>' + h
 p4 = negative(r'(<h3 class="chapter" id="vol-1-ch-1">第 1 章 )', r"\1附录 A ", "l_appendix")
 
 # ── M 组：比较节后接非述评节 ──────────────────────────────────────────
-m_os = re.search(r'<li[^>]*><span class="sec-num">([\d.]+)</span>[^<]*'
+# 2026-11-17 批 B 修复：原锚 `<li…><span class="sec-num">` 在节行改为 `<li…><a…><span>` 后只命中
+# **小节**（sub）行，注入块落在子表内 → 章级判据未见新增节（违规 0）。改为章级锚（id 含 -sec-），
+# 并以标签配对求该节外层 `</li>`，在其后插入同级插入节（OS 比较节不再居章末 → 违规 1）。
+m_os = re.search(r'<li id="vol-\d+-ch-\d+-sec-[\d-]+"[^>]*>(?:<a[^>]*>)?'
+                 r'<span class="sec-num">([\d.]+)</span>[^<]*'
                  r'(?:操作系统比较|OS 比较|同时期操作系统|同时代操作系统|同期操作系统)', h)
-assert m_os, "M 组：源文本未找到 OS 比较节"
-li_end = h.index("</li>", m_os.end()) + len("</li>")
+assert m_os, "M 组：源文本未找到章级 OS 比较节"
+_li_start = m_os.start(0)
+_depth, _i = 0, _li_start
+while True:
+    _no, _nc = h.find("<li", _i), h.find("</li>", _i)
+    assert _nc != -1, "夹具：未找到配对 </li>"
+    if _no != -1 and _no < _nc:
+        _depth += 1
+        _i = h.find(">", _no) + 1
+    else:
+        _depth -= 1
+        _i = _nc + 5
+        if _depth == 0:
+            li_end = _i
+            break
 p5 = OUT / "_neg_m_osorder.html"
 p5.write_text(h[:li_end]
               + f'<li><span class="sec-num">{m_os.group(1)}</span> 负向自检插入节</li>'
@@ -154,8 +206,16 @@ p8.write_text(h.replace(old3.group(0),
 
 p9 = OUT / "n_d_compound_endash.html"
 # 复合词连接号旧形（en dash）：2026-11-14 J1 后项目名复合词用短横线“-”，en dash 形为违规形
-assert "BSD-Linux" in h or "BSD-UNIX" in h, "N-d 夹具无法定位复合词"
-p9.write_text(h.replace("BSD-Linux", "BSD-Linux", 1).replace("BSD-UNIX", "BSD-UNIX", 1), encoding="utf-8", newline="\n")
+# 2026-11-17 批 B 修复（第 2 轮）：①原实现 `h.replace("BSD-Linux","BSD-Linux")` 系自我替换空转；
+# ②改为取「文档区内首个 <li> 中的复合词」，避免注入落在 TOC 侧栏或 <script> 数据块（判据不读）。
+def _inject_nd(d):
+    for _li in re.finditer(r"<li[^>]*>.*?</li>", d, re.S):
+        _mm = re.search(r"BSD[-–—](?:UNIX|Linux)", _li.group(0))
+        if _mm:
+            _s = _li.start() + _mm.start()
+            return d[:_s] + "BSD–" + d[_s + 4:]
+    return d
+p9.write_text(_doc_apply(_inject_nd, "N-d"), encoding="utf-8", newline="\n")
 
 cases += [
     (p6, "N-a2 层序反转", "N-a2"),
@@ -165,10 +225,39 @@ cases += [
 ]
 
 # ── N-e～N-i（2026-09-27 补遗追加）：五种节级结构裁决缺陷 ────────────────────
-# N-e 年序回落：把卷 5 ch1 1.5 的年份 1975—1976 改为 1970（早于 ch1 前节 1974）
+# N-e 年序回落（2026-11-17 批 B 重做）：原夹具锚死卷 5「Berkeley Pascal（1975—1976）」，
+#   而 N-e 判据前提是**章题**含年代区间（`（\d{4}[–—]`）且章内 ≥4 个含年份节；卷 5 该章题
+#   无年代区间 → 判据根本未进入 → 注入再准也不被检。改为**动态选取**：扫描文档区首例
+#   「章题带年代区间且章内含年份节 ≥4」的章，把其最后一个含年份节的年份拉回（首年 −5）。
+def _inject_ne(d):
+    # 跳过 N-e 豁免章（与 audit_index_structure.N_E_EXEMPT 同键；夹具须构造**在效**违规）
+    _NE_EXEMPT = {("18", "6")}
+    _chs2 = [(mm.start(), mm.group(3), mm.group(1), mm.group(2)) for mm in re.finditer(
+        r'<h3 class="chapter" id="vol-(\d+)-ch-(\d+)"[^>]*>(.*?)</h3>', d, re.S)]
+    YR1 = re.compile(r"(1[5-9]\d{2}|20[0-4]\d)")
+    for _i in range(len(_chs2)):
+        _pos, _ct_raw, _vno, _cno = _chs2[_i]
+        if (_vno, _cno) in _NE_EXEMPT:
+            continue
+        _ct = re.sub(r"<[^>]+>", "", _ct_raw)
+        if not re.search(r"（\d{4}[–—]", _ct):
+            continue
+        _end = _chs2[_i + 1][0] if _i + 1 < len(_chs2) else d.find("</section>", _pos)
+        _seg = d[_pos:_end]
+        _secs = list(re.finditer(r'<span class="sec-num">[0-9.]+</span>\s*([^<\n]*)', _seg))
+        _years = [(m.start(1), YR1.search(re.sub(r"<[^>]+>", "", m.group(1))))
+                  for m in _secs]
+        _years = [(_p, _y) for _p, _y in _years if _y]
+        if len(_years) < 4:
+            continue
+        _first = int(_years[0][1].group(1))
+        _plast, _ylast = _years[-1]
+        _new = str(_first - 5)
+        _tgt = _pos + _plast + _ylast.start()
+        return d[:_tgt] + _new + d[_tgt + 4:]
+    return d
 p10 = OUT / 'n_e_year_regress.html'
-assert 'Berkeley Pascal（1975—1976）' in h, 'N-e 夹具无法定位'
-p10.write_text(h.replace('Berkeley Pascal（1975—1976）', 'Berkeley Pascal（1970—1976）', 1), encoding='utf-8', newline='\n')
+p10.write_text(_doc_apply(_inject_ne, "N-e"), encoding='utf-8', newline='\n')
 
 # N-f 节题长度（**软限**，2026-09-27 ykla 裁定）：把卷 3 ch1 1.2 节题拉长到新计数口径下逾 60 字（不含注）。
 #   该条**不在**「拦下」式 cases 内（软限不阻断），另以软限断言核验：须报 WARN 且门禁 exit 0。
@@ -212,7 +301,9 @@ p13.write_text(h13, encoding="utf-8", newline="\n")
 # 已自 1.1 移至 2.1 → 夹具静默失效（系既有失效，非本次引入）。改为**题面锚定、不锁节号**，
 # 以抗历次重编号（同 O 组锚点纪律）。
 p14 = OUT / "n_i_unregistered_dup.html"
-h14 = h
+# 2026-11-17 批 B（第 3 轮）：锚定移入**文档区**——原循环在整页 search，首个命中是 TOC 侧栏行，
+# 三处注入全落侧栏，正文未变 → N-i 判据 0 命中（假自证）。改为在 d14（正文）内改写。
+d14 = h[DOC0:]
 _NI_TITLE = "跨章节系统测试基线的重复题面"
 _NI_ANCHORS = ["NeXT 的创立与操作系统战略", "BSD UNIX 进入计算机工业", "伯克利软件研究与美国版权制度"]
 # 2026-11-09 修：第四级小节层上线后，有下位小节的节在渲染为
@@ -222,7 +313,7 @@ _NI_ANCHORS = ["NeXT 的创立与操作系统战略", "BSD UNIX 进入计算机�
 # 仍只替换 group(1) 之后的题面文本，保留后续标记原样。
 _NI_TAIL = r'(\s*(?:</li>|<ul class="subsections">))'
 for _a in _NI_ANCHORS:
-    _m = re.search(r'(<span class="sec-num">[0-9.]+</span>\s*)' + re.escape(_a) + _NI_TAIL, h14)
+    _m = re.search(r'(<span class="sec-num">[0-9.]+</span>\s*)' + re.escape(_a) + _NI_TAIL, d14)
     assert _m, "N-i 夹具无法定位目标节：%s" % _a
     # 2026-09-30 修（98 号文 §11.4 P0-1 落地时发现）：原实现作
     #   `h14[:_m.start(2)] + _NI_TITLE + h14[_m.end(2):]`，而 group(2) 恰为 `</li>` 的跨度，
@@ -230,8 +321,8 @@ for _a in _NI_ANCHORS:
     #   N-i 判据因此**从未被真正自证**（该夹具当时 exit=1 系被 G 组「li 未闭合」等其他判据拦下，
     #   属「被别的缺陷顺带拦下而误判判据有效」）。现改为**仅替换锚题面文本**、保留 `</li>`。
     _pre = _m.end(1)
-    h14 = h14[:_pre] + _NI_TITLE + h14[_m.start(2):]
-p14.write_text(h14, encoding="utf-8", newline="\n")
+    d14 = d14[:_pre] + _NI_TITLE + d14[_m.start(2):]
+p14.write_text(h[:DOC0] + d14, encoding="utf-8", newline="\n")
 
 # ── O 组（2026-09-27 立）：标题计数概括式与集合名词 ────────────────────────
 # O 硬：章题改计数概括式（「四大 BSD」）→ 须 FAIL（卷／章题为集合的定义层）
@@ -248,17 +339,20 @@ assert m_o1, "O1 夹具无法定位「UNIX 软件工程」章题"
 p_o1.write_text(h[:m_o1.start(1)] + m_o1.group(1) + "软件工程：四大 BSD 的工程过程" + m_o1.group(2) + h[m_o1.end(2):], encoding="utf-8", newline="\n")
 
 # O 正控：专名「四条款 BSD」入节题 → 须**不** FAIL、亦不 WARN（豁免生效）
+# 2026-11-17 批 A 修复：装配器改版后节行形态为 `<li …><a href=…><span class="sec-num">N</span> 题</a>`，
+# 且节 `<li>` 内含子表，原夹具「`<li><span …>题</li>`」在本次全量实测中定位失败（O2 正控失效、
+# 整套负向自检中断）。判据锚点改为「首个 2.1 节题的题面文本」，只替换题面、不动结构与闭合。
 p_o2 = OUT / "o_exempt_clause.html"
-m_o2 = re.search(r"(<li[^>]*><span class=\"sec-num\">2\.1</span> )[^<]*(</li>)", h)
-assert m_o2, "O2 正控夹具无法定位卷 30 2.1 节题"
-p_o2.write_text(h[:m_o2.start(1)] + m_o2.group(1) + "四条款 BSD 许可证的条款对照" + m_o2.group(2) + h[m_o2.end(2):], encoding="utf-8", newline="\n")
+m_o2 = re.search(r'(<span class="sec-num">2\.1</span>\s)([^<]+)', h[DOC0:])
+assert m_o2, "O2 正控夹具无法定位 2.1 节题（文档区装配形态再变，须复核本夹具锚）"
+p_o2.write_text(h[:DOC0] + h[DOC0:][:m_o2.start(2)] + "四条款 BSD 许可证的条款对照" + h[DOC0:][m_o2.end(2):], encoding="utf-8", newline="\n")
 
 # O 软：节题改计数概括式（「三种路线」）→ 须只 WARN、不阻断
+# 同上（2026-11-17 批 A）：只替换首个 1.2 节题题面，避免依赖 `</li>` 位置（节 li 内含子表）。
 p_o3 = OUT / "o_soft_section.html"
-m_o3 = re.search(r"(<li[^>]*><span class=\"sec-num\">1\.2</span> )[^<]*", h)
-assert m_o3, "O3 夹具无法定位某章 1.2 节题"
-m_o3_end = h.index("</li>", m_o3.end())
-p_o3.write_text(h[:m_o3.start(1)] + m_o3.group(1) + "三种路线的对照" + h[m_o3_end:], encoding="utf-8", newline="\n")
+m_o3 = re.search(r'(<span class="sec-num">1\.2</span>\s)([^<]+)', h[DOC0:])
+assert m_o3, "O3 夹具无法定位 1.2 节题（文档区装配形态再变，须复核本夹具锚）"
+p_o3.write_text(h[:DOC0] + h[DOC0:][:m_o3.start(2)] + "三种路线的对照" + h[DOC0:][m_o3.end(2):], encoding="utf-8", newline="\n")
 
 # O 硬：章题改集合名词（「各分支」）→ 须 FAIL（集合名词不可用）
 # 同上：原锚 `id="vol-29-ch-13"` 已随重编号失效，改以题面锚定。
@@ -312,33 +406,55 @@ p_r.write_text(h_r, encoding="utf-8", newline="\n")
 # ── S 组（2026-11-06 追加，ADR-0020）：小节（第四级）四缺陷 ────────────────
 #   动态锚定卷 2 ch1 节 1.1（M.N 锚恒定）；在其 </li> 前注入嵌套 ul.subsections。
 #   四件分别命中：小节编号跳号／不归属父节／空小节题／F 组四级口径漂移。
-_m_s = re.search(r'<li id="vol-2-ch-1-sec-1-1">.*?</li>', h, re.S)
-assert _m_s, "S 组夹具无法定位 vol-2-ch-1-sec-1-1"
-_s_li = _m_s.group(0)
-_s_head = h[:_m_s.start()]
-_s_tail = h[_m_s.end():]
+# 2026-11-17 批 B 修复：`<li ...>.*?</li>` 非贪婪在节含**真实子表**后只截到第一子行，
+# 注入点错位并把子行残留成「节行」（HARD 判据随之被 snums 不匹配顶替）。改为标签配对取整节，
+# 并先剥掉既有 `<ul class="subsections">`，让注入件成为唯一子表。
+_s_start = h.index('<li id="vol-2-ch-1-sec-1-1">')
+
+
+def _extract_li(text, start):
+    depth, i = 0, start
+    while True:
+        no, nc = text.find("<li", i), text.find("</li>", i)
+        assert nc != -1, "夹具：未找到配对 </li>"
+        if no != -1 and no < nc:
+            depth += 1
+            i = text.find(">", no) + 1
+        else:
+            depth -= 1
+            i = nc + 5
+            if depth == 0:
+                return text[start:i], i
+
+
+_s_li_full, _s_end = _extract_li(h, _s_start)
+_s_head = h[:_s_start]
+_s_tail = h[_s_end:]
+_s_li = re.sub(r'<ul class="subsections">.*?</ul>', "", _s_li_full, flags=re.S)
+_s_cut = _s_li.rindex("</li>")
+_s_open, _s_close = _s_li[:_s_cut], "</li>"
 
 # S-1 跳号：注入 1.1.1 与 1.1.3（缺 1.1.2）→ D 组 want 序列不匹配
 p_s1 = OUT / "_neg_s_sub_gap.html"
-p_s1.write_text(_s_head + _s_li.replace("</li>",
+p_s1.write_text(_s_head + _s_open +
     '<ul class="subsections">'
     '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.1.1</span> 小节甲</li>'
     '<li id="vol-2-ch-1-sec-1-1-sub-3"><span class="sec-num">1.1.3</span> 小节丙</li>'
-    "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
+    "</ul>" + _s_close + _s_tail, encoding="utf-8", newline="\n")
 
 # S-2 归属破坏：小节号 1.2.1 挂在节 1.1 下
 p_s2 = OUT / "_neg_s_sub_orphan.html"
-p_s2.write_text(_s_head + _s_li.replace("</li>",
+p_s2.write_text(_s_head + _s_open +
     '<ul class="subsections">'
     '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.2.1</span> 小节甲</li>'
-    "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
+    "</ul>" + _s_close + _s_tail, encoding="utf-8", newline="\n")
 
 # S-3 空小节题：编号后有且只有空白
 p_s3 = OUT / "_neg_s_sub_empty.html"
-p_s3.write_text(_s_head + _s_li.replace("</li>",
+p_s3.write_text(_s_head + _s_open +
     '<ul class="subsections">'
     '<li id="vol-2-ch-1-sec-1-1-sub-1"><span class="sec-num">1.1.1</span> </li>'
-    "</ul></li>", 1) + _s_tail, encoding="utf-8", newline="\n")
+    "</ul>" + _s_close + _s_tail, encoding="utf-8", newline="\n")
 
 # S-4 F 组口径漂移：footer 四级串的小节数 +5（与实测值不符）
 # 2026-11-09 修：原锚写死「0 小节」（Task 5 零态时的口径），Task 8 起小节数非零 → 夹具静默失效

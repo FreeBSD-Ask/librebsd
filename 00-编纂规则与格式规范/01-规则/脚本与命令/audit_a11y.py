@@ -42,15 +42,33 @@ HERE = pathlib.Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 INDEX = REPO / "05-卷册大纲" / "目录" / "index.html"
 AXE = HERE / "axe.min.js"
-PLAYWRIGHT_ENTRY = ("file:///C:/Users/ykla/AppData/Roaming/npm/node_modules/"
-                    "@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs")
+
+# playwright 入口解析（2026-11-17 批 A 修复：原写死 mcp-server 树内路径已失效）。
+# 候选依次探测：目录页 tests 树内安装（现行真值）→ 旧 mcp-server 路径（历史兼容）。
+# 解析失败时主流程按“依赖缺失”exit 2，不静默跳过。
+def resolve_playwright_entry():
+    tests_nm = REPO / "05-卷册大纲" / "目录" / "tests" / "node_modules"
+    candidates = [
+        tests_nm / "playwright" / "index.mjs",
+        pathlib.Path("C:/Users/ykla/AppData/Roaming/npm/node_modules/"
+                     "@executeautomation/playwright-mcp-server/node_modules/playwright/index.mjs"),
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return None
+
+PLAYWRIGHT_ENTRY = resolve_playwright_entry()
 
 RUNNER_JS = R'''
 import { chromium } from '__PW__';
 import { readFileSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
 const [INDEX, AXE_PATH] = process.argv.slice(2);
 const AXE = readFileSync(AXE_PATH, 'utf8');
-const FILE_URL = 'file:///' + INDEX.replace(/\\/g, '/');
+// 2026-11-17 批 A 修复：字符串拼 file:/// + 盘符路径在 UNC 映射盘（D: → \\host\d）下产出畸形 URL 致 goto 挂死；
+// 一律走 pathToFileURL（UNC 自动转 file://host/path 形）。
+const FILE_URL = pathToFileURL(INDEX).href;
 const combos = [
   { w: 1920, h: 1080, theme: 'light' },
   { w: 1920, h: 1080, theme: 'oled' },
@@ -149,8 +167,8 @@ def run_scan(index_path: pathlib.Path):
     """跑一次 JS 扫描器；返回解析后的 dict（或 None + 错误信息）。"""
     with tempfile.TemporaryDirectory(prefix="a11y_") as td:
         js = pathlib.Path(td) / "a11y_run.mjs"
-        js.write_text(RUNNER_JS.replace("__PW__", PLAYWRIGHT_ENTRY), encoding="utf-8", newline="\n")
-        p = subprocess.run(["node", str(js), str(index_path), str(AXE)],
+        js.write_text(RUNNER_JS.replace("__PW__", PLAYWRIGHT_ENTRY.as_uri()), encoding="utf-8", newline="\n")
+        p = subprocess.run(["bun", str(js), str(index_path), str(AXE)],
                            capture_output=True, text=True, encoding="utf-8",
                            errors="replace", timeout=600)
         out = (p.stdout or "") + "\n" + (p.stderr or "")
@@ -251,15 +269,14 @@ def main():
     ap.add_argument("--selftest", action="store_true", help="判据非空：缺陷副本须被拦下")
     args = ap.parse_args()
 
-    if not shutil.which("node") and not pathlib.Path("C:/Program Files/nodejs/node.exe").exists():
-        print("依赖缺失：node 不可用（exit 2）")
+    if not shutil.which("bun"):
+        print("依赖缺失：bun 不可用（JS 运行时与包管理器基线见 流程规则/02）（exit 2）")
         return 2
     if not AXE.exists():
         print("依赖缺失：%s 不存在（exit 2）" % AXE)
         return 2
-    pw = PLAYWRIGHT_ENTRY.replace("file:///", "")
-    if not pathlib.Path(pw).exists():
-        print("依赖缺失：playwright 入口不存在（%s）（exit 2）" % pw)
+    if PLAYWRIGHT_ENTRY is None:
+        print("依赖缺失：playwright 入口解析失败（候选均不存在）（exit 2）")
         return 2
     if not INDEX.exists():
         print("依赖缺失：index.html 不存在（exit 2）")

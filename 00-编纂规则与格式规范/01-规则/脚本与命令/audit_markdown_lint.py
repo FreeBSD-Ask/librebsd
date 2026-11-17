@@ -41,9 +41,9 @@
 版本钉定
 --------
 实测 v0.23.2 与 v0.22.1 对同一语料给出**不同计数**（5,487 条为 v0.23.2 与 v0.22.1
-一致值，但历史上 `npx --yes` 曾拉到新版产生漂移）。为保证可复现，本门禁钉定
-`markdownlint-cli2 0.24.1 / markdownlint 0.42.1`（2026-11-14 升补丁版；原钉定 0.24.0／0.42.0 于 2026-10-29 升级，升级前同语料复跑：
-闸面 166 文件、旧新两版报错集逐条相同）——**摘要行形态随版本变动**（旧版
+一致值，但历史上 `npx --yes` 曾拉到新版产生漂移）。为保证可复现，本门禁钉定版本，
+钉定值的**唯一声明源**＝同目录 `markdownlint-version-baseline.txt`（2026-11-17 起；
+安装通道 2026-11-17 起为 bun add -g，禁 npm，见 流程规则/02）——**摘要行形态随版本变动**（旧版
 `Summary: N error(s)`，v0.24.0 起 `Summary: N issues in M file(s)`），故升级须
 ①显式 `--allow-version`；②同批核 `SUMMARY_RE` 是否仍能解析新版摘要行（否则表现为
 “无法解析 lint 输出”的假红）；③核报错集有无新增。
@@ -81,7 +81,25 @@ from pathlib import Path
 # os.path.abspath 不做符号链接/盘符解析，保留盘符，Node 侧即可正常加载配置。
 ROOT = Path(os.path.abspath(__file__)).parents[3]
 
-PINNED = ("0.24.1", "0.42.1")  # markdownlint-cli2 / markdownlint
+def _load_pinned():
+    """版本钉定唯一声明源：同目录 markdownlint-version-baseline.txt（2026-11-17 起，G-05）。
+
+    解析“钉定：markdownlint-cli2==X / markdownlint==Y”行；文件缺失或不可解析即退出码 2
+    （与 duckdb 版本基线同一纪律：缺声明源不运行，防静默漂移）。
+    """
+    base = Path(__file__).resolve().parent / "markdownlint-version-baseline.txt"
+    if not base.exists():
+        print("[exit 2] 版本基线缺失：%s（唯一声明源，见 流程规则/02）" % base)
+        raise SystemExit(2)
+    text = base.read_text(encoding="utf-8")
+    m = re.search(r"钉定：markdownlint-cli2==([\d.]+) / markdownlint==([\d.]+)", text)
+    if not m:
+        print("[exit 2] 版本基线不可解析：缺“钉定：markdownlint-cli2==… / markdownlint==…”行")
+        raise SystemExit(2)
+    return m.group(1), m.group(2)
+
+
+PINNED = _load_pinned()  # markdownlint-cli2 / markdownlint（唯一声明源＝markdownlint-version-baseline.txt）
 
 MANIFEST = [
     "AGENTS.md",

@@ -73,6 +73,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import random
 import re
 import shutil
@@ -146,7 +147,10 @@ EXPECTED_CONSTRAINTS = {
 COUNT_TABLES = ["pages", "fulltext", "fulltext_blocks", "links", "conversions"]
 ALLOWED_LINK_STATUS = {"fetched", "wayback", "excluded", "failed", "needs_ocr_deferred"}
 
-SCRIPT_DIR = Path(__file__).resolve().parent
+# 2026-11-17 批 B：不用 resolve()——本机 D: 为映射盘，resolve 会把路径展开成
+# `D:\<主机名>\d\...` 混成形（与 audit_markdown_lint 2026-10-15 的同类结论一致：
+# abspath 不做盘符解析，保留原盘符才安全）。
+SCRIPT_DIR = Path(os.path.abspath(__file__)).parent
 PROJECT_ROOT = SCRIPT_DIR.parents[2]
 DEFAULT_ROOT = PROJECT_ROOT / "03-原始史料库" / "16-TUHS-Wiki史料"
 DEFAULT_DB = DEFAULT_ROOT / "tuhs_wiki.duckdb"
@@ -1042,6 +1046,9 @@ def check_v8(ctx: VerifyContext) -> Result:
 
     work = ctx.new_tempdir("v8")
     export_dir = work / "export"
+    # 2026-11-17 批 B 修复：duckdb 2.0.0 的 EXPORT DATABASE 不再自建目标目录
+    # （1.x 会自建）；缺目录时 IOException「Cannot open file …\export\*.parquet」。
+    export_dir.mkdir(parents=True, exist_ok=True)
     import_db = work / "import.duckdb"
     exported = 0
     compared = 0
@@ -1123,6 +1130,7 @@ def check_v9(ctx: VerifyContext) -> Result:
 
         # Windows 下无法复制被本进程打开的库文件，故以逻辑导出／导入生成同构副本
         export_dir = work / "export"
+        export_dir.mkdir(parents=True, exist_ok=True)  # 2026-11-17 批 B：duckdb 2.0.0 不自建导出目录
         target = export_dir.as_posix().replace("'", "''")
         ctx.conn.execute(f"EXPORT DATABASE '{target}' (FORMAT PARQUET)")
         copied = duckdb.connect(str(temp_db))

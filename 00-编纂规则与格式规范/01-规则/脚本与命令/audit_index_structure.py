@@ -128,6 +128,43 @@ def cn2int(s):
     return CN.index(s)
 
 
+# ── 章块节列表的标签配对解析（2026-11-17 批 B）─────────────────────────────
+# 缘由：节行自第四级小节上线起内含 `<ul class="subsections">`，原章块正则
+# `...</h3>\s*<ul class="sections">(.*?)</ul>` 的非贪婪 `</ul>` 只截到**第一个子表**闭合，
+# 章内节列表被截断——N-e（章内 ≥4 个含年份节）等条件因此永不满足、判据整库空转。
+def _match_ul_end(text, open_pos):
+    """text[open_pos:] 以 '<ul' 开头；返回其配对 '</ul>' 之后的绝对位置。"""
+    depth, i = 0, open_pos
+    while True:
+        no, nc = text.find("<ul", i), text.find("</ul>", i)
+        if nc < 0:
+            return len(text)
+        if no != -1 and no < nc:
+            depth += 1
+            i = text.find(">", no) + 1
+        else:
+            depth -= 1
+            i = nc + 5
+            if depth == 0:
+                return i
+
+
+class _ChapPair:
+    """给配对切片段套一个 match 形接口（group(1)=h3 内容，group(2)=sections 内容）。"""
+
+    def __init__(self, g1, g2):
+        self._g = (None, g1, g2)
+
+    def group(self, i):
+        return self._g[i]
+
+
+# N-e 年序判据豁免台账（2026-11-17 批 B；键＝(卷号字符串, 章号字符串)；理由见各条注释与技术债 TD-031）
+N_E_EXEMPT = {
+    ("18", "6"),   # TAB／KS 会议议题线章：节题年份跨 2018—2025 交织，非编年线
+}
+
+
 # ═══════════════════════════════════════════════════════════════════════════
 # 卷序索引表（**唯一源**）——2026-10-02 集中化，依 101 号文 §九 P0-3
 # ═══════════════════════════════════════════════════════════════════════════
@@ -727,21 +764,36 @@ def main():
         _ot = o_flag(_vt)
         if _ot:
             o_bad.append("O 卷题计数概括式／集合名词：卷%d「%s」（命中「%s」）" % (vi, _vt[:40], _ot))
-        for cm in re.finditer(r'<h3 class="chapter"[^>]*>(.*?)</h3>\s*<ul class="sections">(.*?)</ul>', seg, re.S):
+        _chapters = []
+        for _hm in re.finditer(r'<h3 class="chapter"[^>]*>(.*?)</h3>', seg, re.S):
+            _u = seg.find('<ul class="sections">', _hm.end())
+            if _u < 0:
+                continue
+            _chapters.append(_ChapPair(
+                _hm.group(1),
+                seg[_u + len('<ul class="sections">'):_match_ul_end(seg, _u)]))
+        for cm in _chapters:
             ct = re.sub("<[^>]+>", "", cm.group(1)).strip()
             cmno = re.match(r"^第 (\d+) 章", ct)
             if not cmno:
                 continue
             cno = int(cmno.group(1))
             secs = []
-            for li in re.findall(r"<li[^>]*>(.*?)</li>", cm.group(2), re.S):
-                mm = re.search(r'<span class="sec-num">([^<]+)</span>\s*(.*)', li, re.S)
-                if not mm:
-                    continue
-                title = re.sub(r'<span class="src">.*?</span>', "", mm.group(2), flags=re.S)
+            # 2026-11-17 批 B：只取**节级**行（`id="vol-V-ch-C-sec-M-N"`，二段号），
+            # 不再用 `<li>(.*?)</li>` 的朴素非贪婪配对——该式在子表嵌套下要么截断、
+            # 要么把小节行混入节数（曾致 N-h 455 条假离群）。子表由第四级小节层持有，
+            # 不属于本节判据面（O 组另有小节软示口径）。
+            for _li_m in re.finditer(
+                    r'<li id="vol-\d+-ch-\d+-sec-(\d+)-(\d+)">(.*?)'
+                    r'(?=<ul class="subsections">|</li>)', cm.group(2), re.S):
+                _num = "%s.%s" % (_li_m.group(1), _li_m.group(2))
+                _body_li = _li_m.group(3)
+                mm2 = re.search(r'<span class="sec-num">([^<]+)</span>\s*(.*)', _body_li, re.S)
+                _title_html = mm2.group(2) if mm2 else ""
+                title = re.sub(r'<span class="src">.*?</span>', "", _title_html, flags=re.S)
                 title = re.sub("<[^>]+>", "", title).strip()
                 title = re.sub("〔[^〕]*〕", "", title).strip()   # 排除〔迁入/溯源〕标记
-                secs.append((mm.group(1).strip(), title))
+                secs.append((_num, title))
                 if len(title) >= 12:
                     sec_titles[title].append("卷%d.第%d章" % (vi, cno))
             # ── O 组：标题计数概括式与集合名词（2026-09-27 立）──
@@ -767,7 +819,13 @@ def main():
                 if _ot:
                     o_warn.append("O WARN（软·注文）卷%d 第%d章「%s…」（命中「%s」）" % (vi, cno, _nt[:32], _ot))
             yr = [int(m.group(1)) for _, t in secs for m in [YR.search(t)] if m]
-            if re.search(r"（\d{4}–", ct) and len(yr) >= 4:
+            # 2026-11-17 批 B 修复：原前提写死 en dash「（\d{4}–」，而全库 1 141 处年份区间
+            # 均为 em dash（—）→ N-e 判据整库空转（第十二件 N-e 夹具因此拦不住）。年序判据与
+            # 破折号形制正交，前提扩为「en 或 em」两形皆检。
+            # 2026-11-17 批 B：N-e 豁免台账（键＝(卷号, 章号)；逐章显式登记，禁模式化放行；
+            # 新增须同批登记技术债并写理由）。("18","6")：TAB／KS 会议**议题线**章（节题年份
+            # 2018—2025 交织，非编年线），年序判据不适用；见技术债登记 TD-031。
+            if (str(vi), str(cno)) not in N_E_EXEMPT and re.search(r"（\d{4}[–—]", ct) and len(yr) >= 4:
                 for k in range(1, len(yr)):
                     if yr[k] < yr[k - 1] - 1:
                         n_e_bad.append("N-e 年序回落：卷%d 第%d章 第%d个含年份节年序回落（%d→%d）" % (vi, cno, k + 1, yr[k - 1], yr[k]))

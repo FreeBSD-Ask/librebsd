@@ -1,0 +1,8 @@
+# markdownlint 版本基线（项目唯一声明源）
+# 2026-11-17 建（批 A，G-05 落地）：版本事实单落点——AGENTS.md 与门禁正文只引用本件，不复述版本号。
+# 变更须走同批三步：①改本件钉定行；②bun add -g 安装（禁 npm，见 流程规则/02“JS 运行时与包管理器基线”）；③同批复跑第十件并核 SUMMARY_RE 解析。
+
+钉定：markdownlint-cli2==0.24.1 / markdownlint==0.42.1
+安装通道：bun add -g markdownlint-cli2@0.24.1
+摘要行形态：v0.24.0 起 `Summary: N issues in M files`（旧版 `Summary: N error(s)`，SUMMARY_RE 两代兼容）
+记录日期：2026-11-17（原钉定 0.24.0／0.42.0 于 2026-10-29 升级，2026-11-14 升补丁版 0.24.1／0.42.1）

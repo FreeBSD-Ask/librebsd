@@ -542,6 +542,38 @@ def run_checks(root: pathlib.Path):
     rows.append(("E13", "标准化文献先行阅读接线", not e13_bad,
                  "；".join(e13_bad) if e13_bad else
                  "理论件／README 登记／§0.8／AGENTS 行／模板 I 接线一致"))
+
+    # E14 缺口文件自反性声明（2026-11-17 立，G-03 偿还）：AGENTS.md 要求“所有缺口文件应含
+    # 自反性声明”，此前无机判。判据：固定四处 G 系列 index 必须存在；04-史学方法论 与
+    # 10-交叉索引 各 index 存在者必须含“自反”；全域命中 0 件即 FAIL（判据不得空转）。
+    e14_bad = []
+    _root = root
+    _fixed_gap = [
+        "08-核查报告与多轮复核/08-历史争议图谱/index.md",
+        "08-核查报告与多轮复核/09-比较史研究/index.md",
+        "08-核查报告与多轮复核/10-同行评议/index.md",
+        "08-核查报告与多轮复核/11-可复现性实验/index.md",
+    ]
+    _gap_files = []
+    for rel in _fixed_gap:
+        f = _root / rel
+        if not f.exists():
+            e14_bad.append("缺缺口文件：%s" % rel)
+        else:
+            _gap_files.append(f)
+    _gap_files += sorted((_root / "00-编纂规则与格式规范/04-史学方法论").glob("*.md"))
+    _gap_files += sorted((_root / "10-交叉索引").glob("*/index.md"))
+    if not _gap_files:
+        e14_bad.append("缺口文件集合为空（判据空转）")
+    for f in _gap_files:
+        try:
+            if "自反" not in f.read_text(encoding="utf-8"):
+                e14_bad.append("缺自反性声明：%s" % f.relative_to(_root).as_posix())
+        except OSError as exc:
+            e14_bad.append("不可读：%s（%s）" % (f, exc))
+    rows.append(("E14", "缺口文件自反性声明", not e14_bad,
+                 "；".join(e14_bad[:6]) if e14_bad else
+                 "缺口文件 %d 件均含自反性声明" % len(_gap_files)))
     return rows, rule_date
 
 
@@ -676,6 +708,19 @@ def _write_fixture(root: pathlib.Path):
         '"skills":[{"file":"../skills/four-source-title.md"},{"file":"../skills/gate-runner.md"},'
         '{"file":"../skills/milestone-tag.md"},{"file":"../skills/volume-parallel.md"}]}',
         encoding="utf-8")
+
+    # E14 正样本夹具（2026-11-17 立，G-03 偿还）：固定四处 G 系列 index ＋史学方法论 index
+    _gap_fixed = ["08-核查报告与多轮复核/08-历史争议图谱",
+                  "08-核查报告与多轮复核/09-比较史研究",
+                  "08-核查报告与多轮复核/10-同行评议",
+                  "08-核查报告与多轮复核/11-可复现性实验"]
+    for _rel in _gap_fixed:
+        _d = root / _rel
+        _d.mkdir(parents=True, exist_ok=True)
+        (_d / "index.md").write_text("# 夹具\n\n本件含自反性声明（夹具）。\n", encoding="utf-8")
+    _hist = root / "00-编纂规则与格式规范" / "04-史学方法论"
+    _hist.mkdir(parents=True, exist_ok=True)
+    (_hist / "index.md").write_text("# 史学方法论（夹具）\n\n自反性声明：夹具件。\n", encoding="utf-8")
 
 
 def _failed_codes(root: pathlib.Path):
@@ -814,6 +859,9 @@ def cmd_selftest():
                 "templates/agents 与 templates/skills：角色卡与技能模板见 templates/qoder-plugin/README.md。\n",
                 encoding="utf-8")),
         ]
+        # E14 负向（2026-11-17 立，G-03 偿还）：缺口文件去掉“自反”字样须判 FAIL
+        cases.append(("E14", lambda: (tmp / "00-编纂规则与格式规范/04-史学方法论/index.md")
+                      .write_text("# 史学方法论\n\n外部方法论参照清单。\n", encoding="utf-8")))
         for code, mutate in cases:
             _write_fixture(tmp)
             mutate()

@@ -7,14 +7,14 @@
 - `visual_regression.mjs` —— 25 项视觉几何 + 功能断言。运行方式：
 
 ```sh
-node visual_regression.mjs            # 有头模式（屏幕可见，人工核对）
-node visual_regression.mjs --headless # 无头模式（静默回归，失败退出码 1）
+bun visual_regression.mjs            # 有头模式（屏幕可见，人工核对）
+bun visual_regression.mjs --headless # 无头模式（静默回归，失败退出码 1）
 ```
 
 ## 前置
 
-- Node ≥ 20；
-- 本机 playwright：借道 `@executeautomation/playwright-mcp-server` 树内安装（`C:/Users/ykla/AppData/Roaming/npm/node_modules/@executeautomation/playwright-mcp-server/node_modules/playwright`）；
+- bun ≥ 1.4（2026-11-17 立“JS 运行时与包管理器基线”：禁止 npm，JS 一律 bun；见 `流程规则/02-脚本与执行安全.md`）；
+- 本机 playwright：`tests/node_modules/` 树内安装（`05-卷册大纲/目录/tests/node_modules/playwright`）；
 - Chromium：钉定修订版 `C:/Users/ykla/AppData/Local/ms-playwright/chromium-1200/chrome-win64/chrome.exe`；**2026-10-04 起夹具内置解析器**——钉定路径存在则用之，否则自动回落至 `ms-playwright/` 下现存最高 `chromium-<rev>` 修订版（环境更新浏览器集后无须逐文件改路径）。
 
 页面与内容源路径自 2026-10-23 起由夹具自身位置推导（`import.meta.url`／`__file__` 向上求 `05-卷册大纲/目录` 与仓库根），迁移机器无须改；仍为机器固定值者仅 Playwright 安装路径与 Chromium 解析器常量 `__PW_DIR`／`__PINNED`，以及指向 `script/`、`review_logs/` 历史归档的引用（各件已就地注明“历史归档引用，勿改”）。
@@ -51,14 +51,14 @@ node visual_regression.mjs --headless # 无头模式（静默回归，失败退�
 
 ## 配套门禁（改后必跑）
 
-1. `node tests/visual_regression.mjs --headless`（本套件）；
+1. `bun tests/visual_regression.mjs --headless`（本套件）；
 2. `python 00-编纂规则与格式规范/01-规则/脚本与命令/audit_data_integrity.py`（DATA 净化门禁，0 问题）；
 3. `python 00-编纂规则与格式规范/01-规则/脚本与命令/sync_refactor2026_baseline.py --check`（口径漂移检测）；
 4. `python 00-编纂规则与格式规范/01-规则/脚本与命令/audit_sequence_continuity.py`（节号／章号连续性＋述评恒末）；
 5. `python 00-编纂规则与格式规范/01-规则/脚本与命令/xref_audit.py`（分工注交叉引用悬空）；
 6. `python 00-编纂规则与格式规范/01-规则/脚本与命令/audit_index_structure.py`（**第七件：目录页结构静态自检 A／A2／B-N／O**（**O 组＝标题计数概括式与集合名词**，2026-09-27 立：卷／章题命中判 FAIL、节题与注文只 WARN；另含 K／L／M 三组），2026-09-18 新增，其中 **A2 空格形制**于同日补入；**K 三级结构／L 不设附录／M OS 比较节位次**三组于 2026-09-27 补入，见下节；不依赖浏览器，可对备份件用 `--path` 交叉验证）；
 7. `python 00-编纂规则与格式规范/01-规则/脚本与命令/embed.py --check`（catalog 与内嵌数据块一致性）；
-8. `C:/Python314/python.exe 00-编纂规则与格式规范/01-规则/脚本与命令/assemble_index.py --check`（**第八件：四层解耦装配器的漂移检测**，2026-09-18 新增；重装到内存与磁盘 `index.html` 逐字节比对，不一致即 FAIL。`index.html` 自此为**装配产物**，一切修改走装配器）；**⚠ 解释器须与上次装配一致**——数据块为 gzip -9（mtime=0）压缩，其字节随 zlib 实现而异（2026-09-27 实测：系统 `C:/Python314/python.exe` 为 `zlib 1.3.1.zlib-ng`，base64 333,920 字符＝磁盘基线；托管 3.13.12 为 `zlib 1.3.1`，335,228 字符），两解码结果 JSON 完全相等而**字节不同**，故用另一解释器运行本件会**恒报漂移**（判据本身不具解释器无关性）；装配与 `--check` 一律用上列系统解释器）；
+8. `（钉定解释器）python 00-编纂规则与格式规范/01-规则/脚本与命令/assemble_index.py --check`（**第八件：四层解耦装配器的漂移检测**，2026-09-18 新增；重装到内存与磁盘 `index.html` 逐字节比对，不一致即 FAIL。`index.html` 自此为**装配产物**，一切修改走装配器）；**⚠ 解释器须与上次装配一致**——数据块为 gzip -9（mtime=0）压缩，其字节随 zlib 实现而异（2026-09-27 实测：系统解释器为 `zlib 1.3.1.zlib-ng`，base64 333,920 字符＝磁盘基线；托管 3.13.12 为 `zlib 1.3.1`，335,228 字符），两解码结果 JSON 完全相等而**字节不同**，故用另一解释器运行本件会**恒报漂移**（判据本身不具解释器无关性）；装配与 `--check` 一律用钉定解释器——唯一声明源见 `01-规则/脚本与命令/duckdb-version-baseline.txt`）；
 9. `C:/Python314/python.exe 00-编纂规则与格式规范/01-规则/脚本与命令/audit_page_assets.py`（**第九件：页面资产层完整性**，2026-09-18 新增；内嵌字体子集覆盖度／品牌派生件形制／自包含性／**本目录夹具口径一致性＋未决项交叉核验（E4，2026-10-11 补）**——其中 E3 即本 README 断言清单与 `visual_regression.mjs` `record()` 编号集的双向吻合、E4 即页面“未决项”格与内容源结构性待补声明双向一致（独立实现；`--selftest` 四用例）。**须用带 fontTools＋brotli 的解释器**（2026-10-11 校正：原指定 venv 已失效、不再硬编码单一环境路径；任一含 fontTools＋brotli 的解释器均可，如系统 `C:/Python314/python.exe`））；
 10. `python tests/tri_structure_negtest.py`（**第十二件：结构判据负向自检**，2026-09-27 新增；构造**二十二种**缺陷副本——K 组三级结构三类／L 组章题以“附录”起首／M 组比较节后接非述评节／N 组结构裁决八类（N-a2／N-b1／N-c／N-d 2026-09-27 随 M-7 追加；N-e／N-g／N-h／N-i 同日补遗）／C 组卷内重题（2026-10-10）／O 组计数概括式两类／P 组括注不配对（2026-09-30）／Q 组可见标记泄漏三形态（加粗／章题 @@／**语言标记 ⟦⟧，2026-10-12 136 批追加**）／Q2 组谱系残留（2026-10-08）／R 组卷头主体声明（2026-10-06）——逐一确认第七件能把它们判 FAIL，且拦下原因正是对应判据。**判据“存在”不等于判据“有效”**，无负向自检则判据逻辑写错而恒判 PASS 无法察觉。夹具副本置于 `script/_vol_adjust_20260927/negfix/`，保留不清理）。
 11. `C:/Python314/python.exe 00-编纂规则与格式规范/01-规则/脚本与命令/audit_server_contract.py`（**第十一件：目录页服务器契约**，2026-09-28 新增；以**运行中的服务器**为对象——既有九件对象面为产物 `index.html` 与大纲 `.md`，服务器此前**不在任何门禁面内**。八项真实 HTTP 断言：压缩且解压正文与磁盘**逐字节相等**／`Cache-Control` 不含 `no-store`／条件请求回 304 且正文 0 字节／目录列表不可枚举／白名单（备份件与构建期件一律 404）／三项安全响应头齐备／路径穿越拦截／新鲜度。**自动起临时实例、绑 `127.0.0.1` ＋ 空闲端口、跑完即杀**，不触碰正式服务。`--selftest` 对内置缺陷服务器跑须 A／B／D／F 全命中）。
@@ -102,8 +102,8 @@ node visual_regression.mjs --headless # 无头模式（静默回归，失败退�
 > **夹具同步纪律（2026-09-18）**：本套件与 `visual_regression.mjs` 含少量**随目录变动须同步的夹具值**——①口径串（现为 `44 卷 414 章 3435 节`，两处：页内文本与 SUMMARY 导出）；②溯源注计数（现为 `注 665`，等于 `ul.sections > li` 中带 `.src` 的节数）；③图谱标签数（已改为**动态**取 `section[id^='vol-']` 计数，不再写死）；④长节名折叠（阈值 150 字符，全库节题未越阈时功能休眠，断言改为“休眠与内容一致”而非“必现按钮”）；⑤**卷题分隔符**（`<h2>` 卷号与题名之间为 **2 个半角空格**，依流程规则 L1532；`visual_regression.mjs` T7a 据此 `indexOf('  ')`＋`slice(+2)` 剥离卷号取短名，页面 `volShort()` 同构，两者必须同改）；⑥**导出保真基准**（T13 的卷／章／节题真值一律读 `data/outline.txt`；**内容源迁址或改语法时须同步该常量**，否则判据静默失效；**2026-10-12 136 批实例**：内容源引入 `⟦lang:文本⟧` 语言标记后，`readOutlineTitles()` 基准须同口径 `stripLang()` 剥离〔标记于装配期被 esc() 消费、DOM 导出为纯文本〕——否则 T13／T17 与导出比对恒 FAIL）；⑦**判据真值不得取被测对象自身**（2026-09-20 立，实例即 T7a：原以页面 `h2` 现文本为真值，而页面 `h2` 与图谱标签同带运行时计数徽标，两侧同源使“包含”判据恒成立而失灵——缺陷被自身掩盖）。⑧**面包屑避让与层叠**（`561–1099px` 面包屑左右各让位 56px 几何错开两角按钮；`≤560px` 顶覆态两角按钮浮于面包屑之上——左“目录”已同右侧“设置”处置（z 90），T16 判据＝可见态下两按钮中心命中自身；抽屉 45＞遮罩 44＞面包屑 40——**改顶栏控件尺寸、面包屑内边距或其 z 层叠后须同步 T15/T16 判据**）。⑨**断言标签与断言同源**（2026-09-28 立）——`ok()` 的**标签**里若嵌入期望值（如 `注计数537`／`口径3435`），该数值须与断言实际使用的真值**由同一常量派生**，不得各写一份。缘由：`full_matrix_regression.mjs` 曾出现断言真值 537 而标签写 535——**标签在输出里显示了一个错误的期望值**，且当时两件门禁（第 9 件 E2 与第 13 件的溯源注判据）都只匹配“注＋数字”形态、**匹配不到“注计数＋数字”**，长期无人发现。现该套件已收敛为单一常量 `const FX = { triple, notes, secs }`，标签一律写成 `'注计数' + FX.notes` 形式；第十三件门禁已扩为覆盖“注＋数字”“注计数＋数字”`notes:` 常量三种形态。**目录增删节、改口径、改卷题分隔符、改内容源语法、改顶栏控件或改夹具常量后必须同步这九处**，否则套件会以陈旧夹具误报。
 
 ```sh
-node tests/full_matrix_regression.mjs            # 有头
-node tests/full_matrix_regression.mjs --headless # 无头（CI）
+bun tests/full_matrix_regression.mjs            # 有头
+bun tests/full_matrix_regression.mjs --headless # 无头（CI）
 ```
 
 ### 已修复的缺陷（矩阵首轮发现）

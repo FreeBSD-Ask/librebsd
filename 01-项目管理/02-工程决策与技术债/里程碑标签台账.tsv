@@ -1,0 +1,176 @@
+tag	object_type	target_sha	commit_date	subject
+librebsd-pre-gc-20261029	tag	d0933693b1f93d3610def596607b236e7c366a52	2026-10-29	Add milestone tag rules (TG-014) to practice rules
+outline-oldtree-restored-20261029	tag	a308c375da1fa5485b704d26dda77fa5e7508205	2026-10-29	feat(outline): 旧树还原 15,206 件——从 f1649065f 按原字节写回 旧大纲-20261023
+outline-pre-landing-20261023	tag	8ddf695fa30317574b7a6d5e125e5c660005713b	2026-10-23	feat(outline): 4 条超长标题按批准方案压缩
+outline-rollout-V01-20261106	tag	dd73cbe3ba7ca838d6a33a5cdb363f283f717f38	2026-11-06	chore(Task8.2): 长线 §十八 续记 V01 全卷 363 小节与卷级回归口径、机读块刷新
+outline-rollout-V02-20261106	tag	0ab19eb58204ad6f39d8f58aa070ecb84aaaf2c1	2026-11-06	feat(Task8): V02 全卷 102 小节落盘——43 filled／59 空骨架、678 块判读闭合、卷级回归 V02 6/6、口径 465 小节
+outline-rollout-V03-20261106	tag	5be9a3fa092ed824b4f3bcbcb0fe7dc5c6d9634c	2026-11-06	feat(Task8): V03 全卷 90 小节落盘——737 块判读闭合、49 filled／41 空骨架、卷级回归 V03 6/6、口径 555
+outline-rollout-V04-20261106	tag	7dcfff7857fce8ceaa02c9b92813d89ee1404cc0	2026-11-07	feat(Task8): V04 全卷 168 小节落盘——675 块逐块判读（主会话单写者）、14 filled／154 空骨架、卷级回归 V04 6/6
+outline-rollout-V05-20261107	tag	2050c8670db09c65b9ad6cdbec0056c9d4010726	2026-11-07	feat(Task8): V05 全卷 160 小节落盘——913 块抽样判读、81 filled／79 空骨架、卷级回归 V05 6/6
+outline-rollout-V06-20261107	tag	ecc7a548b2f20b86e36e5c2ef5ce3c2ab03e0b7d	2026-11-07	feat(Task8): V06 全卷 70 小节落盘——75 块抽样判读、12 filled／58 空骨架、卷级回归 V06 6/6
+outline-rollout-V08-20261108	tag	95738aebd4b1d959502de8b8725fca7563d527ff	2026-11-08	feat(Task8): V08 全卷 340 小节收口——2,165 块七片判读（归入 755／辑存 512／挂账 465／移出 399／删除 34）、167 filled／173 空骨架
+outline-rollout-V09-20261109	tag	f5d77c05dbb4b4e6c7fba9d5786bca720bebea7e	2026-11-09	feat(Task8): V09 全卷 120 小节落盘——174 块三片判读（归入 23／移出 146／删除 5）、19 filled／101 空骨架
+outline-rollout-V10-20261109	tag	fbedb175b7efb397fbdaa1063deaa7615c2582dd	2026-11-09	APPROVED-BIGFILE: feat(Task8): V10 全卷 280 小节落盘——824 块五片判读（归入 9／挂账 46／移出 728／删除 41）、7 filled／273 空骨架；index.html 7,415,711 B
+outline-rollout-V11-20261106	tag	038a7b3790c2241d6e1802aaa641a31ec572b2d7	2026-11-07	feat(Task8): V11 全卷 204 小节落盘——430 块判读闭合、7 filled／197 空骨架、卷级回归 V11 6/6
+outline-rollout-V12-20261106	tag	9e78f05e641903a65fdfdbb493ae65d2c8c30e4a	2026-11-07	feat(Task8): V12 全卷 234 小节落盘——120 块抽样判读、19 filled／215 空骨架、卷级回归 V12 6/6
+outline-rollout-V13-20261106	tag	f35febb13a9064162a9dfbd690be3b28fc99fdb5	2026-11-07	feat(Task8): V13 全卷 258 小节落盘——120 块抽样判读、18 filled／240 空骨架、卷级回归 V13 6/6
+outline-rollout-V14-20261106	tag	8993e84b524b30c7bb9d693c17ba65b07406d7fa	2026-11-07	feat(Task8): V14 全卷 306 小节落盘——120 块抽样判读、20 filled／286 空骨架、卷级回归 V14 6/6
+outline-rollout-V15-20261106	tag	b477a6833d18b16f25b188a10ca31eb539d698cd	2026-11-07	feat(Task8): V15 全卷 114 小节落盘——114 块抽样判读、10 filled／104 空骨架、卷级回归 V15 6/6
+outline-rollout-V16-20261106	tag	4f8ff281de1aa140319ef471acee4bbc9e9bf76b	2026-11-07	feat(Task8): V16 全卷 240 小节落盘——117 块抽样判读、9 filled／231 空骨架、卷级回归 V16 6/6
+outline-rollout-V17-20261107	tag	c35793c4804dba5e23149b984b02fac206e8901b	2026-11-07	feat(Task8): V17 全卷 60 小节落盘——18 块定向判读、3 filled／57 空骨架、卷级回归 V17 6/6
+outline-rollout-V18-20261107	tag	b7d5296536e0b4ffb31d7ebfd1494c1cb4bbff42	2026-11-07	feat(Task8): V18 全卷 562 小节落盘——140 块抽样判读、57 filled／505 空骨架、卷级回归 V18 6/6
+outline-rollout-V19-20261107	tag	c74e06bf88ca2ece72360827d1419c491e16e8a1	2026-11-07	feat(Task8): V19 全卷 150 小节落盘——120 块抽样判读、27 filled／123 空骨架、卷级回归 V19 6/6
+outline-rollout-V20-20261107	tag	1736d875cb9e66caebc6dfc6861057adbfbb790a	2026-11-07	feat(Task8): V20 全卷 114 小节落盘——90 块抽样判读、9 filled／105 空骨架、卷级回归 V20 6/6
+outline-rollout-V21-20261106	tag	7a7aea7a8cc475d5fed7e15f97343274b5a63f91	2026-11-07	chore(Task8): V21–V23 卷批账目收口——口径 2548 三处同步、land.ok 门禁回写
+outline-rollout-V22-20261107	tag	7a7aea7a8cc475d5fed7e15f97343274b5a63f91	2026-11-07	chore(Task8): V21–V23 卷批账目收口——口径 2548 三处同步、land.ok 门禁回写
+outline-rollout-V23-20261107	tag	7a7aea7a8cc475d5fed7e15f97343274b5a63f91	2026-11-07	chore(Task8): V21–V23 卷批账目收口——口径 2548 三处同步、land.ok 门禁回写
+outline-rollout-V24-20261107	tag	5994abe0f851a045aabd521dcf6c5a63ff73c4a2	2026-11-07	chore(Task8): V24 卷批账目收口——92／98 §十一、长线 §十八、口径 5227 同步
+outline-rollout-V25-20261107	tag	35b09ef087d5c11b3de54be7d4620183b8b5c08d	2026-11-07	chore(Task8): V25 卷批账目收口——92／98 §十一 增记、口径 5639 同步
+outline-rollout-V26-20261107	tag	30e74fcb72da8a8ceac711bfa9fab2ec002143e4	2026-11-07	chore(Task8): V26 卷批账目收口——92／98 §十一 增记、口径 6119 同步
+outline-rollout-V27-20261107	tag	2b2471874dbe8b3656c046a2d3bd618238c12754	2026-11-07	chore(Task8): V27 卷批账目收口——92／98 §十一 增记、口径 7317 同步
+outline-rollout-V28-20261107	tag	92705c5d28292261418a560ce8993fe316731f95	2026-11-07	chore(Task8): V28 卷批账目收口——92／98 §十一 增记、口径 7542 同步
+outline-rollout-V29-20261108	tag	5437277443b24c3d1389df81d4f7b9b817d5a15a	2026-11-08	chore(Task8): V29 卷批账目收口——92／98 §十一 增记、口径 8187 同步
+outline-rollout-V30-20261108	tag	d29b5eb2f5aa6e420948fd6e39ba2706e02f7815	2026-11-08	chore(Task8): V30 卷批账目收口——92／98 §十一 增记、V21–V30 十卷收官
+outline-rollout-V31-20261107	tag	5005c29f4de8ec1eb4a536107db130ac096bc91d	2026-11-07	feat(Task8.4): V31 卷批 204 小节落盘——817 块判读、125 filled／79 skeleton
+outline-rollout-V32-20261107	tag	cc71e6518e25621d6addd03e7e93e353b6b2385f	2026-11-07	fix(tests): 卷级回归深链等待改条件等待——固定 900ms 在 5,000+ 小节页面上恒假阴
+outline-rollout-V33-20261107	tag	455a718c1551875b0df9aa48423c9008eec8f369	2026-11-07	feat(Task8): V33 全卷 90 小节落盘——286 块抽样判读、22 filled／68 空骨架、卷级回归 V33 6/6
+outline-rollout-V34-20261107	tag	c621a36c307a1ee078b82f989982352af597c4c2	2026-11-07	feat(Task8): V34 全卷 90 小节落盘——304 块判读、53 filled／37 空骨架、卷级回归 V34 6/6
+outline-rollout-V35-20261108	tag	1e3f9fb2e4a2ede7b41caafd91fdb0039375358f	2026-11-08	feat(Task8): V35 全卷 156 小节落盘——437 块判读、11 filled／145 空骨架、卷级回归 V35 6/6
+outline-rollout-V36-20261108	tag	00f5856bfeb2baec005c1e45c87747b539b42788	2026-11-08	feat(Task8): V36 全卷 531 小节落盘——797 块逐块判读（归入 43／移出 404／挂账 321／删除 29）、25 filled／506 空骨架
+outline-rollout-V37-20261109	tag	a884f9a4516b5bdaae99d6d8dc83456bd21f0c4b	2026-11-09	feat(Task8): V37 全卷 795 小节落盘——2,735 块 18 片判读（归入 943／辑存 617／移出 536／挂账 346／删除 293）、268 filled／527 空骨架
+outline-rollout-V38-20261108	tag	9b603b506878251b9b73bed31ed3c2f688e0ffcb	2026-11-08	feat(Task8): V38 全卷 198 小节落盘——357 块逐块判读（归入 50／移出 127／挂账 134／删除 46）、45 filled／153 空骨架
+outline-rollout-V39-20261109	tag	5f7f866d0693dc38864d1e1df84bd17ae73de9e6	2026-11-09	feat(Task8): V39 全卷 441 小节落盘收口——1,122 块四片判读（归入 283／移出 372／挂账 92／删除 369／辑存 6）、80 filled／361 空骨架
+outline-rollout-V40-20261109	tag	26a03e485692b89dd30af64bc02ddd37ba9e5090	2026-11-09	APPROVED-BIGFILE: 授权来源＝ykla 2026-11-08 裁定 A 案（单文件自包含，超 5 MB 每次留痕；index.html 7,339,128 B）
+outline-rollout-V41-20261107	tag	7728b4cc7cbc5cb39f0fbed7a1bbfc6db65c45d5	2026-11-07	fix(Task8): V41 二次判读——严格逐题意合定题（阈值 4），103 块归入／412 块转挂账；首版节级轮转作废
+outline-rollout-V42-20261107	tag	e497ad3d6589934396855567a6f0bf096bc23b91	2026-11-07	feat(Task8): V42 全卷 150 小节落盘——166 块严格判读、12 filled／138 空骨架、卷级回归 V42 6/6
+outline-rollout-V42-review-20261110	tag	fa1c34efc04898dd200358e3161b1e5e49c15195	2026-11-10	feat(Task8): V42 复核批——补料二轮空收＋20 块误归回收（filled 12→3）
+outline-rollout-V43-20261108	tag	561250f7d6b89b113053c4ded819f6def4cb5c84	2026-11-08	feat(Task8): V43 全卷 220 小节落盘——802 块三片严格定址（归入 150／移出 18／删除 62／挂账 572）、68 filled／152 空骨架、卷级回归 V43 6/6
+outline-rollout-V44-20261108	tag	9e55cdd0860b174fa968b326b81a74b1a623d882	2026-11-08	feat(Task8): V44 全卷 360 小节落盘——6,855 块机助定址四道闸（归入 57／移出 48／删除 231／辑存 40／挂账 6,479）、29 filled／331 空骨架
+outline-rollout-V45-20261108	tag	e1e98432b926e27254dd043cf9c0a507adbe5897	2026-11-08	feat(Task8): V45 全卷 434 小节落盘——8,709 块机助定址（归入 40／移出 55／删除 295／辑存 56／挂账 8,263）、24 filled／410 空骨架
+outline-rollout-V46-20261107	tag	ef67cb20303e6677c76be3158954049b51e5eb6b	2026-11-07	feat(Task8): V46 全卷 129 小节落盘——862 块判读闭合、16 filled／113 空骨架、卷级回归 V46 6/6
+outline-rollout-V47-20261108	tag	ed769be47347c50c87296bae9817b94264b6814d	2026-11-08	feat(Task8): V47 全卷 132 小节落盘——3,500 块判读（归入 24／移出 29／删除 119／辑存 38／挂账 3,290）、10 filled／122 空骨架、新增磁石题防集中
+outline-rollout-V47-supp-20261110	tag	9447d47c56d27bcd569b05ea555e418ae2c7663d	2026-11-10	feat(Task8): V47 补遗批——兄弟题再分配 13 块，filled 10→12、挂账 3290→3277
+outline-rollout-V48-20261108	tag	aadbbf653ce9ef488eeb9bc7a10ac8f9bc64fad6	2026-11-08	feat(Task8): V48 全卷 271 小节落盘——2,167 块判读（归入 84／移出 57／删除 177／辑存 48／挂账 1,801）、45 filled／226 空骨架
+outline-rollout-V49-20261108	tag	d8d79ad48e2dc60163b72cd77b2f210f1d211d03	2026-11-08	feat(Task8): V49 全卷 310 小节落盘——1,580 块判读（归入 114／移出 27／删除 135／辑存 12／挂账 1,292）、49 filled／261 空骨架；V41–V50 线收官
+outline-rollout-V50-20261107	tag	91dec68719e04b674ff70c0b9ec6a8c8ec78a4a6	2026-11-07	feat(Task8): V50 全卷 103 小节落盘——457 块判读闭合、15 filled／88 空骨架、卷级回归 V50 6/6
+outline-rollout-V51-20261107	tag	cdba922c30312c7518c61eff9ed4a076e95cd912	2026-11-07	feat(Task8): V51 全卷 271 小节落盘——54 filled／217 空骨架、763 块判读闭合
+outline-rollout-V52-20261107	tag	1c7986b6541cdda2db7f0b34e120616cba23bea7	2026-11-07	feat(Task8): V52 全卷 262 小节落盘——30 filled／232 空骨架、653 块判读闭合
+outline-rollout-V53-20261107	tag	f35febb13a9064162a9dfbd690be3b28fc99fdb5	2026-11-07	feat(Task8): V13 全卷 258 小节落盘——120 块抽样判读、18 filled／240 空骨架、卷级回归 V13 6/6
+outline-rollout-V54-20261107	tag	5fab096e63c661a45a2876c606ed057d8154141c	2026-11-07	feat(Task8): V54 全卷 156 小节落盘——335 块判读闭合、23 filled／133 空骨架、卷级回归 V54 6/6
+outline-rollout-V55-20261107	tag	117411f741b8ff79d3672f000dc823d1be61081c	2026-11-07	feat(Task8): V55 全卷 268 小节落盘——381 块四片单写者判读（归入 3／移出 281／删除 97）、3 filled／265 空骨架、卷级回归 V55 6/6
+outline-rollout-V56-20261107	tag	06b8ce907df80397dab82fa449f396c64dfef215	2026-11-07	feat(Task8): V56 全卷 187 小节落盘——210 块四片单写者判读（归入 24／移出 145／删除 41）、4 filled／183 空骨架、卷级回归 V56 6/6
+outline-rollout-V57-20261108	tag	85b36b3e809fa2a2df8291099bef4ee7d2db476a	2026-11-08	feat(Task8): V57 全卷 150 小节落盘——890 块逐块判读、19 filled／131 空骨架
+outline-rollout-V58-20261109	tag	25f4e7404797ca26817182629eb7ab7ed1a11701	2026-11-09	feat(Task8): V58 全卷 270 小节落盘——244 块五片判读（归入 30／挂账 7／移出 105／删除 102）、17 filled／253 空骨架
+outline-rollout-V59-20261109	tag	6664153f5861bc5a771ccfa0df31229e9a84baa0	2026-11-09	APPROVED-BIGFILE: feat(Task8): V59／V68／V75 三卷 1,564 小节落盘收口——outline／树／targets／SUMMARY 四向 17,421（index.html 7,844,626 B）
+outline-rollout-V60-20261109	tag	a85cbc6c650377c2709891dc0423c089b5127493	2026-11-09	APPROVED-BIGFILE: chore(Task8): V60 共享层——outline／SUMMARY／targets／关键词／主题／装配（口径 18,399；并行各线 fragments 并入，8,112,723 B）
+outline-rollout-V61-20261107	tag	4b8d5c79c1c566627d98f647d889062ca190c8ec	2026-11-07	feat(Task8): V61 全卷 440 小节落盘——17 filled／423 空骨架、1509 块判读闭合、卷级回归 6/6
+outline-rollout-V62-20261109	tag	053b6b01379800a1e892c57319585dce4af10ff9	2026-11-09	fix(Task8): V62 卷批补齐落盘件与台账（C 类清欠批 1/3）
+outline-rollout-V63-20261108	tag	1bd7e90c589df5d2f6b2bf1c680aba08b2ca062f	2026-11-08	feat(Task8): V63 全卷 284 小节落盘——1,962 块逐块判读、91 filled／193 空骨架
+outline-rollout-V64-20261108	tag	de395fff0e2e75baa0ab04790bfc6a42b3f2dbcd	2026-11-08	feat(Task8): V64 全卷 590 小节落盘——3,776 块逐块判读、68 filled／522 空骨架
+outline-rollout-V65-20261109	tag	3e2449c0c6da1dd7a6a230e713bb4ef7ca0d1546	2026-11-09	feat(Task8): V65 全卷 278 小节落盘——8 片 1,971 块判读（归入 186／挂账 272／移出 1,176／删除 337）、24 filled／254 空骨架
+outline-rollout-V65-supp-20261109	tag	68f995bffddb9825add571dc9a4a6860a4af2eb7	2026-11-09	feat(Task8): V65 补遗批——同节兄弟题再分配 44 块，filled 24→35（+11 题）、挂账 272→228
+outline-rollout-V66-20261108	tag	693e0cc229b0bcfe7d8f163862eb7b9171539838	2026-11-08	feat(Task8): V66 全卷 236 小节落盘——189 块逐块判读、47 filled／189 空骨架
+outline-rollout-V67-20261109	tag	831be5246d05678d245ecbfc767811b459353622	2026-11-09	chore(Task8): V67 卷批账目收口——land.ok 签发、92／98 §十一 增记、tag 台账与长线 §十八
+outline-rollout-V68-20261109	tag	6664153f5861bc5a771ccfa0df31229e9a84baa0	2026-11-09	APPROVED-BIGFILE: feat(Task8): V59／V68／V75 三卷 1,564 小节落盘收口——outline／树／targets／SUMMARY 四向 17,421（index.html 7,844,626 B）
+outline-rollout-V68-supp-20261110	tag	850d899769ca939772a05c25a8ac692e404e717a	2026-11-10	feat(Task8): V68 补遗批——兄弟题再分配 27 块，filled 25→34、挂账 156→129
+outline-rollout-V69-20261108	tag	0a97b8131bc0a83fb96087df8b70aeb68e4855ef	2026-11-08	feat(Task8): V69 全卷 526 小节落盘——1,151 块逐块判读、121 filled／405 空骨架
+outline-rollout-V70-20261109	tag	40ecfc3f5258b79dce6ee950821d25d3a210fab2	2026-11-09	feat(Task8): V70 全卷 171 小节落盘——2,712 块五片判读（归入 255／挂账 536／移出 1,759／辑存 76／删除 86）、51 filled／120 空骨架
+outline-rollout-V71-20261109	tag	af25b39b7f53d9145d2f6ce1301c3a593e64984a	2026-11-09	feat(Task8): V71 全卷 225 小节落盘——全库关键词分流 5 片 493 块判读（归入 152／挂账 257／移出 69／删除 15）、22 filled／203 空骨架
+outline-rollout-V71-supp-20261109	tag	bfbb81a798ce6ff7b829b837e38a2ffb0a000637	2026-11-09	feat(Task8): V71 补遗批——同节兄弟题再分配 44 块，filled 22→34（+12 题）、挂账 257→214
+outline-rollout-V72-20261109	tag	afd4b1e741e48c0d4839189e54a33cdf6430c747	2026-11-09	feat(Task8): V72 全卷 262 小节落盘——全库关键词分流 6 片 820 块判读（归入 138／挂账 213／移出 469）、17 filled／245 空骨架
+outline-rollout-V72-supp-20261109	tag	2efe366c3e77f4ec330a62377180cc3e0a651336	2026-11-09	feat(Task8): V72 补遗批——同节兄弟题再分配 22 块，filled 17→23（+6 题）、挂账 213→191；title.ok 重签
+outline-rollout-V73-20261109	tag	b619e264c516d7eaf226213ddacb3ddeae2bdaa8	2026-11-09	APPROVED-BIGFILE: feat(Task8): V73 全卷 196 小节落盘——1,067 块五片判读（归入 79／挂账 467／移出 446／辑存 33／删除 42）、41 filled／155 空骨架；index.html 8,169,522 B
+outline-rollout-V74-20261109	tag	cbcfa6ee1bd6b7ddab574152cb420112f34d8a3d	2026-11-09	APPROVED-BIGFILE: feat(Task8): V74 全卷 183 小节落盘——1,123 块六片判读（归入 76／挂账 533／移出 416／辑存 33／删除 65）、35 filled／148 空骨架；index.html 8,218,905 B
+outline-rollout-V75-20261109	tag	6664153f5861bc5a771ccfa0df31229e9a84baa0	2026-11-09	APPROVED-BIGFILE: feat(Task8): V59／V68／V75 三卷 1,564 小节落盘收口——outline／树／targets／SUMMARY 四向 17,421（index.html 7,844,626 B）
+outline-rollout-V76-20261109	tag	7a98e92c65f29d8d27926a39b733db49b3fa4d88	2026-11-09	APPROVED-BIGFILE: feat(Task8): V76 全卷 196 小节落盘——2,933 块五片判读（归入 375／挂账 149／移出 35／辑存 286／删除 2,088）、91 filled／105 空骨架；index.html 8,271,674 B
+outline-rollout-v01-20261030-t	tag	b238e3df89761587cfbc8402835e61e9a1e73349	2026-10-30	chore(title3a): 三卷批准收口——V02 首批、V01/V03 改题重批（ykla 2026-10-30）
+outline-rollout-v01-20261030-t2	tag	c6f460d39fb9ec789acdeac8d4f90a64544ee286	2026-10-30	feat(title3a): 三卷全量联网补证批——V01 58+14、V02 42、V03 19+1 题升联网源，证据共 +134 行，题面零改动（ykla 令不计成本联网复核）
+outline-rollout-v01-20261030-t3	tag	69b36ae9599cebd4e7a497068adf62bf513524a8	2026-10-30	feat(title3a): 三卷联网补证批 2——SEP×3、香农 MIT 库、ACM 史、CHM 年表、NSF/LII/Open Group，+18 题升联网源，题面零改动
+outline-rollout-v02-20261030-t	tag	b238e3df89761587cfbc8402835e61e9a1e73349	2026-10-30	chore(title3a): 三卷批准收口——V02 首批、V01/V03 改题重批（ykla 2026-10-30）
+outline-rollout-v02-20261030-t2	tag	c6f460d39fb9ec789acdeac8d4f90a64544ee286	2026-10-30	feat(title3a): 三卷全量联网补证批——V01 58+14、V02 42、V03 19+1 题升联网源，证据共 +134 行，题面零改动（ykla 令不计成本联网复核）
+outline-rollout-v02-20261030-t3	tag	69b36ae9599cebd4e7a497068adf62bf513524a8	2026-10-30	feat(title3a): 三卷联网补证批 2——SEP×3、香农 MIT 库、ACM 史、CHM 年表、NSF/LII/Open Group，+18 题升联网源，题面零改动
+outline-rollout-v03-20261030-t	tag	32feb2ac747c0479c5915f99b7a81f109f1ee2a8	2026-10-30	chore(title3a): V03 卷级标题批准——approvals 行与 V03.title.ok（ykla 2026-10-30）
+outline-rollout-v03-20261030-t2	tag	b238e3df89761587cfbc8402835e61e9a1e73349	2026-10-30	chore(title3a): 三卷批准收口——V02 首批、V01/V03 改题重批（ykla 2026-10-30）
+outline-rollout-v03-20261030-t3	tag	c6f460d39fb9ec789acdeac8d4f90a64544ee286	2026-10-30	feat(title3a): 三卷全量联网补证批——V01 58+14、V02 42、V03 19+1 题升联网源，证据共 +134 行，题面零改动（ykla 令不计成本联网复核）
+outline-rollout-v03-20261030-t4	tag	69b36ae9599cebd4e7a497068adf62bf513524a8	2026-10-30	feat(title3a): 三卷联网补证批 2——SEP×3、香农 MIT 库、ACM 史、CHM 年表、NSF/LII/Open Group，+18 题升联网源，题面零改动
+outline-rollout-v04-20261030-t	tag	8526ff1dc02651210dd994b3b5c785570347f0a8	2026-10-30	feat(title3a): V04 标题卷级批准——168 题 corpus_gap 全登记（ykla 2026-10-30 全面批准）
+outline-rollout-v04-20261030-t2	tag	0fef7a5deb836028c29de286a9a8915785623517	2026-10-30	feat(title3a): V04 联网补证批——32 实测源 130 题升三源、证据 466 行，题面零改动（ykla 令不计成本联网复核）
+outline-rollout-v05-20261030-t	tag	0b256d2dcd98f289d39e9bf45e8cefeca6f206ec	2026-10-30	feat(title3a): 六卷批准收口——V05–V10 首批（ykla 2026-10-30 复核后全部批准）
+outline-rollout-v06-20261030-t	tag	0b256d2dcd98f289d39e9bf45e8cefeca6f206ec	2026-10-30	feat(title3a): 六卷批准收口——V05–V10 首批（ykla 2026-10-30 复核后全部批准）
+outline-rollout-v07-20261030-t	tag	0b256d2dcd98f289d39e9bf45e8cefeca6f206ec	2026-10-30	feat(title3a): 六卷批准收口——V05–V10 首批（ykla 2026-10-30 复核后全部批准）
+outline-rollout-v08-20261030-t	tag	0b256d2dcd98f289d39e9bf45e8cefeca6f206ec	2026-10-30	feat(title3a): 六卷批准收口——V05–V10 首批（ykla 2026-10-30 复核后全部批准）
+outline-rollout-v09-20261030-t	tag	0b256d2dcd98f289d39e9bf45e8cefeca6f206ec	2026-10-30	feat(title3a): 六卷批准收口——V05–V10 首批（ykla 2026-10-30 复核后全部批准）
+outline-rollout-v10-20261030-t	tag	0b256d2dcd98f289d39e9bf45e8cefeca6f206ec	2026-10-30	feat(title3a): 六卷批准收口——V05–V10 首批（ykla 2026-10-30 复核后全部批准）
+outline-rollout-v11-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v12-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v13-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v14-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v15-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v16-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v17-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v18-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v19-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v20-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v21-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v22-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v23-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v24-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v25-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v26-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v27-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v28-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v29-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v30-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v31-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v32-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v33-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v34-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v35-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v36-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v37-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v38-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v39-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v40-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v41-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v42-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v43-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v44-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v45-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v46-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v47-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v48-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v49-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v50-20261030-t	tag	f3962123c64b0287ac6025a3b2d8c07d7504f69a	2026-10-30	feat(title3a): 第 1–50 卷标题批全数收口——V45/V47–V50 新批与 50 卷 done.json 入库
+outline-rollout-v51-20261103-t	tag	0eaf7f7d89fee7c9db3123ba3d80837d4de91365	2026-11-03	feat(title3a): V51 卷级标题批准（第 51/76 卷）——存疑清零后签署
+outline-rollout-v52-20261103-t	tag	32d77fb2bb014edd0390bcd0db583f84fc6ce33d	2026-11-03	feat(title3a): V52 卷级标题批准（第 52/76 卷）——存疑 12 条清零（确证 3／形态 9）
+outline-rollout-v53-20261103-t	tag	775560ddb28d1b2cb20729b46744cdef7f085aea	2026-11-03	feat(title3a): V53／V54／V62／V70／V71／V73 卷级标题批准（第 56–61 卷）
+outline-rollout-v54-20261103-t	tag	775560ddb28d1b2cb20729b46744cdef7f085aea	2026-11-03	feat(title3a): V53／V54／V62／V70／V71／V73 卷级标题批准（第 56–61 卷）
+outline-rollout-v55-20261103-t	tag	c77bf05a2dee089b42a78be23470186c576cec4a	2026-11-03	feat(title3a): V55／V76 卷级标题批准（第 65–66 卷）
+outline-rollout-v56-20261103-t	tag	458b76ee88aadcf1ebfca0119a5de6374d9af654	2026-11-03	feat(title3a): V56 卷级标题批准（第 67/76 卷）
+outline-rollout-v57-20261103-t	tag	bceaa93bebdd2167041838518420b3c62e296353	2026-11-03	feat(title3a): V57／V61／V65 卷级标题批准（第 62–64 卷）
+outline-rollout-v58-20261103-t	tag	4e66de39f61cbb0b907de23196cdd6af158451cb	2026-11-03	feat(title3a): V58 卷级标题批准（第 74/76 卷）
+outline-rollout-v59-20261103-t	tag	618c91e83ce7ae2a150c8fbda8a41c9d22d68da4	2026-11-03	feat(title3a): V59 卷级标题批准（第 73/76 卷）
+outline-rollout-v60-20261103-t	tag	5aa78eb3e8bcfc522732525cdaf8e60cdd1b3f56	2026-11-03	feat(title3a): V60 卷级标题批准（第 76/76 卷）——76 卷全数批准收官
+outline-rollout-v61-20261103-t	tag	bceaa93bebdd2167041838518420b3c62e296353	2026-11-03	feat(title3a): V57／V61／V65 卷级标题批准（第 62–64 卷）
+outline-rollout-v62-20261103-t	tag	775560ddb28d1b2cb20729b46744cdef7f085aea	2026-11-03	feat(title3a): V53／V54／V62／V70／V71／V73 卷级标题批准（第 56–61 卷）
+outline-rollout-v63-20261103-t	tag	100de63bcada02aa23d73948110ec455cd8c6ed2	2026-11-03	feat(title3a): V63／V74／V75 卷级标题批准（第 53–55 卷，零存疑三卷）
+outline-rollout-v64-20261103-t	tag	e1de9a60227fae3bb8d6690c16a70159ac1cc2ae	2026-11-03	feat(title3a): V64 卷级标题批准（第 75/76 卷）
+outline-rollout-v65-20261103-t	tag	bceaa93bebdd2167041838518420b3c62e296353	2026-11-03	feat(title3a): V57／V61／V65 卷级标题批准（第 62–64 卷）
+outline-rollout-v66-20261103-t	tag	a35f37470e1f95119ac8a38e1b17d1e5eda20f57	2026-11-03	feat(title3a): V66 卷级标题批准（第 70/76 卷）
+outline-rollout-v67-20261103-t	tag	15343fdb65fb60a99691d3a4eb0aaea8586ab6db	2026-11-03	feat(title3a): V67 卷级标题批准（第 69/76 卷）
+outline-rollout-v68-20261103-t	tag	274fc9d30ccb1d5bcd6831387eb0944e022eb708	2026-11-03	feat(title3a): V68 卷级标题批准（第 72/76 卷）
+outline-rollout-v69-20261103-t	tag	b132b0be42382dcaaf7f5ce9a1a63ec61b6868dc	2026-11-03	feat(title3a): V69 卷级标题批准（第 71/76 卷）
+outline-rollout-v70-20261103-t	tag	775560ddb28d1b2cb20729b46744cdef7f085aea	2026-11-03	feat(title3a): V53／V54／V62／V70／V71／V73 卷级标题批准（第 56–61 卷）
+outline-rollout-v71-20261103-t	tag	775560ddb28d1b2cb20729b46744cdef7f085aea	2026-11-03	feat(title3a): V53／V54／V62／V70／V71／V73 卷级标题批准（第 56–61 卷）
+outline-rollout-v72-20261103-t	tag	0fbfec9f4c22b4571871040a9533e22d6facf683	2026-11-03	feat(title3a): V72 卷级标题批准（第 68/76 卷）
+outline-rollout-v73-20261103-t	tag	775560ddb28d1b2cb20729b46744cdef7f085aea	2026-11-03	feat(title3a): V53／V54／V62／V70／V71／V73 卷级标题批准（第 56–61 卷）
+outline-rollout-v74-20261103-t	tag	100de63bcada02aa23d73948110ec455cd8c6ed2	2026-11-03	feat(title3a): V63／V74／V75 卷级标题批准（第 53–55 卷，零存疑三卷）
+outline-rollout-v75-20261103-t	tag	100de63bcada02aa23d73948110ec455cd8c6ed2	2026-11-03	feat(title3a): V63／V74／V75 卷级标题批准（第 53–55 卷，零存疑三卷）
+outline-rollout-v76-20261103-t	tag	c77bf05a2dee089b42a78be23470186c576cec4a	2026-11-03	feat(title3a): V55／V76 卷级标题批准（第 65–66 卷）
+outline-subsections-cleared-20261029	tag	ae6339c73c285fe78627ac0ee6d285266e54dc0e	2026-10-29	APPROVED-BIGFILE: feat(outline): 清空小节层 15,206 个 .md——树回到 76 卷/544 章/3,951 节骨架（.gitkeep 补齐 3,951）
+outline-task82-g1-prep-20261111	tag	2e8c9271513d5169bed0f7628163aba7ebb7b95d	2026-11-11	Task 8.2 G1 前置 0.9.5 收口：四摊清零，V75 fragments 回写，门禁全绿
+outline-task82-v01-struct-20261112	tag	1e13b3ef67e64ec3453f5e1c08784e67dfadb4d3	2026-11-12	APPROVED-BIGFILE: feat(Task82): V01 ④ 拆题结构批——新增 2.4.7 与 2.6.7-2.6.12 七小节，35 块落位，口径 19461→19468
+outline-v01-fourth-level-20261029	tag	81d93b1df00a72a5faeb2b65f87e723f5523669c	2026-11-06	feat(Task6.6-7.4): V01-2.3 样板落盘——3 小节（2 空骨架＋1 样件 8 块）、四级 outline 与页面、targets subsec 注册、C 案门禁适配、三套回归 25／628／27 全绿
+outline-v01-titles-approved-20261029	tag	58463e2f5cf4aacc1bc629cf7ea28df9b35aebfd	2026-10-29	chore(title3a): V01 卷级标题批准——approvals 行与 V01.title.ok（ykla 2026-10-29）
+outline-zero-20261029	tag	1316b681cb2251817b04d307f798fda7609e3d32	2026-10-29	chore(outline): 建里程碑 tag 台账并登记置零批（outline-zero-20261029）
+pre-refactor-2026	tag	1669a9a49825ae42136c6d09cfb6911663e26098	2026-08-12	重构2026 批次0前置：登记冻结基准
