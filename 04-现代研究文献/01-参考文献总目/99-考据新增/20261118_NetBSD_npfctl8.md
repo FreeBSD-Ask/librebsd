@@ -1,0 +1,5 @@
+<!-- 网页存档｜来源：https://man.netbsd.org/npfctl.8｜抓取：2026-11-18｜curl 直取成功，HTML 标签剥离与空白归一 -->
+# npfctl.8 — NetBSD 手册页（control the NPF packet filter）
+
+## 抓取正文（DESCRIPTION 与 reload 命令节选，空白已归一） ``` The npfctl command can be used to control the NPF packet filter. For a description of NPF's configuration file, see npf.conf(5) . The first argument, command , specifies the action to take. Valid com- mands are: start Enable packet inspection using the currently loaded configura- tion, if any. Note that this command does not load or reload the configuration, or affect existing connections. stop Disable packet inspection. This command does not change the currently loaded configuration, or affect existing connec- tions. reload [ path ] Load or reload configuration from file. The configuration file at /etc/npf.conf will be used unless a file is specified by path . All connections will be preserved during the reload, except those which will lose NAT policy due to removal. ```
+## 用途注记 Task 8.2 V41—V45 五卷线 · V41《NetBSD 技术专题史》9.6.3（策略模型的管控入口——命令面）联网补证（D2 块；官方手册页，collection=NetBSD-current）。
