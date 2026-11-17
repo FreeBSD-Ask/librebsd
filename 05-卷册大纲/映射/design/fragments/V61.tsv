@@ -14,11 +14,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 61	1	1.3	1.3.3	远程执行服务的信任滥用	filled	
 61	1	1.3	1.3.4	漏洞利用的自动化转向	filled	
 61	1	1.3	1.3.5	应用层漏洞的利用方式	filled	
-61	1	1.4	1.4.1	事件的时点与波及面	skeleton	
-61	1	1.4	1.4.2	蠕虫作为安全事件的原型	skeleton	
-61	1	1.4	1.4.3	实现错误的两处归并	skeleton	
-61	1	1.4	1.4.4	漏洞不可避免性的判断	skeleton	
-61	1	1.4	1.4.5	事件之后的制度需求	skeleton	
+61	1	1.4	1.4.1	事件的时点与波及面	filled	
+61	1	1.4	1.4.2	蠕虫作为安全事件的原型	filled	
+61	1	1.4	1.4.3	实现错误的两处归并	filled	
+61	1	1.4	1.4.4	漏洞不可避免性的判断	filled	
+61	1	1.4	1.4.5	事件之后的制度需求	filled	
 61	1	1.5	1.5.1	三条入站途径的技术构成	skeleton	
 61	1	1.5	1.5.2	gets 越界与栈上执行	skeleton	
 61	1	1.5	1.5.3	sendmail 调试命令的滥用	skeleton	

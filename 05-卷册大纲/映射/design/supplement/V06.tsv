@@ -24,3 +24,7 @@ V06.2.4.3	corpus_gap	810	CL-RM-496678	academic_work	primary	D1	supp-V06-b004	sup
 V06.2.4.3	corpus_gap	1567	CL-RM-496679	magazine-article	primary	D1	supp-V06-b004	supplemented	ref1567#39（D1 L3 同时代报道）；订单页售价行逐字
 V06.2.4.5	corpus_gap	1567	CL-RM-496680	magazine-article	primary	D1	supp-V06-b004	supplemented	ref1567#3（D1 L3 同时代报道）；TUHS Usenet CFP 骨架模板逐字同构
 V06.2.4.5	corpus_gap	810	CL-RM-496681	academic_work	primary	D1	supp-V06-b004	supplemented	ref810#618（D1 L2 学术记载）；SOSP 1973 月份两说并陈见批记
+V06.2.5.5	corpus_gap	11005	CL-RM-496860	official_doc	primary	D1	supp-V06-b005	supplemented	rfc1855#0（D1 L3 官方文档）；全文入库，rfc-editor 直取
+V06.2.5.5	corpus_gap	11006	CL-RM-496861	news	secondary_nonauthoritative	D2	supp-V06-b005	supplemented	tuhs1990 帖（D2 L3 新闻报道）；TUHS 镜像直取，正文 PRE 标签
+V06.2.5.4	corpus_gap	11005	CL-RM-496862	official_doc	primary	D1	supp-V06-b005	supplemented	rfc1855#1（D1 L3 官方文档）；省略号跳 flames 直引号短语
+V06.2.5.4	corpus_gap	11007	CL-RM-496863	news	secondary_nonauthoritative	D2	supp-V06-b005	supplemented	emily 帖（D2 L3 新闻报道）；templetons.com 直取；讽刺性质披露见卡

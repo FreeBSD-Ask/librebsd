@@ -697,3 +697,152 @@ V63.8.4.4	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A
 V63.8.4.4	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
 V63.8.4.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 8 章第 4 节“初始化系统的设计前提比较”；本节题为其下位论题	none
 V63.8.4.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“内核接口与系统调用的 BSD 渊源”；本节题为其下位论题	none
+V63.1.9.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.6-fsd_bsd/395.6.10-Linux社区在storefree路径遍历的性能讨论中ChristophHell.md	史料	A	2026-10-31	许多可移植应用之所以使用 statvfs，是因为它在 XPG 与较新的 Posix 中是标准化的接口，而 statfs 只是 Linux 从 BSD 借来的扩展	none
+V63.1.9.5	select 履历标注	https://man7.org/linux/man-pages/man2/select.2.html	联网	A	2026-10-31	POSIX.1-2001, 4.4BSD (first appeared in 4.2BSD).	none
+V63.1.9.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“内核接口与系统调用的 BSD 渊源”；本节题为其下位论题	none
+V63.1.9.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.3-lap_bsd/395.3.10-Linux社区ChristianBrauner在close_range系统调用补.md	史料	A	2026-10-31	Aleksa Sarai 在 openat2 补丁系列 v11 说明中指出该系列是 Al Viro 旧 AT_NO_JUMPS 补丁集的复活，而 AT_NO_JUMPS 又是 David Drysdale O_BENEATH 补丁集的变体，后者则派生自 FreeBSD 的 Capsicum 项目，形成完整的 BSD 谱系路径解析脉络	none
+V63.1.12.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“内核接口与系统调用的 BSD 渊源”；本节题为其下位论题	none
+V63.1.12.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.3-lap_bsd/395.3.10-Linux社区ChristianBrauner在close_range系统调用补.md	史料	A	2026-10-31	Christian Brauner 在 close_range 系统调用补丁 v5 中说明 FreeBSD 曾主动联系希望获得与 Linux 方案一致的 close_range，双方就此协调，并已计划在 Linux 合并后回移该实现到 FreeBSD 12.2，构成罕见的跨 BSD 谱系同步开发记录	none
+V63.1.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“内核接口与系统调用的 BSD 渊源”；本节题为其下位论题	none
+V63.1.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.3-lap_bsd/395.3.13-Linux社区JoshTriplett在CLONE_FD补丁讨论中回应David.md	史料	A	2026-10-31	Josh Triplett 在 CLONE_FD 补丁讨论中回应 David Drysdale 援引 FreeBSD 9.x 与 10.x 进程描述符特性所作的功能对照，认为 glibc 或 libbsd 可在 Linux 系统调用之上提供 BSD 兼容调用	none
+V63.1.9.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 1 节“内核接口与系统调用的 BSD 渊源”；本节题为其下位论题	none
+V63.1.9.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.3-lap_bsd/395.3.12-Linux社区CambdaZhu发现Linux的kill允许把线程ID当作进程I.md	史料	A	2026-10-31	Cambda Zhu 发现 Linux 的 kill 允许把线程 ID 当作进程 ID 使用，而 FreeBSD 上以线程 ID 查询会返回 ESRCH，双方由此暴露 Linux 与 FreeBSD 在线程信号语义上的实质差异	none
+V63.1.1.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“驱动与硬件移植承袭”；本节题为其下位论题	none
+V63.1.1.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.2-spax_bsd/395.2.3-Linux社区MarkCaveAyland用QEMU仿真sunhme卡时发现内核.md	史料	A	2026-10-31	他说明自己已核对 NetBSD 源码，那边与数据手册一致，因此 Linux 侧取值可疑。David Miller 回应说若这些偏移量确实错误，那么这个驱动居然还能工作属实惊人	none
+V63.1.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“驱动与硬件移植承袭”；本节题为其下位论题	none
+V63.1.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.2-spax_bsd/395.2.6-Linux社区在讨论允许sparc64sbus建立大于1MB映射的补丁时补丁作者.md	史料	A	2026-10-31	补丁作者 David Dillow 说明该实现没有真实文档，是依据 NetBSD 驱动提供的文档加上他自己的调查写成的。David Miller 回复直接要求 Dillow 把那份 lpvi.c 的 NetBSD 驱动副本发给他	none
+V63.1.2.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“驱动与硬件移植承袭”；本节题为其下位论题	none
+V63.1.2.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.2.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.25-netdev中的bsd网络张力与bsd许可证落地/395.25.3-2181linux社区bsd网络技术反向输出6条.md	史料	A	2026-10-31	2013年4月 Stephen Hemminger 在“[RFC 2/2] ixgbe: netmap support”中 将 netmap 支持直接移植进 Intel ixgbe 驱动，“originally developed on FreeBSD”是 BSD 网络技术被 Linux 驱动采纳的直接证据	none
+V63.1.2.5	netmap 支持平台	https://github.com/luigirizzo/netmap	联网	A	2026-10-31	This repository contains source code (BSD-Copyright) for FreeBSD, Linux and Windows.	none
+V63.1.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“驱动与硬件移植承袭”；本节题为其下位论题	none
+V63.1.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.2-spax_bsd/395.2.7-Linux社区LudwigRydberg提交为SPARC架构增加clone3系统.md	史料	A	2026-10-31	Jessica Clarke 指出 clone3 的好处之一是可以把所有架构的接口统一，而 clone 的麻烦正在于不同架构传参顺序不同，SPARC 更继承了 SunOS 系统调用接口的那套古怪返回约定	none
+V63.1.1.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 2 节“驱动与硬件移植承袭”；本节题为其下位论题	none
+V63.1.1.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.5-lscsi_bsd/395.5.10-Linux社区DouglasGilbert发布sg3_utils工具包声明已移植.md	史料	A	2026-10-31	Douglas Gilbert发布sg3_utils工具包声明已移植至FreeBSD Tru64 Solaris和Windows展示SCSI工具链跨平台实践 Ported to FreeBSD Tru64 Solaris and Windows	none
+V63.1.10.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“安全与能力模型承袭”；本节题为其下位论题	none
+V63.1.10.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.24-bsd安全创新反向输出专题/395.24.3-2171linux社区bsd安全谱系与linux能力模型6条.md	史料	A	2026-10-31	1997年6月 Darren Reed 在“[ADVISORY] 4.4BSD Securelevels (fwd)”中 转发 Thomas H. Ptacek 对 4.4BSD securelevel 的漏洞公告，“securelevel”是 BSD 内核提权约束机制的源头	none
+V63.1.1.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“安全与能力模型承袭”；本节题为其下位论题	none
+V63.1.1.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.26-linux-api中的bsd安全模型承袭链/395.26.3-2191linux社区capsicum移植尝试2014daviddrysdale.md	史料	A	2026-10-31	2014年7月 David Drysdale 把 FreeBSD 10.x 权利值定义与结构体移植进内核，“adapted from the FreeBSD 10.x implementation of” 移植尝试，未合入主线	none
+V63.1.10.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“安全与能力模型承袭”；本节题为其下位论题	none
+V63.1.10.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.26-linux-api中的bsd安全模型承袭链/395.26.6-2194linux社区landlock权利集继承2016-2021合入主线cap.md	史料	A	2026-10-31	2018年2月 Mickaël Salaün 重构文件动作集并对标 Capsicum 与 Pledge 沙箱，“security sandboxes comparable to XNU Sandbox or OpenBSD Pledge” 承袭落地，已合入主线	none
+V63.1.10.7	pledge 收缩语义	https://man.openbsd.org/pledge	联网	A	2026-10-31	Subsystems not listed become unavailable, and most attempts to use operations in that subsystem result in the process being killed	none
+V63.1.12.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“安全与能力模型承袭”；本节题为其下位论题	none
+V63.1.12.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.26-linux-api中的bsd安全模型承袭链/395.26.6-2194linux社区landlock权利集继承2016-2021合入主线cap.md	史料	A	2026-10-31	2020年2月 Mickaël Salaün 明列 FreeBSD Capsicum 与 OpenBSD Pledge	none
+V63.1.12.6	Landlock 定位	https://docs.kernel.org/userspace-api/landlock.html	联网	A	2026-10-31	Landlock empowers any process, including unprivileged ones, to securely restrict themselves.	none
+V63.1.2.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 3 节“安全与能力模型承袭”；本节题为其下位论题	none
+V63.1.2.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.2.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.15-lkml中的bsd-技术承袭续篇/395.15.8-2086linux社区arc4random与fork安全.md	史料	A	2026-10-31	2017年8月 Colm MacCárthaigh (colm@allcosts.net) 在“Re: [PATCH v2 0/2] mm,fork,security: introduce MADV_WIPEONFORK”串中以“here's how LibreSSL does it”及 OpenBSD arc4random 实现佐证 Linux 引入 fork 感知内存清零机制，是 Linux 内存管理子系统向 OpenBSD 借鉴的 BSD 谱系证据	none
+V63.1.1.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD Jail 与 LSM 分歧”；本节题为其下位论题	none
+V63.1.1.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.13-lkml中的bsd-技术承袭/395.13.9-2065linux社区jail与容器.md	史料	A	2026-10-31	Jail thwarts these... Jail takes care of this by only allowing 35 operations for jailed root (out of the 260 allowed for normal root)	none
+V63.1.1.8	监狱两种用途	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8	联网	A	2026-10-31	Jails are typically set up using one of two philosophies: either to constrain a specific application (possibly running with privilege), or to create a 'virtual system image'	none
+V63.1.12.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD Jail 与 LSM 分歧”；本节题为其下位论题	none
+V63.1.12.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.8-nd_bsd/395.8.2-Linux社区AlanCox对BSDJailLSM补丁提出接口设计意见认为jai.md	史料	A	2026-10-31	Alan Cox 对 BSD Jail LSM 补丁提出接口设计意见，认为 jail 场景下应当允许同时挂载 ipv4 与 ipv6 接口，并进一步质疑用 bind 或 connect 时机的 netfilter 链能否覆盖全部选择接口的需求	none
+V63.1.12.7	网络限制口径	https://man.freebsd.org/cgi/man.cgi?query=jail&sektion=8	联网	A	2026-10-31	If this is set, the jail is restricted to using only these addresses. Any attempts to use other addresses fail	none
+V63.1.9.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD Jail 与 LSM 分歧”；本节题为其下位论题	none
+V63.1.9.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.8-nd_bsd/395.8.19-Linux社区关于内核层socket包装符是否该用EXPORT_SYMBOL_G.md	史料	A	2026-10-31	Brian Bidulock 论称这些接口是 “direct derivatives of the BSD/POSIX system call interface”，故协议函数指针本身并非 GPL 专属	none
+V63.1.9.8	LSM 框架定义	https://www.kernel.org/doc/html/latest/admin-guide/LSM/index.html	联网	A	2026-10-31	The Linux Security Module (LSM) framework provides a mechanism for various security checks to be hooked by new kernel extensions.	none
+V63.3.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD Jail 与 LSM 分歧”；本节题为其下位论题	none
+V63.3.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.5.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.8-nd_bsd/395.8.25-Linux社区Linux挪用BSD代码指控的争论中AdrianBunk澄清两件被.md	史料	A	2026-10-31	Adrian Bunk 澄清两件被混为一谈的事，指出 Jiri 的补丁原文为 “not only removed the BSD header from dual licenced files but also from not dual licenced files.”	none
+V63.1.10.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 4 节“BSD Jail 与 LSM 分歧”；本节题为其下位论题	none
+V63.1.10.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.8-nd_bsd/395.8.14-Linux社区Davem以BSDAPI兼容性为由否决了一个DiffServ路由补.md	史料	A	2026-10-31	Davem 以 BSD API 兼容性为由否决了一个 DiffServ 路由补丁：“TOS socket 选项的含义与行为是多年前由 BSD socket 接口定义的”，并且“你不能也不得改变这些系统调用的行为”。	none
+V63.1.9.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
+V63.1.9.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.3-Linux社区Linux地址空间随机化RFC讨论中作者以OpenBSD的mmap.md	史料	A	2026-10-31	The OpenBSD randomized mmap is a fairly conservative implementation to avoid causing excessive fragmentation	none
+V63.1.9.9	随机化选项	https://docs.kernel.org/admin-guide/sysctl/kernel.html	联网	A	2026-10-31	This option can be used to select the type of process address space randomization that is used in the system, for architectures	none
+V63.1.9.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
+V63.1.9.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.9.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.14-Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral.md	史料	A	2026-10-31	FreeBSD的mmap(2)已提供MAP_EXCL，使MAP_FIXED在目标区间已有映射时返回失败，与Linux拟新增的语义几乎同构	none
+V63.1.9.10	mmap 栈随机化	https://docs.kernel.org/admin-guide/sysctl/kernel.html	联网	A	2026-10-31	Make the addresses of mmap base, stack and VDSO page randomized.	none
+V63.1.11.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
+V63.1.11.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.14-Linux社区MAP_FIXED_SAFE命名争论中EdwardNapieral.md	史料	A	2026-10-31	It was introduced in FreeBSD, and seems to do exactly this.	none
+V63.1.11.6	Napierala 援引 FreeBSD MAP_EXCL 先例	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/lkml.duckdb（6,437,908 帖）	史料	A	2026-11-03	2017-12-14 帖：Regarding the name - how about adopting MAP_EXCL? It was introduced in FreeBSD, and seems to do exactly this; quoting mmap(2)…if MAP_EXCL is specified, the request will fail if a mapping already exists within the range.；Hocko 回帖：reusing a name with a different semantics would be a bad idea	none
+V63.1.11.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
+V63.1.11.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.18-Linux社区PedroFalcato在msealRFC讨论中以OpenBSD动.md	史料	A	2026-10-31	Pedro Falcato 在 mseal() RFC 讨论中，以 OpenBSD 动态链接器代码里 mmap() + mimmutable() 与 mprotect() + mimmutable() 属常见组合为例，支持一次性 mmap 即加密封的调用路径。	none
+V63.1.10.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 5 节“内存管理与地址空间随机化”；本节题为其下位论题	none
+V63.1.10.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.7-mm_bsd/395.7.16-Linux社区FreeBSDpageoutdaemon算法讨论DanielPhi.md	史料	A	2026-10-31	it still looks like he's keeping dirty pages 'on probation' twice as long as before	none
+V63.1.12.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件系统、ZFS 与网络承袭”；本节题为其下位论题	none
+V63.1.12.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.16-lkml中的zfs-bsd血统与许可证张力/395.16.3-2091linux社区bsd谱系zfs交叉验证与nfsv4acl参照.md	史料	A	2026-10-31	Martin Cracauer(cracauer@cons.org) 在“Possibe NFS mm problem: client page-in errors with ZFS Linux server”串中报告 ZFS on Linux NFS 客户端页错误问题，“cross-checked with a FreeBSD server with very similar ZFS code”	none
+V63.1.12.8	CDDL 不兼容论断	https://sfconservancy.org/blog/2016/feb/25/zfs-and-linux/	联网	A	2026-10-31	unfortunately, CDDLv1 is incompatible with GPLv2, so distribution of binaries is not permitted	none
+V63.1.10.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件系统、ZFS 与网络承袭”；本节题为其下位论题	none
+V63.1.10.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.23-linux-fsdevel中的bsd文件系统张力/395.23.4-2162linux社区bsd文件系统血统与linux技术流向13条.md	史料	A	2026-10-31	指出 UFS、HFS/HFS+、ZFS、AFP 都支持 BSD 的 UF_HIDDEN 标志，说明 BSD 派生文件系统对 Linux VFS 抽象的反例	none
+V63.1.12.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件系统、ZFS 与网络承袭”；本节题为其下位论题	none
+V63.1.12.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.23-linux-fsdevel中的bsd文件系统张力/395.23.4-2162linux社区bsd文件系统血统与linux技术流向13条.md	史料	A	2026-10-31	2014年4月 Christoph Hellwig(hch@infradead.org) 在“fsync_range, was: Re: munmap, msync: synchronization”中提交 fsync_range VFS 调用补丁，以 NetBSD 命名空间为蓝本移植 BSD 的范围同步 API 到 Linux。	none
+V63.1.12.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件系统、ZFS 与网络承袭”；本节题为其下位论题	none
+V63.1.12.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.25-netdev中的bsd网络张力与bsd许可证落地/395.25.3-2181linux社区bsd网络技术反向输出6条.md	史料	A	2026-10-31	“完全分离命名空间以支持 VPN 与进程组迁移”是 FreeBSD jail 隔离语义被移植为 Linux network namespace 的原始设计争辩	none
+V63.1.2.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 6 节“文件系统、ZFS 与网络承袭”；本节题为其下位论题	none
+V63.1.2.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.2.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.25-netdev中的bsd网络张力与bsd许可证落地/395.25.3-2181linux社区bsd网络技术反向输出6条.md	史料	A	2026-10-31	2013年3月 Stephen Hemminger 在“[RFC 1/2] netmap: infrastructure (in staging)”中 将 Luigi Rizzo 源自 FreeBSD	none
+V63.1.2.7	VALE 交换机	https://github.com/luigirizzo/netmap	联网	A	2026-10-31	VALE is an equally fast in-kernel L2 software switch using the netmap API.	none
+V63.7.8.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD 技术源流综述与人物互见”；本节题为其下位论题	none
+V63.7.8.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.8.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.18-bsd发展列表中的bsd-linux张力/395.18.4-2112linux社区bsd血统与linux技术流向24条.md	史料	A	2026-10-31	Daniel Gerzo (danger@FreeBSD.org) 在“FreeBSD Status Report January-March, 2010”串中 记录 webcamd 项目让 Linux USB 设备驱动运行于 FreeBSD 而不违反 GPL	none
+V63.7.8.5	FreeBSD 谱系自述	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-31	FreeBSD is based on the 4.4BSD-Lite release from Computer Systems Research Group (CSRG) at the University of California	none
+V63.1.12.11	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD 技术源流综述与人物互见”；本节题为其下位论题	none
+V63.1.12.11	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.12.11	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.19-bsd人物反向追溯-lkml中的bsd张力叙事/395.19.4-Linux社区2009年8月RobertWatsonrwatson@freebs.md	史料	A	2026-10-31	Robert Watson(rwatson@freebsd.org) 在“Re: Security: information leaks in /proc enable keystroke recovery”串中以“the OS community has not engaged well with the concerns raised by past cache-based crypto side channels”立论并引 Colin Percival RSA cache side channel 论文	none
+V63.3.10.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD 技术源流综述与人物互见”；本节题为其下位论题	none
+V63.3.10.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.10.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.19-bsd人物反向追溯-lkml中的bsd张力叙事/395.19.5-Linux社区2024年1月23日TheodeRaadtderaadt@open.md	史料	A	2026-10-31	Theo de Raadt(deraadt@openbsd.org) 在 Re: [PATCH v7 0/4] Introduce mseal() 串中 以 OpenBSD 全量实证否定 PROT_SEAL 实用价值	none
+V63.3.10.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD 技术源流综述与人物互见”；本节题为其下位论题	none
+V63.3.10.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.10.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.12-lkml中的bsd/395.12.5-2053linux社区bsd人物在lkml的出场.md	史料	A	2026-10-31	BSD 网络传奇人物 Sam Leffler（errno.com）回复无线配置争议，就 bg scanning 与 power save 交互展开技术辩论	none
+V63.2.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 7 节“BSD 技术源流综述与人物互见”；本节题为其下位论题	none
+V63.2.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.2.3.5	二进制兼容表述	https://docs.freebsd.org/en/books/handbook/introduction/	联网	A	2026-10-31	Binary compatibility with Linux, which makes it possible to run many Linux binaries without the need for virtualisation.	none
+V63.1.8.6	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“治理议题与峰会互见”；本节题为其下位论题	none
+V63.1.8.6	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.6	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.9-ks_bsd/395.9.45-Linux社区治理议题LinuxFoundationTAB宣布2019年选举转电.md	史料	A	2026-10-31	James Bottomley 明确对比 BSD 集体维护模式，将其与 Linux 单一领导制对照，触及 Linux 治理模型中 BSD 谱系的参照意义。引语：“I like the single leader model because it doesn't lead to the cabal cult like the group maintainer model does in BSD”	none
+V63.1.8.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“治理议题与峰会互见”；本节题为其下位论题	none
+V63.1.8.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.21-kernel-summit中的bsd-linux张力/395.21.3-2141linux社区bsd技术在kernelsummit的张力8条.md	史料	A	2026-10-31	转述 Andrew Turner 的“all 5 projects using a common set of dts files”提议，是 FreeBSD/NetBSD/OpenBSD 与 Linux 在 DT 层首次走向共库的合流节点	none
+V63.3.11.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“治理议题与峰会互见”；本节题为其下位论题	none
+V63.3.11.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.11.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.21-kernel-summit中的bsd-linux张力/395.21.3-2141linux社区bsd技术在kernelsummit的张力8条.md	史料	A	2026-10-31	以 FreeBSD tty 维护者的旧竞赛与 BSD 4.3 架构的固化姿态反衬 Linux 快速迭代的治理优势，原文“viewed the architecture from BSD 4.3 to be handed down from the mountain top as if from Moses”	none
+V63.1.10.11	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 8 节“治理议题与峰会互见”；本节题为其下位论题	none
+V63.1.10.11	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.10.11	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.21-kernel-summit中的bsd-linux张力/395.21.3-2141linux社区bsd技术在kernelsummit的张力8条.md	史料	A	2026-10-31	把 John Stultz 开篇援引的 NetBSD 与 OpenBSD time_t ABI 破例纳入 Linux 的兼容治理议程	none
+V63.1.1.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“署名规范与用户态项目”；本节题为其下位论题	none
+V63.1.1.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.1.9	sudo 起源记述	https://www.sudo.ws/history.html	联网	A	2026-10-31	Sudo was first conceived and implemented by Bob Coggeshall and Cliff Spencer around 1980	none
+V63.1.1.9	sudo 运行平台	https://www.sudo.ws/history.html	联网	A	2026-10-31	It ran on a VAX-11/750 running 4.1BSD.	none
+V63.1.3.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“署名规范与用户态项目”；本节题为其下位论题	none
+V63.1.3.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.3.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.11-lman_bsd_man/395.11.3-Linux社区Colomar描述在shadow项目中先尝试改用NetBSD的st.md	史料	A	2026-10-31	Colomar 描述在 shadow 项目中先尝试改用 NetBSD 的 strtoi(3)/strtou(3)（GNU/Linux 上由 libbsd 提供），因 Fedora 等系统拒纳 libbsd 依赖而自建 strtoi(3)	none
+V63.1.11.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“署名规范与用户态项目”；本节题为其下位论题	none
+V63.1.11.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.11.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.11-lman_bsd_man/395.11.5-Linux社区翻译者质疑exec3为何用frontend而非wrapper描述e.md	史料	A	2026-10-31	Kerrisk 回复该措辞已沿用数十年，因为整页取自 BSD，且含义清楚；不过他也承认这并非首选措辞，已改为 are layered on top of。	none
+V63.3.7.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“署名规范与用户态项目”；本节题为其下位论题	none
+V63.3.7.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.3.7.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.11-lman_bsd_man/395.11.8-Linux社区Kerrisk在修订vfork2时增补42BSD手册原文的arch.md	史料	A	2026-10-31	Kerrisk 在修订 vfork(2) 时增补 4.2BSD 手册原文的“architectural blemish”表述并引其原句“This system call will be eliminated when proper system sharing mechanisms”；同时删去此前带有 Linux 立场的批评句	none
+V63.7.5.5	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“署名规范与用户态项目”；本节题为其下位论题	none
+V63.7.5.5	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.7.5.5	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.11-lman_bsd_man/395.11.8-Linux社区Kerrisk在修订vfork2时增补42BSD手册原文的arch.md	史料	A	2026-10-31	Hellwig 答复 Frysinger 关于从 FreeBSD 导入 queue(3) 的提议：“We have queue(3)”，称自己当年在 Andries 维护 man-pages 时提交的版本即基于 FreeBSD 版，并提醒该页并非 straight import——现代 BSD 相对旧 4.4BSD 版本已有大量改动。	none
+V63.1.8.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 5 章第 9 节“署名规范与用户态项目”；本节题为其下位论题	none
+V63.1.8.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V63.1.8.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第395章-bsd-linux张力与承袭专题/395.11-lman_bsd_man/395.11.4-Linux社区Robinson认为统一署名方案与GNU的做法一致AUTHORS文.md	史料	A	2026-10-31	Robinson 认为统一署名方案与 GNU 的做法一致：“AUTHORS 文件列版权持有人，THANKS 文件感谢未持有版权者”	none

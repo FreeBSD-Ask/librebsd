@@ -1708,3 +1708,187 @@ V18.1.6.2	graylist 语义说明帖（与黑白名单非同一清单）	03-原始
 V18.4.9.3	PM dependencies 议题帖（ACPI _DEP 对象）	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/ksummit-discuss.duckdb	史料	A	2026-11-03	"Thu, 22 May 2014 02:19:35 +0200 Re: [Ksummit-discuss] [TECH TOPIC] PM dependencies（message-id 6638836.llWl1tdgvD@vostro.rjw.lan）：For example, we have the _DEP object in ACPI that basically says ""this device depends on that one"" and there may be no other relationship between the two whatsoever. How are we supposed to implement this within the existing frameworks?"	noted
 V18.4.9.3	PM 域归属回帖	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/ksummit-discuss.duckdb	史料	A	2026-11-03	"Thu, 22 May 2014 10:35:46 -0700 Re: [Ksummit-discuss] [TECH TOPIC] PM dependencies（message-id 7hha4hlnrh.fsf@paris.lan）：Sounds like something for the ACPI PM domain to sort out, and it really depends on what what ""this device depends on that one"" means."	none
 V18.4.9.3	ACPI _DEP 支持状态回帖	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/ksummit-discuss.duckdb	史料	A	2026-11-03	Sat, 24 May 2014 01:15:56 +0200 Re: [Ksummit-discuss] [TECH TOPIC] PM dependencies（message-id 1638523.rqHsXd5Z1n@vostro.rjw.lan）：It is a relatively new addition to ACPI and we don't support it today. That's because it hasn't been present in the ACPI tables of any production systems until recently.	none
+V18.8.2.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Rust 入核辩论与稳定性之争”；本节题为其下位论题	none
+V18.8.2.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.8.2.7	Greg KH 论内存缺陷	https://lkml.org/lkml/2025/2/19/222	联网	A	2026-10-31	simple overwrites of memory (not that rust can catch all of these by far), error path cleanups, forgetting to check error values, and use-after-free mistakes.	none
+V18.7.9.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 3 节“Rust 入核辩论与稳定性之争”；本节题为其下位论题	none
+V18.7.9.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.9.7	kernel crate 口径	https://rust.docs.kernel.org/kernel/	联网	A	2026-10-31	This crate contains the kernel APIs that have been ported or wrapped for usage by Rust code in the kernel	none
+V18.8.2.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 1 章第 4 节“峰会治理、安全披露与工具链争议”；本节题为其下位论题	none
+V18.8.2.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.8.2.8	渐进参与策略	https://rust-for-linux.com/rust-kernel-policy	联网	A	2026-10-31	The goal has always been to get maintainers involved progressively, because the effort does not scale otherwise.	none
+V18.5.12.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“-mm 树发布宣告档案：早期批次”；本节题为其下位论题	none
+V18.5.12.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.12.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.2-mm树发布评语与stable公告/398.2.2-1021-mm发布2615-rc5-mm2.md	史料	A	2026-10-31	Andrew Morton 发布 2.6.15-rc5-mm2，共 1164 个补丁；亮点为新 CPU 调度策略 SCHED_BATCH、新版 hrtimers 代码（由 ktimers 更名而来）与大量驱动/架构更新；附逐补丁评语与 patch-list 链接。	none
+V18.5.12.7	mm-commits 存档	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	+ mm-remove-redundant-pagetable_dtor-calls.patch added to mm-new branch	none
+V18.5.12.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 1 节“-mm 树发布宣告档案：早期批次”；本节题为其下位论题	none
+V18.5.12.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.12.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.2-mm树发布评语与stable公告/398.2.8-1027-mm发布2626-rc5-mm2.md	史料	A	2026-10-31	Andrew Morton 发布 2.6.26-rc5-mm2，1354 commits 对应 931 个补丁文件；说明这是 -mm1 的修复版，主要修 vmscan.c bug，以免妨碍其余 vmscan 改动的测试；jbd/ext3 journal abort 系列补丁被弃。	none
+V18.5.12.8	mm-commits 存档	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	+ mm-remove-redundant-pagetable_dtor-calls.patch added to mm-new branch	none
+V18.5.12.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“-mm 树发布宣告档案：后期批次”；本节题为其下位论题	none
+V18.5.12.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.12.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.4-mm树发布评语与loopAES/398.4.9-1088-mm发布2618-rc3-mm2.md	史料	A	2026-10-31	Andrew Morton 发布 2.6.18-rc3-mm2，共 1136 个补丁；评语核心：说明上一版 rc3-mm1 出现 udev 启动超时与 NFS 崩溃两个已知问题，本版回退引发问题的两个补丁（i386 lock section 与 NUMA-aware RPC 线程池）。	none
+V18.5.12.9	mm-commits 构建报告	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	[[akpm-mm:mm-new] BUILD SUCCESS 9c449f885765cf8d80b2c60b1971e774bba51a3f]	none
+V18.4.3.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“-mm 树发布宣告档案：后期批次”；本节题为其下位论题	none
+V18.4.3.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.4.3.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.3-mm树发布与2.2.26末版/398.3.3-10322626-rc5-mm3.md	史料	A	2026-10-31	Andrew Morton 发布；说明此为 rc5-mm2 的修 bug 版且未重拉 git 树，目标是清掉低级 bug 以便开展认真 MM 测试；1390 个提交、967 个补丁文件，含 Rik 页回收工作新迭代（unevictable LRU）。	none
+V18.4.3.7	mm-commits 存档	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	+ mm-remove-redundant-pagetable_dtor-calls.patch added to mm-new branch	none
+V18.5.12.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 2 节“-mm 树发布宣告档案：后期批次”；本节题为其下位论题	none
+V18.5.12.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.12.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.4-mm树发布评语与loopAES/398.4.7-1086-mm发布2615-mm4.md	史料	A	2026-10-31	Andrew Morton 发布 2.6.15-mm4，共 730 个补丁；评语核心：大量 sem2mutex 转换、FUSE 异步请求大更新、nfsd（主要为 nfs4）更新、CPU 调度器更新，新增 pselect/ppoll 与 unshare() 系统调用，默认启用 i386 4K 栈；并留有“凌晨 5:41 懒得逐一描述”的评语。	none
+V18.5.12.10	mm-commits 存档	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	+ mm-remove-redundant-pagetable_dtor-calls.patch added to mm-new branch	none
+V18.7.6.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“debugfs、模块参数与驱动接口之争”；本节题为其下位论题	none
+V18.7.6.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.6.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.1-debugfs升格安全门槛与Brendan-Eich案/398.1.3-571linux社区debugfs定位之争tracefs先例与直接干流程观.md	史料	A	2026-10-31	Greg KH：“技术议题别上 maintainer summit”；debugfs 东西永远不该用于真实功能；多数发行版已关 debugfs、Android 亦然；放哪个案个案定	none
+V18.7.6.7	debugfs 定位	https://docs.kernel.org/filesystems/debugfs.html	联网	A	2026-10-31	Debugfs exists as a simple way for kernel developers to make information available to user space.	none
+V18.7.6.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“debugfs、模块参数与驱动接口之争”；本节题为其下位论题	none
+V18.7.6.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.6.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.1-debugfs升格安全门槛与Brendan-Eich案/398.1.4-572linux社区模块参数反向迁移与probe时序之利.md	史料	A	2026-10-31	Mauro 反对一刀切：media 廉价硬件无 eeprom/无 ID 靠非调试类 modprobe 参数加载配置；也不动现有参数以免破坏用户空间	none
+V18.7.6.8	debugfs 清理缺失	https://docs.kernel.org/filesystems/debugfs.html	联网	A	2026-10-31	there is no automatic cleanup of any directories created in debugfs.	none
+V18.7.6.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“debugfs、模块参数与驱动接口之争”；本节题为其下位论题	none
+V18.7.6.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.6.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.1-debugfs升格安全门槛与Brendan-Eich案/398.1.4-572linux社区模块参数反向迁移与probe时序之利.md	史料	A	2026-10-31	调试参数无法在 probe 时生效（驱动须先注册 debugfs 文件）——正是模块参数独有便利	none
+V18.7.6.9	debugfs 永久维护预期	https://docs.kernel.org/filesystems/debugfs.html	联网	A	2026-10-31	even debugfs interfaces are best designed with the idea that they will need to be maintained forever.	none
+V18.7.6.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 3 节“debugfs、模块参数与驱动接口之争”；本节题为其下位论题	none
+V18.7.6.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.6.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.1-debugfs升格安全门槛与Brendan-Eich案/398.1.7-575linux社区zufs用户态文件系统提案.md	史料	A	2026-10-31	Greg：“为什么不在文件系统专门会议讨论？今年开过了吗？”	none
+V18.7.6.10	列表审查轨道	https://docs.kernel.org/process/howto.html	联网	A	2026-10-31	Before a proposed patch is committed to such a subsystem tree, it is subject to review which primarily happens on mailing lists	none
+V18.5.15.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“stable 回归防范与 MAINTAINERS 治理”；本节题为其下位论题	none
+V18.5.15.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.15.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.15-WoT过期与folio五缺口/398.15.3-1411stable回退回归防范.md	史料	A	2026-10-31	认同“能提前告知回归就告知”，并逐一回应推迟回传、紧急标记、按 Fixes: 延迟回传三方案的可行性。	none
+V18.5.15.7	回传自动化	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-10-31	Once the patch is mainlined it will be applied to the stable tree without anything else needing to be done by the author or subsystem maintainer.	none
+V18.5.15.7	stable 规则三选项与延迟回移	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-11-03	There are three options to submit a change to -stable trees: Add a ‘stable tag’…Ask the stable team to pick up a patch already mainlined. Submit a patch to the stable team that is equivalent…；Delay pick up of patches: Cc: <stable@vger.kernel.org> # after -rc3	none
+V18.5.2.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 4 节“stable 回归防范与 MAINTAINERS 治理”；本节题为其下位论题	none
+V18.5.2.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.2.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.14-embargo小灶与Folios僵局/398.14.18-14016回归防回退与link标签.md	史料	A	2026-10-31	更正Link标签格式：整个message-id填入patch.msgid.link与lore链接，属流程规范记录。	none
+V18.5.2.7	Link 标签用途	https://docs.kernel.org/admin-guide/reporting-regressions.html	联网	A	2026-10-31	It also watches for "posted or committed patches referencing such reports with 'Link:' tags; replies to such patch postings are tracked as well."	none
+V18.8.2.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Rust 内核政策与社区争议”；本节题为其下位论题	none
+V18.8.2.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.8.2.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.16-kallsyms44MiB与565新人/398.16.10-1528内核可持续性.md	史料	A	2026-10-31	论述 GPU merge criteria 以开源用户空间要求为大棒阻断厂商 dump-and-run，属集体性可持续机制。	none
+V18.8.2.9	渐进参与策略	https://rust-for-linux.com/rust-kernel-policy	联网	A	2026-10-31	The goal has always been to get maintainers involved progressively, because the effort does not scale otherwise.	none
+V18.4.14.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Rust 内核政策与社区争议”；本节题为其下位论题	none
+V18.4.14.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.4.14.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.17-文件系统维护门槛与stable标签/398.17.18-16216社区行为准则争论.md	史料	A	2026-10-31	Bottomley以Chinner回其提议的粗口拒绝为例，主张其与Linus嘲讽同等致压，称对己与对人的标准必须一致；Chinner坚称议题是机器人与第三方基础设施伤害社区时的伦理对策而非AI。	none
+V18.4.14.7	非技术争议代价	https://lwn.net/Articles/987635/	联网	B	2026-10-31	After almost 4 years, I find myself lacking the energy and enthusiasm I once had to respond to some of the nontechnical nonsense, so it's best to leave it up to those who still have it in them.	none
+V18.4.6.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Rust 内核政策与社区争议”；本节题为其下位论题	none
+V18.4.6.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.4.6.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.17-文件系统维护门槛与stable标签/398.17.22-16220llm信任与身份认证.md	史料	A	2026-10-31	Torvalds称不相信自动化信任系统，因其必被博弈而失却信任本义；真正的信任是对子维护者的人身信任，git签名与kernel.org密钥属身份证明，并提及Greg参与的“去中心化信任”项目。	none
+V18.4.6.7	人类责任认定	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	The human submitter is responsible for: Reviewing all AI-generated code	none
+V18.7.5.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Rust 内核政策与社区争议”；本节题为其下位论题	none
+V18.7.5.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.5.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.17-文件系统维护门槛与stable标签/398.17.21-16219ai补丁法律风险.md	史料	A	2026-10-31	Bottomley区分维护者依DCO(c)条无责与内核整体风险：若法院裁定AI代码属模型衍生作品，已合入代码或须大规模回退，需集体确定风险容忍度；其个人判断风险小到可接受。	none
+V18.7.5.7	许可兼容要求	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	All code must be compatible with GPL-2.0-only	none
+V18.8.2.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 5 节“Rust 内核政策与社区争议”；本节题为其下位论题	none
+V18.8.2.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.8.2.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.16-kallsyms44MiB与565新人/398.16.18-15216ebpf边界.md	史料	A	2026-10-31	转述 Linus 在 OSS 峰会对 eBPF 的表态，论证 eBPF 非用户 API 及维护者被动担责的风险。	none
+V18.8.2.10	构建默认规则	https://rust-for-linux.com/rust-kernel-policy	联网	A	2026-10-31	So, by default, changes should not be introduced if they are known to break the build, including Rust.	none
+V18.5.12.11	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“回归追踪与 linux-next 运维”；本节题为其下位论题	none
+V18.5.12.11	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.12.11	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.18-reiserfs弃用定调与回归痛点/398.18.5-1693隐藏提交与next滞后.md	史料	A	2026-10-31	Kozlowski证实补丁滞留维护者树曾致其漏掉DT绑定集成问题，指rebase丢失签名标签信任链，引其统计约133个提交迟至近两周才入linux-next	none
+V18.5.12.11	linux-next 机制	https://docs.kernel.org/process/howto.html	联网	A	2026-10-31	a special testing repository exists into which virtually all subsystem trees are pulled on an almost daily basis	none
+V18.5.12.12	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 6 节“回归追踪与 linux-next 运维”；本节题为其下位论题	none
+V18.5.12.12	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.12.12	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.18-reiserfs弃用定调与回归痛点/398.18.24-16922linus-next测试二分.md	史料	A	2026-10-31	Brown澄清其曾在帖中讲过mainline、pending-fixes与-next之间二分方法，认同应收入官方文档并承诺提交patch	none
+V18.5.12.12	回归定位要求	https://docs.kernel.org/admin-guide/reporting-regressions.html	联网	A	2026-10-31	If your problem is a regression, try to narrow down when the issue was introduced as much as possible.	none
+V18.7.15.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“AI 评审与文档持续集成”；本节题为其下位论题	none
+V18.7.15.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.15.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.19-除名机制与C内存安全提案/398.19.6-1754ai代码评审.md	史料	A	2026-10-31	Figa 引 Roeck 案例称 AI 评审对约 350 行驱动报 9 处问题须处理，Brown 则见提交者与 AI 迭代 15 版仍被人类评审否路；Figa 提议工具辅助核对跨版本意见是否落实。	none
+V18.7.15.7	AI 责任框架	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	The human submitter is responsible for: Reviewing all AI-generated code	none
+V18.7.3.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“AI 评审与文档持续集成”；本节题为其下位论题	none
+V18.7.3.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.3.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.22-TAB得票排名与文件系统划分/398.22.13-20212内核文档构建.md	史料	A	2026-10-31	Corbet 称文档警告清理已大头完成（Mauro 出力最多），但文档改动不过 docs 树难以强制零警告	none
+V18.7.3.7	Sphinx 管线	https://docs.kernel.org/doc-guide/sphinx.html	联网	A	2026-10-31	The Linux kernel uses [Sphinx](http://www.sphinx-doc.org/) to generate pretty documentation from reStructuredText files	none
+V18.7.15.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“AI 评审与文档持续集成”；本节题为其下位论题	none
+V18.7.15.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.15.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.19-除名机制与C内存安全提案/398.19.5-1753文档ci.md	史料	A	2026-10-31	Lunn 介绍 netdev 的 NIPA CI 逐补丁统计 W=1 警告数、增加即失败并输出统一差异，代码开源可复用，回应 Nikula“如何只抓新增警告”之问，供文档构建借鉴。	none
+V18.7.15.8	构建命令口径	https://docs.kernel.org/doc-guide/sphinx.html	联网	A	2026-10-31	To build the documentation in HTML or PDF formats, use make htmldocs or make pdfdocs.	none
+V18.7.16.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“AI 评审与文档持续集成”；本节题为其下位论题	none
+V18.7.16.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.16.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.16-kallsyms44MiB与565新人/398.16.12-15210llm标签.md	史料	A	2026-10-31	提案 assisted-by 作为补丁脚注（同 base-commit 模式），承诺在 b4 落地并写入 AGENTS.md。	none
+V18.7.16.7	Assisted-by 格式	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	Assisted-by: LLM [TOOL1] [TOOL2]	none
+V18.7.13.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 2 章第 7 节“AI 评审与文档持续集成”；本节题为其下位论题	none
+V18.7.13.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.13.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第398章-文件系统与内存管理/398.19-除名机制与C内存安全提案/398.19.26-17524ai贡献门槛.md	史料	A	2026-10-31	Levin 统计 v6.12..v6.18 有 1902 名单提交作者占三分之一、仅 177 人获 Reviewed-by，拟议审查能力门槛将挡 1700 余人；Bottomley 称 Rb 不等于理解，应以 changelog 论证。	none
+V18.7.13.7	提交者义务	https://docs.kernel.org/process/coding-assistants.html	联网	A	2026-10-31	Taking full responsibility for the contribution	none
+V18.7.13.7	提交者论证义务成文	https://docs.kernel.org/process/generated-content.html	联网	A	2026-11-03	You are expected to understand and to be able to defend everything you submit.	none
+V18.5.14.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“IO-APIC 与 noapic 治理”；本节题为其下位论题	none
+V18.5.14.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.14.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.3-IO-APIC警告编年与HT早期实践/403.3.2-131linux社区unexpectedio-apic警告编年与维护者定调.md	史料	A	2026-10-31	报 unexpected IO-APIC 的方法——“寄 /var/log/messages 全文（至少含全部 IO-APIC 相关行），整 boot log 更好；标识 Linux 内核版本号而非 RH9 版本号”	none
+V18.5.14.7	启动参数文档	https://docs.kernel.org/admin-guide/kernel-parameters.html	联网	A	2026-10-31	Change the output verbosity while booting	none
+V18.5.14.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 1 节“IO-APIC 与 noapic 治理”；本节题为其下位论题	none
+V18.5.14.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.14.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.3-IO-APIC警告编年与HT早期实践/403.3.4-133linux社区smp硬件兼容与bios选项实战.md	史料	A	2026-10-31	“Linux SMP 能跑须 BIOS 关 MPS 1.4 支持+关自动 IDE 检测再开 Primary IDE 通道”	none
+V18.5.14.8	MP 表缺陷注释	https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/x86/kernel/apic/io_apic.c	联网	A	2026-10-31	There is a nasty bug in some older SMP boards, their mptable lies about the timer IRQ.	none
+V18.5.14.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“警告白名单与平台兼容定调”；本节题为其下位论题	none
+V18.5.14.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.14.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.10-警告机制解读全文与AMD勘误提示/403.10.2-211linux社区警告机制解读全文与noapic论战2例.md	史料	A	2026-10-31	Earle R. Nietzel（2003-04-17）：“How does an UNEXPECTED_IO_APIC happen?”警告机制科普全文	none
+V18.5.14.9	文档讹误注释	https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/x86/kernel/apic/io_apic.c	联网	A	2026-10-31	Some of the Intel ICH Specs (ICH2 to ICH5) documents the io-apic version as 0x2. This is an error with documentation	none
+V18.5.14.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 2 节“警告白名单与平台兼容定调”；本节题为其下位论题	none
+V18.5.14.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.14.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.11-未知IO-APIC的版本白名单报告浪潮/403.11.4-223linux社区2421新版措辞与0x20白名单外4例.md	史料	A	2026-10-31	Marco Wertejuk记录P4超线程平台上2.4.20-18.9smp出现新版措辞的信息即发现意外IO-APIC且内核发布不足三个月请报告，并称未察觉系统行为变化	none
+V18.5.14.10	apic 调试口径	https://docs.kernel.org/admin-guide/kernel-parameters.html	联网	A	2026-10-31	the amount of debugging information output when initialising the APIC and IO-APIC components.	none
+V18.5.14.10	devik 转述启动警告原始措辞	03-原始史料库/11-邮件列表史料/05-linux-kernel/db/lkml.duckdb（6,437,908 帖）	史料	A	2026-11-03	2002-11-26 帖：When booting kernel complaints that APIC is unknown and that I should write to linux-smp@vger.kernel.org.	none
+V18.5.11.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“DRM、加速器与设备直通”；本节题为其下位论题	none
+V18.5.11.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.11.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.14-加速器uAPI原则与PGP过期驳斥/403.14.3-1791drm分支管理争论.md	史料	A	2026-10-31	Airlie反驳Kozlowski：AMD与Intel各有50-100人多团队上游化未上市GPU、速度优先，难要求人人吃透上游周期；Qualcomm经Android或ChromeOS交付、回归压力不同，不可类比。	none
+V18.5.11.7	DRM 层职责	https://docs.kernel.org/gpu/introduction.html	联网	A	2026-10-31	interrupt handling and DMA easier, and provide a uniform interface to applications.	none
+V18.5.11.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“DRM、加速器与设备直通”；本节题为其下位论题	none
+V18.5.11.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.11.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.14-加速器uAPI原则与PGP过期驳斥/403.14.20-17918加速器用户态要求.md	史料	A	2026-10-31	Airlie详述开源用户态要求：加速器uAPI多线程多用户，文档与kselftest远不够；社区靠说“不”与跨厂商教育建立；厂商多受大厂驱动而最低限度参与；正起草通用文档组建维护者联盟。	none
+V18.5.11.8	剥离动机	https://docs.kernel.org/accel/introduction.html	联网	A	2026-10-31	we want to prevent the extensive user-space graphic software stack from trying to use an accelerator as a GPU	none
+V18.5.11.9	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“DRM、加速器与设备直通”；本节题为其下位论题	none
+V18.5.11.9	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.11.9	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.15-加速器门槛与激励瓦解论/403.15.2-1851加速器驱动用户态.md	史料	A	2026-10-31	主张新驱动须有开放用户态对应，引DRM/KMS先例（提交补丁并获维护者认可），指habanalabs曾绕过netdev与RDMA经drivers/misc进入，并详述树莓派相机经libcamera上游化历程。	none
+V18.5.11.9	负载定位	https://docs.kernel.org/accel/introduction.html	联网	A	2026-10-31	Although these devices are typically designed to accelerate Machine-Learning (ML) and/or Deep-Learning (DL) computations	none
+V18.5.11.10	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“DRM、加速器与设备直通”；本节题为其下位论题	none
+V18.5.11.10	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.11.10	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.15-加速器门槛与激励瓦解论/403.15.17-18516驱动探测缺陷.md	史料	A	2026-10-31	提出峰会议题：probe失败仍被注册，__driver_attach忽略错误返回成功并创建sysfs接口，行为自2005年如此，用户须rmmod清理僵尸驱动，寻求方案。	none
+V18.5.11.10	主设备号隔离	https://docs.kernel.org/accel/introduction.html	联网	A	2026-10-31	the compute accelerators will be differentiated from GPUs by using a new major number and new device char files.	none
+V18.5.11.11	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“DRM、加速器与设备直通”；本节题为其下位论题	none
+V18.5.11.11	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.11.11	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.14-加速器uAPI原则与PGP过期驳斥/403.14.3-1791drm分支管理争论.md	史料	A	2026-10-31	Airlie反驳Kozlowski：AMD与Intel各有50-100人多团队上游化未上市GPU、速度优先，难要求人人吃透上游周期；Qualcomm经Android或ChromeOS交付、回归压力不同，不可类比。	none
+V18.5.11.11	依托 DRM	https://docs.kernel.org/accel/introduction.html	联网	A	2026-10-31	the accel core code will be part of the DRM subsystem and an accel device will be a new type of DRM device.	none
+V18.5.11.12	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 3 章第 3 节“DRM、加速器与设备直通”；本节题为其下位论题	none
+V18.5.11.12	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.11.12	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第403章-硬件平台与警告治理/403.15-加速器门槛与激励瓦解论/403.15.4-1853设备直通与fwctl.md	史料	A	2026-10-31	两人一致认同UAPI功能须有开源对应实现。	none
+V18.5.11.12	统一暴露口径	https://docs.kernel.org/accel/introduction.html	联网	A	2026-10-31	The Linux compute accelerators subsystem is designed to expose compute accelerators in a common way to user-space	none
+V18.6.15.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“TAB 选举与署名标签”；本节题为其下位论题	none
+V18.6.15.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.6.15.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.27-缺陷跟踪与buffercache力挺/405.27.5-1563tab选举.md	史料	A	2026-10-31	2024年TAB选举11人获提名（含Dave Hansen、Kees Cook、Miguel Ojeda、Shuah Khan等），CIVS投票至9月27日。	none
+V18.6.15.7	征选公告	https://lore.kernel.org/tech-board-discuss/	联网	A	2026-11-05	2026 LF Technical Advisory Board election - call for candidates	none
+V18.6.11.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 7 节“TAB 选举与署名标签”；本节题为其下位论题	none
+V18.6.11.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.6.11.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.12-reporting-issues转正与eBPF边界之争/405.12.16-8814tab选举催票公告.md	史料	A	2026-10-31	Abbott 通告 2021 TAB 选举 9 月 23 日 16:00（GMT-4）截止，缺票联络 tab-elections@lists.linuxfoundation.org，资格为 2020-21 年三个带 SoB 等标签的提交	none
+V18.6.11.7	提名个案	https://lore.kernel.org/tech-board-discuss/	联网	A	2026-11-05	TAB nomination: Mike Rapoport	none
+V18.4.9.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“-mm／stable 发布宣告档案”；本节题为其下位论题	none
+V18.4.9.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.4.9.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.15-tty大改写与git-slub/405.15.3-1151mm树发布宣告.md	史料	A	2026-10-31	Andrew Morton 发布 2.6.12-rc1-mm3，称相对上一版主要是一批修复，请遇 DRM 与 USB 恢复问题的用户测试报告	none
+V18.4.9.7	mm 分支档案	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	+ mm-remove-redundant-pagetable_dtor-calls.patch added to mm-new branch	none
+V18.5.15.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“-mm／stable 发布宣告档案”；本节题为其下位论题	none
+V18.5.15.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.15.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.15-tty大改写与git-slub/405.15.4-1152stable发布宣告.md	史料	A	2026-10-31	Chris Wright 代表 -stable 团队发布 Linux 2.6.14.3，附 diffstat 与完整修复摘要，32 个文件 177 处插入，含 PPTP NAT 字节序、conntrack 高端口助手、早期 Nocona MTRR、ALSA rtc 软锁死等修复。	none
+V18.5.15.8	修复类型清单	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-10-31	It fixes a problem like an oops, a hang, data corruption, a real security issue, a hardware quirk, a build error	none
+V18.5.16.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“-mm／stable 发布宣告档案”；本节题为其下位论题	none
+V18.5.16.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.16.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.15-tty大改写与git-slub/405.15.5-1153stable补丁跟帖.md	史料	A	2026-10-31	Chris Wright 跟帖回复 Linux 2.6.15.1 宣告，正文无评语、直接贴出 2.6.15 至 2.6.15.1 完整补丁	none
+V18.5.16.7	回传自动化	https://docs.kernel.org/process/stable-kernel-rules.html	联网	A	2026-10-31	Once the patch is mainlined it will be applied to the stable tree without anything else needing to be done by the author or subsystem maintainer.	none
+V18.4.9.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 8 节“-mm／stable 发布宣告档案”；本节题为其下位论题	none
+V18.4.9.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.4.9.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.16-CFSv18与冻结期灌入/405.16.3-12212625-rc8-mm2.md	史料	A	2026-10-31	Andrew Morton 发布 -mm 树快照，评语核心：page-flags 补丁致 mips/sparc64/powerpc 编译破坏，git-drm/git-xfs/git-kvm 因构建或冲突被剔除，git-slub 临时由 git-pekka 顶替（Pekka 代班 Christoph）	none
+V18.4.9.8	mm 分支档案	https://lore.kernel.org/mm-commits/	联网	A	2026-11-05	+ mm-shmem-fix-swapin-livelock-on-a-mismatched-large-swap-cache-folio.patch added to mm-hotfixes-unstable branch	none
+V18.5.18.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
+V18.5.18.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.18.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.14-LTP收束与代码弃用议题/405.14.6-954黑名单经济批判.md	史料	A	2026-10-31	Bottomley：自己的 pull request 曾进 Linus 的 Gmail 垃圾箱直至 Linus 加白名单；Novell 曾用的付费反垃圾把 hansenpartnership.com 网段标垃圾且移除流程全无效——“只对收钱感兴趣”；私有黑名单难查难除	none
+V18.5.18.7	Git 创生叙事	https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git	联网	A	2026-10-31	In 2005, the relationship between the community that developed the Linux kernel and the commercial company that developed BitKeeper broke down, and the tool's free-of-charge status was revoked.	noted
+V18.5.5.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
+V18.5.5.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.5.5.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.28-sparse实测与linusnext树争议/405.28.24-16022静态检查工具.md	史料	A	2026-10-31	Torvalds详析自制sparse补丁：追踪曾为有符号值的unsigned负值比较，揪出null_blk将blk_status_t强转int的真bug；但噪音多，仍斥-Wtype-limits。	none
+V18.5.5.7	社区自研工具	https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git	联网	A	2026-10-31	This prompted the Linux development community (and in particular Linus Torvalds, the creator of Linux) to develop their own tool based on some of the lessons they learned while using BitKeeper.	none
+V18.7.5.8	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 9 节“工具与基础设施史”；本节题为其下位论题	none
+V18.7.5.8	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.5.8	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.14-LTP收束与代码弃用议题/405.14.13-9511弃用adhoc之叹.md	史料	A	2026-10-31	hpa 附议 Konrad 议题：现在弃用全然 ad hoc——“X 版没编译过且无人注意”；受控弃用难做——“third rail 议题但让我们处境艰难”	none
+V18.7.5.8	邮件样本	https://docs.kernel.org/process/deprecated.html	联网	A	2026-11-05	In a perfect world, it would be possible to convert all instances of some deprecated API into the new API and entirely remove the old API in a single development cycle. However, due to the size of the kernel, the maintainership hierarchy, and timing, it's not always feasible to do these kinds of conversions at once.	noted
+V18.7.2.7	节题与上位节点	05-卷册大纲/目录/data/outline.txt	目录	A	2026-10-30	第 4 章第 12 节“硬件加速器与 malloc 议题”；本节题为其下位论题	none
+V18.7.2.7	所据条款	00-编纂规则与格式规范/01-规则/小节建制与题名规则.md	规则	A	2026-10-30	T1 论题名词短语；S2 下位一致；S3 同节同族同粒度	none
+V18.7.2.7	旧树同节料件	旧大纲-20261023/第20卷-linux社区史与比较研究/第405章-早期内核史料1990s-2015/405.24-malloc统一提案与7GB数据/405.24.12-15110议题讨论c聚合传递与内存模型.md	史料	A	2026-10-31	厘清可观察行为与线程可见性之别，指出 UB 被现代优化器利用的历史及 TS 6010 未入 C23 的原因。	none
+V18.7.2.7	对象缓存建议	https://docs.kernel.org/core-api/memory-allocation.html	联网	A	2026-10-31	If you need to allocate many identical objects you can use the slab cache allocator.	noted

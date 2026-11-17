@@ -527,7 +527,7 @@ function linkVisible(link) {
     click('json');
     click('txt');
     await new Promise(function (r) { setTimeout(r, 400); });
-    return { len: t.split('\n').length, hasStats: /统计：76 卷 544 章 3954 节/.test(t),
+    return { len: t.split('\n').length, hasStats: /统计：75 卷 539 章 3918 节/.test(t),
              summary: t, json: caps[0] || '', txt: caps[1] || '' };
   });
   const fid = checkExportFidelity(summary);
