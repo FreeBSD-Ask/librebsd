@@ -18,3 +18,9 @@ V06.2.1.3	corpus_gap	810;3332	CL-RM-496575;CL-RM-496576	academic_work	primary	D1
 V06.2.2.1	corpus_gap	3560;3564	CL-RM-496577;CL-RM-496578	magazine-article	primary	D1;D1	supp-V06-b003	supplemented	ref3560#4（D1 L3）；ref3564#4（D1 L3）；联网核验见批记
 V06.2.2.2	corpus_gap	3332;3551	CL-RM-496579;CL-RM-496580	academic_work;magazine-article	primary	D1;D1	supp-V06-b003	supplemented	ref3332#0（D1 L2）；ref3551#0（D1 L3）；联网核验见批记
 V06.2.2.3	corpus_gap	3564;1567	CL-RM-496581;CL-RM-496582	magazine-article	primary	D1;D1	supp-V06-b003	supplemented	ref3564#4（D1 L3）；ref1567#8（D1 L3）；联网核验见批记
+V06.2.4.2	corpus_gap	1567	CL-RM-496676	magazine-article	primary	D1	supp-V06-b004	supplemented	ref1567#37（D1 L3 同时代报道）；TUHS Usenet 与 usenix.org mach91 活源核验命中
+V06.2.4.2	corpus_gap	810	CL-RM-496677	academic_work	primary	D1	supp-V06-b004	supplemented	ref810#850（D1 L2 学术记载）；联办序列库内互证
+V06.2.4.3	corpus_gap	810	CL-RM-496678	academic_work	primary	D1	supp-V06-b004	supplemented	ref810#270（D1 L2 学术记载）；9p.io hist 页 C. ACM 17(7) 自引互证
+V06.2.4.3	corpus_gap	1567	CL-RM-496679	magazine-article	primary	D1	supp-V06-b004	supplemented	ref1567#39（D1 L3 同时代报道）；订单页售价行逐字
+V06.2.4.5	corpus_gap	1567	CL-RM-496680	magazine-article	primary	D1	supp-V06-b004	supplemented	ref1567#3（D1 L3 同时代报道）；TUHS Usenet CFP 骨架模板逐字同构
+V06.2.4.5	corpus_gap	810	CL-RM-496681	academic_work	primary	D1	supp-V06-b004	supplemented	ref810#618（D1 L2 学术记载）；SOSP 1973 月份两说并陈见批记
