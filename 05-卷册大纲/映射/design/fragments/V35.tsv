@@ -5,11 +5,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 35	1	1.1	1.1.4	产业史叙述中 BSD 角色的退居与改写	skeleton	
 35	1	1.1	1.1.5	遮蔽进程与传播前史的分期依据	skeleton	
 35	1	1.1	1.1.6	产业渗透的计量口径与证据边界	skeleton	
-35	1	1.2	1.2.1	sendmail 与 BIND 成为基础设施默认件	skeleton	
+35	1	1.2	1.2.1	sendmail 与 BIND 成为基础设施默认件	filled	
 35	1	1.2	1.2.2	基础设施软件的署名惯例与省略	filled	
-35	1	1.2	1.2.3	Internet 服务栈中 BSD 成分的隐名	skeleton	
-35	1	1.2	1.2.4	routed 与 4.3BSD 的渊源记载	skeleton	
-35	1	1.2	1.2.5	从发行说明到运维手册的出处淡出	skeleton	
+35	1	1.2	1.2.3	Internet 服务栈中 BSD 成分的隐名	filled	
+35	1	1.2	1.2.4	routed 与 4.3BSD 的渊源记载	filled	
+35	1	1.2	1.2.5	从发行说明到运维手册的出处淡出	filled	
 35	1	1.2	1.2.6	基础设施归名的证据链与缺口	filled	
 35	1	1.3	1.3.1	POSIX 接口吸收 BSD 惯例的标准化路径	filled	
 35	1	1.3	1.3.2	socket 从 BSD 实现到通用接口的泛化	filled	
@@ -125,8 +125,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 35	3	3.6	3.6.4	来源误记的常见形态	skeleton	
 35	3	3.6	3.6.5	归名核查的档案途径	filled	
 35	3	3.6	3.6.6	个案与通例的推理衔接	filled	
-35	3	3.7	3.7.1	误归 BSD 的工具类别	skeleton	
-35	3	3.7	3.7.2	误归 Linux 的工具类别	skeleton	
+35	3	3.7	3.7.1	误归 BSD 的工具类别	filled	
+35	3	3.7	3.7.2	误归 Linux 的工具类别	filled	
 35	3	3.7	3.7.3	双向误记所成的镜像结构	skeleton	
 35	3	3.7	3.7.4	双向甄别的证据程序	filled	
 35	3	3.7	3.7.5	工具署名的交叉核对流程	skeleton	
