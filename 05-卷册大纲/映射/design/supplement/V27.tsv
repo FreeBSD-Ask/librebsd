@@ -21,3 +21,9 @@ V27.1.6.3	corpus_gap	1579	CL-RM-496630	academic_work	primary	D1	supp-V27-b007	su
 V27.1.6.3	corpus_gap	10944	CL-RM-496631	official_doc	primary	D1	supp-V27-b007	supplemented	block:letter#release10-0.1-to-1.0｜新 ref 全文入库 D1，1.0 分支披露
 V27.1.6.4	corpus_gap	1579	CL-RM-496632	academic_work	primary	D1	supp-V27-b007	supplemented	block:paragraph#rename-after-halt｜D1 复用 ref1579
 V27.1.6.4	corpus_gap	10919	CL-RM-496633	official_doc	primary	D2	supp-V27-b007	supplemented	page:announce#header-newsgroup-date｜复用 ref10919 卡追加 Q4 并回刷哈希
+V27.1.6.5	corpus_gap	1818	CL-RM-496700	academic_work	primary	D1	supp-V27-b008	supplemented	block:52#halt-sentence-current-handbook｜D1 复用 ref1818（与 ref1579 同句异载体，不互证）
+V27.1.6.5	corpus_gap	10944	CL-RM-496701	official_doc	primary	D1	supp-V27-b008	supplemented	block:4#continuation-framing｜D1 复用 ref10944
+V27.1.7.1	corpus_gap	10919	CL-RM-496702	official_doc	primary	D2	supp-V27-b008	supplemented	page:announce#pc-peripherals｜复用 ref10919 卡追加 Q5
+V27.1.7.1	corpus_gap	10944	CL-RM-496703	official_doc	primary	D1	supp-V27-b008	supplemented	block:8#pcat-platform｜D1 复用 ref10944
+V27.1.7.2	corpus_gap	10919	CL-RM-496704	official_doc	primary	D2	supp-V27-b008	supplemented	page:announce#isa-failsafe-probing｜复用 ref10919 卡追加 Q6
+V27.1.7.2	corpus_gap	10958	CL-RM-496705	official_doc	primary	D2	supp-V27-b008	supplemented	page:readme#install-floppies-tools｜新 ref（README.TXT，https 失败改 http 披露）
