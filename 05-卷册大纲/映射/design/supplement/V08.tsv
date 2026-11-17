@@ -1,0 +1,9 @@
+subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
+V08.1.5.1	corpus_gap	810	CL-RM-496605	academic_work	primary	D1	supp-V08-b001	supplemented	ref810#258（D1 L2 学术记载）；9p.io hist 活源核验命中
+V08.1.5.1	corpus_gap	878	CL-RM-496606	academic_work	primary	D1	supp-V08-b001	supplemented	ref878#19（D1 L2 学术记载）；9p.io hist 活源核验同句命中，ref1651 同书重复条目披露
+V08.6.3.1	corpus_gap	810	CL-RM-496607	academic_work	primary	D1	supp-V08-b001	supplemented	ref810#266（D1 L2 学术记载）；9p.io hist 分水岭句互证
+V08.6.3.1	corpus_gap	878	CL-RM-496608	academic_work	primary	D1	supp-V08-b001	supplemented	ref878#23（D1 L2 学术记载）；9p.io hist 活源核验命中
+V08.9.2.2	corpus_gap	810	CL-RM-496609	academic_work	primary	D1	supp-V08-b001	supplemented	ref810#728（D1 L2 学术记载）；oreilly 章 exa 取件互证
+V08.9.2.2	corpus_gap	1575	CL-RM-496610	academic_work	primary	D1	supp-V08-b001	supplemented	ref1575#8（D1 L2 学术记载）；oreilly 章 exa 取件同句命中
+V08.9.4.1	corpus_gap	810	CL-RM-496611	academic_work	primary	D1	supp-V08-b001	supplemented	ref810#736（D1 L2 学术记载）；TUHS socket.2 活源互证
+V08.9.4.1	corpus_gap	10841	CL-RM-496612	official_doc	primary	D2	supp-V08-b001	supplemented	ref10841#url（D2 L3 官方文档）；TUHS utree 活源核验命中，卡 quote 2 随批 resync

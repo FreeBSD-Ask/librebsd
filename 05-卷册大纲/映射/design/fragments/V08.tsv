@@ -19,7 +19,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 8	1	1.4	1.4.3	定时器与睡眠等待	filled	
 8	1	1.4	1.4.4	日历时间与本地时制	filled	
 8	1	1.4	1.4.5	时间服务的精度限度	filled	
-8	1	1.5	1.5.1	pipe 调用与进程通道	skeleton	
+8	1	1.5	1.5.1	pipe 调用与进程通道	filled	
 8	1	1.5	1.5.2	匿名通道的半双工限制	filled	
 8	1	1.5	1.5.3	描述符传递的衔接方式	filled	
 8	1	1.5	1.5.4	命名通道的后续扩展	filled	
@@ -144,7 +144,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 8	6	6.2	6.2.3	语言特性的取舍记录	skeleton	
 8	6	6.2	6.2.4	与硬件字长的适配	skeleton	
 8	6	6.2	6.2.5	早期用户的反馈回路	skeleton	
-8	6	6.3	6.3.1	内核重写的始末考订	skeleton	
+8	6	6.3	6.3.1	内核重写的始末考订	filled	
 8	6	6.3	6.3.2	重写后的可移植收益	skeleton	
 8	6	6.3	6.3.3	汇编残留的范围界定	skeleton	
 8	6	6.3	6.3.4	重写风险的当事人评估	skeleton	
@@ -255,7 +255,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 8	9	9.1	9.1.4	站点地图的维护办法	skeleton	
 8	9	9.1	9.1.5	UUCP 网的扩散角色	skeleton	
 8	9	9.2	9.2.1	协议环境的养成条件	filled	
-8	9	9.2	9.2.2	军方与学界的双轨推动	skeleton	
+8	9	9.2	9.2.2	军方与学界的双轨推动	filled	
 8	9	9.2	9.2.3	BSD 实现的催化作用	filled	
 8	9	9.2	9.2.4	协议选型的争论记录	skeleton	
 8	9	9.2	9.2.5	网络化的分期基准	skeleton	
@@ -264,7 +264,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 8	9	9.3	9.3.3	诊断工具的成套出现	filled	
 8	9	9.3	9.3.4	服务配置的文件惯例	filled	
 8	9	9.3	9.3.5	工具链的运维作用	skeleton	
-8	9	9.4	9.4.1	sockets 的接口形制	skeleton	
+8	9	9.4	9.4.1	sockets 的接口形制	filled	
 8	9	9.4	9.4.2	与既有 I/O 模型的衔接	skeleton	
 8	9	9.4	9.4.3	跨系统的移植扩散	skeleton	
 8	9	9.4	9.4.4	标准化进程的收编	skeleton	
