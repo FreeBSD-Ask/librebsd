@@ -19,3 +19,11 @@
 - **考据注**：四句均在 READ_ME 正文 .SH 小节内（Pascal／Ex／Installing the software），支撑 V12 2.7.2（依存关系）与 2.7.3（结构含义）两题两面。引文逐字照录，READ_ME 原文的省略号（"installed..."）为原文自带，非引者截断。取源时点 2026-11-18，TUHS utree 界面渲染页（页脚档案戳 1977-11-23）。
 - **本批落点**：V12.2.7.2／V12.2.7.3 各两块（#url、#2）
 - **考据日期**：2026-11-18（supp-V12-b017；official_doc 表定抬头／L3）
+
+## b018 追加段（2026-11-18，supp-V12-b018）
+
+- **本批（supp-V12-b018）引用面**：目录页捐赠者句（1bsd-archive#donor-two-claims），异段异锚，零冲突——
+  1. 捐赠者两说句（1bsd-archive#donor-two-claims）：“The files here come from 1bsd.tar.gz, donated by either Keith Bostic or Kirk McKusick.”
+- **考据注**：TUHS 述介对 1bsd.tar.gz 的捐赠者给出 Bostic 或 McKusick 两说（either…or 原文并列），归属归属复原止于两说披露、不择一为定。与 b017 追加段四句同为 utree 卷页文本（剥标签＋空白归一）。
+- **本批落点**：V12.2.8.6 一块（#url）
+- **考据日期**：2026-11-18（supp-V12-b018；official_doc 表定抬头／L3）
