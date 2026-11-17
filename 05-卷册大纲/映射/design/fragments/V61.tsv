@@ -1,8 +1,8 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
-61	1	1.1	1.1.1	超级用户的全能边界	skeleton	
-61	1	1.1	1.1.2	UID 与 GID 的授权粒度	skeleton	
+61	1	1.1	1.1.1	超级用户的全能边界	filled	
+61	1	1.1	1.1.2	UID 与 GID 的授权粒度	filled	
 61	1	1.1	1.1.3	setuid 位的提权通道	filled	
-61	1	1.1	1.1.4	受信主机免口令的信任假设	skeleton	
+61	1	1.1	1.1.4	受信主机免口令的信任假设	filled	
 61	1	1.1	1.1.5	口令文件的猜测资源	filled	
 61	1	1.2	1.2.1	分时系统向联网主机的演进	skeleton	
 61	1	1.2	1.2.2	服务进程的暴露面扩张	skeleton	
