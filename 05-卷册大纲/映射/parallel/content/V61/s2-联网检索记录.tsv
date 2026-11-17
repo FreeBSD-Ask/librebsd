@@ -13,3 +13,11 @@ V61.1.1.5	67 encrypted passwords 10 installations Webster dictionary	exa 检索�
 V61.1.1.3	树内状态核实（开工逐题断言）	第61卷树内 1.1.3 文件	—	题已 filled（2026-09-14 行级遍历批 2 块 ROW_MINE），按反模式 2 撤出本批	2026-11-18	树内直读
 V61.1.1.5	树内状态核实（开工逐题断言）	第61卷树内 1.1.5 文件	—	题已 filled（2026-09-14 行级遍历批），按反模式 2 撤出本批	2026-11-18	树内直读
 V61.1.1.1	—	—	—	每题两独立来源齐备：1.1.1 Ritchie×M&T；1.1.2 Ritchie×su(1)；1.1.4 hosts.equiv(5)×Spafford（1.1.3／1.1.5 已 filled 撤出）	2026-11-18	—
+V61.1.2.1	4.2BSD distribution site licenses vendors shipped	exa 检索（oreilly openbook kirkmck 全章页）	命中	McKusick 千站许可段取得；URL 撞既有 ref2007 拒登，改复用 ref1575（471 块真全文，D1 块 15）	2026-11-18	exa web_search
+V61.1.2.1	worm only infect Sun 3 VAX variants of 4BSD	exa 检索（UH 镜像 CSD-TR-823）	命中	引文取自导言段（止于 spread quickly 避断词）	2026-11-18	exa web_search
+V61.1.2.2	sendmail daemon socket 25 SMTP	man.freebsd.org	命中	-bd 守护模式句取得（lis- tening 连字断痕照录）	2026-11-18	exa fetch
+V61.1.2.3	inetd user entry less permission than root	man.freebsd.org	命中	user 字段降权句取得；inetd.conf(5) 归并同页披露	2026-11-18	exa fetch
+V61.1.2.4	rsh executes command remote host	man.freebsd.org	命中	rsh 执行句＋标准流对接句取得（r-tools 起源段因 ref1575 块页断口弃用，rsh(1) 改充）	2026-11-18	exa fetch
+V61.1.2.5	hosts.equiv single plus matches all	man.freebsd.org	命中	通配句取得（b001 卡追加段）	2026-11-18	exa fetch
+V61.1.2.5	rlogind authentication assumes integrity insecure	man.freebsd.org	命中	BUGS 自陈句取得（信任链脆弱性官方质证）	2026-11-18	exa fetch
+V61.1.2.1	—	—	—	五题两独立来源齐备：1.2.1 ref1575×Spafford；1.2.2 Spafford×sendmail(8)；1.2.3 Spafford×inetd(8)；1.2.4 rsh(1)×rlogind(8)；1.2.5 hosts.equiv(5)×rlogind(8)	2026-11-18	—

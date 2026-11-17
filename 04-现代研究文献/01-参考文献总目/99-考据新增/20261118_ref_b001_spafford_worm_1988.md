@@ -16,3 +16,13 @@
 3. [口令面备用（后续批），照录] This allows an attacker to encrypt lists of possible passwords and then compare them against the actual passwords without passing through any system function.
 
 4. [摘要照录（卡内语境）] On the evening of 2 November 1988, someone infected the Internet with a worm program. That program exploited flaws in utility programs in systems based on BSD-derived versions of UNIX. The flaws allowed the program to break into those machines and copy itself, thus infecting those systems.
+
+## b002 追加引文池（2026-11-18 V61 b002 取用，同源异句异锚）
+
+5. [1.2.1 用，止于 spread quickly 以避后句 adminis-trators 断词] Although the program would only infect Sun Microsystems Sun 3 systems, and VAX computers running variants of 4 BSD UNIX, the program spread quickly
+
+6. [1.2.2 用] The sendmail program is of immense importance on most Berkeley-derived (and other) UNIX systems because it handles the complex tasks of mail routing and delivery.
+
+7. [1.2.3 用] One way to deal with the general problem is have every daemon and subsystem run with a separate userid. That way, the command and data files for each subsystem could be protected in such a way that only that subsystem could have write (and perhaps read) access to the files.
+
+8. [语境照录，含断词 sys-tem，不入引] A security flaw not exploited by the Worm, but now becoming obvious, is that many sys tem services have configuration and command files owned by a common userid.

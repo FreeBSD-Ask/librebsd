@@ -14,3 +14,7 @@
 2. [备用（后续批可用），照录] For security reasons, a user's .rhosts file will be ignored if it is not a regular file, or if it is not owned by the user, or if it is writable by anyone other than the user.
 
 3. [备用，照录] Trust user "foo" from host "bar.com".
+
+## b002 追加引文池（2026-11-18 V61 b002 取用，同源异句异锚）
+
+4. [1.2.5 用] A single "+" matches all hosts or users.
