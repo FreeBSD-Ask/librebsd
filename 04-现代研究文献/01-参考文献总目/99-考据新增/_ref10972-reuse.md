@@ -11,3 +11,13 @@
 - **限度**：①本句证历史分界的成因，不证两类模式的具体性能数值；②“性能与兼容分界”的展开属编纂论旨。
 - **本批落点**：V37.3.4.4
 - **考据日期**：2026-11-18（Task 8.2 G4-P2 批 b026；复用 ref10972，official_doc／L3）
+
+## b027 追加引文（2026-11-18，第三段）
+
+- **本批取句（逐字，一处；行内多空格归一，词界换行无断词）**：
+
+  > although para-virtualized device drivers were also required to access resources such as virtual network interfaces and disk devices.
+
+- **考据注**：用于 **DomU 内核适配面覆盖驱动栈**（V37.3.4.2）——半虚拟化设备驱动为访问虚拟网络接口与磁盘设备等资源所必需，与 b025 的接入模式句、b026 的分界成因句同页三面互补（接入模式／分界成因／驱动适配）。
+- **限度**：①事件通道（event channel）机制本句未展开，另有出处面；②“适配面覆盖驱动栈”的清单化属编纂论旨。
+- **落点**：V37.3.4.2（复用 ref10972，official_doc／L3）

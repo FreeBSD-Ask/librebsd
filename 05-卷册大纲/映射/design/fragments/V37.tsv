@@ -1,8 +1,8 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
-37	1	1.1	1.1.1	FFS 的柱面组编排	skeleton	
+37	1	1.1	1.1.1	FFS 的柱面组编排	filled	
 37	1	1.1	1.1.2	超级块与位图的一致性	filled	
-37	1	1.1	1.1.3	旋转延迟的布局对策	skeleton	
-37	1	1.1	1.1.4	碎片化的度量口径	skeleton	
+37	1	1.1	1.1.3	旋转延迟的布局对策	filled	
+37	1	1.1	1.1.4	碎片化的度量口径	filled	
 37	1	1.1	1.1.5	4.2BSD 存储传统的延续	filled	
 37	1	1.2	1.2.1	UFS1 的 32 位地址上限	filled	
 37	1	1.2	1.2.2	UFS2 的 64 位扩展	filled	
@@ -15,8 +15,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	1	1.3	1.3.4	性能代价的实测比较	filled	
 37	1	1.3	1.3.5	软更新与日志式方案的争点	filled	
 37	1	1.4	1.4.1	GEOM 的类层次组织	filled	
-37	1	1.4	1.4.2	provider 与 geom 的配对	skeleton	
-37	1	1.4	1.4.3	磁盘转接的模块化	skeleton	
+37	1	1.4	1.4.2	provider 与 geom 的配对	filled	
+37	1	1.4	1.4.3	磁盘转接的模块化	filled	
 37	1	1.4	1.4.4	分区方案的叠加次序	filled	
 37	1	1.4	1.4.5	存储栈的故障隔离	filled	
 37	1	1.5	1.5.1	CAM 的适配层与队列	filled	
@@ -24,40 +24,40 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	1	1.5	1.5.3	设备热插拔的感知链	filled	
 37	1	1.5	1.5.4	ATA 与 NVMe 的接入差异	filled	
 37	1	1.5	1.5.5	错误恢复的分级策略	filled	
-37	1	1.6	1.6.1	软 RAID 的镜像与条带	skeleton	
-37	1	1.6	1.6.2	GELI 的密钥层级	skeleton	
+37	1	1.6	1.6.1	软 RAID 的镜像与条带	filled	
+37	1	1.6	1.6.2	GELI 的密钥层级	filled	
 37	1	1.6	1.6.3	加密卷的启动链条	filled	
 37	1	1.6	1.6.4	冗余与加密的组合边界	filled	
 37	1	1.6	1.6.5	故障盘的替换流程	filled	
-37	1	1.7	1.7.1	ZFS 进入内核的路径	skeleton	
-37	1	1.7	1.7.2	存储池与卷的语义	skeleton	
-37	1	1.7	1.7.3	许可条款的兼容审查	skeleton	
-37	1	1.7	1.7.4	从 Sun 到 FreeBSD 的移植途径	skeleton	
-37	1	1.7	1.7.5	ZFS 与 GEOM 的接合处	skeleton	
+37	1	1.7	1.7.1	ZFS 进入内核的路径	filled	
+37	1	1.7	1.7.2	存储池与卷的语义	filled	
+37	1	1.7	1.7.3	许可条款的兼容审查	filled	
+37	1	1.7	1.7.4	从 Sun 到 FreeBSD 的移植途径	filled	
+37	1	1.7	1.7.5	ZFS 与 GEOM 的接合处	filled	
 37	1	1.8	1.8.1	OpenZFS 的跨平台协作	filled	
 37	1	1.8	1.8.2	特性旗标与版本对齐	filled	
 37	1	1.8	1.8.3	上游补丁的回流机制	filled	
 37	1	1.8	1.8.4	平台差异的兼容补丁	filled	
 37	1	1.8	1.8.5	发行周期与存储可靠性	filled	
-37	1	1.9	1.9.1	双栈并存的选型依据	skeleton	
+37	1	1.9	1.9.1	双栈并存的选型依据	filled	
 37	1	1.9	1.9.2	启动镜像的格式选择	filled	
 37	1	1.9	1.9.3	迁移路径与回退方案	filled	
 37	1	1.9	1.9.4	运维惯例的路径依赖	filled	
 37	1	1.9	1.9.5	性能对照的适用场景	filled	
-37	1	1.10	1.10.1	Gibbs 主导的 CAM 工程	skeleton	
+37	1	1.10	1.10.1	Gibbs 主导的 CAM 工程	filled	
 37	1	1.10	1.10.2	SCSI 子系统的主导者	filled	
-37	1	1.10	1.10.3	ATA 与 NVMe 的接续	skeleton	
+37	1	1.10	1.10.3	ATA 与 NVMe 的接续	filled	
 37	1	1.10	1.10.4	驱动维护的交接班	skeleton	
 37	1	1.10	1.10.5	贡献者角色的多重身份	skeleton	
 37	1	1.11	1.11.1	13.x 的架构退役清单	filled	
-37	1	1.11	1.11.2	i386 降级的决策过程	skeleton	
+37	1	1.11	1.11.2	i386 降级的决策过程	filled	
 37	1	1.11	1.11.3	旧平台的构建支持收缩	filled	
-37	1	1.11	1.11.4	硬件淘汰的公告体例	skeleton	
+37	1	1.11	1.11.4	硬件淘汰的公告体例	filled	
 37	1	1.11	1.11.5	迁移窗口的用户告知	skeleton	
 37	1	1.12	1.12.1	devfs 的设备节点管理	filled	
 37	1	1.12	1.12.2	mdconfig 的内存盘接口	filled	
 37	1	1.12	1.12.3	tmpfs 的页缓存复用	filled	
-37	1	1.12	1.12.4	sendfile 的零拷贝路径	skeleton	
+37	1	1.12	1.12.4	sendfile 的零拷贝路径	filled	
 37	1	1.12	1.12.5	VFS 的层间协议	filled	
 37	1	1.13	1.13.1	十年间的贡献者构成	filled	
 37	1	1.13	1.13.2	企业参与的资助形态	skeleton	
@@ -73,7 +73,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.2	2.2.2	IPv6 地址体系的接入	filled	
 37	2	2.2	2.2.3	双栈并行的过渡安排	filled	
 37	2	2.2	2.2.4	KAME 与 FreeBSD 的协作	filled	
-37	2	2.2	2.2.5	IPv6 测试床的工程遗产	skeleton	
+37	2	2.2	2.2.5	IPv6 测试床的工程遗产	filled	
 37	2	2.3	2.3.1	Netgraph 的节点图模型	filled	
 37	2	2.3	2.3.2	可组合网络的接插方式	filled	
 37	2	2.3	2.3.3	协议图的运行时改写	filled	
@@ -99,23 +99,23 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.7	2.7.3	网卡注册的模板化	filled	
 37	2	2.7	2.7.4	多队列硬件的适配	filled	
 37	2	2.7	2.7.5	驱动迁移的收益评估	filled	
-37	2	2.8	2.8.1	kTLS 的对称加密卸载	skeleton	
-37	2	2.8	2.8.2	kTLS 的会话状态管理	skeleton	
-37	2	2.8	2.8.3	用户态与内核态的边界	skeleton	
-37	2	2.8	2.8.4	加密加速的硬件接口	skeleton	
-37	2	2.8	2.8.5	协议实现的性能取舍	skeleton	
+37	2	2.8	2.8.1	kTLS 的对称加密卸载	filled	
+37	2	2.8	2.8.2	kTLS 的会话状态管理	filled	
+37	2	2.8	2.8.3	用户态与内核态的边界	filled	
+37	2	2.8	2.8.4	加密加速的硬件接口	filled	
+37	2	2.8	2.8.5	协议实现的性能取舍	filled	
 37	2	2.9	2.9.1	WireGuard 的接口设计	filled	
 37	2	2.9	2.9.2	内核 VPN 的路由接入	filled	
-37	2	2.9	2.9.3	密钥协商的会话模型	skeleton	
+37	2	2.9	2.9.3	密钥协商的会话模型	filled	
 37	2	2.9	2.9.4	移动场景的漫游支持	skeleton	
 37	2	2.9	2.9.5	VPN 栈的部署惯例	filled	
-37	2	2.10	2.10.1	Kqueue 的内核数据结构	skeleton	
-37	2	2.10	2.10.2	过滤器注册的语义	skeleton	
-37	2	2.10	2.10.3	事件队列的唤醒路径	skeleton	
+37	2	2.10	2.10.1	Kqueue 的内核数据结构	filled	
+37	2	2.10	2.10.2	过滤器注册的语义	filled	
+37	2	2.10	2.10.3	事件队列的唤醒路径	filled	
 37	2	2.10	2.10.4	并发访问的锁保护	filled	
-37	2	2.10	2.10.5	机制本体与应用面的划界	skeleton	
+37	2	2.10	2.10.5	机制本体与应用面的划界	filled	
 37	3	3.1	3.1.1	UNIX 隔离传统的来源	filled	
-37	3	3.1	3.1.2	Jail 的边界设定	skeleton	
+37	3	3.1	3.1.2	Jail 的边界设定	filled	
 37	3	3.1	3.1.3	chroot 的局限与超越	filled	
 37	3	3.1	3.1.4	早期容器的安全争论	filled	
 37	3	3.1	3.1.5	Jail 与进程树的管辖	filled	
@@ -130,28 +130,28 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	3	3.3	3.3.4	多实例并行的资源账	filled	
 37	3	3.3	3.3.5	虚拟网络的路由界限	filled	
 37	3	3.4	3.4.1	Xen 的半虚拟化接入	filled	
-37	3	3.4	3.4.2	DomU 的内核适配	skeleton	
+37	3	3.4	3.4.2	DomU 的内核适配	filled	
 37	3	3.4	3.4.3	早期虚拟化的试验田	skeleton	
 37	3	3.4	3.4.4	Xen 与硬件辅助的分界	filled	
 37	3	3.4	3.4.5	移植团队的协作方式	skeleton	
-37	3	3.5	3.5.1	bhyve 的用户态与内核模块协同	skeleton	
-37	3	3.5	3.5.2	vmm 的内核模块划分	skeleton	
-37	3	3.5	3.5.3	虚拟设备的模拟层	skeleton	
-37	3	3.5	3.5.4	bhyve 的启动与控制接点	skeleton	
+37	3	3.5	3.5.1	bhyve 的用户态与内核模块协同	filled	
+37	3	3.5	3.5.2	vmm 的内核模块划分	filled	
+37	3	3.5	3.5.3	虚拟设备的模拟层	filled	
+37	3	3.5	3.5.4	bhyve 的启动与控制接点	filled	
 37	3	3.5	3.5.5	bhyve 与 QEMU 的路线差异	filled	
-37	3	3.6	3.6.1	隔离强度与开销的对照	skeleton	
+37	3	3.6	3.6.1	隔离强度与开销的对照	filled	
 37	3	3.6	3.6.2	启动开销的量化表	skeleton	
 37	3	3.6	3.6.3	两套隔离的运维分工	skeleton	
 37	3	3.6	3.6.4	混合负载的适用判据	skeleton	
 37	3	3.6	3.6.5	混合部署的编排法	skeleton	
-37	3	3.7	3.7.1	Jail 与容器语义的错位	skeleton	
-37	3	3.7	3.7.2	bhyve 与 KVM 的架构对照	skeleton	
-37	3	3.7	3.7.3	调度与内存的共享差异	skeleton	
-37	3	3.7	3.7.4	替代关系的生态位	skeleton	
-37	3	3.7	3.7.5	路线比较的历史条件	skeleton	
+37	3	3.7	3.7.1	Jail 与容器语义的错位	filled	
+37	3	3.7	3.7.2	bhyve 与 KVM 的架构对照	filled	
+37	3	3.7	3.7.3	调度与内存的共享差异	filled	
+37	3	3.7	3.7.4	替代关系的生态位	filled	
+37	3	3.7	3.7.5	路线比较的历史条件	filled	
 37	3	3.8	3.8.1	云主机的 FreeBSD 镜像	filled	
 37	3	3.8	3.8.2	虚拟化平台的驱动支持	filled	
-37	3	3.8	3.8.3	云存储的挂载办法	skeleton	
+37	3	3.8	3.8.3	云存储的挂载办法	filled	
 37	3	3.8	3.8.4	弹性伸缩的运维约束	skeleton	
 37	3	3.8	3.8.5	云环境的性能基线	skeleton	
 37	3	3.9	3.9.1	8.x 虚拟化团队的构成	skeleton	
@@ -167,7 +167,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	4	4.1	4.1.1	单处理器内核的锁假设	filled	
 37	4	4.1	4.1.2	中断屏蔽的临界区	filled	
 37	4	4.1	4.1.3	spl 层级的保护范围	filled	
-37	4	4.1	4.1.4	单核模型的可扩展上限	skeleton	
+37	4	4.1	4.1.4	单核模型的可扩展上限	filled	
 37	4	4.1	4.1.5	多核时代的前提缺环	skeleton	
 37	4	4.2	4.2.1	早期 SMP 的自旋锁	filled	
 37	4	4.2	4.2.2	多处理器启动的握手	filled	
@@ -214,8 +214,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	4	4.10	4.10.3	并发重构的返工成本	skeleton	
 37	4	4.10	4.10.4	发布质量的守门机制	skeleton	
 37	4	4.10	4.10.5	长周期项目的组织代价	skeleton	
-37	4	4.11	4.11.1	CAM 对 SCSI 子系统的替代	skeleton	
-37	4	4.11	4.11.2	适配器抽象的工程效应	skeleton	
+37	4	4.11	4.11.1	CAM 对 SCSI 子系统的替代	filled	
+37	4	4.11	4.11.2	适配器抽象的工程效应	filled	
 37	4	4.11	4.11.3	驱动迁移的兼容层	skeleton	
 37	4	4.11	4.11.4	错误处理的统一口径	skeleton	
 37	4	4.11	4.11.5	存储栈的分层收益	skeleton	
