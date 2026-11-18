@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "e74d11a68ca22920f0d9be561b8eb6ae1e493a55e46c0f435fb7d8472d384aaf",
+  "content_sha256": "5326515dfa2769f174a3ddc874f6ee016707afc1e5063d1ead1ea5d00b26f491",
   "extract": "title+body",
-  "generated_at": "2026-11-19T05:17:24+08:00"
+  "generated_at": "2026-11-19T06:36:41+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -4798,8 +4798,6 @@
    "domains": [],
    "themes": [
     "TH-HIS-001",
-    "TH-HIS-037",
-    "TH-HIS-040",
     "TH-HIS-046"
    ],
    "sections": 3
@@ -14435,9 +14433,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -21253,9 +21249,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -21270,6 +21264,7 @@
     "TH-HIS-000"
    ],
    "themes": [
+    "TH-HIS-001",
     "TH-HIS-046"
    ],
    "projects": [],
@@ -21285,9 +21280,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -24142,8 +24135,8 @@
     "TH-REL-003",
     "TH-LANG-009",
     "TH-FS-012",
-    "TH-REL-030",
-    "TH-LAW-003"
+    "TH-LAW-003",
+    "TH-REL-030"
    ],
    "projects": [],
    "technical_terms": [],
@@ -40461,8 +40454,8 @@
     "TH-GOV-026",
     "TH-FS-001",
     "TH-GOV-008",
-    "TH-OS-009",
     "TH-OS-005",
+    "TH-OS-009",
     "TH-VM-001"
    ],
    "projects": [],
@@ -43388,8 +43381,7 @@
     "TH-OS-017",
     "TH-HW-012",
     "TH-FS-007",
-    "TH-REL-015",
-    "TH-REL-030"
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -43653,13 +43645,13 @@
    "title": "Veriexec 文件完整性验证（2004）",
    "meta": false,
    "domains": [
-    "TH-HW-000",
     "TH-HIS-000",
+    "TH-HW-000",
     "TH-REL-000"
    ],
    "themes": [
-    "TH-HW-010",
     "TH-HIS-001",
+    "TH-HW-010",
     "TH-REL-017"
    ],
    "projects": [],
@@ -71015,15 +71007,15 @@
    "domains": [
     "TH-LAW-000",
     "TH-HIS-000",
-    "TH-HW-000"
+    "TH-NET-000"
    ],
    "themes": [
     "TH-LAW-010",
     "TH-HIS-004",
-    "TH-HW-010",
     "TH-LAW-013",
     "TH-NET-037",
-    "TH-HW-028"
+    "TH-HW-028",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81171,10 +81163,12 @@
    "themes": [
     "TH-HIS-046"
    ],
-   "projects": [],
+   "projects": [
+    "freebsd"
+   ],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "b0c0fc6df05a7f6bcc693a393c05ff1261175811"
+   "subs_sha1": "001bd1257fb3c8139d8adf065cb4b0eb3f75aebc"
   },
   "V74-C001-1.2": {
    "chapter": "V74-C001",
@@ -81189,7 +81183,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "064efac0d472e039a42851b446926f0288de473b"
+   "subs_sha1": "aaf185359bce8e292ebb577fbb52b70a297a0b1e"
   },
   "V74-C001-1.3": {
    "chapter": "V74-C001",
@@ -81204,7 +81198,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "38b533fba1d0fc73e67e9ae8321e42d4d301756d"
+   "subs_sha1": "a02a73c3416f17465afd17235fd63b62f676a12f"
   },
   "V74-C001-1.4": {
    "chapter": "V74-C001",
@@ -81221,7 +81215,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "0a2de86034ffa508bbdcfd558d90b9b3229212cf"
+   "subs_sha1": "d270cc353c4b0183724deec9f5c53e2ca9373128"
   },
   "V74-C001-1.5": {
    "chapter": "V74-C001",
@@ -81237,7 +81231,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "1e79631eb8cd21d58ef52e1bcb37b49d1100fa07"
+   "subs_sha1": "c4ddb368ca8dce30b3c3d723e9e23f2846441ae2"
   },
   "V74-C001-1.6": {
    "chapter": "V74-C001",
@@ -81253,7 +81247,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "ee0066eadb386dc337dcfe30cfb8d4dc1004524b"
+   "subs_sha1": "d1744cca4892dfa4a6f0f4c4cdd3d019bce5cec4"
   },
   "V74-C001-1.7": {
    "chapter": "V74-C001",
@@ -81270,7 +81264,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "665d858495a4f00eb5940caaf715a7527862c804"
+   "subs_sha1": "da66bbaeeadd31059ffc4e11bd1d2abd7827e114"
   },
   "V74-C002-2.1": {
    "chapter": "V74-C002",
@@ -82227,7 +82221,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "c0868439c6f609901c97976059cb627e5fac7164"
+   "subs_sha1": "b6afe97febc1c2386e0a77a04bfab7740af9e945"
   },
   "V75-C003-3.2": {
    "chapter": "V75-C003",
@@ -82249,7 +82243,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "d23aa65819a835dab93f147319b4c76a09c62ff8"
+   "subs_sha1": "942a207312dc6b4d7d3dcfa1efc7b2fd0bb3d00d"
   },
   "V75-C003-3.3": {
    "chapter": "V75-C003",
@@ -82271,7 +82265,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "1954593781beee6fbd76c1e5d48fb325f88703fb"
+   "subs_sha1": "71beba79c6921d9d53979c0783ac69f3fdf92c0f"
   },
   "V75-C003-3.4": {
    "chapter": "V75-C003",
@@ -82290,7 +82284,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "9b1f4808fd1a72ee3b1356b3e8574f08a8f827b1"
+   "subs_sha1": "5553a20a93da5b262dcb6a689dd1b387a1723dc2"
   },
   "V75-C003-3.5": {
    "chapter": "V75-C003",
@@ -82309,7 +82303,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "2916d3ff8dbcdda377e90c0c78ff93ec5418abac"
+   "subs_sha1": "aa97692606b82d749c877eecea10743845a979d7"
   },
   "V75-C003-3.6": {
    "chapter": "V75-C003",
@@ -82328,7 +82322,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "9ef878afec872db6e85c47beebb505c7a7efda7e"
+   "subs_sha1": "4d9441e2f4d131f2aa3c8a2b62b111487e2a4736"
   },
   "V75-C003-3.7": {
    "chapter": "V75-C003",
@@ -82347,7 +82341,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "23b4420986406b3d6c1326d5e99b8e0a82c0d13b"
+   "subs_sha1": "53702ddb7e8a09d13d0e9772efe1bda133a76953"
   },
   "V75-C003-3.8": {
    "chapter": "V75-C003",
@@ -82369,7 +82363,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "94536b0e94d53a655db4f2fc6592a7a76c209943"
+   "subs_sha1": "520f3d2b8d61bf4e65bb54f5aacde0551ae1a68f"
   },
   "V75-C003-3.9": {
    "chapter": "V75-C003",
@@ -82391,7 +82385,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "cb969004e6100b66dc82b9fd23dbecf875087935"
+   "subs_sha1": "63608f40970a74ca9145d182b4a315ff9ca0c3c1"
   },
   "V75-C003-3.10": {
    "chapter": "V75-C003",
@@ -82410,7 +82404,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "51ea6035f990fa2789977da64601f532b2eaffcc"
+   "subs_sha1": "775c13486a8ae15a4192db4cf98d86bc09f22fe3"
   },
   "V75-C003-3.11": {
    "chapter": "V75-C003",
@@ -82429,7 +82423,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "9edf40b1b223694541454d38b1162d8899c3d35b"
+   "subs_sha1": "e922a22aae94a580312ab4d36f91102103b4e97b"
   },
   "V75-C003-3.12": {
    "chapter": "V75-C003",
@@ -82448,7 +82442,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "12d054ab00bcc2050d90883d8839c2b5340613c8"
+   "subs_sha1": "1272f1c8458171217d7aa1647332d25f24363312"
   },
   "V75-C003-3.13": {
    "chapter": "V75-C003",
@@ -82467,7 +82461,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "a006e5940a6f33741797a3caadf3ce2e31195e7b"
+   "subs_sha1": "2009ba2564f6943fbfcbc0e478939cae2bdcba1f"
   },
   "V75-C003-3.14": {
    "chapter": "V75-C003",
@@ -82486,7 +82480,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "7785c939a3fa74885f1731e766c6e91d5b3cf641"
+   "subs_sha1": "b11ced5b3b1b9de72397e53a47ef066376c9054b"
   },
   "V75-C003-3.15": {
    "chapter": "V75-C003",
@@ -82505,7 +82499,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "ce588df8d07f7600073c8a343300a3b811ad5d1e"
+   "subs_sha1": "8c9f66304d6c321330572b02dad9fe3424a11c7c"
   },
   "V75-C003-3.16": {
    "chapter": "V75-C003",
@@ -82524,7 +82518,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "846197e26dd3921fcbf422a524794b5abac62a41"
+   "subs_sha1": "400782112caf06e083c840d537df7b173c0b06fe"
   },
   "V75-C003-3.17": {
    "chapter": "V75-C003",
@@ -82543,7 +82537,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "daf2e86d8dcdf19933931a0312cb71b8d34d30b1"
+   "subs_sha1": "b03dfafe59839d4a3e1d643ffbb9b1aa952b3312"
   },
   "V75-C004-4.1": {
    "chapter": "V75-C004",
@@ -88110,8 +88104,8 @@
     "TH-HW-037",
     "TH-LANG-025",
     "TH-HW-016",
-    "TH-REL-030",
-    "TH-LAW-003"
+    "TH-LAW-003",
+    "TH-REL-030"
    ]
   },
   "V18-C005-5.14.10": {
@@ -96650,7 +96644,16 @@
   },
   "V41-C009-9.9.1": {
    "add": [
-    "TH-LANG-024"
+    "TH-LANG-024",
+    "TH-HW-003",
+    "TH-HW-002"
+   ]
+  },
+  "V41-C009-9.9.3": {
+   "add": [
+    "TH-SEC-008",
+    "TH-REL-003",
+    "TH-REL-001"
    ]
   },
   "V41-C010-10.1.3": {
@@ -99637,8 +99640,8 @@
   "V51-C002-2.6.1": {
    "add": [
     "TH-REL-009",
-    "TH-OS-009",
-    "TH-OS-005"
+    "TH-OS-005",
+    "TH-OS-009"
    ]
   },
   "V51-C002-2.6.3": {
@@ -101362,8 +101365,8 @@
     "TH-HW-010",
     "TH-HW-023",
     "TH-LANG-007",
-    "TH-REL-030",
-    "TH-LAW-003"
+    "TH-LAW-003",
+    "TH-REL-030"
    ]
   },
   "V56-C003-3.3.1": {
@@ -106477,7 +106480,7 @@
    "add": [
     "TH-NET-027",
     "TH-VM-023",
-    "TH-LANG-009"
+    "TH-NET-001"
    ]
   },
   "V71-C003-3.2.5": {
@@ -107545,6 +107548,7 @@
   },
   "V75-C003-3.4.3": {
    "add": [
+    "TH-BIZ-016",
     "TH-GOV-017"
    ]
   },
