@@ -30,3 +30,12 @@
 - **quote 10 考据注**：2BSD 随包清单句（增强 Pascal＋vi＋termcap），支撑 V12 3.2.5 对应面。
 - **本批落点**：V12.3.2.1／V12.3.2.4／V12.3.2.6 各一块（#url）
 - **考据日期**：2026-11-18（supp-V12-b020；academic_work 表定抬头／L4）
+
+## supp-V12-b021 追加引文（2026-11-18）
+
+- **quote 11（逐字，遇断行并句未改字）**：With the arrival of some ADM-3a terminals offering screen-addressable cursors, Joy was finally able to write vi, bringing screen-based editing to Berkeley.
+- **quote 12（逐字）**：sent out about thirty free copies of the system
+- **quote 11 考据注**：ADM-3a 屏幕可寻址光标终端到位后 vi 得以写成——交互设计与终端条件互相塑造的直接叙述；支撑 V12 3.3.3A。
+- **quote 12 考据注**：1BSD 阶段 Joy 以发行秘书身份送出约三十套免费套件——扩散规模起点；支撑 V12 3.3.4B（与 002795 七十五盘句同源对照、不写互证）。
+- **本批落点**：V12.3.3.3／V12.3.3.4 各一块（#url／#2）
+- **考据日期**：2026-11-18（supp-V12-b021；academic_work 表定抬头／L4）
