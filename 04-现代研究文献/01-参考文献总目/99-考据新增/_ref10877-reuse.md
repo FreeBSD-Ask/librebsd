@@ -9,5 +9,9 @@
 1. In article <55 at ecrcvax.UUCP> pete at ecrcvax.UUCP (Pete Delaney) writes:
 2. I feel obligated to point out the reason why 4.2BSD does not include cpio or SCCS.
 
+## supp-V16-b008 追加段（2026-11-18 活源复核）
+
+3. Before anyone sends a copy to ecrcvax, has a System V license.（→V16.1.5.4B 寄码前核验对方许可句；… 省略号跳过 you'd best verify that ecrcvax，原句：Before anyone sends a copy to ecrcvax, you'd best verify that ecrcvax has a System V license.）
+
 - **用途**：V16.1.5.2B（线上聚集塑造讨论规范——引注回贴格式面）
 - **说明**：页面 HTML 的 &lt;/&gt; 实体在卡与 evidence.quote 中按原文语义还原为尖括号；存档页只读，本卡为独立复用卡（不追加源件、不回刷哈希，J89 口径）

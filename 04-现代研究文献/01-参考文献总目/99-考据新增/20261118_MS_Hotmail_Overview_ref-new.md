@@ -1,0 +1,9 @@
+# 《Microsoft Hotmail Migration Technical Case Study: Overview》（新 ref）引用卡
+
+- **性质**：Microsoft Learn tn-archive 归档的微软官方 Hotmail 迁移技术案例研究总览章（原 Technet 文档）；exa web_fetch 实取 2026-11-18（official_doc／L3）
+- **数据库**：新建 ref（2026-11-18 Task 8.2 V71—V75 线 supp-V71-b034；source_url 四键查重无重合）
+- **source_url**：https://learn.microsoft.com/en-us/previous-versions/tn-archive/bb496985(v=technet.10)
+- **quote（逐字）**：其一：The original builders of the application created a two-tier architecture built around various UNIX systems. FreeBSD, a UNIX-like system similar to the Linux operating system, was used to run the front-end Web servers that handled login, Microsoft Outlook Express, and Web-based content delivery tasks. The current network of more than 5,000 servers is organized into about a dozen clusters; each consisting of front-end servers linked to data storage machines. 其二：During June and July of 2000, the Hotmail site was converted from FreeBSD running Apache Web services to Windows 2000 Server running Microsoft Internet Information Services 5.0. The purpose of this technical case study is to describe how that migration was accomplished. The technical case study and the actual process of migration are broken down into three distinct stages, specifically: planning, deploying, and operating. 其三：Hotmail chose Microsoft Windows 2000 Server to keep pace with this applications vital need for greater performance, increased scalability, foreign language support, and shorter development cycles.（其三原文 "this applications vital need" 缺撇号，微软原文照录）
+- **考据注**：三句分别支撑 V71.3.12.1（两层架构与 5,000 服务器／约 12 集群构成）、V71.3.12.4（三阶段分期）、V71.3.12.5（官方战略口径句，与 Brooks 白皮书工程代价评价句对置）。页面归档元数据 ms.date 2007-12-05、updated_at 2022-01-21，内容为 2000—2001 年迁移动态的官方追记
+- **本批落点**：V71.3.12.1 第 1 块／V71.3.12.4 第 1 块／V71.3.12.5 第 2 块
+- **考据日期**：2026-11-18（Task 8.2 V71—V75 线 supp-V71-b034；official_doc／L3）

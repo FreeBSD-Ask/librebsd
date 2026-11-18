@@ -1,0 +1,64 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V60.1.1.4	文档集分发清单的构成	ref_title	10462	10462	0.228	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V60.1.1.4	文档集分发清单的构成	ref_title	10463	10463	0.228	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V60.1.1.4	文档集分发清单的构成	ref_title	10464	10464	0.228	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V60.1.1.4	文档集分发清单的构成	ref_title	10519	10519	0.228	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V60.1.2.4	随发行交付的文档名录	ref_title	5539	5539	0.278	C	rc.d(8) 手册页与 Mewburn USENIX 2001 论文（Mewburn 为 rc.d 设计者） 2001	可推	文献线索（须核全文再定 D1/D2）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-011950		1.60	A	[L4] 4.4BSD-Alpha 发布信：Encumbered 与可自由再分发的 4.4BSD-Lite 双轨计划首次完整表述（Lite 沿用网络版许可模式）	可推	claim 复用（先库后网，不重复建）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-000402		1.60	A	[L3] 1991 年 6 月，CSRG 发布 Networking Release 2（Net/2），为不含 AT&T 专有内核文件、可自由再分发的近乎完整操作系统。	可推	claim 复用（先库后网，不重复建）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-000401		1.60	A	[L3] 1989 年 6 月，伯克利在 BSD 许可证下发布 Networking Release 1（Net/1），这是第一个可自由再分发的 BSD 版本。	可推	claim 复用（先库后网，不重复建）
+V60.1.5.4	自由再分发的条件	claim	CL-4-101		1.60	A	[L4] OpenBSD 严格区分固件许可证——可自由再分发的固件纳入 base 系统，许可证不兼容的固件另行单独分发。	可推	claim 复用（先库后网，不重复建）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-011953		1.30	A	[L4] 4.4BSD-Lite 发布信：USL 与加州大学就 Net/2 达成和解、可免许可自由再分发、强烈建议以 Lite 替换全部 Net/2 代码、1000 美元	可推	claim 复用（先库后网，不重复建）
+V60.1.5.4	自由再分发的条件	claim	CL-RM-011949		1.30	A	[L4] CSRG 解散公告（McKusick/Bostic）：筹资艰难、厂商自建研究组、BSD 自由再分发致销量下降、Karels 离开致低于临界规模，最终版后关闭	可推	claim 复用（先库后网，不重复建）
+V60.10.2.2	立项动机的项目首页原文	ref_title	10509	10509	0.348	B	DragonFly BSD 项目首页 DragonFly BSD Project 2026	可推	文献线索（须核全文再定 D1/D2）
+V60.11.1.4	文档工具的系统内嵌	fulltext_fact	kf-bell-10022-719	10022	0.232	C	G. H. Mealy和G. J. Hansen为IBM 704构建了Bell Operating System (BESYS)	可推	全文补证候选（S1 命中即复用，D1 型）
+V60.11.2.5	替换旧工具的动因说明	ref_title	10166	10166	0.301	B	libbe/bectl 2017 项目说明（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V60.11.3.2	清理幅度的记录缺环	sacred	2107		0.260	C	技术基础设施与平台支持	可推	史观参照（不作证据，仅定题面归属）
+V60.12.5.1	bmake 分支的立项线索	ref_title	5817	5817	0.312	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.12.7.4	工具生命周期的分化	claim	CL-RM-010329		1.10	A	[L4] 2026 年 Dave Cottlehuber 提出将默认 Erlang 升至 OTP28、退役不受上游支持的 OTP21-26 并移除六年未更的 leofs——语言栈生命周期的最新一幕	可推	claim 复用（先库后网，不重复建）
+V60.12.7.4	工具生命周期的分化	claim	CL-RM-010142		1.10	A	[L4] 2014 年 3 月列表关闭提案：netbsd-desktop 最后非垃圾流量止于 2012，拟并入 netbsd-users/pkgsrc-users——桌面专项列表五年生命周期的终点记录	可推	claim 复用（先库后网，不重复建）
+V60.12.7.5	现代工具链中的席位	claim	CL-RM-010264		1.30	A	[L4] 2005 年 m88k ELF 二进制链接里程碑达成——该架构从 a.out 时代向现代工具链迁移的关键节点（同期 GCC m88k 支持存续之问）	可推	claim 复用（先库后网，不重复建）
+V60.13.2.4	语言平台起步的记载	ref_title	5817	5817	0.272	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.14.11.3	错位的典型个案对照	claim	CL-RM-010286		1.10	A	[L4] 2001 年 1 月俄罗斯开发者 Nikolai Saoukh 公开求问'有人有 commit 权吗？我的补丁袋越来越鼓'——外围贡献者因 commit 权缺位而受阻的典型个案（后续自述'缺 committer 配合拖延	可推	claim 复用（先库后网，不重复建）
+V60.14.6.1	重写的触发条件判定	fulltext_summary	91	91	0.231	C	Let’s make manuals more useful! Tutorial on software documentation EuroBSDCon 2014, September 26, Soﬁa Ingo Schwarze <sc	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	4	4	0.253	C	The UNIX- HATERS Handbook The UNIX- HATERS Handbook “Two of the most famous products of Berkeley are LSD and Unix. I don	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	93	93	0.253	C	Making make parallel - legacy code nightmare Marc Espie <espie@openbsd.org> September 27, 2014 Marc Espie <espie@openbsd	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	99	99	0.253	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	122	122	0.253	C	Welcome to the BSDCon/Euro 2023 presentation program. (I)ntroduce, (O)verview or (P)resent? i Setup a user? (enter a low	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	128	128	0.253	C	Dave Voutila <dv@openbsd.org>, EuroBSDCon 2024 OpenBSD’s vmd(8) Hypervisor & Multi-processing — 2 Years Later fork& exec	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	130	130	0.253	C	DPB: One protocol to build them all Marc Espie <espie@openbsd.org>, <marc.espie@epita.fr> September 27, 2025 Marc Espie 	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	131	131	0.253	C	We choose to do the things, not because they are easy... We choose to do the things, not because they are easy... but be	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	138	138	0.253	C	by Claudio Jeker OpenBGPD bringing full views to OpenBSD since 2004 OpenBGPD was after OpenSSH the second “subproject” d	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	155	155	0.253	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	198	198	0.253	C	12 Incremental and Decentralized Integration in FreeBSD Niels Jørgensen There is a tremendous sense of satisfaction to t	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	736	736	0.253	C	A Carrier-Grade L2BSA Gateway with Netgraph Lutz Donnerhacke IKS Service GmbH Personal background • Grown up with a C64 	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	791	791	0.253	C	MICHEL FOUCAULT SURVEILLER ET PUNIR NAISSANCE DE LA PRISON GALLIMARD - 1975 ------------------------------------------- 	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	794	794	0.253	C	Edited by Michel Senellart General Editors: François Ewald and Alessandro Fontana English Series Editor: Arnold I. David	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	805	805	0.253	C	Kragen - 1 Silicon Snake Oil -- Second Thoughts On The Information Highway Clifford Stoll (New York, 1995) Reviewed by K	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	810	810	0.253	C	/* You are not expected to understand this */ if (rp -> p_flag & SSWAP) { rp -> p_flag =& -SSWAP; aretu (u.u_eeav); ) li	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	835	835	0.253	C	DESIGNING BSD ROOTKITS Author: Joseph Kong Number of Pages: 144 pages Published Date: 01 Apr 2007 Publisher: No Starch P	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	838	838	0.253	C	THE DAEMON, THE GNU, AND THE PENGUIN Author: Peter H. Salus, Jeremy C. Reed, Jon Hall Number of Pages: 204 pages Publish	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	839	839	0.253	C	Page 1 39th Edition James Joyce Ramble 10K April 28, 2024 10 Kilometers (USATF Certified #MA24006JK) Dedham, MA Timing B	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	872	872	0.253	C	Programming Techniques S.L. Rivest* Editors A Method for Obtaining Digital Signatures and Public- Key Cryptosystems R. A	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.7.2	分支命名样本的成因	fulltext_summary	879	879	0.253	C	by @z Bentley programming pearls LITTLE LANGUAGES When you say “language,” most programmers think of the big ones, like 	可推	全文综述候选（D1 型，核对原文后落块）
+V60.14.8.3	用户迁移的缓冲期	sacred	2741		0.236	C	4.1 Windows 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V60.14.8.3	用户迁移的缓冲期	sacred	2885		0.236	C	4.2 Linux 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V60.14.8.3	用户迁移的缓冲期	sacred	3032		0.236	C	4.3 macOS 用户迁移指南	可推	史观参照（不作证据，仅定题面归属）
+V60.2.1.2	行编辑与显示编辑的分工	fulltext_fact	kf-tb3-3687-000	3687	0.249	C	ged 一手文档：ged 是交互图形编辑器，用于在 Tektronix 4010 系列显示终端上显示、编辑与构造图形。	可推	全文补证候选（S1 命中即复用，D1 型）
+V60.2.2.1	屏幕作为文件的窗口	claim	CL-2-007		0.90	A	[L4] vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口。	可推	claim 复用（先库后网，不重复建）
+V60.2.3.4	标准文本编辑器的规格承接	claim	CL-2-007		1.10	A	[L4] vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口。	可推	claim 复用（先库后网，不重复建）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-015241		1.20	A	[L4] Dillon 定位 6/15 panic 根因：callout timer 模块用 SI_SUB_CPU/SI_ORDER_FIRST 初始化，与初始化序列冲突。	可推	claim 复用（先库后网，不重复建）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-016960		0.90	A	[L3] Rui Paulo 评审 RMI 处理器 SMP 初始补丁（C. Jayachandran 提供）：32 CPU 可进 multi-user、HEAD 更新前 buildworld 可成（现 HEAD 有挂起待查）；请 	可推	claim 复用（先库后网，不重复建）
+V60.3.4.5	作业控制与 shell 的绑定	claim	CL-2-006		1.30	A	[L4] csh 的历史机制源于 Michael Ubell 的关键观察与原型实现，Eric Allman 提供评论，Mike O'Brien 建议路径名哈希机制，Jim Kulp 添加作业控制与目录栈原语。	可推	claim 复用（先库后网，不重复建）
+V60.3.6.2	语法甜度与可移植性的权衡	claim	CL-RM-015565		0.80	A	[L3] Thor Simon 追问：AF_LOCAL 套接字为何不在最后 close 时从文件系统删除（所有系统上都发生 second socket bind failed 演示）——Unix 域套接字文件生命周期语义与可移植性	可推	claim 复用（先库后网，不重复建）
+V60.3.6.2	语法甜度与可移植性的权衡	claim	CL-RM-014174		0.70	A	[L4] 指 Yale Scheme 衍生版 T 已移植 Apollo/VAX Unix/VMS，效率与可移植性佳	可推	claim 复用（先库后网，不重复建）
+V60.4.2.1	能力数据库的文本格式	claim	CL-2-009		1.10	A	[L4] curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上。	可推	claim 复用（先库后网，不重复建）
+V60.5.4.2	往返时延的测量口径	claim	CL-RM-057804		1.30	A	[L4] 给出两台 3/50 与 3/60 上数据报往返时延的实测曲线与拐点	可推	claim 复用（先库后网，不重复建）
+V60.6.2.2	别名与转发的初版手册	fulltext_summary	60	60	0.305	B	FreeBSD Handbook Abstract Welcome to FreeBSD! This handbook covers the installation and day to day use of FreeBSD 15.0- 	可推	全文综述候选（D1 型，核对原文后落块）
+V60.6.4.1	宏处理器充当配置语汇	fulltext_fact	kf-tb3-3680-000	3680	0.223	C	M4 宏处理器 一手文档：由 Brian W. Kernighan 与 Dennis M. Ritchie 在 Bell Laboratories 合著。	可推	全文补证候选（S1 命中即复用，D1 型）
+V60.7.1.5	名称缩写的项目文档	ref_title	5817	5817	0.346	B	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.7.7.2	替代解析器的打包记录	ref_title	5817	5817	0.296	C	T. E. (1993-1996) ncurses 项目文档 1993	可推	文献线索（须核全文再定 D1/D2）
+V60.7.7.4	许可变更的公告原件	ref_title	5693	5693	0.229	C	Foundation 2006-04-05 PRWeb 公告原文 2006	可推	文献线索（须核全文再定 D1/D2）
+V60.8.3.4	套接字继承的副作用	claim	CL-RM-021706		1.10	B	[L4] John Cowan 总结 V7 mpx 为未获 BSD 与 System V 继承的不雅补丁、早于命名管道与套接字	可推	claim 复用（先库后网，不重复建）
+V60.8.8.5	管理工具的淘汰节奏	claim	CL-RM-010722		1.30	A	[L4] 1998 年 2 月 Ruslan Shevchenko 发布其管理系统 TCL API——FreeBSD 社区第三方 GUI 管理工具的当事人交付。	可推	claim 复用（先库后网，不重复建）
+V60.9.1.3	主机密钥的信任模型	claim	CL-RM-010582		1.30	A	[L4] 2012 年 9 月 Taylor R Campbell 报告 NetBSD 6.0_RC1 首次启动默认生成主机密钥的缺陷——默认 sshd 主机密钥生成的一次工程审查。	可推	claim 复用（先库后网，不重复建）

@@ -46,3 +46,15 @@
 15. [1.4.3 用] The actions of the Internet Worm exposed some specific security flaws in standard services provided by BSD-derived versions of UNIX.
 
 16. [1.4.4 用] Although UNIX has long been known to have some security weaknesses (cf. [Ritc79], [Gram84], and [Reid87]), the scope of the breakins came as a great surprise to almost everyone.
+
+## b005 追加引文池（2026-11-18 V61 b005 取用，同源异句异锚）
+
+17. [1.5.1 用] 8b) The attack via the finger daemon was somewhat more subtle. A connection was established to the remote finger server daemon and then a specially constructed string of 536 bytes was passed to the daemon, overflowing its input buffer and overwriting parts of the stack.
+
+18. [1.5.2 用，自 the overflow 起句以避 com-puters 断词] the overflow resulted in the return stack frame for the main routine being changed so that the return address pointed into the buffer on the stack
+
+19. [1.5.3 用] The debug option of sendmail is often used because of the complexity of configuring the mailer for local conditions, and many vendors and site administrators leave the debug option compiled in.
+
+20. [1.5.5 用] An important step in removing this hazard would be first to develop a set of replacement calls that accept values for bounds on their program-supplied buffer arguments.
+
+21. [1.5.6 用，止于 program 以避脚注号 3] From this, I can conclude with some certainty that if there was only one version of the worm program

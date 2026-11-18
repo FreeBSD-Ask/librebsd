@@ -19,12 +19,12 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 61	1	1.4	1.4.3	实现错误的两处归并	filled	
 61	1	1.4	1.4.4	漏洞不可避免性的判断	filled	
 61	1	1.4	1.4.5	事件之后的制度需求	filled	
-61	1	1.5	1.5.1	三条入站途径的技术构成	skeleton	
-61	1	1.5	1.5.2	gets 越界与栈上执行	skeleton	
-61	1	1.5	1.5.3	sendmail 调试命令的滥用	skeleton	
-61	1	1.5	1.5.4	口令猜测的字典策略	skeleton	
-61	1	1.5	1.5.5	已知漏洞清单的事后整理	skeleton	
-61	1	1.5	1.5.6	事后结论的不确定性表述	skeleton	
+61	1	1.5	1.5.1	三条入站途径的技术构成	filled	
+61	1	1.5	1.5.2	gets 越界与栈上执行	filled	
+61	1	1.5	1.5.3	sendmail 调试命令的滥用	filled	
+61	1	1.5	1.5.4	口令猜测的字典策略	filled	
+61	1	1.5	1.5.5	已知漏洞清单的事后整理	filled	
+61	1	1.5	1.5.6	事后结论的不确定性表述	filled	
 61	1	1.6	1.6.1	受信主机表的默认放行	skeleton	
 61	1	1.6	1.6.2	rsh 与 rexec 的口令豁免	skeleton	
 61	1	1.6	1.6.3	服务程序的输入校验缺失	skeleton	

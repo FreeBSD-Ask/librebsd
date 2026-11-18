@@ -1,6 +1,6 @@
 # Funding a Revolution: Government Support for Computing Research（NRC，1999）引用卡
 
-> 用途：V11.4.4.4“采用之后的反馈回路”、4.4.5“传递模型的解释力”、4.4.6“因果表述的分寸与禁忌”内容补证（V11 补证批 b021）。库内 ref10403。
+> 用途：V11.4.4.4“采用之后的反馈回路”、4.4.5“传递模型的解释力”、4.4.6“因果表述的分寸与禁忌”内容补证（V11 补证批 b021）。库内 ref10407（2026-11-17 订正：原笔误作 ref10403，10403 实为 NetScaler 页）。
 
 ## 一、著录
 
@@ -203,3 +203,12 @@ Whirlwind 预算削减与项目濒危（1.3.4 容忍的限度）：
 > Conversely, NSF has provided continued support for projects that DARPA pioneered but was unwilling to sustain after the major research challenges were resolved.
 
 注：本段取 NAP 开放章节页 chapter/2（Executive Summary），访问日 2026-11-17；与既有 chapter/7（Chapter 5）取段不重叠。
+
+
+## b015 追加引文（V02.2.1.5，2026-11-17）
+
+ONR／NSF 的多元资助渠道：同行评议、研究生奖学金与设备经费（2.1.5 用）：
+
+> The Office of Naval Research (ONR) and NSF, in contrast, have supported individual researchers at a more diverse set of institutions. They have awarded numerous peer-review grants to individual researchers, especially in universities. NSF has also been active in supporting educational and research needs more broadly, awarding graduate student fellowships and providing funding for research equipment and infrastructure.
+
+注：本段取 NAP 开放章节页 chapter/2（Executive Summary），访问日 2026-11-17（nap.edu 直连循环重定向，exa 文本层取文，引文逐字录入）；与 b041 的 chapter/2 取段（延续资助句）不重叠。

@@ -27,6 +27,9 @@ C 字符 C1–C3／C5–C9（中英空格、直角引号、ASCII 句读、空白
    技术义「失败」（构建／装载／校验失败等及「失败日志」类技术对象形态）白名单豁免，见
    TECH_FAIL_RE（2026-11-04 P7-1）；
    理论腔词披露不拦；C8 去 AI 味：空转词硬拦、同卷同尾簇 ≤3、单题「的」≤2、AI 腔词披露不拦；
+   C8d／C8e 去公式化（2026-11-19 立注册表驱动，164 号文）：同卷含「的」题占比 ≤60％、
+   8—12 字题占比 ≤60％——retitle-progress.tsv 登记卷态，drafted／approved／landed 硬拦，
+   pending（含未登记卷）只披露不拦，过渡期不染红未重拟卷；
    C9 禁反斜杠与控制字符——2026-11-04 由原「C4」重编，与规则 C4（官方名斜杠两分，
    由第四十一件承载）脱钩对齐（G-01），本判据语义不变）
 D 语义 S1–S4 的可机读下限（题旨非空、层级一致、同节平行、异质登记；
@@ -134,6 +137,15 @@ REVIEW_TERMS = ("叙事", "话语", "互构", "建构", "解构", "范式", "语
 # C8 去 AI 味（2026-10-30 ykla 令“标题风格应一致，去 AI 味的同时保持学术性”）：
 # 硬拦 AI 高频空转词、同卷结尾二字簇超限、单题「的」超密；临界词只披露防误杀。
 BANNED_AI = ("赋能", "抓手", "闭环", "颗粒度", "锚点", "景深", "温差", "样态")
+# C8d／C8e 去公式化（2026-11-19 ykla 令全量重拟小节标题，164 号文）。旧面实测
+# （2026-11-19 盘点）：全库 19 363 题 95.6％ 含「的」、93.6％ 挤在 8—12 字；节题对照
+# 含「的」49.8％、8—12 字仅 21.9％。阈值取节题样态外推，按卷计；不设卷段豁免。
+C8D_DE_RATIO_CAP = 0.60    # C8d：同卷含「的」题占比上限
+C8E_BAND_RATIO_CAP = 0.60  # C8e：同卷 8—12 字题占比上限
+# 重拟进度注册表：标题战役卷态唯一机读源（164 号文 §六）。缺文件或缺行＝pending。
+RETITLE_REG = "retitle-progress.tsv"
+RETITLE_HDR = ["vol", "status", "batch_tag", "updated", "note"]
+RETITLE_ENFORCE = ("drafted", "approved", "landed")
 _CN_DIGIT = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5,
              "六": 6, "七": 7, "八": 8, "九": 9}
 
@@ -466,6 +478,60 @@ def run(root, collect=None):
                for _, _, r in all_rows if r["title"].count("的") > 2]
     f("C8c", "C8c 单题“的”字 ≤2（去 AI 味）", bad_c8c,
       "超限 %d 处：%s" % (len(bad_c8c), "、".join(bad_c8c[:5]) or "无"))
+
+    # C8d／C8e 去公式化（2026-11-19 立，164 号文；注册表驱动）。drafted 及以后硬拦，
+    # pending（含未登记卷）只披露——过渡期不染红未重拟卷；不设卷段豁免。
+    rreg_path = os.path.join(design_dir, RETITLE_REG)
+    rreg = {}
+    if os.path.isfile(rreg_path):
+        rhdr, rbody = _rows(rreg_path)
+        if rhdr is not None:
+            if rhdr != RETITLE_HDR:
+                raise ValueError("retitle-progress.tsv 表头不合 schema：%s" % rhdr)
+            for c in rbody:
+                if len(c) >= 2 and c[0].strip():
+                    rreg[c[0].strip()] = c[1].strip()
+    vol_group = {}
+    for vol, ln, r in all_rows:
+        vol_group.setdefault(vol, []).append(r)
+
+    bad_c8d, info_c8d = [], []
+    for vol in sorted(vol_group):
+        rs = vol_group[vol]
+        de = sum(1 for r in rs if "的" in r["title"])
+        ratio = de / len(rs)
+        item = "V%s（的题 %d/%d＝%.1f%%）" % (vol, de, len(rs), ratio * 100)
+        if ratio > C8D_DE_RATIO_CAP:
+            if rreg.get(vol, "pending") in RETITLE_ENFORCE:
+                bad_c8d.append(item)
+            else:
+                info_c8d.append(item)
+    if bad_c8d:
+        f("C8d", "C8d 去公式化：同卷含「的」题占比 ≤60%（重拟卷硬拦）", bad_c8d,
+          "超限卷 %d：%s" % (len(bad_c8d), "、".join(bad_c8d[:6])))
+    else:
+        rec("C8d", "C8d 去公式化：同卷含「的」题占比 ≤60%", True,
+            "达标或仅待重拟卷披露 %d：%s" % (len(info_c8d), "、".join(info_c8d[:6]) or "无"),
+            items=info_c8d)
+
+    bad_c8e, info_c8e = [], []
+    for vol in sorted(vol_group):
+        rs = vol_group[vol]
+        band = sum(1 for r in rs if 8 <= _title_len(r["title"]) <= 12)
+        ratio = band / len(rs)
+        item = "V%s（8—12 字题 %d/%d＝%.1f%%）" % (vol, band, len(rs), ratio * 100)
+        if ratio > C8E_BAND_RATIO_CAP:
+            if rreg.get(vol, "pending") in RETITLE_ENFORCE:
+                bad_c8e.append(item)
+            else:
+                info_c8e.append(item)
+    if bad_c8e:
+        f("C8e", "C8e 去公式化：同卷 8—12 字题占比 ≤60%（重拟卷硬拦）", bad_c8e,
+          "超限卷 %d：%s" % (len(bad_c8e), "、".join(bad_c8e[:6])))
+    else:
+        rec("C8e", "C8e 去公式化：同卷 8—12 字题占比 ≤60%", True,
+            "达标或仅待重拟卷披露 %d：%s" % (len(info_c8e), "、".join(info_c8e[:6]) or "无"),
+            items=info_c8e)
 
     info_c8 = ["%s（%s）" % (r["subsection_id"], "、".join(w for w in REVIEW_AI if w in r["title"]))
                for _, _, r in all_rows if any(w in r["title"] for w in REVIEW_AI)]
@@ -836,7 +902,8 @@ def cmd_selftest():
     C8a／C8b／C8c／F2／F3／G1／H1／A2／A3／D1／G2／H2／H3，另含 B7 全角括号内
     ASCII 连字符（G-19）、D3 V01–V50 豁免（EXEMPT 且 B2 照判不外溢，G-02）与
     D3 V51+ 照判两组豁免用例；正例含「偶然性与必然性」辩证合法用例与 B7 U+2014
-    正形各一（零误报）。
+    正形各一（零误报）；2026-11-19 增 C8d／C8e 注册表驱动三态（drafted 硬拦／
+    pending 披露／达标卷零 FAIL）四例。
     """
     good = ["自动计算的观念源流", "差分机与通用计算的分离", "形式化纲领的边界"]
     TAB = "\t"
@@ -1038,6 +1105,55 @@ def cmd_selftest():
         ok_exc = False
     cases.append(("例外台账扩展两列兼容（registered_date／date_src 不判 schema 违约）",
                   ok_exc, "期望 I2 非法 0 且例外行数计入 1"))
+
+    # ---- 2026-11-19 增补（164 号文全量重拟战役前置批）：C8d／C8e 注册表驱动三态
+    def _rreg(troot, rows):
+        rd = os.path.join(troot, "05-卷册大纲", "映射", "title-design")
+        w(os.path.join(rd, RETITLE_REG),
+          TAB.join(RETITLE_HDR) + "\n" +
+          "".join(TAB.join(r) + "\n" for r in rows))
+
+    # C8d 硬拦：V61 drafted、11 题中 10 题含「的」（90.9%＞60%）。
+    de_titles = ["创始者名单的早期在场", "移植进展的硬件依赖", "分叉前夜的补丁分歧",
+                 "早期记录的邮件基座", "承接卷的年代界标", "许可文本的传抄网络",
+                 "会议演示的现场反应", "用户名册的登记缺口", "合同文本的交付边界",
+                 "报告封面的编号序列", "许可协定与授权实践"]
+    t2 = build("61", de_titles, sources=src3)
+    _rreg(t2, [["61", "drafted", "", "2026-11-19", ""]])
+    r2 = run(t2)
+    ok_c8d = any((not ok) and c == "C8d" for c, _, ok, _ in r2)
+    cases.append(("C8d 重拟卷硬拦（V61 drafted 的题 90.9%）", ok_c8d, "期望命中 C8d"))
+
+    # C8e 硬拦：V62 drafted、11 题中 10 题挤 8—12 字（90.9%＞60%），的题 0 不触 C8d。
+    band_titles = ["提交者名录与权责", "邮件基座与拼接复原", "补丁质量与合入门槛",
+                   "硬件捐赠与移植节奏", "许可文本与传抄网络", "演示现场与用户反应",
+                   "名册登记与缺口披露", "交付边界与合同文本", "编号序列与封面版式",
+                   "年表界标与承接范围", long_t]
+    t2 = build("62", band_titles, sources=src3)
+    _rreg(t2, [["62", "drafted", "", "2026-11-19", ""]])
+    r2 = run(t2)
+    ok_c8e = (any((not ok) and c == "C8e" for c, _, ok, _ in r2)
+              and all(c != "C8d" or ok for c, _, ok, _ in r2))
+    cases.append(("C8e 重拟卷硬拦（V62 drafted 8—12 字题 90.9%，C8d 不误报）", ok_c8e,
+                  "期望命中 C8e 且 C8d 达标"))
+
+    # pending 只披露：同 V62 题面、无注册文件 → C8d／C8e 均不拦退出码。
+    t2 = build("62", band_titles, sources=src3)
+    r2 = run(t2)
+    ok_pen = all(ok is not False for c, _, ok, _ in r2 if c in ("C8d", "C8e"))
+    cases.append(("C8d／C8e pending 只披露（V62 未登记不拦）", ok_pen,
+                  "期望两判据均不 FAIL"))
+
+    # 达标卷 drafted 零 FAIL：V63 五题（的 40%、带外 40%），注册 drafted。
+    ok_titles = ["许可文本的传抄网络", "提交者名录与权责",
+                 "从早期分时系统到个人工作站", "邮件基座与拼接复原",
+                 "补丁质量与合入门槛的争论经过"]
+    t2 = build("63", ok_titles, sources=src3)
+    _rreg(t2, [["V63", "drafted", "", "2026-11-19", ""]])
+    rows = run(t2)
+    n_fail = sum(1 for _, _, ok, _ in rows if not ok)
+    cases.append(("C8d／C8e 达标卷（V63 drafted，的 40%／带外 40%，零 FAIL）",
+                  n_fail == 0, "FAIL=%d" % n_fail))
 
     # ---- 2026-11-05 P7-4 自检：J 组节题层判定面（V68 范围，夹具自带 outline.txt）
     def _write_jreg(troot, row):

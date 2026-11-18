@@ -1,0 +1,17 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V57.1.6.3	版权声明保留的分发前提	claim	CL-RM-012789		1.20	B	[L5] 2009 年 11 月，Tony Finch 将 Linux 内核 scripts/unifdef.c 更新至其上游 1.190 版，补丁 diff 显示旧版文件头保留 Berkeley 8.1（1993-06-06）、	可推	claim 复用（先库后网，不重复建）
+V57.2.2.2	服务端转向的公告缺口	ref_title	10400	10400	0.245	C	DragonFly Design Goals（2007-03-18 网页存档） DragonFly BSD Project 2007	可推	文献线索（须核全文再定 D1/D2）
+V57.2.2.4	用户空间实验的清单缺口	ref_title	10400	10400	0.261	C	DragonFly Design Goals（2007-03-18 网页存档） DragonFly BSD Project 2007	可推	文献线索（须核全文再定 D1/D2）
+V57.2.3.5	桌面衍生的终止实例	ref_title	10400	10400	0.254	C	DragonFly Design Goals（2007-03-18 网页存档） DragonFly BSD Project 2007	可推	文献线索（须核全文再定 D1/D2）
+V57.4.1.5	防火墙系统的许可选择	fulltext_summary	190	190	0.258	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V57.6.1.1	终止公告的三种体裁	claim	CL-RM-010635		1.30	A	[L4] 2022 年 3 月 FreeBSD Security Officer 用测试列表测试 12.2 生命周期终止公告的多 MIME 格式——安全公告基础设施测试的当事人记录。	可推	claim 复用（先库后网，不重复建）
+V57.7.1.2	内核与用户空间的配对	claim	CL-7-010		1.30	A	[L4] Yarrow PRNG 由 Mark R. V. Murray 为 FreeBSD 实现，用于解决内核与用户态随机数熵源问题。	可推	claim 复用（先库后网，不重复建）
+V57.7.1.2	内核与用户空间的配对	claim	CL-6-103		1.10	A	[L4] 2024 年 6 月，FreeBSD Foundation 委托 Alpha-Omega 项目赞助的代码审计覆盖 bhyve 与 Capsicum 两大子系统，由攻击性安全公司 Synacktiv 执行，发现可导致内核与	可推	claim 复用（先库后网，不重复建）
+V57.7.2.3	嵌入式构建框架的定位	claim	CL-RM-010685		0.90	A	[L4] 2015 年 1 月 Gerald Pfeifer 提交补丁消除 Uses/fortran.mk 中 lang/gcc 版本的硬编码——FreeBSD Fortran 构建框架的去硬编码工作。	可推	claim 复用（先库后网，不重复建）
+V57.8.1.2	可接受许可的清单	ref_title	10083	10083	0.221	C	Melange GSoC2014 接受项目列表 (Wayback)（Wayback 20150220093820；capture=wayback） 2014	可推	文献线索（须核全文再定 D1/D2）
+V57.8.1.2	可接受许可的清单	ref_title	10085	10085	0.221	C	Melange GSoC2013 接受项目列表（Wayback 20130607110904；capture=wayback） 2013	可推	文献线索（须核全文再定 D1/D2）
+V57.8.1.2	可接受许可的清单	ref_title	10087	10087	0.221	C	Melange GSoC2012 接受项目列表（Wayback 20120428203144；capture=wayback） 2012	可推	文献线索（须核全文再定 D1/D2）
+V57.8.1.2	可接受许可的清单	ref_title	10089	10089	0.221	C	Melange GSoC2011 接受项目列表（Wayback 20120105181344；capture=wayback） 2011	可推	文献线索（须核全文再定 D1/D2）
+V57.8.1.2	可接受许可的清单	ref_title	10091	10091	0.221	C	Melange GSoC2010 接受项目列表（Wayback 20150905173753；capture=wayback） 2010	可推	文献线索（须核全文再定 D1/D2）
+V57.8.1.3	新增代码的权利归属	claim	CL-4-115		1.10	A	[L4] SCO Group 知识产权许可证明确不授予任何形式下访问、使用、修改或分发任何 SCO 源代码的权利。	可推	claim 复用（先库后网，不重复建）
+V57.8.2.1	4.4BSD 基底的分发形态	claim	CL-RM-011116		1.10	A	[L4] 2000年9月18日John Baldwin通报将发布仅限网络的4.1.1版本（FTP与可下载ISO），是FreeBSD首次尝试net-only release的分发形态变革。	可推	claim 复用（先库后网，不重复建）

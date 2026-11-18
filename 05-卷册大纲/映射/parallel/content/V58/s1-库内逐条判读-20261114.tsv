@@ -1,0 +1,69 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V58.1.1.4	商业计划的执笔角色	ref_title	10439	10439	0.222	C	Northern Pacific Railway Co. v. United States, 356 U.S. 1 (1958) Supreme Court of the United States（Black, J. 执笔） 1958	可推	文献线索（须核全文再定 D1/D2）
+V58.1.1.4	商业计划的执笔角色	ref_title	10440	10440	0.222	C	Board of Trade of City of Chicago v. United States, 246 U.S. 231 (1918) Supreme Court of the United States（Brandeis, J. 	可推	文献线索（须核全文再定 D1/D2）
+V58.1.2.2	个人计算机革命的入口叙述	claim	CL-1-112		1.70	A	[L3] 计算机史常按机器设计世代分期——大型机世代、小型机时代、个人计算机革命。	可推	claim 复用（先库后网，不重复建）
+V58.1.2.2	个人计算机革命的入口叙述	claim	CL-RM-010980		1.30	A	[L4] Kazuhisa Shimizu 宣布其友 Masaru Oki 已将 NetBSD 移植至 SHARP X68030 个人计算机并由 Masanobu Saito 开设匿名 FTP 站点分发，是日本硬件社区对 NetB	可推	claim 复用（先库后网，不重复建）
+V58.1.3.4	四分之一售价与普及取向	fulltext_fact	kf-bell-10024-848	10024	0.233	C	N2 系统功耗约为 N1 系统的四分之一	可推	全文补证候选（S1 命中即复用，D1 型）
+V58.2.3.1	Mach 内核的调度职责	ref_title	10508	10508	0.236	C	msgport(9) — LWKT 消息传递接口 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.2.6.2	BSD 子系统的首次商用	fulltext_fact	kf-bell-10020-349	10020	0.235	C	No. 1 ESS于1965年首次投入商用服务	可推	全文补证候选（S1 命中即复用，D1 型）
+V58.3.3.1	用户空间构成清单的缺漏	ref_title	10462	10462	0.275	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.1	用户空间构成清单的缺漏	ref_title	10463	10463	0.275	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.1	用户空间构成清单的缺漏	ref_title	10464	10464	0.275	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.1	用户空间构成清单的缺漏	ref_title	10519	10519	0.275	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.2	目标文件格式的切换	ref_title	10431	10431	0.221	C	jail.conf(5) — FreeBSD 文件格式手册页 The FreeBSD Project 2026	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.2	目标文件格式的切换	claim	CL-RM-010203		1.60	A	[L4] 2001 年 3 月 NetBSD/news68k 默认目标文件格式切换为 ELF（含 X sets 的快照与升级说明一并发布）——m68k 系端口 a.out→ELF 迁移的节点	可推	claim 复用（先库后网，不重复建）
+V58.3.3.3	POSIX 接口的覆盖范围	sacred	3057		0.321	B	覆盖范围	可推	史观参照（不作证据，仅定题面归属）
+V58.3.3.4	kdebug 血统文档的空缺	ref_title	10462	10462	0.230	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.4	kdebug 血统文档的空缺	ref_title	10463	10463	0.230	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.4	kdebug 血统文档的空缺	ref_title	10464	10464	0.230	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.4	kdebug 血统文档的空缺	ref_title	10519	10519	0.230	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.5	工具链差异表的待补	ref_title	10462	10462	0.252	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.5	工具链差异表的待补	ref_title	10463	10463	0.252	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.5	工具链差异表的待补	ref_title	10464	10464	0.252	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.3.3.5	工具链差异表的待补	ref_title	10519	10519	0.252	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.3.4.3	撤回后果的链条缺口	ref_title	10462	10462	0.231	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.3.4.3	撤回后果的链条缺口	ref_title	10463	10463	0.231	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.3.4.3	撤回后果的链条缺口	ref_title	10464	10464	0.231	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.3.4.3	撤回后果的链条缺口	ref_title	10519	10519	0.231	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.4	贡献流程条文的缺项	ref_title	10462	10462	0.243	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.4	贡献流程条文的缺项	ref_title	10463	10463	0.243	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.4	贡献流程条文的缺项	ref_title	10464	10464	0.243	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.4	贡献流程条文的缺项	ref_title	10519	10519	0.243	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.5	争议双方文本的待取证	ref_title	10462	10462	0.226	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.5	争议双方文本的待取证	ref_title	10463	10463	0.226	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.5	争议双方文本的待取证	ref_title	10464	10464	0.226	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.3.5.5	争议双方文本的待取证	ref_title	10519	10519	0.226	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.5.1.1	移动系统的内核基座	fulltext_summary	216	216	0.256	C	Mach: A New Kernel Foundation For UNIX Development Mike Accetta, Robert Baron, William Bolosky, David Golub, Richard Ras	可推	全文综述候选（D1 型，核对原文后落块）
+V58.5.2.5	调试接口的年表缺环	ref_title	10462	10462	0.270	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.5.2.5	调试接口的年表缺环	ref_title	10463	10463	0.270	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.5.2.5	调试接口的年表缺环	ref_title	10464	10464	0.270	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.5.2.5	调试接口的年表缺环	ref_title	10519	10519	0.270	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.6.3.2	Mach 层的保留理由	ref_title	10508	10508	0.248	C	msgport(9) — LWKT 消息传递接口 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.6.4.3	改造幅度的清单底册	ref_title	10462	10462	0.338	B	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.6.4.3	改造幅度的清单底册	ref_title	10463	10463	0.338	B	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.6.4.3	改造幅度的清单底册	ref_title	10464	10464	0.338	B	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.6.4.3	改造幅度的清单底册	ref_title	10519	10519	0.338	B	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.7.13.4	辨析边界的划定依据	ref_title	2663	2663	0.230	C	BSD Now EP278: McKusick Real McCoy 片段（2018） Marshall Kirk McKusick 2018	可推	文献线索（须核全文再定 D1/D2）
+V58.7.2.2	二进制分发的声明要求	claim	CL-RM-010333		1.30	A	[L4] 2018 年用户报告 stack 工具在 FreeBSD 上找不到 ghc-8.4.3 的 freebsd64 二进制分发——Haskell 工具链与 ports 体系衔接缺口的当事人样本	可推	claim 复用（先库后网，不重复建）
+V58.7.2.2	二进制分发的声明要求	claim	CL-RM-010290		1.30	A	[L3] 2004 年 cube（Quentin Garnier）立场被社区转引：'我们不维护二进制包，我们支持 50 种架构的 NetBSD'——pkgsrc 二进制分发定位之争（同期 GNUpg 打包疑问）	可推	claim 复用（先库后网，不重复建）
+V58.7.2.2	二进制分发的声明要求	claim	CL-RM-010235		1.10	B	[L4] 1998 年 11 月 Kazuki Sakamoto 发布 BeBox 移植二进制快照（含 tsubai 共享库补丁）——NetBSD/bebox 早期分发的节点	可推	claim 复用（先库后网，不重复建）
+V58.7.4.1	许可证契约的许可条款	sacred	2603		0.250	C	BSD 一条款许可证（The 1-Clause BSD License，BSD-1-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.4.1	许可证契约的许可条款	sacred	2609		0.243	C	BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.4.1	许可证契约的许可条款	sacred	2615		0.242	C	BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.4.1	许可证契约的许可条款	sacred	2621		0.231	C	BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.4.1	许可证契约的许可条款	sacred	2596		0.220	C	BSD 零条款许可证（Zero-Clause BSD，0BSD）	可推	史观参照（不作证据，仅定题面归属）
+V58.7.7.1	防火墙替换的时点	ref_title	10462	10462	0.234	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.7.7.1	防火墙替换的时点	ref_title	10463	10463	0.234	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.7.7.1	防火墙替换的时点	ref_title	10464	10464	0.234	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.7.7.1	防火墙替换的时点	ref_title	10519	10519	0.234	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.7.7.1	防火墙替换的时点	fulltext_summary	190	190	0.227	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.7.5	安全工具的取舍清单	fulltext_summary	190	190	0.270	C	Secure Internet Servers/Firewalls with Ian F. Darwin http://www.darwinsys.com http://www.openbsd.org What you will learn	可推	全文综述候选（D1 型，核对原文后落块）
+V58.7.9.2	代码交换的取证限度	ref_title	2663	2663	0.229	C	BSD Now EP278: McKusick Real McCoy 片段（2018） Marshall Kirk McKusick 2018	可推	文献线索（须核全文再定 D1/D2）
+V58.8.2.2	版本序列的年度制	ref_title	10462	10462	0.265	C	DragonFly BSD Release 3.8 发行说明 DragonFly BSD Project 2014	可推	文献线索（须核全文再定 D1/D2）
+V58.8.2.2	版本序列的年度制	ref_title	10463	10463	0.265	C	DragonFly BSD Release 3.6 发行说明 DragonFly BSD Project 2013	可推	文献线索（须核全文再定 D1/D2）
+V58.8.2.2	版本序列的年度制	ref_title	10464	10464	0.265	C	DragonFly BSD Release 2.4 发行说明 DragonFly BSD Project 2009	可推	文献线索（须核全文再定 D1/D2）
+V58.8.2.2	版本序列的年度制	ref_title	10519	10519	0.265	C	DragonFly BSD Release 2.0 发行说明 DragonFly BSD Project 2010	可推	文献线索（须核全文再定 D1/D2）
+V58.8.2.2	版本序列的年度制	claim	CL-RM-010284		1.30	A	[L4] 1999 年 9 月 oltr 驱动随 FreeBSD 3.3-RELEASE 发布但'未做宣传'——Token Ring 支持进入正式版本序列的低调里程碑	可推	claim 复用（先库后网，不重复建）
+V58.9.2.5	项目治理的结构安排	ref_title	10166	10166	0.334	B	libbe/bectl 2017 项目说明（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）
+V58.9.3.1	开发工具链的组成	claim	CL-6-201		1.20	B	[L3] pkgbase 的设计目标包括：对 RELEASE、STABLE 与 CURRENT 分支提供二进制升级、实现无需 sendmail 与工具链的细粒度安装、由 pkg(8) 处理配置文件更新、允许开发者向用户提供测试软件	可推	claim 复用（先库后网，不重复建）
+V58.9.3.4	脚本式能力的分寸	ref_title	10166	10166	0.303	B	libbe/bectl 2017 项目说明（capture=playwright） 2017	可推	文献线索（须核全文再定 D1/D2）

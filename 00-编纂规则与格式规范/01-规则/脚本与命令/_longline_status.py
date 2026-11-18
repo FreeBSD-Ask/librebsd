@@ -9,9 +9,10 @@ r"""全项目长线任务状态聚合器（**只读**）。
 🔴 本项目**禁止自动化**（2026-09-16 ykla 裁定）。本脚本**只读**，不触发任何后台执行、
 不写任何文件；其唯一用途是「人在场时一条命令看清全局」。
 
-🔴 本文件真身路径：`01-项目管理/01-编纂规划与报告归档/_longline_status.py`，**不在 `script/`**。
-登记表头部旧记 `script/_longline_status.py`（查无此文件），2026-10-09 已订正；旧备份目录
-`script/_backup_longline/` 已于 2026-10-23 旁路备份封禁令下清除，不再重建。
+🔴 本文件唯一真身路径：`00-编纂规则与格式规范/01-规则/脚本与命令/_longline_status.py`
+（2026-11-10 解释器基线切换时定稿于此；旧记 `01-项目管理/01-编纂规划与报告归档/` 与
+`script/` 两处均已失效）。旧备份目录 `script/_backup_longline/` 已于 2026-10-23 旁路备份
+封禁令下清除，不再重建。
 
 用法（cwd 任意，路径为仓库根相对）：
   "C:/Program Files/Python315/python.exe" 01-项目管理/01-编纂规划与报告归档/_longline_status.py              # 快档总表
@@ -736,6 +737,49 @@ def probe_title_design():
             "sources": srcs}
 
 
+def probe_ddj():
+    """DDJ 线（dvd6 期刊库：DDJ/CUJ/SA/TPJ 四刊，2026-11-17 立线）。
+
+    真值＝`dvd6/ddj/`（`/dvd6` 整目录 .gitignore 不入库）：`README.md` 为唯一工作真值台账；
+    填充层机读源＝`ddj_fill_work/manifest.json`×`results/` 批数对账＋`ddj_fill_work/state.json`
+    覆盖快照。覆盖数字（summaries／kf）以 state.json 为源——跑官方入口
+    `python work/_ddj_fill_status.py`（cwd=dvd6/ddj）即刷新；探针不读库（SMB 重，
+    且 dvd6 五库不在 12-数据库备份 SCOPE）。判读注册数（SRC-*→CL-21-*）在
+    historical_claims.duckdb，属 claim 库面，探针不读，以登记表 §二十散文为准。
+    """
+    base = _p("dvd6", "ddj")
+    if not os.path.isdir(base):
+        return probe_manual("dvd6/ddj 落点不可达（D: 与 UNC 均打不开）")
+    work = os.path.join(base, "ddj_fill_work")
+    man_p = os.path.join(work, "manifest.json")
+    st_p = os.path.join(work, "state.json")
+    if not (os.path.isfile(man_p) and os.path.isfile(st_p)):
+        return probe_manual("ddj_fill_work/manifest.json 或 state.json 缺失")
+    man = json.loads(_read(man_p))
+    st = json.loads(_read(st_p))
+    res_dir = os.path.join(work, "results")
+    res = set()
+    if os.path.isdir(res_dir):
+        res = {f[:-6] for f in os.listdir(res_dir) if f.endswith(".jsonl")}
+    done = len(set(man) & res)
+    pending = len(man) - done
+    tot_a = tot_s = tot_k = 0
+    for c in st.get("coverage", {}).values():
+        tot_a += c.get("articles", 0)
+        tot_s += c.get("summaries", 0)
+        tot_k += c.get("kf_articles", 0)
+    pct = 100.0 * tot_s / tot_a if tot_a else 0.0
+    return {"status": "ACTIVE",
+            "progress": "填充 %d/%d 批（%.1f%%）｜DB 覆盖 summaries %d/%d（%.2f%%）｜kf 篇 %d｜待判 %d 批"
+                        % (done, len(man), 100.0 * done / max(len(man), 1),
+                           tot_s, tot_a, pct, tot_k, pending),
+            "values": {"fill_batches_total": len(man), "fill_batches_done": done,
+                       "fill_batches_pending": pending, "articles": tot_a,
+                       "summaries": tot_s, "summary_pct": round(pct, 2),
+                       "kf_articles": tot_k},
+            "sources": [st_p, man_p, os.path.join(base, "README.md")]}
+
+
 # ---------------------------------------------------------------- 线定义
 LINES = [
     dict(id="usenet7", name="usenet 行级挖掘（7 组）", probe=probe_usenet7,
@@ -811,6 +855,12 @@ LINES = [
              "2026-10-17 裁决删除（提交 5ec23ec5136c），终态凭证＝changelog＋该提交；数字以登记表为准")),
          resume="（归档线）历史件见提交 5ec23ec5136c 与登记表 §十七；如目录重建则探针自动回到台账口径",
          health="归档线（源已删，仅核登记存在性）", deep=None),
+    dict(id="ddj", name="DDJ 线（dvd6 期刊库：DDJ/CUJ/SA/TPJ）", probe=probe_ddj,
+         resume="读 `dvd6/ddj/README.md`（唯一工作真值台账）→ cwd=dvd6/ddj 跑 `python work/_ddj_fill_status.py`（状态）"
+                "→ `python work/_ddj_fill_load.py`（装载；写库先 claimdb_guard）",
+         health="`_longline_status.py --check`（ddj 探针：manifest×results×state.json 三源对账）；"
+                "写库门禁 `claimdb_guard.py --db dvd6_journals`",
+         deep=None),
 ]
 
 

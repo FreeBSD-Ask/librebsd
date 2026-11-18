@@ -24,3 +24,7 @@
 ## b004 追加引文池（2026-11-18 V61 b004 取用，同源异句异锚）
 
 7. [1.4.4 用] Remote-access systems are peculiarly vulnerable to penetration by outsiders as there are threats at the remote terminal, along the communications link, as well as at the computer itself.
+
+## b005 追加引文池（2026-11-18 V61 b005 取用，同源异句异锚）
+
+8. [1.5.4 用，列表标记照录] Some "good" things to try are: --The dictionary with the words spelled backwards. --A list of first names (best obtained from some mailing list). Last names, street names, and city names also work well.

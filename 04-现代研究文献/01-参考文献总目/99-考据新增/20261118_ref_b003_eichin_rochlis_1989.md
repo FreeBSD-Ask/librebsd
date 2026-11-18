@@ -32,3 +32,17 @@
 10. [1.4.3 用] When it became clear that the virus was propagating via sendmail, the first reaction of many sites was to cut off mail service.
 
 11. [1.4.5 用] We describe the lessons that this incident has taught the Internet community and topics for future consideration and resolution.
+
+## b005 追加引文池（2026-11-18 V61 b005 取用，同源异句异锚）
+
+12. [1.5.1 用，含“make”（原文如此）照录] This routine make a connection to TCP port 25, the SMTP port, of a remote machine and used it to take advantage of the sendmail bug.
+
+13. [1.5.2 用] A 400 byte ‘‘runway’’ of VAX ‘‘nop’’ instructions, which can be executed harmlessly. A small piece of code which executes a Bourne Shell. A stack frame, with a return address which would hopefully point into the code.
+
+14. [1.5.3 用] It attempts to use the debug option to make sendmail run a command (the ‘‘recipient’’ of the message), which transfers the l1.c program included in the body of the message.
+
+15. [1.5.4 用] The program only used pairs of user names and passwords which it had already tested and found to be correct on the local host.
+
+16. [1.5.5 用，止于 normal users 以避 instructionsfor 粘连] Patching out the debug command in sendmail was only effective in conjunction with other fixes, did not interfere with normal users
+
+17. [1.5.6 用] This may have been the genesis of the virus, but that is disputed by reports in the New York Times[11] in which Paul Graham of Harvard states the virus started on a machine at the MIT AI Lab via remote login from Cornell.
