@@ -39,3 +39,12 @@
 - **quote 12 考据注**：1BSD 阶段 Joy 以发行秘书身份送出约三十套免费套件——扩散规模起点；支撑 V12 3.3.4B（与 002795 七十五盘句同源对照、不写互证）。
 - **本批落点**：V12.3.3.3／V12.3.3.4 各一块（#url／#2）
 - **考据日期**：2026-11-18（supp-V12-b021；academic_work 表定抬头／L4）
+
+## supp-V12-b022 追加引文（2026-11-19）
+
+- **quote 13（逐字，遇断行并句未改字）**：He soon found himself in a quandary. As is frequently the case in universities strapped for money, old equipment is never replaced all at once.
+- **quote 14（逐字）**：This interpreter was driven by a description of the terminal characteristics, an effort that eventually became termcap.
+- **quote 15（逐字）**：Rather than support code for optimizing the updating of several different terminals, he decided to consolidate the screen management by using a small interpreter to redraw the screen.
+- **quote 13—15 考据注**：termcap 起源三面——经费受限致新旧终端并存的差异困扰（3.4.1A）、以终端特性描述驱动小解释器并终成 termcap（3.4.2A）、放弃逐终端优化代码而统一屏幕管理（3.4.3A）。
+- **本批落点**：V12.3.4.1／V12.3.4.2／V12.3.4.3 各一块（#url）
+- **考据日期**：2026-11-19（supp-V12-b022；academic_work 表定抬头／L4）
