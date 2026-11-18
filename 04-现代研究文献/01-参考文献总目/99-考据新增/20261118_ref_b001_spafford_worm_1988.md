@@ -36,3 +36,13 @@
 11. [1.3.4 用] A worm is a program that can run by itself and can propagate a fully working version of itself to other machines. It is derived from the word tapeworm, a parasitic organism that lives inside a host and saps its resources to maintain itself.
 
 12. [1.3.5 用] Although the Worm exploited flaws in only two server programs, its behavior has served to illustrate a few fundamental problems that have not yet been widely addressed.
+
+## b004 追加引文池（2026-11-18 V61 b004 取用，同源异句异锚）
+
+13. [1.4.1 用] This program eventually spread to thousands of machines, and disrupted normal activities and Internet connectivity for many days.
+
+14. [1.4.2 用] As time went on, some of these machines became so loaded that they were unable to continue any processing; some machines failed completely when their swap space or process tables were exhausted.
+
+15. [1.4.3 用] The actions of the Internet Worm exposed some specific security flaws in standard services provided by BSD-derived versions of UNIX.
+
+16. [1.4.4 用] Although UNIX has long been known to have some security weaknesses (cf. [Ritc79], [Gram84], and [Reid87]), the scope of the breakins came as a great surprise to almost everyone.

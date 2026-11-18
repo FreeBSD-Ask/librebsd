@@ -20,3 +20,7 @@
 5. [语境照录，含伪影，不入引] The so-called "super-user" password on the UNIX system, for exam ple, is especially critical because the super-user has all sorts of permissions and has essentially unlimited access to all system resources.
 
 6. [86% 汇总句照录（后续批可用），含伪影不入引] An additional 492 passwords appeared in various avail able dictionaries, name lists, and the like. A total of 2,831 or 86 percent of this sample of passwords fell into one of these classes.
+
+## b004 追加引文池（2026-11-18 V61 b004 取用，同源异句异锚）
+
+7. [1.4.4 用] Remote-access systems are peculiarly vulnerable to penetration by outsiders as there are threats at the remote terminal, along the communications link, as well as at the computer itself.

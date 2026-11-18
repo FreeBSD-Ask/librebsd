@@ -27,3 +27,14 @@ V61.1.3.3	rsh trust design flaw network address forged	exa 检索（同上）	�
 V61.1.3.4	virus launched 5:01:59pm second Cornell machine	exa 检索（同上）	命中	Cornell 日志时间线句取得（硬事实）	2026-11-18	exa web_search
 V61.1.3.5	debug enabled by default 4.2BSD 4.3BSD Sun	exa 检索（同上）	命中	默认开启跨发行延续句取得	2026-11-18	exa web_search
 V61.1.3.1	—	—	—	五题两独立来源齐备：1.3.1—1.3.5 Spafford×E&R（4 题）＋E&R×rsh(1)（1.3.3）；ref10956 异句异锚 ×4 披露	2026-11-18	—
+V61.1.4.1	worm spread thousands of machines disrupted connectivity	exa 检索（UH 镜像 Spafford）	命中	摘要扩散句取得（b004 卡追加段）	2026-11-18	exa web_search
+V61.1.4.1	60,000 host computers TCP/IP protocol suite	exa 检索（d.umn.edu E&R 镜像）	命中	互联网规模句取得（自 consisting 起句避断词）	2026-11-18	exa web_search
+V61.1.4.2	machines so loaded swap space process tables exhausted	exa 检索（UH 镜像 Spafford）	命中	耗资源瘫痪句取得	2026-11-18	exa web_search
+V61.1.4.2	broke into computers spread from one machine to another	exa 检索（d.umn.edu E&R 镜像）	命中	破入＋跨机传播句取得	2026-11-18	exa web_search
+V61.1.4.3	exposed specific security flaws standard services BSD	exa 检索（UH 镜像 Spafford）	命中	服务实现缺陷句取得	2026-11-18	exa web_search
+V61.1.4.3	propagating via sendmail cut off mail service	exa 检索（d.umn.edu E&R 镜像）	命中	判明传播即断邮件服务句取得	2026-11-18	exa web_search
+V61.1.4.4	UNIX long been known security weaknesses scope surprise	exa 检索（UH 镜像 Spafford）	命中	固有弱点＋规模意外句取得	2026-11-18	exa web_search
+V61.1.4.4	remote-access systems peculiarly vulnerable outsiders	exa 检索（Cornell 镜像 M&T 1979）	命中	远程系统固有易受渗漏句取得（先于事件十年）	2026-11-18	exa web_search
+V61.1.4.5	DARPA asked SEI establish computer emergency response team	exa 检索（sei.cmu.edu 沿革页）	命中	CERT/CC 设立句取得（官方）	2026-11-18	exa web_search
+V61.1.4.5	lessons incident taught Internet community topics future	exa 检索（d.umn.edu E&R 镜像）	命中	教训与未来议题句取得	2026-11-18	exa web_search
+V61.1.4.1	—	—	—	五题两独立来源齐备：1.4.1—1.4.4 Spafford×E&R／M&T（ref10956×4＋ref11004×3＋ref10953×1）；1.4.5 SEI 沿革页×E&R	2026-11-18	—

@@ -22,3 +22,13 @@
 6. [备用（1.1.5 可读文件面后续批），照录] A common, world readable file (/etc/passwd) that containsthe user names and encrypted passwords for every user on the system fa cilitated this search.
 
 7. [备用，照录] The virus attempted to use the Berkeley remote shell pro gram (called rsh) to attack other machines without using passwords.
+
+## b004 追加引文池（2026-11-18 V61 b004 取用，同源异句异锚）
+
+8. [1.4.1 用，自 consisting 起句以避 net-works 断词] consisting of 60,000 host computers implementing the TCP/IP protocol suite, was attacked by a virus
+
+9. [1.4.2 用，承前句主语（a virus）] which broke into computers on the network and which spread from one machine to another
+
+10. [1.4.3 用] When it became clear that the virus was propagating via sendmail, the first reaction of many sites was to cut off mail service.
+
+11. [1.4.5 用] We describe the lessons that this incident has taught the Internet community and topics for future consideration and resolution.
