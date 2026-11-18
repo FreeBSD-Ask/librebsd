@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "1f5f2df6752d98ce6878945792575cc6cd1cd836ca0a2f171560b6a2ffcc1da8",
+  "content_sha256": "e74d11a68ca22920f0d9be561b8eb6ae1e493a55e46c0f435fb7d8472d384aaf",
   "extract": "title+body",
-  "generated_at": "2026-11-19T03:32:10+08:00"
+  "generated_at": "2026-11-19T05:17:24+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -14442,7 +14442,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "40ca09d0b2add38e448b0d83a33db55f3a0b876e"
+   "subs_sha1": "6082e8b99b370d458f8cd89bafdb9d0f0ee4e04f"
   },
   "V07-C001-1.2": {
    "chapter": "V07-C001",
@@ -14459,7 +14459,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "3379653c81e4e8c5f7d4da90e6e536f88d106fc4"
+   "subs_sha1": "fd17fdf25a826c156883ecbe1555a6252a3cd04e"
   },
   "V07-C001-1.3": {
    "chapter": "V07-C001",
@@ -14476,7 +14476,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "2efa0e3ad048736586c5a870da1e3b70b3eb4f2b"
+   "subs_sha1": "6742f19476233c0734838c4341653f5300b7bcb6"
   },
   "V07-C001-1.4": {
    "chapter": "V07-C001",
@@ -14493,7 +14493,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "83d21c884aa63c061a313b1b6a4262ce5764b679"
+   "subs_sha1": "885733e2abb808c8dc2ce129aee782d1177fdac2"
   },
   "V07-C002-2.1": {
    "chapter": "V07-C002",
@@ -21260,7 +21260,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "399818257d3845f4323fb9ff5c60a09e27b871f7"
+   "subs_sha1": "176c76556d7984cb52c3a9eea9a19f2f222b9b4d"
   },
   "V15-C001-1.2": {
    "chapter": "V15-C001",
@@ -21275,7 +21275,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "77512824436af6c6802c3407918bbf1b386ce86f"
+   "subs_sha1": "6878bda2f628c462f5c4de83d57862f2ec041345"
   },
   "V15-C001-1.3": {
    "chapter": "V15-C001",
@@ -21292,7 +21292,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "6c6c0c4ae52f959538d5c6caf8b6bc1b58e24e7d"
+   "subs_sha1": "dfe1b44bd1a694d388b7ad5ae7d2674398885cbc"
   },
   "V15-C002-2.1": {
    "chapter": "V15-C002",
@@ -82027,7 +82027,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "c9a61c17af76559dfe71d9c24cdb4e5eda214026"
+   "subs_sha1": "10208717050d6a8ffd57eb700ff0aecc42e7c337"
   },
   "V75-C002-2.2": {
    "chapter": "V75-C002",
@@ -82045,7 +82045,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "5e8a5ed3b5b6a6a99615d94fd898a50a1567bf7e"
+   "subs_sha1": "ac66bc11c5fe734927dfe48ccda7d14e541136af"
   },
   "V75-C002-2.3": {
    "chapter": "V75-C002",
@@ -82064,7 +82064,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "d6654a5d407a33290c9a5cda50457dc4a88421b0"
+   "subs_sha1": "d33dbef343651b8a9bc52cd28cf6a8b5c0c5c1f2"
   },
   "V75-C002-2.4": {
    "chapter": "V75-C002",
@@ -82082,7 +82082,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "4e4c59116e214fb54d313e94d166aa8fd8cedba2"
+   "subs_sha1": "829686a5b828e92a936d2d96776cf71878b6f9be"
   },
   "V75-C002-2.5": {
    "chapter": "V75-C002",
@@ -82101,7 +82101,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "12b5b72754ed7a0b5c614f1cb024077b405d6823"
+   "subs_sha1": "1ea4e8bcd75a688597b30cdf87b9293beede7704"
   },
   "V75-C002-2.6": {
    "chapter": "V75-C002",
@@ -82116,14 +82116,14 @@
     "TH-HW-010",
     "TH-HIS-001",
     "TH-GOV-015",
-    "TH-GOV-016",
-    "TH-FS-036",
-    "TH-FS-005"
+    "TH-FS-005",
+    "TH-GOV-026",
+    "TH-GOV-016"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "43a7437582b40c31dfaa8ac7b16f9efde7342ced"
+   "subs_sha1": "351c55553a33a24eae0e90c0bb5061fcecb85f62"
   },
   "V75-C002-2.7": {
    "chapter": "V75-C002",
@@ -82145,7 +82145,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "2e1ff261fd0756dcc5c95451bff94008b0144b99"
+   "subs_sha1": "cfd559642814fb69e63df32bed68fc3bb4f0b04f"
   },
   "V75-C002-2.8": {
    "chapter": "V75-C002",
@@ -82164,7 +82164,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "e38bae74721021a6cc7b0d1f8454422365f1a1ab"
+   "subs_sha1": "fbc5e29920a4609afb8508265bca6463b3621cc9"
   },
   "V75-C002-2.9": {
    "chapter": "V75-C002",
@@ -82186,7 +82186,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "31ac3908a19911ae7698ab73f4774c4c2c754ae4"
+   "subs_sha1": "e58157f9a4b6af3bb0897619d636499b9aa66ba7"
   },
   "V75-C002-2.10": {
    "chapter": "V75-C002",
@@ -82205,7 +82205,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 3,
-   "subs_sha1": "4b8b24787cc932a378cf9d15f1f0607e8a8c86e2"
+   "subs_sha1": "bfe67996e00bc2bddfd79bc50994e78b93884187"
   },
   "V75-C003-3.1": {
    "chapter": "V75-C003",
@@ -107440,13 +107440,9 @@
     "TH-REL-001"
    ]
   },
-  "V75-C002-2.6.1": {
-   "add": [
-    "TH-GOV-026"
-   ]
-  },
   "V75-C002-2.6.4": {
    "add": [
+    "TH-FS-036",
     "TH-GOV-037"
    ]
   },
@@ -107462,16 +107458,16 @@
   },
   "V75-C002-2.8.2": {
    "add": [
-    "TH-NET-003",
-    "TH-FS-005"
+    "TH-FS-005",
+    "TH-NET-003"
    ]
   },
   "V75-C002-2.8.3": {
    "add": [
+    "TH-FS-005",
     "TH-FS-038",
     "TH-SEC-010",
-    "TH-HIS-007",
-    "TH-FS-005"
+    "TH-HIS-007"
    ]
   },
   "V75-C002-2.8.4": {
