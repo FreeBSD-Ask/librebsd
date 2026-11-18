@@ -1,4 +1,4 @@
-subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
+﻿subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
 V03.1.1.2	corpus_gap	3896	CL-RM-495698	official_doc	primary	D1	supp-V03-b001	supplemented	库内复用＋全文取证（DEC PDP-11 Processor Handbook 1976，ref3896#0）
 V03.1.1.2	corpus_gap	10771	CL-RM-495699	academic_work	primary	D1	supp-V03-b001	supplemented	联网新 ref＋全文入库（Bell 1977，D1#3）
 V03.1.1.2	corpus_gap	10772	CL-RM-495700	web_archive	secondary_authoritative	D2	supp-V03-b001	supplemented	联网新 ref（CHM 1970s 年表，D2 #url）
@@ -53,3 +53,9 @@ V03.2.5.3	corpus_gap	10991	CL-RM-496816	reference_book	secondary_authoritative	D
 V03.2.5.3	corpus_gap	10929	CL-RM-496817	reference_book	secondary_authoritative	D2	supp-V03-b007	supplemented	联网/库内逐字取证；bibm#url
 V03.2.5.5	corpus_gap	10992	CL-RM-496818	talk_interview	primary	D2	supp-V03-b007	supplemented	联网/库内逐字取证；fylstra#url
 V03.2.5.5	corpus_gap	10993	CL-RM-496819	web_archive	secondary_authoritative	D2	supp-V03-b007	supplemented	联网/库内逐字取证；chmrev#url
+V03.2.6.2	corpus_gap	11022	CL-RM-496961	official_doc	primary	D2	supp-V03-b008	supplemented	联网/库内逐字取证；nist#url
+V03.2.6.2	corpus_gap	11023	CL-RM-496962	official_doc	primary	D2	supp-V03-b008	supplemented	联网/库内逐字取证；ibmvmware#url
+V03.2.6.3	corpus_gap	11024	CL-RM-496963	academic_work	secondary_authoritative	D2	supp-V03-b008	supplemented	联网/库内逐字取证；randal#url
+V03.2.6.3	corpus_gap	11025	CL-RM-496964	official_doc	primary	D2	supp-V03-b008	supplemented	联网/库内逐字取证；vm50#url
+V03.2.6.6	corpus_gap	10741	CL-RM-496965	web_archive	primary	D2	supp-V03-b008	supplemented	联网/库内逐字取证；tuhs#url
+V03.2.6.6	corpus_gap	11027	CL-RM-496966	official_doc	primary	D2	supp-V03-b008	supplemented	联网/库内逐字取证；chmswhc#url
