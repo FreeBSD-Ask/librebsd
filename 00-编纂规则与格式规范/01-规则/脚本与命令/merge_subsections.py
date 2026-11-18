@@ -10,7 +10,9 @@
   * **放行条件**：该卷 `映射/title-design/approved/V{NN}.title.ok` 存在，且其
     `ledger_sha256` 与当前 `title-design/V{NN}.tsv` **文件字节 sha256** 一致
     （与第三十九件 H1 同算法）；台账任何变动即旧批准失效，合并器拒绝该卷
-    （exit 0 跳过并披露，`--strict` 时 exit 1）。
+    （exit 0 跳过并披露，`--strict` 时 exit 1）。**拒绝＝保留原行**（2026-11-19 修：
+    拒绝卷不再按 fragments 重写——原实现会误剪拒绝卷的既有 outline 行，V18/V63
+    91 行事故根因；配套守卫＝`premerge_keyguard.py`，按卷过滤＝`--vols`）。
   * **幂等**：以 fragment 为真值——节下已有同键行更新题名、缺键插入、
     fragment 外的既有小节行删除；二跑零差。
   * ** fragment↔outline 双射**：--check 报告每卷将增／改／删行数与键差。
@@ -176,7 +178,7 @@ def merge(outline_path, frags, allowed, strict=False):
         nonlocal changed
         if sec is None:
             return
-        want = frags.get(v, {}).get(sec) if v in allowed else None
+        want = frags.get(v, {}).get(sec) if (v in allowed and allowed[v] == "OK") else None
         if want is None:
             return
         want_keys = {p for p, *_ in want}
@@ -285,6 +287,9 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description="outline.txt 第四级小节行合并器（唯一写者）")
     ap.add_argument("--root", default=DEFAULT_ROOT)
     ap.add_argument("--map", default=None)
+    ap.add_argument("--vols", default=None,
+                    help="只处理这些卷（逗号分隔，如 75 或 18,75）；缺省=全部放行卷"
+                         "（2026-11-19 增：他卷在途改号时经 premerge_keyguard 判定后按卷过滤，防误剪他卷行）")
     ap.add_argument("--write", action="store_true", help="合并写盘（默认 dry-run）")
     ap.add_argument("--check", action="store_true", help="dry-run（兼容惯例，默认行为）")
     ap.add_argument("--strict", action="store_true", help="存在拒绝卷时退出码 1")
@@ -298,6 +303,14 @@ def main(argv=None):
         print("FATAL 缺 %s" % outline_p)
         return 2
     allowed = approved_vols(mapdir)
+    if a.vols:
+        keep = set()
+        for tok in a.vols.split(","):
+            tok = tok.strip()
+            keep.add(int(tok) if tok.isdigit() else int(tok[1:]))
+        for vn in list(allowed):
+            if vn not in keep:
+                allowed[vn] = "跳过：--vols 过滤"
     frags = load_fragments(mapdir)
     if not frags:
         print("合并器：零态（无 fragment）——outline 不动")
