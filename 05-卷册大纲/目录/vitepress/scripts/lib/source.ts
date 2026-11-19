@@ -64,7 +64,7 @@ export interface VolNode {
 }
 export interface OutlineTree {
   vols: VolNode[]
-  counts: { vols: number; chs: number; secs: number; subs: number; notes: number }
+  counts: { vols: number; chs: number; secs: number; subs: number; notes: number; sectionsWithNotes: number }
   sectionNotes: Map<string, string[]>
 }
 
@@ -97,7 +97,7 @@ function noteGroups(tail: string): string[] {
 
 export function parseOutline(text: string): OutlineTree {
   const vols: VolNode[] = []
-  const counts = { vols: 0, chs: 0, secs: 0, subs: 0, notes: 0 }
+  const counts = { vols: 0, chs: 0, secs: 0, subs: 0, notes: 0, sectionsWithNotes: 0 }
   const sectionNotes = new Map<string, string[]>()
   let vol: VolNode | null = null
   let ch: ChNode | null = null
@@ -105,7 +105,10 @@ export function parseOutline(text: string): OutlineTree {
   let mode: 'none' | 'intro' | 'posnote' = 'none'
 
   const flushSec = () => {
-    if (sec && ch) { ch.secs.push(sec); if (sec.notes.length) sectionNotes.set(sec.num, sec.notes) }
+    if (sec && ch) {
+      ch.secs.push(sec)
+      if (sec.notes.length) { sectionNotes.set(sec.num, sec.notes); counts.sectionsWithNotes++ }
+    }
     sec = null
   }
   const flushCh = () => { flushSec(); if (ch && vol) vol.chs.push(ch); ch = null }
@@ -216,10 +219,20 @@ export function stripHtml(s: string): string {
 export function parseMetrics(html: string): { vols: number; chs: number; secs: number; subs: number; notes: number } | null {
   const i = html.indexOf('class="doc-metrics"')
   if (i < 0) return null
-  const seg = html.slice(i, i + 2000)
-  const nums = [...seg.matchAll(/<strong>(\d[\d \u00a0\u202f]*)<\/strong>/g)].map((m) => Number(m[1].replace(/[^\d]/g, '')))
-  if (nums.length < 5) return null
-  return { vols: nums[0], chs: nums[1], secs: nums[2], subs: nums[3], notes: nums[4] }
+  const seg = html.slice(i, i + 4000)
+  // 按标签锚定取值：装配器若增删 tile，位置取法会串位；标签是稳定契约。
+  const grab = (label: string): number | null => {
+    const pattern = '<span>' + label + '</span><strong>([0-9\\u00a0\\u202f ]+)</strong>'
+    const m = seg.match(new RegExp(pattern))
+    return m ? Number(m[1].replace(/[^0-9]/g, '')) : null
+  }
+  const vols = grab('总卷数')
+  const chs = grab('总章数')
+  const secs = grab('总节数')
+  const subs = grab('总小节数')
+  const notes = grab('溯源标注')
+  if (vols === null || chs === null || secs === null || subs === null || notes === null) return null
+  return { vols, chs, secs, subs, notes }
 }
 
 /** 装配页有序 (节号, 题名) 与小节序列提取。 */

@@ -19,6 +19,8 @@ function inline(title: string): string {
     .join('')
 }
 const pad = (n: number, w = 2) => String(n).padStart(w, '0')
+/** 号锚：1.1 → _1-1；1.1.1 → _1-1-1（与 CatalogApp 生成的 href 同式）。 */
+const anchor = (num: string) => `_${num.replace(/\./g, '-')}`
 
 const tree = readOutline()
 let chFiles = 0
@@ -79,14 +81,15 @@ for (const v of tree.vols) {
     L.push(`[← 返回第${v.roman}卷](./index.md)`)
     L.push('')
     for (const s of c.secs) {
-      L.push(`## ${s.num} ${inline(s.title)}`)
+      // 显式锚点：VitePress 默认 slug 会带整题（_1-1-题名），首页深链需稳定的号锚
+      L.push(`## ${s.num} ${inline(s.title)} {#${anchor(s.num)}}`)
       L.push('')
       if (s.notes.length) {
         for (const n of s.notes) L.push(`> ${esc(n)}`)
         L.push('')
       }
       if (s.subs.length) {
-        for (const x of s.subs) L.push(`### ${x.num} ${inline(x.title)}`)
+        for (const x of s.subs) L.push(`### ${x.num} ${inline(x.title)} {#${anchor(x.num)}}`)
         L.push('')
       }
     }

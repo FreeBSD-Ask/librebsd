@@ -31,35 +31,48 @@ for (const v of tree.vols) for (const c of v.chs) chTitleByKey.set(`${v.no}:${c.
 
 const plainTitle = (t: string) => t.replace(/⟦en:([^⟧]*)⟧/g, '$1')
 
-// 按 SUMMARY 的层级顺序重建侧边栏：卷（level0）→ 章（level1）
-type Item = { text: string; link: string }
-const groups: Array<{ text: string; collapsed: boolean; items: Item[] }> = []
+// 按 SUMMARY 的层级顺序重建侧边栏：卷（level0）→ 章（level1）。
+// 按卷分表（key=/vNN/）：若挂全局单表，539 条链接会内联进 615 个页面，
+// 单页 HTML 达 ~290 KB、整站产物 ~193 MB；分表后每页只带本卷章目。
+const perVol: Record<string, Array<{ text: string; collapsed: boolean; items: Item[] }>> = {}
 let volNo = 0
+let curVolKey = ''
 for (const node of summary) {
   if (node.level === 0) {
     volNo = Number(node.num ?? volNo + 1)
+    curVolKey = `/v${String(volNo).padStart(2, '0')}/`
     const t = volTitleByNo.get(volNo)
-    groups.push({
-      text: `第${String(volNo).padStart(2, '0')}卷　${t ? plainTitle(t) : node.text}`,
-      collapsed: true,
-      items: [],
-    })
-  } else if (node.level === 1) {
+    perVol[curVolKey] = [
+      {
+        text: `第${String(volNo).padStart(2, '0')}卷　${t ? plainTitle(t) : node.text}`,
+        collapsed: false,
+        items: [],
+      },
+    ]
+  } else if (node.level === 1 && perVol[curVolKey]) {
     const chNo = Number(node.num ?? 0)
     const t = chTitleByKey.get(`${volNo}:${chNo}`)
-    groups[groups.length - 1]?.items.push({
+    perVol[curVolKey][0].items.push({
       text: `第 ${chNo} 章　${t ? plainTitle(t) : node.text}`,
       link: `/v${String(volNo).padStart(2, '0')}/c${String(chNo).padStart(2, '0')}`,
     })
   }
 }
+// 卷页与章页共用本卷表：chapter 路径同样以 /vNN/ 为前缀
+const sidebar = Object.keys(perVol).length ? perVol : undefined
 
-const bookTitle = (ui['shell.book_title'] as string) ?? '给我自由——一部 BSD 的历史'
+if (!ui['shell.book_title']) {
+  throw new Error('[config] ui-strings.json 缺 shell.book_title：书名是单一真值，不得 fallback')
+}
+const bookTitle = ui['shell.book_title'] as string
+const t0 = tree.counts
+const DESCRIPTION =
+  `${bookTitle}：卷章节目录（${t0.vols} 卷／${t0.chs} 章／${t0.secs} 节／${t0.subs} 小节），据编译内容源实时生成`
 
 export default defineConfig({
   lang: 'zh-CN',
   title: bookTitle,
-  description: '《给我自由——一部 BSD 的历史》卷章节目录（75 卷／539 章／3 918 节／19 363 小节）',
+  description: DESCRIPTION,
   base: BASE,
   srcDir,
   outDir,
@@ -75,7 +88,28 @@ export default defineConfig({
   sitemap: { hostname: HOST },
   head: [
     ['link', { rel: 'icon', href: `${BASE}favicon.ico` }],
+    ['link', { rel: 'canonical', href: `${HOST}${BASE}` }],
     ['meta', { name: 'theme-color', content: '#b0004f' }],
+    // 社交分享与结构化数据（对应装配页的 OG 面；标题／描述取数据源，不硬编码口径）
+    ['meta', { property: 'og:type', content: 'book' }],
+    ['meta', { property: 'og:site_name', content: bookTitle }],
+    ['meta', { property: 'og:title', content: bookTitle }],
+    ['meta', { property: 'og:description', content: DESCRIPTION }],
+    ['meta', { property: 'og:url', content: `${HOST}${BASE}` }],
+    ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    [
+      'script',
+      { type: 'application/ld+json' },
+      JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Book',
+        name: bookTitle,
+        inLanguage: 'zh-CN',
+        url: `${HOST}${BASE}`,
+        description: DESCRIPTION,
+      }),
+    ],
   ],
   markdown: {
     image: { lazyLoading: true },
@@ -91,7 +125,8 @@ export default defineConfig({
   },
   themeConfig: {
     siteTitle: bookTitle,
-    logo: { src: `${BASE}favicon.ico`, width: 24, height: 24 },
+    // logo 由 VitePress 自动加 base，此处不得再拼 BASE（否则 /librebsd/librebsd/…）
+    logo: { src: '/favicon.ico', width: 24, height: 24 },
     socialLinks: [{ icon: 'github', link: 'https://github.com/FreeBSD-Ask/librebsd' }],
     outline: { label: '本页目录', level: [2, 3] },
     docFooter: { prev: '上一页', next: '下一页' },
@@ -114,7 +149,7 @@ export default defineConfig({
       { text: '数据视图', link: '/#data' },
       { text: 'GitHub', link: 'https://github.com/FreeBSD-Ask/librebsd' },
     ],
-    sidebar: groups.length ? groups : undefined,
+    sidebar,
   },
   vite: {
     // 分卷构建时 srcDir 下沉到 .build/<分片>，Vite 的 publicDir 会跟着 srcDir 走而漏掉静态件；

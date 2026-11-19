@@ -103,7 +103,7 @@ const searching = computed(() => q.value.trim().length > 0)
       />
       <span class="cat-hint">
         <template v-if="searching">命中 {{ hits.total.toLocaleString('zh-CN') }} 项（显示前 {{ Math.min(hits.total, MAX_HITS) }} 项）</template>
-        <template v-else>点卷号展开；章页可深链到节与小节</template>
+        <template v-else>点卷号展开；章页可深链到节与小节（注文共 {{ book.counts.notes }} 组，分布于 {{ book.counts.sectionsWithNotes }} 个小节）</template>
       </span>
     </div>
 

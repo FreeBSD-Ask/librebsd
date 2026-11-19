@@ -43,6 +43,9 @@ if (only) {
   volNos = volNos.filter((n) => n >= a && n <= (Number.isFinite(b) ? b : a))
 }
 
+/** --only 试点构建：日志标注「部分构建」，全集构建时须覆盖全部卷。 */
+const partial = volNos.length !== tree.vols.length
+
 type Shard = { key: string; label: string; pagesSrc: string | null }
 const shards: Shard[] = [
   { key: 'home', label: '站点壳', pagesSrc: null },
@@ -145,10 +148,14 @@ function walkHtml(dir: string, rel = '') {
 }
 walkHtml(DIST)
 const origin = `${HOST}${BASEP.replace(/\/$/, '')}`
-const urls = htmlRels
-  .map((r) => (r === 'index.html' ? `${origin}/` : `${origin}/${r.replace(/\.html$/, '')}`))
-  .sort()
-  .map((u) => `  <url><loc>${u}</loc></url>`)
+/** 合并后 HTML → cleanUrls 路由：`index.html`→`/`、`vNN/index.html`→`/vNN/`、`vNN/cMM.html`→`/vNN/cMM`。 */
+function routeOf(rel: string): string {
+  if (rel === 'index.html') return '/'
+  if (rel.endsWith('/index.html')) return `/${rel.slice(0, -'index.html'.length)}`
+  return `/${rel.replace(/\.html$/, '')}`
+}
+const routes = htmlRels.map(routeOf).sort()
+const urls = routes.map((r) => `  <url><loc>${origin}${r}</loc></url>`)
 writeFileSync(
   path.join(DIST, 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
@@ -162,22 +169,77 @@ if (san.renamed.length) {
   console.log(`[build] 净化 ${san.renamed.length} 件撞名产物（引用回写 ${san.touched} 件）：${san.renamed.slice(0, 3).join('、')}`)
 }
 
-// ---- 4. 报告
-const indexOk = existsSync(path.join(DIST, 'index.html'))
-// 1 壳首页 ＋ 每卷 1 卷页 ＋ 章页（404 不计入 htmlRels）
-const expectHtml =
-  1 + volNos.length + tree.vols.filter((v) => volNos.includes(v.no)).reduce((a, v) => a + v.chs.length, 0)
-console.log(
-  `[build] PASS 合并 ${files} 件 → .vitepress/dist（分片 ${shards.length}，用时 ${((Date.now() - t0) / 1000).toFixed(0)}s）`,
-)
-console.log(
-  `         首页 ${indexOk ? '在' : '缺'}；HTML ${htmlRels.length}（预期 ≥ ${expectHtml}）；hashmap ${Object.keys(hashmap).length} 项；sitemap ${urls.length} 条`,
-)
-if (!indexOk) {
-  console.error('[build] FAIL 合并后缺 index.html')
-  process.exit(1)
+// ---- 4. 完整性断言（集合级，非仅计数）
+const problems: string[] = []
+
+// 4a. 预期路由集合：首页 ＋ 每卷 1 卷页 ＋ 各自章页（与 SUMMARY 号序由 verify 锁死，此处按树展开）
+const volOf = (n: number) => tree.vols.find((v) => v.no === n)
+const expected = new Set<string>(['/'])
+for (const n of volNos) {
+  expected.add(`/v${pad(n)}/`)
+  for (const c of volOf(n)?.chs ?? []) expected.add(`/v${pad(n)}/c${pad(c.no)}`)
 }
-if (collisions.length) {
-  console.warn(`[build] WARN 合并冲突 ${collisions.length} 件（同名不同内容，保留先到）：${collisions.slice(0, 8).join('、')}`)
+const actual = new Set(htmlRels.map(routeOf))
+const missingPages = [...expected].filter((r) => !actual.has(r))
+const extraPages = [...actual].filter((r) => !expected.has(r))
+if (missingPages.length) problems.push(`缺页 ${missingPages.length} 项：${missingPages.slice(0, 5).join('、')}`)
+if (extraPages.length) problems.push(`多页 ${extraPages.length} 项：${extraPages.slice(0, 5).join('、')}`)
+
+// 4b. hashmap：键集合须覆盖全部内容页，且每个值都能解析到 assets 下的页数据 chunk
+const keyOf = (r: string) =>
+  r === '/' ? 'index.md' : `${r.replace(/^\//, '').replace(/\//g, '_').replace(/_$/, '_index')}.md`
+const expectKeys = new Set([...expected].map(keyOf))
+const hmKeys = new Set(Object.keys(hashmap))
+const hmMissing = [...expectKeys].filter((k) => !hmKeys.has(k))
+const hmExtra = [...hmKeys].filter((k) => !expectKeys.has(k))
+if (hmMissing.length) problems.push(`hashmap 缺键 ${hmMissing.length} 项：${hmMissing.slice(0, 5).join('、')}`)
+if (hmExtra.length) problems.push(`hashmap 多键 ${hmExtra.length} 项：${hmExtra.slice(0, 5).join('、')}`)
+const noChunk = [...hmKeys].filter((k) => !existsSync(path.join(DIST, 'assets', `${k}.${hashmap[k]}.js`)))
+if (noChunk.length) problems.push(`hashmap 指向的页数据缺失 ${noChunk.length} 项：${noChunk.slice(0, 3).join('、')}`)
+
+// 4c. sitemap：实写文件的 URL 集合须与预期路由集合逐条相等
+const smText = readFileSync(path.join(DIST, 'sitemap.xml'), 'utf8')
+const smRoutes = new Set(
+  [...smText.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].slice(origin.length) || '/'),
+)
+if (smRoutes.size !== expected.size) problems.push(`sitemap 条数 ${smRoutes.size} ≠ 预期 ${expected.size}`)
+for (const r of expected) if (!smRoutes.has(r)) problems.push(`sitemap 缺 ${r}`)
+for (const r of smRoutes) if (!expected.has(r)) problems.push(`sitemap 多 ${r}`)
+
+// 4d. base 双前缀：全 dist 文本件（html/js/css/json/xml）两种错形态
+const DUP = [`${BASEP}${BASEP.slice(1)}`, '//librebsd/', `${BASEP.slice(1)}//`]
+const dupHits: string[] = []
+function walkText(dir: string, rel = '') {
+  for (const name of readdirSync(dir)) {
+    const full = path.join(dir, name)
+    const r = rel ? `${rel}/${name}` : name
+    if (statSync(full).isDirectory()) { walkText(full, r); continue }
+    if (!/\.(html|js|mjs|css|json|xml)$/i.test(name)) continue
+    const t = readFileSync(full, 'utf8')
+    if (DUP.some((d) => t.includes(d))) dupHits.push(r)
+  }
+}
+walkText(DIST)
+if (dupHits.length) problems.push(`base 双前缀 ${dupHits.length} 件：${dupHits.slice(0, 3).join('、')}`)
+
+// 4e. 合并冲突（同名不同内容）一律判失败：内容不可判定，不得静默保留先到
+if (collisions.length) problems.push(`合并冲突 ${collisions.length} 件：${collisions.slice(0, 5).join('、')}`)
+
+const indexOk = existsSync(path.join(DIST, 'index.html'))
+if (!indexOk) problems.push('合并后缺 index.html')
+console.log(
+  `[build] ${partial ? '部分构建' : 'PASS'} 合并 ${files} 件 → .vitepress/dist（分片 ${shards.length}${partial ? `／全集 ${tree.vols.length} 卷` : ''}，用时 ${((Date.now() - t0) / 1000).toFixed(0)}s）`,
+)
+console.log(
+  `         首页 ${indexOk ? '在' : '缺'}；HTML ${htmlRels.length}（预期 = ${expected.size}）；hashmap ${hmKeys.size} 项；sitemap ${smRoutes.size} 条`,
+)
+
+// 4f. 全集构建须覆盖全部卷（partial 在顶部声明；此处只做集合完整性断言）
+if (!partial && new Set(volNos).size !== tree.vols.length) problems.push('全集构建卷号集合不完整')
+
+if (problems.length) {
+  console.error('[build] FAIL 合并后完整性断言：')
+  for (const x of problems.slice(0, 20)) console.error('  ✗ ' + x)
+  process.exit(1)
 }
 if (clean) rmSync(BUILD, { recursive: true, force: true })

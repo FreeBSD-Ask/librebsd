@@ -15,7 +15,7 @@ export interface VolD {
 }
 export interface BookData {
   vols: VolD[]
-  counts: { vols: number; chs: number; secs: number; subs: number; notes: number }
+  counts: { vols: number; chs: number; secs: number; subs: number; notes: number; sectionsWithNotes: number }
   ui: Record<string, string>
 }
 
@@ -30,13 +30,13 @@ export default defineLoader({
     return {
       counts: tree.counts,
       ui: {
-        bookTitle: ui['shell.book_title'] ?? '',
         pageVersion: ui['shell.page_version'] ?? '',
         metricVol: ui['shell.metric.vol.label'] ?? '总卷数',
         metricCh: ui['shell.metric.ch.label'] ?? '总章数',
         metricSec: ui['shell.metric.sec.label'] ?? '总节数',
         metricSub: ui['shell.metric.sub.label'] ?? '总小节数',
-        metricNote: '题名注文',
+        // 第五格与装配页「溯源标注」同口径＝有注小节数（注文组数在提示行另述，避免两口径混读）
+        metricNote: ui['shell.metric.src.label'] ?? '溯源标注',
         searchTitle: ui['shell.btn.search.title'] ?? '检索',
       },
       vols: tree.vols.map((v) => ({

@@ -46,7 +46,7 @@ jobs:
         working-directory: 05-卷册大纲/目录/vitepress
         run: bun run verify
 
-      - name: 构建站点（sync + gen + vitepress build）
+      - name: 构建站点（bun run docs:build：sync + gen + verify + 分卷构建再合并）
         working-directory: 05-卷册大纲/目录/vitepress
         run: bun run docs:build
 

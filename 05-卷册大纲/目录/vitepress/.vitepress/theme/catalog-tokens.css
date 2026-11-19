@@ -304,3 +304,89 @@
     padding-left: 12px;
   }
 }
+
+/* ---- 字号档位（FontScale.vue 写入 --cat-font-scale） ---- */
+.cat-app,
+.vp-doc {
+  font-size: calc(1em * var(--cat-font-scale, 1));
+}
+
+.cat-fontscale {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  margin: 0 0 6px;
+}
+.cat-fontscale button {
+  min-width: 30px;
+  padding: 2px 6px;
+  border: 1px solid var(--cat-line);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.cat-fontscale button:hover:not(:disabled) {
+  border-color: var(--cat-accent);
+  color: var(--cat-accent);
+}
+.cat-fontscale button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ---- noscript 提示 ---- */
+.cat-noscript {
+  margin: 12px 0;
+  padding: 10px 14px;
+  border: 1px solid var(--cat-line);
+  border-left: 4px solid var(--cat-accent);
+  border-radius: 10px;
+  color: var(--cat-muted);
+  font-size: 14px;
+}
+
+/* ---- 打印／导出（对应装配页的 PDF／打印面；只保留正文与题名树） ---- */
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPLocalNav,
+  .VPDocAside,
+  .VPFooter,
+  .cat-tools,
+  .cat-fontscale,
+  .cat-tabs,
+  .cat-metrics,
+  .VPDocFooter {
+    display: none !important;
+  }
+  :root,
+  .dark {
+    --cat-accent: #000;
+    --cat-line: #999;
+    --cat-line-strong: #666;
+    --cat-muted: #000;
+    --cat-faint: #333;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .cat-vol > summary::before,
+  .cat-ch > summary::before {
+    content: "" !important;
+  }
+  .cat-vol,
+  .cat-ch {
+    break-inside: avoid;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  .cat-sec {
+    border-left: 1px solid #ccc;
+  }
+}

@@ -8,7 +8,7 @@
     "verify": "bun scripts/verify-assembly.ts",
     "build:vols": "bun scripts/build-by-volume.ts",
     "docs:dev": "vitepress dev",
-    "docs:build": "bun run sync && bun run gen && bun run build:vols",
+    "docs:build": "bun run sync && bun run gen && bun run verify && bun run build:vols",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {

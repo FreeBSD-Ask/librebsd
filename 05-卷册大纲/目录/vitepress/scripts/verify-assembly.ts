@@ -37,8 +37,16 @@ if (sCounts.vols !== oc.vols || sCounts.chs !== oc.chs || sCounts.secs !== oc.se
 }
 if (!metrics) {
   fails.push('V1 装配页 doc-metrics 未解析到')
-} else if (metrics.vols !== oc.vols || metrics.chs !== oc.chs || metrics.secs !== oc.secs || metrics.subs !== oc.subs) {
-  fails.push(`V1 装配页≠outline：装配 ${JSON.stringify(metrics)} vs outline ${JSON.stringify(oc)}`)
+} else {
+  if (metrics.vols !== oc.vols || metrics.chs !== oc.chs || metrics.secs !== oc.secs || metrics.subs !== oc.subs) {
+    fails.push(`V1 装配页≠outline：装配 ${JSON.stringify(metrics)} vs outline ${JSON.stringify(oc)}`)
+  }
+  // 第五数口径：装配页「溯源标注」＝有注小节数（非注文组数），故比 sectionsWithNotes
+  if (metrics.notes !== oc.sectionsWithNotes) {
+    fails.push(
+      `V1 第五数（溯源标注＝有注小节）不一致：装配 ${metrics.notes} vs outline ${oc.sectionsWithNotes}`,
+    )
+  }
 }
 
 // ---- V2：号序
@@ -87,6 +95,22 @@ for (let i = 0; i < Math.max(aChTitle.length, oChTitle.length) && cDiff.length <
 }
 if (cDiff.length) fails.push(`V4 章题不一致（${cDiff.length} 项）\n${head(cDiff)}`)
 
+// ---- V5：SUMMARY 题名漂移（只报数，不作判失败依据；结构判据已由 V2 号序承担）
+const norm = (t: string) => t.replace(/⟦en:([^⟧]*)⟧/g, '$1')
+const sTitles: string[] = []
+let lastVol = 0
+for (const n of summary) {
+  if (n.level === 0) lastVol = Number(n.num ?? lastVol + 1)
+  else if (n.level === 1) sTitles.push(norm(n.text.replace(/^第\d+章[-－]/, '')))
+}
+const oTitles = outline.vols.flatMap((v) => v.chs.map((c) => norm(c.title).trim()))
+const drift: Array<{ i: number; summary: string; outline: string }> = []
+for (let i = 0; i < Math.min(sTitles.length, oTitles.length); i++) {
+  const a = sTitles[i].replace(/[：:／\/–—－]/g, '-').replace(/\s+/g, '')
+  const b = oTitles[i].replace(/[：:／\/–—－]/g, '-').replace(/\s+/g, '')
+  if (a !== b) drift.push({ i, summary: sTitles[i], outline: oTitles[i] })
+}
+
 // ---- 报告
 const line = `卷 ${oc.vols}／章 ${oc.chs}／节 ${oc.secs}／小节 ${oc.subs}／注文 ${oc.notes}`
 if (fails.length) {
@@ -96,3 +120,11 @@ if (fails.length) {
 }
 console.log(`[verify] PASS 三源互证全绿：${line}`)
 console.log(`          SUMMARY 四数 ${JSON.stringify(sCounts)}；装配页题名对 ${assembled.pairs.length}；章题 ${aChTitle.length}`)
+console.log(
+  `          注文：${oc.notes} 组／有注小节 ${oc.sectionsWithNotes}（装配页第五数＝后者）`,
+)
+if (drift.length) {
+  console.log(
+    `          INFO SUMMARY 章题与 outline 漂移 ${drift.length} 项（不作失败判据；示例 ${JSON.stringify(drift[0])}）`,
+  )
+}
