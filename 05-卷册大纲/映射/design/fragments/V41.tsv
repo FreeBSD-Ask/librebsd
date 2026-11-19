@@ -1,10 +1,10 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
-41	1	1.1	1.1.1	Net/2 分装与三大分支各自的源码边界	skeleton	
+41	1	1.1	1.1.1	Net-2 分装与三大分支各自的源码边界	skeleton	
 41	1	1.1	1.1.2	386BSD 的单人维护与自行发行	skeleton	
-41	1	1.1	1.1.3	4.3BSD、Net/2 与 386BSD 三条承继线	skeleton	
-41	1	1.1	1.1.4	承接 4.4BSD-Lite 与 Net/2 的 NetBSD 1.0	skeleton	
+41	1	1.1	1.1.3	4.3BSD、Net-2 与 386BSD 三条承继线	skeleton	
+41	1	1.1	1.1.4	承接 4.4BSD-Lite 与 Net-2 的 NetBSD 1.0	skeleton	
 41	1	1.1	1.1.5	早期移植共享的同一批设备驱动	skeleton	
-41	1	1.2	1.2.1	MI/MD 划界及其源码、头文件标记	filled	
+41	1	1.2	1.2.1	MI-MD 划界及其源码、头文件标记	filled	
 41	1	1.2	1.2.2	machine 目录与接口头文件的命名约定	filled	
 41	1	1.2	1.2.3	各平台共需实现的 MI 公共操作集	filled	
 41	1	1.2	1.2.4	分层换来的共享收益与接口维护开销	skeleton	
@@ -21,7 +21,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 41	1	1.4	1.4.5	bus.h 接口与机器无关的设备访问面	filled	
 41	1	1.5	1.5.1	设备树中的驱动挂接与注册	filled	
 41	1	1.5	1.5.2	总线、设备与驱动三层分列	filled	
-41	1	1.5	1.5.3	按可共享程度分流的 MI/MD 驱动配额	skeleton	
+41	1	1.5	1.5.3	按可共享程度分流的 MI-MD 驱动配额	skeleton	
 41	1	1.5	1.5.4	探测、附着与解挂的生命周期	skeleton	
 41	1	1.5	1.5.5	抽象层成熟后单份驱动的多平台复用	skeleton	
 41	1	1.6	1.6.1	维护者承担的跨平台构建与回归	filled	

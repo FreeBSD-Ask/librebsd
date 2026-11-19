@@ -1,9 +1,9 @@
 vol	chapter	sec_no	sub_no	title	status	evidence
-1	1	1.1	1.1.1	计算工具的古代源流：算盘与算筹	filled	
-1	1	1.1	1.1.2	机械算术的兴起：帕斯卡与莱布尼茨	filled	
+1	1	1.1	1.1.1	计算工具的古代源流-算盘与算筹	filled	
+1	1	1.1	1.1.2	机械算术的兴起-帕斯卡与莱布尼茨	filled	
 1	1	1.1	1.1.3	数学表的编制与人力计算机	filled	
 1	1	1.1	1.1.4	工业革命与计算需求的增长	filled	
-1	1	1.1	1.1.5	自动计算的观念：规则与重复的机器化	filled	
+1	1	1.1	1.1.5	自动计算的观念-规则与重复的机器化	filled	
 1	1	1.1	1.1.6	机械计算的技术限度与时代困境	filled	
 1	2	1.2	1.2.1	差分机的设计原理与制表应用	filled	
 1	2	1.2	1.2.2	巴贝奇分析机的存储与指令结构	filled	
@@ -11,14 +11,14 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 1	2	1.2	1.2.4	通用计算构想的时代局限	filled	
 1	2	1.2	1.2.5	差分机的仿制与工程传播	filled	
 1	2	1.2	1.2.6	巴贝奇事业的未完成与后继者	filled	
-1	3	1.3	1.3.1	弗雷格与罗素：逻辑主义的纲领与悖论	filled	
-1	3	1.3	1.3.2	希尔伯特纲领：形式系统的对象化	filled	
+1	3	1.3	1.3.1	弗雷格与罗素-逻辑主义的纲领与悖论	filled	
+1	3	1.3	1.3.2	希尔伯特纲领-形式系统的对象化	filled	
 1	3	1.3	1.3.3	哥德尔不完全性定理的冲击	filled	
 1	3	1.3	1.3.4	塔斯基的真之定义与模型论	filled	
 1	3	1.3	1.3.5	逻辑经验主义与形式语言的哲学	filled	
 1	3	1.3	1.3.6	形式化的界限及其思想后果	filled	
 1	4	1.4	1.4.1	图灵的可计算数与判定问题	filled	
-1	4	1.4	1.4.2	丘奇与图灵：可计算性的两种刻画	filled	
+1	4	1.4	1.4.2	丘奇与图灵-可计算性的两种刻画	filled	
 1	4	1.4	1.4.3	香农的开关电路与逻辑设计	filled	
 1	4	1.4	1.4.4	楚泽的继电器计算机与程序控制	filled	
 1	4	1.4	1.4.5	艾肯与哈佛系列机的机电计算	filled	
@@ -30,7 +30,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 1	5	1.5	1.5.5	晶体管的商业化与计算机的换代	filled	
 1	5	1.5	1.5.6	物质基础与计算形态的耦合	filled	
 2	1	2.1	2.1.1	弹道计算需求与 ENIAC 的立项	filled	
-2	1	2.1	2.1.2	ENIAC 的编程方式：接线与开关	filled	
+2	1	2.1	2.1.2	ENIAC 的编程方式-接线与开关	filled	
 2	1	2.1	2.1.3	公开演示与弹道算题能力	filled	
 2	1	2.1	2.1.4	ENIAC 的女程序员与编程工作	filled	
 2	1	2.1	2.1.5	计算实验室的设立与学科组织	filled	
@@ -42,7 +42,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 2	2	2.2	2.2.5	UNIVAC 与计算机的商业化	filled	
 2	2	2.2	2.2.6	存储程序概念的传播与优先权叙述	filled	
 2	3	2.3	2.3.1	ACM 的成立与早期学术共同体	filled	
-2	3	2.3	2.3.2	IEEE 计算机学会的源流：从 IRE 计算机组到独立学会	filled	
+2	3	2.3	2.3.2	IEEE 计算机学会的源流-从 IRE 计算机组到独立学会	filled	
 2	3	2.3	2.3.3	学科建制与标准活动的交汇	filled	
 2	4	2.4	2.4.1	USENIX 的成立与首会	filled	
 2	4	2.4	2.4.2	会名更替与年会延续	filled	
@@ -54,7 +54,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 2	5	2.5	2.5.1	标准报告栏目的设立与定位	filled	
 2	5	2.5	2.5.2	志愿编辑机制与人选征集	filled	
 2	5	2.5	2.5.3	标准联络人的对外代表职责	filled	
-2	5	2.5	2.5.4	报告稿源：参会者的会议亲述	filled	
+2	5	2.5	2.5.4	报告稿源-参会者的会议亲述	filled	
 2	5	2.5	2.5.5	个人身份声明与免责体例	filled	
 2	5	2.5	2.5.6	会刊栏目与标准报告的载体关系	filled	
 2	6	2.6	2.6.1	POSIX 会议的议程与公告机制	filled	
@@ -82,9 +82,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 2	8	2.8	2.8.5	标准文档的征补正机制	filled	
 2	8	2.8	2.8.6	文档标准与实现标准的衔接	filled	
 2	9	2.9	2.9.1	UniForum 与 USENIX 的两会关系	filled	
-2	9	2.9	2.9.2	DECUS 与 UNISIG：用户组的 UNIX 分支	filled	
+2	9	2.9	2.9.2	DECUS 与 UNISIG-用户组的 UNIX 分支	filled	
 2	9	2.9	2.9.3	LISA 会议的程序委员会与投稿规则	filled	
-2	9	2.9	2.9.4	教程与商展：会议的非学术面向	filled	
+2	9	2.9	2.9.4	教程与商展-会议的非学术面向	filled	
 2	9	2.9	2.9.5	区域用户组与年度会议的地域分布	filled	
 2	9	2.9	2.9.6	用户组生态中的标准议题讨论	filled	
 3	1	3.1	3.1.1	通用电气进入计算产业的技术起点	skeleton	
@@ -95,19 +95,19 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 3	1	3.1	3.1.6	分时系统在通用电气事业中的位置	skeleton	
 3	2	3.2	3.2.1	制表机事业的组织基础	skeleton	
 3	2	3.2	3.2.2	打孔卡数据处理的技术源流	skeleton	
-3	2	3.2	3.2.3	System/360 的架构统一	skeleton	
+3	2	3.2	3.2.3	System-360 的架构统一	skeleton	
 3	2	3.2	3.2.4	系列机研发的产业赌注	skeleton	
 3	2	3.2	3.2.5	操作系统家族与软件生产的关联	skeleton	
 3	2	3.2	3.2.6	从大型机垄断到产业分化	skeleton	
 3	3	3.3	3.3.1	大型机产业的市场结构	skeleton	
 3	3	3.3	3.3.2	小型机的技术条件与价格曲线	skeleton	
 3	3	3.3	3.3.3	DEC 的产品线策略	skeleton	
-3	3	3.3	3.3.4	计算模式的分化：批处理与交互	skeleton	
+3	3	3.3	3.3.4	计算模式的分化-批处理与交互	skeleton	
 3	3	3.3	3.3.5	软件与硬件产业的分工	skeleton	
 3	3	3.3	3.3.6	从大型机到小型机的制度后果	skeleton	
 3	4	3.4	3.4.1	大型机技术源流的延续	skeleton	
 3	4	3.4	3.4.2	IBM Z 系列的代际演进	skeleton	
-3	4	3.4	3.4.3	大型机的物质文化：穿孔卡、磁带与磁盘	skeleton	
+3	4	3.4	3.4.3	大型机的物质文化-穿孔卡、磁带与磁盘	skeleton	
 3	4	3.4	3.4.4	LinuxONE 与开放接口的转向	skeleton	
 3	4	3.4	3.4.5	大型机在云计算时代的角色	skeleton	
 3	4	3.4	3.4.6	制度延续与技术转型的张力	skeleton	
@@ -118,7 +118,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 4	1	4.1	4.1.5	系统软件的交付与随附	skeleton	
 4	1	4.1	4.1.6	早期大型机软件的分层秩序	skeleton	
 4	2	4.2	4.2.1	从批处理到交互式的转变	skeleton	
-4	2	4.2	4.2.2	分时的技术条件：中断与存储保护	skeleton	
+4	2	4.2	4.2.2	分时的技术条件-中断与存储保护	skeleton	
 4	2	4.2	4.2.3	多用户共享的经济学	skeleton	
 4	2	4.2	4.2.4	终端与响应时间的取舍	skeleton	
 4	2	4.2	4.2.5	分时系统的组织形态	skeleton	
@@ -135,14 +135,14 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 4	4	4.4	4.4.4	操作系统传统的汇聚点	skeleton	
 4	4	4.4	4.4.5	项目制研究与工具文化	skeleton	
 4	4	4.4	4.4.6	从分时到小型机的过渡	skeleton	
-4	5	4.5	4.5.1	CP/M 的微机路径	skeleton	
+4	5	4.5	4.5.1	CP-M 的微机路径	skeleton	
 4	5	4.5	4.5.2	Apple DOS 的个人电脑路径	skeleton	
 4	5	4.5	4.5.3	TRSDOS 与整机零售策略	skeleton	
 4	5	4.5	4.5.4	MS-DOS 的世代源流	skeleton	
 4	5	4.5	4.5.5	微机操作系统的兼容性竞争	skeleton	
 4	5	4.5	4.5.6	从整机附送到软件单独售卖	skeleton	
-4	6	4.6	4.6.1	CP/M 的接口约定与移植策略	skeleton	
-4	6	4.6	4.6.2	从 CP/M 到 MS-DOS 的接口继承	skeleton	
+4	6	4.6	4.6.1	CP-M 的接口约定与移植策略	skeleton	
+4	6	4.6	4.6.2	从 CP-M 到 MS-DOS 的接口继承	skeleton	
 4	6	4.6	4.6.3	微机 BIOS 与硬件抽象层	skeleton	
 4	6	4.6	4.6.4	应用软件生态的锁定效应	skeleton	
 4	6	4.6	4.6.5	版本迭代与兼容性负担	skeleton	
@@ -178,7 +178,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 5	5	5.5	5.5.5	学术自治与工业纪律的张力	skeleton	
 5	5	5.5	5.5.6	科研体制的价值取向	skeleton	
 6	1	6.1	6.1.1	CTSS 的硬件基础与兼容设计	skeleton	
-6	1	6.1	6.1.2	分时调度：内存换入换出	skeleton	
+6	1	6.1	6.1.2	分时调度-内存换入换出	skeleton	
 6	1	6.1	6.1.3	终端与用户账户的组织	skeleton	
 6	1	6.1	6.1.4	教学场景中的分时使用	skeleton	
 6	1	6.1	6.1.5	CTSS 的示范效应与访问者	skeleton	

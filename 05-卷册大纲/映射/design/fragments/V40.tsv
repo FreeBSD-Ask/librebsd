@@ -2,7 +2,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 40	1	1.1	1.1.1	386BSD 之前的 4.3BSD 血统	filled	
 40	1	1.1	1.1.2	Jolitz 的 PC 移植路径	filled	
 40	1	1.1	1.1.3	386BSD 补丁流的积累与缺陷	skeleton	
-40	1	1.1	1.1.4	Net/2 许可争议的技术后果	skeleton	
+40	1	1.1	1.1.4	Net-2 许可争议的技术后果	skeleton	
 40	1	1.1	1.1.5	386BSD 1.0 的发行时点	skeleton	
 40	1	1.1	1.1.6	早期移植者对 386BSD 的依赖	skeleton	
 40	1	1.2	1.2.1	补丁提交渠道的堵塞	skeleton	
@@ -467,4 +467,3 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 40	9	9.10	9.10.4	安全默认值的取向	skeleton	
 40	9	9.10	9.10.5	生态活跃度的比较	skeleton	
 40	9	9.10	9.10.6	比较结论的适用条件	skeleton	
-

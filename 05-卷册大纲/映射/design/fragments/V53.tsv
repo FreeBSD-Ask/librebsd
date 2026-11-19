@@ -5,7 +5,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	1	1.1	1.1.4	FreeBSD 自述的源流接续	skeleton	
 53	1	1.1	1.1.5	网络发行版与完整系统的分界	filled	
 53	1	1.1	1.1.6	学术机构的署名约束	skeleton	
-53	1	1.2	1.2.1	Net/2 缺失文件的补齐	skeleton	
+53	1	1.2	1.2.1	Net-2 缺失文件的补齐	skeleton	
 53	1	1.2	1.2.2	匿名 FTP 分发的最初形态	skeleton	
 53	1	1.2	1.2.3	维护人力与缺陷积压的错位	filled	
 53	1	1.2	1.2.4	用户自组织的维护团体	filled	
@@ -62,7 +62,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	2	2.4	2.4.1	受支持平台的清单构成	skeleton	
 53	2	2.4	2.4.2	旧硬件支持的长期承诺	filled	
 53	2	2.4	2.4.3	未解决问题在优先级中的位置	filled	
-53	2	2.4	2.4.4	TCP/IP 网络在强项清单的位次	skeleton	
+53	2	2.4	2.4.4	TCP-IP 网络在强项清单的位次	skeleton	
 53	2	2.4	2.4.5	ARM 平台的支持方式	filled	
 53	2	2.4	2.4.6	硬件淘汰与平台退役	skeleton	
 53	2	2.5	2.5.1	商业采用与许可前提	skeleton	
@@ -169,7 +169,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	4	4.7	4.7.6	署名要求作为边界条件	skeleton	
 53	4	4.8	4.8.1	新文件的默认许可选择	skeleton	
 53	4	4.8	4.8.2	man page 的 HISTORY 与 BUGS 段	skeleton	
-53	4	4.8	4.8.3	bsd.*.mk 宏文件的共享	skeleton	
+53	4	4.8	4.8.3	bsd.＊.mk 宏文件的共享	skeleton	
 53	4	4.8	4.8.4	示例目录的文档取向	skeleton	
 53	4	4.8	4.8.5	目录层次约定的成文化	skeleton	
 53	4	4.8	4.8.6	chflags 与不可变标志	skeleton	
@@ -327,7 +327,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 53	8	8.1	8.1.2	上游树与产品树的对齐	skeleton	
 53	8	8.1	8.1.3	内核 TLS 的吞吐收益	skeleton	
 53	8	8.1	8.1.4	发送文件路径的零拷贝改造	skeleton	
-53	8	8.1	8.1.5	概念验证阶段的 10 Gb/s 接口配置	skeleton	
+53	8	8.1	8.1.5	概念验证阶段的 10 Gb-s 接口配置	skeleton	
 53	8	8.1	8.1.6	商用机群的吞吐规模	skeleton	
 53	8	8.2	8.2.1	平台移植的分层制	skeleton	
 53	8	8.2	8.2.2	第一层移植的战略角色	skeleton	

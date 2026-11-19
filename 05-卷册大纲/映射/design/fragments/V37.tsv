@@ -459,7 +459,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	9	9.4	9.4.3	性能事件的分类表	skeleton	
 37	9	9.4	9.4.4	计数器复用的调度	skeleton	
 37	9	9.4	9.4.5	性能数据的校准法	skeleton	
-37	9	9.5	9.5.1	ddb：内核内建调试器	filled	
+37	9	9.5	9.5.1	ddb-内核内建调试器	filled	
 37	9	9.5	9.5.2	kgdb 的远程会话	filled	
 37	9	9.5	9.5.3	崩溃现场的保护法	filled	
 37	9	9.5	9.5.4	符号加载的路径图	skeleton	
@@ -590,7 +590,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	11	11.9	11.9.4	工单数据的保全法	skeleton	
 37	11	11.9	11.9.5	平台更替的使用反馈	skeleton	
 37	11	11.10	11.10.1	14.0 的发布时点	skeleton	
-37	11	11.10	11.10.2	stable/14 分支的建立	skeleton	
+37	11	11.10	11.10.2	stable-14 分支的建立	skeleton	
 37	11	11.10	11.10.3	14.x 的特性集	filled	
 37	11	11.10	11.10.4	发布工程的交接单	skeleton	
 37	11	11.10	11.10.5	版本升级的用户告知	filled	
