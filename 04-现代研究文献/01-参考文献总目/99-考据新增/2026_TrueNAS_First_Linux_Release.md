@@ -43,3 +43,7 @@ OpenZFS 2.0 双主 OS 起点（b007 补录）：
 - 末句“enabled the migration of data between CORE to SCALE”是 2.8.3“数据池迁移技术前提”的预备证据，留后续批使用。
 - 按 L3 采信；厂商博客，宣传口径。
 - b007 补录：“All of the excellent TrueNAS tools…”印证共用面覆盖核心功能清单（2.8.1-B）；“The journey started with…primary OSes for OpenZFS 2.0”是中间件移植的工程起点（2.8.2-B）；“hundreds of development years”是底座更换代价的厂商与社区分担口径（2.8.5-A）。
+
+## supp-V57-b003 追加引文（G6 全责线，2026-11-20）
+
+- 取句（V57.3.1.2 D 块，省略号分段）：For the first time, TrueNAS, the most widely deployed Open Source Software-Defined Storage, is now officially available on both FreeBSD ( TrueNAS CORE & TrueNAS Enterprise ) and Linux with TrueNAS SCALE . … TrueNAS SCALE 22.02.0 (Angelfish) is now released on … 2/22/22.

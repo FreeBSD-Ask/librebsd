@@ -69,3 +69,8 @@ Web 界面现代化与底座无关（b015 补录）：
 - “Both of these TrueNAS editions use FreeBSD 12.0”把 CORE／Enterprise 两档与同一基线绑定，支撑 2.6.1、2.6.2。
 - “chose Linux (Debian) as the base OS”是 2.7.2 底座重选的动机原文；本批仅取 2.6 线，2.7.2 留后续批。
 - b007 补录：“over 90%…is shared”是 2.8.1“软件共用比例”的直接原文；“Middleware…OS independent”是 2.8.2“系统无关层”的原文；“OpenZFS 2.0 integration…migrated easily between OSes”是 2.8.3“池迁移前提”的前提句；“Collaboration with Open Source component projects”是 2.8.5“上游分担”的原文。
+
+## supp-V57-b003 追加引文（G6 全责线，2026-11-20）
+
+- 取句一（V57.3.1.1 A 块）：With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE. What was formerly TrueNAS will now be TrueNAS Enterprise.
+- 取句二（V57.3.1.2 C 块，省略号分段）：We also announced the start of a new Open Source project, called TrueNAS SCALE. The goals of this project include running Linux containers and building scale-out clustered storage. … we chose Linux (Debian) as the base OS so that we had access to all of these container and clustering tools and could deliver a well-integrated user experience in a reasonable timeframe.

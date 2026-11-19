@@ -59,11 +59,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 57	2	2.4	2.4.3	桌面环境由打包团队分担	filled	
 57	2	2.4	2.4.4	桌面支持另有渠道	filled	
 57	2	2.4	2.4.5	可用性不能只凭公告判断	filled	
-57	3	3.1	3.1.1	FreeNAS 的两代同名异指	skeleton	
-57	3	3.1	3.1.2	TrueNAS 产品线的分层	skeleton	
-57	3	3.1	3.1.3	XigmaNAS 的分支来历	skeleton	
-57	3	3.1	3.1.4	ZFS 版本的随行实态	skeleton	
-57	3	3.1	3.1.5	存储衍生的许可取向	skeleton	
+57	3	3.1	3.1.1	FreeNAS 一名先后指两代	filled	
+57	3	3.1	3.1.2	CORE 与 SCALE 两线并立	filled	
+57	3	3.1	3.1.3	XigmaNAS 承接旧代 FreeNAS	skeleton	
+57	3	3.1	3.1.4	官网见 ZFS v5000 一例	filled	
+57	3	3.1	3.1.5	存储衍生多用宽松许可	skeleton	
 57	4	4.1	4.1.1	m0n0wall 的终止与迁移提示	skeleton	
 57	4	4.1	4.1.2	嵌入式镜像的体积约束	skeleton	
 57	4	4.1	4.1.3	分叉后保留的共同成分	skeleton	

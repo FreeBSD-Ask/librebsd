@@ -51,3 +51,8 @@ CORE 的支持承诺：
 - “Both TrueNAS CORE and TrueNAS SCALE will exist…”是 2.6.2 品牌结构后期形态（CORE＋SCALE 两版并存）。
 - “sidegrade”句是 2.7.4 的迁移路径第二来源。
 - “hasn’t been deprecated”句系博客**引述社区论坛帖**，claim 必须写明“引述”，不得当作厂商正式声明。
+
+## supp-V57-b003 追加引文（G6 全责线，2026-11-20）
+
+- 取句一（V57.3.1.1 B 块）：After nearly 20 years of evolution since its inception in 2005 as FreeNAS, TrueNAS CORE has proven to be the most reliable and highest-quality platform for traditional primary storage use cases .
+- 取句二（V57.3.1.4 F 块，省略号分段）：Both FreeNAS and TrueNAS CORE were originally developed using FreeBSD as their underlying OS. … The release candidate for the next version of TrueNAS CORE (13.3) is planned for May, followed by its formal release in June 2024.
