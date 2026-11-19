@@ -26,9 +26,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 57	1	1.5	1.5.5	从打包框架合并看同步节奏	skeleton	
 57	1	1.6	1.6.1	广告条款撤销时点与文本后果	filled	
 57	1	1.6	1.6.2	三条款与四条款只差广告一项	filled	
-57	1	1.6	1.6.3	声明保留义务随分发形态而分	skeleton	
+57	1	1.6	1.6.3	声明保留义务随分发形态而分	filled	
 57	1	1.6	1.6.4	衍生作品版权只及于新增部分	filled	
-57	1	1.6	1.6.5	成文条款与不成文署名惯例	skeleton	
+57	1	1.6	1.6.5	成文条款与不成文署名惯例	filled	
 57	1	1.7	1.7.1	提交权按代码域分割授予	skeleton	
 57	1	1.7	1.7.2	权限自导师提名入管理组	skeleton	
 57	1	1.7	1.7.3	项目终止须公告并留存源码	skeleton	
@@ -39,26 +39,26 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 57	1	1.8	1.8.3	专用设备系统易被生态对照漏计	skeleton	
 57	1	1.8	1.8.4	嵌入式市场分野最明显	skeleton	
 57	1	1.8	1.8.5	生态位比较以许可与形态为界	skeleton	
-57	2	2.1	2.1.1	PC-BSD 的图形安装器路线	skeleton	
-57	2	2.1	2.1.2	桌面产品化的打包选择	filled	
-57	2	2.1	2.1.3	预装应用集的范围	skeleton	
-57	2	2.1	2.1.4	版本沿革的编号惯例	skeleton	
-57	2	2.1	2.1.5	商业支持与社区版的双轨	skeleton	
-57	2	2.2	2.2.1	从 PC-BSD 到 TrueOS 的更名	skeleton	
-57	2	2.2	2.2.2	服务端转向的公告缺口	skeleton	
-57	2	2.2	2.2.3	回馈上游的提交权前提	skeleton	
-57	2	2.2	2.2.4	用户空间实验的清单缺口	skeleton	
-57	2	2.2	2.2.5	开发停止后的资产处置	skeleton	
-57	2	2.3	2.3.1	GhostBSD 的桌面栈选择	skeleton	
-57	2	2.3	2.3.2	MidnightBSD 的分叉起点	skeleton	
-57	2	2.3	2.3.3	小型项目的维护者结构	filled	
-57	2	2.3	2.3.4	版本编号的惯例对照	skeleton	
-57	2	2.3	2.3.5	桌面衍生的终止实例	skeleton	
-57	2	2.4	2.4.1	桌面栈的集成方式	filled	
-57	2	2.4	2.4.2	桌面栈的上游依赖	filled	
-57	2	2.4	2.4.3	桌面环境的打包分工	filled	
-57	2	2.4	2.4.4	桌面支持的渠道分布	filled	
-57	2	2.4	2.4.5	可用性评估的取材口径	filled	
+57	2	2.1	2.1.1	PC-BSD 从图形安装器起步	skeleton	
+57	2	2.1	2.1.2	PBI 打包自成一路	filled	
+57	2	2.1	2.1.3	预装应用实证与缺口	skeleton	
+57	2	2.1	2.1.4	版本编号随发布记录沿革	skeleton	
+57	2	2.1	2.1.5	商业赞助与社区维护并行	skeleton	
+57	2	2.2	2.2.1	PC-BSD 改名 TrueOS 即定位转向	skeleton	
+57	2	2.2	2.2.2	trueos.org 仅余终止公告	skeleton	
+57	2	2.2	2.2.3	回馈上游须先有提交权	skeleton	
+57	2	2.2	2.2.4	用户空间实验旧档缺口	skeleton	
+57	2	2.2	2.2.5	源码与品牌分途处置	skeleton	
+57	2	2.3	2.3.1	GhostBSD 以 MATE 为默认	skeleton	
+57	2	2.3	2.3.2	MidnightBSD 源于 FreeBSD	skeleton	
+57	2	2.3	2.3.3	单人主导与项目存续	filled	
+57	2	2.3	2.3.4	版本惯例对照缺一例	skeleton	
+57	2	2.3	2.3.5	终止成因归纳止于一例	skeleton	
+57	2	2.4	2.4.1	Ports 树集成与版本绑定	filled	
+57	2	2.4	2.4.2	桌面栈随上游用户空间而动	filled	
+57	2	2.4	2.4.3	桌面环境由打包团队分担	filled	
+57	2	2.4	2.4.4	桌面支持另有渠道	filled	
+57	2	2.4	2.4.5	可用性不能只凭公告判断	filled	
 57	3	3.1	3.1.1	FreeNAS 的两代同名异指	skeleton	
 57	3	3.1	3.1.2	TrueNAS 产品线的分层	skeleton	
 57	3	3.1	3.1.3	XigmaNAS 的分支来历	skeleton	
