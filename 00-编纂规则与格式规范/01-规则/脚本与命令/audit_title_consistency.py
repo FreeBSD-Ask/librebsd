@@ -21,7 +21,10 @@
 --------
 A 台账结构（表头、唯一性、层级对位、order 连续、status 枚举）
 B 形态 T1–T7（名词短语下限、禁日期起头、禁转述动词、禁纯版本号、禁工序词、长度、
-   年代括注：全角括号＋U+2014 一字线，含全角括号内 ASCII 连字符与 U+2013 年份区间（2026-11-04 增补，G-19；2026-11-14 按 J1 改一字线））
+   年代括注：全角括号＋U+2014 一字线，含全角括号内 ASCII 连字符与 U+2013 年份区间（2026-11-04 增补，G-19；2026-11-14 按 J1 改一字线）；
+   名词短语下限自 2026-11-19 ykla 令「允许问句收尾」起，对以全角问号收尾的论题式问句
+   不再判非名词短语——改题长线 v4.2 六规则本就授权问句题；ASCII 问号／叹号／句号／
+   句末语气词与非问句的「如何」仍判不符）
 C 字符 C1–C3／C5–C9（中英空格、直角引号、ASCII 句读、空白与不可见字符、术语、
    禁词：Q2「谱系」＋《释读规则》读者面禁名＋进步叙事与等级修辞（R31）＋劳动禁词（R32）；
    技术义「失败」（构建／装载／校验失败等及「失败日志」类技术对象形态）白名单豁免，见
@@ -146,6 +149,9 @@ C8E_BAND_RATIO_CAP = 0.60  # C8e：同卷 8—12 字题占比上限
 RETITLE_REG = "retitle-progress.tsv"
 RETITLE_HDR = ["vol", "status", "batch_tag", "updated", "note"]
 RETITLE_ENFORCE = ("drafted", "approved", "landed")
+# C8b 逐卷尾簇注册表（2026-11-19 ykla 令“接入与 J2 同型的逐卷登记”；默认 ≤3 不变，
+# 登记卷按「尾簇×上限」逐簇放行，新增题顶过上限即 FAIL）。缺文件＝全卷默认 3。
+C8B_REG = "小节尾簇注册.tsv"
 _CN_DIGIT = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5,
              "六": 6, "七": 7, "八": 8, "九": 9}
 
@@ -359,9 +365,16 @@ def run(root, collect=None):
         if not t:
             bad_t1.append("%s（空题）" % r["subsection_id"])
             continue
+        # 动词起首：动词后接「之／的／者／前／后／中／间」时已名词化（如「研究之先的对表口径」
+        # 的「研究之先」是时间状语性名词短语），不判动词起首——机器下限只拦真正的 VO 起首。
         if t.startswith(VERB_HEAD):
-            bad_t1.append("%s（动词起首）" % r["subsection_id"])
-        if t.endswith(("吗", "呢", "吧", "？", "!", "！", "。")) or "如何" in t:
+            v = next(x for x in VERB_HEAD if t.startswith(x))
+            if t[len(v):len(v) + 1] not in ("之", "的", "者", "前", "后", "中", "间"):
+                bad_t1.append("%s（动词起首）" % r["subsection_id"])
+        # 问句收尾豁免（2026-11-19 ykla 令“允许问句收尾”）：以全角问号收尾的论题式问句
+        # 不判“非名词短语收尾”——改题长线 v4.2 六规则本就授权问句题。豁免只认全角问号
+        # 这一形态：ASCII 问号、叹号、句号、句末语气词（吗／呢／吧）与非问句里的“如何”照判。
+        if not t.endswith("？") and (t.endswith(("吗", "呢", "吧", "?", "!", "！", "。")) or "如何" in t):
             bad_t1.append("%s（非名词短语收尾）" % r["subsection_id"])
     f("B1", "B1 论题名词短语（机器下限）", bad_t1,
       "不符 %d 处：%s" % (len(bad_t1), "、".join(bad_t1[:5]) or "无"))
@@ -385,9 +398,11 @@ def run(root, collect=None):
     f("B5", "B5 禁工序状态词", bad_t5,
       "命中 %d 处：%s" % (len(bad_t5), "、".join(bad_t5[:5]) or "无"))
 
+    # B6 长度下限（2026-11-19 ykla 令：8→6 字，与改题长线 v4.2 六规则的题长 6—17 对齐；
+    # 改题线刻意使用 6—7 字短题（burstiness 不对称），旧下限 8 会把授权短题判越界）
     bad_t6 = ["%s（%d 字）" % (r["subsection_id"], _title_len(r["title"]))
-              for _, _, r in all_rows if not (8 <= _title_len(r["title"]) <= 40)]
-    f("B6", "B6 长度 8—40 字（去空格）", bad_t6,
+              for _, _, r in all_rows if not (6 <= _title_len(r["title"]) <= 40)]
+    f("B6", "B6 长度 6—40 字（去空格）", bad_t6,
       "越界 %d 处：%s" % (len(bad_t6), "、".join(bad_t6[:5]) or "无"))
 
     bad_t7 = [r["subsection_id"] for _, _, r in all_rows
@@ -461,18 +476,74 @@ def run(root, collect=None):
     f("C8a", "C8a 禁 AI 高频空转词", bad_c8a,
       "命中 %d 处：%s" % (len(bad_c8a), "、".join(bad_c8a[:5]) or "无"))
 
-    bad_c8b, bad_c8b_ids = [], []
+    # C8b 逐卷注册（2026-11-19 ykla 令：接入与 J2 同型的逐卷登记，默认 ≤3 不变）。
+    # 登记表 `映射/title-design/小节尾簇注册.tsv`：vol／mode／exceptions／basis／decided_by／
+    # decided_date；mode=exempt 时按「尾簇×上限」逐簇登记（新增题把某簇顶过注册上限即 FAIL），
+    # mode=cap 或未登记卷按默认 3。登记须写明清零期限（该卷改题批收口即注销该行）。
+    c8b_reg, c8b_reg_err = {}, []
+    c8b_regp = os.path.join(design_dir, C8B_REG)
+    if os.path.isfile(c8b_regp):
+        hdr_seen = False
+        for ln, line in enumerate(_read(c8b_regp).split("\n"), 1):
+            if not line.strip():
+                continue
+            parts = line.split("\t")
+            if not hdr_seen:
+                hdr_seen = True
+                if parts[:3] != ["vol", "mode", "exceptions"]:
+                    c8b_reg_err.append("表头不合 schema（第 1 行）")
+                continue
+            if len(parts) < 3:
+                c8b_reg_err.append("第 %d 行列数 %d<3" % (ln, len(parts)))
+                continue
+            m = re.match(r"^V(\d{2})$", parts[0].strip())
+            if not m:
+                c8b_reg_err.append("第 %d 行卷号非法：%s" % (ln, parts[0]))
+                continue
+            vv = m.group(1)  # 与 all_rows 的卷号同形（两位补零，如 "07"）
+            mode = parts[1].strip()
+            if mode not in ("cap", "exempt"):
+                c8b_reg_err.append("第 %d 行 mode 非法（须 cap／exempt）：%s" % (ln, mode))
+                continue
+            caps, okc = {}, True
+            for it in (x.strip() for x in parts[2].split("；")):
+                if not it:
+                    continue
+                mt = re.match(r"^(.+)×(\d+)$", it)
+                if not mt:
+                    c8b_reg_err.append("第 %d 行尾簇格式非法：%s" % (ln, it))
+                    okc = False
+                    break
+                caps[mt.group(1)] = int(mt.group(2))
+            if okc:
+                c8b_reg[vv] = {"mode": mode, "cap": caps}
+
+    bad_c8b, bad_c8b_ids, info_c8b = [], [], []
     tail_groups = {}
     for vol, ln, r in all_rows:
         t = "".join(r["title"].split())
         if len(t) >= 2:
             tail_groups.setdefault((vol, t[-2:]), []).append(r["subsection_id"])
+    c8b_reg_hits = 0
     for (vol, tail), ids in sorted(tail_groups.items()):
-        if len(ids) > 3:
-            bad_c8b.append("V%s 尾“%s”×%d（%s…）" % (vol, tail, len(ids), "、".join(ids[:4])))
+        reg = c8b_reg.get(vol)
+        limit = 3
+        if reg and reg["mode"] == "exempt" and tail in reg["cap"]:
+            limit = reg["cap"][tail]
+            c8b_reg_hits += 1
+        if len(ids) > limit:
+            bad_c8b.append("V%s 尾“%s”×%d（上限 %d；%s…）"
+                           % (vol, tail, len(ids), limit, "、".join(ids[:4])))
             bad_c8b_ids.extend(ids)
-    f("C8b", "C8b 风格一致：同卷同结尾二字簇 ≤3", bad_c8b,
-      "超限簇 %d 处：%s" % (len(bad_c8b), "、".join(bad_c8b[:5]) or "无"), bad_c8b_ids)
+        elif len(ids) > 3:
+            info_c8b.append("V%s 尾“%s”×%d（注册上限 %d）" % (vol, tail, len(ids), limit))
+    f("C8b", "C8b 风格一致：同卷同结尾二字簇 ≤3（逐卷注册，2026-11-19 立）",
+      bad_c8b + c8b_reg_err,
+      "超限簇 %d 处：%s%s%s" % (
+          len(bad_c8b), "、".join(bad_c8b[:5]) or "无",
+          "；注册放行 %d 簇（%s）" % (c8b_reg_hits, "、".join(info_c8b[:5])) if info_c8b else "",
+          "；注册表问题 %d 处（%s）" % (len(c8b_reg_err), "；".join(c8b_reg_err[:3]))
+          if c8b_reg_err else ""), bad_c8b_ids)
 
     bad_c8c = ["%s（的×%d）" % (r["subsection_id"], r["title"].count("的"))
                for _, _, r in all_rows if r["title"].count("的") > 2]
@@ -1241,6 +1312,44 @@ def cmd_selftest():
                   any(ok is False for c, _, ok, _ in rj3 if c == "J2")
                   and any("×6" in d for d in j2det),
                   "期望 FAIL 且计 ×6"))
+
+    # ---- 2026-11-19 ykla 令落地三判据的自检（问句收尾放行／B6 下限 6／C8b 逐卷注册）
+    def _write_c8b_reg(troot, row):
+        rd = os.path.join(troot, "05-卷册大纲", "映射", "title-design")
+        os.makedirs(rd, exist_ok=True)
+        w(os.path.join(rd, "小节尾簇注册.tsv"),
+          "vol\tmode\texceptions\tbasis\tdecided_by\tdecided_date\n" + row + "\n")
+
+    t_q = build("11", ["同源代码如何扩散？", "补丁积压的临界状态", "协调人接手的时序"])
+    r_q = run(t_q)
+    cases.append(("B1 问句收尾放行（全角问号收尾不判非名词短语，2026-11-19 令）",
+                  not any(c == "B1" and ok is False for c, _, ok, _ in r_q),
+                  "期望 B1 零 FAIL"))
+
+    t_b7 = build("12", ["档案只记发言者", "补丁积压的临界状态", "协调人接手的时序"])
+    r_b7 = run(t_b7)
+    cases.append(("B6 下限 6 字放行（七字短题不判越界）",
+                  not any(c == "B6" and ok is False for c, _, ok, _ in r_b7),
+                  "期望 B6 零 FAIL"))
+    t_b5 = build("13", ["档案只记发", "补丁积压的临界状态", "协调人接手的时序"])
+    r_b5 = run(t_b5)
+    cases.append(("B6 五字题照拦",
+                  any(c == "B6" and ok is False for c, _, ok, _ in r_b5), "期望命中 B6"))
+
+    c8b_tails = ["发行带断代的归属边界", "源码比对的同源边界", "归档范围的取舍边界",
+                 "争议并陈的叙述边界"]
+    t_c8 = build("14", c8b_tails)
+    _write_c8b_reg(t_c8, "V14\texempt\t边界×4\t夹具：注册放行\t夹具\t2026-11-19")
+    r_c8 = run(t_c8)
+    cases.append(("C8b 逐卷注册放行（注册边界×4 不拦，2026-11-19 令）",
+                  not any(c == "C8b" and ok is False for c, _, ok, _ in r_c8),
+                  "期望 C8b 零 FAIL"))
+    t_c8b = build("14", c8b_tails)
+    _write_c8b_reg(t_c8b, "V14\texempt\t边界×3\t夹具：注册顶破上限\t夹具\t2026-11-19")
+    r_c8b = run(t_c8b)
+    cases.append(("C8b 顶破注册上限照拦（注册 3／实测 4）",
+                  any(c == "C8b" and ok is False for c, _, ok, _ in r_c8b),
+                  "期望命中 C8b"))
 
     bad = [c for c in cases if not c[1]]
     for label, ok, detail in cases:

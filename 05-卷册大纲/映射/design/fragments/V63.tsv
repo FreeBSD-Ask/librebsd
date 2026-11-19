@@ -3,14 +3,23 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	1	1.1	1.1.2	抓包工具的流通路径	skeleton	
 63	1	1.1	1.1.3	守护进程的可移植性改造	skeleton	
 63	1	1.1	1.1.4	许可条款对移植的约束	skeleton	
+63	1	1.1	1.1.5	寄存器偏移的勘正凭据	filled	lkml.messages.2321591
+63	1	1.1	1.1.6	SCSI 工具链的跨系移植	filled	lkml.messages.2408836
+63	1	1.1	1.1.7	权利模型的移植尝试	filled	lkml.messages.2613781
+63	1	1.1	1.1.8	监狱机制的沙箱语义	filled	lkml.messages.5825116
+63	1	1.1	1.1.9	特权工具的 BSD 起点	filled	sparclinux.messages.9343774
 63	1	1.2	1.2.1	抓包库的接口抽象	filled	
 63	1	1.2	1.2.2	过滤器语法的共用规范	skeleton	
 63	1	1.2	1.2.3	网络诊断工具的跨系统部署	skeleton	
 63	1	1.2	1.2.4	内核特性差异的适配层	skeleton	
+63	1	1.2	1.2.5	netmap 的 FreeBSD 渊源	filled	lkml.messages.2050123
+63	1	1.2	1.2.6	随机源的 fork 感知借鉴	filled	lkml.messages.5822881
+63	1	1.2	1.2.7	高速收发的内核交换	filled	ob-193967
 63	1	1.3	1.3.1	双重许可文件的并存形态	skeleton	
 63	1	1.3	1.3.2	宽松许可代码的并入限度	skeleton	
 63	1	1.3	1.3.3	许可兼容的判定依据	skeleton	
 63	1	1.3	1.3.4	发行版对许可条款的取舍	filled	
+63	1	1.3	1.3.5	数值转换的跨库重写	filled	rust-for-linux.messages.9268951
 63	1	1.4	1.4.1	编译器套件的引入时序	filled	
 63	1	1.4	1.4.2	binutils 的移植面与用途	skeleton	
 63	1	1.4	1.4.3	基本系统与第三方件的分界	skeleton	
@@ -31,22 +40,50 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	1	1.8	1.8.2	维护职责的跨系交接	filled	
 63	1	1.8	1.8.3	上游与下游的补丁往返	skeleton	
 63	1	1.8	1.8.4	志愿与受薪工作的交织	filled	
+63	1	1.8	1.8.5	驱动移植的文档缺口	filled	lkml.messages.5590345
+63	1	1.8	1.8.6	集体维护的模式参证	filled	rust-for-linux.messages.9267987
+63	1	1.8	1.8.7	设备树的跨项目共建	filled	ob-235104
+63	1	1.8	1.8.8	署名惯例的源流考镜	filled	rust-for-linux.messages.9268507
 63	1	1.9	1.9.1	协议实现的多源参照	filled	
 63	1	1.9	1.9.2	系统接口的边界约定	filled	
 63	1	1.9	1.9.3	工具行为的兼容约定	filled	
 63	1	1.9	1.9.4	共同实现的边界与共享	filled	
+63	1	1.9	1.9.5	系统调用的 BSD 底色	filled	lkml.messages.6412275
+63	1	1.9	1.9.6	路径解析的 Capsicum 渊源	filled	lkml.messages.5429709
+63	1	1.9	1.9.7	信号投递语义的两系差异	filled	lkml.messages.1782605
+63	1	1.9	1.9.8	强制访问的框架脉络	filled	lkml.messages.1693799
+63	1	1.9	1.9.9	随机化实现的保守对标	filled	lkml.messages.3766149
+63	1	1.9	1.9.10	映射基址的随机化口径	filled	rust-for-linux.messages.9270985
 63	1	1.10	1.10.1	同一功能的两种实现路径	filled	
 63	1	1.10	1.10.2	代码同源的技术判据	skeleton	
 63	1	1.10	1.10.3	接口相似与代码同源的辨析	filled	
 63	1	1.10	1.10.4	共享代码的登记体例	filled	
+63	1	1.10	1.10.5	进程描述符的功能比照	filled	rust-for-linux.messages.9278159
+63	1	1.10	1.10.6	提权约束的机制源头	filled	lkml.messages.2107675
+63	1	1.10	1.10.7	最小授权的设计范式	filled	fb-1102840
+63	1	1.10	1.10.8	兼容基准的定调实践	filled	rust-for-linux.messages.9286619
+63	1	1.10	1.10.9	页回收算法的对比缺口	filled	lkml.messages.1752340
+63	1	1.10	1.10.10	隐藏标志的归属争辩	filled	rust-for-linux.messages.9304786
+63	1	1.10	1.10.11	兼容规则的先例纳入	filled	lkml.messages.1763181
 63	1	1.11	1.11.1	交流事实与源流叙事的分离	skeleton	
 63	1	1.11	1.11.2	影响一词的证据要求	skeleton	
 63	1	1.11	1.11.3	借鉴与挪用的界线	filled	
 63	1	1.11	1.11.4	来源叙述的层级划分	skeleton	
+63	1	1.11	1.11.5	返回约定的 SunOS 遗产	filled	lkml.messages.7254720
+63	1	1.11	1.11.6	固定映射的先例援引	filled	lkml.messages.1871378
+63	1	1.11	1.11.7	内存封禁的同类参照	filled	lkml.messages.1831079
+63	1	1.11	1.11.8	接口文档的 BSD 底本	filled	lkml.messages.2033405
 63	1	1.12	1.12.1	长期交汇的三条线索	skeleton	
 63	1	1.12	1.12.2	交汇点的制度条件	skeleton	
 63	1	1.12	1.12.3	反向流动的个案清单	filled	
 63	1	1.12	1.12.4	关系史的叙述收束	skeleton	
+63	1	1.12	1.12.5	close_range 的双向协同	filled	lkml.messages.1983190
+63	1	1.12	1.12.6	非特权沙箱的承袭落地	filled	sparclinux.messages.9339973
+63	1	1.12	1.12.7	Jail 补丁的接口争议	filled	sparclinux.messages.9343463
+63	1	1.12	1.12.8	ZFS 调试的交叉验证	filled	rust-for-linux.messages.9271703
+63	1	1.12	1.12.9	范围同步的 NetBSD 蓝本	filled	lkml.messages.2008275
+63	1	1.12	1.12.10	网络命名空间与 jail 的隔离分界	filled	lkml.messages.2188147
+63	1	1.12	1.12.11	安全工程的差距对话	filled	lkml.messages.1649285
 63	2	2.1	2.1.1	内核与用户空间的分层	skeleton	
 63	2	2.1	2.1.2	组件边界的历史形成	skeleton	
 63	2	2.1	2.1.3	分层假设的适用范围	skeleton	
@@ -59,6 +96,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	2	2.3	2.3.2	基本系统组件的替换范围	skeleton	
 63	2	2.3	2.3.3	组合系统的启动链条	skeleton	
 63	2	2.3	2.3.4	组合形态的稳定性代价	filled	
+63	2	2.3	2.3.5	Linux 二进制的免虚拟化兼容	filled	rust-for-linux.messages.9293027
 63	2	2.4	2.4.1	官方移植的准入门槛	filled	
 63	2	2.4	2.4.2	架构名的登记方式	skeleton	
 63	2	2.4	2.4.3	构建农场的覆盖程度	skeleton	
@@ -119,6 +157,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	3	3.5	3.5.2	条款删除的协商过程	skeleton	
 63	3	3.5	3.5.3	著佐权与宽松许可的对立	filled	
 63	3	3.5	3.5.4	许可争论的长期余波	filled	
+63	3	3.5	3.5.5	挪用指控的辨析实录	filled	rust-for-linux.messages.9270903
 63	3	3.6	3.6.1	命名的两种主张之争	skeleton	
 63	3	3.6	3.6.2	代码占比的统计论据	skeleton	
 63	3	3.6	3.6.3	发行版命名的实际用法	filled	
@@ -127,6 +166,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	3	3.7	3.7.2	承袭说的证据要求	filled	
 63	3	3.7	3.7.3	两系互用组件的实际情形	filled	
 63	3	3.7	3.7.4	来源争论的判定层级	skeleton	
+63	3	3.7	3.7.5	历史评断的中立改写	filled	rust-for-linux.messages.9298170
 63	3	3.8	3.8.1	中文论坛的论战体例	skeleton	
 63	3	3.8	3.8.2	译名与术语的歧异	skeleton	
 63	3	3.8	3.8.3	论战帖的存档与留存	skeleton	
@@ -139,10 +179,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	3	3.10	3.10.2	项目声明的效力范围	skeleton	
 63	3	3.10	3.10.3	口述材料的立场偏移	skeleton	
 63	3	3.10	3.10.4	立场归属的判定方法	skeleton	
+63	3	3.10	3.10.5	创始人的实证立场	filled	lkml.messages.1672577
+63	3	3.10	3.10.6	领域人物的出场侧写	filled	lkml.messages.6448850
 63	3	3.11	3.11.1	当时语境的重建步骤	skeleton	
 63	3	3.11	3.11.2	事后叙述的选择性	filled	
 63	3	3.11	3.11.3	纪念文本的叙事倾向	skeleton	
 63	3	3.11	3.11.4	叙述与档案的对照	skeleton	
+63	3	3.11	3.11.5	治理论战的旧例援引	filled	systemd-devel.messages.10040
 63	3	3.12	3.12.1	技术立场与身份认同	skeleton	
 63	3	3.12	3.12.2	历史记忆的世代更替	skeleton	
 63	3	3.12	3.12.3	争论遗产的双向评价	skeleton	
@@ -251,6 +294,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	7	7.5	7.5.2	影响与借鉴的分野	skeleton	
 63	7	7.5	7.5.3	兼容一词的两种用法	skeleton	
 63	7	7.5	7.5.4	概念层级的举证规则	skeleton	
+63	7	7.5	7.5.5	队列底本的导入辨析	filled	sparclinux.messages.9319759
 63	7	7.6	7.6.1	派生声明的判定作用	skeleton	
 63	7	7.6	7.6.2	归名的三种通行惯例	skeleton	
 63	7	7.6	7.6.3	传播路径的复原方法	skeleton	
@@ -263,6 +307,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 63	7	7.8	7.8.2	独立生态的并存条件	skeleton	
 63	7	7.8	7.8.3	网络节点的互证链条	skeleton	
 63	7	7.8	7.8.4	二元对立的叙事限度	skeleton	
+63	7	7.8	7.8.5	血统技术的采用总表	filled	lkml.messages.1625369
 63	8	8.1	8.1.1	实验性内核的自述	skeleton	
 63	8	8.1	8.1.2	PID 1 的职责界定	skeleton	
 63	8	8.1	8.1.3	启动速度的问题意识	skeleton	
