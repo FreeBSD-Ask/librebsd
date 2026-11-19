@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "3ba0c569eef72605b5900bc29564c589ecf36a33a7d1cbf0c781e6459ff41a51",
+  "content_sha256": "ac076c045adc3b9f0143cc47c7a97a7d5a663412ac034bfe5975c2de2134a31b",
   "extract": "title+body",
-  "generated_at": "2026-11-20T01:41:20+08:00"
+  "generated_at": "2026-11-20T02:26:10+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -4057,9 +4057,7 @@
    "title": "论文",
    "domains": [],
    "themes": [
-    "TH-HIS-001",
-    "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "sections": 4
   },
@@ -11150,8 +11148,13 @@
    "title": "沉默的大多数：不发言者与社区态度的不可知性",
    "domains": [],
    "themes": [
+    "TH-BIZ-012",
+    "TH-BIZ-015",
     "TH-BIZ-026",
-    "TH-GOV-034"
+    "TH-GOV-015",
+    "TH-GOV-034",
+    "TH-HIS-001",
+    "TH-HW-010"
    ],
    "sections": 4
   },
@@ -14482,9 +14485,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32356,9 +32357,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -67206,13 +67205,13 @@
    "title": "早期 Linux 社区与 BSD 社区",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-LAW-000",
+    "TH-GOV-000",
     "TH-HW-000"
    ],
    "themes": [
-    "TH-GOV-015",
     "TH-LAW-003",
+    "TH-GOV-015",
     "TH-HW-010",
     "TH-BIZ-008",
     "TH-NET-001",
@@ -81273,14 +81272,16 @@
    "title": "问题的提出：邮件列表之外的大多数",
    "meta": false,
    "domains": [
+    "TH-HW-000",
     "TH-BIZ-000",
-    "TH-GOV-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-BIZ-026",
-    "TH-GOV-034",
-    "TH-HIS-030"
+    "TH-HW-010",
+    "TH-BIZ-015",
+    "TH-BIZ-012",
+    "TH-HIS-001",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81292,14 +81293,12 @@
    "title": "态度不可知的群体构成：用户、教师与行业采用者",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-BIZ-026",
-    "TH-GOV-034",
-    "TH-HIS-030"
+    "TH-BIZ-012",
+    "TH-BIZ-015",
+    "TH-BIZ-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81311,14 +81310,12 @@
    "title": "代表性偏差的矫正方法：抽样、口述史与档案外推",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-BIZ-026",
-    "TH-GOV-034",
-    "TH-HIS-030"
+    "TH-BIZ-012",
+    "TH-BIZ-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81331,13 +81328,12 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-GOV-034",
-    "TH-BIZ-026",
-    "TH-HIS-030"
+    "TH-BIZ-012",
+    "TH-BIZ-015"
    ],
    "projects": [],
    "technical_terms": [],

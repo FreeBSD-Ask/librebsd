@@ -1,0 +1,5 @@
+subsection_id	kind	ref_id	claim_id	source_type	tier	block_type	batch	status	note
+V57.1.6.1	corpus_gap	10672	CL-RM-496786	official_doc	primary	D2	supp-V57-b001	supplemented	绑定 CL-RM-496786 第 2 落（V53.7.1.4 首落）；同句同锚复用 EV-SUP-002834，撤销时点官方口径
+V57.1.6.1	corpus_gap	11049	CL-RM-497364	web_archive	primary	D2	supp-V57-b001	supplemented	UCB 原信生效删除宣告句；ftp 原件不可达，取 SPEC 存档逐字副本，宿主非原域披露
+V57.1.6.2	corpus_gap	11049	CL-RM-497365	web_archive	primary	D2	supp-V57-b001	supplemented	UCB 原信第三条原文复述段；引号外逐字、行内空白归一，四条款版被删条款本体
+V57.1.6.2	corpus_gap	11050	CL-RM-497366	official_doc	primary	D2	supp-V57-b001	supplemented	FreeBSD 两条款分发条件句；第三方 BSD 式许可最简形态，衍生自由度实态
