@@ -1,0 +1,21 @@
+{
+  "name": "librebsd-outline-roles",
+  "version": "0.1.0",
+  "description": "给我自由——BSD 史编纂项目的角色卡与技能模板包（大纲小节层重制线）。只作模板与安装说明；不自动安装、不入根目录。",
+  "agents": [
+    { "id": "title-designer", "file": "../agents/title-designer.md", "role": "四源合成拟题与题名自检" },
+    { "id": "block-triage", "file": "../agents/block-triage.md", "role": "史料块逐块判读归属与 J4 处置" },
+    { "id": "gate-reviewer", "file": "../agents/gate-reviewer.md", "role": "门禁独立复核与 FAIL 清单" },
+    { "id": "volume-merger", "file": "../agents/volume-merger.md", "role": "单写者合并、重装配、收口与 tag" }
+  ],
+  "skills": [
+    { "id": "four-source-title", "file": "../skills/four-source-title.md", "trigger": "标题设计线开工" },
+    { "id": "gate-runner", "file": "../skills/gate-runner.md", "trigger": "每批收口/编辑后最小验证回路" },
+    { "id": "milestone-tag", "file": "../skills/milestone-tag.md", "trigger": "不可逆里程碑收口" },
+    { "id": "volume-parallel", "file": "../skills/volume-parallel.md", "trigger": "可按卷并行任务开工" }
+  ],
+  "install": {
+    "manual_only": true,
+    "note": "本项目不安装本插件（ykla 2026-10-29 裁定：只做模板）。若他项目复用，将 agents/ 与 skills/ 各文件内容按宿主平台的智能体/技能定义格式转换后手工装载。"
+  }
+}

@@ -333,7 +333,9 @@ def main():
 
     exe = find_bin()
     if not exe:
-        print("[exit 2] 未找到 markdownlint-cli2；请安装（npm i -g markdownlint-cli2）", file=sys.stderr)
+        print(f"[exit 2] 未找到 markdownlint-cli2；请安装（bun add -g markdownlint-cli2@{PINNED[0]}，"
+              f"版本唯一声明源＝markdownlint-version-baseline.txt；禁 npm，见 流程规则/02）",
+              file=sys.stderr)
         return 2
     ver = version_of(exe)
     if ver is None:

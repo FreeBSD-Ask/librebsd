@@ -82,6 +82,11 @@ cnki*
 !10-交叉索引/S03-historical_objects.json
 !11-元数据接口/01-章节元数据/chapter_index.json
 !05-卷册大纲/映射/再分配/checkpoints/*.json
+# 角色卡与技能模板包清单入库例外（2026-11-19 立）：`plugin.json` 是第二十九件 E11
+# 的判据对象（agents 4／skills 4 引用可达性），不入库则全新克隆下 E11 恒 FAIL——
+# 与 `data/catalog.json`、`.markdownlint.json` 同口径（“不入库则 CI 门禁恒失败”）。
+# 该件只含模板清单与安装说明（manual_only），无凭据、无运行态。绕开全局 `*.json` 规则。
+!13-软件工程/templates/qoder-plugin/plugin.json
 # 根目录临时工作文件（并发会话的路径清单等，不入版本库）
 /_*.txt
 # 目录页测试套件例外（2026-09-11 固化，须随 index.html 一起纳入版本管理；
