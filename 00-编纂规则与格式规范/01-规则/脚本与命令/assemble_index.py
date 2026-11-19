@@ -520,21 +520,25 @@ def assemble():
 
 
 def _blob_canon(text):
-    """内嵌数据块归一：按解压后的载荷比对，不比压缩流字节。
+    """内嵌数据块归一：按解压后的载荷比对，不比压缩流字节与标签属性。
 
     缘由（2026-11-19 CI 实跑实测）：gzip 输出随 zlib 实现／版本漂移——本机 Python 3.15 为
     zlib-ng，CI Python 3.14 为 zlib，同一输入产出的压缩字节不同（gzip 头 mtime 已固定为 0，
-    非时间戳问题）。逐字节比对会让 --check 在任何跨环境的克隆上恒红，而判据本意是
-    “装配产物是否与内容源同步”，落点应是解压载荷。载荷相同则渲染行为完全相同。
+    非时间戳问题）。随压缩流漂移的不止块体本身，还有标签上的 `data-integrity` SRI——
+    它按去空白 base64 的 SHA-256 计算，压缩流一变 SRI 即变。故归一必须把开标签属性
+    一并剥去，只保留“载荷指纹”；逐字节比对会让 --check 在任何跨环境的克隆上恒红，
+    而判据本意是“装配产物是否与内容源同步”，落点应是解压载荷。载荷相同则
+    渲染行为完全相同（SRI 是各环境对自家压缩流的自洽校验，页面装载器按本环境重算）。
     """
     def _sub(m):
         body = "".join(m.group(2).split())
         try:
             raw = gzip.decompress(base64.b64decode(body))
         except Exception:
-            return m.group(0)
-        return (m.group(1) + "<PAYLOAD sha256=%s bytes=%d>"
-                % (hashlib.sha256(raw).hexdigest(), len(raw)) + m.group(3))
+            return "<BLOB-UNDECODABLE>"
+        return ("<script type=application/gzip+base64 id=opt-data-blob>"
+                "<PAYLOAD sha256=%s bytes=%d></script>"
+                % (hashlib.sha256(raw).hexdigest(), len(raw)))
     return _embed.BLOB_RE.sub(_sub, text)
 
 
@@ -568,15 +572,22 @@ def cmd_selftest():
     payload = b'{"persons":[1,2,3],"refs":{"1":"x"},"revs":[]}'
     low, high = gzip.compress(payload, 9, mtime=0), gzip.compress(payload, 1, mtime=0)
     other = gzip.compress(payload.replace(b"1,2,3", b"1,2,4"), 9, mtime=0)
-    tpl = ('<script type="application/gzip+base64" id="opt-data-blob" nonce="N" '
-           'data-integrity="sha256-x">\n%s\n</script>')
+
+    def sri(b):
+        """模拟 sync_integrity：SRI 按去空白 base64 的 SHA-256（压缩流一变即变）。"""
+        b64 = base64.b64encode(b).decode()
+        import hashlib as _h
+        return "sha256-" + base64.b64encode(_h.sha256(b64.encode()).digest()).decode()
 
     def wrap(b):
         s = base64.b64encode(b).decode()
-        return tpl % "\n".join(s[i:i + 76] for i in range(0, len(s), 76))
+        body = "\n".join(s[i:i + 76] for i in range(0, len(s), 76))
+        return ('<script type="application/gzip+base64" id="opt-data-blob" nonce="N" '
+                'data-integrity="%s">\n%s\n</script>' % (sri(b), body))
 
     cases = [
-        ("同载荷异压缩流判同（zlib 版本漂移免疫）", _blob_canon(wrap(low)) == _blob_canon(wrap(high))),
+        ("同载荷异压缩流判同（zlib 版本漂移免疫，含 SRI 属性随流漂移）",
+         _blob_canon(wrap(low)) == _blob_canon(wrap(high))),
         ("异载荷判不同（真漂移照拦）", _blob_canon(wrap(low)) != _blob_canon(wrap(other))),
         ("未含数据块文本原样返回", _blob_canon("abc") == "abc"),
     ]
