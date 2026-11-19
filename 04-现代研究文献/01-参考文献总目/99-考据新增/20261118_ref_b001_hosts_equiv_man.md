@@ -18,3 +18,7 @@
 ## b002 追加引文池（2026-11-18 V61 b002 取用，同源异句异锚）
 
 4. [1.2.5 用] A single "+" matches all hosts or users.
+
+## b006 追加引文池（2026-11-20 V61 b006 取用，同源异句异锚）
+
+5. [1.6.1 用] Trust user "foo" from host "bar.com".

@@ -46,3 +46,7 @@
 16. [1.5.5 用，止于 normal users 以避 instructionsfor 粘连] Patching out the debug command in sendmail was only effective in conjunction with other fixes, did not interfere with normal users
 
 17. [1.5.6 用] This may have been the genesis of the virus, but that is disputed by reports in the New York Times[11] in which Paul Graham of Harvard states the virus started on a machine at the MIT AI Lab via remote login from Cornell.
+
+## b006 追加引文池（2026-11-20 V61 b006 取用，同源异句异锚）
+
+18. [1.6.1 用，含“pro gram”断词照录] The virus attempted to use the Berkeley remote shell pro gram (called rsh) to attack other machines without using passwords.
