@@ -62,3 +62,14 @@ V61.1.7.4	CERT CC instrumental building network 50 national CSIRTs	exa 检索（
 V61.1.7.5	CERT CC neutral third party reports vulnerabilities without revealing reporter	exa 检索（SEI 沿革页）	命中	中立第三方通报句取得	2026-11-20	exa web_search
 V61.1.7.5	GAO virus incident agencies actions emergency response centers ethics statements	exa 检索（Purdue CERIAS morris_worm 存档 GAO-rpt.txt）	命中	官方文书面动作范围句取得（缺口披露题）	2026-11-20	exa web_search
 V61.1.7.*	—	—	—	五题两独立来源齐备（10 块）：ref11066 GAO/IMTEC-89-57 新建＋ref11014 SEI／ref11061 CSNET／ref11059 RFC 1135 复用异句异锚；RFC 句经 curl 直取二次回核（页脚剥离披露）	2026-11-20	—
+V61.1.8.1	CERT Guide to CVD disclosure timing expected disclosure timing report	curl 直取 certcc.github.io disclosure_timing 页（59 538 字节）	命中	时序逐报告协商句取得	2026-11-20	curl 直连
+V61.1.8.1	CERT CC vulnerability disclosure policy balance public vendors community	curl 直取 certcc.github.io 政策页（28 742 字节；kb.cert.org 壳页改 GitHub Pages 载体）	命中	三方平衡制度目标句取得	2026-11-20	curl 直连
+V61.1.8.2	CERT CC 45 days after initial report regardless patches workarounds	curl 直取 certcc.github.io 政策页（同上）	命中	45 天固定条款句取得	2026-11-20	curl 直连
+V61.1.8.2	CERT Guide CVD choosing policy 45-90 days normal range negotiation hard deadline	curl 直取 certcc.github.io choosing_policy 页（58 142 字节）	命中	行业区间加协商起点句取得	2026-11-20	curl 直连
+V61.1.8.3	Project Zero announcing bug report public typically once a patch is available	exa 通道全文（blogspot curl/WebFetch 两度超时，exa 实取）	命中	同步原则句取得	2026-11-20	exa web_fetch
+V61.1.8.3	CERT CC policy FAQ routinely discovered disclosed before fair opportunity working exploits	curl 直取 certcc.github.io 政策页 FAQ（同上）	命中	同步脱节倒计时句取得	2026-11-20	curl 直连
+V61.1.8.4	FreeBSD security advisories base system mailing lists notifications page	curl 直取 freebsd.org/security/（26 890 字节；ref10409 复用异句）	命中	官方三列表加公告页句取得	2026-11-20	curl 直连
+V61.1.8.4	Bugtraq premier general security mailing list announced first seclists	curl 直取 seclists.org/bugtraq/（26 200 字节）	命中	公开渠道首发句取得	2026-11-20	curl 直连
+V61.1.8.5	CVE Program mission identify define catalog publicly disclosed vulnerabilities	exa 通道（cve.org curl 得 880 字节壳页改 exa）	命中	编目使命句取得（™ 空格照录）	2026-11-20	exa web_fetch
+V61.1.8.5	CVSS owned managed by FIRST non-profit incident response teams specification	curl 直取 first.org/cvss/specification-document（118 866 字节）	命中	FIRST 拥有管理句取得	2026-11-20	curl 直连
+V61.1.8.*	—	—	—	五题两独立来源齐备（10 块）：ref11077—11083 七新建（CERT/CC 政策／CVD Guide 两页／GPO launch／BugTraq 存档／CVE 概览／CVSS v4.0）＋ref10409 复用异句异锚；6160/6161 同题名旧式无 URL 卡披露非同文镜像	2026-11-20	—
