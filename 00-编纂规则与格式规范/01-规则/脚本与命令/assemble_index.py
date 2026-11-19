@@ -46,6 +46,8 @@
 """
 import argparse
 import base64
+import gzip
+import hashlib
 import html
 import importlib.util
 import io
@@ -517,11 +519,34 @@ def assemble():
     return tpl
 
 
+def _blob_canon(text):
+    """内嵌数据块归一：按解压后的载荷比对，不比压缩流字节。
+
+    缘由（2026-11-19 CI 实跑实测）：gzip 输出随 zlib 实现／版本漂移——本机 Python 3.15 为
+    zlib-ng，CI Python 3.14 为 zlib，同一输入产出的压缩字节不同（gzip 头 mtime 已固定为 0，
+    非时间戳问题）。逐字节比对会让 --check 在任何跨环境的克隆上恒红，而判据本意是
+    “装配产物是否与内容源同步”，落点应是解压载荷。载荷相同则渲染行为完全相同。
+    """
+    def _sub(m):
+        body = "".join(m.group(2).split())
+        try:
+            raw = gzip.decompress(base64.b64decode(body))
+        except Exception:
+            return m.group(0)
+        return (m.group(1) + "<PAYLOAD sha256=%s bytes=%d>"
+                % (hashlib.sha256(raw).hexdigest(), len(raw)) + m.group(3))
+    return _embed.BLOB_RE.sub(_sub, text)
+
+
 def cmd_check():
     disk = read(INDEX)
     built = assemble()
     if disk == built:
         print("装配产物与磁盘 index.html 一致：✅ 无漂移")
+        return 0
+    if _blob_canon(disk) == _blob_canon(built):
+        print("装配产物与磁盘 index.html 一致：✅ 无漂移"
+              "（内嵌数据块按解压载荷比对——压缩流随 zlib 实现版本漂移，不参与比对）")
         return 0
     d, b = disk.split("\n"), built.split("\n")
     print("装配产物与磁盘 index.html 不一致：❌ 漂移（%d 行 vs %d 行）" % (len(d), len(b)))
@@ -538,10 +563,37 @@ def cmd_check():
     return 1
 
 
+def cmd_selftest():
+    """数据块归一判据的非空自检（三例）：同载荷异压缩流判同／异载荷判不同／无块文本原样返回。"""
+    payload = b'{"persons":[1,2,3],"refs":{"1":"x"},"revs":[]}'
+    low, high = gzip.compress(payload, 9, mtime=0), gzip.compress(payload, 1, mtime=0)
+    other = gzip.compress(payload.replace(b"1,2,3", b"1,2,4"), 9, mtime=0)
+    tpl = ('<script type="application/gzip+base64" id="opt-data-blob" nonce="N" '
+           'data-integrity="sha256-x">\n%s\n</script>')
+
+    def wrap(b):
+        s = base64.b64encode(b).decode()
+        return tpl % "\n".join(s[i:i + 76] for i in range(0, len(s), 76))
+
+    cases = [
+        ("同载荷异压缩流判同（zlib 版本漂移免疫）", _blob_canon(wrap(low)) == _blob_canon(wrap(high))),
+        ("异载荷判不同（真漂移照拦）", _blob_canon(wrap(low)) != _blob_canon(wrap(other))),
+        ("未含数据块文本原样返回", _blob_canon("abc") == "abc"),
+    ]
+    bad = [c for c in cases if not c[1]]
+    for label, ok in cases:
+        print("  [%s] %s" % ("PASS" if ok else "FAIL", label))
+    print("  selftest：%d 例，未达预期 %d 例" % (len(cases), len(bad)))
+    return 0 if not bad else 1
+
+
 def main():
     ap = argparse.ArgumentParser(description="05-卷册大纲/目录装配器（四层解耦）")
     ap.add_argument("--check", action="store_true", help="漂移检测（重装到内存与磁盘比对）")
+    ap.add_argument("--selftest", action="store_true", help="数据块归一判据的非空自检")
     args = ap.parse_args()
+    if args.selftest:
+        return cmd_selftest()
     global CHECK_MODE
     CHECK_MODE = args.check
     if args.check:
