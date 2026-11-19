@@ -5,3 +5,7 @@
 - **本批取句二（1.6.5 A 块；Goal 节 attribution 句）**：Understanding the legal issues surrounding copyright is fundamental to the ability to exchange and re-distribute code, while honoring the spirit of the copyright and concept of attribution is fundamental to promoting the cooperation of the people involved.
 - **口径**：同 ref 不同引句跨题复用，各自立 evidence（source_id＋anchor＋quote 三元组）；原卡只读，本卡承载新引文。
 - **考据日期**：2026-11-20
+
+## supp-V57-b004 追加引文（G6 全责线，2026-11-20）
+
+- 取句（V57.3.1.5 C 块；三连句第三宿主主题复用，前两落＝V53.7.1.4／V57.1.6.1）：Berkeley rescinded the 3rd term (the advertising term) on 22 July 1999. Verbatim copies of the Berkeley license in the OpenBSD tree have that term removed. In addition, many 3rd-party BSD-style licenses consist solely of the first two terms.

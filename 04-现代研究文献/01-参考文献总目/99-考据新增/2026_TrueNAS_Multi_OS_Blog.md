@@ -74,3 +74,7 @@ Web 界面现代化与底座无关（b015 补录）：
 
 - 取句一（V57.3.1.1 A 块）：With the release of Version 12.0, what was previously called FreeNAS will now be TrueNAS CORE. What was formerly TrueNAS will now be TrueNAS Enterprise.
 - 取句二（V57.3.1.2 C 块，省略号分段）：We also announced the start of a new Open Source project, called TrueNAS SCALE. The goals of this project include running Linux containers and building scale-out clustered storage. … we chose Linux (Debian) as the base OS so that we had access to all of these container and clustering tools and could deliver a well-integrated user experience in a reasonable timeframe.
+
+## supp-V57-b004 追加引文（G6 全责线，2026-11-20）
+
+- 取句（V57.3.1.5 D 块）：The history of TrueNAS is FreeNAS and FreeBSD. FreeBSD is a well-structured OS with our preferred BSD license. It integrates well with ZFS and is well suited to the Open Storage business model that TrueNAS uses.
