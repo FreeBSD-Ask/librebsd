@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "ca2d58b81bbfd721685ca052b04ff0e25c355cfdcf6008922fa2711b8d604bd0",
+  "content_sha256": "afb3a3424007e4a39c540087e74ea90be3f435692c3bd86a2b11ecb4a0d867a4",
   "extract": "title+body",
-  "generated_at": "2026-11-20T03:30:27+08:00"
+  "generated_at": "2026-11-20T03:51:14+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -9651,7 +9651,8 @@
     "TH-HIS-037",
     "TH-HIS-040",
     "TH-HIS-003",
-    "TH-HIS-004"
+    "TH-HIS-004",
+    "TH-HIS-013"
    ],
    "sections": 11
   },
@@ -11149,8 +11150,13 @@
    "title": "沉默的大多数：不发言者与社区态度的不可知性",
    "domains": [],
    "themes": [
+    "TH-BIZ-012",
+    "TH-BIZ-015",
     "TH-BIZ-026",
-    "TH-GOV-034"
+    "TH-GOV-015",
+    "TH-GOV-034",
+    "TH-HIS-001",
+    "TH-HW-010"
    ],
    "sections": 4
   },
@@ -11253,9 +11259,9 @@
     "TH-GOV-015",
     "TH-GOV-037",
     "TH-BIZ-015",
+    "TH-HIS-046",
     "TH-HW-020",
-    "TH-BIZ-025",
-    "TH-BIZ-026"
+    "TH-BIZ-023"
    ],
    "sections": 17
   },
@@ -42697,11 +42703,11 @@
    "projects": [],
    "technical_terms": [
     "i386",
-    "sparc",
+    "mmu",
     "vax"
    ],
    "subs": 5,
-   "subs_sha1": "7fd1cba1af04d7558db742aed1a03f7cbe598140"
+   "subs_sha1": "5704eb8edb0bb0509a8e1b541a4d39c859d09e5c"
   },
   "V41-C002-2.2": {
    "chapter": "V41-C002",
@@ -42722,7 +42728,7 @@
     "powerpc"
    ],
    "subs": 5,
-   "subs_sha1": "9f581952e4e7646902581cb5c1f749fe06473184"
+   "subs_sha1": "05a6ebcb121722b385d2b913af831a59a9082141"
   },
   "V41-C002-2.3": {
    "chapter": "V41-C002",
@@ -42740,7 +42746,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "d106d037e3a5deb9b2dc61d6ea6d2790871cd10a"
+   "subs_sha1": "b165a4bc68be60ed43c671d3cbb4a2077abeeca1"
   },
   "V41-C002-2.4": {
    "chapter": "V41-C002",
@@ -42760,7 +42766,7 @@
     "arm"
    ],
    "subs": 5,
-   "subs_sha1": "4e3a3b158a8a3892f4cebfd4e1584a32f250dd4c"
+   "subs_sha1": "869a94e8cb41e5635be865c49cca647a3e3a83ed"
   },
   "V41-C002-2.5": {
    "chapter": "V41-C002",
@@ -42777,12 +42783,12 @@
    ],
    "projects": [],
    "technical_terms": [
+    "arm",
     "arm64",
-    "aarch64",
-    "arm"
+    "aarch64"
    ],
    "subs": 5,
-   "subs_sha1": "4727ead14ffcab5386c57f4bac9e1100f523c973"
+   "subs_sha1": "5104341c2fa9d2d1701efb1a153219debdb849e0"
   },
   "V41-C002-2.6": {
    "chapter": "V41-C002",
@@ -42802,7 +42808,7 @@
     "risc"
    ],
    "subs": 5,
-   "subs_sha1": "195a287147802ef72edc98daee2e083cf7cca071"
+   "subs_sha1": "468e95ff9b1605b0a7a40c1fa9713de5bf78a641"
   },
   "V41-C002-2.7": {
    "chapter": "V41-C002",
@@ -42821,7 +42827,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "b956b1599c843fb270a426f567e023ec668aad0d"
+   "subs_sha1": "ec37c86991c3efc92833a39d08322e6554ff85df"
   },
   "V41-C003-3.1": {
    "chapter": "V41-C003",
@@ -62979,8 +62985,8 @@
     "TH-BIZ-008",
     "TH-NET-001",
     "TH-NET-026",
-    "TH-NET-038",
     "TH-NET-016",
+    "TH-NET-038",
     "TH-NET-027"
    ],
    "projects": [],
@@ -64373,9 +64379,8 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-013"
    ],
    "projects": [],
    "technical_terms": [],
@@ -67199,13 +67204,13 @@
    "title": "早期 Linux 社区与 BSD 社区",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
     "TH-LAW-000",
+    "TH-GOV-000",
     "TH-HW-000"
    ],
    "themes": [
-    "TH-GOV-015",
     "TH-LAW-003",
+    "TH-GOV-015",
     "TH-HW-010",
     "TH-BIZ-008",
     "TH-NET-001",
@@ -81266,14 +81271,16 @@
    "title": "问题的提出：邮件列表之外的大多数",
    "meta": false,
    "domains": [
+    "TH-HW-000",
     "TH-BIZ-000",
-    "TH-GOV-000",
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-BIZ-026",
-    "TH-GOV-034",
-    "TH-HIS-030"
+    "TH-HW-010",
+    "TH-BIZ-015",
+    "TH-BIZ-012",
+    "TH-HIS-001",
+    "TH-GOV-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81285,14 +81292,12 @@
    "title": "态度不可知的群体构成：用户、教师与行业采用者",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-BIZ-026",
-    "TH-GOV-034",
-    "TH-HIS-030"
+    "TH-BIZ-012",
+    "TH-BIZ-015",
+    "TH-BIZ-026"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81304,14 +81309,12 @@
    "title": "代表性偏差的矫正方法：抽样、口述史与档案外推",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-GOV-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-BIZ-026",
-    "TH-GOV-034",
-    "TH-HIS-030"
+    "TH-BIZ-012",
+    "TH-BIZ-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81324,13 +81327,12 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-BIZ-000",
-    "TH-HIS-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-GOV-034",
-    "TH-BIZ-026",
-    "TH-HIS-030"
+    "TH-BIZ-012",
+    "TH-BIZ-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -82388,13 +82390,15 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-LAW-000",
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-HW-010",
-    "TH-HIS-001",
-    "TH-GOV-015"
+    "TH-LAW-015",
+    "TH-HIS-046",
+    "TH-BIZ-023",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -96204,7 +96208,9 @@
   },
   "V41-C002-2.1.4": {
    "add": [
-    "TH-HW-012"
+    "TH-HW-012",
+    "TH-OS-009",
+    "TH-HW-036"
    ]
   },
   "V41-C002-2.1.5": {
@@ -96214,6 +96220,7 @@
   },
   "V41-C002-2.2.1": {
    "add": [
+    "TH-LANG-024",
     "TH-HW-036"
    ]
   },
@@ -96255,12 +96262,12 @@
   },
   "V41-C002-2.3.4": {
    "add": [
+    "TH-HW-036",
     "TH-HW-015",
     "TH-VM-015",
     "TH-HIS-004",
     "TH-LANG-034",
-    "TH-HW-010",
-    "TH-HW-024"
+    "TH-HW-010"
    ]
   },
   "V41-C002-2.3.5": {
@@ -96306,13 +96313,14 @@
   },
   "V41-C002-2.5.5": {
    "add": [
-    "TH-HW-036"
+    "TH-HW-036",
+    "TH-LANG-021"
    ]
   },
   "V41-C002-2.6.1": {
    "add": [
-    "TH-HW-036",
-    "TH-HW-008"
+    "TH-HW-008",
+    "TH-HW-036"
    ]
   },
   "V41-C002-2.6.2": {
