@@ -1,0 +1,11 @@
+# 依赖与生成件（bun）
+node_modules/
+.vitepress/cache/
+.vitepress/dist/
+# 生成件：由 scripts/gen-pages.ts 与 scripts/sync-assets.ts 产出，随构建再生，不入库
+v[0-9][0-9]/
+.build/
+public/fonts/
+public/favicon.ico
+# 站点构建入口必须入库（根 .gitignore 的 *.json 全局规则在此本地放开）
+!package.json

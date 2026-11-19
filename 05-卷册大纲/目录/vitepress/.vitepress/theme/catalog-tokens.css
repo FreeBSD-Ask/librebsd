@@ -1,0 +1,306 @@
+/* 目录页设计令牌（自 05-卷册大纲/目录/assets/doc.css、modern.css 拆分移植；只取令牌层，不搬运装配页布局） */
+@font-face {
+  font-family: "LXGW WenKai Screen";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/lxgw-wenkai-screen-subset.woff2") format("woff2");
+}
+
+:root {
+  /* 装配页令牌（light） */
+  --cat-accent: #b0004f;
+  --cat-line: #d98cb0;
+  --cat-line-strong: #c96a97;
+  --cat-muted: #3a3f45;
+  --cat-faint: #444a52;
+
+  /* 映射到 VitePress 品牌与字族 */
+  --vp-c-brand-1: var(--cat-accent);
+  --vp-c-brand-2: var(--cat-line-strong);
+  --vp-c-brand-3: var(--cat-line);
+  --vp-c-brand-soft: color-mix(in srgb, var(--cat-accent) 12%, transparent);
+  --vp-font-family-base: "LXGW WenKai Screen", "霞鹜文楷 屏幕阅读版", "Kaiti SC", "STKaiti", KaiTi,
+    "楷体", "Noto Serif SC", serif;
+}
+
+/* 暗色沿用目录页 oled 变体（黑底绿字） */
+.dark {
+  --cat-accent: #7ee088;
+  --cat-line: #2f6b41;
+  --cat-line-strong: #4f9d63;
+  --cat-muted: #b9c2bd;
+  --cat-faint: #99a49f;
+  --vp-c-brand-1: var(--cat-accent);
+  --vp-c-brand-2: var(--cat-line-strong);
+  --vp-c-brand-3: var(--cat-line);
+  --vp-c-brand-soft: color-mix(in srgb, var(--cat-accent) 14%, transparent);
+}
+
+.cat-app {
+  --cat-radius: 14px;
+  font-family: var(--vp-font-family-base);
+}
+
+/* 指标条 */
+.cat-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 0;
+  margin: 18px 0 14px;
+  border: 1px solid var(--cat-line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.cat-metric {
+  padding: 6px 8px;
+  min-width: 0;
+}
+.cat-metric + .cat-metric {
+  border-left: 1px solid var(--cat-line);
+}
+.cat-metric span {
+  display: block;
+  color: var(--cat-muted);
+  font-size: 12px;
+}
+.cat-metric strong {
+  display: block;
+  color: var(--cat-accent);
+  font-size: 20px;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+.cat-metric small {
+  display: block;
+  color: var(--cat-faint);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+/* 检索区 */
+.cat-tools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.cat-tools input {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--cat-line);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+.cat-tools input:focus-visible {
+  outline: 2px solid var(--cat-accent);
+  outline-offset: 1px;
+}
+.cat-hint {
+  color: var(--cat-faint);
+  font-size: 12px;
+}
+
+/* 树 */
+.cat-vol {
+  border-top: 1px solid var(--cat-line);
+}
+.cat-vol > summary {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 9px 4px;
+  cursor: pointer;
+  list-style: none;
+}
+.cat-vol > summary::-webkit-details-marker {
+  display: none;
+}
+.cat-vol > summary::before {
+  content: "▸";
+  color: var(--cat-accent);
+  transition: transform 0.15s ease;
+}
+.cat-vol[open] > summary::before {
+  transform: rotate(90deg);
+}
+.cat-vol-no {
+  color: var(--cat-accent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.cat-vol-title {
+  font-weight: 600;
+}
+.cat-vol-meta {
+  margin-left: auto;
+  color: var(--cat-faint);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.cat-vol-body {
+  padding: 0 4px 12px 22px;
+}
+.cat-intro {
+  color: var(--cat-muted);
+  font-size: 13px;
+  border-left: 3px solid var(--cat-line);
+  padding: 2px 0 2px 10px;
+  margin: 4px 0 10px;
+}
+
+/* 章 */
+.cat-ch {
+  margin: 2px 0;
+}
+.cat-ch > summary {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 5px 2px;
+  cursor: pointer;
+  list-style: none;
+}
+.cat-ch > summary::-webkit-details-marker {
+  display: none;
+}
+.cat-ch > summary::before {
+  content: "·";
+  color: var(--cat-line-strong);
+}
+.cat-ch[open] > summary::before {
+  content: "▾";
+  color: var(--cat-accent);
+}
+.cat-ch-title {
+  flex: 1 1 auto;
+}
+.cat-ch-meta {
+  color: var(--cat-faint);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* 节与小节 */
+.cat-sec {
+  margin: 6px 0 6px 10px;
+  border-left: 1px dashed var(--cat-line);
+  padding-left: 10px;
+}
+.cat-sec-head {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.cat-sec-num {
+  color: var(--cat-accent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.cat-note {
+  margin: 3px 0 6px;
+  color: var(--cat-muted);
+  font-size: 12.5px;
+  background: color-mix(in srgb, var(--cat-accent) 6%, transparent);
+  border-radius: 8px;
+  padding: 5px 9px;
+}
+.cat-subs {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 2px;
+}
+.cat-subs a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+  padding: 2px 4px;
+  border-radius: 6px;
+}
+.cat-subs a:hover {
+  background: color-mix(in srgb, var(--cat-accent) 8%, transparent);
+  color: var(--cat-accent);
+}
+.cat-sub-num {
+  color: var(--cat-faint);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* 检索结果 */
+.cat-hit {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 6px 4px;
+  border-bottom: 1px solid color-mix(in srgb, var(--cat-line) 55%, transparent);
+  text-decoration: none;
+  color: inherit;
+}
+.cat-hit:hover {
+  background: color-mix(in srgb, var(--cat-accent) 7%, transparent);
+}
+.cat-hit-no {
+  color: var(--cat-accent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.cat-hit-path {
+  color: var(--cat-faint);
+  font-size: 12px;
+}
+
+/* 数据视图 */
+.cat-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.cat-tab {
+  padding: 5px 14px;
+  border: 1px solid var(--cat-line);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.cat-tab[aria-selected="true"] {
+  border-color: var(--cat-accent);
+  color: var(--cat-accent);
+  background: color-mix(in srgb, var(--cat-accent) 10%, transparent);
+}
+.cat-row {
+  display: grid;
+  grid-template-columns: minmax(84px, 130px) 1fr;
+  gap: 10px;
+  padding: 5px 4px;
+  border-bottom: 1px solid color-mix(in srgb, var(--cat-line) 45%, transparent);
+  font-size: 14px;
+}
+.cat-row-id {
+  color: var(--cat-accent);
+  font-variant-numeric: tabular-nums;
+}
+.cat-row-sub {
+  color: var(--cat-faint);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .cat-vol-meta,
+  .cat-ch-meta {
+    display: none;
+  }
+  .cat-vol-body {
+    padding-left: 12px;
+  }
+}

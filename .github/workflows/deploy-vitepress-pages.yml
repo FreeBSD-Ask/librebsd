@@ -1,0 +1,71 @@
+# 目录页站点部署：VitePress → GitHub Pages（05-卷册大纲/目录/vitepress）
+# 依据：ADR-0021；VitePress 官方《Deploy: GitHub Pages》；任一第三方 action 钉定 40 位提交 SHA（与 ci.yml 同口径）。
+# 链序：verify（三源互证，装配产物只作对照件）→ build（sync+gen+vitepress build）→ deploy。
+# 运行时：bun（禁 npm／npx／pnpm／yarn，2026-11-17 ykla 令）。
+name: Deploy Outline Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '05-卷册大纲/目录/**'
+      - '05-卷册大纲/SUMMARY.md'
+      - '.github/workflows/deploy-vitepress-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 验证与构建
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 检出
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 1
+
+      - name: 安装 bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
+        with:
+          bun-version: '1.4.4'
+
+      - name: 安装依赖（bun，锁定锁文件）
+        working-directory: 05-卷册大纲/目录/vitepress
+        run: bun install --frozen-lockfile
+
+      - name: 三源互证（SUMMARY ↔ outline.txt ↔ 装配页 index.html）
+        working-directory: 05-卷册大纲/目录/vitepress
+        run: bun run verify
+
+      - name: 构建站点（sync + gen + vitepress build）
+        working-directory: 05-卷册大纲/目录/vitepress
+        run: bun run docs:build
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d  # v6
+
+      - name: 上传产物
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5
+        with:
+          path: 05-卷册大纲/目录/vitepress/.vitepress/dist
+
+  deploy:
+    name: 部署
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5
