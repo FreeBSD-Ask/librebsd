@@ -27,3 +27,13 @@ V07.1.4.1	corpus_gap	11052	CL-RM-497457	web_archive	primary	D2	supp-V07-b007	sup
 V07.1.4.1	corpus_gap	11051	CL-RM-497458	official_doc	primary	D2	supp-V07-b007	supplemented	ACM DL TT D2（Published 1984-08-01）
 V07.1.2.3	corpus_gap	203	CL-RM-497361	academic_work	primary	D1	supp-V07-b007	supplemented	ref203#1 D1 复用 CL-RM-497361 第二宿主（专号成员件刊头）
 V07.1.2.3	corpus_gap	1649	CL-RM-497459	academic_work	primary	D2	supp-V07-b007	supplemented	ref1649 D2（bell-labs.com 成员篇著录页）
+V07.1.2.4	corpus_gap	11067	CL-RM-497496	web_archive	primary	D2	supp-V07-b008	supplemented	bitsavers 整卷扫描刊名页 D2（期刊一期形态）；目标页转写承 D2 校验
+V07.1.2.4	corpus_gap	11068	CL-RM-497497	web_archive	primary	D2	supp-V07-b008	supplemented	computinghistory 馆藏条目 D2（平装单册实物著录）；逐字段取证
+V07.1.2.5	corpus_gap	11067	CL-RM-497498	web_archive	primary	D2	supp-V07-b008	supplemented	bitsavers Preface 两句 D2（6% 稀缺度＋central theme；OCR 噪声句以省略号绕开）
+V07.1.2.5	corpus_gap	11067	CL-RM-497499	web_archive	primary	D2	supp-V07-b008	supplemented	bitsavers Foreword 句 D2（prizewinning 更新版＋no more concise summary；h~s 噪声绕开）
+V07.1.3.5	corpus_gap	11069	CL-RM-497500	web_archive	primary	D2	supp-V07-b008	supplemented	warsus.github.io Lions 前言 D2（第三方转写本；与扫描件三方同文互核）
+V07.1.3.5	corpus_gap	11067	CL-RM-497501	web_archive	primary	D2	supp-V07-b008	supplemented	bitsavers Foreword descendant systems 句 D2（系统描述被后代承袭）
+V07.1.4.4	corpus_gap	11070	CL-RM-497502	academic_work	secondary_authoritative	D1	supp-V07-b008	supplemented	acsac.org 全文入库 D1（页 3 §3.2.4 TT 段；同文异载体按域去重）
+V07.1.4.4	corpus_gap	11071	CL-RM-497503	academic_work	secondary_authoritative	D2	supp-V07-b008	supplemented	dwheeler.com 学位论文 D2（widely publicized 段；内嵌直引号题名绕开）
+V07.1.4.5	corpus_gap	11072	CL-RM-497504	web_archive	primary	D2	supp-V07-b008	supplemented	Semantic Scholar API D2（citationCount 786／influential 32，取值时点固化）
+V07.1.4.5	corpus_gap	11070	CL-RM-497505	academic_work	secondary_authoritative	D1	supp-V07-b008	supplemented	acsac.org 全文入库 D1（页 7 参考文献表 [39][40]；连字还原口径）
