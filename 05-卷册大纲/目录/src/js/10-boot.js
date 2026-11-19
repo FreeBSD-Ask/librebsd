@@ -34,13 +34,9 @@ function F(k, o) {
 
   /* 尊重“减少动效”偏好：显式 behavior 会覆盖 CSS 的 scroll-behavior，故须在 JS 侧判定 */
   var rmq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
-  /* 墨水屏（2026-10-22）：慢刷新屏上任何过渡与补间都既耗刷新又留残影，故 eink 与
-     “减少动效”偏好同等对待——任一命中即走静态路径（瞬时落点、零交叉淡入）。 */
-  function inkTheme() {
-    var r = document.documentElement;
-    return !!r && r.getAttribute("data-theme") === "eink";
-  }
-  function staticMode() { return inkTheme() || !!(rmq && rmq.matches); }
+  /* 墨水屏静态化已随主题收敛移除（2026-11-19 ykla 令：主题面只留纯彩与纯黑 OLED）；
+     “减少动效”偏好单独承担静态路径（瞬时落点、零交叉淡入）。 */
+  function staticMode() { return !!(rmq && rmq.matches); }
   function scrollBehavior() { return staticMode() ? "auto" : "smooth"; }
 
   /* 对话框收口：关闭面板并把焦点交回其触发按钮（触发按钮由 aria-controls 反查）。

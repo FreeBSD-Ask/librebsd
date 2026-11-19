@@ -166,7 +166,6 @@ h3.chapter { letter-spacing: 0.01em; }
 @media (prefers-contrast: more) {
   :root { --muted: #3a3f45; --faint: #444a52; --line: #d98cb0; --line-strong: #c96a97; }
   html[data-theme="oled"] { --muted: #b0c2ab; --faint: #8ba086; --line: #22301f; --line-strong: #4a5f44; }
-html[data-theme="eink"] { --muted: #1c1c1c; --faint: #3a3a3a; --line: #000000; --line-strong: #000000; }
   .toc-left a, .toc-right a, #tocDrawer a, a.plink, a.reflink { text-decoration: underline; }
   .sections li { border-bottom-style: solid; }
 }
@@ -297,79 +296,6 @@ body.sec-only .vol-overview { display: none !important; }
 }
 
 
-/* 2026-10-22（151 批）：墨水屏静态化——过渡／动画／阴影全禁（慢刷新屏避免鬼影与多帧重绘）。
-   2026-10-22 扩面：滚动补间、合成层提示与悬停位移一并归零，能不动即不动。 */
-html[data-theme="eink"] *,
-html[data-theme="eink"] *::before,
-html[data-theme="eink"] *::after {
-  transition: none !important;
-  animation: none !important;
-  will-change: auto !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
-
-/* 悬停位移属“看得见的动”——静态化后一律钉住原位（配色反馈保留，仅去位移与投影）。 */
-html[data-theme="eink"] .doc-metric:hover,
-html[data-theme="eink"] .theme-toggle:hover,
-html[data-theme="eink"] .toc-toggle:hover,
-html[data-theme="eink"] .back-to-top:hover,
-html[data-theme="eink"] .opt-tools-toggle:hover,
-html[data-theme="eink"] #optSearch:hover,
-html[data-theme="eink"] #optNotes:hover,
-html[data-theme="eink"] #optExport:hover,
-html[data-theme="eink"] #optMode:hover,
-html[data-theme="eink"] #optTl:hover,
-html[data-theme="eink"] #optRev:hover,
-html[data-theme="eink"] #optGraphBtn:hover,
-html[data-theme="eink"] #fontSizeToggle:hover {
-  transform: none !important;
-}
-
-/* 折叠指示三角：默认靠 transform 旋转过渡，静态化后旋转改为瞬时落位（不再逐帧播放）。 */
-html[data-theme="eink"] .doc-block > h2::after,
-html[data-theme="eink"] h3.chapter::after {
-  transition: none !important;
-}
-
-/* 2026-10-22（151 批）：真墨水屏回落——单色或慢刷新屏即使 JS 未落 eink 主题也强制纸白高对比静态。 */
-@media screen and (monochrome: 1), screen and (update: slow) {
-  html {
-    --page: #ffffff;
-    --page-2: #ffffff;
-    --ink: #000000;
-    --muted: #1c1c1c;
-    --faint: #3a3a3a;
-    --fg-soft: #222222;
-    --line: #000000;
-    --line-strong: #000000;
-    --accent: #000000;
-    --teal: #000000;
-    --rose: #000000;
-    --gold: #2a2a2a;
-    --surface: #ffffff;
-    --callout-bg: #f5f5f5;
-    --callout-border: #000000;
-    --callout-ink: #000000;
-    scroll-behavior: auto;
-  }
-  html body::before {
-    background: #ffffff;
-  }
-  html *,
-  html *::before,
-  html *::after {
-    transition: none !important;
-    animation: none !important;
-    will-change: auto !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  .doc-metric:hover, .theme-toggle:hover, .toc-toggle:hover, .back-to-top:hover,
-  .opt-tools-toggle:hover, #optSearch:hover, #optNotes:hover, #optExport:hover,
-  #optMode:hover, #optTl:hover, #optRev:hover, #optGraphBtn:hover,
-  #fontSizeToggle:hover { transform: none !important; }
-}
 
 /* 2026-10-22（151 批）：修订史面板表体限高滚动＋关闭钮——长表打开时参与全局视觉捕获，
    限高把捕获面收敛到视口内；.opt-close 为夹具与用户共用的关闭钮约定类。 */

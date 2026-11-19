@@ -34,13 +34,9 @@ function F(k, o) {
 
   /* 尊重“减少动效”偏好：显式 behavior 会覆盖 CSS 的 scroll-behavior，故须在 JS 侧判定 */
   var rmq = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
-  /* 墨水屏（2026-10-22）：慢刷新屏上任何过渡与补间都既耗刷新又留残影，故 eink 与
-     “减少动效”偏好同等对待——任一命中即走静态路径（瞬时落点、零交叉淡入）。 */
-  function inkTheme() {
-    var r = document.documentElement;
-    return !!r && r.getAttribute("data-theme") === "eink";
-  }
-  function staticMode() { return inkTheme() || !!(rmq && rmq.matches); }
+  /* 墨水屏静态化已随主题收敛移除（2026-11-19 ykla 令：主题面只留纯彩与纯黑 OLED）；
+     “减少动效”偏好单独承担静态路径（瞬时落点、零交叉淡入）。 */
+  function staticMode() { return !!(rmq && rmq.matches); }
   function scrollBehavior() { return staticMode() ? "auto" : "smooth"; }
 
   /* 对话框收口：关闭面板并把焦点交回其触发按钮（触发按钮由 aria-controls 反查）。
@@ -538,9 +534,12 @@ function F(k, o) {
   var btn = document.getElementById("themeToggle");
   if (!btn) return;
   var root = document.documentElement;
-  var ORDER = ["light", "oled", "eink"];
-  var GLYPH = { light: "☾", oled: "●", eink: "□" };
-  var FALL = { light: "#F9F5F0", oled: "#000000", eink: "#ffffff" };
+  /* 主题面（2026-11-19 ykla 令“只保留纯黑 OLED 主题和纯彩主题，移除墨水屏和其他配色”）：
+     light＝纯彩（纸面底色全彩），oled＝纯黑（AMOLED 夜间）。历史值迁移：dark→oled（153 批）、
+     eink→light（本批，墨水屏主题移除后落最近的浅色面）。 */
+  var ORDER = ["light", "oled"];
+  var GLYPH = { light: "☾", oled: "●" };
+  var FALL = { light: "#F9F5F0", oled: "#000000" };
   function apply(theme) {
     root.setAttribute("data-theme", theme);
     btn.textContent = GLYPH[theme] || "☾";
@@ -561,22 +560,17 @@ function F(k, o) {
     var idx = ORDER.indexOf(now);
     var next = ORDER[(idx < 0 ? 0 : idx + 1) % ORDER.length];
     try { localStorage.setItem("sme-theme", next); } catch (e) {}
-    /* 墨水屏切换（2026-10-22）：进出 eink 一律瞬时落位——切入时 inkTheme() 尚为旧值，
-       故须另判目标主题，否则会留下一次交叉淡入。 */
-    if (next === "eink") { apply(next); return; }
     __LB.viewTransition(function () { apply(next); });
   });
-  /* 未显式选择过时，跟随系统主题变化；单色／慢刷新屏直接落墨水屏 */
+  /* 未显式选择过时，跟随系统主题变化 */
   if (window.matchMedia) {
     var mq = window.matchMedia("(prefers-color-scheme: dark)");
     var onSys = function () {
       var s = null; try { s = localStorage.getItem("sme-theme"); } catch (e) {}
-      if (s === "dark") s = "oled";   /* 153 批：历史值迁移 */
+      if (s === "dark") s = "oled";       /* 153 批：历史值迁移 */
+      if (s === "eink") s = "light";      /* 本批：历史值迁移 */
       if (ORDER.indexOf(s) < 0) {
-        var mono = false, slow = false;
-        try { mono = window.matchMedia("(monochrome: 1)").matches; } catch (e1) {}
-        try { slow = window.matchMedia("(update: slow)").matches; } catch (e2) {}
-        apply(mono || slow ? "eink" : (mq.matches ? "oled" : "light"));
+        apply(mq.matches ? "oled" : "light");
       }
     };
     if (mq.addEventListener) mq.addEventListener("change", onSys); else if (mq.addListener) mq.addListener(onSys);
