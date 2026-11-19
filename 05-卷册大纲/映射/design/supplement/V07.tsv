@@ -15,3 +15,7 @@ V07.1.2.2	corpus_gap	203	CL-RM-497360	academic_work	primary	D1	supp-V07-b004	sup
 V07.1.2.2	corpus_gap	869	CL-RM-497013	academic_work	primary	D1	supp-V07-b004	supplemented	ref869#1 D1 复用 CL-RM-497013 第二宿主（概念题材面）
 V07.1.2.1	corpus_gap	2666	CL-RM-497361	academic_work	primary	D2	supp-V07-b004	supplemented	ref2666 D2（全卷 22 篇著录）
 V07.1.2.1	corpus_gap	203	CL-RM-061567	academic_work	primary	D1	supp-V07-b004	supplemented	ref203#1 D1 复用 CL-RM-061567 第二宿主（专号成员内证）
+V07.1.4.2	corpus_gap	11051	NEW-STAGE	official_doc	primary	D2	supp-V07-b005	supplemented	ACM DL TT 著录页 D2（摘要设问＋三段式自述）；块头 CID 于库内真值
+V07.1.4.2	corpus_gap	11052	CL-RM-497368	web_archive	primary	D2	supp-V07-b005	supplemented	CMU 全文镜像 D2（STAGE III login 后门逐字）
+V07.1.4.3	corpus_gap	11052	CL-RM-497369	web_archive	primary	D2	supp-V07-b005	supplemented	CMU 全文镜像 D2（MORAL 句逐字；全文镜像未入 fulltext 库故按 D2，快照逐字在案）
+V07.1.4.3	corpus_gap	11051	CL-1-117	official_doc	primary	D2	supp-V07-b005	supplemented	ACM DL TT D2 复用 CL-1-117 第二宿主（摘要设问）
