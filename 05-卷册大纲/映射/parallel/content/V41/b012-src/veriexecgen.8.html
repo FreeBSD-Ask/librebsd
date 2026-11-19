@@ -1,0 +1,403 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+<style type="text/css">
+<!--
+body {
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 12pt;
+  line-height: 1.2;
+  margin: 2ex 2em;
+}
+body, .queryform { background-color: #ffffff; }
+@media screen {
+  body, .queryform { background-color: #f0f0f0; }
+}
+a:link, .intro a:visited { color: #0000f0; }
+a:visited { color: #6000c0; }
+@media screen and (prefers-color-scheme: dark) {
+  body { color: #c0c0c0; }
+  body, .queryform { background-color: #000000; }
+  a:link, .intro a:visited { color: #90c0f0; }
+  a:visited { color: #c060c0; }
+}
+h1 { margin-bottom: 0.5ex; }
+table, th, td { border-collapse: collapse; padding-bottom: 0.5ex; }
+table { margin-top: 1.5ex; }
+.intro th, .intro td { padding-right: 1em; }
+.intro td.page { text-align: right; }
+.intro td.section { padding-left: 3.3em; }
+.spacer { font-size: 6pt; }
+.powered { font-size: 10pt; font-style: italic; }
+.queryform { position: sticky; top: 0px; }
+.queryform { padding-top: 1ex; padding-bottom: 1ex; }
+form { display: flex; flex-wrap: wrap; gap: 3px; }
+label, input { display: flex; flex-direction: column; }
+input { padding-right: 5px; }
+label {
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 8pt;
+  padding-bottom: 3px;
+  padding-left: 0.65em;
+}
+label[for="command"] { padding-left: 0.15em; }
+label[for="submit"] span { display: none; }
+label[for="submit"]:after { content: '\00a0'; }
+/* The remember opt-in gets a wrapped row of its own; the explicit
+   display would defeat the hidden attribute without the [hidden]
+   rule. */
+div.remember { display: flex; align-items: center; flex-basis: 100%; }
+div.remember[hidden] { display: none; }
+label[for="remember"] { text-transform: none; padding-bottom: 0; }
+pre, tt, ul.matches { font-family: monospace; }
+pre { white-space: pre-wrap; }
+/* Two blank lines (2 x line-height) where the list of other
+   matches runs straight into the manual page. A menu has no
+   page after it and needs none. */
+ul.matches + pre.manpage { margin-top: 2.4em; }
+@media screen and (max-width: 800px) {
+  body { margin: 0 0.5em; }
+  .queryform { position: static; }
+}
+@media print {
+  body { font-size: 10pt; margin: 0; }
+  h1.manpage, .queryform { display: none; }
+  a:link, a:visited, .intro a:visited { color: #000000; }
+}
+-->
+</style>
+<link rel="shortcut icon" href="/s/NetBSD.ico" type="image/x-icon">
+<title>veriexecgen(8) - NetBSD Manual Pages</title>
+<link rel="canonical" href="https://man.netbsd.org/veriexecgen.8">
+</head>
+<body>
+<h1 class="manpage">veriexecgen(8)
+  - NetBSD Manual Pages</h1>
+<div class="queryform">
+<form method=post action="/cgi-bin/man-cgi">
+  <div>
+    <label for="command">Command:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="command" id="command" size="24" type="text"
+      value="veriexecgen">
+  </div>
+  <div>
+    <label for="section">Section:&nbsp;&nbsp;&nbsp;</label>
+    <select name="section" id="section">
+      <option value="ANY">ANY - Search in All Sections</option>
+      <option value="1">1 - General Commands</option>
+      <option value="2">2 - System Calls</option>
+      <option value="3">3 - C Library Functions</option>
+      <option value="3f">3f - Fortran Library Functions</option>
+      <option value="3lua">3lua - Lua Modules</option>
+      <option value="4">4 - Special Files and Hardware Support</option>
+      <option value="5">5 - File Formats</option>
+      <option value="6">6 - Games and Demos</option>
+      <option value="7">7 - Miscellaneous Information Pages</option>
+      <option value="8" selected>8 - System Maintenance Commands</option>
+      <option value="9">9 - Kernel Internals</option>
+      <option value="9lua">9lua - Lua Kernel Bindings</option>
+    </select>
+  </div>
+  <div>
+    <label for="arch">Arch:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <select name="arch" id="arch">
+      <option value="NONE">NONE</option>
+    </select>
+  </div>
+  <div>
+    <label for="coll">Collection:</label>
+    <select name="coll" id="coll">
+      <option value="NetBSD-current" selected>NetBSD-current</option>
+    </select>
+  </div>
+  <div>
+    <label for="submit"><span>&gt;&gt;&gt;</span></label>
+    <input id="submit" type="submit" value="Show">
+  </div>
+  <div class="remember" hidden>
+    <input id="remember" type="checkbox">
+    <label for="remember"
+      title="Stored only in this browser, until you untick this. Nothing is sent to the server.">Remember arch and collection across visits</label>
+  </div>
+</form>
+</div>
+<script>
+(function () {
+  // The opt-in flag is read live on every store access, so another
+  // tab's tick or untick is honored here from the next submit on.
+  function persistent() {
+    try {
+      return localStorage.getItem('man-cgi.remember') === 'yes';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function store() {
+    return persistent() ? localStorage : sessionStorage;
+  }
+
+  function remember(key, value) {
+    try {
+      store().setItem('man-cgi.' + key, value);
+    } catch (e) {}
+  }
+
+  function recall(key) {
+    try {
+      return store().getItem('man-cgi.' + key);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // After a move the target mirrors the source and the source is
+  // empty: a key the source does not hold is removed, never kept,
+  // so no stale value is ever adopted. Per-key try/catch: losing
+  // a preference beats retaining withdrawn data.
+  function move(from, to) {
+    var i, v, keys = ['man-cgi.arch', 'man-cgi.coll'];
+    for (i = 0; i < keys.length; i++) {
+      try {
+        v = from.getItem(keys[i]);
+        if (v !== null) {
+          to.setItem(keys[i], v);
+        } else {
+          to.removeItem(keys[i]);
+        }
+      } catch (e) {}
+      try {
+        from.removeItem(keys[i]);
+      } catch (e) {}
+    }
+  }
+
+  function fill(name, fallback) {
+    var sel = document.getElementById(name);
+    if (!sel || !window.fetch) {
+      return;
+    }
+    fetch('/api/v1/' + name + 'list').then(function (r) {
+      if (!r.ok) {
+        throw new Error(r.status);
+      }
+      return r.text();
+    }).then(function (text) {
+      var names = text.split('\n');
+      var want = recall(name) || sel.getAttribute('data-url') || fallback;
+      var i, opt;
+      sel.options.length = 0;
+      for (i = 0; i < names.length; i++) {
+        if (!names[i]) {
+          continue;
+        }
+        opt = document.createElement('option');
+        opt.value = names[i];
+        opt.textContent = names[i];
+        if (names[i] === want) {
+          opt.selected = true;
+        }
+        sel.appendChild(opt);
+      }
+    }).catch(function (e) {});
+  }
+
+  var arch, cmd, rem, held = false, heldCode;
+
+  document.addEventListener('keydown', function (e) {
+    var t = e.target;
+    if (e.key === 'Escape' && !e.isComposing && t && t.id === 'command') {
+      t.setSelectionRange(t.value.length, t.value.length);
+      t.blur();
+      return;
+    }
+    if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey ||
+        e.isComposing) {
+      return;
+    }
+    if (held && e.repeat) {
+      e.preventDefault();
+      return;
+    }
+    if (t && (t.tagName === 'TEXTAREA' || t.isContentEditable ||
+        (t.tagName === 'INPUT' &&
+         !/^(button|checkbox|radio|reset|submit)$/i.test(t.type)))) {
+      return;
+    }
+    if (!cmd) {
+      return;
+    }
+    cmd.focus({preventScroll: true});
+    if (document.activeElement === cmd) {
+      e.preventDefault();
+      cmd.select();
+      held = true;
+      heldCode = e.code;
+    }
+  });
+
+  document.addEventListener('keyup', function (e) {
+    if (e.key === '/' || (heldCode && e.code === heldCode)) {
+      held = false;
+    }
+  });
+
+  window.addEventListener('blur', function () {
+    held = false;
+  });
+
+  cmd = document.getElementById('command');
+  if (cmd && !cmd.autofocus) {
+    cmd.title = 'Press / to focus';
+  }
+
+  // One-time cleanup: the arch/coll keys lived in localStorage
+  // until ADR-0021 moved them to sessionStorage. With the opt-in
+  // ticked they are current again and stay.
+  if (!persistent()) {
+    try {
+      localStorage.removeItem('man-cgi.arch');
+      localStorage.removeItem('man-cgi.coll');
+    } catch (e) {}
+  }
+
+  // The remember opt-in: the row stays hidden until here, so only
+  // pages where the script runs show a working checkbox. Ticking
+  // is the consent: the memory moves to localStorage with the
+  // flag; unticking withdraws it all back to the session.
+  rem = document.getElementById('remember');
+  if (rem) {
+    rem.checked = persistent();
+    rem.parentNode.hidden = false;
+    rem.addEventListener('change', function () {
+      try {
+        if (rem.checked) {
+          localStorage.setItem('man-cgi.remember', 'yes');
+          move(sessionStorage, localStorage);
+        } else {
+          localStorage.removeItem('man-cgi.remember');
+          move(localStorage, sessionStorage);
+        }
+      } catch (e) {}
+      rem.checked = persistent();
+    });
+  }
+
+  fill('arch', 'NONE');
+  fill('coll', '');
+  arch = document.getElementById('arch');
+  if (arch && arch.form) {
+    arch.form.addEventListener('submit', function () {
+      var coll = document.getElementById('coll');
+      remember('arch', arch.value);
+      if (coll) {
+        remember('coll', coll.value);
+      }
+    });
+  }
+})();
+</script>
+<pre class="manpage">
+VERIEXECGEN(8)          NetBSD System Manager's Manual          VERIEXECGEN(8)
+
+<br /><b class="section"><a id="NAME" href="#NAME">NAME</a></b><br />
+     <b>veriexecgen</b> -- generate fingerprints for Veriexec
+
+<br /><b class="section"><a id="SYNOPSIS" href="#SYNOPSIS">SYNOPSIS</a></b><br />
+     <b>veriexecgen</b> [<b>-AaDrSTvW</b>] [<b>-d</b> <i>dir</i>] [<b>-f</b> <i>file</i>] [<b>-o</b> <i>fingerprintdb</i>] [<b>-p</b> <i>prefix</i>]
+                 [<b>-t</b> <i>algorithm</i>]
+     <b>veriexecgen</b> [<b>-h</b>]
+
+<br /><b class="section"><a id="DESCRIPTION" href="#DESCRIPTION">DESCRIPTION</a></b><br />
+     <b>veriexecgen</b> can be used to create a fingerprint database for use with
+     <i>Veriexec</i>.
+
+     If no command line arguments were specified, <b>veriexecgen</b> will resort to
+     default operation, implying <b>-D -o</b> <i>/etc/signatures</i> <b>-t</b> <i>sha256</i>.
+
+     If the output file already exists, <b>veriexecgen</b> will save a backup copy in
+     the same file only with a ``.old'' suffix.
+
+     The following options are available:
+
+     <b>-A</b>         Append to the output file, don't overwrite it.
+
+     <b>-a</b>         Add fingerprints for non-executable files as well.
+
+     <b>-D</b>         Search system directories, <i>/bin</i>, <i>/sbin</i>, <i>/usr/bin</i>, <i>/usr/sbin</i>,
+                <i>/lib</i>, <i>/usr/lib</i>, <i>/libexec</i>, and <i>/usr/libexec</i>.
+
+     <b>-d</b> <i>dir</i>     Scan for files in <i>dir</i>.  Multiple uses of this flag can specify
+                more than one directory.
+
+     <b>-f</b> <i>file</i>    Read files from <i>file</i>, or if <i>file</i> is "-" read from <i>stdin</i>.
+
+     <b>-h</b>         Display the help screen.
+
+     <b>-o</b> <i>fingerprintdb</i>
+                Save the generated fingerprint database to <i>fingerprintdb</i>.
+
+     <b>-p</b> <i>prefix</i>  When storing files in the fingerprint database, store the full
+                pathnames of files with the leading ``prefix'' of the file-
+                names removed.
+
+     <b>-r</b>         Scan recursively.
+
+     <b>-S</b>         Set the immutable flag on the created signatures file when
+                done writing it.
+
+     <b>-T</b>         Put a timestamp on the generated file.
+
+     <b>-t</b> <i>algorithm</i>
+                Use <i>algorithm</i> for the fingerprints.  Must be one of
+                ``sha256'', ``sha384'', or ``sha512''.
+
+     <b>-v</b>         Verbose mode.  Print messages describing what operations are
+                being done.
+
+     <b>-W</b>         By default, <b>veriexecgen</b> will exit when an error condition is
+                encountered.  This option will treat errors such as not being
+                able to follow a symbolic link, not being able to find the
+                real path for a directory entry, or not being able to calcu-
+                late a hash of an entry as a warning, rather than an error.
+                If errors are treated as warnings, <b>veriexecgen</b> will continue
+                processing.  The default behaviour is to treat errors as
+                fatal.
+
+<br /><b class="section"><a id="FILES" href="#FILES">FILES</a></b><br />
+     <i>/etc/signatures</i>
+
+<br /><b class="section"><a id="EXAMPLES" href="#EXAMPLES">EXAMPLES</a></b><br />
+     Fingerprint files in the common system directories using the default
+     hashing algorithm ``sha256'' and save to the default fingerprint database
+     in <i>/etc/signatures</i>:
+
+           # veriexecgen
+
+     Fingerprint files in <i>/etc</i>, appending to the default fingerprint database:
+
+           # veriexecgen -A -a -d /etc
+
+     Fingerprint files in <i>/path/to/somewhere using</i> ``sha512'' as the hashing
+     algorithm, saving to <i>/etc/somewhere.fp</i>:
+
+           # veriexecgen -d /path/to/somewhere -t sha512 -o /etc/somewhere.fp
+
+<br /><b class="section"><a id="SEE ALSO" href="#SEE ALSO">SEE ALSO</a></b><br />
+     <a href="/veriexec.4">veriexec(4)</a>, <a href="/veriexec.5">veriexec(5)</a>, <a href="/security.7">security(7)</a>, <a href="/veriexec.8">veriexec(8)</a>, <a href="/veriexecctl.8">veriexecctl(8)</a>
+
+NetBSD 11.99                     July 31, 2019                    NetBSD 11.99
+</pre>
+<p class="powered">Powered by man-cgi (2026-09-02).
+Maintained for <a href="https://www.netbsd.org/">NetBSD</a>
+by <a href="https://kimmo.suominen.com/">Kimmo Suominen</a>.
+Based on <a href="http://users.softlab.ntua.gr/~christia/man-cgi.html"
+>man-cgi</a> by <a href="http://users.softlab.ntua.gr/~christia/"
+>Panagiotis Christias</a>.</p>
+</body>
+</html>

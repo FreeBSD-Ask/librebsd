@@ -3,3 +3,7 @@ V07.1.1.2	corpus_gap	11036	CL-RM-497012	official_doc	primary	D2	supp-V07-b001	su
 V07.1.1.2	corpus_gap	869	CL-RM-497013	academic_work	primary	D1	supp-V07-b001	supplemented	ref869#1 D1（CACM 原版全文在库）；四键 isbn_doi 复用既有 ref
 V07.1.1.4	corpus_gap	11036	CL-RM-497014	official_doc	primary	D2	supp-V07-b001	supplemented	belllabs cacm.html 重印注脚 D2（三形渠道链逐字）；同 ref 双块异文件
 V07.1.1.4	corpus_gap	11037	CL-RM-497015	official_doc	primary	D2	supp-V07-b001	supplemented	ACM DL 著录页 D2（Published 1974-07-01；L3 著录记载）
+V07.1.1.1	corpus_gap	869	CL-RM-497016	academic_work	primary	D1	supp-V07-b002	supplemented	ref869#2 D1；九节节名自块 2/4/8/14/20/24/30/32/36 逐字汇集；0 信任订正旧 thesis 六节之误
+V07.1.1.1	corpus_gap	11036	CL-RM-497017	official_doc	primary	D2	supp-V07-b002	supplemented	belllabs cacm.html D2（BSTJ 罗马节号 I. INTRODUCTION 逐字）
+V07.1.1.3	corpus_gap	869	CL-RM-497018	academic_work	primary	D1	supp-V07-b002	supplemented	ref869#35 D1（致谢段逐字：fork 源出 Berkeley TS；Multics 影响 I/O 与 Shell）
+V07.1.1.3	corpus_gap	11037	CL-RM-497019	official_doc	primary	D2	supp-V07-b002	supplemented	ACM DL 著录页 D2（Authors 署名行逐字）
