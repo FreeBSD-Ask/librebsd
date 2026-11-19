@@ -91,7 +91,7 @@
 | `.trae/specs/` | Spec 配置（223 个 spec 子目录，含 `spec.md`／`tasks.md`／`checklist.md`） | 不入库（2026-10-17 ykla 裁决，目录保留作工作区） |
 | `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 不入库（2026-10-17 ykla 裁决，目录保留作工作区） |
 | `.zcode/` | ZCode 工作区路径 | 忽略 |
-| `bsd-family-tree.txt`、`bsd-family-tree-zh.txt` | 第三方维护的 BSD 家族树纯文本参照件（逐年更新）；被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 与 115 号文引用 | 入库（2026-10-29 补登记，同步列入 B2 根级白名单） |
+| `bsd-family-tree.txt`、`bsd-family-tree-zh.txt` | 第三方维护的 BSD 家族树纯文本参照件（逐年更新）；被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 与 115 号文引用 | **已不在库（2026-11-19 实测订正）**：`bcfe37828`（初始）引入、`e75542ae6` 删除，磁盘与 Git 索引均无此件；引用处以“文件缺失”处理，恢复须重新抓取并另批补登记 |
 | `.autocorrectrc`、`.gitattributes`、`.gitignore`、`.zcodeignore`、`LICENSE`、`SECURITY.md` | 根配置（`SECURITY.md` 为安全策略与漏洞报告渠道） | 入库 |
 
 `.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则/00-索引.md`）；**2026-10-17 ykla 裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
