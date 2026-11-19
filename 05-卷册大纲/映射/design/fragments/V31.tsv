@@ -16,13 +16,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	1	1.3	1.3.3	共享内存的引入动因	filled	
 31	1	1.3	1.3.4	套接字作通用的进程间通道	filled	
 31	1	1.3	1.3.5	与异构系统通信机制的对照	filled	
-31	1	1.3	1.3.6	进程间通信的接口分层	skeleton	
+31	1	1.3	1.3.6	进程间通信的接口分层	filled	
 31	2	2.1	2.1.1	柱面组与局部性布局	filled	
 31	2	2.1	2.1.2	大块与碎片的双赢取舍	filled	
-31	2	2.1	2.1.3	超级块复刻的容错考量	skeleton	
-31	2	2.1	2.1.4	布局策略的两级构造	skeleton	
+31	2	2.1	2.1.3	超级块复刻的容错考量	filled	
+31	2	2.1	2.1.4	布局策略的两级构造	filled	
 31	2	2.1	2.1.5	参数化与磁盘特性耦合	filled	
-31	2	2.1	2.1.6	吞吐提升的量级记载	skeleton	
+31	2	2.1	2.1.6	吞吐提升的量级记载	filled	
 31	2	2.2	2.2.1	UFS 命名的诞生语境	filled	
 31	2	2.2	2.2.2	文件系统形态的分期盘点	filled	
 31	2	2.2	2.2.3	与 FFS 的名实关系	filled	
@@ -36,11 +36,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	2	2.3	2.3.5	与日志方案的语义对照	filled	
 31	2	2.3	2.3.6	主文献的时段外落位	filled	
 31	2	2.4	2.4.1	fsck 的全量扫描程序	filled	
-31	2	2.4	2.4.2	一致性模型的两种路线	skeleton	
+31	2	2.4	2.4.2	一致性模型的两种路线	filled	
 31	2	2.4	2.4.3	磁盘缺陷的应对惯例	filled	
 31	2	2.4	2.4.4	崩溃恢复的时间成本	filled	
 31	2	2.4	2.4.5	可靠性的工程权衡	filled	
-31	2	2.4	2.4.6	检查项目的清单口径	skeleton	
+31	2	2.4	2.4.6	检查项目的清单口径	filled	
 31	3	3.1	3.1.1	缺引用位下的分页难题	filled	
 31	3	3.1	3.1.2	可回收页的软件模拟	filled	
 31	3	3.1	3.1.3	3BSD 的分页落地	filled	
@@ -101,7 +101,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	5	5.3	5.3.4	局限登记的窗口口径	filled	
 31	5	5.3	5.3.5	容器化前夜的过渡议题	filled	
 31	5	5.3	5.3.6	边界议题的分驻去向	filled	
-31	6	6.1	6.1.1	从 ed 到 ex 的扩展	skeleton	
+31	6	6.1	6.1.1	从 ed 到 ex 的扩展	filled	
 31	6	6.1	6.1.2	vi 的显示编辑转向	filled	
 31	6	6.1	6.1.3	同码双模的切换规矩	filled	
 31	6	6.1	6.1.4	作者与维护者的更替	filled	
@@ -110,7 +110,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	6	6.2	6.2.1	模态切换的核心约定	filled	
 31	6	6.2	6.2.2	运动算子的组合语法	filled	
 31	6	6.2	6.2.3	终端无关的渲染策略	filled	
-31	6	6.2	6.2.4	低速线路的降级显示	skeleton	
+31	6	6.2	6.2.4	低速线路的降级显示	filled	
 31	6	6.2	6.2.5	命令助记的键位考量	filled	
 31	6	6.2	6.2.6	交互模型的史学意义	filled	
 31	6	6.3	6.3.1	能力描述文件的章程	filled	
@@ -156,7 +156,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 31	7	7.3	7.3.5	争议叙述的源流辨析	filled	
 31	7	7.3	7.3.6	档案与口述的互证	filled	
 31	7	7.4	7.4.1	radix 树的引入	filled	
-31	7	7.4	7.4.2	变长地址的查找难题	skeleton	
+31	7	7.4	7.4.2	变长地址的查找难题	filled	
 31	7	7.4	7.4.3	内核与用户的报文通道	filled	
 31	7	7.4	7.4.4	子网划分的工程背景	filled	
 31	7	7.4	7.4.5	网关行为的语义定义	filled	
