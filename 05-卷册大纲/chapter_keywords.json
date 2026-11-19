@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "6534963f59e2b00a5628769f8479102503befc360dcec7987ab42c779e494468",
+  "content_sha256": "3ba0c569eef72605b5900bc29564c589ecf36a33a7d1cbf0c781e6459ff41a51",
   "extract": "title+body",
-  "generated_at": "2026-11-19T19:32:04+08:00"
+  "generated_at": "2026-11-20T01:41:20+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -4807,11 +4807,14 @@
    "title": "CSRG 的档案、记录与历史记忆",
    "domains": [],
    "themes": [
-    "TH-BIZ-008",
-    "TH-BIZ-030",
+    "TH-BIZ-020",
+    "TH-HIS-001",
     "TH-GOV-005",
-    "TH-HIS-046",
-    "TH-NET-037"
+    "TH-GOV-037",
+    "TH-REL-030",
+    "TH-BIZ-008",
+    "TH-BIZ-015",
+    "TH-BIZ-025"
    ],
    "sections": 3
   },
@@ -5521,10 +5524,9 @@
    "themes": [
     "TH-HIS-001",
     "TH-HIS-003",
-    "TH-HIS-004",
     "TH-HIS-010",
+    "TH-HIS-004",
     "TH-HIS-007",
-    "TH-HIS-037",
     "TH-HIS-040",
     "TH-HIS-046"
    ],
@@ -9065,8 +9067,8 @@
     "TH-HIS-004",
     "TH-HIS-037",
     "TH-HIS-040",
-    "TH-HIS-002",
-    "TH-HIS-046"
+    "TH-HIS-046",
+    "TH-HIS-002"
    ],
    "sections": 8
   },
@@ -11252,9 +11254,9 @@
     "TH-GOV-015",
     "TH-GOV-037",
     "TH-BIZ-015",
+    "TH-HIS-046",
     "TH-HW-020",
-    "TH-BIZ-025",
-    "TH-BIZ-026"
+    "TH-BIZ-023"
    ],
    "sections": 17
   },
@@ -14450,9 +14452,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -14467,9 +14467,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -21294,57 +21292,64 @@
    "title": "CSRG 档案：形成、保存与取用条件",
    "meta": false,
    "domains": [
+    "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-REL-000"
    ],
    "themes": [
-    "TH-BIZ-008",
-    "TH-BIZ-030",
-    "TH-GOV-005"
+    "TH-HIS-001",
+    "TH-BIZ-020",
+    "TH-REL-030",
+    "TH-GOV-037"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "ffc0873799bb7e0926cf57ed7ec24f407043ef47"
+   "subs_sha1": "7945da8ff9071b37cac9394cc3d3393883c8c4b0"
   },
   "V15-C002-2.2": {
    "chapter": "V15-C002",
    "title": "被记录的与未被记录的 CSRG：行政、后勤与女性参与",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-HIS-000",
+    "TH-GOV-000",
+    "TH-BIZ-000"
    ],
    "themes": [
-    "TH-BIZ-008",
-    "TH-BIZ-030",
-    "TH-GOV-005"
+    "TH-HIS-001",
+    "TH-GOV-005",
+    "TH-BIZ-020",
+    "TH-LAW-031",
+    "TH-BIZ-025",
+    "TH-BIZ-015"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "5d7d02129612f0d62758f1d54cb2a989bce10438"
+   "subs_sha1": "98d33edfeea75ea36775c918d5bd0892801faaae"
   },
   "V15-C002-2.3": {
    "chapter": "V15-C002",
    "title": "CSRG 的历史记忆：档案、叙事与 BSD 形象",
    "meta": false,
    "domains": [
-    "TH-BIZ-000",
-    "TH-HIS-000",
-    "TH-NET-000"
+    "TH-GOV-000",
+    "TH-REL-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-BIZ-008",
-    "TH-HIS-046",
-    "TH-NET-037",
-    "TH-BIZ-030",
-    "TH-GOV-005"
+    "TH-GOV-037",
+    "TH-REL-030",
+    "TH-HIS-001",
+    "TH-BIZ-020",
+    "TH-GOV-005",
+    "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "17529124401a8bca6f79981d724fe9517b373992"
+   "subs_sha1": "c789c5d8b55acb5335dc3710d9700e123fa71988"
   },
   "V15-C003-3.1": {
    "chapter": "V15-C003",
@@ -26976,7 +26981,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
+    "TH-HIS-010",
     "TH-HIS-001",
     "TH-HIS-040"
    ],
@@ -32306,9 +32311,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32323,9 +32326,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32340,9 +32341,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -39769,8 +39768,8 @@
    "themes": [
     "TH-HW-020",
     "TH-LAW-013",
-    "TH-HW-010",
     "TH-LAW-016",
+    "TH-HW-010",
     "TH-LAW-015",
     "TH-HIS-004"
    ],
@@ -40371,8 +40370,8 @@
    ],
    "themes": [
     "TH-HW-015",
-    "TH-HW-010",
     "TH-LAW-016",
+    "TH-HW-010",
     "TH-HIS-046"
    ],
    "projects": [],
@@ -42593,7 +42592,7 @@
    ],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "2d658a3c35a70555aab727d6e98e15cd800fc3ea"
+   "subs_sha1": "68340501dbc9bd1406336efe74e2ba575e79cf3e"
   },
   "V41-C001-1.2": {
    "chapter": "V41-C001",
@@ -42609,7 +42608,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "f548bb618002d571423c539a376723ec6028ef08"
+   "subs_sha1": "bc67f9e857476b3945f36c9949aed45811b33303"
   },
   "V41-C001-1.3": {
    "chapter": "V41-C001",
@@ -42625,7 +42624,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "7e578f17d765035008a042f034847ebed9ca6004"
+   "subs_sha1": "09ca4e0288fe57dcc045e6278b906d49cec598f1"
   },
   "V41-C001-1.4": {
    "chapter": "V41-C001",
@@ -42640,7 +42639,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "d15864e7c10d9914269285272f9e38a9a586334a"
+   "subs_sha1": "3523977e228ebdd70f495c4f2220c297f3674273"
   },
   "V41-C001-1.5": {
    "chapter": "V41-C001",
@@ -42655,7 +42654,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "bf479ffd5734430546542f15125750516c1de45c"
+   "subs_sha1": "b9030d21b1d2e2ac4ffafb36ee1c6743f31b1915"
   },
   "V41-C001-1.6": {
    "chapter": "V41-C001",
@@ -42671,7 +42670,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "b9ea67590c69976ebc8328a685e3cfbd7312bf55"
+   "subs_sha1": "ee5e264667c6e2ddf059fe400017d378c1511f4a"
   },
   "V41-C001-1.7": {
    "chapter": "V41-C001",
@@ -42688,7 +42687,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "8e7d84dcb838a271bc0d4c976f7b34f8706fc557"
+   "subs_sha1": "de58d100b48b95045b609ef3ef05f1f5d612e24d"
   },
   "V41-C002-2.1": {
    "chapter": "V41-C002",
@@ -59093,13 +59092,14 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-004",
-    "TH-HIS-001"
+    "TH-HIS-001",
+    "TH-HIS-046",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "78bd2a6168de31c338e529cef566b256e2154ef9"
+   "subs_sha1": "1cdfa0e93840bbd10323e870acd41ec7b6e3e95f"
   },
   "V57-C001-1.7": {
    "chapter": "V57-C001",
@@ -77416,8 +77416,8 @@
     "TH-VM-014",
     "TH-HIS-003",
     "TH-HW-010",
-    "TH-BIZ-015",
-    "TH-LANG-022"
+    "TH-LANG-022",
+    "TH-BIZ-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -82395,13 +82395,15 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-LAW-000",
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-HW-010",
-    "TH-HIS-001",
-    "TH-GOV-015"
+    "TH-LAW-015",
+    "TH-HIS-046",
+    "TH-BIZ-023",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -85384,8 +85386,8 @@
   "V03-C002-2.1.1": {
    "add": [
     "TH-HW-010",
-    "TH-HIS-010",
-    "TH-BIZ-014"
+    "TH-BIZ-014",
+    "TH-HIS-010"
    ]
   },
   "V03-C002-2.1.2": {
@@ -87685,6 +87687,37 @@
     "TH-HIS-046"
    ]
   },
+  "V15-C002-2.2.4": {
+   "add": [
+    "TH-GOV-017"
+   ]
+  },
+  "V15-C002-2.2.5": {
+   "add": [
+    "TH-GOV-017"
+   ]
+  },
+  "V15-C002-2.2.6": {
+   "add": [
+    "TH-GOV-037",
+    "TH-REL-030"
+   ]
+  },
+  "V15-C002-2.3.2": {
+   "add": [
+    "TH-HIS-046",
+    "TH-BIZ-030"
+   ]
+  },
+  "V15-C002-2.3.4": {
+   "add": [
+    "TH-NET-037",
+    "TH-LAW-031",
+    "TH-BIZ-025",
+    "TH-BIZ-015",
+    "TH-GOV-017"
+   ]
+  },
   "V15-C003-3.5.4": {
    "add": [
     "TH-SEC-023"
@@ -89342,8 +89375,7 @@
     "TH-HIS-003",
     "TH-BIZ-008",
     "TH-REL-001",
-    "TH-GOV-015",
-    "TH-HW-010"
+    "TH-GOV-015"
    ]
   },
   "V22-C004-4.4.2": {
@@ -90744,8 +90776,8 @@
    "add": [
     "TH-HIS-003",
     "TH-LANG-014",
-    "TH-HW-010",
     "TH-LANG-012",
+    "TH-HW-010",
     "TH-HW-017"
    ]
   },
@@ -99872,7 +99904,7 @@
   },
   "V51-C004-4.6.1": {
    "add": [
-    "TH-LAW-010"
+    "TH-LAW-033"
    ]
   },
   "V51-C004-4.6.2": {
@@ -100789,8 +100821,7 @@
   },
   "V53-C007-7.6.6": {
    "add": [
-    "TH-HW-010",
-    "TH-BIZ-020"
+    "TH-HW-010"
    ]
   },
   "V53-C007-7.7.4": {
@@ -107533,8 +107564,8 @@
   },
   "V75-C003-3.3.2": {
    "add": [
-    "TH-BIZ-018",
-    "TH-BIZ-012"
+    "TH-BIZ-012",
+    "TH-BIZ-018"
    ]
   },
   "V75-C003-3.4.1": {
@@ -107628,8 +107659,8 @@
   },
   "V75-C003-3.8.4": {
    "add": [
-    "TH-HIS-010",
     "TH-BIZ-014",
+    "TH-HIS-010",
     "TH-GOV-037"
    ]
   },
@@ -107906,8 +107937,8 @@
   },
   "V75-C008-8.4.3": {
    "add": [
-    "TH-HW-010",
     "TH-LAW-016",
+    "TH-HW-010",
     "TH-HIS-046"
    ]
   },
