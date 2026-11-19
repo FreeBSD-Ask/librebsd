@@ -9,9 +9,11 @@
 
 ## 1. 形式
 
-- 形式：在 `05-卷册大纲/目录/vitepress/` 建独立 VitePress 站点（`public/` 与 `.vitepress/` 两目录分离）。站点**原生实现目录页功能**：数据层用 VitePress data loaders 构建期直读内容源 `data/outline.txt`（四级题名树＋注文＋卷注）与 `data/catalog.json`（人物／文献／修订 DATA 段）、文案层直读 `data/ui-strings.json`；主题令牌（light／oled／eink＋LXGW WenKai 字族）拆分自 doc.css／modern.css 并适配 `extends: DefaultTheme`；首页即目录浏览应用。装配产物 `index.html` 仅作**构建期装配验证对照件**——`bun run verify` 有序（节号，题名）对全量比对＋章题序列比对＋doc-metrics 口径数比对，不随站点部署。部署走 `.github/workflows/deploy-vitepress-pages.yml`（actions 三件套＋SHA 钉定）到 GitHub Pages 项目页 `https://freebsd-ask.github.io/librebsd/`（base `/librebsd/`）。
+- 形式：在 `05-卷册大纲/目录/vitepress/` 建独立 VitePress 站点（`public/` 与 `.vitepress/` 两目录分离）。站点**原生实现目录页功能**：数据层用 VitePress data loaders 构建期直读内容源 `data/outline.txt`（四级题名树＋注文＋卷注）与 `data/catalog.json`（人物／文献／修订 DATA 段）、文案层直读 `data/ui-strings.json`；主题令牌（light／oled／eink＋LXGW WenKai 字族）拆分自 doc.css／modern.css 并适配 `extends: DefaultTheme`；首页即目录浏览应用。装配产物 `index.html` 仅作**构建期装配验证对照件**——`bun run verify` 有序（节号，题名）对全量比对＋章题序列比对＋doc-metrics 口径数比对，不随站点部署。部署走 `.github/workflows/deploy-vitepress-pages.yml`（五个 action：checkout／setup-bun／configure-pages／upload-pages-artifact／deploy-pages，全部 40 位 SHA 钉定）到 GitHub Pages 项目页 `https://freebsd-ask.github.io/librebsd/`（base `/librebsd/`）。
 - 构建：**分卷构建再合并**（ykla 2026-11-19 令）。`scripts/build-by-volume.ts` 逐卷（1—12 页／卷，实测 6—8 s）独立构建，产物按路径合并进 `.vitepress/dist`；理由＝单进程 614 页一次构建 Wall time 与内存不可控、失败即全废；VitePress 临时目录固定于 `<root>/.vitepress/.temp`，同根并行会互删中间件（实测 `ENOENT … .temp/v01_c10.md.js`），故顺序执行。合并步整站再生两件派生文件：`hashmap.json`（客户端路由按源路径查页数据，取各分片并集，缺项会断跨卷跳转）、`sitemap.xml`（按合并后实际 HTML 全量重生成，分片自产的只覆盖自身）。`lastUpdated` 关闭：per-page git 历史查询 × 614 页不可接受，页面版本串改由 `ui-strings.json` 的 `shell.page_version` 提供（与装配页同源）。
-- 边界：装配源（`index.html`、`assets/`、`data/`、`src/`、装配器与门禁）零改动；本批功能面不含导出／时间线／谱系图／字号档位／移动抽屉／noscript 全量镜像（留后续批，见 spec v2 §1 ③）。
+- 边界：装配源（`index.html`、`assets/`、`data/`、`src/`、装配器与门禁）零改动。
+- 功能面（v4，2026-11-19 复核整改后实况）：四级树＋注文＋检索＋指标条、DATA 三视图、**人物生卒时间线**、**字号五档**（`--cat-font-scale` 持久化）、**打印／导出样式**（`@media print`）、**`noscript` 提示＋卷页直链**、**OG＋`schema.org/Book` JSON-LD**（缺 `shell.book_title` 抛错，不设 fallback）。仍不做：谱系图（`bsd-family-tree.txt` 已于 `e75542ae6` 删除、无源数据）、移动端抽屉（以响应式替代）、`noscript` 全量镜像、OG 位图、字体子集再生（只消费 doc.css 既存子集）。
+- 校勘（v4）：sitemap 的卷页路由统一为 `/vNN/`（不得出现 `/vNN/index`）；`themeConfig.logo` 不再拼 `base`（VitePress 自动加，否则 `/librebsd/librebsd/…`）；章页节／小节标题写显式锚 `{#_n-n}`，与首页深链同式；构建末加硬断言（HTML 数、hashmap 条数与 chunk 可解析、sitemap 条数与无 `/index` 错链、base 双前缀零点）。
 
 ## 2. 矛盾
 
@@ -22,7 +24,7 @@
 
 - 能力：目录页获得公网静态托管；数据自内容源（outline.txt）原生渲染，装配批次 push 后 verify→build→deploy 自动链路；VitePress 主题基座（`extends: DefaultTheme`＋拆分令牌）为后续扩展（说明页、检索增强）预留。
 - 受益者：ykla 与所有读者；后续工程批直接复用站点骨架与数据加载层。
-- 验证方式：`bun run verify` exit 0（有序题名对全量一致＋口径四数一致）；`docs:build`／`docs:preview` 实测；工作流 SHA 钉定审读。
+- 验证方式：`bun run verify` exit 0（四数＋第五数“有注小节”＋号序＋outline↔装配页题名对＋章题序列）；`docs:build` 末硬断言全绿；`docs:preview` 实测；工作流 SHA 钉定审读；独立复核（RV-20261119-003）。
 
 ## 4. 负面
 
@@ -45,7 +47,7 @@
 
 ## 7. 现在依据
 
-- 测试／测量／故障／反馈：outline.txt 实测解析 75 卷／539 章／3 918 节／19 363 小节＋1 797 条节级注文＋75 条卷导言＋71 条卷级定位注（2026-11-19）；catalog.json＝DATA 段（人物 2 269／文献 5 605／修订 38）；字体子集单文件约 569 KB（含于 doc.css）；bun 1.4.4＋node v26.13.0 在机；vitepress npm `next`＝2.0.0-alpha.21（无任何 2.0.0-beta.x，用户所称“beta20”经查为记忆偏差，按“最新预发布”取值并披露）。
+- 测试／测量／故障／反馈：outline.txt 实测解析 75 卷／539 章／3 918 节／19 363 小节＋注文 2 257 组（其中 1 797 个小节带注）＋75 条卷导言＋71 条卷级定位注（2026-11-19）；catalog.json＝DATA 段（人物 2 269／文献 5 605／修订 38）；字体子集单文件约 569 KB（含于 doc.css）；bun 1.4.4＋node v26.13.0 在机；vitepress npm `next`＝2.0.0-alpha.21（无任何 2.0.0-beta.x，用户所称“beta20”经查为记忆偏差，按“最新预发布”取值并披露）。
 - 日期与环境：2026-11-19，Windows 10.0.26300，Git Bash。
 - 证据路径：`.trae/specs/vitepress-pages-deploy-20261119/spec.md` §0（v2 修订记录）与 §2（标准文献四问）；`script/_bakref_freebsdask_config.mts`（参照件）；本批执行记录（README 收口段）。
 
@@ -82,7 +84,7 @@
 ## 12. 复审触发
 
 - 时间：2027-02-19。
-- 事件：vitepress 脱离 alpha（beta／stable）发布、outline.txt 语法口径变更、仓库迁移、后续批补功能面（导出／时间线等）开工。
+- 事件：vitepress 脱离 alpha（beta／stable）发布、outline.txt 语法口径变更、仓库迁移、后续批补功能面（谱系图／`noscript` 全量镜像／OG 位图／字体子集再生）开工。
 - 复审动作：重跑 verify 与双通道构建；核对 data loader 语义；按需更新 base 与钉定版本。
 
 ## 附：替代方案与取舍
