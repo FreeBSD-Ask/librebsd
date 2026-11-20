@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "195e8c19e5ffbcd6161534fff6b69171163be056a839eb6519236dc6997e0855",
+  "content_sha256": "1708b1420d09c78160f6889488e7ba75e8e70ba799443103d39adc5abcfcd552",
   "extract": "title+body",
-  "generated_at": "2026-11-21T00:44:56+08:00"
+  "generated_at": "2026-11-21T01:41:04+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -6083,7 +6083,7 @@
     "TH-LAW-029",
     "TH-LAW-031",
     "TH-REL-001",
-    "TH-BIZ-023"
+    "TH-BIZ-028"
    ],
    "sections": 6
   },
@@ -6241,13 +6241,13 @@
    "domains": [],
    "themes": [
     "TH-HW-010",
+    "TH-HIS-001",
+    "TH-REL-001",
     "TH-BIZ-018",
     "TH-BIZ-020",
-    "TH-HIS-001",
     "TH-LAW-015",
-    "TH-REL-001",
-    "TH-REL-004",
-    "TH-FS-023"
+    "TH-FS-023",
+    "TH-HIS-003"
    ],
    "sections": 9
   },
@@ -9656,9 +9656,8 @@
     "TH-HIS-001",
     "TH-HIS-003",
     "TH-HIS-004",
-    "TH-HIS-013",
-    "TH-HIS-037",
-    "TH-HIS-040"
+    "TH-HIS-007",
+    "TH-HIS-013"
    ],
    "sections": 11
   },
@@ -30988,7 +30987,7 @@
     "TH-NET-027",
     "TH-LAW-029",
     "TH-LAW-031",
-    "TH-BIZ-023"
+    "TH-GOV-005"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32503,14 +32502,17 @@
    "title": "4.4BSD-Lite 带来的新内核基线",
    "meta": false,
    "domains": [
-    "TH-OS-000",
     "TH-REL-000",
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-HIS-000"
    ],
    "themes": [
-    "TH-OS-015",
-    "TH-REL-004",
-    "TH-HW-010"
+    "TH-REL-001",
+    "TH-HW-010",
+    "TH-HW-002",
+    "TH-HIS-001",
+    "TH-OS-012",
+    "TH-REL-025"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32523,12 +32525,13 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-BIZ-000"
+    "TH-HIS-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HW-010",
-    "TH-BIZ-018",
-    "TH-BIZ-020"
+    "TH-HIS-001",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32601,12 +32604,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-BIZ-000"
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-010",
-    "TH-BIZ-018"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -53236,10 +53239,12 @@
     "TH-HIS-001",
     "TH-HIS-010"
    ],
-   "projects": [],
+   "projects": [
+    "dragonflybsd"
+   ],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "b62d17620d16ba9bfadbe614dc4d7e6dfe22309b"
+   "subs_sha1": "6fddf6e3bf0fbed179746b4483eff67ba2615399"
   },
   "V50-C001-1.3": {
    "chapter": "V50-C001",
@@ -59314,11 +59319,11 @@
    ],
    "themes": [
     "TH-GOV-026",
+    "TH-OS-001",
+    "TH-HW-010",
     "TH-OS-036",
     "TH-HW-022",
-    "TH-OS-001",
-    "TH-REL-015",
-    "TH-HW-010"
+    "TH-REL-015"
    ],
    "projects": [],
    "technical_terms": [],
@@ -64479,9 +64484,8 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
     "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -78390,8 +78394,8 @@
     "TH-FS-004",
     "TH-OS-005",
     "TH-NET-033",
-    "TH-OS-012",
     "TH-FS-021",
+    "TH-OS-012",
     "TH-OS-030"
    ],
    "projects": [
@@ -81318,7 +81322,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "5445f08d689222a8145598aaea2a36cb23b4d5ad"
+   "subs_sha1": "da856e0862914dfe14d004519c9e73506ca1a41b"
   },
   "V74-C002-2.2": {
    "chapter": "V74-C002",
@@ -81340,7 +81344,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "65daa679fa99205b420bcb54cd25ce259cb48767"
+   "subs_sha1": "d363c28d798c636b46eceb775c025e23816d0f49"
   },
   "V74-C002-2.3": {
    "chapter": "V74-C002",
@@ -81359,7 +81363,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "e13bf4d87180959cad7d97118a4c6f8c892aeda9"
+   "subs_sha1": "50d657a653ab6fdc07b1d4147c6b02bd9b4eb1d4"
   },
   "V74-C002-2.4": {
    "chapter": "V74-C002",
@@ -81381,7 +81385,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "d9845fbd60cf7ce7de89c94aac17982826f91bfa"
+   "subs_sha1": "d7eae2dee9ded11867fd7bf5041b8ab78dee6940"
   },
   "V74-C003-3.1": {
    "chapter": "V74-C003",
@@ -82476,12 +82480,15 @@
    "domains": [
     "TH-HW-000",
     "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-FS-000"
    ],
    "themes": [
     "TH-HW-010",
     "TH-HIS-001",
-    "TH-GOV-015"
+    "TH-FS-011",
+    "TH-BIZ-033",
+    "TH-REL-003",
+    "TH-GOV-017"
    ],
    "projects": [],
    "technical_terms": [],
@@ -88314,8 +88321,8 @@
    "add": [
     "TH-OS-040",
     "TH-HW-037",
-    "TH-REL-026",
-    "TH-SEC-003"
+    "TH-SEC-003",
+    "TH-REL-026"
    ]
   },
   "V18-C006-6.17.2": {
@@ -91447,12 +91454,8 @@
   },
   "V32-C002-2.1.1": {
    "add": [
-    "TH-BIZ-014"
-   ]
-  },
-  "V32-C002-2.1.2": {
-   "add": [
-    "TH-GOV-005"
+    "TH-BIZ-014",
+    "TH-BIZ-024"
    ]
   },
   "V32-C002-2.1.3": {
@@ -91461,9 +91464,13 @@
     "TH-VM-020"
    ]
   },
+  "V32-C002-2.1.4": {
+   "add": [
+    "TH-BIZ-023"
+   ]
+  },
   "V32-C002-2.1.5": {
    "add": [
-    "TH-GOV-005",
     "TH-GOV-006"
    ]
   },
@@ -91967,6 +91974,21 @@
    "add": [
     "TH-HW-002",
     "TH-GOV-037"
+   ]
+  },
+  "V36-C002-2.3.1": {
+   "add": [
+    "TH-REL-004"
+   ]
+  },
+  "V36-C002-2.3.2": {
+   "add": [
+    "TH-FS-023"
+   ]
+  },
+  "V36-C002-2.3.3": {
+   "add": [
+    "TH-OS-015"
    ]
   },
   "V36-C002-2.8.1": {
@@ -95311,8 +95333,8 @@
    "add": [
     "TH-BIZ-019",
     "TH-HW-010",
-    "TH-OS-001",
     "TH-LANG-025",
+    "TH-OS-001",
     "TH-LANG-038"
    ]
   },
@@ -101683,12 +101705,20 @@
   },
   "V57-C004-4.1.5": {
    "add": [
-    "TH-REL-001"
+    "TH-REL-001",
+    "TH-OS-001",
+    "TH-REL-026",
+    "TH-HW-010"
    ]
   },
   "V57-C004-4.2.1": {
    "add": [
     "TH-BIZ-033"
+   ]
+  },
+  "V57-C004-4.2.2": {
+   "add": [
+    "TH-NET-010"
    ]
   },
   "V57-C004-4.2.5": {
@@ -101717,6 +101747,14 @@
     "TH-REL-026",
     "TH-REL-001",
     "TH-GOV-003"
+   ]
+  },
+  "V57-C004-4.3.4": {
+   "add": [
+    "TH-OS-001",
+    "TH-REL-015",
+    "TH-HIS-001",
+    "TH-REL-001"
    ]
   },
   "V57-C004-4.3.5": {
@@ -107849,6 +107887,17 @@
     "TH-BIZ-015",
     "TH-GOV-017",
     "TH-HIS-001"
+   ]
+  },
+  "V75-C003-3.12.2": {
+   "add": [
+    "TH-BIZ-018",
+    "TH-GOV-037"
+   ]
+  },
+  "V75-C003-3.12.3": {
+   "add": [
+    "TH-VM-015"
    ]
   },
   "V75-C004-4.1.1": {
