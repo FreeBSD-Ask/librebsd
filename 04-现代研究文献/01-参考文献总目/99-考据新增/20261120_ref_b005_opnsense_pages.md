@@ -17,3 +17,7 @@
 - 发布稿句三（V57.4.1.5 A 块）：Companies that want to use OPNsense to create a branded version, extend its features, or even create a fork and build upon the same codebase are allowed to do so under the 2-clause BSD license.
 - fork 史页句五（V57.4.1.5 B 块）：ESF has since changed their policy several times with different license models, including the ESF 6 clause license and the latest being a Apache style license.
 - 主描述页句二（V57.4.3.4 A 块）：It has a fixed cycle of 2 major releases annually, allowing businesses to plan upgrades. Each major release has a roadmap to guide development and set clear goals.
+
+## supp-V57-b008 追加引文（G6 全责线，2026-11-21）
+
+- 取句（V57.4.3.5 H 块；Founded by 节）：The OPNsense project is founded by Deciso B.V. The support and history of Deciso gives the OPNsense project a stable environment.
