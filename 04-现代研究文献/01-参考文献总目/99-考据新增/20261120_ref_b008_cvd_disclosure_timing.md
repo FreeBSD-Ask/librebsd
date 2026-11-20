@@ -13,3 +13,8 @@
 
 2. [备用（提前公开动因面），照录] Evidence of active exploitation
    （该页 "Reasons to release early" 列表首项，列表条目短句照录）
+
+## b009 追加引文（2026-11-20，G7 全责线 supp-V61-b009 复用，异句异锚 J84）
+
+3. [1.9.4 用] Breaking a previous disclosure timeline agreement is sometimes necessary when events warrant.
+   （"Diverting from the Plan" 段首句，空白归一逐字回核）

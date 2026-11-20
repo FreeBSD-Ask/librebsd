@@ -14,3 +14,8 @@
 
 2. [备用（严重度评分非 CVE 职责面），照录] Myth #4: The CVE Program is responsible for assigning vulnerability severity scores.
    （该页 Podcast 节"Myth #4"条目，CVE 计划明确不负责严重度评分＝编目与评分分立的 CVE 侧自述）
+
+## b009 追加引文（2026-11-20，G7 全责线 supp-V61-b009 复用，异句异锚 J84）
+
+3. [1.9.1 用] Partners publish CVE Records to communicate consistent descriptions of vulnerabilities.
+   （同段继条目 1 之句，exa 取文形态照录）

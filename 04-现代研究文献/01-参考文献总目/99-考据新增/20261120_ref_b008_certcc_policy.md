@@ -16,3 +16,15 @@
 3. [1.8.3 用，政策页 FAQ] Vulnerabilities are routinely discovered and disclosed, frequently before vendors have had a fair opportunity to provide a fix, and disclosure often includes working exploits.
 
 4. [备用（1.8.2 例外条款面），照录] Extenuating circumstances, such as active exploitation, threats of an especially serious (or trivial) nature, or situations that require changes to an established standard may result in earlier or later disclosure.
+
+## b009 追加引文（2026-11-20，G7 全责线 supp-V61-b009 复用，异句异锚 J84）
+
+5. [1.9.1 用] Vulnerabilities will be disclosed in Vulnerability Notes.
+
+6. [1.9.2 用] Vulnerabilities reported to us will be forwarded to the affected vendors as soon as practical after we receive the report.
+
+7. [1.9.3 用，FAQ 后半句] In our experience, if there is not responsible, qualified disclosure of vulnerability information then researchers, programmers, system administrators, and other IT professionals who discover vulnerabilities often feel they have no choice but to make the information public in an attempt to coerce vendors into addressing the problem.
+
+8. [1.9.5 用] Disclosures made by the CERT/CC will include credit to the reporter unless otherwise requested by the reporter.
+
+- **形态披露（b009）**：条目 5"Vulnerability Notes"系超链接元素（原 HTML `<a>Vulnerability Notes</a>.` 句号紧贴链接尾），引文按渲染形态取（剥离脚本会生句号前伪影空格，勿误录）。

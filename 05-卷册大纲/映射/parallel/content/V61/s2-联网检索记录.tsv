@@ -73,3 +73,14 @@ V61.1.8.4	Bugtraq premier general security mailing list announced first seclists
 V61.1.8.5	CVE Program mission identify define catalog publicly disclosed vulnerabilities	exa 通道（cve.org curl 得 880 字节壳页改 exa）	命中	编目使命句取得（™ 空格照录）	2026-11-20	exa web_fetch
 V61.1.8.5	CVSS owned managed by FIRST non-profit incident response teams specification	curl 直取 first.org/cvss/specification-document（118 866 字节）	命中	FIRST 拥有管理句取得	2026-11-20	curl 直连
 V61.1.8.*	—	—	—	五题两独立来源齐备（10 块）：ref11077—11083 七新建（CERT/CC 政策／CVD Guide 两页／GPO launch／BugTraq 存档／CVE 概览／CVSS v4.0）＋ref10409 复用异句异锚；6160/6161 同题名旧式无 URL 卡披露非同文镜像	2026-11-20	—
+V61.1.9.1	CVE Records partners publish consistent descriptions	exa 取文同段复用（ref11082 卡 b009 追加条目 3）	命中	公开编目载体句取得	2026-11-20	exa web_fetch
+V61.1.9.1	CERT CC disclosed in Vulnerability Notes	curl 直取 certcc.github.io 政策页复用（ref11077 b009 追加条目 5；超链接渲染形态核）	命中	公开档案形态句取得	2026-11-20	curl 直连
+V61.1.9.2	draft responsible disclosure process involves reporters vendors third parties users	curl 直取 ietf.org/archive/id/draft-christey-wysopal-vuln-disclosure-00.txt（61 212 字节；draft 名循 seclists.org/bugtraq/2002/Feb/282 发布帖定位，datatracker/watersprings/错误名三度 404 披露）	命中	多方最佳实践句取得	2026-11-20	curl 直连
+V61.1.9.2	CERT CC forwarded to affected vendors as soon as practical	curl 直取 certcc.github.io 政策页复用（ref11077 b009 追加条目 6）	命中	私下转递步骤句取得	2026-11-20	curl 直连
+V61.1.9.3	draft term responsible refers to recognition formal repeatable process	curl 直取 draft 全文（同上）	命中	responsible 语义界定句取得（thesis 预设引文逐字核得）	2026-11-20	curl 直连
+V61.1.9.3	CERT CC FAQ responsible qualified disclosure no choice make public coerce	curl 直取 certcc.github.io 政策页 FAQ 复用（ref11077 b009 追加条目 7）	命中	行为规范语义句取得	2026-11-20	curl 直连
+V61.1.9.4	CVD Guide breaking previous disclosure timeline agreement necessary events warrant	curl 直取 certcc.github.io disclosure_timing 页复用（ref11079 b009 追加条目 3）	命中	时点策略调整句取得	2026-11-21	curl 直连
+V61.1.9.4	CERT CC extenuating circumstances active exploitation earlier later disclosure	curl 直取 certcc.github.io 政策页复用（ref11077 b008 条目 4 已录）	命中	时点弹性条款句取得	2026-11-20	curl 直连
+V61.1.9.5	CERT CC disclosures include credit to the reporter unless requested	curl 直取 certcc.github.io 政策页复用（ref11077 b009 追加条目 8）	命中	署名惯例句取得	2026-11-20	curl 直连
+V61.1.9.5	RFC 1135 continuing need instill professional code of ethics preserve community	curl 直取 rfc-editor.org 原文（b007 存档复用；ref11059 b009 追加条目 5）	命中	伦理争论沉淀句取得	2026-11-20	curl 直连
+V61.1.9.*	—	—	—	五题两独立来源齐备（10 块）：ref11090 IETF 草案新建＋ref11077×4／ref11082／ref11079／ref11059 复用异句异锚；NVD 被 Cloudflare 拦改 CVE/CERT 复用方案披露；跨日批（取文 11-20、收口 11-21）	2026-11-21	—
