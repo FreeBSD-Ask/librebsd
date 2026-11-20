@@ -12,7 +12,7 @@
 | 格式层 | `assets/doc.css` | 原 `<style id="format-layer">` 正文 |
 | 现代化层 | `assets/modern.css` | 原 `<style id="modern-layer">` 正文 |
 | 行为层 | `assets/theme-preset.js`、`assets/doc.js` | 主题预设（head 内早执行）＋ 目录引擎 |
-| 数据层 | `data/catalog.json`、`data/schema.jsonld` | 运行时数据（persons/refs/revs）＋ 结构化元数据 |
+| 数据层 | `data/catalog.json`、`data/schema.jsonld` | 运行时数据（persons/refs/revs）＋ 结构化元数据；**persons 段为派生投影**（唯一真值＝`10-交叉索引/cross_indexes.duckdb.person_bio_research`，唯一写者＝`export_catalog_data.py`，2026-11-21 立；refs/revs 暂为过渡手工池） |
 | 页壳 | `assets/page.template.html` | head／页框／main 骨架／tail，含占位符 |
 
 **内容源语法**（`data/outline.txt`，纯文本行式）：

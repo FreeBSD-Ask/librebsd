@@ -57,49 +57,73 @@ else:
         except json.JSONDecodeError as e:
             issues.append(f"DATA 段不是合法 JSON：{e}")
             data = None
-    if data is not None:
-        persons = data.get("persons") or []
-        if len(persons) == 0:
-            issues.append("persons 数组为空")
-        # 形态检测：P2 枚举化/扁平同构双兼容
-        enum_mode = any("names" in p for p in persons[:5]) if persons else False
-        # 1) JSON 残片（枚举化：检查 names.zh / names.en；扁平：检查 n）
-        candidates = []
-        if enum_mode:
-            for p in persons:
-                c = []
-                for t in (p.get("names", {}).get("zh") or []) + (p.get("names", {}).get("en") or []):
-                    if isinstance(t, str):
-                        c.append(t)
-                candidates.append((p.get("id", "?"), c))
-        else:
-            for p in persons:
-                c = [x for x in (p.get("n") or []) if isinstance(x, str)]
-                candidates.append((p.get("r", "?"), c))
-        for pid, items in candidates:
-            for s0 in items:
-                s = s0.strip()
-                if (s.startswith("{") and '"value"' in s) or (s.endswith("}") and '"value"' in s):
-                    issues.append(f"n 数组 JSON 残片：{s[:60]}（{pid}）")
-        # 2) 邮箱条目提示（2026-09-11 收敛：BSD committer 邮箱系真实身份史料，
-        #    如 terry@freebsd.org，非污染；仅提示不再判错，禁止按黑名单删除）
-        email_hint = sum(1 for _pid, items in candidates for x in items if "@" in x)
-        if email_hint:
-            print(f"提示：n 数组含邮箱/账户形态条目 {email_hint} 个（committer 邮箱属有效身份史料，不判错、不删除）")
-        # 3) 内部标识串
-        for pid, items in candidates:
-            for s0 in items:
-                if IDENT_PAT.search(s0.strip()):
-                    issues.append(f"n 数组内部标识串：{s0.strip()[:60]}（{pid}）")
-        # 4) 无人名
-        for pid, items in candidates:
-            clean = [x for x in items if "@" not in x and not IDENT_PAT.search(x.strip()) and '"value"' not in x]
-            has_human = any(re.search(r"[A-Za-z\u4e00-\u9fff]", x) for x in clean)
-            if not has_human:
-                issues.append(f"此人 n 数组全部污染无法识别：{pid}")
-        # 数据规模提示（非问题，仅输出）
-        total_names = sum(len(x[1]) for x in candidates)
-        print(f"DATA 摘要：persons={len(persons)}，n 数组总元素={total_names}，形态={'枚举化' if enum_mode else '扁平同构'}，refs={len(data.get('refs') or {})}，revisions={len(data.get('revs') or [])}")
+if data is not None:
+    persons = data.get("persons") or []
+    if len(persons) == 0:
+        issues.append("persons 数组为空")
+    # 形态检测：P2 枚举化/扁平同构双兼容
+    enum_mode = any("names" in p for p in persons[:5]) if persons else False
+    # 1) JSON 残片（枚举化：检查 names.zh / names.en；扁平：检查 n）
+    candidates = []
+    if enum_mode:
+        for p in persons:
+            c = []
+            for t in (p.get("names", {}).get("zh") or []) + (p.get("names", {}).get("en") or []):
+                if isinstance(t, str):
+                    c.append(t)
+            candidates.append((p.get("id", "?"), c))
+    else:
+        for p in persons:
+            c = [x for x in (p.get("n") or []) if isinstance(x, str)]
+            candidates.append((p.get("r", "?"), c))
+    for pid, items in candidates:
+        for s0 in items:
+            s = s0.strip()
+            if (s.startswith("{") and '"value"' in s) or (s.endswith("}") and '"value"' in s):
+                issues.append(f"n 数组 JSON 残片：{s[:60]}（{pid}）")
+    # 2) 邮箱条目提示（2026-09-11 收敛：BSD committer 邮箱系真实身份史料，
+    #    如 terry@freebsd.org，非污染；仅提示不再判错，禁止按黑名单删除）
+    email_hint = sum(1 for _pid, items in candidates for x in items if "@" in x)
+    if email_hint:
+        print(f"提示：n 数组含邮箱/账户形态条目 {email_hint} 个（committer 邮箱属有效身份史料，不判错、不删除）")
+    # 3) 内部标识串
+    for pid, items in candidates:
+        for s0 in items:
+            if IDENT_PAT.search(s0.strip()):
+                issues.append(f"n 数组内部标识串：{s0.strip()[:60]}（{pid}）")
+    # 4) 无人名
+    for pid, items in candidates:
+        clean = [x for x in items if "@" not in x and not IDENT_PAT.search(x.strip()) and '"value"' not in x]
+        has_human = any(re.search(r"[A-Za-z\u4e00-\u9fff]", x) for x in clean)
+        if not has_human:
+            issues.append(f"此人 n 数组全部污染无法识别：{pid}")
+    # 数据规模提示（非问题，仅输出）
+    total_names = sum(len(x[1]) for x in candidates)
+    print(f"DATA 摘要：persons={len(persons)}，n 数组总元素={total_names}，形态={'枚举化' if enum_mode else '扁平同构'}，refs={len(data.get('refs') or {})}，revisions={len(data.get('revs') or [])}")
+
+    # 5) persons 段派生一致性（catalog-recon 线 2026-11-21 立）：与真值库
+    #    person_bio_research 全表派生结果逐字节比对。库／duckdb 不可达（CI
+    #    检出无 *.duckdb）时降级为 INFO 跳过——本地强制、CI 豁免。
+    _db = pathlib.Path(__file__).resolve().parents[3] / "10-交叉索引" / "cross_indexes.duckdb"
+    if _db.is_file():
+        try:
+            import importlib.util as _ilu
+            _spec = _ilu.spec_from_file_location(
+                "export_catalog_data",
+                pathlib.Path(__file__).resolve().parent / "export_catalog_data.py")
+            _mod = _ilu.module_from_spec(_spec)
+            _spec.loader.exec_module(_mod)
+            _derived = _mod.derive_persons()
+            if persons != _derived:
+                issues.append(
+                    f"persons 段与真值库派生不一致：产物 {len(persons)} 行 vs 库派生 {len(_derived)} 行"
+                    "（跑 export_catalog_data.py 重派生后重装）")
+            else:
+                print(f"派生一致性：persons {len(persons)} 行与 person_bio_research 全表派生一致")
+        except Exception as e:
+            issues.append(f"派生一致性校验执行失败：{e}")
+    else:
+        print("派生一致性：真值库不存在（CI 检出），降级跳过（本地强制）")
 
 print(f"审计文件：{path}")
 print(f"DATA 数据完整性审计问题：{len(issues)} 处")
