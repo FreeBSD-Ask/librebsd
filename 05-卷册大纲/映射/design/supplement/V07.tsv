@@ -3,10 +3,10 @@ V07.1.1.2	corpus_gap	11036	CL-RM-497012	official_doc	primary	D2	supp-V07-b001	su
 V07.1.1.2	corpus_gap	869	CL-RM-497013	academic_work	primary	D1	supp-V07-b001	supplemented	ref869#1 D1（CACM 原版全文在库）；四键 isbn_doi 复用既有 ref
 V07.1.1.4	corpus_gap	11036	CL-RM-497014	official_doc	primary	D2	supp-V07-b001	supplemented	belllabs cacm.html 重印注脚 D2（三形渠道链逐字）；同 ref 双块异文件
 V07.1.1.4	corpus_gap	11037	CL-RM-497015	official_doc	primary	D2	supp-V07-b001	supplemented	ACM DL 著录页 D2（Published 1974-07-01；L3 著录记载）
-V07.1.1.1	corpus_gap	869	CL-RM-497016	academic_work	primary	D1	supp-V07-b002	supplemented	ref869#2 D1；九节节名自块 2/4/8/14/20/24/30/32/36 逐字汇集；0 信任订正旧 thesis 六节之误
-V07.1.1.1	corpus_gap	11036	CL-RM-497017	official_doc	primary	D2	supp-V07-b002	supplemented	belllabs cacm.html D2（BSTJ 罗马节号 I. INTRODUCTION 逐字）
-V07.1.1.3	corpus_gap	869	CL-RM-497018	academic_work	primary	D1	supp-V07-b002	supplemented	ref869#35 D1（致谢段逐字：fork 源出 Berkeley TS；Multics 影响 I/O 与 Shell）
-V07.1.1.3	corpus_gap	11037	CL-RM-497019	official_doc	primary	D2	supp-V07-b002	supplemented	ACM DL 著录页 D2（Authors 署名行逐字）
+V07.1.1.1	corpus_gap	869	CL-RM-497051	academic_work	primary	D1	supp-V07-b002	supplemented	ref869#2 D1；九节节名自块 2/4/8/14/20/24/30/32/36 逐字汇集；0 信任订正旧 thesis 六节之误
+V07.1.1.1	corpus_gap	11036	CL-RM-497052	official_doc	primary	D2	supp-V07-b002	supplemented	belllabs cacm.html D2（BSTJ 罗马节号 I. INTRODUCTION 逐字）
+V07.1.1.3	corpus_gap	869	CL-RM-497053	academic_work	primary	D1	supp-V07-b002	supplemented	ref869#35 D1（致谢段逐字：fork 源出 Berkeley TS；Multics 影响 I/O 与 Shell）
+V07.1.1.3	corpus_gap	11037	CL-RM-497054	official_doc	primary	D2	supp-V07-b002	supplemented	ACM DL 著录页 D2（Authors 署名行逐字）
 V07.1.3.1	corpus_gap	203	CL-RM-497346	academic_work	primary	D1	supp-V07-b003	supplemented	ref203#2 D1（四节编排枚举；电子本止 p.9 披露）
 V07.1.3.1	corpus_gap	203	CL-RM-497347	academic_work	primary	D1	supp-V07-b003	supplemented	ref203#29 D1（THE FILE SYSTEM 节题）
 V07.1.3.2	corpus_gap	203	CL-RM-497348	academic_work	primary	D1	supp-V07-b003	supplemented	ref203#3 D1（内核规模自述 10k C＋1k asm）
@@ -14,18 +14,18 @@ V07.1.3.2	corpus_gap	203	CL-RM-497349	academic_work	primary	D1	supp-V07-b003	sup
 V07.1.2.2	corpus_gap	203	CL-RM-497360	academic_work	primary	D1	supp-V07-b004	supplemented	ref203#1 D1（实现题材面摘要自述三部分）
 V07.1.2.2	corpus_gap	869	CL-RM-497013	academic_work	primary	D1	supp-V07-b004	supplemented	ref869#1 D1 复用 CL-RM-497013 第二宿主（概念题材面）
 V07.1.2.1	corpus_gap	2666	CL-RM-497361	academic_work	primary	D2	supp-V07-b004	supplemented	ref2666 D2（全卷 22 篇著录）
-V07.1.2.1	corpus_gap	203	CL-RM-061567	academic_work	primary	D1	supp-V07-b004	supplemented	ref203#1 D1 复用 CL-RM-061567 第二宿主（专号成员内证）
-V07.1.4.2	corpus_gap	11051	NEW-STAGE	official_doc	primary	D2	supp-V07-b005	supplemented	ACM DL TT 著录页 D2（摘要设问＋三段式自述）；块头 CID 于库内真值
+V07.1.2.1	corpus_gap	203	CL-RM-497360	academic_work	primary	D1	supp-V07-b004	supplemented	ref203#1 D1 复用 CL-RM-497360 第二宿主（专号成员件摘要自述；fix1 订正原 061567 跨源错挂）
+V07.1.4.2	corpus_gap	11051	CL-RM-497367	official_doc	primary	D2	supp-V07-b005	supplemented	ACM DL TT 著录页 D2（摘要设问＋三段式自述）；块头 CID 于库内真值
 V07.1.4.2	corpus_gap	11052	CL-RM-497368	web_archive	primary	D2	supp-V07-b005	supplemented	CMU 全文镜像 D2（STAGE III login 后门逐字）
 V07.1.4.3	corpus_gap	11052	CL-RM-497369	web_archive	primary	D2	supp-V07-b005	supplemented	CMU 全文镜像 D2（MORAL 句逐字；全文镜像未入 fulltext 库故按 D2，快照逐字在案）
-V07.1.4.3	corpus_gap	11051	CL-1-117	official_doc	primary	D2	supp-V07-b005	supplemented	ACM DL TT D2 复用 CL-1-117 第二宿主（摘要设问）
+V07.1.4.3	corpus_gap	11051	CL-RM-497367	official_doc	primary	D2	supp-V07-b005	supplemented	ACM DL TT D2 复用 CL-RM-497367 第二宿主（摘要设问；fix1 订正原挂 CL-1-117 跨源错链）
 V07.1.3.4	corpus_gap	203	CL-RM-497455	academic_work	primary	D1	supp-V07-b006	supplemented	ref203#34 D1（间接寻址链与最大文件边界逐字）
 V07.1.3.4	corpus_gap	203	CL-RM-497456	academic_work	primary	D1	supp-V07-b006	supplemented	ref203#38 D1（Fig. 2 数据结构图题）
 V07.1.3.3	corpus_gap	869	CL-RM-497013	academic_work	primary	D1	supp-V07-b006	supplemented	ref869#1 D1 复用 CL-RM-497013 第二宿主（概念面）
 V07.1.3.3	corpus_gap	203	CL-RM-497360	academic_work	primary	D1	supp-V07-b006	supplemented	ref203#1 D1 复用 CL-RM-497360 第二宿主（实现面）
 V07.1.4.1	corpus_gap	11052	CL-RM-497457	web_archive	primary	D2	supp-V07-b007	supplemented	CMU 全文镜像 D2（TURING AWARD LECTURE 标目＋版权行逐字）
 V07.1.4.1	corpus_gap	11051	CL-RM-497458	official_doc	primary	D2	supp-V07-b007	supplemented	ACM DL TT D2（Published 1984-08-01）
-V07.1.2.3	corpus_gap	203	CL-RM-497361	academic_work	primary	D1	supp-V07-b007	supplemented	ref203#1 D1 复用 CL-RM-497361 第二宿主（专号成员件刊头）
+V07.1.2.3	corpus_gap	2666	CL-RM-497361	academic_work	primary	D2	supp-V07-b007	supplemented	ref2666 D2 复用 CL-RM-497361 第二宿主（全卷 22 篇著录；fix1 订正原锚 203 与链不符）
 V07.1.2.3	corpus_gap	1649	CL-RM-497459	academic_work	primary	D2	supp-V07-b007	supplemented	ref1649 D2（bell-labs.com 成员篇著录页）
 V07.1.2.4	corpus_gap	11067	CL-RM-497496	web_archive	primary	D2	supp-V07-b008	supplemented	bitsavers 整卷扫描刊名页 D2（期刊一期形态）；目标页转写承 D2 校验
 V07.1.2.4	corpus_gap	11068	CL-RM-497497	web_archive	primary	D2	supp-V07-b008	supplemented	computinghistory 馆藏条目 D2（平装单册实物著录）；逐字段取证
