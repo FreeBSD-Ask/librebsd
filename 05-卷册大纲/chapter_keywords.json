@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "746c79b100e519211f2ee2058e6a0c95794bd0067faae0a0e3eafcb3390cf07e",
+  "content_sha256": "961d98343901d37edc002365127731ca74fd727828ece3b24a2d66b37fe9adaa",
   "extract": "title+body",
-  "generated_at": "2026-11-21T03:31:52+08:00"
+  "generated_at": "2026-11-21T04:15:10+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -6245,9 +6245,9 @@
     "TH-REL-001",
     "TH-BIZ-018",
     "TH-BIZ-020",
-    "TH-LAW-015",
     "TH-FS-023",
-    "TH-HIS-003"
+    "TH-HW-002",
+    "TH-LAW-015"
    ],
    "sections": 9
   },
@@ -11175,10 +11175,10 @@
     "TH-GOV-005",
     "TH-HIS-030",
     "TH-REL-009",
-    "TH-REL-010",
     "TH-BIZ-020",
     "TH-GOV-006",
-    "TH-GOV-019"
+    "TH-GOV-019",
+    "TH-GOV-035"
    ],
    "sections": 9
   },
@@ -32526,14 +32526,17 @@
    "title": "用户空间、文件系统与设备体系的重新拼接",
    "meta": false,
    "domains": [
+    "TH-REL-000",
     "TH-HW-000",
-    "TH-HIS-000",
-    "TH-REL-000"
+    "TH-HIS-000"
    ],
    "themes": [
+    "TH-REL-001",
     "TH-HW-010",
+    "TH-HW-002",
     "TH-HIS-001",
-    "TH-REL-001"
+    "TH-FS-002",
+    "TH-FS-023"
    ],
    "projects": [],
    "technical_terms": [],
@@ -41250,8 +41253,8 @@
     "TH-HW-010",
     "TH-GOV-026",
     "TH-REL-001",
-    "TH-HW-002",
-    "TH-VM-001"
+    "TH-VM-001",
+    "TH-HW-002"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81402,14 +81405,13 @@
     "TH-BIZ-008",
     "TH-HIS-030",
     "TH-GOV-005",
-    "TH-REL-010",
     "TH-OS-040",
     "TH-GOV-037"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "a7257f984b0b5a833b6d585a4c6d8d03cf167677"
+   "subs_sha1": "b7a02841bdc7e1752edac84eb9197038711715db"
   },
   "V74-C003-3.2": {
    "chapter": "V74-C003",
@@ -81430,7 +81432,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "0134819401e067fb160837e4ca75d1b5c29d98f1"
+   "subs_sha1": "d5e6520f1115f7412b89a1da58f08fed7d97bef8"
   },
   "V74-C003-3.3": {
    "chapter": "V74-C003",
@@ -81448,7 +81450,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "84a1dc850c73d5eba1d4136ddd55a8409fd23043"
+   "subs_sha1": "90fd74ed5c33b16f4390ad67c5388fc5e969f075"
   },
   "V74-C003-3.4": {
    "chapter": "V74-C003",
@@ -81467,7 +81469,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "6501edb2cf51a35b8d6b8658e7fab6cc0a98aaa4"
+   "subs_sha1": "dd5d1db1847732c75c6b63a93519f21fe1abc865"
   },
   "V74-C003-3.5": {
    "chapter": "V74-C003",
@@ -81486,7 +81488,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "31ab787d4301b8b3639fe98622abc7e19f0f5a5b"
+   "subs_sha1": "fcdc1fd2daca5333ccf8648048a05e80f71d37a5"
   },
   "V74-C003-3.6": {
    "chapter": "V74-C003",
@@ -81505,7 +81507,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "dc1f701684dcf111bf44b6445f05da3556d51db8"
+   "subs_sha1": "992c6e61bce3d193463ade2bb8a783e046315397"
   },
   "V74-C003-3.7": {
    "chapter": "V74-C003",
@@ -81524,26 +81526,26 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "86e409bff0b28f0ac961d8b100b8e1bda225eb35"
+   "subs_sha1": "fa0b0582da7fa3fdbc134609d30d5496d3953ca2"
   },
   "V74-C003-3.8": {
    "chapter": "V74-C003",
    "title": "谁的名字留下了：遗忘的选择性",
    "meta": false,
    "domains": [
-    "TH-REL-000",
     "TH-GOV-000",
+    "TH-REL-000",
     "TH-BIZ-000"
    ],
    "themes": [
-    "TH-REL-009",
     "TH-GOV-005",
+    "TH-REL-009",
     "TH-BIZ-008"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "d8d7fbee5b4c6f9c2a6e05cc01dc0a7df1ebad9d"
+   "subs_sha1": "842ca21c5c31434a8c2f962138d4630ab6791fa1"
   },
   "V74-C003-3.9": {
    "chapter": "V74-C003",
@@ -81565,7 +81567,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "101cf511163c1cb69aded0281b5df2482dec3d5d"
+   "subs_sha1": "d77f1dc750fa7adf02cf178772ae0d4c746d32d8"
   },
   "V74-C004-4.1": {
    "chapter": "V74-C004",
@@ -82569,14 +82571,17 @@
    "title": "史料与方法：源码与提交记录、设计文档、邮件",
    "meta": false,
    "domains": [
-    "TH-GOV-000",
+    "TH-HW-000",
     "TH-LANG-000",
-    "TH-HW-000"
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-GOV-008",
+    "TH-HW-010",
     "TH-LANG-017",
-    "TH-HW-010"
+    "TH-LANG-016",
+    "TH-GOV-008",
+    "TH-GOV-004",
+    "TH-HIS-007"
    ],
    "projects": [],
    "technical_terms": [],
@@ -85935,7 +85940,7 @@
   },
   "V07-C003-3.3.1": {
    "add": [
-    "TH-HW-002"
+    "TH-VM-001"
    ]
   },
   "V07-C004-4.4.1": {
@@ -87779,8 +87784,8 @@
     "TH-VM-015",
     "TH-REL-026",
     "TH-BIZ-019",
-    "TH-LANG-017",
-    "TH-OS-024"
+    "TH-OS-024",
+    "TH-LANG-017"
    ]
   },
   "V15-C003-3.1.2": {
@@ -92042,6 +92047,11 @@
   "V36-C002-2.3.3": {
    "add": [
     "TH-OS-015"
+   ]
+  },
+  "V36-C002-2.4.1": {
+   "add": [
+    "TH-GOV-037"
    ]
   },
   "V36-C002-2.8.1": {
@@ -98959,8 +98969,8 @@
   "V48-C003-3.6.4": {
    "add": [
     "TH-HIS-004",
-    "TH-HW-002",
     "TH-VM-001",
+    "TH-HW-002",
     "TH-LANG-016"
    ]
   },
@@ -108018,6 +108028,21 @@
   "V75-C003-3.15.3": {
    "add": [
     "TH-HW-020"
+   ]
+  },
+  "V75-C003-3.16.1": {
+   "add": [
+    "TH-REL-010",
+    "TH-HIS-010"
+   ]
+  },
+  "V75-C003-3.16.4": {
+   "add": [
+    "TH-LANG-022",
+    "TH-REL-003",
+    "TH-BIZ-018",
+    "TH-HIS-001",
+    "TH-LANG-021"
    ]
   },
   "V75-C004-4.1.1": {
