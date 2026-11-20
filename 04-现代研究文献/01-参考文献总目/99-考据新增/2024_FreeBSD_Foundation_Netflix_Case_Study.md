@@ -1,6 +1,6 @@
 # Maintaining the World’s Fastest Content Delivery Network at Netflix on FreeBSD（FreeBSD Foundation 案例）引用卡
 
-> 用途：V71.3.1／3.2／3.5／3.6 内容补证（G8-S2 V71 b020 起）。
+> 用途：V71.3.1／3.2／3.5／3.6 内容补证（G8-S2 V71 b020 起）；V74.2.2.1／2.2.3 补证（supp-V74-b002，2026-11-20 补录）。
 
 ## 一、著录
 
@@ -64,6 +64,14 @@ KTLS 后的吞吐口径：
 kTLS 奠基工作的具名叙述（b028 补录）：
 
 > While at Netflix, Scott Long first proposed integrating TLS into the kernel. Together with Randall Stewart, they developed the foundational software TLS transmission mechanisms.
+
+部署规模自述（Smirnoff 2023 Vendor Summit 引语，supp-V74-b002 补录；2026-11-20 exa 实取快照 freebsdfoundation.org/netflix-case-study/ 同文路径）：
+
+> We are one of the biggest sources of traffic on the internet – sending terabits per second, powered by thousands of servers or appliances, all running FreeBSD.
+
+概念验证起步时点（supp-V74-b002 补录，同上快照）：
+
+> In 2012, a proof-of-concept CDN was started on vanilla FreeBSD 9.0-RELEASE and nginx that was provisioned on servers equipped with a single 10 Gbit/s interface.
 
 ## 三、考据说明
 
