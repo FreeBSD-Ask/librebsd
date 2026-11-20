@@ -1,6 +1,6 @@
 # 目录页站点部署：VitePress → GitHub Pages（05-卷册大纲/目录/vitepress）
 # 依据：ADR-0021；VitePress 官方《Deploy: GitHub Pages》；任一第三方 action 钉定 40 位提交 SHA（与 ci.yml 同口径）。
-# 链序：verify（三源互证，装配产物只作对照件）→ build（sync+gen+vitepress build）→ deploy。
+# 链序：gen（生成页源，verify V6 依赖）→ verify（三源互证＋V6，装配产物只作对照件）→ build（sync+gen+vitepress build）→ deploy。
 # 运行时：bun（禁 npm／npx／pnpm／yarn，2026-11-17 ykla 令）。
 name: Deploy Outline Site
 
@@ -42,7 +42,11 @@ jobs:
         working-directory: 05-卷册大纲/目录/vitepress
         run: bun install --frozen-lockfile
 
-      - name: 三源互证（SUMMARY ↔ outline.txt ↔ 装配页 index.html）
+      - name: 生成页源（gen：vNN 卷章页＋工具面数据——verify V6 依赖生成源，必须先跑）
+        working-directory: 05-卷册大纲/目录/vitepress
+        run: bun run gen
+
+      - name: 三源互证＋V6 结构断言（SUMMARY ↔ outline.txt ↔ 装配页 index.html ↔ 站点生成源）
         working-directory: 05-卷册大纲/目录/vitepress
         run: bun run verify
 
