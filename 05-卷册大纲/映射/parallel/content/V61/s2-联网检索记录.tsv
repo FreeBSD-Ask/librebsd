@@ -84,3 +84,14 @@ V61.1.9.4	CERT CC extenuating circumstances active exploitation earlier later di
 V61.1.9.5	CERT CC disclosures include credit to the reporter unless requested	curl 直取 certcc.github.io 政策页复用（ref11077 b009 追加条目 8）	命中	署名惯例句取得	2026-11-20	curl 直连
 V61.1.9.5	RFC 1135 continuing need instill professional code of ethics preserve community	curl 直取 rfc-editor.org 原文（b007 存档复用；ref11059 b009 追加条目 5）	命中	伦理争论沉淀句取得	2026-11-20	curl 直连
 V61.1.9.*	—	—	—	五题两独立来源齐备（10 块）：ref11090 IETF 草案新建＋ref11077×4／ref11082／ref11079／ref11059 复用异句异锚；NVD 被 Cloudflare 拦改 CVE/CERT 复用方案披露；跨日批（取文 11-20、收口 11-21）	2026-11-21	—
+V61.1.10.1	CVE Records professionals discussing same issue coordinate	exa 取文同段复用（ref11082 卡 b010 追加条目 4）	命中	跨方指称一致句取得	2026-11-21	exa web_fetch
+V61.1.10.1	NVD use of CVEs two or more parties confidently refer CVE identifier	web_reader 通道取 nvd.nist.gov/vuln 全文（curl/WebFetch 被 Cloudflare 拦 5 681 字节拦截页）	命中	跨方确信指称句取得	2026-11-21	web_reader
+V61.1.10.2	CVE assigned and published by organizations partnered	exa 取文同段复用（ref11082 卡 b010 追加条目 5）	命中	授权伙伴定名句取得	2026-11-21	exa web_fetch
+V61.1.10.2	NVD CNA Rules refer cve.org authorized	web_reader 取 nvd.nist.gov/vuln 复用（CNA Rules 指引句，链接元素合并形态）	命中	规则载体互认句取得	2026-11-21	web_reader
+V61.1.10.3	CVE Record Format JSON schema defining structure records	curl 直取 raw.githubusercontent.com/CVEProject/cve-schema/main/README.md（5 323 字节）	命中	记录结构定义句取得	2026-11-21	curl 直连
+V61.1.10.3	NVD staff enrichment aggregating description references supplemental	web_reader 取 nvd.nist.gov/general 全文（同上通道）	命中	聚合字段自述句取得	2026-11-21	web_reader
+V61.1.10.4	NVD all vulnerabilities assigned CVE identifier abide definition	web_search 定位 /vuln 页后 web_reader 直取逐字核（thesis 预设句）	命中	thesis 预设句逐字核得	2026-11-21	web_reader
+V61.1.10.4	NVD performs enrichment CVEs published CVE List	web_reader 取 nvd.nist.gov/general 复用	命中	承接流程句取得	2026-11-21	web_reader
+V61.1.10.5	NVD news February 2024 consortium temporary delays analysis	web_reader 取 nvd.nist.gov/general/news 全文（2024-02-13 行）	命中	积压官方公告句取得（thesis 阻断披露部分兑现）	2026-11-21	web_reader
+V61.1.10.5	NVD US government repository SCAP vulnerability management	web_reader 取 nvd.nist.gov/general 复用	命中	收录边界定位句取得	2026-11-21	web_reader
+V61.1.10.*	—	—	—	五题两独立来源齐备（10 块）：ref11092—11095 四新建（NVD /vuln／/general／/general/news 三页＋CVE Record Format README）＋ref11082 复用两句异句异锚；NVD 被 Cloudflare 拦、web_reader 代理出口放行披露；cve.org 子页 JS 壳经 web_reader 亦空取披露	2026-11-21	—

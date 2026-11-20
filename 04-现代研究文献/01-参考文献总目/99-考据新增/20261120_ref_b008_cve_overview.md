@@ -19,3 +19,10 @@
 
 3. [1.9.1 用] Partners publish CVE Records to communicate consistent descriptions of vulnerabilities.
    （同段继条目 1 之句，exa 取文形态照录）
+
+## b010 追加引文（2026-11-21，G7 全责线 supp-V61-b010 复用，异句异锚 J84）
+
+4. [1.10.1 用] Information technology and cybersecurity professionals use CVE Records to ensure they are discussing the same issue, and to coordinate their efforts to prioritize and address the vulnerabilities.
+
+5. [1.10.2 用] The vulnerabilities are discovered then assigned and published by organizations from around the world that have partnered with the CVE Program.
+   （同段继条目 1 之句；exa 取文形态照录）
