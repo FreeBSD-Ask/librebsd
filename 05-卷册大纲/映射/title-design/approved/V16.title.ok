@@ -1,6 +1,8 @@
 kind=title
 vol=V16
 title_count=240
-ledger_sha256=3f776fc4df5efb4b3aeb5c2bba80990858f6aee8b9bfbeb04e59c85957385b50
+ledger_sha256=5f31ca68597edda7f6e576fa4055e7b94418d464569e750253f5ab0cdd879da4
 approved_by=ykla
-approved_at=2026-11-20
+approved_at=2026-11-21
+supersedes=3f776fc4df5e
+note=V16 第 1 章验收打回 1.6.5／1.7.4 二题按完整主谓句形态重拟
