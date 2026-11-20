@@ -44,7 +44,7 @@ for (const node of summary) {
     const t = volTitleByNo.get(volNo)
     perVol[curVolKey] = [
       {
-        text: `第${String(volNo).padStart(2, '0')}卷　${t ? plainTitle(t) : node.text}`,
+        text: `第${String(volNo).padStart(2, '0')}卷  ${t ? plainTitle(t) : node.text}`,
         collapsed: false,
         items: [],
       },
@@ -53,7 +53,7 @@ for (const node of summary) {
     const chNo = Number(node.num ?? 0)
     const t = chTitleByKey.get(`${volNo}:${chNo}`)
     perVol[curVolKey][0].items.push({
-      text: `第 ${chNo} 章　${t ? plainTitle(t) : node.text}`,
+      text: `第 ${chNo} 章 ${t ? plainTitle(t) : node.text}`,
       link: `/v${String(volNo).padStart(2, '0')}/c${String(chNo).padStart(2, '0')}`,
     })
   }
@@ -88,8 +88,28 @@ export default defineConfig({
   sitemap: { hostname: HOST },
   head: [
     ['link', { rel: 'icon', href: `${BASE}favicon.ico` }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: `${BASE}apple-touch-icon.png` }],
     ['link', { rel: 'canonical', href: `${HOST}${BASE}` }],
-    ['meta', { name: 'theme-color', content: '#b0004f' }],
+    // 主题色与装配页同源：纸色／OLED 纯黑两态（按配色方案切换，不写品牌粉）
+    ['meta', { name: 'theme-color', content: '#F9F5F0' }],
+    ['meta', { name: 'theme-color', media: '(prefers-color-scheme: dark)', content: '#000000' }],
+    ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
+    ['meta', { name: 'apple-mobile-web-app-title', content: ui['shell.app_title'] ?? '给我自由' }],
+    // 溯源注默认收起只在 html.js 时生效：无脚本（或脚本被拦）时注文直接可读，满足 noscript 可读
+    ['script', {}, 'document.documentElement.classList.add("js")'],
+    // 内容安全策略：静态托管无法设 HTTP 头，只能 meta。VitePress 大量内联脚本，故 script/style
+    // 保留 'unsafe-inline'（诚实披露：此 CSP 只收敛 object/base/form/connect 面，不做 nonce 级加固）。
+    [
+      'meta',
+      {
+        'http-equiv': 'Content-Security-Policy',
+        content:
+          "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'",
+      },
+    ],
+    ['meta', { name: 'referrer', content: 'no-referrer' }],
     // 社交分享与结构化数据（对应装配页的 OG 面；标题／描述取数据源，不硬编码口径）
     ['meta', { property: 'og:type', content: 'book' }],
     ['meta', { property: 'og:site_name', content: bookTitle }],
@@ -97,6 +117,10 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: DESCRIPTION }],
     ['meta', { property: 'og:url', content: `${HOST}${BASE}` }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
+    ['meta', { property: 'og:image', content: `${HOST}${BASE}apple-touch-icon.png` }],
+    ['meta', { property: 'og:image:width', content: '180' }],
+    ['meta', { property: 'og:image:height', content: '180' }],
+    ['meta', { property: 'og:image:alt', content: `${bookTitle}（书名标志）` }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'script',
@@ -136,6 +160,28 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     langMenuLabel: '多语言',
+    // 跨页检索：VitePress 原生 localSearch（⌘K／Ctrl+K）。分片构建下各片索引互不相通，
+    // 故合并步由 scripts/build-by-volume.ts 用同一 MiniSearch 口径重造全站索引并覆盖索引 chunk。
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+        translations: {
+          button: { buttonText: '检索', buttonAriaLabel: '检索' },
+          modal: {
+            displayDetails: '展开详情',
+            resetButtonTitle: '清除检索',
+            backButtonTitle: '关闭检索',
+            noResultsText: '无匹配结果',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭',
+            },
+          },
+        },
+      },
+    },
     lastUpdated: { text: '最后更新于', formatOptions: { dateStyle: 'long', timeStyle: 'short' } },
     notFound: {
       title: '页面未找到',
@@ -155,6 +201,49 @@ export default defineConfig({
     // 分卷构建时 srcDir 下沉到 .build/<分片>，Vite 的 publicDir 会跟着 srcDir 走而漏掉静态件；
     // 这里显式钉在站点根，保证 fonts／favicon 每片都进产物（合并时同名同内容自动去重）。
     publicDir: `${SITE_ROOT}/public`,
+    plugins: [
+      {
+        // bun 在映射网络盘上把模块 URL 解成 UNC（import.meta.url＝file://desktop-m5p610n/d/...），
+        // vitepress 用自身 import.meta.url 推出的客户端入口（APP_PATH/index.js）随之为 //host/... 形态；
+        // vite/rolldown 把以 // 开头的 id 当协议相对 URL 外链，且 UNC 链上的 plugin-vue 主模块
+        // 不挂样式子模块（探针实测 transform hasStyleImport=false）→ 组件样式成片缺失、
+        // 产物 HTML 出现指向本机的 modulepreload。此钩子（enforce:pre，输入解析会过 resolveId）双向阻断：
+        // ①绝对 UNC 源 → 归一盘符形态；②相对导入的 importer 为 UNC → 以盘符形态的 importer
+        // 重新委托默认解析（skipSelf 防递归）。归一后整条客户端图取盘符 id，样式聚合恢复正常
+        // （实测 style 包 76 550→125 929 B、VPNavBar 样式回归、UNC 链接归零；运行时基线仍为 bun）。
+        name: 'librebsd-bun-unc-normalize',
+        enforce: 'pre',
+        resolveId(source, importer) {
+          const UNC = /^\/\/[^/]+\/([A-Za-z])\/(.*)$/
+          const m = UNC.exec(source)
+          if (m) return `${m[1].toUpperCase()}:/${m[2]}`
+          if (importer) {
+            const im = UNC.exec(importer)
+            if (im) {
+              const r = this.resolve(source, `${im[1].toUpperCase()}:/${im[2]}`, { skipSelf: true })
+              if (r) return r
+            }
+          }
+          return null
+        },
+      },
+      {
+        // 检索索引 chunk 固定文件名：VitePress 的 chunkFileNames 是内容哈希，各分片索引不同 →
+        // 文件名不同 → app chunk 指向不同 → 合并冲突。改为按模块名定名（无哈希），
+        // 合并步再用全站索引覆盖数据 chunk（见 scripts/build-by-volume.ts）。
+        name: 'librebsd-stable-search-chunk',
+        outputOptions(o: { chunkFileNames?: unknown }) {
+          const prev = o.chunkFileNames
+          o.chunkFileNames = (chunk: { name?: string }) => {
+            const n = chunk.name ?? ''
+            if (/localSearchIndex/i.test(n)) return `assets/chunks/${n.replace(/[^\w.-]/g, '_')}.js`
+            if (typeof prev === 'function') return (prev as (c: unknown) => string)(chunk)
+            return 'assets/chunks/[name].[hash].js'
+          }
+          return o
+        },
+      },
+    ],
     server: { fs: { allow: ['..', '../..'] } },
   },
 })

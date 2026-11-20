@@ -6,10 +6,13 @@
  *   V2 号序逐位相等：章号、节号、小节号
  *   V3 装配页有序 (号, 题名) 序列 == outline 序列（剥标签＋实体反解后逐位比对）
  *   V4 装配页章题序列 == outline 章题序列
+ *   V6 点名级结构断言：装配页与站点生成源（vNN/*.md）的锚点集合、卷导言／卷级定位注／
+ *      溯源注／节号计数逐项相等——verify 由此从“题名与口径”扩到“结构性类名”。
  */
-import { readFileSync } from 'node:fs'
+import { readFileSync, readdirSync } from 'node:fs'
+import path from 'node:path'
 import {
-  ASSEMBLED_PATH, readOutline, readSummary, parseMetrics, parseAssembledTitles, plain,
+  ASSEMBLED_PATH, SITE_ROOT, readOutline, readSummary, parseMetrics, parseAssembledTitles, plain,
 } from './lib/source'
 
 function head<T>(arr: T[], n = 10): string {
@@ -41,7 +44,7 @@ if (!metrics) {
   if (metrics.vols !== oc.vols || metrics.chs !== oc.chs || metrics.secs !== oc.secs || metrics.subs !== oc.subs) {
     fails.push(`V1 装配页≠outline：装配 ${JSON.stringify(metrics)} vs outline ${JSON.stringify(oc)}`)
   }
-  // 第五数口径：装配页「溯源标注」＝有注小节数（非注文组数），故比 sectionsWithNotes
+  // 第五数口径：装配页“溯源标注”＝有注小节数（非注文组数），故比 sectionsWithNotes
   if (metrics.notes !== oc.sectionsWithNotes) {
     fails.push(
       `V1 第五数（溯源标注＝有注小节）不一致：装配 ${metrics.notes} vs outline ${oc.sectionsWithNotes}`,
@@ -109,6 +112,52 @@ for (let i = 0; i < Math.min(sTitles.length, oTitles.length); i++) {
   const a = sTitles[i].replace(/[：:／\/–—－]/g, '-').replace(/\s+/g, '')
   const b = oTitles[i].replace(/[：:／\/–—－]/g, '-').replace(/\s+/g, '')
   if (a !== b) drift.push({ i, summary: sTitles[i], outline: oTitles[i] })
+}
+
+// ---- V6：点名级结构断言（装配页 ↔ 站点生成源 vNN/*.md）
+// 只比“结构性类名与锚点”，不比视觉样式；样式层的值仍需人眼对照（V6 是漂移下限而非上限）。
+const asmIds = new Set([...html.matchAll(/\sid="(vol-[^"]+)"/g)].map((m) => m[1]))
+const genIds = new Set<string>()
+let genOverview = 0
+let genVolNote = 0
+let genSrc = 0
+let genSecNum = 0
+const volDirs = readdirSync(SITE_ROOT).filter((n) => /^v\d{2}$/.test(n))
+for (const d of volDirs) {
+  const dir = path.join(SITE_ROOT, d)
+  for (const f of readdirSync(dir)) {
+    if (!f.endsWith('.md')) continue
+    const t = readFileSync(path.join(dir, f), 'utf8')
+    for (const m of t.matchAll(/\{#(vol-[^}]+)\}/g)) genIds.add(m[1])
+    genOverview += (t.match(/<p class="vol-overview">/g) ?? []).length
+    genVolNote += (t.match(/<p class="vol-note">/g) ?? []).length
+    genSrc += (t.match(/class="src note-x /g) ?? []).length
+    genSecNum += (t.match(/<span class="sec-num">/g) ?? []).length
+  }
+}
+// 只取装配页 <main> 区：noscript 静态双栏 TOC 会镜像一份 .sec-num（不计入正文口径）
+const mainStart = html.indexOf('<main class="doc-page"')
+const mainEnd = html.indexOf('</main>', mainStart)
+const mainHtml = mainStart >= 0 && mainEnd > mainStart ? html.slice(mainStart, mainEnd) : html
+const asmOverview = (mainHtml.match(/class="vol-overview"/g) ?? []).length
+const asmVolNote = (mainHtml.match(/class="vol-note"/g) ?? []).length
+const asmSrc = (mainHtml.match(/class="src"/g) ?? []).length
+const asmSecNum = (mainHtml.match(/<span class="sec-num">/g) ?? []).length
+const missIds = [...asmIds].filter((x) => !genIds.has(x))
+const extraIds = [...genIds].filter((x) => !asmIds.has(x))
+if (missIds.length || extraIds.length) {
+  fails.push(
+    `V6 锚点集合不一致：装配 ${asmIds.size} vs 站点源 ${genIds.size}；缺 ${missIds.length}（示例 ${JSON.stringify(missIds.slice(0, 5))}）／多 ${extraIds.length}（示例 ${JSON.stringify(extraIds.slice(0, 5))}）`,
+  )
+}
+const v6: Array<[string, number, number]> = [
+  ['卷导言 p.vol-overview', asmOverview, genOverview],
+  ['卷级定位注 p.vol-note', asmVolNote, genVolNote],
+  ['溯源注 span.src', asmSrc, genSrc],
+  ['节／小节号 span.sec-num', asmSecNum, genSecNum],
+]
+for (const [name, a, b] of v6) {
+  if (a !== b) fails.push(`V6 ${name} 计数不一致：装配 ${a} vs 站点源 ${b}`)
 }
 
 // ---- 报告

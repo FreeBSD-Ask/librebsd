@@ -1,0 +1,647 @@
+/* ============================================================================
+   大纲排印复刻层：把站点正文层（卷页／章页／首页目录树）对齐 05-卷册大纲/目录/index.html。
+   判据源＝assets/doc.css（格式层）＋assets/modern.css（美化层）；选择器改为 VitePress
+   DOM 上的等价锚（节＝h2[id*="-sec-"]、小节＝h3[id*="-sub-"]），不改装配源。
+   壳层（顶栏／侧栏／右 aside／页脚）按 ykla 2026-11-20 裁定保留 VitePress 原生，本文件不动。
+   ============================================================================ */
+
+/* ---- 内容宽度：装配页 --doc-w 口径（≥1140px 走 27vw+440px 上限 1080px） ---- */
+:root {
+  --cat-doc-w: min(680px, calc(100vw - 460px));
+}
+@media (min-width: 1140px) {
+  :root {
+    --cat-doc-w: min(calc(27vw + 440px), 1080px);
+  }
+}
+@media (max-width: 959px) {
+  :root {
+    --cat-doc-w: min(780px, calc(100vw - 48px));
+  }
+}
+.VPDoc .content-container {
+  max-width: var(--cat-doc-w);
+}
+
+/* ---- 卷段（装配页 .doc-block > h2：左强调竖线＋底部细线；卷题为页面 h1，id=vol-N） ---- */
+.vp-doc h1[id^="vol-"]:not([id*="-ch-"]),
+.doc-title-h {
+  margin: 36px 0 12px;
+  padding: 0 0 10px 14px;
+  border: 0;
+  border-left: 4px solid var(--cat-accent);
+  border-bottom: 1px solid var(--cat-line);
+  border-radius: 0;
+  color: var(--cat-ink);
+  font-size: 23px;
+  line-height: 1.35;
+  font-weight: 620;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+/* ---- 章题（h3.chapter：accent 19px；卷页内以 h3.chapter 承载卷内章目，章页 h1 同字号） ---- */
+.vp-doc h3.chapter,
+.vp-doc h1[id*="-ch-"] {
+  margin: 22px 0 6px;
+  padding: 0;
+  border: 0;
+  color: var(--cat-accent);
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 620;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+.vp-doc h3.chapter {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.vp-doc h3.chapter a {
+  color: inherit;
+  text-decoration: none;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.vp-doc h3.chapter a:hover {
+  text-decoration: underline;
+}
+
+/* 卷／章计数徽标（F11）：题面右侧小字 */
+.ch-cnt {
+  margin-left: auto;
+  color: var(--cat-faint);
+  font-size: 12px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* ---- 卷导言／卷级定位注（D2／D3：常显，两者字号与色阶分档） ---- */
+.vp-doc p.vol-overview {
+  margin: 10px 0 20px;
+  color: var(--cat-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.vp-doc p.vol-note {
+  margin: 8px 0 20px;
+  color: var(--cat-faint);
+  font-size: 13px;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+/* ---- 节（ul.sections > li 的悬挂缩进搬到来 h2：--hang 3.2em，节号等宽） ---- */
+.vp-doc h2[id*="-sec-"] {
+  margin: 4px 0;
+  padding: 5px 8px 5px 0;
+  border: 0;
+  border-bottom: 1px dashed color-mix(in srgb, var(--cat-line) 60%, transparent);
+  border-radius: 6px;
+  padding-left: var(--cat-hang);
+  text-indent: calc(-1 * var(--cat-hang));
+  color: var(--cat-ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  scroll-margin-top: 100px;
+}
+.vp-doc h2[id*="-sec-"]:hover {
+  background: color-mix(in srgb, var(--cat-accent) 5%, transparent);
+}
+.vp-doc h2[id*="-sec-"] .header-anchor,
+.vp-doc h3[id*="-sub-"] .header-anchor {
+  display: none;
+}
+.vp-doc .sec-num {
+  display: inline-block;
+  min-width: var(--cat-hang);
+  text-indent: 0;
+  color: color-mix(in srgb, var(--cat-accent) 72%, var(--cat-muted));
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.86em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+
+/* ---- 小节（ul.subsections：缩进 ×2、0.95em、无边框，弱化于节） ---- */
+.vp-doc h3[id*="-sub-"] {
+  margin: 2px 0;
+  padding: 2px 8px 2px 0;
+  margin-left: 16px;
+  padding-left: calc(var(--cat-hang) * 2);
+  text-indent: calc(-1 * var(--cat-hang));
+  border: 0;
+  border-radius: 6px;
+  color: var(--cat-ink-soft);
+  font-size: 0.95em;
+  line-height: 1.6;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  scroll-margin-top: 100px;
+}
+.vp-doc h3[id*="-sub-"]:hover {
+  background: color-mix(in srgb, var(--cat-accent) 5%, transparent);
+}
+.vp-doc h3[id*="-sub-"] .sec-num {
+  min-width: var(--cat-hang);
+  font-size: 0.82em;
+}
+
+/* ---- 溯源注（E1—E3）：仅在 html.js 时默认收起，无脚本直接可读 ---- */
+.vp-doc p.sec-note,
+.cat-note {
+  margin: 2px 0 8px;
+  padding-left: var(--cat-hang);
+  color: var(--cat-note-ink);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.cat-note {
+  margin-left: 10px;
+  padding-left: 0;
+}
+/* 小节注（装配页为 li 内行内 .src，无徽标，仅全局“注”展开可见） */
+.vp-doc p.sub-note {
+  margin: 0 0 4px;
+  padding-left: calc(var(--cat-hang) * 2);
+  color: var(--cat-note-ink);
+  font-size: 12.5px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.js .vp-doc p.sec-note .src,
+.js .cat-note .src,
+.js .vp-doc p.sub-note .src,
+.js .cat-subs .src {
+  display: none;
+}
+.js .sec-note.open .src,
+.js .cat-note.open .src,
+.js body.notes-all .sec-note .src,
+.js body.notes-all .cat-note .src,
+.js body.notes-all .vp-doc p.sub-note .src,
+.js body.notes-all .cat-subs .src {
+  display: block;
+  margin: 4px 0 0;
+  padding: 6px 8px;
+  color: var(--cat-gold);
+  background: var(--cat-soft);
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+.note-badge {
+  font: inherit;
+  font-size: 11px;
+  line-height: 1;
+  vertical-align: super;
+  padding: 2px 5px;
+  border: 1px solid var(--cat-line-strong);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--cat-accent);
+  cursor: pointer;
+}
+.note-badge:hover {
+  background: color-mix(in srgb, var(--cat-accent) 12%, transparent);
+}
+.js body.notes-all .note-badge {
+  display: none;
+}
+/* 三色左边框：装配页按注文本判类（迁入／并入／移入／原第＝迁移；分工／互注／本节载＝分工；余＝史料） */
+.src.note-x {
+  border-left: 3px solid var(--cat-line-strong);
+  padding-left: 8px;
+}
+.src.note-x.k-xref {
+  border-left-color: var(--cat-accent);
+}
+.src.note-x.k-mig {
+  border-left-color: var(--cat-teal);
+}
+.src.note-x.k-src {
+  border-left-color: var(--cat-gold);
+}
+
+/* ---- 图例（E3）：指标条下一行 ---- */
+.note-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0 0 14px;
+  color: var(--cat-muted);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.note-legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 2px;
+  vertical-align: -1px;
+}
+.note-legend i.a {
+  background: var(--cat-accent);
+}
+.note-legend i.b {
+  background: var(--cat-teal);
+}
+.note-legend i.c {
+  background: var(--cat-gold);
+}
+
+/* ---- 书名区（B1）：居中 accent 36px＋下饰线＋版本号上标 ---- */
+.doc-title {
+  margin: 8px 0 32px;
+}
+.doc-title h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--cat-accent);
+  font-size: 36px;
+  line-height: 1.18;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-wrap: balance;
+}
+.doc-title h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--cat-accent), color-mix(in srgb, var(--cat-accent) 25%, var(--cat-line)));
+}
+.doc-title h1 .page-version {
+  font-size: 0.34em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  vertical-align: super;
+  margin-left: 0.6em;
+  color: var(--cat-faint);
+}
+.doc-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: -8px;
+}
+
+/* ---- 指标条（B2）：装配页“冰箱指标卡”口径——5 列、8/11/7px 三档字级 ---- */
+.doc-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 8px 0 10px;
+  border: 1px solid var(--cat-line);
+  border-radius: 16px;
+  background: var(--cat-surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px -18px rgba(0, 0, 0, 0.25);
+}
+.doc-metric {
+  min-width: 0;
+  padding: 4px 5px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.doc-metric + .doc-metric {
+  border-left: 1px solid var(--cat-line);
+}
+.doc-metric span {
+  display: block;
+  color: var(--cat-muted);
+  font-size: 8px;
+  line-height: 1.2;
+}
+.doc-metric strong {
+  display: block;
+  margin: 1px 0;
+  color: var(--cat-accent);
+  font-size: 11px;
+  line-height: 1.1;
+  font-weight: 640;
+  letter-spacing: 0.02em;
+}
+.doc-metric small {
+  display: block;
+  color: var(--cat-muted);
+  font-size: 7px;
+  line-height: 1.2;
+}
+@media (max-width: 820px) {
+  .doc-metrics {
+    grid-template-columns: 1fr 1fr;
+    margin: 4px 0 6px;
+  }
+  .doc-metric {
+    padding: 2px 3px;
+    border-left: 0;
+  }
+  .doc-metric:nth-child(2n) {
+    border-left: 1px solid var(--cat-line);
+  }
+  .doc-metric:nth-child(n + 3) {
+    border-top: 1px solid var(--cat-line);
+  }
+  .doc-metric strong {
+    font-size: 9px;
+  }
+  .doc-metric span,
+  .doc-metric small {
+    font-size: 7px;
+  }
+}
+
+/* ---- 自校验胶囊（E7） ---- */
+.selfcheck {
+  display: inline-block;
+  margin: 6px 0 0;
+  padding: 4px 14px;
+  border: 1px solid var(--cat-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cat-surface) 82%, transparent);
+  color: var(--cat-muted);
+  font-size: 12px;
+  text-wrap: pretty;
+}
+.selfcheck.bad {
+  border-color: var(--cat-rose);
+  color: var(--cat-rose);
+}
+.selfcheck ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+/* ---- 阅读版（F3）：17px/1.95、隐注、去悬挂缩进；节号保留（2026-09-30 裁定） ---- */
+body.read-mode {
+  font-size: 17px;
+  line-height: 1.95;
+}
+body.read-mode .src,
+body.read-mode .note-badge {
+  display: none !important;
+}
+body.read-mode .vp-doc h2[id*="-sec-"],
+body.read-mode .vp-doc h3[id*="-sub-"] {
+  padding-left: 0;
+  text-indent: 0;
+}
+body.read-mode .vp-doc h2[id*="-sec-"] .sec-num,
+body.read-mode .vp-doc h3[id*="-sub-"] .sec-num {
+  min-width: 0;
+  margin-right: 0.5em;
+}
+
+/* ---- 工具面板（顶栏 nav 触发的弹层） ---- */
+.opt-panel {
+  position: fixed;
+  z-index: 80;
+  top: 64px;
+  right: 16px;
+  width: min(560px, calc(100vw - 32px));
+  max-height: 78vh;
+  overflow: auto;
+  padding: 16px 18px 20px;
+  border: 1px solid var(--cat-line-strong);
+  border-radius: 14px;
+  background: var(--cat-surface);
+  color: var(--cat-ink);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.35);
+  font-weight: 400;
+}
+.opt-panel h3 {
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+  color: var(--cat-accent);
+  font-size: 16px;
+}
+.opt-panel .hint {
+  margin: 0 0 10px;
+  color: var(--cat-faint);
+  font-size: 12px;
+}
+.opt-panel .opt-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--cat-line-strong);
+  border-radius: 999px;
+  background: var(--cat-surface);
+  color: var(--cat-ink);
+  font-size: 15px;
+  line-height: 28px;
+  cursor: pointer;
+  padding: 0;
+}
+.opt-panel table {
+  width: 100%;
+  font-size: 13px;
+}
+.opt-panel .rev-scroll {
+  max-height: 60vh;
+  overflow: auto;
+}
+.opt-panel .tl-year {
+  color: var(--cat-accent);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.opt-panel .tl-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 10px;
+  padding: 4px 0;
+  border-bottom: 1px dashed color-mix(in srgb, var(--cat-line) 60%, transparent);
+}
+.opt-panel .tl-row a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.opt-panel .tl-row a:hover {
+  color: var(--cat-accent);
+  text-decoration: underline;
+}
+.opt-menu {
+  position: absolute;
+  z-index: 85;
+  top: calc(100% + 6px);
+  right: 0;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 190px;
+  padding: 6px;
+  border: 1px solid var(--cat-line-strong);
+  border-radius: 10px;
+  background: var(--cat-surface);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+}
+.opt-menu.open {
+  display: flex;
+}
+.opt-menu button {
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.opt-menu button:hover {
+  background: var(--cat-soft);
+}
+.VPMenuGroup + .VPMenuGroup {
+  margin-top: 0;
+  border-top: 0;
+}
+.opt-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: var(--vp-nav-height-mobile);
+  padding: 0 12px;
+  border: 0;
+  background: transparent;
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: var(--vp-nav-height-mobile);
+  cursor: pointer;
+  position: relative;
+}
+.opt-item:hover {
+  color: var(--vp-c-brand-1);
+}
+.opt-item.on::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 11px;
+  height: 1px;
+  background: var(--vp-c-brand-1);
+}
+.opt-wrap {
+  position: relative;
+  display: inline-flex;
+}
+@media (min-width: 768px) {
+  .opt-item {
+    height: var(--vp-nav-height-desktop);
+    line-height: var(--vp-nav-height-desktop);
+  }
+}
+.opt-graph svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.opt-graph text {
+  font-size: 9px;
+  fill: var(--cat-ink-soft);
+}
+.opt-graph .node:hover text {
+  fill: var(--cat-accent);
+}
+.opt-graph .edge {
+  stroke: var(--cat-line-strong);
+  stroke-opacity: 0.55;
+  fill: none;
+}
+
+/* ---- 长节名：自动换行（ykla 2026-11-20 裁示，代装配页的“展开/收起”折叠） ---- */
+.vp-doc h2[id*="-sec-"],
+.vp-doc h3[id*="-sub-"],
+.cat-app .cat-sec-head,
+.cat-app .cat-subs a {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* ---- 无障碍与偏好（modern.css 同源） ---- */
+@media (prefers-reduced-motion: reduce) {
+  .doc-metric,
+  .vp-doc h2[id*="-sec-"],
+  .vp-doc h3[id*="-sub-"] {
+    transition: none;
+  }
+}
+@media (forced-colors: active) {
+  .doc-metrics,
+  .selfcheck,
+  .note-badge,
+  .opt-panel,
+  .opt-menu {
+    border: 1px solid ButtonText;
+  }
+}
+::selection {
+  background: color-mix(in srgb, var(--cat-accent) 18%, transparent);
+}
+
+/* ---- 打印／PDF（F2 的 PDF 通道靠打印样式） ---- */
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPLocalNav,
+  .VPDocAside,
+  .VPDocFooter,
+  .opt-panel,
+  .opt-menu,
+  .cat-tools,
+  .cat-fontscale,
+  .note-badge,
+  .LocalSearchResult {
+    display: none !important;
+  }
+  :root {
+    --cat-doc-w: 100%;
+  }
+  .VPDoc.has-aside .content-container,
+  .VPDoc .content-container {
+    max-width: 100%;
+  }
+  body,
+  .VPContent,
+  .vp-doc {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .js .vp-doc p.sec-note .src,
+  .js .cat-note .src,
+  .js .vp-doc p.sub-note .src {
+    display: block;
+  }
+  .src.note-x {
+    border-left: 2px solid #999;
+  }
+  .vp-doc h2[id*="-sec-"] {
+    break-inside: avoid;
+    border-bottom: 1px solid #ccc;
+  }
+  .vp-doc h3[id*="-sub-"] {
+    break-inside: avoid;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}

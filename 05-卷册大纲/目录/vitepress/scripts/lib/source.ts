@@ -56,7 +56,7 @@ export function plain(title: string): string {
   return title.replace(/⟦en:([^⟧]*)⟧/g, '$1')
 }
 
-export interface SubNode { num: string; title: string }
+export interface SubNode { num: string; title: string; notes: string[] }
 export interface SecNode { num: string; title: string; notes: string[]; subs: SubNode[] }
 export interface ChNode { no: number; title: string; secs: SecNode[] }
 export interface VolNode {
@@ -151,9 +151,10 @@ export function parseOutline(text: string): OutlineTree {
     if (m) {
       mode = 'none'
       const rest = (m[2] ?? '').trim()
-      const title = rest.split('@@')[0].trim()
+      const [title, noteTail] = rest.split('@@')
       counts.subs++
-      sec?.subs.push({ num: m[1], title })
+      // 小节也可带 @@ 注文（装配页渲染为行内 .src，计入 .src 计数但不计入 N_SRC／第五数）
+      sec?.subs.push({ num: m[1], title: (title ?? '').trim(), notes: noteTail ? noteGroups(noteTail) : [] })
       continue
     }
     if (line.startsWith('> ')) { vol?.intro.push(line.slice(2).trim()); mode = 'intro'; continue }

@@ -1,4 +1,6 @@
-/* 目录页设计令牌（自 05-卷册大纲/目录/assets/doc.css、modern.css 拆分移植；只取令牌层，不搬运装配页布局） */
+/* 目录页设计令牌：doc.css 全量变量移植（light＝纯彩纸色；.dark＝OLED 纯黑）。
+   2026-11-20 ykla 令“最大化适配装配页，排除墨水屏配色”——装配页 theme-preset.js 已把 eink 迁 light，
+   站点同样不设 eink 分支；两态色值与 doc.css :root / html[data-theme="oled"] 逐项同源。 */
 @font-face {
   font-family: "LXGW WenKai Screen";
   font-style: normal;
@@ -8,38 +10,144 @@
 }
 
 :root {
-  /* 装配页令牌（light） */
-  --cat-accent: #b0004f;
-  --cat-line: #d98cb0;
-  --cat-line-strong: #c96a97;
-  --cat-muted: #3a3f45;
-  --cat-faint: #444a52;
+  color-scheme: light;
 
-  /* 映射到 VitePress 品牌与字族 */
+  /* ---- 装配页 doc.css :root（light，逐项照录） ---- */
+  --cat-page: #f9f5f0;
+  --cat-page-2: #fefdfc;
+  --cat-ink: #2f302d;
+  --cat-muted: #4b5563;
+  --cat-faint: #5f6672;
+  --cat-fg-soft: #5c636b;
+  --cat-line: #ffc9df;
+  --cat-line-strong: #ff9cc5;
+  --cat-soft: #fff0f6;
+  --cat-soft-2: #ffe3ef;
+  --cat-accent: #b0004f;
+  --cat-teal: #a00052;
+  --cat-rose: #b8005e;
+  --cat-gold: #b7791f;
+  --cat-surface: #ffffff;
+  --cat-ink-soft: #4b5059;
+  --cat-note-ink: #535a66;
+  --cat-callout-bg: #fff0f6;
+  --cat-callout-border: #ffc9df;
+  --cat-callout-ink: #8f1d58;
+  --cat-shadow-color: 120, 0, 60;
+  --cat-hang: 3.2em;
+
+  /* ---- 映射到 VitePress 公共变量 ---- */
+  --vp-c-bg: var(--cat-page);
+  --vp-c-bg-alt: var(--cat-page);
+  --vp-c-bg-soft: var(--cat-soft);
+  --vp-c-bg-elv: var(--cat-surface);
+  --vp-c-text-1: var(--cat-ink);
+  --vp-c-text-2: var(--cat-ink-soft);
+  --vp-c-text-3: var(--cat-muted);
+  --vp-c-divider: var(--cat-line);
+  --vp-c-border: var(--cat-line-strong);
+  --vp-c-gutter: var(--cat-soft);
   --vp-c-brand-1: var(--cat-accent);
-  --vp-c-brand-2: var(--cat-line-strong);
-  --vp-c-brand-3: var(--cat-line);
+  --vp-c-brand-2: var(--cat-teal);
+  --vp-c-brand-3: var(--cat-rose);
   --vp-c-brand-soft: color-mix(in srgb, var(--cat-accent) 12%, transparent);
+  --vp-nav-bg-color: var(--cat-page);
+  --vp-sidebar-bg-color: var(--cat-page);
+  --vp-code-block-bg: var(--cat-surface);
+  --vp-code-color: var(--cat-accent);
+  --vp-c-default-soft: var(--cat-soft);
   --vp-font-family-base: "LXGW WenKai Screen", "霞鹜文楷 屏幕阅读版", "Kaiti SC", "STKaiti", KaiTi,
     "楷体", "Noto Serif SC", serif;
 }
 
-/* 暗色沿用目录页 oled 变体（黑底绿字） */
+/* 暗色＝OLED 纯黑（doc.css html[data-theme="oled"] 逐项照录；VitePress 以 .dark 切态） */
 .dark {
+  color-scheme: dark;
+
+  --cat-page: #000000;
+  --cat-page-2: #000000;
+  --cat-ink: #e0e0e0;
+  --cat-muted: #b0c2ab;
+  --cat-faint: #8ba086;
+  --cat-fg-soft: #9db298;
+  --cat-line: #22301f;
+  --cat-line-strong: #4a5f44;
+  --cat-soft: #10160d;
+  --cat-soft-2: #182014;
   --cat-accent: #7ee088;
-  --cat-line: #2f6b41;
-  --cat-line-strong: #4f9d63;
-  --cat-muted: #b9c2bd;
-  --cat-faint: #99a49f;
+  --cat-teal: #35a844;
+  --cat-rose: #f2718b;
+  --cat-gold: #c9a35c;
+  --cat-surface: #0b0d0a;
+  --cat-ink-soft: #c4d2be;
+  --cat-note-ink: #b4c4ae;
+  --cat-callout-bg: #131a10;
+  --cat-callout-border: #2c3d25;
+  --cat-callout-ink: #cfe2ca;
+  --cat-shadow-color: 0, 0, 0;
+
+  --vp-c-bg: var(--cat-page);
+  --vp-c-bg-alt: var(--cat-surface);
+  --vp-c-bg-soft: var(--cat-soft);
+  --vp-c-bg-elv: var(--cat-surface);
+  --vp-c-text-1: var(--cat-ink);
+  --vp-c-text-2: var(--cat-ink-soft);
+  --vp-c-text-3: var(--cat-muted);
+  --vp-c-divider: var(--cat-line);
+  --vp-c-border: var(--cat-line-strong);
+  --vp-c-gutter: var(--cat-soft);
   --vp-c-brand-1: var(--cat-accent);
-  --vp-c-brand-2: var(--cat-line-strong);
-  --vp-c-brand-3: var(--cat-line);
+  --vp-c-brand-2: var(--cat-teal);
+  --vp-c-brand-3: var(--cat-rose);
   --vp-c-brand-soft: color-mix(in srgb, var(--cat-accent) 14%, transparent);
+  --vp-nav-bg-color: var(--cat-page);
+  --vp-sidebar-bg-color: var(--cat-page);
+  --vp-code-block-bg: var(--cat-surface);
+  --vp-code-color: var(--cat-accent);
+  --vp-c-default-soft: var(--cat-soft);
+}
+
+/* 提高对比度偏好：modern.css @media (prefers-contrast: more) 的分隔线与次级文字强化 */
+@media (prefers-contrast: more) {
+  :root {
+    --cat-muted: #3a3f45;
+    --cat-faint: #444a52;
+    --cat-line: #d98cb0;
+    --cat-line-strong: #c96a97;
+  }
+  .dark {
+    --cat-muted: #b0c2ab;
+    --cat-faint: #8ba086;
+    --cat-line: #22301f;
+    --cat-line-strong: #4a5f44;
+  }
+}
+
+/* 窄屏悬挂缩进收窄：doc.css @media (max-width: 640px) 的 --hang 覆写 */
+@media (max-width: 640px) {
+  :root {
+    --cat-hang: 2.6em;
+  }
 }
 
 .cat-app {
   --cat-radius: 14px;
   font-family: var(--vp-font-family-base);
+}
+
+/* 正文排印底色：装配页 body 为 700/16px/1.72（霞鹜文楷子集仅 400 重，浏览器合成粗体即原观感） */
+body {
+  font-family: var(--vp-font-family-base);
+  font-size: 16px;
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.vp-doc,
+.cat-app {
+  font-size: calc(1em * var(--cat-font-scale, 1));
+  line-height: 1.72;
+  font-weight: 700;
 }
 
 /* ---- 页面容器（2026-11-20 ykla 令“充分适配移动端，保持一定边距，既有的太窄”）----
@@ -453,10 +561,7 @@
   .cat-ch {
     break-inside: avoid;
   }
-  a {
-    color: #000 !important;
-    text-decoration: underline;
-  }
+  /* 链接形态统一由 outline.css 的 print 块裁定（此处不再写 a 规则，避免同特异性双写） */
   .cat-sec {
     border-left: 1px solid #ccc;
   }

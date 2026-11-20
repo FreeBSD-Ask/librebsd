@@ -22,6 +22,7 @@ import {
 import path from 'node:path'
 import { spawn } from 'node:child_process'
 import { SITE_ROOT, readOutline } from './lib/source'
+import { buildSearchIndex } from './lib/search-index'
 import { sanitizeDist } from './lib/sanitize-dist'
 
 const args = process.argv.slice(2)
@@ -32,6 +33,13 @@ const clean = !args.includes('--no-clean')
 const BUILD = path.join(SITE_ROOT, '.build')
 const DIST = path.join(SITE_ROOT, '.vitepress', 'dist')
 const VP_BIN = path.join(SITE_ROOT, 'node_modules', 'vitepress', 'bin', 'vitepress.js')
+/**
+ * 运行时基线：bun（ykla 2026-11-17 令“禁 npm、仅 bun”）。映射网络盘上 bun 会把模块 URL 解成
+ * UNC（//desktop-m5p610n/d/...），vitepress 客户端入口随之为 UNC → vite/rolldown 把以 // 开头的
+ * id 当外链：组件样式不进 style 包、HTML 出现指向本机的 modulepreload。
+ * 修复在 config.mts 的 `librebsd-bun-unc-normalize` 插件（resolveId 把 UNC 归一盘符形态），
+ * 不换驱动进程；合并步的 4d-bis／4d-ter 两条断言把该形态锁死在门禁上。
+ */
 const HOST = 'https://freebsd-ask.github.io'
 const BASEP = '/librebsd/'
 const pad = (n: number) => String(n).padStart(2, '0')
@@ -43,7 +51,7 @@ if (only) {
   volNos = volNos.filter((n) => n >= a && n <= (Number.isFinite(b) ? b : a))
 }
 
-/** --only 试点构建：日志标注「部分构建」，全集构建时须覆盖全部卷。 */
+/** --only 试点构建：日志标注“部分构建”，全集构建时须覆盖全部卷。 */
 const partial = volNos.length !== tree.vols.length
 
 type Shard = { key: string; label: string; pagesSrc: string | null }
@@ -102,7 +110,8 @@ if (failures.length) {
 rmSync(DIST, { recursive: true, force: true })
 mkdirSync(DIST, { recursive: true })
 const collisions: string[] = []
-const DERIVED = ['hashmap.json', 'sitemap.xml', '404.html']
+// DERIVED＝合并步整站再生、允许分片间内容不同的件（同名不同内容不判冲突）
+const DERIVED = ['hashmap.json', 'sitemap.xml', '404.html', 'assets/chunks/_localSearchIndexroot.js']
 let files = 0
 
 function mergeInto(from: string, to: string) {
@@ -161,6 +170,22 @@ writeFileSync(
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     `${urls.join('\n')}\n</urlset>\n`,
   'utf8',
+)
+
+// ---- 3b. 检索索引重建（全站）：分片索引互不相通，合并后用同一 MiniSearch 口径重造并覆盖数据 chunk
+const searchChunk = path.join(DIST, 'assets', 'chunks', '_localSearchIndexroot.js')
+const search = buildSearchIndex(tree)
+mkdirSync(path.dirname(searchChunk), { recursive: true })
+writeFileSync(searchChunk, search.module, 'utf8')
+const expectSearchDocs = tree.counts.vols + tree.counts.chs + tree.counts.secs + tree.counts.subs
+let searchDocs = -1
+try {
+  searchDocs = (JSON.parse(search.json) as { documentCount: number }).documentCount
+} catch {
+  searchDocs = -1
+}
+console.log(
+  `[build] 检索索引 ${(search.bytes / 1024 / 1024).toFixed(1)} MB：${search.docs} 条文档（卷＋章＋节＋小节）→ assets/chunks/_localSearchIndexroot.js`,
 )
 
 // ---- 3c. 产物净化：撞 `.bak` 判据的内容哈希片段改名＋引用回写
@@ -222,8 +247,29 @@ function walkText(dir: string, rel = '') {
 walkText(DIST)
 if (dupHits.length) problems.push(`base 双前缀 ${dupHits.length} 件：${dupHits.slice(0, 3).join('、')}`)
 
+// 4d-bis. 协议相对 URL（UNC 泄漏）：bun 驱动 VitePress 时组件样式虚拟模块会写成
+//   href="//desktop-m5p610n/d/..."（见 NODE_BIN 注释），浏览器当成主机名、请求全数落空；
+//   并且组件 CSS 不进 style 包。此处以“HTML 内出现 href/src=//”为硬判据锁死该形态。
+const uncHits = htmlRels.filter((rel) =>
+  /(?:href|src)="\/\/[^/]/.test(readFileSync(path.join(DIST, rel), 'utf8')),
+)
+if (uncHits.length) problems.push(`协议相对 URL（UNC 泄漏）${uncHits.length} 件：${uncHits.slice(0, 3).join('、')}`)
+
+// 4d-ter. 样式包完整性：VitePress 组件样式应进 style 包（bun 驱动时实测缺失 → 壳层无样式）
+const cssBundles = readdirSync(path.join(DIST, 'assets')).filter((f) => /^style\..*\.css$/.test(f))
+const navStyled = cssBundles.some((f) =>
+  readFileSync(path.join(DIST, 'assets', f), 'utf8').includes('VPNavBar'),
+)
+if (!navStyled) problems.push('样式包缺 VitePress 组件样式（VPNavBar）：驱动进程或打包异常')
+
 // 4e. 合并冲突（同名不同内容）一律判失败：内容不可判定，不得静默保留先到
 if (collisions.length) problems.push(`合并冲突 ${collisions.length} 件：${collisions.slice(0, 5).join('、')}`)
+
+// 4f. 检索索引：chunk 在，且文档数＝四数之和（分片构建下这是全站检索可用的唯一保证）
+if (!existsSync(searchChunk)) problems.push('检索索引 chunk 缺失（assets/chunks/_localSearchIndexroot.js）')
+if (searchDocs !== expectSearchDocs) problems.push(`检索索引文档数 ${searchDocs} ≠ 预期 ${expectSearchDocs}`)
+const hasSearchUi = readdirSync(path.join(DIST, 'assets', 'chunks')).some((f) => /^VPLocalSearchBox/.test(f))
+if (!hasSearchUi) problems.push('检索 UI chunk 缺失（VPLocalSearchBox）：search.provider 未生效？')
 
 const indexOk = existsSync(path.join(DIST, 'index.html'))
 if (!indexOk) problems.push('合并后缺 index.html')
