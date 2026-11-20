@@ -5,9 +5,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 50	1	1.1	1.1.4	T1 线路起步	filled	
 50	1	1.1	1.1.5	FreeBSD development(7) 手册页写作	filled	
 50	1	1.2	1.2.1	锁密度过高促使 Dillon 改取 4.x 基线	filled	
-50	1	1.2	1.2.2	以无锁轻量线程替换互斥锁作为核心异议	filled	
-50	1	1.2	1.2.3	以集群支持为起点、以缓存一致性为前提	filled	
-50	1	1.2	1.2.4	集群目标退居背景与文件系统一致性的遗留约束	filled	
+50	1	1.2	1.2.2	Dillon 反对 5.x 互斥锁路线、主张无锁轻量线程	filled	
+50	1	1.2	1.2.3	DragonFly 起点落在集群支持与缓存一致性前提	filled	
+50	1	1.2	1.2.4	集群目标退场后文件系统一致性仍约束设计	filled	
 50	1	1.2	1.2.5	在采访中公开表述的分道动因	filled	
 50	1	1.3	1.3.1	freebsd-current 上的分叉公告	filled	
 50	1	1.3	1.3.2	接管 4.x、SMP 新路与打包重写	filled	
