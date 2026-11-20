@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "07f9ea3492a350a217871ffcb0cc505681c2250f42bb46c1960be03852801384",
+  "content_sha256": "ca53f07d6d635d0113dc0085ed2d8a6915719bee24d8bdaa7c313dfa4ca5780d",
   "extract": "title+body",
-  "generated_at": "2026-11-21T06:16:58+08:00"
+  "generated_at": "2026-11-21T06:58:30+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -9109,13 +9109,13 @@
    "domains": [],
    "themes": [
     "TH-GOV-026",
-    "TH-HW-022",
+    "TH-BIZ-006",
+    "TH-HIS-001",
     "TH-HW-010",
+    "TH-HW-022",
     "TH-NET-010",
     "TH-OS-001",
-    "TH-OS-036",
-    "TH-REL-001",
-    "TH-REL-015"
+    "TH-OS-036"
    ],
    "sections": 4
   },
@@ -21886,7 +21886,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "68784a88178ccf344ce7cceede1a87b689a37288"
+   "subs_sha1": "87f7faaf5b58310e9241abf1dac6dfc5183cc9a1"
   },
   "V16-C002-2.10": {
    "chapter": "V16-C002",
@@ -59322,17 +59322,17 @@
    "title": "pfSense 与 FreeBSD 网络平台",
    "meta": false,
    "domains": [
+    "TH-HW-000",
     "TH-GOV-000",
-    "TH-OS-000",
-    "TH-HW-000"
+    "TH-OS-000"
    ],
    "themes": [
+    "TH-HW-010",
     "TH-GOV-026",
     "TH-OS-001",
-    "TH-HW-010",
-    "TH-OS-036",
-    "TH-HW-022",
-    "TH-REL-015"
+    "TH-BIZ-006",
+    "TH-HIS-001",
+    "TH-OS-036"
    ],
    "projects": [],
    "technical_terms": [],
@@ -59345,12 +59345,13 @@
    "meta": false,
    "domains": [
     "TH-GOV-000",
-    "TH-HW-000"
+    "TH-BIZ-000",
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-GOV-026",
-    "TH-HW-022",
-    "TH-HW-010"
+    "TH-BIZ-006",
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -59382,13 +59383,13 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HW-000",
-    "TH-GOV-000"
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-SEC-032",
-    "TH-HW-010",
-    "TH-GOV-026"
+    "TH-HIS-001",
+    "TH-HW-010"
    ],
    "projects": [
     "freebsd"
@@ -59403,13 +59404,13 @@
    "meta": false,
    "domains": [
     "TH-SEC-000",
-    "TH-HW-000",
-    "TH-GOV-000"
+    "TH-HIS-000",
+    "TH-HW-000"
    ],
    "themes": [
     "TH-SEC-032",
-    "TH-HW-010",
-    "TH-GOV-026"
+    "TH-HIS-001",
+    "TH-HW-010"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81571,7 +81572,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "98f9153b01b2c49442496b0d8e13859101e4c873"
+   "subs_sha1": "7036ba99d6fe8e5f587679788e323da6c8945697"
   },
   "V74-C004-4.1": {
    "chapter": "V74-C004",
@@ -82604,6 +82605,7 @@
    "themes": [
     "TH-HW-010",
     "TH-HIS-001",
+    "TH-HIS-040",
     "TH-BIZ-015",
     "TH-SEC-032",
     "TH-BIZ-027"
@@ -101855,26 +101857,37 @@
   },
   "V57-C004-4.2.2": {
    "add": [
+    "TH-HW-022",
     "TH-NET-010"
+   ]
+  },
+  "V57-C004-4.2.4": {
+   "add": [
+    "TH-REL-015"
    ]
   },
   "V57-C004-4.2.5": {
    "add": [
+    "TH-REL-001",
     "TH-REL-005",
-    "TH-REL-004",
-    "TH-REL-001"
+    "TH-REL-004"
    ]
   },
   "V57-C004-4.3.1": {
    "add": [
     "TH-REL-001",
     "TH-REL-026",
+    "TH-HW-010",
     "TH-OS-001",
     "TH-LANG-022"
    ]
   },
   "V57-C004-4.3.2": {
    "add": [
+    "TH-REL-026",
+    "TH-HW-010",
+    "TH-REL-001",
+    "TH-LANG-022",
     "TH-REL-004"
    ]
   },
@@ -101882,22 +101895,24 @@
    "add": [
     "TH-OS-001",
     "TH-REL-026",
+    "TH-HW-010",
     "TH-REL-001",
     "TH-GOV-003"
    ]
   },
   "V57-C004-4.3.4": {
    "add": [
+    "TH-HW-010",
     "TH-OS-001",
     "TH-REL-015",
-    "TH-HIS-001",
     "TH-REL-001"
    ]
   },
   "V57-C004-4.3.5": {
    "add": [
     "TH-LAW-013",
-    "TH-BIZ-030"
+    "TH-BIZ-030",
+    "TH-HW-010"
    ]
   },
   "V57-C007-7.2.1": {
