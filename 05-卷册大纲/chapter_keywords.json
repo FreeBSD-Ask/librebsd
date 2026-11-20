@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "9f0ddd4e0901ef3d27cfaf5bd429ded9612f35894443417b0f069e297ac7ba09",
+  "content_sha256": "8db6c4e5144eca794b662ee7f58829c301e42c538c5bf66c2ade17f9ab50e269",
   "extract": "title+body",
-  "generated_at": "2026-11-20T07:01:35+08:00"
+  "generated_at": "2026-11-20T12:44:36+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -9092,11 +9092,11 @@
    "domains": [],
    "themes": [
     "TH-BIZ-005",
+    "TH-BIZ-022",
     "TH-BIZ-027",
     "TH-FS-003",
     "TH-HIS-001",
-    "TH-HW-010",
-    "TH-REL-001"
+    "TH-HW-010"
    ],
    "sections": 1
   },
@@ -9651,9 +9651,9 @@
    "domains": [],
    "themes": [
     "TH-HIS-001",
+    "TH-HIS-003",
     "TH-HIS-037",
     "TH-HIS-040",
-    "TH-HIS-003",
     "TH-HIS-004",
     "TH-HIS-013"
    ],
@@ -59261,10 +59261,10 @@
    "themes": [
     "TH-BIZ-027",
     "TH-HW-010",
-    "TH-BIZ-005",
     "TH-HIS-001",
-    "TH-REL-001",
-    "TH-FS-003"
+    "TH-FS-003",
+    "TH-BIZ-005",
+    "TH-BIZ-022"
    ],
    "projects": [],
    "technical_terms": [
@@ -64439,9 +64439,7 @@
     "TH-HIS-000"
    ],
    "themes": [
-    "TH-HIS-037",
-    "TH-HIS-001",
-    "TH-HIS-040"
+    "TH-HIS-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -74364,8 +74362,8 @@
    "themes": [
     "TH-GOV-037",
     "TH-GOV-024",
-    "TH-BIZ-027",
-    "TH-GOV-025"
+    "TH-GOV-025",
+    "TH-BIZ-027"
    ],
    "projects": [],
    "technical_terms": [],
@@ -101637,7 +101635,19 @@
   },
   "V57-C003-3.1.2": {
    "add": [
-    "TH-OS-031"
+    "TH-OS-031",
+    "TH-REL-001"
+   ]
+  },
+  "V57-C003-3.1.3": {
+   "add": [
+    "TH-LAW-013"
+   ]
+  },
+  "V57-C003-3.1.5": {
+   "add": [
+    "TH-BIZ-001",
+    "TH-LAW-010"
    ]
   },
   "V57-C004-4.1.2": {
@@ -102044,8 +102054,8 @@
   },
   "V59-C003-3.6.1": {
    "add": [
-    "TH-BIZ-027",
-    "TH-FS-002"
+    "TH-FS-002",
+    "TH-BIZ-027"
    ]
   },
   "V59-C003-3.6.2": {
@@ -104212,8 +104222,8 @@
   "V63-C006-6.1.2": {
    "add": [
     "TH-HIS-004",
-    "TH-LAW-013",
-    "TH-LANG-017"
+    "TH-LANG-017",
+    "TH-LAW-013"
    ]
   },
   "V63-C006-6.1.3": {
