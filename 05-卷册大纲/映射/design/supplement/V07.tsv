@@ -37,3 +37,7 @@ V07.1.4.4	corpus_gap	11070	CL-RM-497502	academic_work	secondary_authoritative	D1
 V07.1.4.4	corpus_gap	11071	CL-RM-497503	academic_work	secondary_authoritative	D2	supp-V07-b008	supplemented	dwheeler.com 学位论文 D2（widely publicized 段；内嵌直引号题名绕开）
 V07.1.4.5	corpus_gap	11072	CL-RM-497504	web_archive	primary	D2	supp-V07-b008	supplemented	Semantic Scholar API D2（citationCount 786／influential 32，取值时点固化）
 V07.1.4.5	corpus_gap	11070	CL-RM-497505	academic_work	secondary_authoritative	D1	supp-V07-b008	supplemented	acsac.org 全文入库 D1（页 7 参考文献表 [39][40]；连字还原口径）
+V07.2.6.4	corpus_gap	11104	CL-RM-497673	web_archive	primary	D2	supp-V07-b009	supplemented	simson.net 全文 PDF 出版页 D2（商业出版＋分销链；© 符号 PDF 层缺失照录披露）；单源缺口留题清单（候选 OCLC/login 书评）
+V07.2.6.3	corpus_gap	11104	CL-RM-497674	web_archive	primary	D2	supp-V07-b009	supplemented	simson.net 反序署名页 D1 目标页转写 D2（邮件头逐字；同 claim 双块之主块）
+V07.2.5.2	corpus_gap	11069	CL-RM-497675	web_archive	primary	D2	supp-V07-b009	supplemented	simson.net 目录页 D2（双序并列辅块；同 claim 同链第二块 #2）
+V07.2.6.3	corpus_gap	11104	CL-RM-497676	web_archive	primary	D2	supp-V07-b009	supplemented	UHH 目录页 D2（双序并列辅块；同题双 claim 拆分——fixchain 订正 q2 双链违 J8）
