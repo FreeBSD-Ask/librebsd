@@ -149,14 +149,13 @@ const searching = computed(() => q.value.trim().length > 0)
             @toggle="(e) => { const t = e.target as HTMLDetailsElement; if (t.open !== isChOpen(`${v.no}:${ch.no}`)) toggleCh(`${v.no}:${ch.no}`) }"
           >
             <summary>
-              <span class="cat-ch-title">
+              <a class="cat-ch-title" :href="chHref(v.no, ch.no)" @click.stop>
                 第 {{ ch.no }} 章　<template v-for="(s, i) in ch.title" :key="i">
                   <span v-if="s.t === 'en'" lang="en">{{ s.s }}</span>
                   <template v-else>{{ s.s }}</template>
                 </template>
-              </span>
+              </a>
               <span class="cat-ch-meta">{{ ch.secs.length }} 节／{{ ch.secs.reduce((a, s) => a + s.subs.length, 0) }} 小节</span>
-              <a :href="chHref(v.no, ch.no)" @click.stop>进入</a>
             </summary>
             <div v-if="isChOpen(`${v.no}:${ch.no}`)" class="cat-vol-body">
               <div v-for="s in ch.secs" :key="s.num" class="cat-sec">
