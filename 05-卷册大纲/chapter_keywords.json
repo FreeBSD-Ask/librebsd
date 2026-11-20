@@ -7,9 +7,9 @@
   "sections": 3918,
   "subsections": 19363,
   "vocab_sha256": "7d0ba5a490ea1d4c686c9078dda70cd93873c2edbc25deeb1a38d5dd2d8f1022",
-  "content_sha256": "487b9d26c70060f8b2860e2aa0c3b373f64679701aeb33f80f7fe9d1ee6107ff",
+  "content_sha256": "07f9ea3492a350a217871ffcb0cc505681c2250f42bb46c1960be03852801384",
   "extract": "title+body",
-  "generated_at": "2026-11-21T05:04:44+08:00"
+  "generated_at": "2026-11-21T06:16:58+08:00"
  },
  "themes": {
   "TH-BIZ-000": {
@@ -4864,14 +4864,14 @@
    "title": "GNU 计划与自由软件运动的形成",
    "domains": [],
    "themes": [
+    "TH-BIZ-014",
     "TH-HIS-004",
     "TH-REL-001",
-    "TH-BIZ-014",
+    "TH-GOV-006",
     "TH-HIS-002",
     "TH-HIS-046",
     "TH-HW-036",
-    "TH-LAW-002",
-    "TH-LAW-010"
+    "TH-LAW-002"
    ],
    "sections": 10
   },
@@ -6241,12 +6241,12 @@
    "domains": [],
    "themes": [
     "TH-HW-010",
-    "TH-HIS-001",
     "TH-REL-001",
+    "TH-HIS-001",
+    "TH-HW-002",
     "TH-BIZ-018",
     "TH-BIZ-020",
     "TH-FS-023",
-    "TH-HW-002",
     "TH-LAW-015"
    ],
    "sections": 9
@@ -11262,12 +11262,12 @@
    "themes": [
     "TH-HW-010",
     "TH-HIS-001",
-    "TH-GOV-037",
     "TH-BIZ-015",
+    "TH-GOV-037",
     "TH-GOV-015",
     "TH-NET-027",
     "TH-BIZ-008",
-    "TH-HIS-046"
+    "TH-BIZ-027"
    ],
    "sections": 17
   },
@@ -14592,7 +14592,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "4903edea10c668f0a42904cc123762b854336054"
+   "subs_sha1": "c5641c2d12b0d3cbf506ab505ed3a42c32d1f4df"
   },
   "V07-C002-2.6": {
    "chapter": "V07-C002",
@@ -21719,10 +21719,12 @@
    "meta": false,
    "domains": [
     "TH-REL-000",
+    "TH-BIZ-000",
     "TH-HIS-000"
    ],
    "themes": [
     "TH-REL-001",
+    "TH-BIZ-014",
     "TH-HIS-002",
     "TH-REL-004",
     "TH-REL-009"
@@ -21730,26 +21732,26 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "682cc033f605fbd59af886e6283d9a885552918b"
+   "subs_sha1": "e04e1acea70700590244d8abad5542ac06432ddc"
   },
   "V16-C002-2.2": {
    "chapter": "V16-C002",
    "title": "GNU 与 Unix 兼容系统的目标",
    "meta": false,
    "domains": [
+    "TH-BIZ-000",
     "TH-HIS-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
+    "TH-BIZ-014",
     "TH-HIS-004",
-    "TH-REL-001",
-    "TH-BIZ-014"
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "49ce52a005030e3ec6f361db41713f0036ffdd26"
+   "subs_sha1": "1bbf8dbeca1867f814a61e1b61b846c90be3401b"
   },
   "V16-C002-2.3": {
    "chapter": "V16-C002",
@@ -21757,18 +21759,18 @@
    "meta": false,
    "domains": [
     "TH-LAW-000",
-    "TH-HIS-000",
-    "TH-REL-000"
+    "TH-BIZ-000",
+    "TH-HIS-000"
    ],
    "themes": [
     "TH-LAW-025",
-    "TH-HIS-004",
-    "TH-REL-001"
+    "TH-BIZ-014",
+    "TH-HIS-004"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "b9174d322bcbf04a2103181b408399cce006c765"
+   "subs_sha1": "82bab7c786283d83e64654277254eb73307bdfc9"
   },
   "V16-C002-2.4": {
    "chapter": "V16-C002",
@@ -21789,45 +21791,45 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "c8f76a791fa09115dd514f64c8d792955fe78774"
+   "subs_sha1": "7e735a677d2c033693802ee8e0f69c8114ad542d"
   },
   "V16-C002-2.5": {
    "chapter": "V16-C002",
    "title": "自由软件基金会（1985）的成立",
    "meta": false,
    "domains": [
+    "TH-BIZ-000",
     "TH-HIS-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
+    "TH-BIZ-014",
     "TH-HIS-004",
-    "TH-REL-001",
-    "TH-BIZ-014"
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "00a1f3b5964b4a82a261f64f4c9557d90c93b4be"
+   "subs_sha1": "8cea5eed3c498e59711c911f7849157693d4c9f7"
   },
   "V16-C002-2.6": {
    "chapter": "V16-C002",
    "title": "从 GNU 宣言到四项自由",
    "meta": false,
    "domains": [
+    "TH-GOV-000",
     "TH-REL-000",
-    "TH-HIS-000",
     "TH-BIZ-000"
    ],
    "themes": [
+    "TH-GOV-006",
     "TH-REL-001",
-    "TH-HIS-004",
     "TH-BIZ-014"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "54d2ec1b45aa3675c31f25881f6fa4de47298313"
+   "subs_sha1": "8f5a5571931e1a592225c2afdf2757f19bfbd23b"
   },
   "V16-C002-2.7": {
    "chapter": "V16-C002",
@@ -21846,26 +21848,26 @@
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "82077d506a9a28cfab2cea06aa1ea6991566ee8f"
+   "subs_sha1": "dfe2e2366ed0489943a51e09e669e92d8a2abb9b"
   },
   "V16-C002-2.8": {
    "chapter": "V16-C002",
    "title": "自由软件运动的组织化",
    "meta": false,
    "domains": [
+    "TH-BIZ-000",
     "TH-HIS-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
+    "TH-BIZ-014",
     "TH-HIS-004",
-    "TH-REL-001",
-    "TH-BIZ-014"
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "8792eae706aef976c4f91141cd009f47c3748278"
+   "subs_sha1": "3443c0f225797e686c0aa12c0d7d6f009aee5f3f"
   },
   "V16-C002-2.9": {
    "chapter": "V16-C002",
@@ -21873,37 +21875,37 @@
    "meta": false,
    "domains": [
     "TH-HIS-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-BIZ-000",
+    "TH-REL-000"
    ],
    "themes": [
     "TH-HIS-046",
-    "TH-REL-001",
-    "TH-BIZ-014"
+    "TH-BIZ-014",
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "7e14dd8e54bce3dc3f0bac03978eb335f68be4e6"
+   "subs_sha1": "68784a88178ccf344ce7cceede1a87b689a37288"
   },
   "V16-C002-2.10": {
    "chapter": "V16-C002",
    "title": "自由软件运动进入 Unix 软件世界",
    "meta": false,
    "domains": [
+    "TH-BIZ-000",
     "TH-HIS-000",
-    "TH-REL-000",
-    "TH-BIZ-000"
+    "TH-REL-000"
    ],
    "themes": [
+    "TH-BIZ-014",
     "TH-HIS-004",
-    "TH-REL-001",
-    "TH-BIZ-014"
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "c350f16a7588fa3a0306249c9c4932923198391d"
+   "subs_sha1": "d29930c3bf85294257fef05566592088d9c3c919"
   },
   "V16-C003-3.1": {
    "chapter": "V16-C003",
@@ -32548,15 +32550,17 @@
    "title": "sysinstall 与完整发行系统的形成",
    "meta": false,
    "domains": [
-    "TH-FS-000",
-    "TH-NET-000",
-    "TH-HW-000"
+    "TH-HW-000",
+    "TH-REL-000",
+    "TH-GOV-000"
    ],
    "themes": [
-    "TH-FS-023",
-    "TH-NET-025",
     "TH-HW-010",
-    "TH-HIS-004"
+    "TH-REL-001",
+    "TH-HW-002",
+    "TH-GOV-037",
+    "TH-FS-023",
+    "TH-NET-025"
    ],
    "projects": [],
    "technical_terms": [],
@@ -32609,12 +32613,12 @@
    "domains": [
     "TH-LAW-000",
     "TH-HW-000",
-    "TH-HIS-000"
+    "TH-REL-000"
    ],
    "themes": [
     "TH-LAW-015",
     "TH-HW-010",
-    "TH-HIS-001"
+    "TH-REL-001"
    ],
    "projects": [],
    "technical_terms": [],
@@ -81399,19 +81403,19 @@
    "domains": [
     "TH-HIS-000",
     "TH-BIZ-000",
-    "TH-GOV-000"
+    "TH-OS-000"
    ],
    "themes": [
     "TH-HIS-030",
     "TH-BIZ-008",
-    "TH-GOV-005",
     "TH-OS-040",
+    "TH-GOV-005",
     "TH-GOV-037"
    ],
    "projects": [],
    "technical_terms": [],
    "subs": 6,
-   "subs_sha1": "c670cdbea1393df5c734a1ccfd9f8a9f8f80d651"
+   "subs_sha1": "74265fa18842f3f6a9c7a343cfa9fe4eff629fe5"
   },
   "V74-C003-3.2": {
    "chapter": "V74-C003",
@@ -81432,7 +81436,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "89f5e0f91ad626396e9ad30616daea198459d777"
+   "subs_sha1": "26c87f2536401fc459cf30799afc4a6207092964"
   },
   "V74-C003-3.3": {
    "chapter": "V74-C003",
@@ -81450,7 +81454,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "0b93081ff2408d613f1156b85612c074d095dd79"
+   "subs_sha1": "8c129126f53b4879ae5e515c8c84d9693ac788a6"
   },
   "V74-C003-3.4": {
    "chapter": "V74-C003",
@@ -81469,7 +81473,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "8294e3b78c67d17528b1c9f71cd682abedcb0118"
+   "subs_sha1": "7b2d4414bea7da005a9309b393741b86e7ddfeee"
   },
   "V74-C003-3.5": {
    "chapter": "V74-C003",
@@ -81488,7 +81492,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 4,
-   "subs_sha1": "86c2a35a1e3190be0287eae0665a2580a0df81d3"
+   "subs_sha1": "048ea7fb498af033a7ba3fbd9b84c1af967d6379"
   },
   "V74-C003-3.6": {
    "chapter": "V74-C003",
@@ -81507,7 +81511,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "a641157072b901798bfc09ac736385983baa410d"
+   "subs_sha1": "fcb0cd663aba52f97466793d2d292d071735de5e"
   },
   "V74-C003-3.7": {
    "chapter": "V74-C003",
@@ -81526,7 +81530,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "7062a368ad79df7fb053932919d66c7541c85433"
+   "subs_sha1": "50e9527f61ccba15992bac71212985ee3127c99c"
   },
   "V74-C003-3.8": {
    "chapter": "V74-C003",
@@ -81545,7 +81549,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "2c967f305f76e6df2c020a59406c8f6e0545a195"
+   "subs_sha1": "635348a7c8cb1f86c0f367b0c1364a513c0f4260"
   },
   "V74-C003-3.9": {
    "chapter": "V74-C003",
@@ -81567,7 +81571,7 @@
    "projects": [],
    "technical_terms": [],
    "subs": 5,
-   "subs_sha1": "c62affd59c5f48004aeb661ac1fee2b1a9351738"
+   "subs_sha1": "98f9153b01b2c49442496b0d8e13859101e4c873"
   },
   "V74-C004-4.1": {
    "chapter": "V74-C004",
@@ -82572,15 +82576,15 @@
    "meta": false,
    "domains": [
     "TH-HW-000",
-    "TH-LANG-000",
-    "TH-GOV-000"
+    "TH-GOV-000",
+    "TH-LANG-000"
    ],
    "themes": [
     "TH-HW-010",
+    "TH-GOV-004",
     "TH-LANG-017",
     "TH-LANG-016",
     "TH-GOV-008",
-    "TH-GOV-004",
     "TH-HIS-007"
    ],
    "projects": [],
@@ -82595,12 +82599,14 @@
    "domains": [
     "TH-HW-000",
     "TH-HIS-000",
-    "TH-GOV-000"
+    "TH-BIZ-000"
    ],
    "themes": [
     "TH-HW-010",
     "TH-HIS-001",
-    "TH-GOV-037"
+    "TH-BIZ-015",
+    "TH-SEC-032",
+    "TH-BIZ-027"
    ],
    "projects": [],
    "technical_terms": [],
@@ -92071,6 +92077,16 @@
     "TH-GOV-037"
    ]
   },
+  "V36-C002-2.5.2": {
+   "add": [
+    "TH-HIS-004"
+   ]
+  },
+  "V36-C002-2.5.3": {
+   "add": [
+    "TH-HIS-001"
+   ]
+  },
   "V36-C002-2.8.1": {
    "add": [
     "TH-LAW-016",
@@ -97196,8 +97212,8 @@
     "TH-GOV-006",
     "TH-GOV-025",
     "TH-LANG-030",
-    "TH-HW-010",
-    "TH-LAW-021"
+    "TH-LAW-021",
+    "TH-HW-010"
    ]
   },
   "V43-C004-4.1.3": {
@@ -97602,8 +97618,8 @@
   "V44-C003-3.8.4": {
    "add": [
     "TH-REL-037",
-    "TH-HW-010",
     "TH-LAW-021",
+    "TH-HW-010",
     "TH-REL-001",
     "TH-HIS-004"
    ]
@@ -100054,8 +100070,8 @@
   "V51-C003-3.9.1": {
    "add": [
     "TH-LAW-001",
-    "TH-HW-010",
     "TH-LAW-021",
+    "TH-HW-010",
     "TH-LANG-009",
     "TH-HIS-001"
    ]
@@ -100063,8 +100079,8 @@
   "V51-C003-3.9.2": {
    "add": [
     "TH-LAW-001",
-    "TH-HW-010",
     "TH-LAW-021",
+    "TH-HW-010",
     "TH-GOV-005",
     "TH-LANG-009",
     "TH-HIS-001"
@@ -100073,8 +100089,8 @@
   "V51-C003-3.9.4": {
    "add": [
     "TH-LAW-001",
-    "TH-HW-010",
     "TH-LAW-021",
+    "TH-HW-010",
     "TH-LANG-009",
     "TH-HIS-001"
    ]
@@ -100105,8 +100121,8 @@
   },
   "V51-C004-4.2.3": {
    "add": [
-    "TH-HW-010",
     "TH-LAW-021",
+    "TH-HW-010",
     "TH-LAW-001",
     "TH-HIS-010"
    ]
@@ -100141,8 +100157,8 @@
   "V51-C004-4.6.2": {
    "add": [
     "TH-LAW-001",
-    "TH-HW-010",
     "TH-LAW-021",
+    "TH-HW-010",
     "TH-LANG-009",
     "TH-HIS-001"
    ]
@@ -108051,6 +108067,11 @@
    "add": [
     "TH-REL-010",
     "TH-HIS-010"
+   ]
+  },
+  "V75-C003-3.16.3": {
+   "add": [
+    "TH-LANG-018"
    ]
   },
   "V75-C003-3.16.4": {
