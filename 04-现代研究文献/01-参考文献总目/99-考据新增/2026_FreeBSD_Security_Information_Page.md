@@ -23,6 +23,18 @@ FreeBSD Project. FreeBSD Security Information[EB/OL]. The FreeBSD Project, （�
 
 > Advisories affecting the base system are sent to the following mailing lists: FreeBSD-security-notifications@FreeBSD.org FreeBSD-security@FreeBSD.org FreeBSD-announce@FreeBSD.org The list of released advisories can be found on the FreeBSD Security Advisories page.
 
+## b011 追加引文（2026-11-21，G7 全责线 supp-V61-b011 复用，异句异锚 J84）
+
+> Advisories or Errata Notices 二分判定（1.11.1-B 用；提问清单后半段句照录）：
+
+> Items that are not on this list are looked into individually and it will be determined then whether or not it will receive a Security Advisory or an Errata Notice.
+
+> 受理职责边界（1.11.2-B 用）：
+
+> FreeBSD security issues specific to the base system should be reported via email to the FreeBSD Security Team or, if a higher level of confidentiality is required, via PGP encrypted email to the Security Officer Team using the Security Officer PGP key.
+>
+> **链接元素披露（b011）**：句内 FreeBSD Security Team／Security Officer Team／Security Officer PGP key 为三处超链接元素（mailto 与公钥页），渲染文本连续无空格（剥离脚本会生 "key ." 伪影空格，勿误录）；引文按渲染形态照录。
+
 ## 三、考据说明
 
 - 两句共同界定项目侧在长期维护中的角色：限时支持＋对 stable 与 security 分支发布公告（1.6.3-A）。

@@ -95,3 +95,12 @@ V61.1.10.4	NVD performs enrichment CVEs published CVE List	web_reader 取 nvd.ni
 V61.1.10.5	NVD news February 2024 consortium temporary delays analysis	web_reader 取 nvd.nist.gov/general/news 全文（2024-02-13 行）	命中	积压官方公告句取得（thesis 阻断披露部分兑现）	2026-11-21	web_reader
 V61.1.10.5	NVD US government repository SCAP vulnerability management	web_reader 取 nvd.nist.gov/general 复用	命中	收录边界定位句取得	2026-11-21	web_reader
 V61.1.10.*	—	—	—	五题两独立来源齐备（10 块）：ref11092—11095 四新建（NVD /vuln／/general／/general/news 三页＋CVE Record Format README）＋ref11082 复用两句异句异锚；NVD 被 Cloudflare 拦、web_reader 代理出口放行披露；cve.org 子页 JS 壳经 web_reader 亦空取披露	2026-11-21	—
+V61.1.11.1	NetBSD security advisory discovered corrected announced mailing lists archived RSS	curl 直取 netbsd.org/security/（17 089 字节）	命中	发布机制固定化三连句取得	2026-11-21	curl 直连
+V61.1.11.1	FreeBSD items not on this list Security Advisory or Errata Notice	curl 直取 freebsd.org/security/ 复用（ref10409 卡 b011 追加）	命中	公告勘误二分判定句取得	2026-11-21	curl 直连
+V61.1.11.2	NetBSD security issues handled by three groups Security Team Alert Officer	curl 直取 netbsd.org/security/ 复用	命中	三组分工句取得	2026-11-21	curl 直连
+V61.1.11.2	FreeBSD base system reported via email Security Team PGP Security Officer	curl 直取 freebsd.org/security/ 复用（ref10409 卡 b011 追加；链接元素渲染形态核）	命中	受理边界句取得	2026-11-21	curl 直连
+V61.1.11.3	OpenBSD 5.3 PIE used by default stack smashing protector enabled by default	curl 直取 openbsd.org/53.html（42 432 字节）	命中	加固默认化两句取得	2026-11-21	curl 直连
+V61.1.11.3	OpenBSD security strlcpy W^X guard pages privilege separation ProPolice list	curl 直取 openbsd.org/security.html 复用（ref2219 卡 b011 追加；裸列表拼接披露；同 URL 三卡历史重复登记披露）	命中	默认缓解清单句取得	2026-11-21	curl 直连
+V61.1.11.5	NetBSD communication vendors other distributions shipping same code delays	curl 直取 netbsd.org/security/ 复用	命中	跨分支惯例复制句取得	2026-11-21	curl 直连
+V61.1.11.5	OpenBSD proactive auditing paid off fixed six months ago commonplace BUGTRAQ	curl 直取 openbsd.org/security.html 复用（ref2219 卡；q 元素渲染弯引号核）	命中	惯例经论坛扩散句取得	2026-11-21	curl 直连
+V61.1.11.*	—	—	—	四题两独立来源齐备（8 块）：ref11102 NetBSD security 页＋ref11103 OpenBSD 5.3 页新建＋ref10409／ref2219 复用异句异锚（两复用卡 b011 追加池）；1.11.4 为 2026-09-14 行级遍历批已 filled 撤出批面（1.1.3 先例）；引擎三跑始成（卡路径前缀缺陷三处两度半程崩、refs 事务两度回滚后幂等复用，如实披露）	2026-11-21	—
