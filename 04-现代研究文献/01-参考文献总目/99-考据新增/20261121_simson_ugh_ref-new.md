@@ -26,3 +26,12 @@
 - PDF 版权页 “Copyright  1994” 处版权符号 © 未被文本层抽出（呈双词间空格），卡转写照录、quote 引“1994 by IDG Books Worldwide.”段避开该位。
 - 本卡同时作批内“网络流传”面载体：作者站公开分发全文 PDF（2026-11-21 实取 3 639 172 B）。
 - 佐证留痕：web.mit.edu/simsong/www/ugh.pdf 已 Access Denied（旧路径失效）；lemis/investorvillage/Wayback/OpenLibrary/WorldCat 本机通道全部超时或拒绝——题级第二独立源缺口随批披露留题清单（候选＝OCLC 编目页／login 书评库）。
+
+## 逐字摘录（supp-V07-b010 追加：章目戏谑改名段，PDF p15＝文本层 p14）
+
+> Nightmare File System Not Fully Serviceable … No File Security … Not File System
+
+## 披露（b010 追加）
+
+- NFS 章（第 14 章）章目以三重戏谑改名展开批评焦点（Nightmare File System／No File Security／Not File System），点线目录分隔以省略号分段绕行。
+- 本段为 supp-V07-b010 取用面（2.6.2 题），追加后卡哈希由引擎 card_resync 回刷。
