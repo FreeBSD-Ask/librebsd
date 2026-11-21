@@ -297,7 +297,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
             <div v-if="isChOpen(`${v.no}:${ch.no}`)" class="cat-vol-body">
               <div v-for="s in ch.secs" :key="s.num" class="cat-sec">
                 <div class="cat-sec-head">
-                  <a class="cat-sec-title" :href="`${chHref(v.no, ch.no)}#${secAnchor(v.no, ch.no, s.num)}`">
+                  <span class="cat-sec-title">
                     <span class="cat-sec-num">{{ s.num }}</span>
                     <span>
                       <template v-for="(x, i) in s.title" :key="i">
@@ -305,7 +305,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
                         <template v-else>{{ x.s }}</template>
                       </template>
                     </span>
-                  </a>
+                  </span>
                 </div>
                 <p v-if="s.notes.length" class="cat-note">
                   <button
@@ -319,7 +319,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
                 </p>
                 <ul v-if="s.subs.length" class="cat-subs">
                   <li v-for="(u, ui) in s.subs" :key="u.num">
-                    <a :href="`${chHref(v.no, ch.no)}#${subAnchor(v.no, ch.no, s.num, ui + 1)}`">
+                    <span class="cat-sub-row">
                       <span class="cat-sub-num">{{ u.num }}</span>
                       <span>
                         <template v-for="(x, i) in u.title" :key="i">
@@ -327,7 +327,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
                           <template v-else>{{ x.s }}</template>
                         </template>
                       </span>
-                    </a>
+                    </span>
                     <span v-if="u.notes.length" :class="['src', 'note-x', `k-${u.notes[0].k}`]">{{ u.notes.map((n) => n.t).join(' ') }}</span>
                   </li>
                 </ul>
