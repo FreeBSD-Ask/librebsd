@@ -63,28 +63,46 @@ for (const v of tree.vols) {
   const secCount = v.chs.reduce((a, c) => a + c.secs.length, 0)
   const subCount = v.chs.reduce((a, c) => a + c.secs.reduce((b, s) => b + s.subs.length, 0), 0)
 
-  // ---- 卷页：卷段复刻（导言＋定位注常显＋章目 h3.chapter＋计数徽标）
+  // ---- 卷页：装配式卷块复刻（ykla 令“点击章/节/小节效果与 index.html 一致”）——
+  // section.doc-block 包裹（卷题 h1 可折叠）、章 h3.chapter（▾ 点击折叠本章节列表）、
+  // ul.sections > li（节号＋题＋注徽标）＋ ul.subsections（小节行内注），与装配页 DOM 同构；
+  // 章页深链保留（章 id 不变，锚直达），折叠交互由 FoldLayer.vue 承担。
   const volLines: string[] = []
   volLines.push('---')
   volLines.push(`title: ${JSON.stringify(`第${v.roman}卷 ${plainOf(v.title)}`)}`)
   volLines.push('outline: false')
   volLines.push('---')
   volLines.push('')
-  volLines.push(`# 第${v.roman}卷  ${inlineMd(v.title)} {#${volAnchor(v.no)}}`)
-  volLines.push('')
+  volLines.push(`<section class="doc-block" id="${volAnchor(v.no)}">`)
+  volLines.push(`<h1>第${v.roman}卷  ${inlineHtml(v.title)}<span class="page-version" title="页面版本（UTC+8，YYYY.MM.DD-HH:MM）">${plainOf(catalog.version)}</span></h1>`)
   for (const p of v.intro) volLines.push(`<p class="vol-overview">${htmlEsc(p)}</p>`)
-  if (v.intro.length) volLines.push('')
   for (const p of v.posnotes) volLines.push(`<p class="vol-note">${htmlEsc(p)}</p>`)
-  if (v.posnotes.length) volLines.push('')
-  volLines.push(`本卷含 **${v.chs.length}** 章／**${secCount}** 节／**${subCount}** 小节。`)
-  volLines.push('')
+  volLines.push(`<p class="vol-count">本卷含 <strong>${v.chs.length}</strong> 章／<strong>${secCount}</strong> 节／<strong>${subCount}</strong> 小节。</p>`)
   for (const c of v.chs) {
-    const sc = c.secs.length
-    const uc = c.secs.reduce((b, s) => b + s.subs.length, 0)
-    volLines.push(
-      `<h3 class="chapter" id="${chAnchor(v.no, c.no)}"><a href="./c${pad(c.no)}">第 ${c.no} 章 ${inlineHtml(c.title)}</a><span class="ch-cnt">${sc} 节／${uc} 小节</span></h3>`,
-    )
+    volLines.push(`<h3 class="chapter" id="${chAnchor(v.no, c.no)}">第 ${c.no} 章  ${inlineHtml(c.title)}</h3>`)
+    volLines.push('<ul class="sections">')
+    for (const s of c.secs) {
+      const badge = s.notes.length
+        ? `<button type="button" class="note-badge" aria-expanded="false" title="展开/折叠溯源注">注</button><span class="src ${NOTE_CLASS[noteKind(s.notes)]}">${htmlEsc(s.notes.join(' '))}</span>`
+        : ''
+      volLines.push(`<li id="${secAnchor(v.no, c.no, s.num)}"><span class="sec-num">${s.num}</span> ${inlineHtml(s.title)}${badge}`)
+      if (s.subs.length) {
+        volLines.push('<ul class="subsections">')
+        s.subs.forEach((x, i) => {
+          const subBadge = x.notes.length
+            ? `<span class="src ${NOTE_CLASS[noteKind(x.notes)]}">${htmlEsc(x.notes.join(' '))}</span>`
+            : ''
+          volLines.push(
+            `<li id="${subAnchor(v.no, c.no, s.num, i + 1)}"><span class="sec-num">${x.num}</span> ${inlineHtml(x.title)}${subBadge}</li>`,
+          )
+        })
+        volLines.push('</ul>')
+      }
+      volLines.push('</li>')
+    }
+    volLines.push('</ul>')
   }
+  volLines.push('</section>')
   volLines.push('')
   writeFileSync(path.join(vdir, 'index.md'), volLines.join('\n'), 'utf8')
   volFiles++

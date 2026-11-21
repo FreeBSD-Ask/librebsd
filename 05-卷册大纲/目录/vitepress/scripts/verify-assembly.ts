@@ -122,6 +122,9 @@ let genOverview = 0
 let genVolNote = 0
 let genSrc = 0
 let genSecNum = 0
+// 2026-11-21 起：卷页也是全量载体（装配式卷块），节/小节/注在「卷页＋章页」双载体各一份——
+// 计数改为逐载体对齐装配（卷页载体＝index.md、章页载体＝c*.md，各自都必须与装配 <main> 相等）
+const carriers: Array<{ kind: 'vol' | 'ch'; overview: number; volNote: number; src: number; secNum: number }> = []
 const volDirs = readdirSync(SITE_ROOT).filter((n) => /^v\d{2}$/.test(n))
 for (const d of volDirs) {
   const dir = path.join(SITE_ROOT, d)
@@ -129,10 +132,20 @@ for (const d of volDirs) {
     if (!f.endsWith('.md')) continue
     const t = readFileSync(path.join(dir, f), 'utf8')
     for (const m of t.matchAll(/\{#(vol-[^}]+)\}/g)) genIds.add(m[1])
-    genOverview += (t.match(/<p class="vol-overview">/g) ?? []).length
-    genVolNote += (t.match(/<p class="vol-note">/g) ?? []).length
-    genSrc += (t.match(/class="src note-x /g) ?? []).length
-    genSecNum += (t.match(/<span class="sec-num">/g) ?? []).length
+    // 卷页为纯 HTML 块（装配式 section.doc-block），锚以 id="vol-…" 形态出现——两形并收
+    for (const m of t.matchAll(/\sid="(vol-[^"]+)"/g)) genIds.add(m[1])
+    const c = {
+      kind: (f === 'index.md' ? 'vol' : 'ch') as 'vol' | 'ch',
+      overview: (t.match(/<p class="vol-overview">/g) ?? []).length,
+      volNote: (t.match(/<p class="vol-note">/g) ?? []).length,
+      src: (t.match(/class="src note-x /g) ?? []).length,
+      secNum: (t.match(/<span class="sec-num">/g) ?? []).length,
+    }
+    carriers.push(c)
+    genOverview += c.overview
+    genVolNote += c.volNote
+    genSrc += c.src
+    genSecNum += c.secNum
   }
 }
 // 只取装配页 <main> 区：noscript 静态双栏 TOC 会镜像一份 .sec-num（不计入正文口径）
@@ -151,13 +164,27 @@ if (missIds.length || extraIds.length) {
   )
 }
 const v6: Array<[string, number, number]> = [
+  // 站点总量＝装配 ×2（卷页与章页双载体各一份全量；逐载体集合对齐见下）
   ['卷导言 p.vol-overview', asmOverview, genOverview],
   ['卷级定位注 p.vol-note', asmVolNote, genVolNote],
-  ['溯源注 span.src', asmSrc, genSrc],
-  ['节／小节号 span.sec-num', asmSecNum, genSecNum],
+  ['溯源注 span.src（双载体 2×）', asmSrc * 2, genSrc],
+  ['节／小节号 span.sec-num（双载体 2×）', asmSecNum * 2, genSecNum],
 ]
 for (const [name, a, b] of v6) {
   if (a !== b) fails.push(`V6 ${name} 计数不一致：装配 ${a} vs 站点源 ${b}`)
+}
+// 逐载体集合对齐：卷页集合与章页集合各自恰好覆盖全书一次（各自合计＝装配 <main>）
+for (const kind of ['vol', 'ch'] as const) {
+  const rows = carriers.filter((c) => c.kind === kind)
+  for (const [name, key, a] of [
+    ['src', 'src', asmSrc],
+    ['sec-num', 'secNum', asmSecNum],
+  ] as Array<[string, 'src' | 'secNum', number]>) {
+    const sum = rows.reduce((acc, c) => acc + c[key], 0)
+    if (rows.length && sum !== a) {
+      fails.push(`V6 ${kind} 载体 ${name} 合计 ${sum} ≠ 装配 ${a}（载体集合覆盖断裂）`)
+    }
+  }
 }
 
 // ---- 报告

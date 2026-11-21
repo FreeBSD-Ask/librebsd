@@ -186,7 +186,7 @@ else:
 
 # ---- 抽查卷结构 ----
 print("\n[J] 抽查关键卷结构")
-for sub in ("UNIX 战争", "BSD–Linux 关系史", "编程之夏", "BSD UNIX 技术专题史", "技术发展史的横向比较"):
+for sub in ("UNIX 战争", "编程之夏", "BSD UNIX 技术专题史", "技术发展史的横向比较"):
     n = find(sub)
     if not n: print(f"   ❌ 未找到「{sub}」"); continue
     i = next(i for i, x in heads if x == n)

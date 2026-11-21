@@ -10,11 +10,20 @@ function onClick(e: MouseEvent) {
   const t = e.target as HTMLElement | null
   const badge = t?.closest<HTMLElement>('.note-badge')
   if (!badge) return
+  // 两种宿主形态：章页 .sec-note／首页 .cat-note（p 包裹）；卷页 li 形（装配页同构，折 li.note-open）
   const host = badge.closest('.sec-note, .cat-note')
-  if (!host) return
-  e.preventDefault()
-  const open = host.classList.toggle('open')
-  badge.setAttribute('aria-expanded', open ? 'true' : 'false')
+  if (host) {
+    e.preventDefault()
+    const open = host.classList.toggle('open')
+    badge.setAttribute('aria-expanded', open ? 'true' : 'false')
+    return
+  }
+  const li = badge.closest('li')
+  if (li) {
+    e.preventDefault()
+    const open = li.classList.toggle('note-open')
+    badge.setAttribute('aria-expanded', open ? 'true' : 'false')
+  }
 }
 
 onMounted(() => document.addEventListener('click', onClick))

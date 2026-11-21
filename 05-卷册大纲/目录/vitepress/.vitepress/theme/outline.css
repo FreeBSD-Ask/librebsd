@@ -566,6 +566,120 @@ body.read-mode .vp-doc h3[id*="-sub-"] .sec-num {
   fill: none;
 }
 
+/* ---- 卷块（卷页 section.doc-block）：装配页 1:1 形态 ----
+   卷题 h1 点击折叠整块、章 h3.chapter 点击折叠本章节列表（手势在 FoldLayer.vue）；
+   节列表 ul.sections 与小节 ul.subsections 为 doc.css 同构移植。 */
+.vp-doc .doc-block > h1 {
+  cursor: pointer;
+}
+.vp-doc .doc-block > h1::after {
+  content: "▾";
+  float: right;
+  font-size: 0.7em;
+  color: var(--cat-muted);
+  transition: transform 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.vp-doc .doc-block.folded > h1::after {
+  content: "▸";
+}
+.vp-doc .doc-block.folded > *:not(h1) {
+  display: none;
+}
+.vp-doc h3.chapter {
+  cursor: pointer;
+}
+.vp-doc h3.chapter::after {
+  content: "▾";
+  float: right;
+  font-size: 0.7em;
+  color: var(--cat-muted);
+  transition: transform 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.vp-doc h3.chapter.folded::after {
+  content: "▸";
+}
+.vp-doc h3.chapter.folded + ul.sections {
+  display: none;
+}
+.vp-doc p.vol-count {
+  margin: 8px 0 20px;
+  color: var(--cat-muted);
+  font-size: 13px;
+}
+.vp-doc ul.sections {
+  margin: 4px 0 0;
+  padding-left: 20px;
+}
+.vp-doc ul.sections > li {
+  margin: 4px 0;
+  padding: 5px 8px 5px 0;
+  padding-left: var(--cat-hang);
+  text-indent: calc(-1 * var(--cat-hang));
+  border-bottom: 1px dashed color-mix(in srgb, var(--cat-line) 60%, transparent);
+  border-radius: 6px;
+  color: var(--cat-ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+  list-style: none;
+  overflow-wrap: anywhere;
+  transition: background-color 0.15s ease;
+}
+.vp-doc ul.sections > li:last-child {
+  border-bottom: none;
+}
+.vp-doc ul.sections > li:hover {
+  background: color-mix(in srgb, var(--cat-accent) 5%, transparent);
+}
+.vp-doc ul.sections > li > .sec-num {
+  display: inline-block;
+  min-width: var(--cat-hang);
+  text-indent: 0;
+}
+.vp-doc ul.subsections {
+  margin: 2px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+.vp-doc ul.subsections > li {
+  padding: 2px 8px 2px 0;
+  padding-left: calc(var(--cat-hang) * 2);
+  text-indent: calc(-1 * var(--cat-hang));
+  font-size: 0.95em;
+  border-radius: 6px;
+}
+.vp-doc ul.subsections > li:hover {
+  background: color-mix(in srgb, var(--cat-accent) 5%, transparent);
+}
+.vp-doc ul.subsections > li > .sec-num {
+  font-size: 0.82em;
+}
+/* 行内注（li 形，装配页同构）：badge 上标＋src 收起；无脚本/全局展开时直接可读 */
+.vp-doc li > .src.note-x {
+  border-left: 3px solid var(--cat-line-strong);
+  padding-left: 8px;
+}
+.js .vp-doc li > .src {
+  display: none;
+}
+.js .vp-doc li.note-open > .src,
+.js body.notes-all .vp-doc li > .src {
+  display: inline;
+}
+.js body.notes-all .vp-doc li .note-badge {
+  display: none;
+}
+
+/* ---- 顶栏工具条：移动端收进汉堡抽屉（nav-screen 实例仍在），避免顶栏溢出 ---- */
+@media (max-width: 959px) {
+  .opt-toolsbar--top {
+    display: none;
+  }
+}
+
 /* ---- 长节名：自动换行（ykla 2026-11-20 裁示，代装配页的“展开/收起”折叠） ---- */
 .vp-doc h2[id*="-sec-"],
 .vp-doc h3[id*="-sub-"],

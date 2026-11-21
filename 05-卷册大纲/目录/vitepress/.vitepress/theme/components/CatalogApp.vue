@@ -285,12 +285,13 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
             @toggle="(e) => { const t = e.target as HTMLDetailsElement; if (t.open !== isChOpen(`${v.no}:${ch.no}`)) toggleCh(`${v.no}:${ch.no}`) }"
           >
             <summary>
-              <a class="cat-ch-title" :href="`${chHref(v.no, ch.no)}#${chAnchor(v.no, ch.no)}`" @click.stop>
+              <!-- 章题＝就地折叠手势（与装配页一致），不作链接；深链走节/小节行与侧栏 -->
+              <span class="cat-ch-title">
                 第 {{ ch.no }} 章 <template v-for="(s, i) in ch.title" :key="i">
                   <span v-if="s.t === 'en'" lang="en">{{ s.s }}</span>
                   <template v-else>{{ s.s }}</template>
                 </template>
-              </a>
+              </span>
               <span class="cat-ch-meta">{{ ch.secs.length }} 节／{{ ch.secs.reduce((a, s) => a + s.subs.length, 0) }} 小节</span>
             </summary>
             <div v-if="isChOpen(`${v.no}:${ch.no}`)" class="cat-vol-body">

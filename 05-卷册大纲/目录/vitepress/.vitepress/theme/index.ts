@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import CatalogApp from './components/CatalogApp.vue'
 import DataPanel from './components/DataPanel.vue'
 import FontScale from './components/FontScale.vue'
+import FoldLayer from './components/FoldLayer.vue'
 import NoteLayer from './components/NoteLayer.vue'
 import ToolsMenu from './components/ToolsMenu.vue'
 import './catalog-tokens.css'
@@ -21,9 +22,10 @@ export default {
   Layout: () =>
     h(DefaultTheme.Layout, null, {
       'aside-outline-before': () => h(FontScale),
-      'nav-bar-content-after': () => h(ToolsMenu),
+      'nav-bar-content-after': () => h(ToolsMenu, { top: true }),
       'nav-screen-content-after': () => h(ToolsMenu),
-      'layout-bottom': () => h(NoteLayer),
+      'layout-bottom': () => [h(NoteLayer), h(FoldLayer)],
+      
     }),
   enhanceApp({ app }) {
     app.component('CatalogApp', CatalogApp)

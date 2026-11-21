@@ -26,6 +26,9 @@ import {
 // 模式与注开关是全局单份状态（双实例共享；挂载仅首实例初始化，见 lib/ui-state.ts）
 import { initState, notesAll, readMode, toggleNotes, toggleRead } from '../lib/ui-state'
 
+// top＝顶栏实例（<960px 隐藏，工具收进汉堡抽屉的 screen 实例）；缺省＝screen 实例
+const props = defineProps<{ top?: boolean }>()
+
 const cat = shallowRef<CatalogT | null>(null)
 const loading = ref(false)
 const err = ref('')
@@ -147,6 +150,7 @@ const edgeLines = computed(() => {
 </script>
 
 <template>
+  <div class="opt-toolsbar" :class="props.top ? 'opt-toolsbar--top' : 'opt-toolsbar--screen'">
   <div class="opt-wrap">
     <button
       type="button"
@@ -251,6 +255,7 @@ const edgeLines = computed(() => {
       </template>
     </div>
   </Teleport>
+  </div>
 </template>
 
 <style scoped>
