@@ -34,13 +34,13 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 36	2	2.3	2.3.3	可装载模块的引入途径	filled	
 36	2	2.4	2.4.1	用户空间与设备的拼接原则	filled	
 36	2	2.4	2.4.2	文件系统注册的覆盖	filled	
-36	2	2.4	2.4.3	大容量存储的接口调整	skeleton	
+36	2	2.4	2.4.3	大容量存储的接口调整	closed	
 36	2	2.5	2.5.1	安装流程的介质路径	filled	
 36	2	2.5	2.5.2	多系统共处的安排	filled	
 36	2	2.5	2.5.3	引导盘的排障设计	filled	
 36	2	2.6	2.6.1	ELF 兼容层的引入	filled	
-36	2	2.6	2.6.2	二进制兼容的边界	skeleton	
-36	2	2.6	2.6.3	a.out 的延续成本	skeleton	
+36	2	2.6	2.6.2	二进制兼容的边界	filled	
+36	2	2.6	2.6.3	a.out 的延续成本	filled	
 36	2	2.7	2.7.1	独立发行实体的成立	skeleton	
 36	2	2.7	2.7.2	两年工程的收束点	skeleton	
 36	2	2.7	2.7.3	法律洁净的技术后果	skeleton	
