@@ -1,27 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""export_catalog_data.py — 目录页数据层派生器（catalog-recon 线，2026-11-21 立）。
+"""export_catalog_data.py — 目录页数据层派生器（catalog-recon 线，2026-11-21 立；v2 同日）。
 
-**定位**：`05-卷册大纲/目录/data/catalog.json` 的 persons 段自此为
-`10-交叉索引/cross_indexes.duckdb.person_bio_research` 全表的**派生投影**；
-本器是 persons 段的唯一写者。refs／revs 两段 v1 透传既有值
-（refs 真值归位由长线承接后升级 v2 接管，见 98 号文 catalog-recon 条目）。
+**定位**：`05-卷册大纲/目录/data/catalog.json` 两段为派生投影，本器为唯一写者：
+  - **persons 段**：真值＝`10-交叉索引/cross_indexes.duckdb.person_bio_research` 全表
+    （plink 按树内人名动态触发，任何人名都可能消费——全量投影）。
+  - **refs 段（v2）**：键集＝内容层 `data/outline.txt` 注文 `ref N` 显式引用集
+    （页面渲染只消费这些编号——旧手工池 5 537 条死键剔除；真值全集＝
+    `04-现代研究文献/historical_claims.duckdb.raw_source` 的 `SRC-ref:` 行，6 483 行）。
+    著录串链：catalog 旧串 → 残缺者查 references_fulltext.bibliography_entry 修复
+    （L1，实物 sha256 在库）→ 仍残缺保留原串并打印待核披露。
+  - **revs 段**：目录页自身版本史，透传（不派生）。
 
-派生规则：
-  - id：p-NNNN 顺序号，按 person_name（casefold）稳定排序分配——旧 catalog 无外部
-    id 引用（JS 仅用 length 与遍历），重编号安全。
+派生规则（persons）：
+  - id：p-NNNN 顺序号，按 person_name（casefold）稳定排序分配——无外部 id 引用。
   - names：{zh: [name_zh], en: [name_en + aliases.values]}（去重、保序）。
   - status：库 alive_status（JSON 串或 'deceased(日期)' 混形）→
     {alive, birth, death, note}；「在世/在世待核」→ alive=true（待核语义在 note 披露）。
-  - volume：库 vol_ch 原样（None→""）。旧编号语义（'346' 式）为已知漂移，长线清理。
-  - affiliations：分号拆数组；role/priority 原样。
-  - Corbató 等同人由库行唯一承载（catalog 旧 p-NNNN 不迁移），Loconti 幻觉人物
-    （120 号文定谳）不在库即自然出清——两例为 catalog-recon 对账结论。
+  - volume：库 vol_ch 原样（None→""）。'346' 式旧树挂靠位语义为已知漂移，
+    现行卷映射属内容裁决，不在本器机械转换（不臆造）。
+  - affiliations：混形拆数组；role/priority 原样；别名净化剔邮箱与内部标识串
+    （与 DATA 门禁判据 2／3 同口径）。
+  - 同人由库行唯一承载；幻觉人物（120 号文定谳）不在库即自然出清。
 
 用法：
-  python export_catalog_data.py            # 派生写盘（写前 --check 级预检）
-  python export_catalog_data.py --check    # 只比对不写：与盘上 catalog.json 的
-                                           # persons 段一致性（0 差异 exit 0）
+  python export_catalog_data.py            # 派生写盘
+  python export_catalog_data.py --check    # 只比对 persons／refs 段（0 差异 exit 0）
 退出码：0 一致／1 有差异或错误（供 DATA 门禁与批后自检调用）。
 """
 import argparse
@@ -126,29 +130,82 @@ def derive_persons():
     return persons
 
 
+def _broken_bib(s):
+    """著录残缺判据：<25 字符，或无 GB/T 类型标且 <40 字符。"""
+    if len(s) < 25:
+        return True
+    return (not re.search(r"\[[A-Z]{1,2}(/OL)?\]", s)) and len(s) < 40
+
+
+def cited_ref_ids():
+    """目录页注文的 ref N 显式引用集——真值源＝内容层 data/outline.txt（装配前源）。"""
+    outline = ROOT / "05-卷册大纲" / "目录" / "data" / "outline.txt"
+    text = outline.read_text(encoding="utf-8")
+    return {int(m.group(1)) for m in re.finditer(r"\bref\s?(\d{1,5})", text)}
+
+
+def derive_refs():
+    """refs 段 v2（catalog-recon 补遗 2026-11-21）：按注文引用集裁剪的投影。
+
+    键集＝outline.txt 注文 `ref N` 显式引用集（页面渲染只消费这些编号；
+    旧手工池 5 537 条死键剔除，真值全集＝raw_source SRC-ref 6 483 行）。
+    著录串链：catalog 旧串 → 残缺者查 references_fulltext.bibliography_entry
+    修复（L1，实物 sha256 在库）→ 仍残缺保留原串（待核，批记披露）。
+    """
+    old_refs = json.loads(CATALOG.read_text(encoding="utf-8")).get("refs") or {}
+    ids = sorted(cited_ref_ids())
+    out = {}
+    unfixed = []
+    ft = duckdb.connect(str(ROOT / "04-现代研究文献" / "05-参考文献全文数据库" / "references_fulltext.duckdb"),
+                        read_only=True)
+    for i in ids:
+        s = str(i)
+        cur = old_refs.get(s, "")
+        if _broken_bib(cur):
+            row = ft.execute(
+                'select bibliography_entry from "references" where id = ?', [s]).fetchone()
+            cand = str(row[0]).strip() if row and row[0] else ""
+            if len(cand) >= 25:
+                cur = cand
+            if _broken_bib(cur) and s not in unfixed:
+                unfixed.append(s)
+        out[s] = cur
+    ft.close()
+    if unfixed:
+        print(f"refs 修复披露：{len(unfixed)} 条仍残缺待核（ft 无完整著录）：{unfixed}")
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--check", action="store_true", help="只比对 persons 段，不写盘")
+    ap.add_argument("--check", action="store_true", help="只比对 persons 与 refs 段，不写盘")
     args = ap.parse_args()
 
     old = json.loads(CATALOG.read_text(encoding="utf-8"))
     new_persons = derive_persons()
+    new_refs = derive_refs()
 
     if args.check:
-        same = old.get("persons") == new_persons
-        if same:
-            print("catalog.json persons 段与库派生一致（逐字节 JSON 相等）")
+        ok_p = old.get("persons") == new_persons
+        ok_r = old.get("refs") == new_refs
+        if ok_p and ok_r:
+            print("catalog.json persons／refs 段与库派生一致（逐字节 JSON 相等）")
             return 0
-        op, np_ = len(old.get("persons", [])), len(new_persons)
-        print(f"persons 段漂移：盘上 {op} 行 vs 库派生 {np_} 行（跑 export_catalog_data.py 重派生）")
+        if not ok_p:
+            print(f"persons 段漂移：盘上 {len(old.get('persons', []))} vs 派生 {len(new_persons)}")
+        if not ok_r:
+            print(f"refs 段漂移：盘上 {len(old.get('refs', {}))} vs 派生 {len(new_refs)}"
+                  "（跑 export_catalog_data.py 重派生）")
         return 1
 
     old["persons"] = new_persons
+    old["refs"] = new_refs
     old["version"] = date.today().isoformat()
     CATALOG.write_text(
         json.dumps(old, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8", newline="\n")
-    print(f"catalog.json persons 段已派生：{len(new_persons)} 行（真值=person_bio_research）")
+    print(f"catalog.json 已派生：persons {len(new_persons)} 行（真值=person_bio_research）；"
+          f"refs {len(new_refs)} 行（引用集投影，真值全集=raw_source SRC-ref）")
     return 0
 
 

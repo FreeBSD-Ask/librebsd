@@ -9,7 +9,7 @@
 
 ## 1. 形式
 
-- 唯一真值＝`10-交叉索引/cross_indexes.duckdb.person_bio_research` 全表（第十五件门禁对象）；目录页数据层 `05-卷册大纲/目录/data/catalog.json` 的 persons 段改为**派生投影**，唯一写者＝`00-编纂规则与格式规范/01-规则/脚本与命令/export_catalog_data.py`（从库全表派生：id 顺序重排 p-NNNN、names/status/affiliations 形态转换、别名净化剔邮箱与 `person_id_(legacy|new):` 等内部标识串、混形 `alive_status` 归一）；**禁止手工编辑 catalog.json persons 段**。refs/revs 段 v1 透传（refs 真值归位由长线承接后导出器升级 v2 接管）。产物链：派生 → `assemble_index.py` 重装配 → DATA 门禁维度 5（产物 blob 与库派生逐字节比对；CI 库不可达降级 INFO 跳过）→ 三套浏览器回归。人物新增/修订只写库（写库门禁＋P1—P4 判据），幻觉人物（120 号文定谳者）不入库。
+- 唯一真值＝`10-交叉索引/cross_indexes.duckdb.person_bio_research` 全表（第十五件门禁对象）；目录页数据层 `05-卷册大纲/目录/data/catalog.json` 的 persons 段改为**派生投影**，唯一写者＝`00-编纂规则与格式规范/01-规则/脚本与命令/export_catalog_data.py`（从库全表派生：id 顺序重排 p-NNNN、names/status/affiliations 形态转换、别名净化剔邮箱与 `person_id_(legacy|new):` 等内部标识串、混形 `alive_status` 归一）；**禁止手工编辑 catalog.json persons 段**。**refs 段（v2，同日补遗批落地）**同为本器派生：键集＝内容层 `outline.txt` 注文 `ref N` 显式引用集（实测 74 编号；旧手工池 5 537 条死键剔除），真值全集＝`raw_source` 的 `SRC-ref:` 行（6 483 行）；著录残缺者由 `references_fulltext.bibliography_entry` 修复。revs 段透传。**注文落树**另立唯一写者 `annotate_tree_notes.py`（卷自反性声明／卷分工注 → `第{NN}卷-*/00-总览.md`；节级溯源注 → 小节 `.md` 的 `section_note` 字段；幂等）。产物链：派生 → `assemble_index.py` 重装配 → DATA 门禁维度 5（产物 blob 与真值派生逐字节比对；CI 库不可达降级 INFO 跳过）→ 三套浏览器回归。人物新增/修订只写库（写库门禁＋P1—P4 判据），幻觉人物（120 号文定谳者）不入库。
 
 ## 2. 矛盾
 
@@ -18,15 +18,15 @@
 
 ## 3. 正面
 
-- 能力：人物维护单点化（写库＋派生），门禁闭环（第十五件管库、DATA 维度 5 管投影）；CSRG 官方名单等真值库修复首次全量投影进目录页；15 名差缺人物 0 信任核验入库（五处字段级存疑显式落 doubt_flags）。
-- 受益者：目录页读者；后续人物批（不再双写）；refs 真值归位长线（先例与导出器骨架）。
-- 验证方式：`export_catalog_data.py --check` 逐字节一致；`audit_data_integrity.py` 0 违例（含维度 5）；三套浏览器回归 25/25、628/628、27/27（T3 人名浮层实测新数据渲染）。
+- 能力：人物维护单点化（写库＋派生），门禁闭环（第十五件管库、DATA 维度 5 管投影）；CSRG 官方名单等真值库修复首次全量投影进目录页；15 名差缺人物 0 信任核验入库（五处字段级存疑显式落 doubt_flags）。**refs 段 v2 后页面数据层减重约 500 KB**（5 611→74 条），注文引用集与文献登记面首次对齐（`SRC-ref` 6 483 行，补登 1 422 条）。**注文落树**使大纲树自足：75 卷自反性声明居卷首（方法论规范第 1 条）、9 075 个小节 `.md` 携带所属节的分工边界注，深化写作者不必回查目录数据层。
+- 受益者：目录页读者；后续人物批（不再双写）；注文落树后的大纲深化批（树内自足）。
+- 验证方式：`export_catalog_data.py --check` 逐字节一致；`audit_data_integrity.py` 0 违例（含维度 5）；第三十八件 D1／D2／L 全 PASS（落树后）；第三十七件 L1—L19 全 PASS（L10 卷头放行判据已修订）；三套浏览器回归 25/25、628/628、27/27。
 
 ## 4. 负面
 
 - 成本：catalog.json persons id 全量重排（2 269→2 280，已核实 JS 仅用 length 与遍历、无外部 id 引用）；导出器三处库存量形态兼容分支（affiliations JSON 串／None 字面／别名污染）。
 - 风险：`volume` 字段透传库 `vol_ch` 的旧编号语义（'346' 式）为已知漂移，展示层语义待 refs 线清理；DATA 门禁假绿缺陷修复后暴露存量污染（14 处，已净化）。
-- 边界：不承担 refs 段真值归位（长线承接）；不承担目录页本体结构改动（opt-data-blob 内嵌等自包含设计维持，ADR-0006）。
+- 边界：不承担目录页本体结构改动（opt-data-blob 内嵌等自包含设计维持，ADR-0006）；不承担 volume 旧树挂靠位到现行卷的映射（属内容裁决，不机械转换）；refs 段只做“注文引用集”投影，不承担全库文献分级。
 
 ## 5. 承担者
 

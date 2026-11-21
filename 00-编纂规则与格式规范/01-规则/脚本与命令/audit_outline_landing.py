@@ -22,7 +22,7 @@ L7  SUMMARY 节条目齐全：每条 CONFIRMED 落点的父节目录名在 `SUMM
 L8  主题索引口径：`chapter_keywords.json` 的 `meta.schema==theme-index/4`，
     `meta.volumes/chapters/sections` 与树计数一致，`sections` 键数 == 节数。
 L9  落点编码：落点 `.md` 无 BOM、无 CRLF。
-L10 无散件：卷层只允许章目录，章层只允许节目录，节层只允许 `.md` 与 `.gitkeep`。
+L10 无散件：卷层允许章目录与 `00-总览.md` 卷头文件（AGENTS.md 内容扩展接口标准卷头；catalog-recon 注文落树线 2026-11-21 起），章层只允许节目录，节层只允许 `.md` 与 `.gitkeep`。
 L11 布局零漂移：`映射/layout.tsv` 每条 dest 在磁盘存在。
 L12 TARGET_LOST 挂账：mapping 标 TARGET_LOST 者须在 `映射/target-lost.tsv`。
 L13 路径合规：>260 字符的落点须在 `映射/path-overlong.tsv`；文件名禁
@@ -165,6 +165,8 @@ def scan_tree(root):
         vols.append(vname)
         for cname in sorted(os.listdir(vfull)):
             cfull = os.path.join(vfull, cname)
+            if cname == "00-总览.md" and os.path.isfile(cfull):
+                continue  # 卷头文件（接口标准，catalog-recon 注文落树线 2026-11-21 起）
             if not os.path.isdir(cfull):
                 anomalies.append(("vol_file", os.path.join(vname, cname), "卷层散件"))
                 continue
@@ -949,11 +951,14 @@ def selftest():
         _write_tsv(lay_path, ["source_id", "dest_relpath"],
                    [[r["source_id"], r["dest_relpath"]] for r in rows])
 
-        # L10 卷层散件
+        # L10 卷层散件（含卷头放行）
+        _mk(os.path.join(root, "第01卷-合成甲", "00-总览.md"), "# 卷头\n")
+        check("正向 L10 卷头 00-总览.md 放行", g()["L10"][1] == "PASS")
         stray = os.path.join(root, "第01卷-合成甲", "stray.txt")
         _mk(stray, "x\n")
         check("负向 L10 卷层散件", g()["L10"][1] == "FAIL")
         os.remove(stray)
+        os.remove(os.path.join(root, "第01卷-合成甲", "00-总览.md"))
 
         # L13 非法文件名与超长路径
         _write_tsv(lay_path, ["source_id", "dest_relpath"],
