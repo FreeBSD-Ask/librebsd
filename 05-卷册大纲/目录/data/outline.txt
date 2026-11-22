@@ -16170,17 +16170,17 @@
   - 4.4.5 加固目标取决于特定威胁模型
 ## 第 5 章 商用设备中的 FreeBSD 系衍生
 - 5.1 厂商设备中的 FreeBSD 证据：Junos、IPSO、OneFS、Data ONTAP 个案@@〔分工·迁移：本体史见第七十一卷第 1—3 章；本节载源流定位〕
-  - 5.1.1 Junos 的 FreeBSD 基线
-  - 5.1.2 控制平面与转发平面的分层
-  - 5.1.3 OneFS 的取证难点
-  - 5.1.4 Data ONTAP 的 BSD 成分
-  - 5.1.5 厂商改动的披露程度
+  - 5.1.1 Junos 以 FreeBSD 为基线
+  - 5.1.2 控制层 FreeBSD 转发层自研
+  - 5.1.3 OneFS 不公开内部构成
+  - 5.1.4 Data ONTAP 仅网络栈用 BSD
+  - 5.1.5 宽松许可不强制公开改动
 - 5.2 FreeBSD 系进入专用设备：源流与证据（1999—2026）@@〔溯源：本节正文待撰（0 信任核证）；材料底数——①华纳兄弟《黑客帝国》特效制作于 FreeBSD 集群（FreeBSD Project 新闻稿 1999-04-22，freebsd.org/press/press-rel-1；《FreeBSD 技术内幕》p.2 互证）；②Beckhoff TwinCAT/BSD＝TwinCAT 实时核与 FreeBSD 结合的工业 PC 平台（beckhoff.com）；③QNX 8.0 起新网络栈 io-sock 复用 FreeBSD 代码（旧 io-pkt 复用 NetBSD 代码）——汽车安全 OS 线（qnx.com 文档；与第七十一卷第1章 BSD 作为网络设备操作系统互指）；④OpenHarmony LiteOS 内核引入 FreeBSD 驱动代码（gitee openharmony/kernel_liteos_a）；⑤FreeBSD 基金会 end-user-stories 汇总页（freebsdfoundation.org）为案例总目；取证源＝book.bsdcn.org §2.1 谁在使用 FreeBSD；依 127 号文批 3（2026-10-10）新增；取证源＝book.bsdcn.org（T-9）〕
-  - 5.2.1 特效制作集群的系统选型
-  - 5.2.2 可扩展目标的工程取舍
-  - 5.2.3 派生项目的软件栈借用
-  - 5.2.4 案例总目的来源与用途
-  - 5.2.5 专用设备衍生的判定要件
+  - 5.2.1 特效集群工期压力下换系统
+  - 5.2.2 性能与可扩展之间作取舍
+  - 5.2.3 借用上游第三方软件栈
+  - 5.2.4 案例总目汇总商用部署
+  - 5.2.5 专用设备算衍生须过要件
 ## 第 6 章 停更与 Live 系统
 - 6.1 项目终止的类型、归因与社区迁移@@〔分工·迁移：自本卷原第 2 章 2.9／2.11 归并本节（C21，2026-10-08）〕
   - 6.1.1 终止公告的三种体裁
