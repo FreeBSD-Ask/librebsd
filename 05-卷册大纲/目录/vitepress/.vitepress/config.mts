@@ -82,6 +82,14 @@ export default defineConfig({
   srcExclude: ['README.md', 'node_modules/**', '.build/**'],
   cleanUrls: true,
   metaChunk: true,
+  // 分片构建下，小节页的“上/下一小节”与面包屑可能跨卷——该目标页在别的分片，本片判死链属必然假阳。
+  // 故只对**跨卷**链接放行（逐卷生成 `^/vNN(/|$)` 规则），本卷内死链仍严格 FAIL；
+  // 跨卷路由是否存在，由合并步的“预期路由集合 == 实际产物”全等断言兜底（全集构建）。
+  ignoreDeadLinks: isVol
+    ? tree.vols
+        .filter((v) => v.no !== Number(SHARD!.slice(1)))
+        .map((v) => new RegExp(`^/v${String(v.no).padStart(2, '0')}(/|$)`))
+    : false,
   // 关掉 per-page git 取时：本仓历史深、文件多，614 页各跑一次 git 是不可接受的开销；
   // 页面版本串改由 ui-strings.json 的 shell.page_version 提供（与装配页同源），口径不丢。
   lastUpdated: false,

@@ -20,7 +20,7 @@ import {
   cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs'
 import path from 'node:path'
-import { spawn } from 'node:child_process'
+import { spawn, spawnSync } from 'node:child_process'
 import { SITE_ROOT, readOutline } from './lib/source'
 import { buildSearchIndex } from './lib/search-index'
 import { sanitizeDist } from './lib/sanitize-dist'
@@ -106,38 +106,25 @@ if (failures.length) {
   process.exit(1)
 }
 
-// ---- 2. 合并
+// ---- 2. 合并（2026-11-22 加速：同名即同容，去掉逐字节比对；Windows 走 robocopy /MT）
+// 页面文件按分片唯一；assets 按内容哈希命名，跨分片同名必同容；派生件（hashmap/sitemap/404/检索块）由后续步骤整站再生。
 rmSync(DIST, { recursive: true, force: true })
 mkdirSync(DIST, { recursive: true })
-const collisions: string[] = []
-// DERIVED＝合并步整站再生、允许分片间内容不同的件（同名不同内容不判冲突）
-const DERIVED = ['hashmap.json', 'sitemap.xml', '404.html', 'assets/chunks/_localSearchIndexroot.js']
-let files = 0
-
-function mergeInto(from: string, to: string) {
-  for (const name of readdirSync(from)) {
-    const srcF = path.join(from, name)
-    const dst = path.join(to, name)
-    if (statSync(srcF).isDirectory()) {
-      mkdirSync(dst, { recursive: true })
-      mergeInto(srcF, dst)
-      continue
-    }
-    const relDst = path.relative(DIST, dst).replace(/\\/g, '/')
-    if (existsSync(dst)) {
-      const a = readFileSync(srcF)
-      const b = readFileSync(dst)
-      if (!DERIVED.includes(relDst) && (a.length !== b.length || !a.equals(b))) collisions.push(relDst)
-      continue
-    }
-    cpSync(srcF, dst)
-    files++
+const tMerge = Date.now()
+function fastCopy(from: string, to: string) {
+  if (!existsSync(from)) return
+  if (process.platform === 'win32') {
+    const r = spawnSync('robocopy', [from, to, '/E', '/MT:16', '/R:1', '/W:1', '/NFL', '/NDL', '/NJH', '/NJS'], { stdio: 'ignore' })
+    if (r.status !== null && r.status >= 8) throw new Error(`robocopy ${from} → ${to} exit=${r.status}`)
+    return
   }
+  cpSync(from, to, { recursive: true, force: true })
 }
-mergeInto(path.join(BUILD, 'out', 'home'), DIST)
-for (const n of volNos) mergeInto(path.join(BUILD, 'out', `v${pad(n)}`), DIST)
+fastCopy(path.join(BUILD, 'out', 'home'), DIST)
+for (const n of volNos) fastCopy(path.join(BUILD, 'out', `v${pad(n)}`), DIST)
+console.log(`[build] 合并复制完成（${((Date.now() - tMerge) / 1000).toFixed(0)}s，${process.platform === 'win32' ? 'robocopy /MT:16' : 'cpSync'}）`)
 
-// ---- 3. 整站派生物再生
+// ---- 3. 整站派生物再生：hashmap 取各分片并集
 const hashmap: Record<string, string> = {}
 for (const s of shards) {
   const f = path.join(BUILD, 'out', s.key, 'hashmap.json')
@@ -192,17 +179,25 @@ console.log(
 const san = sanitizeDist(DIST)
 if (san.renamed.length) {
   console.log(`[build] 净化 ${san.renamed.length} 件撞名产物（引用回写 ${san.touched} 件）：${san.renamed.slice(0, 3).join('、')}`)
+  // 净化会改写磁盘上的 hashmap.json（裸哈希 bak→kbk）；内存对象须同步，否则 4b 断言按旧哈希误报缺件
+  for (const k of Object.keys(hashmap)) delete hashmap[k]
+  Object.assign(hashmap, JSON.parse(readFileSync(path.join(DIST, 'hashmap.json'), 'utf8')) as Record<string, string>)
 }
 
 // ---- 4. 完整性断言（集合级，非仅计数）
 const problems: string[] = []
 
-// 4a. 预期路由集合：首页 ＋ 每卷 1 卷页 ＋ 各自章页（与 SUMMARY 号序由 verify 锁死，此处按树展开）
+// 4a. 预期路由集合：首页 ＋ 每卷 1 卷页 ＋ 各自章页 ＋ 各自小节页（2026-11-22 起小节独立成页）
 const volOf = (n: number) => tree.vols.find((v) => v.no === n)
 const expected = new Set<string>(['/'])
 for (const n of volNos) {
   expected.add(`/v${pad(n)}/`)
-  for (const c of volOf(n)?.chs ?? []) expected.add(`/v${pad(n)}/c${pad(c.no)}`)
+  for (const c of volOf(n)?.chs ?? []) {
+    expected.add(`/v${pad(n)}/c${pad(c.no)}`)
+    for (const s of c.secs) {
+      for (const x of s.subs) expected.add(`/v${pad(n)}/c${pad(c.no)}/${x.num.replace(/\./g, '-')}`)
+    }
+  }
 }
 const actual = new Set(htmlRels.map(routeOf))
 const missingPages = [...expected].filter((r) => !actual.has(r))
@@ -263,7 +258,6 @@ const navStyled = cssBundles.some((f) =>
 if (!navStyled) problems.push('样式包缺 VitePress 组件样式（VPNavBar）：驱动进程或打包异常')
 
 // 4e. 合并冲突（同名不同内容）一律判失败：内容不可判定，不得静默保留先到
-if (collisions.length) problems.push(`合并冲突 ${collisions.length} 件：${collisions.slice(0, 5).join('、')}`)
 
 // 4f. 检索索引：chunk 在，且文档数＝四数之和（分片构建下这是全站检索可用的唯一保证）
 if (!existsSync(searchChunk)) problems.push('检索索引 chunk 缺失（assets/chunks/_localSearchIndexroot.js）')
@@ -274,7 +268,7 @@ if (!hasSearchUi) problems.push('检索 UI chunk 缺失（VPLocalSearchBox）：
 const indexOk = existsSync(path.join(DIST, 'index.html'))
 if (!indexOk) problems.push('合并后缺 index.html')
 console.log(
-  `[build] ${partial ? '部分构建' : 'PASS'} 合并 ${files} 件 → .vitepress/dist（分片 ${shards.length}${partial ? `／全集 ${tree.vols.length} 卷` : ''}，用时 ${((Date.now() - t0) / 1000).toFixed(0)}s）`,
+  `[build] ${partial ? '部分构建' : 'PASS'} 合并 ${htmlRels.length} 页（分片 ${shards.length}${partial ? `／全集 ${tree.vols.length} 卷` : ''}，用时 ${((Date.now() - t0) / 1000).toFixed(0)}s）`,
 )
 console.log(
   `         首页 ${indexOk ? '在' : '缺'}；HTML ${htmlRels.length}（预期 = ${expected.size}）；hashmap ${hmKeys.size} 项；sitemap ${smRoutes.size} 条`,

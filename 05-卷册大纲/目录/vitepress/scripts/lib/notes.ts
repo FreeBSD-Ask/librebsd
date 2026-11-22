@@ -47,3 +47,10 @@ export const secAnchor = (v: number, c: number, num: string) =>
   `vol-${v}-ch-${c}-sec-${num.replace(/\./g, "-")}`;
 export const subAnchor = (v: number, c: number, secNum: string, k: number) =>
   `${secAnchor(v, c, secNum)}-sub-${k}`;
+
+/** 小节页路由段：`1.1.1` → `1-1-1`（站点路由 `vNN/cMM/1-1-1`，2026-11-22 立）。 */
+export const subSlug = (num: string) => num.replace(/\./g, "-");
+export const subPath = (v: number, c: number, num: string, base = "") => {
+  const p2 = (n: number) => String(n).padStart(2, "0");
+  return `${base}/v${p2(v)}/c${p2(c)}/${subSlug(num)}`;
+};

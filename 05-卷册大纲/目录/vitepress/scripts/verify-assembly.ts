@@ -9,7 +9,7 @@
  *   V6 点名级结构断言：装配页与站点生成源（vNN/*.md）的锚点集合、卷导言／卷级定位注／
  *      溯源注／节号计数逐项相等——verify 由此从“题名与口径”扩到“结构性类名”。
  */
-import { readFileSync, readdirSync } from 'node:fs'
+import { readFileSync, readdirSync, statSync } from 'node:fs'
 import path from 'node:path'
 import {
   ASSEMBLED_PATH, SITE_ROOT, readOutline, readSummary, parseMetrics, parseAssembledTitles, plain,
@@ -148,6 +148,28 @@ for (const d of volDirs) {
     genSecNum += c.secNum
   }
 }
+// ---- V7：小节独立成页（2026-11-22 ykla 令）：vNN/cMM/A-B-C.md 数 == 小节数，且逐件 H1 号一致
+let subPages = 0
+const subBad: string[] = []
+for (const d of volDirs) {
+  const dir = path.join(SITE_ROOT, d)
+  for (const f of readdirSync(dir)) {
+    if (!/^c\d+$/.test(f)) continue
+    const cdir = path.join(dir, f)
+    if (!statSync(cdir).isDirectory()) continue
+    for (const s of readdirSync(cdir)) {
+      if (!s.endsWith('.md')) continue
+      subPages++
+      const t = readFileSync(path.join(cdir, s), 'utf8')
+      const m = t.match(/^# (\d+\.\d+\.\d+)/m)
+      const want = s.replace(/\.md$/, '').replace(/-/g, '.')
+      if (!m || m[1] !== want) subBad.push(`${d}/${f}/${s}`)
+    }
+  }
+}
+if (subPages !== oc.subs) fails.push(`V7 小节页数 ${subPages} ≠ 小节数 ${oc.subs}`)
+if (subBad.length) fails.push(`V7 小节页题号不符 ${subBad.length} 件（示例 ${subBad.slice(0, 3).join('、')}）`)
+
 // 只取装配页 <main> 区：noscript 静态双栏 TOC 会镜像一份 .sec-num（不计入正文口径）
 const mainStart = html.indexOf('<main class="doc-page"')
 const mainEnd = html.indexOf('</main>', mainStart)

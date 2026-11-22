@@ -15,7 +15,8 @@ import { mkdirSync, writeFileSync, rmSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import path from 'node:path'
 import { SITE_ROOT, readCatalogJson, readOutline, readUiStrings, segs } from './lib/source'
-import { NOTE_CLASS, chAnchor, htmlEsc, noteKind, secAnchor, subAnchor, volAnchor } from './lib/notes'
+import { NOTE_CLASS, chAnchor, htmlEsc, noteKind, secAnchor, subAnchor, subPath, subSlug, volAnchor } from './lib/notes'
+import { escapeStrayAngles, loadTreeIndex } from './lib/subpages'
 
 const OUT = SITE_ROOT
 const PUB = path.join(SITE_ROOT, 'public')
@@ -42,6 +43,59 @@ const plainOf = (t: string) => segs(t).map((x) => x.s).join('')
 const tree = readOutline()
 let chFiles = 0
 let volFiles = 0
+let subFiles = 0
+let subBlocks = 0
+
+/** 小节树件索引（thesis／status／证据块）与全书写序（小节页上/下一导航用）。 */
+const subTrees = loadTreeIndex()
+const subOrder: Array<{ v: number; c: number; s: string; num: string; title: string }> = []
+for (const v of tree.vols) for (const c of v.chs) for (const s of c.secs) for (const x of s.subs) {
+  subOrder.push({ v: v.no, c: c.no, s: s.num, num: x.num, title: plainOf(x.title) })
+}
+const subIndex = new Map(subOrder.map((o, i) => [`${o.v}/${o.num}`, i]))
+
+/**
+ * 小节页（2026-11-22 ykla 令）：19 363 个独立页，**树件正文原样渲染**——除 frontmatter 外不动一字，
+ * 页面只额外加一行面包屑与上/下一小节。路由 `vNN/cMM/A-B-C`。
+ */
+function writeSubPage(
+  v: { no: number; roman: string },
+  c: { no: number; title: string },
+  s: { num: string; title: string },
+  x: { num: string; title: string },
+): void {
+  const t = subTrees.get(`${v.no}/${x.num}`)
+  const dir = path.join(OUT, `v${pad(v.no)}`, `c${pad(c.no)}`)
+  mkdirSync(dir, { recursive: true })
+  const L: string[] = []
+  L.push('---')
+  L.push(`title: ${JSON.stringify(`${x.num} ${plainOf(x.title)}`)}`)
+  L.push('outline: false')
+  L.push('sidebar: false')
+  L.push('---')
+  L.push('')
+  L.push(
+    `[← 第${v.roman}卷](/v${pad(v.no)}/) · [第 ${c.no} 章 ${plainOf(c.title)}](/v${pad(v.no)}/c${pad(c.no)}) · ` +
+      `[${s.num} ${plainOf(s.title)}](/v${pad(v.no)}/c${pad(c.no)}#${secAnchor(v.no, c.no, s.num)})`,
+  )
+  L.push('')
+  L.push(
+    t?.body
+      ? escapeStrayAngles(t.body)
+      : `# ${x.num} ${plainOf(x.title)}\n\n<p class="sub-empty">树件缺失（状态：${htmlEsc(t?.status || '未知')}）。</p>`,
+  )
+  L.push('')
+  const i = subIndex.get(`${v.no}/${x.num}`) ?? -1
+  const prev = i > 0 ? subOrder[i - 1] : null
+  const next = i >= 0 && i < subOrder.length - 1 ? subOrder[i + 1] : null
+  const href = (o: { v: number; c: number; num: string }) => `/v${pad(o.v)}/c${pad(o.c)}/${subSlug(o.num)}`
+  L.push(prev ? `[← ${prev.num} ${prev.title}](${href(prev)})` : '')
+  L.push(next ? `[${next.num} ${next.title} →](${href(next)})` : '')
+  L.push('')
+  writeFileSync(path.join(dir, `${subSlug(x.num)}.md`), L.join('\n'), 'utf8')
+  subFiles++
+  subBlocks += t?.blocks.length ?? 0
+}
 
 /** 供工具面（导出／时间线／图谱／修订史）惰性取用的全站数据；标题取纯文本（剥 ⟦en:⟧）。 */
 const UI = readUiStrings() as Record<string, string>
@@ -93,7 +147,7 @@ for (const v of tree.vols) {
             ? `<span class="src ${NOTE_CLASS[noteKind(x.notes)]}">${htmlEsc(x.notes.join(' '))}</span>`
             : ''
           volLines.push(
-            `<li id="${subAnchor(v.no, c.no, s.num, i + 1)}"><span class="sec-num">${x.num}</span> ${inlineHtml(x.title)}${subBadge}</li>`,
+            `<li id="${subAnchor(v.no, c.no, s.num, i + 1)}"><a class="sub-link" href="./c${pad(c.no)}/${subSlug(x.num)}"><span class="sec-num">${x.num}</span> ${inlineHtml(x.title)}</a>${subBadge}</li>`,
           )
         })
         volLines.push('</ul>')
@@ -153,6 +207,11 @@ for (const v of tree.vols) {
           )
           L.push('')
         }
+        L.push(
+          `<p class="sub-go"><a href="./c${pad(c.no)}/${subSlug(x.num)}">打开本小节页 →</a></p>`,
+        )
+        L.push('')
+        writeSubPage(v, c, s, x)
       })
     }
     writeFileSync(path.join(vdir, `c${pad(c.no)}.md`), L.join('\n'), 'utf8')
@@ -186,7 +245,7 @@ writeFileSync(
   'utf8',
 )
 
-console.log(`[gen] PASS 卷页 ${volFiles} ＋ 章页 ${chFiles} → vNN/（站点根）`)
+console.log(`[gen] PASS 卷页 ${volFiles} ＋ 章页 ${chFiles} ＋ 小节页 ${subFiles}（取证块 ${subBlocks}）→ vNN/（站点根）`)
 console.log(
   `[gen] PASS 工具面数据 ${(Buffer.byteLength(json) / 1024).toFixed(0)} KB → public/data/catalog-data.json（sha256 已落 manifest）`,
 )

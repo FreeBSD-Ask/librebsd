@@ -13,7 +13,7 @@ import { computed, ref, shallowRef } from 'vue'
 import { withBase } from 'vitepress'
 import { data as book } from '../../../data/book.data'
 import { data as catalogData } from '../../../data/catalog.data'
-import { chAnchor, secAnchor, subAnchor, volAnchor } from '../../../scripts/lib/notes'
+import { chAnchor, secAnchor, subPath, volAnchor } from '../../../scripts/lib/notes'
 
 /** 自校验④的 ref 号表与⑤人名数（首页已加载 DATA 段，不额外取数）。 */
 const refMap: Record<string, string> = Object.fromEntries(catalogData.refs)
@@ -152,7 +152,7 @@ function buildIndex(): Hit[] {
             num: u.num,
             text: plain(u.title),
             path: cPath,
-            href: `${href}#${subAnchor(v.no, ch.no, s.num, ui + 1)}`,
+            href: withBase(subPath(v.no, ch.no, u.num)),
           })
         })
       }
@@ -240,7 +240,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
       />
       <span class="cat-hint">
         <template v-if="searching">命中 {{ hits.total }} 项（显示前 {{ Math.min(hits.total, MAX_HITS) }} 项）</template>
-        <template v-else>点卷号展开；章页可深链到节与小节（跨页检索用 Ctrl/⌘+K）</template>
+        <template v-else>点卷号展开；小节题点开独立小节页；跨页检索用 Ctrl/⌘+K</template>
       </span>
     </div>
 
@@ -297,7 +297,10 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
             <div v-if="isChOpen(`${v.no}:${ch.no}`)" class="cat-vol-body">
               <div v-for="s in ch.secs" :key="s.num" class="cat-sec">
                 <div class="cat-sec-head">
-                  <span class="cat-sec-title">
+                  <a
+                    class="cat-sec-title"
+                    :href="chHref(v.no, ch.no) + '#' + secAnchor(v.no, ch.no, s.num)"
+                  >
                     <span class="cat-sec-num">{{ s.num }}</span>
                     <span>
                       <template v-for="(x, i) in s.title" :key="i">
@@ -305,7 +308,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
                         <template v-else>{{ x.s }}</template>
                       </template>
                     </span>
-                  </span>
+                  </a>
                 </div>
                 <p v-if="s.notes.length" class="cat-note">
                   <button
@@ -319,7 +322,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
                 </p>
                 <ul v-if="s.subs.length" class="cat-subs">
                   <li v-for="(u, ui) in s.subs" :key="u.num">
-                    <span class="cat-sub-row">
+                    <a class="cat-sub-row" :href="withBase(subPath(v.no, ch.no, u.num))">
                       <span class="cat-sub-num">{{ u.num }}</span>
                       <span>
                         <template v-for="(x, i) in u.title" :key="i">
@@ -327,7 +330,7 @@ const isChOpen = (key: string) => openChs.value.has(key) || searching.value
                           <template v-else>{{ x.s }}</template>
                         </template>
                       </span>
-                    </span>
+                    </a>
                     <span v-if="u.notes.length" :class="['src', 'note-x', `k-${u.notes[0].k}`]">{{ u.notes.map((n) => n.t).join(' ') }}</span>
                   </li>
                 </ul>
