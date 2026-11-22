@@ -109,3 +109,13 @@ V61.2.1.3	chmod only the owner or the super-user permitted change mode	curl 直�
 V61.2.1.4	OpenBSD getgroups group access list current user process gidset	curl 直取 man.openbsd.org getgroups(2)（9 143 字节）	命中	组访问清单句取得	2026-11-21	curl 直连
 V61.2.1.4	FreeBSD group(5) group name granting file access members	curl 直取 man.freebsd.org group(5)（59 629 字节）	命中	成员授予句取得	2026-11-21	curl 直连
 V61.2.1.*	—	—	—	两题两独立来源齐备（4 块）：ref11111—11114 四新建（FreeBSD mac(4)／chmod(1)／group(5)＋OpenBSD getgroups(2)，man 页官方文书）；2.1.1/2/5 为 2026-09-14 行级遍历批已 filled 撤出批面（树内核实）	2026-11-21	—
+V61.2.2.1	FreeBSD chroot has no effect current directory man	curl 直取 man.freebsd.org chroot(2)（61 151 字节，FreeBSD 15.0-RELEASE）	命中	作用界限句取得（roff 原形 chroot () 与 di- rectory）	2026-11-23	curl 直连
+V61.2.2.1	OpenBSD chroot causes dirname become root starting point path searches	curl 直取 man.openbsd.org chroot.2（11 178 字节）	命中	路径搜索起点定义句取得（HTML 实体照录）	2026-11-23	curl 直连
+V61.2.2.2	chroot EACCES search permission denied component	curl 直取两站 chroot(2) 复用	命中	搜索权限前置句取得（两站方括号空格形态相异如实记）＋OpenBSD execute (search) access 句	2026-11-23	curl 直连
+V61.2.2.3	FreeBSD kern.chroot_allow_open_directories sysctl open filedescriptors EPERM	curl 直取 man.freebsd.org chroot(2) 复用	命中	开关段句取得	2026-11-23	curl 直连
+V61.2.2.3	OpenBSD passing directory file descriptors recvmsg escape chroot jail	curl 直取 man.openbsd.org chroot.2 CAVEATS 复用	命中	描述符传递逃逸句取得	2026-11-23	curl 直连
+V61.2.2.4	OpenBSD chroot EXAMPLES chroot chdir setresuid drops privileges	curl 直取 man.openbsd.org chroot.2 EXAMPLES 复用	命中	降权配套句取得（换根换目录降特权＋续句）	2026-11-23	curl 直连
+V61.2.2.4	FreeBSD chroot BUGS working directory left changed access control check	curl 直取 man.freebsd.org chroot(2) BUGS 复用	命中	半程残留注脚句取得	2026-11-23	curl 直连
+V61.2.2.5	OpenBSD chroot CAVEATS root process escape jail	curl 直取 man.openbsd.org chroot.2 CAVEATS 复用	命中	强度上限警示句取得	2026-11-23	curl 直连
+V61.2.2.5	FreeBSD kern.chroot_allow_open_directories bypass historic insecure behavior	curl 直取 man.freebsd.org chroot(2) 复用	命中	历史不安全行为定性句取得	2026-11-23	curl 直连
+V61.2.2.*	—	—	—	五题两独立来源齐备（10 块）：ref11124 FreeBSD CHROOT(2)＋ref11125 OpenBSD CHROOT(2) 两新建，五题异句异锚 J84；roff 原形（chroot ()／di- rectory／ch- root ()／al- ways 断词）与 HTML 实体（&#x2018; / &#x2019;）照录披露	2026-11-23	—
