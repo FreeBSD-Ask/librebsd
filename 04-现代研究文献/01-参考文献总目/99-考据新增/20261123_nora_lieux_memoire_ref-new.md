@@ -18,6 +18,15 @@
 
 > even though their location is far from arbitrary, one could justify relocating them without altering their meaning. Such is not the case with ensembles constructed over time, which draw their meaning from the complex relations between their elements
 
+**supp-V74-b006 新引三句（2026-11-23，同源 PDF 逐字）**：
+
+> The "acceleration of history," then, confronts us with the brutal realization of the difference between real memory-social and unviolated, exemplified in but also retained as the secret of so-called primitive or archaic societies-and history, which is how our hopelessly forgetful modern societies, propelled by change, organize the past.
+
+> There are lieux de mémoire, sites of memory, because there are no longer milieux de mémoire, real environments of memory.
+
+> Consider, for example, the irrevocable break marked by the disappearance of peasant culture, that quintessential repository of collective memory whose recent vogue as an object of historical study coincided with the apogee of industrial growth.
+
+
 
 > Amid these complexities, it is memory that dictates while history writes; this is why both history books and historical events merit special attention.
 
