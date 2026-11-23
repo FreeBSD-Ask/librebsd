@@ -18,3 +18,7 @@
 - README 句四（V57.4.4.4 B 块；直撇号预弯为弯撇号规避 hook 失配）：If the project has an upstream, like our src and ports repos have FreeBSD as their upstream, we cannot control what that upstream accepts (or doesn’t accept.)
 - README 句五（V57.4.4.5 A 块）：A holistic approach to security (aka, defense-in-depth) is the best way to secure a system. Additionally, ASLR is intended and designed to help prevent successful remote attacks, not local.
 - README 句六（V57.4.4.5 B 块；直撇号预弯）：Some of HardenedBSD’s features can be toggled on a per-application and per-jail basis using secadm or hbsdcontrol.
+
+## supp-V57-b011 追加引文（G6 全责线，2026-11-23）
+
+- 官网文章句（V57.4.4.3 A 块；Verifying Build Artifacts 文章本体，README 同文异载体不互证 J94）：The HardenedBSD build artifacts are signed with an SSH key. SSH keys are used so that artifacts can be validated using only tools included in the base operating system.
