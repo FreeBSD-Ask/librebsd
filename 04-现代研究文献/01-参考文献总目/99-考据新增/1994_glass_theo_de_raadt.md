@@ -4,3 +4,20 @@
 - **来源 URL**：https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html
 - **访问日期**：2026-08-04
 - **说明**：联网考据新增参考文献（存疑 id 1656）。NetBSD 官方 mail-index.netbsd.org 一手邮件存档（1994-12）。On December 20, Theo de Raadt was asked to resign from the NetBSD Project by the remaining members of core. Rude/abusive behaviour cited; replies to core@NetBSD.ORG. 零信任核验，拒绝 Wikipedia/Baidu 作证据源。
+
+## b012/b013 追加引文（2026-11-21/22 快照复取核证）
+
+- **追加用途**：b012（3.1.1A／3.1.2B／3.1.4B／3.2.1A／3.2.5A）
+- **披露**：链接后空格标点归一；marc 帖引用层符号剥离；apnic 页为 2021-10-28 文章快照；核心句逐字照录
+
+A1（t23a）:
+On December 20, Theo de Raadt was asked to resign from the NetBSD Project by the remaining members of 'core'.
+
+A2（t23b）:
+resulted from Theo's long history of rudeness towards and abuse of users and developers of NetBSD.
+
+A3（t23c）:
+He was the principal caretaker of NetBSD's SPARC support, and has written too much code to mention.
+
+A4（t23d）:
+it is inappropriate for him to be an "official" representative of the project any longer.

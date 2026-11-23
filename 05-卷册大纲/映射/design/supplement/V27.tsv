@@ -73,3 +73,55 @@ V27.2.5.5	corpus_gap	2150	CL-RM-497645	official_doc	primary	D2	supp-V27-b011	sup
 V27.2.5.5	corpus_gap	2281	CL-RM-497646	official_doc	primary	D2	supp-V27-b011	supplemented	page:netbsd-about#international-community｜新 ref
 V27.2.7.5	corpus_gap	10938	CL-RM-497647	official_doc	primary	D2	supp-V27-b011	supplemented	url:https://www.netbsd.org/about/history.html｜复用 10938
 V27.2.7.5	corpus_gap	2281	CL-RM-497648	official_doc	primary	D2	supp-V27-b011	supplemented	page:netbsd-about#code-into-environments｜新 ref
+V27.3.1.1	corpus_gap	2346	CL-RM-497734	academic_work	primary	D2	supp-V27-b012	supplemented	url:https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html｜复用句首宿主
+V27.3.1.1	corpus_gap	11123	CL-RM-497735	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句第二宿主（首宿主 3.1.2A）
+V27.3.1.2	corpus_gap	11123	CL-RM-497736	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句第二宿主（首宿主 3.1.1B）
+V27.3.1.2	corpus_gap	2346	CL-RM-497737	academic_work	primary	D2	supp-V27-b012	supplemented	url:https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html｜复用句首宿主
+V27.3.1.4	corpus_gap	11123	CL-RM-497738	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句首宿主
+V27.3.1.4	corpus_gap	2346	CL-RM-497739	academic_work	primary	D2	supp-V27-b012	supplemented	url:https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html｜复用句首宿主
+V27.3.2.1	corpus_gap	2346	CL-RM-497740	academic_work	primary	D2	supp-V27-b012	supplemented	url:https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html｜复用句首宿主
+V27.3.2.1	corpus_gap	11123	CL-RM-497741	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句第二宿主（首宿主 3.2.5B）
+V27.3.2.4	corpus_gap	11123	CL-RM-497742	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句第二宿主（首宿主 3.2.4B）
+V27.3.2.4	corpus_gap	11123	CL-RM-497743	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句第二宿主（首宿主 3.1.4A）
+V27.3.2.5	corpus_gap	2346	CL-RM-497744	academic_work	primary	D2	supp-V27-b012	supplemented	url:https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html｜复用句第二宿主（首宿主 3.2.1A）
+V27.3.2.5	corpus_gap	11123	CL-RM-497745	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://www.theos.com/deraadt/coremail.html｜复用句第二宿主（首宿主 3.2.1B）
+V27.3.3.1	corpus_gap	11002	CL-RM-497746	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://marc.info/?l=openbsd-misc&m=112930348303656&w=2｜复用句首宿主
+V27.3.3.1	corpus_gap	11015	CL-RM-497747	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.4.2A）
+V27.3.3.2	corpus_gap	2219	CL-RM-497748	academic_work	primary	D2	supp-V27-b012	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.3.2	corpus_gap	11015	CL-RM-497749	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.6.1A）
+V27.3.3.3	corpus_gap	10895	CL-RM-497750	official_doc	primary	D2	supp-V27-b012	supplemented	url:https://www.openbsd.org/plus20.html｜复用句第二宿主（首宿主 3.7.3A）
+V27.3.3.3	corpus_gap	11015	CL-RM-497751	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.3.1B）
+V27.3.3.4	corpus_gap	10802	CL-RM-497752	official_doc	primary	D2	supp-V27-b012	supplemented	url:https://www.openbsd.org/goals.html｜复用句首宿主
+V27.3.3.4	corpus_gap	11015	CL-RM-497753	web_archive	primary	D2	supp-V27-b012	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句首宿主
+V27.3.4.1	corpus_gap	11002	CL-RM-497764	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://marc.info/?l=openbsd-misc&m=112930348303656&w=2｜复用句第二宿主（首宿主 3.4.5B）
+V27.3.4.1	corpus_gap	11015	CL-RM-497765	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.4.2A）
+V27.3.4.2	corpus_gap	11015	CL-RM-497766	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.4.1B）
+V27.3.4.2	corpus_gap	2219	CL-RM-497767	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.4.3	corpus_gap	10895	CL-RM-497768	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/plus20.html｜复用句首宿主
+V27.3.4.3	corpus_gap	2219	CL-RM-497769	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.4.4	corpus_gap	10999	CL-RM-497770	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/papers/anoncvs-paper.pdf｜复用句首宿主
+V27.3.4.4	corpus_gap	10802	CL-RM-497771	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/goals.html｜复用句首宿主
+V27.3.4.5	corpus_gap	2219	CL-RM-497772	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句第二宿主（首宿主 3.4.2B）
+V27.3.4.5	corpus_gap	10895	CL-RM-497773	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/plus20.html｜复用句第二宿主（首宿主 3.4.3A）
+V27.3.5.1	corpus_gap	2219	CL-RM-497774	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.5.1	corpus_gap	11015	CL-RM-497775	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句首宿主
+V27.3.5.2	corpus_gap	2219	CL-RM-497776	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.5.2	corpus_gap	11015	CL-RM-497777	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.7.4A）
+V27.3.5.3	corpus_gap	2219	CL-RM-497778	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.5.3	corpus_gap	11015	CL-RM-497779	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句首宿主
+V27.3.5.5	corpus_gap	2219	CL-RM-497780	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.5.5	corpus_gap	2219	CL-RM-497781	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句第二宿主（首宿主 3.6.5B）
+V27.3.6.1	corpus_gap	11015	CL-RM-497782	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.3.2B）
+V27.3.6.1	corpus_gap	10802	CL-RM-497783	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/goals.html｜复用句首宿主
+V27.3.6.2	corpus_gap	10802	CL-RM-497784	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/goals.html｜复用句第二宿主（首宿主 3.4.4B）
+V27.3.6.2	corpus_gap	2219	CL-RM-497785	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句第二宿主（首宿主 3.7.4B）
+V27.3.6.3	corpus_gap	2219	CL-RM-497786	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句第二宿主（首宿主 3.3.2A）
+V27.3.6.3	corpus_gap	11015	CL-RM-497787	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.3.2B）
+V27.3.6.5	corpus_gap	2219	CL-RM-497788	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.6.5	corpus_gap	2219	CL-RM-497789	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句第二宿主（首宿主 3.5.5B）
+V27.3.7.3	corpus_gap	10895	CL-RM-497790	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/plus20.html｜复用句第二宿主（首宿主 3.3.3A）
+V27.3.7.3	corpus_gap	10895	CL-RM-497791	official_doc	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/plus20.html｜复用句首宿主
+V27.3.7.4	corpus_gap	11015	CL-RM-497792	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句第二宿主（首宿主 3.5.2B）
+V27.3.7.4	corpus_gap	2219	CL-RM-497793	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句第二宿主（首宿主 3.6.2B）
+V27.3.7.5	corpus_gap	2219	CL-RM-497794	academic_work	primary	D2	supp-V27-b013	supplemented	url:https://www.openbsd.org/security.html｜复用句首宿主
+V27.3.7.5	corpus_gap	11015	CL-RM-497795	web_archive	primary	D2	supp-V27-b013	supplemented	url:https://blog.apnic.net/2021/10/28/openbsd-part-1-how-it-all-started/｜复用句首宿主

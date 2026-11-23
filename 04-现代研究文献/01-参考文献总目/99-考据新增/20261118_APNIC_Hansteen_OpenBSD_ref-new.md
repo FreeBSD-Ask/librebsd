@@ -17,3 +17,32 @@
 
 ## 备注
 本批取 1—2 条；第 3 条备用。
+
+## b012/b013 追加引文（2026-11-21/22 快照复取核证）
+
+- **追加用途**：b012/b013（3.3.1B／3.3.2B／3.3.3B／3.3.4B／3.4.1B／3.4.2A／3.5.1B／3.5.2B／3.5.3B／3.6.1A／3.6.3B／3.7.4A）
+- **披露**：链接后空格标点归一；marc 帖引用层符号剥离；apnic 页为 2021-10-28 文章快照；核心句逐字照录
+
+A1（aA）:
+OpenBSD came into existence a couple of years later, from a fork of the NetBSD code base in October 1995, with the initial release in July 1996.
+
+A2（aB）:
+From the very start, the OpenBSD project has been running a code audit of the entire tree, focusing on code correctness and security.
+
+A3（aC）:
+the project was always coordinated from Canada by undisputed project leader Theo de Raadt
+
+A4（aD）:
+exporting OpenBSD source code from the US was technically illegal under its munitions export restrictions as they were defined at the time. Fortunately for us, the project was always coordinated from Canada by undisputed project leader Theo de Raadt.
+
+A5（aE）:
+One early application of crypto in OpenBSD was when a full IPSEC stack was included in the system in 1997.
+
+A6（aF）:
+attention to intellectual integrity and insisting on clearly worded and unambiguous license
+
+A7（aG）:
+OpenBSD was the first free system to include IPSec by default in its base install.
+
+A8（aH）:
+We want secure, correct code that makes up a usable system with sane defaults and complete and readable documentation.

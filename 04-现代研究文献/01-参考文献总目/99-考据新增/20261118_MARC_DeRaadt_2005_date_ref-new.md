@@ -17,3 +17,17 @@
 
 ## 备注
 RCS 首修订完整行含 “revision 1.1”“branches: 1.1.1;”“Initial revision” 上下文；邮件经层层引用（> 前缀），引文取正文归一形态；两说实态＝10-14（calendar）与 10-18（RCS，官方）。
+
+## b012/b013 追加引文（2026-11-21/22 快照复取核证）
+
+- **追加用途**：b012/b013（3.3.1A／3.4.1A）
+- **披露**：链接后空格标点归一；marc 帖引用层符号剥离；apnic 页为 2021-10-28 文章快照；核心句逐字照录
+
+A1（mA）:
+That is when the repository was created. That is the official date. I don't know where people get the other date from.
+
+A2（mB）:
+date: 1995/10/18 08:37:01; author: deraadt;
+
+A3（mC）:
+Security is decided by quality

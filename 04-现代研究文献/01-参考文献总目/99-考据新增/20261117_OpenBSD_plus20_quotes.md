@@ -11,3 +11,17 @@
 
 Q1（3.2.3a，相对 NetBSD 的增强自陈）:
 Many ports have had architecture-specific enhancements relative to NetBSD, but when they do not they certainly have plenty of platform-independent changes, starting with those listed below..
+
+## b012/b013 追加引文（2026-11-21/22 快照复取核证）
+
+- **追加用途**：b012/b013（3.3.3A／3.4.3A／3.4.5B／3.7.3A/B）
+- **披露**：链接后空格标点归一；marc 帖引用层符号剥离；apnic 页为 2021-10-28 文章快照；核心句逐字照录
+
+A1（pA）:
+Many ports have had architecture-specific enhancements relative to NetBSD, but when they do not they certainly have plenty of platform-independent changes, starting with those listed below..
+
+A2（pB）:
+Machine specific changes have also been made, and are sometimes mentioned in the pages for the specific platforms
+
+A3（pC）:
+This is a partial list of the major machine independent changes (i.e., these are the changes people ask about most often).

@@ -17,3 +17,20 @@
 - **追加考据注**：此为共同目标清单中的发行节奏条，与 8.0 发行页的日期／序数（2026-10-20／第 61 次）构成“声明＋实例”对；7.9 页标 2026-05-19（第 60 次）作旁证，两页相距五个月余。
 - **本批落点**：V75.2.3.4 一块（#url）
 - **考据日期**：2026-11-16（supp-V75-b014）
+
+## b012/b013 追加引文（2026-11-21/22 快照复取核证）
+
+- **追加用途**：b012/b013（3.3.4A／3.4.4B／3.6.1B／3.6.2A）
+- **披露**：链接后空格标点归一；marc 帖引用层符号剥离；apnic 页为 2021-10-28 文章快照；核心句逐字照录
+
+A1（gA）:
+Integrate good code from any source with acceptable licenses. ISC or Berkeley style licences are preferred, the GPL is not acceptable when adding new code, NDAs are never acceptable.
+
+A2（gB）:
+Provide full source access to developers and users, including the ability to look at CVS tree changes directly
+
+A3（gC）:
+each developer working on OpenBSD has their own aims and priorities, but it is possible to classify the goals we all share
+
+A4（gD）:
+We want to make available source code that anyone can use for ANY PURPOSE, with no restrictions.

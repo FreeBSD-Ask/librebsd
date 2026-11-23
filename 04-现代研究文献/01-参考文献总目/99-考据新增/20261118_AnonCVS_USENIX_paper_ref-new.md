@@ -19,3 +19,14 @@
 
 ## 备注
 slides 页另记 “Fall 1995: first anonymous CVS server (wistl.edu)”（wustl.edu 首服）；论文正文并记 SUP／匿名 FTP 等机制比较；本批取 1—4 条，第 4 条只作机制图景比较（CTM 系 FreeBSD 阵营机制，claim 不作“OpenBSD 以 CTM 分发自家源码”断言）。
+
+## b012/b013 追加引文（2026-11-21/22 快照复取核证）
+
+- **追加用途**：b013（3.4.4A）
+- **披露**：链接后空格标点归一；marc 帖引用层符号剥离；apnic 页为 2021-10-28 文章快照；核心句逐字照录
+
+A1（anA）:
+Anonymous CVS is an advanced source file distribution mechanism we created to allow open source software projects to distribute source code and information about code to Internet users.
+
+A2（anB）:
+Built on top of the Concurrent Versions System (CVS) revision control system, Anonymous CVS safely allows
