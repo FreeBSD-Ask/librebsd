@@ -21,3 +21,7 @@
 ## supp-V57-b008 追加引文（G6 全责线，2026-11-21）
 
 - 取句（V57.4.3.5 H 块；Founded by 节）：The OPNsense project is founded by Deciso B.V. The support and history of Deciso gives the OPNsense project a stable environment.
+
+## supp-V57-b012 追加引文（G6 全责线，2026-11-24）
+
+- 取句（V57.5.1.5 E 块；Our license 节）：OPNsense® is and will be available with the simple 2-clause BSD license. We believe an open source project should provide the sources and the tools to build it.

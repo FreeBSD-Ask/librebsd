@@ -48,3 +48,7 @@ BSD 基底与语义支持：
 - “三层合一”是功能层合并，运行在 BSD 基底之上——落块不得写成“BSD 被替换”。
 - 白皮书 PDF 原件（cdn-prod.scdn6…a748.pdf）直连失败（276 字节），以 Info Hub 版文本为准。
 - 按 L3 采信；厂商技术文档。
+
+## supp-V57-b012 追加引文（G6 全责线，2026-11-24）
+
+- 取句（V57.5.1.3 A 块）：OneFS is built on a BSD-based UNIX operating system foundation. It supports both Linux/UNIX and Windows semantics natively, including hard links, delete-on-close, atomic rename, ACLs, and extended attributes. It uses BSD as its base operating system because it is a mature and proven operating system, and the open-source community can be leveraged for innovation.

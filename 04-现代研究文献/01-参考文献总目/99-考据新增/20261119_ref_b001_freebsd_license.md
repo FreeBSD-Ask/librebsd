@@ -8,3 +8,7 @@
 - **取句（逐字）**：Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. … Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 - **数据库**：ref 新建（kaoju_source，batch supp-V57-b001）
 - **考据日期**：2026-11-19
+
+## supp-V57-b012 追加引文（G6 全责线，2026-11-24）
+
+- 取句（V57.5.1.5 F 块；同句第三宿主主题复用）：Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. … Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
