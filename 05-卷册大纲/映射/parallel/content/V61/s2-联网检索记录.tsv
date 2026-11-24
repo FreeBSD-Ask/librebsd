@@ -119,3 +119,14 @@ V61.2.2.4	FreeBSD chroot BUGS working directory left changed access control chec
 V61.2.2.5	OpenBSD chroot CAVEATS root process escape jail	curl 直取 man.openbsd.org chroot.2 CAVEATS 复用	命中	强度上限警示句取得	2026-11-23	curl 直连
 V61.2.2.5	FreeBSD kern.chroot_allow_open_directories bypass historic insecure behavior	curl 直取 man.freebsd.org chroot(2) 复用	命中	历史不安全行为定性句取得	2026-11-23	curl 直连
 V61.2.2.*	—	—	—	五题两独立来源齐备（10 块）：ref11124 FreeBSD CHROOT(2)＋ref11125 OpenBSD CHROOT(2) 两新建，五题异句异锚 J84；roff 原形（chroot ()／di- rectory／ch- root ()／al- ways 断词）与 HTML 实体（&#x2018; / &#x2019;）照录披露	2026-11-23	—
+V61.2.3.1	FreeBSD security any super-user process raise level no process lower	curl 直取 man.freebsd.org security(7)（107 499 字节）	命中	单向性句取得	2026-11-23	curl 直连
+V61.2.3.1	OpenBSD securelevel may no longer be lowered except by init	curl 直取 man.openbsd.org securelevel(7)（11 999 字节）	命中	单向例外分级句取得	2026-11-23	curl 直连
+V61.2.3.2	FreeBSD security level 1 raw devices denied chflags schg enforced	curl 直取 man.freebsd.org security(7) 复用	命中	分档限制句取得	2026-11-23	curl 直连
+V61.2.3.2	OpenBSD securelevel 1 Secure mode /dev/mem kmem flags read-only list	curl 直取 man.openbsd.org securelevel(7) 1 级清单复用	命中	逐项清单句取得（列表拼接披露）	2026-11-23	curl 直连
+V61.2.3.3	FreeBSD jail -s securelevel kern.securelevel MIB inside newly created jail deprecated	curl 直取 man.freebsd.org jail(8)（122 147 字节）	命中	jail 逐项设定句取得	2026-11-23	curl 直连
+V61.2.3.3	OpenBSD securelevel 0 Insecure mode bootstrapping single-user	curl 直取 man.openbsd.org securelevel(7) 0 级清单复用	命中	单用户门槛句取得	2026-11-23	curl 直连
+V61.2.3.4	FreeBSD security levels are -1 Permanently insecure mode	curl 直取 man.freebsd.org security(7) 分档段复用	命中	分档起句取得	2026-11-23	curl 直连
+V61.2.3.4	OpenBSD kernel provides four levels of system security	curl 直取 man.openbsd.org securelevel(7) 分档段复用	命中	四级起句取得	2026-11-23	curl 直连
+V61.2.3.5	FreeBSD -1 Permanently insecure mode default initial value	curl 直取 man.freebsd.org security(7) 分档段复用	命中	FreeBSD 默认初始值句取得	2026-11-23	curl 直连
+V61.2.3.5	OpenBSD 1 Secure mode default mode when system is multi-user	curl 直取 man.openbsd.org securelevel(7) 分档段复用	命中	OpenBSD 默认档句取得（默认分化两站对读）	2026-11-23	curl 直连
+V61.2.3.*	—	—	—	五题两独立来源齐备（10 块）：ref11132—11134 三新建（FreeBSD SECURITY(7)／OpenBSD SECURELEVEL(7)／FreeBSD JAIL(8)），五题异句异锚 J84；NetBSD man 站 securelevel(7)/security(8) 均 404（手册名演进弃用）改两站默认分化对读披露	2026-11-23	curl 直连
