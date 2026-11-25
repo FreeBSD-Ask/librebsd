@@ -1,0 +1,140 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V06.3.1.1	UNIX 为何进入大学本科课堂	historical_claims.claim	CL-1-00511			A	1979 USENIX 记录：UNIX 已广泛进入本科教学；Bradley 用 Mini-UNIX/11/40，俄克拉荷马 11/70 支持 500—700 用户	命中	D1 候选（会议录）
+V06.3.1.1	UNIX 为何进入大学本科课堂	historical_claims.claim	CL-1-00340			A	1976 拉夫堡大学 Taylor 致函：PDP-11/40 拟自 RSTS 全面切换至 UNIX，用于本科教学与研究生科研	命中	D1 候选
+V06.3.1.1	UNIX 为何进入大学本科课堂	historical_claims.claim	CL-1-00483			B	1978 年高校 OS 课程仍教 IBM 专有系统；UNIX 因可及性与可移植性成为更佳教学替代	命中	D2 候选（解释性 claim，须与一手并置）
+V06.3.1.1	UNIX 为何进入大学本科课堂	references_fulltext.fulltext_blocks	55#490	55		C	1973 年 AT&T 开始向高校发放 Unix 许可，只收象征性费用	命中	D2 候选（译本转述，须核原书）
+V06.3.1.1	UNIX 为何进入大学本科课堂	doubts_standalone.doubts_to_resolve	2017				R-0052（第一卷 7.6）：教学使用数量统计缺一手数据；复核建议教学影响不变	命中	风险披露：教学使用数量无一手统计
+V06.3.1.1	UNIX 为何进入大学本科课堂	sacred_sources.blocks（史观）	27#2			史观	26.1 教育无意义与启蒙不可能；反对把教学制度写成启蒙成功叙事	史观参照	史观映射，不作证据
+V06.3.1.1	UNIX 为何进入大学本科课堂	metadata_interfaces.chapter_metadata					未命中：仅存旧 12 卷结构（第06卷-地理学），无当前 V06.3；timeline_records 无课程条目	未命中	排除面记录
+V06.3.1.2	教育许可近乎免费之后的校园采纳	historical_claims.claim	CL-1-018			A	AT&T 对学术机构的 UNIX 许可证仅收取 150 美元磁带复制费，覆盖购买、写入并寄回磁带的成本	命中	D1 候选
+V06.3.1.2	教育许可近乎免费之后的校园采纳	historical_claims.claim	CL-RM-496353			A	UNSW 课程讲义：教育许可近乎免费，世界各地大学以 UNIX 为教学与研究基础	命中	D1 候选
+V06.3.1.2	教育许可近乎免费之后的校园采纳	historical_claims.claim	CL-RM-083553			A	MINIX 是为绕开 AT&T 禁止以 UNIX 源码教学的限制而编写的 PC 类机器 UNIX 克隆	命中	D1 候选（许可约束塑造课程）
+V06.3.1.2	教育许可近乎免费之后的校园采纳	historical_claims.claim	CL-RM-015649			B	McKusick 1992 课程公告：上次开课为 9 年前，需 AT&T 许可；Karels 已离开 CSRG	命中	D2 候选
+V06.3.1.2	教育许可近乎免费之后的校园采纳	references_fulltext.references	5441	5441		A	1984-02 AT&T 价目：System V 教育价 800 美元/CPU，商用 43,000 美元	命中	D1 候选
+V06.3.1.2	教育许可近乎免费之后的校园采纳	references_fulltext.references	5440	5440		A	1983-09 AT&T 软件目录：System V/V7 等统一 400 美元	命中	D1 候选
+V06.3.1.2	教育许可近乎免费之后的校园采纳	cross_indexes.person_bio_research	person_4e859588			A	Andrew Tanenbaum：MINIX 作者、Vrije Universiteit 教授	命中	人物锚核
+V06.3.1.2	教育许可近乎免费之后的校园采纳	doubts_standalone.doubts_to_resolve	2078				第六卷 1.4 PDP-11/70 教学计算系统：经费来源档案裁决；状态 reclassified_evidence_unavailable	命中	风险披露：经费来源无档案
+V06.3.1.2	教育许可近乎免费之后的校园采纳	sacred_sources.blocks（史观）	17#1			史观	16.1 经验优先的合理性；许可与机时的经验条件先于制度叙事	史观参照	史观映射，不作证据
+V06.3.1.3	从工具使用到系统阅读	historical_claims.claim	CL-RM-022723			A	Rob Lake：UNIX 管道与 Software Tools 教学可做快速原型，荐 UNIX 入教职	命中	D1 候选
+V06.3.1.3	从工具使用到系统阅读	historical_claims.claim	CL-1-00547			A	1981 BNR 的 Menu 语言作为新手 shell，用于备份、教学、电话应答	命中	D2 候选
+V06.3.1.3	从工具使用到系统阅读	references_fulltext.references	1149	1149		A	Bourne《An Introduction to the UNIX Shell》1978	命中	D1 候选
+V06.3.1.3	从工具使用到系统阅读	references_fulltext.references	1269	1269		A	Kernighan & Mashey《UNIX Programming》BSTJ 1978	命中	D1 候选
+V06.3.1.3	从工具使用到系统阅读	references_fulltext.references	1270	1270		A	Kernighan & Plauger《Software Tools》BSTJ 1978	命中	D1 候选
+V06.3.1.3	从工具使用到系统阅读	references_fulltext.references	1528	1528		A	Pike《Program Design in the UNIX Environment》1984：管道组合	命中	D2 候选
+V06.3.1.3	从工具使用到系统阅读	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.1.3	从工具使用到系统阅读	sacred_sources.blocks（史观）	15#3			史观	14.2 动手者创造历史；工具使用属动手面	史观参照	史观映射，不作证据
+V06.3.1.4	学生作业与课程项目	historical_claims.claim	CL-5-00118			A	2000 科罗拉多大学 OS 课程改用 FreeBSD 源码，学生修改内核实现 undelete，95 人	时段外	仅作传统延续旁证
+V06.3.1.4	学生作业与课程项目	historical_claims.claim	CL-3-00106			A	2000 年前后以 FreeBSD 内核与 FFS 源码设计学生项目（插桩、FFS 块地址）	时段外	仅作传统延续旁证
+V06.3.1.4	学生作业与课程项目	references_fulltext.key_facts					未命中：key_facts 仅 RJE 作业投递，与课程项目无关	未命中	无匹配
+V06.3.1.4	学生作业与课程项目	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.1.4	学生作业与课程项目	original_sources.kaoju_records	374	390		A	第22.17节 学生自主研究项目与 BSD 代码作为教学载体；CSRG 档案、McKusick 1999、课程目录	命中	史料线索（跨卷/后期）
+V06.3.1.4	学生作业与课程项目	sacred_sources.blocks（史观）	15#4			史观	14.2 真正推动 BSD 的是动手去做的人	史观参照	史观映射，不作证据
+V06.3.1.5	选修课逐步进入培养方案	historical_claims.claim	CL-RM-076466			A	Rahul Dhesi 回应 UNIX 教学大纲征询：是否把某 OS 列为必修、推荐讲义来源	命中	D1 候选
+V06.3.1.5	选修课逐步进入培养方案	historical_claims.claim	CL-RM-076467			B	1989 阿姆斯特丹大学学生因预算偏好讲义而非教材	命中	D2 候选
+V06.3.1.5	选修课逐步进入培养方案	historical_claims.claim	CL-1-00483			B	1978 年高校 OS 课程仍教 IBM 专有系统；UNIX 成为替代	命中	D2 候选
+V06.3.1.5	选修课逐步进入培养方案	historical_claims.claim	CL-2-00059			B	1987 年末 4.3BSD/System V 内部机制进入商业培训课程	命中	D2（职业课程，非学位培养方案）
+V06.3.1.5	选修课逐步进入培养方案	references_fulltext.references					未命中：references/key_facts 无“培养方案”专条	未命中	无匹配
+V06.3.1.5	选修课逐步进入培养方案	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.1.5	选修课逐步进入培养方案	sacred_sources.blocks（史观）	8#10			史观	史学含义：BSD 文化史是形式主义建构与消解史；课程建制亦形式	史观参照	史观映射，不作证据
+V06.3.2.1	手册页作为最早的系统教学文本	historical_claims.claim	CL-8-002			C	仅命中模板化候选 claim（文献收录占位，与 ref 2819 同源），不作证据	不采用	排除：模板占位
+V06.3.2.1	手册页作为最早的系统教学文本	references_fulltext.references	1527	1527		A	UNIX Programmer's Manual Seventh Edition Vol 1，1979	命中	D1 候选
+V06.3.2.1	手册页作为最早的系统教学文本	references_fulltext.references	2731	2731		A	MERT Release 0 手册全集（24 文件），1976	命中	D1 候选
+V06.3.2.1	手册页作为最早的系统教学文本	references_fulltext.references	2819	2819		A	Pgs 01-38 Unix Programmer's Manual for MERT，1977	命中	D1 候选
+V06.3.2.1	手册页作为最早的系统教学文本	references_fulltext.references	3698	3698		A	F.1.1 UNIX Operations Manual（Petruccelli）	命中	D1 候选
+V06.3.2.1	手册页作为最早的系统教学文本	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.2.1	手册页作为最早的系统教学文本	sacred_sources.blocks（史观）	17#1			史观	16.1 经验优先；手册页为最早的经验文本	史观参照	史观映射，不作证据
+V06.3.2.2	讲义如何变成教科书	historical_claims.claim	CL-1-00603			A	Lions 1977 编写 Commentary 及源码清单用于教学；因版权压制多年禁流通，1996 重印	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	historical_claims.claim	CL-RM-496355			A	UNSW 官方页：Lions 于 1970 年代中动念记录源码并写评注，以更好教学生编程	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	historical_claims.claim	CL-RM-497915			A	注释书扉页自述：为 UNSW 6.602B 与 6.657G 两门课程学生而作	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	references_fulltext.references	5	5		A	Kernighan & Pike《The UNIX Programming Environment》1984	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	references_fulltext.references	1269	1269		A	Kernighan & Mashey《UNIX Programming》BSTJ 1978	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	references_fulltext.references	1272	1272		A	tuhs_bstj1978_lions_commentary	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	references_fulltext.references	804	804		A	Leffler 等《The Design and Implementation of the 4.3BSD UNIX OS》1989	命中	D1 候选
+V06.3.2.2	讲义如何变成教科书	cross_indexes.person_bio_research	john_lions			A	John Lions：UNSW，UNIX V6 评注作者	命中	人物锚核
+V06.3.2.2	讲义如何变成教科书	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.2.2	讲义如何变成教科书	sacred_sources.blocks（史观）	15#3			史观	14.2 动手者创造历史；评注成书属动手面	史观参照	史观映射，不作证据
+V06.3.2.3	习题围绕源码阅读	historical_claims.claim	CL-1-020			A	Lions 注释收录内核源码，作为盗版影印件被广泛传阅	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	historical_claims.claim	CL-1-00624			A	1970 年代 Lions 以 V6 源码讲授 OS 课程，构成源码教学传统开端	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	historical_claims.claim	CL-1-00341			A	1977 Melvin Ferentz 编写 PDP-11/40 内核源码注释，作为 OS 教学案例	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	historical_claims.claim	CL-RM-013718			A	Lions 书经 Bell Labs 以每许可证一本 15 美元向 V6 被许可方发售	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	historical_claims.claim	CL-RM-013719			A	Lions 书许可极严：每站点两册、禁复制、非被许可人不得阅览	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	references_fulltext.references	1272	1272		A	tuhs_bstj1978_lions_commentary	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	references_fulltext.references	1286	1286		A	tuhs_lions_1979_pcc_pass2（Lions PCC 第二遍）	命中	D1 候选
+V06.3.2.3	习题围绕源码阅读	references_fulltext.fulltext_blocks	4#179	4		C	Lions 原话：用 UNIX 教 OS 课，源码与文档可装进学生公文包	命中	线索（论战书引语，须回原书）
+V06.3.2.3	习题围绕源码阅读	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.2.3	习题围绕源码阅读	sacred_sources.blocks（史观）	15#4			史观	14.2 动手去做的人创造历史	史观参照	史观映射，不作证据
+V06.3.2.4	教材与系统版本错位	historical_claims.claim	CL-RM-497915			A	注释书为 6.602B/6.657G 两门课程而作，教材与课程/版本绑定	命中	D1 候选
+V06.3.2.4	教材与系统版本错位	historical_claims.claim	CL-RM-076467			B	1989 阿姆斯特丹学生偏好讲义而非教材	命中	D2 候选
+V06.3.2.4	教材与系统版本错位	references_fulltext.references	3713	3713		A	AUUGN V01.6：UNSW 的 Lions Level 7 手册政策草案；1980-01-01 后或失去 25% 印刷补贴，须重订印量	命中	D1 候选
+V06.3.2.4	教材与系统版本错位	references_fulltext.references	1527	1527		A	UNIX Programmer's Manual 7th ed Vol 1，1979	命中	D1 候选
+V06.3.2.4	教材与系统版本错位	references_fulltext.references	5441	5441		A	1984 价目表按 System V 版本分列教育价	命中	D2 候选
+V06.3.2.4	教材与系统版本错位	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.2.4	教材与系统版本错位	sacred_sources.blocks（史观）	8#10			史观	史学含义：文化形式的历史性；教材版本亦形式	史观参照	史观映射，不作证据
+V06.3.2.5	教材经翻译与改编扩散至他国	historical_claims.claim	CL-RM-076467			B	1989 阿姆斯特丹大学记录欧洲高校 UNIX 课程实况	命中	D2 候选（in-period 唯一直接）
+V06.3.2.5	教材经翻译与改编扩散至他国	historical_claims.claim	CL-RM-148181			C	阿拉伯语社区翻译手册后促成埃及艾因夏姆斯大学开设 FreeBSD 暑期课程	时段外	仅作译本扩散后期旁证
+V06.3.2.5	教材经翻译与改编扩散至他国	historical_claims.claim	CL-RM-148335			C	ArabBSD 手册翻译吸引艾因夏姆斯大学，7 月 10 日开免费暑期课程	时段外	仅作译本扩散后期旁证
+V06.3.2.5	教材经翻译与改编扩散至他国	references_fulltext.references	55	55		C	Kernighan《UNIX 传奇》中译本 2021	时段外	译本存在之证，不作 1975—1995 证据
+V06.3.2.5	教材经翻译与改编扩散至他国	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.2.5	教材经翻译与改编扩散至他国	sacred_sources.blocks（史观）	8#10			史观	史学含义：文化形式在传播中变形	史观参照	史观映射，不作证据
+V06.3.3.1	源码可读才可讲授	historical_claims.claim	CL-1-00624			A	1970 年代 Lions 以 V6 源码讲授 OS 课程，构成源码教学传统开端	命中	D1 候选
+V06.3.3.1	源码可读才可讲授	historical_claims.claim	CL-1-020			A	Lions 注释收录内核源码，作为盗版影印件被广泛传阅	命中	D1 候选
+V06.3.3.1	源码可读才可讲授	historical_claims.claim	CL-RM-496355			A	UNSW 官方页：Lions 记录源码并写评注，以更好教学生编程	命中	D1 候选
+V06.3.3.1	源码可读才可讲授	references_fulltext.references	1272	1272		A	tuhs_bstj1978_lions_commentary	命中	D1 候选
+V06.3.3.1	源码可读才可讲授	references_fulltext.fulltext_blocks	4#179	4		C	Lions 原话：源码与文档可装进学生公文包	命中	线索（论战书引语）
+V06.3.3.1	源码可读才可讲授	references_fulltext.references	632	632		C	Reuschling 2018：用 FreeBSD 教 UNIX 课程的反思	时段外	方法回溯，非当期证据
+V06.3.3.1	源码可读才可讲授	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.3.1	源码可读才可讲授	sacred_sources.blocks（史观）	15#3			史观	14.2 动手者创造历史；源码实验属动手面	史观参照	史观映射，不作证据
+V06.3.3.2	课程项目规模与课程容量的匹配	historical_claims.claim	CL-3-00106			A	2000 年前后 FreeBSD 内核课程学生项目（插桩、FFS 块地址）	时段外	仅作后期旁证
+V06.3.3.2	课程项目规模与课程容量的匹配	historical_claims.claim	CL-5-00118			A	2000 科罗拉多 95 名学生修改 FreeBSD 内核	时段外	仅作后期旁证
+V06.3.3.2	课程项目规模与课程容量的匹配	references_fulltext.key_facts					未命中：key_facts 无课程项目规模专条	未命中	无匹配
+V06.3.3.2	课程项目规模与课程容量的匹配	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.3.2	课程项目规模与课程容量的匹配	sacred_sources.blocks（史观）	17#1			史观	16.1 经验优先；项目规模的经验边界先于设计	史观参照	史观映射，不作证据
+V06.3.3.3	机时稀缺下的份额调度	historical_claims.claim	CL-1-00556			A	1981 悉尼 Basser 在 VAX 11/780 实现 Larmouth 份额调度，解决教学环境并发挤占	命中	D1 候选
+V06.3.3.3	机时稀缺下的份额调度	historical_claims.claim	CL-1-00712			A	1984 DEC 赠伯克利六台 VAX 11/750；学生实现 Maitre d' 负载均衡，迁移过载教学机作业	命中	D1 候选
+V06.3.3.3	机时稀缺下的份额调度	historical_claims.claim	CL-4-00152			A	1977 悉尼大学征询 PDP-11/70 支持 32+ 终端教学负载经验	命中	D1 候选
+V06.3.3.3	机时稀缺下的份额调度	historical_claims.claim	CL-1-00511			A	俄克拉荷马 11/70 支持 500—700 用户	命中	D2 候选
+V06.3.3.3	机时稀缺下的份额调度	references_fulltext.key_facts					未命中：key_facts/fulltext 无份额调度或机时排程专条	未命中	无匹配
+V06.3.3.3	机时稀缺下的份额调度	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.3.3	机时稀缺下的份额调度	sacred_sources.blocks（史观）	15#4			史观	14.2 动手去做的人创造历史	史观参照	史观映射，不作证据
+V06.3.3.4	实验平台为教学而裁剪	historical_claims.claim	CL-1-00712			A	1984 DEC 赠伯克利六台 VAX 11/750；学生实现负载均衡迁移教学机作业	命中	D1 候选
+V06.3.3.4	实验平台为教学而裁剪	historical_claims.claim	CL-1-00341			A	Wollongong 在 Interdata 7/32 移植 UNIX，编辑器为首个重编译投入使用的程序	命中	D2 候选
+V06.3.3.4	实验平台为教学而裁剪	references_fulltext.references	3714	3714		A	AUUGN V02.3：UNSW 电气工程学院 1980 年 6 月获 VAX 11/780，用于计算机科学系教学，缓解一年多过载	命中	D1 候选
+V06.3.3.4	实验平台为教学而裁剪	references_fulltext.references	3717	3717		A	AUUGN V03.2：UNSW 宣布 Modula-2 可在 PDP-11 UNIX 分时系统运行	命中	D2 候选
+V06.3.3.4	实验平台为教学而裁剪	doubts_standalone.doubts_to_resolve	2078				第六卷 1.4 PDP-11/70 教学计算系统：经费来源档案裁决	命中	风险披露：经费来源无档案
+V06.3.3.4	实验平台为教学而裁剪	sacred_sources.blocks（史观）	15#3			史观	14.2 动手者创造历史；平台裁剪属动手面	史观参照	史观映射，不作证据
+V06.3.3.5	实验训练塑造动手能力与人才去向	historical_claims.claim	CL-2-00552			A	2000 年 ;login: 报告：源码 UNIX 教学，选课率升 15%	时段外	后期效果回溯，不入直接证据
+V06.3.3.5	实验训练塑造动手能力与人才去向	historical_claims.claim	CL-5-00118			A	2000 科罗拉多 95 名学生修改内核	时段外	后期效果回溯
+V06.3.3.5	实验训练塑造动手能力与人才去向	historical_claims.claim	CL-1-00624			A	Lions 源码教学传统开端（仅证传统形成，不证效果）	命中	D2（仅传统形成）
+V06.3.3.5	实验训练塑造动手能力与人才去向	references_fulltext.key_facts					未命中：key_facts 无能力培养效果专条	未命中	无匹配
+V06.3.3.5	实验训练塑造动手能力与人才去向	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.3.5	实验训练塑造动手能力与人才去向	sacred_sources.blocks（史观）	15#18			史观	史学含义：核心是人的参与与退出，非技术演进	史观参照	史观映射，不作证据
+V06.3.4.1	受训者留校任教与师资繁衍	historical_claims.claim	CL-RM-015649			B	McKusick 1992 课程公告：上次开课 9 年前（需 AT&T 许可）；Karels 离 CSRG 返明尼苏达并加入 BSDI	命中	D2（教师流动，非学生成师资）
+V06.3.4.1	受训者留校任教与师资繁衍	historical_claims.claim	CL-1-00624			A	Lions 以 V6 源码授课，构成源码教学传统开端	命中	D2（师承线索）
+V06.3.4.1	受训者留校任教与师资繁衍	references_fulltext.key_facts					未命中：key_facts 无师资繁衍专条	未命中	无匹配
+V06.3.4.1	受训者留校任教与师资繁衍	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.4.1	受训者留校任教与师资繁衍	sacred_sources.blocks（史观）	15#18			史观	史学含义：记录默默做事的人，而非台前大佬	史观参照	史观映射，不作证据
+V06.3.4.2	课程学分跨校互通	historical_claims.claim	CL-1-00602			A	1976 英国大学 UNIX 通讯创刊，联结 11 个高校安装点，建通讯员制度并整理设备清单	命中	D1 候选
+V06.3.4.2	课程学分跨校互通	historical_claims.claim	CL-RM-076466			A	回应 UNIX 教学大纲征询，讨论必修设置并推荐讲义来源	命中	D2 候选
+V06.3.4.2	课程学分跨校互通	historical_claims.claim	CL-1-00483			B	USENIX 初期以共享代码、文档与经验交流维系社群	命中	D2 候选
+V06.3.4.2	课程学分跨校互通	references_fulltext.references	3713	3713		A	AUUGN V01.6：AUUG 拟在 Melbourne 办国际 UNIX 用户会议，与 IFIP 80 同期	命中	D2 候选
+V06.3.4.2	课程学分跨校互通	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.4.2	课程学分跨校互通	sacred_sources.blocks（史观）	8#10			史观	史学含义：共同体文化形式史	史观参照	史观映射，不作证据
+V06.3.4.3	毕业生从校园流向产业与学界	historical_claims.claim	CL-2-00059			C	1987 年末 4.3BSD/System V 内部机制进入商业培训课程	命中	旁证（培训市场，非毕业生统计）
+V06.3.4.3	毕业生从校园流向产业与学界	historical_claims.claim	CL-1-00547			C	BNR 的 Menu 语言用于教学等场景	命中	旁证
+V06.3.4.3	毕业生从校园流向产业与学界	references_fulltext.key_facts					未命中：key_facts 无毕业生去向统计	未命中	无匹配
+V06.3.4.3	毕业生从校园流向产业与学界	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.4.3	毕业生从校园流向产业与学界	sacred_sources.blocks（史观）	15#18			史观	史学含义：人的参与与退出	史观参照	史观映射，不作证据
+V06.3.4.4	教学网络跨洋延伸至海外各院校	historical_claims.claim	CL-1-00602			A	1976 英国大学 UNIX 通讯联结 11 个高校安装点	命中	D1 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	historical_claims.claim	CL-4-00152			A	1977 悉尼大学征询 PDP-11/70 教学负载经验	命中	D1 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	historical_claims.claim	CL-1-00340			A	1976 拉夫堡大学拟自 RSTS 切换至 UNIX 用于教学	命中	D1 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	historical_claims.claim	CL-1-00341			A	Wollongong 在 Interdata 7/32 移植 UNIX	命中	D1 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	historical_claims.claim	CL-RM-018178			A	1987 年国际 UNIX 组织全景：USENIX、USUG 等用户组与出版物接入目录	命中	D2 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	references_fulltext.references	3713	3713		A	AUUGN V01.6：AUUG 拟在 Melbourne 办国际会议，与 IFIP 80 同期	命中	D2 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	references_fulltext.references	3334	3334		A	AUUGN V02.5 1980：国际 UNIX 用户组通讯编辑互助网络	命中	D2 候选
+V06.3.4.4	教学网络跨洋延伸至海外各院校	doubts_standalone.doubts_to_resolve					未命中：doubts 无 V06.3 或本题关键词	未命中	无存疑记录
+V06.3.4.4	教学网络跨洋延伸至海外各院校	sacred_sources.blocks（史观）	8#10			史观	史学含义：文化形式的传播与变形	史观参照	史观映射，不作证据
+V06.3.4.5	教学共同体的史料边界	historical_claims.claim	CL-1-00511			A	1979 USENIX 会议录：教学使用散见各校报告，无总量统计	命中	D2（边界例证）
+V06.3.4.5	教学共同体的史料边界	references_fulltext.references	632	632		C	Reuschling 2018：用 FreeBSD 教 UNIX 课程的反思	时段外	后期方法回溯
+V06.3.4.5	教学共同体的史料边界	doubts_standalone.doubts_to_resolve	2017				R-0052（第一卷 7.6）：教学使用数量统计缺一手数据	命中	方法论：史料边界
+V06.3.4.5	教学共同体的史料边界	original_sources.kaoju_records	374	390		A	第22.17节 学生自主研究项目与 BSD 代码作为教学载体；CSRG 档案等	命中	史料线索
+V06.3.4.5	教学共同体的史料边界	sacred_sources.blocks（史观）	8#10			史观	史学含义：史家记录文化形式并坦承其为形式主义	史观参照	史观映射，不作证据
