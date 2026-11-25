@@ -1,0 +1,2 @@
+subsection_id	reason	queries	sites_checked	misses	verdict
+V50.4.2.4	拟证命题为“核心子系统维护者陆续淡出、接续断层见于提交时序”，属人员更替史实；committer(7) 只给“数周无提交即视为不活跃”的制度定义，不是更替记录。	dragonflybsd.org 子系统维护者变更；DragonFly BSD commits per year statistics 2005 peak contributors；GitHub mirror commit search（按作者分年）	dragonflybsd.org（release64 发行页、docs/developer/ProjectsPage、dragonflybsd.org_maintenance）；gitweb.dragonflybsd.org（summary，被 Anubis 工作证明页拦截）；openhub.net/p/dragonflybsd；api.github.com（分年计数可查，按作者分年受 10 次／分钟频控未毕）	发行页只列变更与修复，不列维护者去留；ProjectsPage 只写“查是否已有人在做”；Open Hub 只给窗口人数与总量，不给子系统维度；gitweb 不可达	needs_more
