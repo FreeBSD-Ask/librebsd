@@ -1,0 +1,151 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V04.4.1.1	三人协作的分工与默契	fulltext_fact	kf-tb3-3681-000	3681	8	A	Awk 一手文档：语言手册由 Alfred V. Aho、Brian W. Kernighan 与 P…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.1.1	三人协作的分工与默契	zref	536		8	A	Aho, Weinberger, Kernighan 1988 "The AWK Programmin…	可推（open）	资料库著录线索（须核全文）
+V04.4.1.1	三人协作的分工与默契	zref	14802		8	A	Aho A V, Weinberger P J, Kernighan B W. awk — A Pat…	可推（open）	资料库著录线索（须核全文）
+V04.4.1.1	三人协作的分工与默契	claim	CL-RM-012505		8	A	Robbins 讲 awk 语法史：POSIX awk 即 1988 年 Aho-Weinberger-Kernighan 之 new awk，规则须换行分号分隔	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.1	三人协作的分工与默契	claim	CL-1-050		4	A	V7 手册前言（1979）明确致谢了 Thompson 与 Ritchie 之外的 16 位贡献者：Aho、Bourne、Cherry、Chesson、Feldman、Haley、Haight、Johnson、Lesk、	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.2	阿尔弗雷德·阿霍的语法理论	fulltext_fact	kf-tb3-3681-000	3681	4	A	Awk 一手文档：语言手册由 Alfred V. Aho、Brian W. Kernighan 与 P…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.1.2	阿尔弗雷德·阿霍的语法理论	mat	463		4	A	Aho 1988 "AWK Patterns" 回忆 Aho 1988 "AWK Patterns"…	可推（open）	素材条目线索（须核原件）
+V04.4.1.2	阿尔弗雷德·阿霍的语法理论	mat	551		4	A	Aho et al. 1988 "The AWK Programming Language" Aho…	可推（open）	素材条目线索（须核原件）
+V04.4.1.2	阿尔弗雷德·阿霍的语法理论	claim	CL-RM-012505		4	A	Robbins 讲 awk 语法史：POSIX awk 即 1988 年 Aho-Weinberger-Kernighan 之 new awk，规则须换行分号分隔	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.2	阿尔弗雷德·阿霍的语法理论	claim	CL-1-050		2	C	V7 手册前言（1979）明确致谢了 Thompson 与 Ritchie 之外的 16 位贡献者：Aho、Bourne、Cherry、Chesson、Feldman、Haley、Haight、Johnson、Lesk、	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.1.3	彼得·温伯格的解释器实现	fulltext_fact	kf-tb3-3681-000	3681	4	A	Awk 一手文档：语言手册由 Alfred V. Aho、Brian W. Kernighan 与 Peter J.…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.1.3	彼得·温伯格的解释器实现	zref	536		4	A	Aho, Weinberger, Kernighan 1988 "The AWK Programming Language"	可推（open）	资料库著录线索（须核全文）
+V04.4.1.3	彼得·温伯格的解释器实现	zref	14802		4	A	Aho A V, Weinberger P J, Kernighan B W. awk — A Pattern Scanning an…	可推（open）	资料库著录线索（须核全文）
+V04.4.1.3	彼得·温伯格的解释器实现	claim	CL-RM-012505		4	A	Robbins 讲 awk 语法史：POSIX awk 即 1988 年 Aho-Weinberger-Kernighan 之 new awk，规则须换行分号分隔	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.3	彼得·温伯格的解释器实现	claim	CL-RM-040565		4	A	Arnold Robbins 述 awk 源流，谓 POSIX awk 基于 1988 年 Aho、Weinberger 与 Kernighan 之新 awk。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.4	布莱恩·克尼汉的接口设计	fulltext_fact	kf-tb3-3681-000	3681	4	A	Awk 一手文档：语言手册由 Alfred V. Aho、Brian W. Kernighan 与 Peter J…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.1.4	布莱恩·克尼汉的接口设计	fulltext_summary	2764	2764	4	A	Kernighan 以亲历者兼学者身份撰写的 Unix 简明史与个人回忆。全书八章：贝尔实验室（物理科学、通信与计…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.1.4	布莱恩·克尼汉的接口设计	fulltext_summary	555	555	4	A	… turkey on PDP/8 Saves the world with UNIX, C & AWK Awarded presidental medal Everybody Lives Happy Ever …	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.1.4	布莱恩·克尼汉的接口设计	claim	CL-RM-012505		4	A	Robbins 讲 awk 语法史：POSIX awk 即 1988 年 Aho-Weinberger-Kernighan 之 new awk，规则须换行分号分隔	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.4	布莱恩·克尼汉的接口设计	claim	CL-RM-018116		4	A	EUUG 哥本哈根全会（1985-09-11 至 13）最终议程：Kernighan 主题演讲 AWK、Duncanson System V streams、Amos sendmail、EUUG 会员大会（Teus Ha	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.1.5	模式扫描语言的取舍	fulltext_summary	326	326	2	B	…ib ansic＝216391，yacc＝2548，pascal＝1214，lex＝ 1181，awk＝621，asm＝504，sh＝68 97620 kern ansic＝97085，sh＝535…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.1.5	模式扫描语言的取舍	kaoju	390		2	B	…：经 McKusick 1999 Open Sources 章节确证 4. **BSD 工具链（awk、lex/yacc、lint、cb、cflow）支撑 C 语言生态**：经 McKusick 1…	可推（open）	既有考据记录（补证链参照）
+V04.4.1.5	模式扫描语言的取舍	fulltext_fact	kf-tb3-3681-000	3681	2	B	Awk 一手文档：语言手册由 Alfred V. Aho、Brian W. Kernighan 与 P…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.1.5	模式扫描语言的取舍	claim	CL-RM-010055		2	C	Jolitz 宣布 2.8 的 clock spl6 问题不予修复、2.81 重写规避，并称 2.81 使 awk 可在 11/40 重编译	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.1.5	模式扫描语言的取舍	claim	CL-RM-010405		2	C	2019 年 5 月 Martin Jakob 梳理 METALOG 文件在 pkgbase 中的枢纽地位：经 mtree-to-plist.awk 转换生成包清单，揭示打包流水线核心机制。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.1.6	署名与致谢的版本变化	fulltext_summary	326	326	2	B	…ib ansic＝216391，yacc＝2548，pascal＝1214，lex＝ 1181，awk＝621，asm＝504，sh＝68 97620 kern ansic＝97085，sh＝535…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.1.6	署名与致谢的版本变化	kaoju	390		2	B	…：经 McKusick 1999 Open Sources 章节确证 4. **BSD 工具链（awk、lex/yacc、lint、cb、cflow）支撑 C 语言生态**：经 McKusick 1…	可推（open）	既有考据记录（补证链参照）
+V04.4.1.6	署名与致谢的版本变化	fulltext_fact	kf-tb3-3681-002	3681	2	B	Awk 一手文档：提供与 C 相同的基本控制流语句 if-else、while、for 及花括号语句组…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.1.6	署名与致谢的版本变化	claim	CL-RM-010055		2	C	Jolitz 宣布 2.8 的 clock spl6 问题不予修复、2.81 重写规避，并称 2.81 使 awk 可在 11/40 重编译	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.1.6	署名与致谢的版本变化	claim	CL-RM-010405		2	C	2019 年 5 月 Martin Jakob 梳理 METALOG 文件在 pkgbase 中的枢纽地位：经 mtree-to-plist.awk 转换生成包清单，揭示打包流水线核心机制。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.2.1	正则工程的作者构成	fulltext_summary	2764	2764	6	A	…x 程序员手册、Dennis 传记）、第六版（1975）（文件系统、系统调用、shell、管道、grep、正则表达式、C 语言、Software Tools 与 Ratfor、McIlroy 传记）…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.2.1	正则工程的作者构成	fulltext_fact	7279	1527	4	A	V7 手册第一卷为命令参考，系统收录了 V7 的基础工具（ls、cat、ed、grep、sed、awk、make、yacc 等），构成后来 POSIX 工具集的原型。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.1	正则工程的作者构成	fulltext_summary	1527	1527	4	A	…第七版（V7）程序员手册第一卷，收录了 V7 系统的基础命令与工具参考（如 ls、cat、ed、grep、sed、awk、make、yacc 等），是 V7 黄金时代命令行工具生态的一手原始文档。手…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.2.1	正则工程的作者构成	claim	CL-RM-029176		4	A	MS-DOS 上的 vi 可向 MKS 购买其 Toolkit 含 awk 与 diff 与 grep 与 sed 等报价 199 美元并附公司地址	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.1	正则工程的作者构成	claim	CL-RM-032369		4	A	D'Arcy Cain 自述从 C 定长记录 fseek 模型转向 Unix 扁平 ASCII 行式文件，理由是 sed、awk、grep 可直接处理。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.2	流编辑器的诞生场景	meta_block	11543		2	B	7.5 awk/sed/grep 的诞生与组件化哲学	可推（open）	元数据块候选（须核原文）
+V04.4.2.2	流编辑器的诞生场景	fulltext_fact	7279	1527	2	B	V7 手册第一卷为命令参考，系统收录了 V7 的基础工具（ls、cat、ed、grep、sed、awk、make、yacc 等），构成后来 POSIX 工具集的原型。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.2	流编辑器的诞生场景	fulltext_fact	9407	3722	2	B	…y L.L. Cherry，含 UNIX 命令速查表（ar、awk、cc、cp、ed、grep、sed 等）	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.2	流编辑器的诞生场景	claim	CL-RM-010034		2	C	Warner Losh 诊断 freebsd-update-build 以 sed 直接改写 newvers.sh 的 BRANCH 行导致构建不可复现	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.2.2	流编辑器的诞生场景	claim	CL-RM-011195		2	C	2002-10-26 Mark Valentine 提交 /usr/posix 目录补丁，安装与 BSD 传统行为冲突的 POSIX.1 版本工具（expr、sed 等）以避免破坏兼容。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.2.3	模式搜索工具的意外成名	kaoju	66		2	B	…文件条目（参考文献同步批次另行处理），但 17 条文献的著录格式与既有 BSD 学术论文条目经 Grep 工具交叉对照一致。 8. **bsd_commits.db 全 23 仓库 commit…	可推（open）	既有考据记录（补证链参照）
+V04.4.2.3	模式搜索工具的意外成名	kaoju	381		2	B	…y、freebsd-committers 邮件列表进行离线全文检索（下载 mbox 归档后本地 grep）；扩展关键词至"China BSD""PLA NUDT""国防科技大学""江南计算"等；与 F…	可推（open）	既有考据记录（补证链参照）
+V04.4.2.3	模式搜索工具的意外成名	fulltext_fact	7279	1527	2	B	V7 手册第一卷为命令参考，系统收录了 V7 的基础工具（ls、cat、ed、grep、sed、awk、make、yacc 等），构成后来 POSIX 工具集的原型。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.3	模式搜索工具的意外成名	claim	CL-RM-011985		2	C	Guy Harris 长文剖析 S5R2 的 fread/fwrite/fgets/fputs 实现改动与 fgetl 引入及 grep 性能问题——System V R2 stdio 实现演化的一手技术史	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.2.3	模式搜索工具的意外成名	claim	CL-RM-012175		2	C	McCarron 答 Gwyn：1003.2 单一 grep 加 -E/-F 并非背弃 monocase 初衷，codifying existing practice 标准哲学之辩	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.2.4	正则语法的表达力权衡	fulltext_summary	2764	2764	5	A	…x 程序员手册、Dennis 传记）、第六版（1975）（文件系统、系统调用、shell、管道、grep、正则表达式、C 语言、Software Tools 与 Ratfor、McIlroy 传记）、…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.2.4	正则语法的表达力权衡	fulltext_fact	7279	1527	4	A	V7 手册第一卷为命令参考，系统收录了 V7 的基础工具（ls、cat、ed、grep、sed、awk、make、yacc 等），构成后来 POSIX 工具集的原型。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.4	正则语法的表达力权衡	fulltext_fact	kf-tb3-3681-005	3681	4	A	Awk 一手文档：如预期所示，awk 的速度不及 wc、sed 与 grep 系列等专用工具。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.4	正则语法的表达力权衡	claim	CL-RM-029176		4	A	MS-DOS 上的 vi 可向 MKS 购买其 Toolkit 含 awk 与 diff 与 grep 与 sed 等报价 199 美元并附公司地址	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.4	正则语法的表达力权衡	claim	CL-RM-032369		4	A	D'Arcy Cain 自述从 C 定长记录 fseek 模型转向 Unix 扁平 ASCII 行式文件，理由是 sed、awk、grep 可直接处理。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.5	工具命名的由来与流传	fulltext_fact	7279	1527	4	A	V7 手册第一卷为命令参考，系统收录了 V7 的基础工具（ls、cat、ed、grep、sed、awk、make、yacc 等），构成后来 POSIX 工具集的原型。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.5	工具命名的由来与流传	fulltext_summary	1527	1527	4	A	…第七版（V7）程序员手册第一卷，收录了 V7 系统的基础命令与工具参考（如 ls、cat、ed、grep、sed、awk、make、yacc 等），是 V7 黄金时代命令行工具生态的一手原始文档。手册…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.2.5	工具命名的由来与流传	fulltext_fact	kf-tb3-3681-005	3681	4	A	Awk 一手文档：如预期所示，awk 的速度不及 wc、sed 与 grep 系列等专用工具。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.5	工具命名的由来与流传	claim	CL-RM-029176		4	A	MS-DOS 上的 vi 可向 MKS 购买其 Toolkit 含 awk 与 diff 与 grep 与 sed 等报价 199 美元并附公司地址	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.5	工具命名的由来与流传	claim	CL-RM-032369		4	A	D'Arcy Cain 自述从 C 定长记录 fseek 模型转向 Unix 扁平 ASCII 行式文件，理由是 sed、awk、grep 可直接处理。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.6	小工具的署名与归属	fulltext_summary	1527	1527	4	A	…第七版（V7）程序员手册第一卷，收录了 V7 系统的基础命令与工具参考（如 ls、cat、ed、grep、sed、awk、make、yacc 等），是 V7 黄金时代命令行工具生态的一手原始文档。手…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.2.6	小工具的署名与归属	fulltext_fact	kf-tb3-3681-005	3681	4	A	Awk 一手文档：如预期所示，awk 的速度不及 wc、sed 与 grep 系列等专用工具。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.6	小工具的署名与归属	fulltext_fact	7279	1527	4	A	V7 手册第一卷为命令参考，系统收录了 V7 的基础工具（ls、cat、ed、grep、sed、awk、make、yacc 等），构成后来 POSIX 工具集的原型。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.2.6	小工具的署名与归属	claim	CL-RM-029176		4	A	MS-DOS 上的 vi 可向 MKS 购买其 Toolkit 含 awk 与 diff 与 grep 与 sed 等报价 199 美元并附公司地址	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.2.6	小工具的署名与归属	claim	CL-RM-032369		4	A	D'Arcy Cain 自述从 C 定长记录 fseek 模型转向 Unix 扁平 ASCII 行式文件，理由是 sed、awk、grep 可直接处理。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.1	命令解释器的家族源流	kaoju	402		6	A	…sick 为 CSRG 核心成员） - **新闻摘要**：McKusick 详述 vi 与 C-Shell 诞生过程：Bill Joy 与 Chuck Haley 起初在 PDP-11 上用 Model…	可推（open）	既有考据记录（补证链参照）
+V04.4.3.1	命令解释器的家族源流	meta_block	11767		6	A	15.6 Shell 家族：BSD 的命令语言——Thompson shell、Bourne shell 与 C s…	可推（open）	元数据块候选（须核原文）
+V04.4.3.1	命令解释器的家族源流	mat	2840		6	A	2BSD 发布说明（csh 1.0 随 2BSD 1978 年中发布）；Joy, W. (1978) "An Introduc…	可推（open）	素材条目线索（须核原件）
+V04.4.3.1	命令解释器的家族源流	claim	CL-1-052		4	A	Spinellis 2017 年实证研究手工标注了 Research Unix 各版本的个人贡献分配表（Table 3），例如 Eric Schmidt 贡献 lex、Stephen C. Johnson 贡献 cc/l	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.1	命令解释器的家族源流	claim	CL-2-005		4	A	C Shell（csh）是伯克利为 UNIX 开发的新命令语言解释器，综合了其他 shell 的优良特性与类似 INTERLISP redo 的历史机制，其独有特性主要面向交互式用户。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.2	早期解释器的迭代作者	kaoju	359		4	A	…年首次发布） - vi 编辑器（由 Bill Joy 编写，1976 年） - csh shell（由 Bill Joy 编写，1978 年） - Ingres 数据库系统（由 …	可推（open）	既有考据记录（补证链参照）
+V04.4.3.2	早期解释器的迭代作者	fulltext_summary	1540	1540	4	A	Bill Joy 撰写的 C Shell（csh）入门文档：介绍 csh 作为交互式命令行解释器的核心特性——命令历史（受 INTERL…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.3.2	早期解释器的迭代作者	kaoju	402		4	A	…sick 为 CSRG 核心成员） - **新闻摘要**：McKusick 详述 vi 与 C-Shell 诞生过程：Bill Joy 与 Chuck Haley 起初在 PDP-11 上用 Model…	可推（open）	既有考据记录（补证链参照）
+V04.4.3.2	早期解释器的迭代作者	claim	CL-2-005		4	A	C Shell（csh）是伯克利为 UNIX 开发的新命令语言解释器，综合了其他 shell 的优良特性与类似 INTERLISP redo 的历史机制，其独有特性主要面向交互式用户。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.2	早期解释器的迭代作者	claim	CL-RM-011765		4	A	csh bug追溯至6th Edition shell	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.3	语法风格的分野与承袭	kaoju	402		5	A	…sick 为 CSRG 核心成员） - **新闻摘要**：McKusick 详述 vi 与 C-Shell 诞生过程：Bill Joy 与 Chuck Haley 起初在 PDP-11 上用 Model…	可推（open）	既有考据记录（补证链参照）
+V04.4.3.3	语法风格的分野与承袭	fulltext_summary	1540	1540	4	A	Bill Joy 撰写的 C Shell（csh）入门文档：介绍 csh 作为交互式命令行解释器的核心特性——命令历史（受 INTERL…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.3.3	语法风格的分野与承袭	kaoju	359		4	A	…年首次发布） - vi 编辑器（由 Bill Joy 编写，1976 年） - csh shell（由 Bill Joy 编写，1978 年） - Ingres 数据库系统（由 …	可推（open）	既有考据记录（补证链参照）
+V04.4.3.3	语法风格的分野与承袭	claim	CL-2-005		4	A	C Shell（csh）是伯克利为 UNIX 开发的新命令语言解释器，综合了其他 shell 的优良特性与类似 INTERLISP redo 的历史机制，其独有特性主要面向交互式用户。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.3	语法风格的分野与承袭	claim	CL-RM-011765		4	A	csh bug追溯至6th Edition shell	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.4	可编程特性的引入路径	kaoju	402		5	A	…sick 为 CSRG 核心成员） - **新闻摘要**：McKusick 详述 vi 与 C-Shell 诞生过程：Bill Joy 与 Chuck Haley 起初在 PDP-11 上用 Model…	可推（open）	既有考据记录（补证链参照）
+V04.4.3.4	可编程特性的引入路径	kaoju	359		4	A	…年首次发布） - vi 编辑器（由 Bill Joy 编写，1976 年） - csh shell（由 Bill Joy 编写，1978 年） - Ingres 数据库系统（由 …	可推（open）	既有考据记录（补证链参照）
+V04.4.3.4	可编程特性的引入路径	meta_block	11767		4	A	15.6 Shell 家族：BSD 的命令语言——Thompson shell、Bourne shell 与 C s…	可推（open）	元数据块候选（须核原文）
+V04.4.3.4	可编程特性的引入路径	claim	CL-2-005		4	A	C Shell（csh）是伯克利为 UNIX 开发的新命令语言解释器，综合了其他 shell 的优良特性与类似 INTERLISP redo 的历史机制，其独有特性主要面向交互式用户。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.4	可编程特性的引入路径	claim	CL-RM-011765		4	A	csh bug追溯至6th Edition shell	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.5	解释器维护的代际交接	fulltext_summary	1540	1540	4	A	Bill Joy 撰写的 C Shell（csh）入门文档：介绍 csh 作为交互式命令行解释器的核心特性——命令历史（受 INTERL…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.3.5	解释器维护的代际交接	kaoju	402		4	A	…sick 为 CSRG 核心成员） - **新闻摘要**：McKusick 详述 vi 与 C-Shell 诞生过程：Bill Joy 与 Chuck Haley 起初在 PDP-11 上用 Model…	可推（open）	既有考据记录（补证链参照）
+V04.4.3.5	解释器维护的代际交接	fulltext_fact	7314	1540	4	A	C Shell（csh）由 Bill Joy 在伯克利开发，作为交互式命令行解释器随 BSD 发行。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.3.5	解释器维护的代际交接	claim	CL-2-005		4	A	C Shell（csh）是伯克利为 UNIX 开发的新命令语言解释器，综合了其他 shell 的优良特性与类似 INTERLISP redo 的历史机制，其独有特性主要面向交互式用户。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.5	解释器维护的代际交接	claim	CL-RM-011765		4	A	csh bug追溯至6th Edition shell	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.6	早期版本的署名难点	kaoju	359		5	A	…年首次发布） - vi 编辑器（由 Bill Joy 编写，1976 年） - csh shell（由 Bill Joy 编写，1978 年） - Ingres 数据库系统（由 …	可推（open）	既有考据记录（补证链参照）
+V04.4.3.6	早期版本的署名难点	kaoju	402		4	A	…sick 为 CSRG 核心成员） - **新闻摘要**：McKusick 详述 vi 与 C-Shell 诞生过程：Bill Joy 与 Chuck Haley 起初在 PDP-11 上用 Model…	可推（open）	既有考据记录（补证链参照）
+V04.4.3.6	早期版本的署名难点	fulltext_fact	7314	1540	4	A	C Shell（csh）由 Bill Joy 在伯克利开发，作为交互式命令行解释器随 BSD 发行。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.3.6	早期版本的署名难点	claim	CL-2-005		4	A	C Shell（csh）是伯克利为 UNIX 开发的新命令语言解释器，综合了其他 shell 的优良特性与类似 INTERLISP redo 的历史机制，其独有特性主要面向交互式用户。	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.3.6	早期版本的署名难点	claim	CL-RM-011765		4	A	csh bug追溯至6th Edition shell	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.4.1	编辑器作者的范围划分	kaoju	361		5	A	…y 官方历史页面（一手系史）** - URL：https://eecs.berkeley.edu/about/history/（访问日期：2026-07-25） - 关键引文：“186…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.1	编辑器作者的范围划分	kaoju	402		4	A	…分发》（Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable，Marshall Kirk McKusic…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.1	编辑器作者的范围划分	meta_block	11952		4	A	26.10 1BSD 时期的技术淘汰——ed→ex 行编辑器演化、Thompson Pascal→Berkeley Pascal 与终端硬件…	可推（open）	元数据块候选（须核原文）
+V04.4.4.1	编辑器作者的范围划分	claim	CL-2-008		2	C	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.1	编辑器作者的范围划分	claim	CL-5-113		2	C	关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-3	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.2	行编辑器的功能设定	kaoju	402		5	A	…分发》（Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable，Marshall Kirk McKusic…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.2	行编辑器的功能设定	meta_block	11952		4	A	26.10 1BSD 时期的技术淘汰——ed→ex 行编辑器演化、Thompson Pascal→Berkeley Pascal 与终端硬件…	可推（open）	元数据块候选（须核原文）
+V04.4.4.2	行编辑器的功能设定	fulltext_fact	kf-tb3-3677-005	3677	4	A	…文档：sdb 提供源文搜索与显示，使不必反复查阅当前源清单即可调试，当前文件与当前行的概念类似 ed/ex。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.4.2	行编辑器的功能设定	claim	CL-2-008		2	C	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.2	行编辑器的功能设定	claim	CL-5-113		2	C	关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-3	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.3	终端机型的适配工具	fulltext_summary	240	240	4	A	…也就造成网 络课堂不能正常启动 的故障。 服务器重启时，最 后系统提示“Cannot read termcap database; using dumb terminal sttings.”， 系统进入单用户…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.4.3	终端机型的适配工具	kaoju	498		2	B	…4 年 9 月 FreeBSD 10.1-RELEASE 发布，引入新的 VT（Virtual Terminal）驱动替代旧的 syscons 控制台驱动，并包含多项硬件改进。VT 驱动解决了 10.0 中 …	可推（open）	既有考据记录（补证链参照）
+V04.4.4.3	终端机型的适配工具	kaoju	402		2	B	…出现，Joy 终于能编写 vi，将基于屏幕的编辑引入伯克利；Joy 为统一管理多终端特性创建了 termcap；1978 年中 2BSD 发布，包含增强 Pascal 系统、vi、termcap；2BSD 在…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.3	终端机型的适配工具	claim	CL-2-009		2	C	curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.3	终端机型的适配工具	claim	CL-3-057		2	C	Ken Arnold 1982 年记载屏幕更新与光标移动优化库（curses）的例程均使用 termcap(5) 数据库描述终端能力。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.4	编辑操作习惯的固化	kaoju	402		5	A	…分发》（Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable，Marshall Kirk McKusic…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.4	编辑操作习惯的固化	meta_block	11952		4	A	26.10 1BSD 时期的技术淘汰——ed→ex 行编辑器演化、Thompson Pascal→Berkeley Pascal 与终端硬件…	可推（open）	元数据块候选（须核原文）
+V04.4.4.4	编辑操作习惯的固化	fulltext_fact	kf-tb3-3677-005	3677	4	A	…文档：sdb 提供源文搜索与显示，使不必反复查阅当前源清单即可调试，当前文件与当前行的概念类似 ed/ex。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.4.4	编辑操作习惯的固化	claim	CL-2-008		2	C	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.4	编辑操作习惯的固化	claim	CL-5-113		2	C	关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-3	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.5	作者贡献的署名与匿名	kaoju	402		5	A	…分发》（Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable，Marshall Kirk McKusic…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.5	作者贡献的署名与匿名	sacred	4186		3	C	…certainty and doubt in the critical moment, it led to a massive loss of territory to Linux outcome…	可推（open）	史观参照（不作证据，仅定题面归属）
+V04.4.4.5	作者贡献的署名与匿名	kaoju	505		2	B	…://www.phoronix.com/news/FreeBSD-15.0-RC1-Released + https://web.archive.org/web/2025/https://www.…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.5	作者贡献的署名与匿名	claim	CL-2-007		2	C	vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.5	作者贡献的署名与匿名	claim	CL-2-008		2	C	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.6	编辑工具的记录与缺载	kaoju	402		4	A	…分发》（Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable，Marshall Kirk McKusic…	可推（open）	既有考据记录（补证链参照）
+V04.4.4.6	编辑工具的记录与缺载	meta_block	11952		4	A	26.10 1BSD 时期的技术淘汰——ed→ex 行编辑器演化、Thompson Pascal→Berkeley Pascal 与终端硬件…	可推（open）	元数据块候选（须核原文）
+V04.4.4.6	编辑工具的记录与缺载	fulltext_fact	kf-tb3-3677-005	3677	4	A	…文档：sdb 提供源文搜索与显示，使不必反复查阅当前源清单即可调试，当前文件与当前行的概念类似 ed/ex。	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.4.6	编辑工具的记录与缺载	claim	CL-2-008		2	C	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性使 ex/vi 在大量终端与 Unix 系统上工作。	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.4.6	编辑工具的记录与缺载	claim	CL-5-113		2	C	关于 FreeBSD 迁移到 Subversion 的时间存在矛盾：McKusick 称经辩论后于 2000 年迁到 Subversion，而 Ed Maste 的版本控制历史显示 src/ 仓库直到 2008-05-3	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.1	编译器与配套工具的分工	kaoju	497		3	B	…10 将使用 Clang 编译器，弃用 GCC（FreeBSD 10 To Use Clang Compiler, Deprecate GCC） - **新闻来源**：Phoronix + Michael L…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.1	编译器与配套工具的分工	kaoju	390		2	B	…e 1985 BSD Pascal”“Computer Language 1986 BSD C compiler”等关键词，部分命中 Internet Archive Byte 杂志扫描存档但内容非结构化文本…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.1	编译器与配套工具的分工	fulltext_summary	316	316	2	B	…vice Tree Blob （DTB）两种数据形式，通过特定的编译器 Device Tree Compiler （DTC）实现转换，满足开发可读 性与运行高效性的双重需求。 DTS 是设备树的源文件，后缀为…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.5.1	编译器与配套工具的分工	claim	CL-RM-013297		2	C	Jan-Benedict Glaw 揭示 Compiler Explorer 上线 VAX GCC NetBSDELF 10.4.0 的过程：由其发起 CE issue #4783 并协助脚本，编译器直接取自 NetBS	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.1	编译器与配套工具的分工	claim	CL-RM-015195		2	C	Atrens报mmxopt=0下buildworld随机internal compiler error并偶发panic（poll()路径trap转储），与Dillon展开20封全天拉锯（61823-61846）：Atre	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.2	史蒂夫·约翰逊的可移植编译器	kaoju	547		4	A	… C Programming Language》ISBN 0-13-110163-3 - Johnson S C. 1978 POPL PCC 论文 - Johnson S C. 1979 Be…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.2	史蒂夫·约翰逊的可移植编译器	fulltext_summary	1274	1274	4	A	S.C. Johnson 与 D.M. Ritchie 论述程序（尤其 Unix 系统与大部分软件）向 Interdat…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.5.2	史蒂夫·约翰逊的可移植编译器	fulltext_fact	kf-tb1-3334-003	3334	2	B	Stephen Johnson（Bell Labs）可移植 C 编译器的移植实绩（1980-03 阿姆斯特丹 Vrije Un…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.5.2	史蒂夫·约翰逊的可移植编译器	claim	CL-1-052		4	A	Spinellis 2017 年实证研究手工标注了 Research Unix 各版本的个人贡献分配表（Table 3），例如 Eric Schmidt 贡献 lex、Stephen C. Johnson 贡献 cc/l	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.5.2	史蒂夫·约翰逊的可移植编译器	claim	CL-RM-020710		4	A	Clifton 发 V7 C 规格 A.2 版增订：删 signed 并加注 Ritchie 原版 V7 编译器本无 void 无符号扩展与独立成员名空间，Johnson 的 PCC 才是首倡，后世多数编译器承其血统	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.5.3	语法分析器的生成工具	fulltext_summary	326	326	5	A	…OC－by－Language （Sorted） 922719 dev ansic＝920245，yacc＝1651，lex＝763，perl＝36，sh＝24 222527 contrib ansic…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.5.3	语法分析器的生成工具	fulltext_fact	kf-tb3-3678-002	3678	4	A	注释目录一手文档：YACC 由语言 BNF 规范与 C 语言写的语义动作转换成该语言的编译器；LEX 则生成正则表达式集合…	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.5.3	语法分析器的生成工具	kaoju	390		4	A	…cKusick 1999 Open Sources 章节确证 4. **BSD 工具链（awk、lex/yacc、lint、cb、cflow）支撑 C 语言生态**：经 McKusick 1999 O…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.3	语法分析器的生成工具	claim	CL-1-052		4	A	Spinellis 2017 年实证研究手工标注了 Research Unix 各版本的个人贡献分配表（Table 3），例如 Eric Schmidt 贡献 lex、Stephen C. Johnson 贡献 cc/l	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.5.3	语法分析器的生成工具	claim	CL-RM-011631		4	A	Avalon Unibus 辅处理器板（32016、1MB、约 1 万美元、附 4.2BSD 驱动与交叉编译器，MCNC 用于 yacc/lex/ccom/ditroff，速度约 0.5×780）；每板另需 UNIX 许	可推（open）	claim 复用（S2 先库后网，仍须联网复核）
+V04.4.5.4	编译理论的工程转化	kaoju	436		3	B	… to be replaced by another technically superior compiler that defended freedom equally well would cause …	可推（open）	既有考据记录（补证链参照）
+V04.4.5.4	编译理论的工程转化	kaoju	497		2	B	…10 将使用 Clang 编译器，弃用 GCC（FreeBSD 10 To Use Clang Compiler, Deprecate GCC） - **新闻来源**：Phoronix + Michael L…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.4	编译理论的工程转化	fulltext_fact	9423	3741	2	B	Four Generations of Portable C Compiler by David M. Kristol (AT&T, 1986)，PCC 编译器四代演进历史	可推（open）	全文补证候选（D1 型，核对原文后落块）
+V04.4.5.4	编译理论的工程转化	claim	CL-RM-013297		2	C	Jan-Benedict Glaw 揭示 Compiler Explorer 上线 VAX GCC NetBSDELF 10.4.0 的过程：由其发起 CE issue #4783 并协助脚本，编译器直接取自 NetBS	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.4	编译理论的工程转化	claim	CL-RM-015195		2	C	Atrens报mmxopt=0下buildworld随机internal compiler error并偶发panic（poll()路径trap转储），与Dillon展开20封全天拉锯（61823-61846）：Atre	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.5	工具链的衔接与约定	fulltext_summary	253	253	2	B	…尾工作的, 而动态加载 模块却需要自己完成这些工作。 2.2 内核模块的编译 编译时需要提供一个makefile 来隐藏底层大量的复杂操 作, 使用户通过make 命令就可以完成编译的任务。下面就是一 个简单的…	可推（open）	全文综述候选（D1 型，核对原文后落块）
+V04.4.5.5	工具链的衔接与约定	kaoju	474		2	B	…d 等人创建，旨在为 FreeBSD 提供统一的第三方软件构建与安装框架。Ports 系统基于 Makefile 与依赖管理机制，使用户能够从源代码自动构建并安装第三方软件，是 FreeBSD 区别于其他 BS…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.5	工具链的衔接与约定	mat	989		2	B	…it 5e0e9b99dc3f 含 `gnu/usr.bin/cc25/usr.bin.f77/Makefile` `lib/libF77/c_exp.c` 等——证实 FreeBSD 1.1 起基础系统已含…	可推（open）	素材条目线索（须核原件）
+V04.4.5.5	工具链的衔接与约定	claim	CL-RM-010063		2	C	Carter 记 2.8 磁带匆忙拼装的安装体验：文档称 8 小时装完，实际 Makefile 失灵、程序含拼写错误	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.5	工具链的衔接与约定	claim	CL-RM-010118		2	C	Izumi Tsutsui 历数 sun2 爱好者贡献：发现 3.0 多用户可用但 PAM 静态环境破损、提 PR 后开发者修复并 pullup 至 netbsd-3(-0)，并修复 m68k 软浮点 gcc4 缺陷与多	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.6	成果归属的文献证据	kaoju	497		3	B	…10 将使用 Clang 编译器，弃用 GCC（FreeBSD 10 To Use Clang Compiler, Deprecate GCC） - **新闻来源**：Phoronix + Michael L…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.6	成果归属的文献证据	kaoju	361		3	B	… Bell Labs Version 6 Unix 的 add-on，主要组件为 Pascal compiler 与 ex line editor；约 30 份磁带发出。 - 备注：1BSD 实际发布日…	可推（open）	既有考据记录（补证链参照）
+V04.4.5.6	成果归属的文献证据	mat	6929		2	B	FreeBSD 14.0/14.1/14.3 Release Notes Userland/Compiler 部分；LLVM 版本更新 commits；Clang/LLVM 在 FreeBSD 上的历史（…	可推（open）	素材条目线索（须核原件）
+V04.4.5.6	成果归属的文献证据	claim	CL-RM-013297		2	C	Jan-Benedict Glaw 揭示 Compiler Explorer 上线 VAX GCC NetBSDELF 10.4.0 的过程：由其发起 CE issue #4783 并协助脚本，编译器直接取自 NetBS	可推（open）	弱线索（仅工具名命中，须判相关性）
+V04.4.5.6	成果归属的文献证据	claim	CL-RM-015195		2	C	Atrens报mmxopt=0下buildworld随机internal compiler error并偶发panic（poll()路径trap转储），与Dillon展开20封全天拉锯（61823-61846）：Atre	可推（open）	弱线索（仅工具名命中，须判相关性）
