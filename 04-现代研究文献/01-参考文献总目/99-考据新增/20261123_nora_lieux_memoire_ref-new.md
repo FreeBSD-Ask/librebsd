@@ -34,6 +34,15 @@
 
 > The less memory is experienced collectively, the more it will require individuals to undertake to become themselves memory-individuals, as if an inner voice were to tell each Corsican "You must be Corsican" and each Breton "You must be Breton."
 
+
+**supp-V74-b008 新引三句（2026-11-25，同源 PDF 逐字；e1 媒体句跨页含期刊页眉串——quote 以…分段跳过）**：
+
+> Indeed, we have seen the tremendous dilation of our very mode of historical perception, which, with the help of the media, has substituted for a REPRESENTATIONS 26 Spring 1989 O THE REGENTS OF THE UNIVERSITY OF CALIFORNIA memory entwined in the intimacy of a collective heritage the ephemeral film of current events.
+
+> Indeed, it is this very push and pull that produces lieux de mémoire-moments of history torn away from the movement of history, then returned; no longer quite life, not yet death, like shells on the shore when the sea of living memory has receded.
+
+> it nourishes recollections that may be out of focus or telescopic, global or detached, particular or symbolic-responsive to each avenue of conveyance or phenomenal screen, to every censorship or projection.
+
 > This conquest and eradication of memory by history has had the effect of a revelation, as if an ancient bond of identity had been broken and something had ended that we had experienced as self-evident-the equation of memory and history.
 
 > The fact that only one word exists in French to designate both lived history and the intellectual operation that renders it intelligible (distinguished in German by Geschichte and Historie) is a weakness of the language that has often been remarked; still, it delivers a profound truth: the process that is carrying us forward and our representation of that process are of the same kind.
