@@ -1,0 +1,38 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V07.3.1.1	以连续编号串起来的报告系列	claim	CL-15-017		—	C	参考文献全文数据库收录《CSTR 33》（unknown，1975），作为本章主题的候选史料（L2）	可推	claim 复用（报告单件在册）
+V07.3.1.1	以连续编号串起来的报告系列	claim	CL-RM-013808		—	B	Lesk、Johnson、Ritchie 的 C 调用序列论文改出 BTL 技术报告付印（L4）	可推	claim 复用（论文改出报告付印）
+V07.3.1.2	编号、著者与年份三栏并列著录	claim	CL-RM-080579		—	B	Doug Gwyn 援引贝尔实验室 CSTR 102 号报告作为经典依据（L4）——编号本身即检索标识	部分可用	claim 复用（编号引用面）
+V07.3.1.3	系统与语言两类构成题材主体	claim	CL-RM-084354		—	B	CSTR 第 117 号报告记录 4.2BSD 的 TCP/IP 软件弱点（L3）	部分可用	claim 复用（题材分布例证）
+V07.3.1.4	按函索与机构交换向校外流通的渠道	claim	CL-RM-071137		—	A	系统调用追踪设施源码发布，技术报告可函索，属早期内核史实（L4）	可推	claim 复用（函索渠道）
+V07.3.1.5	存本稀少、数字化补位	缺口			0.00	—	四核心库与 original_sources 本轮检索面无可用同题块	候选缺口	P2 联网（全题必经）
+V07.3.2.1	简装合订的早期文集	claim	CL-RM-010024		—	A	1981 年 Bill Jolitz 预告 USENIX 2.8BSD 鸟群聚会，实现者携官方缺陷报告与修订到场（L4）	可推	claim 复用（会议与鸟群会形态）
+V07.3.2.1	简装合订的早期文集	fulltext_fact	kf-bell-10021-021	10021	0.21	C	Frank B. Jewett 领导了 Bell Telephone Laboratories 的早期发展	部分可用（机构背景）	机构背景，不作形制证据
+V07.3.2.2	管理、移植与工具三类论文	claim	CL-RM-026998		—	A	USENIX 八三年夏季会议录载有 ksh 及其编辑功能的论文（L4）	可推	claim 复用（题材实例）
+V07.3.2.2	管理、移植与工具三类论文	fulltext_summary	154	154	0.20	C	Bidirectional Forwarding Detection (BFD) implementation and support in OpenBSD Peter Hessler phessler@openbsd.org OpenBS	不可用	不作证据（现代 OpenBSD 网络题材）
+V07.3.2.2	管理、移植与工具三类论文	fulltext_summary	171	171	0.20	C	Opening The Source Repository With Anonymous CVS Charles D. Cranor Theo de Raadt AT&T Labs-Research The OpenBSD Project 	不可用	不作证据（现代版本控制题材）
+V07.3.2.3	报告人多出自大学	claim	CL-1-00510		—	A	1979 年 USENIX 夏季会议纪要：多伦多大学、伊利诺伊大学、新南威尔士大学等分别报告（L4）	可推	claim 复用（报告人机构构成）
+V07.3.2.4	会员限定发行、印数有限的发行面	claim	CL-RM-027030		—	A	USENIX 八四年夏季会议录载 TEMPO 论文，并给出会议录购买方式与价格（L4）	可推	claim 复用（发行面与售价）
+V07.3.2.4	会员限定发行、印数有限的发行面	claim	CL-RM-010060		—	A	2.81 仅在波士顿 USENIX 以 alpha 形式发放，限 2.8 许可证持有者并须回寄缺陷修复磁带（L4）	可推	claim 复用（发行限制）
+V07.3.2.5	会议录与期刊本的先后	claim	CL-RM-018074		—	B	1984 年盐湖城夏季会议征稿通知：首次计划在会议当天发论文集（L3）	可推	claim 复用（会议录先于期刊刊出）
+V07.3.2.5	会议录与期刊本的先后	fulltext_summary	33	33	0.20	C	AT&T Bell Laboratories Technical Journal Vol. 63, No.8, October 1984 Printed in U.S.A. The UNIX System: Program Design i	部分可用（期刊本外证）	期刊本形制外证，须核原件
+V07.3.2.5	会议录与期刊本的先后	fulltext_summary	877	877	0.20	C	AT&T Bell Laboratories Technical Journal Vol. 63, No.8, October 1984 Printed in U.S.A. The UNIX System: The Evolution of	部分可用（期刊本外证）	期刊本形制外证，须核原件
+V07.3.3.1	刊物报道前后相继	claim	CL-1-00481		—	A	1977-07 AT&T 律师禁刊名用 UNIX 一词，致主编费伦茨的《UNIX NEWS》更名，1978-05 定名 ;login:（L4）	可推	迁移面外证（刊物沿革；本章已实填，不另补块）
+V07.3.3.1	刊物报道前后相继	claim	CL-1-00496		—	B	1978 年该组织是许可证用户获取缺陷修复与应用软件的唯一渠道（L4）	可推	迁移面外证（渠道面）
+V07.3.3.1	刊物报道前后相继	ref_title	10599	10599	0.21	C	Netscape's play: Bold or desperate?（CNET 1998-01-23 报道） Alex Lash 1998	不可用	不作证据（与本卷媒体面无关）
+V07.3.3.2	报道口径与可核史实之间的出入	sacred	232		—	B	10.12 真理性的层级	可推	史观参照（不作证据，仅定题面归属）
+V07.3.3.3	访谈与厂商材料两处来源	claim	CL-RM-080279		—	C	Uniq 在若干 Unix 行业刊物上刊登相关广告（L3）——厂商材料的一手痕迹	可推	claim 复用（厂商材料）
+V07.3.3.3	访谈与厂商材料两处来源	ref_title	2446	2446	0.25	C	Berkeley DB 访谈（Seltzer/Olson） ACM QUEUE 2022	部分可用（访谈体裁）	访谈体裁样例，非本章证据
+V07.3.3.3	访谈与厂商材料两处来源	ref_title	2660	2660	0.25	C	bsdtalk EP018: Kirk McKusick 访谈（2006） Marshall Kirk McKusick 2006	部分可用（访谈体裁）	访谈体裁样例，非本章证据
+V07.3.3.4	媒体报道为何滞后多年？	缺口			0.00	—	四核心库与 original_sources 本轮检索面无可用同题块	候选缺口	P2 联网（全题必经）
+V07.3.3.5	剪报与存档构成媒体面的底本	claim	CL-18-00072		—	B	1976-03 普渡大学实验室致信《UNIX NEWS》编辑，报告试验 UNIX 并计划迁移（L4）	可推	claim 复用（刊物存件）
+V07.3.4.1	随软件协议分发的文档集合与增补卷	claim	CL-RM-011865		—	A	Guy Harris 引 V7 1980-12-02 增补带 README，证 fgrep 等修复未达发行方（L4）	可推	claim 复用（增补卷流通）
+V07.3.4.2	文章讲理、手册记用	claim	CL-1-050		—	A	V7 手册前言（1979）致谢 Thompson 与 Ritchie 之外的 16 位贡献者（L4）	可推	claim 复用（手册文本自述）
+V07.3.4.2	文章讲理、手册记用	ref_title	10418	10418	0.36	B	jail(8) — FreeBSD 系统管理手册页 The FreeBSD Project 2026	部分可用（手册页体裁）	手册页体裁样例，非本章证据
+V07.3.4.2	文章讲理、手册记用	claim	CL-RM-011678		—	C	null filename 在 UNIX TSS 与 Unix 3.0 手册中的差异（L3）	部分可用	手册体例对照（他期）
+V07.3.4.2	文章讲理、手册记用	ref_title	5819	5819	0.27	C	T. (1996) USENIX 文章 1996	不可用	不作证据（著录残缺）
+V07.3.4.2	文章讲理、手册记用	fulltext_summary	98	98	0.26	C	softraid boot Stefan Sperling <stsp@openbsd.org> EuroBSDcon 2015 Introduction to softraid OpenBSD’s softraid(4) device e	不可用	不作证据（现代会议题材）
+V07.3.4.3	写作规范见于文本样本	claim	CL-RM-496534		—	B	Kernighan 回忆《编程格调》体例仿《风格的要素》，把文章写作规范移入代码实践（L2）	可推	claim 复用（写作规范源流）
+V07.3.4.3	写作规范见于文本样本	fulltext_fact	kf-bell-10018-1125	10018	0.21	C	1904年AT&TCo发布Engineering Bulletin No. 11规定PBX操作规范	部分可用（工程规范前史）	AT&T 工程规范前史（1904），须核年代口径
+V07.3.4.3	写作规范见于文本样本	claim	CL-RM-496533		—	B	《编程格调》以写作训练类比编程训练，声明风格原则适用于一切语言（L4）	部分可用	同上（第二源）
+V07.3.4.4	文档存件逐件可核	缺口			0.00	—	四核心库与 original_sources 本轮检索面无可用同题块	候选缺口	P2 联网（全题必经）
+V07.3.4.5	正式出版物与内部文档的收档线	claim	CL-RM-011837		—	C	Joel West 记 DEC 与 AT&T 删手册 BUGS 节而 Gould 改称 Special Considerations（L3）	部分可用	收档边界例（版本间删改）
