@@ -1,0 +1,71 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V51.6.1.1	分叉起因的简化版本	claim	CL-RM-494232	2072	0.82	A	2003-07-16 Dillon 在 freebsd-hackers 宣布 DragonFly BSD，声明三项意图：接管 4.x 树的开发、把内核开发引向全新的 SMP 路径、完全重写打包与分发系统	可推	claim 复用（技术动因面；公告为邮件体，须配非邮件载体）
+V51.6.1.1	分叉起因的简化版本	claim	CL-RM-496368	2072	0.78	A	Dillon 建项公告自陈 FreeBSD 5.x 基线 mutex 过重、自 4.x 前行更快，锁路线差异构成建项技术动因	可推	claim 复用（技术动因面）
+V51.6.1.1	分叉起因的简化版本	claim	CL-RM-000706	2072	0.80	A	Matthew Dillon 于 2003 年 7 月 16 日 12:41:34 PDT 在 freebsd-current 发布 fork 公告，标题原文拼写 Annoucning DragonFly BSD!	可推	claim 复用（时点锚）
+V51.6.1.1	分叉起因的简化版本	ref_title	2503	2503	0.55	C	FreeBSD Core Developer Thrown Out（Linux.com 转 Slashdot，2003）	待核	传言载体 D2（须核原文、日期与措辞）
+V51.6.1.1	分叉起因的简化版本	ref_title	11121	11121	0.52	C	Matthew Dillon Lost Commit Access to FreeBSD（OSNews）	待核	传言载体 D2（同上；判为“有记载的传言”）
+V51.6.1.1	分叉起因的简化版本	note	已用面	—	—	—	V51.1.1.1 已用 CL-RM-493818（可靠起点＋异路）、V51.1.1.3 已用 496638／496639（人事承续、用户态自证）	已占用	本题须取“简化版本”facet，勿复述分叉理由本体
+V51.6.1.2	单开发者项目的传闻	ref_fulltext	1229	1229	0.66	A	Hsu J M, The DragonFlyBSD Operating System（AsiaBSDCon 2004），fulltext 28 069 字符，fb 0/sum 1/kf 3	可推	D1（作者自述项目目标与协作面）
+V51.6.1.2	单开发者项目的传闻	ref_title	10414	10414	0.61	B	DragonFly BSD — Team（团队页，2026）	待核	D2（多成员名单）
+V51.6.1.2	单开发者项目的传闻	db	dragonfly.duckdb	—	0.70	A	commits 656 207；distinct author_email 209；min author_date 2003-06-17T02:57:24Z；max 2026-08-18	可推	二级库佐证（块载体须主会话裁定；不得单独作 D1）
+V51.6.1.2	单开发者项目的传闻	claim	CL-RM-496638	10250	0.50	B	同时代报道记 DragonFly 为 FreeBSD-4.x 逻辑延续，同段把 Dillon 记为主要推动者	已占用	勿重复（V51.1.1.3，b010 已用）
+V51.6.1.3	HAMMER 与 ZFS 的混淆	ref_title	2075	2075	0.62	B	THE HAMMER FILESYSTEM（hammer.pdf，2008-06-21），DB 内 fulltext 仅 87 字符＝占位桩	待核	D2 主证（须重取全文并重登记）
+V51.6.1.3	HAMMER 与 ZFS 的混淆	ref_title	10521	10521	0.60	B	The HAMMER filesystem（HAMMER2 节）：HAMMER2 为 HAMMER 继任者，2012 起开发，官方默认文件系统	待核	D2 辅证
+V51.6.1.3	HAMMER 与 ZFS 的混淆	ref_title	10843	10843	0.58	B	HAMMER2 DESIGN DOCUMENT（sys/vfs/hammer2/DESIGN），署名 Matthew Dillon	待核	D2 辅证（设计自述）
+V51.6.1.3	HAMMER 与 ZFS 的混淆	claim	CL-RM-127464	—	0.55	B	Dillon 指出 BSD 世界基于快照的备份方案只有 HAMMER 与 ZFS 可选，并称 UFS 快照存在诸多问题	可推	D2（“替代说”缘起的可核表述）
+V51.6.1.3	HAMMER 与 ZFS 的混淆	claim	CL-RM-047874	—	0.45	C	Joe Smith 提出用 ZFS 取代 HAMMER2	线索	邮件体，须另找非邮件载体
+V51.6.1.4	高可用功能的传言检验	ref_title	10521	10521	0.70	B	HAMMER 页“Future and TBD Features”段：multi-master、master-slave、复制镜像等为预留字段、尚未实现	待核	D2 主证（须以 Wayback 快照固化抓取时点）
+V51.6.1.4	高可用功能的传言检验	ref_title	10843	10843	0.58	B	HAMMER2 DESIGN DOCUMENT	待核	D2 辅证（设计预留与实现状态须逐条核）
+V51.6.1.4	高可用功能的传言检验	gap	—	—	—	—	三库无 claim；官方页须固化快照后方可落块	无候选	候选缺口（主证在抓取面，不在库内）
+V51.6.1.5	传言交叉验证的三源	ref_title	2072	2072	0.55	B	Annoucning DragonFly BSD!（公告原件），DB 内 fulltext 仅 90 字符＝占位桩	待核	线索（邮件体，不落 DOC_MINE）
+V51.6.1.5	传言交叉验证的三源	ref_title	10249	10249	0.68	A	DragonFly BSD — History；实体存档 04-现代研究文献/03-文献下载/07-网页参考/20261111_dragonflybsd_history.md（5 445 B，可读全文）	可推	D2（项目自述面；须按规范登记全文）
+V51.6.1.5	传言交叉验证的三源	ref_title	2291	2291	0.45	C	DragonFly BSD: The announcement of the fork（2003-07-16），source_url 仅域名	待核	与 ref2072 同源，查重后弃
+V51.6.1.5	传言交叉验证的三源	db	dragonfly.duckdb	—	0.70	A	首提交 author_date 2003-06-17T02:57:24Z（提交哈希待回库复核）	可推	三源之代码库（块载体待裁定）
+V51.6.1.6	考据结论的分级标注	gap	—	—	—	—	三库无候选；属本书体例自述（已证／存疑／失实三级）	无候选	体例—自证类（见章批计划 §六.3）
+V51.6.2.1	分叉周年的自述刻度	ref_title	2221	2221	0.55	C	DragonFly BSD 1.0 Release（2004），source_url 仅域名，fulltext 119 字符＝占位桩	待核	D2（须重取 1.0 发行说明或发行页）
+V51.6.2.1	分叉周年的自述刻度	ref_title	2338	2338	0.50	C	DragonFly BSD Releases 总页（2026）	待核	定位 1.0 发行条并取非邮件载体
+V51.6.2.1	分叉周年的自述刻度	repo_note	20260815 考据记录	—	0.60	B	Message-ID 200407121832.i6CIWZ0K088095（2004-07-12）载 One year after starting the project as a fork off the FreeBSD-4.x tree	线索	邮件界线：只作线索，须在非邮件载体复现方落块
+V51.6.2.1	分叉周年的自述刻度	ref_title	2789	2789	0.315	B	The OpenBSD 2.0 release（旧 S1 命中）	拒收	错路由：他项目公告
+V51.6.2.2	习俗判定的存档凭据	ref_title	10434	10434	0.55	B	DragonFly BSD — Mailing Lists（2021）	待核	D2（列表制度页）
+V51.6.2.2	习俗判定的存档凭据	ref_title	10832	10832	0.52	B	DragonFly BSD Mailing List Archives（lists 现行存档根）	待核	D2（存档入口）
+V51.6.2.2	习俗判定的存档凭据	ref_title	10855	10855	0.45	C	lists.dragonflybsd.org mailman listinfo 总册页	待核	D2（列表清单）
+V51.6.2.2	习俗判定的存档凭据	ref_title	10816	10816	0.45	C	DragonFly BSD Mailing List Archives（leaf 旧存档）	待核	D2（历史存档面）
+V51.6.2.2	习俗判定的存档凭据	claim	CL-RM-015151	—	0.42	C	新订阅用户提议官网开 web 论坛，corecode 回长文阐述邮件列表治理立场	线索	邮件体，只作线索
+V51.6.2.2	习俗判定的存档凭据	ref_title	2460	2460	0.236	C	marc.info OpenBSD 邮件列表存档（旧 S1 命中）	拒收	错路由：非 DragonFly 列表
+V51.6.2.2	习俗判定的存档凭据	ref_title	5762	5762	0.231	C	TUHS 邮件列表公开发布公告（旧 S1 命中）	拒收	错路由：他项目
+V51.6.2.3	文件系统设计的单一架构师传统	ref_title	10843	10843	0.60	B	HAMMER2 DESIGN DOCUMENT，署名 Matthew Dillon	待核	D2 主证（署名与设计自述）
+V51.6.2.3	文件系统设计的单一架构师传统	ref_title	10827	10827	0.45	C	DragonFly diary（Dillon 开发日记页，2007）	待核	D2 辅证（长文载体，非邮件）
+V51.6.2.3	文件系统设计的单一架构师传统	ref_title	10521	10521	0.40	C	HAMMER 页（HAMMER2 继任叙述）	待核	D2 辅证
+V51.6.2.3	文件系统设计的单一架构师传统	ref_title	2460	2460	0.223	C	OpenBSD 邮件列表存档（旧 S1 命中）	拒收	错路由
+V51.6.2.4	吉祥物在公告中的位置	claim	CL-RM-014676	—	0.55	B	漫画家 Joe Angerson 为 DragonFly 设计卡通吉祥物 Fred 并提供 EPS 与 Illustrator 源文件	已占用	重叠：树内 7.3.1／7.4.1—7.4.6 已用 7 处
+V51.6.2.4	吉祥物在公告中的位置	claim	CL-RM-014995	—	0.50	B	分叉仅两周，Joe Angerson 向 bugs 列表投稿 The New Fred，Peter da Silva 等热议，OSNews 主编索要 32x32 图标	线索	邮件体＋与 7.3.1 重叠
+V51.6.2.4	吉祥物在公告中的位置	ref_title	10509	10509	0.30	C	DragonFly BSD 项目首页（是否含吉祥物图示未证）	待核	非邮件载体候选（未证实含题面要素）
+V51.6.2.4	吉祥物在公告中的位置	sacred	2269	—	0.299	C	吉祥物（sacred 词条）	排除	史观参照不作证据（旧 S1 已判）
+V51.6.2.4	吉祥物在公告中的位置	note	结构候选	—	—	—	与 7.4.1“吉祥物定名的悬置”实质重叠；唯一一手载体为分叉公告（邮件体）	待判	merged 预判（须串行结构窗口报批）
+V51.6.2.5	习俗与路线分歧的交叠	ref_title	10259	10259	0.66	A	Dillon M, DragonFly BSD Project（UCB 2003 讲稿 PDF，一手）	待核	D2（一手讲稿，非邮件）
+V51.6.2.5	习俗与路线分歧的交叠	ref_title	10274	10274	0.60	B	DragonFly Design Goals（2007-03-18 Wayback 存档）	待核	D2
+V51.6.2.5	习俗与路线分歧的交叠	claim	CL-RM-496368	2072	0.70	A	公告自陈 5.x 基线 mutex 过重、4.x 前行更快	可推	D2（技术动因面）
+V51.6.2.5	习俗与路线分歧的交叠	claim	CL-RM-494232	2072	0.68	A	公告三项意图之一为把内核开发引向全新 SMP 路径	可推	D2
+V51.6.2.5	习俗与路线分歧的交叠	claim	CL-RM-496641	10251	0.50	B	Dillon 2004 访谈：自研基础设施＋维持 FreeBSD-5 兼容驱动 API 的双轨方法	已占用	V51.1.1.6 已用，勿重复
+V51.6.2.6	习俗识别的证据门槛	ref_title	1229	1229	0.55	B	Hsu, The DragonFly BSD Operating System（AsiaBSDCon 2004），fulltext 28 069 字符	可推	D1（同类项目作者对协作与目标的表述）
+V51.6.2.6	习俗识别的证据门槛	ref_title	10434	10434	0.40	C	DragonFly BSD — Mailing Lists	待核	D2（对照面）
+V51.6.2.6	习俗识别的证据门槛	ref_title	10083	10083	0.229	C	Melange GSoC2014 接受项目列表（Wayback）（旧 S1 命中）	拒收	无关
+V51.6.2.6	习俗识别的证据门槛	ref_title	10085	10085	0.229	C	Melange GSoC2013 接受项目列表（旧 S1 命中）	拒收	无关
+V51.6.2.6	习俗识别的证据门槛	ref_title	10087	10087	0.229	C	Melange GSoC2012 接受项目列表（旧 S1 命中）	拒收	无关
+V51.6.3.1	传言对象的范围界定	ref_title	2458	2458	0.35	C	Apple Releases Darwin 1.0（2000），DB 内 fulltext 15 字符	待核	范围锚（弱，仅作被划界对象）
+V51.6.3.1	传言对象的范围界定	gap	—	—	—	—	划界为方法自述；三库无 macOS／Darwin 与 DragonFly 关系传言的候选	无候选	弱候选＋方法自证（见章批计划 §六.3）
+V51.6.3.2	Darwin 的 FreeBSD 血统	ref_fulltext	216	216	0.70	A	Accetta et al., Mach: A New Kernel Foundation for UNIX Development（1986），fulltext 35 445 字符	可推	D1
+V51.6.3.2	Darwin 的 FreeBSD 血统	ref_fulltext	1549	1549	0.66	A	Rashid, From RIG to Accent to Mach（1986），fulltext 52 920 字符	可推	D1
+V51.6.3.2	Darwin 的 FreeBSD 血统	claim	CL-RM-000714	—	0.62	A	Apple 官方 XNU 仓库 README 明示 XNU 为 Mach 与 BSD 组件（含 FreeBSD 组件）结合；touch.c 等含 FreeBSD 版权头与 __FBSDID	可推	D2（代码级证据）
+V51.6.3.2	Darwin 的 FreeBSD 血统	ref_title	2458	2458	0.40	C	Apple Releases Darwin 1.0（2000）	待核	D2（时间锚）
+V51.6.3.2	Darwin 的 FreeBSD 血统	claim	CL-RM-092944	—	0.50	C	Robert Watson 说明 Darwin 只用 Mach 做调度与内存管理，网络栈与 VFS 等取自 FreeBSD	线索	邮件体
+V51.6.3.2	Darwin 的 FreeBSD 血统	claim	CL-RM-023230	—	0.45	C	jpd 考据 Darwin 三重血统（FreeBSD、CSRG BSD、Mach 混合内核）	线索	邮件体
+V51.6.3.3	检索范围的界定方法	gap	—	—	—	—	本节为八项关键词全库检索与六卷磁盘比对的执行记录	无候选	方法自证（须留检索时点与命令）
+V51.6.3.4	磁盘层的传言分布核对	gap	—	—	—	—	磁盘层传言考据仅第 01／08／09／10／11／17 六卷、无 macOS／Darwin 条目的内部统计	无候选	方法自证（数字须现算复核）
+V51.6.3.5	材料缺口的诚实标注	gap	—	—	—	—	零命中记材料缺口、不作不存在的结论	无候选	体例—自证类
+V51.6.4.1	首次可证出处的判定	gap	—	—	—	—	体例：名言以最早可查文本为准	无候选	体例—自证类（路径 A 时以规范文件作 D2）
+V51.6.4.2	存疑条目的标注符号	gap	—	—	—	—	体例：无法确证者以存疑脚注文本标注	无候选	体例—自证类
+V51.6.4.3	对勘表的列项设计	gap	—	—	—	—	体例：出处、异文、判定分栏并列	无候选	体例—自证类
+V51.6.4.4	转引与直引的区分	gap	—	—	—	—	体例：转引须写完整引用链，直引须附原文片段	无候选	体例—自证类
+V51.6.4.5	网络流传文本的降级	gap	—	—	—	—	体例：聚合站与个人转载降为线索	无候选	体例—自证类（可用聚合站案例作反例）
+V51.6.4.6	引文的逐字保真约束	gap	—	—	—	—	体例：引文与代码块逐字保真，异文只入对勘表	无候选	体例—自证类

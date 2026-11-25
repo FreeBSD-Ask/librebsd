@@ -1,0 +1,26 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V58.1.1.1	合伙制的三人开局	缺口			0.00	—	三核心库与 original_sources 无 Apple 合伙创立同类块；Wozniak／Wayne 命中均为同名人物或他项目	候选缺口	P2 联网（CHM Apple@50、Stanford M1007）
+V58.1.1.2	退出与持股的处置	缺口			0.00	—	库内无 Wayne 退出与股权处置块；Wayne 命中均为他项目人名（Wayne Morrison 等）	候选缺口	P2 联网（Fortune、Apple Confidential 节选）
+V58.1.1.3	法人化的注册时点	ref_title	2389	2389	0.11	C	Apple Computer, Inc. v. Franklin Computer Corp., 714 F.2d 1240 (3d Cir. 1983)——仅证公司法人名称，不载注册日	不可用	不作证据
+V58.1.1.4	商业计划的执笔角色	缺口			0.00	—	库内无 Markkula 入股／商业计划块；raw_source 中 Sun／Khosla 商业计划为他项目	候选缺口	P2 联网（CHM、Linzmayer 系）
+V58.1.2.1	彩色图形与扩展槽的卖点	缺口			0.00	—	库内 Apple II 命中均为 A/UX、IIgs 串口、磁盘控制器等他题；无 1977 年产品规格块	候选缺口	P2 联网（CHM 1977 Apple II 彩页）
+V58.1.2.2	个人计算机革命的入口叙述	claim	CL-1-112		1.70	A	计算机史常按机器设计世代分期——大型机世代、小型机时代、个人计算机革命。	可推	claim 复用（D2 语境，不作 Apple 专属证据）
+V58.1.2.3	上市融资的资金来源	ref_title	2442	2442	0.12	C	Computer Connections: People, Places, and Events in the Evolution of the Personal Computer Industry（Kildall）——产业史，不含 Apple IPO	不可用	仅线索
+V58.1.2.4	厂商回顾叙述里的产品位次	缺口			0.00	—	库内无厂商回溯叙述块；“厂商”命中均为 UNIX 厂商与固件许可，与 Apple II 位次无关	候选缺口	P2 联网（Stanford M0825 史述、CHM 彩页）
+V58.1.2.5	西海岸展会的首秀	evidence	EV-ddj:55:1		0.35	C	The Mac made one of its first big public appearances at the 1984 West Coast Computer Faire.	部分可用（年份错位）	语境佐证，须辨 1977 首届与 1984 届
+V58.1.2.5	西海岸展会的首秀	evidence	EV-ddj:2287:1		0.33	C	The Homebrew Computer Club, the West Coast Computer Faire, and of course, Dr. Dobb's Journal, all enabled the open flow of information among computer pioneers.	部分可用	语境佐证（展会的信息流通作用）
+V58.1.3.1	PARC 之行的技术转移	raw_source	SRC-mat:326		0.22	C	Kay 1993 The Early History of Smalltalk（HOPL II, ACM SIGPLAN Notices Vol. 28 No. 3）	弱可用（技术背景）	D2 背景，须核原文
+V58.1.3.1	PARC 之行的技术转移	raw_source	SRC-mat:327		0.21	C	Goldberg 1976 Smalltalk-72 Instruction Manual（Xerox PARC SSL 76-6）	弱可用（技术背景）	D2 背景，须核原文
+V58.1.3.2	两案并行的界面路线	claim	CL-RM-011656		1.20	A	Apple Lisa 2/10 跑 SCO Xenix 3.0 一年实况：4 用户上限、SMC BASIC 文件表瓶颈、SCO 拒为 Lisa 提供 config 调参工具	可推	侧面证据（Lisa 硬件史），D2
+V58.1.3.3	定价失误的市场后果	缺口			0.00	—	库内无 Lisa 定价块；9995／2495 命中为内存报价、专利号、PR 编号等他义	候选缺口	P2 联网（CHM《The Lisa》、Craig 1993）
+V58.1.3.4	四分之一售价与普及取向	缺口			0.00	—	库内无 Macintosh 定价块；2,495 命中均为 bug 号与内存条目	候选缺口	P2 联网（Stanford 首份 Mac 新闻稿）
+V58.1.3.5	广告片的传播设计	缺口			0.00	—	库内无“1984”广告块；超级碗命中仅 USENIX 会址轶事	候选缺口	P2 联网（folklore《1984》长文）；首播记录缺口
+V58.1.3.6	灵感归属的两说并存	缺口			0.00	—	库内 GUI／灵感命中均为 Xfce、dummynet、Smalltalk 实现等他题	候选缺口	P2 联网（CHM Xerox PARC 页、folklore）
+V58.1.4.1	部门主管的职位变动	orig_source	249		0.90	B	Steve Jobs 1985 年 Playboy 访谈考据：Playboy 1985 访谈与 1985-09-17 辞职信、Isaacson《Steve Jobs》(2011)、Young & Simon《iCon》、Hertzfeld《Revolution in the Valley》交叉	可推	D2 强候选（库内章级考据综述）
+V58.1.4.2	董事会政变的未遂	orig_source	249		0.88	B	同上，含 1985 年权力斗争记载（辞职信与 iCon 交叉）	可推	D2 强候选
+V58.1.4.3	离职与创业的时序	orig_source	249		0.90	B	同上，含离职时点与 NeXT 创立动机的当事人陈述与交叉核验	可推	D2 强候选
+V58.1.4.3	离职与创业的时序	orig_source	133		0.70	B	第 106 章 NeXTSTEP 的起源——采访录章级考据综述：Jobs 1985 Playboy 访谈关于 NeXT 创立动机的陈述与 Isaacson 记载相互印证	可推	D2 辅助
+V58.1.4.4	NeXT 创立的技术前提	orig_source	133		0.85	B	NeXTSTEP 起源考据：Rashid 1986《From RIG to Accent to Mach》、Tevanian 1988 论文与 Mach 项目最终报告（CMU-CS-94-146）三源一致	可推	D2
+V58.1.4.4	NeXT 创立的技术前提	claim	CL-RM-000016		1.10	A	macOS 的 XNU 是混合内核，结合 Mach 微内核与 BSD 组件，可追溯至 NeXTSTEP	可推	D2（承继关系）
+V58.1.4.4	NeXT 创立的技术前提	ref_title	5475	5475	0.30	B	Computer Inc. NeXTSTEP Reference, Release 0.9-3.0 [Z]. 1988-1992	可推（须核馆藏与全文）	文献线索，D2
+V58.1.4.5	前史与新章的交接线	缺口			0.00	—	内部编例（卷分工注与 00-总览），无外部史料；1.4 节注仅载主线交接说明	候选缺口	结构处置候选（closed 或 ④ 类），不落块

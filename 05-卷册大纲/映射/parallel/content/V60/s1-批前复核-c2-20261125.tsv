@@ -1,0 +1,76 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V60.2.1.1	行编辑器的正则定位	claim	CL-2-008		0.50	B	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建了编辑器框架，Mark Horton 添加宏与其他特性——血脉线索，非正则语法证据	部分可推	线索（D2），语法须以 ed(1) 手册为证
+V60.2.1.1	行编辑器的正则定位	none			0.00	—	ed(1) 手册原句库内无收录；检索词 ed(1)／regular expression／addressing	缺口	联网待取（FreeBSD／4.4BSD man 源）
+V60.2.1.2	行编辑与显示编辑的分工	claim	CL-2-007		0.90	A	vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口	可推	复用（先库后网，不重复建）
+V60.2.1.2	行编辑与显示编辑的分工	fulltext_fact	kf-tb3-3687-000	3687	0.05	C	ged 是交互图形编辑器，用于 Tektronix 4010 系列显示终端——与 ex／vi 分工无关	不可推	拒用（2026-11-14 S1 行误配）
+V60.2.1.3	编辑教程的入门体例	ref	1002	2817	0.62	B	UNIX 4.0 文档集六编含 Kernighan ed 教程与 Bourne《An Introduction to the UNIX Shell》	D1 候选	全文补证（教学层文本存在之证）
+V60.2.1.3	编辑教程的入门体例	ref	2817	2817	0.60	B	00_Annotated_Table_of_Contents（UNIX 4.0 文档集目录件）	部分可推	D1 候选（须核 ed 教程条目原文）
+V60.2.1.4	选择文本的正则手段	claim	CL-2-008		0.40	C	Joy 编写 vi 各版本并创建编辑器框架——仅血脉，不涉正则原语	部分可推	线索（D2）
+V60.2.1.4	选择文本的正则手段	ref	1632	1632	0.55	B	Kernighan B W, Pike R. The UNIX Programming Environment（1984）	部分可推	D1 候选（ed／sed 正则各章待核）
+V60.2.1.5	ed 到 ex 的接口延续	ref	810	810	0.85	A	The tape consisted of a) Unix Pascal System b) Ex Text Editor ... created by ... W. N. Joy（Salus 1994, p.143）	D1 候选	全文补证（2BSD 磁带清单一手清单体）
+V60.2.1.5	ed 到 ex 的接口延续	doubts	171		0.50	C	1BSD 之前编辑器与 curses 程序对终端硬编码；2BSD（1978 年中）为 termcap 之分界	部分可推	参照（时点与载体须另证）
+V60.2.2.1	屏幕作为文件的窗口	claim	CL-2-007		0.90	A	vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口	可推	复用（先库后网）
+V60.2.2.1	屏幕作为文件的窗口	ref	810	810	0.60	B	Joy 述在 9600 baud 的 vdu 终端环境中做 em 的经历（Salus 1994 Berkeley Unix 章）	部分可推	D1 候选（背景，非 vi 本体）
+V60.2.2.2	慢速线路下的窗口尺寸	claim	CL-RM-011780		0.60	B	Mark Horton 解释 vi 滚动区域与 termcap 能力拆分设计并指 4.1a 磁带可得	可推	复用（先库后网）
+V60.2.2.2	慢速线路下的窗口尺寸	ref	810	810	0.55	B	9600 baud 多终端机房环境（Salus 1994）	部分可推	D1 候选（带宽条件背景）
+V60.2.2.3	哑终端上的可用性	claim	CL-RM-014529		0.50	B	TRS80 Model 100 更好的 termcap（可用 vi）	部分可推	线索（终端覆盖实例）
+V60.2.2.3	哑终端上的可用性	claim	CL-RM-014126		0.45	B	Visual 50 终端 termcap 改造（基于 vt52）	部分可推	线索（终端覆盖实例）
+V60.2.2.4	终端描述文件的适配	claim	CL-RM-014126		0.55	B	Visual 50 终端 termcap 改造（基于 vt52）——新增终端改数据不改码之实例	可推	复用（先库后网）
+V60.2.2.4	终端描述文件的适配	claim	CL-RM-014354		0.45	B	Commodore 与 Grid 终端的 termcap 之问	部分可推	线索
+V60.2.2.5	命令集跨终端的统一	claim	CL-RM-014529		0.50	B	TRS80 Model 100 更好的 termcap（可用 vi）	部分可推	线索
+V60.2.2.5	命令集跨终端的统一	claim	CL-RM-017611		0.50	B	termcap 的 am／xn 字段语义争议：Gilmore 主张废弃、程序应忽略	部分可推	复用（终端差异之证据，须标争议）
+V60.2.3.1	命令模式与输入模式的切换	ref	810	810	0.70	B	I had gone to some lengths to ensure that the interaction in em didn't involve more than one meaning for any key. This principle was badly violated in vi with its insert and edit modes（Salus 1994, p.142）	D1 候选	全文补证（模式设计的当事人评述）
+V60.2.3.1	命令模式与输入模式的切换	claim	CL-RM-017895		0.45	C	vi／termcap 魔：后台 vi 的 term mode 处理	部分可推	线索
+V60.2.3.2	行命令的批量执行形态	claim	CL-RM-125406		0.55	B	nvi 手册未记载 ex 替换命令的范围语法，他按 ed／sed 习惯以逗号表示整个文件	可推	复用（地址范围语法之证）
+V60.2.3.2	行命令的批量执行形态	ref	1632	1632	0.50	B	UPE 1984 ed 章（地址与命令成组执行）	部分可推	D1 候选（待核章节）
+V60.2.3.3	流式处理的命令约定	none			0.00	—	sed(1) 名称行“sed -- stream editor”库内无收录；检索词 stream editor／sed(1)	缺口	联网待取（FreeBSD man 源，逐字引名称行）
+V60.2.3.4	标准文本编辑器的规格承接	claim	CL-RM-055823		0.65	B	POSIX 的 vi 规范与 nvi 同出 Keith Bostic 之手，故两者皆无 modeline	可推	复用（标准文本与实现之关联，须另引标准原件）
+V60.2.3.4	标准文本编辑器的规格承接	claim	CL-2-007		0.10	C	vi 为显示导向编辑器——与规格承接无直接关系	不可推	拒用（2026-11-14 S1 行弱配）
+V60.2.3.4	标准文本编辑器的规格承接	none			0.00	—	IEEE Std 1003.2 的 ex／vi 条目库内无收录	缺口	联网待取（标准原件）
+V60.2.3.5	脚本化编辑的复用条件	none			0.00	—	无交互输入与脚本复用条件库内无同类候选；检索词 script／non-interactive／batch	缺口	联网待取＋UPE 1984 脚本章待核
+V60.2.4.1	终端能力的描述表	claim	CL-2-009		0.70	A	curses 屏幕包建立在 Bill Joy 编写编辑器时创建的终端通用描述能力、termcap 数据库读取例程与最优光标移动例程之上	可推	复用（先库后网）
+V60.2.4.1	终端能力的描述表	doubts	163		0.50	C	termcap 数据库：Bill Joy／Mark Horton（归属存疑），2BSD	部分可推	参照（归属争议须标）
+V60.2.4.1	终端能力的描述表	claim	CL-RM-035114		0.55	B	Rich Salz 称 termcap 概念由 Bill Joy 在早期 BSD 提出，部分 V7 与 System III 厂商只是买来这些增强	部分可推	复用（须与归属争议并陈）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-011780		0.60	B	Horton 解释 vi 滚动区域与 termcap 能力拆分设计	部分可推	复用（能力项拆分，非填充项本身）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-015241		0.05	C	Dillon 定位 panic 根因：callout timer 用 SI_SUB_CPU 初始化序列冲突——内核初始化，与 termcap 填充无关	不可推	拒用（2026-11-14 S1 行误配）
+V60.2.4.2	填充与初始化序列	claim	CL-RM-016960		0.05	C	Rui Paulo 评审 RMI 处理器 SMP 初始补丁——同上，误配	不可推	拒用（2026-11-14 S1 行误配）
+V60.2.4.3	设备差异的抽象层	ref	4	4	0.80	A	Eventually, with the advent of vi, Bill Joy provided his own API based on a terminal description（UNIX-HATERS Handbook, p.114）	D1 候选	全文补证（翻案式叙述，须与正面史料并陈）
+V60.2.4.3	设备差异的抽象层	claim	CL-RM-020848		0.50	B	Thomas Dickey 答 vim 与 TERM：内嵌 termcap 之集乃其肿之由——编辑器与终端库之界	部分可推	线索（后世之界，非起源）
+V60.2.4.4	能力项条目的字段结构	claim	CL-RM-017611		0.60	B	termcap 的 am／xn 字段语义争议	可推	复用（字段语义须标争议）
+V60.2.4.4	能力项条目的字段结构	doubts	173		0.45	C	Horton, M. (1978) Termcap Manual 2BSD［存疑-作者归属］；Arnold 1978 curses	部分可推	参照（作者归属存疑）
+V60.2.4.4	能力项条目的字段结构	none			0.00	—	termcap(5) 手册原句库内无收录	缺口	联网待取（逐字引字段分隔写法）
+V60.2.4.5	终端库与编辑器的依赖链	ref	4	4	0.70	B	half-implemented hack (such as termcap) after half implemented hack (such as curses)（同书 p.113）	D1 候选	全文补证（须平衡取用）
+V60.2.4.5	终端库与编辑器的依赖链	claim	CL-RM-020956		0.45	C	Coleman 提 libterminfo 之途：terminfo db 之读、termcap 之兼容层	部分可推	线索（后世依赖关系）
+V60.2.5.1	nvi 兼容目标的官方说明	claim	CL-RM-097709		0.65	B	Lowell Gilbert 指出 FreeBSD 基本系统自带的 vi 并非源自伯克利版本，实为 nvi	可推	复用（判题面对象）
+V60.2.5.1	nvi 兼容目标的官方说明	none			0.00	—	nvi 项目页与 nvi(1) 手册“兼容目标”原句库内无收录	缺口	联网待取（官方页／手册）
+V60.2.5.2	nex 与 nvi 的双名并存	claim	CL-RM-107451		0.55	B	nvi 须在 .nexrc 里设 showmode 与 ruler 才有模式提示，且只读属主自己的文件	部分可推	复用（双名之实件线索）
+V60.2.5.2	nex 与 nvi 的双名并存	claim	CL-RM-098307		0.40	C	用户自述为 contrib/nvi 拼出支持简单 modeline 的补丁	部分可推	线索
+V60.2.5.3	历史实现的甄别基准	claim	CL-RM-107454		0.60	B	原版 vi 随 1BSD 磁带首发，因法律负担才由 4.4BSD 收录重写的 nvi	可推	复用（区分今本与旧本之证）
+V60.2.5.3	历史实现的甄别基准	ref	3780	3780	0.50	B	McKusick 等《The Design and Implementation of the 4.4BSD Operating System》（1996）	部分可推	D1 候选（版本沿革章）
+V60.2.5.4	编辑器的后代维护线	claim	CL-RM-107454		0.85	A	原版 vi 随 1BSD 磁带首发，因法律负担才由 4.4BSD 收录重写的 nvi	可推	复用（主证）
+V60.2.5.4	编辑器的后代维护线	claim	CL-RM-054722		0.50	B	david parsons 述 nvi 1.79 之南瓜条款已除	部分可推	复用（后代维护之许可层）
+V60.2.5.4	编辑器的后代维护线	claim	CL-RM-021527		0.50	B	Zhihao Yuan 提以 nvi2 代 nvi（Please consider replace src/dist/nvi with nvi2）	部分可推	线索（维护线延伸）
+V60.2.5.5	命令集不变的继承策略	claim	CL-RM-020847		0.60	B	Mewburn 献 nvi 新选项 expandtab：禁 tab 之用而代以空格——新增功能藏于选项	可推	复用（策略实证）
+V60.2.5.5	命令集不变的继承策略	claim	CL-RM-020775		0.50	B	Christos 释 nvi 之大之因：wchar_t 化之 regex 库	部分可推	线索（增强的代价）
+V60.2.6.1	改进版的功能面向	claim	CL-RM-155197		0.60	B	Bram 对仅面向单一平台的 vim 补丁不愿纳入，若补丁跨多数平台则接受	可推	复用（增强取舍之当事人判断）
+V60.2.6.1	改进版的功能面向	claim	CL-RM-032227		0.20	C	QQ11 汇总编辑器比较（vi、ded、GNU-Emacs、Jove 等）——已落块，关联薄弱	不可推	不重复引用（既有 filled 面，仅记录）
+V60.2.6.2	配置化编辑的取舍	claim	CL-RM-020848		0.45	C	Dickey 论 vim 内嵌 termcap 致肿——配置与体积之权衡的旁观评述	部分可推	线索
+V60.2.6.2	配置化编辑的取舍	none			0.00	—	Vim 默认行为与扩展机制配比的一手文档库内无同类候选	缺口	联网待取（Vim runtime doc）
+V60.2.6.3	vim 的自我描述原句	none			0.00	—	vim.org 首页“highly configurable text editor”“power tool for everyone”为已核原句（见 thesis），库内无快照件	缺口	联网待取（A 级官方页，逐字引）
+V60.2.6.3	vim 的自我描述原句	claim	CL-RM-020848		0.35	C	vim 与 TERM：内嵌 termcap 之集乃其肿之由	不可推	不作证据（无涉自我描述）
+V60.2.6.4	图形界面时代的终端编辑	claim	CL-RM-056408		0.40	C	讨论若把 /usr/local/bin 提前将带来的 vi 与 vim 等冲突及解决代价	部分可推	线索（终端编辑仍在用的旁证）
+V60.2.6.4	图形界面时代的终端编辑	none			0.00	—	图形界面普及后终端编辑器存续的一手统计库内无	缺口	联网待取（发行版清单与远程会话实践）
+V60.2.6.5	Vim 对既有用户的兼容	claim	CL-RM-098307		0.30	C	用户自述为 contrib/nvi 拼 modeline 补丁——属 nvi 非 Vim	不可推	不作证据
+V60.2.6.5	Vim 对既有用户的兼容	none			0.00	—	vim.org 兼容 vi 用户之定位表述库内无快照件	缺口	联网待取（A 级官方页）
+V60.2.7.1	随系统预装的扩散路径	claim	CL-RM-032179		0.35	C	Dewey Paciaffi 推荐比 vi.com 更稳健的 vi 克隆 STEVIE（既有 ROW_MINE 块 usenet_mail.messages.46320 所引）	不可推	不重复引用（既有 filled 面，仅记录）
+V60.2.7.2	克隆实现的并行出现	claim	CL-RM-032179		0.60	B	Dewey Paciaffi 推荐比 vi.com 更稳健的 vi 克隆 STEVIE	可推	复用（克隆并行之实例，与既有填充面同源不重复建）
+V60.2.7.1	随系统预装的扩散路径	none			0.00	—	各系统 base 收录 vi／nvi 的清单库内无	缺口	联网待取（FreeBSD／NetBSD／OpenBSD 源码树与 base 清单）
+V60.2.7.2	克隆实现的并行出现	claim	CL-RM-097709		0.65	B	FreeBSD 自带 vi 实为 nvi——克隆与取代之实件	可推	复用（克隆并行之一例）
+V60.2.7.2	克隆实现的并行出现	claim	CL-RM-021527		0.50	B	以 nvi2 代 nvi 之提议	部分可推	线索（克隆谱系延伸）
+V60.2.7.3	教材与课程的传播	landing	unc.963		0.25	C	MAIL_INSIGHT 块：1981-07 Bill Mitchell 已把 4BSD 版 vi 改到 VMS 的 Eunice 上运行（跨系统扩散实例，非教材证据）	不可推	不重复引用（既有 filled 面；与题旨偏差已记录）
+V60.2.7.3	教材与课程的传播	ref	1632	1632	0.55	B	UPE 1984 作为课程教材之候选（须核采用记录）	部分可推	D1 候选（教材侧）
+V60.2.7.3	教材与课程的传播	ref	1002	2817	0.50	B	UNIX 4.0 文档集含 Kernighan ed 教程——教程进入文档集	部分可推	D1 候选（教程侧）
+V60.2.7.4	默认编辑器的选择惯例	claim	CL-RM-098732		0.40	C	升级 2.9 到 3.0 后 vi 与 vim 退格删除键异常（deleteIsDEL 与 backarrowKey）	部分可推	线索（默认与并存之实况）
+V60.2.7.4	默认编辑器的选择惯例	none			0.00	—	发行方默认编辑器与 alternatives 之制度实件库内无	缺口	联网待取（各发行版实件）
+V60.2.7.5	扩散中的命令集统一	claim	CL-RM-125406		0.50	B	nvi 手册未载 ex 替换范围语法，用户按 ed／sed 习惯迁移	部分可推	复用（命令集跨实现之一例）
+V60.2.7.5	扩散中的命令集统一	claim	CL-RM-055823		0.50	B	POSIX 的 vi 规范与 nvi 同出 Bostic，两者皆无 modeline	部分可推	复用（标准与实现固定命令集）
