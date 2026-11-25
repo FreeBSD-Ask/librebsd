@@ -28,41 +28,41 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	1	1.6	1.6.3	作品在开源项目中的位置	skeleton	
 60	1	1.6	1.6.4	许可兼容性的技术后果	skeleton	
 60	1	1.6	1.6.5	作品式扩散与系统式扩散的分野	skeleton	
-60	2	2.1	2.1.1	行编辑器的正则定位	skeleton	
-60	2	2.1	2.1.2	行编辑与显示编辑的分工	skeleton	
-60	2	2.1	2.1.3	编辑教程的入门体例	skeleton	
-60	2	2.1	2.1.4	选择文本的正则手段	skeleton	
-60	2	2.1	2.1.5	ed 到 ex 的接口延续	skeleton	
-60	2	2.2	2.2.1	屏幕作为文件的窗口	skeleton	
-60	2	2.2	2.2.2	慢速线路下的窗口尺寸	skeleton	
-60	2	2.2	2.2.3	哑终端上的可用性	skeleton	
-60	2	2.2	2.2.4	终端描述文件的适配	skeleton	
-60	2	2.2	2.2.5	命令集跨终端的统一	skeleton	
-60	2	2.3	2.3.1	命令模式与输入模式的切换	skeleton	
-60	2	2.3	2.3.2	行命令的批量执行形态	skeleton	
-60	2	2.3	2.3.3	流式处理的命令约定	skeleton	
-60	2	2.3	2.3.4	标准文本编辑器的规格承接	skeleton	
-60	2	2.3	2.3.5	脚本化编辑的复用条件	skeleton	
-60	2	2.4	2.4.1	终端能力的描述表	skeleton	
-60	2	2.4	2.4.2	填充与初始化序列	skeleton	
-60	2	2.4	2.4.3	设备差异的抽象层	skeleton	
-60	2	2.4	2.4.4	能力项条目的字段结构	skeleton	
-60	2	2.4	2.4.5	终端库与编辑器的依赖链	skeleton	
-60	2	2.5	2.5.1	nvi 兼容目标的官方说明	skeleton	
-60	2	2.5	2.5.2	nex 与 nvi 的双名并存	skeleton	
-60	2	2.5	2.5.3	历史实现的甄别基准	skeleton	
-60	2	2.5	2.5.4	编辑器的后代维护线	skeleton	
-60	2	2.5	2.5.5	命令集不变的继承策略	skeleton	
-60	2	2.6	2.6.1	改进版的功能面向	filled	
-60	2	2.6	2.6.2	配置化编辑的取舍	filled	
-60	2	2.6	2.6.3	vim 的自我描述原句	filled	
-60	2	2.6	2.6.4	图形界面时代的终端编辑	filled	
-60	2	2.6	2.6.5	Vim 对既有用户的兼容	filled	
-60	2	2.7	2.7.1	随系统预装的扩散路径	filled	
-60	2	2.7	2.7.2	克隆实现的并行出现	skeleton	
-60	2	2.7	2.7.3	教材与课程的传播	filled	
-60	2	2.7	2.7.4	默认编辑器的选择惯例	skeleton	
-60	2	2.7	2.7.5	扩散中的命令集统一	skeleton	
+60	2	2.1	2.1.1	ed 用正则寻址行	skeleton	
+60	2	2.1	2.1.2	ex 与 vi 同出一个程序	skeleton	
+60	2	2.1	2.1.3	ed 教程把编辑拆成分步练习	skeleton	
+60	2	2.1	2.1.4	同一套正则兼管定位与替换	skeleton	
+60	2	2.1	2.1.5	行命令接口一路从 ed 带到 ex	skeleton	
+60	2	2.2	2.2.1	屏幕成了文件的取景框	skeleton	
+60	2	2.2	2.2.2	慢速线路逼小窗口	skeleton	
+60	2	2.2	2.2.3	哑终端也能跑 vi	skeleton	
+60	2	2.2	2.2.4	新增终端只改描述文件	skeleton	
+60	2	2.2	2.2.5	硬拷贝与玻璃终端共用命令集	skeleton	
+60	2	2.3	2.3.1	插入模式与命令模式来回切换	skeleton	
+60	2	2.3	2.3.2	地址范围成批执行行命令	skeleton	
+60	2	2.3	2.3.3	sed 只读输入写标准输出	skeleton	
+60	2	2.3	2.3.4	POSIX 把 ex 与 vi 语法写进标准	skeleton	
+60	2	2.3	2.3.5	无交互输入才可反复执行脚本	skeleton	
+60	2	2.4	2.4.1	终端能力写成一张表	skeleton	
+60	2	2.4	2.4.2	时延填充写进描述项	skeleton	
+60	2	2.4	2.4.3	设备差异收进库里	skeleton	
+60	2	2.4	2.4.4	条目以冒号分隔字段	skeleton	
+60	2	2.4	2.4.5	库描述出错故障直达应用层	skeleton	
+60	2	2.5	2.5.1	nvi 兼容目标查无官方说明	skeleton	
+60	2	2.5	2.5.2	nex 与 nvi 双名并存无据	skeleton	
+60	2	2.5	2.5.3	手册首段区分今本与旧本	skeleton	
+60	2	2.5	2.5.4	原版 vi 因许可负担让位 nvi	skeleton	
+60	2	2.5	2.5.5	新增功能藏在选项与配置后面	skeleton	
+60	2	2.6	2.6.1	Vim 把增强压在可配置与效率上	filled	
+60	2	2.6	2.6.2	可配置换来适应性也带来负担	filled	
+60	2	2.6	2.6.3	vim.org 只自称高度可配置	filled	
+60	2	2.6	2.6.4	图形界面普及后终端编辑未退场	filled	
+60	2	2.6	2.6.5	Vim 以兼容 vi 用户为定位	filled	
+60	2	2.7	2.7.1	厂商预装把 vi 送进大学机房	filled	
+60	2	2.7	2.7.2	各系统自养克隆实现	skeleton	
+60	2	2.7	2.7.3	教材把 vi 编进入门课	filled	
+60	2	2.7	2.7.4	默认编辑器一经选定长期不改	skeleton	
+60	2	2.7	2.7.5	手册与标准把命令集长期钉住	skeleton	
 60	3	3.1	3.1.1	两代 sh 的沿革线索	filled	
 60	3	3.1	3.1.2	脚本语法的最简内核	filled	
 60	3	3.1	3.1.3	命令语言的分工位置	filled	
@@ -528,4 +528,3 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	14	14.13	14.13.3	生命周期观察的收获	skeleton	
 60	14	14.13	14.13.4	安全页面的处置说明	skeleton	
 60	14	14.13	14.13.5	后续研究的方向条目	skeleton	
-

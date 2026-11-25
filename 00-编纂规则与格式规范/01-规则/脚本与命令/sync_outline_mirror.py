@@ -232,7 +232,9 @@ def _scan_chapters(root, vol, tree):
         cfull = os.path.join(vpath, cname)
         rel = _rel_join(vol["name"], cname)
         if not os.path.isdir(cfull):
-            tree["anomalies"].append(("stray_file", rel, "卷层只允许章目录"))
+            if cname == "00-总览.md":
+                continue  # 卷头（AGENTS 内容扩展接口标准卷头；37 件 L10 放行集 2026-11-21）
+            tree["anomalies"].append(("stray_file", rel, "卷层只允许章目录（卷头 00-总览.md 除外）"))
             continue
         cm = CH_RE.match(cname)
         if not cm:
