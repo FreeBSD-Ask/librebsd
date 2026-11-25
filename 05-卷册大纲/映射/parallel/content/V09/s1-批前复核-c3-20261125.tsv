@@ -1,0 +1,100 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V09.3.1.1	计算机科学系从哪一年算起	claim	CL-1-119		0.90	B	1960 年代计算机科学成为独立学科，该术语由 George Forsythe 提出；1962 年普渡大学成立第一个计算机科学系	可推	claim 复用（S2 先库后网）
+V09.3.1.1	计算机科学系从哪一年算起	claim	CL-1-00400		0.55	C	1996 年 USENIX 终身成就奖授予加州大学伯克利分校计算机科学研究组（CSRG），表彰其制作 UNIX BSD 发行版	线索	claim 复用（S2 先库后网）
+V09.3.1.1	计算机科学系从哪一年算起	claim	CL-RM-097310		0.50	C	Greg Lehey 凭记忆梳理 1990 年前的 BSD 历史时间线，从伯克利计算机科学研究组谈起	线索	claim 复用（S2 先库后网）
+V09.3.1.2	四校建系先后与取向	claim	CL-RM-494756		0.95	B	DARPA 计算机研究资助集中于 MIT、斯坦福、卡内基梅隆与伯克利等少数卓越中心	可推	claim 复用（S2 先库后网）
+V09.3.1.2	四校建系先后与取向	claim	CL-RM-494398		0.75	C	核心节点为少数研究型大学：MIT／斯坦福／伯克利／卡内基梅隆等校逾半研究生受联邦资助	可推	claim 复用（S2 先库后网）
+V09.3.1.2	四校建系先后与取向	claim	CL-RM-494468		0.60	C	卡内基梅隆与 MIT、斯坦福、伯克利并列，逾半研究生受联邦资助，系统研究沿数个计划展开	线索	claim 复用（S2 先库后网）
+V09.3.1.3	课程表比建系更早分歧	claim	CL-RM-496618		0.85	B	1BSD READ_ME 载明 Pascal 系统已在伯克利用于教学一年，并用于本科生与研究生教学	可推	claim 复用（S2 先库后网）
+V09.3.1.3	课程表比建系更早分歧	claim	CL-RM-496214		0.55	C	1BSD 的 READ_ME 自述带内为伯克利软件的源码与二进制、主要条目为教学用 Pascal 系统与 ex 编辑器	线索	claim 复用（S2 先库后网）
+V09.3.1.3	课程表比建系更早分歧	claim	CL-RM-040811		0.50	C	主张好的计算机课程应融合设计、团队、管理与编程并以大作业为主、少靠考试	线索	claim 复用（S2 先库后网）
+V09.3.1.3	课程表比建系更早分歧	claim	CL-RM-095096		0.40	C	Justin T. Gibbs 指出加州大学伯克利分校的操作系统本科课程采用 FreeBSD 教学	线索	claim 复用（S2 先库后网）
+V09.3.1.4	与电机系合并的几种模式	doubts	96		0.90	B	EECS 合并的精确日期：官方历史页与 eScholarship PDF 仅记 1973 年合并，未给精确日期	可推	存疑面参照（不作证据）
+V09.3.1.4	与电机系合并的几种模式	ref_title	5700	5700	0.85	B	Engineering. Timeline: EE becomes EECS（engineering.berkeley.edu 时间线页）	可推	文献候选（核全文定 D1／D2）
+V09.3.1.4	与电机系合并的几种模式	ref_title	1591	1591	0.60	C	EECS berkeley eecs 50years firsts en（2023）	线索	文献候选（核全文定 D1／D2）
+V09.3.1.4	与电机系合并的几种模式	claim	CL-8-012		0.45	C	参考文献全文数据库收录《EECS berkeley eecs 50years firsts en》（EECS，2023），作为本章主题的候选史料	线索	claim 复用（S2 先库后网）
+V09.3.1.5	学科形成靠档案与口述两类材料拼合	doubts	161		0.90	B	Chuck Haley 的独立口述史截至 2026-07-28 经三轮检索（CHM 口述目录、USENIX 论文集、Internet Archive）未检索到	可推	存疑面参照（不作证据）
+V09.3.1.5	学科形成靠档案与口述两类材料拼合	claim	CL-RM-496214		0.55	C	1BSD READ_ME 的积累过程形式记录稀薄，其可回溯面依赖发行物自带文书	线索	claim 复用（S2 先库后网）
+V09.3.1.5	学科形成靠档案与口述两类材料拼合	doubts	151		0.45	C	Margo Seltzer 与 Keith Bostic 1991 年在伯克利开发 Berkeley DB（多源一致，含二手转述）	线索	存疑面参照（不作证据）
+V09.3.1.5	学科形成靠档案与口述两类材料拼合	kaoju	15		0.90	B	一手史料：CSRG 技术报告（EECS/TR）系列，含 3BSD 至 4.4BSD-Lite2 各版 Release Notes 与设计文档	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.1.5	学科形成靠档案与口述两类材料拼合	kaoju	104		0.85	B	受访者 Bill Joy（时任伯克利 CSRG 研究生、3BSD 主要组装者），CHM 口述史项目，2011 年	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.2.1	计算中心是校园计算起点	claim	CL-1-00712		0.95	B	1984 年 12 月 DEC 向伯克利赠送六台 VAX 11/750，EECS 学生实现负载均衡系统 Maitre d'，经 10Mb 以太网迁移作业	可推	claim 复用（S2 先库后网）
+V09.3.2.1	计算中心是校园计算起点	claim	CL-RM-015649		0.45	C	McKusick 1992-02-02 发布 4.4BSD 内核课程公告，自证最后一次开课为 9 年前，Karels 已离开 CSRG	线索	claim 复用（S2 先库后网）
+V09.3.2.1	计算中心是校园计算起点	tree	3.2.1#MAIL_INSIGHT		1.00	A	在档 MAIL_INSIGHT：1988-03 DEC 的 Bob Devine 称伯克利 CS 系购 VAX 8800 跑 Ultrix 系政治而非技术决定	可推	在档块（迁移保真对象）
+V09.3.2.1	计算中心是校园计算起点	kaoju	361		0.85	B	SubTask 2.1：伯克利早期计算史（CALDIGIC、Project Genie、SDS 930 等），含 EECS Berkeley 官方历史页面	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.2.2	从 Genie 到 VAX 的两代主机更替	claim	CL-RM-014977		0.90	B	unisoft 的 Ed 证 Genie 系 60 年代 Berkeley 操作系统、跑 SDS/XDS 940，为 qed（ed 前身）之源	可推	claim 复用（S2 先库后网）
+V09.3.2.2	从 Genie 到 VAX 的两代主机更替	claim	CL-RM-014959		0.70	C	Yost 记 genie 传说：60 年代初 Berkeley 有汇编写的 Genie 系统、与 Unix 惊人相似——起源传说入网	可推	claim 复用（S2 先库后网）
+V09.3.2.2	从 Genie 到 VAX 的两代主机更替	claim	CL-1-00712		0.60	C	1984 年 DEC 赠六台 VAX 11/750，为伯克利教学机群的下一代主机	可推	claim 复用（S2 先库后网）
+V09.3.2.2	从 Genie 到 VAX 的两代主机更替	kaoju	361		0.80	B	同上：Project Genie 与 SDS 930／940 早期系统的官方史页线索	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.2.3	校园网按机房逐段铺开	claim	CL-1-00712		0.80	B	经 10Mb 以太网将过载教学机的 CPU 密集作业迁移至轻载 VAX，展示 Berkeley UNIX 多机网络能力	可推	claim 复用（S2 先库后网）
+V09.3.2.3	校园网按机房逐段铺开	claim	CL-RM-018189		0.35	C	MIT Athena 赞助大型工作站网络 BOF（1988-02 达拉斯 USENIX）：校园网管议题与 Sun 合办 NFS Security BOF	线索	claim 复用（S2 先库后网）
+V09.3.2.4	机时稀缺催生排队惯例	claim	CL-1-00712		0.85	B	Maitre d' 把过载教学机的 CPU 密集作业外迁，机制上即按负载给机时排队	可推	claim 复用（S2 先库后网）
+V09.3.2.5	早期环境档案与口述的缺口	claim	CL-RM-014959		0.65	C	Genie 系统以“传说”形态进入网络记忆，一手记录未同步留存	可推	claim 复用（S2 先库后网）
+V09.3.2.5	早期环境档案与口述的缺口	doubts	178		0.70	C	UC Berkeley Academic Senate 1980 年代关于 DARPA 资助伦理审查的会议记录在公开互联网检索中未得	可推	存疑面参照（不作证据）
+V09.3.2.5	早期环境档案与口述的缺口	claim	CL-RM-496214		0.50	C	1BSD 时代积累过程的形式记录稀薄，早期环境可回溯面依赖发行物自带文书	线索	claim 复用（S2 先库后网）
+V09.3.3.1	两系合并为 EECS	ref_title	5700	5700	0.90	B	Timeline: EE becomes EECS（伯克利工学院时间线页）	可推	文献候选（核全文定 D1／D2）
+V09.3.3.1	两系合并为 EECS	doubts	96		0.85	B	EECS 合并精确日期未见于官方页与 eScholarship PDF，仅记 1973 年	可推	存疑面参照（不作证据）
+V09.3.3.1	两系合并为 EECS	ref_title	1591	1591	0.60	C	EECS berkeley eecs 50years firsts en（2023）	线索	文献候选（核全文定 D1／D2）
+V09.3.3.1	两系合并为 EECS	claim	CL-8-012		0.45	C	所称《EECS 50years firsts》为本章候选史料，尚未核全文	线索	claim 复用（S2 先库后网）
+V09.3.3.1	两系合并为 EECS	kaoju	361		0.70	C	EECS Berkeley 官方历史页面为系史一手线索（合并年份须回页核）	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.3.2	认证与联盟只是建制化的一层侧面	claim	CL-RM-035924		0.30	C	NIST 计算机系统实验室的 FIPS 与认证工作被撤销仅余一人签证书（非伯克利本域）	线索	claim 复用（S2 先库后网）
+V09.3.3.2	认证与联盟只是建制化的一层侧面	未命中			0	—	核心四库与二级库无伯克利计算机学科参与认证／联盟的一手记录（其余“认证”命中皆他域）	未命中	—
+V09.3.3.3	共同体靠会议与奖项长期维系	claim	CL-1-00400		0.80	B	1996 年 USENIX 终身成就奖首届授予伯克利 CSRG，由 USENIX 主席 Steve Johnson 在年会颁发	可推	claim 复用（S2 先库后网）
+V09.3.3.3	共同体靠会议与奖项长期维系	sacred	140		0.30	C	7.3 知音与共同体（史观参照）	线索	史观参照（不作证据）
+V09.3.3.3	共同体靠会议与奖项长期维系	claim	CL-1-00511		0.45	C	1979 年 USENIX 会议记录显示 UNIX 已广泛进入本科教学环境，多伦多 CSRG 由 Tom Duff 等开发 qed	线索	claim 复用（S2 先库后网）
+V09.3.3.4	普渡大学先于四校设系	claim	CL-1-119		0.85	B	1962 年普渡大学成立第一个计算机科学系；1965 年 12 月 Richard Wexelblat 成为首位计算机科学博士	可推	claim 复用（S2 先库后网）
+V09.3.3.4	普渡大学先于四校设系	ref_title	5700	5700	0.70	C	EE becomes EECS 时间线，为伯克利制度化节点	可推	文献候选（核全文定 D1／D2）
+V09.3.3.4	普渡大学先于四校设系	claim	CL-8-012		0.45	C	《EECS 50years firsts》条目在库，可作建系节点线索	线索	claim 复用（S2 先库后网）
+V09.3.3.5	系级建制在学科史上的位置	ref_title	1591	1591	0.70	C	EECS 五十年“firsts”汇编，含系级建制史事	可推	文献候选（核全文定 D1／D2）
+V09.3.3.5	系级建制在学科史上的位置	ref_title	5700	5700	0.60	C	EE becomes EECS 时间线页	可推	文献候选（核全文定 D1／D2）
+V09.3.3.5	系级建制在学科史上的位置	claim	CL-1-00400		0.55	C	USENIX 1996 年授奖辞以“制作 UNIX BSD 发行版”定位 CSRG 的学科贡献	线索	claim 复用（S2 先库后网）
+V09.3.3.5	系级建制在学科史上的位置	kaoju	15		0.60	C	CSRG 技术报告系列存档，可作系级建制产出的档案面	线索	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.4.1	从一人项目到四人研究组的三年间	claim	CL-3-001		0.95	B	BSD 于 1977 年由 Bill Joy 在伯克利以单人项目起步，1980 年成长为四人协调的计算机系统研究组（CSRG）	可推	claim 复用（S2 先库后网）
+V09.3.4.1	从一人项目到四人研究组的三年间	claim	CL-2-012		0.75	C	4.4BSD 架构手册作者署名为 Joy、Fabry、Leffler、McKusick、Karels，隶属伯克利 CSRG	可推	claim 复用（S2 先库后网）
+V09.3.4.1	从一人项目到四人研究组的三年间	claim	CL-RM-494792		0.60	C	公告自陈 CSRG 为研究开发组织而非商业组织，研究成果以收费方式提供	可推	claim 复用（S2 先库后网）
+V09.3.4.1	从一人项目到四人研究组的三年间	kaoju	104		0.80	B	Bill Joy 口述：CSRG 研究生身份与 3BSD 组装者角色，为群体起步的当事人叙述	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.4.2	经费渠道与方向选择之间的约束	claim	CL-3-014		0.95	B	伯克利 UNIX 性能改进工作由 NSF（MCS80-05144）与 DARPA（ARPA Order 4031，合同 N00039-82-C-0235）资助	可推	claim 复用（S2 先库后网）
+V09.3.4.2	经费渠道与方向选择之间的约束	claim	CL-15-1804		0.85	B	McKusick 口述：DARPA 在 VAX/VMS 与 4BSD 之间抉择时，伯克利卡在上下文切换速度上无法取胜	可推	claim 复用（S2 先库后网）
+V09.3.4.2	经费渠道与方向选择之间的约束	claim	CL-RM-494214		0.70	C	承包商报告首页的资助声明表明成果以报告形式交付资助方，交付通道与进入伯克利发行的通道并非同一条	可推	claim 复用（S2 先库后网）
+V09.3.4.2	经费渠道与方向选择之间的约束	kaoju	367		0.75	C	CSRG 解散的伯克利校方背景，含 McKusick 1999 年《Twenty Years of Berkeley Unix》原文线索	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.4.3	招聘记录读得出取向	claim	CL-RM-034036		0.35	C	Elbridge Puckett 发布加大数学系系统管理员招聘启事并延长申请截止（非 CS 系师资）	线索	claim 复用（S2 先库后网）
+V09.3.4.3	招聘记录读得出取向	未命中			0	—	核心四库与二级库无伯克利计算机学科师资招聘一手记录（“招聘”命中皆他域或他校）	未命中	—
+V09.3.4.4	跨系合作靠联合任命	tree	3.4.4#DB_POINTS		0.90	B	在档综述：EECS 与数学系在理论 CS 有合作，部分教师在数学系与 EECS 系联合任命	可推	在档块（迁移保真对象）
+V09.3.4.4	跨系合作靠联合任命	未命中			0	—	核心四库无跨系联合任命或项目协作的一手记录（在档块系二级综述，非一手）	未命中	—
+V09.3.4.5	先划史料边界再谈群体	doubts	118		0.60	C	BIND 1984 年四位研究生的姓名经多源确认（含二手转述），群体名录须逐人核	可推	存疑面参照（不作证据）
+V09.3.4.5	先划史料边界再谈群体	doubts	63		0.50	C	UNIX 是否真处“边缘”需考据；bsd_commits 库查询未得明确证据	线索	存疑面参照（不作证据）
+V09.3.5.1	Ingres 之后是 Postgres	ref_title	1547	1547	1.20	A	The Design and Implementation of INGRES（Stonebraker，1976）	可推	文献候选（核全文定 D1／D2）
+V09.3.5.1	Ingres 之后是 Postgres	claim	CL-3-070		1.10	A	Stonebraker、Wong、Kreps 与 Held 1976 年记载 INGRES 给出关系数据视图，作为用户进程集合运行于 UNIX 之上（DEC PDP-11）	可推	claim 复用（S2 先库后网）
+V09.3.5.1	Ingres 之后是 Postgres	fulltext_fact	7334	1547	0.80	B	INGRES 是 1970 年代 Berkeley 开发的关系数据库系统，与 IBM System R 并列为关系数据库早期两大原型	可推	全文补证候选（D1 型，核原文后落块）
+V09.3.5.1	Ingres 之后是 Postgres	fulltext_summary	880	880	0.60	C	THE DESIGN OF POSTGRES（Stonebraker & Rowe，Electrical Engineering and Computer Sciences）	线索	全文综述候选（D1 型）
+V09.3.5.1	Ingres 之后是 Postgres	person	michael_stonebraker		0.50	C	迈克尔·斯通布雷克：Ingres/Postgres 作者（人物索引 P2）	线索	人物面参照（不作证据）
+V09.3.5.1	Ingres 之后是 Postgres	kaoju	300		0.95	B	受访者 Michael Stonebraker（时任伯克利计算机科学教授、Ingres 与 Postgres 设计者），CHM 口述史，2015 年	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.5.1	Ingres 之后是 Postgres	kaoju	359		0.70	C	ACM Turing Award 官方页面（Stonebraker，2014）为获奖与技术贡献的一手页	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.5.2	体系结构方向早就单列	claim	CL-RM-037448		0.60	C	推荐 Hennessy 与 Patterson 的计算机体系结构量化方法一书，认为它是理解 RISC 优势的首选读物	线索	claim 复用（S2 先库后网）
+V09.3.5.2	体系结构方向早就单列	claim	CL-RM-084343		0.55	C	讨论 RISC 与 CISC 两种体系结构的取舍，并指出 RISC 编译出的目标代码通常更大	线索	claim 复用（S2 先库后网）
+V09.3.5.2	体系结构方向早就单列	person	david_patterson		0.50	C	大卫·帕特森：RISC/RAID/Berkeley 教授（人物索引 P1）	线索	人物面参照（不作证据）
+V09.3.5.3	其余方向与主线并行	person	john_ousterhout		0.45	C	约翰·奥斯特豪特：LFS/Tcl 作者（人物索引 P2），可作“其余方向”的人物落点	线索	人物面参照（不作证据）
+V09.3.5.3	其余方向与主线并行	未命中			0	—	核心四库无“伯克利计算机科学其他研究方向”的专门证据（人工智能／理论方向零命中）	未命中	—
+V09.3.5.4	资源在几个研究方向之间分配	claim	CL-3-014		0.80	B	伯克利 UNIX 性能改进由 NSF 与 DARPA 两条渠道资助，构成多向并行的资源面	可推	claim 复用（S2 先库后网）
+V09.3.5.4	资源在几个研究方向之间分配	claim	CL-RM-494398		0.65	C	少数研究型大学逾半研究生受联邦资助、多为研究助理形式，资源分配依附项目	可推	claim 复用（S2 先库后网）
+V09.3.5.5	传统形成可分三段看	fulltext_fact	7336	1547	1.00	B	INGRES 项目构成 Berkeley 数据库研究传统（Ingres→Postgres→PostgreSQL）的源头	可推	全文补证候选（D1 型，核原文后落块）
+V09.3.5.5	传统形成可分三段看	doubts	135		0.85	B	POSTGRES 1986 启动已确认（PostgreSQL 官方历史）；Ingres 1985 商业化时间存疑，须查 RTI／Ingres Corp. 档案	可推	存疑面参照（不作证据）
+V09.3.5.5	传统形成可分三段看	claim	CL-3-071		0.80	B	Stonebraker 与 Rowe 1986 年提出 POSTGRES 初步设计，作为 INGRES 的后继者	可推	claim 复用（S2 先库后网）
+V09.3.5.5	传统形成可分三段看	fulltext_summary	880	880	0.60	C	THE DESIGN OF POSTGRES（1986 前后设计文本）	线索	全文综述候选（D1 型）
+V09.3.5.5	传统形成可分三段看	kaoju	300		0.90	B	Stonebraker 口述史：Ingres 与 Postgres 两代系统的设计者自述，为分期判断的当事人证据	可推	考据记录复用（一手档案／口述，核原文后落块）
+V09.3.6.1	VLSI 计划里长出一套精简指令	ref_title	1535	1535	1.10	A	RISC I: A Reduced Instruction Set VLSI Computer（Patterson，1981）	可推	文献候选（核全文定 D1／D2）
+V09.3.6.1	VLSI 计划里长出一套精简指令	fulltext_fact	7302	1535	0.85	B	RISC I 是 Berkeley 提出的精简指令集（RISC）VLSI 计算机设计，代表 1980 年代初对 CISC 的反拨	可推	全文补证候选（D1 型，核原文后落块）
+V09.3.6.1	VLSI 计划里长出一套精简指令	ref_title	222	222	0.70	C	VLSI_Processor_Architecture（Hennessy，1984）	可推	文献候选（核全文定 D1／D2）
+V09.3.6.1	VLSI 计划里长出一套精简指令	claim	CL-RM-018063		0.50	C	1983 年多伦多 USENIX VLSI BOF：Bell Labs 将不再发布任何 CAD 软件，MCNC 愿分发自研工具	线索	claim 复用（S2 先库后网）
+V09.3.6.2	两代样机各自改指令	claim	CL-1-102		0.90	B	Patterson 与 Sequin 1981 年在 RISC I 论文中质疑 CISC 架构，提出精简指令集计算机方案	可推	claim 复用（S2 先库后网）
+V09.3.6.2	两代样机各自改指令	fulltext_fact	7302	1535	0.70	C	RISC I 为 Berkeley 的 VLSI 精简指令设计	可推	全文补证候选（D1 型，核原文后落块）
+V09.3.6.2	两代样机各自改指令	未命中			0	—	RISC II 专属记录零命中（核心四库中 RISC II 无独立事实行），第二代样机须联网补证	未命中	—
+V09.3.6.3	SPARC 之后的授权与转手	claim	CL-RM-058840		0.85	B	转发东芝发布世界首台 RISC 笔记本工作站的新闻稿，含 1989 年东芝取得 SPARC 及 SunOS 授权的背景	可推	claim 复用（S2 先库后网）
+V09.3.6.3	SPARC 之后的授权与转手	ref_title	5432	5432	0.80	B	AT&T 与 Sun Microsystems 联合新闻稿（1987-10-19）：统一 UNIX System V 与 SPARC 平台联盟（TUHS 转录）	可推	文献候选（核全文定 D1／D2）
+V09.3.6.3	SPARC 之后的授权与转手	claim	CL-RM-010001		0.45	C	Sun 员工 Bierman 发布 SPARC 技术会议全球日程，为 SPARC 生态早期推广一手记录	线索	claim 复用（S2 先库后网）
+V09.3.6.4	RISC 影响向产业与学界外溢	claim	CL-RM-058125		0.80	B	SUG 1989 年会实录：披露 4/490 的 33MHz SPARC 与基准与价格，并称 SPARC 已占 RISC 市场三分之二	可推	claim 复用（S2 先库后网）
+V09.3.6.4	RISC 影响向产业与学界外溢	claim	CL-RM-061105		0.60	C	SPARC 克隆机价格预期的讨论，反映 RISC 工作站市场竞争态势	可推	claim 复用（S2 先库后网）
+V09.3.6.4	RISC 影响向产业与学界外溢	claim	CL-RM-058840		0.55	C	东芝取得 SPARC 与 SunOS 授权，为学术设计外溢至产业的一例	线索	claim 复用（S2 先库后网）
+V09.3.6.5	伯克利与 SPARC 之间的血缘	claim	CL-RM-059483		0.90	B	Jim Williams 指 Chris Torek 从未正式任职伯克利 CSRG，此前在 LBL 移植 BSD 到 SPARC	可推	claim 复用（S2 先库后网）
+V09.3.6.5	伯克利与 SPARC 之间的血缘	ref_title	5432	5432	0.60	C	AT&T 与 Sun 1987 年 SPARC 联盟新闻稿，为渊源的另一端	可推	文献候选（核全文定 D1／D2）
+V09.3.6.5	伯克利与 SPARC 之间的血缘	sacred	2631		0.30	C	NetBSD 的学术渊源可追溯至伯克利 BSD 项目（史观参照，不作证据）	线索	史观参照（不作证据）
