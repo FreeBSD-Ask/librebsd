@@ -130,3 +130,10 @@ V61.2.3.4	OpenBSD kernel provides four levels of system security	curl 直取 man
 V61.2.3.5	FreeBSD -1 Permanently insecure mode default initial value	curl 直取 man.freebsd.org security(7) 分档段复用	命中	FreeBSD 默认初始值句取得	2026-11-23	curl 直连
 V61.2.3.5	OpenBSD 1 Secure mode default mode when system is multi-user	curl 直取 man.openbsd.org securelevel(7) 分档段复用	命中	OpenBSD 默认档句取得（默认分化两站对读）	2026-11-23	curl 直连
 V61.2.3.*	—	—	—	五题两独立来源齐备（10 块）：ref11132—11134 三新建（FreeBSD SECURITY(7)／OpenBSD SECURELEVEL(7)／FreeBSD JAIL(8)），五题异句异锚 J84；NetBSD man 站 securelevel(7)/security(8) 均 404（手册名演进弃用）改两站默认分化对读披露	2026-11-23	curl 直连
+V61.2.4.2	FreeBSD setfacl user group other mask entry types	curl 直取 man.freebsd.org setfacl(1)（70 246 字节）	命中	条目类型句取得（roff 原形照录）	2026-11-25	curl 直连
+V61.2.4.2	FreeBSD acl_valid may reorder ACL verification	curl 直取 man.freebsd.org acl_valid(3)（60 410 字节）	命中	验证重排句取得	2026-11-25	curl 直连
+V61.2.4.3	FreeBSD setfacl mask entry substituted group bits stat ls	curl 直取 man.freebsd.org setfacl(1) 复用	命中	mask 映射句取得（stat/ls 旧工具语义）	2026-11-25	curl 直连
+V61.2.4.3	FreeBSD getfacl trivial ACL owner group other match mode skipped	curl 直取 man.freebsd.org getfacl(1)（59 389 字节）	命中	退化判据句取得	2026-11-25	curl 直连
+V61.2.4.4	FreeBSD tunefs -a enable disable POSIX.1e ACL enable flag	curl 直取 man.freebsd.org tunefs(8)（65 193 字节）	命中	标志开关句取得	2026-11-25	curl 直连
+V61.2.4.4	FreeBSD acl POSIX.1e NFSv4 not all file systems explicitly enabled administrator	curl 直取 man.freebsd.org acl(3)（72 815 字节）	命中	支持面句取得；NetBSD acl(3) 域与文案不符 0 信任弃用披露（man.netbsd.org acl.5 404）	2026-11-25	curl 直连
+V61.2.4.*	—	—	—	三题两独立来源齐备（6 块）：ref11137—11141 五新建（setfacl(1)／acl_valid(3)／getfacl(1)／tunefs(8)／acl(3)，FreeBSD 15.0-RELEASE man 页）零复用；2.4.1/2.4.5 为 2026-09-14 行级遍历批已 filled 撤出批面	2026-11-25	curl 直连
