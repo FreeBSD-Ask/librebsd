@@ -1,0 +1,73 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V01.4.1.1	常驻监督程序接管全部人工操作	fulltext_fact	kf-bell-10022-739	10022	0.260	C	1972年初，A. R. Breithaupt 和 N. A. Martellotto 提议连接 Holmdel、Whippany 和 Indian Hill 的大型 IBM 批处理系统。	可推	全文补证候选（S1 命中即复用，D1 型；年代落在节内后段，须核是否入本节）
+V01.4.1.2	操作员的判断被写成卡片指令	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.1.3	通道与中断划定软件分层	fulltext_fact	9403	3647	0.250	C	516-7 DMA 助记符（1968-06-18）：三条 DMA 通道操作，N=1,2,3,4；LACN 为 LOAD DMA CHANNEL N ADDRESS。	可推	全文补证候选（通道硬件层线索，须与早期大型机通道体系对照）
+V01.4.1.4	资源管理与调度合成一个对象	claim	CL-1-104		1.20	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是英国曼彻斯特项目（Manchester Project）为 Atlas 计算机设计的 Atlas supervisor。	可推	claim 复用（S2 先库后网）
+V01.4.1.4	资源管理与调度合成一个对象	claim	CL-1-008		1.10	B	Dijkstra 1968 年描述的 THE 多道程序系统明确声明不作为多访问系统、无公共数据库供独立用户间通信，与 Multics 的多访问分时设计形成同时期路径对照。	可推	claim 复用（S2 先库后网）
+V01.4.1.5	系统软件随附机器	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.1.6	从监控程序到编译器与实用程序	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.2.1	排队作业转成会话使用	claim	CL-1-104		1.20	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是英国曼彻斯特项目（Manchester Project）为 Atlas 计算机设计的 Atlas supervisor。	可推	claim 复用（S2 先库后网）
+V01.4.2.1	排队作业转成会话使用	claim	CL-1-008		1.10	B	Dijkstra 1968 年描述的 THE 多道程序系统明确声明不作为多访问系统、无公共数据库供独立用户间通信，与 Multics 的多访问分时设计形成同时期路径对照。	可推	claim 复用（S2 先库后网）
+V01.4.2.2	中断与存储保护缺一不可	claim	CL-RM-494242		1.10	B	1971 年 Schroeder 与 Saltzer 记：在分段式内存寻址的系统中，保护可部分实现为“与计算关联的同心环、权限逐环递减”；GE-645 处理器虽含分段虚存逻辑，却只提供有限的访问控制机制。	可推	claim 复用（存储保护与保护环的同期一手记述）
+V01.4.2.3	机器时间按份额分摊给多用户	claim	CL-RM-494173		1.20	B	Multics 的设计目标是成为“计算机公用事业”（computer utility）的原型系统，服务众多目标各异的用户；其原始虚拟内存设计把硬件支持的分段与分页结合。	可推	claim 复用（多用户共享的经济学与公用事业定价语境）
+V01.4.2.3	机器时间按份额分摊给多用户	claim	CL-1-104		1.10	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是英国曼彻斯特项目（Manchester Project）为 Atlas 计算机设计的 Atlas supervisor。	可推	claim 复用（S2 先库后网）
+V01.4.2.4	响应时间成了硬指标	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.2.5	运营与计费另立专门班子	claim	CL-RM-494174		1.10	B	Project MAC 内 Corbató 领导的计算机系统研究组约占预算三分之一，目标为设计并实现 CTSS 的后继操作系统；与“公用事业”愿景相比，MIT 侧的工程目标更具体、更近端。	可推	claim 复用（分时运营的组织与预算线索）
+V01.4.2.6	会议与示范系统把分时推向各机构	fulltext_summary	1049	1049	0.300	C	1964 Timesharing systems started appearing in the early 1960s, with one of the first being ...	可推	全文综述候选（D1 型，核对原文后落块）
+V01.4.2.6	会议与示范系统把分时推向各机构	fulltext_summary	723	723	0.280	C	Hidden Early History of Unix（Warner Losh，Bell Labs UNIX 50 事件页），述早期分时与 UNIX 起源。	可推	全文综述候选（D1 型，核对原文后落块）
+V01.4.2.6	会议与示范系统把分时推向各机构	claim	CL-1-104		1.10	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是英国曼彻斯特项目（Manchester Project）为 Atlas 计算机设计的 Atlas supervisor。	可推	claim 复用（S2 先库后网）
+V01.4.3.1	三条分时路线分道	claim	CL-1-008		1.20	B	Dijkstra 1968 年描述的 THE 多道程序系统明确声明不作为多访问系统、无公共数据库供独立用户间通信，与 Multics 的多访问分时设计形成同时期路径对照。	可推	claim 复用（路线分化的直接对照）
+V01.4.3.1	三条分时路线分道	claim	CL-1-104		1.10	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是英国曼彻斯特项目（Manchester Project）为 Atlas 计算机设计的 Atlas supervisor。	可推	claim 复用（S2 先库后网）
+V01.4.3.2	把计算当作按需供给的公用事业	fulltext_fact	9429	3763	0.340	A	同篇 Corbató 讲稿说明 Multics 项目目标——“试图建立一个计算机服务公用事业”（a computer service utility），即把计算机当作公共服务经营。	可推	全文补证候选（D1 型，Corbató 原话）
+V01.4.3.2	把计算当作按需供给的公用事业	claim	CL-RM-494173		1.30	A	Multics 的设计目标是成为“计算机公用事业”（computer utility）的原型系统，服务众多目标各异的用户。	可推	claim 复用（S2 先库后网）
+V01.4.3.2	把计算当作按需供给的公用事业	fulltext_fact	7421	1146	0.300	B	文献《Protection and the Control of Information Sharing in Multics》，Saltzer（1974），收录于参考文献数据库。	可推	全文补证候选（D1 型，Multics 保护设计）
+V01.4.3.2	把计算当作按需供给的公用事业	fulltext_summary	2761	2761	0.280	B	这是为运行 Multics 而设计的 GE-645 计算机系统的官方手册；第一部分前三章阐述“信息处理公用事业”（information processing utility）的构想。	可推	全文综述候选（D1 型，核对原文后落块）
+V01.4.3.3	分时实践与黑客文化互为表里	claim	CL-RM-013829		1.00	C	MIT 为 ITS 写的 C 编译器经 Dave Krusch 与作者移植 TOPS-10，称 Snyder 编译器。	可推	claim 复用（ITS 技术实践线索，黑客文化面须联网补证）
+V01.4.3.3	分时实践与黑客文化互为表里	claim	CL-RM-014251		0.90	C	安全列表准入策略：极不安全系统（如 ITS）应排除。	可推	claim 复用（ITS 的同期评价线索）
+V01.4.3.3	分时实践与黑客文化互为表里	fulltext_summary	723	723	0.250	C	Hidden Early History of Unix（Warner Losh），述早期分时与 UNIX 起源，可作 ITS 与贝尔实验室路线的对照背景。	可推	全文综述候选（D1 型，核对原文后落块）
+V01.4.3.4	保护环与分段分页各执一端	claim	CL-RM-077448		1.30	A	Doug Gwyn 梳理 Multics 与 UNIX 的异同：前者有保护环、内存文件与动态链接，后者胜在小巧与管道记法。	可推	claim 复用（保护环与分段分页的设计对照）
+V01.4.3.4	保护环与分段分页各执一端	claim	CL-RM-494242		1.20	A	1971 年 Schroeder 与 Saltzer 记：保护可部分实现为“与计算关联的同心环、权限逐环递减”；GE-645 只提供有限的访问控制机制。	可推	claim 复用（S2 先库后网）
+V01.4.3.4	保护环与分段分页各执一端	fulltext_fact	7421	1146	0.300	B	文献《Protection and the Control of Information Sharing in Multics》，Saltzer（1974）。	可推	全文补证候选（D1 型）
+V01.4.3.4	保护环与分段分页各执一端	claim	CL-RM-014877		0.90	C	dmr 亲笔“Shared library follies”：戏引 Multics/Organick 分段谱系，折射 BTL 态度。	可推	claim 复用（当事人态度线索）
+V01.4.3.5	目标超出当时工程规模	claim	CL-1-003		1.30	A	Unix 的诞生是对 Multics 在贝尔实验室默里山（BTL-MH）开发拖期、无法提供交互能力的直接反应——默里山团队被迫退回到运行 GECOS 的状态。	可推	claim 复用（目标与工程规模不匹配的直接证据）
+V01.4.3.5	目标超出当时工程规模	claim	CL-1-001		1.10	B	Multics 最初是 MIT、贝尔实验室（BTL）、通用电气（GE）三方联合项目，其开发跨度多年。	可推	claim 复用（S2 先库后网）
+V01.4.3.5	目标超出当时工程规模	fulltext_summary	2761	2761	0.250	C	GE-645 计算机系统官方手册，为运行 Multics 而设计；前三章阐述“信息处理公用事业”构想。	可推	全文综述候选（D1 型）
+V01.4.3.6	从路线分化到系统分流	claim	CL-1-002		1.20	B	UNIX 的名称源于对 Multics（Multiplexed Information and Computing System）的类比；Brian Kernighan 命名时意在对比 Multics。	可推	claim 复用（路线分流后的命名痕迹）
+V01.4.3.6	从路线分化到系统分流	claim	CL-1-003		1.10	A	Unix 的诞生是对 Multics 在贝尔实验室默里山开发拖期、无法提供交互能力的直接反应。	可推	claim 复用（S2 先库后网）
+V01.4.3.6	从路线分化到系统分流	claim	CL-1-008		1.00	B	Dijkstra 1968 年描述的 THE 多道程序系统与 Multics 的多访问分时设计形成同时期路径对照。	可推	claim 复用（S2 先库后网）
+V01.4.4.1	交互经验移向小型机	fulltext_fact	7276	1526	0.320	A	一台 PDP-11/34 级传统 UNIX 系统（最大 256K 字节内存）1977 年价格约 5 万—15 万美元，PDP-11/70 级约 25 万美元，同期大型系统常以 50 万美元起步。	可推	全文补证候选（D1 型，小型机价格与体积）
+V01.4.4.1	交互经验移向小型机	claim	CL-1-012		1.30	A	Thompson 认为 UNIX 的流行是时机与机缘的结果，与计算机行业从中央大型机向自主小型机的转变相伴发生。	可推	claim 复用（分时遗产向小型机转移）
+V01.4.4.1	交互经验移向小型机	claim	CL-1-101		1.10	A	Bell 等人 1970 年在 DEC 发表 PDP-11 小型机架构论文，作者包括 DEC 的 G. Bell、R. Cady 等。	可推	claim 复用（S2 先库后网）
+V01.4.4.1	交互经验移向小型机	cross_person	263		0.300	C	Dennis Ritchie（丹尼斯·里奇），人物索引锚。	可推	人名索引锚（不作证据，仅供题面归属）
+V01.4.4.2	交互编辑与层次文件系统初具雏形	claim	CL-2-007		1.20	A	vi（visual）是显示导向的交互式文本编辑器，使用 vi 时终端屏幕充当所编辑文件的窗口。	可推	claim 复用（交互式编辑）
+V01.4.4.2	交互编辑与层次文件系统初具雏形	claim	CL-1-017		1.10	A	运行于 PDP-11 的原 UNIX 系统采用简单优雅的文件系统，所有磁盘传输均为 512 字节块。	可推	claim 复用（文件系统雏形）
+V01.4.4.2	交互编辑与层次文件系统初具雏形	claim	CL-2-008		1.00	B	Bill Joy 编写了 vi 的版本 1 与 2.0 至 2.7 并创建编辑器框架，Mark Horton 添加宏与其他特性。	可推	claim 复用（S2 先库后网）
+V01.4.4.3	把工具链搬进部门	fulltext_fact	7276	1526	0.300	A	一台 PDP-11/34 级传统 UNIX 系统 1977 年价格约 5 万—15 万美元，PDP-11/70 级约 25 万美元。	可推	全文补证候选（D1 型，部门自建工具链的成本前提）
+V01.4.4.3	把工具链搬进部门	claim	CL-1-012		1.10	B	Thompson 认为 UNIX 的流行与计算机行业从中央大型机向自主小型机的转变相伴发生。	可推	claim 复用（S2 先库后网）
+V01.4.4.3	把工具链搬进部门	fulltext_fact	7301	1534	0.250	C	Bell 与 Newell 将 PDP-11 置于小型机架构设计的理论框架中讨论，反映 1970 年代初 DEC 小型机系列的系统化思考。	可推	全文补证候选（小型机技术环境线索）
+V01.4.4.4	批处理分时与文件传统汇于小型机	claim	CL-1-012		1.30	A	Thompson 认为 UNIX 的流行是时机与机缘的结果，与计算机行业从中央大型机向自主小型机的转变相伴发生。	可推	claim 复用（三条传统汇聚的产业条件）
+V01.4.4.4	批处理分时与文件传统汇于小型机	claim	CL-1-104		1.10	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是 Atlas supervisor。	可推	claim 复用（分时传统）
+V01.4.4.4	批处理分时与文件传统汇于小型机	claim	CL-1-008		1.00	B	Dijkstra 1968 年描述的 THE 多道程序系统与 Multics 的多访问分时设计形成同时期路径对照。	可推	claim 复用（批处理与分时传统对照）
+V01.4.4.4	批处理分时与文件传统汇于小型机	fulltext_fact	7276	1526	0.280	A	PDP-11/34 级传统 UNIX 系统 1977 年价格约 5 万—15 万美元，同期大型系统常以 50 万美元起步。	可推	全文补证候选（小型机作为汇聚载体）
+V01.4.4.5	工具成为研究的中心	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.4.6	共享与独占两种逻辑交替	claim	CL-1-103		1.30	A	Pike 等人 1995 年在《Plan 9 from Bell Labs》论文中称，1980 年代中期计算趋势正从大型集中式分时计算机转向由较小个人机器组成的网络，这是 Plan 9 的设计动机。	可推	claim 复用（共享逻辑与独占逻辑交替的直接证据）
+V01.4.4.6	共享与独占两种逻辑交替	claim	CL-1-012		1.20	A	Thompson 认为 UNIX 的流行与计算机行业从中央大型机向自主小型机的转变相伴发生。	可推	claim 复用（S2 先库后网）
+V01.4.4.6	共享与独占两种逻辑交替	claim	CL-1-104		1.00	B	分时系统最早出现于 1960 年代初，最早的分时系统之一是 Atlas supervisor。	可推	claim 复用（S2 先库后网）
+V01.4.4.6	共享与独占两种逻辑交替	timeline	1		0.300	C	1969-01-01 UNIX 在贝尔实验室诞生（第 6 章）。	可推	年代锚（仅定时间边界，不作证据）
+V01.4.5.1	可移植接口层把硬件差异隔开	fulltext_fact	kf-tb3-3718-004	3718	0.300	B	据 p0062，把 UNIX V7 移植到 C/70 微机的报告称，最终仅重写了三个模块（moddep.c、trap.c、ureg.c）。	可推	全文补证候选（可移植接口层的移植工作量证据）
+V01.4.5.1	可移植接口层把硬件差异隔开	claim	CL-RM-020806		1.00	C	Clamage 反驳库不可写论：TauMetric 有全 hosted ANSI 库，已移植至 BSD、SV、VMS、DOS、CP/M。	可推	claim 复用（跨机移植线索，含微机系统）
+V01.4.5.1	可移植接口层把硬件差异隔开	claim	CL-RM-013739		0.90	C	CP/M // MARC 版 UUCP 独立实现（BDS C 写就，与 Bell 代码完全无关）。	可推	claim 复用（CP/M 生态线索，须联网核一手）
+V01.4.5.2	整机厂商自建一套极简文件系统	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.5.3	系统随整机经零售渠道分发到户	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.5.4	十六位机上的系统转手	fulltext_fact	9434	10211	0.260	C	DDJ 1991-02《Three Initial PC Utilities》（系列 2/17）：给出 boot.exe、cpfs.exe、cpsw.exe 三个 PC 实用程序，实现从 MS-DOS 对硬件的基本访问以启动 UNIX 移植。	可推	全文补证候选（MS-DOS 与 UNIX 移植的交界线索）
+V01.4.5.4	十六位机上的系统转手	claim	CL-RM-012496		0.90	C	转 Isaak 答疑：1003.1 无子集定义致 MS-DOS 与嵌入式实时系统难合规，1003.2 逼近千页且无在线版。	可推	claim 复用（MS-DOS 与标准化的关系线索）
+V01.4.5.5	兼容比先进更要紧	claim	CL-1-126		0.80	C	FreeBSD 的 bhyve 虚拟机监控器支持的客户机操作系统包括 *BSD、Linux、Windows 以及 Illumos、Plan 9 等。	可推	claim 复用（兼容性作为竞争主轴的后世例证，非同期证据）
+V01.4.5.5	兼容比先进更要紧	sacred	257		0.225	C	11.5 先进性的虚伪。	可推	史观参照（不作证据，仅定题面归属）
+V01.4.5.6	系统从附送走向单独售卖	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.6.1	基本输入输出层隔离硬件差异	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.6.2	命令与接口沿袭旧系统	claim	CL-RM-020806		0.90	C	Clamage 反驳库不可写论：TauMetric 有全 hosted ANSI 库，已移植至 BSD、SV、VMS、DOS、CP/M。	可推	claim 复用（接口沿袭与跨系统移植线索）
+V01.4.6.3	中断调用收束硬件差异	claim	CL-6-212		0.90	C	FreeBSD 虚拟内存子系统源自卡内基梅隆大学（CMU）的 Mach VM，采用机器无关层（以惰性求值为主要原则）加 PMAP 硬件抽象层的架构。	可推	claim 复用（硬件抽象层的后世例证，非同期证据）
+V01.4.6.4	系统选择被应用生态锁定	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.6.5	版本累积兼容负担	none			0.000	—	核心四库与二级库均零命中，P2 联网查证必查。	可推	P2 联网一手查证（库内无候选）
+V01.4.6.6	微机源流何以被排除在主流之外？	claim	CL-1-112		1.10	B	计算机史常按机器设计世代分期——大型机世代、小型机时代、个人计算机革命。	可推	claim 复用（史学分期框架，供“被排除在主流之外”辨析）
+V01.4.6.6	微机源流何以被排除在主流之外？	fulltext_fact	9451	10226	0.260	C	DDJ 1992-07《The Final Step》：386BSD 是“大型”操作系统（Plan 9、Mach、Minix、MS-DOS、Windows-NT、OS/2 2.0 等）的缩影。	可推	全文补证候选（微机系统被并入大传统叙述的例证）
