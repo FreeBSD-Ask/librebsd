@@ -1,0 +1,48 @@
+subsection_id	title	source	object_id	ref_id	score	quality	snippet	status	拟用途
+V09.1.1.1	主教哲学与城市之名	claim	CL-RM-496737		0.78	B	对照记载：伯克利校址先为 1820 年 Peralta 家族受让的 Rancho San Antonio 一部，1853 年设 Ocean View 聚落并由加州学院选作校址，1868 年两学院合并建校，1873 年校园开课且校名取自哲学家贝克莱。	可推	claim 复用（S2 先库后网）
+V09.1.1.1	主教哲学与城市之名	sacred	2549		0.29	C	贝克莱哲学	线索	史观参照（不作证据）
+V09.1.1.1	主教哲学与城市之名	sacred	2541		0.23	C	贝克莱思想概述	线索	史观参照（不作证据）
+V09.1.1.2	命名经过本身就是史料	claim	CL-RM-496737		0.82	B	对照记载：1853 年设 Ocean View 聚落并由加州学院选作校址，1873 年校园开课且校名取自哲学家贝克莱。	可推	claim 复用（S2 先库后网）
+V09.1.1.3	两种汉译为何长期混同？	未命中			0.00	—	四库无音译／译名同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.1.4	城市与大学共用一个名字	claim	CL-RM-496737		0.66	C	对照记载：1868 年两学院合并建校，1873 年校园开课且校名取自哲学家贝克莱。	线索	claim 复用（S2 先库后网）
+V09.1.1.5	移民定居者的自我想象与地名选择	未命中			0.00	—	四库无移民／定居同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.2.1	建市章程定下市政框架	tree	1.2.1#DB_POINTS:chapter_reviews		1.00	A	在档 DB_POINTS：chapter_reviews，469 字综述、匹配 13 篇文献	可推	在档块（迁移保真对象）
+V09.1.2.1	建市章程定下市政框架	ref_title	1556	1556	0.90	B	Berkeley city charter en（1908，全文 282,497 字符／180 页）	可推	文献候选（核全文定 D1／D2）
+V09.1.2.1	建市章程定下市政框架	ref_title	1555	1555	0.55	C	California uc organic act 1868 en（1868，全文 37,629 字符／10 页）	线索	文献候选（核全文定 D1／D2）
+V09.1.2.1	建市章程定下市政框架	claim	CL-RM-496737		0.55	C	对照记载：1868 年两学院合并建校，1873 年迁至伯克利。	线索	claim 复用（S2 先库后网）
+V09.1.2.2	市校关系落在土地与税收条款上	ref_title	1556	1556	0.85	B	Berkeley city charter en（1908，含市政条款与边界）	可推	文献候选（核全文定 D1／D2）
+V09.1.2.2	市校关系落在土地与税收条款上	claim	CL-RM-496737		0.50	C	对照记载：伯克利校址先为 1820 年 Peralta 家族受让的 Rancho San Antonio 一部。	线索	claim 复用（S2 先库后网）
+V09.1.2.2	市校关系落在土地与税收条款上	ref_title	1555	1555	0.40	C	California uc organic act 1868 en（1868）	线索	文献候选（核全文定 D1／D2）
+V09.1.2.3	华埠存续与对华联系的线索	未命中			0.00	—	四库无华埠／对华联系同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.2.4	东湾设镇可以编年	claim	CL-RM-496737		0.78	B	对照记载：1853 年设 Ocean View 聚落，1868 年两学院合并建校，1873 年校园开课。	可推	claim 复用（S2 先库后网）
+V09.1.2.4	东湾设镇可以编年	ref_title	2782	2782	0.55	C	The Centennial Record of the University of California, 1868-1968（1968）	线索	文献候选（核全文定 D1／D2）
+V09.1.2.4	东湾设镇可以编年	ref_title	1555	1555	0.45	C	California uc organic act 1868 en（1868）	线索	文献候选（核全文定 D1／D2）
+V09.1.2.5	市政扩张与校园边界长期互相拉扯	ref_title	1556	1556	0.75	B	Berkeley city charter en（1908，含市政边界与条款）	可推	文献候选（核全文定 D1／D2）
+V09.1.2.5	市政扩张与校园边界长期互相拉扯	ref_title	5901	5901	0.45	C	Black Activist Mayor Takes Berkeley Post（1971，NYT）	线索	文献候选（核全文定 D1／D2）
+V09.1.2.5	市政扩张与校园边界长期互相拉扯	ref_title	5902	5902	0.40	C	Warren Widener: Mayor-elect of Berkeley（1971，KPFA 口述）	线索	文献候选（核全文定 D1／D2）
+V09.1.3.1	东岸山地与海湾定下聚落格局	未命中			0.00	—	四库无东岸地理同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.3.2	交通网络延伸牵引城市成长	未命中			0.00	—	四库无交通网络同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.3.3	科技带雏形可溯至湾区产业	未命中			0.00	—	四库无科技带同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.3.4	气候也塑造聚落分布	未命中			0.00	—	四库无气候／聚落同题候选，须 P2 联网专查	未命中	P2 联网专查
+V09.1.3.5	地理条件与机构选址之间的持久约束	claim	CL-RM-496737		0.68	B	对照记载：1853 年设 Ocean View 聚落并由加州学院选作校址。	可推	claim 复用（S2 先库后网）
+V09.1.3.5	地理条件与机构选址之间的持久约束	ref_title	2782	2782	0.50	C	The Centennial Record of the University of California, 1868-1968（1968）	线索	文献候选（核全文定 D1／D2）
+V09.1.4.1	言论自由运动留下政治遗产	tree	1.4.1#DB_POINTS:cross_indexes_person		1.00	A	在档人物索引：Mario Savio（P2，伯克利自由言论运动领袖）	可推	在档块（迁移保真对象）
+V09.1.4.1	言论自由运动留下政治遗产	tree	1.4.1#DB_POINTS:chapter_reviews		1.00	A	在档综述：783 字、锚定素材 122 篇（含存疑 14 篇）	可推	在档块（迁移保真对象）
+V09.1.4.1	言论自由运动留下政治遗产	ref_title	1551	1551	0.95	A	Mario Savio - Berkeley Free Speech Movement Speech（1964）	可推	文献候选（核全文定 D1／D2）
+V09.1.4.1	言论自由运动留下政治遗产	ref_title	1552	1552	0.88	B	Free Speech Movement (History)（2013）	可推	文献候选（核全文定 D1／D2）
+V09.1.4.1	言论自由运动留下政治遗产	claim	CL-3-006		0.88	B	Mario Savio 领导的伯克利自由言论运动是 1960 年代美国大学校园第一次大规模公民不服从行动。	可推	claim 复用（S2 先库后网）
+V09.1.4.1	言论自由运动留下政治遗产	claim	CL-3-007		0.80	B	学生要求大学行政当局解除对校园政治活动的禁令，并承认学生的言论自由与学术自由权利。	可推	claim 复用（S2 先库后网）
+V09.1.4.1	言论自由运动留下政治遗产	fulltext_fact	7346	1551	0.85	B	Mario Savio 领导了伯克利自由言论运动，该运动是 1960 年代美国大学校园第一次大规模的公民不服从行动。	可推	全文补证候选（D1 型）
+V09.1.4.2	反文化运动构成技术文化土壤	tree	1.4.2#DB_POINTS:chapter_reviews		1.00	A	在档综述：316 字、9 篇匹配（Roszak 技术官僚社会）	可推	在档块（迁移保真对象）
+V09.1.4.2	反文化运动构成技术文化土壤	fulltext_summary	1545	1545	0.82	B	Roszak 1969《The Making of a Counter Culture》提出技术官僚社会概念，考察青年反文化对技术理性的批判。	可推	全文综述候选（D1 型，核原文后落块）
+V09.1.4.2	反文化运动构成技术文化土壤	claim	CL-RM-496735		0.85	B	Britannica 记 1960—70 年代嬉皮文化在伯克利市繁盛并持续影响市民日常。	可推	claim 复用（S2 先库后网）
+V09.1.4.2	反文化运动构成技术文化土壤	claim	CL-21-00702		0.45	C	Swaine 认为 Markoff 之书的核心贡献并非六十年代反文化叙事，而在记录 Engelbart 与 McCarthy 的研究影响。	线索	claim 复用（S2 先库后网）
+V09.1.4.3	伯克利成了西部激进主义的地理符号	tree	1.4.3#DOC_MINE:ref10968		1.00	A	在档 DOC_MINE（L3，官方大事记：FSM 后本校为全国政治行动焦点、反战抗议频仍）	可推	在档块（迁移保真对象）
+V09.1.4.3	伯克利成了西部激进主义的地理符号	tree	1.4.3#DOC_MINE:ref10970		1.00	A	在档 DOC_MINE（L2，Britannica：1960—70 年代嬉皮文化繁盛）	可推	在档块（迁移保真对象）
+V09.1.4.3	伯克利成了西部激进主义的地理符号	claim	CL-RM-496734		0.92	A	伯克利校区官方大事记自记 1960—70 年代反战抗议频仍，1964 年 FSM 后本校园成为全国政治行动焦点。	可推	claim 复用（S2 先库后网）
+V09.1.4.3	伯克利成了西部激进主义的地理符号	ref_title	5907	5907	0.50	C	Berkeley People's Park Volleyball Court Protests（1991，LA Times）	线索	文献候选（核全文定 D1／D2）
+V09.1.4.4	政治事件在共同体文化中留下痕迹	tree	1.4.4#MAIL_INSIGHT:507@azure.UUCP		1.00	A	在档 MAIL_INSIGHT：1985 年 Steve Summit 指州级夏令时立法冲击 ctime 时区机制	可推	在档块（迁移保真对象）
+V09.1.4.4	政治事件在共同体文化中留下痕迹	claim	CL-RM-496734		0.55	C	伯克利校区官方大事记自记 1964 年 FSM 后本校园成为全国政治行动焦点。	线索	claim 复用（S2 先库后网）
+V09.1.4.5	政治文化能拉多长？	claim	CL-RM-496734		0.60	C	伯克利校区官方大事记明言该城的激进主义地理符号有官方制度记录。	线索	claim 复用（S2 先库后网）
+V09.1.4.5	政治文化能拉多长？	claim	CL-RM-496735		0.50	C	Britannica 记伯克利城市级文化符号延续至当代。	线索	claim 复用（S2 先库后网）
+V09.1.4.5	政治文化能拉多长？	ref_title	5907	5907	0.45	C	Berkeley People's Park Volleyball Court Protests（1991，LA Times）	线索	文献候选（核全文定 D1／D2）
