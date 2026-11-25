@@ -1,0 +1,13 @@
+ref_key	author	title	publisher	year	url	accessed	type	note
+REF-V46C1-01	The OpenBSD Project	OpenBSD 5.2	The OpenBSD Project	2012	https://www.openbsd.org/52.html	2026-11-25	official_doc	官方发行页（2012-11-01 发行）；1.6.2 主源，含 Disabled SSLv2 in OpenSSL.
+REF-V46C1-02	The OpenBSD Project	OpenBSD 5.2 Changelog	The OpenBSD Project	2012	https://www.openbsd.org/plus52.html	2026-11-25	official_doc	官方变更页；1.6.2 第二源，含 Disabled SSLv2 in the OpenSSL code base.；与 01 为不同文献，D4 四键不应判重
+REF-V46C1-03	The OpenBSD Project	OpenBSD 5.6	The OpenBSD Project	2014	https://www.openbsd.org/56.html	2026-11-25	official_doc	官方发行页（2014-11-01）；LibreSSL 分叉与 ALTQ 移除两处主源；库内 ref2055 URL 尾带句点（56.html.），建议新条目取净 URL 并在 note 披露与 ref2055 的关系
+REF-V46C1-04	The OpenBSD Project	OpenBSD 5.7	The OpenBSD Project	2015	https://www.openbsd.org/57.html	2026-11-25	official_doc	官方发行页（2015-05-01）；Removed hardware support 三条与路由表／mbuf mpsafe 句
+REF-V46C1-05	The OpenBSD Project	OpenBSD 5.9	The OpenBSD Project	2016	https://www.openbsd.org/59.html	2026-11-25	official_doc	官方发行页（2016-03-29）；pledge(2) 条目与 453／707 句
+REF-V46C1-06	The OpenBSD Project	OpenBSD 6.0	The OpenBSD Project	2016	https://www.openbsd.org/60.html	2026-11-25	official_doc	官方发行页（2016-09-01）；ART 路由表、网络输入路径线程上下文、smtpd fork+exec
+REF-V46C1-07	The OpenBSD Project	Upgrade Guide 5.4 to 5.5	The OpenBSD Project	2014	https://www.openbsd.org/faq/upgrade55.html	2026-11-25	official_doc	官方升级指南；Year 2038 ready 节为 1.6.5 第二源
+REF-V46C1-08	The OpenBSD Project	pledge(2) manual page (OpenBSD 5.9)	The OpenBSD Project	2016	https://man.openbsd.org/OpenBSD-5.9/pledge.2	2026-11-25	official_doc	手册页 5.9 版本；HISTORY 句 first appeared in OpenBSD 5.9
+REF-V46C1-09	The OpenBSD Project	LibreSSL	The OpenBSD Project	n.d.	https://www.libressl.org/	2026-11-25	official_doc	LibreSSL 官方页；与 56.html 不同域名，可作独立第二源；库内 ref2053 为维基条目（禁引）、ref2054 为 threatpost 报道，均不宜代此页
+REF-V46C1-10	The OpenBSD Project	strlcpy(3) manual page	The OpenBSD Project	2024	https://man.openbsd.org/strlcpy.3	2026-11-25	official_doc	手册页（页面日期 2024-08-03）；AUTHORS 仅署 Todd C. Miller，与创新清单双署不一致，落块须并置
+REF-V46C1-11	The OpenBSD Project	lofn(4) manual page (OpenBSD 5.6)	The OpenBSD Project	2007	https://man.openbsd.org/OpenBSD-5.6/man4/lofn.4	2026-11-25	official_doc	手册页 5.6 版本（页面日期 2007-05-31）；仅证设备身份（Hifn 6500 crypto accelerator），不移除事实
+REF-V46C1-12	The OpenBSD Project	urio(4) manual page (OpenBSD 5.6)	The OpenBSD Project	2010	https://man.openbsd.org/OpenBSD-5.6/man4/urio.4	2026-11-25	official_doc	手册页 5.6 版本（页面日期 2010-05-09）；仅证设备身份（Diamond Multimedia Rio MP3 players），不移除事实

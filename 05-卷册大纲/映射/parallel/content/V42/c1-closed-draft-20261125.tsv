@@ -1,0 +1,12 @@
+subsection_id	reason	queries	sites_checked	misses	verdict
+V42.1.4.2	SPARC 早期维护人无官方署名记载；ports history 只记 1994-02-01 导入	de Raadt SPARC NetBSD port maintainer 1994；NetBSD sparc port history maintainer	netbsd.org/ports/history.html；netbsd.org/people/port-maintainers.html；openbsd.org	ports history 无维护人字段；port-maintainers 页仅列现任；无 1994 年名单	needs_more
+V42.1.4.3	1994 去职公告正文仅存邮件列表，按 DOC_MINE 非邮件界线不落块	NetBSD core group December 1994 Theo de Raadt announcement；Theo de Raadt removed NetBSD core group 1994	mail-index.netbsd.org（邮件档，仅线索）；netbsd.org/about/history.html；netbsd.org/people/core.html；openbsd.org；zbruceli.org（个人博客引邮件原文，不作证据）	非邮件一手未见；官方沿革与 core 页只记名单，不记去职	needs_more
+V42.1.4.4	公告文本与当事人陈述分界，须两造文本，均属邮件档	NetBSD core group 1994 announcement text Theo response	同上	两造均无官网载体	needs_more
+V42.1.4.5	贡献认定与去职理由并陈，须公告原文	NetBSD 1994 core announcement contribution recognition	同上	同上	needs_more
+V42.1.4.6	章节互见边界属编辑结构命题，外部无对应载体	（无外部检索；依据 outline.txt 节题与 @@ 互见注）	outline.txt 第四十二卷第1章 1.4 节题与注文（内部结构）	无外部一手	needs_more
+V42.1.6.1	两版并陈须公告与回应原文	NetBSD 1994 core announcement and Theo reply	mail-index.netbsd.org（仅线索）；openbsd.org；netbsd.org/about/history.html	官网无两造文本	needs_more
+V42.1.6.2	集体落款须公告原文	NetBSD core group collective statement 1994	同上	同上	needs_more
+V42.1.6.3	贡献认定语须公告原文	NetBSD 1994 core announcement long service contribution	同上	同上	needs_more
+V42.1.6.4	证据层级属考据纪律，无外部一手可证	（无外部检索；依据 DOC_MINE 与考据规则证据分级）	01-规则/DOC_MINE补证块格式规则.md；01-规则/考据规则.md（内部规则）	无外部载体	needs_more
+V42.1.6.5	OpenBSD 创立经过未在官网明述	OpenBSD founded 1995 Theo de Raadt site:openbsd.org；OpenBSD history NetBSD fork	site:openbsd.org；openbsd.org 首页；openbsd.org/faq/faq1.html；openbsd.org/goals.html	openbsd.org 未明述 1995 年创立与 NetBSD 分家；仅称 4.4BSD-based	needs_more
+V42.1.6.6	分家记录对读属编辑元命题，外部无对应载体	（无外部检索）	outline.txt 1.6 节题与注文（内部结构）	无外部一手	needs_more

@@ -1,0 +1,11 @@
+ref_key	author	title	publisher	year	url	accessed	type	note
+DF-HSU-2004	HSU J M	The DragonFlyBSD Operating System	AsiaBSDCon 2004	2004	http://www.freebsd.org/~hsu/publications/dragonflybsd.asiabsdcon04.pdf	2026-11-25	会议论文	稿末记 Manuscript received March 11, 2004；作者自署 FreeBSD and DragonFlyBSD 成员。GB/T 7714-2015：HSU J M. The DragonFlyBSD Operating System[C]//Proceedings of AsiaBSDCon 2004. 2004.
+DF-REL12	The DragonFly Project	DragonFly 1.2.x Release Notes	The DragonFly Project	2005	https://www.dragonflybsd.org/release12/	2026-11-25	官方发行说明	页内记 1.2.0 于 08-Apr-2005；末次编辑 2018-07-24。本批用于 1.2 系列策略、网络进展、namecache、GCC/CCVER、基础工具条目。
+DF-REL14	The DragonFly Project	DragonFly 1.4.x Release Notes	The DragonFly Project	2006	https://www.dragonflybsd.org/release14/	2026-11-25	官方发行说明	页内记 1.4.4 于 23-Apr-2006；用于 GCC 3.4 转正、pkgsrc 取代 FreeBSD Ports、errata 自陈。
+DF-RELEASES	The DragonFly Project	releases	The DragonFly Project	2025	https://www.dragonflybsd.org/releases/	2026-11-25	官方发行索引	末次编辑 2025-05-21；1.0（July 12, 2004）与 1.0A（July 14, 2004）两行。
+DF-DIARY	The DragonFly Project	diary	The DragonFly Project	n.d.	https://www.dragonflybsd.com/diary/	2026-11-25	官方项目日记	本批引 2006-07-12 条：gdb -k 改 kgdb、SHA256 自 FreeBSD 引入、VOP_OPEN 关联 VM 对象。
+FBSD-50-ANN	FreeBSD Project	FreeBSD 5.0-RELEASE Announcement	The FreeBSD Project	2003	https://www.freebsd.org/releases/5.0R/announce/	2026-11-25	官方发布公告	公告日期 2003-01-19；记 “Fine-grained locking in the kernel paves the road…”。
+FBSD-51-ANN	FreeBSD Project	FreeBSD 5.1-RELEASE Announcement	The FreeBSD Project	2003	https://www.freebsd.org/releases/5.1R/announce/	2026-11-25	官方发布公告	公告日期 2003-06-09；记实验性 1:1 与 M:N 线程库。
+FBSD-48-ANN	FreeBSD Project	FreeBSD 4.8-RELEASE Announcement	The FreeBSD Project	2003	https://www.freebsd.org/releases/4.8R/announce/	2026-11-25	官方发布公告	公告日期 2003-04-03；用于分叉基线 4.8 的发行时点。
+FBSD-SMPNG	FreeBSD Project	SMPng Design Document	The FreeBSD Project	n.d.	https://docs.freebsd.org/en/books/arch-handbook/smp/	2026-11-25	官方设计文档	FreeBSD Handbook 第 8 章；用于 4.x Giant 与 SMPng 细粒度锁两处引文。
+OSN-7660	OSNews	DragonFlyBSD 1.0 Released	OSNews	2004	https://www.osnews.com/story/7660/dragonflybsd-10-released/	2026-11-25	新闻报道	页头 2004-07-12，Submitted by polluted；转引站方 1.0 公告首段。
