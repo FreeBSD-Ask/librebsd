@@ -60,7 +60,7 @@ function readSubs(volNo) {
     }
     if (v !== volNo) continue;
     const m = line.match(/^  -\s+(\d{1,3}\.\d{1,3}\.\d{1,4})\s+(.*)$/);
-    if (m) out.push({ num: m[1], title: m[2].trim() });
+    if (m) out.push({ num: m[1], title: m[2].split('@@')[0].trim() });
   }
   return out;
 }
