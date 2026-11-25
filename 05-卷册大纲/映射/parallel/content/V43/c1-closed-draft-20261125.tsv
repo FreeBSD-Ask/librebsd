@@ -1,0 +1,6 @@
+subsection_id	reason	queries	sites_checked	misses	verdict
+V43.1.3.2	MI 改动须在至少一个 Tier I 移植上测试的规则仅见 ports 页；wiki.netbsd.org/ports/ 为同文副本，不构成独立来源	MI changes must be tested on at least one of these ports；NetBSD tier I MI changes testing	www.netbsd.org/ports/；wiki.netbsd.org/ports/；NetBSD 9.3／10.0 发行公告	两页同文；发行公告与第三方检索未见该规则的独立记载	single_source
+V43.1.3.3	MI 改动应向 Tier I 移植让利的规则仅见 ports 页；wiki 副本同文	MI changes should benefit these ports NetBSD；NetBSD focus ports MI benefit	www.netbsd.org/ports/；wiki.netbsd.org/ports/	无独立第二源；第三方材料仅转抄同页	single_source
+V43.1.3.4	有机移植可能因重点移植受益而受损的表述仅见 ports 页	MI architecture decisions may penalize organic ports benefit focus ports NetBSD	www.netbsd.org/ports/；wiki.netbsd.org/ports/	无独立第二源；未见第三方评述该条	single_source
+V43.1.3.5	三层分级的依据仅见 ports 页	NetBSD ports three tiers importance community activity；NetBSD port tiers core@	www.netbsd.org/ports/；wiki.netbsd.org/ports/	wiki 为同文副本；未获独立文献复述分级依据	single_source
+V43.1.4.4	发布时剔除不可用移植并降级的规则仅见 ports 页；未找到当期发行公告的对应实例	a release is done without the port and the port is moved down to the life support tier NetBSD	www.netbsd.org/ports/；wiki.netbsd.org/ports/；formal-9／formal-10 发行公告	发行公告未见“某移植因发布时不可用而剔除”的对应实例；无独立第二源	single_source

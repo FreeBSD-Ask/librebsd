@@ -1,0 +1,12 @@
+ref_key	author	title	publisher	year	url	accessed	type	note
+REF-NB-HISTORY	The NetBSD Project	The History of the NetBSD Project	The NetBSD Project	2026	https://www.netbsd.org/about/history.html	2026-11-25	EB/OL	官方沿革活页；载四位发起人、quality and architecture independence、4.3BSD 经 Net/2 与 386BSD
+REF-NB-ABOUT	The NetBSD Project	About NetBSD	The NetBSD Project	2026	https://www.netbsd.org/about/	2026-11-25	EB/OL	官方简介活页；载五项项目目标及其列序、质量与可移植表述
+REF-NB-SYSTEM	The NetBSD Project	The NetBSD system	The NetBSD Project	2026	https://www.netbsd.org/about/system.html	2026-11-25	EB/OL	系统目标页；载正确设计为首要目标、It doesn't work unless it's right、code bloat 与 MI 总线基础设施
+REF-NB-PORTABILITY	The NetBSD Project	Portability and supported hardware platforms	The NetBSD Project	2026	https://www.netbsd.org/about/portability.html	2026-11-25	EB/OL	可移植性页；载 MD／MI 分层、代码写一次多处复用、53 架构表述
+REF-NB-PORTS	The NetBSD Project	Platforms Supported by NetBSD	The NetBSD Project	2026	https://www.netbsd.org/ports/	2026-11-25	EB/OL	移植页；载三层分级依据与 Tier I／II 的 MI 测试、收益、惩罚、发布剔除四处规则
+REF-NB-WIKI-PORTS	NetBSD Wiki	Platforms supported by NetBSD	NetBSD Wiki	2026	https://wiki.netbsd.org/ports/	2026-11-25	EB/OL	NetBSD Wiki 移植页；与 www ports 页同文，仅作对照，不计独立来源
+REF-NB-GUIDE-INTRO	The NetBSD Project	NetBSD Guide, Chapter 1: What is NetBSD?	The NetBSD Project	2026	https://www.netbsd.org/docs/guide/en/chap-intro.html	2026-11-25	EB/OL	官方手册第 1 章；载 4.3BSD／386BSD 血缘、质量与可移植关系、It doesn't work unless it's right、逾两万包
+REF-NB-RELEASEMAP	The NetBSD Project	NetBSD release glossary and graphs	The NetBSD Project	2026	https://www.netbsd.org/releases/release-map.html	2026-11-25	EB/OL	发布术语与分支图；载维护分支产生正式次版本（如 6.1）
+REF-NB-REL15	The NetBSD Project	Announcing NetBSD 1.5	The NetBSD Project	2000	https://www.netbsd.org/releases/formal-1.5/NetBSD-1.5.html	2026-11-25	EB/OL	1.5 发行公告，2000-12-06 首发（formal-1.5 索引页载明）；载单源码树、最可移植、KDE／GNOME 经包系统
+REF-NB-REL30	The NetBSD Project	Announcing NetBSD 3.0	The NetBSD Project	2005	https://www.netbsd.org/releases/formal-3/NetBSD-3.0.html	2026-11-25	EB/OL	3.0 发行公告，2005-12-23 发布（formal-3 索引页载明）；载 57 架构单源码树与最可移植句
+REF-NB-REL93	The NetBSD Project	Announcing NetBSD 9.3	The NetBSD Project	2022	https://www.netbsd.org/releases/formal-9/NetBSD-9.3.html	2026-11-25	EB/OL	9.3 发行公告，2022-08-04；自称 9 发布分支的第三次更新
