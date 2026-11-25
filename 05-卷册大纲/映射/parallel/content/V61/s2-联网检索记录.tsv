@@ -137,3 +137,10 @@ V61.2.4.3	FreeBSD getfacl trivial ACL owner group other match mode skipped	curl 
 V61.2.4.4	FreeBSD tunefs -a enable disable POSIX.1e ACL enable flag	curl 直取 man.freebsd.org tunefs(8)（65 193 字节）	命中	标志开关句取得	2026-11-25	curl 直连
 V61.2.4.4	FreeBSD acl POSIX.1e NFSv4 not all file systems explicitly enabled administrator	curl 直取 man.freebsd.org acl(3)（72 815 字节）	命中	支持面句取得；NetBSD acl(3) 域与文案不符 0 信任弃用披露（man.netbsd.org acl.5 404）	2026-11-25	curl 直连
 V61.2.4.*	—	—	—	三题两独立来源齐备（6 块）：ref11137—11141 五新建（setfacl(1)／acl_valid(3)／getfacl(1)／tunefs(8)／acl(3)，FreeBSD 15.0-RELEASE man 页）零复用；2.4.1/2.4.5 为 2026-09-14 行级遍历批已 filled 撤出批面	2026-11-25	curl 直连
+V61.2.5.3	FreeBSD MAC policies cannot override traditional Unix file permissions superuser checks	curl 直取 man.freebsd.org MAC(4)（69 363 字节；四键命中既有 ref11111 复用）	命中	叠加边界句取得（roff 断词空白归一照录）	2026-11-25	curl 直连
+V61.2.5.3	FreeBSD Handbook MAC mandatory vs DAC discretionary users	curl 直取 docs.freebsd.org Handbook MAC 章（133 507 字节；新 ref11152）	命中	MAC/DAC 执行主体分野句取得	2026-11-25	curl 直连
+V61.2.5.4	FreeBSD MAC loadable security policy architecture finely control	curl 直取 man.freebsd.org MAC(4) 复用	命中	可装载架构句取得	2026-11-25	curl 直连
+V61.2.5.4	FreeBSD Handbook load several policy modules at a time MLS environment overhead	curl 直取 docs.freebsd.org Handbook MAC 章 复用	命中	多模块组合与开销句取得	2026-11-25	curl 直连
+V61.2.5.5	FreeBSD MAC BUGS not all attack channels protected by entry point checks root	curl 直取 man.freebsd.org MAC(4) BUGS 段 复用	命中	入口点检查上限句取得	2026-11-25	curl 直连
+V61.2.5.5	FreeBSD Handbook root user can still change security enforcement edit configuration files	curl 直取 docs.freebsd.org Handbook MAC 章 复用	命中	root 约束边界句取得	2026-11-25	curl 直连
+V61.2.5.*	—	—	—	三题两独立来源齐备（6 块）：ref11111 既有复用（MAC(4)，他线 11-21 建前次未用）＋ref11152 新建（FreeBSD Handbook MAC 章）；零挂账存量、S1 无候选，全联网；2.5.1/2.5.2 为旧批已 filled 撤出批面	2026-11-25	curl 直连
