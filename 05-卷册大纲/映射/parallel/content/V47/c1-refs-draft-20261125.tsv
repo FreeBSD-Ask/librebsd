@@ -1,0 +1,14 @@
+ref_key	author	title	publisher	year	url	accessed	type	note
+ob-security	OpenBSD	Security[EB/OL]	OpenBSD	2026	https://www.openbsd.org/security.html	2026-11-25	official_doc	库内已有 ref2219（V27／V46 均用），本批 reuse，不新建；D2 网页锚。
+ob-goals	OpenBSD	Project Goals[EB/OL]	OpenBSD	2026	https://www.openbsd.org/goals.html	2026-11-25	official_doc	库内已有 ref10802（V27／V75／V46 均用），本批 reuse；D2 网页锚。
+ob-policy	OpenBSD	Copyright Policy[EB/OL]	OpenBSD	2026	https://www.openbsd.org/policy.html	2026-11-25	official_doc	库内已有 ref10672（V53 用），本批 reuse；D2 网页锚。
+ob-faq1	OpenBSD	FAQ - Introduction to OpenBSD[EB/OL]	OpenBSD	2026	https://www.openbsd.org/faq/faq1.html	2026-11-25	official_doc	库内已有 ref10804（V46／V75 用），本批 reuse；D2 网页锚。
+ob-index	OpenBSD	OpenBSD[EB/OL]	OpenBSD	2026	https://www.openbsd.org/	2026-11-25	official_doc	新建（库内未检得首页 ref，四键待主会话复核；若命中改复用）。D2 网页锚；页面 n.d.，页载当前发行 OpenBSD 8.0（2026-10-20）。
+ob-innovations	OpenBSD	Innovations[EB/OL]	OpenBSD	2026	https://www.openbsd.org/innovations.html	2026-11-25	official_doc	新建；三题（1.2.3／1.4.1／1.4.2）三条异段 quote，落库时按异锚处理。D2 网页锚。
+ob-33	OpenBSD	OpenBSD 3.3[EB/OL]	OpenBSD	2003	https://www.openbsd.org/33.html	2026-11-25	official_doc	新建；发行日 2003-05-01。D2 网页锚。
+ob-34	OpenBSD	OpenBSD 3.4[EB/OL]	OpenBSD	2003	https://www.openbsd.org/34.html	2026-11-25	official_doc	新建；发行日 2003-11-01。D2 网页锚。
+ob-60	OpenBSD	OpenBSD 6.0[EB/OL]	OpenBSD	2016	https://www.openbsd.org/60.html	2026-11-25	official_doc	新建；发行日 2016-09-01。D2 网页锚。
+ob-faq5	OpenBSD	FAQ - Building the System From Source[EB/OL]	OpenBSD	2026	https://www.openbsd.org/faq/faq5.html	2026-11-25	official_doc	新建；页面 n.d.。D2 网页锚。
+nb-about	The NetBSD Foundation	About NetBSD[EB/OL]	The NetBSD Foundation	2026	https://www.netbsd.org/about/	2026-11-25	official_doc	新建；页面 n.d.。D2 网页锚。
+nb-redistribution	The NetBSD Foundation	NetBSD Licensing and Redistribution[EB/OL]	The NetBSD Foundation	2026	https://www.netbsd.org/about/redistribution.html	2026-11-25	official_doc	新建；页面 n.d.，其 why2clause 节载 2008 年改两条款与 UCB 删第三条款的旁证。D2 网页锚。
+fb-about	The FreeBSD Project	About FreeBSD[EB/OL]	The FreeBSD Project	2025	https://www.freebsd.org/about/	2026-11-25	official_doc	新建；页面末改 2025-12-21（页内自述）。D2 网页锚。
