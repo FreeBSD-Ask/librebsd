@@ -11,7 +11,7 @@
 
 ## 关键原文（逐字）
 
-> The kld loads the file filename.ko into the kernel using the kernel linker.
+> The kldload loads the file filename.ko into the kernel using the kernel linker.
 
 ## 中文提要
 

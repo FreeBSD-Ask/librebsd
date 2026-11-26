@@ -51,8 +51,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 36	2	2.9	2.9.2	NT 4.0 把图形子系统移入内核态	filled	
 36	2	2.9	2.9.3	Solaris 2.4 以产品名统合 SunOS 5.x	filled	
 36	3	3.1	3.1.1	Lite2 是 BSD UNIX 最后一份公共发行	skeleton	
-36	3	3.1	3.1.2	各分支以增补累积出两代 Lite 差异	skeleton	
-36	3	3.1	3.1.3	共同基线由各分支共享	skeleton	
+36	3	3.1	3.1.2	各分支以增补累积出两代 Lite 差异	filled	
+36	3	3.1	3.1.3	共同基线由各分支共享	filled	
 36	3	3.2	3.2.1	导入成果按 releng 版本线固化	filled	
 36	3	3.2	3.2.2	3.0 于 1998 年 10 月发行	filled	
 36	3	3.2	3.2.3	导入范围以源码树整体计	filled	
@@ -74,10 +74,10 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 36	3	3.8	3.8.1	两代代码按差异清单合并记账	filled	
 36	3	3.8	3.8.2	差异走兼容层与条件编译两条路	filled	
 36	3	3.8	3.8.3	合并后基线趋稳、后续只作增量	filled	
-36	3	3.9	3.9.1	Ports 树构建宏出自 Jordan Hubbard 之手	skeleton	
+36	3	3.9	3.9.1	Ports 树构建宏出自 Jordan Hubbard 之手	filled	
 36	3	3.9	3.9.2	Ports 树规模自数百增至数万	skeleton	
-36	3	3.9	3.9.3	二进制包与源码构建并行供给	skeleton	
-36	3	3.10	3.10.1	Linux 2.2 改进锁粒度但保留大内核锁	skeleton	
+36	3	3.9	3.9.3	二进制包与源码构建并行供给	filled	
+36	3	3.10	3.10.1	Linux 2.2 改进锁粒度但保留大内核锁	filled	
 36	3	3.10	3.10.2	Windows 2000 以混合内核进入服务器市场	skeleton	
 36	3	3.10	3.10.3	Solaris 8 以 UFS 日志与 VxFS 应对存储需求	skeleton	
 36	4	4.1	4.1.1	长支持周期的制度安排	filled	
