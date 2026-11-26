@@ -118,3 +118,9 @@ Kahn, Robert E. Oral History of Robert Kahn[Z/OL]. Interviewed by Vinton G. Cerf
 扩散断言（2.4.5A，早期互联网基础设施经 SCP 落地）：
 
 > A lot of the infrastructure for the early Internet happened through Strategic Computing, which caused it to get funded and in place.
+
+## 九、补充引文（b053 取用，4.5 节一题）
+
+厂商配合（4.5.4B，DEC 对研究机构的支持）：
+
+> Digital Equipment was very helpful. Sam Fuller, and I guess Gordon Bell, must have been involved.
