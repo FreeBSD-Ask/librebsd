@@ -32,3 +32,29 @@ Kahn, Robert E. Oral History of Robert Kahn[Z/OL]. Interviewed by Vinton G. Cerf
 2. 2.1.6 的引文（“不知道记录在哪里，也许在档案馆”）是“收尾留痕稀薄”的当事人自证，与 NRC 第 9 章章首的学术自述（“little information was drawn from the records…”）互为印证。
 3. L4 纪律：事后追述的时间点（如“1990 年最后一节点退役”）须与档案互证，正文表述用“据当事人回忆”口径。
 4. 禁引核查：CHM 官方开放转录，`banned_source=0`。
+
+## 四、补充引文（b043 取用，2.2 节六题）
+
+机构间流动路径（2.2.1A，Elkind 经 Licklider 入 MIT 再入 PARC）：
+
+> Jerry ended up being hired by Licklider over to MIT for a while before he ended up going after Xerox PARC where, I guess, Bob Taylor hired him in as his boss.
+
+招募方视角（2.2.5B，把聪明人拉进来互动）：
+
+> I think they were just happy to bring smart people into the mix and have them interact with other people.
+
+合作网络延续（2.2.2B，长期友谊）：
+
+> I met many people there who I got to know and have maintained long friendships with ever since.
+
+机构环境差异（2.2.4A，BBN 环境独特）：
+
+> The environment there was unlike any other one I had ever been at.
+
+个人去留抉择（2.2.3B）：
+
+> Do I go back or do I stay with the ARPANET project? I opted to stay
+
+记录存续依赖当事人（2.2.6B，Xerox 内情须问当事人）：
+
+> I'm sure you could find people from the Xerox days that could explain it.
