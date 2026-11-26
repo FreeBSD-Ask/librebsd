@@ -144,17 +144,17 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 36	5	5.13	5.13.2	Windows Server 的定位	filled	
 36	5	5.13	5.13.3	Solaris 的版本节奏	filled	
 36	6	6.1	6.1.1	遗留问题的工程任务化	filled	
-36	6	6.1	6.1.2	稳定优先的排期原则	skeleton	
-36	6	6.1	6.1.3	修复范围的组织方式	skeleton	
-36	6	6.2	6.2.1	重构收益的性能显现	skeleton	
-36	6	6.2	6.2.2	巨锁退出的分步推进	skeleton	
+36	6	6.1	6.1.2	稳定优先的排期原则	filled	
+36	6	6.1	6.1.3	修复范围的组织方式	filled	
+36	6	6.2	6.2.1	重构收益的性能显现	filled	
+36	6	6.2	6.2.2	巨锁退出的分步推进	filled	
 36	6	6.2	6.2.3	基准比较的外部参照	skeleton	
-36	6	6.3	6.3.1	服务器承载模型的多核化	skeleton	
-36	6	6.3	6.3.2	抢占式内核的两难	skeleton	
-36	6	6.3	6.3.3	线程库的默认切换	skeleton	
-36	6	6.4	6.4.1	GEOM 的并发负载	skeleton	
-36	6	6.4	6.4.2	文件系统的一致性维护	skeleton	
-36	6	6.4	6.4.3	存储层级的可组合性	skeleton	
+36	6	6.3	6.3.1	服务器承载模型的多核化	filled	
+36	6	6.3	6.3.2	抢占式内核的两难	filled	
+36	6	6.3	6.3.3	线程库的默认切换	filled	
+36	6	6.4	6.4.1	GEOM 的并发负载	filled	
+36	6	6.4	6.4.2	文件系统的一致性维护	filled	
+36	6	6.4	6.4.3	存储层级的可组合性	filled	
 36	6	6.5	6.5.1	网络栈的并发承载	skeleton	
 36	6	6.5	6.5.2	无线支持的逐版补全	skeleton	
 36	6	6.5	6.5.3	审计框架的接入时机	skeleton	
