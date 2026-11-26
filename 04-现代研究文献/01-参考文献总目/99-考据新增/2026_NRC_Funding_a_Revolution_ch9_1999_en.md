@@ -72,3 +72,25 @@ Mansfield 修正案的效果（2.3.5A）：
 资助模式的自我表述（2.4.1B，Newell 1984 引语）：
 
 > DARPA began to build excellence in information processing in whatever fashion we thought best.
+
+## 六、补充引文（b046 取用，2.5 节六题）
+
+研究生规模与人力载体（2.5.1A）：
+
+> AI was ideally suited to graduate education, and enrollments at each of the AI centers grew rapidly during the first decade of DARPA funding.
+
+设备代际（2.5.2B，LISP 机器被工作站取代）：
+
+> the rapid development of engineering workstations, especially those of Sun Microsystems, Inc., soon undermined the LISP machine industry.
+
+十年计划周期（2.5.3B，SCP）：
+
+> DARPA committed $1 billion over the planned 10-year course of the program.
+
+年度经费额度（2.5.4A，SUR）：
+
+> Roberts committed $3 million per year for 5 years, with the intention of pursuing a 5-year follow-on project.
+
+联邦经费核算体例（2.5.5B，Table 9.1）：
+
+> Between 1984 and 1988, total federal funding for AI research, excluding the SCP, tripled from $57 million to $159 million (see Table 9.1).

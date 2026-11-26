@@ -94,3 +94,17 @@ Kahn, Robert E. Oral History of Robert Kahn[Z/OL]. Interviewed by Vinton G. Cerf
 解释限度（2.4.6B，当事人不知实现细节）：
 
 > I don’t know how he did the actual implementation.
+
+## 七、补充引文（b046 取用，2.5 节三题）
+
+团队职级结构（2.5.1B，Frank Heart 与 Kahn 平行汇报）：
+
+> He had another gentleman working for him named Frank Heart. So in some sense, Frank and I were parallel in terms of the reporting structure
+
+设备选择（2.5.2A，Honeywell 机型由 Frank Heart 与 Hawley Rising 定）：
+
+> The actual choice for the Honeywell machine was probably made by some combination of Frank Heart and Hawley Rising, who worked for them.
+
+经费规模增长（2.5.4B，IPTO 预算随 VLSI 等扩张）：
+
+> it took the IPTO budget and it grew it by leaps and bounds. It went from mainly the $40 million-ish level to maybe the $90 million level with the addition of VLSI and other growth that got built into the program.
