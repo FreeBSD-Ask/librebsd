@@ -63,3 +63,9 @@ V07.2.5.3	corpus_gap	11145	CL-RM-497916	web_archive	primary	D2	supp-V07-b014	sup
 V07.2.5.4	corpus_gap	10918	CL-RM-497920	official_doc	primary	D2	supp-V07-b015	supplemented	ref10918 复用（同页 1996 合法出版段；原卡仅取教学动念句，另段另用不冲突）；L3 官方追述，单源留题
 V07.2.2.1	corpus_gap	11150	CL-RM-497921	magazine-article	primary	D2	supp-V07-b015	supplemented	net.books 1983-03-27 当期书评 D2（各章按单一组件分列）；L4 同时代评论，馆藏目录第二源留题
 V07.2.2.4	corpus_gap	11150	CL-RM-497922	magazine-article	primary	D2	supp-V07-b015	supplemented	net.books 同书评另段 D2（附录收手册页→正文与附录互补）；同 anchor 异 quote（J83 形态），第二源留题
+V07.3.1.1	corpus_gap	3944	CL-RM-498310	official_doc	primary	D1	supp-V07-b016	supplemented	ref3944 CSTR #33 全文块 D1（封面编号＋作者日期；OCR User?s 噪声照录）
+V07.3.1.1	corpus_gap	11235	CL-RM-498311	web_archive	secondary_authoritative	D2	supp-V07-b016	supplemented	TUHS 目录 D2（同列十余号存件）
+V07.3.1.2	corpus_gap	3945	CL-RM-498312	official_doc	primary	D1	supp-V07-b016	supplemented	ref3945 CSTR #52 全文块 D1（No. 52＋作者日期）
+V07.3.1.2	corpus_gap	3944	CL-RM-498313	official_doc	primary	D1	supp-V07-b016	supplemented	ref3944 异 quote D1（标题句，证编号标题并列）
+V07.3.1.5	corpus_gap	11235	CL-RM-498314	web_archive	secondary_authoritative	D2	supp-V07-b016	supplemented	TUHS 目录 D2（ps.gz 与 pdf 多形态并存）
+V07.3.1.5	corpus_gap	3944	CL-RM-498315	official_doc	primary	D1	supp-V07-b016	supplemented	ref3944 短 quote D1（编号串，证入库件）
