@@ -66,3 +66,9 @@ Mansfield 修正案的效果（2.3.5A）：
 1970 年代末至 1980 年代的转向（2.3.6A）：
 
 > DARPA's emphasis on relevance in AI research grew during the late 1970s and 1980s.
+
+## 五、补充引文（b045 取用，2.4 节一题）
+
+资助模式的自我表述（2.4.1B，Newell 1984 引语）：
+
+> DARPA began to build excellence in information processing in whatever fashion we thought best.

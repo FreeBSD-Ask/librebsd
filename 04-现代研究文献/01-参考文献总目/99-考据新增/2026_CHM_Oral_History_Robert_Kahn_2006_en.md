@@ -80,3 +80,17 @@ Kahn, Robert E. Oral History of Robert Kahn[Z/OL]. Interviewed by Vinton G. Cerf
 1980 年代中期后的财政节点（2.3.6B）：
 
 > Gramm-Rudman was on the horizon and it eventually came back and bit DARPA pretty heavily.
+
+## 六、补充引文（b045 取用，2.4 节三题）
+
+资助决策与平台传导（2.4.1A，BBN Unix 包进 Berkeley 发行带）：
+
+> The decision was made to have Berkeley put the BBN Unix software package on the Berkeley distribution tape.
+
+传导环节中的人（2.4.4B，Duane Adams 拉 Berkeley 参与）：
+
+> Duane Adams, who was working for me, had gotten the Berkeley guys involved in it.
+
+解释限度（2.4.6B，当事人不知实现细节）：
+
+> I don’t know how he did the actual implementation.
