@@ -43,3 +43,9 @@ ARPA 社区的合作面（2.2.2A）：
 2. “51% of my funding”句为 Roberts 转述林肯实验室主任的话，是资助机构以经费杠杆促成人员借调的罕见证词；正文表述须注明“据当事人转述”。
 3. L4 纪律：事后追述的年份与细节（如 1966 年底赴华盛顿、1973-10-01 入职 Telenet）须与档案互证；与 Kahn 2006 访谈合用构成双一手（不同当事人、不同访谈）。
 4. 禁引核查：CHM 官方开放转录，`banned_source=0`。
+
+## 四、补充引文（b044 取用，2.3 节六题）
+
+保密文件与公开文献的边界（2.3.4B）：
+
+> the set of documents which I had at ARPA that were, some classified and so-on

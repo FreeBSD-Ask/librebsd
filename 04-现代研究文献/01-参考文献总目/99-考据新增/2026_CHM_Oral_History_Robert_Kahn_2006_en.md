@@ -58,3 +58,25 @@ Kahn, Robert E. Oral History of Robert Kahn[Z/OL]. Interviewed by Vinton G. Cerf
 记录存续依赖当事人（2.2.6B，Xerox 内情须问当事人）：
 
 > I'm sure you could find people from the Xerox days that could explain it.
+
+## 五、补充引文（b044 取用，2.3 节六题）
+
+两用政策的操作定义（2.3.1B，SCP 首要把技术交国防部）：
+
+> So goal number one was getting it to DOD. The strategy was you need industry help, because that’s what the DOD has to rely on.
+
+立项建立在预算假定上（2.3.2B）：
+
+> I was sort of hired to go do that on the assumption that it was in the budget and would happen, but it never actually happened.
+
+保密与公开边界（2.3.4A，黑项目）：
+
+> there were an increasing number of “black programs” that were being started. Things that I didn’t know about, couldn’t talk about if I did.
+
+成文之外的经费政治（2.3.5B）：
+
+> the politics of taking all the money and building it up in one office versus sharing a little bit of the wealth with the other offices politically probably didn’t work.
+
+1980 年代中期后的财政节点（2.3.6B）：
+
+> Gramm-Rudman was on the horizon and it eventually came back and bit DARPA pretty heavily.

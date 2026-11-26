@@ -48,3 +48,21 @@ SUR 项目期满未获后续（2.1.1A）：
 2. 本章自述的史料构成（“little information was drawn from the records…”）是 2.1.6“收尾留痕稀薄”的**学术自证**：专业史家最看重的一手记录恰是本章采用最少的。
 3. 引用按 L3 纪律（学术二次文献）；与 CHM 口述史（一手）合用构成二源。
 4. 禁引核查：国家科学院出版社官方开放全文，`banned_source=0`。
+
+## 四、补充引文（b044 取用，2.3 节六题）
+
+逐项预算与审查（2.3.2A）：
+
+> The line-item budget of AI research inevitably led to greater scrutiny owing to reporting mechanisms and the need to justify programs to the DOD, the Administration, and the U.S. Congress.
+
+阶段性报告与可见成果之要求（2.3.3A）：
+
+> the demand grew for interim reports and more tangible results.
+
+Mansfield 修正案的效果（2.3.5A）：
+
+> It brought about a swift decline in some of the military's support for basic research, often driving it toward the applied realm.
+
+1970 年代末至 1980 年代的转向（2.3.6A）：
+
+> DARPA's emphasis on relevance in AI research grew during the late 1970s and 1980s.
