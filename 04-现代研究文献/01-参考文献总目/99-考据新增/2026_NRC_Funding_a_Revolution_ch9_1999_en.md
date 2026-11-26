@@ -94,3 +94,13 @@ Mansfield 修正案的效果（2.3.5A）：
 联邦经费核算体例（2.5.5B，Table 9.1）：
 
 > Between 1984 and 1988, total federal funding for AI research, excluding the SCP, tripled from $57 million to $159 million (see Table 9.1).
+
+## 七、补充引文（b047 取用，2.6 节三题）
+
+预算科目的任意性与政治影响（2.6.1A）：
+
+> Although budget categorizations for programs such as the SCP are somewhat arbitrary and subject to political influence, researchers noted a change in DARPA's funding style.
+
+口径差（2.6.4A，基本研究翻倍而 DOD 总份额下降）：
+
+> Although DARPA's funding for basic AI research doubled from roughly $20 million to $40 million during this same period, the DOD's overall role in basic AI research declined (see Table 9.2).
