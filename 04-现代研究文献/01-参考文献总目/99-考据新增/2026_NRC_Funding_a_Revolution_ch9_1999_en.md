@@ -104,3 +104,9 @@ Mansfield 修正案的效果（2.3.5A）：
 口径差（2.6.4A，基本研究翻倍而 DOD 总份额下降）：
 
 > Although DARPA's funding for basic AI research doubled from roughly $20 million to $40 million during this same period, the DOD's overall role in basic AI research declined (see Table 9.2).
+
+## 八、补充引文（b048 取用，2.4 节一题）
+
+学术共同体的机构延续（2.4.3B，SUR 原班机构参与 SCP）：
+
+> Many of the same institutions that had been part of the SUR program, including CMU, BBN, SRI, and MIT, participated in the new initiatives.

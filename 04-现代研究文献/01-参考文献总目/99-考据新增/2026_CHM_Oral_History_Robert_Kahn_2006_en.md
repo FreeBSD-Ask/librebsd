@@ -108,3 +108,13 @@ Kahn, Robert E. Oral History of Robert Kahn[Z/OL]. Interviewed by Vinton G. Cerf
 经费规模增长（2.5.4B，IPTO 预算随 VLSI 等扩张）：
 
 > it took the IPTO budget and it grew it by leaps and bounds. It went from mainly the $40 million-ish level to maybe the $90 million level with the addition of VLSI and other growth that got built into the program.
+
+## 八、补充引文（b048 取用，2.4 节两题）
+
+采用链条的机制（2.4.3A，单包经商业厂商分发成为技术载体）：
+
+> by getting it through a single package from a commercial vendor, you could go buy their workstation or their operating system and it came packaged for free. So it became the carrier of that part of the technology base.
+
+扩散断言（2.4.5A，早期互联网基础设施经 SCP 落地）：
+
+> A lot of the infrastructure for the early Internet happened through Strategic Computing, which caused it to get funded and in place.
