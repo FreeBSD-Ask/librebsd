@@ -25,6 +25,18 @@ Usenet newsgroup comp.unix.wizards（1981—1983 三条讨论贴）[DB/OL]. 本�
 
 > There is a bug in the exec routine in the 4.1c kernel. One manifestation of this bug is when the shell tries to execute a command file that does not have "#! /bin/csh" (or "#! /bin/sh") as its first line.
 
+用户立场（3.8.4A，1981-12-27 Rich Wales at UCLA-Security，message_id 3189）：
+
+> My motivation is basically that /bin/csh seems so much better than /bin/sh.
+
+当事人（安装者）回应（3.8.5A，1981-09-17 Steffen 贴内转引 Greg Guthrie，1981-09-11）：
+
+> Steve Sutphen at Univ. Alberta (used to be in uucp alberta!steve) was going to do exactly what you described, about a year ago.
+
+言论渠道（3.8.6A，1981-09-17 Steffen 贴尾）：
+
+> Please reply via unix-wizards due to Arpanet-Usenet communication problems.
+
 ## 三、考据说明
 
 1. 三条贴均出自 comp.unix.wizards 的 1981／1983 讨论：rusty 的“两个 sleep 都被停”是**用户对作业控制行为的批评**；Steffen 的“BTL 人主要用 csh 的交互特性、不用其脚本控制结构”是**用户分化的同时代实证**；dean 的“exec 例程的 bug 而非 csh”是**批评的技术归因回应**——三者恰对 3.8.1／3.8.2／3.8.3 三题。
