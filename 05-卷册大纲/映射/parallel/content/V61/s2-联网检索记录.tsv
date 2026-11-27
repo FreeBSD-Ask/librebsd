@@ -184,3 +184,8 @@ V61.2.12.2	信任链起点 signed checksum list sha256(1) output	man.openbsd.org
 V61.2.12.3	包库元数据签名 compressed archives cryptographic signatures pkg repo	man.freebsd.org pkg-repo(8)（and+Ports manpath）	命中	签名句命中；base manpath 查 pkg-repository(5)／pkg-repo(8)／pkg(8) 三次 no results，换 and+Ports manpath 解决；pkg(8) 全文经 web_reader 后备确认后定位	2026-11-28	tvly extract advanced＋web_reader
 V61.2.12.4	密钥轮换 keytype matches /etc/signify pubkey	man.openbsd.org signify(1)	命中	-t keytype 句命中（含 \- 转义原形）；EXAMPLES 公钥按发行版命名 openbsd-81-base.pub	2026-11-28	tvly extract
 V61.2.12.5	校验不符处置 IDS known good index tampered trusted	man.freebsd.org freebsd-update(8)	命中	TIPS IDS 两句命中（快照为无断词形 tampered）；security.html／pkg_install.conf(5)／signify HISTORY 侧检索未得更强句，不硬凑	2026-11-28	tvly extract advanced
+V61.3.1.1	访问矩阵 Lampson subject/object access matrix model notable achievements	acsac.org Lampson ACSAC 2000 PDF	命中	subject/object access matrix model 与 ACL／信息流多级安全并列为显著智力成就句命中；PDF 提取空格逗号伪迹照录	2026-11-28	tvly search＋tvly extract
+V61.3.1.2	主体客体抽象 principal accountability authorization	UVA CS551 转载 S&S 1975 HTML	命中	principal 承担问责、授权以 principal 为单位句命中；S&S 原版 PDF（cl.cam.ac.uk）扫描版提取失败改 HTML 版	2026-11-28	tvly search＋tvly extract
+V61.3.1.3	策略机制分离 policy mechanism assurance specification implementation	acsac.org Lampson ACSAC 2000 PDF	命中	policy／mechanism／assurance 三分句命中；as-surance／famil-iar 连字断词照录	2026-11-28	tvly extract
+V61.3.1.4	经验落差 deployed systems security terrible	acsac.org Lampson ACSAC 2000 PDF	命中	In spite of these successes 句命中；com-puter 断词照录	2026-11-28	tvly extract
+V61.3.1.5	移植代价 Multics ACL process unforgeable identifier	UT Austin 镜像 Saltzer CACM 1974 PDF	命中	ACL 进程级不可伪造标识符句命中；OCR 伪迹 structureOof 照录；S&S 1975 论文内 access matrix 节经 ss75 PDF 扫描版未得，未硬凑	2026-11-28	tvly search＋tvly extract
