@@ -38,11 +38,11 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 60	2	2.2	2.2.3	哑终端也能跑 vi	filled	
 60	2	2.2	2.2.4	新增终端只改描述文件	filled	
 60	2	2.2	2.2.5	硬拷贝与玻璃终端共用命令集	filled	
-60	2	2.3	2.3.1	插入模式与命令模式来回切换	skeleton	
-60	2	2.3	2.3.2	地址范围成批执行行命令	skeleton	
-60	2	2.3	2.3.3	sed 只读输入写标准输出	skeleton	
-60	2	2.3	2.3.4	POSIX 把 ex 与 vi 语法写进标准	skeleton	
-60	2	2.3	2.3.5	无交互输入才可反复执行脚本	skeleton	
+60	2	2.3	2.3.1	插入模式与命令模式来回切换	filled	
+60	2	2.3	2.3.2	地址范围成批执行行命令	filled	
+60	2	2.3	2.3.3	sed 只读输入写标准输出	filled	
+60	2	2.3	2.3.4	POSIX 把 ex 与 vi 语法写进标准	filled	
+60	2	2.3	2.3.5	无交互输入才可反复执行脚本	filled	
 60	2	2.4	2.4.1	终端能力写成一张表	skeleton	
 60	2	2.4	2.4.2	时延填充写进描述项	skeleton	
 60	2	2.4	2.4.3	设备差异收进库里	skeleton	
