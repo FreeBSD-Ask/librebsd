@@ -37,3 +37,42 @@ V17.1.3.5	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/l
 V17.1.3.6	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记附录 E 源码清单带行号，全书以行号定位所讨论的代码。	2026-11-27	Tavily extract／curl（逐字快照）
 V17.1.3.6	Minix versions and their use in teaching	https://minix1.woodhull.com/teaching/teach_ver.html	命中	Woodhull 记 1.5 内核与组件代码与 1987 教材清单相近，仍可用于教学。	2026-11-27	Tavily extract／curl（逐字快照）
 V17.1.2.*,V17.1.3.*	—	—	—	本批 10 题各两独立源齐备（20 块）；V17.1.2.3、V17.1.2.4、V17.1.2.5、V17.1.2.6、V17.1.3.1、V17.1.3.2、V17.1.3.3、V17.1.3.4、V17.1.3.5、V17.1.3.6	2026-11-27	批末总行
+V17.2.1.1	Andrew Tanenbaum Vrije Universiteit professor computer science MINIX author	https://uwaterloo.ca/computer-science/dls-andrew-tanenbaum	命中	Waterloo 讲座页传记段（教授身份＋三系统主设计者）；快照存 script/_v17_fetch_c2/x_211_waterloo.json，作备查源未入库。	2026-11-28	Tavily search（逐字快照）
+V17.2.1.1	1987 年论文署名单位复核	https://research.vu.nl/files/111353126/11154	命中	VU Research Portal PDF 转录快照逐字核对：署名 Dept. of Mathematics and Computer Science Vrije Universiteit（ref 11359 复用）。	2026-11-28	Tavily extract／快照逐字核对
+V17.2.1.1	Tanenbaum 官方主页取文	https://www.cs.vu.nl/~ast/	命中	主页题头 Professor of Computer Science；新 ref 11439 登记（官方文档／primary，16,171 字符快照 sha256 落卡）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.1.2	1987 论文内核结构段复核	https://research.vu.nl/files/111353126/11154	命中	快照逐字核对 Unlike UNIX... messages. 段（ref 11359 复用）。	2026-11-28	快照逐字核对
+V17.2.1.2	CACM 2016 回顾取文	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	kernel mode／user mode 分离自述段（ref 11361 复用）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.1.3	CACM 2016 出版分发段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	like Lions did before me... all source code 段；另有 1984 缘起段（ref 11361 复用）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.1.3	1987 论文写书缘起段复核	https://research.vu.nl/files/111353126/11154	命中	To deal with this issue, I jotted down some notes.（ref 11359 复用）。	2026-11-28	快照逐字核对
+V17.2.1.4	VU 主页机构托底	https://www.cs.vu.nl/~ast/	命中	教职与退休自述（ref 11439）；另 CACM 1984 任教之余段支撑时间余裕。	2026-11-28	Tavily extract（逐字快照）
+V17.2.1.4	Woodhull 编年产出复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	1987 著作描述 Minix 1.1；页面 Tanebaum 误植照录（ref 11362 复用）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.1.5	1987 论文授权双轨段复核	https://research.vu.nl/files/111353126/11154	命中	Prentice-Hall 版权与教育用途免许可段（ref 11359 复用）。	2026-11-28	快照逐字核对
+V17.2.1.5	CACM 2000 BSD 放出段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	2000 年 BSD 许可放出 MINIX 2（ref 11361 复用）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.1.6	1987 论文自述缘起复核	https://research.vu.nl/files/111353126/11154	命中	Faced with this problem... from scratch 自述段（ref 11359 复用）。	2026-11-28	快照逐字核对
+V17.2.1.6	O'Reilly 附录 A 编者评价复核	https://www.oreilly.com/openbook/opensources/book/appa.html	命中	well-respected researcher 编者介绍句（ref 11365 复用）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.2.1	1987 论文近距离观察段复核	https://research.vu.nl/files/111353126/11154	命中	In this way they get to see a whole system close up 段（ref 11359 复用）。	2026-11-28	快照逐字核对
+V17.2.2.1	Woodhull 教学指南 bookquote 取文	https://minix1.woodhull.com/teaching/index.html	命中	教材前言转录：V6 源码可研读→V7 禁读→To remedy this situation 从零写新系统（ref 11363 复用）。	2026-11-28	Tavily extract（逐字快照）
+V17.2.2.2	1987 论文 719 页构成复核	https://research.vu.nl/files/111353126/11154	命中	Of the 719 pages, 253 are the kernel listing, in C.（ref 11359 复用）。	2026-11-28	快照逐字核对
+V17.2.2.2	Woodhull 编年磁盘授权复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	许可禁止自由分发但教育用途可复制软盘段（ref 11362 复用）。	2026-11-28	Tavily extract（逐字快照）
+批末	信息表随书构成补核	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	Full C source code supplied／MINIX BOOK 段定位备查（ref 11360，本批未落块）。	2026-11-28	Tavily extract（快照备查）
+V17.2.2.3	OSR 1987 实验室安排难段复核	https://research.vu.nl/files/111353126/11154	命中	For courses on operating systems... laboratory.（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.2.2.3	Woodhull 教学指南组织链目句复核	https://minix1.woodhull.com/teaching/index.html	命中	What I hope to do here is to organize links...（ref 11363 复用）	2026-11-28	Tavily extract／c1 快照复用（逐字核对）
+V17.2.2.4	OSR 1987 章节次序段复核	https://research.vu.nl/files/111353126/11154	命中	First comes a thorough treatment... 段（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.2.2.4	CACM 设计目标清单复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	Have a clean design students could easily understand（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.2.2.5	OSR 1987 二十台机器段复核	https://research.vu.nl/files/111353126/11154	命中	acquiring 20 machines... under $1000 段（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.2.2.5	CACM 640kB 构建配置段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	maximum possible RAM (640kB) and two 360kB 段（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.2.2.6	Woodhull 三版次句复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	There have been three editions...（ref 11362 复用；星号伪影照录）	2026-11-28	Tavily extract（逐字快照）
+V17.2.2.6	OSR 1987 出版缘起段复核	https://research.vu.nl/files/111353126/11154	命中	These have now been published as a 719 page book 段（ref 11359 复用；空格伪影照录）	2026-11-28	快照逐字核对
+V17.2.3.1	OSR 1987 动手学习首句复核	https://research.vu.nl/files/111353126/11154	命中	Students learn by doing, not by listening.（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.2.3.1	CACM 四万读者段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	40,000 readers... instant cult item 段（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.2.3.2	teaching 页收目（SunOS Minix）复核	https://minix1.woodhull.com/teaching/index.html	命中	SunOS Minix: a tool for use in Operating System Laboratories（ref 11363 复用；c1 完整页快照）	2026-11-28	c1 快照逐字核对（script/_v17_fetch/minix1_teaching_.txt）
+V17.2.3.2	teaching 页征集课程页链接句复核	https://minix1.woodhull.com/teaching/index.html	命中	links to your course pages（ref 11363 复用）	2026-11-28	同上
+V17.2.3.3	teaching 页收目（Howatt）复核	https://minix1.woodhull.com/teaching/index.html	命中	James Howatt, Operating System Projects -- Minix Revisited（ref 11363 复用）	2026-11-28	c1 快照逐字核对
+V17.2.3.3	Woodhull 二版次句复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	2nd edition... Minix 2.0.0 CD-ROM（ref 11362 复用；星号伪影照录）	2026-11-28	Tavily extract（逐字快照）
+V17.2.3.4	CACM 1997 二版句复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	In 1997, MINIX 2... co-authored with Albert Woodhull（ref 11361 复用；斜体伪影照录）	2026-11-28	Tavily extract（逐字快照）
+V17.2.3.4	Woodhull 三版次句复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	3rd edition... Minix 3.1.0 CD-ROM（ref 11362 复用；星号伪影照录）	2026-11-28	Tavily extract（逐字快照）
+V17.2.3.5	teaching 页收目（Alvarez 西语）复核	https://minix1.woodhull.com/teaching/index.html	命中	Alvarez Llorente et al, Learning Symmetrical Multiprocessing with Minix (Spanish, PDF)（ref 11363 复用）	2026-11-28	c1 快照逐字核对
+V17.2.3.5	信息表 1.5 五平台清单复核	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	MINIX 1.5 (Intel, Macintosh, Amiga, Atari, SPARC)（ref 11360 复用）	2026-11-28	Tavily extract／c1 快照复用（逐字核对）
+V17.2.3.6	teaching 页 work-in-progress 自白复核	https://minix1.woodhull.com/teaching/index.html	命中	This page is a work-in-progress...（ref 11363 复用）	2026-11-28	c1 快照逐字核对
+V17.2.3.6	Woodhull probably 限定句复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	probably will be easily adaptable（ref 11362 复用）	2026-11-28	Tavily extract（逐字快照）
+批末	V17 第 2 章取证通道总披露	多源	命中	本章 36 claim／36 块全部 Tavily extract 或 c1 快照逐字核对；复用 ref 8 个（11359—11365）＋新登记 11439；快照存 script/_v17_fetch_c2/（临时件不入库）。	2026-11-28	Tavily search/extract（Tavily 优先口径）
