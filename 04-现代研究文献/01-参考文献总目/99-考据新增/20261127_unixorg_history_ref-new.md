@@ -39,3 +39,13 @@
 
 > 1989System V AT&T UNIX Software Operation formed in preparation for spinoff of USL.
 
+## 追加引文（V19 b005，2026-11-28）
+
+> 追加用途：V19.1.7.2／1.7.4／1.7.6（UNIX Wars 段）。
+
+> In 1987, AT&T and Sun Microsystems formed a pact to unify the market around their version.
+
+> Fearing this alliance, the rest of the industry formed the competing Open Software Foundation (OSF).
+
+> The resulting "UNIX Wars" divided the community between AT&T's UNIX System V and the OSF's OSF/1, while X/Open held the neutral center ground.
+
