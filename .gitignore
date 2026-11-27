@@ -191,7 +191,8 @@ cnki*
 /login-db/txt
 /login-db/txt_ia
 /login-db/txt_online
-/specs
+# specs 入库跟踪（2026-11-27 ykla 令：specs 不排除，进行跟踪；.trae/specs 仍为工作区）
+!/specs/**
 /.tmp
 state/inuse.6428.lock
 /.qoder

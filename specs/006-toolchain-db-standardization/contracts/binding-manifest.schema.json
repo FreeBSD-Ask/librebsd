@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://librebsd.local/schemas/binding-manifest.schema.json",
+  "title": "TaskBook-Spec Binding Manifest Row",
+  "description": "One row of specs/006-toolchain-db-standardization/BINDING.tsv.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "binding_id",
+    "spec_id",
+    "goals",
+    "spec_path",
+    "spec_sha256",
+    "tasks_sha256",
+    "checklist_sha256",
+    "task_book_path",
+    "task_book_anchor",
+    "spec_version",
+    "status",
+    "updated_at"
+  ],
+  "properties": {
+    "binding_id": {
+      "type": "string",
+      "pattern": "^TB-20261127-(M|S(0[1-9]|1[0-2]))$"
+    },
+    "spec_id": {
+      "type": "string",
+      "pattern": "^(M|S(0[1-9]|1[0-2]))$"
+    },
+    "goals": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1, "maximum": 12 },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "spec_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "spec_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "tasks_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "checklist_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "task_book_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_book_anchor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "spec_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "closed", "superseded"]
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

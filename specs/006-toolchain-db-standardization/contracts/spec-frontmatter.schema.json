@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://librebsd.local/schemas/spec-frontmatter.schema.json",
+  "title": "Spec Frontmatter",
+  "description": "Parsed YAML frontmatter of a spec file in specs/006-toolchain-db-standardization/.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_id",
+    "title",
+    "task_book",
+    "task_book_anchor",
+    "version",
+    "status",
+    "goals",
+    "owner",
+    "created",
+    "updated",
+    "binding_id"
+  ],
+  "properties": {
+    "spec_id": {
+      "type": "string",
+      "pattern": "^(M|S(0[1-9]|1[0-2]))$"
+    },
+    "title": { "type": "string", "minLength": 1 },
+    "task_book": { "type": "string", "minLength": 1 },
+    "task_book_anchor": { "type": "string", "minLength": 1 },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "closed", "superseded"]
+    },
+    "goals": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1, "maximum": 12 },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "owner": { "type": "string", "minLength": 1 },
+    "created": { "type": "string", "format": "date" },
+    "updated": { "type": "string", "format": "date" },
+    "binding_id": {
+      "type": "string",
+      "pattern": "^TB-20261127-(M|S(0[1-9]|1[0-2])|BIND)$"
+    }
+  }
+}

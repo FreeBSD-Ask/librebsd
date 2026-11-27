@@ -1,0 +1,194 @@
+{
+  "generated_at": "2026-11-28T04:23:51+08:00",
+  "model": {
+    "root": "D:\\librebsd",
+    "taskbook_sha256": "dff2986587bd1eb77ccd158b8ae2ca16d65bafe72514726a0b1269af0b12cfc9",
+    "binding_sha256": "4f7190377acb59e35c5916174b8a0521034d2573fd67a32e3c0c2ec91c6fd6a9",
+    "object_file_count": 48,
+    "spec_count": 13
+  },
+  "axioms": [
+    {
+      "axiom": "A01",
+      "pass": true,
+      "detail": "manifest 13 行＝M+S01—S12；subspecs 目录＝S01—S12（实测 12）"
+    },
+    {
+      "axiom": "A02",
+      "pass": true,
+      "detail": "spec_id 唯一 13/13；binding_id 唯一 13/13"
+    },
+    {
+      "axiom": "A03",
+      "pass": true,
+      "detail": "目标并集＝[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]；缺 []"
+    },
+    {
+      "axiom": "A04",
+      "pass": true,
+      "detail": "孤儿 []；越界 []"
+    },
+    {
+      "axiom": "A05",
+      "pass": true,
+      "detail": "13×3 件齐备；缺 []"
+    },
+    {
+      "axiom": "A06",
+      "pass": true,
+      "detail": "行 13↔spec 13；行指向缺失 []"
+    },
+    {
+      "axiom": "A07",
+      "pass": true,
+      "detail": "13 锚点精确命中任务书小节各 1 次；异常 []"
+    },
+    {
+      "axiom": "A08",
+      "pass": true,
+      "detail": "39 个哈希逐件复算相等；异常 []"
+    },
+    {
+      "axiom": "A09",
+      "pass": true,
+      "detail": "13×(spec+tasks+checklist) 状态一致；异常 []"
+    },
+    {
+      "axiom": "A10",
+      "pass": true,
+      "detail": "附录 C manifest 哈希＝BINDING.tsv sha256（4f7190377acb…）；行 13"
+    },
+    {
+      "axiom": "A11",
+      "pass": true,
+      "detail": "12 子 spec 均 ≥5FR/≥3场景/≥5check；M ≥10FR/≥5SC/≥30check；异常 []"
+    },
+    {
+      "axiom": "A12",
+      "pass": true,
+      "detail": "对象域文件集 48 件闭合；盘外 []；幽灵 []"
+    },
+    {
+      "axiom": "A13",
+      "pass": true,
+      "detail": "13 条 spec_path 两两不同"
+    },
+    {
+      "axiom": "A14",
+      "pass": true,
+      "detail": "12 子 spec 追溯目标/任务/验收全闭合；M §7 覆盖 1—12；异常 []"
+    },
+    {
+      "axiom": "A15",
+      "pass": true,
+      "detail": "§3 矩阵 12 目标与清单覆盖逐格相等；G12 为绑定契约；异常 []"
+    },
+    {
+      "axiom": "A16",
+      "pass": true,
+      "detail": "13 spec 状态∈枚举、版本 SemVer、日期 ISO；异常 []"
+    },
+    {
+      "axiom": "A17",
+      "pass": true,
+      "detail": "附录 C 13 行逐列与清单相等；异常 []"
+    },
+    {
+      "axiom": "A18",
+      "pass": true,
+      "detail": "必需节 4/4；用户原话在；43155 字符"
+    }
+  ],
+  "theorems": [
+    {
+      "theorem": "T1 相对充分性（目标覆盖）",
+      "pass": true,
+      "depends": [
+        "A03",
+        "A11"
+      ]
+    },
+    {
+      "theorem": "T2 无孤儿 spec",
+      "pass": true,
+      "depends": [
+        "A04"
+      ]
+    },
+    {
+      "theorem": "T3 绑定双射",
+      "pass": true,
+      "depends": [
+        "A02",
+        "A06"
+      ]
+    },
+    {
+      "theorem": "T4 哈希完整性",
+      "pass": true,
+      "depends": [
+        "A08"
+      ]
+    },
+    {
+      "theorem": "T5 锚点可靠性",
+      "pass": true,
+      "depends": [
+        "A07"
+      ]
+    },
+    {
+      "theorem": "T6 状态一致性",
+      "pass": true,
+      "depends": [
+        "A09"
+      ]
+    },
+    {
+      "theorem": "T7 清单—任务书整合",
+      "pass": true,
+      "depends": [
+        "A10",
+        "A17"
+      ]
+    },
+    {
+      "theorem": "T8 结构充分性",
+      "pass": true,
+      "depends": [
+        "A11"
+      ]
+    },
+    {
+      "theorem": "T9 闭包（相对完备性）",
+      "pass": true,
+      "depends": [
+        "A01",
+        "A12",
+        "A13"
+      ]
+    },
+    {
+      "theorem": "T10 追溯闭合",
+      "pass": true,
+      "depends": [
+        "A14"
+      ]
+    },
+    {
+      "theorem": "T11 矩阵一致性",
+      "pass": true,
+      "depends": [
+        "A15"
+      ]
+    },
+    {
+      "theorem": "T12 论域良构",
+      "pass": true,
+      "depends": [
+        "A16",
+        "A18"
+      ]
+    }
+  ]
+}

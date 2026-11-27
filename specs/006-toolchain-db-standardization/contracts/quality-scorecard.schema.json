@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://librebsd.local/schemas/quality-scorecard.schema.json",
+  "title": "Database Quality Scorecard Row",
+  "description": "One row per formal database. Dimensions follow ISO/IEC 25012 characteristics.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "db_name",
+    "db_path",
+    "schema_version",
+    "table_count",
+    "row_count",
+    "size_bytes",
+    "last_modified",
+    "registry_match",
+    "schema_meta_present",
+    "quality_score",
+    "risk_level",
+    "evidence_path"
+  ],
+  "properties": {
+    "db_name": { "type": "string", "minLength": 1 },
+    "db_path": { "type": "string", "minLength": 1 },
+    "schema_version": { "type": "string", "minLength": 1 },
+    "table_count": { "type": "integer", "minimum": 0 },
+    "row_count": { "type": "integer", "minimum": 0 },
+    "size_bytes": { "type": "integer", "minimum": 0 },
+    "last_modified": { "type": "string", "format": "date-time" },
+    "registry_match": { "type": "boolean" },
+    "schema_meta_present": { "type": "boolean" },
+    "pk_fk_coverage": { "type": "number", "minimum": 0, "maximum": 1 },
+    "orphan_count": { "type": "integer", "minimum": 0 },
+    "duplicate_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+    "null_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+    "provenance_coverage": { "type": "number", "minimum": 0, "maximum": 1 },
+    "encoding_issues": { "type": "integer", "minimum": 0 },
+    "timestamp_min": { "type": ["string", "null"], "format": "date-time" },
+    "timestamp_max": { "type": ["string", "null"], "format": "date-time" },
+    "quality_score": { "type": "number", "minimum": 0, "maximum": 100 },
+    "risk_level": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "dimension_scores": {
+      "type": "object",
+      "description": "Optional 15-dimension breakdown keyed by ISO/IEC 25012 characteristic.",
+      "additionalProperties": {
+        "type": ["number", "null"],
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "top_issues": { "type": "string", "default": "" },
+    "evidence_path": { "type": "string", "minLength": 1 }
+  }
+}

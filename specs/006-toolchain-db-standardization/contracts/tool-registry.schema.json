@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://librebsd.local/schemas/tool-registry.schema.json",
+  "title": "Global Tool Registry Row",
+  "description": "One row of 01-项目管理/03-架构与技术文档/工具总表.tsv. TSV is the physical form; this schema is the logical contract.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tool_id",
+    "name",
+    "path",
+    "category",
+    "language",
+    "entrypoint",
+    "purpose",
+    "owner",
+    "created_at",
+    "last_modified",
+    "lifecycle",
+    "tracked"
+  ],
+  "properties": {
+    "tool_id": {
+      "type": "string",
+      "pattern": "^T-[a-z0-9]+-[0-9]{3,4}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Relative to repository root; must exist."
+    },
+    "category": {
+      "type": "string",
+      "enum": ["gate", "writer", "scanner", "collector", "converter", "service", "analysis", "other"]
+    },
+    "language": {
+      "type": "string",
+      "enum": ["python", "rust", "sql", "js", "shell", "other"]
+    },
+    "entrypoint": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_modified": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": ["stable", "experimental", "deprecated", "one-shot", "external"]
+    },
+    "tracked": {
+      "type": "boolean"
+    },
+    "rule_references": {
+      "type": "string",
+      "default": ""
+    },
+    "gates": {
+      "type": "string",
+      "default": ""
+    },
+    "dependencies": {
+      "type": "string",
+      "default": ""
+    },
+    "invocation": {
+      "type": "string",
+      "default": ""
+    },
+    "exit_codes": {
+      "type": "string",
+      "default": "0=ok;1=fail;2=usage"
+    },
+    "last_verified": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "verification_method": {
+      "type": "string",
+      "enum": ["selftest", "manual", "recompute", ""],
+      "default": ""
+    },
+    "risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high", ""],
+      "default": ""
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 500,
+      "default": ""
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "lifecycle": { "const": "stable" } },
+        "required": ["lifecycle"]
+      },
+      "then": {
+        "properties": {
+          "tracked": { "const": true },
+          "rule_references": { "minLength": 1 },
+          "verification_method": { "const": "selftest" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "lifecycle": { "const": "one-shot" } },
+        "required": ["lifecycle"]
+      },
+      "then": {
+        "properties": {
+          "tracked": { "const": false },
+          "path": { "pattern": "^script/" }
+        }
+      }
+    }
+  ]
+}

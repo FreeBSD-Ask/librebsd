@@ -89,12 +89,12 @@
 | `review_logs/` | 评审日志与运行中间件目录；执行记录归 `05-卷册大纲/目录/` 顶层，2026-10-20 起新件不入库 | 冻结（18 件正式报告在库，83 件中间产物已清除跟踪） |
 | `dvd6/`、`login-db/` | 外部资料快照 | 不入库 |
 | `.trae/specs/` | Spec 配置（223 个 spec 子目录，含 `spec.md`／`tasks.md`／`checklist.md`） | 不入库（2026-10-17 ykla 裁决，目录保留作工作区） |
-| `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 不入库（2026-10-17 ykla 裁决，目录保留作工作区） |
+| `specs/` | Spec Kit feature 产出（`NNN-<slug>/`） | 入库（2026-11-27 ykla 令：specs 不排除，进行跟踪） |
 | `.zcode/` | ZCode 工作区路径 | 忽略 |
 | `bsd-family-tree.txt`、`bsd-family-tree-zh.txt` | 第三方维护的 BSD 家族树纯文本参照件（逐年更新）；被 `01-项目管理/03-架构与技术文档/07-附录-谱系与术语.md` 与 115 号文引用 | **已不在库（2026-11-19 实测订正）**：`bcfe37828`（初始）引入、`e75542ae6` 删除，磁盘与 Git 索引均无此件；引用处以“文件缺失”处理，恢复须重新抓取并另批补登记 |
 | `.autocorrectrc`、`.gitattributes`、`.gitignore`、`.zcodeignore`、`LICENSE`、`SECURITY.md` | 根配置（`SECURITY.md` 为安全策略与漏洞报告渠道） | 入库 |
 
-`.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则/00-索引.md`）；**2026-10-17 ykla 裁决：`.trae/` 与 `specs/` 不入库**（目录保留作工作区，根 `.gitignore` 维持挡新增）。
+`.trae/specs/`、`specs/`、`.zcode/` 已获“根目录禁止生成新路径规则”豁免（2026-09-30 ykla 批准，见 `流程规则/00-索引.md`）；**2026-10-17 ykla 裁决：`.trae/` 不入库**；**2026-11-27 ykla 令：`specs/` 不排除、入库跟踪**（`.trae/specs/` 仍为工作区，根 `.gitignore` 已放行 `specs/`）。
 
 ## 规则调用
 
@@ -154,7 +154,7 @@
 | 参考文献 | `04-现代研究文献/01-参考文献总目/index.md`；卷级综述另置 `02-卷级文献综述/` | GB/T 7714-2015：作者、题名、出版地、出版者、出版年、页码、ISBN/DOI | 追加著录后同步更新总目 `index.md`；若为大纲级综述来源，再登卷级综述子文件 |
 | 文献本体下载 | `04-现代研究文献/03-文献下载/01-pdf/`、`02-epub/`、`03-ocr/` | `YYYYMMDD_作者_书名.pdf`；OCR 输出同名 Markdown | 下载后在总目 `index.md` 追加完整著录（详见 `03-文献下载/README.md`） |
 | 脚本 | 临时 → `script/`；固定 → `01-规则/脚本与命令/` | Python，文件头 docstring 说明用途，见名知义 | 固定脚本应被规则文件引用并登记 `脚本与命令/README.md`（见 `流程规则/02-脚本与执行安全.md`“规则引用脚本与命令独立存储规则”） |
-| Spec 配置 | `.trae/specs/<主题>-<YYYY-MM-DD>/` | `spec.md`（Why／What Changes／Impact＋SSOT Schema）、`tasks.md`、`checklist.md` | 在 `.trae/specs/` 下新建三文件；**不入库**（`.gitignore` 挡新增，2026-10-17 ykla 裁决——目录仍可用作工作区） |
+| Spec 配置 | `.trae/specs/<主题>-<YYYY-MM-DD>/` | `spec.md`（Why／What Changes／Impact＋SSOT Schema）、`tasks.md`、`checklist.md` | 在 `.trae/specs/` 下新建三文件（**不入库**，2026-10-17 裁决，仍为工作区）；`specs/<NNN-slug>/` 的 spec 包**入库**（2026-11-27 ykla 令） |
 
 ## 修改规范
 
