@@ -24,6 +24,12 @@ ref11153 考据登记（Rael 史学写作指南）
 
 > What kinds of information does this text reveal that it does not seemed concerned with revealing? (In other words, what does it tell us without knowing it’s telling us?)
 
+**supp-V73-b002 新引二句（2026-11-27，同源 PDF 逐字；p.15 脚注为史学写作之 nuts and bolts；p.7 引用必附脚注）**：
+
+> Students of history often do not read footnotes. Granted, footnotes are not exactly entertaining, but they are the nuts and bolts of history writing.
+
+> Each time you quote a work by another author, or use the ideas of another author, you should indicate the source with a footnote.
+
 ## 中文提要
 
 Rael 2004 指南：提问为学者首要之务，好问题既可习得亦须直觉；问题为材料提供取径。

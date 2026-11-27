@@ -26,3 +26,18 @@ The lawsuit settlement also stipulated that USL would not sue any organization u
 The final set of changes was released as 4.4BSD-Lite, Release 2 in June 1995.
 
 Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.
+
+## supp-V73-b002 追加引文（2026-11-27，库内全文 txt ref3778 逐字；O'Reilly 官方页同文 Tavily extract 2026-11-27 复核）
+
+> With Ken Thompson's departure at the end of the summer of 1976, Joy and Haley begin to take an interest in exploring the internals of the Unix kernel. Under Schriebman's watchful eye, they first installed the fixes and improvements provided on the "fifty changes" tape from Bell Labs.
+
+> Thompson's remote debugging was the first example of the cooperation that sprang up between Berkeley and Bell Labs. The willingness of the researchers at the Labs to share their work with Berkeley was instrumental in the rapid improvement of the software available at Berkeley
+
+> Although we did not yet have the complete feature set of 4.4BSD ready to ship, the CSRG decided to do an interim release to get additional feedback and experiences on the two major new additions to the system.
+
+> This licensed interim release was called 4.3BSD-Reno and occurred in early 1990. The release was named after a big gambling city in Nevada as an oblique reminder to its recipients that running the interim release was a bit of a gamble.
+
+- **考据注**：四句均出 Early History／4.3BSD-Reno 两节（当事人事后追述，L4）。第 1 句＝Thompson 1976 夏离任后 Joy／Haley 接手内核探索，先装 Bell Labs "fifty changes" 带——早期改动以"改动带"传递的直接记录（1.2.2／1.5.3）；第 2 句＝远程调试为 Berkeley 与 Bell Labs 合作首例（1.5.3）；第 3／4 句＝Reno 过渡发行性质与赌城命名（1.5.4，引文至 gamble 止）。
+- **本批落点**：V73.1.2.2（第 1 句）、1.5.3（第 1／2 句）、1.5.4（第 3／4 句）
+- **考据日期**：2026-11-27（supp-V73-b002；academic_work 表定抬头／L4）
+
