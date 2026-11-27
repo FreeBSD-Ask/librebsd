@@ -123,7 +123,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	3	3.2	3.2.2	文件系统命名空间在根处封闭	filled	
 37	3	3.2	3.2.3	网络栈按 Jail 划分归属面	filled	
 37	3	3.2	3.2.4	Jail 参数配置按标准分级	filled	
-37	3	3.2	3.2.5	越狱风险须按各攻击面评估	skeleton	
+37	3	3.2	3.2.5	越狱风险须按各攻击面评估	filled	
 37	3	3.3	3.3.1	VIMAGE 引入网络命名空间	filled	
 37	3	3.3	3.3.2	VNET 按实例逐层落地成栈	filled	
 37	3	3.3	3.3.3	全局变量逐项改为实例	filled	
@@ -141,9 +141,9 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	3	3.5	3.5.5	bhyve 与 QEMU 路线分岔	filled	
 37	3	3.6	3.6.1	隔离强度须权衡性能损失	filled	
 37	3	3.6	3.6.2	启动开销列成量化对照表	skeleton	
-37	3	3.6	3.6.3	两套隔离按负载场景各分工	skeleton	
-37	3	3.6	3.6.4	混合负载须按适用判据选用	skeleton	
-37	3	3.6	3.6.5	混合部署须先定编排次序与边界	skeleton	
+37	3	3.6	3.6.3	两套隔离按负载场景各分工	filled	
+37	3	3.6	3.6.4	混合负载须按适用判据选用	filled	
+37	3	3.6	3.6.5	混合部署须先定编排次序与边界	filled	
 37	3	3.7	3.7.1	Jail 与容器语义存在错位	filled	
 37	3	3.7	3.7.2	bhyve 与 KVM 架构有别	filled	
 37	3	3.7	3.7.3	调度与内存共享各异	filled	
@@ -152,8 +152,8 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	3	3.8	3.8.1	云主机提供 FreeBSD 镜像	filled	
 37	3	3.8	3.8.2	虚拟化平台逐项补齐驱动面	filled	
 37	3	3.8	3.8.3	云存储按块与文件接口挂载	filled	
-37	3	3.8	3.8.4	弹性伸缩受运维惯例约束	skeleton	
-37	3	3.8	3.8.5	云环境须先立可核性能基线	skeleton	
+37	3	3.8	3.8.4	弹性伸缩受运维惯例约束	filled	
+37	3	3.8	3.8.5	云环境须先立可核性能基线	filled	
 37	3	3.9	3.9.1	8.x 虚拟化团队成形	filled	
 37	3	3.9	3.9.2	开发者结成跨仓库协作网络	filled	
 37	3	3.9	3.9.3	Xen 移植按人力分头配置	filled	
