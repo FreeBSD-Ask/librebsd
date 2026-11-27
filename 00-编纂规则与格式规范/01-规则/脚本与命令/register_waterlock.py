@@ -12,6 +12,14 @@
 预期条数**。锁是串行化设施，不替代 claimdb_guard，也不替代整库专项正式备份
 （`12-数据库备份/<db>/`）；全库禁止旁路备份副本，见 `ADR-0016`。
 
+锁域（2026-11-27 增，ykla 批准“产能再平衡三令”之三）
+--------------------------------------------------
+锁名原按 ``(db, tag)`` 生成，**异 tag 会话各持一把锁**、各自探测 ``MAX(claim_id)``，
+于是同时取到同一号段，撞号在无主键约束下静默成功（近 24h 87 份批记中 19 份记撞号／水位锁）。
+现默认 ``scope="db"``：同库只一把 ``register__<db>__GLOBAL.lock``，所有取号串行；
+``scope="tag"`` 保留旧行为，仅作显式退让（同库分表写入且号段互不相交的场合）。
+``--scope`` 同时适用于 ``acquire``／``release``／``abort``。
+
 升格入库（2026-10-17，ykla 令「允许等级水位线」）
 ----------------------------------------------------
 原位于 ``script/_db_row_mining/register_waterlock.py``。``script/`` 整体受
@@ -192,7 +200,15 @@ def _safe(tag: str) -> str:
     return s[:64] or "untagged"
 
 
-def lock_path(base: Path, db: str, tag: str) -> Path:
+def lock_path(base: Path, db: str, tag: str, scope: str = "db") -> Path:
+    """锁文件路径。
+
+    ``scope="db"``（默认）→ ``register__<db>__GLOBAL.lock``，同库取号串行；
+    ``scope="tag"`` → ``register__<db>__<tag>.lock``，旧行为（异 tag 可并发，
+    亦即撞号来源），仅在号段互不相交的显式退让场合使用。
+    """
+    if scope == "db":
+        return lock_dir(base) / f"register__{_safe(db)}__GLOBAL.lock"
     return lock_dir(base) / f"register__{_safe(db)}__{_safe(tag)}.lock"
 
 
@@ -361,7 +377,7 @@ def list_locks(base: Path) -> list:
 
 def cmd_acquire(a: argparse.Namespace) -> int:
     base = Path(a.base) if a.base else repo_root()
-    lp = lock_path(base, a.db, a.tag)
+    lp = lock_path(base, a.db, a.tag, a.scope)
 
     if lp.exists():
         other = LockFile(lp, json.loads(lp.read_text(encoding="utf-8")))
@@ -449,7 +465,7 @@ def cmd_acquire(a: argparse.Namespace) -> int:
 
 def cmd_release(a: argparse.Namespace) -> int:
     base = Path(a.base) if a.base else repo_root()
-    lp = lock_path(base, a.db, a.tag)
+    lp = lock_path(base, a.db, a.tag, a.scope)
     if not lp.exists():
         print(json.dumps({"ok": False, "error": f"锁文件不存在：{lp}",
                           "hint": "无锁释放＝本批从未取过水位锁"}, ensure_ascii=False, indent=1))
@@ -469,7 +485,7 @@ def cmd_release(a: argparse.Namespace) -> int:
 
 def cmd_abort(a: argparse.Namespace) -> int:
     base = Path(a.base) if a.base else repo_root()
-    lp = lock_path(base, a.db, a.tag)
+    lp = lock_path(base, a.db, a.tag, a.scope)
     if not lp.exists():
         return 0
     lf = LockFile(lp, json.loads(lp.read_text(encoding="utf-8")))
@@ -513,10 +529,15 @@ def cmd_show(a: argparse.Namespace) -> int:
 def waterlock(db: str, tag: str, *, count: Optional[int] = None,
               session: Optional[str] = None, base: Optional[Path] = None,
               max_claim_id: Optional[int] = None, force: bool = False,
-              ttl: int = DEFAULT_TTL, db_path: Optional[str] = None) -> Iterator[LockFile]:
-    """库形式的取锁／释放。进入即持锁，退出即释放（不做 rows 断言）。"""
+              ttl: int = DEFAULT_TTL, db_path: Optional[str] = None,
+              scope: str = "db") -> Iterator[LockFile]:
+    """库形式的取锁／释放。进入即持锁，退出即释放（不做 rows 断言）。
+
+    ``scope`` 默认 ``"db"``：同库全局锁，异 tag 会话亦串行（2026-11-27 起）；
+    显式传 ``scope="tag"`` 退让为旧行为。
+    """
     b = base or repo_root()
-    lp = lock_path(b, db, tag)
+    lp = lock_path(b, db, tag, scope)
     if lp.exists() and not force:
         other = LockFile(lp, json.loads(lp.read_text(encoding="utf-8")))
         if other.verdict() == "alive":
@@ -560,8 +581,10 @@ def selftest() -> int:
     tmp = Path(tempfile.mkdtemp(prefix="wl_selftest_"))
     me = f"{socket.gethostname()}:{os.getpid()}"
     fails = []
+    checks = [0]
 
     def chk(name: str, cond: bool, detail: str = "") -> None:
+        checks[0] += 1
         if not cond:
             fails.append(f"{name}{('　' + detail) if detail else ''}")
 
@@ -571,7 +594,7 @@ def selftest() -> int:
         (b / "04-现代研究文献").mkdir(parents=True)
         (b / "12-数据库备份").mkdir(parents=True)
         (b / "04-现代研究文献" / "t.duckdb").write_bytes(b"x")
-        lp = lock_path(b, "t", "tagA")
+        lp = lock_path(b, "t", "tagA", scope="tag")
 
         # T1 取锁成功，且载荷里 min/max 号段正确
         p1: Dict[str, Any] = {
@@ -627,10 +650,10 @@ def selftest() -> int:
         chk("T7 已清理", not lp.exists())
 
         # T8 真互斥：两把不同 tag 的锁可并存
-        _try_create(lock_path(b, "t", "tagX"), dict(p1, tag="tagX"))
-        _try_create(lock_path(b, "t", "tagY"), dict(p1, tag="tagY"))
-        chk("T8 异 tag 并存", lock_path(b, "t", "tagX").exists()
-            and lock_path(b, "t", "tagY").exists())
+        _try_create(lock_path(b, "t", "tagX", scope="tag"), dict(p1, tag="tagX"))
+        _try_create(lock_path(b, "t", "tagY", scope="tag"), dict(p1, tag="tagY"))
+        chk("T8 异 tag 并存", lock_path(b, "t", "tagX", scope="tag").exists()
+            and lock_path(b, "t", "tagY", scope="tag").exists())
 
         # T9 _safe 对非法字符收敛（/ 空格 . 一律转 _，长度截到 64）
         chk("T9 _safe", _safe("a/b c.d") == "a_b_c_d" and len(_safe("x" * 99)) == 64)
@@ -639,7 +662,27 @@ def selftest() -> int:
         chk("T11 数字保留", _safe("fhk_b081") == "fhk_b081"
             and _safe("fhk_b082") == "fhk_b082"
             and _safe("fhk_b081") != _safe("fhk_b082"))
-        chk("T11 锁文件名互不撞", lock_path(b, "t", "fhk_b081") != lock_path(b, "t", "fhk_b082"))
+        chk("T11 锁文件名互不撞", lock_path(b, "t", "fhk_b081", scope="tag")
+            != lock_path(b, "t", "fhk_b082", scope="tag"))
+
+        # T13 库级全局锁：异 tag 必须落到同一把锁（2026-11-27 撞号根因的正面判据）
+        g1 = lock_path(b, "t", "supp-V64-b001")
+        g2 = lock_path(b, "t", "supp-V68-b003")
+        chk("T13 异 tag 同库同锁", g1 == g2, f"{g1.name} != {g2.name}")
+        chk("T13 锁名为 GLOBAL", g1.name == "register__t__GLOBAL.lock", g1.name)
+        chk("T13 与 tag 域不同锁", g1 != lock_path(b, "t", "supp-V64-b001", scope="tag"))
+        try:
+            _try_create(g1, dict(p1, tag="supp-V64-b001"))
+            try:
+                _try_create(g2, dict(p1, tag="supp-V68-b003"))
+                chk("T13 全局互斥", False, "异 tag 竟同时取锁成功")
+            except FileExistsError:
+                chk("T13 全局互斥", True)
+        finally:
+            try:
+                os.unlink(str(g1))
+            except OSError:
+                pass
 
         # T10 CLI 自身：show 在空锁目录返回空列表且 exit 0
         r = subprocess.run([sys.executable, str(Path(__file__).resolve()),
@@ -676,6 +719,7 @@ def selftest() -> int:
         print("PASS" if not fails else "FAIL")
         for f in fails:
             print("  FAIL |", f)
+        print(f"用例 {checks[0]} 项（通过 {checks[0] - len(fails)}）")
         print(f"自检结论：{'全部通过' if not fails else f'{len(fails)} 项未通过'}")
         return 0 if not fails else 1
     finally:
@@ -690,6 +734,8 @@ def build_parser() -> argparse.ArgumentParser:
         p = sub.add_parser(n)
         p.add_argument("--db", required=True)
         p.add_argument("--tag", required=True)
+        p.add_argument("--scope", choices=("db", "tag"), default="db",
+                       help="锁域：db＝同库全局锁（默认，消撞号）；tag＝旧行为（异 tag 可并发）")
         p.add_argument("--session")
         p.add_argument("--base")
         p.add_argument("--db-path", dest="db_path")
