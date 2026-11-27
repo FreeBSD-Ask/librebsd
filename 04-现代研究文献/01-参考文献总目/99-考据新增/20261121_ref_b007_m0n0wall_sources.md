@@ -13,3 +13,10 @@
 - **迁移帖句（V57.4.1.2 B 块；括号内空格照录）**：The only critical issue that I see is low RAM and too small a SD card (our install is about 600 MB without additional packages).
 - **口径**：end_announcement 为 m0n0wall 官方终止公告原件（m0n0.ch 存续域名承载）；docs relations 页为 OPNsense 官方对 m0n0wall 的关系记载（Manuel Kasper 背景引文段为当事人原话转存）；两论坛帖为当事人（Manuel Kasper／项目成员 Franco）在官方论坛的记载，按社区记载 L3 采信；end_announcement 与 relations 页 End 节同文异载体，本卡与批记不互证（J94）。
 - **考据日期**：2026-11-21
+
+## b014 补录（2026-11-27，V57 第 6 章停更面）
+
+- **end_announcement 句四（V57.6.1.2 A 块）**：However, the world keeps turning, and while m0n0wall has made an effort to keep up, there are now better solutions available and under active development.
+- **end_announcement 句五（V57.6.2.5 A 块）**：All the contents of the website, repository, downloads, mailing list and forum will be archived in a permanent location on the web so that they remain accessible indefinitely to anyone who might be interested in them.
+- **relations 句四（V57.6.1.2 B 块）**：The OPNsense core team would like to thank Manuel for all his efforts, as without him OPNsense would not have been possible.
+- **口径**：三句均自原抓取件逐字复核（end_announcement 全文与 relations 页正文），未改词；本卡 sha256 随补录更新，ref 11097／11098／11099／11100 四行同刷。
