@@ -37,6 +37,14 @@ Usenet newsgroup comp.unix.wizards（1981—1983 三条讨论贴）[DB/OL]. 本�
 
 > Please reply via unix-wizards due to Arpanet-Usenet communication problems.
 
+早期用户之迁移需求（4.7.1A，1981-06-12 JMETZGER at USC）：
+
+> Does anyone know of a way to restore a DD tape of a v6 file system to Vax Unix running 4bsd and convert it to the v7 file system format?
+
+使用反馈之驱动问题（4.7.3A，1981-12-26 Alan S. Watt at ITT Programming Technology Center）：
+
+> Several times now I have had occasion to write tapes just a little too large for a 2400 ft reel. Every time the tape simply came off the reel, a very unpleasant experience with a TU78
+
 ## 三、考据说明
 
 1. 三条贴均出自 comp.unix.wizards 的 1981／1983 讨论：rusty 的“两个 sleep 都被停”是**用户对作业控制行为的批评**；Steffen 的“BTL 人主要用 csh 的交互特性、不用其脚本控制结构”是**用户分化的同时代实证**；dean 的“exec 例程的 bug 而非 csh”是**批评的技术归因回应**——三者恰对 3.8.1／3.8.2／3.8.3 三题。
