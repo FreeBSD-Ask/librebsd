@@ -13,3 +13,20 @@
 - **文本处理披露**：Asciidoc 源按行取用，块内引文将原文换行并为空格；第 2 处中间略去一句（以 `…` 标示），未落块；库内 quote 存整段连续文本（不含省略号）。
 - **本批落点**：V35.1.4.3（第 1 处）、V35.1.8.1（第 2 处）、V35.1.11.5（第 3 处）
 - **考据日期**：2026-11-16（Task 8.2 G4 V35 P2 批 b018；official_doc／L3，retrospective=1）
+
+## supp-V73-b003 追加引文（2026-11-27，docs.freebsd.org 现行页逐字；Tavily＋curl 实取）
+
+> The first CD-ROM (and general net-wide) distribution was FreeBSD 1.0, released in December of 1993. This was based on the 4.3BSD-Lite ("Net/2") tape from U.C. Berkeley, with many components also provided by 386BSD and the Free Software Foundation.
+
+- **考据注**：首 CD-ROM 发行起点句（A Brief History of 小节）；与卡内第 2 条创生叙事同节，支撑 V73 2.2.2 起点文本面。
+- **考据日期**：2026-11-27（supp-V73-b003）
+
+## supp-V73-b003 追加引二句（2026-11-27，docs.freebsd.org 现行页逐字）
+
+> Those plans came to a rude halt when Bill Jolitz suddenly decided to withdraw his sanction from the project without any clear indication of what would be done instead.
+
+> The trio thought that the goal remained worthwhile, even without Bill’s support, and so they adopted the name "FreeBSD" coined by David Greenman.
+
+- **考据注**：Jolitz 撤回支持句与自立命名句（A Brief History of 小节连续两句），支撑 V73 2.2.4 分叉叙事的自我定位面。
+- **考据日期**：2026-11-27（supp-V73-b003）
+
