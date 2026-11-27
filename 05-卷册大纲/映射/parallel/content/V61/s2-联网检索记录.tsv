@@ -174,3 +174,13 @@ V61.2.10.2	用户密钥分解 User Key piecewise components passphrase keyfile	m
 V61.2.10.3	主密钥备份恢复 Master Key backed up restored	man.freebsd.org geli(8)	命中	主密钥可备份恢复句命中；roff 断词 possi- possible 照录	2026-11-28	tvly extract advanced
 V61.2.10.4	元数据扇区 last sector metadata	man.freebsd.org geli(8)	命中（收窄）	末扇区句命中；跨句 /var/backups/<prov>.eli 的 <prov> 被提取器剥除，引文收窄单句	2026-11-28	tvly extract advanced
 V61.2.10.5	一次性密钥 one-time Master Key swap temporary filesystems	man.freebsd.org geli(8)	命中	随机一次性主密钥适用交换分区与临时文件系统句命中	2026-11-28	tvly extract advanced
+V61.2.11.1	熵源候选 harvest.mask bitmask select entropy sources	man.freebsd.org random(4)	命中	harvest.mask 位掩码三句命中；同页 sysctl 输出示例含 harvest.mask_symbolic	2026-11-28	tvly extract advanced
+V61.2.11.2	未播种阻塞 unseeded state block reads seeded	man.freebsd.org random(4)	命中	unseeded state block reads 句命中	2026-11-28	tvly extract advanced
+V61.2.11.3	算法代际 Yarrow Fortuna replacement FreeBSD 11	man.freebsd.org random(4)	命中	HISTORY 四句命中；2.2→5.0 Yarrow→11.0 Fortuna→12.0 移除；roff 断词 algo- rithm 照录	2026-11-28	tvly extract advanced
+V61.2.11.4	健康测试 NIST 800-90B health tests repetition count	man.freebsd.org random(4)	命中	nist_healthtest_enabled 三句命中；Publica- tion／subse- quent 断词照录	2026-11-28	tvly extract advanced
+V61.2.11.5	启动播种 /boot/entropy loader seeded	man.freebsd.org random(4)	命中	/boot/entropy＋/var/db/entropy 持久化熵三句命中；auto- matically 断词照录	2026-11-28	tvly extract advanced
+V61.2.12.1	发布件签名覆盖 release directory SHA256.sig full set	man.openbsd.org signify(1)	命中	EXAMPLES release 目录两句命中	2026-11-28	tvly extract
+V61.2.12.2	信任链起点 signed checksum list sha256(1) output	man.openbsd.org signify(1)	命中	-C 模式三句命中（先验签名清单再逐文件验校验和）	2026-11-28	tvly extract
+V61.2.12.3	包库元数据签名 compressed archives cryptographic signatures pkg repo	man.freebsd.org pkg-repo(8)（and+Ports manpath）	命中	签名句命中；base manpath 查 pkg-repository(5)／pkg-repo(8)／pkg(8) 三次 no results，换 and+Ports manpath 解决；pkg(8) 全文经 web_reader 后备确认后定位	2026-11-28	tvly extract advanced＋web_reader
+V61.2.12.4	密钥轮换 keytype matches /etc/signify pubkey	man.openbsd.org signify(1)	命中	-t keytype 句命中（含 \- 转义原形）；EXAMPLES 公钥按发行版命名 openbsd-81-base.pub	2026-11-28	tvly extract
+V61.2.12.5	校验不符处置 IDS known good index tampered trusted	man.freebsd.org freebsd-update(8)	命中	TIPS IDS 两句命中（快照为无断词形 tampered）；security.html／pkg_install.conf(5)／signify HISTORY 侧检索未得更强句，不硬凑	2026-11-28	tvly extract advanced
