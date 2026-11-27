@@ -14,3 +14,12 @@ NetBSD is an entirely free and open-source UNIX-like operating system developed 
 
 Q2（AB 源，首宿主 2）:
 Over time, its code has found its way into many surprising environments, on the basis of a long history of quality, cleanliness, and stability.
+
+
+## supp-V73-b008 追加一句（2026-11-28，netbsd.org 现行页逐字，curl 实取）
+
+> It isn't a "distribution" or variant, but has evolved over several decades to be a complete and unique operating system in the BSD family.
+
+- **考据注**：NetBSD 自述“不是发行版或变体”句（What is NetBSD? 节），支撑 V73 3.5.4 项目史的自我归类面。
+- **考据日期**：2026-11-28（supp-V73-b008）
+

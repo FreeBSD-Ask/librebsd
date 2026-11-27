@@ -112,3 +112,19 @@ V73.4.1.1	corpus_gap	3778	CL-RM-499259	academic_work	primary	D2	supp-V73-b007	su
 V73.4.1.1	corpus_gap	3778	CL-RM-499260	academic_work	primary	D2	supp-V73-b007	supplemented	联网补证：McKusick 起诉范围重定句（ref3778 卡内既有句）
 V73.4.3.1	corpus_gap	3778	CL-RM-499261	academic_work	primary	D2	supp-V73-b007	supplemented	联网补证：McKusick fifty changes 带句（ref3778，第二宿主）
 V73.4.3.1	corpus_gap	3778	CL-RM-499262	academic_work	primary	D2	supp-V73-b007	supplemented	联网补证：McKusick 远程调试首例句（ref3778，第二宿主）
+V73.3.5.2	corpus_gap	10665	CL-RM-499338	official_doc	primary	D2	supp-V73-b008	supplemented	库内复用：FreeBSD Handbook encumbered 句（ref10872，EV-SUP-001566 绑定，第二宿主）
+V73.3.5.2	corpus_gap	3778	CL-RM-499339	academic_work	primary	D2	supp-V73-b008	supplemented	库内复用：McKusick Lite 2 句（ref3778，卡内既有句）
+V73.3.5.3	corpus_gap	10730	CL-RM-499340	official_doc	primary	D2	supp-V73-b008	supplemented	库内复用：Open Sources 目录 BSD 章与 Linux 章并列（ref10730，EV-SUP-002722 绑定，第二宿主）
+V73.3.5.3	corpus_gap	810	CL-RM-499341	academic_work	primary	D1	supp-V73-b008	supplemented	库内复用：Salus 三群体句（ref810，block 54，D1，第三宿主）
+V73.3.5.4	corpus_gap	2281	CL-RM-499342	official_doc	primary	D2	supp-V73-b008	supplemented	联网补证：NetBSD About 自述句（新 ref，2026-11-28 curl 实取）
+V73.3.5.4	corpus_gap	2281	CL-RM-499343	official_doc	primary	D2	supp-V73-b008	supplemented	联网补证：NetBSD About 1993 首发句（同源）
+V73.3.6.3	corpus_gap	10665	CL-RM-499344	official_doc	primary	D2	supp-V73-b008	supplemented	库内复用：FreeBSD Handbook 贡献者名单句（ref10872，EV-SUP-001577 绑定，第三宿主）
+V73.3.6.3	corpus_gap	11412	CL-RM-499345	official_doc	primary	D2	supp-V73-b008	supplemented	库内复用：NetBSD 名录准入句（ref11412，EV-SUP-004825 绑定，第二宿主）
+V73.3.6.5	corpus_gap	11413	CL-RM-499346	official_doc	primary	D2	supp-V73-b008	supplemented	库内复用：NetBSD 人员分群句（ref11413，EV-SUP-004826 绑定，第二宿主）
+V73.3.6.5	corpus_gap	4180	CL-RM-499347	academic_work	primary	D2	supp-V73-b008	supplemented	库内复用：Contributors to FreeBSD 页（ref4180，EV-DB-001427 绑定，第二宿主）
+V73.3.9.1	corpus_gap	3778	CL-RM-499348	academic_work	primary	D2	supp-V73-b008	supplemented	联网补证：McKusick Fabry 建组命名句（ref3778 卡追加句，2026-11-28 库内全文逐字）
+V73.3.9.1	corpus_gap	3778	CL-RM-499349	academic_work	primary	D2	supp-V73-b008	supplemented	联网补证：McKusick 即雇 Laura Tong 句（ref3778 卡追加句，同源）
+V73.3.9.2	corpus_gap	3778	CL-RM-499350	academic_work	primary	D2	supp-V73-b008	supplemented	库内复用：McKusick BSDI 公司成立句（ref3778，卡内既有句）
+V73.3.9.2	corpus_gap	3778	CL-RM-499351	academic_work	primary	D2	supp-V73-b008	supplemented	库内复用：McKusick 995 美元句（ref3778，卡内既有句，第三宿主）
+V73.3.9.3	corpus_gap	10741	CL-RM-499352	web_archive	primary	D2	supp-V73-b008	supplemented	库内复用：TUHS 宗旨句（ref10741，EV-SUP-001827 绑定，第二宿主）
+V73.3.9.3	corpus_gap	10584	CL-RM-499353	web_archive	primary	D2	supp-V73-b008	supplemented	库内复用：McKusick CSRG 档案 SCCS 句（ref10584，EV-SUP-002209 绑定，第二宿主）
