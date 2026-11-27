@@ -14,3 +14,11 @@
 In 1984, AT&T divested itself of its local Bell telephone companies, and also created an independent subsidiary, AT&T Computer Systems. The creation of the subsidiary enabled the communications giant to enter the computer business.
 
 Its software flagship was System 5, which ran on AT&T's 3B series of computers.
+
+## 追加引文（V19 b002，2026-11-27）
+
+> 追加用途：V19.1.3.1（USG 1970 年代形成）／1.3.2（USO 1989 重组）／1.3.3（USL 1989 组织）／1.3.4（USO 1990 并入 USL）。
+
+> As the versions of UNIX grew in number, the UNIX System Group (USG), which had been formed in the 1970s as a support organization for the internal Bell System use of UNIX, was reorganized as the UNIX Software Operation (USO) in 1989. Two of the earliest applications of UNIX for telecommunications operations support systems were the Centralized Automatic Reporting on Trunks (CAROT) system and the Loop Management Operations System (LMOS), two Bell Labs efforts that monitored the health of transmission facilities in the Bell System. Other systems to quickly follow were the SARTS (Switched Access Remote Test System) and CMS (Circuit Maintenance System). In Bell Labs, the UNIX System Laboratories (USL) also was organized in 1989.
+
+> The USO made several UNIX distributions of its own to academia and to some commercial and government users, stemming from the development of the Programmer's Workbench (PWB) system. The USO in 1990 then was merged with UNIX Systems Laboratories, and the USL became an AT&T subsidiary.
