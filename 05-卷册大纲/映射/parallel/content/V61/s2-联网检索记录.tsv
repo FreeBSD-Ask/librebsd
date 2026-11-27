@@ -155,3 +155,12 @@ V61.2.6.4	FreeBSD login.conf maxproc maximum number of processes	curl 直取 man
 V61.2.6.5	FreeBSD rctl per user sum virtual memory 100MB	curl 直取 man.freebsd.org rctl(8)（ref11164 复用）	命中	per=user 计账范围句取得	2026-11-25	curl 直连
 V61.2.6.5	FreeBSD Handbook resource limits prevent excessive consumption performance degradation	curl 直取 docs.freebsd.org Handbook §16.14（ref11167 复用）	命中	限制目的句取得	2026-11-25	curl 直连
 V61.2.6.*	—	—	—	五题两独立来源齐备（10 块）：ref11164—11167 四新建（rctl(8)／login.conf(5)／rctl.conf(5)／Handbook §16.14），零复用；2.6 节五题全批面（无撤出）	2026-11-25	curl 直连
+V61.2.7.1	页级读写执行的分割	OpenBSD W^X page table permissions kernel improvements Larkin	openbsd.org（Hackfest 2015 幻灯片）	命中	支持硬件上以页表权限分隔可写与可执行句；新 ref11406	2026-11-27
+V61.2.7.2	栈帧哨兵的检查时点	StackGuard sentinel return address check before return Cowan	USENIX Security 1998 论文	命中	哨兵置于返回地址旁、返回前核对句；新 ref11407	2026-11-27
+V61.2.7.3	只读重定位的实现手法	PT_GNU_RELRO OpenBSD elf(5) read-only after immediate relocations	man.openbsd.org elf(5)	命中	RELRO 段在立即重定位后置只读句；新 ref11408	2026-11-27
+V61.2.7.4	地址随机化的粒度分档	NetBSD security(7) PaX ASLR global paxctl per program	man.netbsd.org security(7)	命中（库内复用）	ASLR 可全局或按程序启用句；复用 ref10500	2026-11-27
+V61.2.7.5	保护机制的组合搭配	FreeBSD mitigations(7) BIND_NOW RELRO full RELRO GOT	man.freebsd.org mitigations(7)	命中	BIND_NOW 与默认 RELRO 组合提供完整 RELRO 句；新 ref11409	2026-11-27
+V61.2.8.2	记录格式的行业来源	FreeBSD audit(4) BSM API file formats Solaris	man.freebsd.org audit(4)	命中（库内复用）	实现 BSM API／文件格式、最早见于 Solaris 句；复用 ref10537	2026-11-27
+V61.2.8.3	守护进程的配置下发	auditd configures kernel pushes configuration files audit(4)	man.freebsd.org audit(4)	命中（库内复用）	auditd 配置内核并把配置文件数据推入句；复用 ref10537 异句	2026-11-27
+V61.2.8.4	审计管道的实时跟踪	auditpipe(4) live BSM audit data real-time monitoring	man.freebsd.org auditpipe(4)	命中（库内复用）	审计管道供实时监测直接访问 live BSM 数据句；复用 ref10538	2026-11-27
+V61.2.8.5	已登记覆盖缺口的分布	FreeBSD audit(4) instrumentation not complete some system calls incomplete argument	man.freebsd.org audit(4)	命中（库内复用）	插桩不完整、部分系统调用无记录或参数不全句；复用 ref10537 异句	2026-11-27
