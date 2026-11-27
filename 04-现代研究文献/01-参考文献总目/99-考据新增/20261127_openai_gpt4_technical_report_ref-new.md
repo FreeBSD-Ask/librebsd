@@ -18,3 +18,10 @@
 ## 中文提要
 
 OpenAI 的 GPT-4 技术报告自陈模型局限：不可靠、会出现幻觉、上下文窗口有限；事实性以内部对抗性评测度量（较 GPT-3.5 高 19 个百分点）——机器叙事的编造风险与核验标准均出自模型方的官方自述。
+
+**supp-V73-b005 新引二句（2026-11-27，同源 PDF 逐字）**：
+
+> GPT-4 generally lacks knowledge of events that have occurred after the vast majority of its pre-training data cuts off in September 2021
+
+> It can sometimes make simple reasoning errors which do not seem to comport with competence across so many domains, or be overly gullible in accepting obviously false statements from
+

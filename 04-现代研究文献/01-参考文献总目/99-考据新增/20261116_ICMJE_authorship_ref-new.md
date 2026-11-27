@@ -11,3 +11,11 @@
 - **限度（要紧）**：①ICMJE 是**医学期刊**规范，不是软件史或许可法的依据；本批取其**程序区分**作方法论支撑，不将四判据直接适用于代码作者认定（代码署名另有许可与版权依据，见 SPDX 与 BSD 版权行）。②该建议稿持续修订，块内引文按抓取时点记录。③跨域类比属**结构性参照**而非同源证据，本批不据以判定任何具体个案的归属。
 - **本批落点**：V35.1.10.2
 - **考据日期**：2026-11-16（Task 8.2 G4 V35 P2 批 b023；official_doc／L3）
+
+## supp-V73-b005 追加引句（2026-11-27，icmje.org 现行页逐字，curl 实取）
+
+> At submission, the journal should require authors to disclose whether they used artificial intelligence (AI)-assisted technologies (such as Large Language Models [LLMs], chatbots, or image creators) in the production of submitted work.
+
+- **考据注**：ICMJE 要求投稿时披露 AI 辅助技术的使用（LLM／chatbot／图像生成器），并在投稿信与稿件中说明用法；支撑 V73 2.6.3 生成文本署名责任面。
+- **考据日期**：2026-11-27（supp-V73-b005）
+
