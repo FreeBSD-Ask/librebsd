@@ -29,6 +29,20 @@ Joy, William. An Introduction to the C shell[Z/OL]. Revised for 4.3BSD by Mark S
 
 > Eric Allman has also provided a large number of useful comments on the shell, helping to unify those concepts which are present and to identify and eliminate useless and marginally useful features.
 
+## 二之一、补充引文（b071 取用）
+
+脚本可移植性（3.6.3A，3.3 节 Invocation）：
+
+> If the file does not begin with a '#' then the standard shell '/bin/sh' will be used to execute it. This allows you to convert your older shell scripts to use csh at your convenience.
+
+脚本局限（3.6.6A，3.2 节 Make）：
+
+> It is important to first note what shell scripts are not useful for. There is a program called make which is very useful for maintaining a group of related files or performing sets of operations on related files.
+
+设计意图（3.6.5A，1.1 节首句）：
+
+> The primary purpose of csh is to translate command lines typed at a terminal into system actions, such as invocation of other programs.
+
 ## 三、考据说明
 
 1. 本文档（USD:4）为 csh 的**设计者说明书**：Abstract 明言“csh 独有的特性多为交互式用户而设计”（交互为中心的设计意图）；1.1 节给出与传统系统命令解释器的分野（用户程序、专用于调用其他程序）；glossary 的 default 条给出类 C 语法的自我类比；Acknowledgements 记 Allman 等协作者的取舍意见——四段逐题对应 3.5.1／3.5.2／3.5.5／3.5.6。
