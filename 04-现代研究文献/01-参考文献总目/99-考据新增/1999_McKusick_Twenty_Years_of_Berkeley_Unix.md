@@ -55,13 +55,3 @@ Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.
 - **考据注**：前两句＝BSDI 广告叙事（99% 折扣＋1-800-ITS-Unix 电话）；第三句＝电话成为诉讼焦点后广告改写；第四句＝BSD 从不以二进制形态发行、始终含全部源码（归属与署名迁移的制度底座）。落 V73 3.4.2／3.4.3／3.4.5／3.3.2。
 - **考据日期**：2026-11-28（supp-V73-b007）
 
-
-## supp-V73-b008 追加二句（2026-11-28，库内全文 txt ref3778 逐字）
-
-> Under the auspices of this contract, Bob Fabry sets up an organization which was christened the Computer Systems Research Group, or CSRG for short.
-
-> He immediately hired Laura Tong to handle the project administration.
-
-- **考据注**：CSRG 建组句（DARPA 合同名义下 Fabry 建组命名）与行政职员雇用句；落 V73 3.9.1 大学任职与项目声名两块。
-- **考据日期**：2026-11-28（supp-V73-b008）
-

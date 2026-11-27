@@ -16,3 +16,9 @@ The discussion has tapered off as well as the incoming ack, review, and sign-off
 1. Acked-by: Andy Lutomirski <luto@kernel.org>
 
 落点：V18.1.7.4（supp-V18-b004）；卡哈希由引擎 card_resync 回刷。
+
+## 批内追加引文（supp-V18-b005，2026-11-28）
+
+1. Hi Linus, please pull from:
+
+落点：V18.1.5.5（supp-V18-b005）；卡哈希由引擎 card_resync 回刷。
