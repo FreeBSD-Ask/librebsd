@@ -164,3 +164,13 @@ V61.2.8.2	记录格式的行业来源	FreeBSD audit(4) BSM API file formats Sola
 V61.2.8.3	守护进程的配置下发	auditd configures kernel pushes configuration files audit(4)	man.freebsd.org audit(4)	命中（库内复用）	auditd 配置内核并把配置文件数据推入句；复用 ref10537 异句	2026-11-27
 V61.2.8.4	审计管道的实时跟踪	auditpipe(4) live BSM audit data real-time monitoring	man.freebsd.org auditpipe(4)	命中（库内复用）	审计管道供实时监测直接访问 live BSM 数据句；复用 ref10538	2026-11-27
 V61.2.8.5	已登记覆盖缺口的分布	FreeBSD audit(4) instrumentation not complete some system calls incomplete argument	man.freebsd.org audit(4)	命中（库内复用）	插桩不完整、部分系统调用无记录或参数不全句；复用 ref10537 异句	2026-11-27
+V61.2.9.1	文件指纹数据库内核驻留 in-kernel file integrity subsystem	man.netbsd.org veriexec(8)	命中	veriexec(8) 载明 in-kernel, real-time, file-system independent 文件完整性子系统；tvly extract basic 正文完整	2026-11-28	tvly extract
+V61.2.9.2	执行前校验 verifies integrity before run or read	man.netbsd.org veriexec(4)	命中（库内复用 ref10498）	veriexec(4) 载明 before they are run or read 句；快照 veriexec4.txt	2026-11-28	tvly extract
+V61.2.9.3	严格级别锁定 fingerprint tables modified strict level	man.netbsd.org veriexec(8)	命中	Learning（strict level 0）为唯一可修改级句命中；现版四级 0—3	2026-11-28	tvly extract
+V61.2.9.4	基线生成 veriexecgen generate fingerprint database	man.netbsd.org veriexecgen(8)	命中（库内复用 ref11040）	veriexecgen 建库句命中；页面正文被提取器截断（-D 选项列表缺失），未用作 evidence	2026-11-28	tvly extract
+V61.2.9.5	校验范围 signatures database list of monitored files	man.netbsd.org veriexec(8)	命中	签名数据库＝监测文件清单＋指纹＋可选访问模式句命中	2026-11-28	tvly extract
+V61.2.10.1	块设备层加密 GEOM providers encryption geli	man.freebsd.org geli(8)	命中（库内复用 ref10350）	geli 在 GEOM 提供者配置加密句命中	2026-11-28	tvly extract advanced（basic 仅目录骨架；curl SSL exit 35 未用；web_reader 全文备用未入库）
+V61.2.10.2	用户密钥分解 User Key piecewise components passphrase keyfile	man.freebsd.org geli(8)	命中	两分段组件句（piecewise components）命中	2026-11-28	tvly extract advanced
+V61.2.10.3	主密钥备份恢复 Master Key backed up restored	man.freebsd.org geli(8)	命中	主密钥可备份恢复句命中；roff 断词 possi- possible 照录	2026-11-28	tvly extract advanced
+V61.2.10.4	元数据扇区 last sector metadata	man.freebsd.org geli(8)	命中（收窄）	末扇区句命中；跨句 /var/backups/<prov>.eli 的 <prov> 被提取器剥除，引文收窄单句	2026-11-28	tvly extract advanced
+V61.2.10.5	一次性密钥 one-time Master Key swap temporary filesystems	man.freebsd.org geli(8)	命中	随机一次性主密钥适用交换分区与临时文件系统句命中	2026-11-28	tvly extract advanced
