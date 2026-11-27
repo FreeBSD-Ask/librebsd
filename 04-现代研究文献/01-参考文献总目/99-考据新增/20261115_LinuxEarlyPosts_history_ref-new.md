@@ -23,3 +23,9 @@
 7. PS. Yes - it's free of any minix code, and it has a multi-threaded fs.
 
 落点：V18.1.1.1／1.1.2／1.1.3／1.1.5／1.2.1／1.2.4／1.2.5／1.3.1（supp-V18-b001）；卡哈希由引擎 card_resync 回刷。
+
+## 批内追加引文（supp-V18-b002，2026-11-27）
+
+1. 0.01 sources weren't actually runnable: they were just a token gesture to arl who had probably started to despair about ever getting anything.
+
+落点：V18.1.3.3（supp-V18-b002）；卡哈希由引擎 card_resync 回刷。
