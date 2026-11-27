@@ -14,3 +14,11 @@ The ULE scheduler has been added as an additional scheduler. Note that the conve
 
 Q2（4.1.3B 源，SMP 每 CPU 运行队列与亲和性）:
 On SMP machines, ULE has per-CPU run queues which allow for CPU affinity, CPU binding, and advanced HyperThreading support, as well as providing a framework for more optimizations in the future.
+
+## b014-r3 追加引文（2026-11-25 快照复取核证）
+
+- **追加用途**：b014-r3（4.4.3A／4.4.5B）
+- **披露**：链接后空格标点归一；roadmap“5. X .”空格形与 ``Giant'' 双反引号、rel53 ``skipping'' 双反引号照录
+
+A1（r53A）:
+For the average user, interactivity is reported to be better in many cases. This means less ``skipping'' and ``jerking'' in interactive applications while the machine is very busy.

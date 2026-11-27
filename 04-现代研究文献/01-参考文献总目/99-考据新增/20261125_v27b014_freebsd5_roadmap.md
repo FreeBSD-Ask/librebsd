@@ -14,3 +14,11 @@ The state of SMPng and kernel lockdown is the biggest concern for 5.X. To date, 
 
 Q2（4.2.2B 源，Giant 争用反伤性能）:
 However, contention due to Giant covering much of the kernel and most of the device driver interrupt routines causes excessive context switches and might actually be hurting performance.
+
+## b014-r3 追加引文（2026-11-25 快照复取核证）
+
+- **追加用途**：b014-r3（4.1.4A／4.4.3B）
+- **披露**：链接后空格标点归一；roadmap“5. X .”空格形与 ``Giant'' 双反引号、rel53 ``skipping'' 双反引号照录
+
+A1（rdA）:
+The state of SMPng and kernel lockdown is the biggest concern for 5. X . To date, few major systems have come out from under the kernel-wide mutex known as ``Giant''.

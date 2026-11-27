@@ -14,3 +14,17 @@ It is the intent of this project to take over development of the 4.x tree, to mo
 
 Q2（补充句，五版代码基“互斥过重”的判断，本批未单独入块，备后续题用）:
 I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.
+
+## b014-r3 追加引文（2026-11-25 快照复取核证）
+
+- **追加用途**：b014-r3（4.3.5A／4.4.2B／4.4.4A）
+- **披露**：链接后空格标点归一；roadmap“5. X .”空格形与 ``Giant'' 双反引号、rel53 ``skipping'' 双反引号照录
+
+A1（m2）:
+I considered starting with a 5.x base but it is simply too heavily mutexed, it was actually faster to start with 4.x and move forward rather then to start with 5.x and move backwards.
+
+A2（m3）:
+under an entirely new mutex-free light weight kernel threading infrastructure. It includes the LWKT system, interrupt threads, and pure threads for system processes amoung other things
+
+A3（m6）:
+The preliminary 'proving' work I have done is now available on the new DragonFly site.

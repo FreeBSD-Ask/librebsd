@@ -14,3 +14,14 @@ FreeBSD-5 has gone down a road that I believe will lead to a slow, cumbersome, a
 
 Q2（4.2.2A 源，对四版稳定性维护态度的判断，作同题补充句）:
 FreeBSD-4.x is nearing its end-of-life, and it is obvious that less care is being taken in preserving its vaunted stability then in the past.
+
+## b014-r3 追加引文（2026-11-25 快照复取核证）
+
+- **追加用途**：b014-r3（4.1.4B／4.4.2A／4.4.4B／4.4.5A）
+- **披露**：链接后空格标点归一；roadmap“5. X .”空格形与 ``Giant'' 双反引号、rel53 ``skipping'' 双反引号照录
+
+A1（sdA）:
+This created some friction because nobody else was willing to do the necessary work yet everyone still had an opinion on how the work should be done.
+
+A2（sdB）:
+You could credit me with being the primary mover for fixing the VM system going from 3.x to 4.x, and the buffer cache as well.
