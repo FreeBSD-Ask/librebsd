@@ -144,3 +144,14 @@ V61.2.5.4	FreeBSD Handbook load several policy modules at a time MLS environment
 V61.2.5.5	FreeBSD MAC BUGS not all attack channels protected by entry point checks root	curl 直取 man.freebsd.org MAC(4) BUGS 段 复用	命中	入口点检查上限句取得	2026-11-25	curl 直连
 V61.2.5.5	FreeBSD Handbook root user can still change security enforcement edit configuration files	curl 直取 docs.freebsd.org Handbook MAC 章 复用	命中	root 约束边界句取得	2026-11-25	curl 直连
 V61.2.5.*	—	—	—	三题两独立来源齐备（6 块）：ref11111 既有复用（MAC(4)，他线 11-21 建前次未用）＋ref11152 新建（FreeBSD Handbook MAC 章）；零挂账存量、S1 无候选，全联网；2.5.1/2.5.2 为旧批已 filled 撤出批面	2026-11-25	curl 直连
+V61.2.6.1	FreeBSD login class determines session accounting resource limits user environment	curl 直取 man.freebsd.org login.conf(5)（77 880 字节 HTML／18 152 字节文本；新 ref11165）	命中	登录类决定记账与资源限制句取得（roff 断词 ac- count 照录）	2026-11-25	curl 直连
+V61.2.6.1	FreeBSD Handbook each user account assigned login class default	curl 直取 docs.freebsd.org Handbook §16.14（201 076 字节 HTML／96 909 字节文本；新 ref11167）	命中	账号指配登录类句取得	2026-11-25	curl 直连
+V61.2.6.2	FreeBSD rctl subject process user loginclass jail	curl 直取 man.freebsd.org rctl(8)（64 337 字节 HTML／6 824 字节文本；新 ref11164）	命中	subject 四类实体句取得	2026-11-25	curl 直连
+V61.2.6.2	FreeBSD Handbook rctl set resource constraints processes jails	curl 直取 docs.freebsd.org Handbook §16.14（ref11167 复用）	命中	rctl 对进程与 jail 施加约束句取得	2026-11-25	curl 直连
+V61.2.6.3	FreeBSD rctl actions deny log devctl sig throttle	curl 直取 man.freebsd.org rctl(8)（ref11164 复用）	命中	动作清单 deny/log/devctl/sig*/throttle 句取得	2026-11-25	curl 直连
+V61.2.6.3	FreeBSD rctl.conf loginclass maxproc deny 100 per user	curl 直取 man.freebsd.org rctl.conf(5)（56 452 字节 HTML／975 字节文本；新 ref11166）	命中	示例规则 deny 落 maxproc 句取得	2026-11-25	curl 直连
+V61.2.6.4	FreeBSD rctl resources memoryuse memorylocked maxproc	curl 直取 man.freebsd.org rctl(8)（ref11164 复用）	命中	资源表三目连续段取得	2026-11-25	curl 直连
+V61.2.6.4	FreeBSD login.conf maxproc maximum number of processes	curl 直取 man.freebsd.org login.conf(5)（ref11165 复用）	命中	maxproc 条目句取得	2026-11-25	curl 直连
+V61.2.6.5	FreeBSD rctl per user sum virtual memory 100MB	curl 直取 man.freebsd.org rctl(8)（ref11164 复用）	命中	per=user 计账范围句取得	2026-11-25	curl 直连
+V61.2.6.5	FreeBSD Handbook resource limits prevent excessive consumption performance degradation	curl 直取 docs.freebsd.org Handbook §16.14（ref11167 复用）	命中	限制目的句取得	2026-11-25	curl 直连
+V61.2.6.*	—	—	—	五题两独立来源齐备（10 块）：ref11164—11167 四新建（rctl(8)／login.conf(5)／rctl.conf(5)／Handbook §16.14），零复用；2.6 节五题全批面（无撤出）	2026-11-25	curl 直连

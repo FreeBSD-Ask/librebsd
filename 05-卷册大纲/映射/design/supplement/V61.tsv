@@ -74,7 +74,7 @@ V61.1.8.2	corpus_gap	11078	CL-RM-497524	official_doc	primary	D2/L3	supp-V61-b008
 V61.1.8.3	corpus_gap	11080	CL-RM-497525	official_doc	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://googleprojectzero.blogspot.com/2014/07/announcing-project-zero.html（Task 8.2 G7 全责线 supp-V61-b008）
 V61.1.8.3	corpus_gap	11077	CL-RM-497526	official_doc	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://certcc.github.io/certcc_disclosure_policy/（Task 8.2 G7 全责线 supp-V61-b008）
 V61.1.8.4	corpus_gap	10409	CL-RM-497527	official_doc	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://www.freebsd.org/security/（Task 8.2 G7 全责线 supp-V61-b008）
-V61.1.8.4	corpus_gap	11081	CL-RM-497528	archive	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://seclists.org/bugtraq/（Task 8.2 G7 全责线 supp-V61-b008）
+V61.1.8.4	corpus_gap	11081	CL-RM-497528	web_archive	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://seclists.org/bugtraq/（Task 8.2 G7 全责线 supp-V61-b008）
 V61.1.8.5	corpus_gap	11082	CL-RM-497529	official_doc	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://www.cve.org/About/Overview（Task 8.2 G7 全责线 supp-V61-b008）
 V61.1.8.5	corpus_gap	11083	CL-RM-497530	official_doc	primary	D2/L3	supp-V61-b008	supplemented	联网补证：https://www.first.org/cvss/specification-document（Task 8.2 G7 全责线 supp-V61-b008）
 V61.1.9.1	corpus_gap	11082	CL-RM-497564	official_doc	primary	D2/L3	supp-V61-b009	supplemented	联网补证：https://www.cve.org/About/Overview（Task 8.2 G7 全责线 supp-V61-b009）
@@ -102,9 +102,9 @@ V61.1.11.1	corpus_gap	10409	CL-RM-497666	official_doc	primary	D2/L3	supp-V61-b01
 V61.1.11.2	corpus_gap	11102	CL-RM-497667	official_doc	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.netbsd.org/security/（Task 8.2 G7 全责线 supp-V61-b011）
 V61.1.11.2	corpus_gap	10409	CL-RM-497668	official_doc	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.freebsd.org/security/（Task 8.2 G7 全责线 supp-V61-b011）
 V61.1.11.3	corpus_gap	11103	CL-RM-497669	official_doc	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.openbsd.org/53.html（Task 8.2 G7 全责线 supp-V61-b011）
-V61.1.11.3	corpus_gap	2219	CL-RM-497670	official_doc	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.openbsd.org/security.html（Task 8.2 G7 全责线 supp-V61-b011）
+V61.1.11.3	corpus_gap	2219	CL-RM-497670	academic_work	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.openbsd.org/security.html（Task 8.2 G7 全责线 supp-V61-b011）
 V61.1.11.5	corpus_gap	11102	CL-RM-497671	official_doc	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.netbsd.org/security/（Task 8.2 G7 全责线 supp-V61-b011）
-V61.1.11.5	corpus_gap	2219	CL-RM-497672	official_doc	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.openbsd.org/security.html（Task 8.2 G7 全责线 supp-V61-b011）
+V61.1.11.5	corpus_gap	2219	CL-RM-497672	academic_work	primary	D2/L3	supp-V61-b011	supplemented	联网补证：https://www.openbsd.org/security.html（Task 8.2 G7 全责线 supp-V61-b011）
 V61.2.1.3	corpus_gap	11111	CL-RM-497689	official_doc	primary	D2/L3	supp-V61-b012	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b012）
 V61.2.1.3	corpus_gap	11112	CL-RM-497690	official_doc	primary	D2/L3	supp-V61-b012	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=chmod&sektion=1&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b012）
 V61.2.1.4	corpus_gap	11113	CL-RM-497691	official_doc	primary	D2/L3	supp-V61-b012	supplemented	联网补证：https://man.openbsd.org/getgroups.2（Task 8.2 G7 全责线 supp-V61-b012）
@@ -141,3 +141,13 @@ V61.2.5.4	corpus_gap	11111	CL-RM-497925	official_doc	primary	D2/L3	supp-V61-b016
 V61.2.5.4	corpus_gap	11152	CL-RM-497926	official_doc	primary	D2/L3	supp-V61-b016	supplemented	联网补证：https://docs.freebsd.org/en/books/handbook/mac/（Task 8.2 G7 全责线 supp-V61-b016）
 V61.2.5.5	corpus_gap	11111	CL-RM-497927	official_doc	primary	D2/L3	supp-V61-b016	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=mac&sektion=4&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b016）
 V61.2.5.5	corpus_gap	11152	CL-RM-497928	official_doc	primary	D2/L3	supp-V61-b016	supplemented	联网补证：https://docs.freebsd.org/en/books/handbook/mac/（Task 8.2 G7 全责线 supp-V61-b016）
+V61.2.6.1	corpus_gap	11165	CL-RM-498002	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.1	corpus_gap	11167	CL-RM-498003	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://docs.freebsd.org/en/books/handbook/security/（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.2	corpus_gap	11164	CL-RM-498004	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.2	corpus_gap	11167	CL-RM-498005	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://docs.freebsd.org/en/books/handbook/security/（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.3	corpus_gap	11164	CL-RM-498006	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.3	corpus_gap	11166	CL-RM-498007	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=rctl.conf&sektion=5&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.4	corpus_gap	11164	CL-RM-498008	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.4	corpus_gap	11165	CL-RM-498009	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.5	corpus_gap	11164	CL-RM-498010	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://man.freebsd.org/cgi/man.cgi?query=rctl&sektion=8&manpath=FreeBSD+15.0-RELEASE（Task 8.2 G7 全责线 supp-V61-b017）
+V61.2.6.5	corpus_gap	11167	CL-RM-498011	official_doc	primary	D2/L3	supp-V61-b017	supplemented	联网补证：https://docs.freebsd.org/en/books/handbook/security/（Task 8.2 G7 全责线 supp-V61-b017）
