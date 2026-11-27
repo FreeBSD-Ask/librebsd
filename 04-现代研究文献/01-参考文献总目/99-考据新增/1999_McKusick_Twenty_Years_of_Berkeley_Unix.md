@@ -41,3 +41,17 @@ Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.
 - **本批落点**：V73.1.2.2（第 1 句）、1.5.3（第 1／2 句）、1.5.4（第 3／4 句）
 - **考据日期**：2026-11-27（supp-V73-b002；academic_work 表定抬头／L4）
 
+
+## supp-V73-b007 追加四句（2026-11-28，库内全文 txt ref3778 逐字）
+
+> They began running advertisements touting their 99% discount over the price charged for System V source plus binary systems. Interested readers were told to call 1-800-ITS-Unix.
+
+> The letter demanded that they stop promoting their product as Unix and in particular that they stop using the deceptive phone number.
+
+> Although the phone number was promptly dropped and the advertisements changed to explain that the product was not Unix, USL was still unhappy and filed suit to enjoin BSDI from selling their product.
+
+> That was because the BSD systems were never released by Berkeley in a binary-only format; the distributions always contained the complete source to every part of the system.
+
+- **考据注**：前两句＝BSDI 广告叙事（99% 折扣＋1-800-ITS-Unix 电话）；第三句＝电话成为诉讼焦点后广告改写；第四句＝BSD 从不以二进制形态发行、始终含全部源码（归属与署名迁移的制度底座）。落 V73 3.4.2／3.4.3／3.4.5／3.3.2。
+- **考据日期**：2026-11-28（supp-V73-b007）
+

@@ -30,3 +30,25 @@
 - **考据注**：Jolitz 撤回支持句与自立命名句（A Brief History of 小节连续两句），支撑 V73 2.2.4 分叉叙事的自我定位面。
 - **考据日期**：2026-11-27（supp-V73-b003）
 
+
+## supp-V73-b007 追加三句（2026-11-28，docs.freebsd.org 现行页逐字）
+
+> Jordan contacted Walnut Creek CDROM with an eye toward improving FreeBSD’s distribution channels for those many unfortunates without easy access to the Internet.
+
+> It was a fairly reasonable success for a first offering, and they followed it with the highly successful FreeBSD 1.1 release in May of 1994.
+
+> Around this time, some rather unexpected storm clouds formed on the horizon as Novell and U.C. Berkeley settled their long-running lawsuit over the legal status of the Berkeley Net/2 tape.
+
+- **考据注**：发行商资助起点句（Walnut Creek 渠道）＋发行评价更替句（reasonable→highly successful）＋周期转折句（Novell 和解风暴）；落 V73 3.4.1／3.4.4。
+- **考据日期**：2026-11-28（supp-V73-b007）
+
+
+## supp-V73-b007 追加二句（2026-11-28，docs.freebsd.org 现行页逐字）
+
+> Walnut Creek CDROM not only supported the idea of distributing FreeBSD on CD but also went so far as to provide the project with a machine to work on and a fast Internet connection.
+
+> Without Walnut Creek CDROM’s almost unprecedented degree of faith in what was, at the time, a completely unknown project, it is quite unlikely that FreeBSD would have gotten as far, as fast, as it has today.
+
+- **考据注**：发行商实质支持句（机器与网络接入）＋信任程度句（几乎空前的信任）；与此前追加的“Jordan contacted Walnut Creek”句同段连续，落 V73 3.4.1 两块。
+- **考据日期**：2026-11-28（supp-V73-b007）
+
