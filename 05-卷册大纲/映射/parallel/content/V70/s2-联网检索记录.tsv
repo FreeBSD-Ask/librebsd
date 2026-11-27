@@ -1,0 +1,7 @@
+subsection_id	title	query	site	hit	conclusion	accessed
+V70.2.2.3	重启代码库的合并代价	BSDI NetBSD FreeBSD restart code base 4.4BSD-Lite sources merged enhancements	oreilly.com（Twenty Years of Berkeley Unix）	命中	三支 BSD 均须以 4.4BSD-Lite 源码重启并合入改进句；新 ref11415	2026-11-27
+V70.2.4.1	反事实推演的设问条件	counterfactual history myriad possible ways history could have happened	networks.h-net.org（Bernstein 评 Virtual History）	命中	实存历史只是众多可能路径之一句；新 ref11416	2026-11-27
+V70.2.4.2	法律冻结的时段与后果	FreeBSD until end of July 1994 stop shipping Net/2 1.1.5.1	docs.freebsd.org（Handbook Introduction；库内 ref10665）	命中（复用）	1994 年 7 月底停发 Net/2 产品句；复用 ref10665	2026-11-27
+V70.2.4.3	和解时点的外部变量	Novell completes acquisition UNIX System Laboratories June 14 1993	krsaborio.net（Business Wire 新闻稿镜像）	命中	1993-06-14 完成收购 USL 句；新 ref11417	2026-11-27
+V70.2.4.4	若无诉讼的替代路径	Within six months Bill Jolitz replacements six missing files Net/2	oreilly.com（同上；ref11415）	命中（复用）	六个月内补写六个缺失文件句；复用 ref11415 异句	2026-11-27
+V70.2.4.5	反事实论证的边界	counterfactual history plausible implausible alternatives modesty inevitable contingent	networks.h-net.org（同上；ref11416）	命中（复用）	分辨可信替代并对必然偶然保持谦抑句；复用 ref11416 异句	2026-11-27
