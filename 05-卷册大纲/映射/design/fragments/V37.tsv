@@ -107,7 +107,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	2	2.9	2.9.1	WireGuard 以简洁接口定义隧道	filled	
 37	2	2.9	2.9.2	内核 VPN 以虚拟接口入路由	filled	
 37	2	2.9	2.9.3	密钥协商靠静态与临时密钥	filled	
-37	2	2.9	2.9.4	漫游支持须处理地址变化	skeleton	
+37	2	2.9	2.9.4	漫游支持须处理地址变化	filled	
 37	2	2.9	2.9.5	VPN 部署牵动防火墙与 DNS	filled	
 37	2	2.10	2.10.1	内核以队列与过滤器组织事件	filled	
 37	2	2.10	2.10.2	过滤器按描述符类型注册	filled	
