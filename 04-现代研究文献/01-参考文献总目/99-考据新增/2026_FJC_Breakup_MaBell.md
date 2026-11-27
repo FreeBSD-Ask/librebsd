@@ -30,3 +30,12 @@ Federal Judicial Center. The Breakup of "Ma Bell": United States v. AT&T[EB/OL].
 ## 三、说明
 
 FJC 记述：1982-08-24 案件撤诉，1984-01-01 实施本地运营公司剥离，22 家运营公司合并为七家地区运营公司（俗称 Baby Bells）；AT&T 管理层最不愿失去西电与贝尔实验室——印证西电（制造主体）未被剥离，与判决令文互证，可纠正“制造主体剥离”的通俗表述。
+## 三、追加引文（V19 b001，2026-11-27）
+
+> 追加用途：V19.1.1.1（1956 判决限制）／V19.1.1.3（计算机市场解禁）／V19.1.2.3（解禁前提）。
+
+> The consent decree AT&T signed included no divestiture of assets; the Federal Communications Commission (FCC) had informed DOJ that it did not deem divestiture of Western necessary. Instead, the company was prohibited from engaging in any new business other than the provision of common carrier communications services.
+
+> The parties agreed on these terms—AT&T’s divestment of its local operating companies accompanied by a modification of the 1956 consent decree to allow AT&T to enter the lucrative computer market—in January 1982.
+
+> Having that ban lifted was essential for AT&T, which was unable to compete with companies like Xerox and IBM in the exploding and lucrative computer market.
