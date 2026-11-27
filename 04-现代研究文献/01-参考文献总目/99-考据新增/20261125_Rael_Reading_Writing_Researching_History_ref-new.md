@@ -16,6 +16,14 @@ ref11153 考据登记（Rael 史学写作指南）
 
 > Pieces of evidence -- in the form of primary and secondary sources -- are the building blocks of historical arguments.
 
+**supp-V73-b001 新引句（2026-11-27，同源 PDF 逐字，p.72 "2. What should I quote?" 节）**：
+
+> Primary sources are the best candidates for direct quotation. Avoid quoting from secondary sources. You can summarize important points from a secondary source by paraphrasing, but be sure to provide a citation.
+
+**supp-V73-b001 新引句（2026-11-27，同源 PDF 逐字，p.17 练习问句；原文笔误 "does not seemed" 照录）**：
+
+> What kinds of information does this text reveal that it does not seemed concerned with revealing? (In other words, what does it tell us without knowing it’s telling us?)
+
 ## 中文提要
 
 Rael 2004 指南：提问为学者首要之务，好问题既可习得亦须直觉；问题为材料提供取径。
