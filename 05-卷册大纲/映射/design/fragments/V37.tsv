@@ -48,22 +48,22 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	1	1.10	1.10.2	SCSI 扩展由核心组定调	filled	
 37	1	1.10	1.10.3	ATA 与 NVMe 由后续者接续	filled	
 37	1	1.10	1.10.4	驱动维护以交接文档完成续任	skeleton	
-37	1	1.10	1.10.5	开发者兼厂商身份左右取舍	skeleton	
+37	1	1.10	1.10.5	开发者兼厂商身份左右取舍	filled	
 37	1	1.11	1.11.1	13.x 列出退役架构清单	filled	
 37	1	1.11	1.11.2	i386 由一级降为二级	filled	
 37	1	1.11	1.11.3	旧平台构建目标逐版收缩	filled	
 37	1	1.11	1.11.4	淘汰公告写明生效版本与替代	filled	
-37	1	1.11	1.11.5	迁移窗口靠公告与手册告知	skeleton	
+37	1	1.11	1.11.5	迁移窗口靠公告与手册告知	filled	
 37	1	1.12	1.12.1	devfs 按规则表生成设备	filled	
 37	1	1.12	1.12.2	mdconfig 以内存盘供块设备	filled	
 37	1	1.12	1.12.3	tmpfs 复用页缓存存文件	filled	
 37	1	1.12	1.12.4	sendfile 在核内传递文件页	filled	
 37	1	1.12	1.12.5	VFS 以 vnode 衔接挂载点	filled	
 37	1	1.13	1.13.1	贡献构成由提交记录统计	filled	
-37	1	1.13	1.13.2	企业以雇人与赞助设备参与	skeleton	
+37	1	1.13	1.13.2	企业以雇人与赞助设备参与	filled	
 37	1	1.13	1.13.3	提交权限随世代更替而分散	skeleton	
-37	1	1.13	1.13.4	治理岗位代际交接保住连续性	skeleton	
-37	1	1.13	1.13.5	多样性按地域雇主统计	skeleton	
+37	1	1.13	1.13.4	治理岗位代际交接保住连续性	filled	
+37	1	1.13	1.13.5	多样性按地域雇主统计	filled	
 37	2	2.1	2.1.1	网络栈源头承自 4.2BSD	filled	
 37	2	2.1	2.1.2	domain 与 protosw 切分协议层	filled	
 37	2	2.1	2.1.3	socket 抽象背负兼容负担	filled	
