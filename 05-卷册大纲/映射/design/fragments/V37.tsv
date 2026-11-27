@@ -659,7 +659,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	12	12.13	12.13.3	64 位时间的 ABI 变更	skeleton	
 37	12	12.13	12.13.4	内核与用户态的时间同步	skeleton	
 37	12	12.13	12.13.5	兼容旧二进制的时间层	skeleton	
-37	13	13.1	13.1.1	CVSup 依赖 Modula-3 编译器	skeleton	
+37	13	13.1	13.1.1	CVSup 依赖 Modula-3 编译器	filled	
 37	13	13.1	13.1.2	增量协议只传变更部分	filled	
 37	13	13.1	13.1.3	Polstra 自行实现 CVSup	filled	
 37	13	13.1	13.1.4	压缩与增量传输省带宽	filled	
@@ -670,15 +670,15 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 37	13	13.2	13.2.4	异常处理分居编译器与运行库	filled	
 37	13	13.2	13.2.5	测试套件校验标准符合性	filled	
 37	13	13.3	13.3.1	Somers 方案限定 Rust 落点	filled	
-37	13	13.3	13.3.2	争论围绕工具链与维护人力	skeleton	
+37	13	13.3	13.3.2	争论围绕工具链与维护人力	filled	
 37	13	13.3	13.3.3	内核模块准入先评 ABI 与构建链	filled	
 37	13	13.3	13.3.4	自举须先有 Rust 编译器	filled	
-37	13	13.3	13.3.5	试验范围与退出机制划定接受界限	skeleton	
-37	13	13.4	13.4.1	Rust for Linux 充当对照样本	skeleton	
-37	13	13.4	13.4.2	两内核比较编译器与接口抽象	skeleton	
-37	13	13.4	13.4.3	Rust 抽象使内核 API 负担上升	skeleton	
-37	13	13.4	13.4.4	两项目编译器版本要求不同	skeleton	
-37	13	13.4	13.4.5	准入制度对照评审与回退	skeleton	
+37	13	13.3	13.3.5	试验范围与退出机制划定接受界限	filled	
+37	13	13.4	13.4.1	Rust for Linux 充当对照样本	filled	
+37	13	13.4	13.4.2	两内核比较编译器与接口抽象	filled	
+37	13	13.4	13.4.3	Rust 抽象使内核 API 负担上升	filled	
+37	13	13.4	13.4.4	两项目编译器版本要求不同	filled	
+37	13	13.4	13.4.5	准入制度对照评审与回退	filled	
 37	14	14.1	14.1.1	协议栈的邮件线索	skeleton	
 37	14	14.1	14.1.2	性能问题的分布表	skeleton	
 37	14	14.1	14.1.3	带宽约束的记录册	skeleton	
