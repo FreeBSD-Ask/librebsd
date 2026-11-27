@@ -49,3 +49,8 @@
 
 > The resulting "UNIX Wars" divided the community between AT&T's UNIX System V and the OSF's OSF/1, while X/Open held the neutral center ground.
 
+## 追加引文（V19 b006，2026-11-28）
+
+> 追加用途：V19.2.2.1（1988 OSF 与 UI 成立）。
+
+> 1988POSIX.1 POSIX.1 published. Open Software Foundation (OSF) and UNIX International (UI) formed.
