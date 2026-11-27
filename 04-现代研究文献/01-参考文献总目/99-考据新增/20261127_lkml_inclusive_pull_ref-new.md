@@ -10,3 +10,9 @@ The discussion has tapered off as well as the incoming ack, review, and sign-off
 - **证据等级**：提交者一手（L4）。
 - **本批落点**：V18.1.5.6／1.6.1／1.6.6（supp-V18-b003）
 - **考据日期**：2026-11-27（supp-V18-b003；primary／L4）
+
+## 批内追加引文（supp-V18-b004，2026-11-28）
+
+1. Acked-by: Andy Lutomirski <luto@kernel.org>
+
+落点：V18.1.7.4（supp-V18-b004）；卡哈希由引擎 card_resync 回刷。

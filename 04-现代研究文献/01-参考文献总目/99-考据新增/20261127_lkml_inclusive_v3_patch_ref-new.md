@@ -10,3 +10,15 @@ Recent events have prompted a Linux position statement on inclusive terminology.
 - **证据等级**：提交者一手（L4）。
 - **本批落点**：V18.1.6.1／1.6.3（supp-V18-b003）
 - **考据日期**：2026-11-27（supp-V18-b003；primary／L4）
+
+## 批内追加（supp-V18-b004，2026-11-28）
+
+1. `[PATCH] CodingStyle: Inclusive Terminology`
+
+2. 词表句（ASCII 单引号置围栏保逐字）：
+
+```
+For symbol names, avoid introducing new usage of the words 'slave' and 'blacklist'
+```
+
+落点：V18.1.6.2／1.7.6（supp-V18-b004）。
