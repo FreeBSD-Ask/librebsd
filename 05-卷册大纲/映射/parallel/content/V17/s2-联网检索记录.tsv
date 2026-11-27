@@ -1,0 +1,39 @@
+subsection_id	query	site	hit	conclusion	retrieved_at	channel
+V17.1.1.1	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	1987 年论文记 MINIX 已完成且系统调用兼容 V7。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.1	MINIX Information Sheet	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	信息表记 MINIX 自 1987 年 1 月问世，comp.os.minix 讨论组随之活跃。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.2	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记 MINIX 在有无硬盘的 PC 上均可运行，以压低必需硬件成本。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.2	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记设计目标为 256kB＋单软驱的 IBM PC。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.3	Minix versions and their use in teaching	https://minix1.woodhull.com/teaching/teach_ver.html	命中	Woodhull 版本页记 1987 年教材所描述的是 MINIX 1.1。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.3	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记到 1991 年 MINIX 1.5 已移植到 Mac、Amiga、Atari 与 SPARC。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.4	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记系统名由 MIni-uNIX 缩合，目标机价低到学生可自购。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.4	Teaching with Minix Howto（含 OSDI 2/e 引文）	https://minix1.woodhull.com/teaching/	命中	教材记 Minix 即 mini-Unix，小到非专家可懂。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.5	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记内核与全部实用程序不含一行 AT&T 代码，与母体代码切割。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.5	MINIX Information Sheet	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	信息表记 MINIX 从零写起，内核、编译器、工具与库均无 AT&T 代码。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.6	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记系统说明已成书 719 页（1987），教材是问世叙述的文本出处。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.6	Minix versions and their use in teaching	https://minix1.woodhull.com/teaching/teach_ver.html	命中	Woodhull 记教材与软盘分售，软件须向 Prentice-Hall 另购整套软盘。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.1	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	386 于 1985 年推出，MINIX 借用户之力出 32 位保护模式版。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.1	MINIX Information Sheet	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	信息表记 MINIX 2.0 在 286、386、486 与 Pentium 上以保护模式运行。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.2	Minix versions and their use in teaching	https://minix1.woodhull.com/teaching/teach_ver.html	命中	Woodhull 记 1.5 已有 386 版但仅 16 位模式，同版另有四类非 Intel 平台版。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.2	MINIX Information Sheet	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	信息表记 MINIX 2.0 的 32 位模式要求 386、486 或 Pentium 处理器。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.1.*,V17.1.2.*	—	—	—	本批 8 题各两独立源齐备（16 块）；V17.1.1.1、V17.1.1.2、V17.1.1.3、V17.1.1.4、V17.1.1.5、V17.1.1.6、V17.1.2.1、V17.1.2.2	2026-11-27	批末总行
+V17.1.2.3	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记系统目标为学生可在课程中或自学研读的 UNIX 兼容系统。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.3	Minix Information Sheet (Last Changed: 30 April 1994)	https://www.funet.fi/pub/OS/Minix/	命中	1993 年信息表记旧版本用户大概数以万计，规模有同期自述可考。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.4	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记 MINIX 发布后数日内即开设 comp.os.minix 讨论组。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.4	Appendix A - The Tanenbaum-Torvalds Debate	https://www.oreilly.com/openbook/opensources/book/appa.html	命中	1992 年 Linux 讨论占据组内，媒介作用有存档为证。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.5	Minix Information Sheet (Last Changed: 30 April 1994)	https://www.funet.fi/pub/OS/Minix/	命中	1993 年信息表记旧版本三年来在世界各地广泛使用，属轮廓性自述。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.5	Minix versions and their use in teaching	https://minix1.woodhull.com/teaching/teach_ver.html	命中	1.5 版覆盖 Atari／Amiga／Mac／SPARC 多平台。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.6	Status of Minix1.hampshire.edu and mirrors	https://minix1.woodhull.com/mx1changes.html	命中	Woodhull 记 Minix1 服务器自 1994 年起成为资料与贡献软件的重要库。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.6	MINIX Information Sheet	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	信息表记组内累计数万帖，内容含提问、缺陷报告、修复与新软件。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.1	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记 AT&T 自 V7 起禁课程使用 UNIX 代码，Lions 注释随之停用。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.1	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记 V7（1979）许可明确禁止写书讲述或向学生授课。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.2	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记多数教材与讲义偏向管程、调度器、死锁等可孤立的少数题。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.2	Teaching with Minix Howto（含 OSDI 2/e 引文）	https://minix1.woodhull.com/teaching/	命中	OSDI 记只教理论使学生对操作系统的真实样貌形成失衡视角。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.3	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记唯一合理办法是发放可细读、可修改、文档完备的完整系统。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.3	Teaching with Minix Howto（含 OSDI 2/e 引文）	https://minix1.woodhull.com/teaching/	命中	OSDI 记读者可像生物课解剖青蛙那样解剖真实系统、看清内部。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.4	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记只写孤立片段虽人人过关，却无人由此学到操作系统的整体。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.4	Teaching with Minix Howto（含 OSDI 2/e 引文）	https://minix1.woodhull.com/teaching/	命中	OSDI 记课程详教的理论题（如调度算法）在实践中并不那么重要。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.5	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记微机降价使学校为操作系统实验室购置二十台机器成为现实。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.5	Lessons Learned from 30 Years of MINIX	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	CACM 记 1987 年几乎无人有互联网，仅部分大学有 USENET 与邮件。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.6	A Unix Clone with Source Code for Operating Systems Courses	https://research.vu.nl/files/111353126/11154	命中	论文记附录 E 源码清单带行号，全书以行号定位所讨论的代码。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.3.6	Minix versions and their use in teaching	https://minix1.woodhull.com/teaching/teach_ver.html	命中	Woodhull 记 1.5 内核与组件代码与 1987 教材清单相近，仍可用于教学。	2026-11-27	Tavily extract／curl（逐字快照）
+V17.1.2.*,V17.1.3.*	—	—	—	本批 10 题各两独立源齐备（20 块）；V17.1.2.3、V17.1.2.4、V17.1.2.5、V17.1.2.6、V17.1.3.1、V17.1.3.2、V17.1.3.3、V17.1.3.4、V17.1.3.5、V17.1.3.6	2026-11-27	批末总行
