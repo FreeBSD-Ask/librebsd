@@ -48,3 +48,19 @@ V73.2.2.5	corpus_gap	10711	CL-RM-498983	official_doc	primary	D2	supp-V73-b003	su
 V73.2.2.5	corpus_gap	10711	CL-RM-498984	official_doc	primary	D2	supp-V73-b003	supplemented	库内复用：FreeBSD Release Information 状态条目句（ref10711，EV-SUP-001760 绑定）
 V73.1.6.3	corpus_gap	10741	CL-RM-498985	web_archive	primary	D2	supp-V73-b003	supplemented	库内复用：TUHS 首页宗旨句（ref10741，EV-SUP-001827 绑定）
 V73.1.6.3	corpus_gap	10584	CL-RM-498986	web_archive	primary	D2	supp-V73-b003	supplemented	库内复用：McKusick CSRG CD-ROM 页 SCCS 句（ref10584，EV-SUP-002209 绑定）
+V73.1.6.1	corpus_gap	11153	CL-RM-499014	academic_work	primary	D2	supp-V73-b004	supplemented	库内复用：Rael 指南 p.38（ref11153，EV-SUP-003745 绑定，第二宿主）
+V73.1.6.1	corpus_gap	10731	CL-RM-499015	official_doc	primary	D2	supp-V73-b004	supplemented	库内复用：Open Sources 第 2 章 Bob Young 立场自陈句（ref10731，EV-SUP-001813 绑定）
+V73.1.6.2	corpus_gap	1736	CL-RM-499016	academic_work	primary	D1	supp-V73-b004	supplemented	库内复用：CSRG Technical Report 4 标题页块（ref1736，block 0，D1）
+V73.1.6.2	corpus_gap	1736	CL-RM-499017	academic_work	primary	D1	supp-V73-b004	supplemented	库内复用：CSRG 技术报告节次句（ref1736，block 3，D1）
+V73.1.6.5	corpus_gap	10730	CL-RM-499018	official_doc	primary	D2	supp-V73-b004	supplemented	库内复用：Open Sources 目录 BSD 章目（ref10730，EV-SUP-002722 绑定）
+V73.1.6.5	corpus_gap	810	CL-RM-499019	academic_work	primary	D1	supp-V73-b004	supplemented	库内复用：Salus 通史三群体句（ref810，block 54，D1）
+V73.2.3.1	corpus_gap	10730	CL-RM-499020	official_doc	primary	D2	supp-V73-b004	supplemented	库内复用：Open Sources 目录 BSD 章标题（ref10730，EV-SUP-002722 绑定，第二宿主）
+V73.2.3.1	corpus_gap	10730	CL-RM-499021	official_doc	primary	D2	supp-V73-b004	supplemented	库内复用：Open Sources 目录 GNU 章目（ref10730，EV-SUP-001807 绑定）
+V73.2.3.4	corpus_gap	10593	CL-RM-499022	web_archive	primary	D2	supp-V73-b004	supplemented	库内复用：Cathedral 修订史 1.29 句（ref10593，EV-SUP-001417 绑定）
+V73.2.3.4	corpus_gap	10589	CL-RM-499023	news	primary	D2	supp-V73-b004	supplemented	库内复用：SD Times 术语史句（ref10589，EV-SUP-001413 绑定）
+V73.2.4.2	corpus_gap	4180	CL-RM-499024	academic_work	primary	D2	supp-V73-b004	supplemented	库内复用：Contributors to FreeBSD 文档页（ref4180，EV-DB-001427 绑定）
+V73.2.4.2	corpus_gap	10665	CL-RM-499025	official_doc	primary	D2	supp-V73-b004	supplemented	库内复用：FreeBSD Handbook 贡献者名单句（ref10665，EV-SUP-001577 绑定，第二宿主）
+V73.2.6.1	corpus_gap	11384	CL-RM-499026	academic_work	primary	D2	supp-V73-b004	supplemented	联网补证：Nature 编造引文研究摘要（新 ref，2026-11-27 Tavily extract 实取）
+V73.2.6.1	corpus_gap	11385	CL-RM-499027	academic_work	primary	D2	supp-V73-b004	supplemented	联网补证：OpenAI GPT-4 技术报告幻觉自陈句（新 ref，2026-11-27 arXiv PDF 实取）
+V73.2.6.4	corpus_gap	11385	CL-RM-499028	academic_work	primary	D2	supp-V73-b004	supplemented	库内复用：GPT-4 报告对抗性事实性评测句（新 ref 同源，报告原文）
+V73.2.6.4	corpus_gap	11385	CL-RM-499029	academic_work	primary	D2	supp-V73-b004	supplemented	库内复用：GPT-4 报告局限句（新 ref 同源，第二宿主，同文件 #2）
