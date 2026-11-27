@@ -65,3 +65,11 @@ Following the release of 4.4BSD-Lite Release 2, the CSRG was disbanded.
 - **考据注**：CSRG 建组句（DARPA 合同名义下 Fabry 建组命名）与行政职员雇用句；落 V73 3.9.1 大学任职与项目声名两块。
 - **考据日期**：2026-11-28（supp-V73-b008）
 
+
+## supp-V73-b009 追加一句（2026-11-28，库内全文 txt ref3778 逐字）
+
+> Instead of passively using the system, they actively worked to fix bugs, improve performance and functionality, and even add completely new features.
+
+- **考据注**：用户主动修补句（Networking, Release 1 节）——非正式渠道改动的真实存在；落 V73 3.6.2／3.6.4（同句第二宿主跨题）。
+- **考据日期**：2026-11-28（supp-V73-b009）
+
