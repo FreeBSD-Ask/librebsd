@@ -15,3 +15,11 @@
 
 > AT&T's Unix Support Group (USG)
 
+## 追加引文（V19 b004，2026-11-27）
+
+> 追加用途：V19.1.5.1／1.5.5。
+
+> Four major versions of System V were released, numbered 1, 2, 3, and 4.
+
+> Documentation:** included in the source code
+

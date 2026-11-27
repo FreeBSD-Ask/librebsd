@@ -23,3 +23,19 @@
 
 > 1980Xenix Microsoft introduces Xenix. 32V and 4BSD introduced.
 
+## 追加引文（V19 b004，2026-11-27）
+
+> 追加用途：V19.1.5.1／1.5.4／1.5.5／1.5.6／1.5.3。
+
+> 1987SVR3 System V Release 3 including STREAMS, TLI, RFS.
+
+> 1984SVR2 System V Release 2 introduced. At this time there are 100,000 UNIX installations around the world.
+
+> Installed base 250,000.
+
+> SVID introduced.
+
+> 1989SVR4 UNIX System V Release 4 ships, unifying System V, BSD and Xenix. Installed base 1.2 million.
+
+> 1989System V AT&T UNIX Software Operation formed in preparation for spinoff of USL.
+
