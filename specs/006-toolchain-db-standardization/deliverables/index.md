@@ -1,0 +1,40 @@
+# 交付物索引（S01—S12；2026-11-28）
+
+> 任务书 `01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md`（v1.0.6）的执行交付。
+> 绑定：`../BINDING.tsv`（13 行，manifest `bf40e6ac…`）；公理化证书：`../axiomatic/certificate.json`（A01—A18 18/18、T1—T12 12/12）。
+> 名实对照：各 spec §8.1 记录"计划件→实际落点"（S01／S09／S12 计划与实交一致，无 §8.1）。
+
+## 一、目标与交付目录
+
+| 目标 | spec | 交付目录 | 件数 | 核心件 |
+| ---- | ---- | -------- | ---- | ------ |
+| G1 标准调研 | S01 | `S01/` | 6 | `标准清单.tsv`（82 条）＋`四问抽取.md`＋`版本冲突表.tsv`（18）＋`排除清单.md`（4） |
+| G2 数据库归一化 | S02 | `S02/` | 6 | `数据字典.tsv`（2 234 行）＋`归一化评估.md`＋R1-2／R1-3 四 JSON |
+| G2 工具链／并发 | S03 | `S03/` | 4 | `CLI契约矩阵.tsv`（126 工具）＋`契约缺口.md`＋`契约缺口整改计划.md`（§六 真缺口 0）＋`并发规范.md` |
+| G3 Rust 与语言标准 | S04 | `S04/` | 5 | `Rust评估矩阵.tsv`（123）＋`Rust基准实测结果.md`（零改写）＋`语言标准.md`＋`生产改写方案.md`＋`保留清单.md` |
+| G4 公理化 | S05 | `../axiomatic/` | 11 | `公理化体系.md`＋`axioms.als`＋`Axioms.tla`＋`traceability.tsv`＋`limitations.md`＋`certificate.json`＋`ALLOY-RUN.md`＋`alloy-run/` |
+| G5 数据质量 | S06 | `S06/` | 3 | `质量评估报告.md`（§十一 约束复核）＋`质量记分卡.tsv`（28 库）＋`剖析清单.tsv`（346 库） |
+| G6 项目结构 | S07 | `S07/` | 1 | `项目结构评估.md`（五节合并交付） |
+| G7 理论复核 | S08 | `S08/` | 5 | `软件工程理论复核.md`＋`TG登记建议.tsv`（TG-018—024）＋3 ADR 草案 |
+| G8 全局工具表 | S09 | `S09/` | 5 | `工具总表.tsv`（144 件×21 字段）＋`one-shot清单.tsv`（3 944）＋`生命周期规则.md`＋`例外覆盖.tsv`＋`工具总表.md`；生成器／校验器在 `01-规则/脚本与命令/` |
+| G9 综合建议 | S10 | `S10/` | 3 | `综合建议.md`（四节）＋`路线图.tsv`（R1—R3）＋`决策记录.md` |
+| G10 缓存机制 | S11 | `S11/` | 1 | `缓存与垃圾识别机制.md`（六节）；执行器 `cleanup_temp.py`＋门禁 `audit_temp_residue.py` 在规则目录 |
+| G11 OCR／音频 | S12 | `S12/` | 6 | `OCR流水线规范.md`＋`音频流水线规范.md`＋`质量指标.tsv`（12）＋两件任务书模板＋`许可评估.md` |
+| G12 绑定 | — | `../BINDING.tsv` | 1 | 13 行；校验器 `audit_task_spec_binding.py`（第四十七件） |
+
+## 二、复核件
+
+| 文件 | 内容 |
+| ---- | ---- |
+| `任务书全量复核-20261128.md` | 逐节判定 §一—§十九＋附录；A-01—A-09 9/9；两处本轮缺陷处置 |
+| `任务书复核数据-20261128.json` | 复核机读数据（BINDING 39 哈希、108 文件编码扫描、FR 计数、交付清单） |
+
+## 三、复跑入口
+
+```text
+"C:/Program Files/Python315/python.exe" 00-编纂规则与格式规范/01-规则/脚本与命令/audit_task_spec_binding.py
+"C:/Program Files/Python315/python.exe" specs/006-toolchain-db-standardization/axiomatic/verify_axioms.py
+"C:/Program Files/Python315/python.exe" script/_tb_full_review_20261128.py   # 一次性，复核数据再生
+```
+
+> 修改任何 spec 后：重算 `BINDING.tsv` 三哈希 → 回填任务书附录 C manifest → **最后**跑 `verify_axioms.py` 刷证书（证书绑定任务书哈希，顺序反了要刷两次）。
