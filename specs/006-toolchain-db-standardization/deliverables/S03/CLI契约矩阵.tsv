@@ -18,7 +18,7 @@ audit_engineering_practice.py	yes	yes	no	—	no	yes	no	no	no	yes	no	no	--dry-run
 audit_evidence_level_labels.py	no	yes	yes	—	no	no	no	no	no	no	no	no	argparse；--root；--dry-run
 audit_fixture_freshness.py	yes	yes	yes	—	no	no	no	no	no	yes	no	no	--root；--dry-run
 audit_folder_db_integrity.py	yes	yes	no	—	no	no	yes	no	no	no	no	no	--root
-audit_gate_registry.py	yes	yes	yes	—	no	no	yes	yes	no	yes	yes	no	--root
+audit_gate_registry.py	yes	yes	yes	—	no	no	yes	yes	yes	yes	yes	no	--root
 audit_index_structure.py	yes	yes	no	—	no	no	no	no	no	no	yes	no	--root；--dry-run
 audit_js_blockscope.py	no	yes	no	—	no	no	no	no	no	yes	no	no	argparse；--root；--dry-run
 audit_keyword_index.py	yes	yes	no	—	no	no	no	no	no	yes	yes	no	--root；--dry-run
@@ -47,6 +47,8 @@ audit_subsection_design.py	yes	yes	no	—	no	yes	no	no	no	yes	yes	no	--dry-run
 audit_supplement_chain.py	yes	yes	yes	—	no	no	no	no	no	yes	yes	yes	--root；--dry-run
 audit_tag_ledger.py	yes	yes	no	subprocess	no	no	no	no	no	yes	yes	no	--root；--dry-run
 audit_task_lifecycle.py	yes	yes	no	—	no	yes	no	no	no	yes	no	no	--dry-run
+audit_task_spec_binding.py	no	yes	no	—	no	no	no	no	no	yes	no	no	argparse；--root；--dry-run
+audit_temp_residue.py	yes	yes	no	subprocess	no	no	no	yes	no	yes	no	yes	--root；--dry-run
 audit_title_consistency.py	yes	yes	no	—	no	yes	no	no	no	yes	yes	yes	--dry-run
 audit_title_term_forms.py	no	yes	no	—	no	no	no	no	no	yes	no	no	argparse；--root；--dry-run
 auto_ingest_new_pdfs.py	yes	yes	yes	—	no	no	yes	no	no	no	no	no	--root
@@ -61,6 +63,7 @@ claimdb_guard.py	yes	yes	yes	—	no	no	no	no	no	yes	no	no	--root；--dry-run
 clean_wal.py	no	no	no	—	no	no	no	no	no	no	no	no	argparse；--root；--dry-run；main_guard
 cleanup_duplicate_sources.py	yes	yes	no	—	no	no	yes	no	no	no	no	no	--root
 cleanup_duplicates_and_errors.py	yes	yes	yes	—	no	no	no	no	no	yes	no	no	--root；--dry-run
+cleanup_temp.py	yes	yes	yes	subprocess	yes	yes	no	yes	yes	no	no	no	--dry-run
 dedup_databases_global.py	yes	yes	no	—	no	no	yes	no	no	no	no	no	--root
 dedup_folder_databases.py	yes	yes	no	—	no	no	no	no	no	no	no	no	--root；--dry-run
 dual_marker_probe.py	no	yes	no	—	no	no	no	no	no	no	no	no	argparse；--root；--dry-run
