@@ -39,13 +39,23 @@ import sys
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-ROOT = r"D:\librebsd"
+# 仓库根：脚本位于 <根>/00-编纂规则与格式规范/01-规则/脚本与命令/，上溯 3 级
+# （2026-11-28 去硬编码 D:\librebsd，跨盘/沙箱可用）。
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__)))))
 DRM = os.path.join(ROOT, "script", "_db_row_mining")
 S64 = os.path.join(ROOT, "05-卷册大纲", "目录", "data", "outline.txt")
 TRAV = os.path.join(ROOT, "04-现代研究文献", "rowmine_traversal.duckdb")
 PY = r"C:/Program Files/Python315/python.exe"
 REGISTRY = os.path.join(ROOT, "01-项目管理", "01-编纂规划与报告归档",
                         "长线任务总登记表.md")
+DEBT_REGISTER = os.path.join(ROOT, "01-项目管理", "02-工程决策与技术债", "技术债登记.md")
+# 已登记「权威源丢失」债务的线（2026-11-28 实测：源在全库无副本；见 TD-033）。
+# 源缺失时：在此名单且债台账确有该 TD 号 → WARN（不阻断）；否则 FAIL（新丢失仍被抓）。
+SOURCE_LOST_DEBT = {
+    "usenet7": "TD-033", "mail2d": "TD-033", "H1": "TD-033", "H2": "TD-033",
+    "H3": "TD-033", "H4": "TD-033", "H5": "TD-033",
+}
 BLOCK_BEGIN = "<!-- LONGLINE_STATUS_BEGIN"
 BLOCK_END = "LONGLINE_STATUS_END -->"
 
@@ -924,6 +934,14 @@ def emit_block(res):
     print(BLOCK_END)
 
 
+def _debt_ok(td):
+    """债务号确实登记在技术债台账（防白名单空挂：台账删行即恢复 FAIL）。"""
+    try:
+        return td in _read(DEBT_REGISTER)
+    except Exception:
+        return False
+
+
 def check(res, max_age_days):
     if not os.path.exists(REGISTRY):
         print("✗ 登记表不存在：%s" % REGISTRY)
@@ -943,7 +961,12 @@ def check(res, max_age_days):
             fails.append("%s：登记表缺该线" % k)
             continue
         if now["status"] in ("源缺失", "探针失败"):
-            fails.append("%s：%s" % (k, now["status"]))
+            td = SOURCE_LOST_DEBT.get(k)
+            if td and _debt_ok(td):
+                warns.append("%s：%s（权威源丢失已登记 %s，恢复条件见技术债登记；以 WARN 放行）"
+                             % (k, now["status"], td))
+            else:
+                fails.append("%s：%s" % (k, now["status"]))
             continue
         if now["status"] == "人工维护":
             print("  ⚠ %s：人工维护，仅查源存在性（见登记表 §十三）" % k)

@@ -329,7 +329,7 @@ REGISTRY = [
          kind="门禁（工具表，独立计数）",
          object="S09 全局工具表：B1 表头 schema／B2 必填／B3 生命周期枚举／B4 路径存在／"
                 "B5 tracked 与 git ls-files 一致／B6 stable 三判据／B7 id 与 path 唯一／"
-                "B8 孤儿未入表／B9 one-shot 清单禁 tracked＋TTL 统计／B10 dashboard 计数一致",
+                "B8 孤儿未入表／B9 one-shot 清单禁 tracked＋TTL 统计／B10 dashboard 计数一致／B11 两 TSV 直角引号 0",
          trigger="工具总表重生成后、新增或删除固定脚本后、每批收口（2026-11-28 立）",
          selftest="--selftest", in_tests_readme=False),
 ]

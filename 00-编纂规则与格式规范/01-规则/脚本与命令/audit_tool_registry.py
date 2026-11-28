@@ -15,6 +15,7 @@
   B9 one-shot清单.tsv 内 tracked=true 即 FAIL（one-shot 必须 untracked）；
      stale 数只统计输出（清理候选，不阻断）
   B10 工具总表.md 的 stable 计数与 TSV 复算一致
+  B11 两个 TSV 直角引号 0 处（TSV 不在 audit_md_quote_glyphs 扫描面）
 
 用法：
   python audit_tool_registry.py --selftest   # 六变异＋干净样本
@@ -162,6 +163,15 @@ def check(root: Path, tracked: set[str] | None = None) -> tuple[list[str], list[
             errors.append("B10 dashboard 缺 stable 计数")
         elif int(m.group(1)) != n_stable:
             errors.append(f"B10 dashboard stable {m.group(1)} ≠ TSV 复算 {n_stable}")
+
+    # B11 TSV 直角引号（TSV 不在 audit_md_quote_glyphs 扫描面，须由本门禁兜底）
+    corner = "\u300c\u300d\u300e\u300f"
+    for p, label in ((tsv, "工具总表.tsv"), (one, "one-shot清单.tsv")):
+        if p.exists():
+            txt = p.read_text(encoding="utf-8", errors="replace")
+            hits = sum(txt.count(c) for c in corner)
+            if hits:
+                errors.append(f"B11 {label} 含直角引号 {hits} 处（生成器应弯化）")
 
     stats["stable"] = sum(1 for r in rows if r.get("lifecycle") == "stable")
     return errors, warns, stats

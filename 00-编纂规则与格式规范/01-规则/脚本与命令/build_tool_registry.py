@@ -355,13 +355,25 @@ def build_oneshot(root: Path, tracked: set[str], as_of: datetime | None = None) 
     return out
 
 
+CORNER_MAP = {"\u300c": "\u201c", "\u300d": "\u201d", "\u300e": "\u2018", "\u300f": "\u2019"}
+
+
+def curl(s):
+    """TSV 输出前弯化直角引号（docstring 可能含「」；TSV 非 .md，不在引号门禁扫描面）。"""
+    if not isinstance(s, str):
+        return s
+    for a, b in CORNER_MAP.items():
+        s = s.replace(a, b)
+    return s
+
+
 def write_tsv(path: Path, header: list[str], rows: list[dict]) -> bytes:
     import io
     buf = io.StringIO(newline="")
     w = csv.DictWriter(buf, fieldnames=header, delimiter="\t", lineterminator="\n")
     w.writeheader()
     for r in rows:
-        w.writerow(r)
+        w.writerow({k: curl(v) for k, v in r.items()})
     data = buf.getvalue().encode("utf-8")
     path.write_bytes(data)
     return data
@@ -449,7 +461,7 @@ def render_tsv_bytes(rows: list[dict]) -> bytes:
     w = csv.DictWriter(buf, fieldnames=HEADER, delimiter="\t", lineterminator="\n")
     w.writeheader()
     for r in rows:
-        w.writerow(r)
+        w.writerow({k: curl(v) for k, v in r.items()})
     return buf.getvalue().encode("utf-8")
 
 
@@ -491,7 +503,7 @@ def main() -> int:
     w = csv.DictWriter(buf, fieldnames=one_header, delimiter="\t", lineterminator="\n")
     w.writeheader()
     for r in oneshot:
-        w.writerow(r)
+        w.writerow({k: curl(v) for k, v in r.items()})
     one_bytes = buf.getvalue().encode("utf-8")
 
     if a.check:

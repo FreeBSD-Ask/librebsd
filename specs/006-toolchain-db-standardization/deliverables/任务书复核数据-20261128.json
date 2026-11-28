@@ -1,0 +1,494 @@
+{
+  "task_book": {
+    "path": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+    "exists": true,
+    "lines": 890,
+    "sha256": "dff2986587bd1eb77ccd158b8ae2ca16d65bafe72514726a0b1269af0b12cfc9",
+    "sections": [
+      "一、意图确证（档 A 六字段）",
+      "二、现状基线（实测与登记，2026-11-27）",
+      "三、目标—spec 映射（追溯矩阵）",
+      "四、工作分解与阶段",
+      "五、标准基线（种子；S01 执行时全量扩展）",
+      "六、数据库归一化与质量框架（S02／S06 的设计约束）",
+      "七、工具链归一化与并发（S03 的设计约束）",
+      "八、Rust 化与编程语言标准（S04 的设计约束）",
+      "九、公理化体系（S05 的设计约束）",
+      "十、项目结构建议（S07 的设计约束）",
+      "十一、全局工具表（S09 的设计约束）",
+      "十二、缓存与垃圾识别清理（S11 的设计约束）",
+      "十三、OCR／音频工具链（S12 的设计约束）",
+      "十四、软件工程理论复核（S08 的设计约束）",
+      "十五、综合最佳建议（S10 的设计约束）",
+      "十六、任务书—specs 绑定协议（G12）",
+      "十七、验收与门禁",
+      "十八、风险与待裁定",
+      "十九、变更记录",
+      "附录 A：术语",
+      "附录 B：引用文件",
+      "附录 C：绑定清单摘要（2026-11-27 生成）"
+    ],
+    "scan": {
+      "bom": false,
+      "crlf": false,
+      "corner": 0,
+      "cf": 0,
+      "zs_nonascii": 0,
+      "fffd": 0
+    }
+  },
+  "subspecs": {
+    "count": 12,
+    "items": [
+      {
+        "dir": "S01-standards-research",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 7758
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 2195
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1612
+          }
+        },
+        "fr_count": 11,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S01",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "五、标准基线（种子；S01 执行时全量扩展）",
+          "goals": "[1]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S01"
+        }
+      },
+      {
+        "dir": "S02-database-normalization",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 6585
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 2173
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1580
+          }
+        },
+        "fr_count": 10,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S02",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "六、数据库归一化与质量框架（S02／S06 的设计约束）",
+          "goals": "[2]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S02"
+        }
+      },
+      {
+        "dir": "S03-toolchain-concurrency",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 6547
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 2179
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1574
+          }
+        },
+        "fr_count": 11,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S03",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "七、工具链归一化与并发（S03 的设计约束）",
+          "goals": "[2]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S03"
+        }
+      },
+      {
+        "dir": "S04-rust-language-standard",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 7227
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 2282
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1681
+          }
+        },
+        "fr_count": 12,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S04",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "八、Rust 化与编程语言标准（S04 的设计约束）",
+          "goals": "[3]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S04"
+        }
+      },
+      {
+        "dir": "S05-axiomatic-system",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 6238
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 1944
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1421
+          }
+        },
+        "fr_count": 10,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S05",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "九、公理化体系（S05 的设计约束）",
+          "goals": "[4]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S05"
+        }
+      },
+      {
+        "dir": "S06-data-quality",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 6313
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 2034
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1501
+          }
+        },
+        "fr_count": 10,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S06",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "六、数据库归一化与质量框架（S02／S06 的设计约束）",
+          "goals": "[5]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S06"
+        }
+      },
+      {
+        "dir": "S07-project-structure",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 5737
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 1851
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1350
+          }
+        },
+        "fr_count": 8,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S07",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "十、项目结构建议（S07 的设计约束）",
+          "goals": "[6]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S07"
+        }
+      },
+      {
+        "dir": "S08-software-engineering-review",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 5416
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 1860
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1353
+          }
+        },
+        "fr_count": 8,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S08",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "十四、软件工程理论复核（S08 的设计约束）",
+          "goals": "[7]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S08"
+        }
+      },
+      {
+        "dir": "S09-global-tool-registry",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 6458
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 1735
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1466
+          }
+        },
+        "fr_count": 10,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S09",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "十一、全局工具表（S09 的设计约束）",
+          "goals": "[8]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S09"
+        }
+      },
+      {
+        "dir": "S10-best-recommendations",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 5116
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 1651
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1332
+          }
+        },
+        "fr_count": 8,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S10",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "十五、综合最佳建议（S10 的设计约束）",
+          "goals": "[9]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S10"
+        }
+      },
+      {
+        "dir": "S11-cache-garbage-mechanism",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 5840
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 1871
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1438
+          }
+        },
+        "fr_count": 10,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S11",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "十二、缓存与垃圾识别清理（S11 的设计约束）",
+          "goals": "[10]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S11"
+        }
+      },
+      {
+        "dir": "S12-ocr-audio-toolchain",
+        "files": {
+          "spec.md": {
+            "exists": true,
+            "bytes": 5974
+          },
+          "tasks.md": {
+            "exists": true,
+            "bytes": 2018
+          },
+          "checklist.md": {
+            "exists": true,
+            "bytes": 1504
+          }
+        },
+        "fr_count": 10,
+        "scenario_count": 0,
+        "frontmatter": {
+          "spec_id": "S12",
+          "task_book": "01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md",
+          "task_book_anchor": "十三、OCR／音频工具链（S12 的设计约束）",
+          "goals": "[11]",
+          "version": "1.0.0",
+          "status": "draft",
+          "binding_id": "TB-20261127-S12"
+        }
+      }
+    ]
+  },
+  "binding": {
+    "exists": true,
+    "rows": 13,
+    "sha256": "4f7190377acb59e35c5916174b8a0521034d2573fd67a32e3c0c2ec91c6fd6a9",
+    "mismatch": [],
+    "missing": []
+  },
+  "deliverables": {
+    "S01": {
+      "count": 6,
+      "files": [
+        "四问抽取.md",
+        "复审计划.md",
+        "排除清单.md",
+        "标准清单.tsv",
+        "检索留痕.md",
+        "版本冲突表.tsv"
+      ]
+    },
+    "S02": {
+      "count": 6,
+      "files": [
+        "R1-2-apply.json",
+        "R1-2-dryrun.json",
+        "R1-3-apply.json",
+        "R1-3-dryrun.json",
+        "归一化评估.md",
+        "数据字典.tsv"
+      ]
+    },
+    "S03": {
+      "count": 4,
+      "files": [
+        "CLI契约矩阵.tsv",
+        "契约缺口.md",
+        "契约缺口整改计划.md",
+        "并发规范.md"
+      ]
+    },
+    "S04": {
+      "count": 5,
+      "files": [
+        "Rust基准实测结果.md",
+        "Rust评估矩阵.tsv",
+        "保留清单.md",
+        "生产改写方案.md",
+        "语言标准.md"
+      ]
+    },
+    "S06": {
+      "count": 3,
+      "files": [
+        "剖析清单.tsv",
+        "质量记分卡.tsv",
+        "质量评估报告.md"
+      ]
+    },
+    "S07": {
+      "count": 1,
+      "files": [
+        "项目结构评估.md"
+      ]
+    },
+    "S08": {
+      "count": 5,
+      "files": [
+        "ADR草案-0023-schema_meta-落地.md",
+        "ADR草案-0024-工具总表与生命周期门禁.md",
+        "ADR草案-0025-specs跟踪与绑定校验.md",
+        "TG登记建议.tsv",
+        "软件工程理论复核.md"
+      ]
+    },
+    "S09": {
+      "count": 5,
+      "files": [
+        "one-shot清单.tsv",
+        "例外覆盖.tsv",
+        "工具总表.md",
+        "工具总表.tsv",
+        "生命周期规则.md"
+      ]
+    },
+    "S10": {
+      "count": 3,
+      "files": [
+        "决策记录.md",
+        "综合建议.md",
+        "路线图.tsv"
+      ]
+    },
+    "S11": {
+      "count": 1,
+      "files": [
+        "缓存与垃圾识别机制.md"
+      ]
+    },
+    "S12": {
+      "count": 6,
+      "files": [
+        "OCR流水线规范.md",
+        "任务书模板-OCR.md",
+        "任务书模板-音频.md",
+        "许可评估.md",
+        "质量指标.tsv",
+        "音频流水线规范.md"
+      ]
+    }
+  },
+  "tree_scan": {
+    "files": 108,
+    "bad": []
+  }
+}

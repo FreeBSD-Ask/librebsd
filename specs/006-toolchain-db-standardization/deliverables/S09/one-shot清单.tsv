@@ -4,8 +4,8 @@ script/_3a6_skeleton_20261103.py	.py	1066	2026-11-28	2026-11-03	filename	25	fres
 script/_92row_v57b017.py	.py	2559	2026-11-28	2026-11-28	content	0	fresh	false	supp-V57-b017 行追加至 92 号文 §十一 表末（幂等：先查重）。
 script/_98row_v57b017.py	.py	1704	2026-11-28	2026-11-28	content	0	fresh	false	supp-V57-b017 状态行追加至 98 号文 §十一 末尾（幂等：先查重）。
 script/_a11y_long.mjs	.mjs	4573	2026-11-28	2026-11-17	content	11	fresh	false	
-script/_a1_surgical_term_fix.py	.py	1824	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	A 批外科式树内术语归一：只改命中「基础系统」的树内 .md，保留 designed_at 原值。
-script/_a1_term_normalize_20261108.py	.py	3838	2026-11-28	2026-11-08	filename	20	fresh	false	A 批术语归一（P2-11 T1）：V41/V44/V45/V47/V48/V63 设计层旧词「基础系统」→「基本系统」。
+script/_a1_surgical_term_fix.py	.py	1824	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	A 批外科式树内术语归一：只改命中“基础系统”的树内 .md，保留 designed_at 原值。
+script/_a1_term_normalize_20261108.py	.py	3838	2026-11-28	2026-11-08	filename	20	fresh	false	A 批术语归一（P2-11 T1）：V41/V44/V45/V47/V48/V63 设计层旧词“基础系统”→“基本系统”。
 script/_a3a1_check_v63ch07.py	.py	0	2026-11-28	2026-11-02	mtime-suspect	-1	unknown	false	
 script/_a5_anchor_scope.py	.py	1493	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	锚配平自查：按卷统计 PODCAST_REVIEW／GAP-A-YT／W172-YT-ROUTE／DOUBT_PENDING_BLOCK 开闭差。
 script/_a5_gate_run.py	.py	3815	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	A 批门禁连跑：按 AGENTS.md 门禁表逐件跑，打印退出码与末行摘要。
@@ -308,7 +308,7 @@ script/_b5_sample.py	.py	1450	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	fal
 script/_backfill_3b_audit_20261106.py	.py	7909	2026-11-28	2026-11-06	filename	22	fresh	false	2026-11-06 3B 任务审计补登（ykla 令“fail 允许改正”）：
 script/_backup_manifest.py	.py	1384	2026-11-28	2026-11-16	content	12	fresh	false	生成专项备份清单（size／sha256／gzip 完整性）。
 script/_balance_vol_20261103.py	.py	2062	2026-11-28	2026-11-03	filename	25	fresh	false	通用尾簇均衡：python _balance_vol.py V36 V37（超限簇保留 3 条，其余按池化尾词改写）。
-script/_batch2_community_20261103.py	.py	7043	2026-11-28	2026-11-03	filename	25	fresh	false	批 2（ykla 2026-11-03 批准修复 3）：全库题面「社区」按语境分治。
+script/_batch2_community_20261103.py	.py	7043	2026-11-28	2026-11-03	filename	25	fresh	false	批 2（ykla 2026-11-03 批准修复 3）：全库题面“社区”按语境分治。
 script/_batch2_docs_20261103.py	.py	5247	2026-11-28	2026-11-03	filename	25	fresh	false	台账与报告更新（ykla 2026-11-03 批准修复 2／3／4）。
 script/_batch2_fix1_20261103.py	.py	10050	2026-11-28	2026-11-03	filename	25	fresh	false	批 1（ykla 2026-11-03 批准修复 2／4）：
 script/_batch2_fix2_20261103.py	.py	2888	2026-11-28	2026-11-03	filename	25	fresh	false	批 1 修正：V75 三处尾簇与一处长度（B6／C8b），V13 改题后重批（H1）。
@@ -404,7 +404,7 @@ script/_claim_reverse_check3.py	.py	20170	2026-11-28	2026-11-13	mtime-suspect	-1
 script/_claim_reverse_diag.py	.py	4895	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_claim_reverse_diag.py — 反查复核诊断（临时只读）：
 script/_claim_reverse_diag2.py	.py	4591	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_claim_reverse_diag2.py — 二轮甄别（临时只读）：
 script/_claim_reverse_diag3.py	.py	3598	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_claim_reverse_diag3.py — 三轮甄别（临时只读）：
-script/_claim_shape_census.py	.py	3728	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_claim_shape_census.py — 树内 claim 块「块形普查」（临时只读）
+script/_claim_shape_census.py	.py	3728	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_claim_shape_census.py — 树内 claim 块“块形普查”（临时只读）
 script/_claim_sim_recalc.py	.py	6945	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_claim_sim_recalc.py — 按块形正确取摘要行后重算块文↔claim_text 相似度（临时只读）
 script/_clean.py	.py	462	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	净化门禁输出里的控制字符（保留 \n \t），转存 UTF-8；参数：输入、输出。
 script/_clean03_invisible_20261029.py	.py	2503	2026-11-28	2026-10-29	filename	30	fresh	false	按“AI 不可见字符清理规则”清理 03 库两件待入库语料（2026-10-29 跟踪范围复核批）。
@@ -460,13 +460,13 @@ script/_dec.py	.py	524	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	把�
 script/_dec16.py	.py	402	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	按 UTF-16LE 解码门禁输出并写 UTF-8；参数：输入、输出。
 script/_dfly_commit_stats2_20261103.py	.py	1874	2026-11-28	2026-11-03	filename	25	fresh	false	V64 ch8 量化论题独立复算（0 信任，v2 用正确 schema：repo_name/author_name/author_date）。
 script/_dfly_commit_stats_20261103.py	.py	1963	2026-11-28	2026-11-03	filename	25	fresh	false	V64 ch8 三个量化论题的独立复算（0 信任）：直接对本地 dragonfly.duckdb 计数。
-script/_dfly_donation_thread_20261103.py	.py	1234	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4 定向：2007-12「Donation system?」线程＋2008 年 foundation 命中片段。
-script/_dfly_foundation_probe2_20261103.py	.py	1553	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4「2008 年设立基金会」传言取证：本机 DragonFly 邮件全档检索（v2，date 为 VARCHAR，改用 year 列）。
-script/_dfly_foundation_probe_20261103.py	.py	1590	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4「2008 年设立基金会」传言取证：本机 DragonFly 邮件全档检索。
-script/_dfly_hammer_stats_20261103.py	.py	1082	2026-11-28	2026-11-03	filename	25	fresh	false	V64.9.5.3「核心子系统的提交集中度」独立复算：HAMMER2 与 vkernel 相关提交的作者分布。
+script/_dfly_donation_thread_20261103.py	.py	1234	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4 定向：2007-12“Donation system?”线程＋2008 年 foundation 命中片段。
+script/_dfly_foundation_probe2_20261103.py	.py	1553	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4“2008 年设立基金会”传言取证：本机 DragonFly 邮件全档检索（v2，date 为 VARCHAR，改用 year 列）。
+script/_dfly_foundation_probe_20261103.py	.py	1590	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4“2008 年设立基金会”传言取证：本机 DragonFly 邮件全档检索。
+script/_dfly_hammer_stats_20261103.py	.py	1082	2026-11-28	2026-11-03	filename	25	fresh	false	V64.9.5.3“核心子系统的提交集中度”独立复算：HAMMER2 与 vkernel 相关提交的作者分布。
 script/_dfly_mail_stats_20261103.py	.py	1244	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.11.2／11.3 口径核：按 author_email（去重）复算前十名占比与活跃人数，并核 dillon 占比。
-script/_dfly_msg_lookup_20261103.py	.py	791	2026-11-28	2026-11-03	filename	25	fresh	false	取 2007-12-18 Justin C. Sherrill「Donation system?」答复的 archive_url 与完整正文。
-script/_dfly_probe_schema_20261103.py	.py	651	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4「2008 设立基金会」传言取证：本机 DragonFly 邮件档 2007–2009 年检索。
+script/_dfly_msg_lookup_20261103.py	.py	791	2026-11-28	2026-11-03	filename	25	fresh	false	取 2007-12-18 Justin C. Sherrill“Donation system?”答复的 archive_url 与完整正文。
+script/_dfly_probe_schema_20261103.py	.py	651	2026-11-28	2026-11-03	filename	25	fresh	false	V64.8.12.4“2008 设立基金会”传言取证：本机 DragonFly 邮件档 2007–2009 年检索。
 script/_dfly_schema_probe_20261103.py	.py	616	2026-11-28	2026-11-03	filename	25	fresh	false	dragonfly.duckdb（01-代码仓库史料）schema 探查。
 script/_diag38.py	.py	1056	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	第三十八件 D1／D2 差异定位（诊断用，只读）。
 script/_diag_q.py	.py	792	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	打印块 9 目标句的 repr 与分段匹配诊断。
@@ -521,11 +521,11 @@ script/_fix_corner_quotes_20261103.py	.py	465	2026-11-28	2026-11-03	filename	25	
 script/_fix_corner_quotes_20261127.py	.py	1644	2026-11-28	2026-11-27	filename	1	fresh	false	临时：将 U+300C/300D/300E/300F 弯化为“”‘’（2026-11-27）。
 script/_fix_corner_quotes_5files.py	.py	1157	2026-11-28	2026-11-17	content	11	fresh	false	五卷线接管批：五件文档的直角引号改弯（U+300C/D/E/F → U+201C/D/2018/9）。
 script/_fix_corner_quotes_v68.py	.py	924	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	把指定文件中的直角引号六码位改为弯引号（仅本批新增文本所在文件）。
-script/_fix_discipline_levels.py	.py	3294	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_fix_discipline_levels.py — 修正 16 条「纪律串等级与抬头/库内等级不符」（临时脚本）
+script/_fix_discipline_levels.py	.py	3294	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_fix_discipline_levels.py — 修正 16 条“纪律串等级与抬头/库内等级不符”（临时脚本）
 script/_fix_en_dash_outline_md_20261115.py	.py	2793	2026-11-28	2026-11-15	filename	13	fresh	false	
 script/_fix_en_dash_rule_corpus_20261115.py	.py	2833	2026-11-28	2026-11-15	filename	13	fresh	false	
 script/_fix_inmc_card.py	.py	776	2026-11-28	2026-11-16	content	12	fresh	false	按原文弯引号规范化书评卡（仅限已知替换，逐字保真）。
-script/_fix_l3_firsthand.py	.py	2785	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_fix_l3_firsthand.py — 清 L3 块误标「当事人一手自述」（临时脚本，两条）
+script/_fix_l3_firsthand.py	.py	2785	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_fix_l3_firsthand.py — 清 L3 块误标“当事人一手自述”（临时脚本，两条）
 script/_fix_missing_summary.py	.py	10149	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	_fix_missing_summary.py — 21 条块体缺摘要修正（临时脚本；1 条 login 悬空跳过）
 script/_fix_o2_fixture_20261114.py	.py	845	2026-11-28	2026-11-14	filename	14	fresh	false	
 script/_fix_o3_anchor_20261114.py	.py	600	2026-11-28	2026-11-14	filename	14	fresh	false	
@@ -596,8 +596,8 @@ script/_g1_fidelity.py	.py	1544	2026-11-28	2026-11-12	mtime-suspect	-1	unknown	f
 script/_g1_fix_quotes.py	.py	901	2026-11-28	2026-11-27	content	1	fresh	false	把本批考据卡中的直角引号（U+300C/U+300D/U+300E/U+300F）替换为弯引号。
 script/_g1_fourway_scan_20261126.py	.py	3517	2026-11-28	2026-11-26	filename	2	fresh	false	G1 十卷全量四账扫描（只读）：fragments／树件／exceptions／supplement 四面比对。
 script/_g1_html2txt.py	.py	1389	2026-11-28	2026-11-12	mtime-suspect	-1	unknown	false	把已 curl 下来的 HTML 转成纯文本，并按关键词输出上下文（供逐字摘录）。
-script/_g1_make_9298.py	.py	1741	2026-11-28	2026-09-30	content	59	stale	false	构造 92／98 的「父版本＋本线行」临时版本（弯化直角引号），供重提交。
-script/_g1_make_9298_v2.py	.py	1726	2026-11-28	2026-09-30	content	59	stale	false	构造 92／98 的「HEAD 版本＋本线行」临时版本并重提交（防裹挟他线在途行）。
+script/_g1_make_9298.py	.py	1741	2026-11-28	2026-09-30	content	59	stale	false	构造 92／98 的“父版本＋本线行”临时版本（弯化直角引号），供重提交。
+script/_g1_make_9298_v2.py	.py	1726	2026-11-28	2026-09-30	content	59	stale	false	构造 92／98 的“HEAD 版本＋本线行”临时版本并重提交（防裹挟他线在途行）。
 script/_g1_pdf.py	.py	478	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	
 script/_g1_q.py	.py	432	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	
 script/_g1_qft.py	.py	546	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	
@@ -1228,7 +1228,7 @@ script/_g5_v41_docs.py	.py	3829	2026-11-28	2026-11-12	content	16	fresh	false	V41
 script/_g5_v41_p1_judge.py	.py	3620	2026-11-28	2026-11-12	content	16	fresh	false	V41 P1 判读落账（204 唯一 message → 474 行）。
 script/_g5_v41_p1_land.py	.py	6987	2026-11-28	2026-11-12	mtime-suspect	-1	unknown	false	V41 P1：修正 6 条误吸＋24 块归入落盘（台账改判、树件落块）。
 script/_g5_v41c5_retitle.py	.py	7081	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	retitle-V41-c5：第 5 章 30 题改题迁移（三台账＋树件改名＋H1）。
-script/_g5_v41c5_retitle_fix_c6.py	.py	3924	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	retitle-V41-c5 二次订正：C6「端口」误译三题（NetBSD 语境 port＝平台）。
+script/_g5_v41c5_retitle_fix_c6.py	.py	3924	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	retitle-V41-c5 二次订正：C6“端口”误译三题（NetBSD 语境 port＝平台）。
 script/_g5_v42_docs.py	.py	3770	2026-11-28	2026-11-12	content	16	fresh	false	V42 P1 账目：92 表尾追加一行、98 Task 8.2 段后追加一段。
 script/_g5_v42_p1_close.py	.py	8505	2026-11-28	2026-11-12	content	16	fresh	false	V42 P1 挂账池判读落账＋6 块归入落盘。
 script/_g5_v43_docs.py	.py	3675	2026-11-28	2026-11-12	content	16	fresh	false	V43 P1 账目：92 表尾一行、98 段后一段。
@@ -1391,13 +1391,13 @@ script/_g8_v74b010_quotes.py	.py	1581	2026-11-28	2026-11-25	mtime-suspect	-1	unk
 script/_g8_v74b010_write.py	.py	11971	2026-11-28	2026-11-25	content	3	fresh	false	supp-V74-b010 写库：2 新 ref（AHA Statement/Guidelines）＋12 claim/evidence/ce。
 script/_g8_v74c2r2.py	.py	4804	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c2-r2：ch2 十八题二稿重拟（ykla 2026-11-21 全量打回一稿——不通顺不流畅；解除字数限制，通顺流畅优先）。
 script/_g8_v74c3.py	.py	8183	2026-11-28	2026-11-21	mtime-suspect	-1	unknown	false	retitle-V74-c3：ch3 44 题重拟（ykla 验收放行 ch2 后续批；纪律＝c2-r2 定稿：通顺流畅优先、解除字数限制、完整命题句；thes
-script/_g8_v74c3r2.py	.py	9102	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r2：ch3 44 题三稿重拟（ykla 2026-11-21 ch3 验收打回「尽量避免逗号，打回全部，避免ai味」）。
-script/_g8_v74c3r3.py	.py	8165	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r3：ch3 44 题四稿重拟（ykla 2026-11-21 三稿验收再打回「不通顺」）。
-script/_g8_v74c3r3fix.py	.py	3331	2026-11-28	2026-11-21	content	7	fresh	false	c3-r3 B1 收敛补丁：5 题去「如何」（B1 判据＝非问号语境含「如何」即 FAIL），保持自然口语书卷风。
-script/_g8_v74c3r4.py	.py	7894	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r4：ch3 44 题五稿重拟（ykla 2026-11-21 四稿验收打回「全部打回，还不如三稿」）。
-script/_g8_v74c3r5.py	.py	7770	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r5：ch3 44 题六稿重拟（ykla 2026-11-21 五稿验收「方向可以，但需要全部重新拟定，现在不像标题」）。
+script/_g8_v74c3r2.py	.py	9102	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r2：ch3 44 题三稿重拟（ykla 2026-11-21 ch3 验收打回“尽量避免逗号，打回全部，避免ai味”）。
+script/_g8_v74c3r3.py	.py	8165	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r3：ch3 44 题四稿重拟（ykla 2026-11-21 三稿验收再打回“不通顺”）。
+script/_g8_v74c3r3fix.py	.py	3331	2026-11-28	2026-11-21	content	7	fresh	false	c3-r3 B1 收敛补丁：5 题去“如何”（B1 判据＝非问号语境含“如何”即 FAIL），保持自然口语书卷风。
+script/_g8_v74c3r4.py	.py	7894	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r4：ch3 44 题五稿重拟（ykla 2026-11-21 四稿验收打回“全部打回，还不如三稿”）。
+script/_g8_v74c3r5.py	.py	7770	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r5：ch3 44 题六稿重拟（ykla 2026-11-21 五稿验收“方向可以，但需要全部重新拟定，现在不像标题”）。
 script/_g8_v74c3r5fix.py	.py	3061	2026-11-28	2026-11-21	content	7	fresh	false	c3-r5 补丁：3.9.4／3.9.5 重拟（ykla 点名），其余 42 题放行。
-script/_g8_v74c3r6.py	.py	7500	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r6：ch3 44 题七稿重拟（ykla 2026-11-21 六稿验收打回「ai味」）。
+script/_g8_v74c3r6.py	.py	7500	2026-11-28	2026-11-21	content	7	fresh	false	retitle-V74-c3-r6：ch3 44 题七稿重拟（ykla 2026-11-21 六稿验收打回“ai味”）。
 script/_g8_verify_b008.py	.py	1951	2026-11-28	2026-11-25	mtime-suspect	-1	unknown	false	
 script/_gates_v31.py	.py	1702	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	V31 批次门禁速跑：四十三（--vol V31）／四十四／二十四／二十八／三十五／三十七。
 script/_gates_v55.py	.py	2959	2026-11-28	2026-11-17	content	11	fresh	false	V55 b001 门禁速跑：四十三（--vol V55）／三十七／三十八／三十九／三十五／三十四／三十三／二十八／二十四。
@@ -1460,9 +1460,11 @@ script/_mem_update_task82_3.py	.py	1219	2026-11-28	2026-11-14	mtime-suspect	-1	u
 script/_mem_update_task82_4.py	.py	2524	2026-11-28	2026-11-11	content	17	fresh	false	memory 三次更新：task82 卡 G1 节追加 b021；MEMORY.md 时点与 G1 子句刷新。锚不存在则如实报告。
 script/_memory_index_toolchain_20261110.py	.py	905	2026-11-28	2026-11-10	filename	18	fresh	false	MEMORY.md 索引行更新：工具链基线卡补记 -I 陷阱与备份任务改指（2026-11-10）。
 script/_memory_sync_duckdb_global_20261110.py	.py	2020	2026-11-28	2026-11-10	filename	18	fresh	false	记忆卡与索引同步：duckdb 已转全局 site（`-I` 恢复可用），订正前一条“-I 必败”的说法。
-script/_mian_w1_20261103.py	.py	3096	2026-11-28	2026-11-03	filename	25	fresh	false	C8b「…面」题尾清理第一波：V36（22 题）＋V37（20 题，保留「局面」一题）。
-script/_mian_w2_20261103.py	.py	2199	2026-11-28	2026-11-03	filename	25	fresh	false	C8b「…面」清理第二波：V10（17 题）＋V61（13 题，4 处技术术语保留）。
-script/_mian_w3_20261103.py	.py	2013	2026-11-28	2026-11-03	filename	25	fresh	false	C8b「…面」清理第三波：V07（14 题）＋V75（13 题，覆盖面保留）。
+script/_mian_w1_20261103.py	.py	3096	2026-11-28	2026-11-03	filename	25	fresh	false	C8b“…面”题尾清理第一波：V36（22 题）＋V37（20 题，保留“局面”一题）。
+script/_mian_w2_20261103.py	.py	2199	2026-11-28	2026-11-03	filename	25	fresh	false	C8b“…面”清理第二波：V10（17 题）＋V61（13 题，4 处技术术语保留）。
+script/_mian_w3_20261103.py	.py	2013	2026-11-28	2026-11-03	filename	25	fresh	false	C8b“…面”清理第三波：V07（14 题）＋V75（13 题，覆盖面保留）。
+script/_mimosa_analyze_20261128.py	.py	3340	2026-11-28	2026-11-28	filename	0	fresh	false	Mimosa 深扫结果归类分析（临时脚本，2026-11-28）。
+script/_mimosa_detail_20261128.py	.py	3471	2026-11-28	2026-11-28	filename	0	fresh	false	Mimosa 深扫结果逐条明细（临时脚本，2026-11-28）。
 script/_mk_b011_20261121.py	.py	4601	2026-11-28	2026-11-21	filename	7	fresh	false	b011 引擎派生：cp b010→b011，改批签/REFS/ITEMS（quote 的
 script/_mk_b012_20261121.py	.py	4251	2026-11-28	2026-11-21	filename	7	fresh	false	b012 引擎派生：cp b011→b012，改批签；RID_EXIST 加 11086（2.0.5 README）与 11091（2.x LINT）；
 script/_mk_b013_20261121.py	.py	4225	2026-11-28	2026-11-21	filename	7	fresh	false	b013 引擎派生：cp b012→b013，改批签；REFS=[install205]；RID_EXIST={11086,11091}（保留）；
@@ -1716,6 +1718,7 @@ script/_mkacct_v35_b028.py	.py	5607	2026-11-28	2026-11-16	content	12	fresh	false
 script/_modality_rewrite_20261114.py	.py	4780	2026-11-28	2026-11-14	filename	14	fresh	false	条文用语全量回改（2026-11-14，ykla 裁定 J3）。
 script/_narrow_v26.py	.py	1263	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	把 V26 料域收窄到专题节（去掉 012.3／012.11／036.1 等巨型混合节），并调整抽样上限。
 script/_netbsd_mercurial_20261103.py	.py	1437	2026-11-28	2026-11-03	filename	25	fresh	false	核实 ref 10015（NetBSD 2025-01-04 core 关于 Mercurial 的表述）——本机 NetBSD 邮档检索。只读。
+script/_nm_cleanup_20261128.py	.py	2543	2026-11-28	2026-11-28	filename	0	fresh	false	node_modules 清理执行器（ykla 2026-11-28 明示批准；三处 74 MB）。
 script/_norm_probe_v510.py	.py	788	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	
 script/_note_mail2d_interp_20261110.py	.py	1496	2026-11-28	2026-11-10	filename	18	fresh	false	给 mail2d 交接/续跑文件加“解释器注记”（不改写历史记录，仅加一行指针）。
 script/_notes3_20261103.py	.py	3189	2026-11-28	2026-11-03	filename	25	fresh	false	向 _sign_notes.json 追加三卷签署说明。
@@ -1831,6 +1834,7 @@ script/_qr_progress_done.py	.py	2524	2026-11-28	2026-11-02	content	26	fresh	fals
 script/_qr_progress_mark.py	.py	3225	2026-11-28	2026-11-02	content	26	fresh	false	组二三四质量批：progress.tsv 在跑标记（仅改本批所涉卷行，其余逐字节不动）。
 script/_quality_rows.py	.py	6460	2026-11-28	2026-11-02	content	26	fresh	false	组二三四质量批·逐卷复核层生成器：从台账生成逐题判定行，默认 verdict=合规；manual 覆盖。
 script/_quote_locate.py	.py	735	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	精确定位 ref1632／ref3769 目标引文。
+script/_r13_pk_apply_20261128.py	.py	8190	2026-11-28	2026-11-28	filename	0	fresh	false	R1-3 代码仓库库 commit_files.id 主键声明（逐库；先 drop 依赖索引，加 PK 后重建）。
 script/_rb_v33_b006_20261115.py	.py	2415	2026-11-28	2026-11-15	filename	13	fresh	false	b006 误写回退：删去 4 claim／4 evidence／4 链／新 ref10699 与相应 raw_source，并复核基线。
 script/_read_intent.py	.py	291	2026-11-28	2026-11-10	mtime-suspect	-1	unknown	false	
 script/_read_spec810.py	.py	266	2026-11-28	2026-10-29	content	30	fresh	false	
@@ -1865,7 +1869,7 @@ script/_render_15835_pages.py	.py	397	2026-11-28	2026-11-14	content	14	fresh	fal
 script/_render_7714_pages.py	.py	341	2026-11-28	2026-11-14	content	14	fresh	false	临时脚本：GB/T 7714-2015 PDF 逐页渲染 PNG（不入库）
 script/_render_cyt154_pages.py	.py	339	2026-11-28	2026-11-14	content	14	fresh	false	临时脚本：CY/T 154-2017 PDF 逐页渲染 PNG（不入库）
 script/_repo_composition_20261029.py	.py	4082	2026-11-28	2026-10-29	filename	30	fresh	false	盘点工作库对象构成：2.7 GB 都由什么撑起来。
-script/_repo_top_split_20261029.py	.py	2567	2026-11-28	2026-10-29	filename	30	fresh	false	按一级目录拆分「HEAD 现存」与「仅存于历史」的压缩占用。
+script/_repo_top_split_20261029.py	.py	2567	2026-11-28	2026-10-29	filename	30	fresh	false	按一级目录拆分“HEAD 现存”与“仅存于历史”的压缩占用。
 script/_report_vol_20261103.py	.py	5012	2026-11-28	2026-11-03	filename	25	fresh	false	按台账生成卷级批准呈报页：呈报-V{NN}-20261103.md（数据驱动，不手写数字）。
 script/_restore_path_cols_20261115.py	.py	1602	2026-11-28	2026-11-15	filename	13	fresh	false	
 script/_retitle_inventory_20261125.py	.py	2566	2026-11-28	2026-11-25	filename	3	fresh	false	盘点 outline.txt 四级小节题面：逐卷题数、“的”题占比、8—12 字占比、中位题长、尾簇 Top。
@@ -1940,25 +1944,25 @@ script/_sub_doubt_fix_V50.py	.py	905	2026-11-28	2026-11-03	mtime-suspect	-1	unkn
 script/_sub_doubt_lib.py	.py	9610	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_doubt_lib.py -- 存疑清零批次读写与自检库（只被 _sub_doubt_* 脚本引用）
 script/_sub_doubt_mail.py	.py	1551	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_doubt_mail.py -- 本机邮件档检索（只读）
 script/_sub_doubt_repair_bytes.py	.py	3094	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_doubt_repair_bytes.py -- 只把本次改动的行重写，未改动行逐字节保留（修复 csv 整体重写带来的引号风格噪声）
-script/_sub_fin_allvol.py	.py	1522	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_allvol.py — 全卷扫描：结尾「…面」题名的分布（只读）。
-script/_sub_fin_apply.py	.py	4274	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_apply.py — 目标卷「抽象…面结尾」题名收尾写入器（默认不改即不写盘）。
+script/_sub_fin_allvol.py	.py	1522	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_allvol.py — 全卷扫描：结尾“…面”题名的分布（只读）。
+script/_sub_fin_apply.py	.py	4274	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_apply.py — 目标卷“抽象…面结尾”题名收尾写入器（默认不改即不写盘）。
 script/_sub_fin_check.py	.py	1696	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_check.py — 目标卷 TSV 往返保真自检（只读，不写盘）。
-script/_sub_fin_inspect.py	.py	660	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_inspect.py — 检查指定卷题名中任意位置含「面」的条目（只读）。
-script/_sub_fin_scan.py	.py	2570	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_scan.py — 扫描指定卷 TSV 中以抽象「…面」结尾的题名（只读，不写盘）。
-script/_sub_g1_apply.py	.py	4486	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	将指定卷 title-design TSV 中抽象「X面」题名改为具体名词结尾（仅改第 5 列）。
+script/_sub_fin_inspect.py	.py	660	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_inspect.py — 检查指定卷题名中任意位置含“面”的条目（只读）。
+script/_sub_fin_scan.py	.py	2570	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_fin_scan.py — 扫描指定卷 TSV 中以抽象“…面”结尾的题名（只读，不写盘）。
+script/_sub_g1_apply.py	.py	4486	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	将指定卷 title-design TSV 中抽象“X面”题名改为具体名词结尾（仅改第 5 列）。
 script/_sub_g1_final.py	.py	1659	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	
-script/_sub_g2_apply_mian.py	.py	5499	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	V58/V16/V64/V68/V14/V48 标题台账：抽象「…面」结尾改为具体名词结尾。
+script/_sub_g2_apply_mian.py	.py	5499	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	V58/V16/V64/V68/V14/V48 标题台账：抽象“…面”结尾改为具体名词结尾。
 script/_sub_g2_dump.py	.py	1521	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	导出待改题及其 thesis，并统计各卷现有结尾二字分布（用于撞簇判据）。
-script/_sub_g2_scan_mian.py	.py	1917	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	列出六卷台账中以「面」结尾的题名，区分排除词与待改词。
-script/_sub_g3_apply.py	.py	4200	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	把指定卷 title 列中以抽象「…面」结尾的题名改为具体名词结尾（只改第 5 列 title）。
-script/_sub_g3_context.py	.py	1538	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	列出 V61/V40 所有以「面」结尾的题名（含白名单），并打印 21 个待改题的 thesis 上下文。
-script/_sub_g3_finalcheck.py	.py	3009	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	终检：改后题名的长度/的/结尾二字撞簇；文件编码(BOM/LF)；残留抽象「面」；禁字符。
+script/_sub_g2_scan_mian.py	.py	1917	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	列出六卷台账中以“面”结尾的题名，区分排除词与待改词。
+script/_sub_g3_apply.py	.py	4200	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	把指定卷 title 列中以抽象“…面”结尾的题名改为具体名词结尾（只改第 5 列 title）。
+script/_sub_g3_context.py	.py	1538	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	列出 V61/V40 所有以“面”结尾的题名（含白名单），并打印 21 个待改题的 thesis 上下文。
+script/_sub_g3_finalcheck.py	.py	3009	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	终检：改后题名的长度/的/结尾二字撞簇；文件编码(BOM/LF)；残留抽象“面”；禁字符。
 script/_sub_g3_fixcollide.py	.py	1684	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	撞簇回改：把 4 条使同卷结尾二字超过 3 次的题名换成同义且不撞簇的具体名词结尾。
-script/_sub_g3_scan.py	.py	1774	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	扫描 title-design 指定卷中以抽象「…面」结尾的题名（排除白名单），只读不改。
-script/_sub_g3_verify.py	.py	2034	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	逐格比对 HEAD 版本与当前工作区版本，区分「本次改动」与「此前已有的未提交改动」。
-script/_sub_g4_apply.py	.py	6329	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_apply.py —— 将指定卷标题台账中以抽象「…面」结尾的题名改为具体名词结尾。
+script/_sub_g3_scan.py	.py	1774	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	扫描 title-design 指定卷中以抽象“…面”结尾的题名（排除白名单），只读不改。
+script/_sub_g3_verify.py	.py	2034	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	逐格比对 HEAD 版本与当前工作区版本，区分“本次改动”与“此前已有的未提交改动”。
+script/_sub_g4_apply.py	.py	6329	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_apply.py —— 将指定卷标题台账中以抽象“…面”结尾的题名改为具体名词结尾。
 script/_sub_g4_ends.py	.py	1350	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_ends.py —— 打印指定卷的题名结尾二字分布，并检查候选结尾是否超限。
-script/_sub_g4_scan.py	.py	1719	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_scan.py —— 扫描指定卷标题台账中以抽象「…面」结尾的题名（只读，不改盘）。
+script/_sub_g4_scan.py	.py	1719	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_scan.py —— 扫描指定卷标题台账中以抽象“…面”结尾的题名（只读，不改盘）。
 script/_sub_g4_show.py	.py	1031	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_show.py —— 打印指定 sid 的完整行（title+thesis），供语义改写判断。
 script/_sub_g4_verify.py	.py	1911	2026-11-28	2026-11-03	mtime-suspect	-1	unknown	false	_sub_g4_verify.py —— 改后终检：列数一致、无重复题名、题名规范、结尾分布。
 script/_supplement_notes.py	.py	730	2026-11-28	2026-11-02	mtime-suspect	-1	unknown	false	补遗批游标记注：向 V19/V25/V38/V58/V59 的 progress.tsv notes 追加采纳标记（行级替换，另会话不触这些卷）。
@@ -1966,7 +1970,7 @@ script/_supply_inventory_20261110.py	.py	1963	2026-11-28	2026-11-10	filename	18	
 script/_survey_20261103.py	.py	3586	2026-11-28	2026-11-03	filename	25	fresh	false	批前勘察（一次性）：任务 2／3／4 的盘面清单。
 script/_sw_diag.py	.py	2578	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	诊断：Service Worker 是否缓存了 API 响应。一次性脚本。
 script/_sync92_98_v32b001.py	.py	2950	2026-11-28	2026-11-14	content	14	fresh	false	92/98 追加（V32 P2 b001）。
-script/_sync92_num.py	.py	1353	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	把 92 号文 frontmatter「现行口径」行的节／小节数对齐到权威基准（并发会话下每次收口前跑）。
+script/_sync92_num.py	.py	1353	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	把 92 号文 frontmatter“现行口径”行的节／小节数对齐到权威基准（并发会话下每次收口前跑）。
 script/_sync_92_98_g4_kunei_20261114.py	.py	4060	2026-11-28	2026-11-14	filename	14	fresh	false	92 §十一 表格行＋98 §十一 补段追加（只插入，不碰他行）。
 script/_sync_92_98_g9.py	.py	2712	2026-11-28	2026-11-27	content	1	fresh	false	92／98 号文 §十一 同步（G9 线成立＋V19-c1 改题批）。插入锚：两件 §十一 尾 `---` 前。
 script/_sync_92_98_subpages.py	.py	3124	2026-11-28	2026-11-22	content	6	fresh	false	临时：92/98 §十一 补登“小节独立成页”批（HEAD 派生版与工作树版各插一次）。
@@ -1980,7 +1984,7 @@ script/_t8_account.py	.py	6719	2026-11-28	2026-11-09	content	19	fresh	false	Task
 script/_t8_apply.py	.py	3427	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	把人工判读表套用到 part<K>.tsv（其余块按移出处理）。
 script/_t8_approve.py	.py	1124	2026-11-28	2026-11-06	content	22	fresh	false	向 title-design/approvals.tsv 追加 landing 行（幂等；已存在则跳过）。
 script/_t8_arch.py	.py	528	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	
-script/_t8_audit_landed.py	.py	2637	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	已落块成色审计（只读）：分层抽样已归入块，打印「题面 thesis ↔ 块原文」供人工判合格。
+script/_t8_audit_landed.py	.py	2637	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	已落块成色审计（只读）：分层抽样已归入块，打印“题面 thesis ↔ 块原文”供人工判合格。
 script/_t8_auto.py	.py	11185	2026-11-28	2026-10-23	content	36	stale	false	Task 8 卷批半自动判读器（单写者模式；题面相似度抽样＋归属，人工复核）。
 script/_t8_bodies.py	.py	1277	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	导出归入块的正文摘要（去块头行，取前 220 字），供人工复核。
 script/_t8_build.py	.py	6195	2026-11-28	2026-11-06	content	22	fresh	false	Task 8 V11–V20 卷批切块器（一次性工具；逐卷跑）。
@@ -1988,7 +1992,7 @@ script/_t8_cand.py	.py	2928	2026-11-28	2026-10-28	content	31	stale	false	按 202
 script/_t8_changelog.py	.py	3245	2026-11-28	2026-11-09	content	19	fresh	false	向 changelog.duckdb 追加 V41 复核收紧批一条（id＝max+1，动态取）。
 script/_t8_changelog_v11.py	.py	3151	2026-11-28	2026-11-06	content	22	fresh	false	向 changelog.duckdb entries 追加 Task 8 V11 卷批条目（id=max+1，写前重读）。
 script/_t8_close.py	.py	4587	2026-11-28	2026-11-06	content	22	fresh	false	Task 8 卷批收口器：land.ok／approvals／92／98／长线／changelog／tag 台账 一次落齐。
-script/_t8_cluster.py	.py	7221	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	簇路由表：把挂账块按「源节」聚簇，用簇聚合画像对目标卷各**节**比，出候选与样本。
+script/_t8_cluster.py	.py	7221	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	簇路由表：把挂账块按“源节”聚簇，用簇聚合画像对目标卷各**节**比，出候选与样本。
 script/_t8_count.py	.py	485	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	
 script/_t8_count2.py	.py	485	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	
 script/_t8_count3.py	.py	577	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	
@@ -2015,7 +2019,7 @@ script/_t8_pick.py	.py	1095	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false
 script/_t8_pick2.py	.py	2431	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	导出某卷抽样块清单（含自动初判的归属题与题名），供人工逐块判读。
 script/_t8_pick3.py	.py	2214	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	按分片导出抽样块清单（含自动初判归属题），供人工逐块判读。
 script/_t8_plan_21_30.py	.py	1997	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	只读：从 pre-reset layout 反查 V21–V30 旧树料域（节目录 → 件数/块数/字节）。
-script/_t8_rejudge.py	.py	13731	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	Task 8 卷批「挂账重判」器（V41–V50 批，主会话单写者）。
+script/_t8_rejudge.py	.py	13731	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	Task 8 卷批“挂账重判”器（V41–V50 批，主会话单写者）。
 script/_t8_review.py	.py	1585	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	导出某卷判读复核清单（归入全部＋移出抽样 20），供主会话人工复核。
 script/_t8_route.py	.py	1636	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	挂账块源节路由视图：按旧树源节聚合，附源节题面与该节已落盘印证。
 script/_t8_rules.py	.py	13553	2026-11-28	2026-11-06	content	22	fresh	false	生成某卷的判读规程卡 RULES.md 与意图确证单（一次性工具）。
@@ -2029,7 +2033,7 @@ script/_t8_state.py	.py	2487	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	fals
 script/_t8_struct.py	.py	1982	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	Task 8 V11–V20 战役：打印各卷章／节结构与题名（只读）。
 script/_t8_tagledger_v11.py	.py	1209	2026-11-28	2026-11-06	content	22	fresh	false	追加 V11 里程碑 tag 台账行（幂等）。
 script/_t8_termhunt.py	.py	2041	2026-11-28	2026-10-23	content	36	stale	false	全旧树定向检索：块文本含指定关键词的机器块（V17 Minix 用）。
-script/_t8_tighten.py	.py	4931	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	卷批复核收紧（通用）：按判定表把错配「归入」块降为挂账，再走 merge／build_md 重建。
+script/_t8_tighten.py	.py	4931	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	卷批复核收紧（通用）：按判定表把错配“归入”块降为挂账，再走 merge／build_md 重建。
 script/_t8_tree.py	.py	403	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	
 script/_t8_v17build.py	.py	4824	2026-11-28	2026-10-23	content	36	stale	false	V17（Minix）定向料域构建：全旧树块文本按主题词强度筛选，产出 content/V17 全套。
 script/_t8_v41_apply.py	.py	2993	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V41 复核收紧：把错配归入块降为挂账（写 part*.tsv，再走 merge／build_md 重建）。
@@ -2128,6 +2132,7 @@ script/_task8_tree_state_now.py	.py	1476	2026-11-28	2026-11-09	mtime-suspect	-1	
 script/_task8_triage_stats_20261110.py	.py	3374	2026-11-28	2026-11-10	filename	18	fresh	false	Task 8 判读面实测：汇总 design/ 下全部小节级判读台账（V*-C*.tsv）。
 script/_tasks_append_tail_20261103.py	.py	3150	2026-11-28	2026-11-03	filename	25	fresh	false	tasks.md 追加执行记录（2026-11-03 尾批：V64 ch8–9 勘正），带已存在即跳护栏。
 script/_tasks_dedup.py	.py	636	2026-11-28	2026-10-30	content	29	fresh	false	tasks.md 去重：删除“质量批组二三四全量收口”重复行（保留首次出现）。
+script/_tb_full_review_20261128.py	.py	6029	2026-11-28	2026-11-28	filename	0	fresh	false	任务书全量复核数据采集（只读；一次性）。
 script/_tf049_helper.py	.py	641	2026-11-28	2026-10-28	content	31	stale	false	TF-049 辅助：打印批次元数据与长度信息。
 script/_theme_converge.py	.py	2847	2026-11-28	2026-11-19	content	9	fresh	false	主题收敛批：目录页主题面收敛为两主题（纯彩 light／纯黑 oled），移除墨水屏（eink）与其他配色。
 script/_theme_ledgers.py	.py	5393	2026-11-28	2026-11-20	content	8	fresh	false	主题收敛批收口：changelog 动态取号落账＋92 号文 §十一 追加行＋98 号文文末补记。
@@ -2421,7 +2426,7 @@ script/_v08_verdict.py	.py	36673	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	
 script/_v08b001_acct.py	.py	15170	2026-11-28	2026-11-18	content	10	fresh	false	V08 b001 账目脚本：changelog INSERT → 92 行 → 98 行 → 批记落盘。
 script/_v08b001_apply_retry.py	.py	1817	2026-11-28	2026-11-18	mtime-suspect	-1	unknown	false	V08 b001 伺机 apply 包装器：轮询 claim 库写连接空窗，空窗即调引擎。
 script/_v08b001_quotecheck.py	.py	3696	2026-11-28	2026-11-16	content	12	fresh	false	V08 b001 独立复核清单（清单 2＋硬事实清单 4）。
-script/_v09_anchor_clean.py	.py	2025	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V09 单边结构锚清理：按「开-闭计数不等则删单边行」处理树内 .md。
+script/_v09_anchor_clean.py	.py	2025	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V09 单边结构锚清理：按“开-闭计数不等则删单边行”处理树内 .md。
 script/_v09_b001_spec.py	.py	14273	2026-11-28	2026-11-27	content	1	fresh	false	supp-V09-b001 spec 生成器：V09 第 2 章 2.1—2.2 节 6 题 9 块（D2 全对卡）。
 script/_v09_b002_spec.py	.py	15919	2026-11-28	2026-11-28	content	0	fresh	false	supp-V09-b002 spec 生成器：V09 第 2 章 2.3 节 5 题＋2.5.1／2.5.2（7 题 11 块，D2 对卡）。
 script/_v09_cursor.py	.py	719	2026-11-28	2026-11-02	content	26	fresh	false	progress.tsv 行级游标更新：V09 质量批置 done。
@@ -2619,7 +2624,7 @@ script/_v36_prep_snapshots.py	.py	2900	2026-11-28	2026-11-26	mtime-suspect	-1	un
 script/_v36_refdedup.py	.py	1318	2026-11-28	2026-11-26	mtime-suspect	-1	unknown	false	V36 wave1 只读 ref 查重助手。
 script/_v36_roff2txt.py	.py	2270	2026-11-28	2026-11-26	mtime-suspect	-1	unknown	false	把 kld(4)/kldload(8) 的 roff 源清洗为可逐字引用的纯文本快照。
 script/_v36_verify_dossiers.py	.py	5719	2026-11-28	2026-11-26	mtime-suspect	-1	unknown	false	V36 wave1 dossier 验收器（只读）。
-script/_v37_audit.py	.py	1206	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	V37 判读自检：列出 partK 中「旧节 vs 归入题」的章级/节级错配候选。
+script/_v37_audit.py	.py	1206	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	V37 判读自检：列出 partK 中“旧节 vs 归入题”的章级/节级错配候选。
 script/_v37_b014_acct.py	.py	5078	2026-11-28	2026-11-13	content	15	fresh	false	V37 P2 b014 收口账目：changelog＋92 表行＋98 补记（锚行校验）。
 script/_v37_b015_acct.py	.py	4308	2026-11-28	2026-11-13	content	15	fresh	false	V37 P2 b015 收口账目：changelog＋92＋98。
 script/_v37_b016_acct.py	.py	5458	2026-11-28	2026-11-13	content	15	fresh	false	V37 P2 b016 收口账目（含越线回滚披露）：changelog＋92＋98。
@@ -2686,7 +2691,7 @@ script/_v40_finish.py	.py	2421	2026-11-28	2026-10-30	content	29	fresh	false	V40 
 script/_v40_fix.py	.py	12131	2026-11-28	2026-10-30	mtime-suspect	-1	unknown	false	V40 题面修订表与体检器（临时脚本，用毕清理）。
 script/_v40_fix_dup.py	.py	2373	2026-11-28	2026-10-30	mtime-suspect	-1	unknown	false	V40 史料重复引文修复（临时脚本，用毕清理）。
 script/_v40_fix_lint_and_msg.py	.py	2323	2026-11-28	2026-11-09	content	19	fresh	false	98 号文 V47 条 MD032 空行补齐（他线遗留格式缺陷；只补空行，不改一字内容）＋提交说明落盘。
-script/_v40_fix_quote.py	.py	1707	2026-11-28	2026-10-30	content	29	fresh	false	V40 台账直角引号修正：唯一一处 thesis 内「架构独立」改弯引号（临时脚本，用毕清理）。
+script/_v40_fix_quote.py	.py	1707	2026-11-28	2026-10-30	content	29	fresh	false	V40 台账直角引号修正：唯一一处 thesis 内“架构独立”改弯引号（临时脚本，用毕清理）。
 script/_v40_fix_wiki.py	.py	2132	2026-11-28	2026-10-30	mtime-suspect	-1	unknown	false	V40 替换 wiki.netbsd.org 联网行为官方 www.netbsd.org 端口总览页（临时脚本，用毕清理）。
 script/_v40_histsrc.py	.py	1080	2026-11-28	2026-10-30	mtime-suspect	-1	unknown	false	查看 V40 6.7 节标题与其史料源、corpus 备选片段。
 script/_v40_inspect.py	.py	1822	2026-11-28	2026-10-30	mtime-suspect	-1	unknown	false	V40 现状巡检：台账行数、节数、证据行数、联网行、URL 数、例外表。
@@ -2726,7 +2731,7 @@ script/_v41_retitle.py	.py	7092	2026-11-28	2026-11-26	content	2	fresh	false	V41 
 script/_v41_skel_list.py	.py	1092	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	临时探针：列出 V41 章 1 与章 9 的 skeleton 小节（题号＋题名＋status）。
 script/_v41_strict.py	.py	2464	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V41 严格逐题判读：块文本×题名+thesis 语义重合定题；低于阈值转挂账。
 script/_v41_supp.py	.py	17247	2026-11-28	2026-11-14	mtime-suspect	-1	unknown	false	Task 8.2 通用补证批引擎（DOC_MINE D1/D2，S0–S5 全链）。
-script/_v41_verdict.py	.py	3909	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V41 三片裁决：技术卷用「件名×题名」token 相似度映射，低分转挂账待定位。
+script/_v41_verdict.py	.py	3909	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V41 三片裁决：技术卷用“件名×题名”token 相似度映射，低分转挂账待定位。
 script/_v41b007_accounts.py	.py	9429	2026-11-28	2026-11-18	content	10	fresh	false	supp-V41-b007 三账收口：changelog id=动态max+1、92 §十一表尾行、98 §十一尾行。
 script/_v41b007_backup_slots.py	.py	1564	2026-11-28	2026-11-18	content	10	fresh	false	临时脚本：落 supp-V41-b007 专项备份 manifest（引用当日例行槽，sha256 实测）。
 script/_v41b007_evfix.py	.py	1250	2026-11-28	2026-11-18	mtime-suspect	-1	unknown	false	临时脚本：EV-SUP Q2 引文改逐字（句点前空格照录）并复跑断言。
@@ -2903,7 +2908,7 @@ script/_v54_changelog.py	.py	3132	2026-11-28	2026-11-07	content	21	fresh	false	�
 script/_v54_dec.py	.py	7754	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V54 判读决定：按全局块序号写四片判读 TSV（script/_v5x_dec_V54_P<K>.tsv）。
 script/_v54_landok.py	.py	1681	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	收口 V54.land.ok：写 gate 行与判读说明。
 script/_v54_pre.py	.py	2233	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V54 预分类：把流水台账／指针句／空块先判删除，余块列为待人工判读。
-script/_v54_pre2.py	.py	1765	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V54 判读辅助：按块输出「块序号｜源节号｜块种｜摘要句」，供主会话逐块判读。
+script/_v54_pre2.py	.py	1765	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	V54 判读辅助：按块输出“块序号｜源节号｜块种｜摘要句”，供主会话逐块判读。
 script/_v54b002_cards.py	.py	347	2026-11-28	2026-11-18	mtime-suspect	-1	unknown	false	
 script/_v54b002_refprobe.py	.py	486	2026-11-28	2026-11-18	mtime-suspect	-1	unknown	false	
 script/_v54b002_reuse.py	.py	3501	2026-11-28	2026-11-18	content	10	fresh	false	
@@ -2976,11 +2981,11 @@ script/_v59_landok_buyi_20261110.py	.py	4276	2026-11-28	2026-11-10	filename	18	f
 script/_v5x_account92.py	.py	6479	2026-11-28	2026-11-07	content	21	fresh	false	向 92／98 号文 §十一 追加 V51／V52／V53 卷批账目行（2026-11-07）。
 script/_v5x_build.py	.py	7266	2026-11-28	2026-10-23	content	36	stale	false	V51–V60 卷批装配器（Task 8.0／8.1）：按料域计划切块。
 script/_v5x_changelog.py	.py	6585	2026-11-28	2026-11-07	content	21	fresh	false	向 changelog.duckdb 追加 Task 8 V51／V52／V53 三条变更记录（id 动态取 max+1）。
-script/_v5x_dec.py	.py	5667	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	V51–V60 判读产物器：把「自动模板块规则＋人工判读决定」合成为 part<K>.tsv。
+script/_v5x_dec.py	.py	5667	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	V51–V60 判读产物器：把“自动模板块规则＋人工判读决定”合成为 part<K>.tsv。
 script/_v5x_digest.py	.py	1900	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	按节汇总块档并取样，供快速判读：script/_<vol>_digest.txt。用法：script/_v5x_digest.py V55 [每节样本数]
 script/_v5x_fixdec.py	.py	505	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	修正决定文件列数：把误写成 5 列（多余空列）的行压回 4 列 idx/sid/action/reason。
 script/_v5x_quote_fix.py	.py	520	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	把指定文件的直角引号六码位改写为弯引号（红线 4：禁 U+300C–U+300F）。
-script/_v5x_rest.py	.py	1438	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	判读辅助（通用）：按块输出「块序号｜源节号｜块种｜摘要句」。用法：script/_v5x_rest.py V55
+script/_v5x_rest.py	.py	1438	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	判读辅助（通用）：按块输出“块序号｜源节号｜块种｜摘要句”。用法：script/_v5x_rest.py V55
 script/_v5x_scan.py	.py	1168	2026-11-28	2026-10-23	content	36	stale	false	扫描旧树，列出名字含指定关键词的节目录及其 .md 件数（用于圈定卷批料域）。
 script/_v5x_tagledger.py	.py	3030	2026-11-28	2026-11-07	content	21	fresh	false	向里程碑 tag 台账追加 V51／V52／V53 三行（2026-11-07 卷批落盘）。
 script/_v5x_term.py	.py	2830	2026-11-28	2026-11-07	content	21	fresh	false	通用术语归一化：某卷台账 基础系统→基本系统＋重签 title.ok＋approvals 追加行。
@@ -3165,7 +3170,7 @@ script/_v64_verdict.py	.py	6697	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	f
 script/_v64_verify_net.py	.py	3406	2026-11-28	2026-11-01	mtime-suspect	-1	unknown	false	V64 联网证据实取复核：下载每个 URL（含 PDF），检查引文是否逐字落在文本中。
 script/_v65_addpart.py	.py	5044	2026-11-28	2026-10-23	content	36	stale	false	V65 补片器：从旧节池中按治理关键词筛块，追加独立片（不重切已判前片）。
 script/_v65_blockcount.py	.py	6100	2026-11-28	2026-10-23	content	36	stale	false	V65 治理制度比较 料域真实块数测量（BLOCK_RE 与 _vol_build 同款，排除他卷已取件）。只读。
-script/_v65_refine.py	.py	6855	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V65 补遗：把「容量已满」挂账块在同节兄弟题内再分配（关键词判据，≤12/题）。
+script/_v65_refine.py	.py	6855	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V65 补遗：把“容量已满”挂账块在同节兄弟题内再分配（关键词判据，≤12/题）。
 script/_v65_verdict.py	.py	9871	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V65 判读裁决器：逐块给出 3 列决定清单（序号 目标 理由），供 _t8_mkledger.py 展开。
 script/_v66_accounting.py	.py	6432	2026-11-28	2026-11-08	content	20	fresh	false	V66 账目：92／98 §十一、tag 台账、长线 §十八、changelog（全幂等）。
 script/_v66_anchor_clean.py	.py	1597	2026-11-28	2026-11-08	mtime-suspect	-1	unknown	false	清除树内未成对结构锚行（REVIEW-ANNOT / PODCAST_REVIEW 等），仅本卷目录。
@@ -3272,14 +3277,14 @@ script/_v71_b034_blocks.py	.py	5935	2026-11-28	2026-11-18	content	10	fresh	false
 script/_v71_b034_ledgers.py	.py	6739	2026-11-28	2026-11-18	content	10	fresh	false	supp-V71-b034 四台账：exceptions 5 行 doc_mine 轨／supplement +10 行／fragments 5 行／s2 +5
 script/_v71_b034_write.py	.py	17139	2026-11-28	2026-11-18	content	10	fresh	false	supp-V71-b034 写库：6 新 ref（11028—11033）→ 6 raw_source → 10 evidence（EV-SUP-003014—
 script/_v71_build.py	.py	6962	2026-11-28	2026-10-23	content	36	stale	false	V71 料域构建器（关键词分流，全库扫描旧树；排除他卷已取件）。
-script/_v71_refine.py	.py	5957	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V71 补遗：把「容量已满」挂账块在同节兄弟题内再分配（关键词判据，≤12/题）。
+script/_v71_refine.py	.py	5957	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V71 补遗：把“容量已满”挂账块在同节兄弟题内再分配（关键词判据，≤12/题）。
 script/_v71_verdict.py	.py	4830	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V71 判读裁决器：逐块输出 3 列决定清单（序号 目标 理由）。
 script/_v72_build.py	.py	7146	2026-11-28	2026-10-23	content	36	stale	false	V72 料域构建器（关键词分流，全库扫描旧树；排除他卷已取件）。
 script/_v72_ch34_build.py	.py	34534	2026-11-28	2026-11-01	content	27	fresh	false	title3a 复核战役 V72 第3+4章行文件构建器（临时脚本）。
 script/_v72_ch5.py	.py	387	2026-11-28	2026-11-01	mtime-suspect	-1	unknown	false	
 script/_v72_ch6.py	.py	387	2026-11-28	2026-11-01	mtime-suspect	-1	unknown	false	
 script/_v72_clear_20261103.py	.py	9575	2026-11-28	2026-11-03	filename	25	fresh	false	V72 存疑 20 条清零：确证 1（版权／专利门槛条文本轮实取）／形态 19。
-script/_v72_refine.py	.py	6870	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V72 补遗：把「容量已满」挂账块在同节兄弟题内再分配（关键词判据，≤12/题）。
+script/_v72_refine.py	.py	6870	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V72 补遗：把“容量已满”挂账块在同节兄弟题内再分配（关键词判据，≤12/题）。
 script/_v72_verdict.py	.py	5040	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V72 判读裁决器：逐块输出 3 列决定清单（序号 目标 理由）。
 script/_v73_b001_changelog.py	.py	3360	2026-11-28	2026-11-27	content	1	fresh	false	写 V73 b001 changelog 行（id 动态 max+1；写后回读核对）。
 script/_v73_b001_fix_anchor.py	.py	3002	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	V73 b001 锚形订正：DOC_MINE 锚的 block 段只许 url 或数字（第四十三件 ANCHOR_RE）。
@@ -3329,7 +3334,7 @@ script/_v75_digest.py	.py	3852	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	fa
 script/_v75_dropblank_20261103.py	.py	494	2026-11-28	2026-11-03	filename	25	fresh	false	V75 复核层空行清理（2026-11-03）：merge2 遗留一空行嵌于 ch1/ch2 行间，剔除并断言行数。
 script/_v75_dup.py	.py	1481	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V75 全库重文统计：同文块按 (norm text) 聚类。
 script/_v75_frame.py	.py	707	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	V75 章—节—题骨架（节号 → 题名列表）。用法：_v75_frame.py [章号 ...]
-script/_v75_intake.py	.py	3314	2026-11-28	2026-10-23	content	36	stale	false	V75 料域清点（只读）：汇总各卷判读账中「属 V75」的移出行，按去重后统计实际可用块。
+script/_v75_intake.py	.py	3314	2026-11-28	2026-10-23	content	36	stale	false	V75 料域清点（只读）：汇总各卷判读账中“属 V75”的移出行，按去重后统计实际可用块。
 script/_v75_landok.py	.py	2404	2026-11-28	2026-11-09	content	19	fresh	false	生成 V75.land.ok（仿 V69 字段）。
 script/_v75_make_build.py	.py	2918	2026-11-28	2026-11-09	content	19	fresh	false	生成 V75 专用切块器副本：读共享 _vol_build.py，在 CONFIG = { 后注入 V75 块。
 script/_v75_map.py	.py	1127	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	
@@ -3354,7 +3359,7 @@ script/_v75_status.py	.py	1769	2026-11-28	2026-11-26	mtime-suspect	-1	unknown	fa
 script/_v75_status_20261125.py	.py	2422	2026-11-28	2026-11-25	filename	3	fresh	false	V75 现行状态盘点（只读）：逐件读树内 frontmatter，按章汇总 filled/skeleton/closed，并可列指定章 skeleton 清单。
 script/_v75_thesis_fix_20261103.py	.py	4209	2026-11-28	2026-11-03	filename	25	fresh	false	V75 卷收口论题层落账（2026-11-03，ykla 令不计成本）：6 处论题订正＋复核行注记＋指纹重算＋done.json 同步。
 script/_v75_v3_probe.mjs	.mjs	1688	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	
-script/_v75_volreport_quotes_20261103.py	.py	521	2026-11-28	2026-11-03	filename	25	fresh	false	V75 卷报告直角引号清零（2026-11-03）：「」→ 弯引号（报告非逐字保真档案）。
+script/_v75_volreport_quotes_20261103.py	.py	521	2026-11-28	2026-11-03	filename	25	fresh	false	V75 卷报告直角引号清零（2026-11-03）：“”→ 弯引号（报告非逐字保真档案）。
 script/_v75p2_acct_b002.py	.py	8360	2026-11-28	2026-11-16	content	12	fresh	false	V75 b002 账目四连：changelog→92→98→登记表（禁反引号／直角引号前置断言）。
 script/_v75p2_acct_b003.py	.py	8005	2026-11-28	2026-11-16	content	12	fresh	false	V75 b003 账目四连：changelog→92→98→登记表（禁反引号／直角引号前置断言）。
 script/_v75p2_acct_b004.py	.py	8172	2026-11-28	2026-11-16	content	12	fresh	false	V75 b004 账目四连：changelog→92→98→登记表（禁反引号／直角引号前置断言）。
@@ -3491,7 +3496,7 @@ script/_vol_merge_v75.py	.py	7892	2026-11-28	2026-11-09	content	19	fresh	false	�
 script/_vol_outline_peek.py	.py	1500	2026-11-28	2026-11-09	mtime-suspect	-1	unknown	false	打印指定卷的章／节骨架（outline.txt），用于卷批料域定位与题域理解。
 script/_volnum_check_20261103.py	.py	1021	2026-11-28	2026-11-03	filename	25	fresh	false	核对 outline.txt 卷号书写模式（2026-11-03）：统计“第七十X卷／第七七十五卷／第七十六卷”等。只读。
 script/_vr_probe.mjs	.mjs	1637	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	
-script/_vsec_avail.py	.py	2645	2026-11-28	2026-10-23	content	36	stale	false	按旧节统计「尚未被任何卷落盘（action==归入）」的真实块数。只读。
+script/_vsec_avail.py	.py	2645	2026-11-28	2026-10-23	content	36	stale	false	按旧节统计“尚未被任何卷落盘（action==归入）”的真实块数。只读。
 script/_vsec_blockcount.py	.py	2095	2026-11-28	2026-10-23	content	36	stale	false	按旧节统计真实块数（BLOCK_RE 同款；跳过他卷已取件）。只读。
 script/_write_v11_b021.py	.py	11796	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	Task 8.2 G2-V11 b021 写库（v2，全动态取号、可重入）。
 script/_write_v11_b022.py	.py	7099	2026-11-28	2026-11-13	mtime-suspect	-1	unknown	false	Task 8.2 G2-V11 b022 写库：4.5 证据链收口 4 题 8 claim。
@@ -3527,7 +3532,7 @@ script/analyze_index_blocks_20261120.py	.py	2433	2026-11-28	2026-11-20	filename	
 script/analyze_index_body_20261120.py	.py	1004	2026-11-28	2026-11-20	filename	8	fresh	false	一次性分析：解剖 index.html body 内部构成。只读。
 script/analyze_index_segments_20261120.py	.py	3476	2026-11-28	2026-11-20	filename	8	fresh	false	一次性分析：解剖 05-卷册大纲/目录/index.html 各段字节占比与内容构成。
 script/append_9298_rows_20261119.py	.py	3512	2026-11-28	2026-11-19	filename	9	fresh	false	临时脚本：向 92 号文 §十一 与 98 号文尾追加合并开批件账行（UTF-8 无 BOM 追加）。
-script/apply_renames.py	.py	2954	2026-11-28	2026-11-05	mtime-suspect	-1	unknown	false	按映射表改小节题名，并同步同卷「题名判据」证据行里的题名与字数。
+script/apply_renames.py	.py	2954	2026-11-28	2026-11-05	mtime-suspect	-1	unknown	false	按映射表改小节题名，并同步同卷“题名判据”证据行里的题名与字数。
 script/audit_v03_b003_state.py	.py	3434	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	V03 b003 状态核验：claim / evidence / references / 台账 / 树内块（只读）。
 script/backfill_orphan_anchors_a.py	.py	6852	2026-11-28	2026-11-16	content	12	fresh	false	A 类孤儿 ROW_MINE 抬头块补锚批（ykla 2026-11-16 批准：只做 A 类 310 块）。
 script/backfill_video_anchors.py	.py	3702	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	item 4：为无锚块补锚（usenet→ROW_MINE；youtube→VIDEO_MINE）。默认 dry-run。
@@ -3537,7 +3542,7 @@ script/batch_close_legacy3_20261123.py	.py	6947	2026-11-28	2026-11-23	filename	5
 script/batch_diff.py	.py	1941	2026-11-28	2026-11-05	mtime-suspect	-1	unknown	false	统计本批台账改动（对 HEAD 逐卷 diff）：改题、改论题、删行、证据行变化。
 script/calc_subsection_fill.py	.py	7213	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	统计 05-卷册大纲 第四级小节骨架的填充状态，按卷汇总。
 script/check_b014r3_claims.py	.py	1237	2026-11-28	2026-11-27	mtime-suspect	-1	unknown	false	临时核查脚本：b014r3 现场完成度——claim 498091-498102 是否在库、outline V27 第 4 章状态。
-script/closeout_approvals_20261030.py	.py	4641	2026-11-28	2026-10-30	filename	29	fresh	false	closeout_approvals_20261030.py —— 三卷批准件收口（ykla 2026-10-30「允许」授权）。
+script/closeout_approvals_20261030.py	.py	4641	2026-11-28	2026-10-30	filename	29	fresh	false	closeout_approvals_20261030.py —— 三卷批准件收口（ykla 2026-10-30“允许”授权）。
 script/commit_blockform_batch.py	.py	4101	2026-11-28	2026-11-16	content	12	fresh	false	暂存并提交块形统一 A 类批：只含 V05 本批 62 件，paths 逐件给 git（避中文路径 pathspec 错配）。
 script/commit_dual_batch.py	.py	3609	2026-11-28	2026-11-16	content	12	fresh	false	提交双块转换批：7 件，形状断言 +63/−35，隔离他线改动。
 script/commit_generic.py	.py	1342	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	通用提交器：显式路径清单 + 期望 numstat 断言 + 隔离他线改动。
@@ -3651,8 +3656,8 @@ script/fix_ledger_verdicts_20261029.py	.py	2556	2026-11-28	2026-10-29	filename	3
 script/fix_ledgers_20261029.py	.py	12531	2026-11-28	2026-10-29	filename	30	fresh	false	一次性台账修复（2026-10-29，第三十二件 L2／L3／L7／L12 收口）。
 script/fix_ref5527_20261123.py	.py	3389	2026-11-28	2026-11-23	filename	5	fresh	false	遗留② 实施：ref5527 修复。
 script/fix_ref5527b_20261123.py	.py	2427	2026-11-28	2026-11-23	filename	5	fresh	false	遗留② 实施v2：ref5527 更新模式（ft 空壳行补全＋raw_source 错值改正）。幂等：值一致即跳过。
-script/fix_report_glyphs.py	.py	527	2026-11-28	2026-11-02	mtime-suspect	-1	unknown	false	复核报告直角引号弯化：title-review 下本会话两份报告的「」→“”。
-script/fix_v01_banned.py	.py	2869	2026-11-28	2026-10-30	content	29	fresh	false	fix_v01_banned.py —— V01 已批台账的 Q2「谱系」清理（ykla 2026-10-30 授权代改）。
+script/fix_report_glyphs.py	.py	527	2026-11-28	2026-11-02	mtime-suspect	-1	unknown	false	复核报告直角引号弯化：title-review 下本会话两份报告的“”→“”。
+script/fix_v01_banned.py	.py	2869	2026-11-28	2026-10-30	content	29	fresh	false	fix_v01_banned.py —— V01 已批台账的 Q2“谱系”清理（ykla 2026-10-30 授权代改）。
 script/fix_v16b012_blocks.py	.py	2434	2026-11-28	2026-11-25	mtime-suspect	-1	unknown	false	修复 b012 块形：块间补空行分隔（D2 须 [抬头,空,正文,空] 4 行段），并消除双句号。只改 8 树件块区。
 script/fix_v16b012_blocks2.py	.py	2851	2026-11-28	2026-11-25	mtime-suspect	-1	unknown	false	b012 块抬头与纪律串规范化：按 D2 判据 HEAD_MAP/TAIL_MAP 修正，不改 claim/evidence。
 script/fix_v16b012_rawsource.py	.py	2706	2026-11-28	2026-11-25	content	3	fresh	false	补建新 ref 11143/11144 的 raw_source 行（D2/D3 需要），并回填 evidence.source_id 一致性。默认 dry-r
@@ -3829,7 +3834,7 @@ script/scan_v61_75_state.py	.py	1120	2026-11-28	2026-11-17	mtime-suspect	-1	unkn
 script/short_title_risk.py	.py	2275	2026-11-28	2026-11-05	mtime-suspect	-1	unknown	false	短题风险筛查：8 字下限带（B6 钉住）逐题风险启发式。
 script/short_title_scan.py	.py	2181	2026-11-28	2026-11-04	content	24	fresh	false	短题专项扫描：算全部小节题名长度分布，列出低于中位数 30% 的题（ykla 2026-11-04 令）。
 script/stage_surgical2_20261121.py	.py	2910	2026-11-28	2026-11-21	filename	7	fresh	false	补遗批外科暂存 v2：pathspec-from-file 避开 Windows 命令行长度限制。
-script/stage_surgical_20261121.py	.py	2977	2026-11-28	2026-11-21	filename	7	fresh	false	补遗批外科暂存：只暂存「纯新增」的小节 .md（我方的 section_note 追加），
+script/stage_surgical_20261121.py	.py	2977	2026-11-28	2026-11-21	filename	7	fresh	false	补遗批外科暂存：只暂存“纯新增”的小节 .md（我方的 section_note 追加），
 script/stat_task82_filled_by_volume.py	.py	4383	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	只读统计：Task 8.2 骨架清零按卷完成率。
 script/subsec_fill_rate.py	.py	11830	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	按卷统计大纲第四节（小节）空白骨架填充率。
 script/subsec_fill_rate_agg.py	.py	1901	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	汇总：可填面完成率、缺口集中度、供可视化嵌入的紧凑数据。
