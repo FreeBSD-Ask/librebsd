@@ -76,3 +76,22 @@ V17.2.3.5	信息表 1.5 五平台清单复核	http://mirror.math.princeton.edu/p
 V17.2.3.6	teaching 页 work-in-progress 自白复核	https://minix1.woodhull.com/teaching/index.html	命中	This page is a work-in-progress...（ref 11363 复用）	2026-11-28	c1 快照逐字核对
 V17.2.3.6	Woodhull probably 限定句复核	https://minix1.woodhull.com/teaching/teach_ver.html	命中	probably will be easily adaptable（ref 11362 复用）	2026-11-28	Tavily extract（逐字快照）
 批末	V17 第 2 章取证通道总披露	多源	命中	本章 36 claim／36 块全部 Tavily extract 或 c1 快照逐字核对；复用 ref 8 个（11359—11365）＋新登记 11439；快照存 script/_v17_fetch_c2/（临时件不入库）。	2026-11-28	Tavily search/extract（Tavily 优先口径）
+V17.3.1.1	CACM IBM PC 设计意图段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	1,565 美元学生买得起（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.1.1	OSR 机型兼容段复核	https://research.vu.nl/files/111353126/11154	命中	IBM PC/XT/AT 与 100% 兼容机（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.3.1.3	OSR 分发修改段复核	https://research.vu.nl/files/111353126/11154	命中	working, welldocumented OS... modify（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.3.1.3	附录 A Linus 修改重编译句复核	https://www.oreilly.com/openbook/opensources/book/appa.html	命中	modify and recompile the system（ref 11365 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.1.4	OSR 讨论组规划句复核	https://research.vu.nl/files/111353126/11154	命中	comp.os.minix will be set up（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.3.1.4	OSR 商用许可句复核	https://research.vu.nl/files/111353126/11154	命中	commercial use... written permission（ref 11359 复用）	2026-11-28	快照逐字核对
+V17.3.1.6	附录 A 编者界定句复核	https://www.oreilly.com/openbook/opensources/book/appa.html	命中	What follows in this appendix...（ref 11365 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.1.6	teaching 页开宗句复核	https://minix1.woodhull.com/teaching/index.html	命中	Minix was written for use in teaching...（ref 11363 复用）	2026-11-28	c1 快照逐字核对
+V17.3.2.1	CACM 2004 资助段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	NWO grant... highly reliable system（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.1	CACM 动工句复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	began to develop MINIX 3（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.2	CACM 驱动出核段复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	move the device drivers entirely out（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.2	Waterloo 讲座页 multiserver 段取文	https://uwaterloo.ca/computer-science/dls-andrew-tanenbaum	命中	4000 lines in kernel... user-mode process（新 ref 11470 入库）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.3	信息表微内核定位句复核	http://mirror.math.princeton.edu/pub/oldlinux/Linux.old/Minix/minix.html	命中	microkernel-based design（ref 11360 复用）	2026-11-28	Tavily extract／c1 快照复用（逐字核对）
+V17.3.2.3	CACM 定名同步版次句复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	called MINIX 3 and coincided with the third edition（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.4	CACM 目标清单句复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	kernel failures are fatal（ref 11361 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.4	Waterloo 讲座页现状判断句取文	https://uwaterloo.ca/computer-science/dls-andrew-tanenbaum	命中	bigger and less reliable every year（ref 11470 复用）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.6	CACM 文末著录行复核	https://cacm.acm.org/research/lessons-learned-from-30-years-of-minix	命中	Computer 39, 5 (May 2006)（ref 11361 复用；斜体伪影照录）	2026-11-28	Tavily extract（逐字快照）
+V17.3.2.6	Waterloo 讲座论题句取文	https://uwaterloo.ca/computer-science/dls-andrew-tanenbaum	命中	The talk will discuss...（ref 11470 复用）	2026-11-28	Tavily extract（逐字快照）
+批末	Computer 2006 论文开放获取核查	https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109/MC.2006.156	未获全文	openAccessPdf status=CLOSED；未登记该 ref，路线论文面以 CACM 文末著录句承载	2026-11-28	Semantic Scholar API（curl）＋Tavily search 两次

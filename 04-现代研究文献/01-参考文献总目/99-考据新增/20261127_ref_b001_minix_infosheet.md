@@ -13,3 +13,7 @@
 3. [V17.1.2.1 用] Runs in protected mode on 286, 386, 486, Pentium
 4. [V17.1.2.2 用] MINIX 2.0 can be compiled in either 16-bit mode or 32-mode, depending on compile time flags. For 32-bit mode, a 386, 486, or Pentium is required.
 5. [V17.1.2.6 用] Tens of thousands of messages have been posted to this group so far. These messages have contained questions, bug reports, bug fixes, and new software.
+
+## 第 2 章追加引文池（b003／b004）
+
+- [V17.2.3.5 用] MINIX 1.5 (Intel, Macintosh, Amiga, Atari, SPARC)

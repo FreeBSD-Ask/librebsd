@@ -16,3 +16,14 @@
 6. [V17.1.2.4 用] Within a few days of its release, a USENET newsgroup, comp.os.minix, was started.
 7. [V17.1.3.1 用] So the next release, V7 (1979), came equipped with a license that explicitly forbade anyone from writing a book about it or teaching it to students.
 8. [V17.1.3.5 用] Figuring out how to distribute the code was a big problem. In those days (1987) almost nobody had a proper Internet connection (though newsgroups on USENET via the UUCP program and email existed at some universities).
+
+## 第 2 章追加引文池（b003／b004）
+
+- [V17.2.1.2 用] Since I was always thinking about future hardware, from day 1, the code clearly distinguished what code ran in “kernel mode” and what code ran as separate processes in “user mode,” even though the 8088 had only one mode.
+- [V17.2.1.3 用] like Lions did before me, and have my publisher, Prentice Hall, distribute the system, including all source code
+- [V17.2.1.5 用] In 2000, I finally convinced Prentice Hall to release MINIX 2 under the BSD license and make it (including all source code) freely available on the Internet.
+- [V17.2.1.6 用] My design goals for MINIX were as follows: * Build a V7 clone that ran on an IBM PC with only a single 360kB floppy disk; * Build and maintain the system using itself, or “self-hosting”
+- [V17.2.2.4 用] Have a clean design students could easily understand
+- [V17.2.2.5 用] Although the system was supposed to run on this configuration (and did), I realized from the start that to actually compile and build the whole system on a PC, I would need a larger system, namely one with the maximum possible RAM (640kB) and two 360kB 5¼-inch floppy disks.
+- [V17.2.3.1 用] Before a month had gone by, it had 40,000 readers, a huge number considering how few people even had access to USENET. MINIX became an instant cult item.
+- [V17.2.3.4 用] In 1997, MINIX 2, now changed to be POSIX-compatible rather than UNIX V7-compatible, was released, along with a second edition of my book _Operating Systems Design and Implementation_, now co-authored with Albert Woodhull, a professor at Hampshire College in Massachusetts.

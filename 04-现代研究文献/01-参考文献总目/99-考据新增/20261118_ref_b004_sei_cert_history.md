@@ -14,3 +14,9 @@
 2. [备用（1.4.1 时点面后续批可用），照录] Graduate student Robert Morris jarred the network-connected world from ambivalence regarding cybersecurity on November 2, 1988, by releasing a worm that brought the nascent Internet to its knees.
 
 3. [备用（CSIRT 网络面），照录] The CERT/CC has been instrumental in building a network of more than 50 national computer security incident response teams (CSIRTs) using tools and training that help managers, project leaders, CSIRT staff, and computer forensic professionals.
+
+## b007 追加引文池（2026-11-20 V61 b007 取用，同源异句异锚）
+
+4. [1.7.5 用] As a neutral third party, the CERT/CC reports vulnerabilities to vendors without revealing the identity of the reporter. This role allows the CERT/CC to work with competing vendors whose products contain the same vulnerability, free of conflicts of interest.
+
+5. [1.7.3 用] Since its formation, the CERT/CC has facilitated the mitigation of vulnerabilities and disseminated information through the publication of Vulnerability Notes, which include summaries, technical details, remediation information, and lists of affected vendors.

@@ -134,36 +134,36 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 41	4	4.7	4.7.3	用 lockstat 追踪锁竞争	filled	
 41	4	4.7	4.7.4	优化收益因平台而异	filled	
 41	4	4.7	4.7.5	优化止步于可测上限	skeleton	
-41	5	5.1	5.1.1	build.sh 的脚本化封装	filled	
-41	5	5.1	5.1.2	交叉工具链的生成途径	skeleton	
-41	5	5.1	5.1.3	构建产物的落盘布局	skeleton	
-41	5	5.1	5.1.4	主机与目标平台的划分	skeleton	
-41	5	5.1	5.1.5	构建体系的可重复保障	skeleton	
-41	5	5.2	5.2.1	源码树的目录分派	skeleton	
-41	5	5.2	5.2.2	共享代码与体系结构目录的隔断	skeleton	
-41	5	5.2	5.2.3	源码树对移植的牵制	skeleton	
-41	5	5.2	5.2.4	树的版本控制形态	skeleton	
-41	5	5.2	5.2.5	树结构的历次增删	skeleton	
-41	5	5.3	5.3.1	内核构建的配置入口	skeleton	
-41	5	5.3	5.3.2	用户空间构建的依赖次第	skeleton	
-41	5	5.3	5.3.3	两段构建的接续节点	skeleton	
-41	5	5.3	5.3.4	构建中断的排查路数	skeleton	
-41	5	5.3	5.3.5	构建体系的演化遗迹	skeleton	
-41	5	5.4	5.4.1	发布工程的职能边界	skeleton	
-41	5	5.4	5.4.2	发布分支的冻结规则	skeleton	
-41	5	5.4	5.4.3	发行公告的技术措辞	filled	
-41	5	5.4	5.4.4	发布流程的核对项目	skeleton	
-41	5	5.4	5.4.5	发布工程的组织骨架	skeleton	
-41	5	5.5	5.5.1	快照构建的周期编排	skeleton	
-41	5	5.5	5.5.2	多架构发行组合的排布	skeleton	
-41	5	5.5	5.5.3	安装镜像的生成工艺	skeleton	
-41	5	5.5	5.5.4	快照与正式发布的落差	skeleton	
-41	5	5.5	5.5.5	多架构发布的质量闸门	skeleton	
-41	5	5.6	5.6.1	构建体系中的测试环	skeleton	
-41	5	5.6	5.6.2	自动化测试的覆盖面	skeleton	
-41	5	5.6	5.6.3	测试结果的归档格式	skeleton	
-41	5	5.6	5.6.4	测试与发布的挂钩	skeleton	
-41	5	5.6	5.6.5	测试体系的养护代价	skeleton	
+41	5	5.1	5.1.1	build.sh 随 1.6 首发	filled	
+41	5	5.1	5.1.2	跨构建工具链落在 tooldir 目录	skeleton	
+41	5	5.1	5.1.3	DESTDIR 承接安装树	skeleton	
+41	5	5.1	5.1.4	构建主机、宿主与目标三者分列	skeleton	
+41	5	5.1	5.1.5	build.sh -P 固定源码时间戳	skeleton	
+41	5	5.2	5.2.1	顶层模块分立 src 与 xsrc	skeleton	
+41	5	5.2	5.2.2	sys／arch 按平台分列机器架构	skeleton	
+41	5	5.2	5.2.3	riscv 平台登记三年后方入发行	skeleton	
+41	5	5.2	5.2.4	源码树由 CVS 统一纳管	skeleton	
+41	5	5.2	5.2.5	平台表逐年增列与除名	skeleton	
+41	5	5.3	5.3.1	内核配置从 std 文件起手	skeleton	
+41	5	5.3	5.3.2	用户空间待工具链就绪再编	skeleton	
+41	5	5.3	5.3.3	工具、内核与用户态三段递进	skeleton	
+41	5	5.3	5.3.4	增量重跑省去全树重编	skeleton	
+41	5	5.3	5.3.5	顶层 Makefile 退居次位	skeleton	
+41	5	5.4	5.4.1	发布工程统筹排期与 pull-up	skeleton	
+41	5	5.4	5.4.2	分支冻结后只收 pull-up	skeleton	
+41	5	5.4	5.4.3	变更清单随公告逐条列名	filled	
+41	5	5.4	5.4.4	pull-up 须附提交邮件或补丁	skeleton	
+41	5	5.4	5.4.5	releng 成员名录见于项目页	skeleton	
+41	5	5.5	5.5.1	1.6 周期内三十九平台近逐日	skeleton	
+41	5	5.5	5.5.2	images 与 shared 分流	skeleton	
+41	5	5.5	5.5.3	安装镜像由 build.sh 生成	skeleton	
+41	5	5.5	5.5.4	快照 README 注明是否官方	skeleton	
+41	5	5.5	5.5.5	发行散列经安全官密钥签署	skeleton	
+41	5	5.6	5.6.1	ATF 自 5.0 起随系统发行	skeleton	
+41	5	5.6	5.6.2	测试套件单列为 tests.tgz	skeleton	
+41	5	5.6	5.6.3	测试报告可转 csv 与 xml	skeleton	
+41	5	5.6	5.6.4	官方测试按分支逐日重跑	skeleton	
+41	5	5.6	5.6.5	测试扩面之后的人力承接	skeleton	
 41	6	6.1	6.1.1	FFS 的磁盘布局继承	skeleton	
 41	6	6.1	6.1.2	文件系统语义的 BSD 底色	skeleton	
 41	6	6.1	6.1.3	FFS 在大容量介质上的伸展	skeleton	

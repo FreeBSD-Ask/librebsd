@@ -1,0 +1,16 @@
+{
+ "schema": "register_waterlock/1",
+ "db": "historical_claims",
+ "tag": "supp-V17-b003",
+ "session": "g7-v17c2-b003",
+ "host": "DESKTOP-RLOEIG9",
+ "pid": 7900,
+ "ttl_seconds": 10800,
+ "claim_count": 16,
+ "db_file": "\\\\Desktop-m5p610n\\d\\librebsd\\04-现代研究文献\\historical_claims.duckdb",
+ "live_max": 499284,
+ "probe_sql": "SELECT MAX(CAST(SUBSTR(claim_id, 7) AS INTEGER)) AS m FROM claim WHERE claim_id LIKE 'CL-RM-%'",
+ "acquired_at": "2026-11-28T04:33:06+08:00",
+ "min_claim_id": 499285,
+ "max_claim_id": 499300
+}

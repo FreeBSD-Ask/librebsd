@@ -1,0 +1,80 @@
+qid	source	object_id	snippet
+V15.3.4.2	claim	CL-3-007	学生要求大学行政当局解除对校园政治活动的禁令，并承认学生的言论自由与学术自由权利。
+V15.3.4.2	claim	CL-RM-496511	NRC 报告记：研究者需要充分的知识自由以随直觉探索并据初步结果调整计划——学术自由是军方资助环境中须保留的研究条件。
+V15.3.4.2	claim	CL-RM-010181	2008 年学生就 NetBSD MMU-less 系统支持项目征询（学士论文选题），获 Hubert Feyrer/Erik 回应资源——无 MMU 移植方向的教育性入口记录
+V15.3.4.2	claim	CL-RM-012087	Zwicky 问题清单修订版：加入 LISA II-IV 论文引用网络与商业产品名录（Unitech BACKUP.UNET/UBACKUP 等），明示作为 LISA 选题议程
+V15.3.4.2	claim	CL-RM-093913	obrien 转发 Sys Admin 杂志编辑 Amber Ankerholz 的回信，对方称自由 UNIX 主题未来可能纳入选题
+V15.3.4.2	claim	CL-RM-199128	Jordan Hubbard 说多数他接触的杂志已榨干 Linux 市场,不愿更快重复此类选题
+V15.3.4.2	claim	CL-RM-199693	Joseph Scott 说 Daemon News 每日站刻意避与 Slashdot 重复选题
+V15.3.4.2	claim	CL-1-101	Bell 等人 1970 年在 DEC 发表 PDP-11 小型机架构论文，作者包括 DEC 的 G. Bell、R. Cady、H. McFarland、B. Delagi、J. O’Laughli
+V15.3.4.2	claim	CL-1-118	1974 年 7 月，Dennis Ritchie 与 Ken Thompson 在《Communications of the ACM》第 17 卷发表《The UNIX Time-Sharing 
+V15.3.4.2	claim	CL-2-050	Pieuchot（2016）记载：自 4.3BSD-Reno 起，BSD 路由转发表以 PATRICIA 字典树（radix tree，r=2）取代哈希查找。
+V15.3.4.2	claim	CL-3-008	1973 年 11 月 Ken Thompson 与 Dennis Ritchie 在普渡大学 SOSP 发表首篇 Unix 论文，伯克利 Bob Fabry 出席后推动在伯克利获取 Unix。
+V15.3.4.2	claim	CL-3-022	Richard M. Karp 1972 年在伯克利发表的《Reducibility Among Combinatorial Problems》证明大量经典组合问题相互等价（NP 完全）。
+V15.3.4.3	claim	CL-RM-245587	莱纳特奥古斯松称 USB 与 Windows 协商方式并无成文规范，只能靠抓包实测
+V15.3.4.3	claim	CL-RM-010091	2010 年 postmaster 公告 freebsd-policy 列表因无活动退役
+V15.3.4.3	claim	CL-RM-010239	2019 年 8-9 月 FCP 20190401-ci_policy（CI 政策）在 fcp 列表激辩约 50 封：Li-Wen Hsu 修订流程自纠、Belousov 质疑 CI 阻断合入、Pro
+V15.3.4.3	claim	CL-RM-012656	comp.policy 新闻组创建之 RFD（讨论请求）由 Kehoe 发布
+V15.3.4.3	claim	CL-RM-012668	comp.admin.policy 创组投票通过 426:29（官方计票公告）
+V15.3.4.3	claim	CL-RM-015069	davshao二分指认xpt中断路由失败启动于6f1a15dc「sysctl - SMP performance work」至bb06d795之间（console五连WARNING后「 Giving 
+V15.3.4.3	claim	CL-RM-083258	Henry Spencer 说明 UNIX 源码规模小因原作者少且无形式规范约束
+V15.3.4.3	claim	CL-15-1522	据〔Intel QuickAssist 驱动 FreeBSD 移植讲座〕讲者口述：把驱动推向 FreeBSD 时编码规范约束更宽松——团队原本写成 camelCase 的代码、乃至形参多达 30 个的
+V15.3.4.4	claim	CL-RM-012529	1003.4 芝加哥报告（Gallmeister）：IPC 消息章遭删减，线程 mutex 与二值信号量调和，4b 另More Real-Time 立项或纳 Ada CIFO
+V15.3.4.4	claim	CL-RM-021734	Root Boy Jim 提议以 comp.unix.gizzards 调和 wizards 与 internals 之争
+V15.3.4.4	claim	CL-RM-026646	就长标识符之争提出调和意见并指出 ANSI 提案并未要求该特性
+V15.3.4.4	claim	CL-RM-038692	Scott Preece以其参加POSIX会议的经历说明标准制定需调和各厂商差异
+V15.3.4.4	claim	CL-RM-045016	Ian Evans 用日常真实应用实测 DECstation 比 SPARCstation 快三成到一倍 调和平均约五成 称性价比大体相当
+V15.3.4.4	claim	CL-3-007	学生要求大学行政当局解除对校园政治活动的禁令，并承认学生的言论自由与学术自由权利。
+V15.3.4.4	claim	CL-RM-496511	NRC 报告记：研究者需要充分的知识自由以随直觉探索并据初步结果调整计划——学术自由是军方资助环境中须保留的研究条件。
+V15.3.4.5	claim	CL-RM-010328	2024 年 Dave Cottlehuber 提出以 RabbitMQ 官方预编译包解除其对 Elixir 的构建依赖，让 RabbitMQ 与 Elixir 端口各自提速——语言栈互相锁死问题的工
+V15.3.4.5	claim	CL-RM-010496	2009 年 1 月 David Brownlee 提出按 -DM680x0 宏自动设置 CMACHFLAGS 编译旗标——m68k 多代 CPU 旗标之争的工程化解法。
+V15.3.4.5	claim	CL-RM-018047	SONY 软件管理者评用户组织是化解 GUI 大战与 FUD 的关键；批评供应商以 OS/GUI 差异化替代价格性能互操作，称碎片化最大赢家是 DOS-Windows-OS2 与微软——1991 平台
+V15.3.4.5	claim	CL-RM-020821	Barrett 提 /usr/bin/shquote：shell 脚本中转义参数予他令之需——923 字节，脚本引号地狱的工具化解法提案。
+V15.3.4.5	claim	CL-RM-025654	Guy Harris 考据 407 魔数本是跳过文件头的分支指令而 410 与 411 不是，锁文件竞态应以排他创建或 link 原子化解，csh 负字符即退出之弊以按位与修复
+V15.3.4.5	claim	CL-RM-010357	2019 年 Koichiro Iwao 提议为 Ruby 端口引入 FLAVORS 多版本机制，遭 Antoine Brodin、Adam Weinberger 与 Mathieu Arnold 以
+V15.3.4.5	claim	CL-RM-010467	2008 年 8 月 Matthias Scheler 引入 Sun 用 Mercurial 管理 Solaris 源码树的消息作为参照——比 NetBSD 树更大更老的先例冲击辩论。
+V15.3.4.5	claim	CL-RM-011537	2005 年 Jochen Kunz 指出 IP27 Origin 与 IP30 Octane 支持的主要障碍是缺失 64 位工具链，并引 OpenBSD 先例
+V15.3.4.5	claim	CL-RM-012055	Arnold Robbins 指认 Research Unix V8-V10 的 Blit/5620/gnot 终端与 sam 编辑器（界面在终端、文件操作在主机）为 NeWS 式服务端功能迁移的先例
+V15.3.4.5	claim	CL-RM-012247	Spencer 举 Waterloo Thoth 系统先例论线程与信号：线程收信号即死、无需 handler 与阻塞，恢复交由兄弟线程
+V15.3.5.1	claim	CL-RM-043202	Thad Floryan 批评用 binhex stuffit 与 MS Word 格式发布清单属于精英主义
+V15.3.5.1	claim	CL-RM-071269	Jesus Cash 自述 BSD 社区既专业又乐于助人，不像常见 Linux 社区那样有精英主义作风
+V15.3.5.1	claim	CL-RM-071750	worldly BSD 自述因在 -newbies 提问被指摘，反驳称已读手册与 Greg 的书，指这种精英态度不利 FreeBSD 扩大用户群
+V15.3.5.1	claim	CL-RM-090063	Eric Stanfield 自述在 FreeBSD 上跑反恐精英服务器，P2-400 加 512M 内存可稳定带 16 人
+V15.3.5.1	claim	CL-RM-090064	Mark Sergeant 自述 1GHz Duron 加 1.5GB 内存同机跑反恐精英与网页托管，日服务 10 万次展示
+V15.3.5.1	claim	CL-5-005	中文开源媒体（开源中国/知乎, 2021）的批评叙事将 FreeBSD 的市场处境概括为“大败局”，核心论点为 BSD 许可证“成也 BSDL，败也 BSDL”——大公司可无偿使用 FreeBSD 代
+V15.3.5.1	claim	CL-RM-000711	2025 年 12 月 30 日，FreeBSD 开发者 Edward Tomasz Napierała（trasz@）在 freebsd-hackers 邮件列表发表退休声明，批评 core 选举机
+V15.3.5.1	claim	CL-RM-010007	六点批评 Sun 工程文化（工程部不关心修复、支持反建议改用 Berkeley sendmail/smail）
+V15.3.5.1	claim	CL-RM-010014	1981 年 Bill Jolitz 批评 2.8BSD 发布带中的 MENLO_ECC 代码陈旧不可用，系临发布前混入的未审差异
+V15.3.5.1	claim	CL-RM-010435	1996 年 12 月 O'Reilly 编辑 Andy Oram 回应批评，称社区并未背弃非 x86 平台、只是不以永不停歇的剑守卫 UNIX——外部出版视角对移植路线的观察。
+V15.3.5.1	claim	CL-RM-010006	“Sun Fortran 有多烂”论战中的辩护立场（mcount profiling 混用所致）
+V15.3.5.1	claim	CL-RM-010450	2009 年 8 月 Julian Stacey 为 CTM 辩护：高效的推送技术优于 CVSup 的拉取模式——分发哲学之争在用户侧的表述。
+V15.3.5.1	claim	CL-RM-011877	Jerry Schwarz 辩护 Bourne shell 显式 export 系有意设计（区分环境变量与局部变量）——shell 设计决策当事人陈述
+V15.3.5.1	claim	CL-RM-012272	ORNL 的 White 为 NIST 辩护：UPE/1003.7 动议源自基层联邦系统程序员，并引 Gwyn 批评里根时代 NBS 更名 NIST 后转激进
+V15.3.5.1	claim	CL-RM-012834	2022 年 10 月，Maciej W. Rozycki 在多代 LRU/i486 支持之辩中为陷阱-仿真（trap-and-emulate）技术辩护：该技术自古有之且被部分处理器 ISA 明文允许
+V15.3.5.1	claim	CL-RM-035359	Moffett 亲述用 pathalias 配 dbm 时大部分时间耗在 dbm 例程尤其 delitem，询问有无提速办法
+V15.3.5.1	claim	CL-RM-061090	实测 RDI 三宝 Britelite 便携机：可跑 Sunview 与 OpenWindows，Mac 仿真约当 Mac SE，约一万二千美元
+V15.3.5.1	claim	CL-RM-187890	toshiba satelite a25 用 nero 刻三张 freebsd.org 的 iso 装盘，启动一两秒后报 ata0 channel 出错
+V15.3.5.1	claim	CL-RM-231370	2.2-beta 升级后对新增 Seagate elite 硬盘执行 newfs 即十秒内挂死，generic 与自定义内核皆然，2.1.6 正常
+V15.3.5.1	claim	CL-RM-270307	elite_bizkit：BFG 7650 GX2 Xorg -configure 报 NV(1) Cannot read V_BIOS 无有效模式
+V15.3.5.4	claim	CL-RM-017187	设备与内核配置综合性提案（免特殊设备文件系统）——386BSD 设备管理层设计思潮
+V15.3.5.4	claim	CL-RM-017191	对象与类型提案主线接续：文件系统框架跳转与消息传递模型讨论——386BSD 文件系统设计思潮
+V15.3.5.4	claim	CL-3-007	学生要求大学行政当局解除对校园政治活动的禁令，并承认学生的言论自由与学术自由权利。
+V15.3.5.4	claim	CL-3-006	Mario Savio 领导的伯克利自由言论运动（FSM）是 1960 年代美国大学校园第一次大规模公民不服从行动。
+V15.3.5.4	claim	CL-RM-000519	Stallman 于 1984 年启动 GNU 项目，1985 年成立 FSF 并发表《GNU 宣言》，1986 年阐明自由软件四项基本自由，1989 年发布 GPL v1；1998 年 OSI 成立
+V15.3.5.4	claim	CL-RM-010513	2003 年 6 月 Wojciech Puchar 发起以旧换新捐盘运动为 ftp.pl.netbsd.org 镜像募集 160GB 硬盘——地方镜像基础设施的民间筹资样本。
+V15.3.5.4	claim	CL-RM-011200	1999年11月Dan Moschuk在新成立的freebsd-audit列表发布首封信，提出随机化PID分配补丁，标志FreeBSD系统性安全审计运动启动。
+V15.3.5.4	claim	CL-RM-011885	henry 提议以 36 进制扩大 uucp 序号空间（decvax 回绕 3 天变约 1 年），并透露“至少一个站点正在做改进版 uucp”——uucp 演化运动早期证据
+V15.3.6.4	claim	CL-RM-016091	Mindaugas Rasiukevicius 回应 Darren Reed 对 BPF 协处理器方案的质疑：主张 IPv6 头解析应另立指令而非由协处理器承担，并认为哪些操作应晋升为正式 BPF 指
+V15.3.6.4	claim	CL-RM-242349	称提议合情合理但魔鬼在细节，关于何者移出 base 及何者晋升必有漫长争论
+V15.3.6.4	claim	CL-RM-335248	René Ladan 以 portmgr-secretary 身份宣布上周 portmgr 新晋成员 Adam Weinberger 与 Mark Felder，Mark 活跃于 Ports Secu
+V15.3.6.4	claim	CL-RM-383877	Scott Bennett 在 sys/i386/vm 中找超大页晋升与降级阈值未找到并询问
+V15.3.6.4	claim	CL-RM-012259	Brader 汇总 struct hack（尾维 [1]）合法性跨组论战：Gwyn 与 Ritchie 皆断不安全，点名求反例实现
+V15.3.6.4	claim	CL-RM-012734	tcsh 二进制分发合法性疑问（README 警告可能非法 giveaway）——tcsh 受 BSD csh 源码许可约束一手
+V15.3.6.4	claim	CL-RM-013301	Maciej 提出 VAX 浮点 ABI 方案：以 multilib 切换 F/D/G 到 float/double/long double 的映射，兼顾 C99 子集合法性与现代软件期望的指数范围；
+V15.3.6.4	claim	CL-RM-015511	der Mouse 质疑 .local 域名的合法性（IANA 无 .local TLD），并讨论 mDNS 协议是否应受制于按键、与 RFC 对链路本地命名的支持条款之争
+V15.3.6.4	claim	CL-RM-016739	Andrew V. Stesin 报告 FreeBSD 1.1.5R 内核 execve() 缺陷：损坏的 argv 参数（未终止数组等）常致系统静默立即重启（Natalie Vinokurova 发
+V15.3.6.4	claim	CL-RM-128697	Wojciech Puchar 启用大页后 promotions 为 2703 而 mappings 仅 610 i386 笔记本上恒为 0
+V15.3.6.4	claim	CL-RM-153665	Marko Zec 的算法需 1M 至 1G 连续内存并想强制映射 superpage，promotions 仅 543，p_failures 266253
+V15.3.6.4	claim	CL-RM-184747	Pawel Worach 提补丁修 sys compat ndis subr_usbd.c 的 K R int promotion 警告
+V15.3.6.4	claim	CL-RM-238782	以sysctl vm.pmap.pte1.promotions证明内核确在跑ARM_NEW_PMAP
+V15.3.6.4	claim	CL-RM-362716	发帖人纠正对方结论，指出这些计数说明已有 543 个 superpage 映射是由 promotion 建立的

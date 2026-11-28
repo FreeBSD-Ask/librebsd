@@ -9,3 +9,7 @@
 ## 逐字引文池
 
 1. [V17.1.2.4 用] In early 1992, noticing the way that the Linux discussion had taken over the discussion in comp.os.minix, he decided it was time to comment on Linux.
+
+## 第 2 章追加引文池（b003／b004）
+
+- [V17.2.3.6 用] Andrew Tanenbaum is a well-respected researcher who has made a very good living thinking about operating systems and OS design.

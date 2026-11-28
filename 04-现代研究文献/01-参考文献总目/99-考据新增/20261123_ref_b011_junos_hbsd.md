@@ -9,3 +9,7 @@
 - **HardenedBSD May 2026 report 句（V57.4.4.3 B 块）**：I am working on a candidate patch to our build scripts to perform this export. The archives exported by our builder VMs will be signed with our normal ssh key-based signing method.
 - **口径**：Juniper 两页为厂商官方文档（L3 official）；Day One 书为 Juniper 官方出版物（PDF 文本层抽取、vMX 面"Free BSD"空格系 PDF 文本层形态照录）；HardenedBSD May 2026 状态报告与 README Verifying Build Artifacts 节为**异文**（前者谈 Radicle 导出签名方法、后者谈构建产物验证步骤）——4.4.3 双源自此成立（J52 同发布者两份文档双源对照）。
 - **考据日期**：2026-11-23
+
+## supp-V57-b013 追加引文（G6 全责线，2026-11-26）
+
+- vMX 书句二（V57.5.2.3 A 块；PFE 节）：The PFE does also utilize DPDK for higher performance.

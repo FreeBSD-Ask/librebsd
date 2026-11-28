@@ -212,3 +212,9 @@ ONR／NSF 的多元资助渠道：同行评议、研究生奖学金与设备经�
 > The Office of Naval Research (ONR) and NSF, in contrast, have supported individual researchers at a more diverse set of institutions. They have awarded numerous peer-review grants to individual researchers, especially in universities. NSF has also been active in supporting educational and research needs more broadly, awarding graduate student fellowships and providing funding for research equipment and infrastructure.
 
 注：本段取 NAP 开放章节页 chapter/2（Executive Summary），访问日 2026-11-17（nap.edu 直连循环重定向，exa 文本层取文，引文逐字录入）；与 b041 的 chapter/2 取段（延续资助句）不重叠。
+
+## 五、补充引文（b042 取用，Executive Summary 章内）
+
+语音识别资助与市场化的时序（2.1.1B）：
+
+> For example, speech recognition systems, which had been the focus of DARPA funding in the early 1970s, finally entered the marketplace in the mid-1990s.

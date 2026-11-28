@@ -22,3 +22,7 @@
 ## supp-V57-b011 追加引文（G6 全责线，2026-11-23）
 
 - 官网文章句（V57.4.4.3 A 块；Verifying Build Artifacts 文章本体，README 同文异载体不互证 J94）：The HardenedBSD build artifacts are signed with an SSH key. SSH keys are used so that artifacts can be validated using only tools included in the base operating system.
+
+## supp-V57-b013 追加引文（G6 全责线，2026-11-26）
+
+- Ports 节句（V57.5.2.3 B 块）：The Ports Collection lives outside the context of the base OS. We automatically sync every six hours with FreeBSD.

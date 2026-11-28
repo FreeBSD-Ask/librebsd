@@ -228,32 +228,32 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 36	8	8.9	8.9.2	Windows Server 2008 R2 的虚拟化	filled	
 36	8	8.9	8.9.3	Solaris 11 Express 的容器	filled	
 36	9	9.1	9.1.1	安装器换代的分界点	filled	
-36	9	9.1	9.1.2	安装流程的自动化	skeleton	
-36	9	9.1	9.1.3	旧安装器的退场步骤	skeleton	
-36	9	9.2	9.2.1	部署流程的环节划分	skeleton	
-36	9	9.2	9.2.2	介质与网络的双通道	skeleton	
+36	9	9.1	9.1.2	安装流程的自动化	filled	
+36	9	9.1	9.1.3	旧安装器的退场步骤	filled	
+36	9	9.2	9.2.1	部署流程的环节划分	filled	
+36	9	9.2	9.2.2	介质与网络的双通道	filled	
 36	9	9.2	9.2.3	部署完成度的判据	skeleton	
-36	9	9.3	9.3.1	分区表的格式迁移	skeleton	
-36	9	9.3	9.3.2	固件环境的启动假设	skeleton	
-36	9	9.3	9.3.3	大容量介质的安装通道	skeleton	
-36	9	9.4	9.4.1	连续运行的资源约束	skeleton	
+36	9	9.3	9.3.1	分区表的格式迁移	filled	
+36	9	9.3	9.3.2	固件环境的启动假设	filled	
+36	9	9.3	9.3.3	大容量介质的安装通道	filled	
+36	9	9.4	9.4.1	连续运行的资源约束	filled	
 36	9	9.4	9.4.2	故障切换的存储前提	skeleton	
-36	9	9.4	9.4.3	维护窗口的压缩手法	skeleton	
-36	9	9.5	9.5.1	基本系统与包的分野	skeleton	
-36	9	9.5	9.5.2	外部软件的分发方式	skeleton	
-36	9	9.5	9.5.3	边界明确的制度后果	skeleton	
+36	9	9.4	9.4.3	维护窗口的压缩手法	filled	
+36	9	9.5	9.5.1	基本系统与包的分野	filled	
+36	9	9.5	9.5.2	外部软件的分发方式	filled	
+36	9	9.5	9.5.3	边界明确的制度后果	filled	
 36	9	9.6	9.6.1	能力模式的系统位置	filled	
-36	9	9.6	9.6.2	沙箱对进程模型的重塑	skeleton	
+36	9	9.6	9.6.2	沙箱对进程模型的重塑	filled	
 36	9	9.6	9.6.3	安全模型的扩展代价	skeleton	
-36	9	9.7	9.7.1	发行介质的地位变化	skeleton	
+36	9	9.7	9.7.1	发行介质的地位变化	filled	
 36	9	9.7	9.7.2	部署系统的组件目录	skeleton	
-36	9	9.7	9.7.3	过渡期的版本序列	skeleton	
+36	9	9.7	9.7.3	过渡期的版本序列	filled	
 36	9	9.8	9.8.1	安装流程的定义权	skeleton	
-36	9	9.8	9.8.2	启动链的组件分段	skeleton	
-36	9	9.8	9.8.3	工具链定义权的转移	skeleton	
-36	9	9.9	9.9.1	Linux 的同期发行线	skeleton	
-36	9	9.9	9.9.2	Windows 8 的界面转向	skeleton	
-36	9	9.9	9.9.3	商业 UNIX 的收缩	skeleton	
+36	9	9.8	9.8.2	启动链的组件分段	filled	
+36	9	9.8	9.8.3	工具链定义权的转移	filled	
+36	9	9.9	9.9.1	Linux 的同期发行线	filled	
+36	9	9.9	9.9.2	Windows 8 的界面转向	filled	
+36	9	9.9	9.9.3	商业 UNIX 的收缩	filled	
 36	10	10.1	10.1.1	编译器与标准库的移出	skeleton	
 36	10	10.1	10.1.2	编译器默认的更换	skeleton	
 36	10	10.1	10.1.3	依赖减少的连带账	skeleton	

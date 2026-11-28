@@ -18,3 +18,18 @@
 8. [V17.1.3.4 用] This strategy has the advantage that everybody passes. Unfortunately, nobody learns anything about operating systems this way.
 9. [V17.1.3.5 用] Fortunately, substantial microcomputers have now become so inexpensive that acquiring 20 machines just for the operating systems lab is becoming a real possibility at many schools.
 10. [V17.1.3.6 用] The source code listing of appendix E contains line numbers, and these line numbers are used throughout the book to pinpoint the code under discussion.
+
+## 第 2 章追加引文池（b003／b004）
+
+- [V17.2.1.1 用] Dept. of Mathematics and Computer Science Vrije Universiteit
+- [V17.2.1.2 用] Unlike UNIX which is organized as a single monolithic program that is loaded into memory at system boot time and then run, the MINIX kernel itself is structured in a much more modular way, as a collection of processes that communicate with each other and with user processes by sending and receiving messages.
+- [V17.2.1.3 用] To deal with this issue, I jotted down some notes.
+- [V17.2.1.5 用] The software has been copyright by Prentice-Hall. It is not public domain. However, Prentice-Hall is permitting copies of both the binaries and sources to be made for educational use without requiring a license or payment.
+- [V17.2.1.6 用] Faced with this problem for my own students, and seeing no solution in sight, several years ago I simply bit the bullet and sat down and wrote a new operating system for classroom use from scratch.
+- [V17.2.2.1 用] In this way they get to see a whole system close up, without having to write all the code.
+- [V17.2.2.2 用] Of the 719 pages, 253 are the kernel listing, in C.
+- [V17.2.2.3 用] For courses on operating systems, it is much more difficult to arrange for a suitable programming laboratory.
+- [V17.2.2.4 用] First comes a thorough treatment of the relevant principles (thorough enough to be usable as a university textbook on operating systems). Next comes a general discussion of how the principles have been applied in MINIX. Finally there is a procedure by procedure description of how the relevant part of MINIX works in detail.
+- [V17.2.2.5 用] I have also written a complete IBM PC simulator in C, so that MINIX can be run on the simulator on top of UNIX on an ordinary time-sharing machine.
+- [V17.2.2.6 用] Appendix E is a full listing of the operating system. The utilities (mercifully) are not listed.
+- [V17.2.3.6 用] Studying the principles and seeing how they are applied in a real system gives the student a better understanding of the subject than either the principles or the code alone would.

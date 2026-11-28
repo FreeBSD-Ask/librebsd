@@ -38,3 +38,12 @@
 2. 3,150 美元是当事人 Segan 的预估（“will probably be getting”），非官方结算数；只能作“参与者预期实收约 3,150 美元”的记载，不得当作全体非美学生的实际到账数。
 3. 4,500 美元是项目设计的全额；同日报道另记首期 500 美元支票（见参与者 FAQ 卡），两者为总额与分期关系，不得混为两套标准。
 4. “clashed with existing bounty programs”为记者概括＋Weidman 观点；可证“与既有悬赏惯例相撞”，不可扩写为“与整个志愿传统决裂”。
+
+
+## 三、补引（2026-11-28，V68 b022 批）
+
+完成率的组织差异：
+
+> Nor was this completion rate uniform. Ubuntu, for example, reports a completion rate of only 64%, and KDE reports a 67% completion rate. However, talking to students and mentors, it seems clear that, despite varying success rates, a wide variety of new projects has been added to FOSS code bases.
+
+读用界限：该段为记者转述组织自报的完成率（Ubuntu 64%、KDE 67%），非 Google 官方统计；与统计页 2005 年全局 80% 并列时须注明口径不同。
