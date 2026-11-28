@@ -27,7 +27,7 @@ vol	chapter	sec_no	sub_no	title	status	evidence
 46	1	1.6	1.6.1	5.7 移除加密加速卡与播放器驱动	skeleton	
 46	1	1.6	1.6.2	5.2 起默认禁用 SSLv2	filled	
 46	1	1.6	1.6.3	网络栈为多处理器改造让路	filled	
-46	1	1.6	1.6.4	5.9 起 pledge 覆盖基础系统多数程序	filled	
+46	1	1.6	1.6.4	5.9 起 pledge 覆盖基本系统多数程序	filled	
 46	1	1.6	1.6.5	5.5 起 time_t 全平台 64 位	filled	
 46	1	1.7	1.7.1	审计团队常年保持六到十二人	skeleton	
 46	1	1.7	1.7.2	源码树权限分读写与只读两级	filled	
