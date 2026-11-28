@@ -325,6 +325,13 @@ REGISTRY = [
          object="同一语料库的 V1–V5／V10／V12 独立 SQL 复算（不复用主验证器判据代码）",
          trigger="主验证器通过后，交叉复核轮",
          selftest="--selftest", in_tests_readme=False),
+    dict(no="第四十八件", script="00-编纂规则与格式规范/01-规则/脚本与命令/audit_tool_registry.py",
+         kind="门禁（工具表，独立计数）",
+         object="S09 全局工具表：B1 表头 schema／B2 必填／B3 生命周期枚举／B4 路径存在／"
+                "B5 tracked 与 git ls-files 一致／B6 stable 三判据／B7 id 与 path 唯一／"
+                "B8 孤儿未入表／B9 one-shot 清单禁 tracked＋TTL 统计／B10 dashboard 计数一致",
+         trigger="工具总表重生成后、新增或删除固定脚本后、每批收口（2026-11-28 立）",
+         selftest="--selftest", in_tests_readme=False),
 ]
 
 
@@ -422,6 +429,7 @@ STAGE_MAP = {
     "build_theme_index.py": "G3",
     "verify_tuhs_wiki.py": "G4",
     "verify_tuhs_wiki_sql.py": "G4",
+    "audit_tool_registry.py": "G5",
 }
 
 
