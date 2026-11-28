@@ -1,0 +1,407 @@
+[
+  {
+    "db": "bsd-derivatives",
+    "meta": "MISSING",
+    "tables": 7,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 19575835,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 20554296
+  },
+  {
+    "db": "causal_graph",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 11,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 27
+  },
+  {
+    "db": "changelog",
+    "meta": "MISSING",
+    "tables": 2,
+    "pk_plan": [
+      {
+        "table": "entries",
+        "column": "id",
+        "rows": 3659,
+        "unique": true
+      },
+      {
+        "table": "file_archive",
+        "column": "id",
+        "rows": 121,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 3780
+  },
+  {
+    "db": "cross_indexes",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 10,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 3855
+  },
+  {
+    "db": "cross_source_identity",
+    "meta": "MISSING",
+    "tables": 2,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 85
+  },
+  {
+    "db": "darwin",
+    "meta": "MISSING",
+    "tables": 8,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 362193,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 366473
+  },
+  {
+    "db": "doubts_standalone",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 7,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 16146
+  },
+  {
+    "db": "dragonfly",
+    "meta": "MISSING",
+    "tables": 10,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 1768429,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 2425219
+  },
+  {
+    "db": "fact_checks",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 5,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 81
+  },
+  {
+    "db": "freebsd",
+    "meta": "MISSING",
+    "tables": 11,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 8274603,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 9579745
+  },
+  {
+    "db": "historical_claims",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 34,
+    "pk_plan": [
+      {
+        "table": "consistency_check",
+        "column": "id",
+        "rows": 1987,
+        "unique": true
+      },
+      {
+        "table": "entity_relation",
+        "column": "id",
+        "rows": 1639,
+        "unique": true
+      },
+      {
+        "table": "evidence_entity",
+        "column": "id",
+        "rows": 11732,
+        "unique": true
+      },
+      {
+        "table": "source_independence",
+        "column": "id",
+        "rows": 5557,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 2128244
+  },
+  {
+    "db": "illumos-gate",
+    "meta": "MISSING",
+    "tables": 6,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 298721,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 323130
+  },
+  {
+    "db": "linux-kernel",
+    "meta": "MISSING",
+    "tables": 11,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 3132751,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 4651630
+  },
+  {
+    "db": "metadata_interfaces",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 7,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 10066
+  },
+  {
+    "db": "netbsd",
+    "meta": "MISSING",
+    "tables": 9,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 27271149,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 29273016
+  },
+  {
+    "db": "openbsd",
+    "meta": "MISSING",
+    "tables": 9,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 2307753,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 2800089
+  },
+  {
+    "db": "openssh",
+    "meta": "MISSING",
+    "tables": 7,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 14867
+  },
+  {
+    "db": "openssh-apple",
+    "meta": "MISSING",
+    "tables": 8,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 7459,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 7539
+  },
+  {
+    "db": "openzfs",
+    "meta": "MISSING",
+    "tables": 7,
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 84178,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 125993
+  },
+  {
+    "db": "original_sources",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 7,
+    "pk_plan": [
+      {
+        "table": "blocks",
+        "column": "id",
+        "rows": 50,
+        "unique": true
+      },
+      {
+        "table": "cross_references",
+        "column": "id",
+        "rows": 56,
+        "unique": true
+      },
+      {
+        "table": "files",
+        "column": "id",
+        "rows": 605,
+        "unique": true
+      },
+      {
+        "table": "kaoju_records",
+        "column": "id",
+        "rows": 572,
+        "unique": true
+      },
+      {
+        "table": "security_vulnerabilities",
+        "column": "id",
+        "rows": 7,
+        "unique": true
+      },
+      {
+        "table": "update_log",
+        "column": "id",
+        "rows": 21,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 1320
+  },
+  {
+    "db": "phoronix_news",
+    "meta": "MISSING",
+    "tables": 6,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 874
+  },
+  {
+    "db": "references_fulltext",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 13,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 1081366
+  },
+  {
+    "db": "research_notes",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 5,
+    "pk_plan": [
+      {
+        "table": "blocks",
+        "column": "id",
+        "rows": 486894,
+        "unique": true
+      },
+      {
+        "table": "cross_references",
+        "column": "id",
+        "rows": 18441,
+        "unique": true
+      },
+      {
+        "table": "files",
+        "column": "id",
+        "rows": 1800,
+        "unique": true
+      },
+      {
+        "table": "update_log",
+        "column": "id",
+        "rows": 21,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 507166
+  },
+  {
+    "db": "review_reports",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 6,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 254
+  },
+  {
+    "db": "sacred_sources",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 5,
+    "pk_plan": [
+      {
+        "table": "cross_references",
+        "column": "id",
+        "rows": 638,
+        "unique": true
+      },
+      {
+        "table": "files",
+        "column": "id",
+        "rows": 54,
+        "unique": true
+      },
+      {
+        "table": "update_log",
+        "column": "id",
+        "rows": 20,
+        "unique": true
+      }
+    ],
+    "errors": [],
+    "total_rows": 3984
+  },
+  {
+    "db": "tuhs_wiki",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 11,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 46209
+  },
+  {
+    "db": "资料数据库",
+    "meta": "NONCONFORMING:schema_meta",
+    "tables": 9,
+    "pk_plan": [],
+    "errors": [],
+    "total_rows": 44702
+  }
+]

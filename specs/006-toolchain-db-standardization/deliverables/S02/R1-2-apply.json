@@ -1,0 +1,633 @@
+[
+  {
+    "db": "bsd-derivatives",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_105820.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 19575835,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "causal_graph",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 9→1"
+    ],
+    "row_diff": [
+      "schema_meta: 9→1"
+    ],
+    "backup_slot": "20261128_105848.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "changelog",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入",
+      "PK entries.id",
+      "PK file_archive.id"
+    ],
+    "errors": [],
+    "row_diff": [],
+    "backup_slot": "20261128_105848.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "entries",
+        "column": "id",
+        "rows": 3659,
+        "unique": true
+      },
+      {
+        "table": "file_archive",
+        "column": "id",
+        "rows": 121,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "cross_indexes",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 9→1"
+    ],
+    "row_diff": [
+      "schema_meta: 9→1"
+    ],
+    "backup_slot": "20261128_105850.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "cross_source_identity",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [],
+    "row_diff": [],
+    "backup_slot": "20261128_105850.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": []
+  },
+  {
+    "db": "darwin",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_105851.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 362193,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "doubts_standalone",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 8→1"
+    ],
+    "row_diff": [
+      "schema_meta: 8→1"
+    ],
+    "backup_slot": "20261128_105852.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "dragonfly",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_105855.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 1768429,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "fact_checks",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 11→1"
+    ],
+    "row_diff": [
+      "schema_meta: 11→1"
+    ],
+    "backup_slot": "20261128_105901.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "freebsd",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_105902.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 8274603,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "historical_claims",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入",
+      "PK consistency_check.id",
+      "PK entity_relation.id",
+      "PK evidence_entity.id",
+      "PK source_independence.id"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 24→1"
+    ],
+    "row_diff": [
+      "schema_meta: 24→1"
+    ],
+    "backup_slot": "historical_claims_before_supp-V71-b032_20261118.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": [
+      {
+        "table": "consistency_check",
+        "column": "id",
+        "rows": 1987,
+        "unique": true
+      },
+      {
+        "table": "entity_relation",
+        "column": "id",
+        "rows": 1639,
+        "unique": true
+      },
+      {
+        "table": "evidence_entity",
+        "column": "id",
+        "rows": 11732,
+        "unique": true
+      },
+      {
+        "table": "source_independence",
+        "column": "id",
+        "rows": 5557,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "illumos-gate",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_105933.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 298721,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "linux-kernel",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_105934.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 3132751,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "metadata_interfaces",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 10→1"
+    ],
+    "row_diff": [
+      "schema_meta: 10→1"
+    ],
+    "backup_slot": "20261128_110015.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "netbsd",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_110016.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 27271149,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "openbsd",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_110108.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 2307753,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "openssh",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [],
+    "row_diff": [],
+    "backup_slot": "20261128_110114.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": []
+  },
+  {
+    "db": "openssh-apple",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_110114.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 7459,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "openzfs",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "PK commit_files.id: Dependency Error: Cannot alter entry \"commit_files\" because there are entries that depend on it."
+    ],
+    "row_diff": [],
+    "backup_slot": "20261128_110115.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": [
+      {
+        "table": "commit_files",
+        "column": "id",
+        "rows": 84178,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "original_sources",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入",
+      "PK blocks.id",
+      "PK cross_references.id",
+      "PK files.id",
+      "PK kaoju_records.id",
+      "PK security_vulnerabilities.id",
+      "PK update_log.id"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 9→1"
+    ],
+    "row_diff": [
+      "schema_meta: 9→1"
+    ],
+    "backup_slot": "20261128_110116.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": [
+      {
+        "table": "blocks",
+        "column": "id",
+        "rows": 50,
+        "unique": true
+      },
+      {
+        "table": "cross_references",
+        "column": "id",
+        "rows": 56,
+        "unique": true
+      },
+      {
+        "table": "files",
+        "column": "id",
+        "rows": 605,
+        "unique": true
+      },
+      {
+        "table": "kaoju_records",
+        "column": "id",
+        "rows": 572,
+        "unique": true
+      },
+      {
+        "table": "security_vulnerabilities",
+        "column": "id",
+        "rows": 7,
+        "unique": true
+      },
+      {
+        "table": "update_log",
+        "column": "id",
+        "rows": 21,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "phoronix_news",
+    "actions": [
+      "schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [],
+    "row_diff": [],
+    "backup_slot": "20261128_110116.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "MISSING",
+    "pk_plan": []
+  },
+  {
+    "db": "references_fulltext",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 9→1"
+    ],
+    "row_diff": [
+      "schema_meta: 9→1"
+    ],
+    "backup_slot": "references_fulltext_before_supp-V71-b032_20261118.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "research_notes",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入",
+      "PK blocks.id",
+      "PK cross_references.id",
+      "PK files.id",
+      "PK update_log.id"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 10→1"
+    ],
+    "row_diff": [
+      "schema_meta: 10→1"
+    ],
+    "backup_slot": "20261128_110145.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": [
+      {
+        "table": "blocks",
+        "column": "id",
+        "rows": 486894,
+        "unique": true
+      },
+      {
+        "table": "cross_references",
+        "column": "id",
+        "rows": 18441,
+        "unique": true
+      },
+      {
+        "table": "files",
+        "column": "id",
+        "rows": 1800,
+        "unique": true
+      },
+      {
+        "table": "update_log",
+        "column": "id",
+        "rows": 21,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "review_reports",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 10→1"
+    ],
+    "row_diff": [
+      "schema_meta: 10→1"
+    ],
+    "backup_slot": "20261128_110148.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "sacred_sources",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入",
+      "PK cross_references.id",
+      "PK files.id",
+      "PK update_log.id"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 11→1"
+    ],
+    "row_diff": [
+      "schema_meta: 11→1"
+    ],
+    "backup_slot": "20261128_110149.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": [
+      {
+        "table": "cross_references",
+        "column": "id",
+        "rows": 638,
+        "unique": true
+      },
+      {
+        "table": "files",
+        "column": "id",
+        "rows": 54,
+        "unique": true
+      },
+      {
+        "table": "update_log",
+        "column": "id",
+        "rows": 20,
+        "unique": true
+      }
+    ]
+  },
+  {
+    "db": "tuhs_wiki",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 15→1"
+    ],
+    "row_diff": [
+      "schema_meta: 15→1"
+    ],
+    "backup_slot": "20261128_110150.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  },
+  {
+    "db": "资料数据库",
+    "actions": [
+      "schema_meta→schema_meta_legacy；合规 schema_meta 创建",
+      "schema_meta 合规行写入"
+    ],
+    "errors": [
+      "行数变化：schema_meta: 13→1"
+    ],
+    "row_diff": [
+      "schema_meta: 13→1"
+    ],
+    "backup_slot": "20261128_110151.duckdb.gz",
+    "meta_conforming": true,
+    "meta_before": "NONCONFORMING:schema_meta",
+    "pk_plan": []
+  }
+]
