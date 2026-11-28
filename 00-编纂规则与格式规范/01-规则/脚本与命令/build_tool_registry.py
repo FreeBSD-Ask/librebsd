@@ -319,12 +319,12 @@ def parse_date_tok(tok: str) -> datetime | None:
         return None
 
 
-def build_oneshot(root: Path, tracked: set[str]) -> list[dict]:
+def build_oneshot(root: Path, tracked: set[str], as_of: datetime | None = None) -> list[dict]:
     script = root / "script"
     out: list[dict] = []
     if not script.exists():
         return out
-    now = datetime.now(TZ)
+    ref = (as_of or datetime.now(TZ)).date()
     for p in sorted(script.iterdir(), key=lambda x: x.name):
         if not p.is_file() or p.suffix.lower() not in SCRIPT_EXTS:
             continue
@@ -332,7 +332,7 @@ def build_oneshot(root: Path, tracked: set[str]) -> list[dict]:
         st = p.stat()
         dt, src = embedded_date(p)
         if dt:
-            age = (now - dt).days
+            age = (ref - dt.date()).days
             ttl = "stale" if age > TTL_DAYS else "fresh"
             asof = dt.strftime("%Y-%m-%d")
         else:
@@ -343,6 +343,7 @@ def build_oneshot(root: Path, tracked: set[str]) -> list[dict]:
             "path": rel,
             "ext": p.suffix.lower(),
             "bytes": st.st_size,
+            "as_of": ref.isoformat(),
             "date_asof": asof,
             "date_source": src,
             "age_days": age,
@@ -466,12 +467,23 @@ def main() -> int:
     created = git_created_all(root)
     overrides = load_overrides(root)
     rows = build_rows(root, tracked, gates, refs, created, overrides)
-    oneshot = build_oneshot(root, tracked)
+    # --check 回读既有清单的 as_of 基准，保证跨日复算字节稳定
+    as_of = None
+    one_p = out / "one-shot清单.tsv"
+    if a.check and one_p.exists():
+        try:
+            with one_p.open(encoding="utf-8", newline="") as fh:
+                first = next(csv.DictReader(fh, delimiter="\t"), None)
+            if first and first.get("as_of"):
+                as_of = datetime.strptime(first["as_of"], "%Y-%m-%d").replace(tzinfo=TZ)
+        except Exception:  # noqa: BLE001
+            as_of = None
+    oneshot = build_oneshot(root, tracked, as_of)
 
     tsv_bytes = render_tsv_bytes(rows)
     md = dashboard(root, rows, oneshot)
-    one_header = ["path", "ext", "bytes", "date_asof", "date_source", "age_days", "ttl",
-                  "tracked", "purpose"]
+    one_header = ["path", "ext", "bytes", "as_of", "date_asof", "date_source", "age_days",
+                  "ttl", "tracked", "purpose"]
     import io
     buf = io.StringIO(newline="")
     w = csv.DictWriter(buf, fieldnames=one_header, delimiter="\t", lineterminator="\n")
