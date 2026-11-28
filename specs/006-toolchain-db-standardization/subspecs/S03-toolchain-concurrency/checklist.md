@@ -3,7 +3,7 @@ spec_id: S03
 title: 工具链归一化与并发
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 七、工具链归一化与并发（S03 的设计约束）
-version: 1.0.1
+version: 1.0.2
 status: closed
 goals: [2]
 owner: ykla

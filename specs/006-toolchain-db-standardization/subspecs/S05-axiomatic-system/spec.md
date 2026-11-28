@@ -3,7 +3,7 @@ spec_id: S05
 title: 公理化体系
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 九、公理化体系（S05 的设计约束）
-version: 1.0.1
+version: 1.0.2
 status: closed
 goals: [4]
 owner: ykla
@@ -151,6 +151,18 @@ binding_id: TB-20261127-S05
 - `traceability.tsv`
 - `limitations.md`
 - `REPRODUCE.md`
+
+### 8.1 实际交付（2026-11-28 复核）
+
+| 计划件 | 实际落点 |
+| ------ | -------- |
+| `公理化体系.md` | `axiomatic/公理化体系.md` |
+| `axioms.als` | `axiomatic/axioms.als`（Alloy 6.2.0 已运行：Default SAT／T1 UNSAT／T2 UNSAT） |
+| `Axioms.tla` | `axiomatic/Axioms.tla`（随附未运行，不作为证书证据） |
+| `Proofs.lean` | **未交付**：Lean／Rocq 层按 S05 P4 延后，见 `axiomatic/limitations.md` §4 |
+| `traceability.tsv` | `axiomatic/traceability.tsv` |
+| `limitations.md` | `axiomatic/limitations.md` |
+| `REPRODUCE.md` | `axiomatic/ALLOY-RUN.md`＋`axiomatic/alloy-run/receipt.json`（Alloy 复现步骤与回执） |
 
 ## 9. 风险与未决
 
