@@ -53,10 +53,12 @@ from __future__ import annotations
 import argparse
 import hashlib
 import html as html_mod
+import ipaddress
 import json
 import os
 import re
 import shutil
+import socket
 import sys
 import time
 import urllib.parse as up
@@ -196,6 +198,35 @@ def fail(check_id: str, name: str, expected: str, actual: str, detail: str) -> C
 # 独立页面清单派生（V1 联网分支）
 # =============================================================================
 
+def ssrf_rejection(url: str) -> Optional[str]:
+    """SSRF 防线（本文件独立实现，不引用主验证器）：只放行 http/https 公网地址。
+
+    索引页抓取目标来自外部内容，属不可信输入；“抓取不受 robots 限制”不构成访问本机、
+    内网、链路本地或云元数据地址的授权。解析后逐地址校验，DNS 重绑定残差以注释披露。
+    """
+    parts = up.urlsplit(url)
+    if parts.scheme not in ("http", "https"):
+        return "scheme_not_allowed"
+    if parts.username or parts.password:
+        return "credentials_in_url"
+    host = parts.hostname
+    if not host:
+        return "empty_host"
+    try:
+        port = parts.port or (443 if parts.scheme == "https" else 80)
+    except ValueError:
+        return "invalid_port"
+    try:
+        infos = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
+    except socket.gaierror as exc:
+        return f"dns_error:{exc}"
+    for info in infos:
+        addr = ipaddress.ip_address(info[4][0].split("%", 1)[0])
+        if not addr.is_global:
+            return f"non_global_address:{addr}"
+    return None
+
+
 class IndexClient:
     """独立 urllib 客户端：同主机 ≥1.5 秒间隔、3 次退避重试、逐次计数。"""
 
@@ -208,6 +239,9 @@ class IndexClient:
         self.requests = 0
 
     def get_text(self, url: str) -> str:
+        rejected = ssrf_rejection(url)
+        if rejected:
+            raise RuntimeError(f"SSRF 拦截（{rejected}）：{url}")
         last_error: Optional[BaseException] = None
         for attempt in range(self.retries):
             wait = self.min_interval - (time.monotonic() - self._last_call)
@@ -947,6 +981,14 @@ def selftest() -> int:
         else:
             print(f"  FAIL {label} {detail}")
             failures.append(label)
+
+    print("[selftest] SSRF 防线（字面量地址，无需联网）")
+    check("SSRF：file:// 被拒", ssrf_rejection("file:///etc/passwd") == "scheme_not_allowed")
+    check("SSRF：回环 IPv4 被拒",
+          (ssrf_rejection("http://127.0.0.1/") or "").startswith("non_global_address:"))
+    check("SSRF：云元数据地址被拒",
+          (ssrf_rejection("http://169.254.169.254/latest/") or "").startswith("non_global_address:"))
+    check("SSRF：URL 内嵌凭据被拒", ssrf_rejection("http://u:p@example.com/") == "credentials_in_url")
 
     if not SCHEMA_SQL.exists():
         print(f"ERROR: 缺少架构 SQL：{SCHEMA_SQL}", file=sys.stderr)

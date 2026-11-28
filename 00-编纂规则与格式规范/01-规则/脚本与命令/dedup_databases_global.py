@@ -93,7 +93,8 @@ def write_text(path: Path, text: str) -> None:
 
 
 def column_exists(conn, table: str, column: str) -> bool:
-    cur = conn.execute(f"PRAGMA table_info({table})")
+    # 表名作数据值经表值函数 pragma_table_info(?) 绑定，不再拼进 SQL 文本（SQLite 3.16+／DuckDB 同形）。
+    cur = conn.execute("SELECT * FROM pragma_table_info(?)", (str(table),))
     return any(row[1] == column for row in cur.fetchall())
 
 

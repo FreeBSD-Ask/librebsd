@@ -117,7 +117,9 @@ def analyze_schema(con, db_name):
     tables = con.execute("SELECT table_name FROM information_schema.tables WHERE table_schema='main'").fetchall()
     result = {"db_name": db_name, "tables": []}
     for (tbl,) in tables:
-        cols = con.execute(f"SELECT column_name, data_type FROM information_schema.columns WHERE table_name='{tbl}'").fetchall()
+        cols = con.execute(
+            "SELECT column_name, data_type FROM information_schema.columns "
+            "WHERE table_name = ?", [tbl]).fetchall()
         try:
             n = con.execute(f"SELECT COUNT(*) FROM \"{tbl}\"").fetchone()[0]
         except Exception:

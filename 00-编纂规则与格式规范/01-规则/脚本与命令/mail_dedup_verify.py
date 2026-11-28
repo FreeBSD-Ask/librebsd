@@ -12,7 +12,8 @@ DBS = {
 }
 
 def has_col(cur, t, col):
-    return any(c[1] == col for c in cur.execute(f'PRAGMA table_info({t})').fetchall())
+    # 表名作数据值绑定到表值函数，不拼进 SQL 文本（SQLite 3.16+ 提供 pragma_table_info）。
+    return any(c[1] == col for c in cur.execute('SELECT * FROM pragma_table_info(?)', (t,)).fetchall())
 
 total_all = 0
 report = {}
