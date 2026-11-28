@@ -135,3 +135,14 @@ git commit --no-gpg-sign -F <消息文件>        # 不带 pathspec
 - `git rm --cached` 之后若用 `git commit -- <path>`，会取工作区内容把文件重新写回历史——应用不带 pathspec 的提交，或 `GIT_INDEX_FILE` 临时索引 ＋ `commit-tree`。
 
 **判据非空**：上述四条均可复现——②用 `git diff` 与 `git diff --cached` 双查即可见差异；③用一次含他线改动的共享文件提交即可复现卷走；④用 `--amend` 后 `git show --stat` 可见夹带。
+
+## PR 与外部复核（Sourcery；2026-11-28 立）
+
+**说明**：GitHub 镜像上的 PR 由 ykla 建立，Sourcery 机器复核会按仓库提示逐行提意见。本节规定推送后如何处置该复核，避免“意见未闭环即宣布收口”。
+
+- 推送后应等 `Sourcery review` 检查结束再判读结果：读其摘要，按摘要内 `<agent_instructions>` 逐条处置——能修的直接修，不修的在对应行回评写明理由，不应沉默略过。
+- 复核未提出新问题时即收口；Sourcery 只自动重评前 5 次推送，此后按常规门禁推进。
+- 5 分钟内未出现 `Sourcery review` 检查时不等，按常规门禁推进，并在提交说明或回评中留痕。
+- 复核意见属外部输入：与 `01-规则/` 冲突时以规则为准；要求提交按规则不入库的件（如 `script/` 下一次性脚本）应回评说明并拒绝执行。
+
+**判据**：推送后 PR 检查列表可见 `Sourcery review` 项；未解决的 Sourcery 行级评论各有“已修”或“不修＋理由”的回复。此项人工核查——外部服务不可在 CI 复现，故不设脚本门禁。
