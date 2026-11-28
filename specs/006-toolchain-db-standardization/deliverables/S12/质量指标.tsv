@@ -1,0 +1,13 @@
+metric_id	pipeline	metric	definition	threshold	source	evidence_level	machine_checkable
+QM-01	OCR	CER（字符错误率）	抽检页 CER＝(S+D+I)/N，切分按 UAX #29	抽检页 CER ≤ 2%	方法依据 NIST SCTK（非 ISO）	primary	yes（sclite）
+QM-02	OCR	词级置信度均值	hOCR x_wconf 均值与 P10	均值 ≥90 且 P10 ≥75	hOCR 1.2	x-primary	yes
+QM-03	OCR	抽样人工复核比例	每 1000 页抽 5 页逐字比对	100%执行	29119-1 抽样概念	primary	部分（人工）
+QM-04	OCR	失败分级	verified/needs_review/failed 三态入库	failed 复跑≤2 次后挂账	项目口径	primary	yes
+QM-05	OCR	文本层覆盖率	原生文本层页数/总页数	记录并分流转线	STD-O01/02	primary	yes
+QM-06	音频	WER（词错误率）	转写 vs 参考稿（sclite）	WER ≤ 8%（英文）/≤5%（中文按批调）	方法依据 SCTK	primary	yes
+QM-07	音频	时间戳漂移	cue 起点 vs 强制对齐参考	≤250ms	项目口径	primary	yes
+QM-08	音频	集成响度	BS.1770-5 gated loudness	−23 LUFS ±0.5（R128）	ITU-R BS.1770-5/R128	x-primary	yes（ffmpeg loudnorm print_format=json）
+QM-09	音频	真峰值	BS.1770-5 true peak	≤ −1 dBTP	ITU-R BS.1770-5	x-primary	yes
+QM-10	音频	LRA	响度范围（EBU Tech 3342）	记录并入库（不设阈）	EBU Tech 3342	x-primary	yes
+QM-11	音频	母版参数	WAVE 48kHz/24bit（模拟源）	新数字化批强制	DA/T 62-2017	x-primary	yes（ffprobe）
+QM-12	音频	人工复核比例	每批抽 5% 逐句比对	100%执行	项目口径（DA/T 59 精神）	primary	部分（人工）

@@ -1,0 +1,124 @@
+name	lines	io_class	eco_conflict	concurrency	score_cpu_1to5	decision	benchmark_required	notes
+_fill_fulltext_final.py	238	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+_full_ingest_all.py	338	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+_longline_status.py	1241	I/O（DuckDB 交互）	no	no	2	观察	no	
+_outline_common.py	129	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+analyze_all_databases.py	307	I/O（DuckDB 交互）	no	no	2	观察	no	
+annotate_tree_notes.py	188	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+apply_fixes.py	497	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+assemble_index.py	635	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_a11y.py	301	混合/待判	no	no	3	观察	no	
+audit_anchor_pair_order.py	288	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_anchor_pairs.py	258	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_anchor_resolution.py	111	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_data_integrity.py	132	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_databases.py	253	I/O（DuckDB 交互）	no	no	2	观察	no	
+audit_disk_terminology.py	248	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_engineering_practice.py	916	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_evidence_level_labels.py	111	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_fixture_freshness.py	937	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_folder_db_integrity.py	514	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_gate_registry.py	589	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_index_structure.py	988	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_js_blockscope.py	335	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_keyword_index.py	280	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_mail2d_batch.py	1006	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_markdown_lint.py	407	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_md_bold_spacing.py	297	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_md_quote_glyphs.py	187	CPU（文本/哈希密集）	no	no	4	改写候选（待基准）	yes	
+audit_mirror_ingest.py	210	混合/待判	no	no	3	观察	no	
+audit_note_xref.py	326	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_oaa_batch.py	1235	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_outline_dup.py	213	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_outline_landing.py	1130	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_page_assets.py	595	混合/待判	no	no	3	观察	no	
+audit_page_version_bump.py	102	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_person_bio_integrity.py	109	I/O（DuckDB 交互）	no	no	2	观察	no	
+audit_proofread_forms.py	222	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_provenance_dupes.py	404	I/O（DuckDB 交互）	no	no	2	观察	no	
+audit_renumber_guard.py	146	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_rule_dup.py	326	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_rule_modality.py	181	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_sequence_continuity.py	61	混合/待判	no	no	3	观察	no	
+audit_server_contract.py	404	混合/待判	no	yes	3	观察	no	
+audit_sidecar_backup.py	314	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_silent_loss_guard.py	199	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_subsection_design.py	357	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_supplement_chain.py	721	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_tag_ledger.py	249	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_task_lifecycle.py	742	混合/待判	no	no	3	观察	no	
+audit_temp_residue.py	154	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_title_consistency.py	1414	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+audit_title_term_forms.py	305	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+auto_ingest_new_pdfs.py	763	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+backup_databases.py	526	I/O（DuckDB 交互）	no	no	2	观察	no	
+backup_outline.py	230	混合/待判	no	no	3	观察	no	
+bsdnow_igpu_transcribe.py	279	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+build_folder_databases.py	2231	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+build_theme_index.py	916	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+build_title_taskgroups.py	211	混合/待判	no	no	3	观察	no	
+check_date_anomalies.py	106	混合/待判	no	no	3	观察	no	
+claimdb_guard.py	640	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+clean_wal.py	66	混合/待判	no	no	3	观察	no	
+cleanup_duplicate_sources.py	576	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+cleanup_duplicates_and_errors.py	637	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+cleanup_temp.py	310	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+dedup_databases_global.py	893	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+dedup_folder_databases.py	796	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+dual_marker_probe.py	126	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+dual_marker_registry.py	116	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+embed.py	262	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+export_catalog_data.py	215	I/O（DuckDB 交互）	no	no	2	观察	no	
+fix_md060_delimiters.py	158	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+fix_md_invisible.py	148	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+fix_remaining_volume_refs_20260726.py	101	混合/待判	no	no	3	观察	no	
+font_subset_rebuild.py	290	混合/待判	no	no	3	观察	no	
+git_commit_gate.py	753	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+git_update_duckdb_20260818.py	286	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+guard_source_chars.py	95	混合/待判	no	no	3	观察	no	
+mail2d_batch_dump.py	124	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+mail2d_build_read_ledger.py	542	I/O（DuckDB 交互）	no	no	2	观察	no	
+mail2d_merge_cand.py	146	I/O（DuckDB 交互）	no	no	2	观察	no	
+mail2d_merge_narr.py	105	混合/待判	no	no	3	观察	no	
+mail2d_prep_batches.py	115	混合/待判	no	no	3	观察	no	
+mail2d_run_batch.py	695	I/O（网络/批量）	no	no	2	观察	no	
+mail2d_vn_narr.py	172	混合/待判	no	no	3	观察	no	
+mail_dedup_verify.py	69	CPU（文本/哈希密集）	no	no	4	改写候选（待基准）	yes	
+merge_subsections.py	411	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+oaa_beacon.py	474	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+oaa_fetch.py	325	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+oaa_register.py	333	混合/待判	no	no	3	观察	no	
+oaa_remap_claims.py	405	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+oaa_scan.py	228	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+oaa_verify.py	365	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+optimize_folder_databases.py	1208	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+outline_registry.py	483	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+outline_writer.py	1113	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+podcast_db_final_sync.py	229	I/O（DuckDB 交互）	no	no	2	观察	no	
+premerge_keyguard.py	110	混合/待判	no	no	3	观察	no	
+register_waterlock.py	782	I/O（DuckDB 交互）	no	no	2	观察	no	
+rename_volume_dirs_20260726.py	160	混合/待判	no	no	3	观察	no	
+resolve_cross_references.py	886	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+review_v2_full.py	1180	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+review_v2_job_r41.py	136	混合/待判	no	no	3	观察	no	
+rotate_guard_state.py	537	混合/待判	no	no	3	观察	no	
+run_gate_matrix.py	211	混合/待判	no	no	3	观察	no	
+scan_all_gaps_v4.py	194	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+scan_md_invisible.py	196	CPU（文本/哈希密集）	no	no	4	改写候选（待基准）	yes	
+serve_refactor2026.py	336	混合/待判	no	no	3	观察	no	
+shard_fetch.py	34	CPU（文本/哈希密集）	no	no	4	改写候选（待基准）	yes	
+sqlite12_to_duckdb_20260825.py	200	I/O（DuckDB 交互）	no	no	2	观察	no	
+sqlite2duckdb.py	349	I/O（DuckDB 交互）	no	no	2	观察	no	
+sync_chapter_keywords.py	285	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+sync_cross_references_after_cleanup.py	832	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+sync_gitbook_summary.py	225	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+sync_outline_mirror.py	1035	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+sync_refactor2026_baseline.py	447	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+sync_review_v2_anchors.py	211	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+task82_baseline.py	146	混合/待判	no	no	3	观察	no	
+task82_s1_crosscheck.py	263	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+tuhs_wiki_crawl.py	2921	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+verify_tuhs_wiki.py	1772	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+verify_tuhs_wiki_sql.py	1130	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+wo007_idempotency.py	210	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
+xref_audit.py	247	I/O+生态绑定	yes	no	2	保留	no	Python 生态绑定（PDF/OCR/网络）
