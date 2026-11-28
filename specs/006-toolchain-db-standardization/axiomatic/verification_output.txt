@@ -1,7 +1,7 @@
 # 公理化判定证书（有限模型穷举）
 
-生成时间：2026-11-28T15:39:58+08:00
-- 模型快照：taskbook sha256=c04a714597f7…；BINDING sha256=bf40e6acaa66…；对象域 48 件；spec 13 个
+生成时间：2026-11-28T15:56:42+08:00
+- 模型快照：taskbook sha256=7018addbd93a…；BINDING sha256=aff096a83c8b…；对象域 48 件；spec 13 个
 
 | 公理 | 判定 | 摘要 |
 | ---- | ---- | ---- |
@@ -14,7 +14,7 @@
 | A07 | PASS | 13 锚点精确命中任务书小节各 1 次；异常 [] |
 | A08 | PASS | 39 个哈希逐件复算相等；异常 [] |
 | A09 | PASS | 13×(spec+tasks+checklist) 状态一致；异常 [] |
-| A10 | PASS | 附录 C manifest 哈希＝BINDING.tsv sha256（bf40e6acaa66…）；行 13 |
+| A10 | PASS | 附录 C manifest 哈希＝BINDING.tsv sha256（aff096a83c8b…）；行 13 |
 | A11 | PASS | 12 子 spec 均 ≥5FR/≥3场景/≥5check；M ≥10FR/≥5SC/≥30check；异常 [] |
 | A12 | PASS | 对象域文件集 48 件闭合；盘外 []；幽灵 [] |
 | A13 | PASS | 13 条 spec_path 两两不同 |
@@ -22,7 +22,7 @@
 | A15 | PASS | §3 矩阵 12 目标与清单覆盖逐格相等；G12 为绑定契约；异常 [] |
 | A16 | PASS | 13 spec 状态∈枚举、版本 SemVer、日期 ISO；异常 [] |
 | A17 | PASS | 附录 C 13 行逐列与清单相等；异常 [] |
-| A18 | PASS | 必需节 4/4；用户原话在；43710 字符 |
+| A18 | PASS | 必需节 4/4；用户原话在；43859 字符 |
 
 | 定理 | 判定 | 依赖 |
 | ---- | ---- | ---- |
