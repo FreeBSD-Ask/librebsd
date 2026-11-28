@@ -1,8 +1,8 @@
 # 交付物索引（S01—S12；2026-11-28）
 
-> 任务书 `01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md`（v1.0.6）的执行交付。
-> 绑定：`../BINDING.tsv`（13 行，manifest `bf40e6ac…`）；公理化证书：`../axiomatic/certificate.json`（A01—A18 18/18、T1—T12 12/12）。
-> 名实对照：各 spec §8.1 记录"计划件→实际落点"（S01／S09／S12 计划与实交一致，无 §8.1）。
+> 任务书 `01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md`（v1.0.7）的执行交付。
+> 绑定：`../BINDING.tsv`（13 行，manifest `aff096a83c8b36d1f165d914e6cf2dc7b7ae234a7486d3eb5e97e17fecf2ba9f`）；公理化证书：`../axiomatic/certificate.json`（A01—A18 18/18、T1—T12 12/12）。
+> 名实对照：各 spec §8.1 记录“计划件→实际落点”（S01／S09／S12 计划与实交一致，无 §8.1）。
 
 ## 一、目标与交付目录
 
@@ -34,7 +34,8 @@
 ```text
 "C:/Program Files/Python315/python.exe" 00-编纂规则与格式规范/01-规则/脚本与命令/audit_task_spec_binding.py
 "C:/Program Files/Python315/python.exe" specs/006-toolchain-db-standardization/axiomatic/verify_axioms.py
-"C:/Program Files/Python315/python.exe" script/_tb_full_review_20261128.py   # 一次性，复核数据再生
 ```
+
+> 复核数据 `任务书复核数据-20261128.json` 由一次性再生脚本产出；该脚本按 `AGENTS.md` 的“`script/` 一律不入库”规则留在工作区、不入库，故不作复跑入口。判据复跑以上面两条为准（绑定＋公理证书），复核数据本身以已提交的 JSON 为准。
 
 > 修改任何 spec 后：重算 `BINDING.tsv` 三哈希 → 回填任务书附录 C manifest → **最后**跑 `verify_axioms.py` 刷证书（证书绑定任务书哈希，顺序反了要刷两次）。
