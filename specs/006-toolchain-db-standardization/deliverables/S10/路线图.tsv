@@ -1,0 +1,9 @@
+route_id	route	phase_batch	scope	depends	risk	rollback
+R3	治理正式化	1	ADR-0025 转正＋绑定校验器落地＋常备接线	—	低	git revert 单提交
+R3	治理正式化	2	TG-018—024 接线批＋清理清单 ykla 审→apply→verify	R3-1	低	清单隔离区原路退回
+R1	数据完整性	1	ADR-0023 转正＋login-zazhi 重建（EXPORT→重建→丢幽灵）	R3	中	专项备份槽 load.sql
+R1	数据完整性	2	28 库 schema_meta＋主键 dry-run→apply→verify	R1-1	中	同上
+R1	数据完整性	3	注册表字段回填＋记分卡 v1（15 维）	R1-2	中	TSV git 历史
+R2	工具链治理	1	ADR-0024 转正＋生成器/校验器转正＋第十六件登记	R3	低	git revert
+R2	工具链治理	2	契约整改（高频优先）＋stable 缺口 61 件补齐	R2-1	低	git revert
+R2	工具链治理	3	Rust 首批：4 候选基准→影子→灰度→回退演练	R2-1;ykla 批	中	回退开关 LIBREBSD_USE_RUST=0
