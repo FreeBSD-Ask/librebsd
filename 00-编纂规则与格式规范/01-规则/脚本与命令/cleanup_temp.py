@@ -80,9 +80,11 @@ def classify(path: Path, root: Path, tracked: set[str], refs: set[str], now: dat
     rel = path.relative_to(root).as_posix()
     top = rel.split("/")[0]
     if is_dir:
+        if rel.startswith("03-原始史料库/"):
+            return ("", "no", "keep")
+        if path.name == "node_modules":
+            return ("cache_dir", "yes", "keep")
         if path.name in CACHE_DIR_NAMES or rel.endswith(tuple("/" + c for c in CACHE_LEAF)):
-            if rel.startswith("03-原始史料库/01-代码仓库史料/"):
-                return ("", "no", "keep")
             return ("cache_dir", "yes", "delete")
         if any(bad in path.name for bad in ("…", "...", "\u200b", "[MASKED]", "[path]")) or path.name.startswith("._") or path.name.endswith("~"):
             if rel.startswith("03-原始史料库/01-代码仓库史料/"):
@@ -91,14 +93,14 @@ def classify(path: Path, root: Path, tracked: set[str], refs: set[str], now: dat
         return ("", "no", "keep")
     if tracked and rel in tracked:
         return ("tracked_file", "no", "keep")
+    if rel.startswith("03-原始史料库/"):
+        return ("clone_tree", "no", "keep")
     if path.suffix in PROTECT_EXT:
         return ("protected_ext", "no", "keep")
     if BACKUP_SUFFIX_RE.search(path.name):
         return ("sidecar_backup", "yes", "delete")
     if path.name.endswith((".pyc", ".pyo")):
         return ("pycache_file", "yes", "delete")
-    if rel.startswith("03-原始史料库/01-代码仓库史料/"):
-        return ("clone_tree", "no", "keep")
     if top in ALLOWLIST_TOPS or rel.startswith(tuple(t + "/" for t in ALLOWLIST_TOPS)):
         try:
             age_days = (now - datetime.fromtimestamp(path.stat().st_mtime, TZ)).days
@@ -209,13 +211,66 @@ def cmd_plan(root: Path) -> int:
 
 
 def remove_file(p: Path) -> None:
+    try:
+        gone = all(e.name != p.name for e in os.scandir(p.parent))
+    except OSError:
+        gone = False
+    if gone:
+        return
     for _ in range(RETRY):
         try:
             p.unlink()
             return
         except PermissionError:
             pass
-    raise PermissionError(f"无法删除 {p}")
+        except OSError:
+            break
+    # Windows 保留名（nul 等）与非法名兜底：\\?\ 前缀
+    extended = "\\\\?\\" + str(p)
+    try:
+        os.remove(extended)
+        return
+    except OSError:
+        pass
+    for _ in range(RETRY):
+        try:
+            p.unlink()
+            return
+        except PermissionError:
+            pass
+    # Windows 保留名（nul 等）与非法名兜底：先以 \\?\ 前缀改名为合法名再删
+    legal = p.parent / ("_rm_" + re.sub(r"[^\w.-]", "_", p.name).strip(".")[:30] + f"_{os.getpid()}")
+    for src in ("\\\\?\\" + str(p), str(p)):
+        try:
+            os.rename(src, "\\\\?\\" + str(legal))
+            os.remove("\\\\?\\" + str(legal))
+            return
+        except OSError:
+            continue
+    raise OSError(f"无法删除 {p}")
+
+
+def rmtree_guarded(d: Path) -> None:
+    try:
+        shutil.rmtree(d)
+        return
+    except OSError:
+        pass
+    extended = "\\\\?\\" + str(d)
+    try:
+        shutil.rmtree(extended)
+        return
+    except OSError:
+        pass
+    # 尾点/尾空格目录：先以 \\?\ 前缀改名成合法名，再普通删除
+    legal = d.parent / ("_rm_" + re.sub(r"[^\w.-]", "_", d.name).strip(".")[:40] + f"_{os.getpid()}")
+    try:
+        os.rename("\\\\?\\" + str(d), "\\\\?\\" + str(legal))
+        shutil.rmtree(legal)
+        return
+    except OSError:
+        pass
+    raise OSError(f"无法移除目录 {d}")
 
 
 def cmd_apply(root: Path, manifest: Path) -> int:
@@ -223,45 +278,91 @@ def cmd_apply(root: Path, manifest: Path) -> int:
     date = datetime.now(TZ).strftime("%Y%m%d")
     quar = root / "script" / f"_quarantine_{date}"
     quar.mkdir(parents=True, exist_ok=True)
+    quar_rel = quar.relative_to(root).as_posix()
     n_del = n_q = 0
+    n_err = 0
     del_log = []
     quar_log = []
+    err_log = []
+    qdir_prefixes = tuple(r["path"] + "/" for r in rows if r["type"] == "dir" and r["action"] == "quarantine")
+    tracked = tracked_files(root)
     for r in rows:
+        p = root / r["path"]
         if r["type"] == "dir":
             if r["action"] == "quarantine" and p.exists():
+                try:
+                    dest = quar / r["path"].replace("/", "__")
+                    shutil.move(str(p), str(dest))
+                    n_q += 1
+                    quar_log.append(r["path"])
+                except Exception as exc:
+                    if any(t.startswith(r["path"] + "/") for t in tracked):
+                        n_err += 1
+                        err_log.append(f"dir:{r['path']}:{exc}"[:160])
+                    else:
+                        rmtree_guarded(p)
+                        n_dirs += 1
+                        del_log.append(r["path"])
+            continue
+        if any(r["path"].startswith(qp) for qp in qdir_prefixes):
+            continue
+        if r["path"].startswith(quar_rel + "/"):
+            continue
+
+        try:
+            try:
+                gone = not p.exists()
+            except OSError:
+                gone = True
+            if gone:
+                continue
+            if sha256(p) != r["sha256"]:
+                print(f"SKIP（哈希不符，防漂移）：{r['path']}")
+                continue
+            if r["action"] == "delete":
+                remove_file(p)
+                n_del += 1
+                del_log.append(r["path"])
+            elif r["action"] == "quarantine":
                 dest = quar / r["path"].replace("/", "__")
-                shutil.move(str(p), str(dest))
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                try:
+                    shutil.move(str(p), str(dest))
+                except OSError:
+                    legal = p.parent / ("_rm_" + re.sub(r"[^\w.-]", "_", p.name).strip(".")[:30] + f"_{os.getpid()}")
+                    os.rename("\\\\?\\" + str(p), "\\\\?\\" + str(legal))
+                    shutil.move(str(legal), str(dest))
                 n_q += 1
                 quar_log.append(r["path"])
-            continue
-        if not p.exists():
-            continue
-        if sha256(p) != r["sha256"]:
-            print(f"SKIP（哈希不符，防漂移）：{r['path']}")
-            continue
-        if r["action"] == "delete":
-            remove_file(p)
-            n_del += 1
-            del_log.append(r["path"])
-        elif r["action"] == "quarantine":
-            dest = quar / r["path"].replace("/", "__")
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            shutil.move(str(p), str(dest))
-            n_q += 1
-            quar_log.append(r["path"])
-    # 目录：仅删空且非保护的缓存目录
+        except Exception as exc:
+            n_err += 1
+            err_log.append(f"{r['path']}:{exc}"[:160])
+    # 目录：action=delete 的缓存目录受控递归移除（无 tracked 后代；node_modules 留 ykla）
     n_dirs = 0
+    skip_nm = 0
     for r in rows:
         if r["type"] != "dir" or r["action"] != "delete":
             continue
         d = root / r["path"]
-        if d.exists() and not any(d.iterdir()):
-            d.rmdir()
+        if not d.exists():
+            continue
+        if d.name == "node_modules":
+            skip_nm += 1
+            continue
+        if any(t.startswith(r["path"] + "/") for t in tracked):
+            n_err += 1
+            err_log.append(f"dir:{r['path']}:含 tracked 后代，拒删")
+            continue
+        try:
+            rmtree_guarded(d)
             n_dirs += 1
+        except Exception as exc:
+            n_err += 1
+            err_log.append(f"rmtree:{r['path']}:{exc}"[:160])
     log_path = manifest.parent / f"apply_log_{datetime.now(TZ).strftime('%H%M%S')}.json"
-    log_path.write_text(json.dumps({"deleted": del_log, "deleted_count": n_del, "quarantined_dirs": quar_log, "quarantined_files": n_q, "dirs_removed": n_dirs}, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
-    print(f"apply：删除 {n_del} 件；隔离（目录整移 {len(quar_log)}／文件 {n_q}）；移除空目录 {n_dirs}；日志 {log_path}")
-    return 0
+    log_path.write_text(json.dumps({"deleted": del_log, "deleted_count": n_del, "quarantined_dirs": quar_log, "quarantined_files": n_q, "dirs_removed": n_dirs, "errors": err_log, "error_count": n_err}, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
+    print(f"apply：删除 {n_del} 件；隔离（目录整移 {len(quar_log)}／文件 {n_q}）；移除空目录 {n_dirs}；错误跳过 {n_err}；日志 {log_path}")
+    return 0 if n_err == 0 else 1
 
 
 def cmd_verify(root: Path, manifest: Path) -> int:
