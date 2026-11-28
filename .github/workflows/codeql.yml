@@ -3,6 +3,11 @@
 # query_suite＝extended，schedule＝weekly；本工作流按能力对等裁剪：
 #   - languages 收敛为 python＋javascript-typescript（后者合并覆盖 js 与 ts，仓库 14 件 .ts 全在 vitepress）＋actions；
 #   - queries＝security-extended 对齐 default setup 的 extended 套件（官方注：追加于默认套件之上，非替换）。
+# 2026-11-28 增补 Rust：CodeQL 的 Rust 支持已 GA（2025-10-14 公告，CodeQL CLI 2.23.3 起；github.com 与
+# GHES 3.20 起可用），且 Rust 仅支持 build-mode: none（官方 build mode 表的 autobuild／manual 不含 Rust）。
+# 接入时仓库无 Rust 源码，若把 rust 直接写进静态矩阵，分析 job 会因“未发现可分析源码”整轮变红；
+# 故改为探测＋条件 job：detect_rust 查 Git 索引里的 .rs／Cargo.toml，analyze_rust 仅在命中时运行，
+# 源码落地即自动纳入分析，无源码时不空跑、不产生空 SARIF。
 # 依赖钉定纪律与 ci.yml 相同：第三方 action 一律钉定 40 位提交 SHA（行尾注释记语义版本），
 # 升级由 dependabot.yml 的 github-actions 生态提 PR。codeql-action 官方建议浮动 v4 以随查询库更新，
 # 本仓统一走钉 SHA＋dependabot，代价是查询库更新滞后至升级 PR 合并，属有意选择。
@@ -26,6 +31,34 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Rust 源码探测：rust 分析没有构建步骤（build-mode: none），但“指定语言却无源码”会让分析 job 失败，
+  # 故先查 Git 索引；present=false 时 analyze_rust 跳过，不产生空 SARIF，也不消耗分析 runner。
+  detect_rust:
+    name: Detect Rust
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      present: ${{ steps.detect.outputs.present }}
+    steps:
+      - name: 检出
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1（与 ci.yml 同钉）
+
+      - name: 探测 Rust 源码
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+          # 根目录与嵌套 Cargo.toml 都算（rust 工程通常由 manifest 决定 crate 边界）；
+          # 结果落临时文件而非管道，避免 set -o pipefail 下 head 提前关管道造成的假失败。
+          git ls-files -- '*.rs' 'Cargo.toml' '*/Cargo.toml' > "$RUNNER_TEMP/rust-sources"
+          if [ -s "$RUNNER_TEMP/rust-sources" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+
   analyze:
     name: Analyze (${{ matrix.language }})
     runs-on: ubuntu-latest
@@ -44,6 +77,7 @@ jobs:
       matrix:
         # actions：分析 .github/workflows 自身；javascript-typescript：覆盖目录页 src/js 与 vitepress 的 ts；
         # python：覆盖 00-编纂规则与格式规范/01-规则/脚本与命令 等全部脚本。
+        # rust 不入静态矩阵（无源码时必红），由 detect_rust／analyze_rust 条件 job 承担，见文件头增补。
         include:
           - language: actions
           - language: javascript-typescript
@@ -64,3 +98,34 @@ jobs:
         uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934  # v4.39.5
         with:
           category: "/language:${{matrix.language}}"
+
+  # Rust 条件分析：官方仅提供 build-mode: none（无需 cargo build，直接从源码建库），
+  # 查询套件与主矩阵同口径（security-extended）；detect_rust 命中 .rs／Cargo.toml 才运行。
+  analyze_rust:
+    name: Analyze (rust)
+    needs: detect_rust
+    if: needs.detect_rust.outputs.present == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    steps:
+      - name: 检出
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1（与 ci.yml 同钉）
+
+      - name: 初始化 CodeQL（Rust）
+        uses: github/codeql-action/init@915412ff23e8b7659517e607487dbeae018f2934  # v4.39.5
+        with:
+          languages: rust
+          # Rust 不支持 autobuild／manual（官方 build mode 表），只接受 none。
+          build-mode: none
+          queries: security-extended
+
+      - name: 执行 CodeQL 分析（Rust）
+        uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934  # v4.39.5
+        with:
+          category: "/language:rust"
