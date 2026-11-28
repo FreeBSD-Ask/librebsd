@@ -46,7 +46,10 @@ from typing import Any, Dict, List, Optional, Tuple
 # 常量与配置
 # =============================================================================
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# 仓库根：脚本位于 <根>/00-编纂规则与格式规范/01-规则/脚本与命令/，需上溯 3 级；
+# 2026-11-28 修：原 parent.parent 指向 01-规则（自 script/ 迁入规则目录后未更新），
+# 导致 SCHEMA_SQL_PATH 落在不存在的路径、任何模式一跑即报"找不到架构 SQL"。
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 SCHEMA_SQL_PATH = (
     PROJECT_ROOT
     / "00-编纂规则与格式规范"
@@ -2182,19 +2185,77 @@ def mode_update_file(file_path_str: str) -> int:
 # =============================================================================
 
 
+def _fmt_bytes(n: int) -> str:
+    return f"{n:,}".replace(",", " ")
+
+
+def plan_only(args) -> int:
+    """--dry-run：只报告影响面（文件夹/待扫文件数/目标库现状），不写库、不写日志、不建目录。"""
+    def report(db_name: str) -> None:
+        cfg = FOLDER_DB_MAP[db_name]
+        folder = PROJECT_ROOT / cfg["folder"]
+        dbp = get_db_path(db_name)
+        n_files = len(scan_folder(db_name)) if folder.exists() else 0
+        state = (f"已存在 {_fmt_bytes(dbp.stat().st_size)} B"
+                 if dbp.exists() else "不存在（正式跑将新建）")
+        print(f"  {db_name}: 文件夹{'存在' if folder.exists() else '缺失'}，"
+              f"待扫 {_fmt_bytes(n_files)} 文件 → {dbp} [{state}]")
+
+    if args.all:
+        print(f"[DRY-RUN] 全部 {len(DB_BUILD_ORDER)} 库：")
+        for n in DB_BUILD_ORDER:
+            report(n)
+    elif args.folder:
+        n = resolve_db_name_by_folder(args.folder)
+        if n is None:
+            print(f"[错误] 未知文件夹: {args.folder}", file=sys.stderr)
+            return 1
+        report(n)
+    elif args.rebuild:
+        if args.rebuild not in FOLDER_DB_MAP:
+            print(f"[错误] 未知数据库名: {args.rebuild}", file=sys.stderr)
+            return 1
+        dbp = get_db_path(args.rebuild)
+        state = (f"将删除现有 {_fmt_bytes(dbp.stat().st_size)} B 并重建"
+                 if dbp.exists() else "库不存在，将新建")
+        print(f"[DRY-RUN] --rebuild {args.rebuild}: {state} → {dbp}")
+    else:
+        raw = args.add_file or args.update_file
+        target = Path(raw)
+        if not target.is_absolute():
+            target = PROJECT_ROOT / target
+        mode = "--add-file" if args.add_file else "--update-file"
+        if not target.exists():
+            print(f"[DRY-RUN] {mode}: 文件不存在 {raw}")
+            return 0
+        rel = normalize_rel_path(target)
+        db_name = detect_db_for_file(rel)
+        print(f"[DRY-RUN] {mode}: {rel} ({_fmt_bytes(target.stat().st_size)} B) → "
+              f"{db_name or '无法归属任何库'}"
+              f"{'（库不存在，正式跑将新建）' if db_name and not get_db_path(db_name).exists() else ''}")
+    print("[DRY-RUN] 未写入任何库、日志或目录。")
+    return 0
+
+
 def main() -> int:
+    global PROJECT_ROOT, SCHEMA_SQL_PATH, LOG_DIR, INDEX_DIR
     parser = argparse.ArgumentParser(
         description="文件夹级数据库构建脚本（7 个一级文件夹 → SQLite + FTS5）",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=(
             "示例:\n"
-            "  python script/build_folder_databases.py --folder 11-元数据接口\n"
-            "  python script/build_folder_databases.py --all\n"
-            "  python script/build_folder_databases.py --rebuild original_sources\n"
-            "  python script/build_folder_databases.py --add-file 03-原始史料库/06-考据记录/xxx.md\n"
-            "  python script/build_folder_databases.py --update-file 03-原始史料库/06-考据记录/xxx.md\n"
+            "  python build_folder_databases.py --folder 11-元数据接口\n"
+            "  python build_folder_databases.py --all\n"
+            "  python build_folder_databases.py --rebuild original_sources\n"
+            "  python build_folder_databases.py --add-file 03-原始史料库/06-考据记录/xxx.md\n"
+            "  python build_folder_databases.py --update-file 03-原始史料库/06-考据记录/xxx.md\n"
+            "  python build_folder_databases.py --all --dry-run\n"
         ),
     )
+    parser.add_argument("--root", default="", metavar="<仓库根>",
+                        help="仓库根（默认由脚本位置派生）")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="只输出影响面（文件数/目标库现状），不写库、不写日志")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--folder", metavar="<folder_name>", help="扫描单个文件夹并构建其数据库")
     group.add_argument("--all", action="store_true", help="按顺序构建全部 7 个数据库")
@@ -2204,10 +2265,20 @@ def main() -> int:
 
     args = parser.parse_args()
 
+    if args.root:
+        PROJECT_ROOT = Path(args.root).resolve()
+        SCHEMA_SQL_PATH = (PROJECT_ROOT / "00-编纂规则与格式规范" / "01-规则"
+                           / "脚本与命令" / "folder_db_common_schema.sql")
+        LOG_DIR = PROJECT_ROOT / "script" / "_folder_db_logs"
+        INDEX_DIR = PROJECT_ROOT / "11-元数据接口" / "09-文件夹数据库索引"
+
     # 确保 schema SQL 存在
     if not SCHEMA_SQL_PATH.exists():
         print(f"[错误] 找不到架构 SQL: {SCHEMA_SQL_PATH}", file=sys.stderr)
         return 1
+
+    if args.dry_run:
+        return plan_only(args)
 
     # 确保日志目录存在
     LOG_DIR.mkdir(parents=True, exist_ok=True)

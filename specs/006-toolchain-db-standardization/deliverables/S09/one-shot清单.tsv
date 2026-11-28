@@ -2192,6 +2192,7 @@ script/_v01_b044_fix_refids.py	.py	4916	2026-11-28	2026-11-27	mtime-suspect	-1	u
 script/_v01_b044_ledger.py	.py	7464	2026-11-28	2026-11-27	content	1	fresh	false	b044 收口账目：changelog 一条 → 92 §十一 → 98 §十一。
 script/_v01_c4r2_retitle_20261127.py	.py	10014	2026-11-28	2026-11-27	filename	1	fresh	false	V01 第 4 章 36 题全部重拟（retitle-V01-c4r2，V01 单卷全责线）。
 script/_v01_c4r2_summary_patch.py	.py	1086	2026-11-28	2026-11-27	content	1	fresh	false	retitle-V01-c4r2 附步：SUMMARY.md 按卷外科更新第 4 章 36 行（镜像全局再生被 W_NORM 阻断）。
+script/_v01_cpm_tree.py	.py	2384	2026-11-28	2026-11-28	mtime-suspect	-1	unknown	false	
 script/_v01_cursor.py	.py	955	2026-11-28	2026-11-02	content	26	fresh	false	progress.tsv 行级游标更新（组二三四质量批专用）：只动指定卷行，写前校验行存在，写后回显。
 script/_v01_export_b032.py	.py	1799	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	V01 b032：导出拟用全文块逐字原文 + ref id 映射 + 树内已占用锚。
 script/_v01_export_b033.py	.py	1067	2026-11-28	2026-11-17	mtime-suspect	-1	unknown	false	V01 b033：导出 7.7 比较史主题关键全文段（ref1561 Levy / ref810 Salus / ref878 Ritchie）。

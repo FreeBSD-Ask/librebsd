@@ -37,7 +37,9 @@ from typing import Any, Dict, List, Optional, Tuple
 # 常量
 # =============================================================================
 
-BASE = Path(r"d:\librebsd")
+# 仓库根：脚本位于 <根>/00-编纂规则与格式规范/01-规则/脚本与命令/，上溯 3 级。
+# 2026-11-28 修：原为硬编码 Path(r"d:\librebsd")，换盘/沙箱即失效；改为派生并可 --root 覆盖。
+BASE = Path(__file__).resolve().parents[3]
 DB_PATH = BASE / "04-现代研究文献" / "05-参考文献全文数据库" / "references_fulltext.db"
 DOWNLOAD_DIR = BASE / "04-现代研究文献" / "03-文献下载"
 CSV_PATH = DOWNLOAD_DIR / "04-文献摘要" / "_匹配映射表.csv"
@@ -690,15 +692,36 @@ def process_file(conn: sqlite3.Connection, file_path: Path,
         log_entry(str(file_path), "failed", 0, "", str(e))
         return "failed"
 
+def _rebase(root: Path) -> None:
+    """--root 覆盖：重算全部派生常量（默认已按脚本位置上溯 3 级，无需调用）。"""
+    global BASE, DB_PATH, DOWNLOAD_DIR, CSV_PATH, SUMMARY_BASE, BIB_DIR
+    global OUTLINE_DIR, LOG_DIR, LOG_FILE, DASHBOARD_FILE
+    BASE = root
+    DB_PATH = BASE / "04-现代研究文献" / "05-参考文献全文数据库" / "references_fulltext.db"
+    DOWNLOAD_DIR = BASE / "04-现代研究文献" / "03-文献下载"
+    CSV_PATH = DOWNLOAD_DIR / "04-文献摘要" / "_匹配映射表.csv"
+    SUMMARY_BASE = DOWNLOAD_DIR / "04-文献摘要"
+    BIB_DIR = BASE / "04-现代研究文献" / "01-参考文献总目"
+    OUTLINE_DIR = BASE / "05-卷册大纲"
+    LOG_DIR = BASE / "script" / "_auto_ingest_logs"
+    LOG_FILE = LOG_DIR / "ingest_log.jsonl"
+    DASHBOARD_FILE = LOG_DIR / "dashboard.md"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="自动检测新增 PDF/EPUB/CAJ 文献并入库"
     )
+    parser.add_argument("--root", default="", metavar="<仓库根>",
+                        help="仓库根（默认由脚本位置派生）")
     parser.add_argument("--dry-run", action="store_true",
                         help="仅检测不执行入库")
     parser.add_argument("--file", metavar="PATH",
                         help="指定单个文件入库")
     args = parser.parse_args()
+
+    if args.root:
+        _rebase(Path(args.root).resolve())
 
     ensure_log_dir()
 

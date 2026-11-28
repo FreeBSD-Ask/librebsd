@@ -51,13 +51,15 @@ audit_task_spec_binding.py	no	yes	no	—	no	no	no	no	no	yes	no	no	argparse；--r
 audit_temp_residue.py	yes	yes	no	subprocess	no	no	no	yes	no	yes	no	yes	--root；--dry-run
 audit_title_consistency.py	yes	yes	no	—	no	yes	no	no	no	yes	yes	yes	--dry-run
 audit_title_term_forms.py	no	yes	no	—	no	no	no	no	no	yes	no	no	argparse；--root；--dry-run
-auto_ingest_new_pdfs.py	yes	yes	yes	—	no	no	yes	no	no	no	no	no	--root
+audit_tool_registry.py	yes	yes	no	subprocess	no	yes	no	no	no	yes	yes	no	--dry-run
+auto_ingest_new_pdfs.py	yes	yes	yes	—	no	yes	yes	no	no	no	no	no	—
 backup_databases.py	yes	yes	yes	—	no	no	no	no	no	no	no	no	--root；--dry-run
 backup_outline.py	yes	yes	no	—	no	no	no	no	no	no	no	no	--root；--dry-run
 bsdnow_igpu_transcribe.py	yes	yes	yes	subprocess	no	no	yes	no	no	yes	no	no	--root
-build_folder_databases.py	yes	yes	no	—	no	no	no	no	no	no	no	no	--root；--dry-run
+build_folder_databases.py	yes	yes	no	—	no	yes	yes	no	no	no	no	no	—
 build_theme_index.py	yes	yes	no	—	no	no	no	no	no	yes	yes	no	--root；--dry-run
 build_title_taskgroups.py	yes	yes	no	—	no	yes	no	no	no	no	yes	no	--dry-run
+build_tool_registry.py	yes	yes	no	subprocess	no	yes	no	no	no	yes	yes	no	--dry-run
 check_date_anomalies.py	no	no	no	—	no	no	no	no	no	no	no	no	argparse；--root；--dry-run；main_guard
 claimdb_guard.py	yes	yes	yes	—	no	no	no	no	no	yes	no	no	--root；--dry-run
 clean_wal.py	no	no	no	—	no	no	no	no	no	no	no	no	argparse；--root；--dry-run；main_guard

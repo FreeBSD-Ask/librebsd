@@ -1,1 +1,3 @@
 tool_id	path	field	value	reason
+T-WR-061	00-编纂规则与格式规范/01-规则/脚本与命令/build_folder_databases.py	lifecycle	deprecated	目标格式过时：SQLite+FTS5（db_filename 仍为 .db），DuckDB 迁移后 7 个目标库在磁盘均不存在；正式跑会造出与“唯一工作副本”规则冲突的 SQLite 库。2026-11-28 契约修复仅补 --root／--dry-run（并修正 PROJECT_ROOT 错两级），功能去留待 ykla 裁定
+T-CO-055	00-编纂规则与格式规范/01-规则/脚本与命令/auto_ingest_new_pdfs.py	lifecycle	deprecated	已自我退役：references_fulltext.db 为 0 字节空壳，脚本 fail-closed 并指向 _full_ingest_all.py（DuckDB 主存储层）；2026-11-28 契约修复仅去硬编码盘符（d:\librebsd→parents[3]）并补 --root

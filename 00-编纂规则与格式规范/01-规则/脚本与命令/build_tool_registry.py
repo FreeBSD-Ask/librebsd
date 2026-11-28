@@ -224,9 +224,10 @@ def load_overrides(root: Path) -> dict[str, dict]:
         return out
     with p.open(encoding="utf-8", newline="") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
-            key = row.get("tool_id") or row.get("path") or ""
-            if key:
-                out[key] = row
+            row = {k: (v or "").strip() for k, v in row.items() if k}
+            for key in (row.get("tool_id"), row.get("path")):
+                if key:
+                    out[key] = row
     return out
 
 
