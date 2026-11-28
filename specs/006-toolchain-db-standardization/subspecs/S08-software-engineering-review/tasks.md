@@ -3,7 +3,7 @@ spec_id: S08
 title: 软件工程理论复核
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 十四、软件工程理论复核（S08 的设计约束）
-version: 1.0.1
+version: 1.0.2
 status: closed
 goals: [7]
 owner: ykla

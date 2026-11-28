@@ -3,7 +3,7 @@ spec_id: S11
 title: 缓存与垃圾识别清理机制
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 十二、缓存与垃圾识别清理（S11 的设计约束）
-version: 1.0.1
+version: 1.0.2
 status: closed
 goals: [10]
 owner: ykla
