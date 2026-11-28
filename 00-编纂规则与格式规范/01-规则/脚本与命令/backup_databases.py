@@ -244,7 +244,9 @@ def verify_archive(gz_path, expect_tables):
         dst = os.path.join(tmpdir, "out")
         os.makedirs(dst, exist_ok=True)
         with tarfile.open(tmp_tar, "r:") as tar:
-            tar.extractall(dst)
+            # 归档可能来自历史备份槽或人工放置件：显式 data 过滤拒绝路径穿越、链接与设备文件
+            # （PEP 706；Python 3.12+ 支持，本项目运行时 3.15）。
+            tar.extractall(dst, filter="data")
         # 只读连接不能以无路径形式启动内存库，此处只计数、不落文件
         con = duckdb.connect()
         total, bad = 0, 0
