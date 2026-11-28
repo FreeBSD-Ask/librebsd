@@ -1,0 +1,48 @@
+[
+  {
+    "db": "bsd-derivatives",
+    "actions": [
+      "claimdb_guard PASS",
+      "备份槽 20261128_140643.duckdb.gz",
+      "DROP INDEX idx_commit_files_commit_hash",
+      "ADD PRIMARY KEY (id)",
+      "CREATE INDEX idx_commit_files_commit_hash(commit_hash)",
+      "验证 PASS（PK＋索引＋行数）"
+    ],
+    "errors": [],
+    "verified": {
+      "pk": [
+        "id"
+      ],
+      "rows_before": 19575835,
+      "rows_after": 19575835,
+      "indexes": [
+        "idx_commit_files_commit_hash"
+      ]
+    },
+    "backup": "20261128_140643.duckdb.gz"
+  },
+  {
+    "db": "netbsd",
+    "actions": [
+      "claimdb_guard PASS",
+      "备份槽 20261128_140714.duckdb.gz",
+      "DROP INDEX idx_commit_files_commit_hash",
+      "ADD PRIMARY KEY (id)",
+      "CREATE INDEX idx_commit_files_commit_hash(commit_hash)",
+      "验证 PASS（PK＋索引＋行数）"
+    ],
+    "errors": [],
+    "verified": {
+      "pk": [
+        "id"
+      ],
+      "rows_before": 27271149,
+      "rows_after": 27271149,
+      "indexes": [
+        "idx_commit_files_commit_hash"
+      ]
+    },
+    "backup": "20261128_140714.duckdb.gz"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "db": "bsd-derivatives",
+    "rows": 19575835,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "darwin",
+    "rows": 362193,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "dragonfly",
+    "rows": 1768429,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "freebsd",
+    "rows": 8274603,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "illumos-gate",
+    "rows": 298721,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "linux-kernel",
+    "rows": 3132751,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "netbsd",
+    "rows": 27271149,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "openbsd",
+    "rows": 2307753,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "openssh-apple",
+    "rows": 7459,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  },
+  {
+    "db": "openzfs",
+    "rows": 84178,
+    "indexes": [
+      "idx_commit_files_commit_hash"
+    ],
+    "views": [],
+    "id_uniqueness": "rows==uniq==nonnull",
+    "note": "执行前侦察快照（2026-11-28 14:00；dry-run 落盘后被终态复跑覆盖为空，按实测补录）"
+  }
+]
