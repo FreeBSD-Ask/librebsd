@@ -166,7 +166,7 @@ def load(root: Path) -> dict:
         for p in spec_root.rglob("*"):
             if p.is_file():
                 rel = p.relative_to(spec_root).as_posix()
-                if rel.startswith("axiomatic/") or "__pycache__" in rel or rel.endswith(".pyc"):
+                if rel.startswith(("axiomatic/", "deliverables/")) or "__pycache__" in rel or rel.endswith(".pyc"):
                     continue
                 object_files.add(rel)
     expected_files = set(ROOT_AUX) | set(CONTRACTS) | {"BINDING.tsv"}

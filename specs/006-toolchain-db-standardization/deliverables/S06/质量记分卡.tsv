@@ -1,0 +1,29 @@
+db_name	db_path	tier	table_count	col_total	row_count_sum	size_bytes	storage_version	schema_meta	meta_conforming	registry_match	meta_conforming_ok	storage_current	score_v0	risk_v0	top_issues	evidence_path
+changelog	01-项目管理/00-变更记录/changelog.duckdb	A	2	13	3778	40644608	v1.0.0+	MISSING	no	True	False	False	67	medium	schema_meta 缺失；changelog v64 为 AGENTS 明载现状（升级须 ADR，不扣分）	deliverables/S06/剖析清单.tsv
+sacred_sources	02-sacred源材料/sacred_sources.duckdb	A	5	57	3984	3420160	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+phoronix_news	03-原始史料库/01-代码仓库史料/01-数据库本体/phoronix_news.duckdb	A	6	61	874	1847296	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+资料数据库	03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	A	9	97	44702	9973760	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+freebsd	03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	A	11	83	9579745	1049899008	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+netbsd	03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	A	9	71	29273016	2289315840	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+openbsd	03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	A	9	71	2800089	289943552	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+dragonfly	03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	A	10	79	2425219	320614400	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+openzfs	03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	A	7	55	125993	18624512	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+bsd-derivatives	03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	A	7	55	20554296	1026568192	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+cross_source_identity	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/cross_source_identity.duckdb	A	2	17	85	1323008	v2.0.0+	MISSING	no	False	False	True	33	high	schema_meta 缺失；未登记 folder_db_registry	deliverables/S06/剖析清单.tsv
+illumos-gate	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	A	6	47	323130	18624512	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+openssh-apple	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	A	8	58	7539	2895872	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+openssh	03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	A	7	51	14867	6303744	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+darwin	03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	A	8	58	366473	10760192	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+linux-kernel	03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	A	11	83	4651630	2625646592	v2.0.0+	MISSING	no	True	False	True	67	medium	schema_meta 缺失	deliverables/S06/剖析清单.tsv
+login-zazhi	03-原始史料库/15-login杂志史料/login-zazhi.duckdb	A	16	103	115260	504115200	v1.0.0+	PRESENT	no	True	False	False	33	high	schema_meta 列不规范（存在但不合 proposed schema）；存储版本 v1.0.0+；COUNT 失败对象：视图 0＋表 6（FTS 残留依赖缺失）	deliverables/S06/剖析清单.tsv
+tuhs_wiki	03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb	A	11	123	46209	53751808	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+original_sources	03-原始史料库/original_sources.duckdb	A	7	80	1320	6041600	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+references_fulltext	04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb	A	13	137	1081366	827076608	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+doubts_standalone	04-现代研究文献/06-存疑数据库/doubts_standalone.duckdb	A	7	99	16146	31731712	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+causal_graph	04-现代研究文献/causal_graph.duckdb	A	11	101	27	2109440	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+historical_claims	04-现代研究文献/historical_claims.duckdb	A	34	255	2128244	464269312	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+research_notes	04-现代研究文献/research_notes.duckdb	A	5	57	507166	138162176	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+fact_checks	07-事实核查记录/fact_checks.duckdb	A	5	57	81	1323008	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+review_reports	08-核查报告与多轮复核/review_reports.duckdb	A	6	72	254	2109440	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+cross_indexes	10-交叉索引/cross_indexes.duckdb	A	10	122	3855	4206592	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv
+metadata_interfaces	11-元数据接口/metadata_interfaces.duckdb	A	7	72	10066	2895872	v2.0.0+	PRESENT	no	True	False	True	67	medium	schema_meta 列不规范（存在但不合 proposed schema）	deliverables/S06/剖析清单.tsv

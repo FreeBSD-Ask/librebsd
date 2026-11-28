@@ -1,0 +1,365 @@
+db_path	size_bytes	mtime	tier	backup_scope	registered	storage_version	table_count	view_count	broken_views	broken_base	col_total	row_count_sum	schema_meta	meta_conforming	error
+01-项目管理/00-变更记录/changelog.duckdb	40644608	2026-11-28T07:48:11	A	changelog	yes	v1.0.0+	2	0	0	0	13	3778	MISSING	no	
+02-sacred源材料/sacred_sources.duckdb	3420160	2026-10-24T20:01:33	A	sacred_sources	yes	v2.0.0+	5	0	0	0	57	3984	PRESENT	no	
+03-原始史料库/01-代码仓库史料/01-数据库本体/phoronix_news.duckdb	1847296	2026-10-24T20:01:28	A	phoronix_news	yes	v2.0.0+	6	0	0	0	61	874	MISSING	no	
+03-原始史料库/01-代码仓库史料/01-数据库本体/资料数据库.duckdb	9973760	2026-10-24T20:01:41	A	资料数据库	yes	v2.0.0+	9	0	0	0	97	44702	PRESENT	no	
+03-原始史料库/01-代码仓库史料/02-FreeBSD/db/duckdb/freebsd.duckdb	1049899008	2026-10-24T20:04:00	A	freebsd	yes	v2.0.0+	11	0	0	0	83	9579745	MISSING	no	
+03-原始史料库/01-代码仓库史料/03-NetBSD/db/duckdb/netbsd.duckdb	2289315840	2026-10-24T20:06:43	A	netbsd	yes	v2.0.0+	9	0	0	0	71	29273016	MISSING	no	
+03-原始史料库/01-代码仓库史料/04-OpenBSD/db/duckdb/openbsd.duckdb	289943552	2026-10-24T20:03:23	A	openbsd	yes	v2.0.0+	9	0	0	0	71	2800089	MISSING	no	
+03-原始史料库/01-代码仓库史料/05-DragonFlyBSD/db/duckdb/dragonfly.duckdb	320614400	2026-10-24T20:03:14	A	dragonfly	yes	v2.0.0+	10	0	0	0	79	2425219	MISSING	no	
+03-原始史料库/01-代码仓库史料/06-OpenZFS/db/duckdb/openzfs.duckdb	18624512	2026-10-24T20:01:45	A	openzfs	yes	v2.0.0+	7	0	0	0	55	125993	MISSING	no	
+03-原始史料库/01-代码仓库史料/07-BSD衍生项目/db/duckdb/bsd-derivatives.duckdb	1026568192	2026-10-24T20:04:40	A	bsd-derivatives	yes	v2.0.0+	7	0	0	0	55	20554296	MISSING	no	
+03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/cross_source_identity.duckdb	1323008	2026-10-24T20:01:27	A	cross_source_identity	no	v2.0.0+	2	0	0	0	17	85	MISSING	no	
+03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/illumos-gate.duckdb	18624512	2026-10-24T20:01:43	A	illumos-gate	yes	v2.0.0+	6	0	0	0	47	323130	MISSING	no	
+03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh-apple.duckdb	2895872	2026-10-24T20:01:32	A	openssh-apple	yes	v2.0.0+	8	0	0	0	58	7539	MISSING	no	
+03-原始史料库/01-代码仓库史料/08-跨项目对比/db/duckdb/openssh.duckdb	6303744	2026-10-24T20:01:38	A	openssh	yes	v2.0.0+	7	0	0	0	51	14867	MISSING	no	
+03-原始史料库/01-代码仓库史料/09-Darwin/db/duckdb/darwin.duckdb	10760192	2026-10-24T20:01:39	A	darwin	yes	v2.0.0+	8	0	0	0	58	366473	MISSING	no	
+03-原始史料库/01-代码仓库史料/10-LinuxKernel/db/duckdb/linux-kernel.duckdb	2625646592	2026-10-24T20:05:37	A	linux-kernel	yes	v2.0.0+	11	0	0	0	83	4651630	MISSING	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/aic7xxx.duckdb	18100224	2026-08-28T00:38:21	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/archbsd-hackers.duckdb	3158016	2026-08-28T00:19:25	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/ctm-announce.duckdb	4468736	2026-08-28T00:38:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/ctm-users.duckdb	6303744	2026-08-28T00:38:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/cu.duckdb	44052480	2026-08-28T00:38:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/dev-reviews.duckdb	2895872	2026-08-28T00:19:36	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-accessibility.duckdb	2895872	2026-08-28T00:19:36	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-acpi.duckdb	55586816	2026-08-28T00:38:27	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ada.duckdb	5255168	2026-08-28T00:38:27	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-advocacy.duckdb	74723328	2026-08-28T00:38:28	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-afs.duckdb	5779456	2026-08-28T00:38:28	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-alpha.duckdb	79966208	2026-08-28T00:38:30	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-amd64.duckdb	81276928	2026-08-28T00:38:31	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-announce.duckdb	33566720	2026-08-28T00:38:31	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-apache.duckdb	58470400	2026-08-28T00:38:32	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-arch.duckdb	173813760	2026-08-28T00:38:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-arm.duckdb	166998016	2026-08-28T00:38:36	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-atm.duckdb	9187328	2026-08-28T00:38:37	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-audit.duckdb	16789504	2026-08-28T00:38:37	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-binup.duckdb	4993024	2026-08-28T00:38:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-bluetooth.duckdb	14430208	2026-08-28T00:38:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-bugbusters.duckdb	7876608	2026-08-28T00:38:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-bugs.duckdb	1024471040	2026-08-28T00:38:47	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-chat.duckdb	226504704	2026-08-28T00:38:50	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-chromium.duckdb	161755136	2026-08-28T00:38:51	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-cloud.duckdb	4730880	2026-08-28T00:38:51	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-cluster.duckdb	8663040	2026-08-28T00:38:52	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-config.duckdb	8138752	2026-08-28T00:38:52	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-current.duckdb	1174679552	2026-08-28T00:39:02	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-database.duckdb	12070912	2026-08-28T00:39:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-desktop.duckdb	30683136	2026-08-28T00:39:04	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-doc.duckdb	348925952	2026-08-28T00:39:08	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-drivers.duckdb	14692352	2026-08-28T00:39:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-dtrace.duckdb	7090176	2026-08-28T00:39:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-eclipse.duckdb	13381632	2026-08-28T00:39:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-elastic.duckdb	101199872	2026-08-28T00:39:12	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-embedded.duckdb	15478784	2026-08-28T00:39:12	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-emulation.duckdb	158871552	2026-08-28T00:39:15	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-enlightenment.duckdb	31731712	2026-08-28T00:31:44	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-enterprisewg.duckdb	3682304	2026-08-28T00:39:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-eol.duckdb	3682304	2026-08-28T00:39:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-errata-notifications.duckdb	3158016	2026-08-28T00:32:10	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-fcp-editors.duckdb	3682304	2026-08-28T00:39:19	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-fcp.duckdb	4730880	2026-08-28T00:39:19	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-firewire.duckdb	14168064	2026-08-28T00:39:19	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-fortran.duckdb	7876608	2026-08-28T00:39:19	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-fs.duckdb	195309568	2026-08-28T00:39:21	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-games.duckdb	4993024	2026-08-28T00:39:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-gecko.duckdb	217329664	2026-08-28T00:39:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-geom.duckdb	34353152	2026-08-28T00:39:24	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-git.duckdb	7876608	2026-08-28T00:39:25	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-gnome.duckdb	944517120	2026-08-28T00:43:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-go.duckdb	10235904	2026-08-28T00:43:39	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hackers.duckdb	1004810240	2026-08-28T00:45:55	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hardware.duckdb	123744256	2026-08-28T00:46:18	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hpc.duckdb	3682304	2026-08-28T00:46:49	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-hubs.duckdb	31731712	2026-08-28T00:46:55	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-i18n.duckdb	8400896	2026-08-28T00:46:56	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-i386.duckdb	87306240	2026-08-28T00:47:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ia32.duckdb	3682304	2026-08-28T00:47:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ia64.duckdb	33042432	2026-08-28T00:47:32	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-infiniband.duckdb	5255168	2026-08-28T00:47:33	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-install.duckdb	4468736	2026-08-28T00:47:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ipfw.duckdb	43528192	2026-08-28T00:47:44	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-isdn.duckdb	31469568	2026-08-28T00:47:49	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-isp.duckdb	158347264	2026-08-28T00:48:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-jail.duckdb	20197376	2026-08-28T00:48:27	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-java.duckdb	114307072	2026-08-28T00:48:56	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-jobs.duckdb	12595200	2026-08-28T00:48:59	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-lfs.duckdb	3420160	2026-08-28T00:48:59	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-libh.duckdb	14430208	2026-08-28T00:49:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-lite.duckdb	3682304	2026-08-28T00:49:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-mips.duckdb	38809600	2026-08-28T00:49:13	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-mobile.duckdb	139210752	2026-08-28T00:49:47	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-mono.duckdb	58470400	2026-08-28T00:50:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-mozilla.duckdb	7352320	2026-08-28T00:50:05	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-multimedia.duckdb	235417600	2026-08-28T00:51:10	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-net.duckdb	333459456	2026-08-28T00:52:33	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-new-bus.duckdb	4468736	2026-08-28T00:52:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-newbies.duckdb	71839744	2026-08-28T00:52:51	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-numerics.duckdb	7876608	2026-08-28T00:52:53	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ocaml.duckdb	2895872	2026-08-28T00:52:54	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-office.duckdb	41955328	2026-08-28T00:53:05	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-openoffice.duckdb	32256000	2026-08-28T00:53:13	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ops-announce.duckdb	3158016	2026-08-28T00:53:13	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-performance.duckdb	22818816	2026-08-28T00:53:19	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-perl.duckdb	82063360	2026-08-28T00:53:41	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pf.duckdb	40644608	2026-08-28T00:53:51	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pkg.duckdb	29896704	2026-08-28T00:54:57	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-pkgbase.duckdb	5517312	2026-08-28T00:54:59	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-platforms.duckdb	6041600	2026-08-28T00:55:00	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-policy.duckdb	3420160	2026-08-28T00:55:00	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ports-announce.duckdb	3944448	2026-08-28T00:55:01	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ports.duckdb	838086656	2026-08-28T01:01:48	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-ppc.duckdb	72364032	2026-08-28T01:02:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-proliant.duckdb	5517312	2026-08-28T01:02:10	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-python.duckdb	101199872	2026-08-28T01:02:32	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-qa.duckdb	14430208	2026-08-28T01:02:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-questions.duckdb	1568944128	2026-08-28T01:05:14	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-rc.duckdb	18624512	2026-08-28T01:05:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-realtime.duckdb	3682304	2026-08-28T01:05:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-reproducibility.duckdb	2895872	2026-08-28T01:05:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-riscv.duckdb	3682304	2026-08-28T01:05:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-scsi.duckdb	95170560	2026-08-28T01:05:39	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-security-notifications.duckdb	10498048	2026-08-28T01:05:41	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-security.duckdb	155987968	2026-08-28T01:06:04	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-small.duckdb	17575936	2026-08-28T01:06:08	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-smp.duckdb	55062528	2026-08-28T01:06:21	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-snapshots.duckdb	41693184	2026-08-28T01:06:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-sparc64.duckdb	56373248	2026-08-28T01:06:50	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-stable.duckdb	308555776	2026-08-28T01:08:11	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-standards.duckdb	14954496	2026-08-28T01:08:14	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-stats.duckdb	4468736	2026-08-28T01:08:15	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-sysinstall.duckdb	4730880	2026-08-28T01:08:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-tcltk.duckdb	7090176	2026-08-28T01:08:18	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-teaching.duckdb	3158016	2026-08-28T01:08:18	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-test.duckdb	7090176	2026-08-28T01:08:20	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-testing.duckdb	6565888	2026-08-28T01:08:21	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-tex.duckdb	4730880	2026-08-28T01:08:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-threads.duckdb	4206592	2026-08-28T01:08:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-tinderbox.duckdb	3420160	2026-08-28T01:08:24	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-tokenring.duckdb	4468736	2026-08-28T01:08:25	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-toolchain.duckdb	20721664	2026-08-28T01:08:31	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-translators.duckdb	3944448	2026-08-28T01:08:32	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-transport.duckdb	4206592	2026-08-28T01:08:32	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-uboot.duckdb	9711616	2026-08-28T01:08:35	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-usb.duckdb	15216640	2026-08-28T01:08:39	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-user-groups.duckdb	3682304	2026-08-28T01:08:40	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-users-jp.duckdb	10235904	2026-08-28T01:08:42	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-vendors.duckdb	3682304	2026-08-28T01:08:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-virtualization.duckdb	24129536	2026-08-28T01:08:48	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-wireless.duckdb	15216640	2026-08-28T01:08:51	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-women.duckdb	3682304	2026-08-28T01:08:52	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-www.duckdb	33304576	2026-08-28T01:09:01	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-x11.duckdb	55062528	2026-08-28T01:09:17	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-xen.duckdb	5517312	2026-08-28T01:09:18	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/freebsd-xfce.duckdb	7614464	2026-08-28T01:09:20	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/oi-users.duckdb	3682304	2026-08-28T01:09:21	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/p4-projects.duckdb	12333056	2026-08-28T01:09:24	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/01-freebsd/db/p4-releng.duckdb	3944448	2026-08-27T23:57:41	B		yes	v1.0.0+	5	0	0	0	53		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/atf-devel.duckdb	5255168	2026-08-28T01:09:40	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/current-users.duckdb	16527360	2026-08-28T01:09:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/ietf-ssh.duckdb	3420160	2026-08-28T01:09:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-advocacy.duckdb	3944448	2026-08-28T01:09:45	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-announce.duckdb	9711616	2026-08-28T01:09:47	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-bugs.duckdb	331624448	2026-08-28T01:11:08	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-desktop.duckdb	3420160	2026-08-28T01:11:10	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-docs.duckdb	20721664	2026-08-28T01:11:14	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-java.duckdb	4730880	2026-08-28T01:11:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-jobs.duckdb	3944448	2026-08-28T01:11:17	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-news.duckdb	3944448	2026-08-28T01:11:18	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-ports.duckdb	13643776	2026-08-28T01:11:21	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-syzbot.duckdb	74723328	2026-08-28T01:11:33	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/netbsd-users.duckdb	3420160	2026-08-28T01:11:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/pkgsrc-bugs.duckdb	163328000	2026-08-28T01:12:15	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/pkgsrc-users.duckdb	90451968	2026-08-28T01:12:42	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/pkgsrc-wip-discuss.duckdb	12595200	2026-08-28T01:12:46	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/pkgsrc-wip-review.duckdb	6828032	2026-08-28T01:12:49	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-acorn26.duckdb	4206592	2026-08-28T01:12:50	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-acorn32.duckdb	6041600	2026-08-28T01:12:51	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-algor.duckdb	3944448	2026-08-28T01:12:53	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-alpha.duckdb	50343936	2026-08-28T01:12:59	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-amd64.duckdb	10760192	2026-08-28T01:13:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-amiga.duckdb	6041600	2026-08-28T01:13:06	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-amigappc.duckdb	3158016	2026-08-28T01:13:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-arc.duckdb	3158016	2026-08-28T01:13:11	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-arm.duckdb	25964544	2026-08-28T01:13:18	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-atari.duckdb	3944448	2026-08-28T01:13:20	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-avr32.duckdb	3420160	2026-08-28T01:13:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-bebox.duckdb	4993024	2026-08-28T01:13:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-cats.duckdb	5517312	2026-08-28T01:13:24	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-cobalt.duckdb	35401728	2026-08-28T01:13:29	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-dreamcast.duckdb	26750976	2026-08-28T01:13:33	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-evbmips.duckdb	8663040	2026-08-28T01:13:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-evbsh5.duckdb	2895872	2026-08-28T01:13:35	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-ews4800mips.duckdb	3944448	2026-08-28T01:13:35	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-hp300.duckdb	3944448	2026-08-28T01:13:36	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-hp700.duckdb	3944448	2026-08-28T01:13:37	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-hpcarm.duckdb	2895872	2026-08-28T01:13:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-hpcmips.duckdb	4468736	2026-08-28T01:13:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-hpcsh.duckdb	3420160	2026-08-28T01:13:39	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-hppa.duckdb	3944448	2026-08-28T01:13:40	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-i386.duckdb	10235904	2026-08-28T01:13:41	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-ia64.duckdb	4206592	2026-08-28T01:13:42	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-ibmnws.duckdb	3944448	2026-08-28T01:13:42	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-iyonix.duckdb	3420160	2026-08-28T01:13:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-luna68k.duckdb	3944448	2026-08-28T01:13:44	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-m68k.duckdb	13643776	2026-08-28T01:13:47	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-m88k.duckdb	5517312	2026-08-28T01:13:48	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-mac68k.duckdb	15740928	2026-08-28T01:13:50	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-macppc.duckdb	9973760	2026-08-28T01:13:52	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-mips.duckdb	7352320	2026-08-28T01:13:53	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-mipsco.duckdb	3158016	2026-08-28T01:13:55	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-mvme68k.duckdb	3420160	2026-08-28T01:13:55	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-mvmeppc.duckdb	3420160	2026-08-28T01:13:56	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-news68k.duckdb	3944448	2026-08-28T01:13:57	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-newsmips.duckdb	3944448	2026-08-28T01:13:58	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-next68k.duckdb	3944448	2026-08-28T01:13:59	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-ofppc.duckdb	3420160	2026-08-28T01:14:00	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-pc532.duckdb	2895872	2026-08-28T01:14:01	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-pdp10.duckdb	3682304	2026-08-28T01:14:01	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-playstation2.duckdb	3420160	2026-08-28T01:14:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-pmax.duckdb	4206592	2026-08-28T01:14:03	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-powerpc.duckdb	10760192	2026-08-28T01:14:05	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-prep.duckdb	4468736	2026-08-28T01:14:07	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-riscv.duckdb	3420160	2026-08-28T01:14:08	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-s390.duckdb	4468736	2026-08-28T01:14:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sandpoint.duckdb	4468736	2026-08-28T01:14:10	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sbmips.duckdb	3944448	2026-08-28T01:14:11	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sgimips.duckdb	19935232	2026-08-28T01:14:14	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sh3.duckdb	9711616	2026-08-28T01:14:16	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sh5.duckdb	3944448	2026-08-28T01:14:17	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sparc.duckdb	28061696	2026-08-28T01:14:20	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sparc64.duckdb	9973760	2026-08-28T01:14:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sun2.duckdb	3158016	2026-08-28T01:14:24	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-sun3.duckdb	3682304	2026-08-28T01:14:25	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-vax.duckdb	12857344	2026-08-28T01:14:28	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-x68k.duckdb	3420160	2026-08-28T01:14:28	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-xen.duckdb	4468736	2026-08-28T01:14:29	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/port-zaurus.duckdb	3944448	2026-08-28T01:14:30	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-au.duckdb	3944448	2026-08-28T01:14:30	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-boston.duckdb	3420160	2026-08-28T01:14:31	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-ca.duckdb	3420160	2026-08-28T01:14:32	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-ch.duckdb	2895872	2026-08-28T01:14:33	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-cs.duckdb	3420160	2026-08-28T01:14:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-de.duckdb	3420160	2026-08-28T01:14:34	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-fr.duckdb	6828032	2026-08-28T01:14:35	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-helsinki.duckdb	3158016	2026-08-28T01:14:36	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-it.duckdb	4206592	2026-08-28T01:14:37	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-jp.duckdb	4206592	2026-08-28T01:14:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-london.duckdb	5517312	2026-08-28T01:14:39	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-nordic.duckdb	3944448	2026-08-28T01:14:40	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-nyc.duckdb	8138752	2026-08-28T01:14:42	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-pl.duckdb	7090176	2026-08-28T01:14:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-pt.duckdb	4206592	2026-08-28T01:14:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/regional-sfba.duckdb	4993024	2026-08-28T01:14:44	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/security-announce.duckdb	3420160	2026-08-28T01:14:45	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-cluster.duckdb	3420160	2026-08-28T01:14:45	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-crypto.duckdb	6828032	2026-08-28T01:14:46	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-embed.duckdb	2895872	2026-08-28T01:14:47	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-install.duckdb	20721664	2026-08-28T01:14:50	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-kern.duckdb	210776064	2026-08-28T01:15:38	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-misc.duckdb	4206592	2026-08-28T01:15:43	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-multimedia.duckdb	3682304	2026-08-28T01:15:44	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-net.duckdb	25702400	2026-08-28T01:15:49	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-perform.duckdb	3420160	2026-08-28T01:15:49	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-pkg.duckdb	51392512	2026-08-28T01:16:04	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-ports.duckdb	3420160	2026-08-28T01:16:06	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-repository.duckdb	5255168	2026-08-28T01:16:08	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-security.duckdb	6565888	2026-08-28T01:16:09	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-smp.duckdb	3158016	2026-08-28T01:16:10	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-toolchain.duckdb	14692352	2026-08-28T01:16:13	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-userlevel.duckdb	39071744	2026-08-28T01:16:22	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/02-netbsd/db/tech-x11.duckdb	13381632	2026-08-28T01:16:23	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/03-openbsd/duckdb/openbsd_mail.duckdb	785133568	2026-08-28T01:12:44	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/04-dragonfly/duckdb/dragonfly_mail.duckdb	215756800	2026-08-28T01:10:35	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/ksummit-discuss.duckdb	32780288	2026-08-28T01:10:00	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/ksummit.duckdb	46149632	2026-08-28T01:42:38	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-api.duckdb	508833792	2026-08-28T01:42:42	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-arch.duckdb	838873088	2026-08-28T01:42:57	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-cve-announce.duckdb	96219136	2026-10-04T11:53:59	B		no	v1.0.0+	3	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-fsdevel.duckdb	3465555968	2026-08-28T01:43:14	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-kernel-announce.duckdb	64237568	2026-08-28T01:10:51	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-mail-core-figures.duckdb	26488832	2026-09-14T00:49:19	B		no	v1.0.0+	4	0	0	0	24		PRESENT	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-mail-keyword-hits.duckdb	926953472	2026-09-14T12:13:06	B		no	v1.0.0+	4	0	0	0	18		PRESENT	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-man.duckdb	151531520	2026-08-28T01:43:20	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-mm.duckdb	3882364928	2026-08-28T01:43:44	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-scsi.duckdb	1508651008	2026-08-28T01:44:03	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/linux-smp.duckdb	11546624	2026-08-28T01:44:03	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/lkml.duckdb	33845424128	2026-08-28T01:53:48	B		no	v1.0.0+	3	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/netdev.duckdb	7912304640	2026-08-28T01:54:37	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/rust-for-linux.duckdb	325070848	2026-08-28T01:54:47	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/sparclinux.duckdb	278409216	2026-08-28T01:54:48	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/systemd-devel.duckdb	295448576	2026-09-22T06:38:10	B		no	v1.0.0+	1	0	0	0	18		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/db/tech-board-discuss.duckdb	6303744	2026-08-28T01:54:48	B		no	v1.0.0+	9	0	0	0	32		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/02-遍历留痕/traversal_trail.duckdb	4468736	2026-09-14T03:21:50	B		no	v1.0.0+	6	0	0	0	38		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/04-脚本/_work_core.duckdb	24129536	2026-09-05T04:51:14	B		no	v1.0.0+	6	0	0	0	26		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/04-脚本/_work_kw.duckdb	274432	2026-09-05T00:40:21	B		no	v1.0.0+	0	0	0	0	0		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/dslinux_changelog.duckdb	1060864	2026-09-23T15:24:27	B		no	v1.0.0+	1	0	0	0	4		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/dslinux_claims.duckdb	220213248	2026-09-23T15:24:27	B		no	v1.0.0+	4	0	0	0	28		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/dslinux_doubts.duckdb	798720	2026-09-23T10:44:37	B		no	v1.0.0+	1	0	0	0	7		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/dslinux_keywords.duckdb	1060864	2026-09-06T17:57:45	B		no	v1.0.0+	2	0	0	0	16		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/dslinux_persons.duckdb	1060864	2026-09-06T17:56:43	B		no	v1.0.0+	2	0	0	0	18		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05-数据库/linux-api.duckdb	12288	2026-09-22T05:29:43	B		no	v1.0.0+	0	0	0	0	0		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/freebsd-hackers.duckdb	12288	2026-09-22T14:49:54	B		no	v1.0.0+	0	0	0	0	0		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/fsdevel_val.duckdb	1434464256	2026-09-22T14:37:23	B		no	v1.0.0+	1	0	0	0	15		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/hackers_val.duckdb	403189760	2026-09-22T14:01:37	B		no	v1.0.0+	1	0	0	0	15		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/ksummit_val.duckdb	38023168	2026-09-22T13:50:35	B		no	v1.0.0+	1	0	0	0	15		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/lkml_value_scores.duckdb	2228760576	2026-09-22T00:01:33	B		no	v1.0.0+	1	0	0	0	23		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/netdev_val.duckdb	3678679040	2026-09-22T16:21:43	B		no	v1.0.0+	1	0	0	0	15		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/05b-lkml专题/05-数据库/sysd_val.duckdb	173551616	2026-09-22T06:57:26	B		no	v1.0.0+	1	0	0	0	16		MISSING	no	
+03-原始史料库/11-邮件列表史料/05-linux-kernel/mining/outline_orphans.duckdb	9449472	2026-09-14T23:15:22	B		no	v1.0.0+	4	0	0	0	25		MISSING	no	
+03-原始史料库/11-邮件列表史料/06-other-bsd/duckdb/other-bsd_mail.duckdb	45101056	2026-08-28T01:10:02	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/11-邮件列表史料/07-usenet/duckdb/usenet_mail.duckdb	800862208	2026-08-28T01:11:47	B		yes	v1.0.0+	10	0	0	0	48		PRESENT	no	
+03-原始史料库/14-播客史料/bsd-conferences-youtube.duckdb	1323008	2026-08-26T17:35:27	B		yes	v1.0.0+	9	0	0	0	83		PRESENT	no	
+03-原始史料库/14-播客史料/bsd-now.duckdb	173289472	2026-10-15T12:11:45	B		yes	v1.0.0+	8	0	0	0	71		PRESENT	no	
+03-原始史料库/14-播客史料/bsdtalk.duckdb	29634560	2026-10-15T12:11:45	B		yes	v1.0.0+	9	0	0	0	86		PRESENT	no	
+03-原始史料库/14-播客史料/floss-weekly.duckdb	4206592	2026-08-28T11:12:50	B		yes	v1.0.0+	9	0	0	0	86		PRESENT	no	
+03-原始史料库/14-播客史料/freebsd-fridays.duckdb	1585152	2026-08-28T04:03:11	B		yes	v1.0.0+	9	0	0	0	83		PRESENT	no	
+03-原始史料库/14-播客史料/freebsd-office-hours.duckdb	1323008	2026-08-26T17:35:27	B		yes	v1.0.0+	9	0	0	0	83		PRESENT	no	
+03-原始史料库/14-播客史料/nerding-out-with-victor.duckdb	4206592	2026-08-28T11:12:50	B		yes	v1.0.0+	9	0	0	0	86		PRESENT	no	
+03-原始史料库/14-播客史料/software-engineering-daily.duckdb	4468736	2026-08-28T11:12:50	B		yes	v1.0.0+	9	0	0	0	86		PRESENT	no	
+03-原始史料库/14-播客史料/the-changelog.duckdb	4730880	2026-08-28T11:12:50	B		yes	v1.0.0+	9	0	0	0	86		PRESENT	no	
+03-原始史料库/14-播客史料/youtube.duckdb	288108544	2026-10-15T12:11:45	B		yes	v1.0.0+	9	0	0	0	86		PRESENT	no	
+03-原始史料库/15-login杂志史料/login-zazhi.duckdb	504115200	2026-10-10T08:53:32	A	login-zazhi	yes	v1.0.0+	16	0	0	6	103	115260	PRESENT	no	"dict:Catalog Error: Table with name dict does not exist!
+Did you mean ""fts_main_chunks.dict""?
+
+LINE 1: PRAGMA table_inf;docs:Catalog Error: Table with name docs does not exist!
+Did you mean ""fts_main_chunks.docs""?
+
+LINE 1: PRAGMA table_inf;fields:Catalog Error: Table with name fields does not exist!
+Did you mean ""fts_main_chunks.fields""?
+
+LINE 1: PRAGMA tab;stats:Catalog Error: Table with name stats does not exist!
+Did you mean ""fts_main_chunks.stats""?
+
+LINE 1: PRAGMA table_;stopwords:Catalog Error: Table with name stopwords does not exist!
+Did you mean ""fts_main_chunks.stopwords""?
+
+LINE 1: P;terms:Catalog Error: Table with name terms does not exist!
+Did you mean ""fts_main_chunks.terms""?
+
+LINE 1: PRAGMA table_"
+03-原始史料库/16-TUHS-Wiki史料/tuhs_wiki.duckdb	53751808	2026-11-17T12:22:25	A	tuhs_wiki	yes	v2.0.0+	11	1	0	0	123	46209	PRESENT	no	
+03-原始史料库/original_sources.duckdb	6041600	2026-10-24T20:01:36	A	original_sources	yes	v2.0.0+	7	0	0	0	80	1320	PRESENT	no	
+04-现代研究文献/05-参考文献全文数据库/references_fulltext.duckdb	827076608	2026-11-28T07:39:59	A	references_fulltext	yes	v2.0.0+	13	0	0	0	137	1081366	PRESENT	no	
+04-现代研究文献/06-存疑数据库/doubts_standalone.duckdb	31731712	2026-11-27T22:31:41	A	doubts_standalone	yes	v2.0.0+	7	0	0	0	99	16146	PRESENT	no	
+04-现代研究文献/causal_graph.duckdb	2109440	2026-10-24T20:01:29	A	causal_graph	yes	v2.0.0+	11	0	0	0	101	27	PRESENT	no	
+04-现代研究文献/historical_claims.duckdb	464269312	2026-11-28T07:39:59	A	historical_claims	yes	v2.0.0+	34	0	0	0	255	2128244	PRESENT	no	
+04-现代研究文献/research_notes.duckdb	138162176	2026-10-24T20:03:06	A	research_notes	yes	v2.0.0+	5	0	0	0	57	507166	PRESENT	no	
+04-现代研究文献/rowmine_traversal.duckdb	27275264	2026-09-15T20:35:24	B		no	v1.0.0+	4	1	0	0	32		MISSING	no	
+05-卷册大纲/映射/mapping.duckdb	22556672	2026-10-29T21:34:54	B		yes	v2.0.0+	2	4	0	0	23		1.0	yes	
+07-事实核查记录/fact_checks.duckdb	1323008	2026-10-24T19:59:31	A	fact_checks	yes	v2.0.0+	5	0	0	0	57	81	PRESENT	no	
+08-核查报告与多轮复核/13-deepseek-cankao消解归档/cankao_refs.duckdb	13381632	2026-09-08T06:52:04	B		no	v1.0.0+	18	0	0	0	91		PRESENT	no	
+08-核查报告与多轮复核/review_reports.duckdb	2109440	2026-10-24T20:01:34	A	review_reports	yes	v2.0.0+	6	0	0	0	72	254	PRESENT	no	
+08-核查报告与多轮复核/重构2026/_prep_20260915/mapping_unresolved.duckdb	536576	2026-09-15T04:25:20	B		no	v1.0.0+	2	0	0	0	14		MISSING	no	
+10-交叉索引/cross_indexes.duckdb	4206592	2026-11-21T01:07:56	A	cross_indexes	yes	v2.0.0+	10	0	0	0	122	3855	PRESENT	no	
+11-元数据接口/metadata_interfaces.duckdb	2895872	2026-10-24T20:01:31	A	metadata_interfaces	yes	v2.0.0+	7	0	0	0	72	10066	PRESENT	no	
+script/_outline_mirror_20261022.duckdb	661139456	2026-10-22T14:33:17	B		no	v1.0.0+	4	0	0	0	19		MISSING	no	
+script/_pilot_20261022/drill_h/claims_drill.duckdb	1323008	2026-10-22T11:24:20	B		no	v1.0.0+	4	0	0	0	46		MISSING	no	
+script/_pilot_20261022/H1/claims_tmp.duckdb	536576	2026-10-22T08:47:10	B		no	v1.0.0+	1	0	0	0	2		MISSING	no	
+script/_pilot_20261022/H2/claims_synth.duckdb	536576	2026-10-22T09:01:25	B		no	v1.0.0+	1	0	0	0	3		MISSING	no	
+script/_pilot_20261022/H3/claims_tmp.duckdb	536576	2026-10-22T09:00:22	B		no	v1.0.0+	1	0	0	0	2		MISSING	no	
+script/_pilot_20261022/H4/claims_tmp.duckdb	536576	2026-10-22T08:59:34	B		no	v1.0.0+	1	0	0	0	2		MISSING	no	
+script/_pilot_20261022/theory_pilot_f/sandbox_db/claims.duckdb	1323008	2026-10-22T12:06:12	B		no	v1.0.0+	4	0	0	0	72		MISSING	no	
+script/_pilot_20261022/theory_pilot_h/sandbox_db/claims.duckdb	1060864	2026-10-22T11:47:28	B		no	v1.0.0+	4	0	0	0	46		MISSING	no	
+script/_td009_test.duckdb	174600192	2026-10-22T07:12:09	B		no	v1.0.0+	8	0	0	0	71		PRESENT	no	
+script/_td016_verify_20261022/path20_verify.duckdb	798720	2026-10-22T18:41:58	B		no	v1.0.0+	2	0	0	0	5		MISSING	no	
