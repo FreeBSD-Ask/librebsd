@@ -63,6 +63,9 @@ SKIP 并说明；`--selftest` 离线自检（临时库与临时目录构造正�
 已知限制
 ========
 - `--skip-network` 时 V1 的清单重派生、V6 抽样重取、V9 二跑、V11 外链比对均为 SKIP。
+- 网络层对不可信 URL 的防线：每跳（含重定向）限时解析并逐地址校验全局性、连接钉定在
+  已校验 IP 上、显式禁用环境代理、自动重定向关闭；TLS 证书校验按原主机名进行。
+  若上游站点依赖代理才能访问，连接会失败并如实记为失败（不静默回退到代理路径）。
 - V6 对 `source_bytes > 5 MB` 的外链页跳过重取（不为比对哈希下载大文件），以 INFO 披露。
 - V11 外链页按“去 script／style／nav／header／footer／aside／form”的独立 HTML 计数实现，
   与抓取器实现不同源；站点自定义容器（如 DokuWiki 的 docinfo 类 div）可能产生差异。
@@ -71,7 +74,9 @@ SKIP 并说明；`--selftest` 离线自检（临时库与临时目录构造正�
 from __future__ import annotations
 
 import argparse
+import functools
 import hashlib
+import http.client
 import ipaddress
 import json
 import os
@@ -82,6 +87,7 @@ import socket
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 import urllib.error
 import urllib.parse as up
@@ -90,7 +96,7 @@ from collections import Counter
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Sequence, Set, Tuple
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
 sys.stdout.reconfigure(encoding="utf-8")
 sys.stderr.reconfigure(encoding="utf-8")
@@ -114,7 +120,10 @@ NAMESPACE_SENTINEL = "(top)"
 BASELINE_EXPECTED = 232          # 规格实测口径（230 命名空间页＋顶层 start／syste），仅披露
 MIN_HOST_INTERVAL = 1.5
 HTTP_TIMEOUT = 40
+DNS_TIMEOUT = 10.0              # 单次主机名解析上限（秒）；解析在 fetch 的重试环内进行
 RETRY_DELAYS = (2, 4, 8)
+REDIRECT_STATUS = frozenset({301, 302, 303, 307, 308})
+MAX_REDIRECTS = 5
 
 ALLOWED_TEXT_EXT = {".md", ".wikitext"}
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".gif", ".svg", ".webp", ".ico", ".bmp", ".tif", ".tiff"}
@@ -239,41 +248,209 @@ def table_count(conn, table: str) -> int:
 
 
 # =============================================================================
-# 网络客户端（限流＋重试）
+# 网络客户端（SSRF 防线＋限流＋重试）
 # =============================================================================
 
-def ssrf_rejection(url: str) -> Optional[str]:
-    """SSRF 防线：抓取目标只能是 http/https 公网地址；返回拒绝原因，None 表示放行。
+class SsrfBlocked(Exception):
+    """SSRF 防线拒绝：`str(exc)` 为原因代码，与 `ssrf_rejection()` 返回值同构。"""
 
-    抓取目标来自外部页面内容（索引页与外链），属不可信输入；“抓取不受 robots 限制”
-    只是不自我限速的既定口径，不构成访问本机、内网、链路本地或云元数据地址的授权。
-    主机名解析后逐地址校验；解析与请求之间仍存在 DNS 重绑定窗口，非对抗环境接受该残差。
+
+def _parse_target(url: str) -> Tuple[str, str, int]:
+    """字面量校验：只放行 http/https、无内嵌凭据、主机非空、端口合法。
+
+    畸形 URL（如未配对的 IPv6 方括号）由 `urlsplit` 抛 `ValueError`，此处转为
+    `SsrfBlocked("malformed_url:…")`，使调用方按“一次抓取失败”记录而不是中断整项判据。
     """
-    parts = up.urlsplit(url)
+    try:
+        parts = up.urlsplit(url)
+    except ValueError as exc:
+        raise SsrfBlocked(f"malformed_url:{exc}") from None
     if parts.scheme not in ("http", "https"):
-        return "scheme_not_allowed"
+        raise SsrfBlocked("scheme_not_allowed")
     if parts.username or parts.password:
-        return "credentials_in_url"
+        raise SsrfBlocked("credentials_in_url")
     host = parts.hostname
     if not host:
-        return "empty_host"
+        raise SsrfBlocked("empty_host")
     try:
         port = parts.port or (443 if parts.scheme == "https" else 80)
     except ValueError:
-        return "invalid_port"
-    try:
-        infos = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
-    except socket.gaierror as exc:
-        return f"dns_error:{exc}"
-    for info in infos:
-        addr = ipaddress.ip_address(info[4][0].split("%", 1)[0])
+        raise SsrfBlocked("invalid_port") from None
+    return parts.scheme, host, port
+
+
+def _resolve_global(host: str, port: int, timeout: float) -> List[str]:
+    """限时解析主机名，返回可连接的全局地址表；任一解析结果非全局即整体拒绝。
+
+    `socket.getaddrinfo` 没有超时参数，故放入守护线程等待 `timeout`：超时即弃（守护线程
+    不阻塞进程退出），解析失败原样带回主线程判定。解析在每次尝试（含每次重定向跳转）内
+    重做，因此慢解析不会越过重试与超时预算，临时 `gaierror` 也会按重试次数重来。
+    """
+    box: Dict[str, Any] = {}
+
+    def _worker() -> None:
+        try:
+            box["infos"] = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
+        except BaseException as exc:  # noqa: BLE001 —— 原样带回主线程判定
+            box["error"] = exc
+
+    thread = threading.Thread(target=_worker, name="ssrf-resolve", daemon=True)
+    thread.start()
+    thread.join(timeout)
+    if thread.is_alive():
+        raise SsrfBlocked("dns_timeout")
+    if "error" in box:
+        raise SsrfBlocked(f"dns_error:{box['error']}")
+    addresses: List[str] = []
+    for info in box.get("infos") or []:
+        addr = ipaddress.ip_address(str(info[4][0]).split("%", 1)[0])
         if not addr.is_global:
-            return f"non_global_address:{addr}"
+            raise SsrfBlocked(f"non_global_address:{addr}")
+        if str(addr) not in addresses:
+            addresses.append(str(addr))
+    if not addresses:
+        raise SsrfBlocked("dns_no_address")
+    return addresses
+
+
+def ssrf_rejection(url: str, timeout: float = DNS_TIMEOUT) -> Optional[str]:
+    """SSRF 预检：返回拒绝原因，None 表示放行（只做校验，不发请求）。
+
+    抓取目标来自外部页面内容（索引页与外链），属不可信输入；“抓取不受 robots 限制”
+    只是不自我限速的既定口径，不构成访问本机、内网、链路本地或云元数据地址的授权。
+    真正的抓取一律走 `http_get_checked()`：地址校验后钉定连接（不给 DNS 重绑定留窗口）、
+    逐跳校验重定向目标、禁用环境代理。本函数供自检与不需要发请求的预检使用。
+    """
+    try:
+        _scheme, host, port = _parse_target(url)
+        _resolve_global(host, port, timeout)
+    except SsrfBlocked as exc:
+        return str(exc)
     return None
 
 
+class _PinnedHTTPConnection(http.client.HTTPConnection):
+    """TCP 连接钉定在已校验的 IP 上；Host 头仍用原主机名。
+
+    只替换 `_create_connection`：标准库 `connect()` 的其余行为（`sys.audit`、
+    TCP_NODELAY、隧道分支）原样保留，避免复制标准库实现而漏掉后续版本的修正。
+    """
+
+    def __init__(self, host: str, port: Optional[int] = None, *, address: str,
+                 **kwargs: Any) -> None:
+        super().__init__(host, port, **kwargs)
+        self._address = address
+        self._create_connection = self._pinned_create_connection
+
+    def _pinned_create_connection(self, address: Tuple[str, int], timeout: Any,
+                                  source_address: Any) -> socket.socket:
+        return socket.create_connection(
+            (self._address, address[1]), timeout, source_address)
+
+
+class _PinnedHTTPSConnection(http.client.HTTPSConnection):
+    """同上；TLS 的 `server_hostname` 仍用原主机名，证书校验不受影响。"""
+
+    def __init__(self, host: str, port: Optional[int] = None, *, address: str,
+                 **kwargs: Any) -> None:
+        super().__init__(host, port, **kwargs)
+        self._address = address
+        self._create_connection = self._pinned_create_connection
+
+    def _pinned_create_connection(self, address: Tuple[str, int], timeout: Any,
+                                  source_address: Any) -> socket.socket:
+        return socket.create_connection(
+            (self._address, address[1]), timeout, source_address)
+
+
+class _PinnedHTTPHandler(urllib.request.HTTPHandler):
+    def __init__(self, address: str) -> None:
+        super().__init__()
+        self._address = address
+
+    def http_open(self, req: urllib.request.Request) -> Any:
+        return self.do_open(
+            functools.partial(_PinnedHTTPConnection, address=self._address), req)
+
+
+class _PinnedHTTPSHandler(urllib.request.HTTPSHandler):
+    def __init__(self, address: str) -> None:
+        super().__init__()
+        self._address = address
+
+    def https_open(self, req: urllib.request.Request) -> Any:
+        return self.do_open(
+            functools.partial(_PinnedHTTPSConnection, address=self._address), req,
+            context=self._context)
+
+
+class _RejectRedirectHandler(urllib.request.HTTPRedirectHandler):
+    """不自动跟随重定向：3xx 原样抛回，由调用方逐跳校验目标后再发。"""
+
+    def redirect_request(self, req: urllib.request.Request, fp: Any, code: int, msg: str,
+                         headers: Any, newurl: str) -> None:
+        return None
+
+
+def http_get_checked(url: str, headers: Dict[str, str], timeout: float,
+                     throttle: Optional[Callable[[str], None]] = None,
+                     max_redirects: int = MAX_REDIRECTS) -> Tuple[bytes, str]:
+    """GET 一个不可信 URL，全程在线校验；返回 (正文, 最终 URL)。
+
+    - 每一跳（含重定向目标）重新做字面量校验与限时全局地址解析，任一非全局地址即拒绝；
+    - 连接钉定在刚校验出的 IP 上，URL 主机名只用于 Host 头与 TLS SNI，不再二次解析；
+    - 显式装配 `ProxyHandler({})`，环境代理（HTTP_PROXY 等）一律不参与，代理无法改写目标；
+    - 关闭 urllib 自动重定向，逐跳交回本函数校验，跳数超 `max_redirects` 即报错。
+    """
+    current = url
+    for _hop in range(max_redirects + 1):
+        _scheme, host, port = _parse_target(current)
+        addresses = _resolve_global(host, port, min(timeout, DNS_TIMEOUT))
+        next_url: Optional[str] = None
+        last_error: Optional[BaseException] = None
+        for address in addresses:
+            if throttle is not None:
+                throttle(host)
+            opener = urllib.request.build_opener(
+                urllib.request.ProxyHandler({}),
+                _RejectRedirectHandler(),
+                _PinnedHTTPHandler(address),
+                _PinnedHTTPSHandler(address),
+            )
+            request = urllib.request.Request(current, headers=headers)
+            try:
+                with opener.open(request, timeout=timeout) as resp:
+                    return resp.read(), current
+            except urllib.error.HTTPError as exc:
+                if exc.code in REDIRECT_STATUS:
+                    location = (exc.headers.get("Location") if exc.headers else "") or ""
+                    try:
+                        exc.read()
+                        exc.close()
+                    except Exception:  # noqa: BLE001
+                        pass
+                    if not location:
+                        raise IOError(f"http_{exc.code}_no_location") from None
+                    next_url = up.urljoin(current, location)
+                    break
+                raise
+            except (urllib.error.URLError, OSError) as exc:
+                last_error = exc
+                continue
+        if next_url is None:
+            if last_error is not None:
+                raise last_error
+            raise IOError("no_address_succeeded")
+        current = next_url
+    raise IOError("too_many_redirects")
+
+
 class NetClient:
-    """同主机 ≥1.5 秒间隔、3 次重试（2／4／8 秒）的独立 HTTP 客户端。"""
+    """同主机 ≥1.5 秒间隔、3 次重试（2／4／8 秒）的独立 HTTP 客户端。
+
+    每次尝试都重新解析并在校验后钉定连接；DNS 超时与临时失败落在重试预算内，
+    地址越界（含重定向目标、畸形 URL）立即失败且不重试。
+    """
 
     def __init__(self, min_interval: float = MIN_HOST_INTERVAL, timeout: int = HTTP_TIMEOUT,
                  attempts: int = 3) -> None:
@@ -292,21 +469,19 @@ class NetClient:
         self._last_host[host] = time.monotonic()
 
     def fetch(self, url: str) -> Tuple[Optional[bytes], Optional[str]]:
-        rejected = ssrf_rejection(url)
-        if rejected:
-            self.stats["failures"] += 1
-            return None, f"ssrf_blocked:{rejected}"
-        host = up.urlsplit(url).netloc.lower()
         last_error: Optional[str] = None
         for attempt in range(1, self.attempts + 1):
-            self._throttle(host)
             try:
-                request = urllib.request.Request(
-                    url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
-                with urllib.request.urlopen(request, timeout=self.timeout) as resp:
-                    body = resp.read()
+                body, _final_url = http_get_checked(
+                    url, {"User-Agent": USER_AGENT, "Accept": "*/*"},
+                    timeout=self.timeout, throttle=self._throttle)
                 self.stats["requests"] += 1
                 return body, None
+            except SsrfBlocked as exc:
+                self.stats["failures"] += 1
+                last_error = f"ssrf_blocked:{exc}"
+                if not str(exc).startswith("dns_"):
+                    return None, last_error
             except urllib.error.HTTPError as exc:
                 self.stats["failures"] += 1
                 last_error = f"http_{exc.code}"
@@ -1645,6 +1820,11 @@ def selftest() -> int:
     check("SSRF：云元数据地址被拒",
           (ssrf_rejection("http://169.254.169.254/latest/") or "").startswith("non_global_address:"))
     check("SSRF：URL 内嵌凭据被拒", ssrf_rejection("http://u:p@example.com/") == "credentials_in_url")
+    check("SSRF：IPv6 回环被拒",
+          (ssrf_rejection("http://[::1]/") or "").startswith("non_global_address:"))
+    check("SSRF：畸形 IPv6 方括号按拒绝记录（不抛异常）",
+          (ssrf_rejection("http://[::1/") or "").startswith("malformed_url:"))
+    check("SSRF：端口非法被拒", ssrf_rejection("http://example.com:70000/") == "invalid_port")
 
     work = Path(tempfile.mkdtemp(prefix="verify_selftest_", dir=str(_ensure_tmp())))
     try:
