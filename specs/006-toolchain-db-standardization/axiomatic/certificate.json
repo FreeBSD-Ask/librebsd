@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-28T11:10:47+08:00",
+  "generated_at": "2026-11-28T15:24:28+08:00",
   "model": {
     "root": "D:\\librebsd",
-    "taskbook_sha256": "dff2986587bd1eb77ccd158b8ae2ca16d65bafe72514726a0b1269af0b12cfc9",
-    "binding_sha256": "4f7190377acb59e35c5916174b8a0521034d2573fd67a32e3c0c2ec91c6fd6a9",
+    "taskbook_sha256": "4f2eb973dae4218349db27adbf91d908c17adddb2e059206ba2dc53ea2b34908",
+    "binding_sha256": "a516a466fb528902c23ba9b44abf5efb199a40bf9a5027973093951c5c7f7153",
     "object_file_count": 48,
     "spec_count": 13
   },
@@ -56,7 +56,7 @@
     {
       "axiom": "A10",
       "pass": true,
-      "detail": "附录 C manifest 哈希＝BINDING.tsv sha256（4f7190377acb…）；行 13"
+      "detail": "附录 C manifest 哈希＝BINDING.tsv sha256（a516a466fb52…）；行 13"
     },
     {
       "axiom": "A11",
@@ -96,7 +96,7 @@
     {
       "axiom": "A18",
       "pass": true,
-      "detail": "必需节 4/4；用户原话在；43155 字符"
+      "detail": "必需节 4/4；用户原话在；43544 字符"
     }
   ],
   "theorems": [

@@ -3,12 +3,12 @@ spec_id: S10
 title: 综合最佳建议
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 十五、综合最佳建议（S10 的设计约束）
-version: 1.0.0
-status: draft
+version: 1.0.1
+status: closed
 goals: [9]
 owner: ykla
 created: 2026-11-27
-updated: 2026-11-27
+updated: 2026-11-28
 binding_id: TB-20261127-S10
 ---
 

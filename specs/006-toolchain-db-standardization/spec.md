@@ -3,12 +3,12 @@ spec_id: M
 title: 工具链与数据库标准化（总 spec）
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 一、意图确证（档 A 六字段）
-version: 1.0.0
-status: draft
+version: 1.0.1
+status: closed
 goals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 owner: ykla
 created: 2026-11-27
-updated: 2026-11-27
+updated: 2026-11-28
 binding_id: TB-20261127-M
 ---
 

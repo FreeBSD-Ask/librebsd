@@ -3,12 +3,12 @@ spec_id: S02
 title: 数据库归一化与清洗
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 六、数据库归一化与质量框架（S02／S06 的设计约束）
-version: 1.0.0
-status: draft
+version: 1.0.1
+status: closed
 goals: [2]
 owner: ykla
 created: 2026-11-27
-updated: 2026-11-27
+updated: 2026-11-28
 binding_id: TB-20261127-S02
 ---
 

@@ -3,12 +3,12 @@ spec_id: S01
 title: 标准与规范调研
 task_book: 01-项目管理/01-编纂规划与报告归档/工具链与数据库标准化-任务书-20261127.md
 task_book_anchor: 五、标准基线（种子；S01 执行时全量扩展）
-version: 1.0.0
-status: draft
+version: 1.0.1
+status: closed
 goals: [1]
 owner: ykla
 created: 2026-11-27
-updated: 2026-11-27
+updated: 2026-11-28
 binding_id: TB-20261127-S01
 ---
 
