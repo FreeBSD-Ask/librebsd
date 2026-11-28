@@ -1465,6 +1465,7 @@ script/_mian_w2_20261103.py	.py	2199	2026-11-28	2026-11-03	filename	25	fresh	fal
 script/_mian_w3_20261103.py	.py	2013	2026-11-28	2026-11-03	filename	25	fresh	false	C8b“…面”清理第三波：V07（14 题）＋V75（13 题，覆盖面保留）。
 script/_mimosa_analyze_20261128.py	.py	3340	2026-11-28	2026-11-28	filename	0	fresh	false	Mimosa 深扫结果归类分析（临时脚本，2026-11-28）。
 script/_mimosa_detail_20261128.py	.py	3471	2026-11-28	2026-11-28	filename	0	fresh	false	Mimosa 深扫结果逐条明细（临时脚本，2026-11-28）。
+script/_mimosa_focus_20261128.py	.py	1185	2026-11-28	2026-11-28	filename	0	fresh	false	按安全类聚合 Mimosa 深扫命中，列出非 path-traversal/sql-injection 的全部条目。
 script/_mk_b011_20261121.py	.py	4601	2026-11-28	2026-11-21	filename	7	fresh	false	b011 引擎派生：cp b010→b011，改批签/REFS/ITEMS（quote 的
 script/_mk_b012_20261121.py	.py	4251	2026-11-28	2026-11-21	filename	7	fresh	false	b012 引擎派生：cp b011→b012，改批签；RID_EXIST 加 11086（2.0.5 README）与 11091（2.x LINT）；
 script/_mk_b013_20261121.py	.py	4225	2026-11-28	2026-11-21	filename	7	fresh	false	b013 引擎派生：cp b012→b013，改批签；REFS=[install205]；RID_EXIST={11086,11091}（保留）；
