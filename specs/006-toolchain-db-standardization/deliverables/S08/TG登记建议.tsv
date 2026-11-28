@@ -1,0 +1,8 @@
+tg_id	命题	证据	工程含义	判据	反模式	失效条件	落地载体	优先级
+TG-018	数据质量须有持续治理（记分卡+schema_meta+注册表对账），不能一次性	本批实测：28 库 schema_meta 无一合规；注册表 built_at 缺 91.2%/size_bytes 错位 95.6%；50 件未登记 59GiB	每批触库后重算记分卡；迁移批统一 schema_meta	记分卡行数=SCOPE 库数；registry_match=true 率 100%；schema_meta 合规率逐季升	“剖析一次永远有效”；注册表手改不复算	连续两季记分卡零更新，或库规模骤降	S02 迁移批＋第六件扩展	S1
+TG-019	固定工具须机器可读生命周期台账，stable 判据可门禁	139 件工具 stable 判据缺口 61；CLI 契约缺口 119/121；盘符文本 21 件	工具总表派生视图+audit_tool_registry 门禁（待建）	TSV 行数=盘上件数；tracked 一致率 100%；stable 四条件全绿	手工维护大表；工具表与磁盘漂移	工具表连续两季零引用	S09 P3 门禁批（新增两脚本须过第十六件）	S1
+TG-020	任务书与 spec 须机器校验绑定，仅 sha256 清单不足以防漂移	BINDING 13 行全等（本批）；但正式校验器仍是临时脚本	audit_task_spec_binding 落地并入常备	B1—B8 全 PASS 且入第十六件登记	改 spec 不刷清单；锚点改名断链	绑定行数为 0（specs 退回不入库）	ADR-0025 残余判据批	S1
+TG-021	供应链与许可须 SBOM/provenance 载体	SLSA 1.2/SPDX 3.0.1 已核；项目 SBOM 为 0；PyMuPDF AGPL 分发面未决	Rust 批与对外分发前置 SBOM	cargo deny/audit 进 CI；SBOM 文件存在且可解析	“本地项目不需要 SBOM”；凭据入库	项目不再产出任何可分发物	S04 生产改写批前置	S2
+TG-022	缓存与垃圾须可执行生命周期（第四十件缺件已偿还）	本批：cleanup_temp/audit_temp_residue 补实现；清单 165,003 行待审；script/... 幻影目录 10,844 件	每批收口跑 --scope repo；清理批跑 --scope all+四步流程	第四十件 PASS；清单 sha256 缺失 0	只 scan 不收口；apply 跳过 ykla 审清单	仓库无临时产物产生	工程实践规则 §12（已落地）	S1（已部分偿还）
+TG-023	OCR/音频批须质量门与任务书模板	现行 OCR 只产 txt/md；无 LUFS/WER；模板缺失（本批补齐）	新批复制模板并过 QM 指标	两模板存在且绑定 S12；QM 表 12 条	引擎跑了就算；引用 WebVTT 写错状态	S12 模板连续两批未被引用	S12 模板（已落地）＋迁移批补列	S2
+TG-024	公理化须分层（实例穷举+层内机检），并诚实声明未跑层	S05：Python 穷举 18/18；Alloy 6.2.0 三连（SAT/UNSAT/UNSAT）；TLA+/Lean 未跑	证书分层标注；未跑层不写“已机检”	两证书均在有效快照内；ALLOY-RUN 在案	单层结论冒充全层；快照过期不重跑	形式化工具链全可用且合并单层	限 limitations 声明（已落地）	S3
