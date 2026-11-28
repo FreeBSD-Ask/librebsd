@@ -17,7 +17,7 @@
  *   bun scripts/build-by-volume.ts --no-clean   保留 .build 中间树
  */
 import {
-  cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync,
+  cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync,
 } from 'node:fs'
 import path from 'node:path'
 import { spawn, spawnSync } from 'node:child_process'
@@ -135,11 +135,12 @@ writeFileSync(path.join(DIST, 'hashmap.json'), `${JSON.stringify(hashmap)}\n`, '
 
 const htmlRels: string[] = []
 function walkHtml(dir: string, rel = '') {
-  for (const name of readdirSync(dir)) {
-    const full = path.join(dir, name)
-    const r = rel ? `${rel}/${name}` : name
-    if (statSync(full).isDirectory()) walkHtml(full, r)
-    else if (name.endsWith('.html') && name !== '404.html') htmlRels.push(r)
+  // withFileTypes：与 walkText 同口径，消除 statSync 检查后再访问的 TOCTOU 形状。
+  for (const dirent of readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, dirent.name)
+    const r = rel ? `${rel}/${dirent.name}` : dirent.name
+    if (dirent.isDirectory()) walkHtml(full, r)
+    else if (dirent.name.endsWith('.html') && dirent.name !== '404.html') htmlRels.push(r)
   }
 }
 walkHtml(DIST)
@@ -230,11 +231,12 @@ for (const r of smRoutes) if (!expected.has(r)) problems.push(`sitemap 多 ${r}`
 const DUP = [`${BASEP}${BASEP.slice(1)}`, '//librebsd/', `${BASEP.slice(1)}//`]
 const dupHits: string[] = []
 function walkText(dir: string, rel = '') {
-  for (const name of readdirSync(dir)) {
-    const full = path.join(dir, name)
-    const r = rel ? `${rel}/${name}` : name
-    if (statSync(full).isDirectory()) { walkText(full, r); continue }
-    if (!/\.(html|js|mjs|css|json|xml)$/i.test(name)) continue
+  // withFileTypes：dirent 类型直接来自 readdir，不做 statSync 检查后再读文件（消除 TOCTOU 形状）。
+  for (const dirent of readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, dirent.name)
+    const r = rel ? `${rel}/${dirent.name}` : dirent.name
+    if (dirent.isDirectory()) { walkText(full, r); continue }
+    if (!/\.(html|js|mjs|css|json|xml)$/i.test(dirent.name)) continue
     const t = readFileSync(full, 'utf8')
     if (DUP.some((d) => t.includes(d))) dupHits.push(r)
   }

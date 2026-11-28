@@ -203,15 +203,18 @@ export function outlineTitleToSummaryForm(t: string, level: 0 | 1 | 2 | 3): stri
   return s
 }
 
-/** 剥 HTML 标签＋反转义实体：装配页题名提取用。 */
+/**
+ * 剥 HTML 标签＋反转义实体：装配页题名提取用。
+ * 实体反转义在单次 pass 内完成具名映射——不做链式 replace：链式会把 “&amp;lt;” 先解码成
+ * “&lt;” 再二次解码成 “<”，与浏览器对 HTML 的单次解码语义不符（CodeQL js/double-escaping）；
+ * 标签剥离用通用模式一次完成，不做对 “<script” 的针对性过滤（CodeQL
+ * js/incomplete-multi-character-sanitization）。
+ */
+const NAMED_ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'" }
 export function stripHtml(s: string): string {
   return s
-    .replace(/<[^>]+>/g, '')
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
+    .replace(/<[^>]*>/g, '')
+    .replace(/&(?:amp|lt|gt|quot|#39);/g, (m) => NAMED_ENTITIES[m.slice(1, -1)] ?? m)
     .replace(/\s+/g, ' ')
     .trim()
 }
