@@ -1,0 +1,66 @@
+# CodeQL Advanced —— 2026-11-28 自 default setup 切换而来（先 PATCH 禁用 default setup，再落本工作流）。
+# 切换时点 default setup 口径：languages＝actions／javascript／javascript-typescript／python／typescript，
+# query_suite＝extended，schedule＝weekly；本工作流按能力对等裁剪：
+#   - languages 收敛为 python＋javascript-typescript（后者合并覆盖 js 与 ts，仓库 14 件 .ts 全在 vitepress）＋actions；
+#   - queries＝security-extended 对齐 default setup 的 extended 套件（官方注：追加于默认套件之上，非替换）。
+# 依赖钉定纪律与 ci.yml 相同：第三方 action 一律钉定 40 位提交 SHA（行尾注释记语义版本），
+# 升级由 dependabot.yml 的 github-actions 生态提 PR。codeql-action 官方建议浮动 v4 以随查询库更新，
+# 本仓统一走钉 SHA＋dependabot，代价是查询库更新滞后至升级 PR 合并，属有意选择。
+name: "CodeQL Advanced"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # 每周一 UTC 6:17（默认 setup 原为 weekly；GitHub 建议避开整点高峰，取非整点分钟）。
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      # 上报 code scanning 结果必需。
+      security-events: write
+      # 拉取 CodeQL pack 必需。
+      packages: read
+      # 私有仓库需要；公共仓库冗余无害（官方模板原样保留）。
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # actions：分析 .github/workflows 自身；javascript-typescript：覆盖目录页 src/js 与 vitepress 的 ts；
+        # python：覆盖 00-编纂规则与格式规范/01-规则/脚本与命令 等全部脚本。
+        include:
+          - language: actions
+          - language: javascript-typescript
+          - language: python
+
+    steps:
+      - name: 检出
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1（与 ci.yml 同钉）
+
+      # 初始化 CodeQL：三语言均为解释型／清单型，无需 build-mode 与手工构建步骤。
+      - name: 初始化 CodeQL
+        uses: github/codeql-action/init@915412ff23e8b7659517e607487dbeae018f2934  # v4.39.5
+        with:
+          languages: ${{ matrix.language }}
+          queries: security-extended
+
+      - name: 执行 CodeQL 分析
+        uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934  # v4.39.5
+        with:
+          category: "/language:${{matrix.language}}"
