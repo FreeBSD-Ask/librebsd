@@ -357,6 +357,7 @@ script/_changelog_lint_20261029.py	.py	4351	2026-11-28	2026-10-29	filename	30	fr
 script/_changelog_p6_20261128.py	.py	2623	2026-11-28	2026-11-28	filename	0	fresh	false	P6 收口：changelog 写入（id=max+1，读锁重试）＋台账复核行回填。
 script/_changelog_peek_2726_2732.py	.py	582	2026-11-28	2026-11-10	mtime-suspect	-1	unknown	false	只读：导出 changelog 指定区间正文，供复盘补遗批做法。
 script/_changelog_probe.py	.py	1505	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	只读查询 changelog 最近记录（1—4 卷相关）。
+script/_changelog_r21_20261128.py	.py	4364	2026-11-28	2026-11-28	filename	0	fresh	false	R2-1 契约收口 changelog 写入（id=max+1，读锁重试）。一次性，不入库。
 script/_changelog_rotate_20261105.py	.py	4130	2026-11-28	2026-11-05	filename	23	fresh	false	changelog.duckdb 记 §十五 第三轮窗口轮替批次（id 动态取 max+1）。
 script/_changelog_s09_20261128.py	.py	4423	2026-11-28	2026-11-28	filename	0	fresh	false	S09 闭环批 changelog 写入（id=max+1，读锁重试）。一次性，不入库。
 script/_changelog_standards_first_20261114.py	.py	4449	2026-11-28	2026-11-14	filename	14	fresh	false	changelog 单条登记：standards-first-doctrine-20261114（软件工程理论修订批）。

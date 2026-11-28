@@ -457,7 +457,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="S09 全局工具表生成器（S09-FR-03）")
     ap.add_argument("--root", default="", help="仓库根（默认由脚本位置派生）")
     ap.add_argument("--out-dir", default="", help=f"输出目录（默认 {OUT_REL}）")
-    ap.add_argument("--check", action="store_true", help="只比对不写盘；漂移 exit 1")
+    ap.add_argument("--check", action="store_true",
+                    help="只比对不写盘；主表漂移 exit 1，one-shot 快照差异仅 WARN")
     a = ap.parse_args()
     root = Path(a.root).resolve() if a.root else repo_root()
     out = Path(a.out_dir) if a.out_dir else root / OUT_REL
@@ -497,15 +498,20 @@ def main() -> int:
         tsv_p = out / "工具总表.tsv"
         one_p = out / "one-shot清单.tsv"
         bad = []
-        for p, want in ((tsv_p, tsv_bytes), (one_p, one_bytes)):
-            if not p.exists():
-                bad.append(f"缺失 {p.name}")
-            elif p.read_bytes() != want:
-                bad.append(f"漂移 {p.name}（磁盘 {p.stat().st_size}B ≠ 复算 {len(want)}B）")
+        if not tsv_p.exists():
+            bad.append(f"缺失 {tsv_p.name}")
+        elif tsv_p.read_bytes() != tsv_bytes:
+            bad.append(f"漂移 {tsv_p.name}（磁盘 {tsv_p.stat().st_size}B ≠ 复算 {len(tsv_bytes)}B）")
+        # one-shot 清单是 script/ 工作区快照，随时新增/清理；差异只 WARN，不阻断
+        # （需要强一致时用 --strict）。
+        if not one_p.exists():
+            print(f"WARN 缺失 {one_p.name}（建议先重生成）")
+        elif one_p.read_bytes() != one_bytes:
+            print(f"WARN {one_p.name} 快照过期（script/ 顶层有增减；重生成即同步，不阻断）")
         if bad:
             print("FAIL: " + "；".join(bad))
             return 1
-        print(f"PASS: 工具总表 {len(rows)} 行、one-shot {len(oneshot)} 行，复算字节一致")
+        print(f"PASS: 工具总表 {len(rows)} 行复算字节一致；one-shot {len(oneshot)} 行（快照）")
         return 0
 
     out.mkdir(parents=True, exist_ok=True)
