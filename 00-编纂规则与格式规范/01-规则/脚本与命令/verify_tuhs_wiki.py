@@ -72,11 +72,13 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import ipaddress
 import json
 import os
 import random
 import re
 import shutil
+import socket
 import subprocess
 import sys
 import tempfile
@@ -240,6 +242,36 @@ def table_count(conn, table: str) -> int:
 # 网络客户端（限流＋重试）
 # =============================================================================
 
+def ssrf_rejection(url: str) -> Optional[str]:
+    """SSRF 防线：抓取目标只能是 http/https 公网地址；返回拒绝原因，None 表示放行。
+
+    抓取目标来自外部页面内容（索引页与外链），属不可信输入；“抓取不受 robots 限制”
+    只是不自我限速的既定口径，不构成访问本机、内网、链路本地或云元数据地址的授权。
+    主机名解析后逐地址校验；解析与请求之间仍存在 DNS 重绑定窗口，非对抗环境接受该残差。
+    """
+    parts = up.urlsplit(url)
+    if parts.scheme not in ("http", "https"):
+        return "scheme_not_allowed"
+    if parts.username or parts.password:
+        return "credentials_in_url"
+    host = parts.hostname
+    if not host:
+        return "empty_host"
+    try:
+        port = parts.port or (443 if parts.scheme == "https" else 80)
+    except ValueError:
+        return "invalid_port"
+    try:
+        infos = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
+    except socket.gaierror as exc:
+        return f"dns_error:{exc}"
+    for info in infos:
+        addr = ipaddress.ip_address(info[4][0].split("%", 1)[0])
+        if not addr.is_global:
+            return f"non_global_address:{addr}"
+    return None
+
+
 class NetClient:
     """同主机 ≥1.5 秒间隔、3 次重试（2／4／8 秒）的独立 HTTP 客户端。"""
 
@@ -260,6 +292,10 @@ class NetClient:
         self._last_host[host] = time.monotonic()
 
     def fetch(self, url: str) -> Tuple[Optional[bytes], Optional[str]]:
+        rejected = ssrf_rejection(url)
+        if rejected:
+            self.stats["failures"] += 1
+            return None, f"ssrf_blocked:{rejected}"
         host = up.urlsplit(url).netloc.lower()
         last_error: Optional[str] = None
         for attempt in range(1, self.attempts + 1):
@@ -1601,6 +1637,14 @@ def selftest() -> int:
 
     def status_map(results: List[Result]) -> Dict[str, str]:
         return {result.check_id: result.status for result in results}
+
+    print("[selftest] SSRF 防线（字面量地址，无需联网）")
+    check("SSRF：file:// 被拒", ssrf_rejection("file:///etc/passwd") == "scheme_not_allowed")
+    check("SSRF：回环 IPv4 被拒",
+          (ssrf_rejection("http://127.0.0.1/") or "").startswith("non_global_address:"))
+    check("SSRF：云元数据地址被拒",
+          (ssrf_rejection("http://169.254.169.254/latest/") or "").startswith("non_global_address:"))
+    check("SSRF：URL 内嵌凭据被拒", ssrf_rejection("http://u:p@example.com/") == "credentials_in_url")
 
     work = Path(tempfile.mkdtemp(prefix="verify_selftest_", dir=str(_ensure_tmp())))
     try:
