@@ -492,7 +492,9 @@ def assemble():
         "THEME_JS": read(THEME_JS).strip("\n"),
         "CSS_FORMAT": read(DOC_CSS).strip("\n"),
         "CSS_MODERN": read(MODERN_CSS).strip("\n"),
-        "JSONLD": schema.strip("\n"),
+        # JSON-LD 与 UI_JSON 同属 <script> 内嵌 JSON：hasPart 的卷名由数据注入，
+        # 含 "</" 时会提前闭合 script 元素，故与 UI_JSON 同口径转义为 "<\/"（2026-11-28）。
+        "JSONLD": schema.strip("\n").replace("</", "<\\/"),
         "TOC_STATIC_LEFT": _toc_l,
         "TOC_STATIC_RIGHT": _toc_r,
         "OUTLINE": body,

@@ -28,6 +28,8 @@
 | `标准基线与文档治理差距-20261114.md` | 2026-11-14 标准先行基线：20 项标准四问抽取、实测差距、裁定与例外登记 |
 | `Mimosa深扫分析与处置-20261128.md` | Mimosa 全树深扫（2 168 条命中）的五档判定、5 处修复与覆盖缺口披露；附逐条台账 |
 | `Mimosa深扫处置台账-20261128.tsv` | 2 168 条命中逐条处置：finding_id／severity／class／path／line／verdict／category／rationale，未分类 0 |
+| `安全工具补充扫描与处置-20261128.md` | Semgrep 全量补扫（212 条唯一命中）＋SonarQube Secrets 实测＋Claude Security 不可用登记；2 处新修复，附台账 |
+| `Semgrep处置台账-20261128.tsv` | Semgrep 212 条命中逐条处置：path／line／check_id／severity／verdict／category／rationale，未分类 0 |
 | `全链路规格/` | 线级全链路 spec：`F1-F4-全链路规格.md`、`H1-H4-全链路规格.md`、`重构2026-全链路规格.md` |
 
 ## ADR 索引

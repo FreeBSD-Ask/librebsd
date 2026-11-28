@@ -1464,8 +1464,10 @@ script/_mian_w1_20261103.py	.py	3096	2026-11-28	2026-11-03	filename	25	fresh	fal
 script/_mian_w2_20261103.py	.py	2199	2026-11-28	2026-11-03	filename	25	fresh	false	C8b“…面”清理第二波：V10（17 题）＋V61（13 题，4 处技术术语保留）。
 script/_mian_w3_20261103.py	.py	2013	2026-11-28	2026-11-03	filename	25	fresh	false	C8b“…面”清理第三波：V07（14 题）＋V75（13 题，覆盖面保留）。
 script/_mimosa_analyze_20261128.py	.py	3340	2026-11-28	2026-11-28	filename	0	fresh	false	Mimosa 深扫结果归类分析（临时脚本，2026-11-28）。
+script/_mimosa_context_20261128.py	.py	1998	2026-11-28	2026-11-28	filename	0	fresh	false	为跟踪文件的每条 Mimosa 命中补上下文（临时脚本，2026-11-28）。
 script/_mimosa_detail_20261128.py	.py	3471	2026-11-28	2026-11-28	filename	0	fresh	false	Mimosa 深扫结果逐条明细（临时脚本，2026-11-28）。
 script/_mimosa_focus_20261128.py	.py	1185	2026-11-28	2026-11-28	filename	0	fresh	false	按安全类聚合 Mimosa 深扫命中，列出非 path-traversal/sql-injection 的全部条目。
+script/_mimosa_ledger_20261128.py	.py	15176	2026-11-28	2026-11-28	filename	0	fresh	false	为 Mimosa 深扫的 2168 条命中逐条落处置判定（临时脚本，2026-11-28）。
 script/_mk_b011_20261121.py	.py	4601	2026-11-28	2026-11-21	filename	7	fresh	false	b011 引擎派生：cp b010→b011，改批签/REFS/ITEMS（quote 的
 script/_mk_b012_20261121.py	.py	4251	2026-11-28	2026-11-21	filename	7	fresh	false	b012 引擎派生：cp b011→b012，改批签；RID_EXIST 加 11086（2.0.5 README）与 11091（2.x LINT）；
 script/_mk_b013_20261121.py	.py	4225	2026-11-28	2026-11-21	filename	7	fresh	false	b013 引擎派生：cp b012→b013，改批签；REFS=[install205]；RID_EXIST={11086,11091}（保留）；
@@ -1893,6 +1895,9 @@ script/_sample_vol.py	.py	2351	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	fa
 script/_scan_catb_netscape.py	.py	700	2026-11-28	2026-11-15	mtime-suspect	-1	unknown	false	扫 catb 各章，找 Netscape 相关句（含 epilog 所在页）。
 script/_scan_stale_python_paths_20261110.py	.py	1736	2026-11-28	2026-11-10	filename	18	fresh	false	扫描活动件中的旧解释器路径，按“可复制命令 vs 执行记录”分类（只读）。
 script/_sccs_guide.py	.py	598	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	查 SCCS 用户指南 ref3682 可引段落。
+script/_semgrep_analyze_20261128.py	.py	3292	2026-11-28	2026-11-28	filename	0	fresh	false	Semgrep JSON 结果归类（临时脚本，2026-11-28）。
+script/_semgrep_ledger_20261128.py	.py	7578	2026-11-28	2026-11-28	filename	0	fresh	false	Semgrep 跟踪面命中逐条处置台账（临时脚本，2026-11-28）。
+script/_semgrep_ndjson_20261128.py	.py	1093	2026-11-28	2026-11-28	filename	0	fresh	false	Semgrep JSON → NDJSON（临时脚本，2026-11-28）。
 script/_shot_sticky.py	.py	980	2026-11-28	2026-11-06	mtime-suspect	-1	unknown	false	临时：截图验证节头吸顶。
 script/_show21.py	.py	635	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	列出 V35 第 2 章 2.1 节各小节的 status 与已落 DOC_MINE 块摘要。
 script/_sign_vol_20261103.py	.py	1142	2026-11-28	2026-11-03	filename	25	fresh	false	卷级批准签署助手：从 script/_sign_notes.json 取 note，写 title.ok 与 approvals 行。用法：python _si
@@ -1900,6 +1905,9 @@ script/_snip.py	.py	574	2026-11-28	2026-11-28	mtime-suspect	-1	unknown	false
 script/_snip2.py	.py	628	2026-11-28	2026-11-28	mtime-suspect	-1	unknown	false	
 script/_snip3.py	.py	630	2026-11-28	2026-11-28	mtime-suspect	-1	unknown	false	
 script/_snip3388.py	.py	411	2026-11-28	2026-11-28	mtime-suspect	-1	unknown	false	
+script/_sonar_secrets_batch_20261128.py	.py	3374	2026-11-28	2026-11-28	filename	0	fresh	false	Sonar 本地 Secrets 扫描：按 git 跟踪文件分批执行（临时脚本，2026-11-28）。
+script/_spec_actual_delivery_20261128.py	.py	9450	2026-11-28	2026-11-28	filename	0	fresh	false	spec §8.1 实际交付映射回写（2026-11-28 复核）。
+script/_spec_close_20261128.py	.py	3614	2026-11-28	2026-11-28	filename	0	fresh	false	spec 收口批：39 文件 frontmatter status/version/updated + BINDING 重算 + 附录 C 回填。
 script/_spec_len.py	.py	404	2026-11-28	2026-11-16	mtime-suspect	-1	unknown	false	检查 spec 摘要长度与题组。
 script/_stage_vol.py	.py	2181	2026-11-28	2026-11-07	mtime-suspect	-1	unknown	false	卷批暂存与提交（V21–V30 通用）：只暂存该卷自身件，路径越界即停。
 script/_stale_dump_20261103.py	.py	1723	2026-11-28	2026-11-03	filename	25	fresh	false	导出 22 件未批卷“论题疑似未随改题订正”的完整 issue 与证据行，供逐件人工改写。
