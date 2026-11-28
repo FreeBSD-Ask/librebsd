@@ -228,3 +228,9 @@ state/inuse.6428.lock
 # 不入库则全新克隆无法 bun install 与构建（与 data/catalog.json 例外同口径）。
 !05-卷册大纲/目录/vitepress/package.json
 /_tmp_ci
+
+# Mimosa 插件本地运行状态（2026-11-28 ykla 令：`*.mimosa*` 加入 .gitignore）
+# 根目录 `.mimosa/` 为插件 hook-state 与扫描缓存（本机运行态，含路径与时间戳）；
+# 无前导斜杠的规则同时覆盖各子目录既有 `.mimosa`（与上方分路径条目并存，不冲突）。
+.mimosa/
+*.mimosa*
